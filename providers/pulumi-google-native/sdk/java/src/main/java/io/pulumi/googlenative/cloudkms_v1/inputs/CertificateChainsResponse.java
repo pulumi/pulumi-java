@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="caviumCerts", required=true)
-    private final List<String> caviumCerts;
+      private final List<String> caviumCerts;
 
     public List<String> getCaviumCerts() {
         return this.caviumCerts;
@@ -33,7 +33,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="googleCardCerts", required=true)
-    private final List<String> googleCardCerts;
+      private final List<String> googleCardCerts;
 
     public List<String> getGoogleCardCerts() {
         return this.googleCardCerts;
@@ -44,7 +44,7 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="googlePartitionCerts", required=true)
-    private final List<String> googlePartitionCerts;
+      private final List<String> googlePartitionCerts;
 
     public List<String> getGooglePartitionCerts() {
         return this.googlePartitionCerts;
@@ -103,7 +103,6 @@ public final class CertificateChainsResponse extends io.pulumi.resources.InvokeA
             this.googlePartitionCerts = Objects.requireNonNull(googlePartitionCerts);
             return this;
         }
-
         public CertificateChainsResponse build() {
             return new CertificateChainsResponse(caviumCerts, googleCardCerts, googlePartitionCerts);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="workloadPool")
-    private final @Nullable Input<String> workloadPool;
+        private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;
@@ -62,7 +62,6 @@ public final class ClusterWorkloadIdentityConfigGetArgs extends io.pulumi.resour
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }
-
         public ClusterWorkloadIdentityConfigGetArgs build() {
             return new ClusterWorkloadIdentityConfigGetArgs(workloadPool);
         }

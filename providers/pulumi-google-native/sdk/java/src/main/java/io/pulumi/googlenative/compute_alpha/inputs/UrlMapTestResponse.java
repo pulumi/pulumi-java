@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.UrlMapTestHeaderResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backendServiceWeight", required=true)
-    private final Integer backendServiceWeight;
+      private final Integer backendServiceWeight;
 
     public Integer getBackendServiceWeight() {
         return this.backendServiceWeight;
@@ -35,7 +35,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -46,7 +46,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expectedOutputUrl", required=true)
-    private final String expectedOutputUrl;
+      private final String expectedOutputUrl;
 
     public String getExpectedOutputUrl() {
         return this.expectedOutputUrl;
@@ -57,7 +57,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expectedRedirectResponseCode", required=true)
-    private final Integer expectedRedirectResponseCode;
+      private final Integer expectedRedirectResponseCode;
 
     public Integer getExpectedRedirectResponseCode() {
         return this.expectedRedirectResponseCode;
@@ -68,7 +68,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headers", required=true)
-    private final List<UrlMapTestHeaderResponse> headers;
+      private final List<UrlMapTestHeaderResponse> headers;
 
     public List<UrlMapTestHeaderResponse> getHeaders() {
         return this.headers;
@@ -79,7 +79,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -90,7 +90,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -101,7 +101,7 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -210,7 +210,6 @@ public final class UrlMapTestResponse extends io.pulumi.resources.InvokeArgs {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public UrlMapTestResponse build() {
             return new UrlMapTestResponse(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
         }

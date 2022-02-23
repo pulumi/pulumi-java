@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ivs.outputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class RecordingConfigurationThumbnailConfiguration {
             this.targetIntervalSeconds = targetIntervalSeconds;
             return this;
         }
-
         public RecordingConfigurationThumbnailConfiguration build() {
             return new RecordingConfigurationThumbnailConfiguration(recordingMode, targetIntervalSeconds);
         }

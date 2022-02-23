@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RepoSourceResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StorageSourceResponse;
@@ -26,7 +26,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalContexts", required=true)
-    private final List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
+      private final List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> additionalContexts;
 
     public List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse> getAdditionalContexts() {
         return this.additionalContexts;
@@ -37,7 +37,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="artifactStorageSource", required=true)
-    private final StorageSourceResponse artifactStorageSource;
+      private final StorageSourceResponse artifactStorageSource;
 
     public StorageSourceResponse getArtifactStorageSource() {
         return this.artifactStorageSource;
@@ -48,7 +48,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="context", required=true)
-    private final GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
+      private final GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse context;
 
     public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse getContext() {
         return this.context;
@@ -59,7 +59,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileHashes", required=true)
-    private final Map<String,String> fileHashes;
+      private final Map<String,String> fileHashes;
 
     public Map<String,String> getFileHashes() {
         return this.fileHashes;
@@ -70,7 +70,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repoSource", required=true)
-    private final RepoSourceResponse repoSource;
+      private final RepoSourceResponse repoSource;
 
     public RepoSourceResponse getRepoSource() {
         return this.repoSource;
@@ -81,7 +81,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageSource", required=true)
-    private final StorageSourceResponse storageSource;
+      private final StorageSourceResponse storageSource;
 
     public StorageSourceResponse getStorageSource() {
         return this.storageSource;
@@ -170,7 +170,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
         }

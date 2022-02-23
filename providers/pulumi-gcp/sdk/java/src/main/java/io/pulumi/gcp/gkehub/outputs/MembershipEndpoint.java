@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.MembershipEndpointGkeCluster;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +56,6 @@ public final class MembershipEndpoint {
             this.gkeCluster = gkeCluster;
             return this;
         }
-
         public MembershipEndpoint build() {
             return new MembershipEndpoint(gkeCluster);
         }

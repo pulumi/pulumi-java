@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class CloudBuildOptionsResponse {
             this.cloudBuildTimeout = Objects.requireNonNull(cloudBuildTimeout);
             return this;
         }
-
         public CloudBuildOptionsResponse build() {
             return new CloudBuildOptionsResponse(appYamlPath, cloudBuildTimeout);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentOptionsArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayPeeringAttachmentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<TransitGatewayPeeringAttachmentOptionsArgs> options;
+        private final @Nullable Input<TransitGatewayPeeringAttachmentOptionsArgs> options;
 
     public Input<TransitGatewayPeeringAttachmentOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -33,7 +33,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="peerAccountId", required=true)
-    private final Input<String> peerAccountId;
+        private final Input<String> peerAccountId;
 
     public Input<String> getPeerAccountId() {
         return this.peerAccountId;
@@ -44,7 +44,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="peerRegion", required=true)
-    private final Input<String> peerRegion;
+        private final Input<String> peerRegion;
 
     public Input<String> getPeerRegion() {
         return this.peerRegion;
@@ -55,7 +55,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="peerTransitGatewayId", required=true)
-    private final Input<String> peerTransitGatewayId;
+        private final Input<String> peerTransitGatewayId;
 
     public Input<String> getPeerTransitGatewayId() {
         return this.peerTransitGatewayId;
@@ -66,7 +66,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
+        private final @Nullable Input<List<TransitGatewayPeeringAttachmentTagArgs>> tags;
 
     public Input<List<TransitGatewayPeeringAttachmentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="transitGatewayId", required=true)
-    private final Input<String> transitGatewayId;
+        private final Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId;
@@ -196,7 +196,6 @@ public final class TransitGatewayPeeringAttachmentArgs extends io.pulumi.resourc
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }
-
         public TransitGatewayPeeringAttachmentArgs build() {
             return new TransitGatewayPeeringAttachmentArgs(options, peerAccountId, peerRegion, peerTransitGatewayId, tags, transitGatewayId);
         }

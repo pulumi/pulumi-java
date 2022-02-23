@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HostRuleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpRedirectActionResponse;
@@ -333,7 +333,6 @@ public final class GetUrlMapResult {
             this.tests = Objects.requireNonNull(tests);
             return this;
         }
-
         public GetUrlMapResult build() {
             return new GetUrlMapResult(creationTimestamp, defaultRouteAction, defaultService, defaultUrlRedirect, description, fingerprint, headerAction, hostRules, kind, name, pathMatchers, region, selfLink, tests);
         }

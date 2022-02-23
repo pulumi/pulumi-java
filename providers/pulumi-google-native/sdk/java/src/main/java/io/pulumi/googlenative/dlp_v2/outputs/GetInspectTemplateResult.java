@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class GetInspectTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetInspectTemplateResult build() {
             return new GetInspectTemplateResult(createTime, description, displayName, inspectConfig, name, updateTime);
         }

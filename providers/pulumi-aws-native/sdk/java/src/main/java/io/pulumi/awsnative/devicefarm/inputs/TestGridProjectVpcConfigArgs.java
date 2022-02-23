@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+        private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -34,14 +34,14 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+        private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
     }
 
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -115,7 +115,6 @@ public final class TestGridProjectVpcConfigArgs extends io.pulumi.resources.Reso
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public TestGridProjectVpcConfigArgs build() {
             return new TestGridProjectVpcConfigArgs(securityGroupIds, subnetIds, vpcId);
         }

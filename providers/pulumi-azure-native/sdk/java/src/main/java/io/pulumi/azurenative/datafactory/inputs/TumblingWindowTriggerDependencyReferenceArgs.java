@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="offset")
-    private final @Nullable Input<String> offset;
+        private final @Nullable Input<String> offset;
 
     public Input<String> getOffset() {
         return this.offset == null ? Input.empty() : this.offset;
@@ -35,7 +35,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="referenceTrigger", required=true)
-    private final Input<TriggerReferenceArgs> referenceTrigger;
+        private final Input<TriggerReferenceArgs> referenceTrigger;
 
     public Input<TriggerReferenceArgs> getReferenceTrigger() {
         return this.referenceTrigger;
@@ -46,7 +46,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+        private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -58,7 +58,7 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class TumblingWindowTriggerDependencyReferenceArgs extends io.pulum
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TumblingWindowTriggerDependencyReferenceArgs build() {
             return new TumblingWindowTriggerDependencyReferenceArgs(offset, referenceTrigger, size, type);
         }

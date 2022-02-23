@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+        private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -32,7 +32,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="migrationId", required=true)
-    private final String migrationId;
+        private final String migrationId;
 
     public String getMigrationId() {
         return this.migrationId;
@@ -54,7 +54,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="sourceDatabaseName", required=true)
-    private final String sourceDatabaseName;
+        private final String sourceDatabaseName;
 
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -65,7 +65,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+        private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -76,7 +76,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -87,7 +87,7 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
      * 
      */
     @InputImport(name="targetDatabaseName", required=true)
-    private final String targetDatabaseName;
+        private final String targetDatabaseName;
 
     public String getTargetDatabaseName() {
         return this.targetDatabaseName;
@@ -186,7 +186,6 @@ public final class MigrationValidationDatabaseSummaryResultResponse extends io.p
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
         }
-
         public MigrationValidationDatabaseSummaryResultResponse build() {
             return new MigrationValidationDatabaseSummaryResultResponse(endedOn, id, migrationId, sourceDatabaseName, startedOn, status, targetDatabaseName);
         }

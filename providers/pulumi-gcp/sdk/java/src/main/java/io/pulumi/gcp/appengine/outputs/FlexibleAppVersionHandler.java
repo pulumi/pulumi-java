@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionHandlerScript;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionHandlerStaticFiles;
 import java.lang.String;
@@ -201,7 +201,6 @@ public final class FlexibleAppVersionHandler {
             this.urlRegex = urlRegex;
             return this;
         }
-
         public FlexibleAppVersionHandler build() {
             return new FlexibleAppVersionHandler(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

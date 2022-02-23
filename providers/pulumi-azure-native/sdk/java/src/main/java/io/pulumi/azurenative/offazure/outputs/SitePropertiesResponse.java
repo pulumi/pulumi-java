@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.outputs;
 
 import io.pulumi.azurenative.offazure.outputs.SiteAgentPropertiesResponse;
 import io.pulumi.azurenative.offazure.outputs.SiteSpnPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class SitePropertiesResponse {
             this.servicePrincipalIdentityDetails = servicePrincipalIdentityDetails;
             return this;
         }
-
         public SitePropertiesResponse build() {
             return new SitePropertiesResponse(agentDetails, applianceName, discoverySolutionId, serviceEndpoint, servicePrincipalIdentityDetails);
         }

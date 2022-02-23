@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class CanaryScheduleArgs extends io.pulumi.resources.ResourceArgs {
     public static final CanaryScheduleArgs Empty = new CanaryScheduleArgs();
 
     @InputImport(name="durationInSeconds")
-    private final @Nullable Input<String> durationInSeconds;
+        private final @Nullable Input<String> durationInSeconds;
 
     public Input<String> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
     }
 
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -81,7 +81,6 @@ public final class CanaryScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.expression = Input.of(Objects.requireNonNull(expression));
             return this;
         }
-
         public CanaryScheduleArgs build() {
             return new CanaryScheduleArgs(durationInSeconds, expression);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="failoverGroupName", required=true)
-    private final String failoverGroupName;
+        private final String failoverGroupName;
 
     public String getFailoverGroupName() {
         return this.failoverGroupName;
@@ -28,7 +28,7 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="locationName", required=true)
-    private final String locationName;
+        private final String locationName;
 
     public String getLocationName() {
         return this.locationName;
@@ -39,7 +39,7 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetInstanceFailoverGroupArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetInstanceFailoverGroupArgs build() {
             return new GetInstanceFailoverGroupArgs(failoverGroupName, locationName, resourceGroupName);
         }

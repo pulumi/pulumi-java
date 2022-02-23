@@ -9,8 +9,8 @@ import io.pulumi.awsnative.iot.enums.AuthorizerStatus;
 import io.pulumi.awsnative.iot.outputs.AuthorizerTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -72,13 +72,6 @@ public class Authorizer extends io.pulumi.resources.CustomResource {
         return this.tokenSigningPublicKeys;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Authorizer(String name) {
-        super("aws-native:iot:Authorizer", name, AuthorizerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

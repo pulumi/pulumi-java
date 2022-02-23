@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class PublicKeyConfig {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PublicKeyConfig build() {
             return new PublicKeyConfig(callerReference, comment, encodedKey, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class ManagedClusterWindowsProfileResponse {
             this.licenseType = licenseType;
             return this;
         }
-
         public ManagedClusterWindowsProfileResponse build() {
             return new ManagedClusterWindowsProfileResponse(adminPassword, adminUsername, enableCSIProxy, licenseType);
         }

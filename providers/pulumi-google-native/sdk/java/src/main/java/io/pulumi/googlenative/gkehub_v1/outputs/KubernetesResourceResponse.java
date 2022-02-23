@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1.outputs.ResourceManifestResponse;
 import io.pulumi.googlenative.gkehub_v1.outputs.ResourceOptionsResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class KubernetesResourceResponse {
             this.resourceOptions = Objects.requireNonNull(resourceOptions);
             return this;
         }
-
         public KubernetesResourceResponse build() {
             return new KubernetesResourceResponse(connectResources, membershipCrManifest, membershipResources, resourceOptions);
         }

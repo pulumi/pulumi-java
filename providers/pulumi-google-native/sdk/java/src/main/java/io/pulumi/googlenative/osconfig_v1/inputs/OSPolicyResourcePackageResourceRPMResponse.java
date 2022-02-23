@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
      * 
      */
     @InputImport(name="pullDeps", required=true)
-    private final Boolean pullDeps;
+      private final Boolean pullDeps;
 
     public Boolean getPullDeps() {
         return this.pullDeps;
@@ -33,7 +33,7 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
      * 
      */
     @InputImport(name="source", required=true)
-    private final OSPolicyResourceFileResponse source;
+      private final OSPolicyResourceFileResponse source;
 
     public OSPolicyResourceFileResponse getSource() {
         return this.source;
@@ -82,7 +82,6 @@ public final class OSPolicyResourcePackageResourceRPMResponse extends io.pulumi.
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public OSPolicyResourcePackageResourceRPMResponse build() {
             return new OSPolicyResourcePackageResourceRPMResponse(pullDeps, source);
         }

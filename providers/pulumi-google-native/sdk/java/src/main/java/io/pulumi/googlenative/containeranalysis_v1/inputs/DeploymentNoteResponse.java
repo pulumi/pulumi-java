@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeploymentNoteResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final List<String> resourceUri;
+      private final List<String> resourceUri;
 
     public List<String> getResourceUri() {
         return this.resourceUri;
@@ -60,7 +60,6 @@ public final class DeploymentNoteResponse extends io.pulumi.resources.InvokeArgs
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public DeploymentNoteResponse build() {
             return new DeploymentNoteResponse(resourceUri);
         }

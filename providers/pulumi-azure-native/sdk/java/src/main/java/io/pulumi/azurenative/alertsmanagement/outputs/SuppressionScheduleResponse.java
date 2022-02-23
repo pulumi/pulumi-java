@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -141,7 +141,6 @@ public final class SuppressionScheduleResponse {
             this.startTime = startTime;
             return this;
         }
-
         public SuppressionScheduleResponse build() {
             return new SuppressionScheduleResponse(endDate, endTime, recurrenceValues, startDate, startTime);
         }

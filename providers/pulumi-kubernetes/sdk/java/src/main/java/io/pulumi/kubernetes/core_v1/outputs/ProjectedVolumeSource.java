@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.VolumeProjection;
 import java.lang.Integer;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class ProjectedVolumeSource {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public ProjectedVolumeSource build() {
             return new ProjectedVolumeSource(defaultMode, sources);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs;
@@ -28,7 +28,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="corsPolicy")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs> corsPolicy;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs> corsPolicy;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionCorsPolicyArgs> getCorsPolicy() {
         return this.corsPolicy == null ? Input.empty() : this.corsPolicy;
@@ -46,7 +46,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="faultInjectionPolicy")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs> faultInjectionPolicy;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionFaultInjectionPolicyArgs> getFaultInjectionPolicy() {
         return this.faultInjectionPolicy == null ? Input.empty() : this.faultInjectionPolicy;
@@ -61,7 +61,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="requestMirrorPolicy")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs> requestMirrorPolicy;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionRequestMirrorPolicyArgs> getRequestMirrorPolicy() {
         return this.requestMirrorPolicy == null ? Input.empty() : this.requestMirrorPolicy;
@@ -73,7 +73,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs> retryPolicy;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs> retryPolicy;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionRetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -88,7 +88,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs> timeout;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs> timeout;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionTimeoutArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -101,7 +101,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="urlRewrite")
-    private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs> urlRewrite;
+        private final @Nullable Input<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs> urlRewrite;
 
     public Input<RegionUrlMapPathMatcherPathRuleRouteActionUrlRewriteArgs> getUrlRewrite() {
         return this.urlRewrite == null ? Input.empty() : this.urlRewrite;
@@ -120,7 +120,7 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
      * 
      */
     @InputImport(name="weightedBackendServices")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs>> weightedBackendServices;
 
     public Input<List<RegionUrlMapPathMatcherPathRuleRouteActionWeightedBackendServiceArgs>> getWeightedBackendServices() {
         return this.weightedBackendServices == null ? Input.empty() : this.weightedBackendServices;
@@ -254,7 +254,6 @@ public final class RegionUrlMapPathMatcherPathRuleRouteActionArgs extends io.pul
             this.weightedBackendServices = Input.ofNullable(weightedBackendServices);
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRuleRouteActionArgs build() {
             return new RegionUrlMapPathMatcherPathRuleRouteActionArgs(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

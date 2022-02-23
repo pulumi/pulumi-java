@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceConversion;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionNames;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionVersion;
@@ -165,7 +165,6 @@ public final class CustomResourceDefinitionSpec {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public CustomResourceDefinitionSpec build() {
             return new CustomResourceDefinitionSpec(conversion, group, names, preserveUnknownFields, scope, versions);
         }

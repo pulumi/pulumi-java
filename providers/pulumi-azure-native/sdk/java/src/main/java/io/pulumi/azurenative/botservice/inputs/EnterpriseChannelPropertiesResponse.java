@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EnterpriseChannelPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="nodes", required=true)
-    private final List<EnterpriseChannelNodeResponse> nodes;
+        private final List<EnterpriseChannelNodeResponse> nodes;
 
     public List<EnterpriseChannelNodeResponse> getNodes() {
         return this.nodes;
@@ -36,7 +36,7 @@ public final class EnterpriseChannelPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -85,7 +85,6 @@ public final class EnterpriseChannelPropertiesResponse extends io.pulumi.resourc
             this.state = state;
             return this;
         }
-
         public EnterpriseChannelPropertiesResponse build() {
             return new EnterpriseChannelPropertiesResponse(nodes, state);
         }

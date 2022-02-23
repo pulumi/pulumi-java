@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appplatform.inputs.GatewayInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.GatewayOperatorPropertiesResponse;
 import io.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="apiMetadataProperties")
-    private final @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties;
+        private final @Nullable GatewayApiMetadataPropertiesResponse apiMetadataProperties;
 
     public Optional<GatewayApiMetadataPropertiesResponse> getApiMetadataProperties() {
         return this.apiMetadataProperties == null ? Optional.empty() : Optional.ofNullable(this.apiMetadataProperties);
@@ -42,7 +42,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="corsProperties")
-    private final @Nullable GatewayCorsPropertiesResponse corsProperties;
+        private final @Nullable GatewayCorsPropertiesResponse corsProperties;
 
     public Optional<GatewayCorsPropertiesResponse> getCorsProperties() {
         return this.corsProperties == null ? Optional.empty() : Optional.ofNullable(this.corsProperties);
@@ -53,7 +53,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Boolean httpsOnly;
+        private final @Nullable Boolean httpsOnly;
 
     public Optional<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Optional.empty() : Optional.ofNullable(this.httpsOnly);
@@ -64,7 +64,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<GatewayInstanceResponse> instances;
+        private final List<GatewayInstanceResponse> instances;
 
     public List<GatewayInstanceResponse> getInstances() {
         return this.instances;
@@ -75,7 +75,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="operatorProperties", required=true)
-    private final GatewayOperatorPropertiesResponse operatorProperties;
+        private final GatewayOperatorPropertiesResponse operatorProperties;
 
     public GatewayOperatorPropertiesResponse getOperatorProperties() {
         return this.operatorProperties;
@@ -86,7 +86,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -97,7 +97,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Boolean $public;
+        private final @Nullable Boolean $public;
 
     public Optional<Boolean> get$public() {
         return this.$public == null ? Optional.empty() : Optional.ofNullable(this.$public);
@@ -108,7 +108,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceRequests")
-    private final @Nullable GatewayResourceRequestsResponse resourceRequests;
+        private final @Nullable GatewayResourceRequestsResponse resourceRequests;
 
     public Optional<GatewayResourceRequestsResponse> getResourceRequests() {
         return this.resourceRequests == null ? Optional.empty() : Optional.ofNullable(this.resourceRequests);
@@ -119,7 +119,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ssoProperties")
-    private final @Nullable SsoPropertiesResponse ssoProperties;
+        private final @Nullable SsoPropertiesResponse ssoProperties;
 
     public Optional<SsoPropertiesResponse> getSsoProperties() {
         return this.ssoProperties == null ? Optional.empty() : Optional.ofNullable(this.ssoProperties);
@@ -130,7 +130,7 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -259,7 +259,6 @@ public final class GatewayPropertiesResponse extends io.pulumi.resources.InvokeA
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GatewayPropertiesResponse build() {
             return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, $public, resourceRequests, ssoProperties, url);
         }

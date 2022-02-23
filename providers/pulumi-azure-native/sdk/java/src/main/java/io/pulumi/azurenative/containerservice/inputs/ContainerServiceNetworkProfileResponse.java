@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterLoadBalancerProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dnsServiceIP")
-    private final @Nullable String dnsServiceIP;
+        private final @Nullable String dnsServiceIP;
 
     public Optional<String> getDnsServiceIP() {
         return this.dnsServiceIP == null ? Optional.empty() : Optional.ofNullable(this.dnsServiceIP);
@@ -35,7 +35,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dockerBridgeCidr")
-    private final @Nullable String dockerBridgeCidr;
+        private final @Nullable String dockerBridgeCidr;
 
     public Optional<String> getDockerBridgeCidr() {
         return this.dockerBridgeCidr == null ? Optional.empty() : Optional.ofNullable(this.dockerBridgeCidr);
@@ -46,7 +46,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="loadBalancerProfile")
-    private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
+        private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
 
     public Optional<ManagedClusterLoadBalancerProfileResponse> getLoadBalancerProfile() {
         return this.loadBalancerProfile == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerProfile);
@@ -57,7 +57,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="loadBalancerSku")
-    private final @Nullable String loadBalancerSku;
+        private final @Nullable String loadBalancerSku;
 
     public Optional<String> getLoadBalancerSku() {
         return this.loadBalancerSku == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerSku);
@@ -68,7 +68,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkMode")
-    private final @Nullable String networkMode;
+        private final @Nullable String networkMode;
 
     public Optional<String> getNetworkMode() {
         return this.networkMode == null ? Optional.empty() : Optional.ofNullable(this.networkMode);
@@ -79,7 +79,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkPlugin")
-    private final @Nullable String networkPlugin;
+        private final @Nullable String networkPlugin;
 
     public Optional<String> getNetworkPlugin() {
         return this.networkPlugin == null ? Optional.empty() : Optional.ofNullable(this.networkPlugin);
@@ -90,7 +90,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkPolicy")
-    private final @Nullable String networkPolicy;
+        private final @Nullable String networkPolicy;
 
     public Optional<String> getNetworkPolicy() {
         return this.networkPolicy == null ? Optional.empty() : Optional.ofNullable(this.networkPolicy);
@@ -101,7 +101,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="outboundType")
-    private final @Nullable String outboundType;
+        private final @Nullable String outboundType;
 
     public Optional<String> getOutboundType() {
         return this.outboundType == null ? Optional.empty() : Optional.ofNullable(this.outboundType);
@@ -112,7 +112,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="podCidr")
-    private final @Nullable String podCidr;
+        private final @Nullable String podCidr;
 
     public Optional<String> getPodCidr() {
         return this.podCidr == null ? Optional.empty() : Optional.ofNullable(this.podCidr);
@@ -123,7 +123,7 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="serviceCidr")
-    private final @Nullable String serviceCidr;
+        private final @Nullable String serviceCidr;
 
     public Optional<String> getServiceCidr() {
         return this.serviceCidr == null ? Optional.empty() : Optional.ofNullable(this.serviceCidr);
@@ -252,7 +252,6 @@ public final class ContainerServiceNetworkProfileResponse extends io.pulumi.reso
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public ContainerServiceNetworkProfileResponse build() {
             return new ContainerServiceNetworkProfileResponse(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
         }

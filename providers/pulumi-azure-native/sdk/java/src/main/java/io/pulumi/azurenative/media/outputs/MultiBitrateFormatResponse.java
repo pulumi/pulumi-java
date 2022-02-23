@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.OutputFileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class MultiBitrateFormatResponse {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public MultiBitrateFormatResponse build() {
             return new MultiBitrateFormatResponse(filenamePattern, odataType, outputFiles);
         }

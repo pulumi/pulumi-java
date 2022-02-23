@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+        private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
 
     public Input<EnabledProtocolsArgs> getEnabledProtocols() {
         return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
@@ -66,7 +66,6 @@ public final class NoEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.enabledProtocols = Input.ofNullable(enabledProtocols);
             return this;
         }
-
         public NoEncryptionArgs build() {
             return new NoEncryptionArgs(enabledProtocols);
         }

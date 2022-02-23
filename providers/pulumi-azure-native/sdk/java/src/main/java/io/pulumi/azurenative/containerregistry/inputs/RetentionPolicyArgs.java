@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.PolicyStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+        private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;
@@ -37,7 +37,7 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PolicyStatus>> status;
+        private final @Nullable Input<Either<String,PolicyStatus>> status;
 
     public Input<Either<String,PolicyStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -96,7 +96,6 @@ public final class RetentionPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public RetentionPolicyArgs build() {
             return new RetentionPolicyArgs(days, status);
         }

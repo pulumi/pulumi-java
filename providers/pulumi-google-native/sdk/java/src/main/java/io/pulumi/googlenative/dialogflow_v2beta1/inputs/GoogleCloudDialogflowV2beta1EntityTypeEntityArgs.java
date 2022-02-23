@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityArgs extends io.p
      * 
      */
     @InputImport(name="synonyms", required=true)
-    private final Input<List<String>> synonyms;
+      private final Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityArgs extends io.p
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1EntityTypeEntityArgs extends io.p
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1EntityTypeEntityArgs build() {
             return new GoogleCloudDialogflowV2beta1EntityTypeEntityArgs(synonyms, value);
         }

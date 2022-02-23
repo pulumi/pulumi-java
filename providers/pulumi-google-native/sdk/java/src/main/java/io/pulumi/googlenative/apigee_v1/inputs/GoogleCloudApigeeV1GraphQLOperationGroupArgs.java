@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
      * 
      */
     @InputImport(name="operationConfigType")
-    private final @Nullable Input<String> operationConfigType;
+      private final @Nullable Input<String> operationConfigType;
 
     public Input<String> getOperationConfigType() {
         return this.operationConfigType == null ? Input.empty() : this.operationConfigType;
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
      * 
      */
     @InputImport(name="operationConfigs", required=true)
-    private final Input<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs;
+      private final Input<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> operationConfigs;
 
     public Input<List<GoogleCloudApigeeV1GraphQLOperationConfigArgs>> getOperationConfigs() {
         return this.operationConfigs;
@@ -95,7 +95,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupArgs extends io.pulum
             this.operationConfigs = Input.of(Objects.requireNonNull(operationConfigs));
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationGroupArgs build() {
             return new GoogleCloudApigeeV1GraphQLOperationGroupArgs(operationConfigType, operationConfigs);
         }

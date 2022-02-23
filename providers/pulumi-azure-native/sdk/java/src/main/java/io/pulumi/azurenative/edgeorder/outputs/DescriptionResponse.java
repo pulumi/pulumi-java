@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.outputs;
 
 import io.pulumi.azurenative.edgeorder.outputs.LinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -160,7 +160,6 @@ public final class DescriptionResponse {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public DescriptionResponse build() {
             return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
         }

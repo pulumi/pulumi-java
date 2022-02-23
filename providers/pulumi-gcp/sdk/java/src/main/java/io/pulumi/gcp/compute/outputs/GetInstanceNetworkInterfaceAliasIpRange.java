@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -78,7 +78,6 @@ public final class GetInstanceNetworkInterfaceAliasIpRange {
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }
-
         public GetInstanceNetworkInterfaceAliasIpRange build() {
             return new GetInstanceNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }

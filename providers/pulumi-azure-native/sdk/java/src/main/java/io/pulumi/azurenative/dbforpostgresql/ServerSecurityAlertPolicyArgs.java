@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbforpostgresql;
 
 import io.pulumi.azurenative.dbforpostgresql.enums.ServerSecurityAlertPolicyState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="disabledAlerts")
-    private final @Nullable Input<List<String>> disabledAlerts;
+        private final @Nullable Input<List<String>> disabledAlerts;
 
     public Input<List<String>> getDisabledAlerts() {
         return this.disabledAlerts == null ? Input.empty() : this.disabledAlerts;
@@ -34,7 +34,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="emailAccountAdmins")
-    private final @Nullable Input<Boolean> emailAccountAdmins;
+        private final @Nullable Input<Boolean> emailAccountAdmins;
 
     public Input<Boolean> getEmailAccountAdmins() {
         return this.emailAccountAdmins == null ? Input.empty() : this.emailAccountAdmins;
@@ -45,7 +45,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="emailAddresses")
-    private final @Nullable Input<List<String>> emailAddresses;
+        private final @Nullable Input<List<String>> emailAddresses;
 
     public Input<List<String>> getEmailAddresses() {
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
@@ -56,7 +56,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+        private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -78,7 +78,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="securityAlertPolicyName")
-    private final @Nullable Input<String> securityAlertPolicyName;
+        private final @Nullable Input<String> securityAlertPolicyName;
 
     public Input<String> getSecurityAlertPolicyName() {
         return this.securityAlertPolicyName == null ? Input.empty() : this.securityAlertPolicyName;
@@ -89,7 +89,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -100,7 +100,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<ServerSecurityAlertPolicyState> state;
+        private final Input<ServerSecurityAlertPolicyState> state;
 
     public Input<ServerSecurityAlertPolicyState> getState() {
         return this.state;
@@ -111,7 +111,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageAccountAccessKey")
-    private final @Nullable Input<String> storageAccountAccessKey;
+        private final @Nullable Input<String> storageAccountAccessKey;
 
     public Input<String> getStorageAccountAccessKey() {
         return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
@@ -122,7 +122,7 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageEndpoint")
-    private final @Nullable Input<String> storageEndpoint;
+        private final @Nullable Input<String> storageEndpoint;
 
     public Input<String> getStorageEndpoint() {
         return this.storageEndpoint == null ? Input.empty() : this.storageEndpoint;
@@ -301,7 +301,6 @@ public final class ServerSecurityAlertPolicyArgs extends io.pulumi.resources.Res
             this.storageEndpoint = Input.ofNullable(storageEndpoint);
             return this;
         }
-
         public ServerSecurityAlertPolicyArgs build() {
             return new ServerSecurityAlertPolicyArgs(disabledAlerts, emailAccountAdmins, emailAddresses, resourceGroupName, retentionDays, securityAlertPolicyName, serverName, state, storageAccountAccessKey, storageEndpoint);
         }

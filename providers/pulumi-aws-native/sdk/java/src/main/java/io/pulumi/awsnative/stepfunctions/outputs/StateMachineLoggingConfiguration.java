@@ -5,7 +5,7 @@ package io.pulumi.awsnative.stepfunctions.outputs;
 
 import io.pulumi.awsnative.stepfunctions.enums.StateMachineLoggingConfigurationLevel;
 import io.pulumi.awsnative.stepfunctions.outputs.StateMachineLogDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class StateMachineLoggingConfiguration {
             this.level = level;
             return this;
         }
-
         public StateMachineLoggingConfiguration build() {
             return new StateMachineLoggingConfiguration(destinations, includeExecutionData, level);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NsgSecurityRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -37,7 +37,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="securityRules")
-    private final @Nullable List<NsgSecurityRuleResponse> securityRules;
+        private final @Nullable List<NsgSecurityRuleResponse> securityRules;
 
     public List<NsgSecurityRuleResponse> getSecurityRules() {
         return this.securityRules == null ? List.of() : this.securityRules;
@@ -48,7 +48,7 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final String targetResourceName;
+        private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -107,7 +107,6 @@ public final class NetworkSecurityGroupResourceSettingsResponse extends io.pulum
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public NetworkSecurityGroupResourceSettingsResponse build() {
             return new NetworkSecurityGroupResourceSettingsResponse(resourceType, securityRules, targetResourceName);
         }

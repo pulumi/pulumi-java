@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.SubnetSharedPublicIpAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -161,7 +161,6 @@ public final class SubnetOverrideResponse {
             this.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }
-
         public SubnetOverrideResponse build() {
             return new SubnetOverrideResponse(labSubnetName, resourceId, sharedPublicIpAddressConfiguration, useInVmCreationPermission, usePublicIpAddressPermission, virtualNetworkPoolName);
         }

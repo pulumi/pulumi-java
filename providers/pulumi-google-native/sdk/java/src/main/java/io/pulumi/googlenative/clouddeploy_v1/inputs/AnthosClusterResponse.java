@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="membership", required=true)
-    private final String membership;
+      private final String membership;
 
     public String getMembership() {
         return this.membership;
@@ -59,7 +59,6 @@ public final class AnthosClusterResponse extends io.pulumi.resources.InvokeArgs 
             this.membership = Objects.requireNonNull(membership);
             return this;
         }
-
         public AnthosClusterResponse build() {
             return new AnthosClusterResponse(membership);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confluent.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class OrganizationResourcePropertiesResponseOfferDetail {
             this.termUnit = termUnit;
             return this;
         }
-
         public OrganizationResourcePropertiesResponseOfferDetail build() {
             return new OrganizationResourcePropertiesResponseOfferDetail(id, planId, planName, publisherId, status, termUnit);
         }

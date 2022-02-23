@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -306,7 +306,6 @@ public final class GetHttpsHealthCheckResult {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public GetHttpsHealthCheckResult build() {
             return new GetHttpsHealthCheckResult(checkIntervalSec, creationTimestamp, description, healthyThreshold, host, kind, name, port, requestPath, selfLink, selfLinkWithId, timeoutSec, unhealthyThreshold);
         }

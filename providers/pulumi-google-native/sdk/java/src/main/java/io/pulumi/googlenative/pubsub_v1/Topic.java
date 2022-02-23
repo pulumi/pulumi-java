@@ -5,8 +5,8 @@ package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.TopicArgs;
 import io.pulumi.googlenative.pubsub_v1.outputs.MessageStoragePolicyResponse;
@@ -121,13 +121,6 @@ public class Topic extends io.pulumi.resources.CustomResource {
         return this.schemaSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Topic(String name) {
-        super("google-native:pubsub/v1:Topic", name, TopicArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

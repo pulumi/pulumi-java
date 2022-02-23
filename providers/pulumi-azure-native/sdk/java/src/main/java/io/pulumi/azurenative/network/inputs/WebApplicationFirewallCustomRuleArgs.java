@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallRuleType;
 import io.pulumi.azurenative.network.inputs.MatchConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<Either<String,WebApplicationFirewallAction>> action;
+        private final Input<Either<String,WebApplicationFirewallAction>> action;
 
     public Input<Either<String,WebApplicationFirewallAction>> getAction() {
         return this.action;
@@ -40,7 +40,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="matchConditions", required=true)
-    private final Input<List<MatchConditionArgs>> matchConditions;
+        private final Input<List<MatchConditionArgs>> matchConditions;
 
     public Input<List<MatchConditionArgs>> getMatchConditions() {
         return this.matchConditions;
@@ -51,7 +51,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -73,7 +73,7 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ruleType", required=true)
-    private final Input<Either<String,WebApplicationFirewallRuleType>> ruleType;
+        private final Input<Either<String,WebApplicationFirewallRuleType>> ruleType;
 
     public Input<Either<String,WebApplicationFirewallRuleType>> getRuleType() {
         return this.ruleType;
@@ -177,7 +177,6 @@ public final class WebApplicationFirewallCustomRuleArgs extends io.pulumi.resour
             this.ruleType = Input.of(Objects.requireNonNull(ruleType));
             return this;
         }
-
         public WebApplicationFirewallCustomRuleArgs build() {
             return new WebApplicationFirewallCustomRuleArgs(action, matchConditions, name, priority, ruleType);
         }

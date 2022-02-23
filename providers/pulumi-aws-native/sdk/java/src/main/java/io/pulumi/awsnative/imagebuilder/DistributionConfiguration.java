@@ -8,8 +8,8 @@ import io.pulumi.awsnative.imagebuilder.DistributionConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistribution;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -92,13 +92,6 @@ public class DistributionConfiguration extends io.pulumi.resources.CustomResourc
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DistributionConfiguration(String name) {
-        super("aws-native:imagebuilder:DistributionConfiguration", name, DistributionConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

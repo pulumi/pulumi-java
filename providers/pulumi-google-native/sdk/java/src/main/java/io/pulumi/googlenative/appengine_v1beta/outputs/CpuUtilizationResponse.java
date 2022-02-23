@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class CpuUtilizationResponse {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public CpuUtilizationResponse build() {
             return new CpuUtilizationResponse(aggregationWindowLength, targetUtilization);
         }

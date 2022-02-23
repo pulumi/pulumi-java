@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.ResourceReference;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="contactProfile", required=true)
-    private final ResourceReference contactProfile;
+        private final ResourceReference contactProfile;
 
     public ResourceReference getContactProfile() {
         return this.contactProfile;
@@ -29,7 +29,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+        private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -40,7 +40,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="groundStationName", required=true)
-    private final String groundStationName;
+        private final String groundStationName;
 
     public String getGroundStationName() {
         return this.groundStationName;
@@ -51,7 +51,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -62,7 +62,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="spacecraftName", required=true)
-    private final String spacecraftName;
+        private final String spacecraftName;
 
     public String getSpacecraftName() {
         return this.spacecraftName;
@@ -73,7 +73,7 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -162,7 +162,6 @@ public final class ListSpacecraftAvailableContactsArgs extends io.pulumi.resourc
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ListSpacecraftAvailableContactsArgs build() {
             return new ListSpacecraftAvailableContactsArgs(contactProfile, endTime, groundStationName, resourceGroupName, spacecraftName, startTime);
         }

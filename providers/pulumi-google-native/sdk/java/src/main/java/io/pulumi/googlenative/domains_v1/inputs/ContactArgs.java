@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1.inputs.PostalAddressArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final Input<String> email;
+      private final Input<String> email;
 
     public Input<String> getEmail() {
         return this.email;
@@ -35,7 +35,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="faxNumber")
-    private final @Nullable Input<String> faxNumber;
+      private final @Nullable Input<String> faxNumber;
 
     public Input<String> getFaxNumber() {
         return this.faxNumber == null ? Input.empty() : this.faxNumber;
@@ -46,7 +46,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final Input<String> phoneNumber;
+      private final Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber;
@@ -57,7 +57,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalAddress", required=true)
-    private final Input<PostalAddressArgs> postalAddress;
+      private final Input<PostalAddressArgs> postalAddress;
 
     public Input<PostalAddressArgs> getPostalAddress() {
         return this.postalAddress;
@@ -146,7 +146,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.postalAddress = Input.of(Objects.requireNonNull(postalAddress));
             return this;
         }
-
         public ContactArgs build() {
             return new ContactArgs(email, faxNumber, phoneNumber, postalAddress);
         }

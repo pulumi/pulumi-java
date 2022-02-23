@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse {
             this.supportsWorkProfile = Objects.requireNonNull(supportsWorkProfile);
             return this;
         }
-
         public GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse build() {
             return new GoogleAppsCloudidentityDevicesV1AndroidAttributesResponse(enabledUnknownSources, ownerProfileAccount, ownershipPrivilege, supportsWorkProfile);
         }

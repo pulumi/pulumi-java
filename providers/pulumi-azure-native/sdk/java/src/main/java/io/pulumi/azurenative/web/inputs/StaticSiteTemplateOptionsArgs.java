@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="isPrivate")
-    private final @Nullable Input<Boolean> isPrivate;
+        private final @Nullable Input<Boolean> isPrivate;
 
     public Input<Boolean> getIsPrivate() {
         return this.isPrivate == null ? Input.empty() : this.isPrivate;
@@ -46,7 +46,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+        private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -57,7 +57,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+        private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -68,7 +68,7 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="templateRepositoryUrl")
-    private final @Nullable Input<String> templateRepositoryUrl;
+        private final @Nullable Input<String> templateRepositoryUrl;
 
     public Input<String> getTemplateRepositoryUrl() {
         return this.templateRepositoryUrl == null ? Input.empty() : this.templateRepositoryUrl;
@@ -172,7 +172,6 @@ public final class StaticSiteTemplateOptionsArgs extends io.pulumi.resources.Res
             this.templateRepositoryUrl = Input.ofNullable(templateRepositoryUrl);
             return this;
         }
-
         public StaticSiteTemplateOptionsArgs build() {
             return new StaticSiteTemplateOptionsArgs(description, isPrivate, owner, repositoryName, templateRepositoryUrl);
         }

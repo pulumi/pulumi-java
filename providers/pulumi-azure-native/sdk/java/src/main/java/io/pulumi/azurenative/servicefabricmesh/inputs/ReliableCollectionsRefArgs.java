@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="doNotPersistState")
-    private final @Nullable Input<Boolean> doNotPersistState;
+        private final @Nullable Input<Boolean> doNotPersistState;
 
     public Input<Boolean> getDoNotPersistState() {
         return this.doNotPersistState == null ? Input.empty() : this.doNotPersistState;
@@ -35,7 +35,7 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -94,7 +94,6 @@ public final class ReliableCollectionsRefArgs extends io.pulumi.resources.Resour
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ReliableCollectionsRefArgs build() {
             return new ReliableCollectionsRefArgs(doNotPersistState, name);
         }

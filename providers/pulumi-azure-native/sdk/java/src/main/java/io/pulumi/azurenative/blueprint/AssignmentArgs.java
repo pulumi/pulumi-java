@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.blueprint.inputs.ParameterValueArgs;
 import io.pulumi.azurenative.blueprint.inputs.ResourceGroupValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignmentName")
-    private final @Nullable Input<String> assignmentName;
+        private final @Nullable Input<String> assignmentName;
 
     public Input<String> getAssignmentName() {
         return this.assignmentName == null ? Input.empty() : this.assignmentName;
@@ -35,7 +35,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blueprintId")
-    private final @Nullable Input<String> blueprintId;
+        private final @Nullable Input<String> blueprintId;
 
     public Input<String> getBlueprintId() {
         return this.blueprintId == null ? Input.empty() : this.blueprintId;
@@ -46,7 +46,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -68,7 +68,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity", required=true)
-    private final Input<ManagedServiceIdentityArgs> identity;
+        private final Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity;
@@ -79,7 +79,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locks")
-    private final @Nullable Input<AssignmentLockSettingsArgs> locks;
+        private final @Nullable Input<AssignmentLockSettingsArgs> locks;
 
     public Input<AssignmentLockSettingsArgs> getLocks() {
         return this.locks == null ? Input.empty() : this.locks;
@@ -101,7 +101,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<Map<String,ParameterValueArgs>> parameters;
+        private final Input<Map<String,ParameterValueArgs>> parameters;
 
     public Input<Map<String,ParameterValueArgs>> getParameters() {
         return this.parameters;
@@ -112,7 +112,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroups", required=true)
-    private final Input<Map<String,ResourceGroupValueArgs>> resourceGroups;
+        private final Input<Map<String,ResourceGroupValueArgs>> resourceGroups;
 
     public Input<Map<String,ResourceGroupValueArgs>> getResourceGroups() {
         return this.resourceGroups;
@@ -123,7 +123,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final Input<String> resourceScope;
+        private final Input<String> resourceScope;
 
     public Input<String> getResourceScope() {
         return this.resourceScope;
@@ -134,7 +134,7 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+        private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -328,7 +328,6 @@ public final class AssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public AssignmentArgs build() {
             return new AssignmentArgs(assignmentName, blueprintId, description, displayName, identity, location, locks, parameters, resourceGroups, resourceScope, scope);
         }

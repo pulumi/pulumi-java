@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final String labelName;
+      private final String labelName;
 
     public String getLabelName() {
         return this.labelName;
@@ -32,7 +32,7 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="labelValue", required=true)
-    private final String labelValue;
+      private final String labelValue;
 
     public String getLabelValue() {
         return this.labelValue;
@@ -81,7 +81,6 @@ public final class MetadataLabelsResponse extends io.pulumi.resources.InvokeArgs
             this.labelValue = Objects.requireNonNull(labelValue);
             return this;
         }
-
         public MetadataLabelsResponse build() {
             return new MetadataLabelsResponse(labelName, labelValue);
         }

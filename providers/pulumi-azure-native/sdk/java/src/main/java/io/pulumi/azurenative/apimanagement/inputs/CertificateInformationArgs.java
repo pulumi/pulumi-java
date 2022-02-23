@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="expiry", required=true)
-    private final Input<String> expiry;
+        private final Input<String> expiry;
 
     public Input<String> getExpiry() {
         return this.expiry;
@@ -33,7 +33,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subject", required=true)
-    private final Input<String> subject;
+        private final Input<String> subject;
 
     public Input<String> getSubject() {
         return this.subject;
@@ -44,7 +44,7 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final Input<String> thumbprint;
+        private final Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint;
@@ -118,7 +118,6 @@ public final class CertificateInformationArgs extends io.pulumi.resources.Resour
             this.thumbprint = Input.of(Objects.requireNonNull(thumbprint));
             return this;
         }
-
         public CertificateInformationArgs build() {
             return new CertificateInformationArgs(expiry, subject, thumbprint);
         }

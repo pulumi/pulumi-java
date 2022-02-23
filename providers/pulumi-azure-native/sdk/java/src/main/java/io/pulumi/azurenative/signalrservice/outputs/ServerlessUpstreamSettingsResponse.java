@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.signalrservice.outputs;
 
 import io.pulumi.azurenative.signalrservice.outputs.UpstreamTemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ServerlessUpstreamSettingsResponse {
             this.templates = templates;
             return this;
         }
-
         public ServerlessUpstreamSettingsResponse build() {
             return new ServerlessUpstreamSettingsResponse(templates);
         }

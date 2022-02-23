@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimCondition;
 import java.lang.String;
 import java.util.List;
@@ -173,7 +173,6 @@ public final class PersistentVolumeClaimStatus {
             this.resizeStatus = resizeStatus;
             return this;
         }
-
         public PersistentVolumeClaimStatus build() {
             return new PersistentVolumeClaimStatus(accessModes, allocatedResources, capacity, conditions, phase, resizeStatus);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.IotDpsPropertiesDescriptionResponse;
 import io.pulumi.azurenative.devices.outputs.IotDpsSkuInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetIotDpsResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotDpsResourceResult build() {
             return new GetIotDpsResourceResult(etag, id, location, name, properties, sku, tags, type);
         }

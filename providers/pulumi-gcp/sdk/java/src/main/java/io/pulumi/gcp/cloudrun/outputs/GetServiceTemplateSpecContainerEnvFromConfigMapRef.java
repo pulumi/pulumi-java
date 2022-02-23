@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReference;
 import java.lang.Boolean;
 import java.util.List;
@@ -60,7 +60,6 @@ public final class GetServiceTemplateSpecContainerEnvFromConfigMapRef {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromConfigMapRef build() {
             return new GetServiceTemplateSpecContainerEnvFromConfigMapRef(localObjectReferences, optional);
         }

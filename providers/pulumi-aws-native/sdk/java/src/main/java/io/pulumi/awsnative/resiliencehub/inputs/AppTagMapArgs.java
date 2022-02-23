@@ -30,7 +30,6 @@ public final class AppTagMapArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(AppTagMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppTagMapArgs build() {
             return new AppTagMapArgs();
         }

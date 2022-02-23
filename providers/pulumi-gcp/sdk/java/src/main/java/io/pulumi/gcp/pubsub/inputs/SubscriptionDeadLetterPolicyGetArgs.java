@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deadLetterTopic")
-    private final @Nullable Input<String> deadLetterTopic;
+        private final @Nullable Input<String> deadLetterTopic;
 
     public Input<String> getDeadLetterTopic() {
         return this.deadLetterTopic == null ? Input.empty() : this.deadLetterTopic;
@@ -46,7 +46,7 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxDeliveryAttempts")
-    private final @Nullable Input<Integer> maxDeliveryAttempts;
+        private final @Nullable Input<Integer> maxDeliveryAttempts;
 
     public Input<Integer> getMaxDeliveryAttempts() {
         return this.maxDeliveryAttempts == null ? Input.empty() : this.maxDeliveryAttempts;
@@ -105,7 +105,6 @@ public final class SubscriptionDeadLetterPolicyGetArgs extends io.pulumi.resourc
             this.maxDeliveryAttempts = Input.ofNullable(maxDeliveryAttempts);
             return this;
         }
-
         public SubscriptionDeadLetterPolicyGetArgs build() {
             return new SubscriptionDeadLetterPolicyGetArgs(deadLetterTopic, maxDeliveryAttempts);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.enums.VideoSyncMode;
 import io.pulumi.azurenative.media.inputs.H264LayerArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="complexity")
-    private final @Nullable Input<Either<String,H264Complexity>> complexity;
+        private final @Nullable Input<Either<String,H264Complexity>> complexity;
 
     public Input<Either<String,H264Complexity>> getComplexity() {
         return this.complexity == null ? Input.empty() : this.complexity;
@@ -41,7 +41,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyFrameInterval")
-    private final @Nullable Input<String> keyFrameInterval;
+        private final @Nullable Input<String> keyFrameInterval;
 
     public Input<String> getKeyFrameInterval() {
         return this.keyFrameInterval == null ? Input.empty() : this.keyFrameInterval;
@@ -52,7 +52,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -63,7 +63,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="layers")
-    private final @Nullable Input<List<H264LayerArgs>> layers;
+        private final @Nullable Input<List<H264LayerArgs>> layers;
 
     public Input<List<H264LayerArgs>> getLayers() {
         return this.layers == null ? Input.empty() : this.layers;
@@ -75,7 +75,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -86,7 +86,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sceneChangeDetection")
-    private final @Nullable Input<Boolean> sceneChangeDetection;
+        private final @Nullable Input<Boolean> sceneChangeDetection;
 
     public Input<Boolean> getSceneChangeDetection() {
         return this.sceneChangeDetection == null ? Input.empty() : this.sceneChangeDetection;
@@ -97,7 +97,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stretchMode")
-    private final @Nullable Input<Either<String,StretchMode>> stretchMode;
+        private final @Nullable Input<Either<String,StretchMode>> stretchMode;
 
     public Input<Either<String,StretchMode>> getStretchMode() {
         return this.stretchMode == null ? Input.empty() : this.stretchMode;
@@ -108,7 +108,7 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncMode")
-    private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
+        private final @Nullable Input<Either<String,VideoSyncMode>> syncMode;
 
     public Input<Either<String,VideoSyncMode>> getSyncMode() {
         return this.syncMode == null ? Input.empty() : this.syncMode;
@@ -257,7 +257,6 @@ public final class H264VideoArgs extends io.pulumi.resources.ResourceArgs {
             this.syncMode = Input.ofNullable(syncMode);
             return this;
         }
-
         public H264VideoArgs build() {
             return new H264VideoArgs(complexity, keyFrameInterval, label, layers, odataType, sceneChangeDetection, stretchMode, syncMode);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.outputs.BotCustomPayload;
 import io.pulumi.awsnative.lex.outputs.BotImageResponseCard;
 import io.pulumi.awsnative.lex.outputs.BotPlainTextMessage;
 import io.pulumi.awsnative.lex.outputs.BotSSMLMessage;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -89,7 +89,6 @@ public final class BotMessage {
             this.sSMLMessage = sSMLMessage;
             return this;
         }
-
         public BotMessage build() {
             return new BotMessage(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+      private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -32,7 +32,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -43,7 +43,7 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -102,7 +102,6 @@ public final class UrlDispatchRuleResponse extends io.pulumi.resources.InvokeArg
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public UrlDispatchRuleResponse build() {
             return new UrlDispatchRuleResponse(domain, path, service);
         }

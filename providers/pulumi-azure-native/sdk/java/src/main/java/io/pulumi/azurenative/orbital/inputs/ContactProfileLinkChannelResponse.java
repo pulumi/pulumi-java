@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.inputs;
 
 import io.pulumi.azurenative.orbital.inputs.EndPointResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="bandwidthMHz", required=true)
-    private final Double bandwidthMHz;
+        private final Double bandwidthMHz;
 
     public Double getBandwidthMHz() {
         return this.bandwidthMHz;
@@ -36,7 +36,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="centerFrequencyMHz", required=true)
-    private final Double centerFrequencyMHz;
+        private final Double centerFrequencyMHz;
 
     public Double getCenterFrequencyMHz() {
         return this.centerFrequencyMHz;
@@ -47,7 +47,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="decodingConfiguration")
-    private final @Nullable String decodingConfiguration;
+        private final @Nullable String decodingConfiguration;
 
     public Optional<String> getDecodingConfiguration() {
         return this.decodingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.decodingConfiguration);
@@ -58,7 +58,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="demodulationConfiguration")
-    private final @Nullable String demodulationConfiguration;
+        private final @Nullable String demodulationConfiguration;
 
     public Optional<String> getDemodulationConfiguration() {
         return this.demodulationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.demodulationConfiguration);
@@ -69,7 +69,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="encodingConfiguration")
-    private final @Nullable String encodingConfiguration;
+        private final @Nullable String encodingConfiguration;
 
     public Optional<String> getEncodingConfiguration() {
         return this.encodingConfiguration == null ? Optional.empty() : Optional.ofNullable(this.encodingConfiguration);
@@ -80,7 +80,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="endPoint", required=true)
-    private final EndPointResponse endPoint;
+        private final EndPointResponse endPoint;
 
     public EndPointResponse getEndPoint() {
         return this.endPoint;
@@ -91,7 +91,7 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="modulationConfiguration")
-    private final @Nullable String modulationConfiguration;
+        private final @Nullable String modulationConfiguration;
 
     public Optional<String> getModulationConfiguration() {
         return this.modulationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.modulationConfiguration);
@@ -190,7 +190,6 @@ public final class ContactProfileLinkChannelResponse extends io.pulumi.resources
             this.modulationConfiguration = modulationConfiguration;
             return this;
         }
-
         public ContactProfileLinkChannelResponse build() {
             return new ContactProfileLinkChannelResponse(bandwidthMHz, centerFrequencyMHz, decodingConfiguration, demodulationConfiguration, encodingConfiguration, endPoint, modulationConfiguration);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.fluidrelay.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class FluidRelayEndpointsResponse {
             this.storageEndpoints = Objects.requireNonNull(storageEndpoints);
             return this;
         }
-
         public FluidRelayEndpointsResponse build() {
             return new FluidRelayEndpointsResponse(ordererEndpoints, storageEndpoints);
         }

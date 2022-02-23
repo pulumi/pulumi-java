@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.AutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicas;
 import java.lang.Integer;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class AutoscalerAutoscalingPolicyScaleInControl {
             this.timeWindowSec = timeWindowSec;
             return this;
         }
-
         public AutoscalerAutoscalingPolicyScaleInControl build() {
             return new AutoscalerAutoscalingPolicyScaleInControl(maxScaledInReplicas, timeWindowSec);
         }

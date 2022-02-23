@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.enums.Operator;
 import io.pulumi.azurenative.insights.inputs.MetricDimensionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="criterionType", required=true)
-    private final Input<String> criterionType;
+        private final Input<String> criterionType;
 
     public Input<String> getCriterionType() {
         return this.criterionType;
@@ -42,7 +42,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<List<MetricDimensionArgs>> dimensions;
+        private final @Nullable Input<List<MetricDimensionArgs>> dimensions;
 
     public Input<List<MetricDimensionArgs>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -53,7 +53,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+        private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -64,7 +64,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable Input<String> metricNamespace;
+        private final @Nullable Input<String> metricNamespace;
 
     public Input<String> getMetricNamespace() {
         return this.metricNamespace == null ? Input.empty() : this.metricNamespace;
@@ -75,7 +75,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -86,7 +86,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,Operator>> operator;
+        private final Input<Either<String,Operator>> operator;
 
     public Input<Either<String,Operator>> getOperator() {
         return this.operator;
@@ -97,7 +97,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipMetricValidation")
-    private final @Nullable Input<Boolean> skipMetricValidation;
+        private final @Nullable Input<Boolean> skipMetricValidation;
 
     public Input<Boolean> getSkipMetricValidation() {
         return this.skipMetricValidation == null ? Input.empty() : this.skipMetricValidation;
@@ -108,7 +108,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Double> threshold;
+        private final Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold;
@@ -119,7 +119,7 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeAggregation", required=true)
-    private final Input<Either<String,AggregationTypeEnum>> timeAggregation;
+        private final Input<Either<String,AggregationTypeEnum>> timeAggregation;
 
     public Input<Either<String,AggregationTypeEnum>> getTimeAggregation() {
         return this.timeAggregation;
@@ -283,7 +283,6 @@ public final class MetricCriteriaArgs extends io.pulumi.resources.ResourceArgs {
             this.timeAggregation = Input.of(Objects.requireNonNull(timeAggregation));
             return this;
         }
-
         public MetricCriteriaArgs build() {
             return new MetricCriteriaArgs(criterionType, dimensions, metricName, metricNamespace, name, operator, skipMetricValidation, threshold, timeAggregation);
         }

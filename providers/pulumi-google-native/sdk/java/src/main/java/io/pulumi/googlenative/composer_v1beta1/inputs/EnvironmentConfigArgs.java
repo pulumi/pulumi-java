@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.enums.EnvironmentConfigEnvironmentSize;
 import io.pulumi.googlenative.composer_v1beta1.inputs.DatabaseConfigArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.EncryptionConfigArgs;
@@ -34,7 +34,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseConfig")
-    private final @Nullable Input<DatabaseConfigArgs> databaseConfig;
+      private final @Nullable Input<DatabaseConfigArgs> databaseConfig;
 
     public Input<DatabaseConfigArgs> getDatabaseConfig() {
         return this.databaseConfig == null ? Input.empty() : this.databaseConfig;
@@ -45,7 +45,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -56,7 +56,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="environmentSize")
-    private final @Nullable Input<EnvironmentConfigEnvironmentSize> environmentSize;
+      private final @Nullable Input<EnvironmentConfigEnvironmentSize> environmentSize;
 
     public Input<EnvironmentConfigEnvironmentSize> getEnvironmentSize() {
         return this.environmentSize == null ? Input.empty() : this.environmentSize;
@@ -67,7 +67,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Input<MaintenanceWindowArgs> maintenanceWindow;
 
     public Input<MaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -78,7 +78,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="masterAuthorizedNetworksConfig")
-    private final @Nullable Input<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
+      private final @Nullable Input<MasterAuthorizedNetworksConfigArgs> masterAuthorizedNetworksConfig;
 
     public Input<MasterAuthorizedNetworksConfigArgs> getMasterAuthorizedNetworksConfig() {
         return this.masterAuthorizedNetworksConfig == null ? Input.empty() : this.masterAuthorizedNetworksConfig;
@@ -89,7 +89,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeConfig")
-    private final @Nullable Input<NodeConfigArgs> nodeConfig;
+      private final @Nullable Input<NodeConfigArgs> nodeConfig;
 
     public Input<NodeConfigArgs> getNodeConfig() {
         return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
@@ -100,7 +100,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="nodeCount")
-    private final @Nullable Input<Integer> nodeCount;
+      private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
@@ -111,7 +111,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="privateEnvironmentConfig")
-    private final @Nullable Input<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
+      private final @Nullable Input<PrivateEnvironmentConfigArgs> privateEnvironmentConfig;
 
     public Input<PrivateEnvironmentConfigArgs> getPrivateEnvironmentConfig() {
         return this.privateEnvironmentConfig == null ? Input.empty() : this.privateEnvironmentConfig;
@@ -122,7 +122,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="softwareConfig")
-    private final @Nullable Input<SoftwareConfigArgs> softwareConfig;
+      private final @Nullable Input<SoftwareConfigArgs> softwareConfig;
 
     public Input<SoftwareConfigArgs> getSoftwareConfig() {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
@@ -133,7 +133,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webServerConfig")
-    private final @Nullable Input<WebServerConfigArgs> webServerConfig;
+      private final @Nullable Input<WebServerConfigArgs> webServerConfig;
 
     public Input<WebServerConfigArgs> getWebServerConfig() {
         return this.webServerConfig == null ? Input.empty() : this.webServerConfig;
@@ -144,7 +144,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webServerNetworkAccessControl")
-    private final @Nullable Input<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
+      private final @Nullable Input<WebServerNetworkAccessControlArgs> webServerNetworkAccessControl;
 
     public Input<WebServerNetworkAccessControlArgs> getWebServerNetworkAccessControl() {
         return this.webServerNetworkAccessControl == null ? Input.empty() : this.webServerNetworkAccessControl;
@@ -155,7 +155,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workloadsConfig")
-    private final @Nullable Input<WorkloadsConfigArgs> workloadsConfig;
+      private final @Nullable Input<WorkloadsConfigArgs> workloadsConfig;
 
     public Input<WorkloadsConfigArgs> getWorkloadsConfig() {
         return this.workloadsConfig == null ? Input.empty() : this.workloadsConfig;
@@ -364,7 +364,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             this.workloadsConfig = Input.ofNullable(workloadsConfig);
             return this;
         }
-
         public EnvironmentConfigArgs build() {
             return new EnvironmentConfigArgs(databaseConfig, encryptionConfig, environmentSize, maintenanceWindow, masterAuthorizedNetworksConfig, nodeConfig, nodeCount, privateEnvironmentConfig, softwareConfig, webServerConfig, webServerNetworkAccessControl, workloadsConfig);
         }

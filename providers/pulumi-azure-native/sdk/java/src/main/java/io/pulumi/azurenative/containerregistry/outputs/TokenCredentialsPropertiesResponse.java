@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.TokenCertificateResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TokenPasswordResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class TokenCredentialsPropertiesResponse {
             this.passwords = passwords;
             return this;
         }
-
         public TokenCredentialsPropertiesResponse build() {
             return new TokenCredentialsPropertiesResponse(certificates, passwords);
         }

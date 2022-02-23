@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -147,7 +147,6 @@ public final class GetWorkloadIdentityPoolResult {
             this.workloadIdentityPoolId = Objects.requireNonNull(workloadIdentityPoolId);
             return this;
         }
-
         public GetWorkloadIdentityPoolResult build() {
             return new GetWorkloadIdentityPoolResult(description, disabled, displayName, id, name, project, state, workloadIdentityPoolId);
         }

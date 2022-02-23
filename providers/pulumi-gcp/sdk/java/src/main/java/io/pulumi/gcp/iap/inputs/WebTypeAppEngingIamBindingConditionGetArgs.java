@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebTypeAppEngingIamBindingConditionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class WebTypeAppEngingIamBindingConditionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="expression", required=true)
-    private final Input<String> expression;
+        private final Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression;
@@ -41,7 +41,7 @@ public final class WebTypeAppEngingIamBindingConditionGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -115,7 +115,6 @@ public final class WebTypeAppEngingIamBindingConditionGetArgs extends io.pulumi.
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public WebTypeAppEngingIamBindingConditionGetArgs build() {
             return new WebTypeAppEngingIamBindingConditionGetArgs(description, expression, title);
         }

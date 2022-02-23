@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="microsoftPeeringConfig")
-    private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
+        private final @Nullable ExpressRouteCircuitPeeringConfigResponse microsoftPeeringConfig;
 
     public Optional<ExpressRouteCircuitPeeringConfigResponse> getMicrosoftPeeringConfig() {
         return this.microsoftPeeringConfig == null ? Optional.empty() : Optional.ofNullable(this.microsoftPeeringConfig);
@@ -36,7 +36,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="primaryPeerAddressPrefix")
-    private final @Nullable String primaryPeerAddressPrefix;
+        private final @Nullable String primaryPeerAddressPrefix;
 
     public Optional<String> getPrimaryPeerAddressPrefix() {
         return this.primaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.primaryPeerAddressPrefix);
@@ -47,7 +47,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="routeFilter")
-    private final @Nullable SubResourceResponse routeFilter;
+        private final @Nullable SubResourceResponse routeFilter;
 
     public Optional<SubResourceResponse> getRouteFilter() {
         return this.routeFilter == null ? Optional.empty() : Optional.ofNullable(this.routeFilter);
@@ -58,7 +58,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="secondaryPeerAddressPrefix")
-    private final @Nullable String secondaryPeerAddressPrefix;
+        private final @Nullable String secondaryPeerAddressPrefix;
 
     public Optional<String> getSecondaryPeerAddressPrefix() {
         return this.secondaryPeerAddressPrefix == null ? Optional.empty() : Optional.ofNullable(this.secondaryPeerAddressPrefix);
@@ -69,7 +69,7 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -148,7 +148,6 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigResponse extends io.pulum
             this.state = state;
             return this;
         }
-
         public Ipv6ExpressRouteCircuitPeeringConfigResponse build() {
             return new Ipv6ExpressRouteCircuitPeeringConfigResponse(microsoftPeeringConfig, primaryPeerAddressPrefix, routeFilter, secondaryPeerAddressPrefix, state);
         }

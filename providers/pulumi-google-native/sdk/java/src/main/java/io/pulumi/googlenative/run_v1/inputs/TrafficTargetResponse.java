@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="configurationName", required=true)
-    private final String configurationName;
+      private final String configurationName;
 
     public String getConfigurationName() {
         return this.configurationName;
@@ -34,7 +34,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="latestRevision", required=true)
-    private final Boolean latestRevision;
+      private final Boolean latestRevision;
 
     public Boolean getLatestRevision() {
         return this.latestRevision;
@@ -45,7 +45,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Integer percent;
+      private final Integer percent;
 
     public Integer getPercent() {
         return this.percent;
@@ -56,7 +56,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="revisionName", required=true)
-    private final String revisionName;
+      private final String revisionName;
 
     public String getRevisionName() {
         return this.revisionName;
@@ -67,7 +67,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -78,7 +78,7 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -167,7 +167,6 @@ public final class TrafficTargetResponse extends io.pulumi.resources.InvokeArgs 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public TrafficTargetResponse build() {
             return new TrafficTargetResponse(configurationName, latestRevision, percent, revisionName, tag, url);
         }

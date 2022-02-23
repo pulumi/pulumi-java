@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -66,7 +66,6 @@ public final class RequestMirrorPolicyArgs extends io.pulumi.resources.ResourceA
             this.backendService = Input.ofNullable(backendService);
             return this;
         }
-
         public RequestMirrorPolicyArgs build() {
             return new RequestMirrorPolicyArgs(backendService);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
      * 
      */
     @InputImport(name="testingChallenge", required=true)
-    private final String testingChallenge;
+      private final String testingChallenge;
 
     public String getTestingChallenge() {
         return this.testingChallenge;
@@ -33,7 +33,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
      * 
      */
     @InputImport(name="testingScore", required=true)
-    private final Double testingScore;
+      private final Double testingScore;
 
     public Double getTestingScore() {
         return this.testingScore;
@@ -82,7 +82,6 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse extend
             this.testingScore = Objects.requireNonNull(testingScore);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse(testingChallenge, testingScore);
         }

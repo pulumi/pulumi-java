@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class CloudTieringDatePolicyStatusResponse {
             this.tieredFilesMostRecentAccessTimestamp = Objects.requireNonNull(tieredFilesMostRecentAccessTimestamp);
             return this;
         }
-
         public CloudTieringDatePolicyStatusResponse build() {
             return new CloudTieringDatePolicyStatusResponse(lastUpdatedTimestamp, tieredFilesMostRecentAccessTimestamp);
         }

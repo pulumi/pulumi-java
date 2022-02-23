@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetServiceDatabaseTableIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetServiceDatabaseTableIamPolicyResult build() {
             return new GetServiceDatabaseTableIamPolicyResult(auditConfigs, bindings, etag, version);
         }

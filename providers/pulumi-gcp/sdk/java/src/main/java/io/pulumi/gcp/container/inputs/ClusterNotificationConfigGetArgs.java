@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterNotificationConfigPubsubGetArgs;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ClusterNotificationConfigGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pubsub", required=true)
-    private final Input<ClusterNotificationConfigPubsubGetArgs> pubsub;
+        private final Input<ClusterNotificationConfigPubsubGetArgs> pubsub;
 
     public Input<ClusterNotificationConfigPubsubGetArgs> getPubsub() {
         return this.pubsub;
@@ -61,7 +61,6 @@ public final class ClusterNotificationConfigGetArgs extends io.pulumi.resources.
             this.pubsub = Input.of(Objects.requireNonNull(pubsub));
             return this;
         }
-
         public ClusterNotificationConfigGetArgs build() {
             return new ClusterNotificationConfigGetArgs(pubsub);
         }

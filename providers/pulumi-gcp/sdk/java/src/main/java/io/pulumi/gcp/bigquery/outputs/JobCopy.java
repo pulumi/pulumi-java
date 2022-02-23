@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobCopyDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobCopyDestinationTable;
 import io.pulumi.gcp.bigquery.outputs.JobCopySourceTable;
@@ -173,7 +173,6 @@ public final class JobCopy {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobCopy build() {
             return new JobCopy(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
         }

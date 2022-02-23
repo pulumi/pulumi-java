@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class GetClusterGatewaySettingsResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetClusterGatewaySettingsResult build() {
             return new GetClusterGatewaySettingsResult(isCredentialEnabled, password, userName);
         }

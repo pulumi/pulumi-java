@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.BitbucketServerConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerRepositoryIdResponse;
@@ -162,13 +162,6 @@ public class BitbucketServerConfig extends io.pulumi.resources.CustomResource {
         return this.webhookKey;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BitbucketServerConfig(String name) {
-        super("google-native:cloudbuild/v1:BitbucketServerConfig", name, BitbucketServerConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

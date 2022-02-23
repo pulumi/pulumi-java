@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -90,7 +90,6 @@ public final class InstanceGroupManagerNamedPortArgs extends io.pulumi.resources
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public InstanceGroupManagerNamedPortArgs build() {
             return new InstanceGroupManagerNamedPortArgs(name, port);
         }

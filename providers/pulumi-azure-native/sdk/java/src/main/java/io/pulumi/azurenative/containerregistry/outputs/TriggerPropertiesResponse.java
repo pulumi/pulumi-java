@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.BaseImageTriggerResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SourceTriggerResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TimerTriggerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -100,7 +100,6 @@ public final class TriggerPropertiesResponse {
             this.timerTriggers = timerTriggers;
             return this;
         }
-
         public TriggerPropertiesResponse build() {
             return new TriggerPropertiesResponse(baseImageTrigger, sourceTriggers, timerTriggers);
         }

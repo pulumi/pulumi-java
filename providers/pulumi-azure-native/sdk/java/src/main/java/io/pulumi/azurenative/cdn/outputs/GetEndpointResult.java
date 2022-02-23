@@ -11,7 +11,7 @@ import io.pulumi.azurenative.cdn.outputs.GeoFilterResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UrlSigningKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -570,7 +570,6 @@ public final class GetEndpointResult {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(contentTypesToCompress, defaultOriginGroup, deliveryPolicy, geoFilters, hostName, id, isCompressionEnabled, isHttpAllowed, isHttpsAllowed, location, name, optimizationType, originGroups, originHostHeader, originPath, origins, probePath, provisioningState, queryStringCachingBehavior, resourceState, systemData, tags, type, urlSigningKeys, webApplicationFirewallPolicyLink);
         }

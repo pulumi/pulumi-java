@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs extend
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<Integer> code;
+        private final @Nullable Input<Integer> code;
 
     public Input<Integer> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -32,7 +32,7 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs extend
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Integer> ttl;
+        private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -91,7 +91,6 @@ public final class RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs extend
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs build() {
             return new RegionBackendServiceCdnPolicyNegativeCachingPolicyArgs(code, ttl);
         }

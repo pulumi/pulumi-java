@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class SourceRepositoryResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public SourceRepositoryResponse build() {
             return new SourceRepositoryResponse(deployedUrl, url);
         }

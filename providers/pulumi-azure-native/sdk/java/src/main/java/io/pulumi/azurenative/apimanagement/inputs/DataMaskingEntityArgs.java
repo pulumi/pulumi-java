@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.DataMaskingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,DataMaskingMode>> mode;
+        private final @Nullable Input<Either<String,DataMaskingMode>> mode;
 
     public Input<Either<String,DataMaskingMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -32,7 +32,7 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -91,7 +91,6 @@ public final class DataMaskingEntityArgs extends io.pulumi.resources.ResourceArg
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public DataMaskingEntityArgs build() {
             return new DataMaskingEntityArgs(mode, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -203,7 +203,6 @@ public final class HadoopJobResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public HadoopJobResponse build() {
             return new HadoopJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

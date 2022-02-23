@@ -5,7 +5,7 @@ package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionResponse;
 import io.pulumi.azurenative.consumption.inputs.BudgetFilterPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="and")
-    private final @Nullable List<BudgetFilterPropertiesResponse> and;
+        private final @Nullable List<BudgetFilterPropertiesResponse> and;
 
     public List<BudgetFilterPropertiesResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
@@ -36,7 +36,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable BudgetComparisonExpressionResponse dimensions;
+        private final @Nullable BudgetComparisonExpressionResponse dimensions;
 
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
@@ -47,7 +47,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="not")
-    private final @Nullable BudgetFilterPropertiesResponse not;
+        private final @Nullable BudgetFilterPropertiesResponse not;
 
     public Optional<BudgetFilterPropertiesResponse> getNot() {
         return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
@@ -58,7 +58,7 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable BudgetComparisonExpressionResponse tags;
+        private final @Nullable BudgetComparisonExpressionResponse tags;
 
     public Optional<BudgetComparisonExpressionResponse> getTags() {
         return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
@@ -127,7 +127,6 @@ public final class BudgetFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public BudgetFilterResponse build() {
             return new BudgetFilterResponse(and, dimensions, not, tags);
         }

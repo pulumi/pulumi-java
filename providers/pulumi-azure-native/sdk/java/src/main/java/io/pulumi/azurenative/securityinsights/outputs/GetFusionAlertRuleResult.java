@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -290,7 +290,6 @@ public final class GetFusionAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFusionAlertRuleResult build() {
             return new GetFusionAlertRuleResult(alertRuleTemplateName, description, displayName, enabled, etag, id, kind, lastModifiedUtc, name, severity, tactics, type);
         }

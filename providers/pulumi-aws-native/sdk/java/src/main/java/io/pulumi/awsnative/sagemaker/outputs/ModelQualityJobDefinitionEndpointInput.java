@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3InputMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -210,7 +210,6 @@ public final class ModelQualityJobDefinitionEndpointInput {
             this.startTimeOffset = startTimeOffset;
             return this;
         }
-
         public ModelQualityJobDefinitionEndpointInput build() {
             return new ModelQualityJobDefinitionEndpointInput(endTimeOffset, endpointName, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);
         }

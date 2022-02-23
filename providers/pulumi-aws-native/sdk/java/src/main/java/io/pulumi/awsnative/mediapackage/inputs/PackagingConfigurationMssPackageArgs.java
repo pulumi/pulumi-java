@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationMssManifestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
     public static final PackagingConfigurationMssPackageArgs Empty = new PackagingConfigurationMssPackageArgs();
 
     @InputImport(name="encryption")
-    private final @Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption;
+        private final @Nullable Input<PackagingConfigurationMssEncryptionArgs> encryption;
 
     public Input<PackagingConfigurationMssEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -33,14 +33,14 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mssManifests", required=true)
-    private final Input<List<PackagingConfigurationMssManifestArgs>> mssManifests;
+        private final Input<List<PackagingConfigurationMssManifestArgs>> mssManifests;
 
     public Input<List<PackagingConfigurationMssManifestArgs>> getMssManifests() {
         return this.mssManifests;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Input<Integer> segmentDurationSeconds;
+        private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
@@ -114,7 +114,6 @@ public final class PackagingConfigurationMssPackageArgs extends io.pulumi.resour
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public PackagingConfigurationMssPackageArgs build() {
             return new PackagingConfigurationMssPackageArgs(encryption, mssManifests, segmentDurationSeconds);
         }

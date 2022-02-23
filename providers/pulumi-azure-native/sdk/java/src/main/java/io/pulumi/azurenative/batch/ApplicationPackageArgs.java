@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final Input<String> applicationName;
+        private final Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName;
@@ -41,7 +41,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="versionName")
-    private final @Nullable Input<String> versionName;
+        private final @Nullable Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName == null ? Input.empty() : this.versionName;
@@ -141,7 +141,6 @@ public final class ApplicationPackageArgs extends io.pulumi.resources.ResourceAr
             this.versionName = Input.ofNullable(versionName);
             return this;
         }
-
         public ApplicationPackageArgs build() {
             return new ApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);
         }

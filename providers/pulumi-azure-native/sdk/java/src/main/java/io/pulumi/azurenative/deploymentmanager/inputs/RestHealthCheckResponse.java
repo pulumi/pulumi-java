@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestRequestResponse;
 import io.pulumi.azurenative.deploymentmanager.inputs.RestResponseResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="request", required=true)
-    private final RestRequestResponse request;
+        private final RestRequestResponse request;
 
     public RestRequestResponse getRequest() {
         return this.request;
@@ -47,7 +47,7 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="response")
-    private final @Nullable RestResponseResponse response;
+        private final @Nullable RestResponseResponse response;
 
     public Optional<RestResponseResponse> getResponse() {
         return this.response == null ? Optional.empty() : Optional.ofNullable(this.response);
@@ -106,7 +106,6 @@ public final class RestHealthCheckResponse extends io.pulumi.resources.InvokeArg
             this.response = response;
             return this;
         }
-
         public RestHealthCheckResponse build() {
             return new RestHealthCheckResponse(name, request, response);
         }

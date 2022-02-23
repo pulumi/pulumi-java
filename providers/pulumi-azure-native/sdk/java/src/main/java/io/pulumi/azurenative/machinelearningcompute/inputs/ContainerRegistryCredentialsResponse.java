@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="loginServer", required=true)
-    private final String loginServer;
+        private final String loginServer;
 
     public String getLoginServer() {
         return this.loginServer;
@@ -32,7 +32,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -43,7 +43,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="password2", required=true)
-    private final String password2;
+        private final String password2;
 
     public String getPassword2() {
         return this.password2;
@@ -54,7 +54,7 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -123,7 +123,6 @@ public final class ContainerRegistryCredentialsResponse extends io.pulumi.resour
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ContainerRegistryCredentialsResponse build() {
             return new ContainerRegistryCredentialsResponse(loginServer, password, password2, username);
         }

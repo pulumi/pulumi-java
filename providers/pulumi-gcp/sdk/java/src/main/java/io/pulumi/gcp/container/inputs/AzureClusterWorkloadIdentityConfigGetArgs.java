@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class AzureClusterWorkloadIdentityConfigGetArgs extends io.pulumi.r
     public static final AzureClusterWorkloadIdentityConfigGetArgs Empty = new AzureClusterWorkloadIdentityConfigGetArgs();
 
     @InputImport(name="identityProvider")
-    private final @Nullable Input<String> identityProvider;
+        private final @Nullable Input<String> identityProvider;
 
     public Input<String> getIdentityProvider() {
         return this.identityProvider == null ? Input.empty() : this.identityProvider;
     }
 
     @InputImport(name="issuerUri")
-    private final @Nullable Input<String> issuerUri;
+        private final @Nullable Input<String> issuerUri;
 
     public Input<String> getIssuerUri() {
         return this.issuerUri == null ? Input.empty() : this.issuerUri;
     }
 
     @InputImport(name="workloadPool")
-    private final @Nullable Input<String> workloadPool;
+        private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;
@@ -103,7 +103,6 @@ public final class AzureClusterWorkloadIdentityConfigGetArgs extends io.pulumi.r
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }
-
         public AzureClusterWorkloadIdentityConfigGetArgs build() {
             return new AzureClusterWorkloadIdentityConfigGetArgs(identityProvider, issuerUri, workloadPool);
         }

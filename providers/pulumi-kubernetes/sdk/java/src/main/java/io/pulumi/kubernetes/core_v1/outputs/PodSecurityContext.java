@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SELinuxOptions;
 import io.pulumi.kubernetes.core_v1.outputs.SeccompProfile;
 import io.pulumi.kubernetes.core_v1.outputs.Sysctl;
@@ -259,7 +259,6 @@ public final class PodSecurityContext {
             this.windowsOptions = windowsOptions;
             return this;
         }
-
         public PodSecurityContext build() {
             return new PodSecurityContext(fsGroup, fsGroupChangePolicy, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, supplementalGroups, sysctls, windowsOptions);
         }

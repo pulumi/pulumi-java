@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ContentSourceResponse;
 import io.pulumi.azurenative.automation.outputs.DscConfigurationParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -375,7 +375,6 @@ public final class GetDscConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDscConfigurationResult build() {
             return new GetDscConfigurationResult(creationTime, description, etag, id, jobCount, lastModifiedTime, location, logVerbose, name, nodeConfigurationCount, parameters, provisioningState, source, state, tags, type);
         }

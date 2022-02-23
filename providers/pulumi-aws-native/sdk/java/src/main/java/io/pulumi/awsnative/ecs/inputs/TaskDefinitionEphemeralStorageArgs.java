@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
     public static final TaskDefinitionEphemeralStorageArgs Empty = new TaskDefinitionEphemeralStorageArgs();
 
     @InputImport(name="sizeInGiB")
-    private final @Nullable Input<Integer> sizeInGiB;
+        private final @Nullable Input<Integer> sizeInGiB;
 
     public Input<Integer> getSizeInGiB() {
         return this.sizeInGiB == null ? Input.empty() : this.sizeInGiB;
@@ -58,7 +58,6 @@ public final class TaskDefinitionEphemeralStorageArgs extends io.pulumi.resource
             this.sizeInGiB = Input.ofNullable(sizeInGiB);
             return this;
         }
-
         public TaskDefinitionEphemeralStorageArgs build() {
             return new TaskDefinitionEphemeralStorageArgs(sizeInGiB);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -122,7 +122,6 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime {
             this.seconds = seconds;
             return this;
         }
-
         public InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime(hours, minutes, nanos, seconds);
         }

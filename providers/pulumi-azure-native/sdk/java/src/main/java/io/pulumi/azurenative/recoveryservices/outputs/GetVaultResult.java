@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.IdentityDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SkuResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SystemDataResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -249,7 +249,6 @@ public final class GetVaultResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVaultResult build() {
             return new GetVaultResult(etag, id, identity, location, name, properties, sku, systemData, tags, type);
         }

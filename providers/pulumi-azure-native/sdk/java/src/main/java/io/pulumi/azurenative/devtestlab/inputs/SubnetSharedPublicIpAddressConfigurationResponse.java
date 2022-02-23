@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.PortResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
      * 
      */
     @InputImport(name="allowedPorts")
-    private final @Nullable List<PortResponse> allowedPorts;
+        private final @Nullable List<PortResponse> allowedPorts;
 
     public List<PortResponse> getAllowedPorts() {
         return this.allowedPorts == null ? List.of() : this.allowedPorts;
@@ -62,7 +62,6 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse extends io.p
             this.allowedPorts = allowedPorts;
             return this;
         }
-
         public SubnetSharedPublicIpAddressConfigurationResponse build() {
             return new SubnetSharedPublicIpAddressConfigurationResponse(allowedPorts);
         }

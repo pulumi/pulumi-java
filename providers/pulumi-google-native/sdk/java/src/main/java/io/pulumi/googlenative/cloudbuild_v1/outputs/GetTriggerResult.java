@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerTriggerConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BuildResponse;
@@ -527,7 +527,6 @@ public final class GetTriggerResult {
             this.webhookConfig = Objects.requireNonNull(webhookConfig);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(approvalConfig, autodetect, bitbucketServerTriggerConfig, build, createTime, description, disabled, eventType, filename, filter, gitFileSource, github, ignoredFiles, includedFiles, name, pubsubConfig, resourceName, serviceAccount, sourceToBuild, substitutions, tags, triggerTemplate, webhookConfig);
         }

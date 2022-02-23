@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * 
      */
     @InputImport(name="buttons")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> getButtons() {
         return this.buttons == null ? Input.empty() : this.buttons;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * 
      */
     @InputImport(name="columnProperties")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> columnProperties;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageColumnPropertiesArgs>> getColumnProperties() {
         return this.columnProperties == null ? Input.empty() : this.columnProperties;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * 
      */
     @InputImport(name="rows")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> rows;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageTableCardRowArgs>> getRows() {
         return this.rows == null ? Input.empty() : this.rows;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+      private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -202,7 +202,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardArgs extends io.
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardArgs(buttons, columnProperties, image, rows, subtitle, title);
         }

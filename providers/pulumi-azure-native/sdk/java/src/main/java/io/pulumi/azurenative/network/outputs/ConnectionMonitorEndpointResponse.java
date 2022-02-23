@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointFilterResponse;
 import io.pulumi.azurenative.network.outputs.ConnectionMonitorEndpointScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class ConnectionMonitorEndpointResponse {
             this.type = type;
             return this;
         }
-
         public ConnectionMonitorEndpointResponse build() {
             return new ConnectionMonitorEndpointResponse(address, coverageLevel, filter, name, resourceId, scope, type);
         }

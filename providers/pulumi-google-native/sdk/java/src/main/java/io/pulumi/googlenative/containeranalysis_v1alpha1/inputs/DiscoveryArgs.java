@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.enums.DiscoveryAnalysisKind;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analysisKind")
-    private final @Nullable Input<DiscoveryAnalysisKind> analysisKind;
+      private final @Nullable Input<DiscoveryAnalysisKind> analysisKind;
 
     public Input<DiscoveryAnalysisKind> getAnalysisKind() {
         return this.analysisKind == null ? Input.empty() : this.analysisKind;
@@ -66,7 +66,6 @@ public final class DiscoveryArgs extends io.pulumi.resources.ResourceArgs {
             this.analysisKind = Input.ofNullable(analysisKind);
             return this;
         }
-
         public DiscoveryArgs build() {
             return new DiscoveryArgs(analysisKind);
         }

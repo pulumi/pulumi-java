@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class BanditPolicyResponse {
             this.slackFactor = slackFactor;
             return this;
         }
-
         public BanditPolicyResponse build() {
             return new BanditPolicyResponse(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable String accountName;
+        private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
@@ -34,7 +34,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -45,7 +45,7 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="spn")
-    private final @Nullable String spn;
+        private final @Nullable String spn;
 
     public Optional<String> getSpn() {
         return this.spn == null ? Optional.empty() : Optional.ofNullable(this.spn);
@@ -104,7 +104,6 @@ public final class ContainerAccountResponse extends io.pulumi.resources.InvokeAr
             this.spn = spn;
             return this;
         }
-
         public ContainerAccountResponse build() {
             return new ContainerAccountResponse(accountName, password, spn);
         }

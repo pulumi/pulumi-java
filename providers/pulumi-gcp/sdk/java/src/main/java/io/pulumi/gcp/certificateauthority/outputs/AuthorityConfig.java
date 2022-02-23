@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigSubjectConfig;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509Config;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class AuthorityConfig {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public AuthorityConfig build() {
             return new AuthorityConfig(subjectConfig, x509Config);
         }

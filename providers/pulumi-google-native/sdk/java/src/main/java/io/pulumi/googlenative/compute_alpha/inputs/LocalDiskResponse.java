@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskCount", required=true)
-    private final Integer diskCount;
+      private final Integer diskCount;
 
     public Integer getDiskCount() {
         return this.diskCount;
@@ -29,7 +29,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final Integer diskSizeGb;
+      private final Integer diskSizeGb;
 
     public Integer getDiskSizeGb() {
         return this.diskSizeGb;
@@ -40,7 +40,7 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -99,7 +99,6 @@ public final class LocalDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.diskType = Objects.requireNonNull(diskType);
             return this;
         }
-
         public LocalDiskResponse build() {
             return new LocalDiskResponse(diskCount, diskSizeGb, diskType);
         }

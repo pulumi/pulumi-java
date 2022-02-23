@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="isSecret")
-    private final @Nullable Boolean isSecret;
+        private final @Nullable Boolean isSecret;
 
     public Optional<Boolean> getIsSecret() {
         return this.isSecret == null ? Optional.empty() : Optional.ofNullable(this.isSecret);
@@ -35,7 +35,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -47,7 +47,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -58,7 +58,7 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -127,7 +127,6 @@ public final class StaticDeliveryAttributeMappingResponse extends io.pulumi.reso
             this.value = value;
             return this;
         }
-
         public StaticDeliveryAttributeMappingResponse build() {
             return new StaticDeliveryAttributeMappingResponse(isSecret, name, type, value);
         }

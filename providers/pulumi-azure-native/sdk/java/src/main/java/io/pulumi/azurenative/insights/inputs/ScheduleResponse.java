@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frequencyInMinutes", required=true)
-    private final Integer frequencyInMinutes;
+        private final Integer frequencyInMinutes;
 
     public Integer getFrequencyInMinutes() {
         return this.frequencyInMinutes;
@@ -32,7 +32,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeWindowInMinutes", required=true)
-    private final Integer timeWindowInMinutes;
+        private final Integer timeWindowInMinutes;
 
     public Integer getTimeWindowInMinutes() {
         return this.timeWindowInMinutes;
@@ -81,7 +81,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.timeWindowInMinutes = Objects.requireNonNull(timeWindowInMinutes);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(frequencyInMinutes, timeWindowInMinutes);
         }

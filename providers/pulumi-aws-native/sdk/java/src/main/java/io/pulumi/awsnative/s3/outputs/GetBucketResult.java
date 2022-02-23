@@ -21,7 +21,7 @@ import io.pulumi.awsnative.s3.outputs.BucketReplicationConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketTag;
 import io.pulumi.awsnative.s3.outputs.BucketVersioningConfiguration;
 import io.pulumi.awsnative.s3.outputs.BucketWebsiteConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -504,7 +504,6 @@ public final class GetBucketResult {
             this.websiteURL = websiteURL;
             return this;
         }
-
         public GetBucketResult build() {
             return new GetBucketResult(accelerateConfiguration, accessControl, analyticsConfigurations, arn, bucketEncryption, corsConfiguration, domainName, dualStackDomainName, intelligentTieringConfigurations, inventoryConfigurations, lifecycleConfiguration, loggingConfiguration, metricsConfigurations, notificationConfiguration, objectLockConfiguration, ownershipControls, publicAccessBlockConfiguration, regionalDomainName, replicationConfiguration, tags, versioningConfiguration, websiteConfiguration, websiteURL);
         }

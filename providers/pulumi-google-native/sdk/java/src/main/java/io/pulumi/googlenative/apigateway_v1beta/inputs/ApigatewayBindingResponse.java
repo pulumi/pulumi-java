@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ApigatewayBindingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="condition", required=true)
-    private final ApigatewayExprResponse condition;
+      private final ApigatewayExprResponse condition;
 
     public ApigatewayExprResponse getCondition() {
         return this.condition;
@@ -34,7 +34,7 @@ public final class ApigatewayBindingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="members", required=true)
-    private final List<String> members;
+      private final List<String> members;
 
     public List<String> getMembers() {
         return this.members;
@@ -45,7 +45,7 @@ public final class ApigatewayBindingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -104,7 +104,6 @@ public final class ApigatewayBindingResponse extends io.pulumi.resources.InvokeA
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public ApigatewayBindingResponse build() {
             return new ApigatewayBindingResponse(condition, members, role);
         }

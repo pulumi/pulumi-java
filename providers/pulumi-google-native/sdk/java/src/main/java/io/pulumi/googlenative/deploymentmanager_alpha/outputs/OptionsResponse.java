@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.AsyncOptionsResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.InputMappingResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ValidationOptionsResponse;
@@ -120,7 +120,6 @@ public final class OptionsResponse {
             this.validationOptions = Objects.requireNonNull(validationOptions);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(asyncOptions, inputMappings, nameProperty, validationOptions);
         }

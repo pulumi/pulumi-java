@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionDiskIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
     public static final RegionDiskIamBindingState Empty = new RegionDiskIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<RegionDiskIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<RegionDiskIamBindingConditionGetArgs> condition;
 
     public Input<RegionDiskIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -46,7 +46,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,14 +58,14 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -78,7 +78,7 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -212,7 +212,6 @@ public final class RegionDiskIamBindingState extends io.pulumi.resources.Resourc
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public RegionDiskIamBindingState build() {
             return new RegionDiskIamBindingState(condition, etag, members, name, project, region, role);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hdinsight.outputs.ApplicationGetHttpsEndpointRespon
 import io.pulumi.azurenative.hdinsight.outputs.ComputeProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.ErrorsResponse;
 import io.pulumi.azurenative.hdinsight.outputs.RuntimeScriptActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -271,7 +271,6 @@ public final class ApplicationPropertiesResponse {
             this.uninstallScriptActions = uninstallScriptActions;
             return this;
         }
-
         public ApplicationPropertiesResponse build() {
             return new ApplicationPropertiesResponse(applicationState, applicationType, computeProfile, createdDate, errors, httpsEndpoints, installScriptActions, marketplaceIdentifier, provisioningState, sshEndpoints, uninstallScriptActions);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicyRuleApplicationProtocolType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -37,7 +37,7 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="protocolType")
-    private final @Nullable Input<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType;
+        private final @Nullable Input<Either<String,FirewallPolicyRuleApplicationProtocolType>> protocolType;
 
     public Input<Either<String,FirewallPolicyRuleApplicationProtocolType>> getProtocolType() {
         return this.protocolType == null ? Input.empty() : this.protocolType;
@@ -96,7 +96,6 @@ public final class FirewallPolicyRuleApplicationProtocolArgs extends io.pulumi.r
             this.protocolType = Input.ofNullable(protocolType);
             return this;
         }
-
         public FirewallPolicyRuleApplicationProtocolArgs build() {
             return new FirewallPolicyRuleApplicationProtocolArgs(port, protocolType);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53;
 
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-    private final Input<String> hostedZoneId;
+        private final Input<String> hostedZoneId;
 
     public Input<String> getHostedZoneId() {
         return this.hostedZoneId;
@@ -31,7 +31,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyManagementServiceArn", required=true)
-    private final Input<String> keyManagementServiceArn;
+        private final Input<String> keyManagementServiceArn;
 
     public Input<String> getKeyManagementServiceArn() {
         return this.keyManagementServiceArn;
@@ -42,7 +42,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -53,7 +53,7 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<KeySigningKeyStatus> status;
+        private final Input<KeySigningKeyStatus> status;
 
     public Input<KeySigningKeyStatus> getStatus() {
         return this.status;
@@ -142,7 +142,6 @@ public final class KeySigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public KeySigningKeyArgs build() {
             return new KeySigningKeyArgs(hostedZoneId, keyManagementServiceArn, name, status);
         }

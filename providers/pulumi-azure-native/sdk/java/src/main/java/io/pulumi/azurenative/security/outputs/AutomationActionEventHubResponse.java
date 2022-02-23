@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class AutomationActionEventHubResponse {
             this.sasPolicyName = Objects.requireNonNull(sasPolicyName);
             return this;
         }
-
         public AutomationActionEventHubResponse build() {
             return new AutomationActionEventHubResponse(actionType, connectionString, eventHubResourceId, sasPolicyName);
         }

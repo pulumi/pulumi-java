@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class CloudServiceRoleSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public CloudServiceRoleSkuResponse build() {
             return new CloudServiceRoleSkuResponse(capacity, name, tier);
         }

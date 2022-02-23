@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.AutoscaleScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class AutoscaleRecurrenceResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public AutoscaleRecurrenceResponse build() {
             return new AutoscaleRecurrenceResponse(schedule, timeZone);
         }

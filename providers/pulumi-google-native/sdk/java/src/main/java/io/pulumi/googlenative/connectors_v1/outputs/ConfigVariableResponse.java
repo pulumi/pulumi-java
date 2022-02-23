@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class ConfigVariableResponse {
             this.stringValue = Objects.requireNonNull(stringValue);
             return this;
         }
-
         public ConfigVariableResponse build() {
             return new ConfigVariableResponse(boolValue, intValue, key, secretValue, stringValue);
         }

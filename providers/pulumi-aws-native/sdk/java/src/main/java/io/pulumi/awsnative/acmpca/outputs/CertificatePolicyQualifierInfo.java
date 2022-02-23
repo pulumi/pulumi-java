@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateQualifier;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class CertificatePolicyQualifierInfo {
             this.qualifier = Objects.requireNonNull(qualifier);
             return this;
         }
-
         public CertificatePolicyQualifierInfo build() {
             return new CertificatePolicyQualifierInfo(policyQualifierId, qualifier);
         }

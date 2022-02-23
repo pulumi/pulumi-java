@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CapacityReservationUtilizationResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CapacityReservationInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+        private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -36,7 +36,7 @@ public final class CapacityReservationInstanceViewResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="utilizationInfo")
-    private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
+        private final @Nullable CapacityReservationUtilizationResponse utilizationInfo;
 
     public Optional<CapacityReservationUtilizationResponse> getUtilizationInfo() {
         return this.utilizationInfo == null ? Optional.empty() : Optional.ofNullable(this.utilizationInfo);
@@ -85,7 +85,6 @@ public final class CapacityReservationInstanceViewResponse extends io.pulumi.res
             this.utilizationInfo = utilizationInfo;
             return this;
         }
-
         public CapacityReservationInstanceViewResponse build() {
             return new CapacityReservationInstanceViewResponse(statuses, utilizationInfo);
         }

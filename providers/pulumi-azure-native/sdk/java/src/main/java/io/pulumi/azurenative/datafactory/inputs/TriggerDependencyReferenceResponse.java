@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class TriggerDependencyReferenceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="referenceTrigger", required=true)
-    private final TriggerReferenceResponse referenceTrigger;
+        private final TriggerReferenceResponse referenceTrigger;
 
     public TriggerReferenceResponse getReferenceTrigger() {
         return this.referenceTrigger;
@@ -34,7 +34,7 @@ public final class TriggerDependencyReferenceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -83,7 +83,6 @@ public final class TriggerDependencyReferenceResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TriggerDependencyReferenceResponse build() {
             return new TriggerDependencyReferenceResponse(referenceTrigger, type);
         }

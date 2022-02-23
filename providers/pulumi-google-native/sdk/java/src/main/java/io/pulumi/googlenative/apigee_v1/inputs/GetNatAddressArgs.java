@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetNatAddressArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetNatAddressArgs Empty = new GetNatAddressArgs();
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="natAddressId", required=true)
-    private final String natAddressId;
+      private final String natAddressId;
 
     public String getNatAddressId() {
         return this.natAddressId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -86,7 +86,6 @@ public final class GetNatAddressArgs extends io.pulumi.resources.InvokeArgs {
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetNatAddressArgs build() {
             return new GetNatAddressArgs(instanceId, natAddressId, organizationId);
         }

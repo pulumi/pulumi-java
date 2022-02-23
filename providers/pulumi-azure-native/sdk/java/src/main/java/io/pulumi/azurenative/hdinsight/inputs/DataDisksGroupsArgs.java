@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disksPerNode")
-    private final @Nullable Input<Integer> disksPerNode;
+        private final @Nullable Input<Integer> disksPerNode;
 
     public Input<Integer> getDisksPerNode() {
         return this.disksPerNode == null ? Input.empty() : this.disksPerNode;
@@ -66,7 +66,6 @@ public final class DataDisksGroupsArgs extends io.pulumi.resources.ResourceArgs 
             this.disksPerNode = Input.ofNullable(disksPerNode);
             return this;
         }
-
         public DataDisksGroupsArgs build() {
             return new DataDisksGroupsArgs(disksPerNode);
         }

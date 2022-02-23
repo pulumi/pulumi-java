@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebase_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebase_v1beta1.AndroidAppArgs;
 import java.lang.String;
@@ -91,13 +91,6 @@ public class AndroidApp extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AndroidApp(String name) {
-        super("google-native:firebase/v1beta1:AndroidApp", name, AndroidAppArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

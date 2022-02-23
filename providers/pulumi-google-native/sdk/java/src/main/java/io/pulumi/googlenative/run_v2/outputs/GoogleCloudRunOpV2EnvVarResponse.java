@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2EnvVarSourceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudRunOpV2EnvVarResponse {
             this.valueSource = Objects.requireNonNull(valueSource);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarResponse build() {
             return new GoogleCloudRunOpV2EnvVarResponse(name, value, valueSource);
         }

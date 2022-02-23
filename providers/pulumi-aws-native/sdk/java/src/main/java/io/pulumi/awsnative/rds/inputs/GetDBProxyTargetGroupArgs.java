@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDBProxyTargetGroupArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="targetGroupArn", required=true)
-    private final String targetGroupArn;
+        private final String targetGroupArn;
 
     public String getTargetGroupArn() {
         return this.targetGroupArn;
@@ -55,7 +55,6 @@ public final class GetDBProxyTargetGroupArgs extends io.pulumi.resources.InvokeA
             this.targetGroupArn = Objects.requireNonNull(targetGroupArn);
             return this;
         }
-
         public GetDBProxyTargetGroupArgs build() {
             return new GetDBProxyTargetGroupArgs(targetGroupArn);
         }

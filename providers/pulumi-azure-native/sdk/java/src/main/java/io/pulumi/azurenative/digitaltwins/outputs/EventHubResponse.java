@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -246,7 +246,6 @@ public final class EventHubResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public EventHubResponse build() {
             return new EventHubResponse(authenticationType, connectionStringPrimaryKey, connectionStringSecondaryKey, createdTime, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, provisioningState);
         }

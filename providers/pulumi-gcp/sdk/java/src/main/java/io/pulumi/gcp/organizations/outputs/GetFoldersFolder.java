@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -200,7 +200,6 @@ public final class GetFoldersFolder {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFoldersFolder build() {
             return new GetFoldersFolder(createTime, deleteTime, displayName, etag, name, parent, state, updateTime);
         }

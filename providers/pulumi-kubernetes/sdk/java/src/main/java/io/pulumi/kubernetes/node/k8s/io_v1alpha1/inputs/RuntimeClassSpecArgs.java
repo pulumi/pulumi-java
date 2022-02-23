@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.inputs.SchedulingArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="overhead")
-    private final @Nullable Input<OverheadArgs> overhead;
+        private final @Nullable Input<OverheadArgs> overhead;
 
     public Input<OverheadArgs> getOverhead() {
         return this.overhead == null ? Input.empty() : this.overhead;
@@ -36,7 +36,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="runtimeHandler", required=true)
-    private final Input<String> runtimeHandler;
+        private final Input<String> runtimeHandler;
 
     public Input<String> getRuntimeHandler() {
         return this.runtimeHandler;
@@ -47,7 +47,7 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<SchedulingArgs> scheduling;
+        private final @Nullable Input<SchedulingArgs> scheduling;
 
     public Input<SchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -121,7 +121,6 @@ public final class RuntimeClassSpecArgs extends io.pulumi.resources.ResourceArgs
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
-
         public RuntimeClassSpecArgs build() {
             return new RuntimeClassSpecArgs(overhead, runtimeHandler, scheduling);
         }

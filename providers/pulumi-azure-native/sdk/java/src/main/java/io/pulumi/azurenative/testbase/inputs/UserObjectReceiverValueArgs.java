@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="userObjectIds")
-    private final @Nullable Input<List<String>> userObjectIds;
+        private final @Nullable Input<List<String>> userObjectIds;
 
     public Input<List<String>> getUserObjectIds() {
         return this.userObjectIds == null ? Input.empty() : this.userObjectIds;
@@ -67,7 +67,6 @@ public final class UserObjectReceiverValueArgs extends io.pulumi.resources.Resou
             this.userObjectIds = Input.ofNullable(userObjectIds);
             return this;
         }
-
         public UserObjectReceiverValueArgs build() {
             return new UserObjectReceiverValueArgs(userObjectIds);
         }

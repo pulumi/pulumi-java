@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class AccountAuditConfigurationAuditNotificationTarget {
             this.targetArn = targetArn;
             return this;
         }
-
         public AccountAuditConfigurationAuditNotificationTarget build() {
             return new AccountAuditConfigurationAuditNotificationTarget(enabled, roleArn, targetArn);
         }

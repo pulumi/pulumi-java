@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datalakeanalytics.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.HiveMetastoreResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.StorageAccountInformationResponse;
 import io.pulumi.azurenative.datalakeanalytics.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -757,7 +757,6 @@ public final class GetAccountResult {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, computePolicies, creationTime, currentTier, dataLakeStoreAccounts, debugDataAccessLevel, defaultDataLakeStoreAccount, endpoint, firewallAllowAzureIps, firewallRules, firewallState, hiveMetastores, id, lastModifiedTime, location, maxActiveJobCountPerUser, maxDegreeOfParallelism, maxDegreeOfParallelismPerJob, maxJobCount, maxJobRunningTimeInMin, maxQueuedJobCountPerUser, minPriorityPerJob, name, newTier, provisioningState, publicDataLakeStoreAccounts, queryStoreRetention, state, storageAccounts, systemMaxDegreeOfParallelism, systemMaxJobCount, tags, type, virtualNetworkRules);
         }

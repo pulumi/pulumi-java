@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicyRetentionPolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicySchedule;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicySnapshotProperty;
@@ -74,7 +74,6 @@ public final class GetResourcePolicySnapshotSchedulePolicy {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicy build() {
             return new GetResourcePolicySnapshotSchedulePolicy(retentionPolicies, schedules, snapshotProperties);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationNoEncryptionConfig;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamKMSEncryptionConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
     public static final DeliveryStreamEncryptionConfigurationArgs Empty = new DeliveryStreamEncryptionConfigurationArgs();
 
     @InputImport(name="kMSEncryptionConfig")
-    private final @Nullable Input<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
+        private final @Nullable Input<DeliveryStreamKMSEncryptionConfigArgs> kMSEncryptionConfig;
 
     public Input<DeliveryStreamKMSEncryptionConfigArgs> getKMSEncryptionConfig() {
         return this.kMSEncryptionConfig == null ? Input.empty() : this.kMSEncryptionConfig;
     }
 
     @InputImport(name="noEncryptionConfig")
-    private final @Nullable Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
+        private final @Nullable Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> noEncryptionConfig;
 
     public Input<DeliveryStreamEncryptionConfigurationNoEncryptionConfig> getNoEncryptionConfig() {
         return this.noEncryptionConfig == null ? Input.empty() : this.noEncryptionConfig;
@@ -82,7 +82,6 @@ public final class DeliveryStreamEncryptionConfigurationArgs extends io.pulumi.r
             this.noEncryptionConfig = Input.ofNullable(noEncryptionConfig);
             return this;
         }
-
         public DeliveryStreamEncryptionConfigurationArgs build() {
             return new DeliveryStreamEncryptionConfigurationArgs(kMSEncryptionConfig, noEncryptionConfig);
         }

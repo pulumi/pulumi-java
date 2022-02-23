@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2ConditionOperator;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="field", required=true)
-    private final Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final Input<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
         return this.field;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<GooglePrivacyDlpV2ConditionOperator> operator;
+      private final Input<GooglePrivacyDlpV2ConditionOperator> operator;
 
     public Input<GooglePrivacyDlpV2ConditionOperator> getOperator() {
         return this.operator;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> value;
+      private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> value;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -121,7 +121,6 @@ public final class GooglePrivacyDlpV2ConditionArgs extends io.pulumi.resources.R
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionArgs build() {
             return new GooglePrivacyDlpV2ConditionArgs(field, operator, value);
         }

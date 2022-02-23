@@ -5,7 +5,7 @@ package io.pulumi.awsnative.resiliencehub.outputs;
 
 import io.pulumi.awsnative.resiliencehub.outputs.AppResourceMapping;
 import io.pulumi.awsnative.resiliencehub.outputs.AppTagMap;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -155,7 +155,6 @@ public final class GetAppResult {
             this.tags = tags;
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(appArn, appTemplateBody, description, resiliencyPolicyArn, resourceMappings, tags);
         }

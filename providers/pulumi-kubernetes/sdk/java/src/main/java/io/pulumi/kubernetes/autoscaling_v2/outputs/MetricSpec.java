@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.ContainerResourceMetricSource;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.ExternalMetricSource;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.ObjectMetricSource;
@@ -165,7 +165,6 @@ public final class MetricSpec {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MetricSpec build() {
             return new MetricSpec(containerResource, external, object, pods, resource, type);
         }

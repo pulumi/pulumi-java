@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="primaryKey", required=true)
-    private final String primaryKey;
+        private final String primaryKey;
 
     public String getPrimaryKey() {
         return this.primaryKey;
@@ -32,7 +32,7 @@ public final class StorageAccountCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -43,7 +43,7 @@ public final class StorageAccountCredentialsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="secondaryKey", required=true)
-    private final String secondaryKey;
+        private final String secondaryKey;
 
     public String getSecondaryKey() {
         return this.secondaryKey;
@@ -102,7 +102,6 @@ public final class StorageAccountCredentialsResponse extends io.pulumi.resources
             this.secondaryKey = Objects.requireNonNull(secondaryKey);
             return this;
         }
-
         public StorageAccountCredentialsResponse build() {
             return new StorageAccountCredentialsResponse(primaryKey, resourceId, secondaryKey);
         }

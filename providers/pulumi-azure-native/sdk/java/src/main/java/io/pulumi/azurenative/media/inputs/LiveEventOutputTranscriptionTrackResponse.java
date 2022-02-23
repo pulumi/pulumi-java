@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="trackName", required=true)
-    private final String trackName;
+        private final String trackName;
 
     public String getTrackName() {
         return this.trackName;
@@ -59,7 +59,6 @@ public final class LiveEventOutputTranscriptionTrackResponse extends io.pulumi.r
             this.trackName = Objects.requireNonNull(trackName);
             return this;
         }
-
         public LiveEventOutputTranscriptionTrackResponse build() {
             return new LiveEventOutputTranscriptionTrackResponse(trackName);
         }

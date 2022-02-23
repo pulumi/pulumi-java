@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetInstanceSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,21 +22,21 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="automaticRestart", required=true)
-    private final Boolean automaticRestart;
+        private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
 
     @InputImport(name="minNodeCpus", required=true)
-    private final Integer minNodeCpus;
+        private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
     }
 
     @InputImport(name="nodeAffinities", required=true)
-    private final List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
+        private final List<GetInstanceSchedulingNodeAffinity> nodeAffinities;
 
     public List<GetInstanceSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities;
@@ -49,7 +49,7 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="onHostMaintenance", required=true)
-    private final String onHostMaintenance;
+        private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
@@ -60,7 +60,7 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="preemptible", required=true)
-    private final Boolean preemptible;
+        private final Boolean preemptible;
 
     public Boolean getPreemptible() {
         return this.preemptible;
@@ -139,7 +139,6 @@ public final class GetInstanceScheduling extends io.pulumi.resources.InvokeArgs 
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public GetInstanceScheduling build() {
             return new GetInstanceScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

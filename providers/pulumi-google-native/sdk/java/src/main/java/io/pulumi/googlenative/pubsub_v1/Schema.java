@@ -5,8 +5,8 @@ package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsub_v1.SchemaArgs;
 import java.lang.String;
@@ -61,13 +61,6 @@ public class Schema extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Schema(String name) {
-        super("google-native:pubsub/v1:Schema", name, SchemaArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

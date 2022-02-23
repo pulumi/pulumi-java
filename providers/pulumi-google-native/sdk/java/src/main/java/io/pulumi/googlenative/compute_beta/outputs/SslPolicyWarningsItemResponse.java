@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SslPolicyWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class SslPolicyWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public SslPolicyWarningsItemResponse build() {
             return new SslPolicyWarningsItemResponse(code, data, message);
         }

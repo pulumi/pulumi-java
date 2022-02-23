@@ -9,8 +9,8 @@ import io.pulumi.awsnative.ec2.enums.IPAMScopeIpamScopeType;
 import io.pulumi.awsnative.ec2.outputs.IPAMScopeTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,13 +142,6 @@ public class IPAMScope extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IPAMScope(String name) {
-        super("aws-native:ec2:IPAMScope", name, IPAMScopeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

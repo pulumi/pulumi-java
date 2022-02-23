@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANUpdateGateway
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionTagArgs;
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionUpdateWirelessGatewayTaskCreateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateTasks", required=true)
-    private final Input<Boolean> autoCreateTasks;
+        private final Input<Boolean> autoCreateTasks;
 
     public Input<Boolean> getAutoCreateTasks() {
         return this.autoCreateTasks;
@@ -36,7 +36,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWANUpdateGatewayTaskEntry")
-    private final @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry;
+        private final @Nullable Input<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> loRaWANUpdateGatewayTaskEntry;
 
     public Input<TaskDefinitionLoRaWANUpdateGatewayTaskEntryArgs> getLoRaWANUpdateGatewayTaskEntry() {
         return this.loRaWANUpdateGatewayTaskEntry == null ? Input.empty() : this.loRaWANUpdateGatewayTaskEntry;
@@ -47,7 +47,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<TaskDefinitionTagArgs>> tags;
+        private final @Nullable Input<List<TaskDefinitionTagArgs>> tags;
 
     public Input<List<TaskDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -69,7 +69,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="taskDefinitionType")
-    private final @Nullable Input<TaskDefinitionType> taskDefinitionType;
+        private final @Nullable Input<TaskDefinitionType> taskDefinitionType;
 
     public Input<TaskDefinitionType> getTaskDefinitionType() {
         return this.taskDefinitionType == null ? Input.empty() : this.taskDefinitionType;
@@ -80,7 +80,7 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="update")
-    private final @Nullable Input<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update;
+        private final @Nullable Input<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> update;
 
     public Input<TaskDefinitionUpdateWirelessGatewayTaskCreateArgs> getUpdate() {
         return this.update == null ? Input.empty() : this.update;
@@ -199,7 +199,6 @@ public final class TaskDefinitionArgs extends io.pulumi.resources.ResourceArgs {
             this.update = Input.ofNullable(update);
             return this;
         }
-
         public TaskDefinitionArgs build() {
             return new TaskDefinitionArgs(autoCreateTasks, loRaWANUpdateGatewayTaskEntry, name, tags, taskDefinitionType, update);
         }

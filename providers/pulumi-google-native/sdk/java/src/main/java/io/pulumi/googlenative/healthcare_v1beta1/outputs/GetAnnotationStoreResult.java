@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GetAnnotationStoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetAnnotationStoreResult build() {
             return new GetAnnotationStoreResult(labels, name);
         }

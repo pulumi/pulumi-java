@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.TargetRegionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -164,7 +164,6 @@ public final class GalleryImageVersionPublishingProfileResponse {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public GalleryImageVersionPublishingProfileResponse build() {
             return new GalleryImageVersionPublishingProfileResponse(endOfLifeDate, excludeFromLatest, publishedDate, replicaCount, storageAccountType, targetRegions);
         }

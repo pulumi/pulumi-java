@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse {
             this.testCases = Objects.requireNonNull(testCases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse build() {
             return new GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse(enableContinuousRun, enablePredeploymentRun, testCases);
         }

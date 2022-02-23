@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelBasicConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="combiningFunction")
-    private final @Nullable Input<String> combiningFunction;
+        private final @Nullable Input<String> combiningFunction;
 
     public Input<String> getCombiningFunction() {
         return this.combiningFunction == null ? Input.empty() : this.combiningFunction;
@@ -39,7 +39,7 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final Input<List<AccessLevelBasicConditionGetArgs>> conditions;
+        private final Input<List<AccessLevelBasicConditionGetArgs>> conditions;
 
     public Input<List<AccessLevelBasicConditionGetArgs>> getConditions() {
         return this.conditions;
@@ -98,7 +98,6 @@ public final class AccessLevelBasicGetArgs extends io.pulumi.resources.ResourceA
             this.conditions = Input.of(Objects.requireNonNull(conditions));
             return this;
         }
-
         public AccessLevelBasicGetArgs build() {
             return new AccessLevelBasicGetArgs(combiningFunction, conditions);
         }

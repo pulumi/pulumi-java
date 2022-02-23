@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+        private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -36,7 +36,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<String> connectionString;
+        private final @Nullable Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -47,7 +47,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="endpointUri")
-    private final @Nullable Input<String> endpointUri;
+        private final @Nullable Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
@@ -58,7 +58,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="entityPath")
-    private final @Nullable Input<String> entityPath;
+        private final @Nullable Input<String> entityPath;
 
     public Input<String> getEntityPath() {
         return this.entityPath == null ? Input.empty() : this.entityPath;
@@ -69,7 +69,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -80,7 +80,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -91,7 +91,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable Input<String> resourceGroup;
+        private final @Nullable Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
@@ -102,7 +102,7 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+        private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -251,7 +251,6 @@ public final class RoutingEventHubPropertiesArgs extends io.pulumi.resources.Res
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
-
         public RoutingEventHubPropertiesArgs build() {
             return new RoutingEventHubPropertiesArgs(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }

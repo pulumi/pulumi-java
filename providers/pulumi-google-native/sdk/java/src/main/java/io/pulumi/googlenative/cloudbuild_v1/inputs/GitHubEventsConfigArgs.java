@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PullRequestFilterArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.PushFilterArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enterpriseConfigResourceName")
-    private final @Nullable Input<String> enterpriseConfigResourceName;
+      private final @Nullable Input<String> enterpriseConfigResourceName;
 
     public Input<String> getEnterpriseConfigResourceName() {
         return this.enterpriseConfigResourceName == null ? Input.empty() : this.enterpriseConfigResourceName;
@@ -36,7 +36,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="installationId")
-    private final @Nullable Input<String> installationId;
+      private final @Nullable Input<String> installationId;
 
     public Input<String> getInstallationId() {
         return this.installationId == null ? Input.empty() : this.installationId;
@@ -47,7 +47,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<String> owner;
+      private final @Nullable Input<String> owner;
 
     public Input<String> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -69,7 +69,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pullRequest")
-    private final @Nullable Input<PullRequestFilterArgs> pullRequest;
+      private final @Nullable Input<PullRequestFilterArgs> pullRequest;
 
     public Input<PullRequestFilterArgs> getPullRequest() {
         return this.pullRequest == null ? Input.empty() : this.pullRequest;
@@ -80,7 +80,7 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="push")
-    private final @Nullable Input<PushFilterArgs> push;
+      private final @Nullable Input<PushFilterArgs> push;
 
     public Input<PushFilterArgs> getPush() {
         return this.push == null ? Input.empty() : this.push;
@@ -199,7 +199,6 @@ public final class GitHubEventsConfigArgs extends io.pulumi.resources.ResourceAr
             this.push = Input.ofNullable(push);
             return this;
         }
-
         public GitHubEventsConfigArgs build() {
             return new GitHubEventsConfigArgs(enterpriseConfigResourceName, installationId, name, owner, pullRequest, push);
         }

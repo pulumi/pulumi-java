@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.CloudFunctionEndpointResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -223,7 +223,6 @@ public final class EndpointResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public EndpointResponse build() {
             return new EndpointResponse(cloudFunction, cloudSqlInstance, gkeMasterCluster, instance, ipAddress, network, networkType, port, project);
         }

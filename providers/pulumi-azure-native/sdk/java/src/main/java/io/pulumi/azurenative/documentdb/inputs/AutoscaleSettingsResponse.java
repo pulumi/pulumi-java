@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="maxThroughput")
-    private final @Nullable Integer maxThroughput;
+        private final @Nullable Integer maxThroughput;
 
     public Optional<Integer> getMaxThroughput() {
         return this.maxThroughput == null ? Optional.empty() : Optional.ofNullable(this.maxThroughput);
@@ -57,7 +57,6 @@ public final class AutoscaleSettingsResponse extends io.pulumi.resources.InvokeA
             this.maxThroughput = maxThroughput;
             return this;
         }
-
         public AutoscaleSettingsResponse build() {
             return new AutoscaleSettingsResponse(maxThroughput);
         }

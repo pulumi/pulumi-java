@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -30,7 +30,7 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable String principalId;
+        private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -79,7 +79,6 @@ public final class UserIdentityPropertiesResponse extends io.pulumi.resources.In
             this.principalId = principalId;
             return this;
         }
-
         public UserIdentityPropertiesResponse build() {
             return new UserIdentityPropertiesResponse(clientId, principalId);
         }

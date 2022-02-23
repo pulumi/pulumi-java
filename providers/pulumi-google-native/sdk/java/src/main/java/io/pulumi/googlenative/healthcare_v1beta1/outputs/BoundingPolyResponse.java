@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.VertexResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class BoundingPolyResponse {
             this.vertices = Objects.requireNonNull(vertices);
             return this;
         }
-
         public BoundingPolyResponse build() {
             return new BoundingPolyResponse(label, vertices);
         }

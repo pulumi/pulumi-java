@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstancePropertiesGuestAccelerator;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstancePropertiesLocalSsd;
 import java.lang.String;
@@ -133,7 +133,6 @@ public final class ReservationSpecificReservationInstanceProperties {
             this.minCpuPlatform = minCpuPlatform;
             return this;
         }
-
         public ReservationSpecificReservationInstanceProperties build() {
             return new ReservationSpecificReservationInstanceProperties(guestAccelerators, localSsds, machineType, minCpuPlatform);
         }

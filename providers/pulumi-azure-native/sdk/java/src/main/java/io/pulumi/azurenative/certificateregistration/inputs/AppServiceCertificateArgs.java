@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.certificateregistration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable Input<String> keyVaultId;
+        private final @Nullable Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
@@ -34,7 +34,7 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultSecretName")
-    private final @Nullable Input<String> keyVaultSecretName;
+        private final @Nullable Input<String> keyVaultSecretName;
 
     public Input<String> getKeyVaultSecretName() {
         return this.keyVaultSecretName == null ? Input.empty() : this.keyVaultSecretName;
@@ -93,7 +93,6 @@ public final class AppServiceCertificateArgs extends io.pulumi.resources.Resourc
             this.keyVaultSecretName = Input.ofNullable(keyVaultSecretName);
             return this;
         }
-
         public AppServiceCertificateArgs build() {
             return new AppServiceCertificateArgs(keyVaultId, keyVaultSecretName);
         }

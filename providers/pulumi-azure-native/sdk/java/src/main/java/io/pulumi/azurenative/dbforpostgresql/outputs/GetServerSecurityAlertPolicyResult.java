@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -247,7 +247,6 @@ public final class GetServerSecurityAlertPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerSecurityAlertPolicyResult build() {
             return new GetServerSecurityAlertPolicyResult(disabledAlerts, emailAccountAdmins, emailAddresses, id, name, retentionDays, state, storageAccountAccessKey, storageEndpoint, type);
         }

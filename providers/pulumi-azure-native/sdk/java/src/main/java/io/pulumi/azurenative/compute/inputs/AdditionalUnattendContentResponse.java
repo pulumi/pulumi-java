@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="componentName")
-    private final @Nullable String componentName;
+        private final @Nullable String componentName;
 
     public Optional<String> getComponentName() {
         return this.componentName == null ? Optional.empty() : Optional.ofNullable(this.componentName);
@@ -34,7 +34,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="content")
-    private final @Nullable String content;
+        private final @Nullable String content;
 
     public Optional<String> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -45,7 +45,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="passName")
-    private final @Nullable String passName;
+        private final @Nullable String passName;
 
     public Optional<String> getPassName() {
         return this.passName == null ? Optional.empty() : Optional.ofNullable(this.passName);
@@ -56,7 +56,7 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="settingName")
-    private final @Nullable String settingName;
+        private final @Nullable String settingName;
 
     public Optional<String> getSettingName() {
         return this.settingName == null ? Optional.empty() : Optional.ofNullable(this.settingName);
@@ -125,7 +125,6 @@ public final class AdditionalUnattendContentResponse extends io.pulumi.resources
             this.settingName = settingName;
             return this;
         }
-
         public AdditionalUnattendContentResponse build() {
             return new AdditionalUnattendContentResponse(componentName, content, passName, settingName);
         }

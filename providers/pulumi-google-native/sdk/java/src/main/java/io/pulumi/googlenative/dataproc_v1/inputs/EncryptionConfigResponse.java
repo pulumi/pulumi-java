@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="gcePdKmsKeyName", required=true)
-    private final String gcePdKmsKeyName;
+      private final String gcePdKmsKeyName;
 
     public String getGcePdKmsKeyName() {
         return this.gcePdKmsKeyName;
@@ -59,7 +59,6 @@ public final class EncryptionConfigResponse extends io.pulumi.resources.InvokeAr
             this.gcePdKmsKeyName = Objects.requireNonNull(gcePdKmsKeyName);
             return this;
         }
-
         public EncryptionConfigResponse build() {
             return new EncryptionConfigResponse(gcePdKmsKeyName);
         }

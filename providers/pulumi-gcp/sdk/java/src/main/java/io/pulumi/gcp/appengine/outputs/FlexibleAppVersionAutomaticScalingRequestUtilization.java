@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class FlexibleAppVersionAutomaticScalingRequestUtilization {
             this.targetRequestCountPerSecond = targetRequestCountPerSecond;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingRequestUtilization build() {
             return new FlexibleAppVersionAutomaticScalingRequestUtilization(targetConcurrentRequests, targetRequestCountPerSecond);
         }

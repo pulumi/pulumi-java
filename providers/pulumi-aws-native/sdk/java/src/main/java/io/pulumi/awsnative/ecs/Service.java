@@ -19,8 +19,8 @@ import io.pulumi.awsnative.ecs.outputs.ServiceRegistry;
 import io.pulumi.awsnative.ecs.outputs.ServiceTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -172,13 +172,6 @@ public class Service extends io.pulumi.resources.CustomResource {
         return this.taskDefinition;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Service(String name) {
-        super("aws-native:ecs:Service", name, ServiceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

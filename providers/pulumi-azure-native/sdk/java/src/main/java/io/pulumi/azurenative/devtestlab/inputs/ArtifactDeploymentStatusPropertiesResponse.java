@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="artifactsApplied")
-    private final @Nullable Integer artifactsApplied;
+        private final @Nullable Integer artifactsApplied;
 
     public Optional<Integer> getArtifactsApplied() {
         return this.artifactsApplied == null ? Optional.empty() : Optional.ofNullable(this.artifactsApplied);
@@ -35,7 +35,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="deploymentStatus")
-    private final @Nullable String deploymentStatus;
+        private final @Nullable String deploymentStatus;
 
     public Optional<String> getDeploymentStatus() {
         return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
@@ -46,7 +46,7 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="totalArtifacts")
-    private final @Nullable Integer totalArtifacts;
+        private final @Nullable Integer totalArtifacts;
 
     public Optional<Integer> getTotalArtifacts() {
         return this.totalArtifacts == null ? Optional.empty() : Optional.ofNullable(this.totalArtifacts);
@@ -105,7 +105,6 @@ public final class ArtifactDeploymentStatusPropertiesResponse extends io.pulumi.
             this.totalArtifacts = totalArtifacts;
             return this;
         }
-
         public ArtifactDeploymentStatusPropertiesResponse build() {
             return new ArtifactDeploymentStatusPropertiesResponse(artifactsApplied, deploymentStatus, totalArtifacts);
         }

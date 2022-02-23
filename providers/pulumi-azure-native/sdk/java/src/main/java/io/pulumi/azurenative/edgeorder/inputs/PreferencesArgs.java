@@ -8,7 +8,7 @@ import io.pulumi.azurenative.edgeorder.inputs.ManagementResourcePreferencesArgs;
 import io.pulumi.azurenative.edgeorder.inputs.NotificationPreferenceArgs;
 import io.pulumi.azurenative.edgeorder.inputs.TransportPreferencesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionPreferences")
-    private final @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
+        private final @Nullable Input<EncryptionPreferencesArgs> encryptionPreferences;
 
     public Input<EncryptionPreferencesArgs> getEncryptionPreferences() {
         return this.encryptionPreferences == null ? Input.empty() : this.encryptionPreferences;
@@ -38,7 +38,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementResourcePreferences")
-    private final @Nullable Input<ManagementResourcePreferencesArgs> managementResourcePreferences;
+        private final @Nullable Input<ManagementResourcePreferencesArgs> managementResourcePreferences;
 
     public Input<ManagementResourcePreferencesArgs> getManagementResourcePreferences() {
         return this.managementResourcePreferences == null ? Input.empty() : this.managementResourcePreferences;
@@ -49,7 +49,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPreferences")
-    private final @Nullable Input<List<NotificationPreferenceArgs>> notificationPreferences;
+        private final @Nullable Input<List<NotificationPreferenceArgs>> notificationPreferences;
 
     public Input<List<NotificationPreferenceArgs>> getNotificationPreferences() {
         return this.notificationPreferences == null ? Input.empty() : this.notificationPreferences;
@@ -60,7 +60,7 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transportPreferences")
-    private final @Nullable Input<TransportPreferencesArgs> transportPreferences;
+        private final @Nullable Input<TransportPreferencesArgs> transportPreferences;
 
     public Input<TransportPreferencesArgs> getTransportPreferences() {
         return this.transportPreferences == null ? Input.empty() : this.transportPreferences;
@@ -149,7 +149,6 @@ public final class PreferencesArgs extends io.pulumi.resources.ResourceArgs {
             this.transportPreferences = Input.ofNullable(transportPreferences);
             return this;
         }
-
         public PreferencesArgs build() {
             return new PreferencesArgs(encryptionPreferences, managementResourcePreferences, notificationPreferences, transportPreferences);
         }

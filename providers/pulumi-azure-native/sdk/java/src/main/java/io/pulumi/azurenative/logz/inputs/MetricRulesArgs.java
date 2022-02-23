@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.FilteringTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filteringTags")
-    private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
+        private final @Nullable Input<List<FilteringTagArgs>> filteringTags;
 
     public Input<List<FilteringTagArgs>> getFilteringTags() {
         return this.filteringTags == null ? Input.empty() : this.filteringTags;
@@ -36,7 +36,7 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+        private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -95,7 +95,6 @@ public final class MetricRulesArgs extends io.pulumi.resources.ResourceArgs {
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
-
         public MetricRulesArgs build() {
             return new MetricRulesArgs(filteringTags, subscriptionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetBackupResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, labels, name, state, statusMessage, type, updateTime);
         }

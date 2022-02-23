@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.DeploymentLabelEntryResponse;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.DeploymentUpdateResponse;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationResponse;
@@ -268,7 +268,6 @@ public final class GetDeploymentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(description, fingerprint, insertTime, labels, manifest, name, operation, selfLink, target, update, updateTime);
         }

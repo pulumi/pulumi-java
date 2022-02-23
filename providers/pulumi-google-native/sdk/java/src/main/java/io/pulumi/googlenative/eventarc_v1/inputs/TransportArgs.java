@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1.inputs.PubsubArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsub")
-    private final @Nullable Input<PubsubArgs> pubsub;
+      private final @Nullable Input<PubsubArgs> pubsub;
 
     public Input<PubsubArgs> getPubsub() {
         return this.pubsub == null ? Input.empty() : this.pubsub;
@@ -66,7 +66,6 @@ public final class TransportArgs extends io.pulumi.resources.ResourceArgs {
             this.pubsub = Input.ofNullable(pubsub);
             return this;
         }
-
         public TransportArgs build() {
             return new TransportArgs(pubsub);
         }

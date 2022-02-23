@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class CreatedByResponse {
             this.puid = Objects.requireNonNull(puid);
             return this;
         }
-
         public CreatedByResponse build() {
             return new CreatedByResponse(applicationId, oid, puid);
         }

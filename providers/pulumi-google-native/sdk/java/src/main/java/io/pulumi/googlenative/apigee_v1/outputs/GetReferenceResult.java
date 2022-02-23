@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class GetReferenceResult {
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public GetReferenceResult build() {
             return new GetReferenceResult(description, name, refers, resourceType);
         }

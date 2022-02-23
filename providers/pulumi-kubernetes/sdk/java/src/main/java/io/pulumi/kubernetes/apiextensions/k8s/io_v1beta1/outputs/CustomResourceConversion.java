@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.WebhookClientConfig;
 import java.lang.String;
 import java.util.List;
@@ -101,7 +101,6 @@ public final class CustomResourceConversion {
             this.webhookClientConfig = webhookClientConfig;
             return this;
         }
-
         public CustomResourceConversion build() {
             return new CustomResourceConversion(conversionReviewVersions, strategy, webhookClientConfig);
         }

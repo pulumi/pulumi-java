@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendServiceCdnPolicyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendServiceConnectionTrackingPolicyResponse;
@@ -822,7 +822,6 @@ public final class GetRegionBackendServiceResult {
             this.timeoutSec = Objects.requireNonNull(timeoutSec);
             return this;
         }
-
         public GetRegionBackendServiceResult build() {
             return new GetRegionBackendServiceResult(affinityCookieTtlSec, backends, cdnPolicy, circuitBreakers, compressionMode, connectionDraining, connectionTrackingPolicy, consistentHash, creationTimestamp, customRequestHeaders, customResponseHeaders, description, edgeSecurityPolicy, enableCDN, failoverPolicy, fingerprint, healthChecks, iap, kind, loadBalancingScheme, localityLbPolicy, logConfig, maxStreamDuration, name, network, outlierDetection, portName, protocol, region, securityPolicy, securitySettings, selfLink, selfLinkWithId, serviceBindings, serviceLbPolicy, sessionAffinity, subsetting, timeoutSec);
         }

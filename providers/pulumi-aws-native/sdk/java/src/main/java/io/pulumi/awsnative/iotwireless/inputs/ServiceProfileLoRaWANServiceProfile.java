@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,133 +17,133 @@ public final class ServiceProfileLoRaWANServiceProfile extends io.pulumi.resourc
     public static final ServiceProfileLoRaWANServiceProfile Empty = new ServiceProfileLoRaWANServiceProfile();
 
     @InputImport(name="addGwMetadata")
-    private final @Nullable Boolean addGwMetadata;
+        private final @Nullable Boolean addGwMetadata;
 
     public Optional<Boolean> getAddGwMetadata() {
         return this.addGwMetadata == null ? Optional.empty() : Optional.ofNullable(this.addGwMetadata);
     }
 
     @InputImport(name="channelMask")
-    private final @Nullable String channelMask;
+        private final @Nullable String channelMask;
 
     public Optional<String> getChannelMask() {
         return this.channelMask == null ? Optional.empty() : Optional.ofNullable(this.channelMask);
     }
 
     @InputImport(name="devStatusReqFreq")
-    private final @Nullable Integer devStatusReqFreq;
+        private final @Nullable Integer devStatusReqFreq;
 
     public Optional<Integer> getDevStatusReqFreq() {
         return this.devStatusReqFreq == null ? Optional.empty() : Optional.ofNullable(this.devStatusReqFreq);
     }
 
     @InputImport(name="dlBucketSize")
-    private final @Nullable Integer dlBucketSize;
+        private final @Nullable Integer dlBucketSize;
 
     public Optional<Integer> getDlBucketSize() {
         return this.dlBucketSize == null ? Optional.empty() : Optional.ofNullable(this.dlBucketSize);
     }
 
     @InputImport(name="dlRate")
-    private final @Nullable Integer dlRate;
+        private final @Nullable Integer dlRate;
 
     public Optional<Integer> getDlRate() {
         return this.dlRate == null ? Optional.empty() : Optional.ofNullable(this.dlRate);
     }
 
     @InputImport(name="dlRatePolicy")
-    private final @Nullable String dlRatePolicy;
+        private final @Nullable String dlRatePolicy;
 
     public Optional<String> getDlRatePolicy() {
         return this.dlRatePolicy == null ? Optional.empty() : Optional.ofNullable(this.dlRatePolicy);
     }
 
     @InputImport(name="drMax")
-    private final @Nullable Integer drMax;
+        private final @Nullable Integer drMax;
 
     public Optional<Integer> getDrMax() {
         return this.drMax == null ? Optional.empty() : Optional.ofNullable(this.drMax);
     }
 
     @InputImport(name="drMin")
-    private final @Nullable Integer drMin;
+        private final @Nullable Integer drMin;
 
     public Optional<Integer> getDrMin() {
         return this.drMin == null ? Optional.empty() : Optional.ofNullable(this.drMin);
     }
 
     @InputImport(name="hrAllowed")
-    private final @Nullable Boolean hrAllowed;
+        private final @Nullable Boolean hrAllowed;
 
     public Optional<Boolean> getHrAllowed() {
         return this.hrAllowed == null ? Optional.empty() : Optional.ofNullable(this.hrAllowed);
     }
 
     @InputImport(name="minGwDiversity")
-    private final @Nullable Integer minGwDiversity;
+        private final @Nullable Integer minGwDiversity;
 
     public Optional<Integer> getMinGwDiversity() {
         return this.minGwDiversity == null ? Optional.empty() : Optional.ofNullable(this.minGwDiversity);
     }
 
     @InputImport(name="nwkGeoLoc")
-    private final @Nullable Boolean nwkGeoLoc;
+        private final @Nullable Boolean nwkGeoLoc;
 
     public Optional<Boolean> getNwkGeoLoc() {
         return this.nwkGeoLoc == null ? Optional.empty() : Optional.ofNullable(this.nwkGeoLoc);
     }
 
     @InputImport(name="prAllowed")
-    private final @Nullable Boolean prAllowed;
+        private final @Nullable Boolean prAllowed;
 
     public Optional<Boolean> getPrAllowed() {
         return this.prAllowed == null ? Optional.empty() : Optional.ofNullable(this.prAllowed);
     }
 
     @InputImport(name="raAllowed")
-    private final @Nullable Boolean raAllowed;
+        private final @Nullable Boolean raAllowed;
 
     public Optional<Boolean> getRaAllowed() {
         return this.raAllowed == null ? Optional.empty() : Optional.ofNullable(this.raAllowed);
     }
 
     @InputImport(name="reportDevStatusBattery")
-    private final @Nullable Boolean reportDevStatusBattery;
+        private final @Nullable Boolean reportDevStatusBattery;
 
     public Optional<Boolean> getReportDevStatusBattery() {
         return this.reportDevStatusBattery == null ? Optional.empty() : Optional.ofNullable(this.reportDevStatusBattery);
     }
 
     @InputImport(name="reportDevStatusMargin")
-    private final @Nullable Boolean reportDevStatusMargin;
+        private final @Nullable Boolean reportDevStatusMargin;
 
     public Optional<Boolean> getReportDevStatusMargin() {
         return this.reportDevStatusMargin == null ? Optional.empty() : Optional.ofNullable(this.reportDevStatusMargin);
     }
 
     @InputImport(name="targetPer")
-    private final @Nullable Integer targetPer;
+        private final @Nullable Integer targetPer;
 
     public Optional<Integer> getTargetPer() {
         return this.targetPer == null ? Optional.empty() : Optional.ofNullable(this.targetPer);
     }
 
     @InputImport(name="ulBucketSize")
-    private final @Nullable Integer ulBucketSize;
+        private final @Nullable Integer ulBucketSize;
 
     public Optional<Integer> getUlBucketSize() {
         return this.ulBucketSize == null ? Optional.empty() : Optional.ofNullable(this.ulBucketSize);
     }
 
     @InputImport(name="ulRate")
-    private final @Nullable Integer ulRate;
+        private final @Nullable Integer ulRate;
 
     public Optional<Integer> getUlRate() {
         return this.ulRate == null ? Optional.empty() : Optional.ofNullable(this.ulRate);
     }
 
     @InputImport(name="ulRatePolicy")
-    private final @Nullable String ulRatePolicy;
+        private final @Nullable String ulRatePolicy;
 
     public Optional<String> getUlRatePolicy() {
         return this.ulRatePolicy == null ? Optional.empty() : Optional.ofNullable(this.ulRatePolicy);
@@ -362,7 +362,6 @@ public final class ServiceProfileLoRaWANServiceProfile extends io.pulumi.resourc
             this.ulRatePolicy = ulRatePolicy;
             return this;
         }
-
         public ServiceProfileLoRaWANServiceProfile build() {
             return new ServiceProfileLoRaWANServiceProfile(addGwMetadata, channelMask, devStatusReqFreq, dlBucketSize, dlRate, dlRatePolicy, drMax, drMin, hrAllowed, minGwDiversity, nwkGeoLoc, prAllowed, raAllowed, reportDevStatusBattery, reportDevStatusMargin, targetPer, ulBucketSize, ulRate, ulRatePolicy);
         }

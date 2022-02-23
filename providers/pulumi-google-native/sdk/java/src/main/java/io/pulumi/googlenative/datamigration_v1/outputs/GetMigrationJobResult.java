@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1.outputs.DatabaseTypeResponse;
 import io.pulumi.googlenative.datamigration_v1.outputs.ReverseSshConnectivityResponse;
 import io.pulumi.googlenative.datamigration_v1.outputs.StaticIpConnectivityResponse;
@@ -437,7 +437,6 @@ public final class GetMigrationJobResult {
             this.vpcPeeringConnectivity = Objects.requireNonNull(vpcPeeringConnectivity);
             return this;
         }
-
         public GetMigrationJobResult build() {
             return new GetMigrationJobResult(createTime, destination, destinationDatabase, displayName, dumpPath, duration, endTime, error, labels, name, phase, reverseSshConnectivity, source, sourceDatabase, state, staticIpConnectivity, type, updateTime, vpcPeeringConnectivity);
         }

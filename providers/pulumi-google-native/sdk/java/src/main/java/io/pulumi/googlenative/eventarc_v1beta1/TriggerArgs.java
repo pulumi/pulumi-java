@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.DestinationArgs;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.MatchingCriteriaArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<DestinationArgs> destination;
+      private final Input<DestinationArgs> destination;
 
     public Input<DestinationArgs> getDestination() {
         return this.destination;
@@ -34,14 +34,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -52,7 +52,7 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchingCriteria", required=true)
-    private final Input<List<MatchingCriteriaArgs>> matchingCriteria;
+      private final Input<List<MatchingCriteriaArgs>> matchingCriteria;
 
     public Input<List<MatchingCriteriaArgs>> getMatchingCriteria() {
         return this.matchingCriteria;
@@ -63,14 +63,14 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -81,21 +81,21 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
     @InputImport(name="triggerId", required=true)
-    private final Input<String> triggerId;
+      private final Input<String> triggerId;
 
     public Input<String> getTriggerId() {
         return this.triggerId;
     }
 
     @InputImport(name="validateOnly", required=true)
-    private final Input<String> validateOnly;
+      private final Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly;
@@ -259,7 +259,6 @@ public final class TriggerArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.of(Objects.requireNonNull(validateOnly));
             return this;
         }
-
         public TriggerArgs build() {
             return new TriggerArgs(destination, labels, location, matchingCriteria, name, project, serviceAccount, triggerId, validateOnly);
         }

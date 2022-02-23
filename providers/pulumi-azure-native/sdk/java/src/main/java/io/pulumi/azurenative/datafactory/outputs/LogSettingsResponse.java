@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.CopyActivityLogSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.LogLocationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class LogSettingsResponse {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }

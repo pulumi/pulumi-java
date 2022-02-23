@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateCommonName", required=true)
-    private final Input<String> certificateCommonName;
+        private final Input<String> certificateCommonName;
 
     public Input<String> getCertificateCommonName() {
         return this.certificateCommonName;
@@ -34,7 +34,7 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateIssuerThumbprint", required=true)
-    private final Input<String> certificateIssuerThumbprint;
+        private final Input<String> certificateIssuerThumbprint;
 
     public Input<String> getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
@@ -45,7 +45,7 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="isAdmin", required=true)
-    private final Input<Boolean> isAdmin;
+        private final Input<Boolean> isAdmin;
 
     public Input<Boolean> getIsAdmin() {
         return this.isAdmin;
@@ -119,7 +119,6 @@ public final class ClientCertificateCommonNameArgs extends io.pulumi.resources.R
             this.isAdmin = Input.of(Objects.requireNonNull(isAdmin));
             return this;
         }
-
         public ClientCertificateCommonNameArgs build() {
             return new ClientCertificateCommonNameArgs(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FormulaPropertiesFromVmResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="labVmId")
-    private final @Nullable String labVmId;
+        private final @Nullable String labVmId;
 
     public Optional<String> getLabVmId() {
         return this.labVmId == null ? Optional.empty() : Optional.ofNullable(this.labVmId);
@@ -61,7 +61,6 @@ public final class FormulaPropertiesFromVmResponse extends io.pulumi.resources.I
             this.labVmId = labVmId;
             return this;
         }
-
         public FormulaPropertiesFromVmResponse build() {
             return new FormulaPropertiesFromVmResponse(labVmId);
         }

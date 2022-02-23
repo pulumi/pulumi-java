@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class FlowGoogleAnalyticsSourceProperties extends io.pulumi.resourc
     public static final FlowGoogleAnalyticsSourceProperties Empty = new FlowGoogleAnalyticsSourceProperties();
 
     @InputImport(name="object", required=true)
-    private final String object;
+        private final String object;
 
     public String getObject() {
         return this.object;
@@ -51,7 +51,6 @@ public final class FlowGoogleAnalyticsSourceProperties extends io.pulumi.resourc
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowGoogleAnalyticsSourceProperties build() {
             return new FlowGoogleAnalyticsSourceProperties(object);
         }

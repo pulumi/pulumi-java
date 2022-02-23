@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.PolicyParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +82,6 @@ public final class PolicyInfoResponse {
             this.policyVersion = Objects.requireNonNull(policyVersion);
             return this;
         }
-
         public PolicyInfoResponse build() {
             return new PolicyInfoResponse(policyId, policyParameters, policyVersion);
         }

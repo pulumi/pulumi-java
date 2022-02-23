@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.OwnerReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -351,7 +351,6 @@ public final class ObjectMetaResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public ObjectMetaResponse build() {
             return new ObjectMetaResponse(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class DataflowEndpointGroupSecurityDetails {
             this.subnetIds = subnetIds;
             return this;
         }
-
         public DataflowEndpointGroupSecurityDetails build() {
             return new DataflowEndpointGroupSecurityDetails(roleArn, securityGroupIds, subnetIds);
         }

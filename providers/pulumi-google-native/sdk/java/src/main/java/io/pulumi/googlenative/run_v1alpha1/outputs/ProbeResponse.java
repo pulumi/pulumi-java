@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ExecActionResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.HTTPGetActionResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.TCPSocketActionResponse;
@@ -203,7 +203,6 @@ public final class ProbeResponse {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
-
         public ProbeResponse build() {
             return new ProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, timeoutSeconds);
         }

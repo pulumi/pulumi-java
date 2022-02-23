@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.ThemeBorderStyleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ThemeTileStyleArgs Empty = new ThemeTileStyleArgs();
 
     @InputImport(name="border")
-    private final @Nullable Input<ThemeBorderStyleArgs> border;
+        private final @Nullable Input<ThemeBorderStyleArgs> border;
 
     public Input<ThemeBorderStyleArgs> getBorder() {
         return this.border == null ? Input.empty() : this.border;
@@ -62,7 +62,6 @@ public final class ThemeTileStyleArgs extends io.pulumi.resources.ResourceArgs {
             this.border = Input.ofNullable(border);
             return this;
         }
-
         public ThemeTileStyleArgs build() {
             return new ThemeTileStyleArgs(border);
         }

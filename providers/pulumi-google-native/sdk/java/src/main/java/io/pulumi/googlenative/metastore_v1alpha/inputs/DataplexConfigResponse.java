@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lakeResources", required=true)
-    private final Map<String,String> lakeResources;
+      private final Map<String,String> lakeResources;
 
     public Map<String,String> getLakeResources() {
         return this.lakeResources;
@@ -60,7 +60,6 @@ public final class DataplexConfigResponse extends io.pulumi.resources.InvokeArgs
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
         }
-
         public DataplexConfigResponse build() {
             return new DataplexConfigResponse(lakeResources);
         }

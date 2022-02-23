@@ -5,7 +5,7 @@ package io.pulumi.azurenative.softwareplan;
 
 import io.pulumi.azurenative.softwareplan.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="planId")
-    private final @Nullable Input<String> planId;
+        private final @Nullable Input<String> planId;
 
     public Input<String> getPlanId() {
         return this.planId == null ? Input.empty() : this.planId;
@@ -31,7 +31,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -42,7 +42,7 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -116,7 +116,6 @@ public final class HybridUseBenefitArgs extends io.pulumi.resources.ResourceArgs
             this.sku = Input.of(Objects.requireNonNull(sku));
             return this;
         }
-
         public HybridUseBenefitArgs build() {
             return new HybridUseBenefitArgs(planId, scope, sku);
         }

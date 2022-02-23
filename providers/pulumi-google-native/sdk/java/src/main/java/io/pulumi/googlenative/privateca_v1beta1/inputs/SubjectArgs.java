@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="countryCode")
-    private final @Nullable Input<String> countryCode;
+      private final @Nullable Input<String> countryCode;
 
     public Input<String> getCountryCode() {
         return this.countryCode == null ? Input.empty() : this.countryCode;
@@ -34,7 +34,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locality")
-    private final @Nullable Input<String> locality;
+      private final @Nullable Input<String> locality;
 
     public Input<String> getLocality() {
         return this.locality == null ? Input.empty() : this.locality;
@@ -45,7 +45,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organization")
-    private final @Nullable Input<String> organization;
+      private final @Nullable Input<String> organization;
 
     public Input<String> getOrganization() {
         return this.organization == null ? Input.empty() : this.organization;
@@ -56,7 +56,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="organizationalUnit")
-    private final @Nullable Input<String> organizationalUnit;
+      private final @Nullable Input<String> organizationalUnit;
 
     public Input<String> getOrganizationalUnit() {
         return this.organizationalUnit == null ? Input.empty() : this.organizationalUnit;
@@ -67,7 +67,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalCode")
-    private final @Nullable Input<String> postalCode;
+      private final @Nullable Input<String> postalCode;
 
     public Input<String> getPostalCode() {
         return this.postalCode == null ? Input.empty() : this.postalCode;
@@ -78,7 +78,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="province")
-    private final @Nullable Input<String> province;
+      private final @Nullable Input<String> province;
 
     public Input<String> getProvince() {
         return this.province == null ? Input.empty() : this.province;
@@ -89,7 +89,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streetAddress")
-    private final @Nullable Input<String> streetAddress;
+      private final @Nullable Input<String> streetAddress;
 
     public Input<String> getStreetAddress() {
         return this.streetAddress == null ? Input.empty() : this.streetAddress;
@@ -223,7 +223,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.streetAddress = Input.ofNullable(streetAddress);
             return this;
         }
-
         public SubjectArgs build() {
             return new SubjectArgs(countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

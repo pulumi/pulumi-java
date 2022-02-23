@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<String> storageClass;
+        private final @Nullable Input<String> storageClass;
 
     public Input<String> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -30,7 +30,7 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -89,7 +89,6 @@ public final class BucketLifecycleRuleActionGetArgs extends io.pulumi.resources.
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public BucketLifecycleRuleActionGetArgs build() {
             return new BucketLifecycleRuleActionGetArgs(storageClass, type);
         }

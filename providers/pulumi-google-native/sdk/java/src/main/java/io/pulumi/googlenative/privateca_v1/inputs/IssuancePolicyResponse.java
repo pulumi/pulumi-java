@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.AllowedKeyTypeResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.CertificateIdentityConstraintsResponse;
@@ -27,7 +27,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="allowedIssuanceModes", required=true)
-    private final IssuanceModesResponse allowedIssuanceModes;
+      private final IssuanceModesResponse allowedIssuanceModes;
 
     public IssuanceModesResponse getAllowedIssuanceModes() {
         return this.allowedIssuanceModes;
@@ -38,7 +38,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="allowedKeyTypes", required=true)
-    private final List<AllowedKeyTypeResponse> allowedKeyTypes;
+      private final List<AllowedKeyTypeResponse> allowedKeyTypes;
 
     public List<AllowedKeyTypeResponse> getAllowedKeyTypes() {
         return this.allowedKeyTypes;
@@ -49,7 +49,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="baselineValues", required=true)
-    private final X509ParametersResponse baselineValues;
+      private final X509ParametersResponse baselineValues;
 
     public X509ParametersResponse getBaselineValues() {
         return this.baselineValues;
@@ -60,7 +60,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="identityConstraints", required=true)
-    private final CertificateIdentityConstraintsResponse identityConstraints;
+      private final CertificateIdentityConstraintsResponse identityConstraints;
 
     public CertificateIdentityConstraintsResponse getIdentityConstraints() {
         return this.identityConstraints;
@@ -71,7 +71,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="maximumLifetime", required=true)
-    private final String maximumLifetime;
+      private final String maximumLifetime;
 
     public String getMaximumLifetime() {
         return this.maximumLifetime;
@@ -82,7 +82,7 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="passthroughExtensions", required=true)
-    private final CertificateExtensionConstraintsResponse passthroughExtensions;
+      private final CertificateExtensionConstraintsResponse passthroughExtensions;
 
     public CertificateExtensionConstraintsResponse getPassthroughExtensions() {
         return this.passthroughExtensions;
@@ -171,7 +171,6 @@ public final class IssuancePolicyResponse extends io.pulumi.resources.InvokeArgs
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
         }
-
         public IssuancePolicyResponse build() {
             return new IssuancePolicyResponse(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
         }

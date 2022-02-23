@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.TagSettingsPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable List<String> locations;
+        private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
@@ -36,7 +36,7 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable List<String> scope;
+        private final @Nullable List<String> scope;
 
     public List<String> getScope() {
         return this.scope == null ? List.of() : this.scope;
@@ -47,7 +47,7 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tagSettings")
-    private final @Nullable TagSettingsPropertiesResponse tagSettings;
+        private final @Nullable TagSettingsPropertiesResponse tagSettings;
 
     public Optional<TagSettingsPropertiesResponse> getTagSettings() {
         return this.tagSettings == null ? Optional.empty() : Optional.ofNullable(this.tagSettings);
@@ -106,7 +106,6 @@ public final class AzureQueryPropertiesResponse extends io.pulumi.resources.Invo
             this.tagSettings = tagSettings;
             return this;
         }
-
         public AzureQueryPropertiesResponse build() {
             return new AzureQueryPropertiesResponse(locations, scope, tagSettings);
         }

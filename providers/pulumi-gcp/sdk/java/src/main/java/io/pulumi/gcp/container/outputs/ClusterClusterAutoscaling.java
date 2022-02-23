@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterClusterAutoscalingAutoProvisioningDefaults;
 import io.pulumi.gcp.container.outputs.ClusterClusterAutoscalingResourceLimit;
 import java.lang.Boolean;
@@ -138,7 +138,6 @@ public final class ClusterClusterAutoscaling {
             this.resourceLimits = resourceLimits;
             return this;
         }
-
         public ClusterClusterAutoscaling build() {
             return new ClusterClusterAutoscaling(autoProvisioningDefaults, autoscalingProfile, enabled, resourceLimits);
         }

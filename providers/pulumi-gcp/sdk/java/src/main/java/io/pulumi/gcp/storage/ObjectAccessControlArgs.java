@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -37,7 +37,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="entity", required=true)
-    private final Input<String> entity;
+        private final Input<String> entity;
 
     public Input<String> getEntity() {
         return this.entity;
@@ -48,7 +48,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -60,7 +60,7 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -149,7 +149,6 @@ public final class ObjectAccessControlArgs extends io.pulumi.resources.ResourceA
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public ObjectAccessControlArgs build() {
             return new ObjectAccessControlArgs(bucket, entity, object, role);
         }

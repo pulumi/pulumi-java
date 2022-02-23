@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs.RouterApplianceInstanceArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hub")
-    private final @Nullable Input<String> hub;
+      private final @Nullable Input<String> hub;
 
     public Input<String> getHub() {
         return this.hub == null ? Input.empty() : this.hub;
@@ -55,7 +55,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -66,7 +66,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedInterconnectAttachments")
-    private final @Nullable Input<List<String>> linkedInterconnectAttachments;
+      private final @Nullable Input<List<String>> linkedInterconnectAttachments;
 
     public Input<List<String>> getLinkedInterconnectAttachments() {
         return this.linkedInterconnectAttachments == null ? Input.empty() : this.linkedInterconnectAttachments;
@@ -77,7 +77,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedRouterApplianceInstances")
-    private final @Nullable Input<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances;
+      private final @Nullable Input<List<RouterApplianceInstanceArgs>> linkedRouterApplianceInstances;
 
     public Input<List<RouterApplianceInstanceArgs>> getLinkedRouterApplianceInstances() {
         return this.linkedRouterApplianceInstances == null ? Input.empty() : this.linkedRouterApplianceInstances;
@@ -88,14 +88,14 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedVpnTunnels")
-    private final @Nullable Input<List<String>> linkedVpnTunnels;
+      private final @Nullable Input<List<String>> linkedVpnTunnels;
 
     public Input<List<String>> getLinkedVpnTunnels() {
         return this.linkedVpnTunnels == null ? Input.empty() : this.linkedVpnTunnels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -106,28 +106,28 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="spokeId")
-    private final @Nullable Input<String> spokeId;
+      private final @Nullable Input<String> spokeId;
 
     public Input<String> getSpokeId() {
         return this.spokeId == null ? Input.empty() : this.spokeId;
@@ -138,7 +138,7 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+      private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -362,7 +362,6 @@ public final class SpokeArgs extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public SpokeArgs build() {
             return new SpokeArgs(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, location, name, project, requestId, spokeId, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="securityProfileName", required=true)
-    private final String securityProfileName;
+        private final String securityProfileName;
 
     public String getSecurityProfileName() {
         return this.securityProfileName;
@@ -55,7 +55,6 @@ public final class GetSecurityProfileArgs extends io.pulumi.resources.InvokeArgs
             this.securityProfileName = Objects.requireNonNull(securityProfileName);
             return this;
         }
-
         public GetSecurityProfileArgs build() {
             return new GetSecurityProfileArgs(securityProfileName);
         }

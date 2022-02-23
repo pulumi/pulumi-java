@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.EmailNotificationResponse;
 import io.pulumi.azurenative.insights.inputs.WebhookNotificationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="email")
-    private final @Nullable EmailNotificationResponse email;
+        private final @Nullable EmailNotificationResponse email;
 
     public Optional<EmailNotificationResponse> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
@@ -37,7 +37,7 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="operation", required=true)
-    private final String operation;
+        private final String operation;
 
     public String getOperation() {
         return this.operation;
@@ -48,7 +48,7 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="webhooks")
-    private final @Nullable List<WebhookNotificationResponse> webhooks;
+        private final @Nullable List<WebhookNotificationResponse> webhooks;
 
     public List<WebhookNotificationResponse> getWebhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;
@@ -107,7 +107,6 @@ public final class AutoscaleNotificationResponse extends io.pulumi.resources.Inv
             this.webhooks = webhooks;
             return this;
         }
-
         public AutoscaleNotificationResponse build() {
             return new AutoscaleNotificationResponse(email, operation, webhooks);
         }

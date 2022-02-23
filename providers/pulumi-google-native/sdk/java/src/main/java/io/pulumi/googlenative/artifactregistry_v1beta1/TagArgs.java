@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.artifactregistry_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
     public static final TagArgs Empty = new TagArgs();
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -26,35 +26,35 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="packageId", required=true)
-    private final Input<String> packageId;
+      private final Input<String> packageId;
 
     public Input<String> getPackageId() {
         return this.packageId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="repositoryId", required=true)
-    private final Input<String> repositoryId;
+      private final Input<String> repositoryId;
 
     public Input<String> getRepositoryId() {
         return this.repositoryId;
     }
 
     @InputImport(name="tagId")
-    private final @Nullable Input<String> tagId;
+      private final @Nullable Input<String> tagId;
 
     public Input<String> getTagId() {
         return this.tagId == null ? Input.empty() : this.tagId;
@@ -65,7 +65,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -199,7 +199,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public TagArgs build() {
             return new TagArgs(location, name, packageId, project, repositoryId, tagId, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class ErrorsResponse {
             this.message = message;
             return this;
         }
-
         public ErrorsResponse build() {
             return new ErrorsResponse(code, message);
         }

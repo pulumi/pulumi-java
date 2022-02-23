@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class ServiceStatusConditionGetArgs extends io.pulumi.resources.Res
     public static final ServiceStatusConditionGetArgs Empty = new ServiceStatusConditionGetArgs();
 
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
     }
 
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+        private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+        private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -125,7 +125,6 @@ public final class ServiceStatusConditionGetArgs extends io.pulumi.resources.Res
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ServiceStatusConditionGetArgs build() {
             return new ServiceStatusConditionGetArgs(message, reason, status, type);
         }

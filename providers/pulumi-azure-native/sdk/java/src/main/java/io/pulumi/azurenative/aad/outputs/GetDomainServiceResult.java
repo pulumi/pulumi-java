@@ -10,7 +10,7 @@ import io.pulumi.azurenative.aad.outputs.NotificationSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.ReplicaSetResponse;
 import io.pulumi.azurenative.aad.outputs.ResourceForestSettingsResponse;
 import io.pulumi.azurenative.aad.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -506,7 +506,6 @@ public final class GetDomainServiceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDomainServiceResult build() {
             return new GetDomainServiceResult(deploymentId, domainConfigurationType, domainName, domainSecuritySettings, etag, filteredSync, id, ldapsSettings, location, migrationProperties, name, notificationSettings, provisioningState, replicaSets, resourceForestSettings, sku, syncOwner, systemData, tags, tenantId, type, version);
         }

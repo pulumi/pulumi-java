@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.NetworkRuleIPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
+        private final @Nullable Input<Either<String,NetworkRuleIPAction>> action;
 
     public Input<Either<String,NetworkRuleIPAction>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -36,7 +36,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="filterName", required=true)
-    private final Input<String> filterName;
+        private final Input<String> filterName;
 
     public Input<String> getFilterName() {
         return this.filterName;
@@ -47,7 +47,7 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="ipMask", required=true)
-    private final Input<String> ipMask;
+        private final Input<String> ipMask;
 
     public Input<String> getIpMask() {
         return this.ipMask;
@@ -121,7 +121,6 @@ public final class NetworkRuleSetIpRuleArgs extends io.pulumi.resources.Resource
             this.ipMask = Input.of(Objects.requireNonNull(ipMask));
             return this;
         }
-
         public NetworkRuleSetIpRuleArgs build() {
             return new NetworkRuleSetIpRuleArgs(action, filterName, ipMask);
         }

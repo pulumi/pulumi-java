@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="autoDelete", required=true)
-    private final Boolean autoDelete;
+      private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
         return this.autoDelete;
@@ -37,7 +37,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="boot", required=true)
-    private final Boolean boot;
+      private final Boolean boot;
 
     public Boolean getBoot() {
         return this.boot;
@@ -48,7 +48,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -59,7 +59,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="diskEncryptionKey", required=true)
-    private final CustomerEncryptionKeyResponse diskEncryptionKey;
+      private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
     public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
         return this.diskEncryptionKey;
@@ -70,7 +70,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -81,7 +81,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -92,7 +92,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="guestOsFeatures", required=true)
-    private final List<GuestOsFeatureResponse> guestOsFeatures;
+      private final List<GuestOsFeatureResponse> guestOsFeatures;
 
     public List<GuestOsFeatureResponse> getGuestOsFeatures() {
         return this.guestOsFeatures;
@@ -103,7 +103,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="index", required=true)
-    private final Integer index;
+      private final Integer index;
 
     public Integer getIndex() {
         return this.index;
@@ -114,7 +114,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="interface", required=true)
-    private final String $interface;
+      private final String $interface;
 
     public String get$interface() {
         return this.$interface;
@@ -125,7 +125,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -136,7 +136,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="licenses", required=true)
-    private final List<String> licenses;
+      private final List<String> licenses;
 
     public List<String> getLicenses() {
         return this.licenses;
@@ -147,7 +147,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -158,7 +158,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -169,7 +169,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="storageBytes", required=true)
-    private final String storageBytes;
+      private final String storageBytes;
 
     public String getStorageBytes() {
         return this.storageBytes;
@@ -180,7 +180,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="storageBytesStatus", required=true)
-    private final String storageBytesStatus;
+      private final String storageBytesStatus;
 
     public String getStorageBytesStatus() {
         return this.storageBytesStatus;
@@ -191,7 +191,7 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -380,7 +380,6 @@ public final class SavedAttachedDiskResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SavedAttachedDiskResponse build() {
             return new SavedAttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, diskType, guestOsFeatures, index, $interface, kind, licenses, mode, source, storageBytes, storageBytesStatus, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsAcl;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsGid;
 import io.pulumi.googlenative.storagetransfer_v1.enums.MetadataOptionsKmsKey;
@@ -30,7 +30,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="acl")
-    private final @Nullable Input<MetadataOptionsAcl> acl;
+      private final @Nullable Input<MetadataOptionsAcl> acl;
 
     public Input<MetadataOptionsAcl> getAcl() {
         return this.acl == null ? Input.empty() : this.acl;
@@ -41,7 +41,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="gid")
-    private final @Nullable Input<MetadataOptionsGid> gid;
+      private final @Nullable Input<MetadataOptionsGid> gid;
 
     public Input<MetadataOptionsGid> getGid() {
         return this.gid == null ? Input.empty() : this.gid;
@@ -52,7 +52,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kmsKey")
-    private final @Nullable Input<MetadataOptionsKmsKey> kmsKey;
+      private final @Nullable Input<MetadataOptionsKmsKey> kmsKey;
 
     public Input<MetadataOptionsKmsKey> getKmsKey() {
         return this.kmsKey == null ? Input.empty() : this.kmsKey;
@@ -63,7 +63,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<MetadataOptionsMode> mode;
+      private final @Nullable Input<MetadataOptionsMode> mode;
 
     public Input<MetadataOptionsMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -74,7 +74,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageClass")
-    private final @Nullable Input<MetadataOptionsStorageClass> storageClass;
+      private final @Nullable Input<MetadataOptionsStorageClass> storageClass;
 
     public Input<MetadataOptionsStorageClass> getStorageClass() {
         return this.storageClass == null ? Input.empty() : this.storageClass;
@@ -85,7 +85,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="symlink")
-    private final @Nullable Input<MetadataOptionsSymlink> symlink;
+      private final @Nullable Input<MetadataOptionsSymlink> symlink;
 
     public Input<MetadataOptionsSymlink> getSymlink() {
         return this.symlink == null ? Input.empty() : this.symlink;
@@ -96,7 +96,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="temporaryHold")
-    private final @Nullable Input<MetadataOptionsTemporaryHold> temporaryHold;
+      private final @Nullable Input<MetadataOptionsTemporaryHold> temporaryHold;
 
     public Input<MetadataOptionsTemporaryHold> getTemporaryHold() {
         return this.temporaryHold == null ? Input.empty() : this.temporaryHold;
@@ -107,7 +107,7 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<MetadataOptionsUid> uid;
+      private final @Nullable Input<MetadataOptionsUid> uid;
 
     public Input<MetadataOptionsUid> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -256,7 +256,6 @@ public final class MetadataOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public MetadataOptionsArgs build() {
             return new MetadataOptionsArgs(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
         }

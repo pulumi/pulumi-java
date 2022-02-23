@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache.outputs;
 
 import io.pulumi.azurenative.cache.outputs.EnterpriseSkuResponse;
 import io.pulumi.azurenative.cache.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -311,7 +311,6 @@ public final class GetRedisEnterpriseResult {
             this.zones = zones;
             return this;
         }
-
         public GetRedisEnterpriseResult build() {
             return new GetRedisEnterpriseResult(hostName, id, location, minimumTlsVersion, name, privateEndpointConnections, provisioningState, redisVersion, resourceState, sku, tags, type, zones);
         }

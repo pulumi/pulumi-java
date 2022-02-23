@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+        private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -34,7 +34,7 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="servicePerimeters")
-    private final @Nullable Input<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
+        private final @Nullable Input<List<ServicePerimetersServicePerimeterArgs>> servicePerimeters;
 
     public Input<List<ServicePerimetersServicePerimeterArgs>> getServicePerimeters() {
         return this.servicePerimeters == null ? Input.empty() : this.servicePerimeters;
@@ -93,7 +93,6 @@ public final class ServicePerimetersArgs extends io.pulumi.resources.ResourceArg
             this.servicePerimeters = Input.ofNullable(servicePerimeters);
             return this;
         }
-
         public ServicePerimetersArgs build() {
             return new ServicePerimetersArgs(parent, servicePerimeters);
         }

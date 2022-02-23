@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
     public static final DeliveryStreamKinesisStreamSourceConfigurationArgs Empty = new DeliveryStreamKinesisStreamSourceConfigurationArgs();
 
     @InputImport(name="kinesisStreamARN", required=true)
-    private final Input<String> kinesisStreamARN;
+        private final Input<String> kinesisStreamARN;
 
     public Input<String> getKinesisStreamARN() {
         return this.kinesisStreamARN;
     }
 
     @InputImport(name="roleARN", required=true)
-    private final Input<String> roleARN;
+        private final Input<String> roleARN;
 
     public Input<String> getRoleARN() {
         return this.roleARN;
@@ -80,7 +80,6 @@ public final class DeliveryStreamKinesisStreamSourceConfigurationArgs extends io
             this.roleARN = Input.of(Objects.requireNonNull(roleARN));
             return this;
         }
-
         public DeliveryStreamKinesisStreamSourceConfigurationArgs build() {
             return new DeliveryStreamKinesisStreamSourceConfigurationArgs(kinesisStreamARN, roleARN);
         }

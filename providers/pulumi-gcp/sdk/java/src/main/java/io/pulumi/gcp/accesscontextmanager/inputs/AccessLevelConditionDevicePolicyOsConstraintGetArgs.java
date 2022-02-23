@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
      * 
      */
     @InputImport(name="minimumVersion")
-    private final @Nullable Input<String> minimumVersion;
+        private final @Nullable Input<String> minimumVersion;
 
     public Input<String> getMinimumVersion() {
         return this.minimumVersion == null ? Input.empty() : this.minimumVersion;
@@ -33,7 +33,7 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
      * 
      */
     @InputImport(name="osType", required=true)
-    private final Input<String> osType;
+        private final Input<String> osType;
 
     public Input<String> getOsType() {
         return this.osType;
@@ -92,7 +92,6 @@ public final class AccessLevelConditionDevicePolicyOsConstraintGetArgs extends i
             this.osType = Input.of(Objects.requireNonNull(osType));
             return this;
         }
-
         public AccessLevelConditionDevicePolicyOsConstraintGetArgs build() {
             return new AccessLevelConditionDevicePolicyOsConstraintGetArgs(minimumVersion, osType);
         }

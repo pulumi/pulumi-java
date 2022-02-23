@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="field", required=true)
-    private final String field;
+      private final String field;
 
     public String getField() {
         return this.field;
@@ -29,7 +29,7 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="range", required=true)
-    private final RangePartitioningRangeResponse range;
+      private final RangePartitioningRangeResponse range;
 
     public RangePartitioningRangeResponse getRange() {
         return this.range;
@@ -78,7 +78,6 @@ public final class RangePartitioningResponse extends io.pulumi.resources.InvokeA
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RangePartitioningResponse build() {
             return new RangePartitioningResponse(field, range);
         }

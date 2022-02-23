@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -21,14 +21,14 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
      * 
      */
     @InputImport(name="imageVersion")
-    private final @Nullable Input<String> imageVersion;
+        private final @Nullable Input<String> imageVersion;
 
     public Input<String> getImageVersion() {
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
     }
 
     @InputImport(name="optionalComponents")
-    private final @Nullable Input<List<String>> optionalComponents;
+        private final @Nullable Input<List<String>> optionalComponents;
 
     public Input<List<String>> getOptionalComponents() {
         return this.optionalComponents == null ? Input.empty() : this.optionalComponents;
@@ -39,7 +39,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -113,7 +113,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigAr
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigArgs(imageVersion, optionalComponents, properties);
         }

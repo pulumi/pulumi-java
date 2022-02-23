@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<String> mountOptions;
+        private final @Nullable Input<String> mountOptions;
 
     public Input<String> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -30,14 +30,14 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final Input<String> relativeMountPath;
+        private final Input<String> relativeMountPath;
 
     public Input<String> getRelativeMountPath() {
         return this.relativeMountPath;
     }
 
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+        private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -111,7 +111,6 @@ public final class NFSMountConfigurationArgs extends io.pulumi.resources.Resourc
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public NFSMountConfigurationArgs build() {
             return new NFSMountConfigurationArgs(mountOptions, relativeMountPath, source);
         }

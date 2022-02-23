@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceLimitsResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ResourceRequestsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable ResourceLimitsResponse limits;
+        private final @Nullable ResourceLimitsResponse limits;
 
     public Optional<ResourceLimitsResponse> getLimits() {
         return this.limits == null ? Optional.empty() : Optional.ofNullable(this.limits);
@@ -35,7 +35,7 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="requests", required=true)
-    private final ResourceRequestsResponse requests;
+        private final ResourceRequestsResponse requests;
 
     public ResourceRequestsResponse getRequests() {
         return this.requests;
@@ -84,7 +84,6 @@ public final class ResourceRequirementsResponse extends io.pulumi.resources.Invo
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
-
         public ResourceRequirementsResponse build() {
             return new ResourceRequirementsResponse(limits, requests);
         }

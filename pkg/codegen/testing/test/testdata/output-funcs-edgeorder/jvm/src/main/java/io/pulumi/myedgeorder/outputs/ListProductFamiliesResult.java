@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.ProductFamilyResponse;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class ListProductFamiliesResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListProductFamiliesResult build() {
             return new ListProductFamiliesResult(nextLink, value);
         }

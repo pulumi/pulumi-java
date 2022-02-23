@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -112,7 +112,6 @@ public final class DatabaseBackupSettingResponse {
             this.name = name;
             return this;
         }
-
         public DatabaseBackupSettingResponse build() {
             return new DatabaseBackupSettingResponse(connectionString, connectionStringName, databaseType, name);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.eks;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.eks.inputs.GetClusterArgs;
 import io.pulumi.awsnative.eks.outputs.GetClusterResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

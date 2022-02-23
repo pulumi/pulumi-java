@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.OtherResourceArgs;
 import io.pulumi.example.Resource;
 import io.pulumi.example.Utilities;
@@ -21,13 +21,6 @@ public class OtherResource extends io.pulumi.resources.ComponentResource {
         return this.foo;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public OtherResource(String name) {
-        super("example::OtherResource", name, OtherResourceArgs.Empty, makeResourceOptions(null, Input.empty()), true);
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

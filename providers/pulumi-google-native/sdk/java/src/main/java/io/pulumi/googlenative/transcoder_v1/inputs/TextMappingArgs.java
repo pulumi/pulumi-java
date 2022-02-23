@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="atomKey", required=true)
-    private final Input<String> atomKey;
+      private final Input<String> atomKey;
 
     public Input<String> getAtomKey() {
         return this.atomKey;
@@ -34,7 +34,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputKey", required=true)
-    private final Input<String> inputKey;
+      private final Input<String> inputKey;
 
     public Input<String> getInputKey() {
         return this.inputKey;
@@ -45,7 +45,7 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputTrack", required=true)
-    private final Input<Integer> inputTrack;
+      private final Input<Integer> inputTrack;
 
     public Input<Integer> getInputTrack() {
         return this.inputTrack;
@@ -119,7 +119,6 @@ public final class TextMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.inputTrack = Input.of(Objects.requireNonNull(inputTrack));
             return this;
         }
-
         public TextMappingArgs build() {
             return new TextMappingArgs(atomKey, inputKey, inputTrack);
         }

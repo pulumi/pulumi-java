@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WorkbookManagedIdentityArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class WorkbookManagedIdentityArgs extends io.pulumi.resources.Resou
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public WorkbookManagedIdentityArgs build() {
             return new WorkbookManagedIdentityArgs(type);
         }

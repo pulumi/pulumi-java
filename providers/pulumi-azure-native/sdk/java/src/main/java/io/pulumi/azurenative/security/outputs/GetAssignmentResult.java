@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.AssignedComponentItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignedStandardItemResponse;
 import io.pulumi.azurenative.security.outputs.AssignmentPropertiesResponseAdditionalData;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -397,7 +397,6 @@ public final class GetAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssignmentResult build() {
             return new GetAssignmentResult(additionalData, assignedComponent, assignedStandard, description, displayName, effect, etag, expiresOn, id, kind, location, metadata, name, scope, systemData, tags, type);
         }

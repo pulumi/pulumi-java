@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="meshUid", required=true)
-    private final String meshUid;
+      private final String meshUid;
 
     public String getMeshUid() {
         return this.meshUid;
@@ -32,7 +32,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -43,7 +43,7 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceNamespace", required=true)
-    private final String serviceNamespace;
+      private final String serviceNamespace;
 
     public String getServiceNamespace() {
         return this.serviceNamespace;
@@ -102,7 +102,6 @@ public final class MeshIstioResponse extends io.pulumi.resources.InvokeArgs {
             this.serviceNamespace = Objects.requireNonNull(serviceNamespace);
             return this;
         }
-
         public MeshIstioResponse build() {
             return new MeshIstioResponse(meshUid, serviceName, serviceNamespace);
         }

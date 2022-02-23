@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startedAt")
-    private final @Nullable Input<String> startedAt;
+        private final @Nullable Input<String> startedAt;
 
     public Input<String> getStartedAt() {
         return this.startedAt == null ? Input.empty() : this.startedAt;
@@ -66,7 +66,6 @@ public final class ContainerStateRunningArgs extends io.pulumi.resources.Resourc
             this.startedAt = Input.ofNullable(startedAt);
             return this;
         }
-
         public ContainerStateRunningArgs build() {
             return new ContainerStateRunningArgs(startedAt);
         }

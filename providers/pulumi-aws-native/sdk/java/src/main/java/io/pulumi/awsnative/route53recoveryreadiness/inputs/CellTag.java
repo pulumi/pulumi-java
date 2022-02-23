@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class CellTag extends io.pulumi.resources.InvokeArgs {
     public static final CellTag Empty = new CellTag();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final List<String> value;
+        private final List<String> value;
 
     public List<String> getValue() {
         return this.value;
@@ -70,7 +70,6 @@ public final class CellTag extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CellTag build() {
             return new CellTag(key, value);
         }

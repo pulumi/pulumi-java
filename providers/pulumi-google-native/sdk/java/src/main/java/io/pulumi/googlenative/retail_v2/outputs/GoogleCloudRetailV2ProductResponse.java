@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2AudienceResponse;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2ColorInfoResponse;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2FulfillmentInfoResponse;
@@ -714,7 +714,6 @@ public final class GoogleCloudRetailV2ProductResponse {
             this.variants = Objects.requireNonNull(variants);
             return this;
         }
-
         public GoogleCloudRetailV2ProductResponse build() {
             return new GoogleCloudRetailV2ProductResponse(attributes, audience, availability, availableQuantity, availableTime, brands, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, images, languageCode, materials, name, patterns, priceInfo, primaryProductId, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri, variants);
         }

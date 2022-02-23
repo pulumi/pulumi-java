@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class WorkspaceFeaturesResponse {
             this.immediatePurgeDataOn30Days = immediatePurgeDataOn30Days;
             return this;
         }
-
         public WorkspaceFeaturesResponse build() {
             return new WorkspaceFeaturesResponse(clusterResourceId, disableLocalAuth, enableDataExport, enableLogAccessUsingOnlyResourcePermissions, immediatePurgeDataOn30Days);
         }

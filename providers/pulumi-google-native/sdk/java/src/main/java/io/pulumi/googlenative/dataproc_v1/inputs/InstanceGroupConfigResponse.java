@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.DiskConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.inputs.InstanceReferenceResponse;
@@ -28,7 +28,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="accelerators", required=true)
-    private final List<AcceleratorConfigResponse> accelerators;
+      private final List<AcceleratorConfigResponse> accelerators;
 
     public List<AcceleratorConfigResponse> getAccelerators() {
         return this.accelerators;
@@ -39,7 +39,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="diskConfig", required=true)
-    private final DiskConfigResponse diskConfig;
+      private final DiskConfigResponse diskConfig;
 
     public DiskConfigResponse getDiskConfig() {
         return this.diskConfig;
@@ -50,7 +50,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final String imageUri;
+      private final String imageUri;
 
     public String getImageUri() {
         return this.imageUri;
@@ -61,7 +61,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="instanceNames", required=true)
-    private final List<String> instanceNames;
+      private final List<String> instanceNames;
 
     public List<String> getInstanceNames() {
         return this.instanceNames;
@@ -72,7 +72,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="instanceReferences", required=true)
-    private final List<InstanceReferenceResponse> instanceReferences;
+      private final List<InstanceReferenceResponse> instanceReferences;
 
     public List<InstanceReferenceResponse> getInstanceReferences() {
         return this.instanceReferences;
@@ -83,7 +83,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="isPreemptible", required=true)
-    private final Boolean isPreemptible;
+      private final Boolean isPreemptible;
 
     public Boolean getIsPreemptible() {
         return this.isPreemptible;
@@ -94,7 +94,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="machineTypeUri", required=true)
-    private final String machineTypeUri;
+      private final String machineTypeUri;
 
     public String getMachineTypeUri() {
         return this.machineTypeUri;
@@ -105,7 +105,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="managedGroupConfig", required=true)
-    private final ManagedGroupConfigResponse managedGroupConfig;
+      private final ManagedGroupConfigResponse managedGroupConfig;
 
     public ManagedGroupConfigResponse getManagedGroupConfig() {
         return this.managedGroupConfig;
@@ -116,7 +116,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
@@ -127,7 +127,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="numInstances", required=true)
-    private final Integer numInstances;
+      private final Integer numInstances;
 
     public Integer getNumInstances() {
         return this.numInstances;
@@ -138,7 +138,7 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="preemptibility", required=true)
-    private final String preemptibility;
+      private final String preemptibility;
 
     public String getPreemptibility() {
         return this.preemptibility;
@@ -277,7 +277,6 @@ public final class InstanceGroupConfigResponse extends io.pulumi.resources.Invok
             this.preemptibility = Objects.requireNonNull(preemptibility);
             return this;
         }
-
         public InstanceGroupConfigResponse build() {
             return new InstanceGroupConfigResponse(accelerators, diskConfig, imageUri, instanceNames, instanceReferences, isPreemptible, machineTypeUri, managedGroupConfig, minCpuPlatform, numInstances, preemptibility);
         }

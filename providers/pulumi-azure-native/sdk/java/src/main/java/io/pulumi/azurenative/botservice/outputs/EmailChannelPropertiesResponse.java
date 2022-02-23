@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class EmailChannelPropertiesResponse {
             this.password = password;
             return this;
         }
-
         public EmailChannelPropertiesResponse build() {
             return new EmailChannelPropertiesResponse(emailAddress, isEnabled, password);
         }

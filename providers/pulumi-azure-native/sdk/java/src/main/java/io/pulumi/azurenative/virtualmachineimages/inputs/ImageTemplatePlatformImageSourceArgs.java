@@ -5,7 +5,7 @@ package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.inputs.PlatformImagePurchasePlanArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="offer")
-    private final @Nullable Input<String> offer;
+        private final @Nullable Input<String> offer;
 
     public Input<String> getOffer() {
         return this.offer == null ? Input.empty() : this.offer;
@@ -35,7 +35,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="planInfo")
-    private final @Nullable Input<PlatformImagePurchasePlanArgs> planInfo;
+        private final @Nullable Input<PlatformImagePurchasePlanArgs> planInfo;
 
     public Input<PlatformImagePurchasePlanArgs> getPlanInfo() {
         return this.planInfo == null ? Input.empty() : this.planInfo;
@@ -46,7 +46,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+        private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -57,7 +57,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+        private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -69,7 +69,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -199,7 +199,6 @@ public final class ImageTemplatePlatformImageSourceArgs extends io.pulumi.resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ImageTemplatePlatformImageSourceArgs build() {
             return new ImageTemplatePlatformImageSourceArgs(offer, planInfo, publisher, sku, type, version);
         }

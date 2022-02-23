@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityandcompliance.outputs;
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.securityandcompliance.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.securityandcompliance.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -248,7 +248,6 @@ public final class GetprivateLinkServicesForSCCPowershellResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkServicesForSCCPowershellResult build() {
             return new GetprivateLinkServicesForSCCPowershellResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

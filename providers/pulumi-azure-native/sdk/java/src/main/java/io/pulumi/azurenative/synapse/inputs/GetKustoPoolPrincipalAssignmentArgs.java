@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final String kustoPoolName;
+        private final String kustoPoolName;
 
     public String getKustoPoolName() {
         return this.kustoPoolName;
@@ -28,7 +28,7 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="principalAssignmentName", required=true)
-    private final String principalAssignmentName;
+        private final String principalAssignmentName;
 
     public String getPrincipalAssignmentName() {
         return this.principalAssignmentName;
@@ -39,7 +39,7 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -119,7 +119,6 @@ public final class GetKustoPoolPrincipalAssignmentArgs extends io.pulumi.resourc
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetKustoPoolPrincipalAssignmentArgs build() {
             return new GetKustoPoolPrincipalAssignmentArgs(kustoPoolName, principalAssignmentName, resourceGroupName, workspaceName);
         }

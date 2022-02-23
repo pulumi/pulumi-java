@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class BotS3Location {
             this.s3ObjectVersion = s3ObjectVersion;
             return this;
         }
-
         public BotS3Location build() {
             return new BotS3Location(s3Bucket, s3ObjectKey, s3ObjectVersion);
         }

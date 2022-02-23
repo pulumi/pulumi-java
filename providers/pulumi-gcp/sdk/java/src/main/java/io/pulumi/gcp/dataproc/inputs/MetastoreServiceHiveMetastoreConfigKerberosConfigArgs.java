@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends
      * 
      */
     @InputImport(name="keytab", required=true)
-    private final Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs> keytab;
+        private final Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs> keytab;
 
     public Input<MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs> getKeytab() {
         return this.keytab;
@@ -31,7 +31,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends
      * 
      */
     @InputImport(name="krb5ConfigGcsUri", required=true)
-    private final Input<String> krb5ConfigGcsUri;
+        private final Input<String> krb5ConfigGcsUri;
 
     public Input<String> getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
@@ -42,7 +42,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends
      * 
      */
     @InputImport(name="principal", required=true)
-    private final Input<String> principal;
+        private final Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal;
@@ -116,7 +116,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigArgs extends
             this.principal = Input.of(Objects.requireNonNull(principal));
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfigArgs build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigArgs(keytab, krb5ConfigGcsUri, principal);
         }

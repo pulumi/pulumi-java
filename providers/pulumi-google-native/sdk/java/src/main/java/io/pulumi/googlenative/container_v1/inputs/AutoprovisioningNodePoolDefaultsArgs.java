@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.NodeManagementArgs;
 import io.pulumi.googlenative.container_v1.inputs.ShieldedInstanceConfigArgs;
 import io.pulumi.googlenative.container_v1.inputs.UpgradeSettingsArgs;
@@ -28,7 +28,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bootDiskKmsKey")
-    private final @Nullable Input<String> bootDiskKmsKey;
+      private final @Nullable Input<String> bootDiskKmsKey;
 
     public Input<String> getBootDiskKmsKey() {
         return this.bootDiskKmsKey == null ? Input.empty() : this.bootDiskKmsKey;
@@ -39,7 +39,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -50,7 +50,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+      private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -61,7 +61,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="imageType")
-    private final @Nullable Input<String> imageType;
+      private final @Nullable Input<String> imageType;
 
     public Input<String> getImageType() {
         return this.imageType == null ? Input.empty() : this.imageType;
@@ -72,7 +72,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="management")
-    private final @Nullable Input<NodeManagementArgs> management;
+      private final @Nullable Input<NodeManagementArgs> management;
 
     public Input<NodeManagementArgs> getManagement() {
         return this.management == null ? Input.empty() : this.management;
@@ -83,7 +83,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minCpuPlatform")
-    private final @Nullable Input<String> minCpuPlatform;
+      private final @Nullable Input<String> minCpuPlatform;
 
     public Input<String> getMinCpuPlatform() {
         return this.minCpuPlatform == null ? Input.empty() : this.minCpuPlatform;
@@ -94,7 +94,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="oauthScopes")
-    private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Input<List<String>> oauthScopes;
 
     public Input<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
@@ -105,7 +105,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -116,7 +116,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
+      private final @Nullable Input<ShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<ShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -127,7 +127,7 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="upgradeSettings")
-    private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
+      private final @Nullable Input<UpgradeSettingsArgs> upgradeSettings;
 
     public Input<UpgradeSettingsArgs> getUpgradeSettings() {
         return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
@@ -306,7 +306,6 @@ public final class AutoprovisioningNodePoolDefaultsArgs extends io.pulumi.resour
             this.upgradeSettings = Input.ofNullable(upgradeSettings);
             return this;
         }
-
         public AutoprovisioningNodePoolDefaultsArgs build() {
             return new AutoprovisioningNodePoolDefaultsArgs(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
         }

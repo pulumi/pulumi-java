@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.AWSElasticBlockStoreVolumeSource;
 import io.pulumi.kubernetes.core_v1.outputs.AzureDiskVolumeSource;
 import io.pulumi.kubernetes.core_v1.outputs.AzureFileVolumeSource;
@@ -719,7 +719,6 @@ public final class Volume {
             this.vsphereVolume = vsphereVolume;
             return this;
         }
-
         public Volume build() {
             return new Volume(awsElasticBlockStore, azureDisk, azureFile, cephfs, cinder, configMap, csi, downwardAPI, emptyDir, ephemeral, fc, flexVolume, flocker, gcePersistentDisk, gitRepo, glusterfs, hostPath, iscsi, name, nfs, persistentVolumeClaim, photonPersistentDisk, portworxVolume, projected, quobyte, rbd, scaleIO, secret, storageos, vsphereVolume);
         }

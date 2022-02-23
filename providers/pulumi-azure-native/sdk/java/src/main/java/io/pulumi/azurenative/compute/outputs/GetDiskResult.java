@@ -12,7 +12,7 @@ import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.PropertyUpdatesInProgressResponse;
 import io.pulumi.azurenative.compute.outputs.PurchasePlanResponse;
 import io.pulumi.azurenative.compute.outputs.ShareInfoElementResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -783,7 +783,6 @@ public final class GetDiskResult {
             this.zones = zones;
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(burstingEnabled, creationData, diskAccessId, diskIOPSReadOnly, diskIOPSReadWrite, diskMBpsReadOnly, diskMBpsReadWrite, diskSizeBytes, diskSizeGB, diskState, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, id, location, managedBy, managedByExtended, maxShares, name, networkAccessPolicy, osType, propertyUpdatesInProgress, provisioningState, purchasePlan, securityProfile, shareInfo, sku, supportsHibernation, tags, tier, timeCreated, type, uniqueId, zones);
         }

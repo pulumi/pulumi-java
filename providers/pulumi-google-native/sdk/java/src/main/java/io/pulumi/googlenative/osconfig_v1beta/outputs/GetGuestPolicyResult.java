@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PackageRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PackageResponse;
@@ -226,7 +226,6 @@ public final class GetGuestPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGuestPolicyResult build() {
             return new GetGuestPolicyResult(assignment, createTime, description, etag, name, packageRepositories, packages, recipes, updateTime);
         }

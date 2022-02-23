@@ -8,8 +8,8 @@ import io.pulumi.awsnative.codeartifact.RepositoryArgs;
 import io.pulumi.awsnative.codeartifact.outputs.RepositoryTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -162,13 +162,6 @@ public class Repository extends io.pulumi.resources.CustomResource {
         return this.upstreams;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Repository(String name) {
-        super("aws-native:codeartifact:Repository", name, RepositoryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

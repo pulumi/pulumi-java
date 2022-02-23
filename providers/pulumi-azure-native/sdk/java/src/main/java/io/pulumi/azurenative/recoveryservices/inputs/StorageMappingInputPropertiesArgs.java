@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetStorageClassificationId")
-    private final @Nullable Input<String> targetStorageClassificationId;
+        private final @Nullable Input<String> targetStorageClassificationId;
 
     public Input<String> getTargetStorageClassificationId() {
         return this.targetStorageClassificationId == null ? Input.empty() : this.targetStorageClassificationId;
@@ -66,7 +66,6 @@ public final class StorageMappingInputPropertiesArgs extends io.pulumi.resources
             this.targetStorageClassificationId = Input.ofNullable(targetStorageClassificationId);
             return this;
         }
-
         public StorageMappingInputPropertiesArgs build() {
             return new StorageMappingInputPropertiesArgs(targetStorageClassificationId);
         }

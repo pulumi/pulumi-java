@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowCors")
-    private final @Nullable Input<Boolean> allowCors;
+      private final @Nullable Input<Boolean> allowCors;
 
     public Input<Boolean> getAllowCors() {
         return this.allowCors == null ? Input.empty() : this.allowCors;
@@ -35,7 +35,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -120,7 +120,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.target = Input.ofNullable(target);
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(allowCors, name, target);
         }

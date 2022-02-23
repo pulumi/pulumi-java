@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigWorkerConfigAccelerator;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigWorkerConfigDiskConfig;
 import java.lang.Integer;
@@ -191,7 +191,6 @@ public final class ClusterClusterConfigWorkerConfig {
             this.numInstances = numInstances;
             return this;
         }
-
         public ClusterClusterConfigWorkerConfig build() {
             return new ClusterClusterConfigWorkerConfig(accelerators, diskConfig, imageUri, instanceNames, machineType, minCpuPlatform, numInstances);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesResponseRegistrationDefinition;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -33,7 +33,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="registrationDefinition", required=true)
-    private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
+        private final RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
 
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition getRegistrationDefinition() {
         return this.registrationDefinition;
@@ -44,7 +44,7 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="registrationDefinitionId", required=true)
-    private final String registrationDefinitionId;
+        private final String registrationDefinitionId;
 
     public String getRegistrationDefinitionId() {
         return this.registrationDefinitionId;
@@ -103,7 +103,6 @@ public final class RegistrationAssignmentPropertiesResponse extends io.pulumi.re
             this.registrationDefinitionId = Objects.requireNonNull(registrationDefinitionId);
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponse build() {
             return new RegistrationAssignmentPropertiesResponse(provisioningState, registrationDefinition, registrationDefinitionId);
         }

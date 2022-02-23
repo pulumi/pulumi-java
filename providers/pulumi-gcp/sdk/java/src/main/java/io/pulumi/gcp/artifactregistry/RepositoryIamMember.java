@@ -5,8 +5,8 @@ package io.pulumi.gcp.artifactregistry;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.artifactregistry.RepositoryIamMemberArgs;
 import io.pulumi.gcp.artifactregistry.inputs.RepositoryIamMemberState;
@@ -149,13 +149,6 @@ public class RepositoryIamMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RepositoryIamMember(String name) {
-        super("gcp:artifactregistry/repositoryIamMember:RepositoryIamMember", name, RepositoryIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apiName", required=true)
-    private final String apiName;
+        private final String apiName;
 
     public String getApiName() {
         return this.apiName;
@@ -30,7 +30,7 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -100,7 +100,6 @@ public final class GetCustomApiArgs extends io.pulumi.resources.InvokeArgs {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public GetCustomApiArgs build() {
             return new GetCustomApiArgs(apiName, resourceGroupName, subscriptionId);
         }

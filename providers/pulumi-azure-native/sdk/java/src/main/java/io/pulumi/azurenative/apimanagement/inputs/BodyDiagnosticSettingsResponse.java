@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="bytes")
-    private final @Nullable Integer bytes;
+        private final @Nullable Integer bytes;
 
     public Optional<Integer> getBytes() {
         return this.bytes == null ? Optional.empty() : Optional.ofNullable(this.bytes);
@@ -61,7 +61,6 @@ public final class BodyDiagnosticSettingsResponse extends io.pulumi.resources.In
             this.bytes = bytes;
             return this;
         }
-
         public BodyDiagnosticSettingsResponse build() {
             return new BodyDiagnosticSettingsResponse(bytes);
         }

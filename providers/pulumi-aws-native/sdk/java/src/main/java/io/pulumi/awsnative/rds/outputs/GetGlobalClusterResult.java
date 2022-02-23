@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.rds.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class GetGlobalClusterResult {
             this.deletionProtection = deletionProtection;
             return this;
         }
-
         public GetGlobalClusterResult build() {
             return new GetGlobalClusterResult(deletionProtection);
         }

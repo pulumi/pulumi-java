@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
     public static final AzureFileShareConfigurationArgs Empty = new AzureFileShareConfigurationArgs();
 
     @InputImport(name="accountKey", required=true)
-    private final Input<String> accountKey;
+        private final Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey;
     }
 
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="azureFileUrl", required=true)
-    private final Input<String> azureFileUrl;
+        private final Input<String> azureFileUrl;
 
     public Input<String> getAzureFileUrl() {
         return this.azureFileUrl;
@@ -44,7 +44,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<String> mountOptions;
+        private final @Nullable Input<String> mountOptions;
 
     public Input<String> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
@@ -55,7 +55,7 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final Input<String> relativeMountPath;
+        private final Input<String> relativeMountPath;
 
     public Input<String> getRelativeMountPath() {
         return this.relativeMountPath;
@@ -159,7 +159,6 @@ public final class AzureFileShareConfigurationArgs extends io.pulumi.resources.R
             this.relativeMountPath = Input.of(Objects.requireNonNull(relativeMountPath));
             return this;
         }
-
         public AzureFileShareConfigurationArgs build() {
             return new AzureFileShareConfigurationArgs(accountKey, accountName, azureFileUrl, mountOptions, relativeMountPath);
         }

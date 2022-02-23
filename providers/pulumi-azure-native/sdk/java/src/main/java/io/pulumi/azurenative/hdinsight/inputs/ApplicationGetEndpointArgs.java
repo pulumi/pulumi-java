@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="destinationPort")
-    private final @Nullable Input<Integer> destinationPort;
+        private final @Nullable Input<Integer> destinationPort;
 
     public Input<Integer> getDestinationPort() {
         return this.destinationPort == null ? Input.empty() : this.destinationPort;
@@ -35,7 +35,7 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable Input<String> privateIPAddress;
+        private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -57,7 +57,7 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="publicPort")
-    private final @Nullable Input<Integer> publicPort;
+        private final @Nullable Input<Integer> publicPort;
 
     public Input<Integer> getPublicPort() {
         return this.publicPort == null ? Input.empty() : this.publicPort;
@@ -146,7 +146,6 @@ public final class ApplicationGetEndpointArgs extends io.pulumi.resources.Resour
             this.publicPort = Input.ofNullable(publicPort);
             return this;
         }
-
         public ApplicationGetEndpointArgs build() {
             return new ApplicationGetEndpointArgs(destinationPort, location, privateIPAddress, publicPort);
         }

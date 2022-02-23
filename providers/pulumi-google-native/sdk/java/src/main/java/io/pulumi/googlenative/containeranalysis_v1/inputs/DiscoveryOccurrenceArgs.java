@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceAnalysisStatus;
 import io.pulumi.googlenative.containeranalysis_v1.enums.DiscoveryOccurrenceContinuousAnalysis;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.StatusArgs;
@@ -26,7 +26,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="analysisStatus")
-    private final @Nullable Input<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
+      private final @Nullable Input<DiscoveryOccurrenceAnalysisStatus> analysisStatus;
 
     public Input<DiscoveryOccurrenceAnalysisStatus> getAnalysisStatus() {
         return this.analysisStatus == null ? Input.empty() : this.analysisStatus;
@@ -37,7 +37,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="analysisStatusError")
-    private final @Nullable Input<StatusArgs> analysisStatusError;
+      private final @Nullable Input<StatusArgs> analysisStatusError;
 
     public Input<StatusArgs> getAnalysisStatusError() {
         return this.analysisStatusError == null ? Input.empty() : this.analysisStatusError;
@@ -48,7 +48,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="continuousAnalysis")
-    private final @Nullable Input<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
+      private final @Nullable Input<DiscoveryOccurrenceContinuousAnalysis> continuousAnalysis;
 
     public Input<DiscoveryOccurrenceContinuousAnalysis> getContinuousAnalysis() {
         return this.continuousAnalysis == null ? Input.empty() : this.continuousAnalysis;
@@ -59,7 +59,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="cpe")
-    private final @Nullable Input<String> cpe;
+      private final @Nullable Input<String> cpe;
 
     public Input<String> getCpe() {
         return this.cpe == null ? Input.empty() : this.cpe;
@@ -70,7 +70,7 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="lastScanTime")
-    private final @Nullable Input<String> lastScanTime;
+      private final @Nullable Input<String> lastScanTime;
 
     public Input<String> getLastScanTime() {
         return this.lastScanTime == null ? Input.empty() : this.lastScanTime;
@@ -174,7 +174,6 @@ public final class DiscoveryOccurrenceArgs extends io.pulumi.resources.ResourceA
             this.lastScanTime = Input.ofNullable(lastScanTime);
             return this;
         }
-
         public DiscoveryOccurrenceArgs build() {
             return new DiscoveryOccurrenceArgs(analysisStatus, analysisStatusError, continuousAnalysis, cpe, lastScanTime);
         }

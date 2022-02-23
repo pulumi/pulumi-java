@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final Input<String> contentType;
+        private final Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType;
@@ -36,7 +36,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="formParameters")
-    private final @Nullable Input<List<ParameterContractArgs>> formParameters;
+        private final @Nullable Input<List<ParameterContractArgs>> formParameters;
 
     public Input<List<ParameterContractArgs>> getFormParameters() {
         return this.formParameters == null ? Input.empty() : this.formParameters;
@@ -47,7 +47,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sample")
-    private final @Nullable Input<String> sample;
+        private final @Nullable Input<String> sample;
 
     public Input<String> getSample() {
         return this.sample == null ? Input.empty() : this.sample;
@@ -58,7 +58,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schemaId")
-    private final @Nullable Input<String> schemaId;
+        private final @Nullable Input<String> schemaId;
 
     public Input<String> getSchemaId() {
         return this.schemaId == null ? Input.empty() : this.schemaId;
@@ -69,7 +69,7 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -173,7 +173,6 @@ public final class RepresentationContractArgs extends io.pulumi.resources.Resour
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
-
         public RepresentationContractArgs build() {
             return new RepresentationContractArgs(contentType, formParameters, sample, schemaId, typeName);
         }

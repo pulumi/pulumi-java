@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="peeringName", required=true)
-    private final String peeringName;
+        private final String peeringName;
 
     public String getPeeringName() {
         return this.peeringName;
@@ -28,7 +28,7 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="virtualRouterName", required=true)
-    private final String virtualRouterName;
+        private final String virtualRouterName;
 
     public String getVirtualRouterName() {
         return this.virtualRouterName;
@@ -98,7 +98,6 @@ public final class GetVirtualRouterPeeringArgs extends io.pulumi.resources.Invok
             this.virtualRouterName = Objects.requireNonNull(virtualRouterName);
             return this;
         }
-
         public GetVirtualRouterPeeringArgs build() {
             return new GetVirtualRouterPeeringArgs(peeringName, resourceGroupName, virtualRouterName);
         }

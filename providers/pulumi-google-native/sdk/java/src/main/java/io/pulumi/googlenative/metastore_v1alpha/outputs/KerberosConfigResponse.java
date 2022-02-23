@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class KerberosConfigResponse {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public KerberosConfigResponse build() {
             return new KerberosConfigResponse(keytab, krb5ConfigGcsUri, principal);
         }

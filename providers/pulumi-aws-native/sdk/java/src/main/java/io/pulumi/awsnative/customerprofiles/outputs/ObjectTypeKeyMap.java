@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeKey;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,6 @@ public final class ObjectTypeKeyMap {
             this.objectTypeKeyList = objectTypeKeyList;
             return this;
         }
-
         public ObjectTypeKeyMap build() {
             return new ObjectTypeKeyMap(name, objectTypeKeyList);
         }

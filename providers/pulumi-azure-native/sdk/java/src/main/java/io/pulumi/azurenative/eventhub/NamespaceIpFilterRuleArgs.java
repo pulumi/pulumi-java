@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventhub;
 import io.pulumi.azurenative.eventhub.enums.IPAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<Either<String,IPAction>> action;
+        private final @Nullable Input<Either<String,IPAction>> action;
 
     public Input<Either<String,IPAction>> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -32,7 +32,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterName")
-    private final @Nullable Input<String> filterName;
+        private final @Nullable Input<String> filterName;
 
     public Input<String> getFilterName() {
         return this.filterName == null ? Input.empty() : this.filterName;
@@ -43,7 +43,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipFilterRuleName")
-    private final @Nullable Input<String> ipFilterRuleName;
+        private final @Nullable Input<String> ipFilterRuleName;
 
     public Input<String> getIpFilterRuleName() {
         return this.ipFilterRuleName == null ? Input.empty() : this.ipFilterRuleName;
@@ -54,7 +54,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipMask")
-    private final @Nullable Input<String> ipMask;
+        private final @Nullable Input<String> ipMask;
 
     public Input<String> getIpMask() {
         return this.ipMask == null ? Input.empty() : this.ipMask;
@@ -65,7 +65,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -76,7 +76,7 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -195,7 +195,6 @@ public final class NamespaceIpFilterRuleArgs extends io.pulumi.resources.Resourc
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public NamespaceIpFilterRuleArgs build() {
             return new NamespaceIpFilterRuleArgs(action, filterName, ipFilterRuleName, ipMask, namespaceName, resourceGroupName);
         }

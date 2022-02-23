@@ -5,8 +5,8 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.InboundSamlConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigState;
@@ -141,13 +141,6 @@ public class InboundSamlConfig extends io.pulumi.resources.CustomResource {
         return this.spConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InboundSamlConfig(String name) {
-        super("gcp:identityplatform/inboundSamlConfig:InboundSamlConfig", name, InboundSamlConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+        private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -32,7 +32,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -44,7 +44,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription")
-    private final @Nullable Input<String> subscription;
+        private final @Nullable Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription == null ? Input.empty() : this.subscription;
@@ -55,7 +55,7 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+        private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -144,7 +144,6 @@ public final class TriggerPubsubConfigGetArgs extends io.pulumi.resources.Resour
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
-
         public TriggerPubsubConfigGetArgs build() {
             return new TriggerPubsubConfigGetArgs(serviceAccountEmail, state, subscription, topic);
         }

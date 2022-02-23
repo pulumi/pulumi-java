@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetManagedDiskParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -227,7 +227,6 @@ public final class VirtualMachineScaleSetDataDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public VirtualMachineScaleSetDataDiskResponse build() {
             return new VirtualMachineScaleSetDataDiskResponse(caching, createOption, diskIOPSReadWrite, diskMBpsReadWrite, diskSizeGB, lun, managedDisk, name, writeAcceleratorEnabled);
         }

@@ -13,7 +13,7 @@ import io.pulumi.azurenative.solutions.outputs.ApplicationPackageSupportUrlsResp
 import io.pulumi.azurenative.solutions.outputs.IdentityResponse;
 import io.pulumi.azurenative.solutions.outputs.PlanResponse;
 import io.pulumi.azurenative.solutions.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -572,7 +572,6 @@ public final class GetApplicationResult {
             this.updatedBy = Objects.requireNonNull(updatedBy);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationDefinitionId, artifacts, authorizations, billingDetails, createdBy, customerSupport, id, identity, jitAccessPolicy, kind, location, managedBy, managedResourceGroupId, managementMode, name, outputs, parameters, plan, provisioningState, publisherTenantId, sku, supportUrls, tags, type, updatedBy);
         }

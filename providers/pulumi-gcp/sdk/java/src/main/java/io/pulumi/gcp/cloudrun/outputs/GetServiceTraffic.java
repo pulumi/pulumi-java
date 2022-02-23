@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -73,7 +73,6 @@ public final class GetServiceTraffic {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
         }
-
         public GetServiceTraffic build() {
             return new GetServiceTraffic(latestRevision, percent, revisionName);
         }

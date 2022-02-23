@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InitialReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="initialReplicationDetails")
-    private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
+        private final @Nullable InitialReplicationDetailsResponse initialReplicationDetails;
 
     public Optional<InitialReplicationDetailsResponse> getInitialReplicationDetails() {
         return this.initialReplicationDetails == null ? Optional.empty() : Optional.ofNullable(this.initialReplicationDetails);
@@ -39,7 +39,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -50,7 +50,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastReplicatedTime")
-    private final @Nullable String lastReplicatedTime;
+        private final @Nullable String lastReplicatedTime;
 
     public Optional<String> getLastReplicatedTime() {
         return this.lastReplicatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastReplicatedTime);
@@ -61,7 +61,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vMDiskDetails")
-    private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
+        private final @Nullable List<DiskDetailsResponse> vMDiskDetails;
 
     public List<DiskDetailsResponse> getVMDiskDetails() {
         return this.vMDiskDetails == null ? List.of() : this.vMDiskDetails;
@@ -72,7 +72,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable String vmId;
+        private final @Nullable String vmId;
 
     public Optional<String> getVmId() {
         return this.vmId == null ? Optional.empty() : Optional.ofNullable(this.vmId);
@@ -83,7 +83,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmNics")
-    private final @Nullable List<VMNicDetailsResponse> vmNics;
+        private final @Nullable List<VMNicDetailsResponse> vmNics;
 
     public List<VMNicDetailsResponse> getVmNics() {
         return this.vmNics == null ? List.of() : this.vmNics;
@@ -94,7 +94,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmProtectionState")
-    private final @Nullable String vmProtectionState;
+        private final @Nullable String vmProtectionState;
 
     public Optional<String> getVmProtectionState() {
         return this.vmProtectionState == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionState);
@@ -105,7 +105,7 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="vmProtectionStateDescription")
-    private final @Nullable String vmProtectionStateDescription;
+        private final @Nullable String vmProtectionStateDescription;
 
     public Optional<String> getVmProtectionStateDescription() {
         return this.vmProtectionStateDescription == null ? Optional.empty() : Optional.ofNullable(this.vmProtectionStateDescription);
@@ -214,7 +214,6 @@ public final class HyperVReplicaReplicationDetailsResponse extends io.pulumi.res
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public HyperVReplicaReplicationDetailsResponse build() {
             return new HyperVReplicaReplicationDetailsResponse(initialReplicationDetails, instanceType, lastReplicatedTime, vMDiskDetails, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

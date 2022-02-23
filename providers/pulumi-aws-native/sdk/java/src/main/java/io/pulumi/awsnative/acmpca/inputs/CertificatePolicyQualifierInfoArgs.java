@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.inputs;
 
 import io.pulumi.awsnative.acmpca.inputs.CertificateQualifierArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,14 +19,14 @@ public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resource
     public static final CertificatePolicyQualifierInfoArgs Empty = new CertificatePolicyQualifierInfoArgs();
 
     @InputImport(name="policyQualifierId", required=true)
-    private final Input<String> policyQualifierId;
+        private final Input<String> policyQualifierId;
 
     public Input<String> getPolicyQualifierId() {
         return this.policyQualifierId;
     }
 
     @InputImport(name="qualifier", required=true)
-    private final Input<CertificateQualifierArgs> qualifier;
+        private final Input<CertificateQualifierArgs> qualifier;
 
     public Input<CertificateQualifierArgs> getQualifier() {
         return this.qualifier;
@@ -85,7 +85,6 @@ public final class CertificatePolicyQualifierInfoArgs extends io.pulumi.resource
             this.qualifier = Input.of(Objects.requireNonNull(qualifier));
             return this;
         }
-
         public CertificatePolicyQualifierInfoArgs build() {
             return new CertificatePolicyQualifierInfoArgs(policyQualifierId, qualifier);
         }

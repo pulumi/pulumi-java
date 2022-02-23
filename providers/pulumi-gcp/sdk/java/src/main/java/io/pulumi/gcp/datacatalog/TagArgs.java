@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.TagFieldArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="column")
-    private final @Nullable Input<String> column;
+        private final @Nullable Input<String> column;
 
     public Input<String> getColumn() {
         return this.column == null ? Input.empty() : this.column;
@@ -37,7 +37,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<List<TagFieldArgs>> fields;
+        private final Input<List<TagFieldArgs>> fields;
 
     public Input<List<TagFieldArgs>> getFields() {
         return this.fields;
@@ -49,7 +49,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -62,7 +62,7 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template", required=true)
-    private final Input<String> template;
+        private final Input<String> template;
 
     public Input<String> getTemplate() {
         return this.template;
@@ -151,7 +151,6 @@ public final class TagArgs extends io.pulumi.resources.ResourceArgs {
             this.template = Input.of(Objects.requireNonNull(template));
             return this;
         }
-
         public TagArgs build() {
             return new TagArgs(column, fields, parent, template);
         }

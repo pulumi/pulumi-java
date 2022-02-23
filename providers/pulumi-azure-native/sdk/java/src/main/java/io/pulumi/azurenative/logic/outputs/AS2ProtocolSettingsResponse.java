@@ -10,7 +10,7 @@ import io.pulumi.azurenative.logic.outputs.AS2MdnSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2MessageConnectionSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.AS2ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -185,7 +185,6 @@ public final class AS2ProtocolSettingsResponse {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public AS2ProtocolSettingsResponse build() {
             return new AS2ProtocolSettingsResponse(acknowledgementConnectionSettings, envelopeSettings, errorSettings, mdnSettings, messageConnectionSettings, securitySettings, validationSettings);
         }

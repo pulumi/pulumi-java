@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.synapse.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable PrivateEndpointResponse privateEndpoint;
+        private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -47,7 +47,7 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+        private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -58,7 +58,7 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -127,7 +127,6 @@ public final class PrivateEndpointConnectionForPrivateLinkHubBasicResponse exten
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionForPrivateLinkHubBasicResponse build() {
             return new PrivateEndpointConnectionForPrivateLinkHubBasicResponse(id, privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

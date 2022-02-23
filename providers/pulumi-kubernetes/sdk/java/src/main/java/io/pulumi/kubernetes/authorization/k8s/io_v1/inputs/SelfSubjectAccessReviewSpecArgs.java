@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.NonResourceAttributesArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.inputs.ResourceAttributesArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nonResourceAttributes")
-    private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
+        private final @Nullable Input<NonResourceAttributesArgs> nonResourceAttributes;
 
     public Input<NonResourceAttributesArgs> getNonResourceAttributes() {
         return this.nonResourceAttributes == null ? Input.empty() : this.nonResourceAttributes;
@@ -35,7 +35,7 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceAttributes")
-    private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
+        private final @Nullable Input<ResourceAttributesArgs> resourceAttributes;
 
     public Input<ResourceAttributesArgs> getResourceAttributes() {
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
@@ -94,7 +94,6 @@ public final class SelfSubjectAccessReviewSpecArgs extends io.pulumi.resources.R
             this.resourceAttributes = Input.ofNullable(resourceAttributes);
             return this;
         }
-
         public SelfSubjectAccessReviewSpecArgs build() {
             return new SelfSubjectAccessReviewSpecArgs(nonResourceAttributes, resourceAttributes);
         }

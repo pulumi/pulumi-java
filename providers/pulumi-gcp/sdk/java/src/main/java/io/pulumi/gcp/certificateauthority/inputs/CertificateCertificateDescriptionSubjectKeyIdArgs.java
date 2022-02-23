@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
     public static final CertificateCertificateDescriptionSubjectKeyIdArgs Empty = new CertificateCertificateDescriptionSubjectKeyIdArgs();
 
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+        private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -58,7 +58,6 @@ public final class CertificateCertificateDescriptionSubjectKeyIdArgs extends io.
             this.keyId = Input.ofNullable(keyId);
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectKeyIdArgs build() {
             return new CertificateCertificateDescriptionSubjectKeyIdArgs(keyId);
         }

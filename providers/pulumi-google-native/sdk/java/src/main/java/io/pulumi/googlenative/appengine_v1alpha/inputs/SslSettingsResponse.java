@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="certificateId", required=true)
-    private final String certificateId;
+      private final String certificateId;
 
     public String getCertificateId() {
         return this.certificateId;
@@ -33,7 +33,7 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isManagedCertificate", required=true)
-    private final Boolean isManagedCertificate;
+      private final Boolean isManagedCertificate;
 
     public Boolean getIsManagedCertificate() {
         return this.isManagedCertificate;
@@ -82,7 +82,6 @@ public final class SslSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
             return this;
         }
-
         public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, isManagedCertificate);
         }

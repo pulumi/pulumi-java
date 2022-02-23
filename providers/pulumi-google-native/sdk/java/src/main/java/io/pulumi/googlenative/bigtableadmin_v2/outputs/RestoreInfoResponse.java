@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.BackupInfoResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class RestoreInfoResponse {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public RestoreInfoResponse build() {
             return new RestoreInfoResponse(backupInfo, sourceType);
         }

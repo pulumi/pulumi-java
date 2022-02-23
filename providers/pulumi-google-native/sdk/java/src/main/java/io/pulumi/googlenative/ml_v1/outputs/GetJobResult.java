@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__PredictionInputResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__PredictionOutputResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__TrainingInputResponse;
@@ -310,7 +310,6 @@ public final class GetJobResult {
             this.trainingOutput = Objects.requireNonNull(trainingOutput);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(createTime, endTime, errorMessage, etag, jobId, jobPosition, labels, predictionInput, predictionOutput, startTime, state, trainingInput, trainingOutput);
         }

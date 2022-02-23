@@ -6,7 +6,7 @@ package io.pulumi.awsnative.globalaccelerator.outputs;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerClientAffinity;
 import io.pulumi.awsnative.globalaccelerator.enums.ListenerProtocol;
 import io.pulumi.awsnative.globalaccelerator.outputs.ListenerPortRange;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -114,7 +114,6 @@ public final class GetListenerResult {
             this.protocol = protocol;
             return this;
         }
-
         public GetListenerResult build() {
             return new GetListenerResult(clientAffinity, listenerArn, portRanges, protocol);
         }

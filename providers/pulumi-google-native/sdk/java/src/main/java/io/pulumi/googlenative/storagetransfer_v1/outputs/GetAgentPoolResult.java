@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.BandwidthLimitResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GetAgentPoolResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetAgentPoolResult build() {
             return new GetAgentPoolResult(bandwidthLimit, displayName, name, state);
         }

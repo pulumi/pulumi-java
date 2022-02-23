@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -32,7 +32,7 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable String zone;
+        private final @Nullable String zone;
 
     public Optional<String> getZone() {
         return this.zone == null ? Optional.empty() : Optional.ofNullable(this.zone);
@@ -81,7 +81,6 @@ public final class GetTensorflowVersionsArgs extends io.pulumi.resources.InvokeA
             this.zone = zone;
             return this;
         }
-
         public GetTensorflowVersionsArgs build() {
             return new GetTensorflowVersionsArgs(project, zone);
         }

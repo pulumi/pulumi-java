@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__StudyConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
     public static final StudyArgs Empty = new StudyArgs();
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -34,14 +34,14 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="studyConfig", required=true)
-    private final Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
+      private final Input<GoogleCloudMlV1__StudyConfigArgs> studyConfig;
 
     public Input<GoogleCloudMlV1__StudyConfigArgs> getStudyConfig() {
         return this.studyConfig;
     }
 
     @InputImport(name="studyId", required=true)
-    private final Input<String> studyId;
+      private final Input<String> studyId;
 
     public Input<String> getStudyId() {
         return this.studyId;
@@ -130,7 +130,6 @@ public final class StudyArgs extends io.pulumi.resources.ResourceArgs {
             this.studyId = Input.of(Objects.requireNonNull(studyId));
             return this;
         }
-
         public StudyArgs build() {
             return new StudyArgs(location, project, studyConfig, studyId);
         }

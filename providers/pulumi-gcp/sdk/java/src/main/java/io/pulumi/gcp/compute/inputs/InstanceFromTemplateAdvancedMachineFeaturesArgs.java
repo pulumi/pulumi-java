@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class InstanceFromTemplateAdvancedMachineFeaturesArgs extends io.pu
     public static final InstanceFromTemplateAdvancedMachineFeaturesArgs Empty = new InstanceFromTemplateAdvancedMachineFeaturesArgs();
 
     @InputImport(name="enableNestedVirtualization")
-    private final @Nullable Input<Boolean> enableNestedVirtualization;
+        private final @Nullable Input<Boolean> enableNestedVirtualization;
 
     public Input<Boolean> getEnableNestedVirtualization() {
         return this.enableNestedVirtualization == null ? Input.empty() : this.enableNestedVirtualization;
     }
 
     @InputImport(name="threadsPerCore")
-    private final @Nullable Input<Integer> threadsPerCore;
+        private final @Nullable Input<Integer> threadsPerCore;
 
     public Input<Integer> getThreadsPerCore() {
         return this.threadsPerCore == null ? Input.empty() : this.threadsPerCore;
@@ -82,7 +82,6 @@ public final class InstanceFromTemplateAdvancedMachineFeaturesArgs extends io.pu
             this.threadsPerCore = Input.ofNullable(threadsPerCore);
             return this;
         }
-
         public InstanceFromTemplateAdvancedMachineFeaturesArgs build() {
             return new InstanceFromTemplateAdvancedMachineFeaturesArgs(enableNestedVirtualization, threadsPerCore);
         }

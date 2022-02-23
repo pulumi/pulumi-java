@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.CaptureDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -247,7 +247,6 @@ public final class GetEventHubResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetEventHubResult build() {
             return new GetEventHubResult(captureDescription, createdAt, id, messageRetentionInDays, name, partitionCount, partitionIds, status, type, updatedAt);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stepId", required=true)
-    private final Input<String> stepId;
+        private final Input<String> stepId;
 
     public Input<String> getStepId() {
         return this.stepId;
@@ -65,7 +65,6 @@ public final class PrePostStepArgs extends io.pulumi.resources.ResourceArgs {
             this.stepId = Input.of(Objects.requireNonNull(stepId));
             return this;
         }
-
         public PrePostStepArgs build() {
             return new PrePostStepArgs(stepId);
         }

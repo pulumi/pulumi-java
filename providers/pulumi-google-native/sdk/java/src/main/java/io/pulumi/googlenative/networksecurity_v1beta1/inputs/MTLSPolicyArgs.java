@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.ValidationCAArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientValidationCa")
-    private final @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
+      private final @Nullable Input<List<ValidationCAArgs>> clientValidationCa;
 
     public Input<List<ValidationCAArgs>> getClientValidationCa() {
         return this.clientValidationCa == null ? Input.empty() : this.clientValidationCa;
@@ -67,7 +67,6 @@ public final class MTLSPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.clientValidationCa = Input.ofNullable(clientValidationCa);
             return this;
         }
-
         public MTLSPolicyArgs build() {
             return new MTLSPolicyArgs(clientValidationCa);
         }

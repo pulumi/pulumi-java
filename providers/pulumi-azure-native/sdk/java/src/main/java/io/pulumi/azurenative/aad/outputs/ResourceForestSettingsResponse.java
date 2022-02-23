@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.ForestTrustResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ResourceForestSettingsResponse {
             this.settings = settings;
             return this;
         }
-
         public ResourceForestSettingsResponse build() {
             return new ResourceForestSettingsResponse(resourceForest, settings);
         }

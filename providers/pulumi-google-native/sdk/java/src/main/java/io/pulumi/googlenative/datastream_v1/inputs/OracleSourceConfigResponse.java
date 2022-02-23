@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleRdbmsResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="excludeObjects", required=true)
-    private final OracleRdbmsResponse excludeObjects;
+      private final OracleRdbmsResponse excludeObjects;
 
     public OracleRdbmsResponse getExcludeObjects() {
         return this.excludeObjects;
@@ -32,7 +32,7 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="includeObjects", required=true)
-    private final OracleRdbmsResponse includeObjects;
+      private final OracleRdbmsResponse includeObjects;
 
     public OracleRdbmsResponse getIncludeObjects() {
         return this.includeObjects;
@@ -81,7 +81,6 @@ public final class OracleSourceConfigResponse extends io.pulumi.resources.Invoke
             this.includeObjects = Objects.requireNonNull(includeObjects);
             return this;
         }
-
         public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(excludeObjects, includeObjects);
         }

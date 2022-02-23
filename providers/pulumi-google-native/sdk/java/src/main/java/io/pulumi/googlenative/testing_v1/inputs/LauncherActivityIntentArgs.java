@@ -34,7 +34,6 @@ public final class LauncherActivityIntentArgs extends io.pulumi.resources.Resour
         public Builder(LauncherActivityIntentArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public LauncherActivityIntentArgs build() {
             return new LauncherActivityIntentArgs();
         }

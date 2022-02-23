@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultSecretGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets;
+        private final @Nullable Input<List<CloudServiceVaultSecretGroupArgs>> secrets;
 
     public Input<List<CloudServiceVaultSecretGroupArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -67,7 +67,6 @@ public final class CloudServiceOsProfileArgs extends io.pulumi.resources.Resourc
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
-
         public CloudServiceOsProfileArgs build() {
             return new CloudServiceOsProfileArgs(secrets);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="externalTablesToExclude")
-    private final @Nullable List<String> externalTablesToExclude;
+        private final @Nullable List<String> externalTablesToExclude;
 
     public List<String> getExternalTablesToExclude() {
         return this.externalTablesToExclude == null ? List.of() : this.externalTablesToExclude;
@@ -35,7 +35,7 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="externalTablesToInclude")
-    private final @Nullable List<String> externalTablesToInclude;
+        private final @Nullable List<String> externalTablesToInclude;
 
     public List<String> getExternalTablesToInclude() {
         return this.externalTablesToInclude == null ? List.of() : this.externalTablesToInclude;
@@ -46,7 +46,7 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="materializedViewsToExclude")
-    private final @Nullable List<String> materializedViewsToExclude;
+        private final @Nullable List<String> materializedViewsToExclude;
 
     public List<String> getMaterializedViewsToExclude() {
         return this.materializedViewsToExclude == null ? List.of() : this.materializedViewsToExclude;
@@ -57,7 +57,7 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="materializedViewsToInclude")
-    private final @Nullable List<String> materializedViewsToInclude;
+        private final @Nullable List<String> materializedViewsToInclude;
 
     public List<String> getMaterializedViewsToInclude() {
         return this.materializedViewsToInclude == null ? List.of() : this.materializedViewsToInclude;
@@ -68,7 +68,7 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tablesToExclude")
-    private final @Nullable List<String> tablesToExclude;
+        private final @Nullable List<String> tablesToExclude;
 
     public List<String> getTablesToExclude() {
         return this.tablesToExclude == null ? List.of() : this.tablesToExclude;
@@ -79,7 +79,7 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tablesToInclude")
-    private final @Nullable List<String> tablesToInclude;
+        private final @Nullable List<String> tablesToInclude;
 
     public List<String> getTablesToInclude() {
         return this.tablesToInclude == null ? List.of() : this.tablesToInclude;
@@ -168,7 +168,6 @@ public final class TableLevelSharingPropertiesResponse extends io.pulumi.resourc
             this.tablesToInclude = tablesToInclude;
             return this;
         }
-
         public TableLevelSharingPropertiesResponse build() {
             return new TableLevelSharingPropertiesResponse(externalTablesToExclude, externalTablesToInclude, materializedViewsToExclude, materializedViewsToInclude, tablesToExclude, tablesToInclude);
         }

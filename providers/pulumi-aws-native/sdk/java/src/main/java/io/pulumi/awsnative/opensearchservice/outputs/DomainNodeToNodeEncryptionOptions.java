@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class DomainNodeToNodeEncryptionOptions {
             this.enabled = enabled;
             return this;
         }
-
         public DomainNodeToNodeEncryptionOptions build() {
             return new DomainNodeToNodeEncryptionOptions(enabled);
         }

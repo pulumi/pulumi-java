@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SuppressionAlertsScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -245,7 +245,6 @@ public final class GetAlertsSuppressionRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertsSuppressionRuleResult build() {
             return new GetAlertsSuppressionRuleResult(alertType, comment, expirationDateUtc, id, lastModifiedUtc, name, reason, state, suppressionAlertsScope, type);
         }

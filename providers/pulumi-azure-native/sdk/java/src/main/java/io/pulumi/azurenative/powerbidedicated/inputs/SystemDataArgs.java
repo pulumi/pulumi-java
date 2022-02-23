@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerbidedicated.inputs;
 import io.pulumi.azurenative.powerbidedicated.enums.IdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+        private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -36,7 +36,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<String> createdBy;
+        private final @Nullable Input<String> createdBy;
 
     public Input<String> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -47,7 +47,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdByType")
-    private final @Nullable Input<Either<String,IdentityType>> createdByType;
+        private final @Nullable Input<Either<String,IdentityType>> createdByType;
 
     public Input<Either<String,IdentityType>> getCreatedByType() {
         return this.createdByType == null ? Input.empty() : this.createdByType;
@@ -58,7 +58,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedAt")
-    private final @Nullable Input<String> lastModifiedAt;
+        private final @Nullable Input<String> lastModifiedAt;
 
     public Input<String> getLastModifiedAt() {
         return this.lastModifiedAt == null ? Input.empty() : this.lastModifiedAt;
@@ -69,7 +69,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedBy")
-    private final @Nullable Input<String> lastModifiedBy;
+        private final @Nullable Input<String> lastModifiedBy;
 
     public Input<String> getLastModifiedBy() {
         return this.lastModifiedBy == null ? Input.empty() : this.lastModifiedBy;
@@ -80,7 +80,7 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedByType")
-    private final @Nullable Input<Either<String,IdentityType>> lastModifiedByType;
+        private final @Nullable Input<Either<String,IdentityType>> lastModifiedByType;
 
     public Input<Either<String,IdentityType>> getLastModifiedByType() {
         return this.lastModifiedByType == null ? Input.empty() : this.lastModifiedByType;
@@ -199,7 +199,6 @@ public final class SystemDataArgs extends io.pulumi.resources.ResourceArgs {
             this.lastModifiedByType = Input.ofNullable(lastModifiedByType);
             return this;
         }
-
         public SystemDataArgs build() {
             return new SystemDataArgs(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

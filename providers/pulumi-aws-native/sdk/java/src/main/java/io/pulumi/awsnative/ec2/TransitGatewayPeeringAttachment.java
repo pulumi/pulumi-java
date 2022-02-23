@@ -10,8 +10,8 @@ import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentPeeringAtt
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayPeeringAttachmentTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -163,13 +163,6 @@ public class TransitGatewayPeeringAttachment extends io.pulumi.resources.CustomR
         return this.transitGatewayId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TransitGatewayPeeringAttachment(String name) {
-        super("aws-native:ec2:TransitGatewayPeeringAttachment", name, TransitGatewayPeeringAttachmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

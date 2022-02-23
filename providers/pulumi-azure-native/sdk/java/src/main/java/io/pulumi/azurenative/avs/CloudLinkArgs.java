@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudLinkName")
-    private final @Nullable Input<String> cloudLinkName;
+        private final @Nullable Input<String> cloudLinkName;
 
     public Input<String> getCloudLinkName() {
         return this.cloudLinkName == null ? Input.empty() : this.cloudLinkName;
@@ -30,7 +30,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedCloud")
-    private final @Nullable Input<String> linkedCloud;
+        private final @Nullable Input<String> linkedCloud;
 
     public Input<String> getLinkedCloud() {
         return this.linkedCloud == null ? Input.empty() : this.linkedCloud;
@@ -41,7 +41,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -52,7 +52,7 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -141,7 +141,6 @@ public final class CloudLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public CloudLinkArgs build() {
             return new CloudLinkArgs(cloudLinkName, linkedCloud, privateCloudName, resourceGroupName);
         }

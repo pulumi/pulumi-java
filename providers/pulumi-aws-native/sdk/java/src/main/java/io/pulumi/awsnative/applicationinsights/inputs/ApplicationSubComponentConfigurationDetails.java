@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationAlarmMetric;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEvent;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * 
      */
     @InputImport(name="alarmMetrics")
-    private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
+        private final @Nullable List<ApplicationAlarmMetric> alarmMetrics;
 
     public List<ApplicationAlarmMetric> getAlarmMetrics() {
         return this.alarmMetrics == null ? List.of() : this.alarmMetrics;
@@ -37,7 +37,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable List<ApplicationLog> logs;
+        private final @Nullable List<ApplicationLog> logs;
 
     public List<ApplicationLog> getLogs() {
         return this.logs == null ? List.of() : this.logs;
@@ -48,7 +48,7 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
      * 
      */
     @InputImport(name="windowsEvents")
-    private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
+        private final @Nullable List<ApplicationWindowsEvent> windowsEvents;
 
     public List<ApplicationWindowsEvent> getWindowsEvents() {
         return this.windowsEvents == null ? List.of() : this.windowsEvents;
@@ -107,7 +107,6 @@ public final class ApplicationSubComponentConfigurationDetails extends io.pulumi
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public ApplicationSubComponentConfigurationDetails build() {
             return new ApplicationSubComponentConfigurationDetails(alarmMetrics, logs, windowsEvents);
         }

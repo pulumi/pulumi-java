@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accessLevels")
-    private final @Nullable Input<String> accessLevels;
+        private final @Nullable Input<String> accessLevels;
 
     public Input<String> getAccessLevels() {
         return this.accessLevels == null ? Input.empty() : this.accessLevels;
@@ -30,7 +30,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="groupKey")
-    private final @Nullable Input<String> groupKey;
+        private final @Nullable Input<String> groupKey;
 
     public Input<String> getGroupKey() {
         return this.groupKey == null ? Input.empty() : this.groupKey;
@@ -43,7 +43,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="organizationId")
-    private final @Nullable Input<String> organizationId;
+        private final @Nullable Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId == null ? Input.empty() : this.organizationId;
@@ -143,7 +143,6 @@ public final class GcpUserAccessBindingState extends io.pulumi.resources.Resourc
             this.organizationId = Input.ofNullable(organizationId);
             return this;
         }
-
         public GcpUserAccessBindingState build() {
             return new GcpUserAccessBindingState(accessLevels, groupKey, name, organizationId);
         }

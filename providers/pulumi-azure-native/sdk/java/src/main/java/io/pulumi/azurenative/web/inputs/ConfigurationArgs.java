@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.inputs.RegistryCredentialsArgs;
 import io.pulumi.azurenative.web.inputs.SecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activeRevisionsMode")
-    private final @Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
+        private final @Nullable Input<Either<String,ActiveRevisionsMode>> activeRevisionsMode;
 
     public Input<Either<String,ActiveRevisionsMode>> getActiveRevisionsMode() {
         return this.activeRevisionsMode == null ? Input.empty() : this.activeRevisionsMode;
@@ -41,7 +41,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingress")
-    private final @Nullable Input<IngressArgs> ingress;
+        private final @Nullable Input<IngressArgs> ingress;
 
     public Input<IngressArgs> getIngress() {
         return this.ingress == null ? Input.empty() : this.ingress;
@@ -52,7 +52,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registries")
-    private final @Nullable Input<List<RegistryCredentialsArgs>> registries;
+        private final @Nullable Input<List<RegistryCredentialsArgs>> registries;
 
     public Input<List<RegistryCredentialsArgs>> getRegistries() {
         return this.registries == null ? Input.empty() : this.registries;
@@ -63,7 +63,7 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<SecretArgs>> secrets;
+        private final @Nullable Input<List<SecretArgs>> secrets;
 
     public Input<List<SecretArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -152,7 +152,6 @@ public final class ConfigurationArgs extends io.pulumi.resources.ResourceArgs {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
-
         public ConfigurationArgs build() {
             return new ConfigurationArgs(activeRevisionsMode, ingress, registries, secrets);
         }

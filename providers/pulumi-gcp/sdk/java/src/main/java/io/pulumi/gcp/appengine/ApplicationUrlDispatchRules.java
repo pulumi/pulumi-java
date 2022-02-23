@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ApplicationUrlDispatchRulesArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRulesState;
@@ -68,13 +68,6 @@ public class ApplicationUrlDispatchRules extends io.pulumi.resources.CustomResou
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ApplicationUrlDispatchRules(String name) {
-        super("gcp:appengine/applicationUrlDispatchRules:ApplicationUrlDispatchRules", name, ApplicationUrlDispatchRulesArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

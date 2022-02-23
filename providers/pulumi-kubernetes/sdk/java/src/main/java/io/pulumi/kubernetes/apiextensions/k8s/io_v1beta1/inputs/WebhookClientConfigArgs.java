@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.ServiceReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="caBundle")
-    private final @Nullable Input<String> caBundle;
+        private final @Nullable Input<String> caBundle;
 
     public Input<String> getCaBundle() {
         return this.caBundle == null ? Input.empty() : this.caBundle;
@@ -37,7 +37,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<ServiceReferenceArgs> service;
+        private final @Nullable Input<ServiceReferenceArgs> service;
 
     public Input<ServiceReferenceArgs> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -58,7 +58,7 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -132,7 +132,6 @@ public final class WebhookClientConfigArgs extends io.pulumi.resources.ResourceA
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public WebhookClientConfigArgs build() {
             return new WebhookClientConfigArgs(caBundle, service, url);
         }

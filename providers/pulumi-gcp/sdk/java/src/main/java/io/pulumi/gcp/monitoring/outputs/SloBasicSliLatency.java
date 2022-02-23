@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -56,7 +56,6 @@ public final class SloBasicSliLatency {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public SloBasicSliLatency build() {
             return new SloBasicSliLatency(threshold);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firestore_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firestore_v1beta2.enums.GoogleFirestoreAdminV1beta2IndexFieldArrayConfig;
 import io.pulumi.googlenative.firestore_v1beta2.enums.GoogleFirestoreAdminV1beta2IndexFieldOrder;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="arrayConfig")
-    private final @Nullable Input<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig> arrayConfig;
+      private final @Nullable Input<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig> arrayConfig;
 
     public Input<GoogleFirestoreAdminV1beta2IndexFieldArrayConfig> getArrayConfig() {
         return this.arrayConfig == null ? Input.empty() : this.arrayConfig;
@@ -36,7 +36,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fieldPath")
-    private final @Nullable Input<String> fieldPath;
+      private final @Nullable Input<String> fieldPath;
 
     public Input<String> getFieldPath() {
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
@@ -47,7 +47,7 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<GoogleFirestoreAdminV1beta2IndexFieldOrder> order;
+      private final @Nullable Input<GoogleFirestoreAdminV1beta2IndexFieldOrder> order;
 
     public Input<GoogleFirestoreAdminV1beta2IndexFieldOrder> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -121,7 +121,6 @@ public final class GoogleFirestoreAdminV1beta2IndexFieldArgs extends io.pulumi.r
             this.order = Input.ofNullable(order);
             return this;
         }
-
         public GoogleFirestoreAdminV1beta2IndexFieldArgs build() {
             return new GoogleFirestoreAdminV1beta2IndexFieldArgs(arrayConfig, fieldPath, order);
         }

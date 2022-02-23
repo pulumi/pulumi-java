@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.TableRangePartitioningRange;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class TableRangePartitioning {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public TableRangePartitioning build() {
             return new TableRangePartitioning(field, range);
         }

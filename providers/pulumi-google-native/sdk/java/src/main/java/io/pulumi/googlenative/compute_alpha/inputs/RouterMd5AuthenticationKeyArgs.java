@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -30,7 +30,7 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,6 @@ public final class RouterMd5AuthenticationKeyArgs extends io.pulumi.resources.Re
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public RouterMd5AuthenticationKeyArgs build() {
             return new RouterMd5AuthenticationKeyArgs(key, name);
         }

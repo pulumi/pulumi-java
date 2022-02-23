@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AuthorizationLoggingOptionsResponse {
             this.permissionType = Objects.requireNonNull(permissionType);
             return this;
         }
-
         public AuthorizationLoggingOptionsResponse build() {
             return new AuthorizationLoggingOptionsResponse(permissionType);
         }

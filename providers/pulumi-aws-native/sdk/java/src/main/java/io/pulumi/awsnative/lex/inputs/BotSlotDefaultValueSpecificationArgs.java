@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotSlotDefaultValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultValueList", required=true)
-    private final Input<List<BotSlotDefaultValueArgs>> defaultValueList;
+        private final Input<List<BotSlotDefaultValueArgs>> defaultValueList;
 
     public Input<List<BotSlotDefaultValueArgs>> getDefaultValueList() {
         return this.defaultValueList;
@@ -66,7 +66,6 @@ public final class BotSlotDefaultValueSpecificationArgs extends io.pulumi.resour
             this.defaultValueList = Input.of(Objects.requireNonNull(defaultValueList));
             return this;
         }
-
         public BotSlotDefaultValueSpecificationArgs build() {
             return new BotSlotDefaultValueSpecificationArgs(defaultValueList);
         }

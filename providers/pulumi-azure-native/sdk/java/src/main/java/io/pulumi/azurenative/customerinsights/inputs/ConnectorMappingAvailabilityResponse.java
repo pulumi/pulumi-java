@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable String frequency;
+        private final @Nullable String frequency;
 
     public Optional<String> getFrequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
@@ -35,7 +35,7 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Integer interval;
+        private final Integer interval;
 
     public Integer getInterval() {
         return this.interval;
@@ -84,7 +84,6 @@ public final class ConnectorMappingAvailabilityResponse extends io.pulumi.resour
             this.interval = Objects.requireNonNull(interval);
             return this;
         }
-
         public ConnectorMappingAvailabilityResponse build() {
             return new ConnectorMappingAvailabilityResponse(frequency, interval);
         }

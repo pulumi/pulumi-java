@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.Capabilities;
 import io.pulumi.kubernetes.core_v1.outputs.SELinuxOptions;
 import io.pulumi.kubernetes.core_v1.outputs.SeccompProfile;
@@ -271,7 +271,6 @@ public final class SecurityContext {
             this.windowsOptions = windowsOptions;
             return this;
         }
-
         public SecurityContext build() {
             return new SecurityContext(allowPrivilegeEscalation, capabilities, privileged, procMount, readOnlyRootFilesystem, runAsGroup, runAsNonRoot, runAsUser, seLinuxOptions, seccompProfile, windowsOptions);
         }

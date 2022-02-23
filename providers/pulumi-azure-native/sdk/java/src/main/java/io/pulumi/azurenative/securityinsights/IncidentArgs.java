@@ -11,7 +11,7 @@ import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelArgs;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classification")
-    private final @Nullable Input<Either<String,IncidentClassification>> classification;
+        private final @Nullable Input<Either<String,IncidentClassification>> classification;
 
     public Input<Either<String,IncidentClassification>> getClassification() {
         return this.classification == null ? Input.empty() : this.classification;
@@ -38,7 +38,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classificationComment")
-    private final @Nullable Input<String> classificationComment;
+        private final @Nullable Input<String> classificationComment;
 
     public Input<String> getClassificationComment() {
         return this.classificationComment == null ? Input.empty() : this.classificationComment;
@@ -49,7 +49,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="classificationReason")
-    private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
+        private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
 
     public Input<Either<String,IncidentClassificationReason>> getClassificationReason() {
         return this.classificationReason == null ? Input.empty() : this.classificationReason;
@@ -60,7 +60,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -71,7 +71,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstActivityTimeUtc")
-    private final @Nullable Input<String> firstActivityTimeUtc;
+        private final @Nullable Input<String> firstActivityTimeUtc;
 
     public Input<String> getFirstActivityTimeUtc() {
         return this.firstActivityTimeUtc == null ? Input.empty() : this.firstActivityTimeUtc;
@@ -82,7 +82,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incidentId")
-    private final @Nullable Input<String> incidentId;
+        private final @Nullable Input<String> incidentId;
 
     public Input<String> getIncidentId() {
         return this.incidentId == null ? Input.empty() : this.incidentId;
@@ -93,7 +93,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<IncidentLabelArgs>> labels;
+        private final @Nullable Input<List<IncidentLabelArgs>> labels;
 
     public Input<List<IncidentLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -104,7 +104,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastActivityTimeUtc")
-    private final @Nullable Input<String> lastActivityTimeUtc;
+        private final @Nullable Input<String> lastActivityTimeUtc;
 
     public Input<String> getLastActivityTimeUtc() {
         return this.lastActivityTimeUtc == null ? Input.empty() : this.lastActivityTimeUtc;
@@ -115,7 +115,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<IncidentOwnerInfoArgs> owner;
+        private final @Nullable Input<IncidentOwnerInfoArgs> owner;
 
     public Input<IncidentOwnerInfoArgs> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -126,7 +126,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -137,7 +137,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="severity", required=true)
-    private final Input<Either<String,IncidentSeverity>> severity;
+        private final Input<Either<String,IncidentSeverity>> severity;
 
     public Input<Either<String,IncidentSeverity>> getSeverity() {
         return this.severity;
@@ -148,7 +148,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,IncidentStatus>> status;
+        private final Input<Either<String,IncidentStatus>> status;
 
     public Input<Either<String,IncidentStatus>> getStatus() {
         return this.status;
@@ -159,7 +159,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -170,7 +170,7 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -409,7 +409,6 @@ public final class IncidentArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public IncidentArgs build() {
             return new IncidentArgs(classification, classificationComment, classificationReason, description, firstActivityTimeUtc, incidentId, labels, lastActivityTimeUtc, owner, resourceGroupName, severity, status, title, workspaceName);
         }

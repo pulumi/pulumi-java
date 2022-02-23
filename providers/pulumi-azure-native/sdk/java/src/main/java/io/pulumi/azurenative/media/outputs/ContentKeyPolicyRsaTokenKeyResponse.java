@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,7 +97,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyRsaTokenKeyResponse build() {
             return new ContentKeyPolicyRsaTokenKeyResponse(exponent, modulus, odataType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -268,7 +268,6 @@ public final class GetAgentPoolResult {
             this.virtualNetworkSubnetResourceId = virtualNetworkSubnetResourceId;
             return this;
         }
-
         public GetAgentPoolResult build() {
             return new GetAgentPoolResult(count, id, location, name, os, provisioningState, systemData, tags, tier, type, virtualNetworkSubnetResourceId);
         }

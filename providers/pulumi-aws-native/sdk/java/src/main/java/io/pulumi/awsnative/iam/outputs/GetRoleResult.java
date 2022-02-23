@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.RolePolicy;
 import io.pulumi.awsnative.iam.outputs.RoleTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -228,7 +228,6 @@ public final class GetRoleResult {
             this.tags = tags;
             return this;
         }
-
         public GetRoleResult build() {
             return new GetRoleResult(arn, assumeRolePolicyDocument, description, managedPolicyArns, maxSessionDuration, permissionsBoundary, policies, roleId, tags);
         }

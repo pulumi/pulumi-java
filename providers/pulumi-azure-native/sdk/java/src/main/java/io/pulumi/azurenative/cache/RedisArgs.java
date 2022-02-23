@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cache.inputs.RedisCommonPropertiesRedisConfiguratio
 import io.pulumi.azurenative.cache.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableNonSslPort")
-    private final @Nullable Input<Boolean> enableNonSslPort;
+        private final @Nullable Input<Boolean> enableNonSslPort;
 
     public Input<Boolean> getEnableNonSslPort() {
         return this.enableNonSslPort == null ? Input.empty() : this.enableNonSslPort;
@@ -39,7 +39,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -50,7 +50,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumTlsVersion")
-    private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
+        private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
 
     public Input<Either<String,TlsVersion>> getMinimumTlsVersion() {
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
@@ -61,7 +61,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -72,7 +72,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -83,7 +83,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redisConfiguration")
-    private final @Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
+        private final @Nullable Input<RedisCommonPropertiesRedisConfigurationArgs> redisConfiguration;
 
     public Input<RedisCommonPropertiesRedisConfigurationArgs> getRedisConfiguration() {
         return this.redisConfiguration == null ? Input.empty() : this.redisConfiguration;
@@ -94,7 +94,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replicasPerMaster")
-    private final @Nullable Input<Integer> replicasPerMaster;
+        private final @Nullable Input<Integer> replicasPerMaster;
 
     public Input<Integer> getReplicasPerMaster() {
         return this.replicasPerMaster == null ? Input.empty() : this.replicasPerMaster;
@@ -105,7 +105,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -116,7 +116,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardCount")
-    private final @Nullable Input<Integer> shardCount;
+        private final @Nullable Input<Integer> shardCount;
 
     public Input<Integer> getShardCount() {
         return this.shardCount == null ? Input.empty() : this.shardCount;
@@ -127,7 +127,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -138,7 +138,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticIP")
-    private final @Nullable Input<String> staticIP;
+        private final @Nullable Input<String> staticIP;
 
     public Input<String> getStaticIP() {
         return this.staticIP == null ? Input.empty() : this.staticIP;
@@ -149,7 +149,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -160,7 +160,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -171,7 +171,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantSettings")
-    private final @Nullable Input<Map<String,String>> tenantSettings;
+        private final @Nullable Input<Map<String,String>> tenantSettings;
 
     public Input<Map<String,String>> getTenantSettings() {
         return this.tenantSettings == null ? Input.empty() : this.tenantSettings;
@@ -182,7 +182,7 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -436,7 +436,6 @@ public final class RedisArgs extends io.pulumi.resources.ResourceArgs {
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public RedisArgs build() {
             return new RedisArgs(enableNonSslPort, location, minimumTlsVersion, name, publicNetworkAccess, redisConfiguration, replicasPerMaster, resourceGroupName, shardCount, sku, staticIP, subnetId, tags, tenantSettings, zones);
         }

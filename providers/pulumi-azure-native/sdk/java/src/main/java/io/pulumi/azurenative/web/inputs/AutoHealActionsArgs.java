@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.AutoHealActionType;
 import io.pulumi.azurenative.web.inputs.AutoHealCustomActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actionType")
-    private final @Nullable Input<AutoHealActionType> actionType;
+        private final @Nullable Input<AutoHealActionType> actionType;
 
     public Input<AutoHealActionType> getActionType() {
         return this.actionType == null ? Input.empty() : this.actionType;
@@ -36,7 +36,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customAction")
-    private final @Nullable Input<AutoHealCustomActionArgs> customAction;
+        private final @Nullable Input<AutoHealCustomActionArgs> customAction;
 
     public Input<AutoHealCustomActionArgs> getCustomAction() {
         return this.customAction == null ? Input.empty() : this.customAction;
@@ -48,7 +48,7 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minProcessExecutionTime")
-    private final @Nullable Input<String> minProcessExecutionTime;
+        private final @Nullable Input<String> minProcessExecutionTime;
 
     public Input<String> getMinProcessExecutionTime() {
         return this.minProcessExecutionTime == null ? Input.empty() : this.minProcessExecutionTime;
@@ -122,7 +122,6 @@ public final class AutoHealActionsArgs extends io.pulumi.resources.ResourceArgs 
             this.minProcessExecutionTime = Input.ofNullable(minProcessExecutionTime);
             return this;
         }
-
         public AutoHealActionsArgs build() {
             return new AutoHealActionsArgs(actionType, customAction, minProcessExecutionTime);
         }

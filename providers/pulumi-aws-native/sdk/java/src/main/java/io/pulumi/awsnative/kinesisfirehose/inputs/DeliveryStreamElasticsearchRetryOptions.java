@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class DeliveryStreamElasticsearchRetryOptions extends io.pulumi.res
     public static final DeliveryStreamElasticsearchRetryOptions Empty = new DeliveryStreamElasticsearchRetryOptions();
 
     @InputImport(name="durationInSeconds")
-    private final @Nullable Integer durationInSeconds;
+        private final @Nullable Integer durationInSeconds;
 
     public Optional<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Optional.empty() : Optional.ofNullable(this.durationInSeconds);
@@ -53,7 +53,6 @@ public final class DeliveryStreamElasticsearchRetryOptions extends io.pulumi.res
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public DeliveryStreamElasticsearchRetryOptions build() {
             return new DeliveryStreamElasticsearchRetryOptions(durationInSeconds);
         }

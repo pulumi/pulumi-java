@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<String> acceleratorCount;
+      private final @Nullable Input<String> acceleratorCount;
 
     public Input<String> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -34,7 +34,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -45,7 +45,7 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="gpuPartitionSize")
-    private final @Nullable Input<String> gpuPartitionSize;
+      private final @Nullable Input<String> gpuPartitionSize;
 
     public Input<String> getGpuPartitionSize() {
         return this.gpuPartitionSize == null ? Input.empty() : this.gpuPartitionSize;
@@ -119,7 +119,6 @@ public final class AcceleratorConfigArgs extends io.pulumi.resources.ResourceArg
             this.gpuPartitionSize = Input.ofNullable(gpuPartitionSize);
             return this;
         }
-
         public AcceleratorConfigArgs build() {
             return new AcceleratorConfigArgs(acceleratorCount, acceleratorType, gpuPartitionSize);
         }

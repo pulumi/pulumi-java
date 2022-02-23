@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -215,7 +215,6 @@ public final class URLMapDefaultRouteActionCorsPolicy {
             this.maxAge = maxAge;
             return this;
         }
-
         public URLMapDefaultRouteActionCorsPolicy build() {
             return new URLMapDefaultRouteActionCorsPolicy(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }

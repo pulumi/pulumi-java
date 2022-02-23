@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionDeidentifyTemplateDeidentifyConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * 
      */
     @InputImport(name="deidentifyConfig")
-    private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig;
+        private final @Nullable Input<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig;
 
     public Input<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> getDeidentifyConfig() {
         return this.deidentifyConfig == null ? Input.empty() : this.deidentifyConfig;
@@ -32,7 +32,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -54,7 +54,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -69,7 +69,7 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -173,7 +173,6 @@ public final class PreventionDeidentifyTemplateState extends io.pulumi.resources
             this.parent = Input.ofNullable(parent);
             return this;
         }
-
         public PreventionDeidentifyTemplateState build() {
             return new PreventionDeidentifyTemplateState(deidentifyConfig, description, displayName, name, parent);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -30,7 +30,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -41,7 +41,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hotCachePeriod")
-    private final @Nullable Input<String> hotCachePeriod;
+        private final @Nullable Input<String> hotCachePeriod;
 
     public Input<String> getHotCachePeriod() {
         return this.hotCachePeriod == null ? Input.empty() : this.hotCachePeriod;
@@ -53,7 +53,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -64,7 +64,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -75,7 +75,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="softDeletePeriod")
-    private final @Nullable Input<String> softDeletePeriod;
+        private final @Nullable Input<String> softDeletePeriod;
 
     public Input<String> getSoftDeletePeriod() {
         return this.softDeletePeriod == null ? Input.empty() : this.softDeletePeriod;
@@ -220,7 +220,6 @@ public final class ReadWriteDatabaseArgs extends io.pulumi.resources.ResourceArg
             this.softDeletePeriod = Input.ofNullable(softDeletePeriod);
             return this;
         }
-
         public ReadWriteDatabaseArgs build() {
             return new ReadWriteDatabaseArgs(clusterName, databaseName, hotCachePeriod, kind, location, resourceGroupName, softDeletePeriod);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.secretmanager_v1.outputs.CustomerManagedEncryptionResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AutomaticResponse {
             this.customerManagedEncryption = Objects.requireNonNull(customerManagedEncryption);
             return this;
         }
-
         public AutomaticResponse build() {
             return new AutomaticResponse(customerManagedEncryption);
         }

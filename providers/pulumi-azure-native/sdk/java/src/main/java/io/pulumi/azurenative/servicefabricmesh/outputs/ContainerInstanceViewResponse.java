@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerEventResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class ContainerInstanceViewResponse {
             this.restartCount = restartCount;
             return this;
         }
-
         public ContainerInstanceViewResponse build() {
             return new ContainerInstanceViewResponse(currentState, events, previousState, restartCount);
         }

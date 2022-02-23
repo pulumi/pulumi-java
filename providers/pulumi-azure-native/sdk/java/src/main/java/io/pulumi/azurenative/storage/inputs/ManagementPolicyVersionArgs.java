@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.DateAfterCreationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="delete")
-    private final @Nullable Input<DateAfterCreationArgs> delete;
+        private final @Nullable Input<DateAfterCreationArgs> delete;
 
     public Input<DateAfterCreationArgs> getDelete() {
         return this.delete == null ? Input.empty() : this.delete;
@@ -34,7 +34,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tierToArchive")
-    private final @Nullable Input<DateAfterCreationArgs> tierToArchive;
+        private final @Nullable Input<DateAfterCreationArgs> tierToArchive;
 
     public Input<DateAfterCreationArgs> getTierToArchive() {
         return this.tierToArchive == null ? Input.empty() : this.tierToArchive;
@@ -45,7 +45,7 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tierToCool")
-    private final @Nullable Input<DateAfterCreationArgs> tierToCool;
+        private final @Nullable Input<DateAfterCreationArgs> tierToCool;
 
     public Input<DateAfterCreationArgs> getTierToCool() {
         return this.tierToCool == null ? Input.empty() : this.tierToCool;
@@ -119,7 +119,6 @@ public final class ManagementPolicyVersionArgs extends io.pulumi.resources.Resou
             this.tierToCool = Input.ofNullable(tierToCool);
             return this;
         }
-
         public ManagementPolicyVersionArgs build() {
             return new ManagementPolicyVersionArgs(delete, tierToArchive, tierToCool);
         }

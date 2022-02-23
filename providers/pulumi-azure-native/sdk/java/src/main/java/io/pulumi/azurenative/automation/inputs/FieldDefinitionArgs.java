@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isEncrypted")
-    private final @Nullable Input<Boolean> isEncrypted;
+        private final @Nullable Input<Boolean> isEncrypted;
 
     public Input<Boolean> getIsEncrypted() {
         return this.isEncrypted == null ? Input.empty() : this.isEncrypted;
@@ -35,7 +35,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isOptional")
-    private final @Nullable Input<Boolean> isOptional;
+        private final @Nullable Input<Boolean> isOptional;
 
     public Input<Boolean> getIsOptional() {
         return this.isOptional == null ? Input.empty() : this.isOptional;
@@ -46,7 +46,7 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -120,7 +120,6 @@ public final class FieldDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public FieldDefinitionArgs build() {
             return new FieldDefinitionArgs(isEncrypted, isOptional, type);
         }

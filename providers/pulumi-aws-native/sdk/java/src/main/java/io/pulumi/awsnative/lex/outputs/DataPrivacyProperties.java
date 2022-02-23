@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class DataPrivacyProperties {
             this.childDirected = Objects.requireNonNull(childDirected);
             return this;
         }
-
         public DataPrivacyProperties build() {
             return new DataPrivacyProperties(childDirected);
         }

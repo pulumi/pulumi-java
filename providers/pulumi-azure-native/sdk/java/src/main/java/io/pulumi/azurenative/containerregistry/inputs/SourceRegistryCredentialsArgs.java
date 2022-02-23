@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.SourceRegistryLoginMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="loginMode")
-    private final @Nullable Input<Either<String,SourceRegistryLoginMode>> loginMode;
+        private final @Nullable Input<Either<String,SourceRegistryLoginMode>> loginMode;
 
     public Input<Either<String,SourceRegistryLoginMode>> getLoginMode() {
         return this.loginMode == null ? Input.empty() : this.loginMode;
@@ -70,7 +70,6 @@ public final class SourceRegistryCredentialsArgs extends io.pulumi.resources.Res
             this.loginMode = Input.ofNullable(loginMode);
             return this;
         }
-
         public SourceRegistryCredentialsArgs build() {
             return new SourceRegistryCredentialsArgs(loginMode);
         }

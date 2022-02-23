@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageType", required=true)
-    private final String storageType;
+        private final String storageType;
 
     public String getStorageType() {
         return this.storageType;
@@ -82,7 +82,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(accountName, storageType);
         }

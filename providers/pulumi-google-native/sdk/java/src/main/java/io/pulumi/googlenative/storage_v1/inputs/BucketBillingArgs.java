@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requesterPays")
-    private final @Nullable Input<Boolean> requesterPays;
+      private final @Nullable Input<Boolean> requesterPays;
 
     public Input<Boolean> getRequesterPays() {
         return this.requesterPays == null ? Input.empty() : this.requesterPays;
@@ -66,7 +66,6 @@ public final class BucketBillingArgs extends io.pulumi.resources.ResourceArgs {
             this.requesterPays = Input.ofNullable(requesterPays);
             return this;
         }
-
         public BucketBillingArgs build() {
             return new BucketBillingArgs(requesterPays);
         }

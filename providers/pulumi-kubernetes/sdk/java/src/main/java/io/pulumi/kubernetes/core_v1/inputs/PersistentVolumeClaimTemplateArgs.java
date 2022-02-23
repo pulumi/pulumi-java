@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeClaimSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -35,7 +35,7 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<PersistentVolumeClaimSpecArgs> spec;
+        private final Input<PersistentVolumeClaimSpecArgs> spec;
 
     public Input<PersistentVolumeClaimSpecArgs> getSpec() {
         return this.spec;
@@ -94,7 +94,6 @@ public final class PersistentVolumeClaimTemplateArgs extends io.pulumi.resources
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public PersistentVolumeClaimTemplateArgs build() {
             return new PersistentVolumeClaimTemplateArgs(metadata, spec);
         }

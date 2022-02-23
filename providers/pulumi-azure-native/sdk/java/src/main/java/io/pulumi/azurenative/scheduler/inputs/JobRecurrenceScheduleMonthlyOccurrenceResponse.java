@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends io.pul
      * 
      */
     @InputImport(name="day")
-    private final @Nullable String day;
+        private final @Nullable String day;
 
     public Optional<String> getDay() {
         return this.day == null ? Optional.empty() : Optional.ofNullable(this.day);
@@ -31,7 +31,7 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends io.pul
      * 
      */
     @InputImport(name="occurrence")
-    private final @Nullable Integer occurrence;
+        private final @Nullable Integer occurrence;
 
     public Optional<Integer> getOccurrence() {
         return this.occurrence == null ? Optional.empty() : Optional.ofNullable(this.occurrence);
@@ -80,7 +80,6 @@ public final class JobRecurrenceScheduleMonthlyOccurrenceResponse extends io.pul
             this.occurrence = occurrence;
             return this;
         }
-
         public JobRecurrenceScheduleMonthlyOccurrenceResponse build() {
             return new JobRecurrenceScheduleMonthlyOccurrenceResponse(day, occurrence);
         }

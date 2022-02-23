@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyIdentifier")
-    private final @Nullable String keyIdentifier;
+        private final @Nullable String keyIdentifier;
 
     public Optional<String> getKeyIdentifier() {
         return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
@@ -65,7 +65,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
             this.keyIdentifier = keyIdentifier;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyIdentifier);
         }

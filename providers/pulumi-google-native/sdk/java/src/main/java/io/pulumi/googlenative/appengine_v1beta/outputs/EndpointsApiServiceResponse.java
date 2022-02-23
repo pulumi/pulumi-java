@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class EndpointsApiServiceResponse {
             this.rolloutStrategy = Objects.requireNonNull(rolloutStrategy);
             return this;
         }
-
         public EndpointsApiServiceResponse build() {
             return new EndpointsApiServiceResponse(configId, disableTraceSampling, name, rolloutStrategy);
         }

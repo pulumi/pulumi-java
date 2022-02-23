@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCutoverJobArgs Empty = new GetCutoverJobArgs();
 
     @InputImport(name="cutoverJobId", required=true)
-    private final String cutoverJobId;
+      private final String cutoverJobId;
 
     public String getCutoverJobId() {
         return this.cutoverJobId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="migratingVmId", required=true)
-    private final String migratingVmId;
+      private final String migratingVmId;
 
     public String getMigratingVmId() {
         return this.migratingVmId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
@@ -122,7 +122,6 @@ public final class GetCutoverJobArgs extends io.pulumi.resources.InvokeArgs {
             this.sourceId = Objects.requireNonNull(sourceId);
             return this;
         }
-
         public GetCutoverJobArgs build() {
             return new GetCutoverJobArgs(cutoverJobId, location, migratingVmId, project, sourceId);
         }

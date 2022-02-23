@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends io.pulu
      * 
      */
     @InputImport(name="overview", required=true)
-    private final String overview;
+      private final String overview;
 
     public String getOverview() {
         return this.overview;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse extends io.pulu
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1EntryOverviewResponse build() {
             return new GoogleCloudDatacatalogV1EntryOverviewResponse(overview);
         }

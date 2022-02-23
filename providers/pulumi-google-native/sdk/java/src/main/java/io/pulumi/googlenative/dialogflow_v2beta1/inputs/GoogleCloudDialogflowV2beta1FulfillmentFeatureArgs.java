@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1FulfillmentFeatureType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends io
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> type;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> type;
 
     public Input<GoogleCloudDialogflowV2beta1FulfillmentFeatureType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs extends io
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentFeatureArgs(type);
         }

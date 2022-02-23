@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class FlexVolumeSource {
             this.secretRef = secretRef;
             return this;
         }
-
         public FlexVolumeSource build() {
             return new FlexVolumeSource(driver, fsType, options, readOnly, secretRef);
         }

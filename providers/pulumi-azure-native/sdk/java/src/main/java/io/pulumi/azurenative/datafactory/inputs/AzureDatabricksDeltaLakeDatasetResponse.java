@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -40,7 +40,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Object database;
+        private final @Nullable Object database;
 
     public Optional<Object> getDatabase() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
@@ -51,7 +51,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -62,7 +62,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable DatasetResponseFolder folder;
+        private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -73,7 +73,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+        private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -84,7 +84,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -95,7 +95,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Object schema;
+        private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -106,7 +106,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Object structure;
+        private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -117,7 +117,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Object table;
+        private final @Nullable Object table;
 
     public Optional<Object> getTable() {
         return this.table == null ? Optional.empty() : Optional.ofNullable(this.table);
@@ -129,7 +129,7 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -258,7 +258,6 @@ public final class AzureDatabricksDeltaLakeDatasetResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDatabricksDeltaLakeDatasetResponse build() {
             return new AzureDatabricksDeltaLakeDatasetResponse(annotations, database, description, folder, linkedServiceName, parameters, schema, structure, table, type);
         }

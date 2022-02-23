@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatabricksPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeLocation")
-    private final @Nullable Input<String> computeLocation;
+        private final @Nullable Input<String> computeLocation;
 
     public Input<String> getComputeLocation() {
         return this.computeLocation == null ? Input.empty() : this.computeLocation;
@@ -36,7 +36,7 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final Input<String> computeType;
+        private final Input<String> computeType;
 
     public Input<String> getComputeType() {
         return this.computeType;
@@ -47,14 +47,14 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<DatabricksPropertiesArgs> properties;
+        private final @Nullable Input<DatabricksPropertiesArgs> properties;
 
     public Input<DatabricksPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -65,7 +65,7 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -169,7 +169,6 @@ public final class DatabricksArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public DatabricksArgs build() {
             return new DatabricksArgs(computeLocation, computeType, description, properties, resourceId);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder;
 
 import io.pulumi.awsnative.imagebuilder.inputs.DistributionConfigurationDistributionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="distributions", required=true)
-    private final Input<List<DistributionConfigurationDistributionArgs>> distributions;
+        private final Input<List<DistributionConfigurationDistributionArgs>> distributions;
 
     public Input<List<DistributionConfigurationDistributionArgs>> getDistributions() {
         return this.distributions;
@@ -44,7 +44,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+        private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,6 @@ public final class DistributionConfigurationArgs extends io.pulumi.resources.Res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DistributionConfigurationArgs build() {
             return new DistributionConfigurationArgs(description, distributions, name, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class OwnerReference {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public OwnerReference build() {
             return new OwnerReference(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

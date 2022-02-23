@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AttestationArgs;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attestation", required=true)
-    private final Input<AttestationArgs> attestation;
+      private final Input<AttestationArgs> attestation;
 
     public Input<AttestationArgs> getAttestation() {
         return this.attestation;
@@ -65,7 +65,6 @@ public final class DetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.attestation = Input.of(Objects.requireNonNull(attestation));
             return this;
         }
-
         public DetailsArgs build() {
             return new DetailsArgs(attestation);
         }

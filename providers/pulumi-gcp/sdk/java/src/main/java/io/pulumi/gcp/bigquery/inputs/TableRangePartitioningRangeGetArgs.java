@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="end", required=true)
-    private final Input<Integer> end;
+        private final Input<Integer> end;
 
     public Input<Integer> getEnd() {
         return this.end;
@@ -29,7 +29,7 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="interval", required=true)
-    private final Input<Integer> interval;
+        private final Input<Integer> interval;
 
     public Input<Integer> getInterval() {
         return this.interval;
@@ -40,7 +40,7 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<Integer> start;
+        private final Input<Integer> start;
 
     public Input<Integer> getStart() {
         return this.start;
@@ -114,7 +114,6 @@ public final class TableRangePartitioningRangeGetArgs extends io.pulumi.resource
             this.start = Input.of(Objects.requireNonNull(start));
             return this;
         }
-
         public TableRangePartitioningRangeGetArgs build() {
             return new TableRangePartitioningRangeGetArgs(end, interval, start);
         }

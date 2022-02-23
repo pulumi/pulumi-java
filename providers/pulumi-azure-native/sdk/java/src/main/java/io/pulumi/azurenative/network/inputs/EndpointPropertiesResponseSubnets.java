@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
      * 
      */
     @InputImport(name="first")
-    private final @Nullable String first;
+        private final @Nullable String first;
 
     public Optional<String> getFirst() {
         return this.first == null ? Optional.empty() : Optional.ofNullable(this.first);
@@ -35,7 +35,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
      * 
      */
     @InputImport(name="last")
-    private final @Nullable String last;
+        private final @Nullable String last;
 
     public Optional<String> getLast() {
         return this.last == null ? Optional.empty() : Optional.ofNullable(this.last);
@@ -46,7 +46,7 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Integer scope;
+        private final @Nullable Integer scope;
 
     public Optional<Integer> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
@@ -105,7 +105,6 @@ public final class EndpointPropertiesResponseSubnets extends io.pulumi.resources
             this.scope = scope;
             return this;
         }
-
         public EndpointPropertiesResponseSubnets build() {
             return new EndpointPropertiesResponseSubnets(first, last, scope);
         }

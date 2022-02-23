@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetLienArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetLienArgs Empty = new GetLienArgs();
 
     @InputImport(name="lienId", required=true)
-    private final String lienId;
+      private final String lienId;
 
     public String getLienId() {
         return this.lienId;
@@ -51,7 +51,6 @@ public final class GetLienArgs extends io.pulumi.resources.InvokeArgs {
             this.lienId = Objects.requireNonNull(lienId);
             return this;
         }
-
         public GetLienArgs build() {
             return new GetLienArgs(lienId);
         }

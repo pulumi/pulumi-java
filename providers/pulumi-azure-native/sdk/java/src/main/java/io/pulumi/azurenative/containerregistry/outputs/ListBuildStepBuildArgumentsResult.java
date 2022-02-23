@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.BuildArgumentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ListBuildStepBuildArgumentsResult {
             this.value = value;
             return this;
         }
-
         public ListBuildStepBuildArgumentsResult build() {
             return new ListBuildStepBuildArgumentsResult(nextLink, value);
         }

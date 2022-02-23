@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3objectlambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -20,14 +20,14 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
     public static final AccessPointTransformationConfigurationArgs Empty = new AccessPointTransformationConfigurationArgs();
 
     @InputImport(name="actions", required=true)
-    private final Input<List<String>> actions;
+        private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="contentTransformation", required=true)
-    private final Input<Object> contentTransformation;
+        private final Input<Object> contentTransformation;
 
     public Input<Object> getContentTransformation() {
         return this.contentTransformation;
@@ -86,7 +86,6 @@ public final class AccessPointTransformationConfigurationArgs extends io.pulumi.
             this.contentTransformation = Input.of(Objects.requireNonNull(contentTransformation));
             return this;
         }
-
         public AccessPointTransformationConfigurationArgs build() {
             return new AccessPointTransformationConfigurationArgs(actions, contentTransformation);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -225,7 +225,6 @@ public final class ServiceAssociationLinkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceAssociationLinkResponse build() {
             return new ServiceAssociationLinkResponse(allowDelete, etag, id, link, linkedResourceType, locations, name, provisioningState, type);
         }

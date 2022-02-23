@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAzureBlobStorageDataSourceAzureCredentials;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class TransferJobTransferSpecAzureBlobStorageDataSource {
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public TransferJobTransferSpecAzureBlobStorageDataSource build() {
             return new TransferJobTransferSpecAzureBlobStorageDataSource(azureCredentials, container, path, storageAccount);
         }

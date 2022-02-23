@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+        private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -30,7 +30,7 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -79,7 +79,6 @@ public final class GetManagementGroupSubscriptionArgs extends io.pulumi.resource
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public GetManagementGroupSubscriptionArgs build() {
             return new GetManagementGroupSubscriptionArgs(groupId, subscriptionId);
         }

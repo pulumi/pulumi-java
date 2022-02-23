@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.networking.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.IngressClassArgs;
@@ -79,13 +79,6 @@ public class IngressClass extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IngressClass(String name) {
-        super("kubernetes:networking.k8s.io/v1beta1:IngressClass", name, IngressClassArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

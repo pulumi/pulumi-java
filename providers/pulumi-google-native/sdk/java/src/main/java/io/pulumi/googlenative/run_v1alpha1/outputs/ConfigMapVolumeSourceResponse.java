@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.KeyToPathResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class ConfigMapVolumeSourceResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapVolumeSourceResponse build() {
             return new ConfigMapVolumeSourceResponse(defaultMode, items, name, optional);
         }

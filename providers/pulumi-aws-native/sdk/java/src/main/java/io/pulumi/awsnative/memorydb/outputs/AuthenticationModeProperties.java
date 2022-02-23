@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.enums.UserAuthenticationModePropertiesType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class AuthenticationModeProperties {
             this.type = type;
             return this;
         }
-
         public AuthenticationModeProperties build() {
             return new AuthenticationModeProperties(passwords, type);
         }

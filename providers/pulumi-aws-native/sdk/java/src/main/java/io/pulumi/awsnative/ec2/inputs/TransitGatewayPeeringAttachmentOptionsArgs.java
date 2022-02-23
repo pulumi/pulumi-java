@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="dynamicRouting")
-    private final @Nullable Input<String> dynamicRouting;
+        private final @Nullable Input<String> dynamicRouting;
 
     public Input<String> getDynamicRouting() {
         return this.dynamicRouting == null ? Input.empty() : this.dynamicRouting;
@@ -62,7 +62,6 @@ public final class TransitGatewayPeeringAttachmentOptionsArgs extends io.pulumi.
             this.dynamicRouting = Input.ofNullable(dynamicRouting);
             return this;
         }
-
         public TransitGatewayPeeringAttachmentOptionsArgs build() {
             return new TransitGatewayPeeringAttachmentOptionsArgs(dynamicRouting);
         }

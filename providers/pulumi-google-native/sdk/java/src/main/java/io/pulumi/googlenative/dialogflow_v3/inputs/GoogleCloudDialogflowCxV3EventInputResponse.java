@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends io.pulumi
      * 
      */
     @InputImport(name="event", required=true)
-    private final String event;
+      private final String event;
 
     public String getEvent() {
         return this.event;
@@ -59,7 +59,6 @@ public final class GoogleCloudDialogflowCxV3EventInputResponse extends io.pulumi
             this.event = Objects.requireNonNull(event);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EventInputResponse build() {
             return new GoogleCloudDialogflowCxV3EventInputResponse(event);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse exte
      * 
      */
     @InputImport(name="doNotAssociateTerms", required=true)
-    private final List<String> doNotAssociateTerms;
+      private final List<String> doNotAssociateTerms;
 
     public List<String> getDoNotAssociateTerms() {
         return this.doNotAssociateTerms;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse exte
      * 
      */
     @InputImport(name="queryTerms", required=true)
-    private final List<String> queryTerms;
+      private final List<String> queryTerms;
 
     public List<String> getQueryTerms() {
         return this.queryTerms;
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse exte
      * 
      */
     @InputImport(name="terms", required=true)
-    private final List<String> terms;
+      private final List<String> terms;
 
     public List<String> getTerms() {
         return this.terms;
@@ -103,7 +103,6 @@ public final class GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse exte
             this.terms = Objects.requireNonNull(terms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleDoNotAssociateActionResponse(doNotAssociateTerms, queryTerms, terms);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArg
      * 
      */
     @InputImport(name="allowedServices")
-    private final @Nullable Input<List<String>> allowedServices;
+        private final @Nullable Input<List<String>> allowedServices;
 
     public Input<List<String>> getAllowedServices() {
         return this.allowedServices == null ? Input.empty() : this.allowedServices;
@@ -34,7 +34,7 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArg
      * 
      */
     @InputImport(name="enableRestriction")
-    private final @Nullable Input<Boolean> enableRestriction;
+        private final @Nullable Input<Boolean> enableRestriction;
 
     public Input<Boolean> getEnableRestriction() {
         return this.enableRestriction == null ? Input.empty() : this.enableRestriction;
@@ -93,7 +93,6 @@ public final class ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArg
             this.enableRestriction = Input.ofNullable(enableRestriction);
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArgs build() {
             return new ServicePerimetersServicePerimeterSpecVpcAccessibleServicesArgs(allowedServices, enableRestriction);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class LocationObjectStorageTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public LocationObjectStorageTag build() {
             return new LocationObjectStorageTag(key, value);
         }

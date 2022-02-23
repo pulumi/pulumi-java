@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ShareInfoElementResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="vmUri", required=true)
-    private final String vmUri;
+        private final String vmUri;
 
     public String getVmUri() {
         return this.vmUri;
@@ -55,7 +55,6 @@ public final class ShareInfoElementResponse extends io.pulumi.resources.InvokeAr
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
         }
-
         public ShareInfoElementResponse build() {
             return new ShareInfoElementResponse(vmUri);
         }

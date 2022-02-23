@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.JwtResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SignatureResponse;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class AttestationOccurrenceResponse {
             this.signatures = Objects.requireNonNull(signatures);
             return this;
         }
-
         public AttestationOccurrenceResponse build() {
             return new AttestationOccurrenceResponse(jwts, serializedPayload, signatures);
         }

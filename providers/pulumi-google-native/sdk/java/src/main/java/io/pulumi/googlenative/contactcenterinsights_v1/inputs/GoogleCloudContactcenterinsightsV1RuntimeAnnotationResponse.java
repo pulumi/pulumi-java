@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse;
@@ -28,7 +28,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="annotationId", required=true)
-    private final String annotationId;
+      private final String annotationId;
 
     public String getAnnotationId() {
         return this.annotationId;
@@ -39,7 +39,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="answerFeedback", required=true)
-    private final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
+      private final GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse answerFeedback;
 
     public GoogleCloudContactcenterinsightsV1AnswerFeedbackResponse getAnswerFeedback() {
         return this.answerFeedback;
@@ -50,7 +50,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="articleSuggestion", required=true)
-    private final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
+      private final GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse articleSuggestion;
 
     public GoogleCloudContactcenterinsightsV1ArticleSuggestionDataResponse getArticleSuggestion() {
         return this.articleSuggestion;
@@ -61,7 +61,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -72,7 +72,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="dialogflowInteraction", required=true)
-    private final GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
+      private final GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse dialogflowInteraction;
 
     public GoogleCloudContactcenterinsightsV1DialogflowInteractionDataResponse getDialogflowInteraction() {
         return this.dialogflowInteraction;
@@ -83,7 +83,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="endBoundary", required=true)
-    private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
+      private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse endBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getEndBoundary() {
         return this.endBoundary;
@@ -94,7 +94,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="faqAnswer", required=true)
-    private final GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
+      private final GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse faqAnswer;
 
     public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse getFaqAnswer() {
         return this.faqAnswer;
@@ -105,7 +105,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="smartComposeSuggestion", required=true)
-    private final GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
+      private final GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse smartComposeSuggestion;
 
     public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse getSmartComposeSuggestion() {
         return this.smartComposeSuggestion;
@@ -116,7 +116,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="smartReply", required=true)
-    private final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
+      private final GoogleCloudContactcenterinsightsV1SmartReplyDataResponse smartReply;
 
     public GoogleCloudContactcenterinsightsV1SmartReplyDataResponse getSmartReply() {
         return this.smartReply;
@@ -127,7 +127,7 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
      * 
      */
     @InputImport(name="startBoundary", required=true)
-    private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
+      private final GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse startBoundary;
 
     public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse getStartBoundary() {
         return this.startBoundary;
@@ -256,7 +256,6 @@ public final class GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse e
             this.startBoundary = Objects.requireNonNull(startBoundary);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse build() {
             return new GoogleCloudContactcenterinsightsV1RuntimeAnnotationResponse(annotationId, answerFeedback, articleSuggestion, createTime, dialogflowInteraction, endBoundary, faqAnswer, smartComposeSuggestion, smartReply, startBoundary);
         }

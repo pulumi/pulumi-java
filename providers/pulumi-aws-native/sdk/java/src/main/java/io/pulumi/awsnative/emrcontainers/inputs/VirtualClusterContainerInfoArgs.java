@@ -5,7 +5,7 @@ package io.pulumi.awsnative.emrcontainers.inputs;
 
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterEksInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -14,7 +14,7 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
     public static final VirtualClusterContainerInfoArgs Empty = new VirtualClusterContainerInfoArgs();
 
     @InputImport(name="eksInfo", required=true)
-    private final Input<VirtualClusterEksInfoArgs> eksInfo;
+        private final Input<VirtualClusterEksInfoArgs> eksInfo;
 
     public Input<VirtualClusterEksInfoArgs> getEksInfo() {
         return this.eksInfo;
@@ -57,7 +57,6 @@ public final class VirtualClusterContainerInfoArgs extends io.pulumi.resources.R
             this.eksInfo = Input.of(Objects.requireNonNull(eksInfo));
             return this;
         }
-
         public VirtualClusterContainerInfoArgs build() {
             return new VirtualClusterContainerInfoArgs(eksInfo);
         }

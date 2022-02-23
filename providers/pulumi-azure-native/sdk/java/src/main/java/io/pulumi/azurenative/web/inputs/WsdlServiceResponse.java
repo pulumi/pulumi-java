@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WsdlServiceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointQualifiedNames")
-    private final @Nullable List<String> endpointQualifiedNames;
+        private final @Nullable List<String> endpointQualifiedNames;
 
     public List<String> getEndpointQualifiedNames() {
         return this.endpointQualifiedNames == null ? List.of() : this.endpointQualifiedNames;
@@ -35,7 +35,7 @@ public final class WsdlServiceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="qualifiedName", required=true)
-    private final String qualifiedName;
+        private final String qualifiedName;
 
     public String getQualifiedName() {
         return this.qualifiedName;
@@ -84,7 +84,6 @@ public final class WsdlServiceResponse extends io.pulumi.resources.InvokeArgs {
             this.qualifiedName = Objects.requireNonNull(qualifiedName);
             return this;
         }
-
         public WsdlServiceResponse build() {
             return new WsdlServiceResponse(endpointQualifiedNames, qualifiedName);
         }

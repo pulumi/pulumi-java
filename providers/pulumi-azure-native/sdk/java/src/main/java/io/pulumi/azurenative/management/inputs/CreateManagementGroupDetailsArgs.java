@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.CreateParentGroupInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<CreateParentGroupInfoArgs> parent;
+        private final @Nullable Input<CreateParentGroupInfoArgs> parent;
 
     public Input<CreateParentGroupInfoArgs> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -66,7 +66,6 @@ public final class CreateManagementGroupDetailsArgs extends io.pulumi.resources.
             this.parent = Input.ofNullable(parent);
             return this;
         }
-
         public CreateManagementGroupDetailsArgs build() {
             return new CreateManagementGroupDetailsArgs(parent);
         }

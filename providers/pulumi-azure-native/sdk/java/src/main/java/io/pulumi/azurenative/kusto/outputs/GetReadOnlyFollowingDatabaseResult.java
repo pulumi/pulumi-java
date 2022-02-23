@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.DatabaseStatisticsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -289,7 +289,6 @@ public final class GetReadOnlyFollowingDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReadOnlyFollowingDatabaseResult build() {
             return new GetReadOnlyFollowingDatabaseResult(attachedDatabaseConfigurationName, hotCachePeriod, id, kind, leaderClusterResourceId, location, name, principalsModificationKind, provisioningState, softDeletePeriod, statistics, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.InputAttribute;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class InputDefinition extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final List<InputAttribute> attributes;
+        private final List<InputAttribute> attributes;
 
     public List<InputAttribute> getAttributes() {
         return this.attributes;
@@ -60,7 +60,6 @@ public final class InputDefinition extends io.pulumi.resources.InvokeArgs {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public InputDefinition build() {
             return new InputDefinition(attributes);
         }

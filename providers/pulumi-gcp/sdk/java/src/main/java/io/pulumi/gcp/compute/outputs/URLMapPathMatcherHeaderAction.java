@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherHeaderActionRequestHeadersToAdd;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherHeaderActionResponseHeadersToAdd;
 import java.lang.String;
@@ -128,7 +128,6 @@ public final class URLMapPathMatcherHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public URLMapPathMatcherHeaderAction build() {
             return new URLMapPathMatcherHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="attachmentId", required=true)
-    private final String attachmentId;
+      private final String attachmentId;
 
     public String getAttachmentId() {
         return this.attachmentId;
@@ -28,7 +28,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -39,7 +39,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="securityPolicyId", required=true)
-    private final String securityPolicyId;
+      private final String securityPolicyId;
 
     public String getSecurityPolicyId() {
         return this.securityPolicyId;
@@ -119,7 +119,6 @@ public final class SecurityPolicyAssociationResponse extends io.pulumi.resources
             this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
             return this;
         }
-
         public SecurityPolicyAssociationResponse build() {
             return new SecurityPolicyAssociationResponse(attachmentId, displayName, name, securityPolicyId);
         }

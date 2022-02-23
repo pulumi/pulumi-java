@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.policysimulator_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.policysimulator_v1beta1.inputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
+      private final Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> config;
 
     public Input<GoogleCloudPolicysimulatorV1beta1ReplayConfigArgs> getConfig() {
         return this.config;
     }
 
     @InputImport(name="folderId", required=true)
-    private final Input<String> folderId;
+      private final Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -108,7 +108,6 @@ public final class FolderReplayArgs extends io.pulumi.resources.ResourceArgs {
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public FolderReplayArgs build() {
             return new FolderReplayArgs(config, folderId, location);
         }

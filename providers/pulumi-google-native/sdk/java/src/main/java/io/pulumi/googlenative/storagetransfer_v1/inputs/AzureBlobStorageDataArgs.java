@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureCredentialsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="azureCredentials", required=true)
-    private final Input<AzureCredentialsArgs> azureCredentials;
+      private final Input<AzureCredentialsArgs> azureCredentials;
 
     public Input<AzureCredentialsArgs> getAzureCredentials() {
         return this.azureCredentials;
@@ -35,7 +35,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+      private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -46,7 +46,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -57,7 +57,7 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageAccount", required=true)
-    private final Input<String> storageAccount;
+      private final Input<String> storageAccount;
 
     public Input<String> getStorageAccount() {
         return this.storageAccount;
@@ -146,7 +146,6 @@ public final class AzureBlobStorageDataArgs extends io.pulumi.resources.Resource
             this.storageAccount = Input.of(Objects.requireNonNull(storageAccount));
             return this;
         }
-
         public AzureBlobStorageDataArgs build() {
             return new AzureBlobStorageDataArgs(azureCredentials, container, path, storageAccount);
         }

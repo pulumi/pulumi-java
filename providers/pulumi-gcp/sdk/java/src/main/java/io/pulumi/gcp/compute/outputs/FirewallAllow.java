@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,7 +92,6 @@ public final class FirewallAllow {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public FirewallAllow build() {
             return new FirewallAllow(ports, protocol);
         }

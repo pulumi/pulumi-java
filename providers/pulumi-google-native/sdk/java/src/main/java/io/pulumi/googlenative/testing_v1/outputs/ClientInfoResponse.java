@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoDetailResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class ClientInfoResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ClientInfoResponse build() {
             return new ClientInfoResponse(clientInfoDetails, name);
         }

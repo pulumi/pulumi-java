@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineStatus;
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineImageTestsConfiguration;
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineSchedule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -270,7 +270,6 @@ public final class GetImagePipelineResult {
             this.tags = tags;
             return this;
         }
-
         public GetImagePipelineResult build() {
             return new GetImagePipelineResult(arn, containerRecipeArn, description, distributionConfigurationArn, enhancedImageMetadataEnabled, imageRecipeArn, imageTestsConfiguration, infrastructureConfigurationArn, schedule, status, tags);
         }

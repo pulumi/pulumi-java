@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportComparisonExpressionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,7 +140,6 @@ public final class ReportFilterResponse {
             this.tag = tag;
             return this;
         }
-
         public ReportFilterResponse build() {
             return new ReportFilterResponse(and, dimension, not, or, tag);
         }

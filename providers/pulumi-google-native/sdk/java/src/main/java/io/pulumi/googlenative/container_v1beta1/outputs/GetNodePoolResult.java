@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.MaxPodsConstraintResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeManagementResponse;
@@ -378,7 +378,6 @@ public final class GetNodePoolResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetNodePoolResult build() {
             return new GetNodePoolResult(autoscaling, conditions, config, initialNodeCount, instanceGroupUrls, locations, management, maxPodsConstraint, name, networkConfig, placementPolicy, podIpv4CidrSize, selfLink, status, upgradeSettings, version);
         }

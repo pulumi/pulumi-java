@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ApigatewayBackendConfigResponse {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
-
         public ApigatewayBackendConfigResponse build() {
             return new ApigatewayBackendConfigResponse(googleServiceAccount);
         }

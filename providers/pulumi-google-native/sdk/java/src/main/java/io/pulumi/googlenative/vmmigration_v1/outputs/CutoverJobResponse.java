@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
 import java.lang.Integer;
@@ -203,7 +203,6 @@ public final class CutoverJobResponse {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public CutoverJobResponse build() {
             return new CutoverJobResponse(computeEngineTargetDetails, createTime, error, name, progressPercent, state, stateMessage, stateTime);
         }

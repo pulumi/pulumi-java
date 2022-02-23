@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lastThirtyMinutesAverageBytesPerSecond", required=true)
-    private final String lastThirtyMinutesAverageBytesPerSecond;
+      private final String lastThirtyMinutesAverageBytesPerSecond;
 
     public String getLastThirtyMinutesAverageBytesPerSecond() {
         return this.lastThirtyMinutesAverageBytesPerSecond;
@@ -32,7 +32,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="lastTwoMinutesAverageBytesPerSecond", required=true)
-    private final String lastTwoMinutesAverageBytesPerSecond;
+      private final String lastTwoMinutesAverageBytesPerSecond;
 
     public String getLastTwoMinutesAverageBytesPerSecond() {
         return this.lastTwoMinutesAverageBytesPerSecond;
@@ -43,7 +43,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="replicatedBytes", required=true)
-    private final String replicatedBytes;
+      private final String replicatedBytes;
 
     public String getReplicatedBytes() {
         return this.replicatedBytes;
@@ -54,7 +54,7 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="totalBytes", required=true)
-    private final String totalBytes;
+      private final String totalBytes;
 
     public String getTotalBytes() {
         return this.totalBytes;
@@ -123,7 +123,6 @@ public final class ReplicatingStepResponse extends io.pulumi.resources.InvokeArg
             this.totalBytes = Objects.requireNonNull(totalBytes);
             return this;
         }
-
         public ReplicatingStepResponse build() {
             return new ReplicatingStepResponse(lastThirtyMinutesAverageBytesPerSecond, lastTwoMinutesAverageBytesPerSecond, replicatedBytes, totalBytes);
         }

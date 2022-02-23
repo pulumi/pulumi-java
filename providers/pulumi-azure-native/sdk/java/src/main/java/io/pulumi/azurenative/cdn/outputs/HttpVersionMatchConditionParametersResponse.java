@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -112,7 +112,6 @@ public final class HttpVersionMatchConditionParametersResponse {
             this.operator = Objects.requireNonNull(operator);
             return this;
         }
-
         public HttpVersionMatchConditionParametersResponse build() {
             return new HttpVersionMatchConditionParametersResponse(matchValues, negateCondition, odataType, operator);
         }

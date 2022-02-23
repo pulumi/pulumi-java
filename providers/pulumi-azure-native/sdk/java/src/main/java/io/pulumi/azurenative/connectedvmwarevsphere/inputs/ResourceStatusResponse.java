@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastUpdatedAt", required=true)
-    private final String lastUpdatedAt;
+        private final String lastUpdatedAt;
 
     public String getLastUpdatedAt() {
         return this.lastUpdatedAt;
@@ -32,7 +32,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -43,7 +43,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="reason", required=true)
-    private final String reason;
+        private final String reason;
 
     public String getReason() {
         return this.reason;
@@ -54,7 +54,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="severity", required=true)
-    private final String severity;
+        private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -65,7 +65,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -76,7 +76,7 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -165,7 +165,6 @@ public final class ResourceStatusResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceStatusResponse build() {
             return new ResourceStatusResponse(lastUpdatedAt, message, reason, severity, status, type);
         }

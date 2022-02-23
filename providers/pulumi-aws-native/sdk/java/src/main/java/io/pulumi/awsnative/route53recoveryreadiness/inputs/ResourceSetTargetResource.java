@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetNLBResource;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetR53ResourceRecord;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class ResourceSetTargetResource extends io.pulumi.resources.InvokeA
     public static final ResourceSetTargetResource Empty = new ResourceSetTargetResource();
 
     @InputImport(name="nLBResource")
-    private final @Nullable ResourceSetNLBResource nLBResource;
+        private final @Nullable ResourceSetNLBResource nLBResource;
 
     public Optional<ResourceSetNLBResource> getNLBResource() {
         return this.nLBResource == null ? Optional.empty() : Optional.ofNullable(this.nLBResource);
     }
 
     @InputImport(name="r53Resource")
-    private final @Nullable ResourceSetR53ResourceRecord r53Resource;
+        private final @Nullable ResourceSetR53ResourceRecord r53Resource;
 
     public Optional<ResourceSetR53ResourceRecord> getR53Resource() {
         return this.r53Resource == null ? Optional.empty() : Optional.ofNullable(this.r53Resource);
@@ -76,7 +76,6 @@ public final class ResourceSetTargetResource extends io.pulumi.resources.InvokeA
             this.r53Resource = r53Resource;
             return this;
         }
-
         public ResourceSetTargetResource build() {
             return new ResourceSetTargetResource(nLBResource, r53Resource);
         }

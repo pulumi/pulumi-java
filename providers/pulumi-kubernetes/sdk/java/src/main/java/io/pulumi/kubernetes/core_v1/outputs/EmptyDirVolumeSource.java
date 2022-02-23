@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class EmptyDirVolumeSource {
             this.sizeLimit = sizeLimit;
             return this;
         }
-
         public EmptyDirVolumeSource build() {
             return new EmptyDirVolumeSource(medium, sizeLimit);
         }

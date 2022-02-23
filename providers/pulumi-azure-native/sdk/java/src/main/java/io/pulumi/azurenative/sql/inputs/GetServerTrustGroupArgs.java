@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="locationName", required=true)
-    private final String locationName;
+        private final String locationName;
 
     public String getLocationName() {
         return this.locationName;
@@ -28,7 +28,7 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serverTrustGroupName", required=true)
-    private final String serverTrustGroupName;
+        private final String serverTrustGroupName;
 
     public String getServerTrustGroupName() {
         return this.serverTrustGroupName;
@@ -98,7 +98,6 @@ public final class GetServerTrustGroupArgs extends io.pulumi.resources.InvokeArg
             this.serverTrustGroupName = Objects.requireNonNull(serverTrustGroupName);
             return this;
         }
-
         public GetServerTrustGroupArgs build() {
             return new GetServerTrustGroupArgs(locationName, resourceGroupName, serverTrustGroupName);
         }

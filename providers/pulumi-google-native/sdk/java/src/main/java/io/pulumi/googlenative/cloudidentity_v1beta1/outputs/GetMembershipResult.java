@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.EntityKeyResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.MembershipRoleResponse;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class GetMembershipResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMembershipResult build() {
             return new GetMembershipResult(createTime, memberKey, name, preferredMemberKey, roles, type, updateTime);
         }

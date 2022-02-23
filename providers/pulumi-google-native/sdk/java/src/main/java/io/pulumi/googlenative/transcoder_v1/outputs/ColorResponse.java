@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class ColorResponse {
             this.saturation = Objects.requireNonNull(saturation);
             return this;
         }
-
         public ColorResponse build() {
             return new ColorResponse(brightness, contrast, saturation);
         }

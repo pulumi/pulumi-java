@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.StatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetReplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationResult build() {
             return new GetReplicationResult(id, location, name, provisioningState, status, tags, type);
         }

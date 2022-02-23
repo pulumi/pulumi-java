@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequest
 import io.pulumi.azurenative.machinelearningservices.inputs.CreateServiceRequestKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final Input<String> computeType;
+        private final Input<String> computeType;
 
     public Input<String> getComputeType() {
         return this.computeType;
@@ -38,7 +38,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentImageRequest")
-    private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
+        private final @Nullable Input<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
     public Input<CreateServiceRequestEnvironmentImageRequestArgs> getEnvironmentImageRequest() {
         return this.environmentImageRequest == null ? Input.empty() : this.environmentImageRequest;
@@ -60,7 +60,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isDefault")
-    private final @Nullable Input<Boolean> isDefault;
+        private final @Nullable Input<Boolean> isDefault;
 
     public Input<Boolean> getIsDefault() {
         return this.isDefault == null ? Input.empty() : this.isDefault;
@@ -71,7 +71,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
+        private final @Nullable Input<CreateServiceRequestKeysArgs> keys;
 
     public Input<CreateServiceRequestKeysArgs> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -82,7 +82,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kvTags")
-    private final @Nullable Input<Map<String,String>> kvTags;
+        private final @Nullable Input<Map<String,String>> kvTags;
 
     public Input<Map<String,String>> getKvTags() {
         return this.kvTags == null ? Input.empty() : this.kvTags;
@@ -93,7 +93,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -104,7 +104,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -115,7 +115,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -126,7 +126,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+        private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -137,7 +137,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trafficPercentile")
-    private final @Nullable Input<Double> trafficPercentile;
+        private final @Nullable Input<Double> trafficPercentile;
 
     public Input<Double> getTrafficPercentile() {
         return this.trafficPercentile == null ? Input.empty() : this.trafficPercentile;
@@ -148,7 +148,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,VariantType>> type;
+        private final @Nullable Input<Either<String,VariantType>> type;
 
     public Input<Either<String,VariantType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -159,7 +159,7 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -383,7 +383,6 @@ public final class EndpointVariantArgs extends io.pulumi.resources.ResourceArgs 
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public EndpointVariantArgs build() {
             return new EndpointVariantArgs(computeType, description, environmentImageRequest, isDefault, keys, kvTags, location, properties, resourceGroupName, serviceName, trafficPercentile, type, workspaceName);
         }

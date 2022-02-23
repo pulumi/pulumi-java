@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="allowCredentials")
-    private final @Nullable Boolean allowCredentials;
+        private final @Nullable Boolean allowCredentials;
 
     public Optional<Boolean> getAllowCredentials() {
         return this.allowCredentials == null ? Optional.empty() : Optional.ofNullable(this.allowCredentials);
@@ -37,7 +37,7 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable List<String> headers;
+        private final @Nullable List<String> headers;
 
     public List<String> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
@@ -48,7 +48,7 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Integer maxAge;
+        private final @Nullable Integer maxAge;
 
     public Optional<Integer> getMaxAge() {
         return this.maxAge == null ? Optional.empty() : Optional.ofNullable(this.maxAge);
@@ -59,7 +59,7 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable List<String> methods;
+        private final @Nullable List<String> methods;
 
     public List<String> getMethods() {
         return this.methods == null ? List.of() : this.methods;
@@ -70,7 +70,7 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="origins")
-    private final @Nullable List<String> origins;
+        private final @Nullable List<String> origins;
 
     public List<String> getOrigins() {
         return this.origins == null ? List.of() : this.origins;
@@ -149,7 +149,6 @@ public final class FhirServiceCorsConfigurationResponse extends io.pulumi.resour
             this.origins = origins;
             return this;
         }
-
         public FhirServiceCorsConfigurationResponse build() {
             return new FhirServiceCorsConfigurationResponse(allowCredentials, headers, maxAge, methods, origins);
         }

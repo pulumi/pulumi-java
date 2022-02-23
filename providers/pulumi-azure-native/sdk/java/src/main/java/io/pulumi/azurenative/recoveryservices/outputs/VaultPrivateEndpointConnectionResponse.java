@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,7 +97,6 @@ public final class VaultPrivateEndpointConnectionResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public VaultPrivateEndpointConnectionResponse build() {
             return new VaultPrivateEndpointConnectionResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

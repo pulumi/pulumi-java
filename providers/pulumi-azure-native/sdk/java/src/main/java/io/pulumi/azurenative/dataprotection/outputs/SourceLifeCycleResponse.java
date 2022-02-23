@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.outputs;
 import io.pulumi.azurenative.dataprotection.outputs.AbsoluteDeleteOptionResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.outputs.TargetCopySettingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -91,7 +91,6 @@ public final class SourceLifeCycleResponse {
             this.targetDataStoreCopySettings = targetDataStoreCopySettings;
             return this;
         }
-
         public SourceLifeCycleResponse build() {
             return new SourceLifeCycleResponse(deleteAfter, sourceDataStore, targetDataStoreCopySettings);
         }

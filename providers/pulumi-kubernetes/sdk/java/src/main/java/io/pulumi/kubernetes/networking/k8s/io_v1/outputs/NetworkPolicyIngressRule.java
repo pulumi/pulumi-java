@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyPeer;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyPort;
 import java.util.List;
@@ -77,7 +77,6 @@ public final class NetworkPolicyIngressRule {
             this.ports = ports;
             return this;
         }
-
         public NetworkPolicyIngressRule build() {
             return new NetworkPolicyIngressRule(from, ports);
         }

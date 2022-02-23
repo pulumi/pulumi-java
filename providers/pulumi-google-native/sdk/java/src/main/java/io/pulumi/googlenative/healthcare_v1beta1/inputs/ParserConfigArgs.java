@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.enums.ParserConfigVersion;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SchemaPackageArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowNullHeader")
-    private final @Nullable Input<Boolean> allowNullHeader;
+      private final @Nullable Input<Boolean> allowNullHeader;
 
     public Input<Boolean> getAllowNullHeader() {
         return this.allowNullHeader == null ? Input.empty() : this.allowNullHeader;
@@ -37,7 +37,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<SchemaPackageArgs> schema;
+      private final @Nullable Input<SchemaPackageArgs> schema;
 
     public Input<SchemaPackageArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -48,7 +48,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="segmentTerminator")
-    private final @Nullable Input<String> segmentTerminator;
+      private final @Nullable Input<String> segmentTerminator;
 
     public Input<String> getSegmentTerminator() {
         return this.segmentTerminator == null ? Input.empty() : this.segmentTerminator;
@@ -59,7 +59,7 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<ParserConfigVersion> version;
+      private final @Nullable Input<ParserConfigVersion> version;
 
     public Input<ParserConfigVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -148,7 +148,6 @@ public final class ParserConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ParserConfigArgs build() {
             return new ParserConfigArgs(allowNullHeader, schema, segmentTerminator, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ModelQualityJobDefinitionMonitoringGroundTruthS3Input {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public ModelQualityJobDefinitionMonitoringGroundTruthS3Input build() {
             return new ModelQualityJobDefinitionMonitoringGroundTruthS3Input(s3Uri);
         }

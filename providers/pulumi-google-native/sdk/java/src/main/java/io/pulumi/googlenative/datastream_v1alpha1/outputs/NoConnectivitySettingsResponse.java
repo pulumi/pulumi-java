@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class NoConnectivitySettingsResponse {
         public Builder(NoConnectivitySettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public NoConnectivitySettingsResponse build() {
             return new NoConnectivitySettingsResponse();
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.PrivateLinkServiceConnectionStateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable Input<List<String>> groupIds;
+        private final @Nullable Input<List<String>> groupIds;
 
     public Input<List<String>> getGroupIds() {
         return this.groupIds == null ? Input.empty() : this.groupIds;
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -47,7 +47,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
+        private final @Nullable Input<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
     public Input<PrivateLinkServiceConnectionStateArgs> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Input.empty() : this.privateLinkServiceConnectionState;
@@ -69,7 +69,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateLinkServiceId")
-    private final @Nullable Input<String> privateLinkServiceId;
+        private final @Nullable Input<String> privateLinkServiceId;
 
     public Input<String> getPrivateLinkServiceId() {
         return this.privateLinkServiceId == null ? Input.empty() : this.privateLinkServiceId;
@@ -80,7 +80,7 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="requestMessage")
-    private final @Nullable Input<String> requestMessage;
+        private final @Nullable Input<String> requestMessage;
 
     public Input<String> getRequestMessage() {
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
@@ -199,7 +199,6 @@ public final class PrivateLinkServiceConnectionArgs extends io.pulumi.resources.
             this.requestMessage = Input.ofNullable(requestMessage);
             return this;
         }
-
         public PrivateLinkServiceConnectionArgs build() {
             return new PrivateLinkServiceConnectionArgs(groupIds, id, name, privateLinkServiceConnectionState, privateLinkServiceId, requestMessage);
         }

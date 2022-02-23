@@ -9,8 +9,8 @@ import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.LoggingFilterProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -93,13 +93,6 @@ public class LoggingConfiguration extends io.pulumi.resources.CustomResource {
         return this.resourceArn;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LoggingConfiguration(String name) {
-        super("aws-native:wafv2:LoggingConfiguration", name, LoggingConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

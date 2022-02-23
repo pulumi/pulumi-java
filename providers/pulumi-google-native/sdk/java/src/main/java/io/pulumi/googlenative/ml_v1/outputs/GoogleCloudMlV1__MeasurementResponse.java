@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_Measurement_MetricResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__MeasurementResponse {
             this.stepCount = Objects.requireNonNull(stepCount);
             return this;
         }
-
         public GoogleCloudMlV1__MeasurementResponse build() {
             return new GoogleCloudMlV1__MeasurementResponse(elapsedTime, metrics, stepCount);
         }

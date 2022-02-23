@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobLoadDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobLoadDestinationTable;
 import io.pulumi.gcp.bigquery.outputs.JobLoadTimePartitioning;
@@ -549,7 +549,6 @@ public final class JobLoad {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobLoad build() {
             return new JobLoad(allowJaggedRows, allowQuotedNewlines, autodetect, createDisposition, destinationEncryptionConfiguration, destinationTable, encoding, fieldDelimiter, ignoreUnknownValues, maxBadRecords, nullMarker, projectionFields, quote, schemaUpdateOptions, skipLeadingRows, sourceFormat, sourceUris, timePartitioning, writeDisposition);
         }

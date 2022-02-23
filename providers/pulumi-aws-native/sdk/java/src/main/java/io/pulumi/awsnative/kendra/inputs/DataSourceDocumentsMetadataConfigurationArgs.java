@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
     public static final DataSourceDocumentsMetadataConfigurationArgs Empty = new DataSourceDocumentsMetadataConfigurationArgs();
 
     @InputImport(name="s3Prefix")
-    private final @Nullable Input<String> s3Prefix;
+        private final @Nullable Input<String> s3Prefix;
 
     public Input<String> getS3Prefix() {
         return this.s3Prefix == null ? Input.empty() : this.s3Prefix;
@@ -58,7 +58,6 @@ public final class DataSourceDocumentsMetadataConfigurationArgs extends io.pulum
             this.s3Prefix = Input.ofNullable(s3Prefix);
             return this;
         }
-
         public DataSourceDocumentsMetadataConfigurationArgs build() {
             return new DataSourceDocumentsMetadataConfigurationArgs(s3Prefix);
         }

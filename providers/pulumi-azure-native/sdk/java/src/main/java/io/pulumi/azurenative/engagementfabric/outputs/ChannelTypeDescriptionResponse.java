@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.engagementfabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ChannelTypeDescriptionResponse {
             this.channelType = channelType;
             return this;
         }
-
         public ChannelTypeDescriptionResponse build() {
             return new ChannelTypeDescriptionResponse(channelDescription, channelFunctions, channelType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataprocParametersResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final String cluster;
+      private final String cluster;
 
     public String getCluster() {
         return this.cluster;
@@ -59,7 +59,6 @@ public final class DataprocParametersResponse extends io.pulumi.resources.Invoke
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public DataprocParametersResponse build() {
             return new DataprocParametersResponse(cluster);
         }

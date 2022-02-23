@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ArtifactObjectsResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class ArtifactsResponse {
             this.objects = Objects.requireNonNull(objects);
             return this;
         }
-
         public ArtifactsResponse build() {
             return new ArtifactsResponse(images, objects);
         }

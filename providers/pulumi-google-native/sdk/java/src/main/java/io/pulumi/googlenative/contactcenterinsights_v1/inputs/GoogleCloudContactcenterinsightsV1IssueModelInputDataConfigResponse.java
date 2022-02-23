@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * 
      */
     @InputImport(name="medium", required=true)
-    private final String medium;
+      private final String medium;
 
     public String getMedium() {
         return this.medium;
@@ -43,7 +43,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
      * 
      */
     @InputImport(name="trainingConversationsCount", required=true)
-    private final String trainingConversationsCount;
+      private final String trainingConversationsCount;
 
     public String getTrainingConversationsCount() {
         return this.trainingConversationsCount;
@@ -102,7 +102,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigRe
             this.trainingConversationsCount = Objects.requireNonNull(trainingConversationsCount);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse(filter, medium, trainingConversationsCount);
         }

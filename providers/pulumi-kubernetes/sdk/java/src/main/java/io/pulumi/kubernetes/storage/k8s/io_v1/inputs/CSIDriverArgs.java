@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.CSIDriverSpecArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CSIDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -36,7 +36,7 @@ public final class CSIDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -47,7 +47,7 @@ public final class CSIDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -58,7 +58,7 @@ public final class CSIDriverArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<CSIDriverSpecArgs> spec;
+        private final Input<CSIDriverSpecArgs> spec;
 
     public Input<CSIDriverSpecArgs> getSpec() {
         return this.spec;
@@ -147,7 +147,6 @@ public final class CSIDriverArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public CSIDriverArgs build() {
             return new CSIDriverArgs(apiVersion, kind, metadata, spec);
         }

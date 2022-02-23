@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cidrBlock", required=true)
-    private final String cidrBlock;
+      private final String cidrBlock;
 
     public String getCidrBlock() {
         return this.cidrBlock;
@@ -32,7 +32,7 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -81,7 +81,6 @@ public final class CidrBlockResponse extends io.pulumi.resources.InvokeArgs {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public CidrBlockResponse build() {
             return new CidrBlockResponse(cidrBlock, displayName);
         }

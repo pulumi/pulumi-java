@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.HorizontalPodAutoscalerCondition;
 import io.pulumi.kubernetes.autoscaling_v2beta1.outputs.MetricStatus;
 import java.lang.Integer;
@@ -164,7 +164,6 @@ public final class HorizontalPodAutoscalerStatus {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public HorizontalPodAutoscalerStatus build() {
             return new HorizontalPodAutoscalerStatus(conditions, currentMetrics, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }

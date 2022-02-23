@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermSchedulePolicyRespo
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final String backupManagementType;
+        private final String backupManagementType;
 
     public String getBackupManagementType() {
         return this.backupManagementType;
@@ -43,7 +43,7 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Integer protectedItemsCount;
+        private final @Nullable Integer protectedItemsCount;
 
     public Optional<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Optional.empty() : Optional.ofNullable(this.protectedItemsCount);
@@ -54,7 +54,7 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
+        private final @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
     public Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> getRetentionPolicy() {
         return this.retentionPolicy == null ? null : this.retentionPolicy;
@@ -65,7 +65,7 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="schedulePolicy")
-    private final @Nullable Object schedulePolicy;
+        private final @Nullable Object schedulePolicy;
 
     public Object getSchedulePolicy() {
         return this.schedulePolicy == null ? null : this.schedulePolicy;
@@ -76,7 +76,7 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable String timeZone;
+        private final @Nullable String timeZone;
 
     public Optional<String> getTimeZone() {
         return this.timeZone == null ? Optional.empty() : Optional.ofNullable(this.timeZone);
@@ -87,7 +87,7 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="workLoadType")
-    private final @Nullable String workLoadType;
+        private final @Nullable String workLoadType;
 
     public Optional<String> getWorkLoadType() {
         return this.workLoadType == null ? Optional.empty() : Optional.ofNullable(this.workLoadType);
@@ -176,7 +176,6 @@ public final class AzureFileShareProtectionPolicyResponse extends io.pulumi.reso
             this.workLoadType = workLoadType;
             return this;
         }
-
         public AzureFileShareProtectionPolicyResponse build() {
             return new AzureFileShareProtectionPolicyResponse(backupManagementType, protectedItemsCount, retentionPolicy, schedulePolicy, timeZone, workLoadType);
         }

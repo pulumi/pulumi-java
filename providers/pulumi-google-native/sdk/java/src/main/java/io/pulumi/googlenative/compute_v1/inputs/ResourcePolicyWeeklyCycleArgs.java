@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.ResourcePolicyWeeklyCycleDayOfWeekArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dayOfWeeks")
-    private final @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
+      private final @Nullable Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> dayOfWeeks;
 
     public Input<List<ResourcePolicyWeeklyCycleDayOfWeekArgs>> getDayOfWeeks() {
         return this.dayOfWeeks == null ? Input.empty() : this.dayOfWeeks;
@@ -67,7 +67,6 @@ public final class ResourcePolicyWeeklyCycleArgs extends io.pulumi.resources.Res
             this.dayOfWeeks = Input.ofNullable(dayOfWeeks);
             return this;
         }
-
         public ResourcePolicyWeeklyCycleArgs build() {
             return new ResourcePolicyWeeklyCycleArgs(dayOfWeeks);
         }

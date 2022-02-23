@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResource;
 import java.util.List;
@@ -77,7 +77,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroup {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroup build() {
             return new OsPolicyAssignmentOsPolicyResourceGroup(inventoryFilters, resources);
         }

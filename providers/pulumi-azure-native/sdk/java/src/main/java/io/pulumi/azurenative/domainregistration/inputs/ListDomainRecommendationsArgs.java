@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keywords")
-    private final @Nullable String keywords;
+        private final @Nullable String keywords;
 
     public Optional<String> getKeywords() {
         return this.keywords == null ? Optional.empty() : Optional.ofNullable(this.keywords);
@@ -31,7 +31,7 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="maxDomainRecommendations")
-    private final @Nullable Integer maxDomainRecommendations;
+        private final @Nullable Integer maxDomainRecommendations;
 
     public Optional<Integer> getMaxDomainRecommendations() {
         return this.maxDomainRecommendations == null ? Optional.empty() : Optional.ofNullable(this.maxDomainRecommendations);
@@ -80,7 +80,6 @@ public final class ListDomainRecommendationsArgs extends io.pulumi.resources.Inv
             this.maxDomainRecommendations = maxDomainRecommendations;
             return this;
         }
-
         public ListDomainRecommendationsArgs build() {
             return new ListDomainRecommendationsArgs(keywords, maxDomainRecommendations);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudresourcemanager_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v1.ProjectArgs;
 import io.pulumi.googlenative.cloudresourcemanager_v1.outputs.ResourceIdResponse;
@@ -119,13 +119,6 @@ public class Project extends io.pulumi.resources.CustomResource {
         return this.projectNumber;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Project(String name) {
-        super("google-native:cloudresourcemanager/v1:Project", name, ProjectArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

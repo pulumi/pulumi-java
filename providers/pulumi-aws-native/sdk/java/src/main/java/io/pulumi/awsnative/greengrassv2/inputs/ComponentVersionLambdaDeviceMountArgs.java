@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
     public static final ComponentVersionLambdaDeviceMountArgs Empty = new ComponentVersionLambdaDeviceMountArgs();
 
     @InputImport(name="addGroupOwner")
-    private final @Nullable Input<Boolean> addGroupOwner;
+        private final @Nullable Input<Boolean> addGroupOwner;
 
     public Input<Boolean> getAddGroupOwner() {
         return this.addGroupOwner == null ? Input.empty() : this.addGroupOwner;
     }
 
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
     }
 
     @InputImport(name="permission")
-    private final @Nullable Input<ComponentVersionLambdaFilesystemPermission> permission;
+        private final @Nullable Input<ComponentVersionLambdaFilesystemPermission> permission;
 
     public Input<ComponentVersionLambdaFilesystemPermission> getPermission() {
         return this.permission == null ? Input.empty() : this.permission;
@@ -105,7 +105,6 @@ public final class ComponentVersionLambdaDeviceMountArgs extends io.pulumi.resou
             this.permission = Input.ofNullable(permission);
             return this;
         }
-
         public ComponentVersionLambdaDeviceMountArgs build() {
             return new ComponentVersionLambdaDeviceMountArgs(addGroupOwner, path, permission);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.ValidationOptionsSchemaValidation;
 import io.pulumi.googlenative.deploymentmanager_v2beta.enums.ValidationOptionsUndeclaredProperties;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schemaValidation")
-    private final @Nullable Input<ValidationOptionsSchemaValidation> schemaValidation;
+      private final @Nullable Input<ValidationOptionsSchemaValidation> schemaValidation;
 
     public Input<ValidationOptionsSchemaValidation> getSchemaValidation() {
         return this.schemaValidation == null ? Input.empty() : this.schemaValidation;
@@ -35,7 +35,7 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="undeclaredProperties")
-    private final @Nullable Input<ValidationOptionsUndeclaredProperties> undeclaredProperties;
+      private final @Nullable Input<ValidationOptionsUndeclaredProperties> undeclaredProperties;
 
     public Input<ValidationOptionsUndeclaredProperties> getUndeclaredProperties() {
         return this.undeclaredProperties == null ? Input.empty() : this.undeclaredProperties;
@@ -94,7 +94,6 @@ public final class ValidationOptionsArgs extends io.pulumi.resources.ResourceArg
             this.undeclaredProperties = Input.ofNullable(undeclaredProperties);
             return this;
         }
-
         public ValidationOptionsArgs build() {
             return new ValidationOptionsArgs(schemaValidation, undeclaredProperties);
         }

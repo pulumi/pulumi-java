@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentInstanceFilterGroupLabel;
 import java.lang.Boolean;
 import java.lang.String;
@@ -150,7 +150,6 @@ public final class PatchDeploymentInstanceFilter {
             this.zones = zones;
             return this;
         }
-
         public PatchDeploymentInstanceFilter build() {
             return new PatchDeploymentInstanceFilter(all, groupLabels, instanceNamePrefixes, instances, zones);
         }

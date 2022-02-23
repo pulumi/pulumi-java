@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.azurenative.datadog.inputs.DatadogHostMetadataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="aliases")
-    private final @Nullable List<String> aliases;
+        private final @Nullable List<String> aliases;
 
     public List<String> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
@@ -32,14 +32,14 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apps")
-    private final @Nullable List<String> apps;
+        private final @Nullable List<String> apps;
 
     public List<String> getApps() {
         return this.apps == null ? List.of() : this.apps;
     }
 
     @InputImport(name="meta")
-    private final @Nullable DatadogHostMetadataResponse meta;
+        private final @Nullable DatadogHostMetadataResponse meta;
 
     public Optional<DatadogHostMetadataResponse> getMeta() {
         return this.meta == null ? Optional.empty() : Optional.ofNullable(this.meta);
@@ -50,7 +50,7 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -119,7 +119,6 @@ public final class DatadogHostResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public DatadogHostResponse build() {
             return new DatadogHostResponse(aliases, apps, meta, name);
         }

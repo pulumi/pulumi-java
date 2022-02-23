@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      * 
      */
     @InputImport(name="executableFile")
-    private final @Nullable Input<String> executableFile;
+        private final @Nullable Input<String> executableFile;
 
     public Input<String> getExecutableFile() {
         return this.executableFile == null ? Input.empty() : this.executableFile;
@@ -30,7 +30,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
      * 
      */
     @InputImport(name="executionTimeout")
-    private final @Nullable Input<String> executionTimeout;
+        private final @Nullable Input<String> executionTimeout;
 
     public Input<String> getExecutionTimeout() {
         return this.executionTimeout == null ? Input.empty() : this.executionTimeout;
@@ -89,7 +89,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigInitializationAc
             this.executionTimeout = Input.ofNullable(executionTimeout);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigInitializationActionArgs(executableFile, executionTimeout);
         }

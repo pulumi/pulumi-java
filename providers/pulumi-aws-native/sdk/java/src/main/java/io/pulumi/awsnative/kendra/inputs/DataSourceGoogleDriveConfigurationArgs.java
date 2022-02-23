@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,49 +17,49 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
     public static final DataSourceGoogleDriveConfigurationArgs Empty = new DataSourceGoogleDriveConfigurationArgs();
 
     @InputImport(name="excludeMimeTypes")
-    private final @Nullable Input<List<String>> excludeMimeTypes;
+        private final @Nullable Input<List<String>> excludeMimeTypes;
 
     public Input<List<String>> getExcludeMimeTypes() {
         return this.excludeMimeTypes == null ? Input.empty() : this.excludeMimeTypes;
     }
 
     @InputImport(name="excludeSharedDrives")
-    private final @Nullable Input<List<String>> excludeSharedDrives;
+        private final @Nullable Input<List<String>> excludeSharedDrives;
 
     public Input<List<String>> getExcludeSharedDrives() {
         return this.excludeSharedDrives == null ? Input.empty() : this.excludeSharedDrives;
     }
 
     @InputImport(name="excludeUserAccounts")
-    private final @Nullable Input<List<String>> excludeUserAccounts;
+        private final @Nullable Input<List<String>> excludeUserAccounts;
 
     public Input<List<String>> getExcludeUserAccounts() {
         return this.excludeUserAccounts == null ? Input.empty() : this.excludeUserAccounts;
     }
 
     @InputImport(name="exclusionPatterns")
-    private final @Nullable Input<List<String>> exclusionPatterns;
+        private final @Nullable Input<List<String>> exclusionPatterns;
 
     public Input<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-    private final @Nullable Input<List<String>> inclusionPatterns;
+        private final @Nullable Input<List<String>> inclusionPatterns;
 
     public Input<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="secretArn", required=true)
-    private final Input<String> secretArn;
+        private final Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn;
@@ -193,7 +193,6 @@ public final class DataSourceGoogleDriveConfigurationArgs extends io.pulumi.reso
             this.secretArn = Input.of(Objects.requireNonNull(secretArn));
             return this;
         }
-
         public DataSourceGoogleDriveConfigurationArgs build() {
             return new DataSourceGoogleDriveConfigurationArgs(excludeMimeTypes, excludeSharedDrives, excludeUserAccounts, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn);
         }

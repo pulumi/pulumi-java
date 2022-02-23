@@ -7,7 +7,7 @@ import io.pulumi.awsnative.panorama.enums.ApplicationInstanceHealthStatus;
 import io.pulumi.awsnative.panorama.enums.ApplicationInstanceStatus;
 import io.pulumi.awsnative.panorama.enums.ApplicationInstanceStatusFilter;
 import io.pulumi.awsnative.panorama.outputs.ApplicationInstanceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -183,7 +183,6 @@ public final class GetApplicationInstanceResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationInstanceResult build() {
             return new GetApplicationInstanceResult(applicationInstanceId, arn, createdTime, defaultRuntimeContextDeviceName, deviceId, healthStatus, lastUpdatedTime, status, statusDescription, statusFilter, tags);
         }

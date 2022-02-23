@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends io.pul
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+        private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;
@@ -61,7 +61,6 @@ public final class AzureClusterControlPlaneDatabaseEncryptionArgs extends io.pul
             this.keyId = Input.of(Objects.requireNonNull(keyId));
             return this;
         }
-
         public AzureClusterControlPlaneDatabaseEncryptionArgs build() {
             return new AzureClusterControlPlaneDatabaseEncryptionArgs(keyId);
         }

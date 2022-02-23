@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectionMode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class GetConnectorProfileResult {
             this.credentialsArn = credentialsArn;
             return this;
         }
-
         public GetConnectorProfileResult build() {
             return new GetConnectorProfileResult(connectionMode, connectorProfileArn, credentialsArn);
         }

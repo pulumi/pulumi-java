@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computeId")
-    private final @Nullable Input<String> computeId;
+        private final @Nullable Input<String> computeId;
 
     public Input<String> getComputeId() {
         return this.computeId == null ? Input.empty() : this.computeId;
@@ -35,7 +35,7 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount")
-    private final @Nullable Input<Integer> nodeCount;
+        private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
@@ -94,7 +94,6 @@ public final class ComputeBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.nodeCount = Input.ofNullable(nodeCount);
             return this;
         }
-
         public ComputeBindingArgs build() {
             return new ComputeBindingArgs(computeId, nodeCount);
         }

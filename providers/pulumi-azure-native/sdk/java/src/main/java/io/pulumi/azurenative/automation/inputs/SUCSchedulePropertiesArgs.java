@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.ScheduleFrequency;
 import io.pulumi.azurenative.automation.inputs.AdvancedScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="advancedSchedule")
-    private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
+        private final @Nullable Input<AdvancedScheduleArgs> advancedSchedule;
 
     public Input<AdvancedScheduleArgs> getAdvancedSchedule() {
         return this.advancedSchedule == null ? Input.empty() : this.advancedSchedule;
@@ -39,7 +39,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<String> creationTime;
+        private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -50,7 +50,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expiryTime")
-    private final @Nullable Input<String> expiryTime;
+        private final @Nullable Input<String> expiryTime;
 
     public Input<String> getExpiryTime() {
         return this.expiryTime == null ? Input.empty() : this.expiryTime;
@@ -72,7 +72,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expiryTimeOffsetMinutes")
-    private final @Nullable Input<Double> expiryTimeOffsetMinutes;
+        private final @Nullable Input<Double> expiryTimeOffsetMinutes;
 
     public Input<Double> getExpiryTimeOffsetMinutes() {
         return this.expiryTimeOffsetMinutes == null ? Input.empty() : this.expiryTimeOffsetMinutes;
@@ -83,7 +83,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable Input<Either<String,ScheduleFrequency>> frequency;
+        private final @Nullable Input<Either<String,ScheduleFrequency>> frequency;
 
     public Input<Either<String,ScheduleFrequency>> getFrequency() {
         return this.frequency == null ? Input.empty() : this.frequency;
@@ -94,7 +94,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<Double> interval;
+        private final @Nullable Input<Double> interval;
 
     public Input<Double> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -105,7 +105,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+        private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -116,7 +116,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastModifiedTime")
-    private final @Nullable Input<String> lastModifiedTime;
+        private final @Nullable Input<String> lastModifiedTime;
 
     public Input<String> getLastModifiedTime() {
         return this.lastModifiedTime == null ? Input.empty() : this.lastModifiedTime;
@@ -127,7 +127,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nextRun")
-    private final @Nullable Input<String> nextRun;
+        private final @Nullable Input<String> nextRun;
 
     public Input<String> getNextRun() {
         return this.nextRun == null ? Input.empty() : this.nextRun;
@@ -138,7 +138,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nextRunOffsetMinutes")
-    private final @Nullable Input<Double> nextRunOffsetMinutes;
+        private final @Nullable Input<Double> nextRunOffsetMinutes;
 
     public Input<Double> getNextRunOffsetMinutes() {
         return this.nextRunOffsetMinutes == null ? Input.empty() : this.nextRunOffsetMinutes;
@@ -149,7 +149,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -160,7 +160,7 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -384,7 +384,6 @@ public final class SUCSchedulePropertiesArgs extends io.pulumi.resources.Resourc
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public SUCSchedulePropertiesArgs build() {
             return new SUCSchedulePropertiesArgs(advancedSchedule, creationTime, description, expiryTime, expiryTimeOffsetMinutes, frequency, interval, isEnabled, lastModifiedTime, nextRun, nextRunOffsetMinutes, startTime, timeZone);
         }

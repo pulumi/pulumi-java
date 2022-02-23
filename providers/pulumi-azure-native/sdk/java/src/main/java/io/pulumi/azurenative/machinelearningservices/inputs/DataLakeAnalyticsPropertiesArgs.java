@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataLakeStoreAccountName")
-    private final @Nullable Input<String> dataLakeStoreAccountName;
+        private final @Nullable Input<String> dataLakeStoreAccountName;
 
     public Input<String> getDataLakeStoreAccountName() {
         return this.dataLakeStoreAccountName == null ? Input.empty() : this.dataLakeStoreAccountName;
@@ -62,7 +62,6 @@ public final class DataLakeAnalyticsPropertiesArgs extends io.pulumi.resources.R
             this.dataLakeStoreAccountName = Input.ofNullable(dataLakeStoreAccountName);
             return this;
         }
-
         public DataLakeAnalyticsPropertiesArgs build() {
             return new DataLakeAnalyticsPropertiesArgs(dataLakeStoreAccountName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -129,7 +129,6 @@ public final class GetAccountAccessTokenResult {
             this.targetServiceAccount = Objects.requireNonNull(targetServiceAccount);
             return this;
         }
-
         public GetAccountAccessTokenResult build() {
             return new GetAccountAccessTokenResult(accessToken, delegates, id, lifetime, scopes, targetServiceAccount);
         }

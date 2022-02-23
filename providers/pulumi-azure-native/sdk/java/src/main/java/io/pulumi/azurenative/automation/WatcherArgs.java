@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -32,7 +32,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionFrequencyInSeconds")
-    private final @Nullable Input<Double> executionFrequencyInSeconds;
+        private final @Nullable Input<Double> executionFrequencyInSeconds;
 
     public Input<Double> getExecutionFrequencyInSeconds() {
         return this.executionFrequencyInSeconds == null ? Input.empty() : this.executionFrequencyInSeconds;
@@ -54,7 +54,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -65,7 +65,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptName")
-    private final @Nullable Input<String> scriptName;
+        private final @Nullable Input<String> scriptName;
 
     public Input<String> getScriptName() {
         return this.scriptName == null ? Input.empty() : this.scriptName;
@@ -87,7 +87,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptParameters")
-    private final @Nullable Input<Map<String,String>> scriptParameters;
+        private final @Nullable Input<Map<String,String>> scriptParameters;
 
     public Input<Map<String,String>> getScriptParameters() {
         return this.scriptParameters == null ? Input.empty() : this.scriptParameters;
@@ -98,7 +98,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptRunOn")
-    private final @Nullable Input<String> scriptRunOn;
+        private final @Nullable Input<String> scriptRunOn;
 
     public Input<String> getScriptRunOn() {
         return this.scriptRunOn == null ? Input.empty() : this.scriptRunOn;
@@ -109,7 +109,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,7 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watcherName")
-    private final @Nullable Input<String> watcherName;
+        private final @Nullable Input<String> watcherName;
 
     public Input<String> getWatcherName() {
         return this.watcherName == null ? Input.empty() : this.watcherName;
@@ -299,7 +299,6 @@ public final class WatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.watcherName = Input.ofNullable(watcherName);
             return this;
         }
-
         public WatcherArgs build() {
             return new WatcherArgs(automationAccountName, description, executionFrequencyInSeconds, location, resourceGroupName, scriptName, scriptParameters, scriptRunOn, tags, watcherName);
         }

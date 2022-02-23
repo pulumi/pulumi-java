@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.athena;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="queryStatement", required=true)
-    private final Input<String> queryStatement;
+        private final Input<String> queryStatement;
 
     public Input<String> getQueryStatement() {
         return this.queryStatement;
@@ -41,7 +41,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="statementName", required=true)
-    private final Input<String> statementName;
+        private final Input<String> statementName;
 
     public Input<String> getStatementName() {
         return this.statementName;
@@ -52,7 +52,7 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workGroup", required=true)
-    private final Input<String> workGroup;
+        private final Input<String> workGroup;
 
     public Input<String> getWorkGroup() {
         return this.workGroup;
@@ -141,7 +141,6 @@ public final class PreparedStatementArgs extends io.pulumi.resources.ResourceArg
             this.workGroup = Input.of(Objects.requireNonNull(workGroup));
             return this;
         }
-
         public PreparedStatementArgs build() {
             return new PreparedStatementArgs(description, queryStatement, statementName, workGroup);
         }

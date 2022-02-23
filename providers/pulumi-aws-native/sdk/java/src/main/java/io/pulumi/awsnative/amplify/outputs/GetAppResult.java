@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplify.outputs;
 import io.pulumi.awsnative.amplify.outputs.AppCustomRule;
 import io.pulumi.awsnative.amplify.outputs.AppEnvironmentVariable;
 import io.pulumi.awsnative.amplify.outputs.AppTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -221,7 +221,6 @@ public final class GetAppResult {
             this.tags = tags;
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(appId, appName, arn, buildSpec, customHeaders, customRules, defaultDomain, description, enableBranchAutoDeletion, environmentVariables, iAMServiceRole, name, repository, tags);
         }

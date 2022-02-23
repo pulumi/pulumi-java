@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.enums.DirectoryType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="aaddsResourceId")
-    private final @Nullable Input<String> aaddsResourceId;
+        private final @Nullable Input<String> aaddsResourceId;
 
     public Input<String> getAaddsResourceId() {
         return this.aaddsResourceId == null ? Input.empty() : this.aaddsResourceId;
@@ -36,7 +36,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterUsersGroupDNs")
-    private final @Nullable Input<List<String>> clusterUsersGroupDNs;
+        private final @Nullable Input<List<String>> clusterUsersGroupDNs;
 
     public Input<List<String>> getClusterUsersGroupDNs() {
         return this.clusterUsersGroupDNs == null ? Input.empty() : this.clusterUsersGroupDNs;
@@ -47,7 +47,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="directoryType")
-    private final @Nullable Input<DirectoryType> directoryType;
+        private final @Nullable Input<DirectoryType> directoryType;
 
     public Input<DirectoryType> getDirectoryType() {
         return this.directoryType == null ? Input.empty() : this.directoryType;
@@ -58,7 +58,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+        private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -69,7 +69,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainUserPassword")
-    private final @Nullable Input<String> domainUserPassword;
+        private final @Nullable Input<String> domainUserPassword;
 
     public Input<String> getDomainUserPassword() {
         return this.domainUserPassword == null ? Input.empty() : this.domainUserPassword;
@@ -80,7 +80,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="domainUsername")
-    private final @Nullable Input<String> domainUsername;
+        private final @Nullable Input<String> domainUsername;
 
     public Input<String> getDomainUsername() {
         return this.domainUsername == null ? Input.empty() : this.domainUsername;
@@ -91,7 +91,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ldapsUrls")
-    private final @Nullable Input<List<String>> ldapsUrls;
+        private final @Nullable Input<List<String>> ldapsUrls;
 
     public Input<List<String>> getLdapsUrls() {
         return this.ldapsUrls == null ? Input.empty() : this.ldapsUrls;
@@ -102,7 +102,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="msiResourceId")
-    private final @Nullable Input<String> msiResourceId;
+        private final @Nullable Input<String> msiResourceId;
 
     public Input<String> getMsiResourceId() {
         return this.msiResourceId == null ? Input.empty() : this.msiResourceId;
@@ -113,7 +113,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="organizationalUnitDN")
-    private final @Nullable Input<String> organizationalUnitDN;
+        private final @Nullable Input<String> organizationalUnitDN;
 
     public Input<String> getOrganizationalUnitDN() {
         return this.organizationalUnitDN == null ? Input.empty() : this.organizationalUnitDN;
@@ -277,7 +277,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.organizationalUnitDN = Input.ofNullable(organizationalUnitDN);
             return this;
         }
-
         public SecurityProfileArgs build() {
             return new SecurityProfileArgs(aaddsResourceId, clusterUsersGroupDNs, directoryType, domain, domainUserPassword, domainUsername, ldapsUrls, msiResourceId, organizationalUnitDN);
         }

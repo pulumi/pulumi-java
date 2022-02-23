@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1BigQuerySourceResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1ClassificationMetadataResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1GcsSourceResponse;
@@ -162,7 +162,6 @@ public final class GoogleCloudDatalabelingV1beta1InputConfigResponse {
             this.textMetadata = Objects.requireNonNull(textMetadata);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1InputConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1InputConfigResponse(annotationType, bigquerySource, classificationMetadata, dataType, gcsSource, textMetadata);
         }

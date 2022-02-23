@@ -9,8 +9,8 @@ import io.pulumi.awsnative.lightsail.outputs.DatabaseRelationalDatabaseParameter
 import io.pulumi.awsnative.lightsail.outputs.DatabaseTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -239,13 +239,6 @@ public class Database extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Database(String name) {
-        super("aws-native:lightsail:Database", name, DatabaseArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

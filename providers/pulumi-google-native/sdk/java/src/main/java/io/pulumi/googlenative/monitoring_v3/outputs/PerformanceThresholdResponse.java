@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.RequestBasedSliResponse;
 import java.lang.Double;
@@ -97,7 +97,6 @@ public final class PerformanceThresholdResponse {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public PerformanceThresholdResponse build() {
             return new PerformanceThresholdResponse(basicSliPerformance, performance, threshold);
         }

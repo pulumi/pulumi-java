@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.SpacecraftLinkResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -332,7 +332,6 @@ public final class GetSpacecraftResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSpacecraftResult build() {
             return new GetSpacecraftResult(authorizationStatus, authorizationStatusExtended, etag, id, links, location, name, noradId, systemData, tags, titleLine, tleLine1, tleLine2, type);
         }

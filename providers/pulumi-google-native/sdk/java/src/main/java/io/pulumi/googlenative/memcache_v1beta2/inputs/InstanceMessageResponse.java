@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -28,7 +28,7 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -77,7 +77,6 @@ public final class InstanceMessageResponse extends io.pulumi.resources.InvokeArg
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public InstanceMessageResponse build() {
             return new InstanceMessageResponse(code, message);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final List<String> destinations;
+        private final List<String> destinations;
 
     public List<String> getDestinations() {
         return this.destinations;
@@ -36,7 +36,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="disable")
-    private final @Nullable Boolean disable;
+        private final @Nullable Boolean disable;
 
     public Optional<Boolean> getDisable() {
         return this.disable == null ? Optional.empty() : Optional.ofNullable(this.disable);
@@ -47,7 +47,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sources", required=true)
-    private final List<String> sources;
+        private final List<String> sources;
 
     public List<String> getSources() {
         return this.sources;
@@ -69,7 +69,7 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="testConfigurations", required=true)
-    private final List<String> testConfigurations;
+        private final List<String> testConfigurations;
 
     public List<String> getTestConfigurations() {
         return this.testConfigurations;
@@ -148,7 +148,6 @@ public final class ConnectionMonitorTestGroupResponse extends io.pulumi.resource
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
-
         public ConnectionMonitorTestGroupResponse build() {
             return new ConnectionMonitorTestGroupResponse(destinations, disable, name, sources, testConfigurations);
         }

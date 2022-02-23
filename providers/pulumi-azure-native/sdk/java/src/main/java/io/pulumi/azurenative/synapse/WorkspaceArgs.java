@@ -14,7 +14,7 @@ import io.pulumi.azurenative.synapse.inputs.VirtualNetworkProfileArgs;
 import io.pulumi.azurenative.synapse.inputs.WorkspaceRepositoryConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +31,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectivityEndpoints")
-    private final @Nullable Input<Map<String,String>> connectivityEndpoints;
+        private final @Nullable Input<Map<String,String>> connectivityEndpoints;
 
     public Input<Map<String,String>> getConnectivityEndpoints() {
         return this.connectivityEndpoints == null ? Input.empty() : this.connectivityEndpoints;
@@ -42,7 +42,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDataLakeStorage")
-    private final @Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
+        private final @Nullable Input<DataLakeStorageAccountDetailsArgs> defaultDataLakeStorage;
 
     public Input<DataLakeStorageAccountDetailsArgs> getDefaultDataLakeStorage() {
         return this.defaultDataLakeStorage == null ? Input.empty() : this.defaultDataLakeStorage;
@@ -53,7 +53,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionDetailsArgs> encryption;
+        private final @Nullable Input<EncryptionDetailsArgs> encryption;
 
     public Input<EncryptionDetailsArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -64,7 +64,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedIdentityArgs> identity;
+        private final @Nullable Input<ManagedIdentityArgs> identity;
 
     public Input<ManagedIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -75,7 +75,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -86,7 +86,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedResourceGroupName")
-    private final @Nullable Input<String> managedResourceGroupName;
+        private final @Nullable Input<String> managedResourceGroupName;
 
     public Input<String> getManagedResourceGroupName() {
         return this.managedResourceGroupName == null ? Input.empty() : this.managedResourceGroupName;
@@ -97,7 +97,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedVirtualNetwork")
-    private final @Nullable Input<String> managedVirtualNetwork;
+        private final @Nullable Input<String> managedVirtualNetwork;
 
     public Input<String> getManagedVirtualNetwork() {
         return this.managedVirtualNetwork == null ? Input.empty() : this.managedVirtualNetwork;
@@ -108,7 +108,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedVirtualNetworkSettings")
-    private final @Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
+        private final @Nullable Input<ManagedVirtualNetworkSettingsArgs> managedVirtualNetworkSettings;
 
     public Input<ManagedVirtualNetworkSettingsArgs> getManagedVirtualNetworkSettings() {
         return this.managedVirtualNetworkSettings == null ? Input.empty() : this.managedVirtualNetworkSettings;
@@ -119,7 +119,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
+        private final @Nullable Input<List<PrivateEndpointConnectionArgs>> privateEndpointConnections;
 
     public Input<List<PrivateEndpointConnectionArgs>> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? Input.empty() : this.privateEndpointConnections;
@@ -130,7 +130,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,WorkspacePublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,WorkspacePublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -141,7 +141,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purviewConfiguration")
-    private final @Nullable Input<PurviewConfigurationArgs> purviewConfiguration;
+        private final @Nullable Input<PurviewConfigurationArgs> purviewConfiguration;
 
     public Input<PurviewConfigurationArgs> getPurviewConfiguration() {
         return this.purviewConfiguration == null ? Input.empty() : this.purviewConfiguration;
@@ -152,7 +152,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -163,7 +163,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlAdministratorLogin")
-    private final @Nullable Input<String> sqlAdministratorLogin;
+        private final @Nullable Input<String> sqlAdministratorLogin;
 
     public Input<String> getSqlAdministratorLogin() {
         return this.sqlAdministratorLogin == null ? Input.empty() : this.sqlAdministratorLogin;
@@ -174,7 +174,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlAdministratorLoginPassword")
-    private final @Nullable Input<String> sqlAdministratorLoginPassword;
+        private final @Nullable Input<String> sqlAdministratorLoginPassword;
 
     public Input<String> getSqlAdministratorLoginPassword() {
         return this.sqlAdministratorLoginPassword == null ? Input.empty() : this.sqlAdministratorLoginPassword;
@@ -185,7 +185,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkProfile")
-    private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
+        private final @Nullable Input<VirtualNetworkProfileArgs> virtualNetworkProfile;
 
     public Input<VirtualNetworkProfileArgs> getVirtualNetworkProfile() {
         return this.virtualNetworkProfile == null ? Input.empty() : this.virtualNetworkProfile;
@@ -207,7 +207,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-    private final @Nullable Input<String> workspaceName;
+        private final @Nullable Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName == null ? Input.empty() : this.workspaceName;
@@ -218,7 +218,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceRepositoryConfiguration")
-    private final @Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
+        private final @Nullable Input<WorkspaceRepositoryConfigurationArgs> workspaceRepositoryConfiguration;
 
     public Input<WorkspaceRepositoryConfigurationArgs> getWorkspaceRepositoryConfiguration() {
         return this.workspaceRepositoryConfiguration == null ? Input.empty() : this.workspaceRepositoryConfiguration;
@@ -517,7 +517,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceRepositoryConfiguration = Input.ofNullable(workspaceRepositoryConfiguration);
             return this;
         }
-
         public WorkspaceArgs build() {
             return new WorkspaceArgs(connectivityEndpoints, defaultDataLakeStorage, encryption, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, privateEndpointConnections, publicNetworkAccess, purviewConfiguration, resourceGroupName, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, virtualNetworkProfile, workspaceName, workspaceRepositoryConfiguration);
         }

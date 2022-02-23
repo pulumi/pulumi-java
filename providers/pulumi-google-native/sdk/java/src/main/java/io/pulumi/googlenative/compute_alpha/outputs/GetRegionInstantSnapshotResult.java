@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstantSnapshotResourceStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -413,7 +413,6 @@ public final class GetRegionInstantSnapshotResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetRegionInstantSnapshotResult build() {
             return new GetRegionInstantSnapshotResult(architecture, creationTimestamp, description, diskSizeGb, guestFlush, kind, labelFingerprint, labels, name, region, resourceStatus, satisfiesPzs, selfLink, selfLinkWithId, sourceDisk, sourceDiskId, status, zone);
         }

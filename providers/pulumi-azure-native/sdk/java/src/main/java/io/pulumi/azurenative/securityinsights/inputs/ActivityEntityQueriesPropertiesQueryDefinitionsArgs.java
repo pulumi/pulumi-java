@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+        private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -66,7 +66,6 @@ public final class ActivityEntityQueriesPropertiesQueryDefinitionsArgs extends i
             this.query = Input.ofNullable(query);
             return this;
         }
-
         public ActivityEntityQueriesPropertiesQueryDefinitionsArgs build() {
             return new ActivityEntityQueriesPropertiesQueryDefinitionsArgs(query);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.genomics_v1alpha2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.genomics_v1alpha2.PipelineArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.DockerExecutorResponse;
@@ -135,13 +135,6 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
         return this.resources;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Pipeline(String name) {
-        super("google-native:genomics/v1alpha2:Pipeline", name, PipelineArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

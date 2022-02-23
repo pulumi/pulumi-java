@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.BlobStorageTokenStoreResponse;
 import io.pulumi.azurenative.web.outputs.FileSystemTokenStoreResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -125,7 +125,6 @@ public final class TokenStoreResponse {
             this.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
-
         public TokenStoreResponse build() {
             return new TokenStoreResponse(azureBlobStorage, enabled, fileSystem, tokenRefreshExtensionHours);
         }

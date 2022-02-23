@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.CapacityReservationFleetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
     public static final CapacityReservationFleetTagSpecificationArgs Empty = new CapacityReservationFleetTagSpecificationArgs();
 
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<CapacityReservationFleetTagArgs>> tags;
+        private final @Nullable Input<List<CapacityReservationFleetTagArgs>> tags;
 
     public Input<List<CapacityReservationFleetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -83,7 +83,6 @@ public final class CapacityReservationFleetTagSpecificationArgs extends io.pulum
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CapacityReservationFleetTagSpecificationArgs build() {
             return new CapacityReservationFleetTagSpecificationArgs(resourceType, tags);
         }

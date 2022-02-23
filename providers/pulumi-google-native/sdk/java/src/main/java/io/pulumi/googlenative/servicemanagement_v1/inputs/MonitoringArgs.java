@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MonitoringDestinationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerDestinations")
-    private final @Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations;
+      private final @Nullable Input<List<MonitoringDestinationArgs>> consumerDestinations;
 
     public Input<List<MonitoringDestinationArgs>> getConsumerDestinations() {
         return this.consumerDestinations == null ? Input.empty() : this.consumerDestinations;
@@ -35,7 +35,7 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="producerDestinations")
-    private final @Nullable Input<List<MonitoringDestinationArgs>> producerDestinations;
+      private final @Nullable Input<List<MonitoringDestinationArgs>> producerDestinations;
 
     public Input<List<MonitoringDestinationArgs>> getProducerDestinations() {
         return this.producerDestinations == null ? Input.empty() : this.producerDestinations;
@@ -94,7 +94,6 @@ public final class MonitoringArgs extends io.pulumi.resources.ResourceArgs {
             this.producerDestinations = Input.ofNullable(producerDestinations);
             return this;
         }
-
         public MonitoringArgs build() {
             return new MonitoringArgs(consumerDestinations, producerDestinations);
         }

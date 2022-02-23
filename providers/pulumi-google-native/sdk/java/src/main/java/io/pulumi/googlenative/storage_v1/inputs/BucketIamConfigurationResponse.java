@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationBucketPolicyOnlyResponse;
 import io.pulumi.googlenative.storage_v1.inputs.BucketIamConfigurationUniformBucketLevelAccessResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="bucketPolicyOnly", required=true)
-    private final BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
+      private final BucketIamConfigurationBucketPolicyOnlyResponse bucketPolicyOnly;
 
     public BucketIamConfigurationBucketPolicyOnlyResponse getBucketPolicyOnly() {
         return this.bucketPolicyOnly;
@@ -34,7 +34,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicAccessPrevention", required=true)
-    private final String publicAccessPrevention;
+      private final String publicAccessPrevention;
 
     public String getPublicAccessPrevention() {
         return this.publicAccessPrevention;
@@ -45,7 +45,7 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="uniformBucketLevelAccess", required=true)
-    private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
+      private final BucketIamConfigurationUniformBucketLevelAccessResponse uniformBucketLevelAccess;
 
     public BucketIamConfigurationUniformBucketLevelAccessResponse getUniformBucketLevelAccess() {
         return this.uniformBucketLevelAccess;
@@ -104,7 +104,6 @@ public final class BucketIamConfigurationResponse extends io.pulumi.resources.In
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }
-
         public BucketIamConfigurationResponse build() {
             return new BucketIamConfigurationResponse(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
         }

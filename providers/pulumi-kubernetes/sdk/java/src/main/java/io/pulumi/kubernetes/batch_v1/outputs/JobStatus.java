@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobCondition;
 import io.pulumi.kubernetes.batch_v1.outputs.UncountedTerminatedPods;
 import java.lang.Integer;
@@ -241,7 +241,6 @@ public final class JobStatus {
             this.uncountedTerminatedPods = uncountedTerminatedPods;
             return this;
         }
-
         public JobStatus build() {
             return new JobStatus(active, completedIndexes, completionTime, conditions, failed, ready, startTime, succeeded, uncountedTerminatedPods);
         }

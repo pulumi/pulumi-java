@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.outputs;
 
 import io.pulumi.azurenative.blueprint.outputs.SecretValueReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class ParameterValueResponse {
             this.value = value;
             return this;
         }
-
         public ParameterValueResponse build() {
             return new ParameterValueResponse(reference, value);
         }

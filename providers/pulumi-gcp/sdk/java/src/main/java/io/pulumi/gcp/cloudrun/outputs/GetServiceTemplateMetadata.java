@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -146,7 +146,6 @@ public final class GetServiceTemplateMetadata {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetServiceTemplateMetadata build() {
             return new GetServiceTemplateMetadata(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.DynamicGroupQueryArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="queries")
-    private final @Nullable Input<List<DynamicGroupQueryArgs>> queries;
+      private final @Nullable Input<List<DynamicGroupQueryArgs>> queries;
 
     public Input<List<DynamicGroupQueryArgs>> getQueries() {
         return this.queries == null ? Input.empty() : this.queries;
@@ -67,7 +67,6 @@ public final class DynamicGroupMetadataArgs extends io.pulumi.resources.Resource
             this.queries = Input.ofNullable(queries);
             return this;
         }
-
         public DynamicGroupMetadataArgs build() {
             return new DynamicGroupMetadataArgs(queries);
         }

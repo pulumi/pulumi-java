@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
             this.scriptUri = scriptUri;
             return this;
         }
-
         public VirtualMachineRunCommandScriptSourceResponse build() {
             return new VirtualMachineRunCommandScriptSourceResponse(commandId, script, scriptUri);
         }

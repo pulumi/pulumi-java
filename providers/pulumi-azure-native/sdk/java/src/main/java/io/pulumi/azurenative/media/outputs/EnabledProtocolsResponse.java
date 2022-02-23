@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class EnabledProtocolsResponse {
             this.smoothStreaming = Objects.requireNonNull(smoothStreaming);
             return this;
         }
-
         public EnabledProtocolsResponse build() {
             return new EnabledProtocolsResponse(dash, download, hls, smoothStreaming);
         }

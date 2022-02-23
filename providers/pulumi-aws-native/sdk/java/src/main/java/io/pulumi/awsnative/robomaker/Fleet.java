@@ -8,8 +8,8 @@ import io.pulumi.awsnative.robomaker.FleetArgs;
 import io.pulumi.awsnative.robomaker.outputs.FleetTags;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -48,13 +48,6 @@ public class Fleet extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Fleet(String name) {
-        super("aws-native:robomaker:Fleet", name, FleetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

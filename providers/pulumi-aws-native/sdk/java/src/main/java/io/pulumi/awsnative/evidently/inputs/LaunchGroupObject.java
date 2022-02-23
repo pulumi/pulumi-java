@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class LaunchGroupObject extends io.pulumi.resources.InvokeArgs {
     public static final LaunchGroupObject Empty = new LaunchGroupObject();
 
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @InputImport(name="feature", required=true)
-    private final String feature;
+        private final String feature;
 
     public String getFeature() {
         return this.feature;
     }
 
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+        private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
     }
 
     @InputImport(name="variation", required=true)
-    private final String variation;
+        private final String variation;
 
     public String getVariation() {
         return this.variation;
@@ -105,7 +105,6 @@ public final class LaunchGroupObject extends io.pulumi.resources.InvokeArgs {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public LaunchGroupObject build() {
             return new LaunchGroupObject(description, feature, groupName, variation);
         }

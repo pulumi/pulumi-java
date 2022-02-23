@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -307,7 +307,6 @@ public final class GetWebAppHostNameBindingSlotResult {
             this.virtualIP = Objects.requireNonNull(virtualIP);
             return this;
         }
-
         public GetWebAppHostNameBindingSlotResult build() {
             return new GetWebAppHostNameBindingSlotResult(azureResourceName, azureResourceType, customHostNameDnsRecordType, domainId, hostNameType, id, kind, name, siteName, sslState, thumbprint, type, virtualIP);
         }

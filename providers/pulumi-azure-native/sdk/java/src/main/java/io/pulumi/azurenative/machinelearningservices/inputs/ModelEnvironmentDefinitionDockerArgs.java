@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ModelDockerSectionBaseImageRegistryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="baseDockerfile")
-    private final @Nullable Input<String> baseDockerfile;
+        private final @Nullable Input<String> baseDockerfile;
 
     public Input<String> getBaseDockerfile() {
         return this.baseDockerfile == null ? Input.empty() : this.baseDockerfile;
@@ -35,7 +35,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="baseImage")
-    private final @Nullable Input<String> baseImage;
+        private final @Nullable Input<String> baseImage;
 
     public Input<String> getBaseImage() {
         return this.baseImage == null ? Input.empty() : this.baseImage;
@@ -46,7 +46,7 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="baseImageRegistry")
-    private final @Nullable Input<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
+        private final @Nullable Input<ModelDockerSectionBaseImageRegistryArgs> baseImageRegistry;
 
     public Input<ModelDockerSectionBaseImageRegistryArgs> getBaseImageRegistry() {
         return this.baseImageRegistry == null ? Input.empty() : this.baseImageRegistry;
@@ -120,7 +120,6 @@ public final class ModelEnvironmentDefinitionDockerArgs extends io.pulumi.resour
             this.baseImageRegistry = Input.ofNullable(baseImageRegistry);
             return this;
         }
-
         public ModelEnvironmentDefinitionDockerArgs build() {
             return new ModelEnvironmentDefinitionDockerArgs(baseDockerfile, baseImage, baseImageRegistry);
         }

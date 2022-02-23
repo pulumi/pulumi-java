@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.inputs;
 import io.pulumi.azurenative.resources.enums.ExpressionEvaluationOptionsScopeType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
+        private final @Nullable Input<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
     public Input<Either<String,ExpressionEvaluationOptionsScopeType>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -68,7 +68,6 @@ public final class ExpressionEvaluationOptionsArgs extends io.pulumi.resources.R
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public ExpressionEvaluationOptionsArgs build() {
             return new ExpressionEvaluationOptionsArgs(scope);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobSchedulingArgs Empty = new JobSchedulingArgs();
 
     @InputImport(name="maxFailuresPerHour", required=true)
-    private final Input<Integer> maxFailuresPerHour;
+        private final Input<Integer> maxFailuresPerHour;
 
     public Input<Integer> getMaxFailuresPerHour() {
         return this.maxFailuresPerHour;
     }
 
     @InputImport(name="maxFailuresTotal", required=true)
-    private final Input<Integer> maxFailuresTotal;
+        private final Input<Integer> maxFailuresTotal;
 
     public Input<Integer> getMaxFailuresTotal() {
         return this.maxFailuresTotal;
@@ -80,7 +80,6 @@ public final class JobSchedulingArgs extends io.pulumi.resources.ResourceArgs {
             this.maxFailuresTotal = Input.of(Objects.requireNonNull(maxFailuresTotal));
             return this;
         }
-
         public JobSchedulingArgs build() {
             return new JobSchedulingArgs(maxFailuresPerHour, maxFailuresTotal);
         }

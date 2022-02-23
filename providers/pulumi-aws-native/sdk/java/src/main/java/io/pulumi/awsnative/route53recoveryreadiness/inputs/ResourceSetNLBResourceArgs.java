@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+        private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -66,7 +66,6 @@ public final class ResourceSetNLBResourceArgs extends io.pulumi.resources.Resour
             this.arn = Input.ofNullable(arn);
             return this;
         }
-
         public ResourceSetNLBResourceArgs build() {
             return new ResourceSetNLBResourceArgs(arn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Object additionalColumns;
+        private final @Nullable Object additionalColumns;
 
     public Optional<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Optional.empty() : Optional.ofNullable(this.additionalColumns);
@@ -35,7 +35,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="detectDatetime")
-    private final @Nullable Object detectDatetime;
+        private final @Nullable Object detectDatetime;
 
     public Optional<Object> getDetectDatetime() {
         return this.detectDatetime == null ? Optional.empty() : Optional.ofNullable(this.detectDatetime);
@@ -46,7 +46,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -57,7 +57,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -68,7 +68,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="pageSize")
-    private final @Nullable Object pageSize;
+        private final @Nullable Object pageSize;
 
     public Optional<Object> getPageSize() {
         return this.pageSize == null ? Optional.empty() : Optional.ofNullable(this.pageSize);
@@ -79,7 +79,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="preferredRegions")
-    private final @Nullable Object preferredRegions;
+        private final @Nullable Object preferredRegions;
 
     public Optional<Object> getPreferredRegions() {
         return this.preferredRegions == null ? Optional.empty() : Optional.ofNullable(this.preferredRegions);
@@ -90,7 +90,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Object query;
+        private final @Nullable Object query;
 
     public Optional<Object> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -101,7 +101,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+        private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -112,7 +112,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+        private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -124,7 +124,7 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -253,7 +253,6 @@ public final class CosmosDbSqlApiSourceResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CosmosDbSqlApiSourceResponse build() {
             return new CosmosDbSqlApiSourceResponse(additionalColumns, detectDatetime, disableMetricsCollection, maxConcurrentConnections, pageSize, preferredRegions, query, sourceRetryCount, sourceRetryWait, type);
         }

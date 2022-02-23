@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class DiagnosticResponse {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticResponse build() {
             return new DiagnosticResponse(field, level);
         }

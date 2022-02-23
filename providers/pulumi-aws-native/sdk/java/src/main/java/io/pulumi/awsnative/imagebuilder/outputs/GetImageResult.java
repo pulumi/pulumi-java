@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class GetImageResult {
             this.name = name;
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(arn, containerRecipeArn, imageId, name);
         }

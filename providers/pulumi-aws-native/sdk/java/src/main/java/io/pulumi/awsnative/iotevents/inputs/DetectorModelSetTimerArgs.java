@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="durationExpression")
-    private final @Nullable Input<String> durationExpression;
+        private final @Nullable Input<String> durationExpression;
 
     public Input<String> getDurationExpression() {
         return this.durationExpression == null ? Input.empty() : this.durationExpression;
@@ -35,7 +35,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="seconds")
-    private final @Nullable Input<Integer> seconds;
+        private final @Nullable Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds == null ? Input.empty() : this.seconds;
@@ -46,7 +46,7 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timerName", required=true)
-    private final Input<String> timerName;
+        private final Input<String> timerName;
 
     public Input<String> getTimerName() {
         return this.timerName;
@@ -120,7 +120,6 @@ public final class DetectorModelSetTimerArgs extends io.pulumi.resources.Resourc
             this.timerName = Input.of(Objects.requireNonNull(timerName));
             return this;
         }
-
         public DetectorModelSetTimerArgs build() {
             return new DetectorModelSetTimerArgs(durationExpression, seconds, timerName);
         }

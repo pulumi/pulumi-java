@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RealtimeConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="maxConcurrentCalls")
-    private final @Nullable Input<Integer> maxConcurrentCalls;
+        private final @Nullable Input<Integer> maxConcurrentCalls;
 
     public Input<Integer> getMaxConcurrentCalls() {
         return this.maxConcurrentCalls == null ? Input.empty() : this.maxConcurrentCalls;
@@ -66,7 +66,6 @@ public final class RealtimeConfigurationArgs extends io.pulumi.resources.Resourc
             this.maxConcurrentCalls = Input.ofNullable(maxConcurrentCalls);
             return this;
         }
-
         public RealtimeConfigurationArgs build() {
             return new RealtimeConfigurationArgs(maxConcurrentCalls);
         }

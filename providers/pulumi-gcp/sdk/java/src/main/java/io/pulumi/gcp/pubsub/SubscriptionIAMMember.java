@@ -5,8 +5,8 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMMemberArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberState;
@@ -129,13 +129,6 @@ public class SubscriptionIAMMember extends io.pulumi.resources.CustomResource {
         return this.subscription;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SubscriptionIAMMember(String name) {
-        super("gcp:pubsub/subscriptionIAMMember:SubscriptionIAMMember", name, SubscriptionIAMMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

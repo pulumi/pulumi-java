@@ -5,7 +5,7 @@ package io.pulumi.awsnative.accessanalyzer.inputs;
 
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
     public static final AnalyzerArchiveRuleArgs Empty = new AnalyzerArchiveRuleArgs();
 
     @InputImport(name="filter", required=true)
-    private final Input<List<AnalyzerFilterArgs>> filter;
+        private final Input<List<AnalyzerFilterArgs>> filter;
 
     public Input<List<AnalyzerFilterArgs>> getFilter() {
         return this.filter;
@@ -31,7 +31,7 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final Input<String> ruleName;
+        private final Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName;
@@ -90,7 +90,6 @@ public final class AnalyzerArchiveRuleArgs extends io.pulumi.resources.ResourceA
             this.ruleName = Input.of(Objects.requireNonNull(ruleName));
             return this;
         }
-
         public AnalyzerArchiveRuleArgs build() {
             return new AnalyzerArchiveRuleArgs(filter, ruleName);
         }

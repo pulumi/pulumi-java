@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2JobNotificationEmailsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishFindingsToCloudDataCatalogResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2PublishSummaryToCsccResponse;
@@ -163,7 +163,6 @@ public final class GooglePrivacyDlpV2ActionResponse {
             this.saveFindings = Objects.requireNonNull(saveFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2ActionResponse build() {
             return new GooglePrivacyDlpV2ActionResponse(jobNotificationEmails, pubSub, publishFindingsToCloudDataCatalog, publishSummaryToCscc, publishToStackdriver, saveFindings);
         }

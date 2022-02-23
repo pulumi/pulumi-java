@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__ContainerPortResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__EnvVarResponse;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class GoogleCloudMlV1__ContainerSpecResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public GoogleCloudMlV1__ContainerSpecResponse build() {
             return new GoogleCloudMlV1__ContainerSpecResponse(args, command, env, image, ports);
         }

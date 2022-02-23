@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.FirewallPolicyIntrusionDetectionState
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
+        private final @Nullable Input<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
     public Input<FirewallPolicyIntrusionDetectionConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -37,7 +37,7 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
+        private final @Nullable Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
     public Input<Either<String,FirewallPolicyIntrusionDetectionStateType>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -96,7 +96,6 @@ public final class FirewallPolicyIntrusionDetectionArgs extends io.pulumi.resour
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionArgs build() {
             return new FirewallPolicyIntrusionDetectionArgs(configuration, mode);
         }

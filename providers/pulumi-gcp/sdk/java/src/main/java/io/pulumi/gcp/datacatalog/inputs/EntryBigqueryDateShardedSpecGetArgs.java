@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
     public static final EntryBigqueryDateShardedSpecGetArgs Empty = new EntryBigqueryDateShardedSpecGetArgs();
 
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+        private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
     }
 
     @InputImport(name="shardCount")
-    private final @Nullable Input<Integer> shardCount;
+        private final @Nullable Input<Integer> shardCount;
 
     public Input<Integer> getShardCount() {
         return this.shardCount == null ? Input.empty() : this.shardCount;
     }
 
     @InputImport(name="tablePrefix")
-    private final @Nullable Input<String> tablePrefix;
+        private final @Nullable Input<String> tablePrefix;
 
     public Input<String> getTablePrefix() {
         return this.tablePrefix == null ? Input.empty() : this.tablePrefix;
@@ -104,7 +104,6 @@ public final class EntryBigqueryDateShardedSpecGetArgs extends io.pulumi.resourc
             this.tablePrefix = Input.ofNullable(tablePrefix);
             return this;
         }
-
         public EntryBigqueryDateShardedSpecGetArgs build() {
             return new EntryBigqueryDateShardedSpecGetArgs(dataset, shardCount, tablePrefix);
         }

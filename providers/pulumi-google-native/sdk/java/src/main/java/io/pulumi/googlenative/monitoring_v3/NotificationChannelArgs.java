@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.NotificationChannelVerificationStatus;
 import io.pulumi.googlenative.monitoring_v3.inputs.MutationRecordArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="creationRecord")
-    private final @Nullable Input<MutationRecordArgs> creationRecord;
+      private final @Nullable Input<MutationRecordArgs> creationRecord;
 
     public Input<MutationRecordArgs> getCreationRecord() {
         return this.creationRecord == null ? Input.empty() : this.creationRecord;
@@ -35,7 +35,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -68,7 +68,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -79,7 +79,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mutationRecords")
-    private final @Nullable Input<List<MutationRecordArgs>> mutationRecords;
+      private final @Nullable Input<List<MutationRecordArgs>> mutationRecords;
 
     public Input<List<MutationRecordArgs>> getMutationRecords() {
         return this.mutationRecords == null ? Input.empty() : this.mutationRecords;
@@ -90,14 +90,14 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,7 +108,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -119,7 +119,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userLabels")
-    private final @Nullable Input<Map<String,String>> userLabels;
+      private final @Nullable Input<Map<String,String>> userLabels;
 
     public Input<Map<String,String>> getUserLabels() {
         return this.userLabels == null ? Input.empty() : this.userLabels;
@@ -130,7 +130,7 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="verificationStatus")
-    private final @Nullable Input<NotificationChannelVerificationStatus> verificationStatus;
+      private final @Nullable Input<NotificationChannelVerificationStatus> verificationStatus;
 
     public Input<NotificationChannelVerificationStatus> getVerificationStatus() {
         return this.verificationStatus == null ? Input.empty() : this.verificationStatus;
@@ -324,7 +324,6 @@ public final class NotificationChannelArgs extends io.pulumi.resources.ResourceA
             this.verificationStatus = Input.ofNullable(verificationStatus);
             return this;
         }
-
         public NotificationChannelArgs build() {
             return new NotificationChannelArgs(creationRecord, description, displayName, enabled, labels, mutationRecords, name, project, type, userLabels, verificationStatus);
         }

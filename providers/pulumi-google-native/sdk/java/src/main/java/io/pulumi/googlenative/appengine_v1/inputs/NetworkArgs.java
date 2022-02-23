@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardedPorts")
-    private final @Nullable Input<List<String>> forwardedPorts;
+      private final @Nullable Input<List<String>> forwardedPorts;
 
     public Input<List<String>> getForwardedPorts() {
         return this.forwardedPorts == null ? Input.empty() : this.forwardedPorts;
@@ -36,7 +36,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceTag")
-    private final @Nullable Input<String> instanceTag;
+      private final @Nullable Input<String> instanceTag;
 
     public Input<String> getInstanceTag() {
         return this.instanceTag == null ? Input.empty() : this.instanceTag;
@@ -47,7 +47,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-    private final @Nullable Input<Boolean> sessionAffinity;
+      private final @Nullable Input<Boolean> sessionAffinity;
 
     public Input<Boolean> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -69,7 +69,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetworkName")
-    private final @Nullable Input<String> subnetworkName;
+      private final @Nullable Input<String> subnetworkName;
 
     public Input<String> getSubnetworkName() {
         return this.subnetworkName == null ? Input.empty() : this.subnetworkName;
@@ -173,7 +173,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetworkName = Input.ofNullable(subnetworkName);
             return this;
         }
-
         public NetworkArgs build() {
             return new NetworkArgs(forwardedPorts, instanceTag, name, sessionAffinity, subnetworkName);
         }

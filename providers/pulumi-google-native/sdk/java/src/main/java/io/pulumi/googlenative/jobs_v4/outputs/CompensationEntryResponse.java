@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationRangeResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.MoneyResponse;
 import java.lang.Double;
@@ -161,7 +161,6 @@ public final class CompensationEntryResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CompensationEntryResponse build() {
             return new CompensationEntryResponse(amount, description, expectedUnitsPerYear, range, type, unit);
         }

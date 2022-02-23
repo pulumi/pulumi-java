@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldTypeEnumType;
 import java.lang.String;
 import java.util.Objects;
@@ -85,7 +85,6 @@ public final class TagTemplateFieldType {
             this.primitiveType = primitiveType;
             return this;
         }
-
         public TagTemplateFieldType build() {
             return new TagTemplateFieldType(enumType, primitiveType);
         }

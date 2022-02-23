@@ -5,8 +5,8 @@ package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.outputs.Container;
 import io.pulumi.plant.tree_v1.RubberTreeArgs;
@@ -50,13 +50,6 @@ public class RubberTree extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RubberTree(String name) {
-        super("plant:tree/v1:RubberTree", name, RubberTreeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

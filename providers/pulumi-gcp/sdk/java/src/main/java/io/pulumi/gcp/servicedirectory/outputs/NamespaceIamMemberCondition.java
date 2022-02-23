@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.servicedirectory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class NamespaceIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public NamespaceIamMemberCondition build() {
             return new NamespaceIamMemberCondition(description, expression, title);
         }

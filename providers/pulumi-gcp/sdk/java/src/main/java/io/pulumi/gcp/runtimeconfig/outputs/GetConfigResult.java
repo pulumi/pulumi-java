@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.runtimeconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -94,7 +94,6 @@ public final class GetConfigResult {
             this.project = project;
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(description, id, name, project);
         }

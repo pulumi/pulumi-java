@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.ProjectTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ServiceCatalogProvisioningDetailsPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final ProjectArgs Empty = new ProjectArgs();
 
     @InputImport(name="projectDescription")
-    private final @Nullable Input<String> projectDescription;
+        private final @Nullable Input<String> projectDescription;
 
     public Input<String> getProjectDescription() {
         return this.projectDescription == null ? Input.empty() : this.projectDescription;
     }
 
     @InputImport(name="projectName")
-    private final @Nullable Input<String> projectName;
+        private final @Nullable Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName == null ? Input.empty() : this.projectName;
@@ -36,7 +36,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCatalogProvisioningDetails", required=true)
-    private final Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
+        private final Input<ServiceCatalogProvisioningDetailsPropertiesArgs> serviceCatalogProvisioningDetails;
 
     public Input<ServiceCatalogProvisioningDetailsPropertiesArgs> getServiceCatalogProvisioningDetails() {
         return this.serviceCatalogProvisioningDetails;
@@ -47,7 +47,7 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ProjectTagArgs>> tags;
+        private final @Nullable Input<List<ProjectTagArgs>> tags;
 
     public Input<List<ProjectTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -136,7 +136,6 @@ public final class ProjectArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ProjectArgs build() {
             return new ProjectArgs(projectDescription, projectName, serviceCatalogProvisioningDetails, tags);
         }

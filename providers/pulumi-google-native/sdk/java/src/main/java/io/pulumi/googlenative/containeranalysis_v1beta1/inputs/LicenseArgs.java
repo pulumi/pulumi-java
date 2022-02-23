@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comments")
-    private final @Nullable Input<String> comments;
+      private final @Nullable Input<String> comments;
 
     public Input<String> getComments() {
         return this.comments == null ? Input.empty() : this.comments;
@@ -34,7 +34,7 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+      private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
@@ -93,7 +93,6 @@ public final class LicenseArgs extends io.pulumi.resources.ResourceArgs {
             this.expression = Input.ofNullable(expression);
             return this;
         }
-
         public LicenseArgs build() {
             return new LicenseArgs(comments, expression);
         }

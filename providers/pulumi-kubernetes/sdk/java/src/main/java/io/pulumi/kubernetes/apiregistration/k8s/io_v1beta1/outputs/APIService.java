@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.APIServiceSpec;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.APIServiceStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -134,7 +134,6 @@ public final class APIService {
             this.status = status;
             return this;
         }
-
         public APIService build() {
             return new APIService(apiVersion, kind, metadata, spec, status);
         }

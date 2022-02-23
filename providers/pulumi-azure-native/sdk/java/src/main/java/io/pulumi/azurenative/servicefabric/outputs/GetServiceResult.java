@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ServiceLoadMetricDescriptionR
 import io.pulumi.azurenative.servicefabric.outputs.ServicePlacementPolicyDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SingletonPartitionSchemeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.UniformInt64RangePartitionSchemeDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -400,7 +400,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(correlationScheme, defaultMoveCost, etag, id, location, name, partitionDescription, placementConstraints, provisioningState, serviceDnsName, serviceKind, serviceLoadMetrics, servicePackageActivationMode, servicePlacementPolicies, serviceTypeName, tags, type);
         }

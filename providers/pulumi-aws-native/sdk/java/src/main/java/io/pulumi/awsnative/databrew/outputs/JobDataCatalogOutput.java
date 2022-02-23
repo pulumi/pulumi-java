@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobDatabaseTableOutputOptions;
 import io.pulumi.awsnative.databrew.outputs.JobS3TableOutputOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -115,7 +115,6 @@ public final class JobDataCatalogOutput {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public JobDataCatalogOutput build() {
             return new JobDataCatalogOutput(catalogId, databaseName, databaseOptions, overwrite, s3Options, tableName);
         }

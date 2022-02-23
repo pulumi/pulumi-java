@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web;
 
 import io.pulumi.azurenative.web.inputs.AzureStorageInfoValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -32,7 +32,7 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> properties;
+        private final @Nullable Input<Map<String,AzureStorageInfoValueArgs>> properties;
 
     public Input<Map<String,AzureStorageInfoValueArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -54,7 +54,7 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -143,7 +143,6 @@ public final class WebAppAzureStorageAccountsArgs extends io.pulumi.resources.Re
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public WebAppAzureStorageAccountsArgs build() {
             return new WebAppAzureStorageAccountsArgs(kind, name, properties, resourceGroupName);
         }

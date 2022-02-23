@@ -5,8 +5,8 @@ package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.firestore.DocumentArgs;
 import io.pulumi.gcp.firestore.inputs.DocumentState;
@@ -173,13 +173,6 @@ public class Document extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Document(String name) {
-        super("gcp:firestore/document:Document", name, DocumentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

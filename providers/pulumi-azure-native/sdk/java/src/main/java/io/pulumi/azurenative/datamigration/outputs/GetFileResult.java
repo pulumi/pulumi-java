@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ProjectFilePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,7 +140,6 @@ public final class GetFileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFileResult build() {
             return new GetFileResult(etag, id, name, properties, type);
         }

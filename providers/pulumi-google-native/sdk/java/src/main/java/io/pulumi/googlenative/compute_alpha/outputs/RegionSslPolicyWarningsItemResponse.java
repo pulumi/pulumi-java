@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RegionSslPolicyWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class RegionSslPolicyWarningsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public RegionSslPolicyWarningsItemResponse build() {
             return new RegionSslPolicyWarningsItemResponse(code, data, message);
         }

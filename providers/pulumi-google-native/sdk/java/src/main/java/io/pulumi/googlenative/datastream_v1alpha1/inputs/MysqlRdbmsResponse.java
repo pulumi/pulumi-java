@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlDatabaseResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mysqlDatabases", required=true)
-    private final List<MysqlDatabaseResponse> mysqlDatabases;
+      private final List<MysqlDatabaseResponse> mysqlDatabases;
 
     public List<MysqlDatabaseResponse> getMysqlDatabases() {
         return this.mysqlDatabases;
@@ -60,7 +60,6 @@ public final class MysqlRdbmsResponse extends io.pulumi.resources.InvokeArgs {
             this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
             return this;
         }
-
         public MysqlRdbmsResponse build() {
             return new MysqlRdbmsResponse(mysqlDatabases);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.outputs;
 
 import io.pulumi.azurenative.eventhub.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -332,7 +332,6 @@ public final class GetNamespaceResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(createdAt, id, isAutoInflateEnabled, kafkaEnabled, location, maximumThroughputUnits, metricId, name, provisioningState, serviceBusEndpoint, sku, tags, type, updatedAt);
         }

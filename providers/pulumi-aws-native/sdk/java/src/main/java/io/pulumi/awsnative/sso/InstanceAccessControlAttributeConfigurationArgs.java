@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sso;
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs;
 import io.pulumi.awsnative.sso.inputs.InstanceAccessControlAttributeConfigurationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
     public static final InstanceAccessControlAttributeConfigurationArgs Empty = new InstanceAccessControlAttributeConfigurationArgs();
 
     @InputImport(name="accessControlAttributes")
-    private final @Nullable Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
+        private final @Nullable Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> accessControlAttributes;
 
     public Input<List<InstanceAccessControlAttributeConfigurationAccessControlAttributeArgs>> getAccessControlAttributes() {
         return this.accessControlAttributes == null ? Input.empty() : this.accessControlAttributes;
@@ -29,7 +29,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="instanceAccessControlAttributeConfiguration")
-    private final @Nullable Input<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
+        private final @Nullable Input<InstanceAccessControlAttributeConfigurationPropertiesArgs> instanceAccessControlAttributeConfiguration;
 
     public Input<InstanceAccessControlAttributeConfigurationPropertiesArgs> getInstanceAccessControlAttributeConfiguration() {
         return this.instanceAccessControlAttributeConfiguration == null ? Input.empty() : this.instanceAccessControlAttributeConfiguration;
@@ -40,7 +40,7 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+        private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -114,7 +114,6 @@ public final class InstanceAccessControlAttributeConfigurationArgs extends io.pu
             this.instanceArn = Input.of(Objects.requireNonNull(instanceArn));
             return this;
         }
-
         public InstanceAccessControlAttributeConfigurationArgs build() {
             return new InstanceAccessControlAttributeConfigurationArgs(accessControlAttributes, instanceAccessControlAttributeConfiguration, instanceArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.HlsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -309,7 +309,6 @@ public final class GetLiveOutputResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLiveOutputResult build() {
             return new GetLiveOutputResult(archiveWindowLength, assetName, created, description, hls, id, lastModified, manifestName, name, outputSnapTime, provisioningState, resourceState, type);
         }

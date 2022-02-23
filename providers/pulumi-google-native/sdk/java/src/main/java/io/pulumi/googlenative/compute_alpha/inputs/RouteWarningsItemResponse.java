@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.RouteWarningsItemDataItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -30,7 +30,7 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="data", required=true)
-    private final List<RouteWarningsItemDataItemResponse> data;
+      private final List<RouteWarningsItemDataItemResponse> data;
 
     public List<RouteWarningsItemDataItemResponse> getData() {
         return this.data;
@@ -41,7 +41,7 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -100,7 +100,6 @@ public final class RouteWarningsItemResponse extends io.pulumi.resources.InvokeA
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public RouteWarningsItemResponse build() {
             return new RouteWarningsItemResponse(code, data, message);
         }

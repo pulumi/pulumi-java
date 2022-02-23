@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VaultCertificateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="certificateStore", required=true)
-    private final String certificateStore;
+        private final String certificateStore;
 
     public String getCertificateStore() {
         return this.certificateStore;
@@ -32,7 +32,7 @@ public final class VaultCertificateResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="certificateUrl", required=true)
-    private final String certificateUrl;
+        private final String certificateUrl;
 
     public String getCertificateUrl() {
         return this.certificateUrl;
@@ -81,7 +81,6 @@ public final class VaultCertificateResponse extends io.pulumi.resources.InvokeAr
             this.certificateUrl = Objects.requireNonNull(certificateUrl);
             return this;
         }
-
         public VaultCertificateResponse build() {
             return new VaultCertificateResponse(certificateStore, certificateUrl);
         }

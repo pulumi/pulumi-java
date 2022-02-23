@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.VaultPrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -33,7 +33,7 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
      * 
      */
     @InputImport(name="properties", required=true)
-    private final VaultPrivateEndpointConnectionResponse properties;
+        private final VaultPrivateEndpointConnectionResponse properties;
 
     public VaultPrivateEndpointConnectionResponse getProperties() {
         return this.properties;
@@ -82,7 +82,6 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse extends io.p
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public PrivateEndpointConnectionVaultPropertiesResponse build() {
             return new PrivateEndpointConnectionVaultPropertiesResponse(id, properties);
         }

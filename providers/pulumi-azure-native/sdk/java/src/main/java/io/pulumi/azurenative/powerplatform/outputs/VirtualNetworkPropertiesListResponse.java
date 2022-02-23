@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.powerplatform.outputs;
 
 import io.pulumi.azurenative.powerplatform.outputs.VirtualNetworkPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class VirtualNetworkPropertiesListResponse {
             this.value = value;
             return this;
         }
-
         public VirtualNetworkPropertiesListResponse build() {
             return new VirtualNetworkPropertiesListResponse(nextLink, value);
         }

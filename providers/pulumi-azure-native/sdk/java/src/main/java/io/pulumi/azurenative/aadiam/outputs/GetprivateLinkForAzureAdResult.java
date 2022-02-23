@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aadiam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -247,7 +247,6 @@ public final class GetprivateLinkForAzureAdResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetprivateLinkForAzureAdResult build() {
             return new GetprivateLinkForAzureAdResult(allTenants, id, name, ownerTenantId, resourceGroup, resourceName, subscriptionId, tags, tenants, type);
         }

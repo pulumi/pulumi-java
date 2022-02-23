@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.RRSetRoutingPolicyResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -174,7 +174,6 @@ public final class GetResourceRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceRecordSetResult build() {
             return new GetResourceRecordSetResult(kind, name, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }

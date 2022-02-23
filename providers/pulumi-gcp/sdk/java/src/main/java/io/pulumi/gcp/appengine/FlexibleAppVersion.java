@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.FlexibleAppVersionArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionState;
@@ -519,13 +519,6 @@ public class FlexibleAppVersion extends io.pulumi.resources.CustomResource {
         return this.vpcAccessConnector;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FlexibleAppVersion(String name) {
-        super("gcp:appengine/flexibleAppVersion:FlexibleAppVersion", name, FlexibleAppVersionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

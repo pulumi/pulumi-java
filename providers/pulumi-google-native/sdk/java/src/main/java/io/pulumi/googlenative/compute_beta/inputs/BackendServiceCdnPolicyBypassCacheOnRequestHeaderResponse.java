@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse ext
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+      private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -59,7 +59,6 @@ public final class BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse ext
             this.headerName = Objects.requireNonNull(headerName);
             return this;
         }
-
         public BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse build() {
             return new BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse(headerName);
         }

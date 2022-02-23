@@ -8,7 +8,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.ErrorDefinitionResp
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ExtensionStatusResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ScopeResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -420,7 +420,6 @@ public final class GetExtensionResult {
             this.version = version;
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(autoUpgradeMinorVersion, configurationProtectedSettings, configurationSettings, creationTime, errorInfo, extensionType, id, identity, installState, lastModifiedTime, lastStatusTime, name, releaseTrain, scope, statuses, systemData, type, version);
         }

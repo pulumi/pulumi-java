@@ -13,7 +13,7 @@ import io.pulumi.azurenative.compute.inputs.ImagePurchasePlanArgs;
 import io.pulumi.azurenative.compute.inputs.RecommendedMachineConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disallowed")
-    private final @Nullable Input<DisallowedArgs> disallowed;
+        private final @Nullable Input<DisallowedArgs> disallowed;
 
     public Input<DisallowedArgs> getDisallowed() {
         return this.disallowed == null ? Input.empty() : this.disallowed;
@@ -52,7 +52,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endOfLifeDate")
-    private final @Nullable Input<String> endOfLifeDate;
+        private final @Nullable Input<String> endOfLifeDate;
 
     public Input<String> getEndOfLifeDate() {
         return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
@@ -63,7 +63,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eula")
-    private final @Nullable Input<String> eula;
+        private final @Nullable Input<String> eula;
 
     public Input<String> getEula() {
         return this.eula == null ? Input.empty() : this.eula;
@@ -74,7 +74,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-    private final @Nullable Input<List<GalleryImageFeatureArgs>> features;
+        private final @Nullable Input<List<GalleryImageFeatureArgs>> features;
 
     public Input<List<GalleryImageFeatureArgs>> getFeatures() {
         return this.features == null ? Input.empty() : this.features;
@@ -85,7 +85,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryImageName")
-    private final @Nullable Input<String> galleryImageName;
+        private final @Nullable Input<String> galleryImageName;
 
     public Input<String> getGalleryImageName() {
         return this.galleryImageName == null ? Input.empty() : this.galleryImageName;
@@ -96,7 +96,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryName", required=true)
-    private final Input<String> galleryName;
+        private final Input<String> galleryName;
 
     public Input<String> getGalleryName() {
         return this.galleryName;
@@ -107,7 +107,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-    private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
+        private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
 
     public Input<Either<String,HyperVGeneration>> getHyperVGeneration() {
         return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
@@ -118,7 +118,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identifier", required=true)
-    private final Input<GalleryImageIdentifierArgs> identifier;
+        private final Input<GalleryImageIdentifierArgs> identifier;
 
     public Input<GalleryImageIdentifierArgs> getIdentifier() {
         return this.identifier;
@@ -129,7 +129,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -140,7 +140,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osState", required=true)
-    private final Input<OperatingSystemStateTypes> osState;
+        private final Input<OperatingSystemStateTypes> osState;
 
     public Input<OperatingSystemStateTypes> getOsState() {
         return this.osState;
@@ -151,7 +151,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-    private final Input<OperatingSystemTypes> osType;
+        private final Input<OperatingSystemTypes> osType;
 
     public Input<OperatingSystemTypes> getOsType() {
         return this.osType;
@@ -162,7 +162,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privacyStatementUri")
-    private final @Nullable Input<String> privacyStatementUri;
+        private final @Nullable Input<String> privacyStatementUri;
 
     public Input<String> getPrivacyStatementUri() {
         return this.privacyStatementUri == null ? Input.empty() : this.privacyStatementUri;
@@ -173,7 +173,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchasePlan")
-    private final @Nullable Input<ImagePurchasePlanArgs> purchasePlan;
+        private final @Nullable Input<ImagePurchasePlanArgs> purchasePlan;
 
     public Input<ImagePurchasePlanArgs> getPurchasePlan() {
         return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
@@ -184,7 +184,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recommended")
-    private final @Nullable Input<RecommendedMachineConfigurationArgs> recommended;
+        private final @Nullable Input<RecommendedMachineConfigurationArgs> recommended;
 
     public Input<RecommendedMachineConfigurationArgs> getRecommended() {
         return this.recommended == null ? Input.empty() : this.recommended;
@@ -195,7 +195,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="releaseNoteUri")
-    private final @Nullable Input<String> releaseNoteUri;
+        private final @Nullable Input<String> releaseNoteUri;
 
     public Input<String> getReleaseNoteUri() {
         return this.releaseNoteUri == null ? Input.empty() : this.releaseNoteUri;
@@ -206,7 +206,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -217,7 +217,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -516,7 +516,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GalleryImageArgs build() {
             return new GalleryImageArgs(description, disallowed, endOfLifeDate, eula, features, galleryImageName, galleryName, hyperVGeneration, identifier, location, osState, osType, privacyStatementUri, purchasePlan, recommended, releaseNoteUri, resourceGroupName, tags);
         }

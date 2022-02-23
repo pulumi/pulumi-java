@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.VirtualMachineSshCredentialsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -32,7 +32,7 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="administratorAccount")
-    private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
+        private final @Nullable Input<VirtualMachineSshCredentialsArgs> administratorAccount;
 
     public Input<VirtualMachineSshCredentialsArgs> getAdministratorAccount() {
         return this.administratorAccount == null ? Input.empty() : this.administratorAccount;
@@ -43,7 +43,7 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sshPort")
-    private final @Nullable Input<Integer> sshPort;
+        private final @Nullable Input<Integer> sshPort;
 
     public Input<Integer> getSshPort() {
         return this.sshPort == null ? Input.empty() : this.sshPort;
@@ -117,7 +117,6 @@ public final class HDInsightPropertiesArgs extends io.pulumi.resources.ResourceA
             this.sshPort = Input.ofNullable(sshPort);
             return this;
         }
-
         public HDInsightPropertiesArgs build() {
             return new HDInsightPropertiesArgs(address, administratorAccount, sshPort);
         }

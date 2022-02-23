@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -264,7 +264,6 @@ public final class GetRegionHealthCheckServiceResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRegionHealthCheckServiceResult build() {
             return new GetRegionHealthCheckServiceResult(creationTimestamp, description, fingerprint, healthChecks, healthStatusAggregationPolicy, kind, name, networkEndpointGroups, notificationEndpoints, region, selfLink);
         }

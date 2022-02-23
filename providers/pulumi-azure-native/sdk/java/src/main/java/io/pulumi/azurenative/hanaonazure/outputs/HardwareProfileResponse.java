@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class HardwareProfileResponse {
             this.hardwareType = Objects.requireNonNull(hardwareType);
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(hanaInstanceSize, hardwareType);
         }

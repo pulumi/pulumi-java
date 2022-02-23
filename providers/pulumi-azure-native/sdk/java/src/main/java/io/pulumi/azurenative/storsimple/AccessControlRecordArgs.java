@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accessControlRecordName")
-    private final @Nullable Input<String> accessControlRecordName;
+        private final @Nullable Input<String> accessControlRecordName;
 
     public Input<String> getAccessControlRecordName() {
         return this.accessControlRecordName == null ? Input.empty() : this.accessControlRecordName;
@@ -31,7 +31,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="initiatorName", required=true)
-    private final Input<String> initiatorName;
+        private final Input<String> initiatorName;
 
     public Input<String> getInitiatorName() {
         return this.initiatorName;
@@ -42,7 +42,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Kind> kind;
+        private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -53,7 +53,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final Input<String> managerName;
+        private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -64,7 +64,7 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -168,7 +168,6 @@ public final class AccessControlRecordArgs extends io.pulumi.resources.ResourceA
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public AccessControlRecordArgs build() {
             return new AccessControlRecordArgs(accessControlRecordName, initiatorName, kind, managerName, resourceGroupName);
         }

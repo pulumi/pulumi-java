@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
     public static final DatastoreRetentionPeriodArgs Empty = new DatastoreRetentionPeriodArgs();
 
     @InputImport(name="numberOfDays")
-    private final @Nullable Input<Integer> numberOfDays;
+        private final @Nullable Input<Integer> numberOfDays;
 
     public Input<Integer> getNumberOfDays() {
         return this.numberOfDays == null ? Input.empty() : this.numberOfDays;
     }
 
     @InputImport(name="unlimited")
-    private final @Nullable Input<Boolean> unlimited;
+        private final @Nullable Input<Boolean> unlimited;
 
     public Input<Boolean> getUnlimited() {
         return this.unlimited == null ? Input.empty() : this.unlimited;
@@ -82,7 +82,6 @@ public final class DatastoreRetentionPeriodArgs extends io.pulumi.resources.Reso
             this.unlimited = Input.ofNullable(unlimited);
             return this;
         }
-
         public DatastoreRetentionPeriodArgs build() {
             return new DatastoreRetentionPeriodArgs(numberOfDays, unlimited);
         }

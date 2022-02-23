@@ -6,7 +6,7 @@ package io.pulumi.awsnative.acmpca.outputs;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityEdiPartyName;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityOtherName;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthoritySubject;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class CertificateAuthorityGeneralName {
             this.uniformResourceIdentifier = uniformResourceIdentifier;
             return this;
         }
-
         public CertificateAuthorityGeneralName build() {
             return new CertificateAuthorityGeneralName(directoryName, dnsName, ediPartyName, ipAddress, otherName, registeredId, rfc822Name, uniformResourceIdentifier);
         }

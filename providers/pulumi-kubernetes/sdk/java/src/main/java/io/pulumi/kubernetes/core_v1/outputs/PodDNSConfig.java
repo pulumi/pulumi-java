@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodDNSConfigOption;
 import java.lang.String;
 import java.util.List;
@@ -98,7 +98,6 @@ public final class PodDNSConfig {
             this.searches = searches;
             return this;
         }
-
         public PodDNSConfig build() {
             return new PodDNSConfig(nameservers, options, searches);
         }

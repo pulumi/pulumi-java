@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class HierarchyInformationResponse {
             this.productName = productName;
             return this;
         }
-
         public HierarchyInformationResponse build() {
             return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
         }

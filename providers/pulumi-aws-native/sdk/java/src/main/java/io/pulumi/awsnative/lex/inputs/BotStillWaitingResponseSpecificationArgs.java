@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -26,28 +26,28 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowInterrupt")
-    private final @Nullable Input<Boolean> allowInterrupt;
+        private final @Nullable Input<Boolean> allowInterrupt;
 
     public Input<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
     }
 
     @InputImport(name="frequencyInSeconds", required=true)
-    private final Input<Integer> frequencyInSeconds;
+        private final Input<Integer> frequencyInSeconds;
 
     public Input<Integer> getFrequencyInSeconds() {
         return this.frequencyInSeconds;
     }
 
     @InputImport(name="messageGroupsList", required=true)
-    private final Input<List<BotMessageGroupArgs>> messageGroupsList;
+        private final Input<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Input<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;
     }
 
     @InputImport(name="timeoutInSeconds", required=true)
-    private final Input<Integer> timeoutInSeconds;
+        private final Input<Integer> timeoutInSeconds;
 
     public Input<Integer> getTimeoutInSeconds() {
         return this.timeoutInSeconds;
@@ -136,7 +136,6 @@ public final class BotStillWaitingResponseSpecificationArgs extends io.pulumi.re
             this.timeoutInSeconds = Input.of(Objects.requireNonNull(timeoutInSeconds));
             return this;
         }
-
         public BotStillWaitingResponseSpecificationArgs build() {
             return new BotStillWaitingResponseSpecificationArgs(allowInterrupt, frequencyInSeconds, messageGroupsList, timeoutInSeconds);
         }

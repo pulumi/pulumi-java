@@ -4,20 +4,13 @@
 package io.pulumi.plant.tree_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.plant.Utilities;
 import io.pulumi.plant.tree_v1.NurseryArgs;
 import javax.annotation.Nullable;
 
 @ResourceType(type="plant:tree/v1:Nursery")
 public class Nursery extends io.pulumi.resources.CustomResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Nursery(String name) {
-        super("plant:tree/v1:Nursery", name, NurseryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

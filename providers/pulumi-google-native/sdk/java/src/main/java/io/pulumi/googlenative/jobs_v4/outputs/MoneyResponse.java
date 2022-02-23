@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class MoneyResponse {
             this.units = Objects.requireNonNull(units);
             return this;
         }
-
         public MoneyResponse build() {
             return new MoneyResponse(currencyCode, nanos, units);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendorName")
-    private final @Nullable Input<String> vendorName;
+        private final @Nullable Input<String> vendorName;
 
     public Input<String> getVendorName() {
         return this.vendorName == null ? Input.empty() : this.vendorName;
@@ -62,7 +62,6 @@ public final class VendorArgs extends io.pulumi.resources.ResourceArgs {
             this.vendorName = Input.ofNullable(vendorName);
             return this;
         }
-
         public VendorArgs build() {
             return new VendorArgs(vendorName);
         }

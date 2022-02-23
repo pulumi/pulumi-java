@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterExclusionLabel;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterInclusionLabel;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentInstanceFilterInventory;
@@ -122,7 +122,6 @@ public final class OsPolicyAssignmentInstanceFilter {
             this.inventories = inventories;
             return this;
         }
-
         public OsPolicyAssignmentInstanceFilter build() {
             return new OsPolicyAssignmentInstanceFilter(all, exclusionLabels, inclusionLabels, inventories);
         }

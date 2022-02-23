@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="bucketId", required=true)
-    private final Input<String> bucketId;
+        private final Input<String> bucketId;
 
     public Input<String> getBucketId() {
         return this.bucketId;
@@ -31,7 +31,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -42,7 +42,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="folder", required=true)
-    private final Input<String> folder;
+        private final Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder;
@@ -53,7 +53,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -64,7 +64,7 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+        private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -168,7 +168,6 @@ public final class FolderBucketConfigArgs extends io.pulumi.resources.ResourceAr
             this.retentionDays = Input.ofNullable(retentionDays);
             return this;
         }
-
         public FolderBucketConfigArgs build() {
             return new FolderBucketConfigArgs(bucketId, description, folder, location, retentionDays);
         }

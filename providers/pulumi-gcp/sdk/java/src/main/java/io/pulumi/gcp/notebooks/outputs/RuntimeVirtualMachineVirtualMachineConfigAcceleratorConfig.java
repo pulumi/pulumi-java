@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig {
             this.type = type;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig build() {
             return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfig(coreCount, type);
         }

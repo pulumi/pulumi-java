@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionCorsPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicy;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy;
@@ -232,7 +232,6 @@ public final class URLMapPathMatcherPathRuleRouteAction {
             this.weightedBackendServices = weightedBackendServices;
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteAction build() {
             return new URLMapPathMatcherPathRuleRouteAction(corsPolicy, faultInjectionPolicy, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

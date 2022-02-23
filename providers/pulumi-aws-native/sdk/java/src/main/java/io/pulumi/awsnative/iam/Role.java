@@ -9,8 +9,8 @@ import io.pulumi.awsnative.iam.outputs.RolePolicy;
 import io.pulumi.awsnative.iam.outputs.RoleTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -180,13 +180,6 @@ public class Role extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Role(String name) {
-        super("aws-native:iam:Role", name, RoleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

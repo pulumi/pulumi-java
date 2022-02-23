@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretVersionResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class SecretVolumeResponse {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public SecretVolumeResponse build() {
             return new SecretVolumeResponse(mountPath, project, secret, versions);
         }

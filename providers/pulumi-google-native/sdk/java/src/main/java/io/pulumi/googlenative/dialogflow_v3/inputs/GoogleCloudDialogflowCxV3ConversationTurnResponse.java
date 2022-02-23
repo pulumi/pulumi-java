@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
      * 
      */
     @InputImport(name="userInput", required=true)
-    private final GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput;
+      private final GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse userInput;
 
     public GoogleCloudDialogflowCxV3ConversationTurnUserInputResponse getUserInput() {
         return this.userInput;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
      * 
      */
     @InputImport(name="virtualAgentOutput", required=true)
-    private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
+      private final GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse virtualAgentOutput;
 
     public GoogleCloudDialogflowCxV3ConversationTurnVirtualAgentOutputResponse getVirtualAgentOutput() {
         return this.virtualAgentOutput;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3ConversationTurnResponse extends io.
             this.virtualAgentOutput = Objects.requireNonNull(virtualAgentOutput);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ConversationTurnResponse build() {
             return new GoogleCloudDialogflowCxV3ConversationTurnResponse(userInput, virtualAgentOutput);
         }

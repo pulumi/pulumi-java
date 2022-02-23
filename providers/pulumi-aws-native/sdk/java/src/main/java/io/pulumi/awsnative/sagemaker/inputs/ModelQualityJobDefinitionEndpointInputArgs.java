@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelQualityJobDefinitionEndpointInputS3InputMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,14 +26,14 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="endTimeOffset")
-    private final @Nullable Input<String> endTimeOffset;
+        private final @Nullable Input<String> endTimeOffset;
 
     public Input<String> getEndTimeOffset() {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
     }
 
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+        private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -44,7 +44,7 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="inferenceAttribute")
-    private final @Nullable Input<String> inferenceAttribute;
+        private final @Nullable Input<String> inferenceAttribute;
 
     public Input<String> getInferenceAttribute() {
         return this.inferenceAttribute == null ? Input.empty() : this.inferenceAttribute;
@@ -55,7 +55,7 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final Input<String> localPath;
+        private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -66,14 +66,14 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="probabilityAttribute")
-    private final @Nullable Input<String> probabilityAttribute;
+        private final @Nullable Input<String> probabilityAttribute;
 
     public Input<String> getProbabilityAttribute() {
         return this.probabilityAttribute == null ? Input.empty() : this.probabilityAttribute;
     }
 
     @InputImport(name="probabilityThresholdAttribute")
-    private final @Nullable Input<Double> probabilityThresholdAttribute;
+        private final @Nullable Input<Double> probabilityThresholdAttribute;
 
     public Input<Double> getProbabilityThresholdAttribute() {
         return this.probabilityThresholdAttribute == null ? Input.empty() : this.probabilityThresholdAttribute;
@@ -84,7 +84,7 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="s3DataDistributionType")
-    private final @Nullable Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
+        private final @Nullable Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Input<ModelQualityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
@@ -95,7 +95,7 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="s3InputMode")
-    private final @Nullable Input<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
+        private final @Nullable Input<ModelQualityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
     public Input<ModelQualityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
@@ -106,7 +106,7 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="startTimeOffset")
-    private final @Nullable Input<String> startTimeOffset;
+        private final @Nullable Input<String> startTimeOffset;
 
     public Input<String> getStartTimeOffset() {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
@@ -270,7 +270,6 @@ public final class ModelQualityJobDefinitionEndpointInputArgs extends io.pulumi.
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
-
         public ModelQualityJobDefinitionEndpointInputArgs build() {
             return new ModelQualityJobDefinitionEndpointInputArgs(endTimeOffset, endpointName, inferenceAttribute, localPath, probabilityAttribute, probabilityThresholdAttribute, s3DataDistributionType, s3InputMode, startTimeOffset);
         }

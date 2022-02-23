@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRegistryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRegistryArgs Empty = new GetRegistryArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="registryId", required=true)
-    private final String registryId;
+      private final String registryId;
 
     public String getRegistryId() {
         return this.registryId;
@@ -88,7 +88,6 @@ public final class GetRegistryArgs extends io.pulumi.resources.InvokeArgs {
             this.registryId = Objects.requireNonNull(registryId);
             return this;
         }
-
         public GetRegistryArgs build() {
             return new GetRegistryArgs(location, project, registryId);
         }

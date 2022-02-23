@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class ClusterLoggingProperties {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public ClusterLoggingProperties build() {
             return new ClusterLoggingProperties(bucketName, s3KeyPrefix);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyPartitionsPerService")
-    private final @Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService;
+        private final @Nullable Input<Integer> maxPercentUnhealthyPartitionsPerService;
 
     public Input<Integer> getMaxPercentUnhealthyPartitionsPerService() {
         return this.maxPercentUnhealthyPartitionsPerService == null ? Input.empty() : this.maxPercentUnhealthyPartitionsPerService;
@@ -34,7 +34,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyReplicasPerPartition")
-    private final @Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition;
+        private final @Nullable Input<Integer> maxPercentUnhealthyReplicasPerPartition;
 
     public Input<Integer> getMaxPercentUnhealthyReplicasPerPartition() {
         return this.maxPercentUnhealthyReplicasPerPartition == null ? Input.empty() : this.maxPercentUnhealthyReplicasPerPartition;
@@ -45,7 +45,7 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="maxPercentUnhealthyServices")
-    private final @Nullable Input<Integer> maxPercentUnhealthyServices;
+        private final @Nullable Input<Integer> maxPercentUnhealthyServices;
 
     public Input<Integer> getMaxPercentUnhealthyServices() {
         return this.maxPercentUnhealthyServices == null ? Input.empty() : this.maxPercentUnhealthyServices;
@@ -119,7 +119,6 @@ public final class ArmServiceTypeHealthPolicyArgs extends io.pulumi.resources.Re
             this.maxPercentUnhealthyServices = Input.ofNullable(maxPercentUnhealthyServices);
             return this;
         }
-
         public ArmServiceTypeHealthPolicyArgs build() {
             return new ArmServiceTypeHealthPolicyArgs(maxPercentUnhealthyPartitionsPerService, maxPercentUnhealthyReplicasPerPartition, maxPercentUnhealthyServices);
         }

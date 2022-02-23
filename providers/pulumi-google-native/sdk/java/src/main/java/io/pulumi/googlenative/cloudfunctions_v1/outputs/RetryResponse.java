@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class RetryResponse {
         public Builder(RetryResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RetryResponse build() {
             return new RetryResponse();
         }

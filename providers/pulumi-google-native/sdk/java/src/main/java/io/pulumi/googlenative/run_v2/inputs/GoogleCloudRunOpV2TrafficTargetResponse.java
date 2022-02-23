@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Integer percent;
+      private final Integer percent;
 
     public Integer getPercent() {
         return this.percent;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="revision", required=true)
-    private final String revision;
+      private final String revision;
 
     public String getRevision() {
         return this.revision;
@@ -44,7 +44,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -55,7 +55,7 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -124,7 +124,6 @@ public final class GoogleCloudRunOpV2TrafficTargetResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetResponse(percent, revision, tag, type);
         }

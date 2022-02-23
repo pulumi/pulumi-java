@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="extension")
-    private final @Nullable String extension;
+        private final @Nullable String extension;
 
     public Optional<String> getExtension() {
         return this.extension == null ? Optional.empty() : Optional.ofNullable(this.extension);
@@ -35,7 +35,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filePath")
-    private final @Nullable String filePath;
+        private final @Nullable String filePath;
 
     public Optional<String> getFilePath() {
         return this.filePath == null ? Optional.empty() : Optional.ofNullable(this.filePath);
@@ -46,7 +46,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastModified", required=true)
-    private final String lastModified;
+        private final String lastModified;
 
     public String getLastModified() {
         return this.lastModified;
@@ -57,7 +57,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="mediaType")
-    private final @Nullable String mediaType;
+        private final @Nullable String mediaType;
 
     public Optional<String> getMediaType() {
         return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
@@ -68,7 +68,7 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="size", required=true)
-    private final Double size;
+        private final Double size;
 
     public Double getSize() {
         return this.size;
@@ -147,7 +147,6 @@ public final class ProjectFilePropertiesResponse extends io.pulumi.resources.Inv
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public ProjectFilePropertiesResponse build() {
             return new ProjectFilePropertiesResponse(extension, filePath, lastModified, mediaType, size);
         }

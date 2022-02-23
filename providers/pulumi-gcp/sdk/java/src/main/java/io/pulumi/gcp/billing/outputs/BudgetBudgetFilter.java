@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.billing.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -208,7 +208,6 @@ public final class BudgetBudgetFilter {
             this.subaccounts = subaccounts;
             return this;
         }
-
         public BudgetBudgetFilter build() {
             return new BudgetBudgetFilter(creditTypes, creditTypesTreatment, labels, projects, services, subaccounts);
         }

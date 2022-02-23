@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @InputImport(name="confidenceInterval", required=true)
-    private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
+      private final GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse confidenceInterval;
 
     public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse getConfidenceInterval() {
         return this.confidenceInterval;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @InputImport(name="count", required=true)
-    private final Double count;
+      private final Double count;
 
     public Double getCount() {
         return this.count;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @InputImport(name="countType", required=true)
-    private final String countType;
+      private final String countType;
 
     public String getCountType() {
         return this.countType;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @InputImport(name="ratio", required=true)
-    private final Double ratio;
+      private final Double ratio;
 
     public Double getRatio() {
         return this.ratio;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultMetricResponse exten
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultMetricResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultMetricResponse(confidenceInterval, count, countType, ratio, type);
         }

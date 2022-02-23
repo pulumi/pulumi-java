@@ -4,7 +4,7 @@
 package io.pulumi.gcp.serviceusage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<Map<String,String>> dimensions;
+        private final @Nullable Input<Map<String,String>> dimensions;
 
     public Input<Map<String,String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -33,7 +33,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="force")
-    private final @Nullable Input<Boolean> force;
+        private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -44,7 +44,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<String> limit;
+        private final @Nullable Input<String> limit;
 
     public Input<String> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -55,7 +55,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metric")
-    private final @Nullable Input<String> metric;
+        private final @Nullable Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric == null ? Input.empty() : this.metric;
@@ -66,7 +66,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="overrideValue")
-    private final @Nullable Input<String> overrideValue;
+        private final @Nullable Input<String> overrideValue;
 
     public Input<String> getOverrideValue() {
         return this.overrideValue == null ? Input.empty() : this.overrideValue;
@@ -89,7 +89,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -100,7 +100,7 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -249,7 +249,6 @@ public final class ConsumerQuotaOverrideState extends io.pulumi.resources.Resour
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ConsumerQuotaOverrideState build() {
             return new ConsumerQuotaOverrideState(dimensions, force, limit, metric, name, overrideValue, project, service);
         }

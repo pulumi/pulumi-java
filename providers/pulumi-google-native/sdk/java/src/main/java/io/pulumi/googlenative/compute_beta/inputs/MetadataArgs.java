@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.MetadataItemsItemArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<MetadataItemsItemArgs>> items;
+      private final @Nullable Input<List<MetadataItemsItemArgs>> items;
 
     public Input<List<MetadataItemsItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -67,7 +67,6 @@ public final class MetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.items = Input.ofNullable(items);
             return this;
         }
-
         public MetadataArgs build() {
             return new MetadataArgs(items);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.GalleryImageVersionPublishingProfileResponse;
 import io.pulumi.azurenative.compute.outputs.GalleryImageVersionStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.ReplicationStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class GetGalleryImageVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryImageVersionResult build() {
             return new GetGalleryImageVersionResult(id, location, name, provisioningState, publishingProfile, replicationStatus, storageProfile, tags, type);
         }

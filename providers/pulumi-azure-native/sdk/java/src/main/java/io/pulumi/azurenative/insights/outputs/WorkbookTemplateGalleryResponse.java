@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class WorkbookTemplateGalleryResponse {
             this.type = type;
             return this;
         }
-
         public WorkbookTemplateGalleryResponse build() {
             return new WorkbookTemplateGalleryResponse(category, name, order, resourceType, type);
         }

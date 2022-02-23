@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationConfigurationDetailsArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentTypeConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configurationDetails")
-    private final @Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails;
+        private final @Nullable Input<ApplicationConfigurationDetailsArgs> configurationDetails;
 
     public Input<ApplicationConfigurationDetailsArgs> getConfigurationDetails() {
         return this.configurationDetails == null ? Input.empty() : this.configurationDetails;
@@ -36,7 +36,7 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subComponentTypeConfigurations")
-    private final @Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
+        private final @Nullable Input<List<ApplicationSubComponentTypeConfigurationArgs>> subComponentTypeConfigurations;
 
     public Input<List<ApplicationSubComponentTypeConfigurationArgs>> getSubComponentTypeConfigurations() {
         return this.subComponentTypeConfigurations == null ? Input.empty() : this.subComponentTypeConfigurations;
@@ -95,7 +95,6 @@ public final class ApplicationComponentConfigurationArgs extends io.pulumi.resou
             this.subComponentTypeConfigurations = Input.ofNullable(subComponentTypeConfigurations);
             return this;
         }
-
         public ApplicationComponentConfigurationArgs build() {
             return new ApplicationComponentConfigurationArgs(configurationDetails, subComponentTypeConfigurations);
         }

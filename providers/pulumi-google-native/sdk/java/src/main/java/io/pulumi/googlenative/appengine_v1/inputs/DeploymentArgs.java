@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.inputs.CloudBuildOptionsArgs;
 import io.pulumi.googlenative.appengine_v1.inputs.ContainerInfoArgs;
 import io.pulumi.googlenative.appengine_v1.inputs.ZipInfoArgs;
@@ -27,7 +27,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudBuildOptions")
-    private final @Nullable Input<CloudBuildOptionsArgs> cloudBuildOptions;
+      private final @Nullable Input<CloudBuildOptionsArgs> cloudBuildOptions;
 
     public Input<CloudBuildOptionsArgs> getCloudBuildOptions() {
         return this.cloudBuildOptions == null ? Input.empty() : this.cloudBuildOptions;
@@ -38,7 +38,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<ContainerInfoArgs> container;
+      private final @Nullable Input<ContainerInfoArgs> container;
 
     public Input<ContainerInfoArgs> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -49,7 +49,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="files")
-    private final @Nullable Input<Map<String,String>> files;
+      private final @Nullable Input<Map<String,String>> files;
 
     public Input<Map<String,String>> getFiles() {
         return this.files == null ? Input.empty() : this.files;
@@ -60,7 +60,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zip")
-    private final @Nullable Input<ZipInfoArgs> zip;
+      private final @Nullable Input<ZipInfoArgs> zip;
 
     public Input<ZipInfoArgs> getZip() {
         return this.zip == null ? Input.empty() : this.zip;
@@ -149,7 +149,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.zip = Input.ofNullable(zip);
             return this;
         }
-
         public DeploymentArgs build() {
             return new DeploymentArgs(cloudBuildOptions, container, files, zip);
         }

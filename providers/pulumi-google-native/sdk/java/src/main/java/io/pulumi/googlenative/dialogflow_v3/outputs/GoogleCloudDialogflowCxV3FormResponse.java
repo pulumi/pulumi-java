@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FormParameterResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowCxV3FormResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormResponse build() {
             return new GoogleCloudDialogflowCxV3FormResponse(parameters);
         }

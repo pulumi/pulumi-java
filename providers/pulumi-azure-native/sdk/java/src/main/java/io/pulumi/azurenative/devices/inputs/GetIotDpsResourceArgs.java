@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="provisioningServiceName", required=true)
-    private final String provisioningServiceName;
+        private final String provisioningServiceName;
 
     public String getProvisioningServiceName() {
         return this.provisioningServiceName;
@@ -28,7 +28,7 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetIotDpsResourceArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetIotDpsResourceArgs build() {
             return new GetIotDpsResourceArgs(provisioningServiceName, resourceGroupName);
         }

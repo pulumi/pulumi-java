@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediaconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="vpcInterfaceName")
-    private final @Nullable Input<String> vpcInterfaceName;
+        private final @Nullable Input<String> vpcInterfaceName;
 
     public Input<String> getVpcInterfaceName() {
         return this.vpcInterfaceName == null ? Input.empty() : this.vpcInterfaceName;
@@ -66,7 +66,6 @@ public final class FlowOutputVpcInterfaceAttachmentArgs extends io.pulumi.resour
             this.vpcInterfaceName = Input.ofNullable(vpcInterfaceName);
             return this;
         }
-
         public FlowOutputVpcInterfaceAttachmentArgs build() {
             return new FlowOutputVpcInterfaceAttachmentArgs(vpcInterfaceName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PoolOptionResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.VolumeResponse;
 import java.lang.Boolean;
@@ -309,7 +309,6 @@ public final class BuildOptionsResponse {
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public BuildOptionsResponse build() {
             return new BuildOptionsResponse(diskSizeGb, dynamicSubstitutions, env, logStreamingOption, logging, machineType, pool, requestedVerifyOption, secretEnv, sourceProvenanceHash, substitutionOption, volumes, workerPool);
         }

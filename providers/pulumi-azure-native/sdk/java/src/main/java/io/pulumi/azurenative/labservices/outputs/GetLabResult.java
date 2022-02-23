@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -373,7 +373,6 @@ public final class GetLabResult {
             this.userQuota = Objects.requireNonNull(userQuota);
             return this;
         }
-
         public GetLabResult build() {
             return new GetLabResult(createdByObjectId, createdByUserPrincipalName, createdDate, id, invitationCode, latestOperationResult, location, maxUsersInLab, name, provisioningState, tags, type, uniqueIdentifier, usageQuota, userAccessMode, userQuota);
         }

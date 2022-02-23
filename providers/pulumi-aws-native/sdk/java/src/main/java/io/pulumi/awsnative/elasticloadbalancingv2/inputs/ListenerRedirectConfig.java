@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,42 +15,42 @@ public final class ListenerRedirectConfig extends io.pulumi.resources.InvokeArgs
     public static final ListenerRedirectConfig Empty = new ListenerRedirectConfig();
 
     @InputImport(name="host")
-    private final @Nullable String host;
+        private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
     }
 
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
     }
 
     @InputImport(name="port")
-    private final @Nullable String port;
+        private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @InputImport(name="query")
-    private final @Nullable String query;
+        private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
     }
 
     @InputImport(name="statusCode", required=true)
-    private final String statusCode;
+        private final String statusCode;
 
     public String getStatusCode() {
         return this.statusCode;
@@ -139,7 +139,6 @@ public final class ListenerRedirectConfig extends io.pulumi.resources.InvokeArgs
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public ListenerRedirectConfig build() {
             return new ListenerRedirectConfig(host, path, port, protocol, query, statusCode);
         }

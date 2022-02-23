@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pem")
-    private final @Nullable Input<String> pem;
+        private final @Nullable Input<String> pem;
 
     public Input<String> getPem() {
         return this.pem == null ? Input.empty() : this.pem;
@@ -62,7 +62,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.pem = Input.ofNullable(pem);
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(pem);
         }

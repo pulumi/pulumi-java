@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class ManagedIntegrationRuntimeErrorResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public ManagedIntegrationRuntimeErrorResponse build() {
             return new ManagedIntegrationRuntimeErrorResponse(code, message, parameters, time);
         }

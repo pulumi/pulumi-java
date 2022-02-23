@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class DomainEncryptionAtRestOptions {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public DomainEncryptionAtRestOptions build() {
             return new DomainEncryptionAtRestOptions(enabled, kmsKeyId);
         }

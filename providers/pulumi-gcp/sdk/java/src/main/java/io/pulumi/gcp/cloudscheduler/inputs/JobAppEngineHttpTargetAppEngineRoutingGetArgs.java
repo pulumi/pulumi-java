@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -32,7 +32,7 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -44,7 +44,7 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -118,7 +118,6 @@ public final class JobAppEngineHttpTargetAppEngineRoutingGetArgs extends io.pulu
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public JobAppEngineHttpTargetAppEngineRoutingGetArgs build() {
             return new JobAppEngineHttpTargetAppEngineRoutingGetArgs(instance, service, version);
         }

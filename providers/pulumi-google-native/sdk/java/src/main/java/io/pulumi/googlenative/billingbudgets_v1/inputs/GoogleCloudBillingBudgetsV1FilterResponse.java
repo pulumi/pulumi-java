@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1.inputs.GoogleCloudBillingBudgetsV1CustomPeriodResponse;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="calendarPeriod", required=true)
-    private final String calendarPeriod;
+      private final String calendarPeriod;
 
     public String getCalendarPeriod() {
         return this.calendarPeriod;
@@ -35,7 +35,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="creditTypes", required=true)
-    private final List<String> creditTypes;
+      private final List<String> creditTypes;
 
     public List<String> getCreditTypes() {
         return this.creditTypes;
@@ -46,7 +46,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="creditTypesTreatment", required=true)
-    private final String creditTypesTreatment;
+      private final String creditTypesTreatment;
 
     public String getCreditTypesTreatment() {
         return this.creditTypesTreatment;
@@ -57,7 +57,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="customPeriod", required=true)
-    private final GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod;
+      private final GoogleCloudBillingBudgetsV1CustomPeriodResponse customPeriod;
 
     public GoogleCloudBillingBudgetsV1CustomPeriodResponse getCustomPeriod() {
         return this.customPeriod;
@@ -68,7 +68,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -79,7 +79,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="projects", required=true)
-    private final List<String> projects;
+      private final List<String> projects;
 
     public List<String> getProjects() {
         return this.projects;
@@ -90,7 +90,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="services", required=true)
-    private final List<String> services;
+      private final List<String> services;
 
     public List<String> getServices() {
         return this.services;
@@ -101,7 +101,7 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="subaccounts", required=true)
-    private final List<String> subaccounts;
+      private final List<String> subaccounts;
 
     public List<String> getSubaccounts() {
         return this.subaccounts;
@@ -210,7 +210,6 @@ public final class GoogleCloudBillingBudgetsV1FilterResponse extends io.pulumi.r
             this.subaccounts = Objects.requireNonNull(subaccounts);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1FilterResponse build() {
             return new GoogleCloudBillingBudgetsV1FilterResponse(calendarPeriod, creditTypes, creditTypesTreatment, customPeriod, labels, projects, services, subaccounts);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="attachmentTarget", required=true)
-    private final String attachmentTarget;
+      private final String attachmentTarget;
 
     public String getAttachmentTarget() {
         return this.attachmentTarget;
@@ -28,7 +28,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -39,7 +39,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="firewallPolicyId", required=true)
-    private final String firewallPolicyId;
+      private final String firewallPolicyId;
 
     public String getFirewallPolicyId() {
         return this.firewallPolicyId;
@@ -50,7 +50,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -61,7 +61,7 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="shortName", required=true)
-    private final String shortName;
+      private final String shortName;
 
     public String getShortName() {
         return this.shortName;
@@ -140,7 +140,6 @@ public final class FirewallPolicyAssociationResponse extends io.pulumi.resources
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public FirewallPolicyAssociationResponse build() {
             return new FirewallPolicyAssociationResponse(attachmentTarget, displayName, firewallPolicyId, name, shortName);
         }

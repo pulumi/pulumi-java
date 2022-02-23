@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.NetworkFirewallPolicyVpcNetworkScope;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyAssociationArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleArgs;
@@ -23,7 +23,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="associations")
-    private final @Nullable Input<List<FirewallPolicyAssociationArgs>> associations;
+      private final @Nullable Input<List<FirewallPolicyAssociationArgs>> associations;
 
     public Input<List<FirewallPolicyAssociationArgs>> getAssociations() {
         return this.associations == null ? Input.empty() : this.associations;
@@ -34,21 +34,21 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -59,7 +59,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<FirewallPolicyRuleArgs>> rules;
+      private final @Nullable Input<List<FirewallPolicyRuleArgs>> rules;
 
     public Input<List<FirewallPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -70,7 +70,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -81,7 +81,7 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vpcNetworkScope")
-    private final @Nullable Input<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
+      private final @Nullable Input<NetworkFirewallPolicyVpcNetworkScope> vpcNetworkScope;
 
     public Input<NetworkFirewallPolicyVpcNetworkScope> getVpcNetworkScope() {
         return this.vpcNetworkScope == null ? Input.empty() : this.vpcNetworkScope;
@@ -215,7 +215,6 @@ public final class NetworkFirewallPolicyArgs extends io.pulumi.resources.Resourc
             this.vpcNetworkScope = Input.ofNullable(vpcNetworkScope);
             return this;
         }
-
         public NetworkFirewallPolicyArgs build() {
             return new NetworkFirewallPolicyArgs(associations, description, project, requestId, rules, shortName, vpcNetworkScope);
         }

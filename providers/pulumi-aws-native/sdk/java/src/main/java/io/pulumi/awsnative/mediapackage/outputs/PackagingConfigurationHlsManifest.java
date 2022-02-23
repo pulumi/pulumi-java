@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -148,7 +148,6 @@ public final class PackagingConfigurationHlsManifest {
             this.streamSelection = streamSelection;
             return this;
         }
-
         public PackagingConfigurationHlsManifest build() {
             return new PackagingConfigurationHlsManifest(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
         }

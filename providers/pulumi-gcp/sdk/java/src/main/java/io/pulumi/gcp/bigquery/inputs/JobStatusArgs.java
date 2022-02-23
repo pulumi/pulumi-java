@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorArgs;
 import io.pulumi.gcp.bigquery.inputs.JobStatusErrorResultArgs;
 import java.lang.String;
@@ -18,21 +18,21 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
     public static final JobStatusArgs Empty = new JobStatusArgs();
 
     @InputImport(name="errorResults")
-    private final @Nullable Input<List<JobStatusErrorResultArgs>> errorResults;
+        private final @Nullable Input<List<JobStatusErrorResultArgs>> errorResults;
 
     public Input<List<JobStatusErrorResultArgs>> getErrorResults() {
         return this.errorResults == null ? Input.empty() : this.errorResults;
     }
 
     @InputImport(name="errors")
-    private final @Nullable Input<List<JobStatusErrorArgs>> errors;
+        private final @Nullable Input<List<JobStatusErrorArgs>> errors;
 
     public Input<List<JobStatusErrorArgs>> getErrors() {
         return this.errors == null ? Input.empty() : this.errors;
     }
 
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -106,7 +106,6 @@ public final class JobStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public JobStatusArgs build() {
             return new JobStatusArgs(errorResults, errors, state);
         }

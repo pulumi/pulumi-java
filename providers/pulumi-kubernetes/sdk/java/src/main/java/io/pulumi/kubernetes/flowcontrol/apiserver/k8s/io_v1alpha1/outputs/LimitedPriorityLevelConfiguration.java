@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.LimitResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -85,7 +85,6 @@ public final class LimitedPriorityLevelConfiguration {
             this.limitResponse = limitResponse;
             return this;
         }
-
         public LimitedPriorityLevelConfiguration build() {
             return new LimitedPriorityLevelConfiguration(assuredConcurrencyShares, limitResponse);
         }

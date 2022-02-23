@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -44,7 +44,7 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class SourceCostAllocationResourceResponse extends io.pulumi.resour
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public SourceCostAllocationResourceResponse build() {
             return new SourceCostAllocationResourceResponse(name, resourceType, values);
         }

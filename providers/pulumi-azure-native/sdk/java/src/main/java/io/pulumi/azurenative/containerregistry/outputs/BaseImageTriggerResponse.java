@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class BaseImageTriggerResponse {
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
-
         public BaseImageTriggerResponse build() {
             return new BaseImageTriggerResponse(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }

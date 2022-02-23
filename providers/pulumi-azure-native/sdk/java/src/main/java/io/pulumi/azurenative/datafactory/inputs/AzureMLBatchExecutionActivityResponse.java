@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.AzureMLWebServiceFileResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -42,7 +42,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -53,7 +53,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="globalParameters")
-    private final @Nullable Map<String,Object> globalParameters;
+        private final @Nullable Map<String,Object> globalParameters;
 
     public Map<String,Object> getGlobalParameters() {
         return this.globalParameters == null ? Map.of() : this.globalParameters;
@@ -64,7 +64,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -75,7 +75,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -86,7 +86,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+        private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -98,7 +98,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -109,7 +109,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -120,7 +120,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="webServiceInputs")
-    private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
+        private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceInputs;
 
     public Map<String,AzureMLWebServiceFileResponse> getWebServiceInputs() {
         return this.webServiceInputs == null ? Map.of() : this.webServiceInputs;
@@ -131,7 +131,7 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="webServiceOutputs")
-    private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
+        private final @Nullable Map<String,AzureMLWebServiceFileResponse> webServiceOutputs;
 
     public Map<String,AzureMLWebServiceFileResponse> getWebServiceOutputs() {
         return this.webServiceOutputs == null ? Map.of() : this.webServiceOutputs;
@@ -260,7 +260,6 @@ public final class AzureMLBatchExecutionActivityResponse extends io.pulumi.resou
             this.webServiceOutputs = webServiceOutputs;
             return this;
         }
-
         public AzureMLBatchExecutionActivityResponse build() {
             return new AzureMLBatchExecutionActivityResponse(dependsOn, description, globalParameters, linkedServiceName, name, policy, type, userProperties, webServiceInputs, webServiceOutputs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="applicationDefinitionName", required=true)
-    private final String applicationDefinitionName;
+        private final String applicationDefinitionName;
 
     public String getApplicationDefinitionName() {
         return this.applicationDefinitionName;
@@ -28,7 +28,7 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetApplicationDefinitionArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetApplicationDefinitionArgs build() {
             return new GetApplicationDefinitionArgs(applicationDefinitionName, resourceGroupName);
         }

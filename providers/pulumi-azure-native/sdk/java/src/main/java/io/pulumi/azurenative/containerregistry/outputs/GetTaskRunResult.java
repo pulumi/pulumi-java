@@ -10,7 +10,7 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.RunResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TaskRunRequestResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -252,7 +252,6 @@ public final class GetTaskRunResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTaskRunResult build() {
             return new GetTaskRunResult(forceUpdateTag, id, identity, location, name, provisioningState, runRequest, runResult, systemData, type);
         }

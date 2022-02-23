@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class MessagingEndpointPropertiesResponse {
             this.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
-
         public MessagingEndpointPropertiesResponse build() {
             return new MessagingEndpointPropertiesResponse(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.recaptchaenterprise_v1.enums.GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
      * 
      */
     @InputImport(name="testingChallenge")
-    private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
+      private final @Nullable Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> testingChallenge;
 
     public Input<GoogleCloudRecaptchaenterpriseV1TestingOptionsTestingChallenge> getTestingChallenge() {
         return this.testingChallenge == null ? Input.empty() : this.testingChallenge;
@@ -35,7 +35,7 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
      * 
      */
     @InputImport(name="testingScore")
-    private final @Nullable Input<Double> testingScore;
+      private final @Nullable Input<Double> testingScore;
 
     public Input<Double> getTestingScore() {
         return this.testingScore == null ? Input.empty() : this.testingScore;
@@ -94,7 +94,6 @@ public final class GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs extends io
             this.testingScore = Input.ofNullable(testingScore);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs build() {
             return new GoogleCloudRecaptchaenterpriseV1TestingOptionsArgs(testingChallenge, testingScore);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleComputeResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleNetworkResponse;
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleStorageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -99,7 +99,6 @@ public final class KubernetesRoleResourcesResponse {
             this.storage = storage;
             return this;
         }
-
         public KubernetesRoleResourcesResponse build() {
             return new KubernetesRoleResourcesResponse(compute, network, storage);
         }

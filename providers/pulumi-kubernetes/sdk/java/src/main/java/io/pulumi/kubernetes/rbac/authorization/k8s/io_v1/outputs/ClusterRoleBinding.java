@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs.RoleRef;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1.outputs.Subject;
@@ -143,7 +143,6 @@ public final class ClusterRoleBinding {
             this.subjects = subjects;
             return this;
         }
-
         public ClusterRoleBinding build() {
             return new ClusterRoleBinding(apiVersion, kind, metadata, roleRef, subjects);
         }

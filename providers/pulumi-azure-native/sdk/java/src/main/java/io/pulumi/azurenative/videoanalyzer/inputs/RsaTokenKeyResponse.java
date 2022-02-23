@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alg", required=true)
-    private final String alg;
+        private final String alg;
 
     public String getAlg() {
         return this.alg;
@@ -32,7 +32,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="e", required=true)
-    private final String e;
+        private final String e;
 
     public String getE() {
         return this.e;
@@ -43,7 +43,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kid", required=true)
-    private final String kid;
+        private final String kid;
 
     public String getKid() {
         return this.kid;
@@ -54,7 +54,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="n", required=true)
-    private final String n;
+        private final String n;
 
     public String getN() {
         return this.n;
@@ -66,7 +66,7 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -145,7 +145,6 @@ public final class RsaTokenKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RsaTokenKeyResponse build() {
             return new RsaTokenKeyResponse(alg, e, kid, n, type);
         }

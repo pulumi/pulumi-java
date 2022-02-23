@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderDirection;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderProtocol;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,42 +15,42 @@ public final class RuleGroupHeader extends io.pulumi.resources.InvokeArgs {
     public static final RuleGroupHeader Empty = new RuleGroupHeader();
 
     @InputImport(name="destination", required=true)
-    private final String destination;
+        private final String destination;
 
     public String getDestination() {
         return this.destination;
     }
 
     @InputImport(name="destinationPort", required=true)
-    private final String destinationPort;
+        private final String destinationPort;
 
     public String getDestinationPort() {
         return this.destinationPort;
     }
 
     @InputImport(name="direction", required=true)
-    private final RuleGroupHeaderDirection direction;
+        private final RuleGroupHeaderDirection direction;
 
     public RuleGroupHeaderDirection getDirection() {
         return this.direction;
     }
 
     @InputImport(name="protocol", required=true)
-    private final RuleGroupHeaderProtocol protocol;
+        private final RuleGroupHeaderProtocol protocol;
 
     public RuleGroupHeaderProtocol getProtocol() {
         return this.protocol;
     }
 
     @InputImport(name="source", required=true)
-    private final String source;
+        private final String source;
 
     public String getSource() {
         return this.source;
     }
 
     @InputImport(name="sourcePort", required=true)
-    private final String sourcePort;
+        private final String sourcePort;
 
     public String getSourcePort() {
         return this.sourcePort;
@@ -139,7 +139,6 @@ public final class RuleGroupHeader extends io.pulumi.resources.InvokeArgs {
             this.sourcePort = Objects.requireNonNull(sourcePort);
             return this;
         }
-
         public RuleGroupHeader build() {
             return new RuleGroupHeader(destination, destinationPort, direction, protocol, source, sourcePort);
         }

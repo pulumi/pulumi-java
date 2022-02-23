@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactGcsArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.SoftwareRecipeArtifactRemoteArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowInsecure")
-    private final @Nullable Input<Boolean> allowInsecure;
+      private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -37,7 +37,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gcs")
-    private final @Nullable Input<SoftwareRecipeArtifactGcsArgs> gcs;
+      private final @Nullable Input<SoftwareRecipeArtifactGcsArgs> gcs;
 
     public Input<SoftwareRecipeArtifactGcsArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -48,7 +48,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -59,7 +59,7 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="remote")
-    private final @Nullable Input<SoftwareRecipeArtifactRemoteArgs> remote;
+      private final @Nullable Input<SoftwareRecipeArtifactRemoteArgs> remote;
 
     public Input<SoftwareRecipeArtifactRemoteArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;
@@ -148,7 +148,6 @@ public final class SoftwareRecipeArtifactArgs extends io.pulumi.resources.Resour
             this.remote = Input.ofNullable(remote);
             return this;
         }
-
         public SoftwareRecipeArtifactArgs build() {
             return new SoftwareRecipeArtifactArgs(allowInsecure, gcs, id, remote);
         }

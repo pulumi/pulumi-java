@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.inputs;
 import io.pulumi.azurenative.storage.inputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.storage.inputs.EncryptionServicesResponse;
 import io.pulumi.azurenative.storage.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="encryptionIdentity")
-    private final @Nullable EncryptionIdentityResponse encryptionIdentity;
+        private final @Nullable EncryptionIdentityResponse encryptionIdentity;
 
     public Optional<EncryptionIdentityResponse> getEncryptionIdentity() {
         return this.encryptionIdentity == null ? Optional.empty() : Optional.ofNullable(this.encryptionIdentity);
@@ -38,7 +38,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keySource", required=true)
-    private final String keySource;
+        private final String keySource;
 
     public String getKeySource() {
         return this.keySource;
@@ -49,7 +49,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+        private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
@@ -60,7 +60,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireInfrastructureEncryption")
-    private final @Nullable Boolean requireInfrastructureEncryption;
+        private final @Nullable Boolean requireInfrastructureEncryption;
 
     public Optional<Boolean> getRequireInfrastructureEncryption() {
         return this.requireInfrastructureEncryption == null ? Optional.empty() : Optional.ofNullable(this.requireInfrastructureEncryption);
@@ -71,7 +71,7 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="services")
-    private final @Nullable EncryptionServicesResponse services;
+        private final @Nullable EncryptionServicesResponse services;
 
     public Optional<EncryptionServicesResponse> getServices() {
         return this.services == null ? Optional.empty() : Optional.ofNullable(this.services);
@@ -150,7 +150,6 @@ public final class EncryptionResponse extends io.pulumi.resources.InvokeArgs {
             this.services = services;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }

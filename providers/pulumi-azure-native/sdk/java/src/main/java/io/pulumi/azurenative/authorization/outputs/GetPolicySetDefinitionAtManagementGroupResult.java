@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization.outputs;
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionGroupResponse;
 import io.pulumi.azurenative.authorization.outputs.PolicyDefinitionReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -250,7 +250,6 @@ public final class GetPolicySetDefinitionAtManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicySetDefinitionAtManagementGroupResult build() {
             return new GetPolicySetDefinitionAtManagementGroupResult(description, displayName, id, metadata, name, parameters, policyDefinitionGroups, policyDefinitions, policyType, type);
         }

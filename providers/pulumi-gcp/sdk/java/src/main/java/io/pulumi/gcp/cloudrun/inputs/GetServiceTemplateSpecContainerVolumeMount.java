@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
     public static final GetServiceTemplateSpecContainerVolumeMount Empty = new GetServiceTemplateSpecContainerVolumeMount();
 
     @InputImport(name="mountPath", required=true)
-    private final String mountPath;
+        private final String mountPath;
 
     public String getMountPath() {
         return this.mountPath;
@@ -24,7 +24,7 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -73,7 +73,6 @@ public final class GetServiceTemplateSpecContainerVolumeMount extends io.pulumi.
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceTemplateSpecContainerVolumeMount build() {
             return new GetServiceTemplateSpecContainerVolumeMount(mountPath, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="blobContainerName")
-    private final @Nullable Input<String> blobContainerName;
+        private final @Nullable Input<String> blobContainerName;
 
     public Input<String> getBlobContainerName() {
         return this.blobContainerName == null ? Input.empty() : this.blobContainerName;
@@ -35,7 +35,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final Input<String> endpointType;
+        private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -46,7 +46,7 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -120,7 +120,6 @@ public final class StorageBlobDeadLetterDestinationArgs extends io.pulumi.resour
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public StorageBlobDeadLetterDestinationArgs build() {
             return new StorageBlobDeadLetterDestinationArgs(blobContainerName, endpointType, resourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="otherNativeCrash", required=true)
-    private final Boolean otherNativeCrash;
+      private final Boolean otherNativeCrash;
 
     public Boolean getOtherNativeCrash() {
         return this.otherNativeCrash;
@@ -59,7 +59,6 @@ public final class SuccessDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.otherNativeCrash = Objects.requireNonNull(otherNativeCrash);
             return this;
         }
-
         public SuccessDetailResponse build() {
             return new SuccessDetailResponse(otherNativeCrash);
         }

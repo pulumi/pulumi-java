@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -300,7 +300,6 @@ public final class GetManagedDatabaseSensitivityLabelResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedDatabaseSensitivityLabelResult build() {
             return new GetManagedDatabaseSensitivityLabelResult(columnName, id, informationType, informationTypeId, isDisabled, labelId, labelName, managedBy, name, rank, schemaName, tableName, type);
         }

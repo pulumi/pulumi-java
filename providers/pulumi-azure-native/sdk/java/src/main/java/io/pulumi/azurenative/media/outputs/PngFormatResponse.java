@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,7 +76,6 @@ public final class PngFormatResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public PngFormatResponse build() {
             return new PngFormatResponse(filenamePattern, odataType);
         }

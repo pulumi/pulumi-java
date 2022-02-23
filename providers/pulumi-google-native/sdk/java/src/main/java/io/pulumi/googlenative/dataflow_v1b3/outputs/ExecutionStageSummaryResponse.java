@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ComponentSourceResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ComponentTransformResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.StageSourceResponse;
@@ -183,7 +183,6 @@ public final class ExecutionStageSummaryResponse {
             this.prerequisiteStage = Objects.requireNonNull(prerequisiteStage);
             return this;
         }
-
         public ExecutionStageSummaryResponse build() {
             return new ExecutionStageSummaryResponse(componentSource, componentTransform, inputSource, kind, name, outputSource, prerequisiteStage);
         }

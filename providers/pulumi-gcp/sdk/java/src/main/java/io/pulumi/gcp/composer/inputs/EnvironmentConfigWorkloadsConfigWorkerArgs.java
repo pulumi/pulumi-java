@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
     public static final EnvironmentConfigWorkloadsConfigWorkerArgs Empty = new EnvironmentConfigWorkloadsConfigWorkerArgs();
 
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+        private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
     @InputImport(name="maxCount")
-    private final @Nullable Input<Integer> maxCount;
+        private final @Nullable Input<Integer> maxCount;
 
     public Input<Integer> getMaxCount() {
         return this.maxCount == null ? Input.empty() : this.maxCount;
     }
 
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+        private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
     @InputImport(name="minCount")
-    private final @Nullable Input<Integer> minCount;
+        private final @Nullable Input<Integer> minCount;
 
     public Input<Integer> getMinCount() {
         return this.minCount == null ? Input.empty() : this.minCount;
     }
 
     @InputImport(name="storageGb")
-    private final @Nullable Input<Double> storageGb;
+        private final @Nullable Input<Double> storageGb;
 
     public Input<Double> getStorageGb() {
         return this.storageGb == null ? Input.empty() : this.storageGb;
@@ -148,7 +148,6 @@ public final class EnvironmentConfigWorkloadsConfigWorkerArgs extends io.pulumi.
             this.storageGb = Input.ofNullable(storageGb);
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigWorkerArgs build() {
             return new EnvironmentConfigWorkloadsConfigWorkerArgs(cpu, maxCount, memoryGb, minCount, storageGb);
         }

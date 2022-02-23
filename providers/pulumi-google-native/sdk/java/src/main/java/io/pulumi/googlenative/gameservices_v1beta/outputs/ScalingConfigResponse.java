@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.LabelSelectorResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.ScheduleResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class ScalingConfigResponse {
             this.selectors = Objects.requireNonNull(selectors);
             return this;
         }
-
         public ScalingConfigResponse build() {
             return new ScalingConfigResponse(fleetAutoscalerSpec, name, schedules, selectors);
         }

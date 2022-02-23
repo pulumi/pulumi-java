@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteBuildPropertiesResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteTemplateOptionsResponse;
 import io.pulumi.azurenative.web.outputs.StaticSiteUserProvidedFunctionAppResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -505,7 +505,6 @@ public final class GetStaticSiteResult {
             this.userProvidedFunctionApps = Objects.requireNonNull(userProvidedFunctionApps);
             return this;
         }
-
         public GetStaticSiteResult build() {
             return new GetStaticSiteResult(allowConfigFileUpdates, branch, buildProperties, contentDistributionEndpoint, customDomains, defaultHostname, id, identity, keyVaultReferenceIdentity, kind, location, name, privateEndpointConnections, provider, repositoryToken, repositoryUrl, sku, stagingEnvironmentPolicy, tags, templateProperties, type, userProvidedFunctionApps);
         }

@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ec2.VPCArgs;
 import io.pulumi.awsnative.ec2.outputs.VPCTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -174,13 +174,6 @@ public class VPC extends io.pulumi.resources.CustomResource {
         return this.vpcId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public VPC(String name) {
-        super("aws-native:ec2:VPC", name, VPCArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

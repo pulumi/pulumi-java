@@ -6,7 +6,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 import io.pulumi.azurenative.signalrservice.enums.FeatureFlags;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flag", required=true)
-    private final Input<Either<String,FeatureFlags>> flag;
+        private final Input<Either<String,FeatureFlags>> flag;
 
     public Input<Either<String,FeatureFlags>> getFlag() {
         return this.flag;
@@ -39,7 +39,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -50,7 +50,7 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -124,7 +124,6 @@ public final class SignalRFeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public SignalRFeatureArgs build() {
             return new SignalRFeatureArgs(flag, properties, value);
         }

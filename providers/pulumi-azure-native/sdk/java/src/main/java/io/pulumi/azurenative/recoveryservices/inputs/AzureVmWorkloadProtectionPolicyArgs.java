@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SettingsArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SubProtectionPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final Input<String> backupManagementType;
+        private final Input<String> backupManagementType;
 
     public Input<String> getBackupManagementType() {
         return this.backupManagementType;
@@ -42,7 +42,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="makePolicyConsistent")
-    private final @Nullable Input<Boolean> makePolicyConsistent;
+        private final @Nullable Input<Boolean> makePolicyConsistent;
 
     public Input<Boolean> getMakePolicyConsistent() {
         return this.makePolicyConsistent == null ? Input.empty() : this.makePolicyConsistent;
@@ -53,7 +53,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Input<Integer> protectedItemsCount;
+        private final @Nullable Input<Integer> protectedItemsCount;
 
     public Input<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
@@ -64,7 +64,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<SettingsArgs> settings;
+        private final @Nullable Input<SettingsArgs> settings;
 
     public Input<SettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -75,7 +75,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subProtectionPolicy")
-    private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
+        private final @Nullable Input<List<SubProtectionPolicyArgs>> subProtectionPolicy;
 
     public Input<List<SubProtectionPolicyArgs>> getSubProtectionPolicy() {
         return this.subProtectionPolicy == null ? Input.empty() : this.subProtectionPolicy;
@@ -86,7 +86,7 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="workLoadType")
-    private final @Nullable Input<Either<String,WorkloadType>> workLoadType;
+        private final @Nullable Input<Either<String,WorkloadType>> workLoadType;
 
     public Input<Either<String,WorkloadType>> getWorkLoadType() {
         return this.workLoadType == null ? Input.empty() : this.workLoadType;
@@ -205,7 +205,6 @@ public final class AzureVmWorkloadProtectionPolicyArgs extends io.pulumi.resourc
             this.workLoadType = Input.ofNullable(workLoadType);
             return this;
         }
-
         public AzureVmWorkloadProtectionPolicyArgs build() {
             return new AzureVmWorkloadProtectionPolicyArgs(backupManagementType, makePolicyConsistent, protectedItemsCount, settings, subProtectionPolicy, workLoadType);
         }

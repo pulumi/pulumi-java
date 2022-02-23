@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class CellTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CellTag build() {
             return new CellTag(key, value);
         }

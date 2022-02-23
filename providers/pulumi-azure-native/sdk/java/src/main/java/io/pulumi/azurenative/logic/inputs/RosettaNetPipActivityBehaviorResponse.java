@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final String actionType;
+        private final String actionType;
 
     public String getActionType() {
         return this.actionType;
@@ -34,7 +34,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="isAuthorizationRequired", required=true)
-    private final Boolean isAuthorizationRequired;
+        private final Boolean isAuthorizationRequired;
 
     public Boolean getIsAuthorizationRequired() {
         return this.isAuthorizationRequired;
@@ -45,7 +45,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="isSecuredTransportRequired", required=true)
-    private final Boolean isSecuredTransportRequired;
+        private final Boolean isSecuredTransportRequired;
 
     public Boolean getIsSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
@@ -56,7 +56,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="nonRepudiationOfOriginAndContent", required=true)
-    private final Boolean nonRepudiationOfOriginAndContent;
+        private final Boolean nonRepudiationOfOriginAndContent;
 
     public Boolean getNonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
@@ -67,7 +67,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="persistentConfidentialityScope", required=true)
-    private final String persistentConfidentialityScope;
+        private final String persistentConfidentialityScope;
 
     public String getPersistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
@@ -78,7 +78,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="responseType", required=true)
-    private final String responseType;
+        private final String responseType;
 
     public String getResponseType() {
         return this.responseType;
@@ -89,7 +89,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="retryCount", required=true)
-    private final Integer retryCount;
+        private final Integer retryCount;
 
     public Integer getRetryCount() {
         return this.retryCount;
@@ -100,7 +100,7 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="timeToPerformInSeconds", required=true)
-    private final Integer timeToPerformInSeconds;
+        private final Integer timeToPerformInSeconds;
 
     public Integer getTimeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
@@ -209,7 +209,6 @@ public final class RosettaNetPipActivityBehaviorResponse extends io.pulumi.resou
             this.timeToPerformInSeconds = Objects.requireNonNull(timeToPerformInSeconds);
             return this;
         }
-
         public RosettaNetPipActivityBehaviorResponse build() {
             return new RosettaNetPipActivityBehaviorResponse(actionType, isAuthorizationRequired, isSecuredTransportRequired, nonRepudiationOfOriginAndContent, persistentConfidentialityScope, responseType, retryCount, timeToPerformInSeconds);
         }

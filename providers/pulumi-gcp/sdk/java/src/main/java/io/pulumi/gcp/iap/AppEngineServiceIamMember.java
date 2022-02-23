@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineServiceIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamMemberState;
@@ -161,13 +161,6 @@ public class AppEngineServiceIamMember extends io.pulumi.resources.CustomResourc
         return this.service;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AppEngineServiceIamMember(String name) {
-        super("gcp:iap/appEngineServiceIamMember:AppEngineServiceIamMember", name, AppEngineServiceIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

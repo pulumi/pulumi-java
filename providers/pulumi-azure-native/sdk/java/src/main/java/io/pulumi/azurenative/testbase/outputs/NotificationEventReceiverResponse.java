@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.NotificationReceiverValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class NotificationEventReceiverResponse {
             this.receiverValue = receiverValue;
             return this;
         }
-
         public NotificationEventReceiverResponse build() {
             return new NotificationEventReceiverResponse(receiverType, receiverValue);
         }

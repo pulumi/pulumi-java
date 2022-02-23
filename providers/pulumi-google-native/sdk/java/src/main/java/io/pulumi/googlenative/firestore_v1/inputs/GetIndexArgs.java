@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firestore_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetIndexArgs Empty = new GetIndexArgs();
 
     @InputImport(name="collectionGroupId", required=true)
-    private final String collectionGroupId;
+      private final String collectionGroupId;
 
     public String getCollectionGroupId() {
         return this.collectionGroupId;
     }
 
     @InputImport(name="databaseId", required=true)
-    private final String databaseId;
+      private final String databaseId;
 
     public String getDatabaseId() {
         return this.databaseId;
     }
 
     @InputImport(name="indexId", required=true)
-    private final String indexId;
+      private final String indexId;
 
     public String getIndexId() {
         return this.indexId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetIndexArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetIndexArgs build() {
             return new GetIndexArgs(collectionGroupId, databaseId, indexId, project);
         }

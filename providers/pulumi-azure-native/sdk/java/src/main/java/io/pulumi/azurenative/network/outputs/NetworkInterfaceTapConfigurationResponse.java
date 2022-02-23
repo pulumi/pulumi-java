@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VirtualNetworkTapResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -161,7 +161,6 @@ public final class NetworkInterfaceTapConfigurationResponse {
             this.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
-
         public NetworkInterfaceTapConfigurationResponse build() {
             return new NetworkInterfaceTapConfigurationResponse(etag, id, name, provisioningState, type, virtualNetworkTap);
         }

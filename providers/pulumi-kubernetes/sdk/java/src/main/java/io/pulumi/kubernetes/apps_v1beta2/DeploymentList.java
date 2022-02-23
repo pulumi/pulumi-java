@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.apps_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta2.DeploymentListArgs;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.Deployment;
@@ -78,13 +78,6 @@ public class DeploymentList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DeploymentList(String name) {
-        super("kubernetes:apps/v1beta2:DeploymentList", name, DeploymentListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

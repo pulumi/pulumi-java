@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudfunctions_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudfunctions_v1.enums.FunctionIngressSettings;
 import io.pulumi.googlenative.cloudfunctions_v1.enums.FunctionVpcConnectorEgressSettings;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.EventTriggerArgs;
@@ -29,7 +29,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableMemoryMb")
-    private final @Nullable Input<Integer> availableMemoryMb;
+      private final @Nullable Input<Integer> availableMemoryMb;
 
     public Input<Integer> getAvailableMemoryMb() {
         return this.availableMemoryMb == null ? Input.empty() : this.availableMemoryMb;
@@ -40,7 +40,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildEnvironmentVariables")
-    private final @Nullable Input<Map<String,String>> buildEnvironmentVariables;
+      private final @Nullable Input<Map<String,String>> buildEnvironmentVariables;
 
     public Input<Map<String,String>> getBuildEnvironmentVariables() {
         return this.buildEnvironmentVariables == null ? Input.empty() : this.buildEnvironmentVariables;
@@ -51,7 +51,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildWorkerPool")
-    private final @Nullable Input<String> buildWorkerPool;
+      private final @Nullable Input<String> buildWorkerPool;
 
     public Input<String> getBuildWorkerPool() {
         return this.buildWorkerPool == null ? Input.empty() : this.buildWorkerPool;
@@ -62,7 +62,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerRepository")
-    private final @Nullable Input<String> dockerRepository;
+      private final @Nullable Input<String> dockerRepository;
 
     public Input<String> getDockerRepository() {
         return this.dockerRepository == null ? Input.empty() : this.dockerRepository;
@@ -84,7 +84,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryPoint")
-    private final @Nullable Input<String> entryPoint;
+      private final @Nullable Input<String> entryPoint;
 
     public Input<String> getEntryPoint() {
         return this.entryPoint == null ? Input.empty() : this.entryPoint;
@@ -95,7 +95,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+      private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -106,7 +106,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTrigger")
-    private final @Nullable Input<EventTriggerArgs> eventTrigger;
+      private final @Nullable Input<EventTriggerArgs> eventTrigger;
 
     public Input<EventTriggerArgs> getEventTrigger() {
         return this.eventTrigger == null ? Input.empty() : this.eventTrigger;
@@ -117,7 +117,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsTrigger")
-    private final @Nullable Input<HttpsTriggerArgs> httpsTrigger;
+      private final @Nullable Input<HttpsTriggerArgs> httpsTrigger;
 
     public Input<HttpsTriggerArgs> getHttpsTrigger() {
         return this.httpsTrigger == null ? Input.empty() : this.httpsTrigger;
@@ -128,7 +128,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressSettings")
-    private final @Nullable Input<FunctionIngressSettings> ingressSettings;
+      private final @Nullable Input<FunctionIngressSettings> ingressSettings;
 
     public Input<FunctionIngressSettings> getIngressSettings() {
         return this.ingressSettings == null ? Input.empty() : this.ingressSettings;
@@ -139,7 +139,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -150,14 +150,14 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -168,7 +168,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxInstances")
-    private final @Nullable Input<Integer> maxInstances;
+      private final @Nullable Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances == null ? Input.empty() : this.maxInstances;
@@ -179,7 +179,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Input<Integer> minInstances;
+      private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -190,7 +190,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -201,14 +201,14 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -219,7 +219,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtime")
-    private final @Nullable Input<String> runtime;
+      private final @Nullable Input<String> runtime;
 
     public Input<String> getRuntime() {
         return this.runtime == null ? Input.empty() : this.runtime;
@@ -230,7 +230,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretEnvironmentVariables")
-    private final @Nullable Input<List<SecretEnvVarArgs>> secretEnvironmentVariables;
+      private final @Nullable Input<List<SecretEnvVarArgs>> secretEnvironmentVariables;
 
     public Input<List<SecretEnvVarArgs>> getSecretEnvironmentVariables() {
         return this.secretEnvironmentVariables == null ? Input.empty() : this.secretEnvironmentVariables;
@@ -241,7 +241,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretVolumes")
-    private final @Nullable Input<List<SecretVolumeArgs>> secretVolumes;
+      private final @Nullable Input<List<SecretVolumeArgs>> secretVolumes;
 
     public Input<List<SecretVolumeArgs>> getSecretVolumes() {
         return this.secretVolumes == null ? Input.empty() : this.secretVolumes;
@@ -252,7 +252,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -263,7 +263,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceArchiveUrl")
-    private final @Nullable Input<String> sourceArchiveUrl;
+      private final @Nullable Input<String> sourceArchiveUrl;
 
     public Input<String> getSourceArchiveUrl() {
         return this.sourceArchiveUrl == null ? Input.empty() : this.sourceArchiveUrl;
@@ -274,7 +274,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRepository")
-    private final @Nullable Input<SourceRepositoryArgs> sourceRepository;
+      private final @Nullable Input<SourceRepositoryArgs> sourceRepository;
 
     public Input<SourceRepositoryArgs> getSourceRepository() {
         return this.sourceRepository == null ? Input.empty() : this.sourceRepository;
@@ -285,7 +285,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceToken")
-    private final @Nullable Input<String> sourceToken;
+      private final @Nullable Input<String> sourceToken;
 
     public Input<String> getSourceToken() {
         return this.sourceToken == null ? Input.empty() : this.sourceToken;
@@ -296,7 +296,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUploadUrl")
-    private final @Nullable Input<String> sourceUploadUrl;
+      private final @Nullable Input<String> sourceUploadUrl;
 
     public Input<String> getSourceUploadUrl() {
         return this.sourceUploadUrl == null ? Input.empty() : this.sourceUploadUrl;
@@ -307,7 +307,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -318,7 +318,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConnector")
-    private final @Nullable Input<String> vpcConnector;
+      private final @Nullable Input<String> vpcConnector;
 
     public Input<String> getVpcConnector() {
         return this.vpcConnector == null ? Input.empty() : this.vpcConnector;
@@ -329,7 +329,7 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConnectorEgressSettings")
-    private final @Nullable Input<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings;
+      private final @Nullable Input<FunctionVpcConnectorEgressSettings> vpcConnectorEgressSettings;
 
     public Input<FunctionVpcConnectorEgressSettings> getVpcConnectorEgressSettings() {
         return this.vpcConnectorEgressSettings == null ? Input.empty() : this.vpcConnectorEgressSettings;
@@ -793,7 +793,6 @@ public final class FunctionArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcConnectorEgressSettings = Input.ofNullable(vpcConnectorEgressSettings);
             return this;
         }
-
         public FunctionArgs build() {
             return new FunctionArgs(availableMemoryMb, buildEnvironmentVariables, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, location, maxInstances, minInstances, name, network, project, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, timeout, vpcConnector, vpcConnectorEgressSettings);
         }

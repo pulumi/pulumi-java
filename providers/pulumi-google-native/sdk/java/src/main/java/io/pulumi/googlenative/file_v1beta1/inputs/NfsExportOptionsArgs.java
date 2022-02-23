@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.file_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.file_v1beta1.enums.NfsExportOptionsAccessMode;
 import io.pulumi.googlenative.file_v1beta1.enums.NfsExportOptionsSquashMode;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accessMode")
-    private final @Nullable Input<NfsExportOptionsAccessMode> accessMode;
+      private final @Nullable Input<NfsExportOptionsAccessMode> accessMode;
 
     public Input<NfsExportOptionsAccessMode> getAccessMode() {
         return this.accessMode == null ? Input.empty() : this.accessMode;
@@ -37,7 +37,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="anonGid")
-    private final @Nullable Input<String> anonGid;
+      private final @Nullable Input<String> anonGid;
 
     public Input<String> getAnonGid() {
         return this.anonGid == null ? Input.empty() : this.anonGid;
@@ -48,7 +48,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="anonUid")
-    private final @Nullable Input<String> anonUid;
+      private final @Nullable Input<String> anonUid;
 
     public Input<String> getAnonUid() {
         return this.anonUid == null ? Input.empty() : this.anonUid;
@@ -59,7 +59,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipRanges")
-    private final @Nullable Input<List<String>> ipRanges;
+      private final @Nullable Input<List<String>> ipRanges;
 
     public Input<List<String>> getIpRanges() {
         return this.ipRanges == null ? Input.empty() : this.ipRanges;
@@ -70,7 +70,7 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="squashMode")
-    private final @Nullable Input<NfsExportOptionsSquashMode> squashMode;
+      private final @Nullable Input<NfsExportOptionsSquashMode> squashMode;
 
     public Input<NfsExportOptionsSquashMode> getSquashMode() {
         return this.squashMode == null ? Input.empty() : this.squashMode;
@@ -174,7 +174,6 @@ public final class NfsExportOptionsArgs extends io.pulumi.resources.ResourceArgs
             this.squashMode = Input.ofNullable(squashMode);
             return this;
         }
-
         public NfsExportOptionsArgs build() {
             return new NfsExportOptionsArgs(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }

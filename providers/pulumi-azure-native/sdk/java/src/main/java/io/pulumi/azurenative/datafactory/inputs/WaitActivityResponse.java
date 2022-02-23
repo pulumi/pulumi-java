@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -38,7 +38,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -49,7 +49,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -61,7 +61,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -72,7 +72,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -83,7 +83,7 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="waitTimeInSeconds", required=true)
-    private final Object waitTimeInSeconds;
+        private final Object waitTimeInSeconds;
 
     public Object getWaitTimeInSeconds() {
         return this.waitTimeInSeconds;
@@ -172,7 +172,6 @@ public final class WaitActivityResponse extends io.pulumi.resources.InvokeArgs {
             this.waitTimeInSeconds = Objects.requireNonNull(waitTimeInSeconds);
             return this;
         }
-
         public WaitActivityResponse build() {
             return new WaitActivityResponse(dependsOn, description, name, type, userProperties, waitTimeInSeconds);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.AgentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.CredentialsResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PlatformPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SetValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -297,7 +297,6 @@ public final class EncodedTaskRunRequestResponse {
             this.values = values;
             return this;
         }
-
         public EncodedTaskRunRequestResponse build() {
             return new EncodedTaskRunRequestResponse(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
         }

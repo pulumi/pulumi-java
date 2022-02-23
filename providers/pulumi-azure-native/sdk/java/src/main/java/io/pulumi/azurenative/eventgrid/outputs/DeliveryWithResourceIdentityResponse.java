@@ -11,7 +11,7 @@ import io.pulumi.azurenative.eventgrid.outputs.ServiceBusQueueEventSubscriptionD
 import io.pulumi.azurenative.eventgrid.outputs.ServiceBusTopicEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StorageQueueEventSubscriptionDestinationResponse;
 import io.pulumi.azurenative.eventgrid.outputs.WebHookEventSubscriptionDestinationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class DeliveryWithResourceIdentityResponse {
             this.identity = identity;
             return this;
         }
-
         public DeliveryWithResourceIdentityResponse build() {
             return new DeliveryWithResourceIdentityResponse(destination, identity);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+        private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -30,7 +30,7 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<String> state;
+        private final Input<String> state;
 
     public Input<String> getState() {
         return this.state;
@@ -89,7 +89,6 @@ public final class ClusterDatabaseEncryptionArgs extends io.pulumi.resources.Res
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
-
         public ClusterDatabaseEncryptionArgs build() {
             return new ClusterDatabaseEncryptionArgs(keyName, state);
         }

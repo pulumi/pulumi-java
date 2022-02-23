@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class UDPHealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public UDPHealthCheckResponse build() {
             return new UDPHealthCheckResponse(port, portName, request, response);
         }

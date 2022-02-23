@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationLogEncoding;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,7 +140,6 @@ public final class ApplicationLog {
             this.patternSet = patternSet;
             return this;
         }
-
         public ApplicationLog build() {
             return new ApplicationLog(encoding, logGroupName, logPath, logType, patternSet);
         }

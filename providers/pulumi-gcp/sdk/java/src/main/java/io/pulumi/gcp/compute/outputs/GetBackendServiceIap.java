@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -71,7 +71,6 @@ public final class GetBackendServiceIap {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }
-
         public GetBackendServiceIap build() {
             return new GetBackendServiceIap(oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

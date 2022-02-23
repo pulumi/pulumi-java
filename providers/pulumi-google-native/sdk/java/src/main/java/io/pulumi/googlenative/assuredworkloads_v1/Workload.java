@@ -5,8 +5,8 @@ package io.pulumi.googlenative.assuredworkloads_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.assuredworkloads_v1.WorkloadArgs;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse;
@@ -222,13 +222,6 @@ public class Workload extends io.pulumi.resources.CustomResource {
         return this.saaEnrollmentResponse;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Workload(String name) {
-        super("google-native:assuredworkloads/v1:Workload", name, WorkloadArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

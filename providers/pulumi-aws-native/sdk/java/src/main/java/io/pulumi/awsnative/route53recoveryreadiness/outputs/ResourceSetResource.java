@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetDNSTargetResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -112,7 +112,6 @@ public final class ResourceSetResource {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public ResourceSetResource build() {
             return new ResourceSetResource(componentId, dnsTargetResource, readinessScopes, resourceArn);
         }

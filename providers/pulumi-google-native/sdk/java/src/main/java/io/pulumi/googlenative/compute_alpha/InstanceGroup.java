@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.InstanceGroupArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.NamedPortResponse;
@@ -204,13 +204,6 @@ public class InstanceGroup extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceGroup(String name) {
-        super("google-native:compute/alpha:InstanceGroup", name, InstanceGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

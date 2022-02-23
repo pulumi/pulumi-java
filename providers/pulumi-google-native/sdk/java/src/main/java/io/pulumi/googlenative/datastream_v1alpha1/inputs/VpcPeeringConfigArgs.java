@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnet", required=true)
-    private final Input<String> subnet;
+      private final Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet;
@@ -33,7 +33,7 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="vpcName", required=true)
-    private final Input<String> vpcName;
+      private final Input<String> vpcName;
 
     public Input<String> getVpcName() {
         return this.vpcName;
@@ -92,7 +92,6 @@ public final class VpcPeeringConfigArgs extends io.pulumi.resources.ResourceArgs
             this.vpcName = Input.of(Objects.requireNonNull(vpcName));
             return this;
         }
-
         public VpcPeeringConfigArgs build() {
             return new VpcPeeringConfigArgs(subnet, vpcName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="certificateName", required=true)
-    private final String certificateName;
+        private final String certificateName;
 
     public String getCertificateName() {
         return this.certificateName;
@@ -28,7 +28,7 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-    private final String loadBalancerName;
+        private final String loadBalancerName;
 
     public String getLoadBalancerName() {
         return this.loadBalancerName;
@@ -77,7 +77,6 @@ public final class GetLoadBalancerTlsCertificateArgs extends io.pulumi.resources
             this.loadBalancerName = Objects.requireNonNull(loadBalancerName);
             return this;
         }
-
         public GetLoadBalancerTlsCertificateArgs build() {
             return new GetLoadBalancerTlsCertificateArgs(certificateName, loadBalancerName);
         }

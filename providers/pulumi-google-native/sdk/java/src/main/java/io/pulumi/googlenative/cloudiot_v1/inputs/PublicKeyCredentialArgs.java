@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.enums.PublicKeyCredentialFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<PublicKeyCredentialFormat> format;
+      private final @Nullable Input<PublicKeyCredentialFormat> format;
 
     public Input<PublicKeyCredentialFormat> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -35,7 +35,7 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -94,7 +94,6 @@ public final class PublicKeyCredentialArgs extends io.pulumi.resources.ResourceA
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public PublicKeyCredentialArgs build() {
             return new PublicKeyCredentialArgs(format, key);
         }

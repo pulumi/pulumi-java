@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.ResourceRecordResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.SslSettingsResponse;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GetDomainMappingResult {
             this.sslSettings = Objects.requireNonNull(sslSettings);
             return this;
         }
-
         public GetDomainMappingResult build() {
             return new GetDomainMappingResult(name, resourceRecords, sslSettings);
         }

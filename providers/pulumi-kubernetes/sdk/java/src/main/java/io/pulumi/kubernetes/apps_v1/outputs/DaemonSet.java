@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1.outputs.DaemonSetSpec;
 import io.pulumi.kubernetes.apps_v1.outputs.DaemonSetStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class DaemonSet {
             this.status = status;
             return this;
         }
-
         public DaemonSet build() {
             return new DaemonSet(apiVersion, kind, metadata, spec, status);
         }

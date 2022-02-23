@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildStepVolume;
 import java.lang.String;
 import java.util.List;
@@ -341,7 +341,6 @@ public final class TriggerBuildStep {
             this.waitFors = waitFors;
             return this;
         }
-
         public TriggerBuildStep build() {
             return new TriggerBuildStep(args, dir, entrypoint, envs, id, name, secretEnvs, timeout, timing, volumes, waitFors);
         }

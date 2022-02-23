@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DistributionPolicyZoneConfigurationResponse extends io.pulumi
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -55,7 +55,6 @@ public final class DistributionPolicyZoneConfigurationResponse extends io.pulumi
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public DistributionPolicyZoneConfigurationResponse build() {
             return new DistributionPolicyZoneConfigurationResponse(zone);
         }

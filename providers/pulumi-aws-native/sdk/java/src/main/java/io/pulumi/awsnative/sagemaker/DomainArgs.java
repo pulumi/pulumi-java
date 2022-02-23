@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.enums.DomainAuthMode;
 import io.pulumi.awsnative.sagemaker.inputs.DomainTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DomainUserSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appNetworkAccessType")
-    private final @Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType;
+        private final @Nullable Input<DomainAppNetworkAccessType> appNetworkAccessType;
 
     public Input<DomainAppNetworkAccessType> getAppNetworkAccessType() {
         return this.appNetworkAccessType == null ? Input.empty() : this.appNetworkAccessType;
@@ -35,7 +35,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode", required=true)
-    private final Input<DomainAuthMode> authMode;
+        private final Input<DomainAuthMode> authMode;
 
     public Input<DomainAuthMode> getAuthMode() {
         return this.authMode;
@@ -46,7 +46,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUserSettings", required=true)
-    private final Input<DomainUserSettingsArgs> defaultUserSettings;
+        private final Input<DomainUserSettingsArgs> defaultUserSettings;
 
     public Input<DomainUserSettingsArgs> getDefaultUserSettings() {
         return this.defaultUserSettings;
@@ -57,7 +57,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -68,7 +68,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyId")
-    private final @Nullable Input<String> kmsKeyId;
+        private final @Nullable Input<String> kmsKeyId;
 
     public Input<String> getKmsKeyId() {
         return this.kmsKeyId == null ? Input.empty() : this.kmsKeyId;
@@ -79,7 +79,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+        private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -90,7 +90,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DomainTagArgs>> tags;
+        private final @Nullable Input<List<DomainTagArgs>> tags;
 
     public Input<List<DomainTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -250,7 +250,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public DomainArgs build() {
             return new DomainArgs(appNetworkAccessType, authMode, defaultUserSettings, domainName, kmsKeyId, subnetIds, tags, vpcId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -31,7 +31,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="numberOfPublicIPs")
-    private final @Nullable Input<Double> numberOfPublicIPs;
+        private final @Nullable Input<Double> numberOfPublicIPs;
 
     public Input<Double> getNumberOfPublicIPs() {
         return this.numberOfPublicIPs == null ? Input.empty() : this.numberOfPublicIPs;
@@ -42,7 +42,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -53,7 +53,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publicIPId")
-    private final @Nullable Input<String> publicIPId;
+        private final @Nullable Input<String> publicIPId;
 
     public Input<String> getPublicIPId() {
         return this.publicIPId == null ? Input.empty() : this.publicIPId;
@@ -64,7 +64,7 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -168,7 +168,6 @@ public final class WorkloadNetworkPublicIPArgs extends io.pulumi.resources.Resou
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public WorkloadNetworkPublicIPArgs build() {
             return new WorkloadNetworkPublicIPArgs(displayName, numberOfPublicIPs, privateCloudName, publicIPId, resourceGroupName);
         }

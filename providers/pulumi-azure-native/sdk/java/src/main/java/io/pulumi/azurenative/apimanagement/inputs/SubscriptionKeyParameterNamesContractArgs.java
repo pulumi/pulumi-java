@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="header")
-    private final @Nullable Input<String> header;
+        private final @Nullable Input<String> header;
 
     public Input<String> getHeader() {
         return this.header == null ? Input.empty() : this.header;
@@ -34,7 +34,7 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+        private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -93,7 +93,6 @@ public final class SubscriptionKeyParameterNamesContractArgs extends io.pulumi.r
             this.query = Input.ofNullable(query);
             return this;
         }
-
         public SubscriptionKeyParameterNamesContractArgs build() {
             return new SubscriptionKeyParameterNamesContractArgs(header, query);
         }

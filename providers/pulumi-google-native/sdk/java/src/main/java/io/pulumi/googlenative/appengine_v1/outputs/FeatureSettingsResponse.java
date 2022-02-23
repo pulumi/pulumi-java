@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class FeatureSettingsResponse {
             this.useContainerOptimizedOs = Objects.requireNonNull(useContainerOptimizedOs);
             return this;
         }
-
         public FeatureSettingsResponse build() {
             return new FeatureSettingsResponse(splitHealthChecks, useContainerOptimizedOs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.redis.inputs.GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 import java.lang.String;
 import java.util.List;
@@ -15,21 +15,21 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow extends i
     public static final GetInstanceMaintenancePolicyWeeklyMaintenanceWindow Empty = new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow();
 
     @InputImport(name="day", required=true)
-    private final String day;
+        private final String day;
 
     public String getDay() {
         return this.day;
     }
 
     @InputImport(name="duration", required=true)
-    private final String duration;
+        private final String duration;
 
     public String getDuration() {
         return this.duration;
     }
 
     @InputImport(name="startTimes", required=true)
-    private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
+        private final List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> startTimes;
 
     public List<GetInstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime> getStartTimes() {
         return this.startTimes;
@@ -88,7 +88,6 @@ public final class GetInstanceMaintenancePolicyWeeklyMaintenanceWindow extends i
             this.startTimes = Objects.requireNonNull(startTimes);
             return this;
         }
-
         public GetInstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new GetInstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTimes);
         }

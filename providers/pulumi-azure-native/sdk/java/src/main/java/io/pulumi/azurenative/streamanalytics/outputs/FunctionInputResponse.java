@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class FunctionInputResponse {
             this.isConfigurationParameter = isConfigurationParameter;
             return this;
         }
-
         public FunctionInputResponse build() {
             return new FunctionInputResponse(dataType, isConfigurationParameter);
         }

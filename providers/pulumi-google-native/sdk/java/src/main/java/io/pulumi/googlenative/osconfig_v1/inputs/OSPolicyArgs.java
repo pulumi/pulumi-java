@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.enums.OSPolicyMode;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceGroupArgs;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowNoResourceGroupMatch")
-    private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
+      private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
 
     public Input<Boolean> getAllowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch == null ? Input.empty() : this.allowNoResourceGroupMatch;
@@ -38,7 +38,7 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -49,7 +49,7 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+      private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -60,7 +60,7 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<OSPolicyMode> mode;
+      private final Input<OSPolicyMode> mode;
 
     public Input<OSPolicyMode> getMode() {
         return this.mode;
@@ -71,7 +71,7 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroups", required=true)
-    private final Input<List<OSPolicyResourceGroupArgs>> resourceGroups;
+      private final Input<List<OSPolicyResourceGroupArgs>> resourceGroups;
 
     public Input<List<OSPolicyResourceGroupArgs>> getResourceGroups() {
         return this.resourceGroups;
@@ -175,7 +175,6 @@ public final class OSPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroups = Input.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
-
         public OSPolicyArgs build() {
             return new OSPolicyArgs(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }

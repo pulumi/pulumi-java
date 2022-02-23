@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerClusterConnectionInfoGkeClusterReference;
 import java.lang.String;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class GameServerClusterConnectionInfo {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GameServerClusterConnectionInfo build() {
             return new GameServerClusterConnectionInfo(gkeClusterReference, namespace);
         }

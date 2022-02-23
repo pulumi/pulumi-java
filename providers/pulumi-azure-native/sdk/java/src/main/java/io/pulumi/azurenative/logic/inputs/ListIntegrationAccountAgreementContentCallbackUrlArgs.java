@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.KeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @InputImport(name="agreementName", required=true)
-    private final String agreementName;
+        private final String agreementName;
 
     public String getAgreementName() {
         return this.agreementName;
@@ -32,7 +32,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final String integrationAccountName;
+        private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -43,7 +43,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Either<String,KeyType> keyType;
+        private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
         return this.keyType == null ? null : this.keyType;
@@ -54,7 +54,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @InputImport(name="notAfter")
-    private final @Nullable String notAfter;
+        private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
@@ -65,7 +65,7 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,6 @@ public final class ListIntegrationAccountAgreementContentCallbackUrlArgs extends
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListIntegrationAccountAgreementContentCallbackUrlArgs build() {
             return new ListIntegrationAccountAgreementContentCallbackUrlArgs(agreementName, integrationAccountName, keyType, notAfter, resourceGroupName);
         }

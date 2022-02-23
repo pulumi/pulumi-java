@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.Resource;
 import java.lang.String;
 import java.util.List;
@@ -18,14 +18,14 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final OtherResourceArgs Empty = new OtherResourceArgs();
 
     @InputImport(name="bar")
-    private final @Nullable List<String> bar;
+      private final @Nullable List<String> bar;
 
     public List<String> getBar() {
         return this.bar == null ? List.of() : this.bar;
     }
 
     @InputImport(name="foo")
-    private final @Nullable Input<Resource> foo;
+      private final @Nullable Input<Resource> foo;
 
     public Input<Resource> getFoo() {
         return this.foo == null ? Input.empty() : this.foo;
@@ -79,7 +79,6 @@ public final class OtherResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.foo = Input.ofNullable(foo);
             return this;
         }
-
         public OtherResourceArgs build() {
             return new OtherResourceArgs(bar, foo);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.ManagedZonePeeringConfigTargetNetworkGetArgs;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetNetwork", required=true)
-    private final Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
+        private final Input<ManagedZonePeeringConfigTargetNetworkGetArgs> targetNetwork;
 
     public Input<ManagedZonePeeringConfigTargetNetworkGetArgs> getTargetNetwork() {
         return this.targetNetwork;
@@ -62,7 +62,6 @@ public final class ManagedZonePeeringConfigGetArgs extends io.pulumi.resources.R
             this.targetNetwork = Input.of(Objects.requireNonNull(targetNetwork));
             return this;
         }
-
         public ManagedZonePeeringConfigGetArgs build() {
             return new ManagedZonePeeringConfigGetArgs(targetNetwork);
         }

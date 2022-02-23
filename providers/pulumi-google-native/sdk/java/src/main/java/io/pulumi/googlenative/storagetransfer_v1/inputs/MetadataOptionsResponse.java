@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="acl", required=true)
-    private final String acl;
+      private final String acl;
 
     public String getAcl() {
         return this.acl;
@@ -32,7 +32,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gid", required=true)
-    private final String gid;
+      private final String gid;
 
     public String getGid() {
         return this.gid;
@@ -43,7 +43,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="kmsKey", required=true)
-    private final String kmsKey;
+      private final String kmsKey;
 
     public String getKmsKey() {
         return this.kmsKey;
@@ -54,7 +54,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -65,7 +65,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="storageClass", required=true)
-    private final String storageClass;
+      private final String storageClass;
 
     public String getStorageClass() {
         return this.storageClass;
@@ -76,7 +76,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="symlink", required=true)
-    private final String symlink;
+      private final String symlink;
 
     public String getSymlink() {
         return this.symlink;
@@ -87,7 +87,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="temporaryHold", required=true)
-    private final String temporaryHold;
+      private final String temporaryHold;
 
     public String getTemporaryHold() {
         return this.temporaryHold;
@@ -98,7 +98,7 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uid", required=true)
-    private final String uid;
+      private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -207,7 +207,6 @@ public final class MetadataOptionsResponse extends io.pulumi.resources.InvokeArg
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public MetadataOptionsResponse build() {
             return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
         }

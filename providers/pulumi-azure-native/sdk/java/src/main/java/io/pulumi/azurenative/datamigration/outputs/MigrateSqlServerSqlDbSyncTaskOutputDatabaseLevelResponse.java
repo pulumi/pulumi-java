@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -393,7 +393,6 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse {
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlDbSyncTaskOutputDatabaseLevelResponse(appliedChanges, cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, databaseName, endedOn, fullLoadCompletedTables, fullLoadErroredTables, fullLoadLoadingTables, fullLoadQueuedTables, id, incomingChanges, initializationCompleted, latency, migrationState, resultType, startedOn);
         }

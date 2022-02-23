@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -200,7 +200,6 @@ public final class MetadataOptionsResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public MetadataOptionsResponse build() {
             return new MetadataOptionsResponse(acl, gid, kmsKey, mode, storageClass, symlink, temporaryHold, uid);
         }

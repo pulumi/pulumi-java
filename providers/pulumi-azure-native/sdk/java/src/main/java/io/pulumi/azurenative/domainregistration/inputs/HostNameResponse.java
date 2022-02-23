@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="azureResourceName")
-    private final @Nullable String azureResourceName;
+        private final @Nullable String azureResourceName;
 
     public Optional<String> getAzureResourceName() {
         return this.azureResourceName == null ? Optional.empty() : Optional.ofNullable(this.azureResourceName);
@@ -35,7 +35,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="azureResourceType")
-    private final @Nullable String azureResourceType;
+        private final @Nullable String azureResourceType;
 
     public Optional<String> getAzureResourceType() {
         return this.azureResourceType == null ? Optional.empty() : Optional.ofNullable(this.azureResourceType);
@@ -46,7 +46,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customHostNameDnsRecordType")
-    private final @Nullable String customHostNameDnsRecordType;
+        private final @Nullable String customHostNameDnsRecordType;
 
     public Optional<String> getCustomHostNameDnsRecordType() {
         return this.customHostNameDnsRecordType == null ? Optional.empty() : Optional.ofNullable(this.customHostNameDnsRecordType);
@@ -57,7 +57,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostNameType")
-    private final @Nullable String hostNameType;
+        private final @Nullable String hostNameType;
 
     public Optional<String> getHostNameType() {
         return this.hostNameType == null ? Optional.empty() : Optional.ofNullable(this.hostNameType);
@@ -68,7 +68,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -79,7 +79,7 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="siteNames")
-    private final @Nullable List<String> siteNames;
+        private final @Nullable List<String> siteNames;
 
     public List<String> getSiteNames() {
         return this.siteNames == null ? List.of() : this.siteNames;
@@ -168,7 +168,6 @@ public final class HostNameResponse extends io.pulumi.resources.InvokeArgs {
             this.siteNames = siteNames;
             return this;
         }
-
         public HostNameResponse build() {
             return new HostNameResponse(azureResourceName, azureResourceType, customHostNameDnsRecordType, hostNameType, name, siteNames);
         }

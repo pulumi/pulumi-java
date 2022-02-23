@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.EdgeClusterArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.GkeClusterArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.KubernetesResourceArgs;
@@ -27,7 +27,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="edgeCluster")
-    private final @Nullable Input<EdgeClusterArgs> edgeCluster;
+      private final @Nullable Input<EdgeClusterArgs> edgeCluster;
 
     public Input<EdgeClusterArgs> getEdgeCluster() {
         return this.edgeCluster == null ? Input.empty() : this.edgeCluster;
@@ -38,7 +38,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="gkeCluster")
-    private final @Nullable Input<GkeClusterArgs> gkeCluster;
+      private final @Nullable Input<GkeClusterArgs> gkeCluster;
 
     public Input<GkeClusterArgs> getGkeCluster() {
         return this.gkeCluster == null ? Input.empty() : this.gkeCluster;
@@ -49,7 +49,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kubernetesResource")
-    private final @Nullable Input<KubernetesResourceArgs> kubernetesResource;
+      private final @Nullable Input<KubernetesResourceArgs> kubernetesResource;
 
     public Input<KubernetesResourceArgs> getKubernetesResource() {
         return this.kubernetesResource == null ? Input.empty() : this.kubernetesResource;
@@ -60,7 +60,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="multiCloudCluster")
-    private final @Nullable Input<MultiCloudClusterArgs> multiCloudCluster;
+      private final @Nullable Input<MultiCloudClusterArgs> multiCloudCluster;
 
     public Input<MultiCloudClusterArgs> getMultiCloudCluster() {
         return this.multiCloudCluster == null ? Input.empty() : this.multiCloudCluster;
@@ -71,7 +71,7 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="onPremCluster")
-    private final @Nullable Input<OnPremClusterArgs> onPremCluster;
+      private final @Nullable Input<OnPremClusterArgs> onPremCluster;
 
     public Input<OnPremClusterArgs> getOnPremCluster() {
         return this.onPremCluster == null ? Input.empty() : this.onPremCluster;
@@ -175,7 +175,6 @@ public final class MembershipEndpointArgs extends io.pulumi.resources.ResourceAr
             this.onPremCluster = Input.ofNullable(onPremCluster);
             return this;
         }
-
         public MembershipEndpointArgs build() {
             return new MembershipEndpointArgs(edgeCluster, gkeCluster, kubernetesResource, multiCloudCluster, onPremCluster);
         }

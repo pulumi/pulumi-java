@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class HttpDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="listUrl", required=true)
-    private final Input<String> listUrl;
+      private final Input<String> listUrl;
 
     public Input<String> getListUrl() {
         return this.listUrl;
@@ -65,7 +65,6 @@ public final class HttpDataArgs extends io.pulumi.resources.ResourceArgs {
             this.listUrl = Input.of(Objects.requireNonNull(listUrl));
             return this;
         }
-
         public HttpDataArgs build() {
             return new HttpDataArgs(listUrl);
         }

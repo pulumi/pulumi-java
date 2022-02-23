@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.TransitGatewayMulticastDomainAssociationArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -103,13 +103,6 @@ public class TransitGatewayMulticastDomainAssociation extends io.pulumi.resource
         return this.transitGatewayMulticastDomainId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TransitGatewayMulticastDomainAssociation(String name) {
-        super("aws-native:ec2:TransitGatewayMulticastDomainAssociation", name, TransitGatewayMulticastDomainAssociationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

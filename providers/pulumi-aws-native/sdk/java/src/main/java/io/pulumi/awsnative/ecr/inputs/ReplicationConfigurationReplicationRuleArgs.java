@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ecr.inputs;
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationReplicationDestinationArgs;
 import io.pulumi.awsnative.ecr.inputs.ReplicationConfigurationRepositoryFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
+        private final Input<List<ReplicationConfigurationReplicationDestinationArgs>> destinations;
 
     public Input<List<ReplicationConfigurationReplicationDestinationArgs>> getDestinations() {
         return this.destinations;
@@ -36,7 +36,7 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
      * 
      */
     @InputImport(name="repositoryFilters")
-    private final @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
+        private final @Nullable Input<List<ReplicationConfigurationRepositoryFilterArgs>> repositoryFilters;
 
     public Input<List<ReplicationConfigurationRepositoryFilterArgs>> getRepositoryFilters() {
         return this.repositoryFilters == null ? Input.empty() : this.repositoryFilters;
@@ -95,7 +95,6 @@ public final class ReplicationConfigurationReplicationRuleArgs extends io.pulumi
             this.repositoryFilters = Input.ofNullable(repositoryFilters);
             return this;
         }
-
         public ReplicationConfigurationReplicationRuleArgs build() {
             return new ReplicationConfigurationReplicationRuleArgs(destinations, repositoryFilters);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.networkmanagement;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkmanagement.ConnectivityTestArgs;
 import io.pulumi.gcp.networkmanagement.inputs.ConnectivityTestState;
@@ -234,13 +234,6 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
         return this.source;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ConnectivityTest(String name) {
-        super("gcp:networkmanagement/connectivityTest:ConnectivityTest", name, ConnectivityTestArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

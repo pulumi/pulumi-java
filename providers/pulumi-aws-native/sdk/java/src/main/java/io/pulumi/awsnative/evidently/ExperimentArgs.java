@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.inputs.ExperimentOnlineAbConfigObjectArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTagArgs;
 import io.pulumi.awsnative.evidently.inputs.ExperimentTreatmentObjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,49 +21,49 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
     public static final ExperimentArgs Empty = new ExperimentArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="metricGoals", required=true)
-    private final Input<List<ExperimentMetricGoalObjectArgs>> metricGoals;
+        private final Input<List<ExperimentMetricGoalObjectArgs>> metricGoals;
 
     public Input<List<ExperimentMetricGoalObjectArgs>> getMetricGoals() {
         return this.metricGoals;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="onlineAbConfig", required=true)
-    private final Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
+        private final Input<ExperimentOnlineAbConfigObjectArgs> onlineAbConfig;
 
     public Input<ExperimentOnlineAbConfigObjectArgs> getOnlineAbConfig() {
         return this.onlineAbConfig;
     }
 
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
     }
 
     @InputImport(name="randomizationSalt")
-    private final @Nullable Input<String> randomizationSalt;
+        private final @Nullable Input<String> randomizationSalt;
 
     public Input<String> getRandomizationSalt() {
         return this.randomizationSalt == null ? Input.empty() : this.randomizationSalt;
     }
 
     @InputImport(name="samplingRate")
-    private final @Nullable Input<Integer> samplingRate;
+        private final @Nullable Input<Integer> samplingRate;
 
     public Input<Integer> getSamplingRate() {
         return this.samplingRate == null ? Input.empty() : this.samplingRate;
@@ -74,14 +74,14 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ExperimentTagArgs>> tags;
+        private final @Nullable Input<List<ExperimentTagArgs>> tags;
 
     public Input<List<ExperimentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="treatments", required=true)
-    private final Input<List<ExperimentTreatmentObjectArgs>> treatments;
+        private final Input<List<ExperimentTreatmentObjectArgs>> treatments;
 
     public Input<List<ExperimentTreatmentObjectArgs>> getTreatments() {
         return this.treatments;
@@ -245,7 +245,6 @@ public final class ExperimentArgs extends io.pulumi.resources.ResourceArgs {
             this.treatments = Input.of(Objects.requireNonNull(treatments));
             return this;
         }
-
         public ExperimentArgs build() {
             return new ExperimentArgs(description, metricGoals, name, onlineAbConfig, project, randomizationSalt, samplingRate, tags, treatments);
         }

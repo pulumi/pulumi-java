@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotMessageGroupArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowInterrupt")
-    private final @Nullable Input<Boolean> allowInterrupt;
+        private final @Nullable Input<Boolean> allowInterrupt;
 
     public Input<Boolean> getAllowInterrupt() {
         return this.allowInterrupt == null ? Input.empty() : this.allowInterrupt;
     }
 
     @InputImport(name="messageGroupsList", required=true)
-    private final Input<List<BotMessageGroupArgs>> messageGroupsList;
+        private final Input<List<BotMessageGroupArgs>> messageGroupsList;
 
     public Input<List<BotMessageGroupArgs>> getMessageGroupsList() {
         return this.messageGroupsList;
@@ -91,7 +91,6 @@ public final class BotResponseSpecificationArgs extends io.pulumi.resources.Reso
             this.messageGroupsList = Input.of(Objects.requireNonNull(messageGroupsList));
             return this;
         }
-
         public BotResponseSpecificationArgs build() {
             return new BotResponseSpecificationArgs(allowInterrupt, messageGroupsList);
         }

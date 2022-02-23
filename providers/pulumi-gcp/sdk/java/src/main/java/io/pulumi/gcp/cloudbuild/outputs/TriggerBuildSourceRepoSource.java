@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -230,7 +230,6 @@ public final class TriggerBuildSourceRepoSource {
             this.tagName = tagName;
             return this;
         }
-
         public TriggerBuildSourceRepoSource build() {
             return new TriggerBuildSourceRepoSource(branchName, commitSha, dir, invertRegex, projectId, repoName, substitutions, tagName);
         }

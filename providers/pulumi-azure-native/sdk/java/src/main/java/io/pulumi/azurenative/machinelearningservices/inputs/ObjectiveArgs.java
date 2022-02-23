@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.Goal;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="goal", required=true)
-    private final Input<Either<String,Goal>> goal;
+        private final Input<Either<String,Goal>> goal;
 
     public Input<Either<String,Goal>> getGoal() {
         return this.goal;
@@ -35,7 +35,7 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryMetric", required=true)
-    private final Input<String> primaryMetric;
+        private final Input<String> primaryMetric;
 
     public Input<String> getPrimaryMetric() {
         return this.primaryMetric;
@@ -94,7 +94,6 @@ public final class ObjectiveArgs extends io.pulumi.resources.ResourceArgs {
             this.primaryMetric = Input.of(Objects.requireNonNull(primaryMetric));
             return this;
         }
-
         public ObjectiveArgs build() {
             return new ObjectiveArgs(goal, primaryMetric);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse e
      * 
      */
     @InputImport(name="postback", required=true)
-    private final String postback;
+      private final String postback;
 
     public String getPostback() {
         return this.postback;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse e
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse e
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageCardButtonResponse(postback, text);
         }

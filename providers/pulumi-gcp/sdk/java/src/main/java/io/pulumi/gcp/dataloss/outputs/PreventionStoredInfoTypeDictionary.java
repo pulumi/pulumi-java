@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeDictionaryCloudStoragePath;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeDictionaryWordList;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class PreventionStoredInfoTypeDictionary {
             this.wordList = wordList;
             return this;
         }
-
         public PreventionStoredInfoTypeDictionary build() {
             return new PreventionStoredInfoTypeDictionary(cloudStoragePath, wordList);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionActionConditionProperties;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationConditionLabelNameConditionProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="actionCondition")
-    private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
+        private final @Nullable LoggingConfigurationConditionActionConditionProperties actionCondition;
 
     public Optional<LoggingConfigurationConditionActionConditionProperties> getActionCondition() {
         return this.actionCondition == null ? Optional.empty() : Optional.ofNullable(this.actionCondition);
@@ -31,7 +31,7 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="labelNameCondition")
-    private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
+        private final @Nullable LoggingConfigurationConditionLabelNameConditionProperties labelNameCondition;
 
     public Optional<LoggingConfigurationConditionLabelNameConditionProperties> getLabelNameCondition() {
         return this.labelNameCondition == null ? Optional.empty() : Optional.ofNullable(this.labelNameCondition);
@@ -80,7 +80,6 @@ public final class LoggingConfigurationCondition extends io.pulumi.resources.Inv
             this.labelNameCondition = labelNameCondition;
             return this;
         }
-
         public LoggingConfigurationCondition build() {
             return new LoggingConfigurationCondition(actionCondition, labelNameCondition);
         }

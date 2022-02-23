@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class StorageAccountMicrosoftEndpointsResponse {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public StorageAccountMicrosoftEndpointsResponse build() {
             return new StorageAccountMicrosoftEndpointsResponse(blob, dfs, file, queue, table, web);
         }

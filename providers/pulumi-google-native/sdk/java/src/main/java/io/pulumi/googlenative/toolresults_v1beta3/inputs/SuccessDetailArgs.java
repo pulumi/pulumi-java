@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="otherNativeCrash")
-    private final @Nullable Input<Boolean> otherNativeCrash;
+      private final @Nullable Input<Boolean> otherNativeCrash;
 
     public Input<Boolean> getOtherNativeCrash() {
         return this.otherNativeCrash == null ? Input.empty() : this.otherNativeCrash;
@@ -66,7 +66,6 @@ public final class SuccessDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.otherNativeCrash = Input.ofNullable(otherNativeCrash);
             return this;
         }
-
         public SuccessDetailArgs build() {
             return new SuccessDetailArgs(otherNativeCrash);
         }

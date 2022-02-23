@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.TrafficSelectorPolicyResponse;
 import io.pulumi.azurenative.network.outputs.TunnelConnectionHealthResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkGatewayResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -654,7 +654,6 @@ public final class GetVirtualNetworkGatewayConnectionResult {
             this.virtualNetworkGateway2 = virtualNetworkGateway2;
             return this;
         }
-
         public GetVirtualNetworkGatewayConnectionResult build() {
             return new GetVirtualNetworkGatewayConnectionResult(authorizationKey, connectionMode, connectionProtocol, connectionStatus, connectionType, dpdTimeoutSeconds, egressBytesTransferred, enableBgp, etag, expressRouteGatewayBypass, id, ingressBytesTransferred, ipsecPolicies, localNetworkGateway2, location, name, peer, provisioningState, resourceGuid, routingWeight, sharedKey, tags, trafficSelectorPolicies, tunnelConnectionStatus, type, useLocalAzureIpAddress, usePolicyBasedTrafficSelectors, virtualNetworkGateway1, virtualNetworkGateway2);
         }

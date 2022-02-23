@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
      * 
      */
     @InputImport(name="enableHttpPortAccess")
-    private final @Nullable Input<Boolean> enableHttpPortAccess;
+        private final @Nullable Input<Boolean> enableHttpPortAccess;
 
     public Input<Boolean> getEnableHttpPortAccess() {
         return this.enableHttpPortAccess == null ? Input.empty() : this.enableHttpPortAccess;
@@ -33,7 +33,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
      * 
      */
     @InputImport(name="httpPorts")
-    private final @Nullable Input<Map<String,String>> httpPorts;
+        private final @Nullable Input<Map<String,String>> httpPorts;
 
     public Input<Map<String,String>> getHttpPorts() {
         return this.httpPorts == null ? Input.empty() : this.httpPorts;
@@ -92,7 +92,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGe
             this.httpPorts = Input.ofNullable(httpPorts);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs(enableHttpPortAccess, httpPorts);
         }

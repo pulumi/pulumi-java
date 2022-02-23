@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class ClusterClusterConfigGceClusterConfigShieldedInstanceConfig {
             this.enableVtpm = enableVtpm;
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfigShieldedInstanceConfig build() {
             return new ClusterClusterConfigGceClusterConfigShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

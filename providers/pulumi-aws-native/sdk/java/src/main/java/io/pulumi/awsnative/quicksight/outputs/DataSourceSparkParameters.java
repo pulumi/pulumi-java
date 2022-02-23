@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class DataSourceSparkParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceSparkParameters build() {
             return new DataSourceSparkParameters(host, port);
         }

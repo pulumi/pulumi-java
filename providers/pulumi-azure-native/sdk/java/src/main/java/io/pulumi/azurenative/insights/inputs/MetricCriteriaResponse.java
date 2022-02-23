@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.MetricDimensionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="criterionType", required=true)
-    private final String criterionType;
+        private final String criterionType;
 
     public String getCriterionType() {
         return this.criterionType;
@@ -39,7 +39,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable List<MetricDimensionResponse> dimensions;
+        private final @Nullable List<MetricDimensionResponse> dimensions;
 
     public List<MetricDimensionResponse> getDimensions() {
         return this.dimensions == null ? List.of() : this.dimensions;
@@ -50,7 +50,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final String metricName;
+        private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
@@ -61,7 +61,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="metricNamespace")
-    private final @Nullable String metricNamespace;
+        private final @Nullable String metricNamespace;
 
     public Optional<String> getMetricNamespace() {
         return this.metricNamespace == null ? Optional.empty() : Optional.ofNullable(this.metricNamespace);
@@ -72,7 +72,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -83,7 +83,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -94,7 +94,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="skipMetricValidation")
-    private final @Nullable Boolean skipMetricValidation;
+        private final @Nullable Boolean skipMetricValidation;
 
     public Optional<Boolean> getSkipMetricValidation() {
         return this.skipMetricValidation == null ? Optional.empty() : Optional.ofNullable(this.skipMetricValidation);
@@ -105,7 +105,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Double threshold;
+        private final Double threshold;
 
     public Double getThreshold() {
         return this.threshold;
@@ -116,7 +116,7 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timeAggregation", required=true)
-    private final String timeAggregation;
+        private final String timeAggregation;
 
     public String getTimeAggregation() {
         return this.timeAggregation;
@@ -235,7 +235,6 @@ public final class MetricCriteriaResponse extends io.pulumi.resources.InvokeArgs
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public MetricCriteriaResponse build() {
             return new MetricCriteriaResponse(criterionType, dimensions, metricName, metricNamespace, name, operator, skipMetricValidation, threshold, timeAggregation);
         }

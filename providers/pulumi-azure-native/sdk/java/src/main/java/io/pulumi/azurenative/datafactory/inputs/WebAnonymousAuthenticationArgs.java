@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final Input<String> authenticationType;
+        private final Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType;
@@ -35,7 +35,7 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<Object> url;
+        private final Input<Object> url;
 
     public Input<Object> getUrl() {
         return this.url;
@@ -94,7 +94,6 @@ public final class WebAnonymousAuthenticationArgs extends io.pulumi.resources.Re
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public WebAnonymousAuthenticationArgs build() {
             return new WebAnonymousAuthenticationArgs(authenticationType, url);
         }

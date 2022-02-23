@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+        private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -53,7 +53,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceTopologyName", required=true)
-    private final Input<String> serviceTopologyName;
+        private final Input<String> serviceTopologyName;
 
     public Input<String> getServiceTopologyName() {
         return this.serviceTopologyName;
@@ -64,7 +64,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -75,7 +75,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetLocation", required=true)
-    private final Input<String> targetLocation;
+        private final Input<String> targetLocation;
 
     public Input<String> getTargetLocation() {
         return this.targetLocation;
@@ -86,7 +86,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetSubscriptionId", required=true)
-    private final Input<String> targetSubscriptionId;
+        private final Input<String> targetSubscriptionId;
 
     public Input<String> getTargetSubscriptionId() {
         return this.targetSubscriptionId;
@@ -220,7 +220,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.targetSubscriptionId = Input.of(Objects.requireNonNull(targetSubscriptionId));
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(location, resourceGroupName, serviceName, serviceTopologyName, tags, targetLocation, targetSubscriptionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class CurrentSpendResponse {
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public CurrentSpendResponse build() {
             return new CurrentSpendResponse(amount, unit);
         }

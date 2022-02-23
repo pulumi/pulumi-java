@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class DocumentationRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public DocumentationRuleResponse build() {
             return new DocumentationRuleResponse(deprecationDescription, description, selector);
         }

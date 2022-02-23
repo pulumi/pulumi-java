@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -173,7 +173,6 @@ public final class SubnetworkLogConfig {
             this.metadataFields = metadataFields;
             return this;
         }
-
         public SubnetworkLogConfig build() {
             return new SubnetworkLogConfig(aggregationInterval, filterExpr, flowSampling, metadata, metadataFields);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.monitoring_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v1.DashboardArgs;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
@@ -136,13 +136,6 @@ public class Dashboard extends io.pulumi.resources.CustomResource {
         return this.rowLayout;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Dashboard(String name) {
-        super("google-native:monitoring/v1:Dashboard", name, DashboardArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

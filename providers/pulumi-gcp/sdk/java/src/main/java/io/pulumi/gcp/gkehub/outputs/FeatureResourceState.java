@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class FeatureResourceState {
             this.state = state;
             return this;
         }
-
         public FeatureResourceState build() {
             return new FeatureResourceState(hasResources, state);
         }

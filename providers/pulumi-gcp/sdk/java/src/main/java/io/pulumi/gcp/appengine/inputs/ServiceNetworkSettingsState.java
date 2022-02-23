@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsNetworkSettingsGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="networkSettings")
-    private final @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
+        private final @Nullable Input<ServiceNetworkSettingsNetworkSettingsGetArgs> networkSettings;
 
     public Input<ServiceNetworkSettingsNetworkSettingsGetArgs> getNetworkSettings() {
         return this.networkSettings == null ? Input.empty() : this.networkSettings;
@@ -33,7 +33,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -44,7 +44,7 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -118,7 +118,6 @@ public final class ServiceNetworkSettingsState extends io.pulumi.resources.Resou
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ServiceNetworkSettingsState build() {
             return new ServiceNetworkSettingsState(networkSettings, project, service);
         }

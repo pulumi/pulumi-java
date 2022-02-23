@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.GuestOSNICCustomizationResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualNetworkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -206,7 +206,6 @@ public final class VirtualNicResponse {
             this.virtualNicName = Objects.requireNonNull(virtualNicName);
             return this;
         }
-
         public VirtualNicResponse build() {
             return new VirtualNicResponse(customization, ipAddresses, macAddress, network, nicType, powerOnBoot, virtualNicId, virtualNicName);
         }

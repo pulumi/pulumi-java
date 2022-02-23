@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="entityType")
-    private final @Nullable String entityType;
+        private final @Nullable String entityType;
 
     public Optional<String> getEntityType() {
         return this.entityType == null ? Optional.empty() : Optional.ofNullable(this.entityType);
@@ -30,7 +30,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="entityTypeName")
-    private final @Nullable String entityTypeName;
+        private final @Nullable String entityTypeName;
 
     public Optional<String> getEntityTypeName() {
         return this.entityTypeName == null ? Optional.empty() : Optional.ofNullable(this.entityTypeName);
@@ -41,7 +41,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final String hubName;
+        private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -52,7 +52,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="relativePath")
-    private final @Nullable String relativePath;
+        private final @Nullable String relativePath;
 
     public Optional<String> getRelativePath() {
         return this.relativePath == null ? Optional.empty() : Optional.ofNullable(this.relativePath);
@@ -63,7 +63,7 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class GetImageUploadUrlForDataArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetImageUploadUrlForDataArgs build() {
             return new GetImageUploadUrlForDataArgs(entityType, entityTypeName, hubName, relativePath, resourceGroupName);
         }

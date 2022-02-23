@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.emrcontainers.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class VirtualClusterEksInfo {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public VirtualClusterEksInfo build() {
             return new VirtualClusterEksInfo(namespace);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -34,7 +34,7 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -83,7 +83,6 @@ public final class ModuleErrorInfoResponse extends io.pulumi.resources.InvokeArg
             this.message = message;
             return this;
         }
-
         public ModuleErrorInfoResponse build() {
             return new ModuleErrorInfoResponse(code, message);
         }

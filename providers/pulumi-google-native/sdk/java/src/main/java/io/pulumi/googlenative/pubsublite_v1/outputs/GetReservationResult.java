@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GetReservationResult {
             this.throughputCapacity = Objects.requireNonNull(throughputCapacity);
             return this;
         }
-
         public GetReservationResult build() {
             return new GetReservationResult(name, throughputCapacity);
         }

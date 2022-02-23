@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessPortRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
      * 
      */
     @InputImport(name="ports", required=true)
-    private final List<JitNetworkAccessPortRuleResponse> ports;
+        private final List<JitNetworkAccessPortRuleResponse> ports;
 
     public List<JitNetworkAccessPortRuleResponse> getPorts() {
         return this.ports;
@@ -43,7 +43,7 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
      * 
      */
     @InputImport(name="publicIpAddress")
-    private final @Nullable String publicIpAddress;
+        private final @Nullable String publicIpAddress;
 
     public Optional<String> getPublicIpAddress() {
         return this.publicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddress);
@@ -102,7 +102,6 @@ public final class JitNetworkAccessPolicyVirtualMachineResponse extends io.pulum
             this.publicIpAddress = publicIpAddress;
             return this;
         }
-
         public JitNetworkAccessPolicyVirtualMachineResponse build() {
             return new JitNetworkAccessPolicyVirtualMachineResponse(id, ports, publicIpAddress);
         }

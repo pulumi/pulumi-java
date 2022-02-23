@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 
 import io.pulumi.azurenative.powerplatform.inputs.KeyPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<KeyPropertiesArgs> key;
+        private final @Nullable Input<KeyPropertiesArgs> key;
 
     public Input<KeyPropertiesArgs> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -94,7 +94,6 @@ public final class KeyVaultPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public KeyVaultPropertiesArgs build() {
             return new KeyVaultPropertiesArgs(id, key);
         }

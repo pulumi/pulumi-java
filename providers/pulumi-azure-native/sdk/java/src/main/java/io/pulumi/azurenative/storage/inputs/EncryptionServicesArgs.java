@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.EncryptionServiceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="blob")
-    private final @Nullable Input<EncryptionServiceArgs> blob;
+        private final @Nullable Input<EncryptionServiceArgs> blob;
 
     public Input<EncryptionServiceArgs> getBlob() {
         return this.blob == null ? Input.empty() : this.blob;
@@ -34,7 +34,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<EncryptionServiceArgs> file;
+        private final @Nullable Input<EncryptionServiceArgs> file;
 
     public Input<EncryptionServiceArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -45,7 +45,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queue")
-    private final @Nullable Input<EncryptionServiceArgs> queue;
+        private final @Nullable Input<EncryptionServiceArgs> queue;
 
     public Input<EncryptionServiceArgs> getQueue() {
         return this.queue == null ? Input.empty() : this.queue;
@@ -56,7 +56,7 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<EncryptionServiceArgs> table;
+        private final @Nullable Input<EncryptionServiceArgs> table;
 
     public Input<EncryptionServiceArgs> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -145,7 +145,6 @@ public final class EncryptionServicesArgs extends io.pulumi.resources.ResourceAr
             this.table = Input.ofNullable(table);
             return this;
         }
-
         public EncryptionServicesArgs build() {
             return new EncryptionServicesArgs(blob, file, queue, table);
         }

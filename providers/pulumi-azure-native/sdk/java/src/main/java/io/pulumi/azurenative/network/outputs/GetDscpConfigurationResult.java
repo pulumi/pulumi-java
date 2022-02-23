@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.QosIpRangeResponse;
 import io.pulumi.azurenative.network.outputs.QosPortRangeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -376,7 +376,6 @@ public final class GetDscpConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDscpConfigurationResult build() {
             return new GetDscpConfigurationResult(associatedNetworkInterfaces, destinationIpRanges, destinationPortRanges, etag, id, location, markings, name, protocol, provisioningState, qosCollectionId, resourceGuid, sourceIpRanges, sourcePortRanges, tags, type);
         }

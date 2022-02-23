@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidDeviceListArgs;
 import io.pulumi.googlenative.testing_v1.inputs.AndroidMatrixArgs;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceListArgs;
@@ -25,7 +25,7 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidDeviceList")
-    private final @Nullable Input<AndroidDeviceListArgs> androidDeviceList;
+      private final @Nullable Input<AndroidDeviceListArgs> androidDeviceList;
 
     public Input<AndroidDeviceListArgs> getAndroidDeviceList() {
         return this.androidDeviceList == null ? Input.empty() : this.androidDeviceList;
@@ -36,7 +36,7 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="androidMatrix")
-    private final @Nullable Input<AndroidMatrixArgs> androidMatrix;
+      private final @Nullable Input<AndroidMatrixArgs> androidMatrix;
 
     public Input<AndroidMatrixArgs> getAndroidMatrix() {
         return this.androidMatrix == null ? Input.empty() : this.androidMatrix;
@@ -47,7 +47,7 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iosDeviceList")
-    private final @Nullable Input<IosDeviceListArgs> iosDeviceList;
+      private final @Nullable Input<IosDeviceListArgs> iosDeviceList;
 
     public Input<IosDeviceListArgs> getIosDeviceList() {
         return this.iosDeviceList == null ? Input.empty() : this.iosDeviceList;
@@ -121,7 +121,6 @@ public final class EnvironmentMatrixArgs extends io.pulumi.resources.ResourceArg
             this.iosDeviceList = Input.ofNullable(iosDeviceList);
             return this;
         }
-
         public EnvironmentMatrixArgs build() {
             return new EnvironmentMatrixArgs(androidDeviceList, androidMatrix, iosDeviceList);
         }

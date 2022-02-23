@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.AmlComputeResponseProperties;
 import io.pulumi.azurenative.machinelearningservices.inputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="computeLocation")
-    private final @Nullable String computeLocation;
+        private final @Nullable String computeLocation;
 
     public Optional<String> getComputeLocation() {
         return this.computeLocation == null ? Optional.empty() : Optional.ofNullable(this.computeLocation);
@@ -39,7 +39,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="computeType", required=true)
-    private final String computeType;
+        private final String computeType;
 
     public String getComputeType() {
         return this.computeType;
@@ -50,7 +50,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -61,7 +61,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isAttachedCompute", required=true)
-    private final Boolean isAttachedCompute;
+        private final Boolean isAttachedCompute;
 
     public Boolean getIsAttachedCompute() {
         return this.isAttachedCompute;
@@ -72,7 +72,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable AmlComputeResponseProperties properties;
+        private final @Nullable AmlComputeResponseProperties properties;
 
     public Optional<AmlComputeResponseProperties> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -83,7 +83,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningErrors", required=true)
-    private final List<MachineLearningServiceErrorResponse> provisioningErrors;
+        private final List<MachineLearningServiceErrorResponse> provisioningErrors;
 
     public List<MachineLearningServiceErrorResponse> getProvisioningErrors() {
         return this.provisioningErrors;
@@ -94,7 +94,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -105,7 +105,7 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -214,7 +214,6 @@ public final class AmlComputeResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceId = resourceId;
             return this;
         }
-
         public AmlComputeResponse build() {
             return new AmlComputeResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

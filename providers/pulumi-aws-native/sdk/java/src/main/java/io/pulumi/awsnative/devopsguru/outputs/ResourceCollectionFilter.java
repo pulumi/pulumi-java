@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.outputs;
 
 import io.pulumi.awsnative.devopsguru.outputs.ResourceCollectionCloudFormationCollectionFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class ResourceCollectionFilter {
             this.cloudFormation = cloudFormation;
             return this;
         }
-
         public ResourceCollectionFilter build() {
             return new ResourceCollectionFilter(cloudFormation);
         }

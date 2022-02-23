@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class GetAccessPointPolicyResult {
             this.policyDocument = policyDocument;
             return this;
         }
-
         public GetAccessPointPolicyResult build() {
             return new GetAccessPointPolicyResult(policyDocument);
         }

@@ -15,7 +15,7 @@ import io.pulumi.azurenative.logic.inputs.X12SchemaReferenceResponse;
 import io.pulumi.azurenative.logic.inputs.X12SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.inputs.X12ValidationOverrideResponse;
 import io.pulumi.azurenative.logic.inputs.X12ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="acknowledgementSettings", required=true)
-    private final X12AcknowledgementSettingsResponse acknowledgementSettings;
+        private final X12AcknowledgementSettingsResponse acknowledgementSettings;
 
     public X12AcknowledgementSettingsResponse getAcknowledgementSettings() {
         return this.acknowledgementSettings;
@@ -46,7 +46,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="envelopeOverrides")
-    private final @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides;
+        private final @Nullable List<X12EnvelopeOverrideResponse> envelopeOverrides;
 
     public List<X12EnvelopeOverrideResponse> getEnvelopeOverrides() {
         return this.envelopeOverrides == null ? List.of() : this.envelopeOverrides;
@@ -57,7 +57,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="envelopeSettings", required=true)
-    private final X12EnvelopeSettingsResponse envelopeSettings;
+        private final X12EnvelopeSettingsResponse envelopeSettings;
 
     public X12EnvelopeSettingsResponse getEnvelopeSettings() {
         return this.envelopeSettings;
@@ -68,7 +68,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="framingSettings", required=true)
-    private final X12FramingSettingsResponse framingSettings;
+        private final X12FramingSettingsResponse framingSettings;
 
     public X12FramingSettingsResponse getFramingSettings() {
         return this.framingSettings;
@@ -79,7 +79,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="messageFilter", required=true)
-    private final X12MessageFilterResponse messageFilter;
+        private final X12MessageFilterResponse messageFilter;
 
     public X12MessageFilterResponse getMessageFilter() {
         return this.messageFilter;
@@ -90,7 +90,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="messageFilterList")
-    private final @Nullable List<X12MessageIdentifierResponse> messageFilterList;
+        private final @Nullable List<X12MessageIdentifierResponse> messageFilterList;
 
     public List<X12MessageIdentifierResponse> getMessageFilterList() {
         return this.messageFilterList == null ? List.of() : this.messageFilterList;
@@ -101,7 +101,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="processingSettings", required=true)
-    private final X12ProcessingSettingsResponse processingSettings;
+        private final X12ProcessingSettingsResponse processingSettings;
 
     public X12ProcessingSettingsResponse getProcessingSettings() {
         return this.processingSettings;
@@ -112,7 +112,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="schemaReferences", required=true)
-    private final List<X12SchemaReferenceResponse> schemaReferences;
+        private final List<X12SchemaReferenceResponse> schemaReferences;
 
     public List<X12SchemaReferenceResponse> getSchemaReferences() {
         return this.schemaReferences;
@@ -123,7 +123,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="securitySettings", required=true)
-    private final X12SecuritySettingsResponse securitySettings;
+        private final X12SecuritySettingsResponse securitySettings;
 
     public X12SecuritySettingsResponse getSecuritySettings() {
         return this.securitySettings;
@@ -134,7 +134,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="validationOverrides")
-    private final @Nullable List<X12ValidationOverrideResponse> validationOverrides;
+        private final @Nullable List<X12ValidationOverrideResponse> validationOverrides;
 
     public List<X12ValidationOverrideResponse> getValidationOverrides() {
         return this.validationOverrides == null ? List.of() : this.validationOverrides;
@@ -145,7 +145,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="validationSettings", required=true)
-    private final X12ValidationSettingsResponse validationSettings;
+        private final X12ValidationSettingsResponse validationSettings;
 
     public X12ValidationSettingsResponse getValidationSettings() {
         return this.validationSettings;
@@ -156,7 +156,7 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="x12DelimiterOverrides")
-    private final @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
+        private final @Nullable List<X12DelimiterOverridesResponse> x12DelimiterOverrides;
 
     public List<X12DelimiterOverridesResponse> getX12DelimiterOverrides() {
         return this.x12DelimiterOverrides == null ? List.of() : this.x12DelimiterOverrides;
@@ -305,7 +305,6 @@ public final class X12ProtocolSettingsResponse extends io.pulumi.resources.Invok
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
-
         public X12ProtocolSettingsResponse build() {
             return new X12ProtocolSettingsResponse(acknowledgementSettings, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, securitySettings, validationOverrides, validationSettings, x12DelimiterOverrides);
         }

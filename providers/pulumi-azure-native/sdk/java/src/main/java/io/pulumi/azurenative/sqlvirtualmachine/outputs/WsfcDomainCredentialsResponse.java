@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class WsfcDomainCredentialsResponse {
             this.sqlServiceAccountPassword = sqlServiceAccountPassword;
             return this;
         }
-
         public WsfcDomainCredentialsResponse build() {
             return new WsfcDomainCredentialsResponse(clusterBootstrapAccountPassword, clusterOperatorAccountPassword, sqlServiceAccountPassword);
         }

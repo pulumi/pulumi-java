@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.outputs;
 
 import io.pulumi.azurenative.azurearcdata.outputs.BasicLoginInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -154,7 +154,6 @@ public final class PostgresInstancePropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PostgresInstancePropertiesResponse build() {
             return new PostgresInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate, provisioningState);
         }

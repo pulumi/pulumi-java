@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionUserConfigurationResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -375,7 +375,6 @@ public final class GetNetworkFunctionResult {
             this.vendorProvisioningState = Objects.requireNonNull(vendorProvisioningState);
             return this;
         }
-
         public GetNetworkFunctionResult build() {
             return new GetNetworkFunctionResult(device, etag, id, location, managedApplication, managedApplicationParameters, name, networkFunctionUserConfigurations, provisioningState, serviceKey, skuName, skuType, tags, type, vendorName, vendorProvisioningState);
         }

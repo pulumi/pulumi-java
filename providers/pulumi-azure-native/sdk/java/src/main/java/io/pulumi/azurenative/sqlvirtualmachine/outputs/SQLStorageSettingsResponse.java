@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class SQLStorageSettingsResponse {
             this.luns = luns;
             return this;
         }
-
         public SQLStorageSettingsResponse build() {
             return new SQLStorageSettingsResponse(defaultFilePath, luns);
         }

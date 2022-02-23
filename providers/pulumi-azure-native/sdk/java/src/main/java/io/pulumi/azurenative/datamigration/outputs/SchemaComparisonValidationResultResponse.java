@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SchemaComparisonValidationResultTypeResponse;
 import io.pulumi.azurenative.datamigration.outputs.ValidationErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -121,7 +121,6 @@ public final class SchemaComparisonValidationResultResponse {
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public SchemaComparisonValidationResultResponse build() {
             return new SchemaComparisonValidationResultResponse(schemaDifferences, sourceDatabaseObjectCount, targetDatabaseObjectCount, validationErrors);
         }

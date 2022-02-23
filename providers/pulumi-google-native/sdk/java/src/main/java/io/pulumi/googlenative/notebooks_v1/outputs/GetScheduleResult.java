@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionTemplateResponse;
 import java.lang.String;
@@ -237,7 +237,6 @@ public final class GetScheduleResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetScheduleResult build() {
             return new GetScheduleResult(createTime, cronSchedule, description, displayName, executionTemplate, name, recentExecutions, state, timeZone, updateTime);
         }

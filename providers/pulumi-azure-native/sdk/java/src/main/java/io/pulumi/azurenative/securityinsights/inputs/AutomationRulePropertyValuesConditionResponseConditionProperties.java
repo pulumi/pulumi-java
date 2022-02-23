@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable String operator;
+        private final @Nullable String operator;
 
     public Optional<String> getOperator() {
         return this.operator == null ? Optional.empty() : Optional.ofNullable(this.operator);
@@ -35,7 +35,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * 
      */
     @InputImport(name="propertyName")
-    private final @Nullable String propertyName;
+        private final @Nullable String propertyName;
 
     public Optional<String> getPropertyName() {
         return this.propertyName == null ? Optional.empty() : Optional.ofNullable(this.propertyName);
@@ -46,7 +46,7 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
      * 
      */
     @InputImport(name="propertyValues")
-    private final @Nullable List<String> propertyValues;
+        private final @Nullable List<String> propertyValues;
 
     public List<String> getPropertyValues() {
         return this.propertyValues == null ? List.of() : this.propertyValues;
@@ -105,7 +105,6 @@ public final class AutomationRulePropertyValuesConditionResponseConditionPropert
             this.propertyValues = propertyValues;
             return this;
         }
-
         public AutomationRulePropertyValuesConditionResponseConditionProperties build() {
             return new AutomationRulePropertyValuesConditionResponseConditionProperties(operator, propertyName, propertyValues);
         }

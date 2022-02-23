@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
     public static final NodePoolNodeConfigWorkloadMetadataConfigArgs Empty = new NodePoolNodeConfigWorkloadMetadataConfigArgs();
 
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+        private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -57,7 +57,6 @@ public final class NodePoolNodeConfigWorkloadMetadataConfigArgs extends io.pulum
             this.mode = Input.of(Objects.requireNonNull(mode));
             return this;
         }
-
         public NodePoolNodeConfigWorkloadMetadataConfigArgs build() {
             return new NodePoolNodeConfigWorkloadMetadataConfigArgs(mode);
         }

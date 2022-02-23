@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class DeliverInfoResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public DeliverInfoResponse build() {
             return new DeliverInfoResponse(resourceUri, target);
         }

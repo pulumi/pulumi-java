@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consumerKey")
-    private final @Nullable Input<String> consumerKey;
+        private final @Nullable Input<String> consumerKey;
 
     public Input<String> getConsumerKey() {
         return this.consumerKey == null ? Input.empty() : this.consumerKey;
@@ -37,7 +37,7 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consumerSecretSettingName")
-    private final @Nullable Input<String> consumerSecretSettingName;
+        private final @Nullable Input<String> consumerSecretSettingName;
 
     public Input<String> getConsumerSecretSettingName() {
         return this.consumerSecretSettingName == null ? Input.empty() : this.consumerSecretSettingName;
@@ -96,7 +96,6 @@ public final class TwitterRegistrationArgs extends io.pulumi.resources.ResourceA
             this.consumerSecretSettingName = Input.ofNullable(consumerSecretSettingName);
             return this;
         }
-
         public TwitterRegistrationArgs build() {
             return new TwitterRegistrationArgs(consumerKey, consumerSecretSettingName);
         }

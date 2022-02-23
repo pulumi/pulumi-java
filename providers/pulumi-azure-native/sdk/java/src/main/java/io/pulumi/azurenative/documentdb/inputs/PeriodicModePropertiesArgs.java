@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupIntervalInMinutes")
-    private final @Nullable Input<Integer> backupIntervalInMinutes;
+        private final @Nullable Input<Integer> backupIntervalInMinutes;
 
     public Input<Integer> getBackupIntervalInMinutes() {
         return this.backupIntervalInMinutes == null ? Input.empty() : this.backupIntervalInMinutes;
@@ -34,7 +34,7 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="backupRetentionIntervalInHours")
-    private final @Nullable Input<Integer> backupRetentionIntervalInHours;
+        private final @Nullable Input<Integer> backupRetentionIntervalInHours;
 
     public Input<Integer> getBackupRetentionIntervalInHours() {
         return this.backupRetentionIntervalInHours == null ? Input.empty() : this.backupRetentionIntervalInHours;
@@ -93,7 +93,6 @@ public final class PeriodicModePropertiesArgs extends io.pulumi.resources.Resour
             this.backupRetentionIntervalInHours = Input.ofNullable(backupRetentionIntervalInHours);
             return this;
         }
-
         public PeriodicModePropertiesArgs build() {
             return new PeriodicModePropertiesArgs(backupIntervalInMinutes, backupRetentionIntervalInHours);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationErrorResponse;
 import io.pulumi.googlenative.deploymentmanager_v2.outputs.OperationWarningsItemResponse;
 import java.lang.Integer;
@@ -498,7 +498,6 @@ public final class OperationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public OperationResponse build() {
             return new OperationResponse(clientOperationId, description, endTime, error, httpErrorMessage, httpErrorStatusCode, insertTime, kind, name, operationGroupId, operationType, progress, region, selfLink, startTime, status, statusMessage, targetId, targetLink, user, warnings, zone);
         }

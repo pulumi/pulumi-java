@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expires")
-    private final @Nullable Input<Integer> expires;
+        private final @Nullable Input<Integer> expires;
 
     public Input<Integer> getExpires() {
         return this.expires == null ? Input.empty() : this.expires;
@@ -46,7 +46,7 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notBefore")
-    private final @Nullable Input<Integer> notBefore;
+        private final @Nullable Input<Integer> notBefore;
 
     public Input<Integer> getNotBefore() {
         return this.notBefore == null ? Input.empty() : this.notBefore;
@@ -120,7 +120,6 @@ public final class SecretAttributesArgs extends io.pulumi.resources.ResourceArgs
             this.notBefore = Input.ofNullable(notBefore);
             return this;
         }
-
         public SecretAttributesArgs build() {
             return new SecretAttributesArgs(enabled, expires, notBefore);
         }

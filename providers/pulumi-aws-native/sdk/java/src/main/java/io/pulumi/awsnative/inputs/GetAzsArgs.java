@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,7 +15,7 @@ public final class GetAzsArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAzsArgs Empty = new GetAzsArgs();
 
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -53,7 +53,6 @@ public final class GetAzsArgs extends io.pulumi.resources.InvokeArgs {
             this.region = region;
             return this;
         }
-
         public GetAzsArgs build() {
             return new GetAzsArgs(region);
         }

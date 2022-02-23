@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.SecretResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keytab", required=true)
-    private final SecretResponse keytab;
+      private final SecretResponse keytab;
 
     public SecretResponse getKeytab() {
         return this.keytab;
@@ -33,7 +33,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="krb5ConfigGcsUri", required=true)
-    private final String krb5ConfigGcsUri;
+      private final String krb5ConfigGcsUri;
 
     public String getKrb5ConfigGcsUri() {
         return this.krb5ConfigGcsUri;
@@ -44,7 +44,7 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="principal", required=true)
-    private final String principal;
+      private final String principal;
 
     public String getPrincipal() {
         return this.principal;
@@ -103,7 +103,6 @@ public final class KerberosConfigResponse extends io.pulumi.resources.InvokeArgs
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public KerberosConfigResponse build() {
             return new KerberosConfigResponse(keytab, krb5ConfigGcsUri, principal);
         }

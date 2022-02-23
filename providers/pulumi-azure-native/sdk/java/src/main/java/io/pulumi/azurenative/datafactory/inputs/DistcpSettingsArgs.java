@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distcpOptions")
-    private final @Nullable Input<Object> distcpOptions;
+        private final @Nullable Input<Object> distcpOptions;
 
     public Input<Object> getDistcpOptions() {
         return this.distcpOptions == null ? Input.empty() : this.distcpOptions;
@@ -34,7 +34,7 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceManagerEndpoint", required=true)
-    private final Input<Object> resourceManagerEndpoint;
+        private final Input<Object> resourceManagerEndpoint;
 
     public Input<Object> getResourceManagerEndpoint() {
         return this.resourceManagerEndpoint;
@@ -45,7 +45,7 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempScriptPath", required=true)
-    private final Input<Object> tempScriptPath;
+        private final Input<Object> tempScriptPath;
 
     public Input<Object> getTempScriptPath() {
         return this.tempScriptPath;
@@ -119,7 +119,6 @@ public final class DistcpSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.tempScriptPath = Input.of(Objects.requireNonNull(tempScriptPath));
             return this;
         }
-
         public DistcpSettingsArgs build() {
             return new DistcpSettingsArgs(distcpOptions, resourceManagerEndpoint, tempScriptPath);
         }

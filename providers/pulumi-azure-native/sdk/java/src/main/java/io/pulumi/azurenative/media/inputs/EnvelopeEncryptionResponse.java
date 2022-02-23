@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.inputs.TrackSelectionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clearTracks")
-    private final @Nullable List<TrackSelectionResponse> clearTracks;
+        private final @Nullable List<TrackSelectionResponse> clearTracks;
 
     public List<TrackSelectionResponse> getClearTracks() {
         return this.clearTracks == null ? List.of() : this.clearTracks;
@@ -38,7 +38,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="contentKeys")
-    private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
+        private final @Nullable StreamingPolicyContentKeysResponse contentKeys;
 
     public Optional<StreamingPolicyContentKeysResponse> getContentKeys() {
         return this.contentKeys == null ? Optional.empty() : Optional.ofNullable(this.contentKeys);
@@ -49,7 +49,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="customKeyAcquisitionUrlTemplate")
-    private final @Nullable String customKeyAcquisitionUrlTemplate;
+        private final @Nullable String customKeyAcquisitionUrlTemplate;
 
     public Optional<String> getCustomKeyAcquisitionUrlTemplate() {
         return this.customKeyAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customKeyAcquisitionUrlTemplate);
@@ -60,7 +60,7 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable EnabledProtocolsResponse enabledProtocols;
+        private final @Nullable EnabledProtocolsResponse enabledProtocols;
 
     public Optional<EnabledProtocolsResponse> getEnabledProtocols() {
         return this.enabledProtocols == null ? Optional.empty() : Optional.ofNullable(this.enabledProtocols);
@@ -129,7 +129,6 @@ public final class EnvelopeEncryptionResponse extends io.pulumi.resources.Invoke
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public EnvelopeEncryptionResponse build() {
             return new EnvelopeEncryptionResponse(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);
         }

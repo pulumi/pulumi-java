@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.FileContentBufferResponse;
 import java.util.List;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class InitialStateConfigResponse {
             this.pk = Objects.requireNonNull(pk);
             return this;
         }
-
         public InitialStateConfigResponse build() {
             return new InitialStateConfigResponse(dbs, dbxs, keks, pk);
         }

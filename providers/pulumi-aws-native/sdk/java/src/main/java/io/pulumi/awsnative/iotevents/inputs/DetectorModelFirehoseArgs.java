@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelPayloadArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deliveryStreamName", required=true)
-    private final Input<String> deliveryStreamName;
+        private final Input<String> deliveryStreamName;
 
     public Input<String> getDeliveryStreamName() {
         return this.deliveryStreamName;
     }
 
     @InputImport(name="payload")
-    private final @Nullable Input<DetectorModelPayloadArgs> payload;
+        private final @Nullable Input<DetectorModelPayloadArgs> payload;
 
     public Input<DetectorModelPayloadArgs> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -42,7 +42,7 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="separator")
-    private final @Nullable Input<String> separator;
+        private final @Nullable Input<String> separator;
 
     public Input<String> getSeparator() {
         return this.separator == null ? Input.empty() : this.separator;
@@ -116,7 +116,6 @@ public final class DetectorModelFirehoseArgs extends io.pulumi.resources.Resourc
             this.separator = Input.ofNullable(separator);
             return this;
         }
-
         public DetectorModelFirehoseArgs build() {
             return new DetectorModelFirehoseArgs(deliveryStreamName, payload, separator);
         }

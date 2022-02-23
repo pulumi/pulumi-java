@@ -15,7 +15,7 @@ import io.pulumi.azurenative.logic.outputs.X12SchemaReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.X12SecuritySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.X12ValidationOverrideResponse;
 import io.pulumi.azurenative.logic.outputs.X12ValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -297,7 +297,6 @@ public final class X12ProtocolSettingsResponse {
             this.x12DelimiterOverrides = x12DelimiterOverrides;
             return this;
         }
-
         public X12ProtocolSettingsResponse build() {
             return new X12ProtocolSettingsResponse(acknowledgementSettings, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, securitySettings, validationOverrides, validationSettings, x12DelimiterOverrides);
         }

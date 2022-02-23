@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NodePlacementConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable String policy;
+        private final @Nullable String policy;
 
     public Optional<String> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -61,7 +61,6 @@ public final class NodePlacementConfigurationResponse extends io.pulumi.resource
             this.policy = policy;
             return this;
         }
-
         public NodePlacementConfigurationResponse build() {
             return new NodePlacementConfigurationResponse(policy);
         }

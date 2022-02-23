@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
     public static final DistributionLambdaFunctionAssociationArgs Empty = new DistributionLambdaFunctionAssociationArgs();
 
     @InputImport(name="eventType")
-    private final @Nullable Input<String> eventType;
+        private final @Nullable Input<String> eventType;
 
     public Input<String> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
     }
 
     @InputImport(name="includeBody")
-    private final @Nullable Input<Boolean> includeBody;
+        private final @Nullable Input<Boolean> includeBody;
 
     public Input<Boolean> getIncludeBody() {
         return this.includeBody == null ? Input.empty() : this.includeBody;
     }
 
     @InputImport(name="lambdaFunctionARN")
-    private final @Nullable Input<String> lambdaFunctionARN;
+        private final @Nullable Input<String> lambdaFunctionARN;
 
     public Input<String> getLambdaFunctionARN() {
         return this.lambdaFunctionARN == null ? Input.empty() : this.lambdaFunctionARN;
@@ -104,7 +104,6 @@ public final class DistributionLambdaFunctionAssociationArgs extends io.pulumi.r
             this.lambdaFunctionARN = Input.ofNullable(lambdaFunctionARN);
             return this;
         }
-
         public DistributionLambdaFunctionAssociationArgs build() {
             return new DistributionLambdaFunctionAssociationArgs(eventType, includeBody, lambdaFunctionARN);
         }

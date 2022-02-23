@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigSchedulerGetArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWebServerGetArgs;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigWorkloadsConfigWorkerGetArgs;
@@ -17,21 +17,21 @@ public final class EnvironmentConfigWorkloadsConfigGetArgs extends io.pulumi.res
     public static final EnvironmentConfigWorkloadsConfigGetArgs Empty = new EnvironmentConfigWorkloadsConfigGetArgs();
 
     @InputImport(name="scheduler")
-    private final @Nullable Input<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler;
+        private final @Nullable Input<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> scheduler;
 
     public Input<EnvironmentConfigWorkloadsConfigSchedulerGetArgs> getScheduler() {
         return this.scheduler == null ? Input.empty() : this.scheduler;
     }
 
     @InputImport(name="webServer")
-    private final @Nullable Input<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer;
+        private final @Nullable Input<EnvironmentConfigWorkloadsConfigWebServerGetArgs> webServer;
 
     public Input<EnvironmentConfigWorkloadsConfigWebServerGetArgs> getWebServer() {
         return this.webServer == null ? Input.empty() : this.webServer;
     }
 
     @InputImport(name="worker")
-    private final @Nullable Input<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker;
+        private final @Nullable Input<EnvironmentConfigWorkloadsConfigWorkerGetArgs> worker;
 
     public Input<EnvironmentConfigWorkloadsConfigWorkerGetArgs> getWorker() {
         return this.worker == null ? Input.empty() : this.worker;
@@ -105,7 +105,6 @@ public final class EnvironmentConfigWorkloadsConfigGetArgs extends io.pulumi.res
             this.worker = Input.ofNullable(worker);
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigGetArgs build() {
             return new EnvironmentConfigWorkloadsConfigGetArgs(scheduler, webServer, worker);
         }

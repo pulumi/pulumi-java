@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="httpHeader")
-    private final @Nullable Input<String> httpHeader;
+      private final @Nullable Input<String> httpHeader;
 
     public Input<String> getHttpHeader() {
         return this.httpHeader == null ? Input.empty() : this.httpHeader;
@@ -34,7 +34,7 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="urlQueryParameter")
-    private final @Nullable Input<String> urlQueryParameter;
+      private final @Nullable Input<String> urlQueryParameter;
 
     public Input<String> getUrlQueryParameter() {
         return this.urlQueryParameter == null ? Input.empty() : this.urlQueryParameter;
@@ -119,7 +119,6 @@ public final class SystemParameterArgs extends io.pulumi.resources.ResourceArgs 
             this.urlQueryParameter = Input.ofNullable(urlQueryParameter);
             return this;
         }
-
         public SystemParameterArgs build() {
             return new SystemParameterArgs(httpHeader, name, urlQueryParameter);
         }

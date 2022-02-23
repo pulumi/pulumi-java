@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobS3LocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
     public static final JobDatabaseTableOutputOptionsArgs Empty = new JobDatabaseTableOutputOptionsArgs();
 
     @InputImport(name="tableName", required=true)
-    private final Input<String> tableName;
+        private final Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName;
     }
 
     @InputImport(name="tempDirectory")
-    private final @Nullable Input<JobS3LocationArgs> tempDirectory;
+        private final @Nullable Input<JobS3LocationArgs> tempDirectory;
 
     public Input<JobS3LocationArgs> getTempDirectory() {
         return this.tempDirectory == null ? Input.empty() : this.tempDirectory;
@@ -82,7 +82,6 @@ public final class JobDatabaseTableOutputOptionsArgs extends io.pulumi.resources
             this.tempDirectory = Input.ofNullable(tempDirectory);
             return this;
         }
-
         public JobDatabaseTableOutputOptionsArgs build() {
             return new JobDatabaseTableOutputOptionsArgs(tableName, tempDirectory);
         }

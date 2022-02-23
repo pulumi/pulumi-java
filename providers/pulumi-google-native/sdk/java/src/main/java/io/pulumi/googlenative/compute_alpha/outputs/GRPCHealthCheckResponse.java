@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GRPCHealthCheckResponse {
             this.portSpecification = Objects.requireNonNull(portSpecification);
             return this;
         }
-
         public GRPCHealthCheckResponse build() {
             return new GRPCHealthCheckResponse(grpcServiceName, port, portName, portSpecification);
         }

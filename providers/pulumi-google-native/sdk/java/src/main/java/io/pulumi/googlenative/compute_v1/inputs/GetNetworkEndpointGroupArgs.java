@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
     public static final GetNetworkEndpointGroupArgs Empty = new GetNetworkEndpointGroupArgs();
 
     @InputImport(name="networkEndpointGroup", required=true)
-    private final String networkEndpointGroup;
+      private final String networkEndpointGroup;
 
     public String getNetworkEndpointGroup() {
         return this.networkEndpointGroup;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -88,7 +88,6 @@ public final class GetNetworkEndpointGroupArgs extends io.pulumi.resources.Invok
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetNetworkEndpointGroupArgs build() {
             return new GetNetworkEndpointGroupArgs(networkEndpointGroup, project, zone);
         }

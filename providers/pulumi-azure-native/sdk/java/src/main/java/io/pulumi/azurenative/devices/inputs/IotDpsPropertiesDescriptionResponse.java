@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.inputs.IotHubDefinitionDescriptionResponse;
 import io.pulumi.azurenative.devices.inputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.inputs.SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse;
 import io.pulumi.azurenative.devices.inputs.TargetIpFilterRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allocationPolicy")
-    private final @Nullable String allocationPolicy;
+        private final @Nullable String allocationPolicy;
 
     public Optional<String> getAllocationPolicy() {
         return this.allocationPolicy == null ? Optional.empty() : Optional.ofNullable(this.allocationPolicy);
@@ -39,7 +39,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="authorizationPolicies")
-    private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
+        private final @Nullable List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> authorizationPolicies;
 
     public List<SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse> getAuthorizationPolicies() {
         return this.authorizationPolicies == null ? List.of() : this.authorizationPolicies;
@@ -50,7 +50,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="deviceProvisioningHostName", required=true)
-    private final String deviceProvisioningHostName;
+        private final String deviceProvisioningHostName;
 
     public String getDeviceProvisioningHostName() {
         return this.deviceProvisioningHostName;
@@ -61,7 +61,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="idScope", required=true)
-    private final String idScope;
+        private final String idScope;
 
     public String getIdScope() {
         return this.idScope;
@@ -72,7 +72,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="iotHubs")
-    private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
+        private final @Nullable List<IotHubDefinitionDescriptionResponse> iotHubs;
 
     public List<IotHubDefinitionDescriptionResponse> getIotHubs() {
         return this.iotHubs == null ? List.of() : this.iotHubs;
@@ -83,7 +83,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ipFilterRules")
-    private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
+        private final @Nullable List<TargetIpFilterRuleResponse> ipFilterRules;
 
     public List<TargetIpFilterRuleResponse> getIpFilterRules() {
         return this.ipFilterRules == null ? List.of() : this.ipFilterRules;
@@ -94,7 +94,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateEndpointConnections")
-    private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
+        private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
     public List<PrivateEndpointConnectionResponse> getPrivateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
@@ -105,7 +105,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -116,7 +116,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable String publicNetworkAccess;
+        private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
@@ -127,7 +127,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceOperationsHostName", required=true)
-    private final String serviceOperationsHostName;
+        private final String serviceOperationsHostName;
 
     public String getServiceOperationsHostName() {
         return this.serviceOperationsHostName;
@@ -138,7 +138,7 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -277,7 +277,6 @@ public final class IotDpsPropertiesDescriptionResponse extends io.pulumi.resourc
             this.state = state;
             return this;
         }
-
         public IotDpsPropertiesDescriptionResponse build() {
             return new IotDpsPropertiesDescriptionResponse(allocationPolicy, authorizationPolicies, deviceProvisioningHostName, idScope, iotHubs, ipFilterRules, privateEndpointConnections, provisioningState, publicNetworkAccess, serviceOperationsHostName, state);
         }

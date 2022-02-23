@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class TopicRuleStepFunctionsAction {
             this.stateMachineName = Objects.requireNonNull(stateMachineName);
             return this;
         }
-
         public TopicRuleStepFunctionsAction build() {
             return new TopicRuleStepFunctionsAction(executionNamePrefix, roleArn, stateMachineName);
         }

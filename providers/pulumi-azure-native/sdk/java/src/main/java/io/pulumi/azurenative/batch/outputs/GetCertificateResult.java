@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.DeleteCertificateErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -284,7 +284,6 @@ public final class GetCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(deleteCertificateError, etag, format, id, name, previousProvisioningState, previousProvisioningStateTransitionTime, provisioningState, provisioningStateTransitionTime, publicData, thumbprint, thumbprintAlgorithm, type);
         }

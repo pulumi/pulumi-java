@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.RestorePointSourceMetadataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="consistencyMode", required=true)
-    private final String consistencyMode;
+        private final String consistencyMode;
 
     public String getConsistencyMode() {
         return this.consistencyMode;
@@ -37,7 +37,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="excludeDisks")
-    private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
+        private final @Nullable List<ApiEntityReferenceResponse> excludeDisks;
 
     public List<ApiEntityReferenceResponse> getExcludeDisks() {
         return this.excludeDisks == null ? List.of() : this.excludeDisks;
@@ -48,7 +48,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -59,7 +59,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -81,7 +81,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceMetadata", required=true)
-    private final RestorePointSourceMetadataResponse sourceMetadata;
+        private final RestorePointSourceMetadataResponse sourceMetadata;
 
     public RestorePointSourceMetadataResponse getSourceMetadata() {
         return this.sourceMetadata;
@@ -92,7 +92,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeCreated")
-    private final @Nullable String timeCreated;
+        private final @Nullable String timeCreated;
 
     public Optional<String> getTimeCreated() {
         return this.timeCreated == null ? Optional.empty() : Optional.ofNullable(this.timeCreated);
@@ -103,7 +103,7 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -212,7 +212,6 @@ public final class RestorePointResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RestorePointResponse build() {
             return new RestorePointResponse(consistencyMode, excludeDisks, id, name, provisioningState, sourceMetadata, timeCreated, type);
         }

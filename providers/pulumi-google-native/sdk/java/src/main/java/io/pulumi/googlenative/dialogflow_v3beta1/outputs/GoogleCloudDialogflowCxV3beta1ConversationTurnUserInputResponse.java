@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1QueryInputResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputRespon
             this.isWebhookEnabled = Objects.requireNonNull(isWebhookEnabled);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ConversationTurnUserInputResponse(enableSentimentAnalysis, injectedParameters, input, isWebhookEnabled);
         }

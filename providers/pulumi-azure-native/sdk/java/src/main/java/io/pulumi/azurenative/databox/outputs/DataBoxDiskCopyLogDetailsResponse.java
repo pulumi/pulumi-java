@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -118,7 +118,6 @@ public final class DataBoxDiskCopyLogDetailsResponse {
             this.verboseLogLink = Objects.requireNonNull(verboseLogLink);
             return this;
         }
-
         public DataBoxDiskCopyLogDetailsResponse build() {
             return new DataBoxDiskCopyLogDetailsResponse(copyLogDetailsType, diskSerialNumber, errorLogLink, verboseLogLink);
         }

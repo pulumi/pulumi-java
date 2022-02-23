@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final Input<List<String>> destinations;
+        private final Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations;
@@ -36,7 +36,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="disable")
-    private final @Nullable Input<Boolean> disable;
+        private final @Nullable Input<Boolean> disable;
 
     public Input<Boolean> getDisable() {
         return this.disable == null ? Input.empty() : this.disable;
@@ -47,7 +47,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sources", required=true)
-    private final Input<List<String>> sources;
+        private final Input<List<String>> sources;
 
     public Input<List<String>> getSources() {
         return this.sources;
@@ -69,7 +69,7 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="testConfigurations", required=true)
-    private final Input<List<String>> testConfigurations;
+        private final Input<List<String>> testConfigurations;
 
     public Input<List<String>> getTestConfigurations() {
         return this.testConfigurations;
@@ -173,7 +173,6 @@ public final class ConnectionMonitorTestGroupArgs extends io.pulumi.resources.Re
             this.testConfigurations = Input.of(Objects.requireNonNull(testConfigurations));
             return this;
         }
-
         public ConnectionMonitorTestGroupArgs build() {
             return new ConnectionMonitorTestGroupArgs(destinations, disable, name, sources, testConfigurations);
         }

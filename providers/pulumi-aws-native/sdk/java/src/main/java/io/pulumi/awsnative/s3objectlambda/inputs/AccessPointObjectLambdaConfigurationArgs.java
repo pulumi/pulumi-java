@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3objectlambda.inputs;
 
 import io.pulumi.awsnative.s3objectlambda.inputs.AccessPointTransformationConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,28 +22,28 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
     public static final AccessPointObjectLambdaConfigurationArgs Empty = new AccessPointObjectLambdaConfigurationArgs();
 
     @InputImport(name="allowedFeatures")
-    private final @Nullable Input<List<String>> allowedFeatures;
+        private final @Nullable Input<List<String>> allowedFeatures;
 
     public Input<List<String>> getAllowedFeatures() {
         return this.allowedFeatures == null ? Input.empty() : this.allowedFeatures;
     }
 
     @InputImport(name="cloudWatchMetricsEnabled")
-    private final @Nullable Input<Boolean> cloudWatchMetricsEnabled;
+        private final @Nullable Input<Boolean> cloudWatchMetricsEnabled;
 
     public Input<Boolean> getCloudWatchMetricsEnabled() {
         return this.cloudWatchMetricsEnabled == null ? Input.empty() : this.cloudWatchMetricsEnabled;
     }
 
     @InputImport(name="supportingAccessPoint", required=true)
-    private final Input<String> supportingAccessPoint;
+        private final Input<String> supportingAccessPoint;
 
     public Input<String> getSupportingAccessPoint() {
         return this.supportingAccessPoint;
     }
 
     @InputImport(name="transformationConfigurations", required=true)
-    private final Input<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
+        private final Input<List<AccessPointTransformationConfigurationArgs>> transformationConfigurations;
 
     public Input<List<AccessPointTransformationConfigurationArgs>> getTransformationConfigurations() {
         return this.transformationConfigurations;
@@ -132,7 +132,6 @@ public final class AccessPointObjectLambdaConfigurationArgs extends io.pulumi.re
             this.transformationConfigurations = Input.of(Objects.requireNonNull(transformationConfigurations));
             return this;
         }
-
         public AccessPointObjectLambdaConfigurationArgs build() {
             return new AccessPointObjectLambdaConfigurationArgs(allowedFeatures, cloudWatchMetricsEnabled, supportingAccessPoint, transformationConfigurations);
         }

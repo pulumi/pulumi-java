@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteV2Response;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class VirtualHubRouteTableV2Response {
             this.routes = routes;
             return this;
         }
-
         public VirtualHubRouteTableV2Response build() {
             return new VirtualHubRouteTableV2Response(attachedConnections, etag, id, name, provisioningState, routes);
         }

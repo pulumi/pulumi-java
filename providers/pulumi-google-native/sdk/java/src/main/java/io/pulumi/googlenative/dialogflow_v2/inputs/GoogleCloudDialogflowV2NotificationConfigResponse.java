@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends io.
      * 
      */
     @InputImport(name="messageFormat", required=true)
-    private final String messageFormat;
+      private final String messageFormat;
 
     public String getMessageFormat() {
         return this.messageFormat;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends io.
      * 
      */
     @InputImport(name="topic", required=true)
-    private final String topic;
+      private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse extends io.
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GoogleCloudDialogflowV2NotificationConfigResponse build() {
             return new GoogleCloudDialogflowV2NotificationConfigResponse(messageFormat, topic);
         }

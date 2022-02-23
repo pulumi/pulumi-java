@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.EndpointResponse;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.ReachabilityDetailsResponse;
 import java.lang.String;
@@ -267,7 +267,6 @@ public final class GetConnectivityTestResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectivityTestResult build() {
             return new GetConnectivityTestResult(createTime, description, destination, displayName, labels, name, protocol, reachabilityDetails, relatedProjects, source, updateTime);
         }

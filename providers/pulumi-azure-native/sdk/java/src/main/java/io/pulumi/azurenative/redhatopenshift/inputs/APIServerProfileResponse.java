@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable String ip;
+        private final @Nullable String ip;
 
     public Optional<String> getIp() {
         return this.ip == null ? Optional.empty() : Optional.ofNullable(this.ip);
@@ -34,7 +34,7 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -45,7 +45,7 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable String visibility;
+        private final @Nullable String visibility;
 
     public Optional<String> getVisibility() {
         return this.visibility == null ? Optional.empty() : Optional.ofNullable(this.visibility);
@@ -104,7 +104,6 @@ public final class APIServerProfileResponse extends io.pulumi.resources.InvokeAr
             this.visibility = visibility;
             return this;
         }
-
         public APIServerProfileResponse build() {
             return new APIServerProfileResponse(ip, url, visibility);
         }

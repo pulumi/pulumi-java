@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class ListDomainSharedAccessKeysResult {
             this.key2 = key2;
             return this;
         }
-
         public ListDomainSharedAccessKeysResult build() {
             return new ListDomainSharedAccessKeysResult(key1, key2);
         }

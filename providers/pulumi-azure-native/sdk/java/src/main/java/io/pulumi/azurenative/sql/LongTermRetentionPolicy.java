@@ -8,8 +8,8 @@ import io.pulumi.azurenative.sql.LongTermRetentionPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -117,13 +117,6 @@ public class LongTermRetentionPolicy extends io.pulumi.resources.CustomResource 
         return this.yearlyRetention;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LongTermRetentionPolicy(String name) {
-        super("azure-native:sql:LongTermRetentionPolicy", name, LongTermRetentionPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

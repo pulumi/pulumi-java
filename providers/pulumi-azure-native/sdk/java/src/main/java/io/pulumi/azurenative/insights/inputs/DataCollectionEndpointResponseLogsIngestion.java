@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataCollectionEndpointResponseLogsIngestion extends io.pulumi
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+        private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -59,7 +59,6 @@ public final class DataCollectionEndpointResponseLogsIngestion extends io.pulumi
             this.endpoint = Objects.requireNonNull(endpoint);
             return this;
         }
-
         public DataCollectionEndpointResponseLogsIngestion build() {
             return new DataCollectionEndpointResponseLogsIngestion(endpoint);
         }

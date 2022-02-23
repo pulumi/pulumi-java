@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.LocalDiskResponse;
@@ -355,7 +355,6 @@ public final class VirtualMachineConfigResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public VirtualMachineConfigResponse build() {
             return new VirtualMachineConfigResponse(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }

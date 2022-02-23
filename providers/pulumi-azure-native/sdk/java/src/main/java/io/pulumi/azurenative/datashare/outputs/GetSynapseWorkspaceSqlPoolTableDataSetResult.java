@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -182,7 +182,6 @@ public final class GetSynapseWorkspaceSqlPoolTableDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSynapseWorkspaceSqlPoolTableDataSetResult build() {
             return new GetSynapseWorkspaceSqlPoolTableDataSetResult(dataSetId, id, kind, name, synapseWorkspaceSqlPoolTableResourceId, systemData, type);
         }

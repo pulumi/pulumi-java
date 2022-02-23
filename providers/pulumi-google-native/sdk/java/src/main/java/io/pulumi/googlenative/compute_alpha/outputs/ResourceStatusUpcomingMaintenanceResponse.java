@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ResourceStatusUpcomingMaintenanceResponse {
             this.canReschedule = Objects.requireNonNull(canReschedule);
             return this;
         }
-
         public ResourceStatusUpcomingMaintenanceResponse build() {
             return new ResourceStatusUpcomingMaintenanceResponse(canReschedule);
         }

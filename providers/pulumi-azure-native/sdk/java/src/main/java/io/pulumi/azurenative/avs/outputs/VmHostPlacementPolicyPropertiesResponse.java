@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -184,7 +184,6 @@ public final class VmHostPlacementPolicyPropertiesResponse {
             this.vmMembers = Objects.requireNonNull(vmMembers);
             return this;
         }
-
         public VmHostPlacementPolicyPropertiesResponse build() {
             return new VmHostPlacementPolicyPropertiesResponse(affinityType, displayName, hostMembers, provisioningState, state, type, vmMembers);
         }

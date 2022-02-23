@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable String defaultValue;
+        private final @Nullable String defaultValue;
 
     public Optional<String> getDefaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
@@ -36,7 +36,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="required")
-    private final @Nullable Boolean required;
+        private final @Nullable Boolean required;
 
     public Optional<Boolean> getRequired() {
         return this.required == null ? Optional.empty() : Optional.ofNullable(this.required);
@@ -69,7 +69,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -80,7 +80,7 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="values")
-    private final @Nullable List<String> values;
+        private final @Nullable List<String> values;
 
     public List<String> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -169,7 +169,6 @@ public final class ParameterContractResponse extends io.pulumi.resources.InvokeA
             this.values = values;
             return this;
         }
-
         public ParameterContractResponse build() {
             return new ParameterContractResponse(defaultValue, description, name, required, type, values);
         }

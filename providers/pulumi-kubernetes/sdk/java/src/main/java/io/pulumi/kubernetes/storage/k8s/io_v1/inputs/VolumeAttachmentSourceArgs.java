@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PersistentVolumeSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inlineVolumeSpec")
-    private final @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec;
+        private final @Nullable Input<PersistentVolumeSpecArgs> inlineVolumeSpec;
 
     public Input<PersistentVolumeSpecArgs> getInlineVolumeSpec() {
         return this.inlineVolumeSpec == null ? Input.empty() : this.inlineVolumeSpec;
@@ -35,7 +35,7 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="persistentVolumeName")
-    private final @Nullable Input<String> persistentVolumeName;
+        private final @Nullable Input<String> persistentVolumeName;
 
     public Input<String> getPersistentVolumeName() {
         return this.persistentVolumeName == null ? Input.empty() : this.persistentVolumeName;
@@ -94,7 +94,6 @@ public final class VolumeAttachmentSourceArgs extends io.pulumi.resources.Resour
             this.persistentVolumeName = Input.ofNullable(persistentVolumeName);
             return this;
         }
-
         public VolumeAttachmentSourceArgs build() {
             return new VolumeAttachmentSourceArgs(inlineVolumeSpec, persistentVolumeName);
         }

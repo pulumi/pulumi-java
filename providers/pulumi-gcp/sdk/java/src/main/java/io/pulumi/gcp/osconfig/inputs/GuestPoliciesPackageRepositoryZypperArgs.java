@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GuestPoliciesPackageRepositoryZypperArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="baseUrl", required=true)
-    private final Input<String> baseUrl;
+        private final Input<String> baseUrl;
 
     public Input<String> getBaseUrl() {
         return this.baseUrl;
@@ -31,7 +31,7 @@ public final class GuestPoliciesPackageRepositoryZypperArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -42,7 +42,7 @@ public final class GuestPoliciesPackageRepositoryZypperArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="gpgKeys")
-    private final @Nullable Input<List<String>> gpgKeys;
+        private final @Nullable Input<List<String>> gpgKeys;
 
     public Input<List<String>> getGpgKeys() {
         return this.gpgKeys == null ? Input.empty() : this.gpgKeys;
@@ -54,7 +54,7 @@ public final class GuestPoliciesPackageRepositoryZypperArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -143,7 +143,6 @@ public final class GuestPoliciesPackageRepositoryZypperArgs extends io.pulumi.re
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public GuestPoliciesPackageRepositoryZypperArgs build() {
             return new GuestPoliciesPackageRepositoryZypperArgs(baseUrl, displayName, gpgKeys, id);
         }

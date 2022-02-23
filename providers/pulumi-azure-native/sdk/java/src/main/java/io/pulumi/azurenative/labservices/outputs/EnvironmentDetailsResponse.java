@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.outputs.VirtualMachineDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -223,7 +223,6 @@ public final class EnvironmentDetailsResponse {
             this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
             return this;
         }
-
         public EnvironmentDetailsResponse build() {
             return new EnvironmentDetailsResponse(description, environmentState, id, latestOperationResult, name, passwordLastReset, provisioningState, totalUsage, virtualMachineDetails);
         }

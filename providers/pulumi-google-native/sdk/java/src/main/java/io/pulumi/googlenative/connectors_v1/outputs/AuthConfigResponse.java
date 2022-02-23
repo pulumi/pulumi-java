@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.Oauth2ClientCredentialsResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.Oauth2JwtBearerResponse;
@@ -142,7 +142,6 @@ public final class AuthConfigResponse {
             this.userPassword = Objects.requireNonNull(userPassword);
             return this;
         }
-
         public AuthConfigResponse build() {
             return new AuthConfigResponse(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }

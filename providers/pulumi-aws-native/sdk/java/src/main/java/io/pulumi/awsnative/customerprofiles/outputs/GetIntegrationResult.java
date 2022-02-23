@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationObjectTypeMapping;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class GetIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetIntegrationResult build() {
             return new GetIntegrationResult(createdAt, lastUpdatedAt, objectTypeName, objectTypeNames, tags);
         }

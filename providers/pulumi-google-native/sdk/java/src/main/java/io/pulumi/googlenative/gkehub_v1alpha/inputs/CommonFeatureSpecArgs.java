@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.AppDevExperienceFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.CloudAuditLoggingFeatureSpecArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.MultiClusterIngressFeatureSpecArgs;
@@ -25,7 +25,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appdevexperience")
-    private final @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
+      private final @Nullable Input<AppDevExperienceFeatureSpecArgs> appdevexperience;
 
     public Input<AppDevExperienceFeatureSpecArgs> getAppdevexperience() {
         return this.appdevexperience == null ? Input.empty() : this.appdevexperience;
@@ -36,7 +36,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudauditlogging")
-    private final @Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
+      private final @Nullable Input<CloudAuditLoggingFeatureSpecArgs> cloudauditlogging;
 
     public Input<CloudAuditLoggingFeatureSpecArgs> getCloudauditlogging() {
         return this.cloudauditlogging == null ? Input.empty() : this.cloudauditlogging;
@@ -47,7 +47,7 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiclusteringress")
-    private final @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
+      private final @Nullable Input<MultiClusterIngressFeatureSpecArgs> multiclusteringress;
 
     public Input<MultiClusterIngressFeatureSpecArgs> getMulticlusteringress() {
         return this.multiclusteringress == null ? Input.empty() : this.multiclusteringress;
@@ -121,7 +121,6 @@ public final class CommonFeatureSpecArgs extends io.pulumi.resources.ResourceArg
             this.multiclusteringress = Input.ofNullable(multiclusteringress);
             return this;
         }
-
         public CommonFeatureSpecArgs build() {
             return new CommonFeatureSpecArgs(appdevexperience, cloudauditlogging, multiclusteringress);
         }

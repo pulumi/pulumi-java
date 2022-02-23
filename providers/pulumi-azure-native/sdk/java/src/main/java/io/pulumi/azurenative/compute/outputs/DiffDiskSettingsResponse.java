@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class DiffDiskSettingsResponse {
             this.placement = placement;
             return this;
         }
-
         public DiffDiskSettingsResponse build() {
             return new DiffDiskSettingsResponse(option, placement);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class VirtualDiskResponse {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
         }
-
         public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerId, independenceMode, totalSize, virtualDiskId, virtualDiskName);
         }

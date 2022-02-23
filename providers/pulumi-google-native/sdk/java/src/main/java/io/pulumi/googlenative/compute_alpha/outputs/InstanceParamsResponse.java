@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class InstanceParamsResponse {
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }
-
         public InstanceParamsResponse build() {
             return new InstanceParamsResponse(resourceManagerTags);
         }

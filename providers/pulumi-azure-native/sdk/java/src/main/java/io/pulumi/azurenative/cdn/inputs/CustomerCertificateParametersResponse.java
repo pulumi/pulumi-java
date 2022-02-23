@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="certificateAuthority")
-    private final @Nullable String certificateAuthority;
+        private final @Nullable String certificateAuthority;
 
     public Optional<String> getCertificateAuthority() {
         return this.certificateAuthority == null ? Optional.empty() : Optional.ofNullable(this.certificateAuthority);
@@ -37,7 +37,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="secretSource", required=true)
-    private final ResourceReferenceResponse secretSource;
+        private final ResourceReferenceResponse secretSource;
 
     public ResourceReferenceResponse getSecretSource() {
         return this.secretSource;
@@ -48,7 +48,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable String secretVersion;
+        private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
@@ -59,7 +59,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="subjectAlternativeNames")
-    private final @Nullable List<String> subjectAlternativeNames;
+        private final @Nullable List<String> subjectAlternativeNames;
 
     public List<String> getSubjectAlternativeNames() {
         return this.subjectAlternativeNames == null ? List.of() : this.subjectAlternativeNames;
@@ -71,7 +71,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,7 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="useLatestVersion")
-    private final @Nullable Boolean useLatestVersion;
+        private final @Nullable Boolean useLatestVersion;
 
     public Optional<Boolean> getUseLatestVersion() {
         return this.useLatestVersion == null ? Optional.empty() : Optional.ofNullable(this.useLatestVersion);
@@ -171,7 +171,6 @@ public final class CustomerCertificateParametersResponse extends io.pulumi.resou
             this.useLatestVersion = useLatestVersion;
             return this;
         }
-
         public CustomerCertificateParametersResponse build() {
             return new CustomerCertificateParametersResponse(certificateAuthority, secretSource, secretVersion, subjectAlternativeNames, type, useLatestVersion);
         }

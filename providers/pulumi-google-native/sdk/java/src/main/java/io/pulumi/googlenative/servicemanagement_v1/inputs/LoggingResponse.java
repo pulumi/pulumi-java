@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LoggingDestinationResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LoggingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="consumerDestinations", required=true)
-    private final List<LoggingDestinationResponse> consumerDestinations;
+      private final List<LoggingDestinationResponse> consumerDestinations;
 
     public List<LoggingDestinationResponse> getConsumerDestinations() {
         return this.consumerDestinations;
@@ -33,7 +33,7 @@ public final class LoggingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="producerDestinations", required=true)
-    private final List<LoggingDestinationResponse> producerDestinations;
+      private final List<LoggingDestinationResponse> producerDestinations;
 
     public List<LoggingDestinationResponse> getProducerDestinations() {
         return this.producerDestinations;
@@ -82,7 +82,6 @@ public final class LoggingResponse extends io.pulumi.resources.InvokeArgs {
             this.producerDestinations = Objects.requireNonNull(producerDestinations);
             return this;
         }
-
         public LoggingResponse build() {
             return new LoggingResponse(consumerDestinations, producerDestinations);
         }

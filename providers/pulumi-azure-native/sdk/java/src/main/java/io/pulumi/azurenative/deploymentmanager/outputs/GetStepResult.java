@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 import io.pulumi.azurenative.deploymentmanager.outputs.HealthCheckStepPropertiesResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.WaitStepPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -163,7 +163,6 @@ public final class GetStepResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStepResult build() {
             return new GetStepResult(id, location, name, properties, tags, type);
         }

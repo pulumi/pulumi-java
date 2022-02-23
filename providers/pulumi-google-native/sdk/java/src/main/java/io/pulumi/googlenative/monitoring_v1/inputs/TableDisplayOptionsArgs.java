@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="shownColumns")
-    private final @Nullable Input<List<String>> shownColumns;
+      private final @Nullable Input<List<String>> shownColumns;
 
     public Input<List<String>> getShownColumns() {
         return this.shownColumns == null ? Input.empty() : this.shownColumns;
@@ -67,7 +67,6 @@ public final class TableDisplayOptionsArgs extends io.pulumi.resources.ResourceA
             this.shownColumns = Input.ofNullable(shownColumns);
             return this;
         }
-
         public TableDisplayOptionsArgs build() {
             return new TableDisplayOptionsArgs(shownColumns);
         }

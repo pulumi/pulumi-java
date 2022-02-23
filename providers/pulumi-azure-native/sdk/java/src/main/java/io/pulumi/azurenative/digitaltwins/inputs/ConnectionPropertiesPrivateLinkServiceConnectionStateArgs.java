@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * 
      */
     @InputImport(name="actionsRequired")
-    private final @Nullable Input<String> actionsRequired;
+        private final @Nullable Input<String> actionsRequired;
 
     public Input<String> getActionsRequired() {
         return this.actionsRequired == null ? Input.empty() : this.actionsRequired;
@@ -32,7 +32,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -43,7 +43,7 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,PrivateLinkServiceConnectionStatus>> status;
+        private final Input<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
     public Input<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {
         return this.status;
@@ -117,7 +117,6 @@ public final class ConnectionPropertiesPrivateLinkServiceConnectionStateArgs ext
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public ConnectionPropertiesPrivateLinkServiceConnectionStateArgs build() {
             return new ConnectionPropertiesPrivateLinkServiceConnectionStateArgs(actionsRequired, description, status);
         }

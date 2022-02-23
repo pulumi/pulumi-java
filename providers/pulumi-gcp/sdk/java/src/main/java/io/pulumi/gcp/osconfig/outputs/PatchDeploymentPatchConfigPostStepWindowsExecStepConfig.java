@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObject;
 import java.lang.Integer;
 import java.lang.String;
@@ -127,7 +127,6 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfig {
             this.localPath = localPath;
             return this;
         }
-
         public PatchDeploymentPatchConfigPostStepWindowsExecStepConfig build() {
             return new PatchDeploymentPatchConfigPostStepWindowsExecStepConfig(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

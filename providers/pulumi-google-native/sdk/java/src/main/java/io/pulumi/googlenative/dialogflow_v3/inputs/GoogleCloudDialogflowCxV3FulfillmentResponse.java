@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageResponse;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * 
      */
     @InputImport(name="conditionalCases", required=true)
-    private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
+      private final List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> conditionalCases;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentConditionalCasesResponse> getConditionalCases() {
         return this.conditionalCases;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * 
      */
     @InputImport(name="messages", required=true)
-    private final List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
+      private final List<GoogleCloudDialogflowCxV3ResponseMessageResponse> messages;
 
     public List<GoogleCloudDialogflowCxV3ResponseMessageResponse> getMessages() {
         return this.messages;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * 
      */
     @InputImport(name="returnPartialResponses", required=true)
-    private final Boolean returnPartialResponses;
+      private final Boolean returnPartialResponses;
 
     public Boolean getReturnPartialResponses() {
         return this.returnPartialResponses;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * 
      */
     @InputImport(name="setParameterActions", required=true)
-    private final List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
+      private final List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> setParameterActions;
 
     public List<GoogleCloudDialogflowCxV3FulfillmentSetParameterActionResponse> getSetParameterActions() {
         return this.setParameterActions;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
      * 
      */
     @InputImport(name="webhook", required=true)
-    private final String webhook;
+      private final String webhook;
 
     public String getWebhook() {
         return this.webhook;
@@ -170,7 +170,6 @@ public final class GoogleCloudDialogflowCxV3FulfillmentResponse extends io.pulum
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FulfillmentResponse build() {
             return new GoogleCloudDialogflowCxV3FulfillmentResponse(conditionalCases, messages, returnPartialResponses, setParameterActions, tag, webhook);
         }

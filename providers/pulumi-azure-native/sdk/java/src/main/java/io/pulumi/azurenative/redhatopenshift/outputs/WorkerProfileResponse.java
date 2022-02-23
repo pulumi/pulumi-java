@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class WorkerProfileResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public WorkerProfileResponse build() {
             return new WorkerProfileResponse(count, diskSizeGB, name, subnetId, vmSize);
         }

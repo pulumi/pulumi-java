@@ -9,8 +9,8 @@ import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetResource;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -96,13 +96,6 @@ public class ResourceSet extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ResourceSet(String name) {
-        super("aws-native:route53recoveryreadiness:ResourceSet", name, ResourceSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

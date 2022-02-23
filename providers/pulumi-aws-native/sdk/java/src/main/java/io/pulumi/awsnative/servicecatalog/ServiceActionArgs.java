@@ -7,7 +7,7 @@ import io.pulumi.awsnative.servicecatalog.enums.ServiceActionAcceptLanguage;
 import io.pulumi.awsnative.servicecatalog.enums.ServiceActionDefinitionType;
 import io.pulumi.awsnative.servicecatalog.inputs.ServiceActionDefinitionParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,35 +19,35 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServiceActionArgs Empty = new ServiceActionArgs();
 
     @InputImport(name="acceptLanguage")
-    private final @Nullable Input<ServiceActionAcceptLanguage> acceptLanguage;
+        private final @Nullable Input<ServiceActionAcceptLanguage> acceptLanguage;
 
     public Input<ServiceActionAcceptLanguage> getAcceptLanguage() {
         return this.acceptLanguage == null ? Input.empty() : this.acceptLanguage;
     }
 
     @InputImport(name="definition", required=true)
-    private final Input<List<ServiceActionDefinitionParameterArgs>> definition;
+        private final Input<List<ServiceActionDefinitionParameterArgs>> definition;
 
     public Input<List<ServiceActionDefinitionParameterArgs>> getDefinition() {
         return this.definition;
     }
 
     @InputImport(name="definitionType", required=true)
-    private final Input<ServiceActionDefinitionType> definitionType;
+        private final Input<ServiceActionDefinitionType> definitionType;
 
     public Input<ServiceActionDefinitionType> getDefinitionType() {
         return this.definitionType;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -151,7 +151,6 @@ public final class ServiceActionArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ServiceActionArgs build() {
             return new ServiceActionArgs(acceptLanguage, definition, definitionType, description, name);
         }

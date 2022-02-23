@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
+      private final @Nullable Input<GoogleMonitoringV3RangeArgs> range;
 
     public Input<GoogleMonitoringV3RangeArgs> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -35,7 +35,7 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeries")
-    private final @Nullable Input<String> timeSeries;
+      private final @Nullable Input<String> timeSeries;
 
     public Input<String> getTimeSeries() {
         return this.timeSeries == null ? Input.empty() : this.timeSeries;
@@ -94,7 +94,6 @@ public final class MetricRangeArgs extends io.pulumi.resources.ResourceArgs {
             this.timeSeries = Input.ofNullable(timeSeries);
             return this;
         }
-
         public MetricRangeArgs build() {
             return new MetricRangeArgs(range, timeSeries);
         }

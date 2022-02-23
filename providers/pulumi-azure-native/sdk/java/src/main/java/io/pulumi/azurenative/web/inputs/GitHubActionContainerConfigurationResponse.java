@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable String imageName;
+        private final @Nullable String imageName;
 
     public Optional<String> getImageName() {
         return this.imageName == null ? Optional.empty() : Optional.ofNullable(this.imageName);
@@ -34,7 +34,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -45,7 +45,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="serverUrl")
-    private final @Nullable String serverUrl;
+        private final @Nullable String serverUrl;
 
     public Optional<String> getServerUrl() {
         return this.serverUrl == null ? Optional.empty() : Optional.ofNullable(this.serverUrl);
@@ -56,7 +56,7 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
      * 
      */
     @InputImport(name="username")
-    private final @Nullable String username;
+        private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -125,7 +125,6 @@ public final class GitHubActionContainerConfigurationResponse extends io.pulumi.
             this.username = username;
             return this;
         }
-
         public GitHubActionContainerConfigurationResponse build() {
             return new GitHubActionContainerConfigurationResponse(imageName, password, serverUrl, username);
         }

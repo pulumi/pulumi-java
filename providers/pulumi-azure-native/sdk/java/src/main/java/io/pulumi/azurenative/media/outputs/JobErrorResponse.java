@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JobErrorDetailResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -139,7 +139,6 @@ public final class JobErrorResponse {
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public JobErrorResponse build() {
             return new JobErrorResponse(category, code, details, message, retry);
         }

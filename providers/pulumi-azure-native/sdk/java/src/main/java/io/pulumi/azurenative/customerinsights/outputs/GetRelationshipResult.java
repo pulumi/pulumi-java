@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.PropertyDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipTypeMappingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -353,7 +353,6 @@ public final class GetRelationshipResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRelationshipResult build() {
             return new GetRelationshipResult(cardinality, description, displayName, expiryDateTimeUtc, fields, id, lookupMappings, name, profileType, provisioningState, relatedProfileType, relationshipGuidId, relationshipName, tenantId, type);
         }

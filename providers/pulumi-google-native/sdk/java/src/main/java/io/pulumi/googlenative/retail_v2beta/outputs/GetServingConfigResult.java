@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaSearchRequestDynamicFacetSpecResponse;
 import java.lang.String;
 import java.util.List;
@@ -391,7 +391,6 @@ public final class GetServingConfigResult {
             this.twowaySynonymsControlIds = Objects.requireNonNull(twowaySynonymsControlIds);
             return this;
         }
-
         public GetServingConfigResult build() {
             return new GetServingConfigResult(boostControlIds, displayName, diversityLevel, doNotAssociateControlIds, dynamicFacetSpec, enableCategoryFilterLevel, facetControlIds, filterControlIds, ignoreControlIds, modelId, name, onewaySynonymsControlIds, priceRerankingLevel, redirectControlIds, replacementControlIds, solutionTypes, twowaySynonymsControlIds);
         }

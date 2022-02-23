@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FileReferenceResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolExitCodeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.ToolOutputReferenceResponse;
@@ -25,7 +25,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="commandLineArguments", required=true)
-    private final List<String> commandLineArguments;
+      private final List<String> commandLineArguments;
 
     public List<String> getCommandLineArguments() {
         return this.commandLineArguments;
@@ -36,7 +36,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="exitCode", required=true)
-    private final ToolExitCodeResponse exitCode;
+      private final ToolExitCodeResponse exitCode;
 
     public ToolExitCodeResponse getExitCode() {
         return this.exitCode;
@@ -47,7 +47,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="toolLogs", required=true)
-    private final List<FileReferenceResponse> toolLogs;
+      private final List<FileReferenceResponse> toolLogs;
 
     public List<FileReferenceResponse> getToolLogs() {
         return this.toolLogs;
@@ -58,7 +58,7 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="toolOutputs", required=true)
-    private final List<ToolOutputReferenceResponse> toolOutputs;
+      private final List<ToolOutputReferenceResponse> toolOutputs;
 
     public List<ToolOutputReferenceResponse> getToolOutputs() {
         return this.toolOutputs;
@@ -127,7 +127,6 @@ public final class ToolExecutionResponse extends io.pulumi.resources.InvokeArgs 
             this.toolOutputs = Objects.requireNonNull(toolOutputs);
             return this;
         }
-
         public ToolExecutionResponse build() {
             return new ToolExecutionResponse(commandLineArguments, exitCode, toolLogs, toolOutputs);
         }

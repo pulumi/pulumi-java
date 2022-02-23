@@ -10,7 +10,7 @@ import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointDashPackage;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointHlsPackage;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointMssPackage;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -318,7 +318,6 @@ public final class GetOriginEndpointResult {
             this.whitelist = whitelist;
             return this;
         }
-
         public GetOriginEndpointResult build() {
             return new GetOriginEndpointResult(arn, authorization, channelId, cmafPackage, dashPackage, description, hlsPackage, manifestName, mssPackage, origination, startoverWindowSeconds, tags, timeDelaySeconds, url, whitelist);
         }

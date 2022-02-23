@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxHeavySecretResponse;
 import io.pulumi.azurenative.databox.outputs.DcAccessSecurityCodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -122,7 +122,6 @@ public final class DataBoxHeavyJobSecretsResponse {
             this.jobSecretsType = Objects.requireNonNull(jobSecretsType);
             return this;
         }
-
         public DataBoxHeavyJobSecretsResponse build() {
             return new DataBoxHeavyJobSecretsResponse(cabinetPodSecrets, dcAccessSecurityCode, error, jobSecretsType);
         }

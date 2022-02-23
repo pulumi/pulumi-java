@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class DiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(mountPoint, name, readOnly, sizeGb, source, type);
         }

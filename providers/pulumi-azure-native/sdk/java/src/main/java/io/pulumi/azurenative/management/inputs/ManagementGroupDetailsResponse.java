@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.ManagementGroupPathElementResponse;
 import io.pulumi.azurenative.management.inputs.ParentGroupInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable ParentGroupInfoResponse parent;
+        private final @Nullable ParentGroupInfoResponse parent;
 
     public Optional<ParentGroupInfoResponse> getParent() {
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
@@ -38,7 +38,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="path")
-    private final @Nullable List<ManagementGroupPathElementResponse> path;
+        private final @Nullable List<ManagementGroupPathElementResponse> path;
 
     public List<ManagementGroupPathElementResponse> getPath() {
         return this.path == null ? List.of() : this.path;
@@ -49,7 +49,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="updatedBy")
-    private final @Nullable String updatedBy;
+        private final @Nullable String updatedBy;
 
     public Optional<String> getUpdatedBy() {
         return this.updatedBy == null ? Optional.empty() : Optional.ofNullable(this.updatedBy);
@@ -60,7 +60,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="updatedTime")
-    private final @Nullable String updatedTime;
+        private final @Nullable String updatedTime;
 
     public Optional<String> getUpdatedTime() {
         return this.updatedTime == null ? Optional.empty() : Optional.ofNullable(this.updatedTime);
@@ -71,7 +71,7 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Double version;
+        private final @Nullable Double version;
 
     public Optional<Double> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -150,7 +150,6 @@ public final class ManagementGroupDetailsResponse extends io.pulumi.resources.In
             this.version = version;
             return this;
         }
-
         public ManagementGroupDetailsResponse build() {
             return new ManagementGroupDetailsResponse(parent, path, updatedBy, updatedTime, version);
         }

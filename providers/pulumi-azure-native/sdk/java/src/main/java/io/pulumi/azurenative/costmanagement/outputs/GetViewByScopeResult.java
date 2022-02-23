@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.outputs.KpiPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.PivotPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportConfigTimePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -439,7 +439,6 @@ public final class GetViewByScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetViewByScopeResult build() {
             return new GetViewByScopeResult(accumulated, chart, createdOn, currency, dataSet, dateRange, displayName, eTag, id, includeMonetaryCommitment, kpis, metric, modifiedOn, name, pivots, scope, timePeriod, timeframe, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="slotMs", required=true)
-    private final String slotMs;
+      private final String slotMs;
 
     public String getSlotMs() {
         return this.slotMs;
@@ -77,7 +77,6 @@ public final class JobStatisticsReservationUsageItemResponse extends io.pulumi.r
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }
-
         public JobStatisticsReservationUsageItemResponse build() {
             return new JobStatisticsReservationUsageItemResponse(name, slotMs);
         }

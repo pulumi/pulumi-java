@@ -5,8 +5,8 @@ package io.pulumi.gcp.datastore;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datastore.DataStoreIndexArgs;
 import io.pulumi.gcp.datastore.inputs.DataStoreIndexState;
@@ -130,13 +130,6 @@ public class DataStoreIndex extends io.pulumi.resources.CustomResource {
         return this.properties;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DataStoreIndex(String name) {
-        super("gcp:datastore/dataStoreIndex:DataStoreIndex", name, DataStoreIndexArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

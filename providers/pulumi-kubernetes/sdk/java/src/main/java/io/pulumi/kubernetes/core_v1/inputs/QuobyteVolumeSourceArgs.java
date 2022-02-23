@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<String> group;
+        private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -35,7 +35,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -46,7 +46,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="registry", required=true)
-    private final Input<String> registry;
+        private final Input<String> registry;
 
     public Input<String> getRegistry() {
         return this.registry;
@@ -57,7 +57,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Input<String> tenant;
+        private final @Nullable Input<String> tenant;
 
     public Input<String> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -68,7 +68,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+        private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -79,7 +79,7 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="volume", required=true)
-    private final Input<String> volume;
+        private final Input<String> volume;
 
     public Input<String> getVolume() {
         return this.volume;
@@ -198,7 +198,6 @@ public final class QuobyteVolumeSourceArgs extends io.pulumi.resources.ResourceA
             this.volume = Input.of(Objects.requireNonNull(volume));
             return this;
         }
-
         public QuobyteVolumeSourceArgs build() {
             return new QuobyteVolumeSourceArgs(group, readOnly, registry, tenant, user, volume);
         }

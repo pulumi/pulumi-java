@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.BasicLevelArgs;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.inputs.CustomLevelArgs;
 import java.lang.String;
@@ -17,7 +17,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
     public static final AccessLevelArgs Empty = new AccessLevelArgs();
 
     @InputImport(name="accessPolicyId", required=true)
-    private final Input<String> accessPolicyId;
+      private final Input<String> accessPolicyId;
 
     public Input<String> getAccessPolicyId() {
         return this.accessPolicyId;
@@ -28,7 +28,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="basic")
-    private final @Nullable Input<BasicLevelArgs> basic;
+      private final @Nullable Input<BasicLevelArgs> basic;
 
     public Input<BasicLevelArgs> getBasic() {
         return this.basic == null ? Input.empty() : this.basic;
@@ -39,7 +39,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-    private final @Nullable Input<CustomLevelArgs> custom;
+      private final @Nullable Input<CustomLevelArgs> custom;
 
     public Input<CustomLevelArgs> getCustom() {
         return this.custom == null ? Input.empty() : this.custom;
@@ -50,7 +50,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -72,7 +72,7 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -191,7 +191,6 @@ public final class AccessLevelArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public AccessLevelArgs build() {
             return new AccessLevelArgs(accessPolicyId, basic, custom, description, name, title);
         }

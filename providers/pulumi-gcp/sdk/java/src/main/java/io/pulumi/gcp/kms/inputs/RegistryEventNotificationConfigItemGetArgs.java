@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
     public static final RegistryEventNotificationConfigItemGetArgs Empty = new RegistryEventNotificationConfigItemGetArgs();
 
     @InputImport(name="pubsubTopicName", required=true)
-    private final Input<String> pubsubTopicName;
+        private final Input<String> pubsubTopicName;
 
     public Input<String> getPubsubTopicName() {
         return this.pubsubTopicName;
     }
 
     @InputImport(name="subfolderMatches")
-    private final @Nullable Input<String> subfolderMatches;
+        private final @Nullable Input<String> subfolderMatches;
 
     public Input<String> getSubfolderMatches() {
         return this.subfolderMatches == null ? Input.empty() : this.subfolderMatches;
@@ -81,7 +81,6 @@ public final class RegistryEventNotificationConfigItemGetArgs extends io.pulumi.
             this.subfolderMatches = Input.ofNullable(subfolderMatches);
             return this;
         }
-
         public RegistryEventNotificationConfigItemGetArgs build() {
             return new RegistryEventNotificationConfigItemGetArgs(pubsubTopicName, subfolderMatches);
         }

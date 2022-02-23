@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ShardingOptionResponse;
@@ -225,7 +225,6 @@ public final class AndroidInstrumentationTestResponse {
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
         public AndroidInstrumentationTestResponse build() {
             return new AndroidInstrumentationTestResponse(appApk, appBundle, appPackageId, orchestratorOption, shardingOption, testApk, testPackageId, testRunnerClass, testTargets);
         }

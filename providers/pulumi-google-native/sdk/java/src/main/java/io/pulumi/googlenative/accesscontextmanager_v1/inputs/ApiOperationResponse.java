@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.MethodSelectorResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="methodSelectors", required=true)
-    private final List<MethodSelectorResponse> methodSelectors;
+      private final List<MethodSelectorResponse> methodSelectors;
 
     public List<MethodSelectorResponse> getMethodSelectors() {
         return this.methodSelectors;
@@ -34,7 +34,7 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+      private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -83,7 +83,6 @@ public final class ApiOperationResponse extends io.pulumi.resources.InvokeArgs {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ApiOperationResponse build() {
             return new ApiOperationResponse(methodSelectors, serviceName);
         }

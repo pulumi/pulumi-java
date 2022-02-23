@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class HttpRetryPolicyResponse {
             this.retryConditions = Objects.requireNonNull(retryConditions);
             return this;
         }
-
         public HttpRetryPolicyResponse build() {
             return new HttpRetryPolicyResponse(numRetries, perTryTimeout, retryConditions);
         }

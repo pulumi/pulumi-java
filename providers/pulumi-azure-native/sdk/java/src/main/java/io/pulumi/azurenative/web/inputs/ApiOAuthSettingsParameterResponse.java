@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Object options;
+        private final @Nullable Object options;
 
     public Optional<Object> getOptions() {
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
@@ -35,7 +35,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="uiDefinition")
-    private final @Nullable Object uiDefinition;
+        private final @Nullable Object uiDefinition;
 
     public Optional<Object> getUiDefinition() {
         return this.uiDefinition == null ? Optional.empty() : Optional.ofNullable(this.uiDefinition);
@@ -46,7 +46,7 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -105,7 +105,6 @@ public final class ApiOAuthSettingsParameterResponse extends io.pulumi.resources
             this.value = value;
             return this;
         }
-
         public ApiOAuthSettingsParameterResponse build() {
             return new ApiOAuthSettingsParameterResponse(options, uiDefinition, value);
         }

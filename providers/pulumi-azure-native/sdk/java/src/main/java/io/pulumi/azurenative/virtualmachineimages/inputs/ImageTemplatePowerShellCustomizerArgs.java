@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="inline")
-    private final @Nullable Input<List<String>> inline;
+        private final @Nullable Input<List<String>> inline;
 
     public Input<List<String>> getInline() {
         return this.inline == null ? Input.empty() : this.inline;
@@ -37,7 +37,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="runAsSystem")
-    private final @Nullable Input<Boolean> runAsSystem;
+        private final @Nullable Input<Boolean> runAsSystem;
 
     public Input<Boolean> getRunAsSystem() {
         return this.runAsSystem == null ? Input.empty() : this.runAsSystem;
@@ -59,7 +59,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="runElevated")
-    private final @Nullable Input<Boolean> runElevated;
+        private final @Nullable Input<Boolean> runElevated;
 
     public Input<Boolean> getRunElevated() {
         return this.runElevated == null ? Input.empty() : this.runElevated;
@@ -70,7 +70,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scriptUri")
-    private final @Nullable Input<String> scriptUri;
+        private final @Nullable Input<String> scriptUri;
 
     public Input<String> getScriptUri() {
         return this.scriptUri == null ? Input.empty() : this.scriptUri;
@@ -81,7 +81,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="sha256Checksum")
-    private final @Nullable Input<String> sha256Checksum;
+        private final @Nullable Input<String> sha256Checksum;
 
     public Input<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
@@ -93,7 +93,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -104,7 +104,7 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="validExitCodes")
-    private final @Nullable Input<List<Integer>> validExitCodes;
+        private final @Nullable Input<List<Integer>> validExitCodes;
 
     public Input<List<Integer>> getValidExitCodes() {
         return this.validExitCodes == null ? Input.empty() : this.validExitCodes;
@@ -253,7 +253,6 @@ public final class ImageTemplatePowerShellCustomizerArgs extends io.pulumi.resou
             this.validExitCodes = Input.ofNullable(validExitCodes);
             return this;
         }
-
         public ImageTemplatePowerShellCustomizerArgs build() {
             return new ImageTemplatePowerShellCustomizerArgs(inline, name, runAsSystem, runElevated, scriptUri, sha256Checksum, type, validExitCodes);
         }

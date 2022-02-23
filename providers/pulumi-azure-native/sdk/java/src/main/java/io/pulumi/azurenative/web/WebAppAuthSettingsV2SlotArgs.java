@@ -9,7 +9,7 @@ import io.pulumi.azurenative.web.inputs.HttpSettingsArgs;
 import io.pulumi.azurenative.web.inputs.IdentityProvidersArgs;
 import io.pulumi.azurenative.web.inputs.LoginArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="globalValidation")
-    private final @Nullable Input<GlobalValidationArgs> globalValidation;
+        private final @Nullable Input<GlobalValidationArgs> globalValidation;
 
     public Input<GlobalValidationArgs> getGlobalValidation() {
         return this.globalValidation == null ? Input.empty() : this.globalValidation;
@@ -35,7 +35,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="httpSettings")
-    private final @Nullable Input<HttpSettingsArgs> httpSettings;
+        private final @Nullable Input<HttpSettingsArgs> httpSettings;
 
     public Input<HttpSettingsArgs> getHttpSettings() {
         return this.httpSettings == null ? Input.empty() : this.httpSettings;
@@ -46,7 +46,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="identityProviders")
-    private final @Nullable Input<IdentityProvidersArgs> identityProviders;
+        private final @Nullable Input<IdentityProvidersArgs> identityProviders;
 
     public Input<IdentityProvidersArgs> getIdentityProviders() {
         return this.identityProviders == null ? Input.empty() : this.identityProviders;
@@ -57,7 +57,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -68,7 +68,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<LoginArgs> login;
+        private final @Nullable Input<LoginArgs> login;
 
     public Input<LoginArgs> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -79,7 +79,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -90,7 +90,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<AuthPlatformArgs> platform;
+        private final @Nullable Input<AuthPlatformArgs> platform;
 
     public Input<AuthPlatformArgs> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -101,7 +101,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -112,7 +112,7 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+        private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -276,7 +276,6 @@ public final class WebAppAuthSettingsV2SlotArgs extends io.pulumi.resources.Reso
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppAuthSettingsV2SlotArgs build() {
             return new WebAppAuthSettingsV2SlotArgs(globalValidation, httpSettings, identityProviders, kind, login, name, platform, resourceGroupName, slot);
         }

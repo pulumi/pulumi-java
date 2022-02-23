@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics2Response;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics3Response;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatistics4Response;
@@ -399,7 +399,6 @@ public final class JobStatisticsResponse {
             this.transactionInfo = Objects.requireNonNull(transactionInfo);
             return this;
         }
-
         public JobStatisticsResponse build() {
             return new JobStatisticsResponse(completionRatio, creationTime, endTime, extract, load, numChildJobs, parentJobId, query, quotaDeferments, reservationId, reservationUsage, rowLevelSecurityStatistics, scriptStatistics, sessionInfo, startTime, totalSlotMs, transactionInfo);
         }

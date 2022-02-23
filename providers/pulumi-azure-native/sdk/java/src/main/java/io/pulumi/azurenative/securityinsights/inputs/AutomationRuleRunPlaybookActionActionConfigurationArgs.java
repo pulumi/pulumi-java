@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
      * 
      */
     @InputImport(name="logicAppResourceId")
-    private final @Nullable Input<String> logicAppResourceId;
+        private final @Nullable Input<String> logicAppResourceId;
 
     public Input<String> getLogicAppResourceId() {
         return this.logicAppResourceId == null ? Input.empty() : this.logicAppResourceId;
@@ -34,7 +34,7 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -93,7 +93,6 @@ public final class AutomationRuleRunPlaybookActionActionConfigurationArgs extend
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public AutomationRuleRunPlaybookActionActionConfigurationArgs build() {
             return new AutomationRuleRunPlaybookActionActionConfigurationArgs(logicAppResourceId, tenantId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class DataSourcePostgreSqlParameters {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourcePostgreSqlParameters build() {
             return new DataSourcePostgreSqlParameters(database, host, port);
         }

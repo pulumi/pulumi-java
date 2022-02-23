@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.KeyVaultReference;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final String integrationAccountName;
+        private final String integrationAccountName;
 
     public String getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -31,7 +31,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyVault", required=true)
-    private final KeyVaultReference keyVault;
+        private final KeyVaultReference keyVault;
 
     public KeyVaultReference getKeyVault() {
         return this.keyVault;
@@ -42,7 +42,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+        private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -122,7 +122,6 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends io.pulumi.reso
             this.skipToken = skipToken;
             return this;
         }
-
         public ListIntegrationAccountKeyVaultKeysArgs build() {
             return new ListIntegrationAccountKeyVaultKeysArgs(integrationAccountName, keyVault, resourceGroupName, skipToken);
         }

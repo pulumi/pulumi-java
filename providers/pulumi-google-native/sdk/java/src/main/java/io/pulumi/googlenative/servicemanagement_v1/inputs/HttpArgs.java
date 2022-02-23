@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.HttpRuleArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fullyDecodeReservedExpansion")
-    private final @Nullable Input<Boolean> fullyDecodeReservedExpansion;
+      private final @Nullable Input<Boolean> fullyDecodeReservedExpansion;
 
     public Input<Boolean> getFullyDecodeReservedExpansion() {
         return this.fullyDecodeReservedExpansion == null ? Input.empty() : this.fullyDecodeReservedExpansion;
@@ -36,7 +36,7 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<HttpRuleArgs>> rules;
+      private final @Nullable Input<List<HttpRuleArgs>> rules;
 
     public Input<List<HttpRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -95,7 +95,6 @@ public final class HttpArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public HttpArgs build() {
             return new HttpArgs(fullyDecodeReservedExpansion, rules);
         }

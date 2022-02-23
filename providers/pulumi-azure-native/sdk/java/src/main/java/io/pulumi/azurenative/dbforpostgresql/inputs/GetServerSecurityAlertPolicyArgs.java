@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="securityAlertPolicyName", required=true)
-    private final String securityAlertPolicyName;
+        private final String securityAlertPolicyName;
 
     public String getSecurityAlertPolicyName() {
         return this.securityAlertPolicyName;
@@ -39,7 +39,7 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -98,7 +98,6 @@ public final class GetServerSecurityAlertPolicyArgs extends io.pulumi.resources.
             this.serverName = Objects.requireNonNull(serverName);
             return this;
         }
-
         public GetServerSecurityAlertPolicyArgs build() {
             return new GetServerSecurityAlertPolicyArgs(resourceGroupName, securityAlertPolicyName, serverName);
         }

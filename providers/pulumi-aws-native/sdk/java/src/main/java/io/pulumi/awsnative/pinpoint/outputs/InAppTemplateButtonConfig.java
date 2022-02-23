@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateDefaultButtonConfiguration;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateOverrideButtonConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -87,7 +87,6 @@ public final class InAppTemplateButtonConfig {
             this.web = web;
             return this;
         }
-
         public InAppTemplateButtonConfig build() {
             return new InAppTemplateButtonConfig(android, defaultConfig, iOS, web);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureToAzureCreateNetworkMa
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToAzureCreateNetworkMappingInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmToVmmCreateNetworkMappingInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="fabricSpecificDetails")
-    private final @Nullable Input<Object> fabricSpecificDetails;
+        private final @Nullable Input<Object> fabricSpecificDetails;
 
     public Input<Object> getFabricSpecificDetails() {
         return this.fabricSpecificDetails == null ? Input.empty() : this.fabricSpecificDetails;
@@ -38,7 +38,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryFabricName")
-    private final @Nullable Input<String> recoveryFabricName;
+        private final @Nullable Input<String> recoveryFabricName;
 
     public Input<String> getRecoveryFabricName() {
         return this.recoveryFabricName == null ? Input.empty() : this.recoveryFabricName;
@@ -49,7 +49,7 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="recoveryNetworkId")
-    private final @Nullable Input<String> recoveryNetworkId;
+        private final @Nullable Input<String> recoveryNetworkId;
 
     public Input<String> getRecoveryNetworkId() {
         return this.recoveryNetworkId == null ? Input.empty() : this.recoveryNetworkId;
@@ -123,7 +123,6 @@ public final class CreateNetworkMappingInputPropertiesArgs extends io.pulumi.res
             this.recoveryNetworkId = Input.ofNullable(recoveryNetworkId);
             return this;
         }
-
         public CreateNetworkMappingInputPropertiesArgs build() {
             return new CreateNetworkMappingInputPropertiesArgs(fabricSpecificDetails, recoveryFabricName, recoveryNetworkId);
         }

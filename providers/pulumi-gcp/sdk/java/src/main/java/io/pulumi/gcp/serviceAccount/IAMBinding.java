@@ -5,8 +5,8 @@ package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.IAMBindingArgs;
 import io.pulumi.gcp.serviceAccount.inputs.IAMBindingState;
@@ -136,13 +136,6 @@ public class IAMBinding extends io.pulumi.resources.CustomResource {
         return this.serviceAccountId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IAMBinding(String name) {
-        super("gcp:serviceAccount/iAMBinding:IAMBinding", name, IAMBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

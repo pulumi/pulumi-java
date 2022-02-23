@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<ConfigurationServiceSettingsArgs> settings;
+        private final @Nullable Input<ConfigurationServiceSettingsArgs> settings;
 
     public Input<ConfigurationServiceSettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -66,7 +66,6 @@ public final class ConfigurationServicePropertiesArgs extends io.pulumi.resource
             this.settings = Input.ofNullable(settings);
             return this;
         }
-
         public ConfigurationServicePropertiesArgs build() {
             return new ConfigurationServicePropertiesArgs(settings);
         }

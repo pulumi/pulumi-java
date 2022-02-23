@@ -4,20 +4,13 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ProviderArgs;
 import io.pulumi.example.Utilities;
 import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:example")
 public class Provider extends io.pulumi.resources.ProviderResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Provider(String name) {
-        super("example", name, ProviderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

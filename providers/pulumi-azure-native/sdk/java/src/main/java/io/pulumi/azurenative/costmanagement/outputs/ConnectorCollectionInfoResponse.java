@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ConnectorCollectionErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ConnectorCollectionInfoResponse {
             this.sourceLastUpdated = Objects.requireNonNull(sourceLastUpdated);
             return this;
         }
-
         public ConnectorCollectionInfoResponse build() {
             return new ConnectorCollectionInfoResponse(error, lastChecked, lastUpdated, sourceLastUpdated);
         }

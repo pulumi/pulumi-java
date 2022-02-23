@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
      * 
      */
     @InputImport(name="classifications")
-    private final @Nullable Input<List<String>> classifications;
+        private final @Nullable Input<List<String>> classifications;
 
     public Input<List<String>> getClassifications() {
         return this.classifications == null ? Input.empty() : this.classifications;
@@ -32,7 +32,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<List<String>> excludes;
+        private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -44,7 +44,7 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
      * 
      */
     @InputImport(name="exclusivePatches")
-    private final @Nullable Input<List<String>> exclusivePatches;
+        private final @Nullable Input<List<String>> exclusivePatches;
 
     public Input<List<String>> getExclusivePatches() {
         return this.exclusivePatches == null ? Input.empty() : this.exclusivePatches;
@@ -118,7 +118,6 @@ public final class PatchDeploymentPatchConfigWindowsUpdateArgs extends io.pulumi
             this.exclusivePatches = Input.ofNullable(exclusivePatches);
             return this;
         }
-
         public PatchDeploymentPatchConfigWindowsUpdateArgs build() {
             return new PatchDeploymentPatchConfigWindowsUpdateArgs(classifications, excludes, exclusivePatches);
         }

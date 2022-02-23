@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="commandId")
-    private final @Nullable Input<String> commandId;
+        private final @Nullable Input<String> commandId;
 
     public Input<String> getCommandId() {
         return this.commandId == null ? Input.empty() : this.commandId;
@@ -34,7 +34,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+        private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -45,7 +45,7 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="scriptUri")
-    private final @Nullable Input<String> scriptUri;
+        private final @Nullable Input<String> scriptUri;
 
     public Input<String> getScriptUri() {
         return this.scriptUri == null ? Input.empty() : this.scriptUri;
@@ -119,7 +119,6 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends io.pulumi.re
             this.scriptUri = Input.ofNullable(scriptUri);
             return this;
         }
-
         public VirtualMachineRunCommandScriptSourceArgs build() {
             return new VirtualMachineRunCommandScriptSourceArgs(commandId, script, scriptUri);
         }

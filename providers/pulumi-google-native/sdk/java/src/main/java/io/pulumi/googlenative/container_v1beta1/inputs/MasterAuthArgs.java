@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.ClientCertificateConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientCertificateConfig")
-    private final @Nullable Input<ClientCertificateConfigArgs> clientCertificateConfig;
+      private final @Nullable Input<ClientCertificateConfigArgs> clientCertificateConfig;
 
     public Input<ClientCertificateConfigArgs> getClientCertificateConfig() {
         return this.clientCertificateConfig == null ? Input.empty() : this.clientCertificateConfig;
     }
 
     @InputImport(name="clusterCaCertificate")
-    private final @Nullable Input<String> clusterCaCertificate;
+      private final @Nullable Input<String> clusterCaCertificate;
 
     public Input<String> getClusterCaCertificate() {
         return this.clusterCaCertificate == null ? Input.empty() : this.clusterCaCertificate;
@@ -42,7 +42,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -53,7 +53,7 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -142,7 +142,6 @@ public final class MasterAuthArgs extends io.pulumi.resources.ResourceArgs {
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public MasterAuthArgs build() {
             return new MasterAuthArgs(clientCertificateConfig, clusterCaCertificate, password, username);
         }

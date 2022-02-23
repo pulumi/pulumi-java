@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.lang.Integer;
@@ -118,7 +118,6 @@ public final class GooglePrivacyDlpV2DateShiftConfigResponse {
             this.upperBoundDays = Objects.requireNonNull(upperBoundDays);
             return this;
         }
-
         public GooglePrivacyDlpV2DateShiftConfigResponse build() {
             return new GooglePrivacyDlpV2DateShiftConfigResponse(context, cryptoKey, lowerBoundDays, upperBoundDays);
         }

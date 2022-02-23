@@ -5,8 +5,8 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.AnnotationArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
@@ -108,13 +108,6 @@ public class Annotation extends io.pulumi.resources.CustomResource {
         return this.textAnnotation;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Annotation(String name) {
-        super("google-native:healthcare/v1beta1:Annotation", name, AnnotationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

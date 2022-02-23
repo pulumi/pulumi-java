@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceExecResourceExecResponse;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class OSPolicyResourceExecResourceResponse {
             this.validate = Objects.requireNonNull(validate);
             return this;
         }
-
         public OSPolicyResourceExecResourceResponse build() {
             return new OSPolicyResourceExecResourceResponse(enforce, validate);
         }

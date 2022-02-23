@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.ExtendedLocationTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ExtendedLocationTypes>> type;
+        private final @Nullable Input<Either<String,ExtendedLocationTypes>> type;
 
     public Input<Either<String,ExtendedLocationTypes>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -95,7 +95,6 @@ public final class ExtendedLocationArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ExtendedLocationArgs build() {
             return new ExtendedLocationArgs(name, type);
         }

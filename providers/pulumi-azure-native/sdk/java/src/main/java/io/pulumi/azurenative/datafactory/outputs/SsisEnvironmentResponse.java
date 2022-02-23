@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SsisVariableResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -165,7 +165,6 @@ public final class SsisEnvironmentResponse {
             this.variables = variables;
             return this;
         }
-
         public SsisEnvironmentResponse build() {
             return new SsisEnvironmentResponse(description, folderId, id, name, type, variables);
         }

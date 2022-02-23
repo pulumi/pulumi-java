@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.memorydb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -31,7 +31,7 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -80,7 +80,6 @@ public final class ClusterEndpoint extends io.pulumi.resources.InvokeArgs {
             this.port = port;
             return this;
         }
-
         public ClusterEndpoint build() {
             return new ClusterEndpoint(address, port);
         }

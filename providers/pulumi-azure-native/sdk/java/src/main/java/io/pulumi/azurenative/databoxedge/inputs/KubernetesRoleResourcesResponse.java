@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleComputeResponse;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleNetworkResponse;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleStorageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="compute", required=true)
-    private final KubernetesRoleComputeResponse compute;
+        private final KubernetesRoleComputeResponse compute;
 
     public KubernetesRoleComputeResponse getCompute() {
         return this.compute;
@@ -36,7 +36,7 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="network", required=true)
-    private final KubernetesRoleNetworkResponse network;
+        private final KubernetesRoleNetworkResponse network;
 
     public KubernetesRoleNetworkResponse getNetwork() {
         return this.network;
@@ -47,7 +47,7 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="storage")
-    private final @Nullable KubernetesRoleStorageResponse storage;
+        private final @Nullable KubernetesRoleStorageResponse storage;
 
     public Optional<KubernetesRoleStorageResponse> getStorage() {
         return this.storage == null ? Optional.empty() : Optional.ofNullable(this.storage);
@@ -106,7 +106,6 @@ public final class KubernetesRoleResourcesResponse extends io.pulumi.resources.I
             this.storage = storage;
             return this;
         }
-
         public KubernetesRoleResourcesResponse build() {
             return new KubernetesRoleResourcesResponse(compute, network, storage);
         }

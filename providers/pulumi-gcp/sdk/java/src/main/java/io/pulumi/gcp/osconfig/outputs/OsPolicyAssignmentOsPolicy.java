@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroup;
 import java.lang.Boolean;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class OsPolicyAssignmentOsPolicy {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicy build() {
             return new OsPolicyAssignmentOsPolicy(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }

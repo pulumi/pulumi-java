@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -114,7 +114,6 @@ public final class LicenseEntitlement {
             this.value = value;
             return this;
         }
-
         public LicenseEntitlement build() {
             return new LicenseEntitlement(allowCheckIn, maxCount, name, overage, unit, value);
         }

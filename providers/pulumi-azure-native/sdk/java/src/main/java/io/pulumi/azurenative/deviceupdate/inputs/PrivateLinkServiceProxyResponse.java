@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.inputs;
 import io.pulumi.azurenative.deviceupdate.inputs.GroupConnectivityInformationResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.deviceupdate.inputs.PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="groupConnectivityInformation")
-    private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
+        private final @Nullable List<GroupConnectivityInformationResponse> groupConnectivityInformation;
 
     public List<GroupConnectivityInformationResponse> getGroupConnectivityInformation() {
         return this.groupConnectivityInformation == null ? List.of() : this.groupConnectivityInformation;
@@ -38,7 +38,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -49,7 +49,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="remotePrivateEndpointConnection")
-    private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
+        private final @Nullable PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection remotePrivateEndpointConnection;
 
     public Optional<PrivateLinkServiceProxyResponseRemotePrivateEndpointConnection> getRemotePrivateEndpointConnection() {
         return this.remotePrivateEndpointConnection == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateEndpointConnection);
@@ -60,7 +60,7 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="remotePrivateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
+        private final @Nullable PrivateLinkServiceConnectionStateResponse remotePrivateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getRemotePrivateLinkServiceConnectionState() {
         return this.remotePrivateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.remotePrivateLinkServiceConnectionState);
@@ -129,7 +129,6 @@ public final class PrivateLinkServiceProxyResponse extends io.pulumi.resources.I
             this.remotePrivateLinkServiceConnectionState = remotePrivateLinkServiceConnectionState;
             return this;
         }
-
         public PrivateLinkServiceProxyResponse build() {
             return new PrivateLinkServiceProxyResponse(groupConnectivityInformation, id, remotePrivateEndpointConnection, remotePrivateLinkServiceConnectionState);
         }

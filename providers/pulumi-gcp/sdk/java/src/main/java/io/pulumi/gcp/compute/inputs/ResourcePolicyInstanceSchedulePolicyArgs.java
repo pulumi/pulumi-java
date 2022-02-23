@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+        private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -32,7 +32,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -44,7 +44,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="timeZone", required=true)
-    private final Input<String> timeZone;
+        private final Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone;
@@ -56,7 +56,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="vmStartSchedule")
-    private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs> vmStartSchedule;
+        private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs> vmStartSchedule;
 
     public Input<ResourcePolicyInstanceSchedulePolicyVmStartScheduleArgs> getVmStartSchedule() {
         return this.vmStartSchedule == null ? Input.empty() : this.vmStartSchedule;
@@ -68,7 +68,7 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="vmStopSchedule")
-    private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs> vmStopSchedule;
+        private final @Nullable Input<ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs> vmStopSchedule;
 
     public Input<ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs> getVmStopSchedule() {
         return this.vmStopSchedule == null ? Input.empty() : this.vmStopSchedule;
@@ -172,7 +172,6 @@ public final class ResourcePolicyInstanceSchedulePolicyArgs extends io.pulumi.re
             this.vmStopSchedule = Input.ofNullable(vmStopSchedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyArgs(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }

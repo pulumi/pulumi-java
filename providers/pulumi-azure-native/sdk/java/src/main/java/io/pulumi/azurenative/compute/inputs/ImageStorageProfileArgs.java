@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ImageDataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.ImageOSDiskArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable Input<List<ImageDataDiskArgs>> dataDisks;
+        private final @Nullable Input<List<ImageDataDiskArgs>> dataDisks;
 
     public Input<List<ImageDataDiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="osDisk")
-    private final @Nullable Input<ImageOSDiskArgs> osDisk;
+        private final @Nullable Input<ImageOSDiskArgs> osDisk;
 
     public Input<ImageOSDiskArgs> getOsDisk() {
         return this.osDisk == null ? Input.empty() : this.osDisk;
@@ -48,7 +48,7 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="zoneResilient")
-    private final @Nullable Input<Boolean> zoneResilient;
+        private final @Nullable Input<Boolean> zoneResilient;
 
     public Input<Boolean> getZoneResilient() {
         return this.zoneResilient == null ? Input.empty() : this.zoneResilient;
@@ -122,7 +122,6 @@ public final class ImageStorageProfileArgs extends io.pulumi.resources.ResourceA
             this.zoneResilient = Input.ofNullable(zoneResilient);
             return this;
         }
-
         public ImageStorageProfileArgs build() {
             return new ImageStorageProfileArgs(dataDisks, osDisk, zoneResilient);
         }

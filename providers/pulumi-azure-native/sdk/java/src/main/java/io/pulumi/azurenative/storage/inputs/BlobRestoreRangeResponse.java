@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endRange", required=true)
-    private final String endRange;
+        private final String endRange;
 
     public String getEndRange() {
         return this.endRange;
@@ -32,7 +32,7 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startRange", required=true)
-    private final String startRange;
+        private final String startRange;
 
     public String getStartRange() {
         return this.startRange;
@@ -81,7 +81,6 @@ public final class BlobRestoreRangeResponse extends io.pulumi.resources.InvokeAr
             this.startRange = Objects.requireNonNull(startRange);
             return this;
         }
-
         public BlobRestoreRangeResponse build() {
             return new BlobRestoreRangeResponse(endRange, startRange);
         }

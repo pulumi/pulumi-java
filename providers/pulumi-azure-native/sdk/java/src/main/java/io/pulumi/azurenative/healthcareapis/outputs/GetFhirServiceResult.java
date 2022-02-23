@@ -10,7 +10,7 @@ import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceCorsConfiguration
 import io.pulumi.azurenative.healthcareapis.outputs.FhirServiceExportConfigurationResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServiceManagedIdentityResponseIdentity;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -358,7 +358,6 @@ public final class GetFhirServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFhirServiceResult build() {
             return new GetFhirServiceResult(accessPolicies, acrConfiguration, authenticationConfiguration, corsConfiguration, etag, exportConfiguration, id, identity, kind, location, name, provisioningState, systemData, tags, type);
         }

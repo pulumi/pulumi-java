@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RulesEngineActionResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineMatchConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -143,7 +143,6 @@ public final class RulesEngineRuleResponse {
             this.priority = Objects.requireNonNull(priority);
             return this;
         }
-
         public RulesEngineRuleResponse build() {
             return new RulesEngineRuleResponse(action, matchConditions, matchProcessingBehavior, name, priority);
         }

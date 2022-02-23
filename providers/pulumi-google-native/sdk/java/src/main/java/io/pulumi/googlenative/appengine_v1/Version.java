@@ -5,8 +5,8 @@ package io.pulumi.googlenative.appengine_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1.VersionArgs;
 import io.pulumi.googlenative.appengine_v1.outputs.ApiConfigHandlerResponse;
@@ -557,13 +557,6 @@ public class Version extends io.pulumi.resources.CustomResource {
         return this.vpcAccessConnector;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Version(String name) {
-        super("google-native:appengine/v1:Version", name, VersionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

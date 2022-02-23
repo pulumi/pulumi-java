@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MediaGraphAssetSinkResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final String assetName;
+        private final String assetName;
 
     public String getAssetName() {
         return this.assetName;
@@ -33,7 +33,7 @@ public final class MediaGraphAssetSinkResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="inputs", required=true)
-    private final List<String> inputs;
+        private final List<String> inputs;
 
     public List<String> getInputs() {
         return this.inputs;
@@ -44,7 +44,7 @@ public final class MediaGraphAssetSinkResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class MediaGraphAssetSinkResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -125,7 +125,6 @@ public final class MediaGraphAssetSinkResponse extends io.pulumi.resources.Invok
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphAssetSinkResponse build() {
             return new MediaGraphAssetSinkResponse(assetName, inputs, name, odataType);
         }

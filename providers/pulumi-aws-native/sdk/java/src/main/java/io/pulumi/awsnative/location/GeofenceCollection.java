@@ -8,8 +8,8 @@ import io.pulumi.awsnative.location.GeofenceCollectionArgs;
 import io.pulumi.awsnative.location.enums.GeofenceCollectionPricingPlan;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -74,13 +74,6 @@ public class GeofenceCollection extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GeofenceCollection(String name) {
-        super("aws-native:location:GeofenceCollection", name, GeofenceCollectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

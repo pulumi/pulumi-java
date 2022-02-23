@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseExchange;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseSharePoint;
 import io.pulumi.azurenative.securityinsights.inputs.OfficeDataConnectorDataTypesResponseTeams;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="exchange")
-    private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
+        private final @Nullable OfficeDataConnectorDataTypesResponseExchange exchange;
 
     public Optional<OfficeDataConnectorDataTypesResponseExchange> getExchange() {
         return this.exchange == null ? Optional.empty() : Optional.ofNullable(this.exchange);
@@ -36,7 +36,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sharePoint")
-    private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
+        private final @Nullable OfficeDataConnectorDataTypesResponseSharePoint sharePoint;
 
     public Optional<OfficeDataConnectorDataTypesResponseSharePoint> getSharePoint() {
         return this.sharePoint == null ? Optional.empty() : Optional.ofNullable(this.sharePoint);
@@ -47,7 +47,7 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="teams")
-    private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
+        private final @Nullable OfficeDataConnectorDataTypesResponseTeams teams;
 
     public Optional<OfficeDataConnectorDataTypesResponseTeams> getTeams() {
         return this.teams == null ? Optional.empty() : Optional.ofNullable(this.teams);
@@ -106,7 +106,6 @@ public final class OfficeDataConnectorDataTypesResponse extends io.pulumi.resour
             this.teams = teams;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponse build() {
             return new OfficeDataConnectorDataTypesResponse(exchange, sharePoint, teams);
         }

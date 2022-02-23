@@ -5,7 +5,7 @@ package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.HealthAlertResponse;
 import io.pulumi.azurenative.aad.outputs.HealthMonitorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -247,7 +247,6 @@ public final class ReplicaSetResponse {
             this.vnetSiteId = Objects.requireNonNull(vnetSiteId);
             return this;
         }
-
         public ReplicaSetResponse build() {
             return new ReplicaSetResponse(domainControllerIpAddress, externalAccessIpAddress, healthAlerts, healthLastEvaluated, healthMonitors, location, replicaSetId, serviceStatus, subnetId, vnetSiteId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.enums.LabelDescriptorValueType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -46,7 +46,7 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="valueType")
-    private final @Nullable Input<LabelDescriptorValueType> valueType;
+      private final @Nullable Input<LabelDescriptorValueType> valueType;
 
     public Input<LabelDescriptorValueType> getValueType() {
         return this.valueType == null ? Input.empty() : this.valueType;
@@ -120,7 +120,6 @@ public final class LabelDescriptorArgs extends io.pulumi.resources.ResourceArgs 
             this.valueType = Input.ofNullable(valueType);
             return this;
         }
-
         public LabelDescriptorArgs build() {
             return new LabelDescriptorArgs(description, key, valueType);
         }

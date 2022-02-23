@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
+      private final @Nullable Input<List<GooglePrivacyDlpV2ConditionArgs>> conditions;
 
     public Input<List<GooglePrivacyDlpV2ConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -67,7 +67,6 @@ public final class GooglePrivacyDlpV2ConditionsArgs extends io.pulumi.resources.
             this.conditions = Input.ofNullable(conditions);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionsArgs build() {
             return new GooglePrivacyDlpV2ConditionsArgs(conditions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DefenderSettingsPropertiesResponseMdeIntegration build() {
             return new DefenderSettingsPropertiesResponseMdeIntegration(status);
         }

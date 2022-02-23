@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.ArgumentResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SetValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -165,7 +165,6 @@ public final class OverrideTaskStepPropertiesResponse {
             this.values = values;
             return this;
         }
-
         public OverrideTaskStepPropertiesResponse build() {
             return new OverrideTaskStepPropertiesResponse(arguments, contextPath, file, target, updateTriggerToken, values);
         }

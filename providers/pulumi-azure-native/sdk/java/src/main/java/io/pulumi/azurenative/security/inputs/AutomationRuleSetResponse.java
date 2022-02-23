@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.AutomationTriggeringRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class AutomationRuleSetResponse extends io.pulumi.resources.InvokeA
     public static final AutomationRuleSetResponse Empty = new AutomationRuleSetResponse();
 
     @InputImport(name="rules")
-    private final @Nullable List<AutomationTriggeringRuleResponse> rules;
+        private final @Nullable List<AutomationTriggeringRuleResponse> rules;
 
     public List<AutomationTriggeringRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -58,7 +58,6 @@ public final class AutomationRuleSetResponse extends io.pulumi.resources.InvokeA
             this.rules = rules;
             return this;
         }
-
         public AutomationRuleSetResponse build() {
             return new AutomationRuleSetResponse(rules);
         }

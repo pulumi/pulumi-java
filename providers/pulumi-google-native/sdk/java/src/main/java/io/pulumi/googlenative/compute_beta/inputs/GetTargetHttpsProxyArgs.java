@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetTargetHttpsProxyArgs extends io.pulumi.resources.InvokeArg
     public static final GetTargetHttpsProxyArgs Empty = new GetTargetHttpsProxyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="targetHttpsProxy", required=true)
-    private final String targetHttpsProxy;
+      private final String targetHttpsProxy;
 
     public String getTargetHttpsProxy() {
         return this.targetHttpsProxy;
@@ -71,7 +71,6 @@ public final class GetTargetHttpsProxyArgs extends io.pulumi.resources.InvokeArg
             this.targetHttpsProxy = Objects.requireNonNull(targetHttpsProxy);
             return this;
         }
-
         public GetTargetHttpsProxyArgs build() {
             return new GetTargetHttpsProxyArgs(project, targetHttpsProxy);
         }

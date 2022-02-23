@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.InfrastructureConfigurationInstanceMetadataOptionsHttpTokens;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
      * 
      */
     @InputImport(name="httpPutResponseHopLimit")
-    private final @Nullable Input<Integer> httpPutResponseHopLimit;
+        private final @Nullable Input<Integer> httpPutResponseHopLimit;
 
     public Input<Integer> getHttpPutResponseHopLimit() {
         return this.httpPutResponseHopLimit == null ? Input.empty() : this.httpPutResponseHopLimit;
@@ -35,7 +35,7 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
      * 
      */
     @InputImport(name="httpTokens")
-    private final @Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
+        private final @Nullable Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> httpTokens;
 
     public Input<InfrastructureConfigurationInstanceMetadataOptionsHttpTokens> getHttpTokens() {
         return this.httpTokens == null ? Input.empty() : this.httpTokens;
@@ -94,7 +94,6 @@ public final class InfrastructureConfigurationInstanceMetadataOptionsArgs extend
             this.httpTokens = Input.ofNullable(httpTokens);
             return this;
         }
-
         public InfrastructureConfigurationInstanceMetadataOptionsArgs build() {
             return new InfrastructureConfigurationInstanceMetadataOptionsArgs(httpPutResponseHopLimit, httpTokens);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="siteToSiteDataTransfer")
-    private final @Nullable Input<Boolean> siteToSiteDataTransfer;
+      private final @Nullable Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer == null ? Input.empty() : this.siteToSiteDataTransfer;
@@ -36,7 +36,7 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<List<String>> uris;
+      private final @Nullable Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -95,7 +95,6 @@ public final class LinkedVpnTunnelsArgs extends io.pulumi.resources.ResourceArgs
             this.uris = Input.ofNullable(uris);
             return this;
         }
-
         public LinkedVpnTunnelsArgs build() {
             return new LinkedVpnTunnelsArgs(siteToSiteDataTransfer, uris);
         }

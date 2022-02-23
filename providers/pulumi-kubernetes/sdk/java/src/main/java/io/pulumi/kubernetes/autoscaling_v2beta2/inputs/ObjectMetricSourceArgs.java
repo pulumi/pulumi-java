@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricIdentifierArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricTargetArgs;
@@ -20,7 +20,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
     public static final ObjectMetricSourceArgs Empty = new ObjectMetricSourceArgs();
 
     @InputImport(name="describedObject", required=true)
-    private final Input<CrossVersionObjectReferenceArgs> describedObject;
+        private final Input<CrossVersionObjectReferenceArgs> describedObject;
 
     public Input<CrossVersionObjectReferenceArgs> getDescribedObject() {
         return this.describedObject;
@@ -31,7 +31,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<MetricIdentifierArgs> metric;
+        private final Input<MetricIdentifierArgs> metric;
 
     public Input<MetricIdentifierArgs> getMetric() {
         return this.metric;
@@ -42,7 +42,7 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<MetricTargetArgs> target;
+        private final Input<MetricTargetArgs> target;
 
     public Input<MetricTargetArgs> getTarget() {
         return this.target;
@@ -116,7 +116,6 @@ public final class ObjectMetricSourceArgs extends io.pulumi.resources.ResourceAr
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public ObjectMetricSourceArgs build() {
             return new ObjectMetricSourceArgs(describedObject, metric, target);
         }

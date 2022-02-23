@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deviceupdate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class ConnectionDetailsResponse {
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public ConnectionDetailsResponse build() {
             return new ConnectionDetailsResponse(groupId, id, linkIdentifier, memberName, privateIpAddress);
         }

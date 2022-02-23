@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.outputs;
 
 import io.pulumi.awsnative.kafkaconnect.outputs.ConnectorCustomPlugin;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class ConnectorPlugin {
             this.customPlugin = Objects.requireNonNull(customPlugin);
             return this;
         }
-
         public ConnectorPlugin build() {
             return new ConnectorPlugin(customPlugin);
         }

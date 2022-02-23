@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.transfer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class WorkflowStepCustomStepDetailsProperties {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public WorkflowStepCustomStepDetailsProperties build() {
             return new WorkflowStepCustomStepDetailsProperties(name, target, timeoutSeconds);
         }

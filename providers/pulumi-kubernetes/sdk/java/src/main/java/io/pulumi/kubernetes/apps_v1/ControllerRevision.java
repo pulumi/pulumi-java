@@ -7,8 +7,8 @@ import com.google.gson.JsonElement;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1.ControllerRevisionArgs;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -94,13 +94,6 @@ public class ControllerRevision extends io.pulumi.resources.CustomResource {
         return this.revision;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ControllerRevision(String name) {
-        super("kubernetes:apps/v1:ControllerRevision", name, ControllerRevisionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

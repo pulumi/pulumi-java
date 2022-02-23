@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 import io.pulumi.awsnative.iotwireless.enums.WirelessDeviceType;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceLoRaWANDevice;
 import io.pulumi.awsnative.iotwireless.outputs.WirelessDeviceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -269,7 +269,6 @@ public final class GetWirelessDeviceResult {
             this.type = type;
             return this;
         }
-
         public GetWirelessDeviceResult build() {
             return new GetWirelessDeviceResult(arn, description, destinationName, id, lastUplinkReceivedAt, loRaWAN, name, tags, thingArn, thingName, type);
         }

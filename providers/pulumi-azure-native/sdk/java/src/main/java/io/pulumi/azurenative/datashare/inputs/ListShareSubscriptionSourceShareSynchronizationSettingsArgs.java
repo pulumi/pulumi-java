@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final String shareSubscriptionName;
+        private final String shareSubscriptionName;
 
     public String getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -52,7 +52,7 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+        private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -121,7 +121,6 @@ public final class ListShareSubscriptionSourceShareSynchronizationSettingsArgs e
             this.skipToken = skipToken;
             return this;
         }
-
         public ListShareSubscriptionSourceShareSynchronizationSettingsArgs build() {
             return new ListShareSubscriptionSourceShareSynchronizationSettingsArgs(accountName, resourceGroupName, shareSubscriptionName, skipToken);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildOptionsVolume;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -340,7 +340,6 @@ public final class TriggerBuildOptions {
             this.workerPool = workerPool;
             return this;
         }
-
         public TriggerBuildOptions build() {
             return new TriggerBuildOptions(diskSizeGb, dynamicSubstitutions, envs, logStreamingOption, logging, machineType, requestedVerifyOption, secretEnvs, sourceProvenanceHashes, substitutionOption, volumes, workerPool);
         }

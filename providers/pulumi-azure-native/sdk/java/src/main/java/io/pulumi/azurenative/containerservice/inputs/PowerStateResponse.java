@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -61,7 +61,6 @@ public final class PowerStateResponse extends io.pulumi.resources.InvokeArgs {
             this.code = code;
             return this;
         }
-
         public PowerStateResponse build() {
             return new PowerStateResponse(code);
         }

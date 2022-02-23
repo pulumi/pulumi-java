@@ -4,7 +4,7 @@
 package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.projects.inputs.IAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<IAMMemberConditionArgs> condition;
+        private final @Nullable Input<IAMMemberConditionArgs> condition;
 
     public Input<IAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -40,7 +40,7 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -53,7 +53,7 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -142,7 +142,6 @@ public final class IAMMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public IAMMemberArgs build() {
             return new IAMMemberArgs(condition, member, project, role);
         }

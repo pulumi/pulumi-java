@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponseTransferAllDetails;
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponseTransferFilterDetails;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class TransferConfigurationResponse {
             this.transferFilterDetails = transferFilterDetails;
             return this;
         }
-
         public TransferConfigurationResponse build() {
             return new TransferConfigurationResponse(transferAllDetails, transferConfigurationType, transferFilterDetails);
         }

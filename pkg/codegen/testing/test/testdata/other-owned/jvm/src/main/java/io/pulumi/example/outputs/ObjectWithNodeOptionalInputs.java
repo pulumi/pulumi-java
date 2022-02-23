@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class ObjectWithNodeOptionalInputs {
             this.foo = Objects.requireNonNull(foo);
             return this;
         }
-
         public ObjectWithNodeOptionalInputs build() {
             return new ObjectWithNodeOptionalInputs(bar, foo);
         }

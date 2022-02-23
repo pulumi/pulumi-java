@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -223,7 +223,6 @@ public final class VMwareCbtNicDetailsResponse {
             this.targetSubnetName = targetSubnetName;
             return this;
         }
-
         public VMwareCbtNicDetailsResponse build() {
             return new VMwareCbtNicDetailsResponse(isPrimaryNic, isSelectedForMigration, nicId, sourceIPAddress, sourceIPAddressType, sourceNetworkId, targetIPAddress, targetIPAddressType, targetSubnetName);
         }

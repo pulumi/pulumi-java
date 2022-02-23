@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ids_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -265,7 +265,6 @@ public final class GetEndpointResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(createTime, description, endpointForwardingRule, endpointIp, labels, name, network, severity, state, trafficLogs, updateTime);
         }

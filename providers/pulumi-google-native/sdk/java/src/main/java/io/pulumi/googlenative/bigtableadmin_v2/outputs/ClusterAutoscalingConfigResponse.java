@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AutoscalingLimitsResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AutoscalingTargetsResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ClusterAutoscalingConfigResponse {
             this.autoscalingTargets = Objects.requireNonNull(autoscalingTargets);
             return this;
         }
-
         public ClusterAutoscalingConfigResponse build() {
             return new ClusterAutoscalingConfigResponse(autoscalingLimits, autoscalingTargets);
         }

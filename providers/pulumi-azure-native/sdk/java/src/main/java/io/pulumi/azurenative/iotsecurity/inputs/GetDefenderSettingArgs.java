@@ -30,7 +30,6 @@ public final class GetDefenderSettingArgs extends io.pulumi.resources.InvokeArgs
         public Builder(GetDefenderSettingArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetDefenderSettingArgs build() {
             return new GetDefenderSettingArgs();
         }

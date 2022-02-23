@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
      * 
      */
     @InputImport(name="featureConfigs")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> featureConfigs;
 
     public Input<List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigArgs>> getFeatureConfigs() {
         return this.featureConfigs == null ? Input.empty() : this.featureConfigs;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
      * 
      */
     @InputImport(name="groupSuggestionResponses")
-    private final @Nullable Input<Boolean> groupSuggestionResponses;
+      private final @Nullable Input<Boolean> groupSuggestionResponses;
 
     public Input<Boolean> getGroupSuggestionResponses() {
         return this.groupSuggestionResponses == null ? Input.empty() : this.groupSuggestionResponses;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
             this.groupSuggestionResponses = Input.ofNullable(groupSuggestionResponses);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigArgs(featureConfigs, groupSuggestionResponses);
         }

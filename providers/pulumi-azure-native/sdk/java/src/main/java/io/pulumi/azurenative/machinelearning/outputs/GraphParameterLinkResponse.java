@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GraphParameterLinkResponse {
             this.parameterKey = Objects.requireNonNull(parameterKey);
             return this;
         }
-
         public GraphParameterLinkResponse build() {
             return new GraphParameterLinkResponse(nodeId, parameterKey);
         }

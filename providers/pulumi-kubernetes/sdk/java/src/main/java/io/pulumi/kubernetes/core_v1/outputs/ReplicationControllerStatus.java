@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationControllerCondition;
 import java.lang.Integer;
 import java.util.List;
@@ -162,7 +162,6 @@ public final class ReplicationControllerStatus {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public ReplicationControllerStatus build() {
             return new ReplicationControllerStatus(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig {
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public GetIAMPolicyAuditConfigAuditLogConfig build() {
             return new GetIAMPolicyAuditConfigAuditLogConfig(exemptedMembers, logType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class AssetModelTumblingWindow {
             this.offset = offset;
             return this;
         }
-
         public AssetModelTumblingWindow build() {
             return new AssetModelTumblingWindow(interval, offset);
         }

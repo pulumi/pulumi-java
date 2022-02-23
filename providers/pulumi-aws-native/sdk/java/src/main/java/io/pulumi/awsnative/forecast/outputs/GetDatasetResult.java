@@ -8,7 +8,7 @@ import io.pulumi.awsnative.forecast.enums.DatasetType;
 import io.pulumi.awsnative.forecast.outputs.EncryptionConfigProperties;
 import io.pulumi.awsnative.forecast.outputs.SchemaProperties;
 import io.pulumi.awsnative.forecast.outputs.TagsItemProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -155,7 +155,6 @@ public final class GetDatasetResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(arn, dataFrequency, datasetType, domain, encryptionConfig, schema, tags);
         }

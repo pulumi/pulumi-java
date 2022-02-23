@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApiPortalCustomDomainPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+        private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -61,7 +61,6 @@ public final class ApiPortalCustomDomainPropertiesResponse extends io.pulumi.res
             this.thumbprint = thumbprint;
             return this;
         }
-
         public ApiPortalCustomDomainPropertiesResponse build() {
             return new ApiPortalCustomDomainPropertiesResponse(thumbprint);
         }

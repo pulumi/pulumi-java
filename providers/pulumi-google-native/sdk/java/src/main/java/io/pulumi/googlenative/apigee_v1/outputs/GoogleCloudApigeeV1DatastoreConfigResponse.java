@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse {
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }
-
         public GoogleCloudApigeeV1DatastoreConfigResponse build() {
             return new GoogleCloudApigeeV1DatastoreConfigResponse(bucketName, datasetName, path, project, tablePrefix);
         }

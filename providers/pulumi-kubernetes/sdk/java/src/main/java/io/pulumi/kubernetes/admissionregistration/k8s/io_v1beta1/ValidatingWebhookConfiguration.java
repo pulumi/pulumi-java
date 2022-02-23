@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.ValidatingWebhookConfigurationArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.ValidatingWebhook;
@@ -79,13 +79,6 @@ public class ValidatingWebhookConfiguration extends io.pulumi.resources.CustomRe
         return this.webhooks;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ValidatingWebhookConfiguration(String name) {
-        super("kubernetes:admissionregistration.k8s.io/v1beta1:ValidatingWebhookConfiguration", name, ValidatingWebhookConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

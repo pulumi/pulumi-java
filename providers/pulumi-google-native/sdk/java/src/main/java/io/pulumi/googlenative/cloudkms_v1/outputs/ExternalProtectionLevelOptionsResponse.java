@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ExternalProtectionLevelOptionsResponse {
             this.externalKeyUri = Objects.requireNonNull(externalKeyUri);
             return this;
         }
-
         public ExternalProtectionLevelOptionsResponse build() {
             return new ExternalProtectionLevelOptionsResponse(ekmConnectionKeyPath, externalKeyUri);
         }

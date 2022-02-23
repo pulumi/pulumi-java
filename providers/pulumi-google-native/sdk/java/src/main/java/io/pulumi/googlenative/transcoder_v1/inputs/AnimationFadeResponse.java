@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.NormalizedCoordinateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="endTimeOffset", required=true)
-    private final String endTimeOffset;
+      private final String endTimeOffset;
 
     public String getEndTimeOffset() {
         return this.endTimeOffset;
@@ -33,7 +33,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fadeType", required=true)
-    private final String fadeType;
+      private final String fadeType;
 
     public String getFadeType() {
         return this.fadeType;
@@ -44,7 +44,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="startTimeOffset", required=true)
-    private final String startTimeOffset;
+      private final String startTimeOffset;
 
     public String getStartTimeOffset() {
         return this.startTimeOffset;
@@ -55,7 +55,7 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="xy", required=true)
-    private final NormalizedCoordinateResponse xy;
+      private final NormalizedCoordinateResponse xy;
 
     public NormalizedCoordinateResponse getXy() {
         return this.xy;
@@ -124,7 +124,6 @@ public final class AnimationFadeResponse extends io.pulumi.resources.InvokeArgs 
             this.xy = Objects.requireNonNull(xy);
             return this;
         }
-
         public AnimationFadeResponse build() {
             return new AnimationFadeResponse(endTimeOffset, fadeType, startTimeOffset, xy);
         }

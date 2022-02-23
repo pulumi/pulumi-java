@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lBBackendAddressPoolIds")
-    private final @Nullable List<String> lBBackendAddressPoolIds;
+        private final @Nullable List<String> lBBackendAddressPoolIds;
 
     public List<String> getLBBackendAddressPoolIds() {
         return this.lBBackendAddressPoolIds == null ? List.of() : this.lBBackendAddressPoolIds;
@@ -35,7 +35,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicIpAddressId")
-    private final @Nullable String publicIpAddressId;
+        private final @Nullable String publicIpAddressId;
 
     public Optional<String> getPublicIpAddressId() {
         return this.publicIpAddressId == null ? Optional.empty() : Optional.ofNullable(this.publicIpAddressId);
@@ -46,7 +46,7 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="staticIPAddress")
-    private final @Nullable String staticIPAddress;
+        private final @Nullable String staticIPAddress;
 
     public Optional<String> getStaticIPAddress() {
         return this.staticIPAddress == null ? Optional.empty() : Optional.ofNullable(this.staticIPAddress);
@@ -105,7 +105,6 @@ public final class IPConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.staticIPAddress = staticIPAddress;
             return this;
         }
-
         public IPConfigResponse build() {
             return new IPConfigResponse(lBBackendAddressPoolIds, publicIpAddressId, staticIPAddress);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.AutoExecuteStatus;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advisorName")
-    private final @Nullable Input<String> advisorName;
+        private final @Nullable Input<String> advisorName;
 
     public Input<String> getAdvisorName() {
         return this.advisorName == null ? Input.empty() : this.advisorName;
@@ -31,7 +31,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoExecuteStatus", required=true)
-    private final Input<AutoExecuteStatus> autoExecuteStatus;
+        private final Input<AutoExecuteStatus> autoExecuteStatus;
 
     public Input<AutoExecuteStatus> getAutoExecuteStatus() {
         return this.autoExecuteStatus;
@@ -42,7 +42,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -142,7 +142,6 @@ public final class ServerAdvisorArgs extends io.pulumi.resources.ResourceArgs {
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public ServerAdvisorArgs build() {
             return new ServerAdvisorArgs(advisorName, autoExecuteStatus, resourceGroupName, serverName);
         }

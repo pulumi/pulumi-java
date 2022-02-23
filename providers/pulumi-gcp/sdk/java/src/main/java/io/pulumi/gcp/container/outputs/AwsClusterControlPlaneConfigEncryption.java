@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AwsClusterControlPlaneConfigEncryption {
             this.kmsKeyArn = Objects.requireNonNull(kmsKeyArn);
             return this;
         }
-
         public AwsClusterControlPlaneConfigEncryption build() {
             return new AwsClusterControlPlaneConfigEncryption(kmsKeyArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotfleethub.outputs;
 
 import io.pulumi.awsnative.iotfleethub.outputs.ApplicationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -289,7 +289,6 @@ public final class GetApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationArn, applicationCreationDate, applicationDescription, applicationId, applicationLastUpdateDate, applicationName, applicationState, applicationUrl, errorMessage, roleArn, ssoClientId, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributeDefinitionId", required=true)
-    private final String attributeDefinitionId;
+      private final String attributeDefinitionId;
 
     public String getAttributeDefinitionId() {
         return this.attributeDefinitionId;
@@ -33,7 +33,7 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -82,7 +82,6 @@ public final class AttributeResponse extends io.pulumi.resources.InvokeArgs {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public AttributeResponse build() {
             return new AttributeResponse(attributeDefinitionId, values);
         }

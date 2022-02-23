@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class CompressionSettingsResponse {
             this.isCompressionEnabled = isCompressionEnabled;
             return this;
         }
-
         public CompressionSettingsResponse build() {
             return new CompressionSettingsResponse(contentTypesToCompress, isCompressionEnabled);
         }

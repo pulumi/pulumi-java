@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.pinpoint.inputs.GetInAppTemplateArgs;
 import io.pulumi.awsnative.pinpoint.outputs.GetInAppTemplateResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

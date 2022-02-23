@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.OidcTokenResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class HttpTargetResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public HttpTargetResponse build() {
             return new HttpTargetResponse(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }

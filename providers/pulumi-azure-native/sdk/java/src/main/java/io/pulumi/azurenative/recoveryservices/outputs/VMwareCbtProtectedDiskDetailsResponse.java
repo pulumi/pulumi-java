@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -245,7 +245,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse {
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
         }
-
         public VMwareCbtProtectedDiskDetailsResponse build() {
             return new VMwareCbtProtectedDiskDetailsResponse(capacityInBytes, diskId, diskName, diskPath, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName, seedManagedDiskId, targetManagedDiskId);
         }

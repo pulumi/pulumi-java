@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseId")
-    private final @Nullable Input<String> databaseId;
+      private final @Nullable Input<String> databaseId;
 
     public Input<String> getDatabaseId() {
         return this.databaseId == null ? Input.empty() : this.databaseId;
@@ -34,7 +34,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -45,7 +45,7 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -119,7 +119,6 @@ public final class SpannerIODetailsArgs extends io.pulumi.resources.ResourceArgs
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public SpannerIODetailsArgs build() {
             return new SpannerIODetailsArgs(databaseId, instanceId, project);
         }

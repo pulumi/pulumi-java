@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ManagedCertificateResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedCertificateResponse build() {
             return new ManagedCertificateResponse(lastRenewalTime, status);
         }

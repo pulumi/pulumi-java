@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1.inputs.RollingUpdateDeploymentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="rollingUpdate")
-    private final @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
+        private final @Nullable Input<RollingUpdateDeploymentArgs> rollingUpdate;
 
     public Input<RollingUpdateDeploymentArgs> getRollingUpdate() {
         return this.rollingUpdate == null ? Input.empty() : this.rollingUpdate;
@@ -39,7 +39,7 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -98,7 +98,6 @@ public final class DeploymentStrategyArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public DeploymentStrategyArgs build() {
             return new DeploymentStrategyArgs(rollingUpdate, type);
         }

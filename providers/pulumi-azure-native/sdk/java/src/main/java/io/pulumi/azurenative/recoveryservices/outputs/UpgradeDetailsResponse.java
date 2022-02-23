@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -221,7 +221,6 @@ public final class UpgradeDetailsResponse {
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
         }
-
         public UpgradeDetailsResponse build() {
             return new UpgradeDetailsResponse(endTimeUtc, lastUpdatedTimeUtc, message, operationId, previousResourceId, startTimeUtc, status, triggerType, upgradedResourceId);
         }

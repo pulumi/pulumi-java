@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.CertificateTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class CertificateAttributesResponse {
             this.validityStartTime = Objects.requireNonNull(validityStartTime);
             return this;
         }
-
         public CertificateAttributesResponse build() {
             return new CertificateAttributesResponse(certificateTemplate, fingerprint, issuer, serialNumber, subject, thumbprint, validationState, validityExpirationTime, validityStartTime);
         }

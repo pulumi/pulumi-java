@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiMetadataStoreEncryptionSpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="encryptionSpec")
-    private final @Nullable Input<AiMetadataStoreEncryptionSpecArgs> encryptionSpec;
+        private final @Nullable Input<AiMetadataStoreEncryptionSpecArgs> encryptionSpec;
 
     public Input<AiMetadataStoreEncryptionSpecArgs> getEncryptionSpec() {
         return this.encryptionSpec == null ? Input.empty() : this.encryptionSpec;
@@ -43,7 +43,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -66,7 +66,7 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -170,7 +170,6 @@ public final class AiMetadataStoreArgs extends io.pulumi.resources.ResourceArgs 
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public AiMetadataStoreArgs build() {
             return new AiMetadataStoreArgs(description, encryptionSpec, name, project, region);
         }

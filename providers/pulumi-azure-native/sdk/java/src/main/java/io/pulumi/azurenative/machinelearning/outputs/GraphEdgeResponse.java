@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class GraphEdgeResponse {
             this.targetPortId = targetPortId;
             return this;
         }
-
         public GraphEdgeResponse build() {
             return new GraphEdgeResponse(sourceNodeId, sourcePortId, targetNodeId, targetPortId);
         }

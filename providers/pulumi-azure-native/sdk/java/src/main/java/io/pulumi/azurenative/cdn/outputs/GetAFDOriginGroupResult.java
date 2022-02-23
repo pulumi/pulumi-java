@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.LoadBalancingSettingsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -262,7 +262,6 @@ public final class GetAFDOriginGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAFDOriginGroupResult build() {
             return new GetAFDOriginGroupResult(deploymentStatus, healthProbeSettings, id, loadBalancingSettings, name, provisioningState, responseBasedAfdOriginErrorDetectionSettings, sessionAffinityState, systemData, trafficRestorationTimeToHealedOrNewEndpointsInMinutes, type);
         }

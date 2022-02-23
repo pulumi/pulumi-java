@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -112,7 +112,6 @@ public final class DeliveryStreamSchemaConfiguration {
             this.versionId = versionId;
             return this;
         }
-
         public DeliveryStreamSchemaConfiguration build() {
             return new DeliveryStreamSchemaConfiguration(catalogId, databaseName, region, roleARN, tableName, versionId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowJaggedRows")
-    private final @Nullable Input<Boolean> allowJaggedRows;
+      private final @Nullable Input<Boolean> allowJaggedRows;
 
     public Input<Boolean> getAllowJaggedRows() {
         return this.allowJaggedRows == null ? Input.empty() : this.allowJaggedRows;
@@ -31,7 +31,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowQuotedNewlines")
-    private final @Nullable Input<Boolean> allowQuotedNewlines;
+      private final @Nullable Input<Boolean> allowQuotedNewlines;
 
     public Input<Boolean> getAllowQuotedNewlines() {
         return this.allowQuotedNewlines == null ? Input.empty() : this.allowQuotedNewlines;
@@ -42,7 +42,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<String> encoding;
+      private final @Nullable Input<String> encoding;
 
     public Input<String> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -53,7 +53,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldDelimiter")
-    private final @Nullable Input<String> fieldDelimiter;
+      private final @Nullable Input<String> fieldDelimiter;
 
     public Input<String> getFieldDelimiter() {
         return this.fieldDelimiter == null ? Input.empty() : this.fieldDelimiter;
@@ -64,7 +64,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nullMarker")
-    private final @Nullable Input<String> nullMarker;
+      private final @Nullable Input<String> nullMarker;
 
     public Input<String> getNullMarker() {
         return this.nullMarker == null ? Input.empty() : this.nullMarker;
@@ -75,7 +75,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quote")
-    private final @Nullable Input<String> quote;
+      private final @Nullable Input<String> quote;
 
     public Input<String> getQuote() {
         return this.quote == null ? Input.empty() : this.quote;
@@ -86,7 +86,7 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipLeadingRows")
-    private final @Nullable Input<String> skipLeadingRows;
+      private final @Nullable Input<String> skipLeadingRows;
 
     public Input<String> getSkipLeadingRows() {
         return this.skipLeadingRows == null ? Input.empty() : this.skipLeadingRows;
@@ -220,7 +220,6 @@ public final class CsvOptionsArgs extends io.pulumi.resources.ResourceArgs {
             this.skipLeadingRows = Input.ofNullable(skipLeadingRows);
             return this;
         }
-
         public CsvOptionsArgs build() {
             return new CsvOptionsArgs(allowJaggedRows, allowQuotedNewlines, encoding, fieldDelimiter, nullMarker, quote, skipLeadingRows);
         }

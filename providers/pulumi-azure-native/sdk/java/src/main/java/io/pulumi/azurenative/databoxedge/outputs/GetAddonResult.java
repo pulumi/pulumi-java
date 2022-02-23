@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -138,7 +138,6 @@ public final class GetAddonResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddonResult build() {
             return new GetAddonResult(id, kind, name, systemData, type);
         }

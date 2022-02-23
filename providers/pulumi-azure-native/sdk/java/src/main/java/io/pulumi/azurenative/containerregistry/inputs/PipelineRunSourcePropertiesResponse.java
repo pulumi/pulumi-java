@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -30,7 +30,7 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -79,7 +79,6 @@ public final class PipelineRunSourcePropertiesResponse extends io.pulumi.resourc
             this.type = type;
             return this;
         }
-
         public PipelineRunSourcePropertiesResponse build() {
             return new PipelineRunSourcePropertiesResponse(name, type);
         }

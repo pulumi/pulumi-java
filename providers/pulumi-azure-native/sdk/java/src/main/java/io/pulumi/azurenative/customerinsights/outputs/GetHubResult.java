@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.HubBillingInfoFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -247,7 +247,6 @@ public final class GetHubResult {
             this.webEndpoint = Objects.requireNonNull(webEndpoint);
             return this;
         }
-
         public GetHubResult build() {
             return new GetHubResult(apiEndpoint, hubBillingInfo, id, location, name, provisioningState, tags, tenantFeatures, type, webEndpoint);
         }

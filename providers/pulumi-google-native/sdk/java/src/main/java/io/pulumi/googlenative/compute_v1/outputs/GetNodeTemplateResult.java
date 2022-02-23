@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.LocalDiskResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NodeTemplateNodeTypeFlexibilityResponse;
@@ -337,7 +337,6 @@ public final class GetNodeTemplateResult {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public GetNodeTemplateResult build() {
             return new GetNodeTemplateResult(accelerators, cpuOvercommitType, creationTimestamp, description, disks, kind, name, nodeAffinityLabels, nodeType, nodeTypeFlexibility, region, selfLink, serverBinding, status, statusMessage);
         }

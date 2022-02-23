@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.EcKeyTypeResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.RsaKeyTypeResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class AllowedKeyTypeResponse {
             this.rsa = Objects.requireNonNull(rsa);
             return this;
         }
-
         public AllowedKeyTypeResponse build() {
             return new AllowedKeyTypeResponse(ellipticCurve, rsa);
         }

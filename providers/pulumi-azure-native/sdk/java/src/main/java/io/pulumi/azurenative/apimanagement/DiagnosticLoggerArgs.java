@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="diagnosticId", required=true)
-    private final Input<String> diagnosticId;
+        private final Input<String> diagnosticId;
 
     public Input<String> getDiagnosticId() {
         return this.diagnosticId;
@@ -30,7 +30,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="loggerid")
-    private final @Nullable Input<String> loggerid;
+        private final @Nullable Input<String> loggerid;
 
     public Input<String> getLoggerid() {
         return this.loggerid == null ? Input.empty() : this.loggerid;
@@ -41,7 +41,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -141,7 +141,6 @@ public final class DiagnosticLoggerArgs extends io.pulumi.resources.ResourceArgs
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public DiagnosticLoggerArgs build() {
             return new DiagnosticLoggerArgs(diagnosticId, loggerid, resourceGroupName, serviceName);
         }

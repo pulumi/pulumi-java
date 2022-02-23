@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wisdom.outputs;
 
 import io.pulumi.awsnative.wisdom.outputs.KnowledgeBaseAppIntegrationsConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class KnowledgeBaseSourceConfiguration {
             this.appIntegrations = appIntegrations;
             return this;
         }
-
         public KnowledgeBaseSourceConfiguration build() {
             return new KnowledgeBaseSourceConfiguration(appIntegrations);
         }

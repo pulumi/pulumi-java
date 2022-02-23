@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.DeploymentConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="availableReplicas")
-    private final @Nullable Input<Integer> availableReplicas;
+        private final @Nullable Input<Integer> availableReplicas;
 
     public Input<Integer> getAvailableReplicas() {
         return this.availableReplicas == null ? Input.empty() : this.availableReplicas;
@@ -36,7 +36,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collisionCount")
-    private final @Nullable Input<Integer> collisionCount;
+        private final @Nullable Input<Integer> collisionCount;
 
     public Input<Integer> getCollisionCount() {
         return this.collisionCount == null ? Input.empty() : this.collisionCount;
@@ -47,7 +47,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<DeploymentConditionArgs>> conditions;
+        private final @Nullable Input<List<DeploymentConditionArgs>> conditions;
 
     public Input<List<DeploymentConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -58,7 +58,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+        private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -69,7 +69,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="readyReplicas")
-    private final @Nullable Input<Integer> readyReplicas;
+        private final @Nullable Input<Integer> readyReplicas;
 
     public Input<Integer> getReadyReplicas() {
         return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
@@ -80,7 +80,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicas")
-    private final @Nullable Input<Integer> replicas;
+        private final @Nullable Input<Integer> replicas;
 
     public Input<Integer> getReplicas() {
         return this.replicas == null ? Input.empty() : this.replicas;
@@ -91,7 +91,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="unavailableReplicas")
-    private final @Nullable Input<Integer> unavailableReplicas;
+        private final @Nullable Input<Integer> unavailableReplicas;
 
     public Input<Integer> getUnavailableReplicas() {
         return this.unavailableReplicas == null ? Input.empty() : this.unavailableReplicas;
@@ -102,7 +102,7 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="updatedReplicas")
-    private final @Nullable Input<Integer> updatedReplicas;
+        private final @Nullable Input<Integer> updatedReplicas;
 
     public Input<Integer> getUpdatedReplicas() {
         return this.updatedReplicas == null ? Input.empty() : this.updatedReplicas;
@@ -251,7 +251,6 @@ public final class DeploymentStatusArgs extends io.pulumi.resources.ResourceArgs
             this.updatedReplicas = Input.ofNullable(updatedReplicas);
             return this;
         }
-
         public DeploymentStatusArgs build() {
             return new DeploymentStatusArgs(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);
         }

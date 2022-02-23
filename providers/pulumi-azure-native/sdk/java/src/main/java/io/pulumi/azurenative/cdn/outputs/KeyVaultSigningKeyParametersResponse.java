@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -150,7 +150,6 @@ public final class KeyVaultSigningKeyParametersResponse {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultSigningKeyParametersResponse build() {
             return new KeyVaultSigningKeyParametersResponse(odataType, resourceGroupName, secretName, secretVersion, subscriptionId, vaultName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.azurenative.eventhub.inputs.DestinationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable DestinationResponse destination;
+        private final @Nullable DestinationResponse destination;
 
     public Optional<DestinationResponse> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
@@ -37,7 +37,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -48,7 +48,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable String encoding;
+        private final @Nullable String encoding;
 
     public Optional<String> getEncoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
@@ -59,7 +59,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Integer intervalInSeconds;
+        private final @Nullable Integer intervalInSeconds;
 
     public Optional<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.intervalInSeconds);
@@ -70,7 +70,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sizeLimitInBytes")
-    private final @Nullable Integer sizeLimitInBytes;
+        private final @Nullable Integer sizeLimitInBytes;
 
     public Optional<Integer> getSizeLimitInBytes() {
         return this.sizeLimitInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeLimitInBytes);
@@ -81,7 +81,7 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="skipEmptyArchives")
-    private final @Nullable Boolean skipEmptyArchives;
+        private final @Nullable Boolean skipEmptyArchives;
 
     public Optional<Boolean> getSkipEmptyArchives() {
         return this.skipEmptyArchives == null ? Optional.empty() : Optional.ofNullable(this.skipEmptyArchives);
@@ -170,7 +170,6 @@ public final class CaptureDescriptionResponse extends io.pulumi.resources.Invoke
             this.skipEmptyArchives = skipEmptyArchives;
             return this;
         }
-
         public CaptureDescriptionResponse build() {
             return new CaptureDescriptionResponse(destination, enabled, encoding, intervalInSeconds, sizeLimitInBytes, skipEmptyArchives);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+        private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -61,7 +61,6 @@ public final class FirewallPolicySkuResponse extends io.pulumi.resources.InvokeA
             this.tier = tier;
             return this;
         }
-
         public FirewallPolicySkuResponse build() {
             return new FirewallPolicySkuResponse(tier);
         }

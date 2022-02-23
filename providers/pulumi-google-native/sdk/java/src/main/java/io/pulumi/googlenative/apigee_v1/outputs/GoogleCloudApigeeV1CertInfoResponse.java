@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -265,7 +265,6 @@ public final class GoogleCloudApigeeV1CertInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudApigeeV1CertInfoResponse build() {
             return new GoogleCloudApigeeV1CertInfoResponse(basicConstraints, expiryDate, isValid, issuer, publicKey, serialNumber, sigAlgName, subject, subjectAlternativeNames, validFrom, version);
         }

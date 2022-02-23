@@ -11,7 +11,7 @@ import io.pulumi.azurenative.media.inputs.LiveEventPreviewArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventTranscriptionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -40,7 +40,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoStart")
-    private final @Nullable Input<Boolean> autoStart;
+        private final @Nullable Input<Boolean> autoStart;
 
     public Input<Boolean> getAutoStart() {
         return this.autoStart == null ? Input.empty() : this.autoStart;
@@ -51,7 +51,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossSiteAccessPolicies")
-    private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
+        private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
     public Input<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies == null ? Input.empty() : this.crossSiteAccessPolicies;
@@ -62,7 +62,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<LiveEventEncodingArgs> encoding;
+        private final @Nullable Input<LiveEventEncodingArgs> encoding;
 
     public Input<LiveEventEncodingArgs> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -84,7 +84,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnamePrefix")
-    private final @Nullable Input<String> hostnamePrefix;
+        private final @Nullable Input<String> hostnamePrefix;
 
     public Input<String> getHostnamePrefix() {
         return this.hostnamePrefix == null ? Input.empty() : this.hostnamePrefix;
@@ -95,7 +95,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="input", required=true)
-    private final Input<LiveEventInputArgs> input;
+        private final Input<LiveEventInputArgs> input;
 
     public Input<LiveEventInputArgs> getInput() {
         return this.input;
@@ -106,7 +106,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="liveEventName")
-    private final @Nullable Input<String> liveEventName;
+        private final @Nullable Input<String> liveEventName;
 
     public Input<String> getLiveEventName() {
         return this.liveEventName == null ? Input.empty() : this.liveEventName;
@@ -117,7 +117,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -128,7 +128,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<LiveEventPreviewArgs> preview;
+        private final @Nullable Input<LiveEventPreviewArgs> preview;
 
     public Input<LiveEventPreviewArgs> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -139,7 +139,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -150,7 +150,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamOptions")
-    private final @Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions;
+        private final @Nullable Input<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
     public Input<List<Either<String,StreamOptionsFlag>>> getStreamOptions() {
         return this.streamOptions == null ? Input.empty() : this.streamOptions;
@@ -161,7 +161,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transcriptions")
-    private final @Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions;
+        private final @Nullable Input<List<LiveEventTranscriptionArgs>> transcriptions;
 
     public Input<List<LiveEventTranscriptionArgs>> getTranscriptions() {
         return this.transcriptions == null ? Input.empty() : this.transcriptions;
@@ -183,7 +183,7 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useStaticHostname")
-    private final @Nullable Input<Boolean> useStaticHostname;
+        private final @Nullable Input<Boolean> useStaticHostname;
 
     public Input<Boolean> getUseStaticHostname() {
         return this.useStaticHostname == null ? Input.empty() : this.useStaticHostname;
@@ -437,7 +437,6 @@ public final class LiveEventArgs extends io.pulumi.resources.ResourceArgs {
             this.useStaticHostname = Input.ofNullable(useStaticHostname);
             return this;
         }
-
         public LiveEventArgs build() {
             return new LiveEventArgs(accountName, autoStart, crossSiteAccessPolicies, description, encoding, hostnamePrefix, input, liveEventName, location, preview, resourceGroupName, streamOptions, tags, transcriptions, useStaticHostname);
         }

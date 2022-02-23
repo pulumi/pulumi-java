@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.DataMaskingEntityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class DataMaskingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable List<DataMaskingEntityResponse> headers;
+        private final @Nullable List<DataMaskingEntityResponse> headers;
 
     public List<DataMaskingEntityResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
@@ -31,7 +31,7 @@ public final class DataMaskingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queryParams")
-    private final @Nullable List<DataMaskingEntityResponse> queryParams;
+        private final @Nullable List<DataMaskingEntityResponse> queryParams;
 
     public List<DataMaskingEntityResponse> getQueryParams() {
         return this.queryParams == null ? List.of() : this.queryParams;
@@ -80,7 +80,6 @@ public final class DataMaskingResponse extends io.pulumi.resources.InvokeArgs {
             this.queryParams = queryParams;
             return this;
         }
-
         public DataMaskingResponse build() {
             return new DataMaskingResponse(headers, queryParams);
         }

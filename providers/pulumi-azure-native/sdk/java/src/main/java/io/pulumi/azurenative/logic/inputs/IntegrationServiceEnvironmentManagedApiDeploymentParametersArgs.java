@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentLinkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
      * 
      */
     @InputImport(name="contentLinkDefinition")
-    private final @Nullable Input<ContentLinkArgs> contentLinkDefinition;
+        private final @Nullable Input<ContentLinkArgs> contentLinkDefinition;
 
     public Input<ContentLinkArgs> getContentLinkDefinition() {
         return this.contentLinkDefinition == null ? Input.empty() : this.contentLinkDefinition;
@@ -66,7 +66,6 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
             this.contentLinkDefinition = Input.ofNullable(contentLinkDefinition);
             return this;
         }
-
         public IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs build() {
             return new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(contentLinkDefinition);
         }

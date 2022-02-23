@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyData")
-    private final @Nullable Input<String> keyData;
+        private final @Nullable Input<String> keyData;
 
     public Input<String> getKeyData() {
         return this.keyData == null ? Input.empty() : this.keyData;
@@ -34,7 +34,7 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -93,7 +93,6 @@ public final class SshPublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public SshPublicKeyArgs build() {
             return new SshPublicKeyArgs(keyData, path);
         }

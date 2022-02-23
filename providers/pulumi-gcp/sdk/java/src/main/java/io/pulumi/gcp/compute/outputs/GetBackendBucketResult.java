@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendBucketCdnPolicy;
 import java.lang.Boolean;
 import java.lang.String;
@@ -175,7 +175,6 @@ public final class GetBackendBucketResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetBackendBucketResult build() {
             return new GetBackendBucketResult(bucketName, cdnPolicies, creationTimestamp, customResponseHeaders, description, enableCdn, id, name, project, selfLink);
         }

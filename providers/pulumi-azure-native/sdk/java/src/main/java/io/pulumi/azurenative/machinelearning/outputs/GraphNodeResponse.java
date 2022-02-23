@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.WebServiceParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class GraphNodeResponse {
             this.parameters = parameters;
             return this;
         }
-
         public GraphNodeResponse build() {
             return new GraphNodeResponse(assetId, inputId, outputId, parameters);
         }

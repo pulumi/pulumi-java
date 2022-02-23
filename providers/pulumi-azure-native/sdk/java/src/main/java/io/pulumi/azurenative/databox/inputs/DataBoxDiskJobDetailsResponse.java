@@ -15,7 +15,7 @@ import io.pulumi.azurenative.databox.inputs.KeyEncryptionKeyResponse;
 import io.pulumi.azurenative.databox.inputs.PackageShippingDetailsResponse;
 import io.pulumi.azurenative.databox.inputs.PreferencesResponse;
 import io.pulumi.azurenative.databox.inputs.ShippingAddressResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -39,7 +39,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="chainOfCustodySasKey", required=true)
-    private final String chainOfCustodySasKey;
+        private final String chainOfCustodySasKey;
 
     public String getChainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
@@ -50,7 +50,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="contactDetails", required=true)
-    private final ContactDetailsResponse contactDetails;
+        private final ContactDetailsResponse contactDetails;
 
     public ContactDetailsResponse getContactDetails() {
         return this.contactDetails;
@@ -61,7 +61,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="copyLogDetails", required=true)
-    private final List<Object> copyLogDetails;
+        private final List<Object> copyLogDetails;
 
     public List<Object> getCopyLogDetails() {
         return this.copyLogDetails;
@@ -72,7 +72,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="copyProgress", required=true)
-    private final List<DataBoxDiskCopyProgressResponse> copyProgress;
+        private final List<DataBoxDiskCopyProgressResponse> copyProgress;
 
     public List<DataBoxDiskCopyProgressResponse> getCopyProgress() {
         return this.copyProgress;
@@ -83,7 +83,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataExportDetails")
-    private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
+        private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
 
     public List<DataExportDetailsResponse> getDataExportDetails() {
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
@@ -94,7 +94,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dataImportDetails")
-    private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
+        private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
 
     public List<DataImportDetailsResponse> getDataImportDetails() {
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
@@ -105,7 +105,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="deliveryPackage", required=true)
-    private final PackageShippingDetailsResponse deliveryPackage;
+        private final PackageShippingDetailsResponse deliveryPackage;
 
     public PackageShippingDetailsResponse getDeliveryPackage() {
         return this.deliveryPackage;
@@ -116,7 +116,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="disksAndSizeDetails", required=true)
-    private final Map<String,Integer> disksAndSizeDetails;
+        private final Map<String,Integer> disksAndSizeDetails;
 
     public Map<String,Integer> getDisksAndSizeDetails() {
         return this.disksAndSizeDetails;
@@ -127,7 +127,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expectedDataSizeInTeraBytes")
-    private final @Nullable Integer expectedDataSizeInTeraBytes;
+        private final @Nullable Integer expectedDataSizeInTeraBytes;
 
     public Optional<Integer> getExpectedDataSizeInTeraBytes() {
         return this.expectedDataSizeInTeraBytes == null ? Optional.empty() : Optional.ofNullable(this.expectedDataSizeInTeraBytes);
@@ -139,7 +139,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jobDetailsType", required=true)
-    private final String jobDetailsType;
+        private final String jobDetailsType;
 
     public String getJobDetailsType() {
         return this.jobDetailsType;
@@ -150,7 +150,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jobStages", required=true)
-    private final List<JobStagesResponse> jobStages;
+        private final List<JobStagesResponse> jobStages;
 
     public List<JobStagesResponse> getJobStages() {
         return this.jobStages;
@@ -161,7 +161,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
+        private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
 
     public Optional<KeyEncryptionKeyResponse> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
@@ -172,7 +172,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="passkey")
-    private final @Nullable String passkey;
+        private final @Nullable String passkey;
 
     public Optional<String> getPasskey() {
         return this.passkey == null ? Optional.empty() : Optional.ofNullable(this.passkey);
@@ -183,7 +183,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="preferences")
-    private final @Nullable PreferencesResponse preferences;
+        private final @Nullable PreferencesResponse preferences;
 
     public Optional<PreferencesResponse> getPreferences() {
         return this.preferences == null ? Optional.empty() : Optional.ofNullable(this.preferences);
@@ -194,7 +194,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="preferredDisks")
-    private final @Nullable Map<String,Integer> preferredDisks;
+        private final @Nullable Map<String,Integer> preferredDisks;
 
     public Map<String,Integer> getPreferredDisks() {
         return this.preferredDisks == null ? Map.of() : this.preferredDisks;
@@ -205,7 +205,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="returnPackage", required=true)
-    private final PackageShippingDetailsResponse returnPackage;
+        private final PackageShippingDetailsResponse returnPackage;
 
     public PackageShippingDetailsResponse getReturnPackage() {
         return this.returnPackage;
@@ -216,7 +216,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="reverseShipmentLabelSasKey", required=true)
-    private final String reverseShipmentLabelSasKey;
+        private final String reverseShipmentLabelSasKey;
 
     public String getReverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
@@ -227,7 +227,7 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="shippingAddress")
-    private final @Nullable ShippingAddressResponse shippingAddress;
+        private final @Nullable ShippingAddressResponse shippingAddress;
 
     public Optional<ShippingAddressResponse> getShippingAddress() {
         return this.shippingAddress == null ? Optional.empty() : Optional.ofNullable(this.shippingAddress);
@@ -436,7 +436,6 @@ public final class DataBoxDiskJobDetailsResponse extends io.pulumi.resources.Inv
             this.shippingAddress = shippingAddress;
             return this;
         }
-
         public DataBoxDiskJobDetailsResponse build() {
             return new DataBoxDiskJobDetailsResponse(chainOfCustodySasKey, contactDetails, copyLogDetails, copyProgress, dataExportDetails, dataImportDetails, deliveryPackage, disksAndSizeDetails, expectedDataSizeInTeraBytes, jobDetailsType, jobStages, keyEncryptionKey, passkey, preferences, preferredDisks, returnPackage, reverseShipmentLabelSasKey, shippingAddress);
         }

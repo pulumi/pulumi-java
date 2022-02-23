@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect.inputs;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEncryptionKeyType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<FlowEncryptionAlgorithm> algorithm;
+        private final @Nullable Input<FlowEncryptionAlgorithm> algorithm;
 
     public Input<FlowEncryptionAlgorithm> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
@@ -36,7 +36,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="constantInitializationVector")
-    private final @Nullable Input<String> constantInitializationVector;
+        private final @Nullable Input<String> constantInitializationVector;
 
     public Input<String> getConstantInitializationVector() {
         return this.constantInitializationVector == null ? Input.empty() : this.constantInitializationVector;
@@ -47,7 +47,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceId")
-    private final @Nullable Input<String> deviceId;
+        private final @Nullable Input<String> deviceId;
 
     public Input<String> getDeviceId() {
         return this.deviceId == null ? Input.empty() : this.deviceId;
@@ -58,7 +58,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Input<FlowEncryptionKeyType> keyType;
+        private final @Nullable Input<FlowEncryptionKeyType> keyType;
 
     public Input<FlowEncryptionKeyType> getKeyType() {
         return this.keyType == null ? Input.empty() : this.keyType;
@@ -69,7 +69,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -80,7 +80,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -91,7 +91,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -102,7 +102,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretArn")
-    private final @Nullable Input<String> secretArn;
+        private final @Nullable Input<String> secretArn;
 
     public Input<String> getSecretArn() {
         return this.secretArn == null ? Input.empty() : this.secretArn;
@@ -113,7 +113,7 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -277,7 +277,6 @@ public final class FlowEncryptionArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public FlowEncryptionArgs build() {
             return new FlowEncryptionArgs(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }

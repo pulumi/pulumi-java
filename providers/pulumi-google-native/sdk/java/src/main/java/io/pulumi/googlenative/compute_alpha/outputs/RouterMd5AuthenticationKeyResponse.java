@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class RouterMd5AuthenticationKeyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public RouterMd5AuthenticationKeyResponse build() {
             return new RouterMd5AuthenticationKeyResponse(key, name);
         }

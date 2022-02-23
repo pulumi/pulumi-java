@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestackhci.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="extension", required=true)
-    private final String extension;
+        private final String extension;
 
     public String getExtension() {
         return this.extension;
@@ -32,7 +32,7 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -102,7 +102,6 @@ public final class PerNodeExtensionStateResponse extends io.pulumi.resources.Inv
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public PerNodeExtensionStateResponse build() {
             return new PerNodeExtensionStateResponse(extension, name, state);
         }

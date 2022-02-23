@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.offazure.outputs;
 
 import io.pulumi.azurenative.offazure.outputs.SitePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -175,7 +175,6 @@ public final class GetHyperVSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHyperVSiteResult build() {
             return new GetHyperVSiteResult(eTag, id, location, name, properties, tags, type);
         }

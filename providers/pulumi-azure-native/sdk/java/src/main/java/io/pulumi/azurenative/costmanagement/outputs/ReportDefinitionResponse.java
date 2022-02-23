@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportDatasetResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportTimePeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class ReportDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReportDefinitionResponse build() {
             return new ReportDefinitionResponse(dataset, timePeriod, timeframe, type);
         }

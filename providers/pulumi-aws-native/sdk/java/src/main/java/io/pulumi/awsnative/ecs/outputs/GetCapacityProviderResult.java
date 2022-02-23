@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderAutoScalingGroupProvider;
 import io.pulumi.awsnative.ecs.outputs.CapacityProviderTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class GetCapacityProviderResult {
             this.tags = tags;
             return this;
         }
-
         public GetCapacityProviderResult build() {
             return new GetCapacityProviderResult(autoScalingGroupProvider, tags);
         }

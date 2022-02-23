@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -371,7 +371,6 @@ public final class GetArtifactSourceResult {
             this.uri = uri;
             return this;
         }
-
         public GetArtifactSourceResult build() {
             return new GetArtifactSourceResult(armTemplateFolderPath, branchRef, createdDate, displayName, folderPath, id, location, name, provisioningState, securityToken, sourceType, status, tags, type, uniqueIdentifier, uri);
         }

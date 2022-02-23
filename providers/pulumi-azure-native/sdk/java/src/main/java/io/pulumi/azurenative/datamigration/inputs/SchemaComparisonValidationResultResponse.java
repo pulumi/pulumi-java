@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.SchemaComparisonValidationResultTypeResponse;
 import io.pulumi.azurenative.datamigration.inputs.ValidationErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="schemaDifferences", required=true)
-    private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
+        private final SchemaComparisonValidationResultTypeResponse schemaDifferences;
 
     public SchemaComparisonValidationResultTypeResponse getSchemaDifferences() {
         return this.schemaDifferences;
@@ -38,7 +38,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="sourceDatabaseObjectCount")
-    private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
+        private final @Nullable Map<String,Double> sourceDatabaseObjectCount;
 
     public Map<String,Double> getSourceDatabaseObjectCount() {
         return this.sourceDatabaseObjectCount == null ? Map.of() : this.sourceDatabaseObjectCount;
@@ -49,7 +49,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="targetDatabaseObjectCount")
-    private final @Nullable Map<String,Double> targetDatabaseObjectCount;
+        private final @Nullable Map<String,Double> targetDatabaseObjectCount;
 
     public Map<String,Double> getTargetDatabaseObjectCount() {
         return this.targetDatabaseObjectCount == null ? Map.of() : this.targetDatabaseObjectCount;
@@ -60,7 +60,7 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final ValidationErrorResponse validationErrors;
+        private final ValidationErrorResponse validationErrors;
 
     public ValidationErrorResponse getValidationErrors() {
         return this.validationErrors;
@@ -129,7 +129,6 @@ public final class SchemaComparisonValidationResultResponse extends io.pulumi.re
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public SchemaComparisonValidationResultResponse build() {
             return new SchemaComparisonValidationResultResponse(schemaDifferences, sourceDatabaseObjectCount, targetDatabaseObjectCount, validationErrors);
         }

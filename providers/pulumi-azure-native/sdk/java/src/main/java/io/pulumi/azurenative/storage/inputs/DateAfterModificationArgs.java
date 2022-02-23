@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="daysAfterLastAccessTimeGreaterThan")
-    private final @Nullable Input<Double> daysAfterLastAccessTimeGreaterThan;
+        private final @Nullable Input<Double> daysAfterLastAccessTimeGreaterThan;
 
     public Input<Double> getDaysAfterLastAccessTimeGreaterThan() {
         return this.daysAfterLastAccessTimeGreaterThan == null ? Input.empty() : this.daysAfterLastAccessTimeGreaterThan;
@@ -34,7 +34,7 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="daysAfterModificationGreaterThan")
-    private final @Nullable Input<Double> daysAfterModificationGreaterThan;
+        private final @Nullable Input<Double> daysAfterModificationGreaterThan;
 
     public Input<Double> getDaysAfterModificationGreaterThan() {
         return this.daysAfterModificationGreaterThan == null ? Input.empty() : this.daysAfterModificationGreaterThan;
@@ -93,7 +93,6 @@ public final class DateAfterModificationArgs extends io.pulumi.resources.Resourc
             this.daysAfterModificationGreaterThan = Input.ofNullable(daysAfterModificationGreaterThan);
             return this;
         }
-
         public DateAfterModificationArgs build() {
             return new DateAfterModificationArgs(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);
         }

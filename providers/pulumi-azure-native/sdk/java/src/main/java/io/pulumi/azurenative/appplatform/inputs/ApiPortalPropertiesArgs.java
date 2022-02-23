@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gatewayIds")
-    private final @Nullable Input<List<String>> gatewayIds;
+        private final @Nullable Input<List<String>> gatewayIds;
 
     public Input<List<String>> getGatewayIds() {
         return this.gatewayIds == null ? Input.empty() : this.gatewayIds;
@@ -37,7 +37,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Input<Boolean> httpsOnly;
+        private final @Nullable Input<Boolean> httpsOnly;
 
     public Input<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
@@ -48,7 +48,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Input<Boolean> $public;
+        private final @Nullable Input<Boolean> $public;
 
     public Input<Boolean> get$public() {
         return this.$public == null ? Input.empty() : this.$public;
@@ -59,7 +59,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceUrls")
-    private final @Nullable Input<List<String>> sourceUrls;
+        private final @Nullable Input<List<String>> sourceUrls;
 
     public Input<List<String>> getSourceUrls() {
         return this.sourceUrls == null ? Input.empty() : this.sourceUrls;
@@ -70,7 +70,7 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ssoProperties")
-    private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
+        private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
 
     public Input<SsoPropertiesArgs> getSsoProperties() {
         return this.ssoProperties == null ? Input.empty() : this.ssoProperties;
@@ -174,7 +174,6 @@ public final class ApiPortalPropertiesArgs extends io.pulumi.resources.ResourceA
             this.ssoProperties = Input.ofNullable(ssoProperties);
             return this;
         }
-
         public ApiPortalPropertiesArgs build() {
             return new ApiPortalPropertiesArgs(gatewayIds, httpsOnly, $public, sourceUrls, ssoProperties);
         }

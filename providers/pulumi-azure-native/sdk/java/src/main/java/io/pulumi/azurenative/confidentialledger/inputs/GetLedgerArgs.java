@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confidentialledger.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ledgerName", required=true)
-    private final String ledgerName;
+        private final String ledgerName;
 
     public String getLedgerName() {
         return this.ledgerName;
@@ -28,7 +28,7 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetLedgerArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLedgerArgs build() {
             return new GetLedgerArgs(ledgerName, resourceGroupName);
         }

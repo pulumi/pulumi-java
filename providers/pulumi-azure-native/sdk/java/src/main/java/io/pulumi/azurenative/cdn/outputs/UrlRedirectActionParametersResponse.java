@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -173,7 +173,6 @@ public final class UrlRedirectActionParametersResponse {
             this.redirectType = Objects.requireNonNull(redirectType);
             return this;
         }
-
         public UrlRedirectActionParametersResponse build() {
             return new UrlRedirectActionParametersResponse(customFragment, customHostname, customPath, customQueryString, destinationProtocol, odataType, redirectType);
         }

@@ -8,8 +8,8 @@ import io.pulumi.azurenative.storage.BlobContainerImmutabilityPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -118,13 +118,6 @@ public class BlobContainerImmutabilityPolicy extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BlobContainerImmutabilityPolicy(String name) {
-        super("azure-native:storage:BlobContainerImmutabilityPolicy", name, BlobContainerImmutabilityPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

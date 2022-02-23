@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="callbackUrl", required=true)
-    private final String callbackUrl;
+        private final String callbackUrl;
 
     public String getCallbackUrl() {
         return this.callbackUrl;
@@ -35,7 +35,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -57,7 +57,7 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Boolean useCommonAlertSchema;
+        private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
@@ -126,7 +126,6 @@ public final class LogicAppReceiverResponse extends io.pulumi.resources.InvokeAr
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public LogicAppReceiverResponse build() {
             return new LogicAppReceiverResponse(callbackUrl, name, resourceId, useCommonAlertSchema);
         }

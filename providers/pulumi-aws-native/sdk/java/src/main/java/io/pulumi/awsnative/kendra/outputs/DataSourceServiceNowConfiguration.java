@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowAuthenticationType;
 import io.pulumi.awsnative.kendra.enums.DataSourceServiceNowBuildVersionType;
 import io.pulumi.awsnative.kendra.outputs.DataSourceServiceNowKnowledgeArticleConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceServiceNowServiceCatalogConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -116,7 +116,6 @@ public final class DataSourceServiceNowConfiguration {
             this.serviceNowBuildVersion = Objects.requireNonNull(serviceNowBuildVersion);
             return this;
         }
-
         public DataSourceServiceNowConfiguration build() {
             return new DataSourceServiceNowConfiguration(authenticationType, hostUrl, knowledgeArticleConfiguration, secretArn, serviceCatalogConfiguration, serviceNowBuildVersion);
         }

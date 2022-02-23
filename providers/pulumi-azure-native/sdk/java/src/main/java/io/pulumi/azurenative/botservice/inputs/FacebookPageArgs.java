@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+        private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -34,7 +34,7 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -93,7 +93,6 @@ public final class FacebookPageArgs extends io.pulumi.resources.ResourceArgs {
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public FacebookPageArgs build() {
             return new FacebookPageArgs(accessToken, id);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingHostPoolReferenceResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ScalingScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -438,7 +438,6 @@ public final class GetScalingPlanResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScalingPlanResult build() {
             return new GetScalingPlanResult(description, etag, exclusionTag, friendlyName, hostPoolReferences, hostPoolType, id, identity, kind, location, managedBy, name, objectId, plan, ring, schedules, sku, tags, timeZone, type);
         }

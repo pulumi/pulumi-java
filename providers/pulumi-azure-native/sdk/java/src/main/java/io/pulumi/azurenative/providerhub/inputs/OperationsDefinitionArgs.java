@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.OperationsDefinitionDisplayArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
     public static final OperationsDefinitionArgs Empty = new OperationsDefinitionArgs();
 
     @InputImport(name="actionType")
-    private final @Nullable Input<String> actionType;
+        private final @Nullable Input<String> actionType;
 
     public Input<String> getActionType() {
         return this.actionType == null ? Input.empty() : this.actionType;
@@ -33,7 +33,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="display", required=true)
-    private final Input<OperationsDefinitionDisplayArgs> display;
+        private final Input<OperationsDefinitionDisplayArgs> display;
 
     public Input<OperationsDefinitionDisplayArgs> getDisplay() {
         return this.display;
@@ -44,7 +44,7 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isDataAction")
-    private final @Nullable Input<Boolean> isDataAction;
+        private final @Nullable Input<Boolean> isDataAction;
 
     public Input<Boolean> getIsDataAction() {
         return this.isDataAction == null ? Input.empty() : this.isDataAction;
@@ -55,21 +55,21 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="origin")
-    private final @Nullable Input<String> origin;
+        private final @Nullable Input<String> origin;
 
     public Input<String> getOrigin() {
         return this.origin == null ? Input.empty() : this.origin;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<Object> properties;
+        private final @Nullable Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -188,7 +188,6 @@ public final class OperationsDefinitionArgs extends io.pulumi.resources.Resource
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public OperationsDefinitionArgs build() {
             return new OperationsDefinitionArgs(actionType, display, isDataAction, name, origin, properties);
         }

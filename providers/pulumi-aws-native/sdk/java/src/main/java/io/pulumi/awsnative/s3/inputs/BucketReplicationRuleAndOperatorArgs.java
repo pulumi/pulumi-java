@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class BucketReplicationRuleAndOperatorArgs extends io.pulumi.resour
     public static final BucketReplicationRuleAndOperatorArgs Empty = new BucketReplicationRuleAndOperatorArgs();
 
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
     @InputImport(name="tagFilters")
-    private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+        private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
 
     public Input<List<BucketTagFilterArgs>> getTagFilters() {
         return this.tagFilters == null ? Input.empty() : this.tagFilters;
@@ -83,7 +83,6 @@ public final class BucketReplicationRuleAndOperatorArgs extends io.pulumi.resour
             this.tagFilters = Input.ofNullable(tagFilters);
             return this;
         }
-
         public BucketReplicationRuleAndOperatorArgs build() {
             return new BucketReplicationRuleAndOperatorArgs(prefix, tagFilters);
         }

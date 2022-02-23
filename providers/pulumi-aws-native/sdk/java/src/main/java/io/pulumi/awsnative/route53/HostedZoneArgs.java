@@ -8,7 +8,7 @@ import io.pulumi.awsnative.route53.inputs.HostedZoneQueryLoggingConfigArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneTagArgs;
 import io.pulumi.awsnative.route53.inputs.HostedZoneVPCArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
     public static final HostedZoneArgs Empty = new HostedZoneArgs();
 
     @InputImport(name="hostedZoneConfig")
-    private final @Nullable Input<HostedZoneConfigArgs> hostedZoneConfig;
+        private final @Nullable Input<HostedZoneConfigArgs> hostedZoneConfig;
 
     public Input<HostedZoneConfigArgs> getHostedZoneConfig() {
         return this.hostedZoneConfig == null ? Input.empty() : this.hostedZoneConfig;
@@ -33,7 +33,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedZoneTags")
-    private final @Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags;
+        private final @Nullable Input<List<HostedZoneTagArgs>> hostedZoneTags;
 
     public Input<List<HostedZoneTagArgs>> getHostedZoneTags() {
         return this.hostedZoneTags == null ? Input.empty() : this.hostedZoneTags;
@@ -46,14 +46,14 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="queryLoggingConfig")
-    private final @Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
+        private final @Nullable Input<HostedZoneQueryLoggingConfigArgs> queryLoggingConfig;
 
     public Input<HostedZoneQueryLoggingConfigArgs> getQueryLoggingConfig() {
         return this.queryLoggingConfig == null ? Input.empty() : this.queryLoggingConfig;
@@ -64,7 +64,7 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vPCs")
-    private final @Nullable Input<List<HostedZoneVPCArgs>> vPCs;
+        private final @Nullable Input<List<HostedZoneVPCArgs>> vPCs;
 
     public Input<List<HostedZoneVPCArgs>> getVPCs() {
         return this.vPCs == null ? Input.empty() : this.vPCs;
@@ -168,7 +168,6 @@ public final class HostedZoneArgs extends io.pulumi.resources.ResourceArgs {
             this.vPCs = Input.ofNullable(vPCs);
             return this;
         }
-
         public HostedZoneArgs build() {
             return new HostedZoneArgs(hostedZoneConfig, hostedZoneTags, name, queryLoggingConfig, vPCs);
         }

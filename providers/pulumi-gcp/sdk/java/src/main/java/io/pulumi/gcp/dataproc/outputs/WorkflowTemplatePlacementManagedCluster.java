@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfig;
 import java.lang.String;
 import java.util.Map;
@@ -98,7 +98,6 @@ public final class WorkflowTemplatePlacementManagedCluster {
             this.labels = labels;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedCluster build() {
             return new WorkflowTemplatePlacementManagedCluster(clusterName, config, labels);
         }

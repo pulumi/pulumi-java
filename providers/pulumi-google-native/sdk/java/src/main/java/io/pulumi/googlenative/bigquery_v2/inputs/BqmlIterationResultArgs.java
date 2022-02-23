@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="durationMs")
-    private final @Nullable Input<String> durationMs;
+      private final @Nullable Input<String> durationMs;
 
     public Input<String> getDurationMs() {
         return this.durationMs == null ? Input.empty() : this.durationMs;
@@ -32,7 +32,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="evalLoss")
-    private final @Nullable Input<Double> evalLoss;
+      private final @Nullable Input<Double> evalLoss;
 
     public Input<Double> getEvalLoss() {
         return this.evalLoss == null ? Input.empty() : this.evalLoss;
@@ -43,7 +43,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="index")
-    private final @Nullable Input<Integer> index;
+      private final @Nullable Input<Integer> index;
 
     public Input<Integer> getIndex() {
         return this.index == null ? Input.empty() : this.index;
@@ -54,7 +54,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="learnRate")
-    private final @Nullable Input<Double> learnRate;
+      private final @Nullable Input<Double> learnRate;
 
     public Input<Double> getLearnRate() {
         return this.learnRate == null ? Input.empty() : this.learnRate;
@@ -65,7 +65,7 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="trainingLoss")
-    private final @Nullable Input<Double> trainingLoss;
+      private final @Nullable Input<Double> trainingLoss;
 
     public Input<Double> getTrainingLoss() {
         return this.trainingLoss == null ? Input.empty() : this.trainingLoss;
@@ -169,7 +169,6 @@ public final class BqmlIterationResultArgs extends io.pulumi.resources.ResourceA
             this.trainingLoss = Input.ofNullable(trainingLoss);
             return this;
         }
-
         public BqmlIterationResultArgs build() {
             return new BqmlIterationResultArgs(durationMs, evalLoss, index, learnRate, trainingLoss);
         }

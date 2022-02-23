@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateLocalizedGalleryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="author")
-    private final @Nullable Input<String> author;
+        private final @Nullable Input<String> author;
 
     public Input<String> getAuthor() {
         return this.author == null ? Input.empty() : this.author;
@@ -36,7 +36,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="galleries", required=true)
-    private final Input<List<WorkbookTemplateGalleryArgs>> galleries;
+        private final Input<List<WorkbookTemplateGalleryArgs>> galleries;
 
     public Input<List<WorkbookTemplateGalleryArgs>> getGalleries() {
         return this.galleries;
@@ -47,7 +47,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="localized")
-    private final @Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
+        private final @Nullable Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> localized;
 
     public Input<Map<String,List<WorkbookTemplateLocalizedGalleryArgs>>> getLocalized() {
         return this.localized == null ? Input.empty() : this.localized;
@@ -58,7 +58,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -80,7 +80,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -102,7 +102,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -113,7 +113,7 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="templateData", required=true)
-    private final Input<Object> templateData;
+        private final Input<Object> templateData;
 
     public Input<Object> getTemplateData() {
         return this.templateData;
@@ -277,7 +277,6 @@ public final class WorkbookTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.templateData = Input.of(Objects.requireNonNull(templateData));
             return this;
         }
-
         public WorkbookTemplateArgs build() {
             return new WorkbookTemplateArgs(author, galleries, localized, location, priority, resourceGroupName, resourceName, tags, templateData);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.EntityInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -99,7 +99,6 @@ public final class GetEntityResult {
             this.value = value;
             return this;
         }
-
         public GetEntityResult build() {
             return new GetEntityResult(count, nextLink, value);
         }

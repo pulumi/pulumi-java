@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.HealthCheckType;
 import io.pulumi.googlenative.compute_v1.inputs.GRPCHealthCheckArgs;
 import io.pulumi.googlenative.compute_v1.inputs.HTTP2HealthCheckArgs;
@@ -28,7 +28,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checkIntervalSec")
-    private final @Nullable Input<Integer> checkIntervalSec;
+      private final @Nullable Input<Integer> checkIntervalSec;
 
     public Input<Integer> getCheckIntervalSec() {
         return this.checkIntervalSec == null ? Input.empty() : this.checkIntervalSec;
@@ -39,14 +39,14 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="grpcHealthCheck")
-    private final @Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck;
+      private final @Nullable Input<GRPCHealthCheckArgs> grpcHealthCheck;
 
     public Input<GRPCHealthCheckArgs> getGrpcHealthCheck() {
         return this.grpcHealthCheck == null ? Input.empty() : this.grpcHealthCheck;
@@ -57,28 +57,28 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
     }
 
     @InputImport(name="http2HealthCheck")
-    private final @Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck;
+      private final @Nullable Input<HTTP2HealthCheckArgs> http2HealthCheck;
 
     public Input<HTTP2HealthCheckArgs> getHttp2HealthCheck() {
         return this.http2HealthCheck == null ? Input.empty() : this.http2HealthCheck;
     }
 
     @InputImport(name="httpHealthCheck")
-    private final @Nullable Input<HTTPHealthCheckArgs> httpHealthCheck;
+      private final @Nullable Input<HTTPHealthCheckArgs> httpHealthCheck;
 
     public Input<HTTPHealthCheckArgs> getHttpHealthCheck() {
         return this.httpHealthCheck == null ? Input.empty() : this.httpHealthCheck;
     }
 
     @InputImport(name="httpsHealthCheck")
-    private final @Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck;
+      private final @Nullable Input<HTTPSHealthCheckArgs> httpsHealthCheck;
 
     public Input<HTTPSHealthCheckArgs> getHttpsHealthCheck() {
         return this.httpsHealthCheck == null ? Input.empty() : this.httpsHealthCheck;
@@ -89,7 +89,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -100,7 +100,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<HealthCheckLogConfigArgs> logConfig;
+      private final @Nullable Input<HealthCheckLogConfigArgs> logConfig;
 
     public Input<HealthCheckLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -111,35 +111,35 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="sslHealthCheck")
-    private final @Nullable Input<SSLHealthCheckArgs> sslHealthCheck;
+      private final @Nullable Input<SSLHealthCheckArgs> sslHealthCheck;
 
     public Input<SSLHealthCheckArgs> getSslHealthCheck() {
         return this.sslHealthCheck == null ? Input.empty() : this.sslHealthCheck;
     }
 
     @InputImport(name="tcpHealthCheck")
-    private final @Nullable Input<TCPHealthCheckArgs> tcpHealthCheck;
+      private final @Nullable Input<TCPHealthCheckArgs> tcpHealthCheck;
 
     public Input<TCPHealthCheckArgs> getTcpHealthCheck() {
         return this.tcpHealthCheck == null ? Input.empty() : this.tcpHealthCheck;
@@ -150,7 +150,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+      private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -161,7 +161,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<HealthCheckType> type;
+      private final @Nullable Input<HealthCheckType> type;
 
     public Input<HealthCheckType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
@@ -456,7 +456,6 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }
-
         public HealthCheckArgs build() {
             return new HealthCheckArgs(checkIntervalSec, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, kind, logConfig, name, project, requestId, sslHealthCheck, tcpHealthCheck, timeoutSec, type, unhealthyThreshold);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.DataBoxDiskJobSecretsResponse;
 import io.pulumi.azurenative.databox.outputs.DataBoxHeavyJobSecretsResponse;
 import io.pulumi.azurenative.databox.outputs.DataboxJobSecretsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class UnencryptedCredentialsResponse {
             this.jobSecrets = Objects.requireNonNull(jobSecrets);
             return this;
         }
-
         public UnencryptedCredentialsResponse build() {
             return new UnencryptedCredentialsResponse(jobName, jobSecrets);
         }

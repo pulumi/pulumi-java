@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.inputs;
 import io.pulumi.azurenative.databox.inputs.CloudErrorResponse;
 import io.pulumi.azurenative.databox.inputs.DcAccessSecurityCodeResponse;
 import io.pulumi.azurenative.databox.inputs.DiskSecretResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dcAccessSecurityCode", required=true)
-    private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
+        private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
 
     public DcAccessSecurityCodeResponse getDcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
@@ -37,7 +37,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="diskSecrets", required=true)
-    private final List<DiskSecretResponse> diskSecrets;
+        private final List<DiskSecretResponse> diskSecrets;
 
     public List<DiskSecretResponse> getDiskSecrets() {
         return this.diskSecrets;
@@ -48,7 +48,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="error", required=true)
-    private final CloudErrorResponse error;
+        private final CloudErrorResponse error;
 
     public CloudErrorResponse getError() {
         return this.error;
@@ -59,7 +59,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="isPasskeyUserDefined", required=true)
-    private final Boolean isPasskeyUserDefined;
+        private final Boolean isPasskeyUserDefined;
 
     public Boolean getIsPasskeyUserDefined() {
         return this.isPasskeyUserDefined;
@@ -71,7 +71,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="jobSecretsType", required=true)
-    private final String jobSecretsType;
+        private final String jobSecretsType;
 
     public String getJobSecretsType() {
         return this.jobSecretsType;
@@ -82,7 +82,7 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="passKey", required=true)
-    private final String passKey;
+        private final String passKey;
 
     public String getPassKey() {
         return this.passKey;
@@ -171,7 +171,6 @@ public final class DataBoxDiskJobSecretsResponse extends io.pulumi.resources.Inv
             this.passKey = Objects.requireNonNull(passKey);
             return this;
         }
-
         public DataBoxDiskJobSecretsResponse build() {
             return new DataBoxDiskJobSecretsResponse(dcAccessSecurityCode, diskSecrets, error, isPasskeyUserDefined, jobSecretsType, passKey);
         }

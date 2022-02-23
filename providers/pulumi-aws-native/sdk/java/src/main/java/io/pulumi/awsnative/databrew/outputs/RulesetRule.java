@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.outputs;
 import io.pulumi.awsnative.databrew.outputs.RulesetColumnSelector;
 import io.pulumi.awsnative.databrew.outputs.RulesetSubstitutionValue;
 import io.pulumi.awsnative.databrew.outputs.RulesetThreshold;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -125,7 +125,6 @@ public final class RulesetRule {
             this.threshold = threshold;
             return this;
         }
-
         public RulesetRule build() {
             return new RulesetRule(checkExpression, columnSelectors, disabled, name, substitutionMap, threshold);
         }

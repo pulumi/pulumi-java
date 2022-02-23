@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
      * 
      */
     @InputImport(name="osShortName", required=true)
-    private final Input<String> osShortName;
+      private final Input<String> osShortName;
 
     public Input<String> getOsShortName() {
         return this.osShortName;
@@ -34,7 +34,7 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
      * 
      */
     @InputImport(name="osVersion")
-    private final @Nullable Input<String> osVersion;
+      private final @Nullable Input<String> osVersion;
 
     public Input<String> getOsVersion() {
         return this.osVersion == null ? Input.empty() : this.osVersion;
@@ -93,7 +93,6 @@ public final class OSPolicyAssignmentInstanceFilterInventoryArgs extends io.pulu
             this.osVersion = Input.ofNullable(osVersion);
             return this;
         }
-
         public OSPolicyAssignmentInstanceFilterInventoryArgs build() {
             return new OSPolicyAssignmentInstanceFilterInventoryArgs(osShortName, osVersion);
         }

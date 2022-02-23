@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="strength")
-    private final @Nullable Input<Double> strength;
+      private final @Nullable Input<Double> strength;
 
     public Input<Double> getStrength() {
         return this.strength == null ? Input.empty() : this.strength;
@@ -35,7 +35,7 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tune")
-    private final @Nullable Input<String> tune;
+      private final @Nullable Input<String> tune;
 
     public Input<String> getTune() {
         return this.tune == null ? Input.empty() : this.tune;
@@ -94,7 +94,6 @@ public final class DenoiseArgs extends io.pulumi.resources.ResourceArgs {
             this.tune = Input.ofNullable(tune);
             return this;
         }
-
         public DenoiseArgs build() {
             return new DenoiseArgs(strength, tune);
         }

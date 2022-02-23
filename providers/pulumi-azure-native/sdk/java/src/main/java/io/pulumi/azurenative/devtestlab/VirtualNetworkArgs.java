@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetArgs;
 import io.pulumi.azurenative.devtestlab.inputs.SubnetOverrideArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedSubnets")
-    private final @Nullable Input<List<SubnetArgs>> allowedSubnets;
+        private final @Nullable Input<List<SubnetArgs>> allowedSubnets;
 
     public Input<List<SubnetArgs>> getAllowedSubnets() {
         return this.allowedSubnets == null ? Input.empty() : this.allowedSubnets;
@@ -34,7 +34,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalProviderResourceId")
-    private final @Nullable Input<String> externalProviderResourceId;
+        private final @Nullable Input<String> externalProviderResourceId;
 
     public Input<String> getExternalProviderResourceId() {
         return this.externalProviderResourceId == null ? Input.empty() : this.externalProviderResourceId;
@@ -56,7 +56,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -67,7 +67,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetOverrides")
-    private final @Nullable Input<List<SubnetOverrideArgs>> subnetOverrides;
+        private final @Nullable Input<List<SubnetOverrideArgs>> subnetOverrides;
 
     public Input<List<SubnetOverrideArgs>> getSubnetOverrides() {
         return this.subnetOverrides == null ? Input.empty() : this.subnetOverrides;
@@ -111,7 +111,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -275,7 +275,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public VirtualNetworkArgs build() {
             return new VirtualNetworkArgs(allowedSubnets, description, externalProviderResourceId, labName, location, name, resourceGroupName, subnetOverrides, tags);
         }

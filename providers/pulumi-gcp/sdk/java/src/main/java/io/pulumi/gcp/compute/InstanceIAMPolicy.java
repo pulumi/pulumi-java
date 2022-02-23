@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceIAMPolicyArgs;
 import io.pulumi.gcp.compute.inputs.InstanceIAMPolicyState;
@@ -140,13 +140,6 @@ public class InstanceIAMPolicy extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceIAMPolicy(String name) {
-        super("gcp:compute/instanceIAMPolicy:InstanceIAMPolicy", name, InstanceIAMPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

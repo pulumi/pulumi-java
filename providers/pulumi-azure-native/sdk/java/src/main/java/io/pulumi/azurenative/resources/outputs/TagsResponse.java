@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -46,7 +46,6 @@ public final class TagsResponse {
             this.tags = tags;
             return this;
         }
-
         public TagsResponse build() {
             return new TagsResponse(tags);
         }

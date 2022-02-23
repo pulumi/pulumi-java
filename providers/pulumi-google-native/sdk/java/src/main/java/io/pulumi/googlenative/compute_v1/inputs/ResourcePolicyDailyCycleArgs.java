@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="daysInCycle")
-    private final @Nullable Input<Integer> daysInCycle;
+      private final @Nullable Input<Integer> daysInCycle;
 
     public Input<Integer> getDaysInCycle() {
         return this.daysInCycle == null ? Input.empty() : this.daysInCycle;
@@ -35,7 +35,7 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -94,7 +94,6 @@ public final class ResourcePolicyDailyCycleArgs extends io.pulumi.resources.Reso
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public ResourcePolicyDailyCycleArgs build() {
             return new ResourcePolicyDailyCycleArgs(daysInCycle, startTime);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 import io.pulumi.azurenative.scheduler.inputs.JobActionResponse;
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceResponse;
 import io.pulumi.azurenative.scheduler.inputs.JobStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="action")
-    private final @Nullable JobActionResponse action;
+        private final @Nullable JobActionResponse action;
 
     public Optional<JobActionResponse> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -33,7 +33,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable JobRecurrenceResponse recurrence;
+        private final @Nullable JobRecurrenceResponse recurrence;
 
     public Optional<JobRecurrenceResponse> getRecurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
@@ -44,7 +44,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -55,7 +55,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -66,7 +66,7 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="status", required=true)
-    private final JobStatusResponse status;
+        private final JobStatusResponse status;
 
     public JobStatusResponse getStatus() {
         return this.status;
@@ -145,7 +145,6 @@ public final class JobPropertiesResponse extends io.pulumi.resources.InvokeArgs 
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public JobPropertiesResponse build() {
             return new JobPropertiesResponse(action, recurrence, startTime, state, status);
         }

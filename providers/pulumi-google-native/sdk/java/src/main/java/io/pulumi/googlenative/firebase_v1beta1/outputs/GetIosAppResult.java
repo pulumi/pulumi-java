@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebase_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class GetIosAppResult {
             this.teamId = Objects.requireNonNull(teamId);
             return this;
         }
-
         public GetIosAppResult build() {
             return new GetIosAppResult(appId, appStoreId, bundleId, displayName, name, project, teamId);
         }

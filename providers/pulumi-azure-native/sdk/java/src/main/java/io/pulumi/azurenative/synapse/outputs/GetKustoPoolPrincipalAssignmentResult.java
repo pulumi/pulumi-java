@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -266,7 +266,6 @@ public final class GetKustoPoolPrincipalAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoPoolPrincipalAssignmentResult build() {
             return new GetKustoPoolPrincipalAssignmentResult(id, name, principalId, principalName, principalType, provisioningState, role, systemData, tenantId, tenantName, type);
         }

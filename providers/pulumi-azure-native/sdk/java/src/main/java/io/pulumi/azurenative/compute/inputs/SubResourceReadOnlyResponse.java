@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SubResourceReadOnlyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -55,7 +55,6 @@ public final class SubResourceReadOnlyResponse extends io.pulumi.resources.Invok
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public SubResourceReadOnlyResponse build() {
             return new SubResourceReadOnlyResponse(id);
         }

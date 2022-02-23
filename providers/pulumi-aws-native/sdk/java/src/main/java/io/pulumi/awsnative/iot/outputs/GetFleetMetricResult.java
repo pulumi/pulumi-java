@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.FleetMetricAggregationType;
 import io.pulumi.awsnative.iot.outputs.FleetMetricTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -304,7 +304,6 @@ public final class GetFleetMetricResult {
             this.version = version;
             return this;
         }
-
         public GetFleetMetricResult build() {
             return new GetFleetMetricResult(aggregationField, aggregationType, creationDate, description, indexName, lastModifiedDate, metricArn, period, queryString, queryVersion, tags, unit, version);
         }

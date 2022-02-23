@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalerStatusDetailsResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalingPolicyResponse;
 import java.lang.Integer;
@@ -331,7 +331,6 @@ public final class GetRegionAutoscalerResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetRegionAutoscalerResult build() {
             return new GetRegionAutoscalerResult(autoscalingPolicy, creationTimestamp, description, kind, name, recommendedSize, region, scalingScheduleStatus, selfLink, selfLinkWithId, status, statusDetails, target, zone);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WorkbookTemplateGalleryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class WorkbookTemplateLocalizedGalleryResponse {
             this.templateData = templateData;
             return this;
         }
-
         public WorkbookTemplateLocalizedGalleryResponse build() {
             return new WorkbookTemplateLocalizedGalleryResponse(galleries, templateData);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.InboundSamlConfigIdpConfigIdpCertificateGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="idpCertificates", required=true)
-    private final Input<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
+        private final Input<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> idpCertificates;
 
     public Input<List<InboundSamlConfigIdpConfigIdpCertificateGetArgs>> getIdpCertificates() {
         return this.idpCertificates;
@@ -34,7 +34,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="idpEntityId", required=true)
-    private final Input<String> idpEntityId;
+        private final Input<String> idpEntityId;
 
     public Input<String> getIdpEntityId() {
         return this.idpEntityId;
@@ -45,7 +45,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="signRequest")
-    private final @Nullable Input<Boolean> signRequest;
+        private final @Nullable Input<Boolean> signRequest;
 
     public Input<Boolean> getSignRequest() {
         return this.signRequest == null ? Input.empty() : this.signRequest;
@@ -56,7 +56,7 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ssoUrl", required=true)
-    private final Input<String> ssoUrl;
+        private final Input<String> ssoUrl;
 
     public Input<String> getSsoUrl() {
         return this.ssoUrl;
@@ -145,7 +145,6 @@ public final class InboundSamlConfigIdpConfigGetArgs extends io.pulumi.resources
             this.ssoUrl = Input.of(Objects.requireNonNull(ssoUrl));
             return this;
         }
-
         public InboundSamlConfigIdpConfigGetArgs build() {
             return new InboundSamlConfigIdpConfigGetArgs(idpCertificates, idpEntityId, signRequest, ssoUrl);
         }

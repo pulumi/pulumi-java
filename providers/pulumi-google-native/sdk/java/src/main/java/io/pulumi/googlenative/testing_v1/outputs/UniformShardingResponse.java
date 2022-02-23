@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class UniformShardingResponse {
             this.numShards = Objects.requireNonNull(numShards);
             return this;
         }
-
         public UniformShardingResponse build() {
             return new UniformShardingResponse(numShards);
         }

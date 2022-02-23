@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.NetworkRoutingConfigArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -22,7 +22,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoCreateSubnetworks")
-    private final @Nullable Input<Boolean> autoCreateSubnetworks;
+      private final @Nullable Input<Boolean> autoCreateSubnetworks;
 
     public Input<Boolean> getAutoCreateSubnetworks() {
         return this.autoCreateSubnetworks == null ? Input.empty() : this.autoCreateSubnetworks;
@@ -33,7 +33,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mtu")
-    private final @Nullable Input<Integer> mtu;
+      private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
@@ -55,21 +55,21 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -80,7 +80,7 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routingConfig")
-    private final @Nullable Input<NetworkRoutingConfigArgs> routingConfig;
+      private final @Nullable Input<NetworkRoutingConfigArgs> routingConfig;
 
     public Input<NetworkRoutingConfigArgs> getRoutingConfig() {
         return this.routingConfig == null ? Input.empty() : this.routingConfig;
@@ -214,7 +214,6 @@ public final class NetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.routingConfig = Input.ofNullable(routingConfig);
             return this;
         }
-
         public NetworkArgs build() {
             return new NetworkArgs(autoCreateSubnetworks, description, mtu, name, project, requestId, routingConfig);
         }

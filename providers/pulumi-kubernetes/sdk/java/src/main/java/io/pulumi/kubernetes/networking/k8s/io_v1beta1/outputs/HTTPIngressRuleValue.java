@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs.HTTPIngressPath;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class HTTPIngressRuleValue {
             this.paths = Objects.requireNonNull(paths);
             return this;
         }
-
         public HTTPIngressRuleValue build() {
             return new HTTPIngressRuleValue(paths);
         }

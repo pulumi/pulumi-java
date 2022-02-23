@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.IdentityInfoResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -268,7 +268,6 @@ public final class GetSystemTopicResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSystemTopicResult build() {
             return new GetSystemTopicResult(id, identity, location, metricResourceId, name, provisioningState, source, systemData, tags, topicType, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.consumption.outputs;
 
 import io.pulumi.azurenative.consumption.outputs.BudgetComparisonExpressionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -76,7 +76,6 @@ public final class BudgetFilterPropertiesResponse {
             this.tags = tags;
             return this;
         }
-
         public BudgetFilterPropertiesResponse build() {
             return new BudgetFilterPropertiesResponse(dimensions, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.folder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.folder.inputs.IamAuditConfigAuditLogConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
+        private final @Nullable Input<List<IamAuditConfigAuditLogConfigGetArgs>> auditLogConfigs;
 
     public Input<List<IamAuditConfigAuditLogConfigGetArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
@@ -32,14 +32,14 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="folder")
-    private final @Nullable Input<String> folder;
+        private final @Nullable Input<String> folder;
 
     public Input<String> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -50,7 +50,7 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -139,7 +139,6 @@ public final class IamAuditConfigState extends io.pulumi.resources.ResourceArgs 
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public IamAuditConfigState build() {
             return new IamAuditConfigState(auditLogConfigs, etag, folder, service);
         }

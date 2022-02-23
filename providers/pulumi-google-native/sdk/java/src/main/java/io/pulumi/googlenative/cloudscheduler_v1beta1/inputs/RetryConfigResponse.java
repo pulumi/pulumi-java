@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxBackoffDuration", required=true)
-    private final String maxBackoffDuration;
+      private final String maxBackoffDuration;
 
     public String getMaxBackoffDuration() {
         return this.maxBackoffDuration;
@@ -33,7 +33,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxDoublings", required=true)
-    private final Integer maxDoublings;
+      private final Integer maxDoublings;
 
     public Integer getMaxDoublings() {
         return this.maxDoublings;
@@ -44,7 +44,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxRetryDuration", required=true)
-    private final String maxRetryDuration;
+      private final String maxRetryDuration;
 
     public String getMaxRetryDuration() {
         return this.maxRetryDuration;
@@ -55,7 +55,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minBackoffDuration", required=true)
-    private final String minBackoffDuration;
+      private final String minBackoffDuration;
 
     public String getMinBackoffDuration() {
         return this.minBackoffDuration;
@@ -66,7 +66,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retryCount", required=true)
-    private final Integer retryCount;
+      private final Integer retryCount;
 
     public Integer getRetryCount() {
         return this.retryCount;
@@ -145,7 +145,6 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.retryCount = Objects.requireNonNull(retryCount);
             return this;
         }
-
         public RetryConfigResponse build() {
             return new RetryConfigResponse(maxBackoffDuration, maxDoublings, maxRetryDuration, minBackoffDuration, retryCount);
         }

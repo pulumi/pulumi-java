@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,21 +18,21 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
     public static final DatasetExcelOptionsArgs Empty = new DatasetExcelOptionsArgs();
 
     @InputImport(name="headerRow")
-    private final @Nullable Input<Boolean> headerRow;
+        private final @Nullable Input<Boolean> headerRow;
 
     public Input<Boolean> getHeaderRow() {
         return this.headerRow == null ? Input.empty() : this.headerRow;
     }
 
     @InputImport(name="sheetIndexes")
-    private final @Nullable Input<List<Integer>> sheetIndexes;
+        private final @Nullable Input<List<Integer>> sheetIndexes;
 
     public Input<List<Integer>> getSheetIndexes() {
         return this.sheetIndexes == null ? Input.empty() : this.sheetIndexes;
     }
 
     @InputImport(name="sheetNames")
-    private final @Nullable Input<List<String>> sheetNames;
+        private final @Nullable Input<List<String>> sheetNames;
 
     public Input<List<String>> getSheetNames() {
         return this.sheetNames == null ? Input.empty() : this.sheetNames;
@@ -106,7 +106,6 @@ public final class DatasetExcelOptionsArgs extends io.pulumi.resources.ResourceA
             this.sheetNames = Input.ofNullable(sheetNames);
             return this;
         }
-
         public DatasetExcelOptionsArgs build() {
             return new DatasetExcelOptionsArgs(headerRow, sheetIndexes, sheetNames);
         }

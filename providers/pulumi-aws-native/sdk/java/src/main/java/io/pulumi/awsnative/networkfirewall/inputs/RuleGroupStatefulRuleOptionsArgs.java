@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupRuleOrder;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
     public static final RuleGroupStatefulRuleOptionsArgs Empty = new RuleGroupStatefulRuleOptionsArgs();
 
     @InputImport(name="ruleOrder")
-    private final @Nullable Input<RuleGroupRuleOrder> ruleOrder;
+        private final @Nullable Input<RuleGroupRuleOrder> ruleOrder;
 
     public Input<RuleGroupRuleOrder> getRuleOrder() {
         return this.ruleOrder == null ? Input.empty() : this.ruleOrder;
@@ -58,7 +58,6 @@ public final class RuleGroupStatefulRuleOptionsArgs extends io.pulumi.resources.
             this.ruleOrder = Input.ofNullable(ruleOrder);
             return this;
         }
-
         public RuleGroupStatefulRuleOptionsArgs build() {
             return new RuleGroupStatefulRuleOptionsArgs(ruleOrder);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.RecurrenceResponse;
 import io.pulumi.azurenative.insights.outputs.ScaleCapacityResponse;
 import io.pulumi.azurenative.insights.outputs.ScaleRuleResponse;
 import io.pulumi.azurenative.insights.outputs.TimeWindowResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -144,7 +144,6 @@ public final class AutoscaleProfileResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public AutoscaleProfileResponse build() {
             return new AutoscaleProfileResponse(capacity, fixedDate, name, recurrence, rules);
         }

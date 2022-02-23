@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accessRoleArn")
-    private final @Nullable Input<String> accessRoleArn;
+        private final @Nullable Input<String> accessRoleArn;
 
     public Input<String> getAccessRoleArn() {
         return this.accessRoleArn == null ? Input.empty() : this.accessRoleArn;
@@ -34,7 +34,7 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="connectionArn")
-    private final @Nullable Input<String> connectionArn;
+        private final @Nullable Input<String> connectionArn;
 
     public Input<String> getConnectionArn() {
         return this.connectionArn == null ? Input.empty() : this.connectionArn;
@@ -93,7 +93,6 @@ public final class ServiceAuthenticationConfigurationArgs extends io.pulumi.reso
             this.connectionArn = Input.ofNullable(connectionArn);
             return this;
         }
-
         public ServiceAuthenticationConfigurationArgs build() {
             return new ServiceAuthenticationConfigurationArgs(accessRoleArn, connectionArn);
         }

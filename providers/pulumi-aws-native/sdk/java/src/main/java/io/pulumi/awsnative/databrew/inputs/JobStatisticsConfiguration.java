@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.JobStatisticOverride;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class JobStatisticsConfiguration extends io.pulumi.resources.Invoke
     public static final JobStatisticsConfiguration Empty = new JobStatisticsConfiguration();
 
     @InputImport(name="includedStatistics")
-    private final @Nullable List<String> includedStatistics;
+        private final @Nullable List<String> includedStatistics;
 
     public List<String> getIncludedStatistics() {
         return this.includedStatistics == null ? List.of() : this.includedStatistics;
     }
 
     @InputImport(name="overrides")
-    private final @Nullable List<JobStatisticOverride> overrides;
+        private final @Nullable List<JobStatisticOverride> overrides;
 
     public List<JobStatisticOverride> getOverrides() {
         return this.overrides == null ? List.of() : this.overrides;
@@ -73,7 +73,6 @@ public final class JobStatisticsConfiguration extends io.pulumi.resources.Invoke
             this.overrides = overrides;
             return this;
         }
-
         public JobStatisticsConfiguration build() {
             return new JobStatisticsConfiguration(includedStatistics, overrides);
         }

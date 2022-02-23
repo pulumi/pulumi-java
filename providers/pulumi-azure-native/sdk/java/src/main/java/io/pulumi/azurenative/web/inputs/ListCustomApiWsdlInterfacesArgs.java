@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.enums.WsdlImportMethod;
 import io.pulumi.azurenative.web.inputs.WsdlService;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="content")
-    private final @Nullable String content;
+        private final @Nullable String content;
 
     public Optional<String> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -33,7 +33,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="importMethod")
-    private final @Nullable Either<String,WsdlImportMethod> importMethod;
+        private final @Nullable Either<String,WsdlImportMethod> importMethod;
 
     public Either<String,WsdlImportMethod> getImportMethod() {
         return this.importMethod == null ? null : this.importMethod;
@@ -44,7 +44,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -55,7 +55,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="service")
-    private final @Nullable WsdlService service;
+        private final @Nullable WsdlService service;
 
     public Optional<WsdlService> getService() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
@@ -66,7 +66,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -77,7 +77,7 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -166,7 +166,6 @@ public final class ListCustomApiWsdlInterfacesArgs extends io.pulumi.resources.I
             this.url = url;
             return this;
         }
-
         public ListCustomApiWsdlInterfacesArgs build() {
             return new ListCustomApiWsdlInterfacesArgs(content, importMethod, location, service, subscriptionId, url);
         }

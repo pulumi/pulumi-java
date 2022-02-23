@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetExtensionProf
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetNetworkProfileResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetOSProfileResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetStorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -294,7 +294,6 @@ public final class VirtualMachineScaleSetVMProfileResponse {
             this.userData = userData;
             return this;
         }
-
         public VirtualMachineScaleSetVMProfileResponse build() {
             return new VirtualMachineScaleSetVMProfileResponse(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
         }

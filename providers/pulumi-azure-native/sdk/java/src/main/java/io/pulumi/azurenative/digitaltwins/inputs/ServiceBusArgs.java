@@ -6,7 +6,7 @@ package io.pulumi.azurenative.digitaltwins.inputs;
 import io.pulumi.azurenative.digitaltwins.enums.AuthenticationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
+        private final @Nullable Input<Either<String,AuthenticationType>> authenticationType;
 
     public Input<Either<String,AuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -36,7 +36,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterSecret")
-    private final @Nullable Input<String> deadLetterSecret;
+        private final @Nullable Input<String> deadLetterSecret;
 
     public Input<String> getDeadLetterSecret() {
         return this.deadLetterSecret == null ? Input.empty() : this.deadLetterSecret;
@@ -47,7 +47,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadLetterUri")
-    private final @Nullable Input<String> deadLetterUri;
+        private final @Nullable Input<String> deadLetterUri;
 
     public Input<String> getDeadLetterUri() {
         return this.deadLetterUri == null ? Input.empty() : this.deadLetterUri;
@@ -59,7 +59,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final Input<String> endpointType;
+        private final Input<String> endpointType;
 
     public Input<String> getEndpointType() {
         return this.endpointType;
@@ -70,7 +70,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointUri")
-    private final @Nullable Input<String> endpointUri;
+        private final @Nullable Input<String> endpointUri;
 
     public Input<String> getEndpointUri() {
         return this.endpointUri == null ? Input.empty() : this.endpointUri;
@@ -81,7 +81,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entityPath")
-    private final @Nullable Input<String> entityPath;
+        private final @Nullable Input<String> entityPath;
 
     public Input<String> getEntityPath() {
         return this.entityPath == null ? Input.empty() : this.entityPath;
@@ -92,7 +92,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryConnectionString")
-    private final @Nullable Input<String> primaryConnectionString;
+        private final @Nullable Input<String> primaryConnectionString;
 
     public Input<String> getPrimaryConnectionString() {
         return this.primaryConnectionString == null ? Input.empty() : this.primaryConnectionString;
@@ -103,7 +103,7 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryConnectionString")
-    private final @Nullable Input<String> secondaryConnectionString;
+        private final @Nullable Input<String> secondaryConnectionString;
 
     public Input<String> getSecondaryConnectionString() {
         return this.secondaryConnectionString == null ? Input.empty() : this.secondaryConnectionString;
@@ -252,7 +252,6 @@ public final class ServiceBusArgs extends io.pulumi.resources.ResourceArgs {
             this.secondaryConnectionString = Input.ofNullable(secondaryConnectionString);
             return this;
         }
-
         public ServiceBusArgs build() {
             return new ServiceBusArgs(authenticationType, deadLetterSecret, deadLetterUri, endpointType, endpointUri, entityPath, primaryConnectionString, secondaryConnectionString);
         }

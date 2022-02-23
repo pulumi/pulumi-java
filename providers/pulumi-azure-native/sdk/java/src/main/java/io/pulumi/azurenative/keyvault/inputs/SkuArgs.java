@@ -7,7 +7,7 @@ import io.pulumi.azurenative.keyvault.enums.SkuFamily;
 import io.pulumi.azurenative.keyvault.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="family", required=true)
-    private final Input<Either<String,SkuFamily>> family;
+        private final Input<Either<String,SkuFamily>> family;
 
     public Input<Either<String,SkuFamily>> getFamily() {
         return this.family;
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<SkuName> name;
+        private final Input<SkuName> name;
 
     public Input<SkuName> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(family, name);
         }

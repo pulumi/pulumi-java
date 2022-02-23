@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable String authenticationType;
+        private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -35,7 +35,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="batchFrequencyInSeconds")
-    private final @Nullable Integer batchFrequencyInSeconds;
+        private final @Nullable Integer batchFrequencyInSeconds;
 
     public Optional<Integer> getBatchFrequencyInSeconds() {
         return this.batchFrequencyInSeconds == null ? Optional.empty() : Optional.ofNullable(this.batchFrequencyInSeconds);
@@ -46,7 +46,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable String connectionString;
+        private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -57,7 +57,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -68,7 +68,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable String encoding;
+        private final @Nullable String encoding;
 
     public Optional<String> getEncoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
@@ -79,7 +79,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="endpointUri")
-    private final @Nullable String endpointUri;
+        private final @Nullable String endpointUri;
 
     public Optional<String> getEndpointUri() {
         return this.endpointUri == null ? Optional.empty() : Optional.ofNullable(this.endpointUri);
@@ -90,7 +90,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="fileNameFormat")
-    private final @Nullable String fileNameFormat;
+        private final @Nullable String fileNameFormat;
 
     public Optional<String> getFileNameFormat() {
         return this.fileNameFormat == null ? Optional.empty() : Optional.ofNullable(this.fileNameFormat);
@@ -101,7 +101,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -112,7 +112,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="maxChunkSizeInBytes")
-    private final @Nullable Integer maxChunkSizeInBytes;
+        private final @Nullable Integer maxChunkSizeInBytes;
 
     public Optional<Integer> getMaxChunkSizeInBytes() {
         return this.maxChunkSizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.maxChunkSizeInBytes);
@@ -123,7 +123,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -134,7 +134,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+        private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -145,7 +145,7 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -294,7 +294,6 @@ public final class RoutingStorageContainerPropertiesResponse extends io.pulumi.r
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingStorageContainerPropertiesResponse build() {
             return new RoutingStorageContainerPropertiesResponse(authenticationType, batchFrequencyInSeconds, connectionString, containerName, encoding, endpointUri, fileNameFormat, id, maxChunkSizeInBytes, name, resourceGroup, subscriptionId);
         }

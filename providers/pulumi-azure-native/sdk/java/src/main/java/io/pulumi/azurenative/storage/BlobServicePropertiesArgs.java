@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storage.inputs.DeleteRetentionPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.LastAccessTimeTrackingPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.RestorePolicyPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -36,7 +36,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="automaticSnapshotPolicyEnabled")
-    private final @Nullable Input<Boolean> automaticSnapshotPolicyEnabled;
+        private final @Nullable Input<Boolean> automaticSnapshotPolicyEnabled;
 
     public Input<Boolean> getAutomaticSnapshotPolicyEnabled() {
         return this.automaticSnapshotPolicyEnabled == null ? Input.empty() : this.automaticSnapshotPolicyEnabled;
@@ -47,7 +47,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="blobServicesName")
-    private final @Nullable Input<String> blobServicesName;
+        private final @Nullable Input<String> blobServicesName;
 
     public Input<String> getBlobServicesName() {
         return this.blobServicesName == null ? Input.empty() : this.blobServicesName;
@@ -58,7 +58,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="changeFeed")
-    private final @Nullable Input<ChangeFeedArgs> changeFeed;
+        private final @Nullable Input<ChangeFeedArgs> changeFeed;
 
     public Input<ChangeFeedArgs> getChangeFeed() {
         return this.changeFeed == null ? Input.empty() : this.changeFeed;
@@ -69,7 +69,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerDeleteRetentionPolicy")
-    private final @Nullable Input<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
+        private final @Nullable Input<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
 
     public Input<DeleteRetentionPolicyArgs> getContainerDeleteRetentionPolicy() {
         return this.containerDeleteRetentionPolicy == null ? Input.empty() : this.containerDeleteRetentionPolicy;
@@ -80,7 +80,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cors")
-    private final @Nullable Input<CorsRulesArgs> cors;
+        private final @Nullable Input<CorsRulesArgs> cors;
 
     public Input<CorsRulesArgs> getCors() {
         return this.cors == null ? Input.empty() : this.cors;
@@ -91,7 +91,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="defaultServiceVersion")
-    private final @Nullable Input<String> defaultServiceVersion;
+        private final @Nullable Input<String> defaultServiceVersion;
 
     public Input<String> getDefaultServiceVersion() {
         return this.defaultServiceVersion == null ? Input.empty() : this.defaultServiceVersion;
@@ -102,7 +102,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="deleteRetentionPolicy")
-    private final @Nullable Input<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
+        private final @Nullable Input<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
 
     public Input<DeleteRetentionPolicyArgs> getDeleteRetentionPolicy() {
         return this.deleteRetentionPolicy == null ? Input.empty() : this.deleteRetentionPolicy;
@@ -113,7 +113,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isVersioningEnabled")
-    private final @Nullable Input<Boolean> isVersioningEnabled;
+        private final @Nullable Input<Boolean> isVersioningEnabled;
 
     public Input<Boolean> getIsVersioningEnabled() {
         return this.isVersioningEnabled == null ? Input.empty() : this.isVersioningEnabled;
@@ -124,7 +124,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastAccessTimeTrackingPolicy")
-    private final @Nullable Input<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
+        private final @Nullable Input<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
 
     public Input<LastAccessTimeTrackingPolicyArgs> getLastAccessTimeTrackingPolicy() {
         return this.lastAccessTimeTrackingPolicy == null ? Input.empty() : this.lastAccessTimeTrackingPolicy;
@@ -135,7 +135,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -146,7 +146,7 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="restorePolicy")
-    private final @Nullable Input<RestorePolicyPropertiesArgs> restorePolicy;
+        private final @Nullable Input<RestorePolicyPropertiesArgs> restorePolicy;
 
     public Input<RestorePolicyPropertiesArgs> getRestorePolicy() {
         return this.restorePolicy == null ? Input.empty() : this.restorePolicy;
@@ -355,7 +355,6 @@ public final class BlobServicePropertiesArgs extends io.pulumi.resources.Resourc
             this.restorePolicy = Input.ofNullable(restorePolicy);
             return this;
         }
-
         public BlobServicePropertiesArgs build() {
             return new BlobServicePropertiesArgs(accountName, automaticSnapshotPolicyEnabled, blobServicesName, changeFeed, containerDeleteRetentionPolicy, cors, defaultServiceVersion, deleteRetentionPolicy, isVersioningEnabled, lastAccessTimeTrackingPolicy, resourceGroupName, restorePolicy);
         }

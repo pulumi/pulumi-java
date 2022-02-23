@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.enums.PrefixListAddressFamily;
 import io.pulumi.awsnative.ec2.outputs.PrefixListEntry;
 import io.pulumi.awsnative.ec2.outputs.PrefixListTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -228,7 +228,6 @@ public final class GetPrefixListResult {
             this.version = version;
             return this;
         }
-
         public GetPrefixListResult build() {
             return new GetPrefixListResult(addressFamily, arn, entries, maxEntries, ownerId, prefixListId, prefixListName, tags, version);
         }

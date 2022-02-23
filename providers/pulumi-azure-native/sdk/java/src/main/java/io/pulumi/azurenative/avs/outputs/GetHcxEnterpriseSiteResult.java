@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class GetHcxEnterpriseSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHcxEnterpriseSiteResult build() {
             return new GetHcxEnterpriseSiteResult(activationKey, id, name, status, type);
         }

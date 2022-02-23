@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.DataprocParametersResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.SchedulerAcceleratorConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.VertexAIParametersResponse;
@@ -309,7 +309,6 @@ public final class ExecutionTemplateResponse {
             this.vertexAiParameters = Objects.requireNonNull(vertexAiParameters);
             return this;
         }
-
         public ExecutionTemplateResponse build() {
             return new ExecutionTemplateResponse(acceleratorConfig, containerImageUri, dataprocParameters, inputNotebookFile, jobType, kernelSpec, labels, masterType, outputNotebookFolder, parameters, paramsYamlFile, serviceAccount, vertexAiParameters);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.LatencyPercentileResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LatencyDistributionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="latencyPercentiles", required=true)
-    private final List<LatencyPercentileResponse> latencyPercentiles;
+      private final List<LatencyPercentileResponse> latencyPercentiles;
 
     public List<LatencyPercentileResponse> getLatencyPercentiles() {
         return this.latencyPercentiles;
@@ -60,7 +60,6 @@ public final class LatencyDistributionResponse extends io.pulumi.resources.Invok
             this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
             return this;
         }
-
         public LatencyDistributionResponse build() {
             return new LatencyDistributionResponse(latencyPercentiles);
         }

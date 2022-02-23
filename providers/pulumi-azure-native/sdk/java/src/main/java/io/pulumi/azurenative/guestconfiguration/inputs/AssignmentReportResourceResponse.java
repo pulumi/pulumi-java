@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
 import io.pulumi.azurenative.guestconfiguration.inputs.AssignmentReportResourceComplianceReasonResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="complianceStatus", required=true)
-    private final String complianceStatus;
+        private final String complianceStatus;
 
     public String getComplianceStatus() {
         return this.complianceStatus;
@@ -37,7 +37,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Object properties;
+        private final Object properties;
 
     public Object getProperties() {
         return this.properties;
@@ -48,7 +48,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="reasons")
-    private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
+        private final @Nullable List<AssignmentReportResourceComplianceReasonResponse> reasons;
 
     public List<AssignmentReportResourceComplianceReasonResponse> getReasons() {
         return this.reasons == null ? List.of() : this.reasons;
@@ -59,7 +59,7 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -128,7 +128,6 @@ public final class AssignmentReportResourceResponse extends io.pulumi.resources.
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public AssignmentReportResourceResponse build() {
             return new AssignmentReportResourceResponse(complianceStatus, properties, reasons, resourceId);
         }

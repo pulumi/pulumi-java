@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currencyCode")
-    private final @Nullable Input<String> currencyCode;
+      private final @Nullable Input<String> currencyCode;
 
     public Input<String> getCurrencyCode() {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
@@ -35,7 +35,7 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+      private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -46,7 +46,7 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="units")
-    private final @Nullable Input<String> units;
+      private final @Nullable Input<String> units;
 
     public Input<String> getUnits() {
         return this.units == null ? Input.empty() : this.units;
@@ -120,7 +120,6 @@ public final class MoneyArgs extends io.pulumi.resources.ResourceArgs {
             this.units = Input.ofNullable(units);
             return this;
         }
-
         public MoneyArgs build() {
             return new MoneyArgs(currencyCode, nanos, units);
         }

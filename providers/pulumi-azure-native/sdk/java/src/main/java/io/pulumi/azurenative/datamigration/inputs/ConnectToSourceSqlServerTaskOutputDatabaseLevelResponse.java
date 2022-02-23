@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.DatabaseFileInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="compatibilityLevel", required=true)
-    private final String compatibilityLevel;
+        private final String compatibilityLevel;
 
     public String getCompatibilityLevel() {
         return this.compatibilityLevel;
@@ -35,7 +35,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="databaseFiles", required=true)
-    private final List<DatabaseFileInfoResponse> databaseFiles;
+        private final List<DatabaseFileInfoResponse> databaseFiles;
 
     public List<DatabaseFileInfoResponse> getDatabaseFiles() {
         return this.databaseFiles;
@@ -46,7 +46,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="databaseState", required=true)
-    private final String databaseState;
+        private final String databaseState;
 
     public String getDatabaseState() {
         return this.databaseState;
@@ -57,7 +57,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -68,7 +68,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -80,7 +80,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -91,7 +91,7 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
      * 
      */
     @InputImport(name="sizeMB", required=true)
-    private final Double sizeMB;
+        private final Double sizeMB;
 
     public Double getSizeMB() {
         return this.sizeMB;
@@ -190,7 +190,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse exten
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(compatibilityLevel, databaseFiles, databaseState, id, name, resultType, sizeMB);
         }

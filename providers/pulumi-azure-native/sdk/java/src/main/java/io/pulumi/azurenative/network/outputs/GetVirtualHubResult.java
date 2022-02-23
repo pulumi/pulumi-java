@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableResponse;
 import io.pulumi.azurenative.network.outputs.VirtualHubRouteTableV2Response;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -545,7 +545,6 @@ public final class GetVirtualHubResult {
             this.vpnGateway = vpnGateway;
             return this;
         }
-
         public GetVirtualHubResult build() {
             return new GetVirtualHubResult(addressPrefix, allowBranchToBranchTraffic, azureFirewall, bgpConnections, etag, expressRouteGateway, id, ipConfigurations, location, name, p2SVpnGateway, provisioningState, routeTable, routingState, securityPartnerProvider, securityProviderName, sku, tags, type, virtualHubRouteTableV2s, virtualRouterAsn, virtualRouterIps, virtualWan, vpnGateway);
         }

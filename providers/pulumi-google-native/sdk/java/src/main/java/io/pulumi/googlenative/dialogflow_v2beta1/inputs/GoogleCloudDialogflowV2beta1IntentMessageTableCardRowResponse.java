@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
      * 
      */
     @InputImport(name="cells", required=true)
-    private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
+      private final List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> cells;
 
     public List<GoogleCloudDialogflowV2beta1IntentMessageTableCardCellResponse> getCells() {
         return this.cells;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
      * 
      */
     @InputImport(name="dividerAfter", required=true)
-    private final Boolean dividerAfter;
+      private final Boolean dividerAfter;
 
     public Boolean getDividerAfter() {
         return this.dividerAfter;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse
             this.dividerAfter = Objects.requireNonNull(dividerAfter);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageTableCardRowResponse(cells, dividerAfter);
         }

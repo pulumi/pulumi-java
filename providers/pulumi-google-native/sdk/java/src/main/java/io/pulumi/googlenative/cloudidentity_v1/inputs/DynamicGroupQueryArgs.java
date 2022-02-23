@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudidentity_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1.enums.DynamicGroupQueryResourceType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -35,7 +35,7 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<DynamicGroupQueryResourceType> resourceType;
+      private final @Nullable Input<DynamicGroupQueryResourceType> resourceType;
 
     public Input<DynamicGroupQueryResourceType> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -94,7 +94,6 @@ public final class DynamicGroupQueryArgs extends io.pulumi.resources.ResourceArg
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public DynamicGroupQueryArgs build() {
             return new DynamicGroupQueryArgs(query, resourceType);
         }

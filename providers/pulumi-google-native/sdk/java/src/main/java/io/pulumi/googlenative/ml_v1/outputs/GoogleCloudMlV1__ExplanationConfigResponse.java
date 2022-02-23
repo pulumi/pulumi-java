@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__IntegratedGradientsAttributionResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__SampledShapleyAttributionResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__XraiAttributionResponse;
@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse {
             this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
             return this;
         }
-
         public GoogleCloudMlV1__ExplanationConfigResponse build() {
             return new GoogleCloudMlV1__ExplanationConfigResponse(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
         }

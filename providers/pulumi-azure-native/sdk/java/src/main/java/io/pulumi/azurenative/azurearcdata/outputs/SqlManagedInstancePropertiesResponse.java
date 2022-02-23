@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.outputs;
 
 import io.pulumi.azurenative.azurearcdata.outputs.BasicLoginInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -196,7 +196,6 @@ public final class SqlManagedInstancePropertiesResponse {
             this.startTime = startTime;
             return this;
         }
-
         public SqlManagedInstancePropertiesResponse build() {
             return new SqlManagedInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, provisioningState, startTime);
         }

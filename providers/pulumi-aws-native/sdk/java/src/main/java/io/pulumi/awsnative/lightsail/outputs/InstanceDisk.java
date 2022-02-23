@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -183,7 +183,6 @@ public final class InstanceDisk {
             this.sizeInGb = sizeInGb;
             return this;
         }
-
         public InstanceDisk build() {
             return new InstanceDisk(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);
         }

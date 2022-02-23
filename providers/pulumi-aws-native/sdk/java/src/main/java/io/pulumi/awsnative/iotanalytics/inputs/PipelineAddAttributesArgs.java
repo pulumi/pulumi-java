@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class PipelineAddAttributesArgs extends io.pulumi.resources.Resourc
     public static final PipelineAddAttributesArgs Empty = new PipelineAddAttributesArgs();
 
     @InputImport(name="attributes", required=true)
-    private final Input<Object> attributes;
+        private final Input<Object> attributes;
 
     public Input<Object> getAttributes() {
         return this.attributes;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable Input<String> next;
+        private final @Nullable Input<String> next;
 
     public Input<String> getNext() {
         return this.next == null ? Input.empty() : this.next;
@@ -104,7 +104,6 @@ public final class PipelineAddAttributesArgs extends io.pulumi.resources.Resourc
             this.next = Input.ofNullable(next);
             return this;
         }
-
         public PipelineAddAttributesArgs build() {
             return new PipelineAddAttributesArgs(attributes, name, next);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class HeaderResponse {
             this.regex = Objects.requireNonNull(regex);
             return this;
         }
-
         public HeaderResponse build() {
             return new HeaderResponse(glob, headers, regex);
         }

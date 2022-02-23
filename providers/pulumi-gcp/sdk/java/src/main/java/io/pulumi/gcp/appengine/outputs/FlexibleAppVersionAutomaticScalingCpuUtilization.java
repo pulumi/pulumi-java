@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class FlexibleAppVersionAutomaticScalingCpuUtilization {
             this.targetUtilization = Objects.requireNonNull(targetUtilization);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingCpuUtilization build() {
             return new FlexibleAppVersionAutomaticScalingCpuUtilization(aggregationWindowLength, targetUtilization);
         }

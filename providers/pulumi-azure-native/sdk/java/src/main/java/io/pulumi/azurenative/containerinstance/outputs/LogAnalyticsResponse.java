@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class LogAnalyticsResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public LogAnalyticsResponse build() {
             return new LogAnalyticsResponse(logType, metadata, workspaceId, workspaceKey, workspaceResourceId);
         }

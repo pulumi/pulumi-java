@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class LabDetailsResponse {
             this.usageQuota = Objects.requireNonNull(usageQuota);
             return this;
         }
-
         public LabDetailsResponse build() {
             return new LabDetailsResponse(id, name, provisioningState, usageQuota);
         }

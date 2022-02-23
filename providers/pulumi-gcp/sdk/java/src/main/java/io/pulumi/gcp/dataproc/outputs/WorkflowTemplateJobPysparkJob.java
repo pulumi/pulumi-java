@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPysparkJobLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -205,7 +205,6 @@ public final class WorkflowTemplateJobPysparkJob {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
-
         public WorkflowTemplateJobPysparkJob build() {
             return new WorkflowTemplateJobPysparkJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigateway_v1beta.outputs.ApigatewayApiConfigFileResponse;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionResponse(fileDescriptorSet, source);
         }

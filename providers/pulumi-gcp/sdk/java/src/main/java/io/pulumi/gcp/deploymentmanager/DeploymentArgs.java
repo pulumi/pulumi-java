@@ -4,7 +4,7 @@
 package io.pulumi.gcp.deploymentmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentLabelArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentTargetArgs;
 import java.lang.Boolean;
@@ -29,7 +29,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createPolicy")
-    private final @Nullable Input<String> createPolicy;
+        private final @Nullable Input<String> createPolicy;
 
     public Input<String> getCreatePolicy() {
         return this.createPolicy == null ? Input.empty() : this.createPolicy;
@@ -47,7 +47,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deletePolicy")
-    private final @Nullable Input<String> deletePolicy;
+        private final @Nullable Input<String> deletePolicy;
 
     public Input<String> getDeletePolicy() {
         return this.deletePolicy == null ? Input.empty() : this.deletePolicy;
@@ -58,7 +58,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<DeploymentLabelArgs>> labels;
+        private final @Nullable Input<List<DeploymentLabelArgs>> labels;
 
     public Input<List<DeploymentLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -82,7 +82,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preview")
-    private final @Nullable Input<Boolean> preview;
+        private final @Nullable Input<Boolean> preview;
 
     public Input<Boolean> getPreview() {
         return this.preview == null ? Input.empty() : this.preview;
@@ -112,7 +112,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -125,7 +125,7 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<DeploymentTargetArgs> target;
+        private final Input<DeploymentTargetArgs> target;
 
     public Input<DeploymentTargetArgs> getTarget() {
         return this.target;
@@ -274,7 +274,6 @@ public final class DeploymentArgs extends io.pulumi.resources.ResourceArgs {
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public DeploymentArgs build() {
             return new DeploymentArgs(createPolicy, deletePolicy, description, labels, name, preview, project, target);
         }

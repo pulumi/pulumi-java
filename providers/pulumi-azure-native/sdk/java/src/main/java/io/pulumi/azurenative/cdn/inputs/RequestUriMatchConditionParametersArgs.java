@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.RequestUriOperator;
 import io.pulumi.azurenative.cdn.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="matchValues")
-    private final @Nullable Input<List<String>> matchValues;
+        private final @Nullable Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues == null ? Input.empty() : this.matchValues;
@@ -39,14 +39,14 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Input<Boolean> negateCondition;
+        private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,RequestUriOperator>> operator;
+        private final Input<Either<String,RequestUriOperator>> operator;
 
     public Input<Either<String,RequestUriOperator>> getOperator() {
         return this.operator;
@@ -68,7 +68,7 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable Input<List<Either<String,Transform>>> transforms;
+        private final @Nullable Input<List<Either<String,Transform>>> transforms;
 
     public Input<List<Either<String,Transform>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;
@@ -172,7 +172,6 @@ public final class RequestUriMatchConditionParametersArgs extends io.pulumi.reso
             this.transforms = Input.ofNullable(transforms);
             return this;
         }
-
         public RequestUriMatchConditionParametersArgs build() {
             return new RequestUriMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator, transforms);
         }

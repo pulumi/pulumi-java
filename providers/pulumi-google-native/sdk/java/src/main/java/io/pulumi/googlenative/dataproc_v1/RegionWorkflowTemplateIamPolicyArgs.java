@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,21 +33,21 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="regionId", required=true)
-    private final Input<String> regionId;
+      private final Input<String> regionId;
 
     public Input<String> getRegionId() {
         return this.regionId;
@@ -58,14 +58,14 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
     }
 
     @InputImport(name="workflowTemplateId", required=true)
-    private final Input<String> workflowTemplateId;
+      private final Input<String> workflowTemplateId;
 
     public Input<String> getWorkflowTemplateId() {
         return this.workflowTemplateId;
@@ -184,7 +184,6 @@ public final class RegionWorkflowTemplateIamPolicyArgs extends io.pulumi.resourc
             this.workflowTemplateId = Input.of(Objects.requireNonNull(workflowTemplateId));
             return this;
         }
-
         public RegionWorkflowTemplateIamPolicyArgs build() {
             return new RegionWorkflowTemplateIamPolicyArgs(bindings, etag, project, regionId, version, workflowTemplateId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractArgs;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable Input<List<ParameterContractArgs>> headers;
+        private final @Nullable Input<List<ParameterContractArgs>> headers;
 
     public Input<List<ParameterContractArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -48,7 +48,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="queryParameters")
-    private final @Nullable Input<List<ParameterContractArgs>> queryParameters;
+        private final @Nullable Input<List<ParameterContractArgs>> queryParameters;
 
     public Input<List<ParameterContractArgs>> getQueryParameters() {
         return this.queryParameters == null ? Input.empty() : this.queryParameters;
@@ -59,7 +59,7 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="representations")
-    private final @Nullable Input<List<RepresentationContractArgs>> representations;
+        private final @Nullable Input<List<RepresentationContractArgs>> representations;
 
     public Input<List<RepresentationContractArgs>> getRepresentations() {
         return this.representations == null ? Input.empty() : this.representations;
@@ -148,7 +148,6 @@ public final class RequestContractArgs extends io.pulumi.resources.ResourceArgs 
             this.representations = Input.ofNullable(representations);
             return this;
         }
-
         public RequestContractArgs build() {
             return new RequestContractArgs(description, headers, queryParameters, representations);
         }

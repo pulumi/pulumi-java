@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.FailoverSetEligibilityResultResponse;
 import io.pulumi.azurenative.storsimple.inputs.VolumeContainerFailoverMetadataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eligibilityResult")
-    private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
+        private final @Nullable FailoverSetEligibilityResultResponse eligibilityResult;
 
     public Optional<FailoverSetEligibilityResultResponse> getEligibilityResult() {
         return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
@@ -36,7 +36,7 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeContainers")
-    private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
+        private final @Nullable List<VolumeContainerFailoverMetadataResponse> volumeContainers;
 
     public List<VolumeContainerFailoverMetadataResponse> getVolumeContainers() {
         return this.volumeContainers == null ? List.of() : this.volumeContainers;
@@ -85,7 +85,6 @@ public final class FailoverSetResponse extends io.pulumi.resources.InvokeArgs {
             this.volumeContainers = volumeContainers;
             return this;
         }
-
         public FailoverSetResponse build() {
             return new FailoverSetResponse(eligibilityResult, volumeContainers);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="alignmentPeriod")
-    private final @Nullable Input<String> alignmentPeriod;
+        private final @Nullable Input<String> alignmentPeriod;
 
     public Input<String> getAlignmentPeriod() {
         return this.alignmentPeriod == null ? Input.empty() : this.alignmentPeriod;
@@ -61,7 +61,7 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="crossSeriesReducer")
-    private final @Nullable Input<String> crossSeriesReducer;
+        private final @Nullable Input<String> crossSeriesReducer;
 
     public Input<String> getCrossSeriesReducer() {
         return this.crossSeriesReducer == null ? Input.empty() : this.crossSeriesReducer;
@@ -96,7 +96,7 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="groupByFields")
-    private final @Nullable Input<List<String>> groupByFields;
+        private final @Nullable Input<List<String>> groupByFields;
 
     public Input<List<String>> getGroupByFields() {
         return this.groupByFields == null ? Input.empty() : this.groupByFields;
@@ -124,7 +124,7 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
      * 
      */
     @InputImport(name="perSeriesAligner")
-    private final @Nullable Input<String> perSeriesAligner;
+        private final @Nullable Input<String> perSeriesAligner;
 
     public Input<String> getPerSeriesAligner() {
         return this.perSeriesAligner == null ? Input.empty() : this.perSeriesAligner;
@@ -213,7 +213,6 @@ public final class AlertPolicyConditionConditionAbsentAggregationGetArgs extends
             this.perSeriesAligner = Input.ofNullable(perSeriesAligner);
             return this;
         }
-
         public AlertPolicyConditionConditionAbsentAggregationGetArgs build() {
             return new AlertPolicyConditionConditionAbsentAggregationGetArgs(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

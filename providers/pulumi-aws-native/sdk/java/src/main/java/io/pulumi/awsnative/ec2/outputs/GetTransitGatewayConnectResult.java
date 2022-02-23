@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -141,7 +141,6 @@ public final class GetTransitGatewayConnectResult {
             this.transitGatewayId = transitGatewayId;
             return this;
         }
-
         public GetTransitGatewayConnectResult build() {
             return new GetTransitGatewayConnectResult(creationTime, state, tags, transitGatewayAttachmentId, transitGatewayId);
         }

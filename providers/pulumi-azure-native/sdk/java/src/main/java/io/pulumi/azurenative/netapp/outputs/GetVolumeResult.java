@@ -6,7 +6,7 @@ package io.pulumi.azurenative.netapp.outputs;
 import io.pulumi.azurenative.netapp.outputs.MountTargetPropertiesResponse;
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseDataProtection;
 import io.pulumi.azurenative.netapp.outputs.VolumePropertiesResponseExportPolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -621,7 +621,6 @@ public final class GetVolumeResult {
             this.volumeType = volumeType;
             return this;
         }
-
         public GetVolumeResult build() {
             return new GetVolumeResult(backupId, baremetalTenantId, creationToken, dataProtection, encryptionKeySource, exportPolicy, fileSystemId, id, isRestoring, kerberosEnabled, ldapEnabled, location, mountTargets, name, protocolTypes, provisioningState, securityStyle, serviceLevel, smbContinuouslyAvailable, smbEncryption, snapshotDirectoryVisible, snapshotId, subnetId, tags, throughputMibps, type, usageThreshold, volumeType);
         }

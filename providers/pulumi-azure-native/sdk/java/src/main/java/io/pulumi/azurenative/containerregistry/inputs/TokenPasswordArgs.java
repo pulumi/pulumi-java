@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TokenPasswordName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable Input<String> creationTime;
+        private final @Nullable Input<String> creationTime;
 
     public Input<String> getCreationTime() {
         return this.creationTime == null ? Input.empty() : this.creationTime;
@@ -36,7 +36,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expiry")
-    private final @Nullable Input<String> expiry;
+        private final @Nullable Input<String> expiry;
 
     public Input<String> getExpiry() {
         return this.expiry == null ? Input.empty() : this.expiry;
@@ -47,7 +47,7 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,TokenPasswordName>> name;
+        private final @Nullable Input<Either<String,TokenPasswordName>> name;
 
     public Input<Either<String,TokenPasswordName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -121,7 +121,6 @@ public final class TokenPasswordArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public TokenPasswordArgs build() {
             return new TokenPasswordArgs(creationTime, expiry, name);
         }

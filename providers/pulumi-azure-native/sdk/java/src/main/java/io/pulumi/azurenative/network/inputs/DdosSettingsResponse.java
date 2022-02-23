@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ddosCustomPolicy")
-    private final @Nullable SubResourceResponse ddosCustomPolicy;
+        private final @Nullable SubResourceResponse ddosCustomPolicy;
 
     public Optional<SubResourceResponse> getDdosCustomPolicy() {
         return this.ddosCustomPolicy == null ? Optional.empty() : Optional.ofNullable(this.ddosCustomPolicy);
@@ -36,7 +36,7 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protectedIP")
-    private final @Nullable Boolean protectedIP;
+        private final @Nullable Boolean protectedIP;
 
     public Optional<Boolean> getProtectedIP() {
         return this.protectedIP == null ? Optional.empty() : Optional.ofNullable(this.protectedIP);
@@ -47,7 +47,7 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protectionCoverage")
-    private final @Nullable String protectionCoverage;
+        private final @Nullable String protectionCoverage;
 
     public Optional<String> getProtectionCoverage() {
         return this.protectionCoverage == null ? Optional.empty() : Optional.ofNullable(this.protectionCoverage);
@@ -106,7 +106,6 @@ public final class DdosSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.protectionCoverage = protectionCoverage;
             return this;
         }
-
         public DdosSettingsResponse build() {
             return new DdosSettingsResponse(ddosCustomPolicy, protectedIP, protectionCoverage);
         }

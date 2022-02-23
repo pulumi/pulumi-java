@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionConfigValueKeyUsageGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
      * 
      */
     @InputImport(name="keyUsages")
-    private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
+        private final @Nullable Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> keyUsages;
 
     public Input<List<CertificateCertificateDescriptionConfigValueKeyUsageGetArgs>> getKeyUsages() {
         return this.keyUsages == null ? Input.empty() : this.keyUsages;
@@ -64,7 +64,6 @@ public final class CertificateCertificateDescriptionConfigValueGetArgs extends i
             this.keyUsages = Input.ofNullable(keyUsages);
             return this;
         }
-
         public CertificateCertificateDescriptionConfigValueGetArgs build() {
             return new CertificateCertificateDescriptionConfigValueGetArgs(keyUsages);
         }

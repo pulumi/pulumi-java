@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.HttpMessageDiagnosticResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -76,7 +76,6 @@ public final class PipelineDiagnosticSettingsResponse {
             this.response = response;
             return this;
         }
-
         public PipelineDiagnosticSettingsResponse build() {
             return new PipelineDiagnosticSettingsResponse(request, response);
         }

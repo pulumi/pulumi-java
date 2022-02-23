@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -77,7 +77,6 @@ public final class KnowledgeBaseResponse extends io.pulumi.resources.InvokeArgs 
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public KnowledgeBaseResponse build() {
             return new KnowledgeBaseResponse(name, url);
         }

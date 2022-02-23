@@ -5,8 +5,8 @@ package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolIamBindingArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamBindingState;
@@ -152,13 +152,6 @@ public class CaPoolIamBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CaPoolIamBinding(String name) {
-        super("gcp:certificateauthority/caPoolIamBinding:CaPoolIamBinding", name, CaPoolIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

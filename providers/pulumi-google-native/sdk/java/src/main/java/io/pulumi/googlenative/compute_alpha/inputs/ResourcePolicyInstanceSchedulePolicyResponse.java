@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyInstanceSchedulePolicyScheduleResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="expirationTime", required=true)
-    private final String expirationTime;
+      private final String expirationTime;
 
     public String getExpirationTime() {
         return this.expirationTime;
@@ -33,7 +33,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -44,7 +44,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="timeZone", required=true)
-    private final String timeZone;
+      private final String timeZone;
 
     public String getTimeZone() {
         return this.timeZone;
@@ -55,7 +55,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="vmStartSchedule", required=true)
-    private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
+      private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStartSchedule;
 
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStartSchedule() {
         return this.vmStartSchedule;
@@ -66,7 +66,7 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="vmStopSchedule", required=true)
-    private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
+      private final ResourcePolicyInstanceSchedulePolicyScheduleResponse vmStopSchedule;
 
     public ResourcePolicyInstanceSchedulePolicyScheduleResponse getVmStopSchedule() {
         return this.vmStopSchedule;
@@ -145,7 +145,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse extends io.pulum
             this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyResponse(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }

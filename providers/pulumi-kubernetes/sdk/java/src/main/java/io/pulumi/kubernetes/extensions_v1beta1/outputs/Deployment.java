@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentSpec;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class Deployment {
             this.status = status;
             return this;
         }
-
         public Deployment build() {
             return new Deployment(apiVersion, kind, metadata, spec, status);
         }

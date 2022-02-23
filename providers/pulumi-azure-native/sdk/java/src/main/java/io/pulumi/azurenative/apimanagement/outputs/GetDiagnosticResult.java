@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.PipelineDiagnosticSettingsResponse;
 import io.pulumi.azurenative.apimanagement.outputs.SamplingSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -289,7 +289,6 @@ public final class GetDiagnosticResult {
             this.verbosity = verbosity;
             return this;
         }
-
         public GetDiagnosticResult build() {
             return new GetDiagnosticResult(alwaysLog, backend, frontend, httpCorrelationProtocol, id, logClientIp, loggerId, name, operationNameFormat, sampling, type, verbosity);
         }

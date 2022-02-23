@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRepositoryArgs Empty = new GetRepositoryArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="repositoryId", required=true)
-    private final String repositoryId;
+      private final String repositoryId;
 
     public String getRepositoryId() {
         return this.repositoryId;
@@ -88,7 +88,6 @@ public final class GetRepositoryArgs extends io.pulumi.resources.InvokeArgs {
             this.repositoryId = Objects.requireNonNull(repositoryId);
             return this;
         }
-
         public GetRepositoryArgs build() {
             return new GetRepositoryArgs(location, project, repositoryId);
         }

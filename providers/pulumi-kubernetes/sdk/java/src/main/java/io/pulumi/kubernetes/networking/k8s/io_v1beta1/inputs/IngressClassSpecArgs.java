@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="controller")
-    private final @Nullable Input<String> controller;
+        private final @Nullable Input<String> controller;
 
     public Input<String> getController() {
         return this.controller == null ? Input.empty() : this.controller;
@@ -35,7 +35,7 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<TypedLocalObjectReferenceArgs> parameters;
+        private final @Nullable Input<TypedLocalObjectReferenceArgs> parameters;
 
     public Input<TypedLocalObjectReferenceArgs> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -94,7 +94,6 @@ public final class IngressClassSpecArgs extends io.pulumi.resources.ResourceArgs
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public IngressClassSpecArgs build() {
             return new IngressClassSpecArgs(controller, parameters);
         }

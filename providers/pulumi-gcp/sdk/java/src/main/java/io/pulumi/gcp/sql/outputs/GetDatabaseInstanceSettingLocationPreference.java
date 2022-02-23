@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class GetDatabaseInstanceSettingLocationPreference {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetDatabaseInstanceSettingLocationPreference build() {
             return new GetDatabaseInstanceSettingLocationPreference(followGaeApplication, zone);
         }

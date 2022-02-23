@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1.enums.VmwareVmDetailsPowerState;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="committedStorageMb")
-    private final @Nullable Input<String> committedStorageMb;
+      private final @Nullable Input<String> committedStorageMb;
 
     public Input<String> getCommittedStorageMb() {
         return this.committedStorageMb == null ? Input.empty() : this.committedStorageMb;
@@ -36,7 +36,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cpuCount")
-    private final @Nullable Input<Integer> cpuCount;
+      private final @Nullable Input<Integer> cpuCount;
 
     public Input<Integer> getCpuCount() {
         return this.cpuCount == null ? Input.empty() : this.cpuCount;
@@ -47,7 +47,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="datacenterDescription")
-    private final @Nullable Input<String> datacenterDescription;
+      private final @Nullable Input<String> datacenterDescription;
 
     public Input<String> getDatacenterDescription() {
         return this.datacenterDescription == null ? Input.empty() : this.datacenterDescription;
@@ -58,7 +58,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="datacenterId")
-    private final @Nullable Input<String> datacenterId;
+      private final @Nullable Input<String> datacenterId;
 
     public Input<String> getDatacenterId() {
         return this.datacenterId == null ? Input.empty() : this.datacenterId;
@@ -69,7 +69,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="diskCount")
-    private final @Nullable Input<Integer> diskCount;
+      private final @Nullable Input<Integer> diskCount;
 
     public Input<Integer> getDiskCount() {
         return this.diskCount == null ? Input.empty() : this.diskCount;
@@ -80,7 +80,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -91,7 +91,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="guestDescription")
-    private final @Nullable Input<String> guestDescription;
+      private final @Nullable Input<String> guestDescription;
 
     public Input<String> getGuestDescription() {
         return this.guestDescription == null ? Input.empty() : this.guestDescription;
@@ -102,7 +102,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="memoryMb")
-    private final @Nullable Input<Integer> memoryMb;
+      private final @Nullable Input<Integer> memoryMb;
 
     public Input<Integer> getMemoryMb() {
         return this.memoryMb == null ? Input.empty() : this.memoryMb;
@@ -113,7 +113,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="powerState")
-    private final @Nullable Input<VmwareVmDetailsPowerState> powerState;
+      private final @Nullable Input<VmwareVmDetailsPowerState> powerState;
 
     public Input<VmwareVmDetailsPowerState> getPowerState() {
         return this.powerState == null ? Input.empty() : this.powerState;
@@ -124,7 +124,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uuid")
-    private final @Nullable Input<String> uuid;
+      private final @Nullable Input<String> uuid;
 
     public Input<String> getUuid() {
         return this.uuid == null ? Input.empty() : this.uuid;
@@ -135,7 +135,7 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable Input<String> vmId;
+      private final @Nullable Input<String> vmId;
 
     public Input<String> getVmId() {
         return this.vmId == null ? Input.empty() : this.vmId;
@@ -329,7 +329,6 @@ public final class VmwareVmDetailsArgs extends io.pulumi.resources.ResourceArgs 
             this.vmId = Input.ofNullable(vmId);
             return this;
         }
-
         public VmwareVmDetailsArgs build() {
             return new VmwareVmDetailsArgs(committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
         }

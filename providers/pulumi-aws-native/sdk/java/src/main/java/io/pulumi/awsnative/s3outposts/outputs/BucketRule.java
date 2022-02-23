@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3outposts.outputs;
 import io.pulumi.awsnative.s3outposts.enums.BucketRuleStatus;
 import io.pulumi.awsnative.s3outposts.outputs.BucketAbortIncompleteMultipartUpload;
 import io.pulumi.awsnative.s3outposts.outputs.BucketRuleFilterProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -156,7 +156,6 @@ public final class BucketRule {
             this.status = status;
             return this;
         }
-
         public BucketRule build() {
             return new BucketRule(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);
         }

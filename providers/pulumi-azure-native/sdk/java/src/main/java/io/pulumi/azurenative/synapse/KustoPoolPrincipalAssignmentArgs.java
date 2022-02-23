@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.enums.ClusterPrincipalRole;
 import io.pulumi.azurenative.synapse.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kustoPoolName", required=true)
-    private final Input<String> kustoPoolName;
+        private final Input<String> kustoPoolName;
 
     public Input<String> getKustoPoolName() {
         return this.kustoPoolName;
@@ -33,7 +33,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="principalAssignmentName")
-    private final @Nullable Input<String> principalAssignmentName;
+        private final @Nullable Input<String> principalAssignmentName;
 
     public Input<String> getPrincipalAssignmentName() {
         return this.principalAssignmentName == null ? Input.empty() : this.principalAssignmentName;
@@ -44,7 +44,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -55,7 +55,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final Input<Either<String,PrincipalType>> principalType;
+        private final Input<Either<String,PrincipalType>> principalType;
 
     public Input<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType;
@@ -66,7 +66,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<Either<String,ClusterPrincipalRole>> role;
+        private final Input<Either<String,ClusterPrincipalRole>> role;
 
     public Input<Either<String,ClusterPrincipalRole>> getRole() {
         return this.role;
@@ -88,7 +88,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -99,7 +99,7 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -248,7 +248,6 @@ public final class KustoPoolPrincipalAssignmentArgs extends io.pulumi.resources.
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public KustoPoolPrincipalAssignmentArgs build() {
             return new KustoPoolPrincipalAssignmentArgs(kustoPoolName, principalAssignmentName, principalId, principalType, resourceGroupName, role, tenantId, workspaceName);
         }

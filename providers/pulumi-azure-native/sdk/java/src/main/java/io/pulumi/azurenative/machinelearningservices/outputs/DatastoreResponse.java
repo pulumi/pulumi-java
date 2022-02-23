@@ -11,7 +11,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.AzureStorageSection
 import io.pulumi.azurenative.machinelearningservices.outputs.GlusterFsSectionResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedInfoResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -340,7 +340,6 @@ public final class DatastoreResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public DatastoreResponse build() {
             return new DatastoreResponse(azureDataLakeSection, azureMySqlSection, azurePostgreSqlSection, azureSqlDatabaseSection, azureStorageSection, createdBy, createdTime, dataStoreType, description, glusterFsSection, hasBeenValidated, linkedInfo, modifiedBy, modifiedTime, name, tags);
         }

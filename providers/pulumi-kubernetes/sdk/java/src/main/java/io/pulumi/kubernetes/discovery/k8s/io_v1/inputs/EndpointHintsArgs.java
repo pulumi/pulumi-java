@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.discovery.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.discovery.k8s.io_v1.inputs.ForZoneArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forZones")
-    private final @Nullable Input<List<ForZoneArgs>> forZones;
+        private final @Nullable Input<List<ForZoneArgs>> forZones;
 
     public Input<List<ForZoneArgs>> getForZones() {
         return this.forZones == null ? Input.empty() : this.forZones;
@@ -67,7 +67,6 @@ public final class EndpointHintsArgs extends io.pulumi.resources.ResourceArgs {
             this.forZones = Input.ofNullable(forZones);
             return this;
         }
-
         public EndpointHintsArgs build() {
             return new EndpointHintsArgs(forZones);
         }

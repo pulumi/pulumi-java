@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyIntrusionDetectionSignatureSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.
      * 
      */
     @InputImport(name="bypassTrafficSettings")
-    private final @Nullable Input<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
+        private final @Nullable Input<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> bypassTrafficSettings;
 
     public Input<List<FirewallPolicyIntrusionDetectionBypassTrafficSpecificationsArgs>> getBypassTrafficSettings() {
         return this.bypassTrafficSettings == null ? Input.empty() : this.bypassTrafficSettings;
@@ -36,7 +36,7 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.
      * 
      */
     @InputImport(name="signatureOverrides")
-    private final @Nullable Input<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;
+        private final @Nullable Input<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> signatureOverrides;
 
     public Input<List<FirewallPolicyIntrusionDetectionSignatureSpecificationArgs>> getSignatureOverrides() {
         return this.signatureOverrides == null ? Input.empty() : this.signatureOverrides;
@@ -95,7 +95,6 @@ public final class FirewallPolicyIntrusionDetectionConfigurationArgs extends io.
             this.signatureOverrides = Input.ofNullable(signatureOverrides);
             return this;
         }
-
         public FirewallPolicyIntrusionDetectionConfigurationArgs build() {
             return new FirewallPolicyIntrusionDetectionConfigurationArgs(bypassTrafficSettings, signatureOverrides);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__BuiltInAlgorithmOutputResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__HyperparameterOutputResponse;
 import java.lang.Boolean;
@@ -206,7 +206,6 @@ public final class GoogleCloudMlV1__TrainingOutputResponse {
             this.webAccessUris = Objects.requireNonNull(webAccessUris);
             return this;
         }
-
         public GoogleCloudMlV1__TrainingOutputResponse build() {
             return new GoogleCloudMlV1__TrainingOutputResponse(builtInAlgorithmOutput, completedTrialCount, consumedMLUnits, hyperparameterMetricTag, isBuiltInAlgorithmJob, isHyperparameterTuningJob, trials, webAccessUris);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayBackendAddressResponse;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="backendAddresses")
-    private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
+        private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
 
     public List<ApplicationGatewayBackendAddressResponse> getBackendAddresses() {
         return this.backendAddresses == null ? List.of() : this.backendAddresses;
@@ -37,7 +37,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="backendIPConfigurations", required=true)
-    private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
+        private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
@@ -48,7 +48,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -59,7 +59,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -70,7 +70,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -92,7 +92,7 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -191,7 +191,6 @@ public final class ApplicationGatewayBackendAddressPoolResponse extends io.pulum
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayBackendAddressPoolResponse build() {
             return new ApplicationGatewayBackendAddressPoolResponse(backendAddresses, backendIPConfigurations, etag, id, name, provisioningState, type);
         }

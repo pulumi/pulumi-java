@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.RouterNatRuleActionResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class RouterNatRuleResponse {
             this.ruleNumber = Objects.requireNonNull(ruleNumber);
             return this;
         }
-
         public RouterNatRuleResponse build() {
             return new RouterNatRuleResponse(action, description, match, ruleNumber);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.BackendServiceCdnPolicyCacheMode;
 import io.pulumi.googlenative.compute_beta.inputs.BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs;
 import io.pulumi.googlenative.compute_beta.inputs.BackendServiceCdnPolicyNegativeCachingPolicyArgs;
@@ -30,7 +30,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="bypassCacheOnRequestHeaders")
-    private final @Nullable Input<List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders;
+      private final @Nullable Input<List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs>> bypassCacheOnRequestHeaders;
 
     public Input<List<BackendServiceCdnPolicyBypassCacheOnRequestHeaderArgs>> getBypassCacheOnRequestHeaders() {
         return this.bypassCacheOnRequestHeaders == null ? Input.empty() : this.bypassCacheOnRequestHeaders;
@@ -41,7 +41,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheKeyPolicy")
-    private final @Nullable Input<CacheKeyPolicyArgs> cacheKeyPolicy;
+      private final @Nullable Input<CacheKeyPolicyArgs> cacheKeyPolicy;
 
     public Input<CacheKeyPolicyArgs> getCacheKeyPolicy() {
         return this.cacheKeyPolicy == null ? Input.empty() : this.cacheKeyPolicy;
@@ -52,7 +52,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheMode")
-    private final @Nullable Input<BackendServiceCdnPolicyCacheMode> cacheMode;
+      private final @Nullable Input<BackendServiceCdnPolicyCacheMode> cacheMode;
 
     public Input<BackendServiceCdnPolicyCacheMode> getCacheMode() {
         return this.cacheMode == null ? Input.empty() : this.cacheMode;
@@ -63,7 +63,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientTtl")
-    private final @Nullable Input<Integer> clientTtl;
+      private final @Nullable Input<Integer> clientTtl;
 
     public Input<Integer> getClientTtl() {
         return this.clientTtl == null ? Input.empty() : this.clientTtl;
@@ -74,7 +74,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<Integer> defaultTtl;
+      private final @Nullable Input<Integer> defaultTtl;
 
     public Input<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -85,7 +85,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxTtl")
-    private final @Nullable Input<Integer> maxTtl;
+      private final @Nullable Input<Integer> maxTtl;
 
     public Input<Integer> getMaxTtl() {
         return this.maxTtl == null ? Input.empty() : this.maxTtl;
@@ -96,7 +96,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="negativeCaching")
-    private final @Nullable Input<Boolean> negativeCaching;
+      private final @Nullable Input<Boolean> negativeCaching;
 
     public Input<Boolean> getNegativeCaching() {
         return this.negativeCaching == null ? Input.empty() : this.negativeCaching;
@@ -107,7 +107,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="negativeCachingPolicy")
-    private final @Nullable Input<List<BackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy;
+      private final @Nullable Input<List<BackendServiceCdnPolicyNegativeCachingPolicyArgs>> negativeCachingPolicy;
 
     public Input<List<BackendServiceCdnPolicyNegativeCachingPolicyArgs>> getNegativeCachingPolicy() {
         return this.negativeCachingPolicy == null ? Input.empty() : this.negativeCachingPolicy;
@@ -118,7 +118,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requestCoalescing")
-    private final @Nullable Input<Boolean> requestCoalescing;
+      private final @Nullable Input<Boolean> requestCoalescing;
 
     public Input<Boolean> getRequestCoalescing() {
         return this.requestCoalescing == null ? Input.empty() : this.requestCoalescing;
@@ -129,7 +129,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serveWhileStale")
-    private final @Nullable Input<Integer> serveWhileStale;
+      private final @Nullable Input<Integer> serveWhileStale;
 
     public Input<Integer> getServeWhileStale() {
         return this.serveWhileStale == null ? Input.empty() : this.serveWhileStale;
@@ -140,7 +140,7 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="signedUrlCacheMaxAgeSec")
-    private final @Nullable Input<String> signedUrlCacheMaxAgeSec;
+      private final @Nullable Input<String> signedUrlCacheMaxAgeSec;
 
     public Input<String> getSignedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec == null ? Input.empty() : this.signedUrlCacheMaxAgeSec;
@@ -334,7 +334,6 @@ public final class BackendServiceCdnPolicyArgs extends io.pulumi.resources.Resou
             this.signedUrlCacheMaxAgeSec = Input.ofNullable(signedUrlCacheMaxAgeSec);
             return this;
         }
-
         public BackendServiceCdnPolicyArgs build() {
             return new BackendServiceCdnPolicyArgs(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

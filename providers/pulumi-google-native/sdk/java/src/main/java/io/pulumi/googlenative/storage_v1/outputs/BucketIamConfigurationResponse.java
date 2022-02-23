@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketIamConfigurationBucketPolicyOnlyResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketIamConfigurationUniformBucketLevelAccessResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class BucketIamConfigurationResponse {
             this.uniformBucketLevelAccess = Objects.requireNonNull(uniformBucketLevelAccess);
             return this;
         }
-
         public BucketIamConfigurationResponse build() {
             return new BucketIamConfigurationResponse(bucketPolicyOnly, publicAccessPrevention, uniformBucketLevelAccess);
         }

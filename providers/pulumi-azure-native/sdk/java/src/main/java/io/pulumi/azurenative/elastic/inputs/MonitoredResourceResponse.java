@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="reasonForLogsStatus")
-    private final @Nullable String reasonForLogsStatus;
+        private final @Nullable String reasonForLogsStatus;
 
     public Optional<String> getReasonForLogsStatus() {
         return this.reasonForLogsStatus == null ? Optional.empty() : Optional.ofNullable(this.reasonForLogsStatus);
@@ -45,7 +45,7 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sendingLogs")
-    private final @Nullable String sendingLogs;
+        private final @Nullable String sendingLogs;
 
     public Optional<String> getSendingLogs() {
         return this.sendingLogs == null ? Optional.empty() : Optional.ofNullable(this.sendingLogs);
@@ -104,7 +104,6 @@ public final class MonitoredResourceResponse extends io.pulumi.resources.InvokeA
             this.sendingLogs = sendingLogs;
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, sendingLogs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterMissing", required=true)
-    private final Boolean clusterMissing;
+      private final Boolean clusterMissing;
 
     public Boolean getClusterMissing() {
         return this.clusterMissing;
@@ -33,7 +33,7 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceLink", required=true)
-    private final String resourceLink;
+      private final String resourceLink;
 
     public String getResourceLink() {
         return this.resourceLink;
@@ -82,7 +82,6 @@ public final class GkeClusterResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public GkeClusterResponse build() {
             return new GkeClusterResponse(clusterMissing, resourceLink);
         }

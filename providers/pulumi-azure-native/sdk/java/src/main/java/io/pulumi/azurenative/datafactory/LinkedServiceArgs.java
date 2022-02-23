@@ -106,7 +106,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XeroLinkedServiceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoLinkedServiceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -122,7 +122,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final Input<String> factoryName;
+        private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -133,7 +133,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<String> linkedServiceName;
+        private final @Nullable Input<String> linkedServiceName;
 
     public Input<String> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -144,7 +144,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Object> properties;
+        private final Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties;
@@ -155,7 +155,7 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -244,7 +244,6 @@ public final class LinkedServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public LinkedServiceArgs build() {
             return new LinkedServiceArgs(factoryName, linkedServiceName, properties, resourceGroupName);
         }

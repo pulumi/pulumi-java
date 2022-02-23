@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="shareId", required=true)
-    private final String shareId;
+        private final String shareId;
 
     public String getShareId() {
         return this.shareId;
@@ -59,7 +59,6 @@ public final class FileSourceInfoResponse extends io.pulumi.resources.InvokeArgs
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public FileSourceInfoResponse build() {
             return new FileSourceInfoResponse(shareId);
         }

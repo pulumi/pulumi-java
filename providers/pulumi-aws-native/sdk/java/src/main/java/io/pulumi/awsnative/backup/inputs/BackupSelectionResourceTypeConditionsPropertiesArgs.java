@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.inputs;
 
 import io.pulumi.awsnative.backup.inputs.BackupSelectionConditionParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,28 +16,28 @@ public final class BackupSelectionResourceTypeConditionsPropertiesArgs extends i
     public static final BackupSelectionResourceTypeConditionsPropertiesArgs Empty = new BackupSelectionResourceTypeConditionsPropertiesArgs();
 
     @InputImport(name="stringEquals")
-    private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringEquals;
+        private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringEquals;
 
     public Input<List<BackupSelectionConditionParameterArgs>> getStringEquals() {
         return this.stringEquals == null ? Input.empty() : this.stringEquals;
     }
 
     @InputImport(name="stringLike")
-    private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringLike;
+        private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringLike;
 
     public Input<List<BackupSelectionConditionParameterArgs>> getStringLike() {
         return this.stringLike == null ? Input.empty() : this.stringLike;
     }
 
     @InputImport(name="stringNotEquals")
-    private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
+        private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotEquals;
 
     public Input<List<BackupSelectionConditionParameterArgs>> getStringNotEquals() {
         return this.stringNotEquals == null ? Input.empty() : this.stringNotEquals;
     }
 
     @InputImport(name="stringNotLike")
-    private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotLike;
+        private final @Nullable Input<List<BackupSelectionConditionParameterArgs>> stringNotLike;
 
     public Input<List<BackupSelectionConditionParameterArgs>> getStringNotLike() {
         return this.stringNotLike == null ? Input.empty() : this.stringNotLike;
@@ -126,7 +126,6 @@ public final class BackupSelectionResourceTypeConditionsPropertiesArgs extends i
             this.stringNotLike = Input.ofNullable(stringNotLike);
             return this;
         }
-
         public BackupSelectionResourceTypeConditionsPropertiesArgs build() {
             return new BackupSelectionResourceTypeConditionsPropertiesArgs(stringEquals, stringLike, stringNotEquals, stringNotLike);
         }

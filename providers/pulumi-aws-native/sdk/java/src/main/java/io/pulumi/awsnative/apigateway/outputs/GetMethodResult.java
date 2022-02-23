@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apigateway.outputs;
 import io.pulumi.awsnative.apigateway.enums.MethodAuthorizationType;
 import io.pulumi.awsnative.apigateway.outputs.MethodIntegration;
 import io.pulumi.awsnative.apigateway.outputs.MethodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -250,7 +250,6 @@ public final class GetMethodResult {
             this.requestValidatorId = requestValidatorId;
             return this;
         }
-
         public GetMethodResult build() {
             return new GetMethodResult(apiKeyRequired, authorizationScopes, authorizationType, authorizerId, integration, methodResponses, operationName, requestModels, requestParameters, requestValidatorId);
         }

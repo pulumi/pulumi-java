@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="installerVersion")
-    private final @Nullable String installerVersion;
+        private final @Nullable String installerVersion;
 
     public Optional<String> getInstallerVersion() {
         return this.installerVersion == null ? Optional.empty() : Optional.ofNullable(this.installerVersion);
@@ -30,7 +30,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tool")
-    private final @Nullable String tool;
+        private final @Nullable String tool;
 
     public Optional<String> getTool() {
         return this.tool == null ? Optional.empty() : Optional.ofNullable(this.tool);
@@ -41,7 +41,7 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="toolVersion")
-    private final @Nullable String toolVersion;
+        private final @Nullable String toolVersion;
 
     public Optional<String> getToolVersion() {
         return this.toolVersion == null ? Optional.empty() : Optional.ofNullable(this.toolVersion);
@@ -100,7 +100,6 @@ public final class DatadogInstallMethodResponse extends io.pulumi.resources.Invo
             this.toolVersion = toolVersion;
             return this;
         }
-
         public DatadogInstallMethodResponse build() {
             return new DatadogInstallMethodResponse(installerVersion, tool, toolVersion);
         }

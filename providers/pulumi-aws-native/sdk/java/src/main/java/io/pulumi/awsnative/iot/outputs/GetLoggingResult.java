@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.LoggingDefaultLogLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class GetLoggingResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetLoggingResult build() {
             return new GetLoggingResult(defaultLogLevel, roleArn);
         }

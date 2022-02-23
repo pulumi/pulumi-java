@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.HTTPHeaderArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -36,7 +36,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpHeaders")
-    private final @Nullable Input<List<HTTPHeaderArgs>> httpHeaders;
+      private final @Nullable Input<List<HTTPHeaderArgs>> httpHeaders;
 
     public Input<List<HTTPHeaderArgs>> getHttpHeaders() {
         return this.httpHeaders == null ? Input.empty() : this.httpHeaders;
@@ -47,7 +47,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -58,7 +58,7 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheme")
-    private final @Nullable Input<String> scheme;
+      private final @Nullable Input<String> scheme;
 
     public Input<String> getScheme() {
         return this.scheme == null ? Input.empty() : this.scheme;
@@ -147,7 +147,6 @@ public final class HTTPGetActionArgs extends io.pulumi.resources.ResourceArgs {
             this.scheme = Input.ofNullable(scheme);
             return this;
         }
-
         public HTTPGetActionArgs build() {
             return new HTTPGetActionArgs(host, httpHeaders, path, scheme);
         }

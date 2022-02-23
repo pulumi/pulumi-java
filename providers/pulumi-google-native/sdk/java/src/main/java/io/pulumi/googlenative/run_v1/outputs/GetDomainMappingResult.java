@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingSpecResponse;
 import io.pulumi.googlenative.run_v1.outputs.DomainMappingStatusResponse;
 import io.pulumi.googlenative.run_v1.outputs.ObjectMetaResponse;
@@ -140,7 +140,6 @@ public final class GetDomainMappingResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetDomainMappingResult build() {
             return new GetDomainMappingResult(apiVersion, kind, metadata, spec, status);
         }

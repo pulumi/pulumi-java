@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+        private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
@@ -41,7 +41,7 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final String projectName;
+        private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -52,7 +52,7 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -63,7 +63,7 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="taskName", required=true)
-    private final String taskName;
+        private final String taskName;
 
     public String getTaskName() {
         return this.taskName;
@@ -142,7 +142,6 @@ public final class GetTaskArgs extends io.pulumi.resources.InvokeArgs {
             this.taskName = Objects.requireNonNull(taskName);
             return this;
         }
-
         public GetTaskArgs build() {
             return new GetTaskArgs(expand, groupName, projectName, serviceName, taskName);
         }

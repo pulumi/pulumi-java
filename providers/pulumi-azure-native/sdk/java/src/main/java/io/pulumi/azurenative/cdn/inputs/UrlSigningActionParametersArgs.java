@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.Algorithm;
 import io.pulumi.azurenative.cdn.inputs.UrlSigningParamIdentifierArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,14 +27,14 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="algorithm")
-    private final @Nullable Input<Either<String,Algorithm>> algorithm;
+        private final @Nullable Input<Either<String,Algorithm>> algorithm;
 
     public Input<Either<String,Algorithm>> getAlgorithm() {
         return this.algorithm == null ? Input.empty() : this.algorithm;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -45,7 +45,7 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="parameterNameOverride")
-    private final @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
+        private final @Nullable Input<List<UrlSigningParamIdentifierArgs>> parameterNameOverride;
 
     public Input<List<UrlSigningParamIdentifierArgs>> getParameterNameOverride() {
         return this.parameterNameOverride == null ? Input.empty() : this.parameterNameOverride;
@@ -119,7 +119,6 @@ public final class UrlSigningActionParametersArgs extends io.pulumi.resources.Re
             this.parameterNameOverride = Input.ofNullable(parameterNameOverride);
             return this;
         }
-
         public UrlSigningActionParametersArgs build() {
             return new UrlSigningActionParametersArgs(algorithm, odataType, parameterNameOverride);
         }

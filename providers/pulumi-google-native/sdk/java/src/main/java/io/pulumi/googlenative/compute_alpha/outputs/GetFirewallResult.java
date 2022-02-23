@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallAllowedItemResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallDeniedItemResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallLogConfigResponse;
@@ -437,7 +437,6 @@ public final class GetFirewallResult {
             this.targetTags = Objects.requireNonNull(targetTags);
             return this;
         }
-
         public GetFirewallResult build() {
             return new GetFirewallResult(allowed, creationTimestamp, denied, description, destinationRanges, direction, disabled, kind, logConfig, name, network, priority, selfLink, selfLinkWithId, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskInitializeParams;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -374,7 +374,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigDataDisk {
             this.type = type;
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigDataDisk build() {
             return new RuntimeVirtualMachineVirtualMachineConfigDataDisk(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }

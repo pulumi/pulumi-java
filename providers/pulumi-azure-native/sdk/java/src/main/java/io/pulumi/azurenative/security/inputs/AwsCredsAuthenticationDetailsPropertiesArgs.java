@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final Input<String> authenticationType;
+        private final Input<String> authenticationType;
 
     public Input<String> getAuthenticationType() {
         return this.authenticationType;
@@ -34,7 +34,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="awsAccessKeyId", required=true)
-    private final Input<String> awsAccessKeyId;
+        private final Input<String> awsAccessKeyId;
 
     public Input<String> getAwsAccessKeyId() {
         return this.awsAccessKeyId;
@@ -45,7 +45,7 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="awsSecretAccessKey", required=true)
-    private final Input<String> awsSecretAccessKey;
+        private final Input<String> awsSecretAccessKey;
 
     public Input<String> getAwsSecretAccessKey() {
         return this.awsSecretAccessKey;
@@ -119,7 +119,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesArgs extends io.pulumi
             this.awsSecretAccessKey = Input.of(Objects.requireNonNull(awsSecretAccessKey));
             return this;
         }
-
         public AwsCredsAuthenticationDetailsPropertiesArgs build() {
             return new AwsCredsAuthenticationDetailsPropertiesArgs(authenticationType, awsAccessKeyId, awsSecretAccessKey);
         }

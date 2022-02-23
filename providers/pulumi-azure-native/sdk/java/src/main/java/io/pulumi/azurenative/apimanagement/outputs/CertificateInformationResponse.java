@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class CertificateInformationResponse {
             this.thumbprint = Objects.requireNonNull(thumbprint);
             return this;
         }
-
         public CertificateInformationResponse build() {
             return new CertificateInformationResponse(expiry, subject, thumbprint);
         }

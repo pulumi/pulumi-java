@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterNamespace")
-    private final @Nullable Input<String> clusterNamespace;
+      private final @Nullable Input<String> clusterNamespace;
 
     public Input<String> getClusterNamespace() {
         return this.clusterNamespace == null ? Input.empty() : this.clusterNamespace;
@@ -34,7 +34,7 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetGkeCluster")
-    private final @Nullable Input<String> targetGkeCluster;
+      private final @Nullable Input<String> targetGkeCluster;
 
     public Input<String> getTargetGkeCluster() {
         return this.targetGkeCluster == null ? Input.empty() : this.targetGkeCluster;
@@ -93,7 +93,6 @@ public final class NamespacedGkeDeploymentTargetArgs extends io.pulumi.resources
             this.targetGkeCluster = Input.ofNullable(targetGkeCluster);
             return this;
         }
-
         public NamespacedGkeDeploymentTargetArgs build() {
             return new NamespacedGkeDeploymentTargetArgs(clusterNamespace, targetGkeCluster);
         }

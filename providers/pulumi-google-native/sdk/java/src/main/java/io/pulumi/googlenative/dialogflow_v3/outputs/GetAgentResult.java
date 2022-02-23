@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3AdvancedSettingsResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3SpeechToTextSettingsResponse;
 import java.lang.Boolean;
@@ -309,7 +309,6 @@ public final class GetAgentResult {
             this.timeZone = Objects.requireNonNull(timeZone);
             return this;
         }
-
         public GetAgentResult build() {
             return new GetAgentResult(advancedSettings, avatarUri, defaultLanguageCode, description, displayName, enableSpellCorrection, enableStackdriverLogging, name, securitySettings, speechToTextSettings, startFlow, supportedLanguageCodes, timeZone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VpcAccessConnectorResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="egressSetting", required=true)
-    private final String egressSetting;
+      private final String egressSetting;
 
     public String getEgressSetting() {
         return this.egressSetting;
@@ -32,7 +32,7 @@ public final class VpcAccessConnectorResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class VpcAccessConnectorResponse extends io.pulumi.resources.Invoke
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public VpcAccessConnectorResponse build() {
             return new VpcAccessConnectorResponse(egressSetting, name);
         }

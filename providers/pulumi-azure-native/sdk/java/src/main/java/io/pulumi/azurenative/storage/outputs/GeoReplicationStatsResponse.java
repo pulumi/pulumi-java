@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GeoReplicationStatsResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GeoReplicationStatsResponse build() {
             return new GeoReplicationStatsResponse(canFailover, lastSyncTime, status);
         }

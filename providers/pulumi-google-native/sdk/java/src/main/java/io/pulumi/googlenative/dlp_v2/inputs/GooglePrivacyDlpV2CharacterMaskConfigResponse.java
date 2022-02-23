@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CharsToIgnoreResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="charactersToIgnore", required=true)
-    private final List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
+      private final List<GooglePrivacyDlpV2CharsToIgnoreResponse> charactersToIgnore;
 
     public List<GooglePrivacyDlpV2CharsToIgnoreResponse> getCharactersToIgnore() {
         return this.charactersToIgnore;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="maskingCharacter", required=true)
-    private final String maskingCharacter;
+      private final String maskingCharacter;
 
     public String getMaskingCharacter() {
         return this.maskingCharacter;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="numberToMask", required=true)
-    private final Integer numberToMask;
+      private final Integer numberToMask;
 
     public Integer getNumberToMask() {
         return this.numberToMask;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="reverseOrder", required=true)
-    private final Boolean reverseOrder;
+      private final Boolean reverseOrder;
 
     public Boolean getReverseOrder() {
         return this.reverseOrder;
@@ -127,7 +127,6 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse extends io.pulu
             this.reverseOrder = Objects.requireNonNull(reverseOrder);
             return this;
         }
-
         public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
             return new GooglePrivacyDlpV2CharacterMaskConfigResponse(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
         }

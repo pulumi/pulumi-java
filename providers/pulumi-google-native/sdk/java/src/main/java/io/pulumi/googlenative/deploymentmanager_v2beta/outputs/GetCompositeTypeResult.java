@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CompositeTypeLabelEntryResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.OperationResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.TemplateContentsResponse;
@@ -196,7 +196,6 @@ public final class GetCompositeTypeResult {
             this.templateContents = Objects.requireNonNull(templateContents);
             return this;
         }
-
         public GetCompositeTypeResult build() {
             return new GetCompositeTypeResult(description, insertTime, labels, name, operation, selfLink, status, templateContents);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.pinpoint.inputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
     public static final InAppTemplateHeaderConfigArgs Empty = new InAppTemplateHeaderConfigArgs();
 
     @InputImport(name="alignment")
-    private final @Nullable Input<InAppTemplateAlignment> alignment;
+        private final @Nullable Input<InAppTemplateAlignment> alignment;
 
     public Input<InAppTemplateAlignment> getAlignment() {
         return this.alignment == null ? Input.empty() : this.alignment;
     }
 
     @InputImport(name="header")
-    private final @Nullable Input<String> header;
+        private final @Nullable Input<String> header;
 
     public Input<String> getHeader() {
         return this.header == null ? Input.empty() : this.header;
     }
 
     @InputImport(name="textColor")
-    private final @Nullable Input<String> textColor;
+        private final @Nullable Input<String> textColor;
 
     public Input<String> getTextColor() {
         return this.textColor == null ? Input.empty() : this.textColor;
@@ -104,7 +104,6 @@ public final class InAppTemplateHeaderConfigArgs extends io.pulumi.resources.Res
             this.textColor = Input.ofNullable(textColor);
             return this;
         }
-
         public InAppTemplateHeaderConfigArgs build() {
             return new InAppTemplateHeaderConfigArgs(alignment, header, textColor);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.logging_v2.BillingAccountSinkArgs;
 import io.pulumi.googlenative.logging_v2.outputs.BigQueryOptionsResponse;
@@ -177,13 +177,6 @@ public class BillingAccountSink extends io.pulumi.resources.CustomResource {
         return this.writerIdentity;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BillingAccountSink(String name) {
-        super("google-native:logging/v2:BillingAccountSink", name, BillingAccountSinkArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

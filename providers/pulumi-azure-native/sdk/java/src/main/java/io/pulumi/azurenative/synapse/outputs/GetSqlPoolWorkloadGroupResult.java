@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -225,7 +225,6 @@ public final class GetSqlPoolWorkloadGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolWorkloadGroupResult build() {
             return new GetSqlPoolWorkloadGroupResult(id, importance, maxResourcePercent, maxResourcePercentPerRequest, minResourcePercent, minResourcePercentPerRequest, name, queryExecutionTimeout, type);
         }

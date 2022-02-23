@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -90,7 +90,6 @@ public final class GetLoadBalancerTlsCertificateResult {
             this.status = status;
             return this;
         }
-
         public GetLoadBalancerTlsCertificateResult build() {
             return new GetLoadBalancerTlsCertificateResult(isAttached, loadBalancerTlsCertificateArn, status);
         }

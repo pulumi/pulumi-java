@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class WeeklyRetentionFormatResponse {
             this.weeksOfTheMonth = weeksOfTheMonth;
             return this;
         }
-
         public WeeklyRetentionFormatResponse build() {
             return new WeeklyRetentionFormatResponse(daysOfTheWeek, weeksOfTheMonth);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kubeletConfigKey", required=true)
-    private final Input<String> kubeletConfigKey;
+        private final Input<String> kubeletConfigKey;
 
     public Input<String> getKubeletConfigKey() {
         return this.kubeletConfigKey;
@@ -34,7 +34,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+        private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -56,7 +56,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceVersion")
-    private final @Nullable Input<String> resourceVersion;
+        private final @Nullable Input<String> resourceVersion;
 
     public Input<String> getResourceVersion() {
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
@@ -67,7 +67,7 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+        private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -171,7 +171,6 @@ public final class ConfigMapNodeConfigSourceArgs extends io.pulumi.resources.Res
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public ConfigMapNodeConfigSourceArgs build() {
             return new ConfigMapNodeConfigSourceArgs(kubeletConfigKey, name, namespace, resourceVersion, uid);
         }

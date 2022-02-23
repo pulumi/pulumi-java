@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.SyncPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="syncProperties", required=true)
-    private final Input<SyncPropertiesArgs> syncProperties;
+        private final Input<SyncPropertiesArgs> syncProperties;
 
     public Input<SyncPropertiesArgs> getSyncProperties() {
         return this.syncProperties;
@@ -94,7 +94,6 @@ public final class ParentPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.syncProperties = Input.of(Objects.requireNonNull(syncProperties));
             return this;
         }
-
         public ParentPropertiesArgs build() {
             return new ParentPropertiesArgs(id, syncProperties);
         }

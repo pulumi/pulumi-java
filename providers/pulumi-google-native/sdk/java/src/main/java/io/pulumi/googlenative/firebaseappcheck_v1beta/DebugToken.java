@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebaseappcheck_v1beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebaseappcheck_v1beta.DebugTokenArgs;
 import java.lang.String;
@@ -61,13 +61,6 @@ public class DebugToken extends io.pulumi.resources.CustomResource {
         return this.token;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DebugToken(String name) {
-        super("google-native:firebaseappcheck/v1beta:DebugToken", name, DebugTokenArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

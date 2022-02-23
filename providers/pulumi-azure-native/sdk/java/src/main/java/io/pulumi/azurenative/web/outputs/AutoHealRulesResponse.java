@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AutoHealActionsResponse;
 import io.pulumi.azurenative.web.outputs.AutoHealTriggersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class AutoHealRulesResponse {
             this.triggers = triggers;
             return this;
         }
-
         public AutoHealRulesResponse build() {
             return new AutoHealRulesResponse(actions, triggers);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1RenewalSettingsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
      * 
      */
     @InputImport(name="renewalSettings")
-    private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
+      private final @Nullable Input<GoogleCloudChannelV1RenewalSettingsArgs> renewalSettings;
 
     public Input<GoogleCloudChannelV1RenewalSettingsArgs> getRenewalSettings() {
         return this.renewalSettings == null ? Input.empty() : this.renewalSettings;
@@ -66,7 +66,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsArgs extends io.pulumi.
             this.renewalSettings = Input.ofNullable(renewalSettings);
             return this;
         }
-
         public GoogleCloudChannelV1CommitmentSettingsArgs build() {
             return new GoogleCloudChannelV1CommitmentSettingsArgs(renewalSettings);
         }

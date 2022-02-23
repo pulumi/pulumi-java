@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssm.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class AssociationS3OutputLocation extends io.pulumi.resources.Invok
     public static final AssociationS3OutputLocation Empty = new AssociationS3OutputLocation();
 
     @InputImport(name="outputS3BucketName")
-    private final @Nullable String outputS3BucketName;
+        private final @Nullable String outputS3BucketName;
 
     public Optional<String> getOutputS3BucketName() {
         return this.outputS3BucketName == null ? Optional.empty() : Optional.ofNullable(this.outputS3BucketName);
     }
 
     @InputImport(name="outputS3KeyPrefix")
-    private final @Nullable String outputS3KeyPrefix;
+        private final @Nullable String outputS3KeyPrefix;
 
     public Optional<String> getOutputS3KeyPrefix() {
         return this.outputS3KeyPrefix == null ? Optional.empty() : Optional.ofNullable(this.outputS3KeyPrefix);
     }
 
     @InputImport(name="outputS3Region")
-    private final @Nullable String outputS3Region;
+        private final @Nullable String outputS3Region;
 
     public Optional<String> getOutputS3Region() {
         return this.outputS3Region == null ? Optional.empty() : Optional.ofNullable(this.outputS3Region);
@@ -88,7 +88,6 @@ public final class AssociationS3OutputLocation extends io.pulumi.resources.Invok
             this.outputS3Region = outputS3Region;
             return this;
         }
-
         public AssociationS3OutputLocation build() {
             return new AssociationS3OutputLocation(outputS3BucketName, outputS3KeyPrefix, outputS3Region);
         }

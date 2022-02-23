@@ -34,7 +34,6 @@ public final class GoogleAutoArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(GoogleAutoArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleAutoArgs build() {
             return new GoogleAutoArgs();
         }

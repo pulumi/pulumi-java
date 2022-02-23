@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="communicationLinkName")
-    private final @Nullable Input<String> communicationLinkName;
+        private final @Nullable Input<String> communicationLinkName;
 
     public Input<String> getCommunicationLinkName() {
         return this.communicationLinkName == null ? Input.empty() : this.communicationLinkName;
@@ -30,7 +30,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="partnerServer", required=true)
-    private final Input<String> partnerServer;
+        private final Input<String> partnerServer;
 
     public Input<String> getPartnerServer() {
         return this.partnerServer;
@@ -41,7 +41,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -141,7 +141,6 @@ public final class ServerCommunicationLinkArgs extends io.pulumi.resources.Resou
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public ServerCommunicationLinkArgs build() {
             return new ServerCommunicationLinkArgs(communicationLinkName, partnerServer, resourceGroupName, serverName);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricSetMetricSe
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetric;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorMetricSource;
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorTimestampColumn;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dimensionList")
-    private final @Nullable List<String> dimensionList;
+        private final @Nullable List<String> dimensionList;
 
     public List<String> getDimensionList() {
         return this.dimensionList == null ? List.of() : this.dimensionList;
@@ -36,7 +36,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricList", required=true)
-    private final List<AnomalyDetectorMetric> metricList;
+        private final List<AnomalyDetectorMetric> metricList;
 
     public List<AnomalyDetectorMetric> getMetricList() {
         return this.metricList;
@@ -47,7 +47,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricSetDescription")
-    private final @Nullable String metricSetDescription;
+        private final @Nullable String metricSetDescription;
 
     public Optional<String> getMetricSetDescription() {
         return this.metricSetDescription == null ? Optional.empty() : Optional.ofNullable(this.metricSetDescription);
@@ -58,7 +58,7 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricSetFrequency")
-    private final @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency;
+        private final @Nullable AnomalyDetectorMetricSetMetricSetFrequency metricSetFrequency;
 
     public Optional<AnomalyDetectorMetricSetMetricSetFrequency> getMetricSetFrequency() {
         return this.metricSetFrequency == null ? Optional.empty() : Optional.ofNullable(this.metricSetFrequency);
@@ -69,14 +69,14 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricSetName", required=true)
-    private final String metricSetName;
+        private final String metricSetName;
 
     public String getMetricSetName() {
         return this.metricSetName;
     }
 
     @InputImport(name="metricSource", required=true)
-    private final AnomalyDetectorMetricSource metricSource;
+        private final AnomalyDetectorMetricSource metricSource;
 
     public AnomalyDetectorMetricSource getMetricSource() {
         return this.metricSource;
@@ -87,21 +87,21 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="offset")
-    private final @Nullable Integer offset;
+        private final @Nullable Integer offset;
 
     public Optional<Integer> getOffset() {
         return this.offset == null ? Optional.empty() : Optional.ofNullable(this.offset);
     }
 
     @InputImport(name="timestampColumn")
-    private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
+        private final @Nullable AnomalyDetectorTimestampColumn timestampColumn;
 
     public Optional<AnomalyDetectorTimestampColumn> getTimestampColumn() {
         return this.timestampColumn == null ? Optional.empty() : Optional.ofNullable(this.timestampColumn);
     }
 
     @InputImport(name="timezone")
-    private final @Nullable String timezone;
+        private final @Nullable String timezone;
 
     public Optional<String> getTimezone() {
         return this.timezone == null ? Optional.empty() : Optional.ofNullable(this.timezone);
@@ -220,7 +220,6 @@ public final class AnomalyDetectorMetricSet extends io.pulumi.resources.InvokeAr
             this.timezone = timezone;
             return this;
         }
-
         public AnomalyDetectorMetricSet build() {
             return new AnomalyDetectorMetricSet(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ContainerPortArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EnvVarArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<GoogleCloudMlV1__EnvVarArgs>> env;
+      private final @Nullable Input<List<GoogleCloudMlV1__EnvVarArgs>> env;
 
     public Input<List<GoogleCloudMlV1__EnvVarArgs>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+      private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
+      private final @Nullable Input<List<GoogleCloudMlV1__ContainerPortArgs>> ports;
 
     public Input<List<GoogleCloudMlV1__ContainerPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -174,7 +174,6 @@ public final class GoogleCloudMlV1__ContainerSpecArgs extends io.pulumi.resource
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public GoogleCloudMlV1__ContainerSpecArgs build() {
             return new GoogleCloudMlV1__ContainerSpecArgs(args, command, env, image, ports);
         }

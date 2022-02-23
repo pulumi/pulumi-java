@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdDenominatorAggregation;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyConditionConditionThresholdTrigger;
@@ -355,7 +355,6 @@ public final class AlertPolicyConditionConditionThreshold {
             this.trigger = trigger;
             return this;
         }
-
         public AlertPolicyConditionConditionThreshold build() {
             return new AlertPolicyConditionConditionThreshold(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

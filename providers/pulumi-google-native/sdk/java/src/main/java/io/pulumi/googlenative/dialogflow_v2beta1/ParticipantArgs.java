@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.ParticipantRole;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
     public static final ParticipantArgs Empty = new ParticipantArgs();
 
     @InputImport(name="conversationId", required=true)
-    private final Input<String> conversationId;
+      private final Input<String> conversationId;
 
     public Input<String> getConversationId() {
         return this.conversationId;
@@ -28,14 +28,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentsMetadataFilters")
-    private final @Nullable Input<Map<String,String>> documentsMetadataFilters;
+      private final @Nullable Input<Map<String,String>> documentsMetadataFilters;
 
     public Input<Map<String,String>> getDocumentsMetadataFilters() {
         return this.documentsMetadataFilters == null ? Input.empty() : this.documentsMetadataFilters;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,14 +57,14 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obfuscatedExternalUserId")
-    private final @Nullable Input<String> obfuscatedExternalUserId;
+      private final @Nullable Input<String> obfuscatedExternalUserId;
 
     public Input<String> getObfuscatedExternalUserId() {
         return this.obfuscatedExternalUserId == null ? Input.empty() : this.obfuscatedExternalUserId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -75,7 +75,7 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<ParticipantRole> role;
+      private final @Nullable Input<ParticipantRole> role;
 
     public Input<ParticipantRole> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -209,7 +209,6 @@ public final class ParticipantArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public ParticipantArgs build() {
             return new ParticipantArgs(conversationId, documentsMetadataFilters, location, name, obfuscatedExternalUserId, project, role);
         }

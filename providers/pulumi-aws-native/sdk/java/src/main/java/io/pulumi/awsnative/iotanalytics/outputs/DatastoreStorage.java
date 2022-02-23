@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreCustomerManagedS3;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreIotSiteWiseMultiLayerStorage;
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreServiceManagedS3;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -75,7 +75,6 @@ public final class DatastoreStorage {
             this.serviceManagedS3 = serviceManagedS3;
             return this;
         }
-
         public DatastoreStorage build() {
             return new DatastoreStorage(customerManagedS3, iotSiteWiseMultiLayerStorage, serviceManagedS3);
         }

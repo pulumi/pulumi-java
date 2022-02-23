@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.RRSetRoutingPolicyArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,21 +18,21 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
     public static final ResourceRecordSetArgs Empty = new ResourceRecordSetArgs();
 
     @InputImport(name="clientOperationId")
-    private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Input<String> clientOperationId;
 
     public Input<String> getClientOperationId() {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="managedZone", required=true)
-    private final Input<String> managedZone;
+      private final Input<String> managedZone;
 
     public Input<String> getManagedZone() {
         return this.managedZone;
@@ -43,14 +43,14 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -61,7 +61,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routingPolicy")
-    private final @Nullable Input<RRSetRoutingPolicyArgs> routingPolicy;
+      private final @Nullable Input<RRSetRoutingPolicyArgs> routingPolicy;
 
     public Input<RRSetRoutingPolicyArgs> getRoutingPolicy() {
         return this.routingPolicy == null ? Input.empty() : this.routingPolicy;
@@ -72,7 +72,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rrdatas")
-    private final @Nullable Input<List<String>> rrdatas;
+      private final @Nullable Input<List<String>> rrdatas;
 
     public Input<List<String>> getRrdatas() {
         return this.rrdatas == null ? Input.empty() : this.rrdatas;
@@ -83,7 +83,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="signatureRrdatas")
-    private final @Nullable Input<List<String>> signatureRrdatas;
+      private final @Nullable Input<List<String>> signatureRrdatas;
 
     public Input<List<String>> getSignatureRrdatas() {
         return this.signatureRrdatas == null ? Input.empty() : this.signatureRrdatas;
@@ -94,7 +94,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Integer> ttl;
+      private final @Nullable Input<Integer> ttl;
 
     public Input<Integer> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -105,7 +105,7 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -284,7 +284,6 @@ public final class ResourceRecordSetArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ResourceRecordSetArgs build() {
             return new ResourceRecordSetArgs(clientOperationId, kind, managedZone, name, project, routingPolicy, rrdatas, signatureRrdatas, ttl, type);
         }

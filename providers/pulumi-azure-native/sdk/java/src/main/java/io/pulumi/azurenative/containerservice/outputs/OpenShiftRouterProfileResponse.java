@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class OpenShiftRouterProfileResponse {
             this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
             return this;
         }
-
         public OpenShiftRouterProfileResponse build() {
             return new OpenShiftRouterProfileResponse(fqdn, name, publicSubdomain);
         }

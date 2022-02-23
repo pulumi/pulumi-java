@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotwireless;
 import io.pulumi.awsnative.iotwireless.inputs.FuotaTaskLoRaWANArgs;
 import io.pulumi.awsnative.iotwireless.inputs.FuotaTaskTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateMulticastGroup")
-    private final @Nullable Input<String> associateMulticastGroup;
+        private final @Nullable Input<String> associateMulticastGroup;
 
     public Input<String> getAssociateMulticastGroup() {
         return this.associateMulticastGroup == null ? Input.empty() : this.associateMulticastGroup;
@@ -33,7 +33,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="associateWirelessDevice")
-    private final @Nullable Input<String> associateWirelessDevice;
+        private final @Nullable Input<String> associateWirelessDevice;
 
     public Input<String> getAssociateWirelessDevice() {
         return this.associateWirelessDevice == null ? Input.empty() : this.associateWirelessDevice;
@@ -44,7 +44,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disassociateMulticastGroup")
-    private final @Nullable Input<String> disassociateMulticastGroup;
+        private final @Nullable Input<String> disassociateMulticastGroup;
 
     public Input<String> getDisassociateMulticastGroup() {
         return this.disassociateMulticastGroup == null ? Input.empty() : this.disassociateMulticastGroup;
@@ -66,7 +66,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disassociateWirelessDevice")
-    private final @Nullable Input<String> disassociateWirelessDevice;
+        private final @Nullable Input<String> disassociateWirelessDevice;
 
     public Input<String> getDisassociateWirelessDevice() {
         return this.disassociateWirelessDevice == null ? Input.empty() : this.disassociateWirelessDevice;
@@ -77,7 +77,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firmwareUpdateImage", required=true)
-    private final Input<String> firmwareUpdateImage;
+        private final Input<String> firmwareUpdateImage;
 
     public Input<String> getFirmwareUpdateImage() {
         return this.firmwareUpdateImage;
@@ -88,7 +88,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firmwareUpdateRole", required=true)
-    private final Input<String> firmwareUpdateRole;
+        private final Input<String> firmwareUpdateRole;
 
     public Input<String> getFirmwareUpdateRole() {
         return this.firmwareUpdateRole;
@@ -99,7 +99,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loRaWAN", required=true)
-    private final Input<FuotaTaskLoRaWANArgs> loRaWAN;
+        private final Input<FuotaTaskLoRaWANArgs> loRaWAN;
 
     public Input<FuotaTaskLoRaWANArgs> getLoRaWAN() {
         return this.loRaWAN;
@@ -110,7 +110,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -121,7 +121,7 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FuotaTaskTagArgs>> tags;
+        private final @Nullable Input<List<FuotaTaskTagArgs>> tags;
 
     public Input<List<FuotaTaskTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -300,7 +300,6 @@ public final class FuotaTaskArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FuotaTaskArgs build() {
             return new FuotaTaskArgs(associateMulticastGroup, associateWirelessDevice, description, disassociateMulticastGroup, disassociateWirelessDevice, firmwareUpdateImage, firmwareUpdateRole, loRaWAN, name, tags);
         }

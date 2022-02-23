@@ -7,7 +7,7 @@ import io.pulumi.awsnative.groundstation.enums.ConfigPolarization;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigFrequencyBandwidthArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,21 +17,21 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
     public static final ConfigSpectrumConfigArgs Empty = new ConfigSpectrumConfigArgs();
 
     @InputImport(name="bandwidth")
-    private final @Nullable Input<ConfigFrequencyBandwidthArgs> bandwidth;
+        private final @Nullable Input<ConfigFrequencyBandwidthArgs> bandwidth;
 
     public Input<ConfigFrequencyBandwidthArgs> getBandwidth() {
         return this.bandwidth == null ? Input.empty() : this.bandwidth;
     }
 
     @InputImport(name="centerFrequency")
-    private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
+        private final @Nullable Input<ConfigFrequencyArgs> centerFrequency;
 
     public Input<ConfigFrequencyArgs> getCenterFrequency() {
         return this.centerFrequency == null ? Input.empty() : this.centerFrequency;
     }
 
     @InputImport(name="polarization")
-    private final @Nullable Input<ConfigPolarization> polarization;
+        private final @Nullable Input<ConfigPolarization> polarization;
 
     public Input<ConfigPolarization> getPolarization() {
         return this.polarization == null ? Input.empty() : this.polarization;
@@ -105,7 +105,6 @@ public final class ConfigSpectrumConfigArgs extends io.pulumi.resources.Resource
             this.polarization = Input.ofNullable(polarization);
             return this;
         }
-
         public ConfigSpectrumConfigArgs build() {
             return new ConfigSpectrumConfigArgs(bandwidth, centerFrequency, polarization);
         }

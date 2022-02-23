@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.SqlDedicatedGatewayRegionalServiceResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final String creationTime;
+        private final String creationTime;
 
     public String getCreationTime() {
         return this.creationTime;
@@ -37,7 +37,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Integer instanceCount;
+        private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
@@ -48,7 +48,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="instanceSize")
-    private final @Nullable String instanceSize;
+        private final @Nullable String instanceSize;
 
     public Optional<String> getInstanceSize() {
         return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
@@ -59,7 +59,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="locations", required=true)
-    private final List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations;
+        private final List<SqlDedicatedGatewayRegionalServiceResourceResponse> locations;
 
     public List<SqlDedicatedGatewayRegionalServiceResourceResponse> getLocations() {
         return this.locations;
@@ -71,7 +71,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="serviceType", required=true)
-    private final String serviceType;
+        private final String serviceType;
 
     public String getServiceType() {
         return this.serviceType;
@@ -82,7 +82,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="sqlDedicatedGatewayEndpoint")
-    private final @Nullable String sqlDedicatedGatewayEndpoint;
+        private final @Nullable String sqlDedicatedGatewayEndpoint;
 
     public Optional<String> getSqlDedicatedGatewayEndpoint() {
         return this.sqlDedicatedGatewayEndpoint == null ? Optional.empty() : Optional.ofNullable(this.sqlDedicatedGatewayEndpoint);
@@ -93,7 +93,7 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -192,7 +192,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse extends 
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SqlDedicatedGatewayServiceResourcePropertiesResponse build() {
             return new SqlDedicatedGatewayServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, sqlDedicatedGatewayEndpoint, status);
         }

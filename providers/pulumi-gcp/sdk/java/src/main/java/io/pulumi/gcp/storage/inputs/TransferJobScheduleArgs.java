@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleEndDateArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleScheduleStartDateArgs;
 import io.pulumi.gcp.storage.inputs.TransferJobScheduleStartTimeOfDayArgs;
@@ -21,7 +21,7 @@ public final class TransferJobScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scheduleEndDate")
-    private final @Nullable Input<TransferJobScheduleScheduleEndDateArgs> scheduleEndDate;
+        private final @Nullable Input<TransferJobScheduleScheduleEndDateArgs> scheduleEndDate;
 
     public Input<TransferJobScheduleScheduleEndDateArgs> getScheduleEndDate() {
         return this.scheduleEndDate == null ? Input.empty() : this.scheduleEndDate;
@@ -32,7 +32,7 @@ public final class TransferJobScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scheduleStartDate", required=true)
-    private final Input<TransferJobScheduleScheduleStartDateArgs> scheduleStartDate;
+        private final Input<TransferJobScheduleScheduleStartDateArgs> scheduleStartDate;
 
     public Input<TransferJobScheduleScheduleStartDateArgs> getScheduleStartDate() {
         return this.scheduleStartDate;
@@ -43,7 +43,7 @@ public final class TransferJobScheduleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startTimeOfDay")
-    private final @Nullable Input<TransferJobScheduleStartTimeOfDayArgs> startTimeOfDay;
+        private final @Nullable Input<TransferJobScheduleStartTimeOfDayArgs> startTimeOfDay;
 
     public Input<TransferJobScheduleStartTimeOfDayArgs> getStartTimeOfDay() {
         return this.startTimeOfDay == null ? Input.empty() : this.startTimeOfDay;
@@ -117,7 +117,6 @@ public final class TransferJobScheduleArgs extends io.pulumi.resources.ResourceA
             this.startTimeOfDay = Input.ofNullable(startTimeOfDay);
             return this;
         }
-
         public TransferJobScheduleArgs build() {
             return new TransferJobScheduleArgs(scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

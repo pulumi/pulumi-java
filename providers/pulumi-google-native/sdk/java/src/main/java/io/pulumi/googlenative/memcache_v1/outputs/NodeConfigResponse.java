@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class NodeConfigResponse {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(cpuCount, memorySizeMb);
         }

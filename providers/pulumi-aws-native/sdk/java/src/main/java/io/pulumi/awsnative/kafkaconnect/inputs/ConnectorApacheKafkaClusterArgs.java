@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.awsnative.kafkaconnect.inputs.ConnectorVpcArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,14 +23,14 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bootstrapServers", required=true)
-    private final Input<String> bootstrapServers;
+        private final Input<String> bootstrapServers;
 
     public Input<String> getBootstrapServers() {
         return this.bootstrapServers;
     }
 
     @InputImport(name="vpc", required=true)
-    private final Input<ConnectorVpcArgs> vpc;
+        private final Input<ConnectorVpcArgs> vpc;
 
     public Input<ConnectorVpcArgs> getVpc() {
         return this.vpc;
@@ -89,7 +89,6 @@ public final class ConnectorApacheKafkaClusterArgs extends io.pulumi.resources.R
             this.vpc = Input.of(Objects.requireNonNull(vpc));
             return this;
         }
-
         public ConnectorApacheKafkaClusterArgs build() {
             return new ConnectorApacheKafkaClusterArgs(bootstrapServers, vpc);
         }

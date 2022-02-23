@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage.outputs;
 
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfileAssignmentComplianceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -161,7 +161,6 @@ public final class ConfigurationProfileAssignmentPropertiesResponse {
             this.targetId = targetId;
             return this;
         }
-
         public ConfigurationProfileAssignmentPropertiesResponse build() {
             return new ConfigurationProfileAssignmentPropertiesResponse(accountId, compliance, configurationProfile, configurationProfilePreferenceId, provisioningState, targetId);
         }

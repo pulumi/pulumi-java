@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHadoopJobLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -205,7 +205,6 @@ public final class WorkflowTemplateJobHadoopJob {
             this.properties = properties;
             return this;
         }
-
         public WorkflowTemplateJobHadoopJob build() {
             return new WorkflowTemplateJobHadoopJob(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainClass, mainJarFileUri, properties);
         }

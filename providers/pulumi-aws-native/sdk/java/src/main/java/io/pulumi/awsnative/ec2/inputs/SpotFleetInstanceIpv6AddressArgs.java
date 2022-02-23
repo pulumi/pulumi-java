@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
     public static final SpotFleetInstanceIpv6AddressArgs Empty = new SpotFleetInstanceIpv6AddressArgs();
 
     @InputImport(name="ipv6Address", required=true)
-    private final Input<String> ipv6Address;
+        private final Input<String> ipv6Address;
 
     public Input<String> getIpv6Address() {
         return this.ipv6Address;
@@ -57,7 +57,6 @@ public final class SpotFleetInstanceIpv6AddressArgs extends io.pulumi.resources.
             this.ipv6Address = Input.of(Objects.requireNonNull(ipv6Address));
             return this;
         }
-
         public SpotFleetInstanceIpv6AddressArgs build() {
             return new SpotFleetInstanceIpv6AddressArgs(ipv6Address);
         }

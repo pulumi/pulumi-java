@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ScopeSelector;
 import java.lang.String;
 import java.util.List;
@@ -100,7 +100,6 @@ public final class ResourceQuotaSpec {
             this.scopes = scopes;
             return this;
         }
-
         public ResourceQuotaSpec build() {
             return new ResourceQuotaSpec(hard, scopeSelector, scopes);
         }

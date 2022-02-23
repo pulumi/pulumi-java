@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasicConditionDevicePolicyOsConstraint;
 import java.lang.Boolean;
 import java.lang.String;
@@ -177,7 +177,6 @@ public final class AccessLevelsAccessLevelBasicConditionDevicePolicy {
             this.requireScreenLock = requireScreenLock;
             return this;
         }
-
         public AccessLevelsAccessLevelBasicConditionDevicePolicy build() {
             return new AccessLevelsAccessLevelBasicConditionDevicePolicy(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenLock);
         }

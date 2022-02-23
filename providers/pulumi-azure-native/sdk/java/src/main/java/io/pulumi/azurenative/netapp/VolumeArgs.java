@@ -9,7 +9,7 @@ import io.pulumi.azurenative.netapp.inputs.VolumePropertiesDataProtectionArgs;
 import io.pulumi.azurenative.netapp.inputs.VolumePropertiesExportPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -39,7 +39,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupId")
-    private final @Nullable Input<String> backupId;
+        private final @Nullable Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId == null ? Input.empty() : this.backupId;
@@ -50,7 +50,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationToken", required=true)
-    private final Input<String> creationToken;
+        private final Input<String> creationToken;
 
     public Input<String> getCreationToken() {
         return this.creationToken;
@@ -61,7 +61,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataProtection")
-    private final @Nullable Input<VolumePropertiesDataProtectionArgs> dataProtection;
+        private final @Nullable Input<VolumePropertiesDataProtectionArgs> dataProtection;
 
     public Input<VolumePropertiesDataProtectionArgs> getDataProtection() {
         return this.dataProtection == null ? Input.empty() : this.dataProtection;
@@ -72,7 +72,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKeySource")
-    private final @Nullable Input<String> encryptionKeySource;
+        private final @Nullable Input<String> encryptionKeySource;
 
     public Input<String> getEncryptionKeySource() {
         return this.encryptionKeySource == null ? Input.empty() : this.encryptionKeySource;
@@ -83,7 +83,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportPolicy")
-    private final @Nullable Input<VolumePropertiesExportPolicyArgs> exportPolicy;
+        private final @Nullable Input<VolumePropertiesExportPolicyArgs> exportPolicy;
 
     public Input<VolumePropertiesExportPolicyArgs> getExportPolicy() {
         return this.exportPolicy == null ? Input.empty() : this.exportPolicy;
@@ -94,7 +94,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isRestoring")
-    private final @Nullable Input<Boolean> isRestoring;
+        private final @Nullable Input<Boolean> isRestoring;
 
     public Input<Boolean> getIsRestoring() {
         return this.isRestoring == null ? Input.empty() : this.isRestoring;
@@ -105,7 +105,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosEnabled")
-    private final @Nullable Input<Boolean> kerberosEnabled;
+        private final @Nullable Input<Boolean> kerberosEnabled;
 
     public Input<Boolean> getKerberosEnabled() {
         return this.kerberosEnabled == null ? Input.empty() : this.kerberosEnabled;
@@ -116,7 +116,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ldapEnabled")
-    private final @Nullable Input<Boolean> ldapEnabled;
+        private final @Nullable Input<Boolean> ldapEnabled;
 
     public Input<Boolean> getLdapEnabled() {
         return this.ldapEnabled == null ? Input.empty() : this.ldapEnabled;
@@ -127,7 +127,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -138,7 +138,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName", required=true)
-    private final Input<String> poolName;
+        private final Input<String> poolName;
 
     public Input<String> getPoolName() {
         return this.poolName;
@@ -149,7 +149,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocolTypes")
-    private final @Nullable Input<List<String>> protocolTypes;
+        private final @Nullable Input<List<String>> protocolTypes;
 
     public Input<List<String>> getProtocolTypes() {
         return this.protocolTypes == null ? Input.empty() : this.protocolTypes;
@@ -160,7 +160,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -171,7 +171,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityStyle")
-    private final @Nullable Input<Either<String,SecurityStyle>> securityStyle;
+        private final @Nullable Input<Either<String,SecurityStyle>> securityStyle;
 
     public Input<Either<String,SecurityStyle>> getSecurityStyle() {
         return this.securityStyle == null ? Input.empty() : this.securityStyle;
@@ -182,7 +182,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLevel")
-    private final @Nullable Input<Either<String,ServiceLevel>> serviceLevel;
+        private final @Nullable Input<Either<String,ServiceLevel>> serviceLevel;
 
     public Input<Either<String,ServiceLevel>> getServiceLevel() {
         return this.serviceLevel == null ? Input.empty() : this.serviceLevel;
@@ -193,7 +193,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbContinuouslyAvailable")
-    private final @Nullable Input<Boolean> smbContinuouslyAvailable;
+        private final @Nullable Input<Boolean> smbContinuouslyAvailable;
 
     public Input<Boolean> getSmbContinuouslyAvailable() {
         return this.smbContinuouslyAvailable == null ? Input.empty() : this.smbContinuouslyAvailable;
@@ -204,7 +204,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="smbEncryption")
-    private final @Nullable Input<Boolean> smbEncryption;
+        private final @Nullable Input<Boolean> smbEncryption;
 
     public Input<Boolean> getSmbEncryption() {
         return this.smbEncryption == null ? Input.empty() : this.smbEncryption;
@@ -215,7 +215,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotDirectoryVisible")
-    private final @Nullable Input<Boolean> snapshotDirectoryVisible;
+        private final @Nullable Input<Boolean> snapshotDirectoryVisible;
 
     public Input<Boolean> getSnapshotDirectoryVisible() {
         return this.snapshotDirectoryVisible == null ? Input.empty() : this.snapshotDirectoryVisible;
@@ -226,7 +226,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotId")
-    private final @Nullable Input<String> snapshotId;
+        private final @Nullable Input<String> snapshotId;
 
     public Input<String> getSnapshotId() {
         return this.snapshotId == null ? Input.empty() : this.snapshotId;
@@ -237,7 +237,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -248,14 +248,14 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="throughputMibps")
-    private final @Nullable Input<Double> throughputMibps;
+        private final @Nullable Input<Double> throughputMibps;
 
     public Input<Double> getThroughputMibps() {
         return this.throughputMibps == null ? Input.empty() : this.throughputMibps;
@@ -266,7 +266,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageThreshold", required=true)
-    private final Input<Double> usageThreshold;
+        private final Input<Double> usageThreshold;
 
     public Input<Double> getUsageThreshold() {
         return this.usageThreshold;
@@ -277,7 +277,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable Input<String> volumeName;
+        private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;
@@ -288,7 +288,7 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+        private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;
@@ -692,7 +692,6 @@ public final class VolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }
-
         public VolumeArgs build() {
             return new VolumeArgs(accountName, backupId, creationToken, dataProtection, encryptionKeySource, exportPolicy, isRestoring, kerberosEnabled, ldapEnabled, location, poolName, protocolTypes, resourceGroupName, securityStyle, serviceLevel, smbContinuouslyAvailable, smbEncryption, snapshotDirectoryVisible, snapshotId, subnetId, tags, throughputMibps, usageThreshold, volumeName, volumeType);
         }

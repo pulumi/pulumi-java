@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -215,7 +215,6 @@ public final class GetStaticSiteCustomDomainResult {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }
-
         public GetStaticSiteCustomDomainResult build() {
             return new GetStaticSiteCustomDomainResult(createdOn, domainName, errorMessage, id, kind, name, status, type, validationToken);
         }

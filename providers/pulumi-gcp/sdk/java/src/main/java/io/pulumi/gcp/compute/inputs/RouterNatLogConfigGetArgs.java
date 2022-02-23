@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Input<Boolean> enable;
+        private final Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable;
@@ -31,7 +31,7 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -90,7 +90,6 @@ public final class RouterNatLogConfigGetArgs extends io.pulumi.resources.Resourc
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public RouterNatLogConfigGetArgs build() {
             return new RouterNatLogConfigGetArgs(enable, filter);
         }

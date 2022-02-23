@@ -5,7 +5,7 @@ package io.pulumi.awsnative.athena.outputs;
 
 import io.pulumi.awsnative.athena.outputs.WorkGroupEngineVersion;
 import io.pulumi.awsnative.athena.outputs.WorkGroupResultConfigurationUpdates;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -128,7 +128,6 @@ public final class WorkGroupConfigurationUpdates {
             this.resultConfigurationUpdates = resultConfigurationUpdates;
             return this;
         }
-
         public WorkGroupConfigurationUpdates build() {
             return new WorkGroupConfigurationUpdates(bytesScannedCutoffPerQuery, enforceWorkGroupConfiguration, engineVersion, publishCloudWatchMetricsEnabled, removeBytesScannedCutoffPerQuery, requesterPaysEnabled, resultConfigurationUpdates);
         }

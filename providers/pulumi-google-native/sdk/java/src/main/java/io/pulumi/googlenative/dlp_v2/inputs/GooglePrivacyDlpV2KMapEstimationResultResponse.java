@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends io.pul
      * 
      */
     @InputImport(name="kMapEstimationHistogram", required=true)
-    private final List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
+      private final List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> kMapEstimationHistogram;
 
     public List<GooglePrivacyDlpV2KMapEstimationHistogramBucketResponse> getKMapEstimationHistogram() {
         return this.kMapEstimationHistogram;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2KMapEstimationResultResponse extends io.pul
             this.kMapEstimationHistogram = Objects.requireNonNull(kMapEstimationHistogram);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationResultResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationResultResponse(kMapEstimationHistogram);
         }

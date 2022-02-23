@@ -5,8 +5,8 @@ package io.pulumi.gcp.essentialcontacts;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.essentialcontacts.ContactArgs;
 import io.pulumi.gcp.essentialcontacts.inputs.ContactState;
@@ -113,13 +113,6 @@ public class Contact extends io.pulumi.resources.CustomResource {
         return this.parent;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Contact(String name) {
-        super("gcp:essentialcontacts/contact:Contact", name, ContactArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

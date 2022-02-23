@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.enums.WebACLLabelMatchScope;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,14 +15,14 @@ public final class WebACLLabelMatchStatementArgs extends io.pulumi.resources.Res
     public static final WebACLLabelMatchStatementArgs Empty = new WebACLLabelMatchStatementArgs();
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
     }
 
     @InputImport(name="scope", required=true)
-    private final Input<WebACLLabelMatchScope> scope;
+        private final Input<WebACLLabelMatchScope> scope;
 
     public Input<WebACLLabelMatchScope> getScope() {
         return this.scope;
@@ -81,7 +81,6 @@ public final class WebACLLabelMatchStatementArgs extends io.pulumi.resources.Res
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public WebACLLabelMatchStatementArgs build() {
             return new WebACLLabelMatchStatementArgs(key, scope);
         }

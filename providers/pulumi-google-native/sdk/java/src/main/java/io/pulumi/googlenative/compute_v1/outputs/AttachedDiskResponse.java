@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AttachedDiskInitializeParamsResponse;
 import io.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.GuestOsFeatureResponse;
@@ -354,7 +354,6 @@ public final class AttachedDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AttachedDiskResponse build() {
             return new AttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, shieldedInstanceInitialState, source, type);
         }

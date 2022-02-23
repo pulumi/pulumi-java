@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class OracleSourceConfigResponse {
             this.rejectlist = Objects.requireNonNull(rejectlist);
             return this;
         }
-
         public OracleSourceConfigResponse build() {
             return new OracleSourceConfigResponse(allowlist, rejectlist);
         }

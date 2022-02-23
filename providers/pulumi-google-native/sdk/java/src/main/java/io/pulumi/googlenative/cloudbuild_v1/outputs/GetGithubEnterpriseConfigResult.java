@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.GitHubEnterpriseSecretsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class GetGithubEnterpriseConfigResult {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }
-
         public GetGithubEnterpriseConfigResult build() {
             return new GetGithubEnterpriseConfigResult(appId, createTime, displayName, hostUrl, name, peeredNetwork, secrets, sslCa, webhookKey);
         }

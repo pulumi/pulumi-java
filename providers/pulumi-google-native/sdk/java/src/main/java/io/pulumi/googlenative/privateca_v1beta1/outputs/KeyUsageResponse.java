@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.ExtendedKeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.KeyUsageOptionsResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.ObjectIdResponse;
@@ -98,7 +98,6 @@ public final class KeyUsageResponse {
             this.unknownExtendedKeyUsages = Objects.requireNonNull(unknownExtendedKeyUsages);
             return this;
         }
-
         public KeyUsageResponse build() {
             return new KeyUsageResponse(baseKeyUsage, extendedKeyUsage, unknownExtendedKeyUsages);
         }

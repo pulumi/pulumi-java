@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.FilterEventTypeItem;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventType")
-    private final @Nullable Input<List<FilterEventTypeItem>> eventType;
+      private final @Nullable Input<List<FilterEventTypeItem>> eventType;
 
     public Input<List<FilterEventTypeItem>> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
@@ -67,7 +67,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.eventType = Input.ofNullable(eventType);
             return this;
         }
-
         public FilterArgs build() {
             return new FilterArgs(eventType);
         }

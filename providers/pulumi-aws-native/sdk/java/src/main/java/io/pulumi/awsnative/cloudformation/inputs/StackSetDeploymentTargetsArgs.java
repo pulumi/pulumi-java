@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accounts")
-    private final @Nullable Input<List<String>> accounts;
+        private final @Nullable Input<List<String>> accounts;
 
     public Input<List<String>> getAccounts() {
         return this.accounts == null ? Input.empty() : this.accounts;
@@ -35,7 +35,7 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="organizationalUnitIds")
-    private final @Nullable Input<List<String>> organizationalUnitIds;
+        private final @Nullable Input<List<String>> organizationalUnitIds;
 
     public Input<List<String>> getOrganizationalUnitIds() {
         return this.organizationalUnitIds == null ? Input.empty() : this.organizationalUnitIds;
@@ -94,7 +94,6 @@ public final class StackSetDeploymentTargetsArgs extends io.pulumi.resources.Res
             this.organizationalUnitIds = Input.ofNullable(organizationalUnitIds);
             return this;
         }
-
         public StackSetDeploymentTargetsArgs build() {
             return new StackSetDeploymentTargetsArgs(accounts, organizationalUnitIds);
         }

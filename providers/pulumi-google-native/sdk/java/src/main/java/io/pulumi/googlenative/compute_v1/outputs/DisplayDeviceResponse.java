@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DisplayDeviceResponse {
             this.enableDisplay = Objects.requireNonNull(enableDisplay);
             return this;
         }
-
         public DisplayDeviceResponse build() {
             return new DisplayDeviceResponse(enableDisplay);
         }

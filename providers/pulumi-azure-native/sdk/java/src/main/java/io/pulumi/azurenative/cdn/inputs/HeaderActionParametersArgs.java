@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.enums.HeaderAction;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headerAction", required=true)
-    private final Input<Either<String,HeaderAction>> headerAction;
+        private final Input<Either<String,HeaderAction>> headerAction;
 
     public Input<Either<String,HeaderAction>> getHeaderAction() {
         return this.headerAction;
@@ -36,14 +36,14 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+        private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -54,7 +54,7 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -143,7 +143,6 @@ public final class HeaderActionParametersArgs extends io.pulumi.resources.Resour
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public HeaderActionParametersArgs build() {
             return new HeaderActionParametersArgs(headerAction, headerName, odataType, value);
         }

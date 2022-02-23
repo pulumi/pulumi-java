@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class RoutingEventHubPropertiesResponse {
             this.subscriptionId = subscriptionId;
             return this;
         }
-
         public RoutingEventHubPropertiesResponse build() {
             return new RoutingEventHubPropertiesResponse(authenticationType, connectionString, endpointUri, entityPath, id, name, resourceGroup, subscriptionId);
         }

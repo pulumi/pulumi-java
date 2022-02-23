@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxSurge", required=true)
-    private final Integer maxSurge;
+      private final Integer maxSurge;
 
     public Integer getMaxSurge() {
         return this.maxSurge;
@@ -28,7 +28,7 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxUnavailable", required=true)
-    private final Integer maxUnavailable;
+      private final Integer maxUnavailable;
 
     public Integer getMaxUnavailable() {
         return this.maxUnavailable;
@@ -77,7 +77,6 @@ public final class UpgradeSettingsResponse extends io.pulumi.resources.InvokeArg
             this.maxUnavailable = Objects.requireNonNull(maxUnavailable);
             return this;
         }
-
         public UpgradeSettingsResponse build() {
             return new UpgradeSettingsResponse(maxSurge, maxUnavailable);
         }

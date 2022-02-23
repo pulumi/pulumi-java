@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -99,7 +99,6 @@ public final class EndpointGroupEndpointConfiguration {
             this.weight = weight;
             return this;
         }
-
         public EndpointGroupEndpointConfiguration build() {
             return new EndpointGroupEndpointConfiguration(clientIPPreservationEnabled, endpointId, weight);
         }

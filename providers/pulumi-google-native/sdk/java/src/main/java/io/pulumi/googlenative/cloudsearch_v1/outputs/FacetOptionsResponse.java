@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class FacetOptionsResponse {
             this.sourceName = Objects.requireNonNull(sourceName);
             return this;
         }
-
         public FacetOptionsResponse build() {
             return new FacetOptionsResponse(numFacetBuckets, objectType, operatorName, sourceName);
         }

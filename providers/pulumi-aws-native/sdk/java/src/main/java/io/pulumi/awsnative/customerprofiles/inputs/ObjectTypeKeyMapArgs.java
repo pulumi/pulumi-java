@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
     public static final ObjectTypeKeyMapArgs Empty = new ObjectTypeKeyMapArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="objectTypeKeyList")
-    private final @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList;
+        private final @Nullable Input<List<ObjectTypeKeyArgs>> objectTypeKeyList;
 
     public Input<List<ObjectTypeKeyArgs>> getObjectTypeKeyList() {
         return this.objectTypeKeyList == null ? Input.empty() : this.objectTypeKeyList;
@@ -83,7 +83,6 @@ public final class ObjectTypeKeyMapArgs extends io.pulumi.resources.ResourceArgs
             this.objectTypeKeyList = Input.ofNullable(objectTypeKeyList);
             return this;
         }
-
         public ObjectTypeKeyMapArgs build() {
             return new ObjectTypeKeyMapArgs(name, objectTypeKeyList);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigQueryIODetailsArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigTableIODetailsArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DatastoreIODetailsArgs;
@@ -30,7 +30,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigTableDetails")
-    private final @Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails;
+      private final @Nullable Input<List<BigTableIODetailsArgs>> bigTableDetails;
 
     public Input<List<BigTableIODetailsArgs>> getBigTableDetails() {
         return this.bigTableDetails == null ? Input.empty() : this.bigTableDetails;
@@ -41,7 +41,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryDetails")
-    private final @Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails;
+      private final @Nullable Input<List<BigQueryIODetailsArgs>> bigqueryDetails;
 
     public Input<List<BigQueryIODetailsArgs>> getBigqueryDetails() {
         return this.bigqueryDetails == null ? Input.empty() : this.bigqueryDetails;
@@ -52,7 +52,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datastoreDetails")
-    private final @Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails;
+      private final @Nullable Input<List<DatastoreIODetailsArgs>> datastoreDetails;
 
     public Input<List<DatastoreIODetailsArgs>> getDatastoreDetails() {
         return this.datastoreDetails == null ? Input.empty() : this.datastoreDetails;
@@ -63,7 +63,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileDetails")
-    private final @Nullable Input<List<FileIODetailsArgs>> fileDetails;
+      private final @Nullable Input<List<FileIODetailsArgs>> fileDetails;
 
     public Input<List<FileIODetailsArgs>> getFileDetails() {
         return this.fileDetails == null ? Input.empty() : this.fileDetails;
@@ -74,7 +74,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubDetails")
-    private final @Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails;
+      private final @Nullable Input<List<PubSubIODetailsArgs>> pubsubDetails;
 
     public Input<List<PubSubIODetailsArgs>> getPubsubDetails() {
         return this.pubsubDetails == null ? Input.empty() : this.pubsubDetails;
@@ -85,7 +85,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkVersion")
-    private final @Nullable Input<SdkVersionArgs> sdkVersion;
+      private final @Nullable Input<SdkVersionArgs> sdkVersion;
 
     public Input<SdkVersionArgs> getSdkVersion() {
         return this.sdkVersion == null ? Input.empty() : this.sdkVersion;
@@ -96,7 +96,7 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spannerDetails")
-    private final @Nullable Input<List<SpannerIODetailsArgs>> spannerDetails;
+      private final @Nullable Input<List<SpannerIODetailsArgs>> spannerDetails;
 
     public Input<List<SpannerIODetailsArgs>> getSpannerDetails() {
         return this.spannerDetails == null ? Input.empty() : this.spannerDetails;
@@ -230,7 +230,6 @@ public final class JobMetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.spannerDetails = Input.ofNullable(spannerDetails);
             return this;
         }
-
         public JobMetadataArgs build() {
             return new JobMetadataArgs(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
         }

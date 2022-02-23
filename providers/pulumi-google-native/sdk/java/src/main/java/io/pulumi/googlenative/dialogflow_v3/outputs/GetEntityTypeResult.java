@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EntityTypeEntityResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EntityTypeExcludedPhraseResponse;
 import java.lang.Boolean;
@@ -204,7 +204,6 @@ public final class GetEntityTypeResult {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }
-
         public GetEntityTypeResult build() {
             return new GetEntityTypeResult(autoExpansionMode, displayName, enableFuzzyExtraction, entities, excludedPhrases, kind, name, redact);
         }

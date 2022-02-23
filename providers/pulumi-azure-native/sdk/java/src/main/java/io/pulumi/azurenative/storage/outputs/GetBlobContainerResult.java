@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ImmutabilityPolicyPropertiesResponse;
 import io.pulumi.azurenative.storage.outputs.LegalHoldPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -459,7 +459,6 @@ public final class GetBlobContainerResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetBlobContainerResult build() {
             return new GetBlobContainerResult(defaultEncryptionScope, deleted, deletedTime, denyEncryptionScopeOverride, etag, hasImmutabilityPolicy, hasLegalHold, id, immutabilityPolicy, lastModifiedTime, leaseDuration, leaseState, leaseStatus, legalHold, metadata, name, publicAccess, remainingRetentionDays, type, version);
         }

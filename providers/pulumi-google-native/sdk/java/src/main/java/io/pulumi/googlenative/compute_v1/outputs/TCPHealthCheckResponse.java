@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class TCPHealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public TCPHealthCheckResponse build() {
             return new TCPHealthCheckResponse(port, portName, portSpecification, proxyHeader, request, response);
         }

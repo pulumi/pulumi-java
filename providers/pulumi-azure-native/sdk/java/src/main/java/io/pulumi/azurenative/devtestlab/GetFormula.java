@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.devtestlab.inputs.GetFormulaArgs;
 import io.pulumi.azurenative.devtestlab.outputs.GetFormulaResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

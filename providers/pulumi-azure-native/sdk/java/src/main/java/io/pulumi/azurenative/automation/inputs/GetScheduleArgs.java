@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final String automationAccountName;
+        private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scheduleName", required=true)
-    private final String scheduleName;
+        private final String scheduleName;
 
     public String getScheduleName() {
         return this.scheduleName;
@@ -98,7 +98,6 @@ public final class GetScheduleArgs extends io.pulumi.resources.InvokeArgs {
             this.scheduleName = Objects.requireNonNull(scheduleName);
             return this;
         }
-
         public GetScheduleArgs build() {
             return new GetScheduleArgs(automationAccountName, resourceGroupName, scheduleName);
         }

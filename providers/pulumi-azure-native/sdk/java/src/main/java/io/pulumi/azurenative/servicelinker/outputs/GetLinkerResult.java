@@ -9,7 +9,7 @@ import io.pulumi.azurenative.servicelinker.outputs.ServicePrincipalSecretAuthInf
 import io.pulumi.azurenative.servicelinker.outputs.SystemAssignedIdentityAuthInfoResponse;
 import io.pulumi.azurenative.servicelinker.outputs.SystemDataResponse;
 import io.pulumi.azurenative.servicelinker.outputs.UserAssignedIdentityAuthInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -209,7 +209,6 @@ public final class GetLinkerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkerResult build() {
             return new GetLinkerResult(authInfo, clientType, id, name, provisioningState, systemData, targetId, type);
         }

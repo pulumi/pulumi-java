@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.LicenseResourceCommitmentResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ReservationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourceCommitmentResponse;
@@ -457,7 +457,6 @@ public final class GetRegionCommitmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegionCommitmentResult build() {
             return new GetRegionCommitmentResult(autoRenew, category, creationTimestamp, description, endTimestamp, kind, licenseResource, mergeSourceCommitments, name, plan, region, reservations, resources, selfLink, selfLinkWithId, splitSourceCommitment, startTimestamp, status, statusMessage, type);
         }

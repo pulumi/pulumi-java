@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DiskResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(id);
         }

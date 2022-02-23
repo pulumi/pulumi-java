@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -246,7 +246,6 @@ public final class AutoBackupSettingsResponse {
             this.storageAccountUrl = storageAccountUrl;
             return this;
         }
-
         public AutoBackupSettingsResponse build() {
             return new AutoBackupSettingsResponse(backupScheduleType, backupSystemDbs, enable, enableEncryption, fullBackupFrequency, fullBackupStartTime, fullBackupWindowHours, logBackupFrequency, retentionPeriod, storageAccountUrl);
         }

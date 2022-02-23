@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contactEmails", required=true)
-    private final List<String> contactEmails;
+        private final List<String> contactEmails;
 
     public List<String> getContactEmails() {
         return this.contactEmails;
@@ -37,7 +37,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contactGroups")
-    private final @Nullable List<String> contactGroups;
+        private final @Nullable List<String> contactGroups;
 
     public List<String> getContactGroups() {
         return this.contactGroups == null ? List.of() : this.contactGroups;
@@ -48,7 +48,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contactRoles")
-    private final @Nullable List<String> contactRoles;
+        private final @Nullable List<String> contactRoles;
 
     public List<String> getContactRoles() {
         return this.contactRoles == null ? List.of() : this.contactRoles;
@@ -59,7 +59,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -70,7 +70,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locale")
-    private final @Nullable String locale;
+        private final @Nullable String locale;
 
     public Optional<String> getLocale() {
         return this.locale == null ? Optional.empty() : Optional.ofNullable(this.locale);
@@ -81,7 +81,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -92,7 +92,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Double threshold;
+        private final Double threshold;
 
     public Double getThreshold() {
         return this.threshold;
@@ -103,7 +103,7 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="thresholdType")
-    private final @Nullable String thresholdType;
+        private final @Nullable String thresholdType;
 
     public Optional<String> getThresholdType() {
         return this.thresholdType == null ? Optional.empty() : Optional.ofNullable(this.thresholdType);
@@ -212,7 +212,6 @@ public final class NotificationResponse extends io.pulumi.resources.InvokeArgs {
             this.thresholdType = thresholdType;
             return this;
         }
-
         public NotificationResponse build() {
             return new NotificationResponse(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);
         }

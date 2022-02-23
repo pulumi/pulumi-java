@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
 import io.pulumi.azurenative.virtualmachineimages.outputs.PlatformImagePurchasePlanResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -163,7 +163,6 @@ public final class ImageTemplatePlatformImageSourceResponse {
             this.version = version;
             return this;
         }
-
         public ImageTemplatePlatformImageSourceResponse build() {
             return new ImageTemplatePlatformImageSourceResponse(offer, planInfo, publisher, sku, type, version);
         }

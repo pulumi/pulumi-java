@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.LatencyDistributionResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.StatusResponse;
@@ -204,7 +204,6 @@ public final class ProbingDetailsResponse {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ProbingDetailsResponse build() {
             return new ProbingDetailsResponse(abortCause, endpointInfo, error, probingLatency, result, sentProbeCount, successfulProbeCount, verifyTime);
         }

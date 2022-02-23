@@ -5,8 +5,8 @@ package io.pulumi.gcp.recaptcha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.recaptcha.EnterpriseKeyArgs;
 import io.pulumi.gcp.recaptcha.inputs.EnterpriseKeyState;
@@ -169,13 +169,6 @@ public class EnterpriseKey extends io.pulumi.resources.CustomResource {
         return this.webSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EnterpriseKey(String name) {
-        super("gcp:recaptcha/enterpriseKey:EnterpriseKey", name, EnterpriseKeyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

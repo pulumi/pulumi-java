@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,7 +91,6 @@ public final class EntityTypeEntity {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EntityTypeEntity build() {
             return new EntityTypeEntity(synonyms, value);
         }

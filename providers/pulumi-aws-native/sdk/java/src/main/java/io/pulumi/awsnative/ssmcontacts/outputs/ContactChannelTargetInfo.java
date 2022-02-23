@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ContactChannelTargetInfo {
             this.retryIntervalInMinutes = Objects.requireNonNull(retryIntervalInMinutes);
             return this;
         }
-
         public ContactChannelTargetInfo build() {
             return new ContactChannelTargetInfo(channelId, retryIntervalInMinutes);
         }

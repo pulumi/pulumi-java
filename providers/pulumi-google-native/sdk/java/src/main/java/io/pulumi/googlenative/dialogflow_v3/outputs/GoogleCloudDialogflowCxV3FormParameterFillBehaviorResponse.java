@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3EventHandlerResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3FulfillmentResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse {
             this.repromptEventHandlers = Objects.requireNonNull(repromptEventHandlers);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse build() {
             return new GoogleCloudDialogflowCxV3FormParameterFillBehaviorResponse(initialPromptFulfillment, repromptEventHandlers);
         }

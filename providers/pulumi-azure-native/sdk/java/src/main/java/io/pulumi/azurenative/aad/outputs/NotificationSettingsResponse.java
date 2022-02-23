@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class NotificationSettingsResponse {
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
         }

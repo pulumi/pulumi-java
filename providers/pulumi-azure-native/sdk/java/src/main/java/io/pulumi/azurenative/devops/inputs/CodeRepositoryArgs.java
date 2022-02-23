@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devops.enums.CodeRepositoryType;
 import io.pulumi.azurenative.devops.inputs.AuthorizationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorization")
-    private final @Nullable Input<AuthorizationArgs> authorization;
+        private final @Nullable Input<AuthorizationArgs> authorization;
 
     public Input<AuthorizationArgs> getAuthorization() {
         return this.authorization == null ? Input.empty() : this.authorization;
@@ -38,7 +38,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultBranch", required=true)
-    private final Input<String> defaultBranch;
+        private final Input<String> defaultBranch;
 
     public Input<String> getDefaultBranch() {
         return this.defaultBranch;
@@ -49,7 +49,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -60,7 +60,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -71,7 +71,7 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryType", required=true)
-    private final Input<Either<String,CodeRepositoryType>> repositoryType;
+        private final Input<Either<String,CodeRepositoryType>> repositoryType;
 
     public Input<Either<String,CodeRepositoryType>> getRepositoryType() {
         return this.repositoryType;
@@ -175,7 +175,6 @@ public final class CodeRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.repositoryType = Input.of(Objects.requireNonNull(repositoryType));
             return this;
         }
-
         public CodeRepositoryArgs build() {
             return new CodeRepositoryArgs(authorization, defaultBranch, id, properties, repositoryType);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.eventgrid.enums.IdentityType;
 import io.pulumi.azurenative.eventgrid.inputs.UserIdentityPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable Input<String> principalId;
+        private final @Nullable Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId == null ? Input.empty() : this.principalId;
@@ -38,7 +38,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -49,7 +49,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,IdentityType>> type;
+        private final @Nullable Input<Either<String,IdentityType>> type;
 
     public Input<Either<String,IdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -62,7 +62,7 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
     public Input<Map<String,UserIdentityPropertiesArgs>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -151,7 +151,6 @@ public final class IdentityInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public IdentityInfoArgs build() {
             return new IdentityInfoArgs(principalId, tenantId, type, userAssignedIdentities);
         }

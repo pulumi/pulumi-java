@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="importCollectorName", required=true)
-    private final String importCollectorName;
+        private final String importCollectorName;
 
     public String getImportCollectorName() {
         return this.importCollectorName;
@@ -28,7 +28,7 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final String projectName;
+        private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -39,7 +39,7 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetImportCollectorArgs extends io.pulumi.resources.InvokeArgs
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetImportCollectorArgs build() {
             return new GetImportCollectorArgs(importCollectorName, projectName, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="excludedActions")
-    private final @Nullable List<String> excludedActions;
+        private final @Nullable List<String> excludedActions;
 
     public List<String> getExcludedActions() {
         return this.excludedActions == null ? List.of() : this.excludedActions;
@@ -35,7 +35,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="excludedPrincipals")
-    private final @Nullable List<String> excludedPrincipals;
+        private final @Nullable List<String> excludedPrincipals;
 
     public List<String> getExcludedPrincipals() {
         return this.excludedPrincipals == null ? List.of() : this.excludedPrincipals;
@@ -46,7 +46,7 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -105,7 +105,6 @@ public final class AssignmentLockSettingsResponse extends io.pulumi.resources.In
             this.mode = mode;
             return this;
         }
-
         public AssignmentLockSettingsResponse build() {
             return new AssignmentLockSettingsResponse(excludedActions, excludedPrincipals, mode);
         }

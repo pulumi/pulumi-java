@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="columnCount")
-    private final @Nullable Input<Integer> columnCount;
+      private final @Nullable Input<Integer> columnCount;
 
     public Input<Integer> getColumnCount() {
         return this.columnCount == null ? Input.empty() : this.columnCount;
@@ -35,7 +35,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTimeOffset")
-    private final @Nullable Input<String> endTimeOffset;
+      private final @Nullable Input<String> endTimeOffset;
 
     public Input<String> getEndTimeOffset() {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
@@ -46,7 +46,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePrefix", required=true)
-    private final Input<String> filePrefix;
+      private final Input<String> filePrefix;
 
     public Input<String> getFilePrefix() {
         return this.filePrefix;
@@ -57,7 +57,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+      private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -68,7 +68,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<String> interval;
+      private final @Nullable Input<String> interval;
 
     public Input<String> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -79,7 +79,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quality")
-    private final @Nullable Input<Integer> quality;
+      private final @Nullable Input<Integer> quality;
 
     public Input<Integer> getQuality() {
         return this.quality == null ? Input.empty() : this.quality;
@@ -90,7 +90,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rowCount")
-    private final @Nullable Input<Integer> rowCount;
+      private final @Nullable Input<Integer> rowCount;
 
     public Input<Integer> getRowCount() {
         return this.rowCount == null ? Input.empty() : this.rowCount;
@@ -101,7 +101,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spriteHeightPixels", required=true)
-    private final Input<Integer> spriteHeightPixels;
+      private final Input<Integer> spriteHeightPixels;
 
     public Input<Integer> getSpriteHeightPixels() {
         return this.spriteHeightPixels;
@@ -112,7 +112,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spriteWidthPixels", required=true)
-    private final Input<Integer> spriteWidthPixels;
+      private final Input<Integer> spriteWidthPixels;
 
     public Input<Integer> getSpriteWidthPixels() {
         return this.spriteWidthPixels;
@@ -123,7 +123,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-    private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Input<String> startTimeOffset;
 
     public Input<String> getStartTimeOffset() {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
@@ -134,7 +134,7 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="totalCount")
-    private final @Nullable Input<Integer> totalCount;
+      private final @Nullable Input<Integer> totalCount;
 
     public Input<Integer> getTotalCount() {
         return this.totalCount == null ? Input.empty() : this.totalCount;
@@ -328,7 +328,6 @@ public final class SpriteSheetArgs extends io.pulumi.resources.ResourceArgs {
             this.totalCount = Input.ofNullable(totalCount);
             return this;
         }
-
         public SpriteSheetArgs build() {
             return new SpriteSheetArgs(columnCount, endTimeOffset, filePrefix, format, interval, quality, rowCount, spriteHeightPixels, spriteWidthPixels, startTimeOffset, totalCount);
         }

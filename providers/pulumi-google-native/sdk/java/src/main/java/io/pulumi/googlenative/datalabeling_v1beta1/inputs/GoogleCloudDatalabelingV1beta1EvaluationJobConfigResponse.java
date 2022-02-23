@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationConfigResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse;
@@ -31,7 +31,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="bigqueryImportKeys", required=true)
-    private final Map<String,String> bigqueryImportKeys;
+      private final Map<String,String> bigqueryImportKeys;
 
     public Map<String,String> getBigqueryImportKeys() {
         return this.bigqueryImportKeys;
@@ -42,7 +42,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="boundingPolyConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig;
+      private final GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse boundingPolyConfig;
 
     public GoogleCloudDatalabelingV1beta1BoundingPolyConfigResponse getBoundingPolyConfig() {
         return this.boundingPolyConfig;
@@ -53,7 +53,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="evaluationConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig;
+      private final GoogleCloudDatalabelingV1beta1EvaluationConfigResponse evaluationConfig;
 
     public GoogleCloudDatalabelingV1beta1EvaluationConfigResponse getEvaluationConfig() {
         return this.evaluationConfig;
@@ -64,7 +64,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="evaluationJobAlertConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig;
+      private final GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse evaluationJobAlertConfig;
 
     public GoogleCloudDatalabelingV1beta1EvaluationJobAlertConfigResponse getEvaluationJobAlertConfig() {
         return this.evaluationJobAlertConfig;
@@ -75,7 +75,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="exampleCount", required=true)
-    private final Integer exampleCount;
+      private final Integer exampleCount;
 
     public Integer getExampleCount() {
         return this.exampleCount;
@@ -86,7 +86,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="exampleSamplePercentage", required=true)
-    private final Double exampleSamplePercentage;
+      private final Double exampleSamplePercentage;
 
     public Double getExampleSamplePercentage() {
         return this.exampleSamplePercentage;
@@ -97,7 +97,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="humanAnnotationConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig;
+      private final GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse humanAnnotationConfig;
 
     public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse getHumanAnnotationConfig() {
         return this.humanAnnotationConfig;
@@ -108,7 +108,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="imageClassificationConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig;
+      private final GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse imageClassificationConfig;
 
     public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse getImageClassificationConfig() {
         return this.imageClassificationConfig;
@@ -119,7 +119,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="inputConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig;
+      private final GoogleCloudDatalabelingV1beta1InputConfigResponse inputConfig;
 
     public GoogleCloudDatalabelingV1beta1InputConfigResponse getInputConfig() {
         return this.inputConfig;
@@ -130,7 +130,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
      * 
      */
     @InputImport(name="textClassificationConfig", required=true)
-    private final GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
+      private final GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse textClassificationConfig;
 
     public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse getTextClassificationConfig() {
         return this.textClassificationConfig;
@@ -259,7 +259,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse ext
             this.textClassificationConfig = Objects.requireNonNull(textClassificationConfig);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse(bigqueryImportKeys, boundingPolyConfig, evaluationConfig, evaluationJobAlertConfig, exampleCount, exampleSamplePercentage, humanAnnotationConfig, imageClassificationConfig, inputConfig, textClassificationConfig);
         }

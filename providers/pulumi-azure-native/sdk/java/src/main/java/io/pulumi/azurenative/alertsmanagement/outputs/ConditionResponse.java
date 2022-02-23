@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class ConditionResponse {
             this.values = values;
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(operator, values);
         }

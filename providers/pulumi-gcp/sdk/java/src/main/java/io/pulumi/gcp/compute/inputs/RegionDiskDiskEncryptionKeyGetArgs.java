@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+        private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -31,7 +31,7 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="rawKey")
-    private final @Nullable Input<String> rawKey;
+        private final @Nullable Input<String> rawKey;
 
     public Input<String> getRawKey() {
         return this.rawKey == null ? Input.empty() : this.rawKey;
@@ -44,7 +44,7 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sha256")
-    private final @Nullable Input<String> sha256;
+        private final @Nullable Input<String> sha256;
 
     public Input<String> getSha256() {
         return this.sha256 == null ? Input.empty() : this.sha256;
@@ -118,7 +118,6 @@ public final class RegionDiskDiskEncryptionKeyGetArgs extends io.pulumi.resource
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }
-
         public RegionDiskDiskEncryptionKeyGetArgs build() {
             return new RegionDiskDiskEncryptionKeyGetArgs(kmsKeyName, rawKey, sha256);
         }

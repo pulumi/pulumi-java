@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="customPluginArn", required=true)
-    private final Input<String> customPluginArn;
+        private final Input<String> customPluginArn;
 
     public Input<String> getCustomPluginArn() {
         return this.customPluginArn;
@@ -34,7 +34,7 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="revision", required=true)
-    private final Input<Integer> revision;
+        private final Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision;
@@ -93,7 +93,6 @@ public final class ConnectorCustomPluginArgs extends io.pulumi.resources.Resourc
             this.revision = Input.of(Objects.requireNonNull(revision));
             return this;
         }
-
         public ConnectorCustomPluginArgs build() {
             return new ConnectorCustomPluginArgs(customPluginArn, revision);
         }

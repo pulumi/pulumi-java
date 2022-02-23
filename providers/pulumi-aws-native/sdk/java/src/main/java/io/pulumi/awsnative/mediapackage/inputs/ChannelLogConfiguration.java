@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ChannelLogConfiguration extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable String logGroupName;
+        private final @Nullable String logGroupName;
 
     public Optional<String> getLogGroupName() {
         return this.logGroupName == null ? Optional.empty() : Optional.ofNullable(this.logGroupName);
@@ -57,7 +57,6 @@ public final class ChannelLogConfiguration extends io.pulumi.resources.InvokeArg
             this.logGroupName = logGroupName;
             return this;
         }
-
         public ChannelLogConfiguration build() {
             return new ChannelLogConfiguration(logGroupName);
         }

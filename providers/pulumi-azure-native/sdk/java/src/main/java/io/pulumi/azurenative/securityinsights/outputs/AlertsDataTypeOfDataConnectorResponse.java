@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.DataConnectorDataTypeCommonResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class AlertsDataTypeOfDataConnectorResponse {
             this.alerts = alerts;
             return this;
         }
-
         public AlertsDataTypeOfDataConnectorResponse build() {
             return new AlertsDataTypeOfDataConnectorResponse(alerts);
         }

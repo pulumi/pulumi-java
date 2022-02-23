@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.CloudErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo {
             this.error = error;
             return this;
         }
-
         public ManagedClusterPodIdentityResponseProvisioningInfo build() {
             return new ManagedClusterPodIdentityResponseProvisioningInfo(error);
         }

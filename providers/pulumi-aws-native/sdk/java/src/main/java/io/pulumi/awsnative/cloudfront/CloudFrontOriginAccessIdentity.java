@@ -8,8 +8,8 @@ import io.pulumi.awsnative.cloudfront.CloudFrontOriginAccessIdentityArgs;
 import io.pulumi.awsnative.cloudfront.outputs.CloudFrontOriginAccessIdentityConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -34,13 +34,6 @@ public class CloudFrontOriginAccessIdentity extends io.pulumi.resources.CustomRe
         return this.s3CanonicalUserId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CloudFrontOriginAccessIdentity(String name) {
-        super("aws-native:cloudfront:CloudFrontOriginAccessIdentity", name, CloudFrontOriginAccessIdentityArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

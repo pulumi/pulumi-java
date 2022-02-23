@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 import io.pulumi.azurenative.databoxedge.enums.AzureContainerDataFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+        private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -35,7 +35,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataFormat", required=true)
-    private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
+        private final Input<Either<String,AzureContainerDataFormat>> dataFormat;
 
     public Input<Either<String,AzureContainerDataFormat>> getDataFormat() {
         return this.dataFormat;
@@ -46,7 +46,7 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="storageAccountCredentialId", required=true)
-    private final Input<String> storageAccountCredentialId;
+        private final Input<String> storageAccountCredentialId;
 
     public Input<String> getStorageAccountCredentialId() {
         return this.storageAccountCredentialId;
@@ -120,7 +120,6 @@ public final class AzureContainerInfoArgs extends io.pulumi.resources.ResourceAr
             this.storageAccountCredentialId = Input.of(Objects.requireNonNull(storageAccountCredentialId));
             return this;
         }
-
         public AzureContainerInfoArgs build() {
             return new AzureContainerInfoArgs(containerName, dataFormat, storageAccountCredentialId);
         }

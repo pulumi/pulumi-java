@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossRealmTrustAdminServer")
-    private final @Nullable Input<String> crossRealmTrustAdminServer;
+      private final @Nullable Input<String> crossRealmTrustAdminServer;
 
     public Input<String> getCrossRealmTrustAdminServer() {
         return this.crossRealmTrustAdminServer == null ? Input.empty() : this.crossRealmTrustAdminServer;
@@ -36,7 +36,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossRealmTrustKdc")
-    private final @Nullable Input<String> crossRealmTrustKdc;
+      private final @Nullable Input<String> crossRealmTrustKdc;
 
     public Input<String> getCrossRealmTrustKdc() {
         return this.crossRealmTrustKdc == null ? Input.empty() : this.crossRealmTrustKdc;
@@ -47,7 +47,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossRealmTrustRealm")
-    private final @Nullable Input<String> crossRealmTrustRealm;
+      private final @Nullable Input<String> crossRealmTrustRealm;
 
     public Input<String> getCrossRealmTrustRealm() {
         return this.crossRealmTrustRealm == null ? Input.empty() : this.crossRealmTrustRealm;
@@ -58,7 +58,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossRealmTrustSharedPasswordUri")
-    private final @Nullable Input<String> crossRealmTrustSharedPasswordUri;
+      private final @Nullable Input<String> crossRealmTrustSharedPasswordUri;
 
     public Input<String> getCrossRealmTrustSharedPasswordUri() {
         return this.crossRealmTrustSharedPasswordUri == null ? Input.empty() : this.crossRealmTrustSharedPasswordUri;
@@ -69,7 +69,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableKerberos")
-    private final @Nullable Input<Boolean> enableKerberos;
+      private final @Nullable Input<Boolean> enableKerberos;
 
     public Input<Boolean> getEnableKerberos() {
         return this.enableKerberos == null ? Input.empty() : this.enableKerberos;
@@ -80,7 +80,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kdcDbKeyUri")
-    private final @Nullable Input<String> kdcDbKeyUri;
+      private final @Nullable Input<String> kdcDbKeyUri;
 
     public Input<String> getKdcDbKeyUri() {
         return this.kdcDbKeyUri == null ? Input.empty() : this.kdcDbKeyUri;
@@ -91,7 +91,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPasswordUri")
-    private final @Nullable Input<String> keyPasswordUri;
+      private final @Nullable Input<String> keyPasswordUri;
 
     public Input<String> getKeyPasswordUri() {
         return this.keyPasswordUri == null ? Input.empty() : this.keyPasswordUri;
@@ -102,7 +102,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keystorePasswordUri")
-    private final @Nullable Input<String> keystorePasswordUri;
+      private final @Nullable Input<String> keystorePasswordUri;
 
     public Input<String> getKeystorePasswordUri() {
         return this.keystorePasswordUri == null ? Input.empty() : this.keystorePasswordUri;
@@ -113,7 +113,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keystoreUri")
-    private final @Nullable Input<String> keystoreUri;
+      private final @Nullable Input<String> keystoreUri;
 
     public Input<String> getKeystoreUri() {
         return this.keystoreUri == null ? Input.empty() : this.keystoreUri;
@@ -124,7 +124,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyUri")
-    private final @Nullable Input<String> kmsKeyUri;
+      private final @Nullable Input<String> kmsKeyUri;
 
     public Input<String> getKmsKeyUri() {
         return this.kmsKeyUri == null ? Input.empty() : this.kmsKeyUri;
@@ -135,7 +135,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="realm")
-    private final @Nullable Input<String> realm;
+      private final @Nullable Input<String> realm;
 
     public Input<String> getRealm() {
         return this.realm == null ? Input.empty() : this.realm;
@@ -146,7 +146,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootPrincipalPasswordUri")
-    private final @Nullable Input<String> rootPrincipalPasswordUri;
+      private final @Nullable Input<String> rootPrincipalPasswordUri;
 
     public Input<String> getRootPrincipalPasswordUri() {
         return this.rootPrincipalPasswordUri == null ? Input.empty() : this.rootPrincipalPasswordUri;
@@ -157,7 +157,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tgtLifetimeHours")
-    private final @Nullable Input<Integer> tgtLifetimeHours;
+      private final @Nullable Input<Integer> tgtLifetimeHours;
 
     public Input<Integer> getTgtLifetimeHours() {
         return this.tgtLifetimeHours == null ? Input.empty() : this.tgtLifetimeHours;
@@ -168,7 +168,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="truststorePasswordUri")
-    private final @Nullable Input<String> truststorePasswordUri;
+      private final @Nullable Input<String> truststorePasswordUri;
 
     public Input<String> getTruststorePasswordUri() {
         return this.truststorePasswordUri == null ? Input.empty() : this.truststorePasswordUri;
@@ -179,7 +179,7 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="truststoreUri")
-    private final @Nullable Input<String> truststoreUri;
+      private final @Nullable Input<String> truststoreUri;
 
     public Input<String> getTruststoreUri() {
         return this.truststoreUri == null ? Input.empty() : this.truststoreUri;
@@ -433,7 +433,6 @@ public final class KerberosConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.truststoreUri = Input.ofNullable(truststoreUri);
             return this;
         }
-
         public KerberosConfigArgs build() {
             return new KerberosConfigArgs(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPasswordUri, enableKerberos, kdcDbKeyUri, keyPasswordUri, keystorePasswordUri, keystoreUri, kmsKeyUri, realm, rootPrincipalPasswordUri, tgtLifetimeHours, truststorePasswordUri, truststoreUri);
         }

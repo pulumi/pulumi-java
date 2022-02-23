@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class GetApiTagDescriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiTagDescriptionResult build() {
             return new GetApiTagDescriptionResult(description, displayName, externalDocsDescription, externalDocsUrl, id, name, tagId, type);
         }

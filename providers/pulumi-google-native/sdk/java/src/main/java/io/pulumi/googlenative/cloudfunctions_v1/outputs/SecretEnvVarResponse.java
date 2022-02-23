@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class SecretEnvVarResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretEnvVarResponse build() {
             return new SecretEnvVarResponse(key, project, secret, version);
         }

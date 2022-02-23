@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1beta1.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1beta1.outputs.WorkerConfigResponse;
 import java.lang.String;
@@ -266,7 +266,6 @@ public final class GetWorkerPoolResult {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(annotations, createTime, deleteTime, displayName, etag, name, networkConfig, state, uid, updateTime, workerConfig);
         }

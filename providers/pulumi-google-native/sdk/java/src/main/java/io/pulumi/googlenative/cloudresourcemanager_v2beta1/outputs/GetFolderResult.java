@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class GetFolderResult {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetFolderResult build() {
             return new GetFolderResult(createTime, displayName, lifecycleState, name, parent);
         }

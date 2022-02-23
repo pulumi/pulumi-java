@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
     public static final ResourcePolicyVmMaintenancePolicyArgs Empty = new ResourcePolicyVmMaintenancePolicyArgs();
 
     @InputImport(name="concurrencyControlGroup")
-    private final @Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
+      private final @Nullable Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> concurrencyControlGroup;
 
     public Input<ResourcePolicyVmMaintenancePolicyConcurrencyControlArgs> getConcurrencyControlGroup() {
         return this.concurrencyControlGroup == null ? Input.empty() : this.concurrencyControlGroup;
@@ -27,7 +27,7 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> maintenanceWindow;
 
     public Input<ResourcePolicyVmMaintenancePolicyMaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -86,7 +86,6 @@ public final class ResourcePolicyVmMaintenancePolicyArgs extends io.pulumi.resou
             this.maintenanceWindow = Input.ofNullable(maintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyArgs build() {
             return new ResourcePolicyVmMaintenancePolicyArgs(concurrencyControlGroup, maintenanceWindow);
         }

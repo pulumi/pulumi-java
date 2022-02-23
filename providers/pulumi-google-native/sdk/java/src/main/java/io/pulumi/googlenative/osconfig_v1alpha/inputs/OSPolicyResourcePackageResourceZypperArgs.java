@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class OSPolicyResourcePackageResourceZypperArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -65,7 +65,6 @@ public final class OSPolicyResourcePackageResourceZypperArgs extends io.pulumi.r
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public OSPolicyResourcePackageResourceZypperArgs build() {
             return new OSPolicyResourcePackageResourceZypperArgs(name);
         }

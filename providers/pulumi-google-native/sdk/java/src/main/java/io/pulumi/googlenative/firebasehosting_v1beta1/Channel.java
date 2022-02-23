@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebasehosting_v1beta1.ChannelArgs;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ReleaseResponse;
@@ -148,13 +148,6 @@ public class Channel extends io.pulumi.resources.CustomResource {
         return this.url;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Channel(String name) {
-        super("google-native:firebasehosting/v1beta1:Channel", name, ChannelArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

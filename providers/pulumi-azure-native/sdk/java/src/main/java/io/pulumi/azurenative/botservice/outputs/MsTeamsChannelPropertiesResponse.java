@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class MsTeamsChannelPropertiesResponse {
             this.isEnabled = Objects.requireNonNull(isEnabled);
             return this;
         }
-
         public MsTeamsChannelPropertiesResponse build() {
             return new MsTeamsChannelPropertiesResponse(acceptedTerms, callingWebHook, deploymentEnvironment, enableCalling, incomingCallRoute, isEnabled);
         }

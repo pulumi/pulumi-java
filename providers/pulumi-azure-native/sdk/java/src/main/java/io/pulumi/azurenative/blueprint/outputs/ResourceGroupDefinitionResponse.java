@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -183,7 +183,6 @@ public final class ResourceGroupDefinitionResponse {
             this.tags = tags;
             return this;
         }
-
         public ResourceGroupDefinitionResponse build() {
             return new ResourceGroupDefinitionResponse(dependsOn, description, displayName, location, name, strongType, tags);
         }

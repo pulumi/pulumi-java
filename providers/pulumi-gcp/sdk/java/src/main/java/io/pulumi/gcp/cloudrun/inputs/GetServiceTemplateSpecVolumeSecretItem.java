@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetServiceTemplateSpecVolumeSecretItem extends io.pulumi.reso
     public static final GetServiceTemplateSpecVolumeSecretItem Empty = new GetServiceTemplateSpecVolumeSecretItem();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="mode", required=true)
-    private final Integer mode;
+        private final Integer mode;
 
     public Integer getMode() {
         return this.mode;
     }
 
     @InputImport(name="path", required=true)
-    private final String path;
+        private final String path;
 
     public String getPath() {
         return this.path;
@@ -87,7 +87,6 @@ public final class GetServiceTemplateSpecVolumeSecretItem extends io.pulumi.reso
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GetServiceTemplateSpecVolumeSecretItem build() {
             return new GetServiceTemplateSpecVolumeSecretItem(key, mode, path);
         }

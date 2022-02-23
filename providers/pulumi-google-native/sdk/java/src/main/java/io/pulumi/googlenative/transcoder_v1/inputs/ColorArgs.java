@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brightness")
-    private final @Nullable Input<Double> brightness;
+      private final @Nullable Input<Double> brightness;
 
     public Input<Double> getBrightness() {
         return this.brightness == null ? Input.empty() : this.brightness;
@@ -34,7 +34,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contrast")
-    private final @Nullable Input<Double> contrast;
+      private final @Nullable Input<Double> contrast;
 
     public Input<Double> getContrast() {
         return this.contrast == null ? Input.empty() : this.contrast;
@@ -45,7 +45,7 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="saturation")
-    private final @Nullable Input<Double> saturation;
+      private final @Nullable Input<Double> saturation;
 
     public Input<Double> getSaturation() {
         return this.saturation == null ? Input.empty() : this.saturation;
@@ -119,7 +119,6 @@ public final class ColorArgs extends io.pulumi.resources.ResourceArgs {
             this.saturation = Input.ofNullable(saturation);
             return this;
         }
-
         public ColorArgs build() {
             return new ColorArgs(brightness, contrast, saturation);
         }

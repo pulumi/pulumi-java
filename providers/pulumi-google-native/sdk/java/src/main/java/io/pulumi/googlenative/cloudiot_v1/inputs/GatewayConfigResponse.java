@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="gatewayAuthMethod", required=true)
-    private final String gatewayAuthMethod;
+      private final String gatewayAuthMethod;
 
     public String getGatewayAuthMethod() {
         return this.gatewayAuthMethod;
@@ -32,7 +32,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="gatewayType", required=true)
-    private final String gatewayType;
+      private final String gatewayType;
 
     public String getGatewayType() {
         return this.gatewayType;
@@ -43,7 +43,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="lastAccessedGatewayId", required=true)
-    private final String lastAccessedGatewayId;
+      private final String lastAccessedGatewayId;
 
     public String getLastAccessedGatewayId() {
         return this.lastAccessedGatewayId;
@@ -54,7 +54,7 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="lastAccessedGatewayTime", required=true)
-    private final String lastAccessedGatewayTime;
+      private final String lastAccessedGatewayTime;
 
     public String getLastAccessedGatewayTime() {
         return this.lastAccessedGatewayTime;
@@ -123,7 +123,6 @@ public final class GatewayConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.lastAccessedGatewayTime = Objects.requireNonNull(lastAccessedGatewayTime);
             return this;
         }
-
         public GatewayConfigResponse build() {
             return new GatewayConfigResponse(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
         }

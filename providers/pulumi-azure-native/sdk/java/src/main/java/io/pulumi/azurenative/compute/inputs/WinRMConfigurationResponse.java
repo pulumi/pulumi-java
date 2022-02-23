@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.WinRMListenerResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class WinRMConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="listeners")
-    private final @Nullable List<WinRMListenerResponse> listeners;
+        private final @Nullable List<WinRMListenerResponse> listeners;
 
     public List<WinRMListenerResponse> getListeners() {
         return this.listeners == null ? List.of() : this.listeners;
@@ -62,7 +62,6 @@ public final class WinRMConfigurationResponse extends io.pulumi.resources.Invoke
             this.listeners = listeners;
             return this;
         }
-
         public WinRMConfigurationResponse build() {
             return new WinRMConfigurationResponse(listeners);
         }

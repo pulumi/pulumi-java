@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="blobName")
-    private final @Nullable String blobName;
+        private final @Nullable String blobName;
 
     public Optional<String> getBlobName() {
         return this.blobName == null ? Optional.empty() : Optional.ofNullable(this.blobName);
@@ -30,7 +30,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-    private final String testBaseAccountName;
+        private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {
         return this.testBaseAccountName;
@@ -100,7 +100,6 @@ public final class GetTestBaseAccountFileUploadUrlArgs extends io.pulumi.resourc
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public GetTestBaseAccountFileUploadUrlArgs build() {
             return new GetTestBaseAccountFileUploadUrlArgs(blobName, resourceGroupName, testBaseAccountName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse 
             this.wordIndex = Objects.requireNonNull(wordIndex);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse build() {
             return new GoogleCloudContactcenterinsightsV1AnnotationBoundaryResponse(transcriptIndex, wordIndex);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deleteFilesAfterCompletion")
-    private final @Nullable Input<Object> deleteFilesAfterCompletion;
+        private final @Nullable Input<Object> deleteFilesAfterCompletion;
 
     public Input<Object> getDeleteFilesAfterCompletion() {
         return this.deleteFilesAfterCompletion == null ? Input.empty() : this.deleteFilesAfterCompletion;
@@ -36,7 +36,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableChunking")
-    private final @Nullable Input<Object> disableChunking;
+        private final @Nullable Input<Object> disableChunking;
 
     public Input<Object> getDisableChunking() {
         return this.disableChunking == null ? Input.empty() : this.disableChunking;
@@ -47,7 +47,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+        private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -58,7 +58,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enablePartitionDiscovery")
-    private final @Nullable Input<Boolean> enablePartitionDiscovery;
+        private final @Nullable Input<Boolean> enablePartitionDiscovery;
 
     public Input<Boolean> getEnablePartitionDiscovery() {
         return this.enablePartitionDiscovery == null ? Input.empty() : this.enablePartitionDiscovery;
@@ -69,7 +69,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fileListPath")
-    private final @Nullable Input<Object> fileListPath;
+        private final @Nullable Input<Object> fileListPath;
 
     public Input<Object> getFileListPath() {
         return this.fileListPath == null ? Input.empty() : this.fileListPath;
@@ -80,7 +80,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+        private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -91,7 +91,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionRootPath")
-    private final @Nullable Input<Object> partitionRootPath;
+        private final @Nullable Input<Object> partitionRootPath;
 
     public Input<Object> getPartitionRootPath() {
         return this.partitionRootPath == null ? Input.empty() : this.partitionRootPath;
@@ -102,7 +102,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="recursive")
-    private final @Nullable Input<Object> recursive;
+        private final @Nullable Input<Object> recursive;
 
     public Input<Object> getRecursive() {
         return this.recursive == null ? Input.empty() : this.recursive;
@@ -114,7 +114,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -125,7 +125,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useBinaryTransfer")
-    private final @Nullable Input<Boolean> useBinaryTransfer;
+        private final @Nullable Input<Boolean> useBinaryTransfer;
 
     public Input<Boolean> getUseBinaryTransfer() {
         return this.useBinaryTransfer == null ? Input.empty() : this.useBinaryTransfer;
@@ -136,7 +136,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="wildcardFileName")
-    private final @Nullable Input<Object> wildcardFileName;
+        private final @Nullable Input<Object> wildcardFileName;
 
     public Input<Object> getWildcardFileName() {
         return this.wildcardFileName == null ? Input.empty() : this.wildcardFileName;
@@ -147,7 +147,7 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="wildcardFolderPath")
-    private final @Nullable Input<Object> wildcardFolderPath;
+        private final @Nullable Input<Object> wildcardFolderPath;
 
     public Input<Object> getWildcardFolderPath() {
         return this.wildcardFolderPath == null ? Input.empty() : this.wildcardFolderPath;
@@ -356,7 +356,6 @@ public final class FtpReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.wildcardFolderPath = Input.ofNullable(wildcardFolderPath);
             return this;
         }
-
         public FtpReadSettingsArgs build() {
             return new FtpReadSettingsArgs(deleteFilesAfterCompletion, disableChunking, disableMetricsCollection, enablePartitionDiscovery, fileListPath, maxConcurrentConnections, partitionRootPath, recursive, type, useBinaryTransfer, wildcardFileName, wildcardFolderPath);
         }

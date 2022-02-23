@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomHTTPHeader;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,14 +26,14 @@ public final class RuleGroupCustomResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="customResponseBodyKey")
-    private final @Nullable String customResponseBodyKey;
+        private final @Nullable String customResponseBodyKey;
 
     public Optional<String> getCustomResponseBodyKey() {
         return this.customResponseBodyKey == null ? Optional.empty() : Optional.ofNullable(this.customResponseBodyKey);
     }
 
     @InputImport(name="responseCode", required=true)
-    private final Integer responseCode;
+        private final Integer responseCode;
 
     public Integer getResponseCode() {
         return this.responseCode;
@@ -44,7 +44,7 @@ public final class RuleGroupCustomResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="responseHeaders")
-    private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
+        private final @Nullable List<RuleGroupCustomHTTPHeader> responseHeaders;
 
     public List<RuleGroupCustomHTTPHeader> getResponseHeaders() {
         return this.responseHeaders == null ? List.of() : this.responseHeaders;
@@ -103,7 +103,6 @@ public final class RuleGroupCustomResponse extends io.pulumi.resources.InvokeArg
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public RuleGroupCustomResponse build() {
             return new RuleGroupCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }

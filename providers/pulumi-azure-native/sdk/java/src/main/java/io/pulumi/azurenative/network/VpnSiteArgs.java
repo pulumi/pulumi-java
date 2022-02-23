@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.inputs.O365PolicyPropertiesArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.VpnSiteLinkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressSpace")
-    private final @Nullable Input<AddressSpaceArgs> addressSpace;
+        private final @Nullable Input<AddressSpaceArgs> addressSpace;
 
     public Input<AddressSpaceArgs> getAddressSpace() {
         return this.addressSpace == null ? Input.empty() : this.addressSpace;
@@ -39,7 +39,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpProperties")
-    private final @Nullable Input<BgpSettingsArgs> bgpProperties;
+        private final @Nullable Input<BgpSettingsArgs> bgpProperties;
 
     public Input<BgpSettingsArgs> getBgpProperties() {
         return this.bgpProperties == null ? Input.empty() : this.bgpProperties;
@@ -50,7 +50,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceProperties")
-    private final @Nullable Input<DevicePropertiesArgs> deviceProperties;
+        private final @Nullable Input<DevicePropertiesArgs> deviceProperties;
 
     public Input<DevicePropertiesArgs> getDeviceProperties() {
         return this.deviceProperties == null ? Input.empty() : this.deviceProperties;
@@ -61,7 +61,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -72,7 +72,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -83,7 +83,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isSecuritySite")
-    private final @Nullable Input<Boolean> isSecuritySite;
+        private final @Nullable Input<Boolean> isSecuritySite;
 
     public Input<Boolean> getIsSecuritySite() {
         return this.isSecuritySite == null ? Input.empty() : this.isSecuritySite;
@@ -94,7 +94,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -105,7 +105,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="o365Policy")
-    private final @Nullable Input<O365PolicyPropertiesArgs> o365Policy;
+        private final @Nullable Input<O365PolicyPropertiesArgs> o365Policy;
 
     public Input<O365PolicyPropertiesArgs> getO365Policy() {
         return this.o365Policy == null ? Input.empty() : this.o365Policy;
@@ -116,7 +116,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -127,7 +127,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteKey")
-    private final @Nullable Input<String> siteKey;
+        private final @Nullable Input<String> siteKey;
 
     public Input<String> getSiteKey() {
         return this.siteKey == null ? Input.empty() : this.siteKey;
@@ -138,7 +138,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -149,7 +149,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualWan")
-    private final @Nullable Input<SubResourceArgs> virtualWan;
+        private final @Nullable Input<SubResourceArgs> virtualWan;
 
     public Input<SubResourceArgs> getVirtualWan() {
         return this.virtualWan == null ? Input.empty() : this.virtualWan;
@@ -160,7 +160,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnSiteLinks")
-    private final @Nullable Input<List<VpnSiteLinkArgs>> vpnSiteLinks;
+        private final @Nullable Input<List<VpnSiteLinkArgs>> vpnSiteLinks;
 
     public Input<List<VpnSiteLinkArgs>> getVpnSiteLinks() {
         return this.vpnSiteLinks == null ? Input.empty() : this.vpnSiteLinks;
@@ -171,7 +171,7 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnSiteName")
-    private final @Nullable Input<String> vpnSiteName;
+        private final @Nullable Input<String> vpnSiteName;
 
     public Input<String> getVpnSiteName() {
         return this.vpnSiteName == null ? Input.empty() : this.vpnSiteName;
@@ -410,7 +410,6 @@ public final class VpnSiteArgs extends io.pulumi.resources.ResourceArgs {
             this.vpnSiteName = Input.ofNullable(vpnSiteName);
             return this;
         }
-
         public VpnSiteArgs build() {
             return new VpnSiteArgs(addressSpace, bgpProperties, deviceProperties, id, ipAddress, isSecuritySite, location, o365Policy, resourceGroupName, siteKey, tags, virtualWan, vpnSiteLinks, vpnSiteName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class InputAttributeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jsonPath", required=true)
-    private final Input<String> jsonPath;
+        private final Input<String> jsonPath;
 
     public Input<String> getJsonPath() {
         return this.jsonPath;
@@ -67,7 +67,6 @@ public final class InputAttributeArgs extends io.pulumi.resources.ResourceArgs {
             this.jsonPath = Input.of(Objects.requireNonNull(jsonPath));
             return this;
         }
-
         public InputAttributeArgs build() {
             return new InputAttributeArgs(jsonPath);
         }

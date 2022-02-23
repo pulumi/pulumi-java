@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.AptRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.GooRepositoryArgs;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.YumRepositoryArgs;
@@ -26,7 +26,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<AptRepositoryArgs> apt;
+      private final @Nullable Input<AptRepositoryArgs> apt;
 
     public Input<AptRepositoryArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -37,7 +37,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="goo")
-    private final @Nullable Input<GooRepositoryArgs> goo;
+      private final @Nullable Input<GooRepositoryArgs> goo;
 
     public Input<GooRepositoryArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -48,7 +48,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<YumRepositoryArgs> yum;
+      private final @Nullable Input<YumRepositoryArgs> yum;
 
     public Input<YumRepositoryArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -59,7 +59,7 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<ZypperRepositoryArgs> zypper;
+      private final @Nullable Input<ZypperRepositoryArgs> zypper;
 
     public Input<ZypperRepositoryArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -148,7 +148,6 @@ public final class PackageRepositoryArgs extends io.pulumi.resources.ResourceArg
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public PackageRepositoryArgs build() {
             return new PackageRepositoryArgs(apt, goo, yum, zypper);
         }

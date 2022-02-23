@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.panorama.outputs;
 
 import io.pulumi.awsnative.panorama.enums.PackageVersionStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class GetPackageVersionResult {
             this.updatedLatestPatchVersion = updatedLatestPatchVersion;
             return this;
         }
-
         public GetPackageVersionResult build() {
             return new GetPackageVersionResult(isLatestPatch, markLatest, packageArn, packageName, registeredTime, status, statusDescription, updatedLatestPatchVersion);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
      * 
      */
     @InputImport(name="header", required=true)
-    private final Input<String> header;
+      private final Input<String> header;
 
     public Input<String> getHeader() {
         return this.header;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
      * 
      */
     @InputImport(name="horizontalAlignment")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> horizontalAlignment;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesHorizontalAlignment> getHorizontalAlignment() {
         return this.horizontalAlignment == null ? Input.empty() : this.horizontalAlignment;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs
             this.horizontalAlignment = Input.ofNullable(horizontalAlignment);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageColumnPropertiesArgs(header, horizontalAlignment);
         }

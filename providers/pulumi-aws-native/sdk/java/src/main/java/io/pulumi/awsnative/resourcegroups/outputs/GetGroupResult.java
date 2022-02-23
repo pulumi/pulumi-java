@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resourcegroups.outputs;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupConfigurationItem;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupResourceQuery;
 import io.pulumi.awsnative.resourcegroups.outputs.GroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -132,7 +132,6 @@ public final class GetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(arn, configuration, description, resourceQuery, resources, tags);
         }

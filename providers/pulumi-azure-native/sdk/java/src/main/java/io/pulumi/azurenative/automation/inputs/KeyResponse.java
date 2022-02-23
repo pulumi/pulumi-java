@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+        private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -32,7 +32,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final String permissions;
+        private final String permissions;
 
     public String getPermissions() {
         return this.permissions;
@@ -43,7 +43,7 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -102,7 +102,6 @@ public final class KeyResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyResponse build() {
             return new KeyResponse(keyName, permissions, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs;
@@ -30,7 +30,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="conversationSuccess")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> conversationSuccess;
 
     public Input<GoogleCloudDialogflowCxV3beta1ResponseMessageConversationSuccessArgs> getConversationSuccess() {
         return this.conversationSuccess == null ? Input.empty() : this.conversationSuccess;
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="liveAgentHandoff")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> liveAgentHandoff;
 
     public Input<GoogleCloudDialogflowCxV3beta1ResponseMessageLiveAgentHandoffArgs> getLiveAgentHandoff() {
         return this.liveAgentHandoff == null ? Input.empty() : this.liveAgentHandoff;
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="outputAudioText")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> outputAudioText;
 
     public Input<GoogleCloudDialogflowCxV3beta1ResponseMessageOutputAudioTextArgs> getOutputAudioText() {
         return this.outputAudioText == null ? Input.empty() : this.outputAudioText;
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="payload")
-    private final @Nullable Input<Map<String,String>> payload;
+      private final @Nullable Input<Map<String,String>> payload;
 
     public Input<Map<String,String>> getPayload() {
         return this.payload == null ? Input.empty() : this.payload;
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="playAudio")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> playAudio;
 
     public Input<GoogleCloudDialogflowCxV3beta1ResponseMessagePlayAudioArgs> getPlayAudio() {
         return this.playAudio == null ? Input.empty() : this.playAudio;
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="telephonyTransferCall")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> telephonyTransferCall;
 
     public Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTelephonyTransferCallArgs> getTelephonyTransferCall() {
         return this.telephonyTransferCall == null ? Input.empty() : this.telephonyTransferCall;
@@ -96,7 +96,7 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> text;
 
     public Input<GoogleCloudDialogflowCxV3beta1ResponseMessageTextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -230,7 +230,6 @@ public final class GoogleCloudDialogflowCxV3beta1ResponseMessageArgs extends io.
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ResponseMessageArgs build() {
             return new GoogleCloudDialogflowCxV3beta1ResponseMessageArgs(conversationSuccess, liveAgentHandoff, outputAudioText, payload, playAudio, telephonyTransferCall, text);
         }

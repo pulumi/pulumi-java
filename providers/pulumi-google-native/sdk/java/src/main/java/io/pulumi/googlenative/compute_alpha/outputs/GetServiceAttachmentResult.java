@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ServiceAttachmentConnectedEndpointResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ServiceAttachmentConsumerProjectLimitResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.Uint128Response;
@@ -394,7 +394,6 @@ public final class GetServiceAttachmentResult {
             this.targetService = Objects.requireNonNull(targetService);
             return this;
         }
-
         public GetServiceAttachmentResult build() {
             return new GetServiceAttachmentResult(connectedEndpoints, connectionPreference, consumerAcceptLists, consumerRejectLists, creationTimestamp, description, domainNames, enableProxyProtocol, fingerprint, kind, name, natSubnets, producerForwardingRule, pscServiceAttachmentId, region, selfLink, targetService);
         }

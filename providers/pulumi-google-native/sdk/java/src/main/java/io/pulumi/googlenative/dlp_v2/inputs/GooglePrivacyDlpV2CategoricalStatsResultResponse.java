@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
      * 
      */
     @InputImport(name="valueFrequencyHistogramBuckets", required=true)
-    private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
+      private final List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> valueFrequencyHistogramBuckets;
 
     public List<GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse> getValueFrequencyHistogramBuckets() {
         return this.valueFrequencyHistogramBuckets;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsResultResponse extends io.p
             this.valueFrequencyHistogramBuckets = Objects.requireNonNull(valueFrequencyHistogramBuckets);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsResultResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsResultResponse(valueFrequencyHistogramBuckets);
         }

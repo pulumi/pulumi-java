@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class BackendBucketCdnPolicyNegativeCachingPolicyResponse {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public BackendBucketCdnPolicyNegativeCachingPolicyResponse build() {
             return new BackendBucketCdnPolicyNegativeCachingPolicyResponse(code, ttl);
         }

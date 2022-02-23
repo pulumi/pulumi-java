@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class PolicySettingsResponse {
             this.state = state;
             return this;
         }
-
         public PolicySettingsResponse build() {
             return new PolicySettingsResponse(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
         }

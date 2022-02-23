@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RegistryCredentialResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="publicKeyCertificate", required=true)
-    private final PublicKeyCertificateResponse publicKeyCertificate;
+      private final PublicKeyCertificateResponse publicKeyCertificate;
 
     public PublicKeyCertificateResponse getPublicKeyCertificate() {
         return this.publicKeyCertificate;
@@ -59,7 +59,6 @@ public final class RegistryCredentialResponse extends io.pulumi.resources.Invoke
             this.publicKeyCertificate = Objects.requireNonNull(publicKeyCertificate);
             return this;
         }
-
         public RegistryCredentialResponse build() {
             return new RegistryCredentialResponse(publicKeyCertificate);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -103,7 +103,6 @@ public final class GetUptimeCheckIPsUptimeCheckIp {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetUptimeCheckIPsUptimeCheckIp build() {
             return new GetUptimeCheckIPsUptimeCheckIp(ipAddress, location, region);
         }

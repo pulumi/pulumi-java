@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VpcPeeringConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subnet", required=true)
-    private final String subnet;
+      private final String subnet;
 
     public String getSubnet() {
         return this.subnet;
@@ -32,7 +32,7 @@ public final class VpcPeeringConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="vpcName", required=true)
-    private final String vpcName;
+      private final String vpcName;
 
     public String getVpcName() {
         return this.vpcName;
@@ -81,7 +81,6 @@ public final class VpcPeeringConfigResponse extends io.pulumi.resources.InvokeAr
             this.vpcName = Objects.requireNonNull(vpcName);
             return this;
         }
-
         public VpcPeeringConfigResponse build() {
             return new VpcPeeringConfigResponse(subnet, vpcName);
         }

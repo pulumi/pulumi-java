@@ -8,8 +8,8 @@ import io.pulumi.azurenative.documentdb.SqlResourceSqlContainerArgs;
 import io.pulumi.azurenative.documentdb.outputs.SqlContainerGetPropertiesResponseResource;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 /**
@@ -36,13 +36,6 @@ public class SqlResourceSqlContainer extends io.pulumi.resources.CustomResource 
         return this.resource;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SqlResourceSqlContainer(String name) {
-        super("azure-native:documentdb:SqlResourceSqlContainer", name, SqlResourceSqlContainerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -145,7 +145,6 @@ public final class ExtensionDataSourceResponse {
             this.streams = streams;
             return this;
         }
-
         public ExtensionDataSourceResponse build() {
             return new ExtensionDataSourceResponse(extensionName, extensionSettings, inputDataSources, name, streams);
         }

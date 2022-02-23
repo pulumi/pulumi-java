@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ModelQualityJobDefinitionStoppingCondition {
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public ModelQualityJobDefinitionStoppingCondition build() {
             return new ModelQualityJobDefinitionStoppingCondition(maxRuntimeInSeconds);
         }

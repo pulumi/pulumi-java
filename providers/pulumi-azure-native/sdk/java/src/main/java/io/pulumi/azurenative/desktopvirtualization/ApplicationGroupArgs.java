@@ -10,7 +10,7 @@ import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllow
 import io.pulumi.azurenative.desktopvirtualization.inputs.ResourceModelWithAllowedPropertySetSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applicationGroupName")
-    private final @Nullable Input<String> applicationGroupName;
+        private final @Nullable Input<String> applicationGroupName;
 
     public Input<String> getApplicationGroupName() {
         return this.applicationGroupName == null ? Input.empty() : this.applicationGroupName;
@@ -37,7 +37,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="applicationGroupType", required=true)
-    private final Input<Either<String,ApplicationGroupType>> applicationGroupType;
+        private final Input<Either<String,ApplicationGroupType>> applicationGroupType;
 
     public Input<Either<String,ApplicationGroupType>> getApplicationGroupType() {
         return this.applicationGroupType;
@@ -48,7 +48,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -59,7 +59,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -70,14 +70,14 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostPoolArmPath", required=true)
-    private final Input<String> hostPoolArmPath;
+        private final Input<String> hostPoolArmPath;
 
     public Input<String> getHostPoolArmPath() {
         return this.hostPoolArmPath;
     }
 
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetIdentityArgs> identity;
 
     public Input<ResourceModelWithAllowedPropertySetIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -88,7 +88,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -99,7 +99,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -110,7 +110,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="managedBy")
-    private final @Nullable Input<String> managedBy;
+        private final @Nullable Input<String> managedBy;
 
     public Input<String> getManagedBy() {
         return this.managedBy == null ? Input.empty() : this.managedBy;
@@ -121,14 +121,14 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="migrationRequest")
-    private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
+        private final @Nullable Input<MigrationRequestPropertiesArgs> migrationRequest;
 
     public Input<MigrationRequestPropertiesArgs> getMigrationRequest() {
         return this.migrationRequest == null ? Input.empty() : this.migrationRequest;
     }
 
     @InputImport(name="plan")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetPlanArgs> plan;
 
     public Input<ResourceModelWithAllowedPropertySetPlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -139,14 +139,14 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="sku")
-    private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
+        private final @Nullable Input<ResourceModelWithAllowedPropertySetSkuArgs> sku;
 
     public Input<ResourceModelWithAllowedPropertySetSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -157,7 +157,7 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -396,7 +396,6 @@ public final class ApplicationGroupArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ApplicationGroupArgs build() {
             return new ApplicationGroupArgs(applicationGroupName, applicationGroupType, description, friendlyName, hostPoolArmPath, identity, kind, location, managedBy, migrationRequest, plan, resourceGroupName, sku, tags);
         }

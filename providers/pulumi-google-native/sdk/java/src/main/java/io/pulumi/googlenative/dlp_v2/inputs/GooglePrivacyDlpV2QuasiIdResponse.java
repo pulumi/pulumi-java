@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleProtobufEmptyResponse;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="customTag", required=true)
-    private final String customTag;
+      private final String customTag;
 
     public String getCustomTag() {
         return this.customTag;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="field", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse field;
+      private final GooglePrivacyDlpV2FieldIdResponse field;
 
     public GooglePrivacyDlpV2FieldIdResponse getField() {
         return this.field;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="inferred", required=true)
-    private final GoogleProtobufEmptyResponse inferred;
+      private final GoogleProtobufEmptyResponse inferred;
 
     public GoogleProtobufEmptyResponse getInferred() {
         return this.inferred;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="infoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
@@ -126,7 +126,6 @@ public final class GooglePrivacyDlpV2QuasiIdResponse extends io.pulumi.resources
             this.infoType = Objects.requireNonNull(infoType);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdResponse build() {
             return new GooglePrivacyDlpV2QuasiIdResponse(customTag, field, inferred, infoType);
         }

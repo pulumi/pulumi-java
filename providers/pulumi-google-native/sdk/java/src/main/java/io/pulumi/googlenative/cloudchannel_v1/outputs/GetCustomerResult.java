@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1CloudIdentityInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ContactInfoResponse;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleTypePostalAddressResponse;
@@ -287,7 +287,6 @@ public final class GetCustomerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCustomerResult build() {
             return new GetCustomerResult(alternateEmail, channelPartnerId, cloudIdentityId, cloudIdentityInfo, createTime, domain, languageCode, name, orgDisplayName, orgPostalAddress, primaryContactInfo, updateTime);
         }

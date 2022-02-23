@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class GetCaCertsCert {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public GetCaCertsCert build() {
             return new GetCaCertsCert(cert, commonName, createTime, expirationTime, sha1Fingerprint);
         }

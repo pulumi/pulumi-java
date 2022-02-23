@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypp
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryZypper(baseUrl, displayName, gpgKeys, id);
         }

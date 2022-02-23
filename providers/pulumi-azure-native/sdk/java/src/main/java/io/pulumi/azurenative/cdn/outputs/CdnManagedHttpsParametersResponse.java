@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.CdnCertificateSourceParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -121,7 +121,6 @@ public final class CdnManagedHttpsParametersResponse {
             this.protocolType = Objects.requireNonNull(protocolType);
             return this;
         }
-
         public CdnManagedHttpsParametersResponse build() {
             return new CdnManagedHttpsParametersResponse(certificateSource, certificateSourceParameters, minimumTlsVersion, protocolType);
         }

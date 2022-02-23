@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.PublicAdvertisedPrefixStatus;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dnsVerificationIp")
-    private final @Nullable Input<String> dnsVerificationIp;
+      private final @Nullable Input<String> dnsVerificationIp;
 
     public Input<String> getDnsVerificationIp() {
         return this.dnsVerificationIp == null ? Input.empty() : this.dnsVerificationIp;
@@ -42,7 +42,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -53,21 +53,21 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -78,7 +78,7 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<PublicAdvertisedPrefixStatus> status;
+      private final @Nullable Input<PublicAdvertisedPrefixStatus> status;
 
     public Input<PublicAdvertisedPrefixStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -212,7 +212,6 @@ public final class PublicAdvertisedPrefixArgs extends io.pulumi.resources.Resour
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public PublicAdvertisedPrefixArgs build() {
             return new PublicAdvertisedPrefixArgs(description, dnsVerificationIp, ipCidrRange, name, project, requestId, status);
         }

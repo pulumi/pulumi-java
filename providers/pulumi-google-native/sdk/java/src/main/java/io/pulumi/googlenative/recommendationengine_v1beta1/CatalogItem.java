@@ -5,8 +5,8 @@ package io.pulumi.googlenative.recommendationengine_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.recommendationengine_v1beta1.CatalogItemArgs;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse;
@@ -122,13 +122,6 @@ public class CatalogItem extends io.pulumi.resources.CustomResource {
         return this.title;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CatalogItem(String name) {
-        super("google-native:recommendationengine/v1beta1:CatalogItem", name, CatalogItemArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

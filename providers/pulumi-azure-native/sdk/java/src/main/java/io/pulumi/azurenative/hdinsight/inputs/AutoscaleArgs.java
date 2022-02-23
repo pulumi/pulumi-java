@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleCapacityArgs;
 import io.pulumi.azurenative.hdinsight.inputs.AutoscaleRecurrenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<AutoscaleCapacityArgs> capacity;
+        private final @Nullable Input<AutoscaleCapacityArgs> capacity;
 
     public Input<AutoscaleCapacityArgs> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -35,7 +35,7 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
+        private final @Nullable Input<AutoscaleRecurrenceArgs> recurrence;
 
     public Input<AutoscaleRecurrenceArgs> getRecurrence() {
         return this.recurrence == null ? Input.empty() : this.recurrence;
@@ -94,7 +94,6 @@ public final class AutoscaleArgs extends io.pulumi.resources.ResourceArgs {
             this.recurrence = Input.ofNullable(recurrence);
             return this;
         }
-
         public AutoscaleArgs build() {
             return new AutoscaleArgs(capacity, recurrence);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final String providerNamespace;
+        private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;
@@ -28,7 +28,7 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -39,7 +39,7 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final String sku;
+        private final String sku;
 
     public String getSku() {
         return this.sku;
@@ -98,7 +98,6 @@ public final class GetSkusArgs extends io.pulumi.resources.InvokeArgs {
             this.sku = Objects.requireNonNull(sku);
             return this;
         }
-
         public GetSkusArgs build() {
             return new GetSkusArgs(providerNamespace, resourceType, sku);
         }

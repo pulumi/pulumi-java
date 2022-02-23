@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -123,7 +123,6 @@ public final class CxIntentParameter {
             this.redact = redact;
             return this;
         }
-
         public CxIntentParameter build() {
             return new CxIntentParameter(entityType, id, isList, redact);
         }

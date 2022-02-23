@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxRunningTime")
-    private final @Nullable Input<String> maxRunningTime;
+      private final @Nullable Input<String> maxRunningTime;
 
     public Input<String> getMaxRunningTime() {
         return this.maxRunningTime == null ? Input.empty() : this.maxRunningTime;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="maxWaitTime")
-    private final @Nullable Input<String> maxWaitTime;
+      private final @Nullable Input<String> maxWaitTime;
 
     public Input<String> getMaxWaitTime() {
         return this.maxWaitTime == null ? Input.empty() : this.maxWaitTime;
@@ -46,7 +46,7 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -120,7 +120,6 @@ public final class GoogleCloudMlV1__SchedulingArgs extends io.pulumi.resources.R
             this.priority = Input.ofNullable(priority);
             return this;
         }
-
         public GoogleCloudMlV1__SchedulingArgs build() {
             return new GoogleCloudMlV1__SchedulingArgs(maxRunningTime, maxWaitTime, priority);
         }

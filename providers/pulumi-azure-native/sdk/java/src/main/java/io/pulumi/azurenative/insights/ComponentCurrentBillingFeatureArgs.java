@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentDataVolumeCapArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="currentBillingFeatures")
-    private final @Nullable Input<List<String>> currentBillingFeatures;
+        private final @Nullable Input<List<String>> currentBillingFeatures;
 
     public Input<List<String>> getCurrentBillingFeatures() {
         return this.currentBillingFeatures == null ? Input.empty() : this.currentBillingFeatures;
@@ -32,7 +32,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataVolumeCap")
-    private final @Nullable Input<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
+        private final @Nullable Input<ApplicationInsightsComponentDataVolumeCapArgs> dataVolumeCap;
 
     public Input<ApplicationInsightsComponentDataVolumeCapArgs> getDataVolumeCap() {
         return this.dataVolumeCap == null ? Input.empty() : this.dataVolumeCap;
@@ -43,7 +43,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -143,7 +143,6 @@ public final class ComponentCurrentBillingFeatureArgs extends io.pulumi.resource
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public ComponentCurrentBillingFeatureArgs build() {
             return new ComponentCurrentBillingFeatureArgs(currentBillingFeatures, dataVolumeCap, resourceGroupName, resourceName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -103,7 +103,6 @@ public final class WebPubSubFeatureResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public WebPubSubFeatureResponse build() {
             return new WebPubSubFeatureResponse(flag, properties, value);
         }

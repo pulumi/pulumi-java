@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkconnectivity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkconnectivity.outputs.SpokeLinkedRouterApplianceInstancesInstance;
 import java.lang.Boolean;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class SpokeLinkedRouterApplianceInstances {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public SpokeLinkedRouterApplianceInstances build() {
             return new SpokeLinkedRouterApplianceInstances(instances, siteToSiteDataTransfer);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
      * 
      */
     @InputImport(name="lockedTime", required=true)
-    private final String lockedTime;
+      private final String lockedTime;
 
     public String getLockedTime() {
         return this.lockedTime;
@@ -82,7 +82,6 @@ public final class BucketIamConfigurationBucketPolicyOnlyResponse extends io.pul
             this.lockedTime = Objects.requireNonNull(lockedTime);
             return this;
         }
-
         public BucketIamConfigurationBucketPolicyOnlyResponse build() {
             return new BucketIamConfigurationBucketPolicyOnlyResponse(enabled, lockedTime);
         }

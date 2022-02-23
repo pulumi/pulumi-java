@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class MediaGraphTlsValidationOptionsResponse {
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }
-
         public MediaGraphTlsValidationOptionsResponse build() {
             return new MediaGraphTlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
         }

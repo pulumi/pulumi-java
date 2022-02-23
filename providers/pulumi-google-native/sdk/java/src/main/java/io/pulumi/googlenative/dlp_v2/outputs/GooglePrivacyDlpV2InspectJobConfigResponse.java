@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ActionResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StorageConfigResponse;
@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigResponse {
             this.storageConfig = Objects.requireNonNull(storageConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectJobConfigResponse build() {
             return new GooglePrivacyDlpV2InspectJobConfigResponse(actions, inspectConfig, inspectTemplateName, storageConfig);
         }

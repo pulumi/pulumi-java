@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.KubernetesClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.inputs.SystemServiceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="agentCount")
-    private final @Nullable Integer agentCount;
+        private final @Nullable Integer agentCount;
 
     public Optional<Integer> getAgentCount() {
         return this.agentCount == null ? Optional.empty() : Optional.ofNullable(this.agentCount);
@@ -38,7 +38,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="agentVmSize")
-    private final @Nullable String agentVmSize;
+        private final @Nullable String agentVmSize;
 
     public Optional<String> getAgentVmSize() {
         return this.agentVmSize == null ? Optional.empty() : Optional.ofNullable(this.agentVmSize);
@@ -49,7 +49,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterFqdn", required=true)
-    private final String clusterFqdn;
+        private final String clusterFqdn;
 
     public String getClusterFqdn() {
         return this.clusterFqdn;
@@ -60,7 +60,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="masterCount")
-    private final @Nullable Integer masterCount;
+        private final @Nullable Integer masterCount;
 
     public Optional<Integer> getMasterCount() {
         return this.masterCount == null ? Optional.empty() : Optional.ofNullable(this.masterCount);
@@ -71,7 +71,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="orchestratorProperties")
-    private final @Nullable KubernetesClusterPropertiesResponse orchestratorProperties;
+        private final @Nullable KubernetesClusterPropertiesResponse orchestratorProperties;
 
     public Optional<KubernetesClusterPropertiesResponse> getOrchestratorProperties() {
         return this.orchestratorProperties == null ? Optional.empty() : Optional.ofNullable(this.orchestratorProperties);
@@ -82,7 +82,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="orchestratorType", required=true)
-    private final String orchestratorType;
+        private final String orchestratorType;
 
     public String getOrchestratorType() {
         return this.orchestratorType;
@@ -93,7 +93,7 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="systemServices")
-    private final @Nullable List<SystemServiceResponse> systemServices;
+        private final @Nullable List<SystemServiceResponse> systemServices;
 
     public List<SystemServiceResponse> getSystemServices() {
         return this.systemServices == null ? List.of() : this.systemServices;
@@ -192,7 +192,6 @@ public final class AcsClusterPropertiesResponse extends io.pulumi.resources.Invo
             this.systemServices = systemServices;
             return this;
         }
-
         public AcsClusterPropertiesResponse build() {
             return new AcsClusterPropertiesResponse(agentCount, agentVmSize, clusterFqdn, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }

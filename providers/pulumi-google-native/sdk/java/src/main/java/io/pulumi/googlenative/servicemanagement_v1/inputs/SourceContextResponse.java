@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fileName", required=true)
-    private final String fileName;
+      private final String fileName;
 
     public String getFileName() {
         return this.fileName;
@@ -59,7 +59,6 @@ public final class SourceContextResponse extends io.pulumi.resources.InvokeArgs 
             this.fileName = Objects.requireNonNull(fileName);
             return this;
         }
-
         public SourceContextResponse build() {
             return new SourceContextResponse(fileName);
         }

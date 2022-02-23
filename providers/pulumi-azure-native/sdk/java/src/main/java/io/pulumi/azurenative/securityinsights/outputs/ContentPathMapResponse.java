@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class ContentPathMapResponse {
             this.path = path;
             return this;
         }
-
         public ContentPathMapResponse build() {
             return new ContentPathMapResponse(contentType, path);
         }

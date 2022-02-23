@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DedicatedHostAvailableCapacityResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="assetId", required=true)
-    private final String assetId;
+        private final String assetId;
 
     public String getAssetId() {
         return this.assetId;
@@ -37,7 +37,7 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="availableCapacity")
-    private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
+        private final @Nullable DedicatedHostAvailableCapacityResponse availableCapacity;
 
     public Optional<DedicatedHostAvailableCapacityResponse> getAvailableCapacity() {
         return this.availableCapacity == null ? Optional.empty() : Optional.ofNullable(this.availableCapacity);
@@ -48,7 +48,7 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+        private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -107,7 +107,6 @@ public final class DedicatedHostInstanceViewResponse extends io.pulumi.resources
             this.statuses = statuses;
             return this;
         }
-
         public DedicatedHostInstanceViewResponse build() {
             return new DedicatedHostInstanceViewResponse(assetId, availableCapacity, statuses);
         }

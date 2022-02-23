@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ClusterAuthenticatorGroupsConfigGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="securityGroup", required=true)
-    private final Input<String> securityGroup;
+        private final Input<String> securityGroup;
 
     public Input<String> getSecurityGroup() {
         return this.securityGroup;
@@ -61,7 +61,6 @@ public final class ClusterAuthenticatorGroupsConfigGetArgs extends io.pulumi.res
             this.securityGroup = Input.of(Objects.requireNonNull(securityGroup));
             return this;
         }
-
         public ClusterAuthenticatorGroupsConfigGetArgs build() {
             return new ClusterAuthenticatorGroupsConfigGetArgs(securityGroup);
         }

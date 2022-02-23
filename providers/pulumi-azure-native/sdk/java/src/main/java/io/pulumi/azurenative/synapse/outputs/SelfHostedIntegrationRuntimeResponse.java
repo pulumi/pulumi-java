@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.outputs;
 import io.pulumi.azurenative.synapse.outputs.LinkedIntegrationRuntimeKeyAuthorizationResponse;
 import io.pulumi.azurenative.synapse.outputs.LinkedIntegrationRuntimeRbacAuthorizationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -102,7 +102,6 @@ public final class SelfHostedIntegrationRuntimeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeResponse build() {
             return new SelfHostedIntegrationRuntimeResponse(description, linkedInfo, type);
         }

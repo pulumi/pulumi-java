@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * 
      */
     @InputImport(name="minimumVersion")
-    private final @Nullable Input<String> minimumVersion;
+        private final @Nullable Input<String> minimumVersion;
 
     public Input<String> getMinimumVersion() {
         return this.minimumVersion == null ? Input.empty() : this.minimumVersion;
@@ -34,7 +34,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * 
      */
     @InputImport(name="osType", required=true)
-    private final Input<String> osType;
+        private final Input<String> osType;
 
     public Input<String> getOsType() {
         return this.osType;
@@ -45,7 +45,7 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
      * 
      */
     @InputImport(name="requireVerifiedChromeOs")
-    private final @Nullable Input<Boolean> requireVerifiedChromeOs;
+        private final @Nullable Input<Boolean> requireVerifiedChromeOs;
 
     public Input<Boolean> getRequireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs == null ? Input.empty() : this.requireVerifiedChromeOs;
@@ -119,7 +119,6 @@ public final class AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs exte
             this.requireVerifiedChromeOs = Input.ofNullable(requireVerifiedChromeOs);
             return this;
         }
-
         public AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs build() {
             return new AccessLevelBasicConditionDevicePolicyOsConstraintGetArgs(minimumVersion, osType, requireVerifiedChromeOs);
         }

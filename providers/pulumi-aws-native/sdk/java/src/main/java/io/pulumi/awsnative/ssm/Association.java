@@ -11,8 +11,8 @@ import io.pulumi.awsnative.ssm.outputs.AssociationInstanceAssociationOutputLocat
 import io.pulumi.awsnative.ssm.outputs.AssociationTarget;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -195,13 +195,6 @@ public class Association extends io.pulumi.resources.CustomResource {
         return this.waitForSuccessTimeoutSeconds;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Association(String name) {
-        super("aws-native:ssm:Association", name, AssociationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

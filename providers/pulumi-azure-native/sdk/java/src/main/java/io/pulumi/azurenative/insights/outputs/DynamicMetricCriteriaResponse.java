@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DynamicThresholdFailingPeriodsResponse;
 import io.pulumi.azurenative.insights.outputs.MetricDimensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -271,7 +271,6 @@ public final class DynamicMetricCriteriaResponse {
             this.timeAggregation = Objects.requireNonNull(timeAggregation);
             return this;
         }
-
         public DynamicMetricCriteriaResponse build() {
             return new DynamicMetricCriteriaResponse(alertSensitivity, criterionType, dimensions, failingPeriods, ignoreDataBefore, metricName, metricNamespace, name, operator, skipMetricValidation, timeAggregation);
         }

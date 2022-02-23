@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1.inputs.ManagedZoneServiceDirectoryConfigNamespaceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
     public static final ManagedZoneServiceDirectoryConfigResponse Empty = new ManagedZoneServiceDirectoryConfigResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -29,7 +29,7 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
+      private final ManagedZoneServiceDirectoryConfigNamespaceResponse namespace;
 
     public ManagedZoneServiceDirectoryConfigNamespaceResponse getNamespace() {
         return this.namespace;
@@ -78,7 +78,6 @@ public final class ManagedZoneServiceDirectoryConfigResponse extends io.pulumi.r
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigResponse build() {
             return new ManagedZoneServiceDirectoryConfigResponse(kind, namespace);
         }

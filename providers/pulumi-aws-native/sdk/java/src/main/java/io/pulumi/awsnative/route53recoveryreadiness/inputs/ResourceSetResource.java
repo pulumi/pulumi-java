@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetDNSTargetResource;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="componentId")
-    private final @Nullable String componentId;
+        private final @Nullable String componentId;
 
     public Optional<String> getComponentId() {
         return this.componentId == null ? Optional.empty() : Optional.ofNullable(this.componentId);
     }
 
     @InputImport(name="dnsTargetResource")
-    private final @Nullable ResourceSetDNSTargetResource dnsTargetResource;
+        private final @Nullable ResourceSetDNSTargetResource dnsTargetResource;
 
     public Optional<ResourceSetDNSTargetResource> getDnsTargetResource() {
         return this.dnsTargetResource == null ? Optional.empty() : Optional.ofNullable(this.dnsTargetResource);
@@ -43,7 +43,7 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="readinessScopes")
-    private final @Nullable List<String> readinessScopes;
+        private final @Nullable List<String> readinessScopes;
 
     public List<String> getReadinessScopes() {
         return this.readinessScopes == null ? List.of() : this.readinessScopes;
@@ -54,7 +54,7 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceArn")
-    private final @Nullable String resourceArn;
+        private final @Nullable String resourceArn;
 
     public Optional<String> getResourceArn() {
         return this.resourceArn == null ? Optional.empty() : Optional.ofNullable(this.resourceArn);
@@ -123,7 +123,6 @@ public final class ResourceSetResource extends io.pulumi.resources.InvokeArgs {
             this.resourceArn = resourceArn;
             return this;
         }
-
         public ResourceSetResource build() {
             return new ResourceSetResource(componentId, dnsTargetResource, readinessScopes, resourceArn);
         }

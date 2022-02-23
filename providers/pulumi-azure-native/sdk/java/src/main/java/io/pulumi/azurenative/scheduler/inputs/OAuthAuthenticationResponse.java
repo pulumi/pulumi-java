@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable String audience;
+        private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
@@ -30,7 +30,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -41,7 +41,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable String secret;
+        private final @Nullable String secret;
 
     public Optional<String> getSecret() {
         return this.secret == null ? Optional.empty() : Optional.ofNullable(this.secret);
@@ -52,7 +52,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable String tenant;
+        private final @Nullable String tenant;
 
     public Optional<String> getTenant() {
         return this.tenant == null ? Optional.empty() : Optional.ofNullable(this.tenant);
@@ -64,7 +64,7 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -143,7 +143,6 @@ public final class OAuthAuthenticationResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OAuthAuthenticationResponse build() {
             return new OAuthAuthenticationResponse(audience, clientId, secret, tenant, type);
         }

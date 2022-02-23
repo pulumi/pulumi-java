@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bottomPixels", required=true)
-    private final Integer bottomPixels;
+      private final Integer bottomPixels;
 
     public Integer getBottomPixels() {
         return this.bottomPixels;
@@ -32,7 +32,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="leftPixels", required=true)
-    private final Integer leftPixels;
+      private final Integer leftPixels;
 
     public Integer getLeftPixels() {
         return this.leftPixels;
@@ -43,7 +43,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rightPixels", required=true)
-    private final Integer rightPixels;
+      private final Integer rightPixels;
 
     public Integer getRightPixels() {
         return this.rightPixels;
@@ -54,7 +54,7 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topPixels", required=true)
-    private final Integer topPixels;
+      private final Integer topPixels;
 
     public Integer getTopPixels() {
         return this.topPixels;
@@ -123,7 +123,6 @@ public final class PadResponse extends io.pulumi.resources.InvokeArgs {
             this.topPixels = Objects.requireNonNull(topPixels);
             return this;
         }
-
         public PadResponse build() {
             return new PadResponse(bottomPixels, leftPixels, rightPixels, topPixels);
         }

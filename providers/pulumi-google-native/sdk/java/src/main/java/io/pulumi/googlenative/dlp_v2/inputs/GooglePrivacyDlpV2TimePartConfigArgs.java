@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2TimePartConfigPartToExtract;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partToExtract")
-    private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
+      private final @Nullable Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> partToExtract;
 
     public Input<GooglePrivacyDlpV2TimePartConfigPartToExtract> getPartToExtract() {
         return this.partToExtract == null ? Input.empty() : this.partToExtract;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2TimePartConfigArgs extends io.pulumi.resour
             this.partToExtract = Input.ofNullable(partToExtract);
             return this;
         }
-
         public GooglePrivacyDlpV2TimePartConfigArgs build() {
             return new GooglePrivacyDlpV2TimePartConfigArgs(partToExtract);
         }

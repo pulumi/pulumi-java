@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.FixedOrPercentResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class AutoscalingPolicyScaleDownControlResponse {
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
         }
-
         public AutoscalingPolicyScaleDownControlResponse build() {
             return new AutoscalingPolicyScaleDownControlResponse(maxScaledDownReplicas, timeWindowSec);
         }

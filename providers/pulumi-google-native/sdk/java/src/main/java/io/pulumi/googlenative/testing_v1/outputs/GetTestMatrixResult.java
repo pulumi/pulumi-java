@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoResponse;
 import io.pulumi.googlenative.testing_v1.outputs.EnvironmentMatrixResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ResultStorageResponse;
@@ -313,7 +313,6 @@ public final class GetTestMatrixResult {
             this.timestamp = Objects.requireNonNull(timestamp);
             return this;
         }
-
         public GetTestMatrixResult build() {
             return new GetTestMatrixResult(clientInfo, environmentMatrix, failFast, flakyTestAttempts, invalidMatrixDetails, outcomeSummary, project, resultStorage, state, testExecutions, testMatrixId, testSpecification, timestamp);
         }

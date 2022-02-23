@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resources.outputs;
 import io.pulumi.azurenative.resources.outputs.AliasPathMetadataResponse;
 import io.pulumi.azurenative.resources.outputs.AliasPathResponse;
 import io.pulumi.azurenative.resources.outputs.AliasPatternResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -164,7 +164,6 @@ public final class AliasResponse {
             this.type = type;
             return this;
         }
-
         public AliasResponse build() {
             return new AliasResponse(defaultMetadata, defaultPath, defaultPattern, name, paths, type);
         }

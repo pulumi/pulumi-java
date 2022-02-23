@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
      * 
      */
     @InputImport(name="maximum")
-    private final @Nullable Input<Integer> maximum;
+        private final @Nullable Input<Integer> maximum;
 
     public Input<Integer> getMaximum() {
         return this.maximum == null ? Input.empty() : this.maximum;
@@ -31,7 +31,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
      * 
      */
     @InputImport(name="minimum")
-    private final @Nullable Input<Integer> minimum;
+        private final @Nullable Input<Integer> minimum;
 
     public Input<Integer> getMinimum() {
         return this.minimum == null ? Input.empty() : this.minimum;
@@ -44,7 +44,7 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+        private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -118,7 +118,6 @@ public final class ClusterClusterAutoscalingResourceLimitGetArgs extends io.pulu
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public ClusterClusterAutoscalingResourceLimitGetArgs build() {
             return new ClusterClusterAutoscalingResourceLimitGetArgs(maximum, minimum, resourceType);
         }

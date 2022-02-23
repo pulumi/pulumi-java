@@ -11,7 +11,7 @@ import io.pulumi.azurenative.notificationhubs.outputs.MpnsCredentialResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SharedAccessAuthorizationRulePropertiesResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
 import io.pulumi.azurenative.notificationhubs.outputs.WnsCredentialResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -338,7 +338,6 @@ public final class GetNotificationHubResult {
             this.wnsCredential = wnsCredential;
             return this;
         }
-
         public GetNotificationHubResult build() {
             return new GetNotificationHubResult(admCredential, apnsCredential, authorizationRules, baiduCredential, gcmCredential, id, location, mpnsCredential, name, registrationTtl, sku, tags, type, wnsCredential);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.azurenative.solutions.inputs.ApplicationNotificationEndpointResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ApplicationNotificationPolicyResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="notificationEndpoints", required=true)
-    private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
+        private final List<ApplicationNotificationEndpointResponse> notificationEndpoints;
 
     public List<ApplicationNotificationEndpointResponse> getNotificationEndpoints() {
         return this.notificationEndpoints;
@@ -60,7 +60,6 @@ public final class ApplicationNotificationPolicyResponse extends io.pulumi.resou
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
-
         public ApplicationNotificationPolicyResponse build() {
             return new ApplicationNotificationPolicyResponse(notificationEndpoints);
         }

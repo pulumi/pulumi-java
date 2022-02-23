@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentDefinitionResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentResultResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1RolloutConfigResponse;
@@ -353,7 +353,6 @@ public final class GetExperimentResult {
             this.variantsHistory = Objects.requireNonNull(variantsHistory);
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(createTime, definition, description, displayName, endTime, experimentLength, lastUpdateTime, name, result, rolloutConfig, rolloutFailureReason, rolloutState, startTime, state, variantsHistory);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.BillingAccountExclusionArgs;
 import io.pulumi.gcp.logging.inputs.BillingAccountExclusionState;
@@ -103,13 +103,6 @@ public class BillingAccountExclusion extends io.pulumi.resources.CustomResource 
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BillingAccountExclusion(String name) {
-        super("gcp:logging/billingAccountExclusion:BillingAccountExclusion", name, BillingAccountExclusionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

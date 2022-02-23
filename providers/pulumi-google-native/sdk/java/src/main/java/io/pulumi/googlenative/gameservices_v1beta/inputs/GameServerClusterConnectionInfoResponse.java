@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1beta.inputs.GkeClusterReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="gkeClusterReference", required=true)
-    private final GkeClusterReferenceResponse gkeClusterReference;
+      private final GkeClusterReferenceResponse gkeClusterReference;
 
     public GkeClusterReferenceResponse getGkeClusterReference() {
         return this.gkeClusterReference;
@@ -33,7 +33,7 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -82,7 +82,6 @@ public final class GameServerClusterConnectionInfoResponse extends io.pulumi.res
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public GameServerClusterConnectionInfoResponse build() {
             return new GameServerClusterConnectionInfoResponse(gkeClusterReference, namespace);
         }

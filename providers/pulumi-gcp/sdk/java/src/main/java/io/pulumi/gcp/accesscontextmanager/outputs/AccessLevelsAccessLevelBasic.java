@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasicCondition;
 import java.lang.String;
 import java.util.List;
@@ -92,7 +92,6 @@ public final class AccessLevelsAccessLevelBasic {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public AccessLevelsAccessLevelBasic build() {
             return new AccessLevelsAccessLevelBasic(combiningFunction, conditions);
         }

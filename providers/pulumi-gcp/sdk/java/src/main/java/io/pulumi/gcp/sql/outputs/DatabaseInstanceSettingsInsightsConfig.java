@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class DatabaseInstanceSettingsInsightsConfig {
             this.recordClientAddress = recordClientAddress;
             return this;
         }
-
         public DatabaseInstanceSettingsInsightsConfig build() {
             return new DatabaseInstanceSettingsInsightsConfig(queryInsightsEnabled, queryStringLength, recordApplicationTags, recordClientAddress);
         }

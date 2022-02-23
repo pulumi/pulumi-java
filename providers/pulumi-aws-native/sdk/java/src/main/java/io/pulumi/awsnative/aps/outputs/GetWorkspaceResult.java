@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.aps.outputs;
 
 import io.pulumi.awsnative.aps.outputs.WorkspaceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class GetWorkspaceResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(alertManagerDefinition, alias, arn, prometheusEndpoint, tags, workspaceId);
         }

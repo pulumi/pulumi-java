@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.BucketLifecycleRuleAction;
 import io.pulumi.gcp.storage.outputs.BucketLifecycleRuleCondition;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class BucketLifecycleRule {
             this.condition = Objects.requireNonNull(condition);
             return this;
         }
-
         public BucketLifecycleRule build() {
             return new BucketLifecycleRule(action, condition);
         }

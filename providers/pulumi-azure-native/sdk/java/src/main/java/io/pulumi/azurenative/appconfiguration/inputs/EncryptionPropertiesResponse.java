@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appconfiguration.inputs;
 
 import io.pulumi.azurenative.appconfiguration.inputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
+        private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
 
     public Optional<KeyVaultPropertiesResponse> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Optional.empty() : Optional.ofNullable(this.keyVaultProperties);
@@ -61,7 +61,6 @@ public final class EncryptionPropertiesResponse extends io.pulumi.resources.Invo
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public EncryptionPropertiesResponse build() {
             return new EncryptionPropertiesResponse(keyVaultProperties);
         }

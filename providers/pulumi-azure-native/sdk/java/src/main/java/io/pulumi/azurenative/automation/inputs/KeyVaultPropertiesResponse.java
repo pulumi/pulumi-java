@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable String keyName;
+        private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
@@ -34,7 +34,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable String keyVersion;
+        private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -45,7 +45,7 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyvaultUri")
-    private final @Nullable String keyvaultUri;
+        private final @Nullable String keyvaultUri;
 
     public Optional<String> getKeyvaultUri() {
         return this.keyvaultUri == null ? Optional.empty() : Optional.ofNullable(this.keyvaultUri);
@@ -104,7 +104,6 @@ public final class KeyVaultPropertiesResponse extends io.pulumi.resources.Invoke
             this.keyvaultUri = keyvaultUri;
             return this;
         }
-
         public KeyVaultPropertiesResponse build() {
             return new KeyVaultPropertiesResponse(keyName, keyVersion, keyvaultUri);
         }

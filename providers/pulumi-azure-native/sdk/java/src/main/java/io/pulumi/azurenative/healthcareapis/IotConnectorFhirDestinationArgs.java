@@ -7,7 +7,7 @@ import io.pulumi.azurenative.healthcareapis.enums.IotIdentityResolutionType;
 import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fhirDestinationName")
-    private final @Nullable Input<String> fhirDestinationName;
+        private final @Nullable Input<String> fhirDestinationName;
 
     public Input<String> getFhirDestinationName() {
         return this.fhirDestinationName == null ? Input.empty() : this.fhirDestinationName;
@@ -33,7 +33,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fhirMapping", required=true)
-    private final Input<IotMappingPropertiesArgs> fhirMapping;
+        private final Input<IotMappingPropertiesArgs> fhirMapping;
 
     public Input<IotMappingPropertiesArgs> getFhirMapping() {
         return this.fhirMapping;
@@ -44,7 +44,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fhirServiceResourceId", required=true)
-    private final Input<String> fhirServiceResourceId;
+        private final Input<String> fhirServiceResourceId;
 
     public Input<String> getFhirServiceResourceId() {
         return this.fhirServiceResourceId;
@@ -55,7 +55,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iotConnectorName", required=true)
-    private final Input<String> iotConnectorName;
+        private final Input<String> iotConnectorName;
 
     public Input<String> getIotConnectorName() {
         return this.iotConnectorName;
@@ -66,7 +66,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceIdentityResolutionType", required=true)
-    private final Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
+        private final Input<Either<String,IotIdentityResolutionType>> resourceIdentityResolutionType;
 
     public Input<Either<String,IotIdentityResolutionType>> getResourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
@@ -99,7 +99,7 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -248,7 +248,6 @@ public final class IotConnectorFhirDestinationArgs extends io.pulumi.resources.R
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public IotConnectorFhirDestinationArgs build() {
             return new IotConnectorFhirDestinationArgs(fhirDestinationName, fhirMapping, fhirServiceResourceId, iotConnectorName, location, resourceGroupName, resourceIdentityResolutionType, workspaceName);
         }

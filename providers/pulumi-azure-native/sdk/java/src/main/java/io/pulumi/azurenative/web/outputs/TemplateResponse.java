@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.outputs;
 import io.pulumi.azurenative.web.outputs.ContainerResponse;
 import io.pulumi.azurenative.web.outputs.DaprResponse;
 import io.pulumi.azurenative.web.outputs.ScaleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -122,7 +122,6 @@ public final class TemplateResponse {
             this.scale = scale;
             return this;
         }
-
         public TemplateResponse build() {
             return new TemplateResponse(containers, dapr, revisionSuffix, scale);
         }

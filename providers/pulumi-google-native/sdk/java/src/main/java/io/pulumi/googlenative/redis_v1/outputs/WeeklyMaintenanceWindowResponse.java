@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.redis_v1.outputs.TimeOfDayResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class WeeklyMaintenanceWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public WeeklyMaintenanceWindowResponse build() {
             return new WeeklyMaintenanceWindowResponse(day, duration, startTime);
         }

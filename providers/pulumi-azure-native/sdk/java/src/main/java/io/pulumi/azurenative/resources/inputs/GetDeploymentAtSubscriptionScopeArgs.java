@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+        private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -55,7 +55,6 @@ public final class GetDeploymentAtSubscriptionScopeArgs extends io.pulumi.resour
             this.deploymentName = Objects.requireNonNull(deploymentName);
             return this;
         }
-
         public GetDeploymentAtSubscriptionScopeArgs build() {
             return new GetDeploymentAtSubscriptionScopeArgs(deploymentName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceDisk", required=true)
-    private final String sourceDisk;
+      private final String sourceDisk;
 
     public String getSourceDisk() {
         return this.sourceDisk;
@@ -43,7 +43,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageBytes", required=true)
-    private final String storageBytes;
+      private final String storageBytes;
 
     public String getStorageBytes() {
         return this.storageBytes;
@@ -54,7 +54,7 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageBytesStatus", required=true)
-    private final String storageBytesStatus;
+      private final String storageBytesStatus;
 
     public String getStorageBytesStatus() {
         return this.storageBytesStatus;
@@ -123,7 +123,6 @@ public final class SavedDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.storageBytesStatus = Objects.requireNonNull(storageBytesStatus);
             return this;
         }
-
         public SavedDiskResponse build() {
             return new SavedDiskResponse(kind, sourceDisk, storageBytes, storageBytesStatus);
         }

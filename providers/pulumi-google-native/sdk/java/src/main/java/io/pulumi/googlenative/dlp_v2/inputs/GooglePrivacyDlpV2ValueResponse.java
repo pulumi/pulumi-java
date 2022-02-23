@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeDateResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GoogleTypeTimeOfDayResponse;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="booleanValue", required=true)
-    private final Boolean booleanValue;
+      private final Boolean booleanValue;
 
     public Boolean getBooleanValue() {
         return this.booleanValue;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dateValue", required=true)
-    private final GoogleTypeDateResponse dateValue;
+      private final GoogleTypeDateResponse dateValue;
 
     public GoogleTypeDateResponse getDateValue() {
         return this.dateValue;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dayOfWeekValue", required=true)
-    private final String dayOfWeekValue;
+      private final String dayOfWeekValue;
 
     public String getDayOfWeekValue() {
         return this.dayOfWeekValue;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="floatValue", required=true)
-    private final Double floatValue;
+      private final Double floatValue;
 
     public Double getFloatValue() {
         return this.floatValue;
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="integerValue", required=true)
-    private final String integerValue;
+      private final String integerValue;
 
     public String getIntegerValue() {
         return this.integerValue;
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="stringValue", required=true)
-    private final String stringValue;
+      private final String stringValue;
 
     public String getStringValue() {
         return this.stringValue;
@@ -91,7 +91,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeValue", required=true)
-    private final GoogleTypeTimeOfDayResponse timeValue;
+      private final GoogleTypeTimeOfDayResponse timeValue;
 
     public GoogleTypeTimeOfDayResponse getTimeValue() {
         return this.timeValue;
@@ -102,7 +102,7 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timestampValue", required=true)
-    private final String timestampValue;
+      private final String timestampValue;
 
     public String getTimestampValue() {
         return this.timestampValue;
@@ -211,7 +211,6 @@ public final class GooglePrivacyDlpV2ValueResponse extends io.pulumi.resources.I
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueResponse build() {
             return new GooglePrivacyDlpV2ValueResponse(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }

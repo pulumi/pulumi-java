@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.inputs.SourceCostAllocationResourceArgs;
 import io.pulumi.azurenative.costmanagement.inputs.TargetCostAllocationResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sourceResources")
-    private final @Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources;
+        private final @Nullable Input<List<SourceCostAllocationResourceArgs>> sourceResources;
 
     public Input<List<SourceCostAllocationResourceArgs>> getSourceResources() {
         return this.sourceResources == null ? Input.empty() : this.sourceResources;
@@ -36,7 +36,7 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources;
+        private final @Nullable Input<List<TargetCostAllocationResourceArgs>> targetResources;
 
     public Input<List<TargetCostAllocationResourceArgs>> getTargetResources() {
         return this.targetResources == null ? Input.empty() : this.targetResources;
@@ -95,7 +95,6 @@ public final class CostAllocationRuleDetailsArgs extends io.pulumi.resources.Res
             this.targetResources = Input.ofNullable(targetResources);
             return this;
         }
-
         public CostAllocationRuleDetailsArgs build() {
             return new CostAllocationRuleDetailsArgs(sourceResources, targetResources);
         }

@@ -9,8 +9,8 @@ import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectOptions;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayConnectTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -120,13 +120,6 @@ public class TransitGatewayConnect extends io.pulumi.resources.CustomResource {
         return this.transportTransitGatewayAttachmentId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TransitGatewayConnect(String name) {
-        super("aws-native:ec2:TransitGatewayConnect", name, TransitGatewayConnectArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

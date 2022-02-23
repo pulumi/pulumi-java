@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isErrorType", required=true)
-    private final Boolean isErrorType;
+      private final Boolean isErrorType;
 
     public Boolean getIsErrorType() {
         return this.isErrorType;
@@ -33,7 +33,7 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -82,7 +82,6 @@ public final class CustomErrorRuleResponse extends io.pulumi.resources.InvokeArg
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public CustomErrorRuleResponse build() {
             return new CustomErrorRuleResponse(isErrorType, selector);
         }

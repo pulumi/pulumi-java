@@ -9,8 +9,8 @@ import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -147,13 +147,6 @@ public class SynapseWorkspaceSqlPoolTableDataSetMapping extends io.pulumi.resour
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SynapseWorkspaceSqlPoolTableDataSetMapping(String name) {
-        super("azure-native:datashare:SynapseWorkspaceSqlPoolTableDataSetMapping", name, SynapseWorkspaceSqlPoolTableDataSetMappingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

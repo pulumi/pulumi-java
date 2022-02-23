@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -245,7 +245,6 @@ public final class GetSqlDWTableDataSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlDWTableDataSetResult build() {
             return new GetSqlDWTableDataSetResult(dataSetId, dataWarehouseName, id, kind, name, schemaName, sqlServerResourceId, systemData, tableName, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeName", required=true)
-    private final String routeName;
+        private final String routeName;
 
     public String getRouteName() {
         return this.routeName;
@@ -39,7 +39,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeTableName", required=true)
-    private final String routeTableName;
+        private final String routeTableName;
 
     public String getRouteTableName() {
         return this.routeTableName;
@@ -98,7 +98,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.routeTableName = Objects.requireNonNull(routeTableName);
             return this;
         }
-
         public GetRouteArgs build() {
             return new GetRouteArgs(resourceGroupName, routeName, routeTableName);
         }

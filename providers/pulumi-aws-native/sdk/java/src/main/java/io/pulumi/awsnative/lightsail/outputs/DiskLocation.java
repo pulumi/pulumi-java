@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class DiskLocation {
             this.regionName = regionName;
             return this;
         }
-
         public DiskLocation build() {
             return new DiskLocation(availabilityZone, regionName);
         }

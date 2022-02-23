@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSqlVirtualMachineGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlVirtualMachineGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sqlVirtualMachineGroupName", required=true)
-    private final String sqlVirtualMachineGroupName;
+        private final String sqlVirtualMachineGroupName;
 
     public String getSqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
@@ -77,7 +77,6 @@ public final class GetSqlVirtualMachineGroupArgs extends io.pulumi.resources.Inv
             this.sqlVirtualMachineGroupName = Objects.requireNonNull(sqlVirtualMachineGroupName);
             return this;
         }
-
         public GetSqlVirtualMachineGroupArgs build() {
             return new GetSqlVirtualMachineGroupArgs(resourceGroupName, sqlVirtualMachineGroupName);
         }

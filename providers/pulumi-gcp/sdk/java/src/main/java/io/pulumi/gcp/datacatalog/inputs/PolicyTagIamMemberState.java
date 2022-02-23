@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
     public static final PolicyTagIamMemberState Empty = new PolicyTagIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<PolicyTagIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<PolicyTagIamMemberConditionGetArgs> condition;
 
     public Input<PolicyTagIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -45,7 +45,7 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyTag")
-    private final @Nullable Input<String> policyTag;
+        private final @Nullable Input<String> policyTag;
 
     public Input<String> getPolicyTag() {
         return this.policyTag == null ? Input.empty() : this.policyTag;
@@ -58,7 +58,7 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -162,7 +162,6 @@ public final class PolicyTagIamMemberState extends io.pulumi.resources.ResourceA
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public PolicyTagIamMemberState build() {
             return new PolicyTagIamMemberState(condition, etag, member, policyTag, role);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class SkuCapacityResponse {
             this.scaleType = scaleType;
             return this;
         }
-
         public SkuCapacityResponse build() {
             return new SkuCapacityResponse($default, elasticMaximum, maximum, minimum, scaleType);
         }

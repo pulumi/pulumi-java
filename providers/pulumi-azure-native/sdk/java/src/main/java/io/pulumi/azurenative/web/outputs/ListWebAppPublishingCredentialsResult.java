@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -223,7 +223,6 @@ public final class ListWebAppPublishingCredentialsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppPublishingCredentialsResult build() {
             return new ListWebAppPublishingCredentialsResult(id, kind, name, publishingPassword, publishingPasswordHash, publishingPasswordHashSalt, publishingUserName, scmUri, type);
         }

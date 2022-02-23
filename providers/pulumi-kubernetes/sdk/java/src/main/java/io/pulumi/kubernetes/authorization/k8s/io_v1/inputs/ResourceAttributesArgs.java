@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<String> group;
+        private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -34,7 +34,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -56,7 +56,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+        private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -67,7 +67,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="subresource")
-    private final @Nullable Input<String> subresource;
+        private final @Nullable Input<String> subresource;
 
     public Input<String> getSubresource() {
         return this.subresource == null ? Input.empty() : this.subresource;
@@ -78,7 +78,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="verb")
-    private final @Nullable Input<String> verb;
+        private final @Nullable Input<String> verb;
 
     public Input<String> getVerb() {
         return this.verb == null ? Input.empty() : this.verb;
@@ -89,7 +89,7 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -223,7 +223,6 @@ public final class ResourceAttributesArgs extends io.pulumi.resources.ResourceAr
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ResourceAttributesArgs build() {
             return new ResourceAttributesArgs(group, name, namespace, resource, subresource, verb, version);
         }

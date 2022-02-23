@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.SearchApplicationArgs;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DataSourceRestrictionResponse;
@@ -181,13 +181,6 @@ public class SearchApplication extends io.pulumi.resources.CustomResource {
         return this.sourceConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SearchApplication(String name) {
-        super("google-native:cloudsearch/v1:SearchApplication", name, SearchApplicationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

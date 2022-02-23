@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.discovery.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.EndpointSliceArgs;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.Endpoint;
@@ -108,13 +108,6 @@ public class EndpointSlice extends io.pulumi.resources.CustomResource {
         return this.ports;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EndpointSlice(String name) {
-        super("kubernetes:discovery.k8s.io/v1beta1:EndpointSlice", name, EndpointSliceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

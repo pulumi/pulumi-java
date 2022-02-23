@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ModelExplainabilityJobDefinitionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionTag build() {
             return new ModelExplainabilityJobDefinitionTag(key, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.O365BreakOutCategoryPoliciesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class O365PolicyPropertiesResponse {
             this.breakOutCategories = breakOutCategories;
             return this;
         }
-
         public O365PolicyPropertiesResponse build() {
             return new O365PolicyPropertiesResponse(breakOutCategories);
         }

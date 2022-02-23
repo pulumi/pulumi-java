@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ConnectionMonitorEndpointFilterType;
 import io.pulumi.azurenative.network.inputs.ConnectionMonitorEndpointFilterItemArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items;
+        private final @Nullable Input<List<ConnectionMonitorEndpointFilterItemArgs>> items;
 
     public Input<List<ConnectionMonitorEndpointFilterItemArgs>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -38,7 +38,7 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type;
+        private final @Nullable Input<Either<String,ConnectionMonitorEndpointFilterType>> type;
 
     public Input<Either<String,ConnectionMonitorEndpointFilterType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -97,7 +97,6 @@ public final class ConnectionMonitorEndpointFilterArgs extends io.pulumi.resourc
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ConnectionMonitorEndpointFilterArgs build() {
             return new ConnectionMonitorEndpointFilterArgs(items, type);
         }

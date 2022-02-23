@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesFilter")
-    private final @Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter;
+      private final @Nullable Input<TimeSeriesFilterArgs> timeSeriesFilter;
 
     public Input<TimeSeriesFilterArgs> getTimeSeriesFilter() {
         return this.timeSeriesFilter == null ? Input.empty() : this.timeSeriesFilter;
@@ -36,7 +36,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesFilterRatio")
-    private final @Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
+      private final @Nullable Input<TimeSeriesFilterRatioArgs> timeSeriesFilterRatio;
 
     public Input<TimeSeriesFilterRatioArgs> getTimeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio == null ? Input.empty() : this.timeSeriesFilterRatio;
@@ -47,7 +47,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeSeriesQueryLanguage")
-    private final @Nullable Input<String> timeSeriesQueryLanguage;
+      private final @Nullable Input<String> timeSeriesQueryLanguage;
 
     public Input<String> getTimeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage == null ? Input.empty() : this.timeSeriesQueryLanguage;
@@ -58,7 +58,7 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="unitOverride")
-    private final @Nullable Input<String> unitOverride;
+      private final @Nullable Input<String> unitOverride;
 
     public Input<String> getUnitOverride() {
         return this.unitOverride == null ? Input.empty() : this.unitOverride;
@@ -147,7 +147,6 @@ public final class TimeSeriesQueryArgs extends io.pulumi.resources.ResourceArgs 
             this.unitOverride = Input.ofNullable(unitOverride);
             return this;
         }
-
         public TimeSeriesQueryArgs build() {
             return new TimeSeriesQueryArgs(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
         }

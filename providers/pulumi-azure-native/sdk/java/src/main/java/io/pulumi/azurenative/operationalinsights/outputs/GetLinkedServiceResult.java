@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetLinkedServiceResult {
             this.writeAccessResourceId = writeAccessResourceId;
             return this;
         }
-
         public GetLinkedServiceResult build() {
             return new GetLinkedServiceResult(id, name, provisioningState, resourceId, tags, type, writeAccessResourceId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automanage.outputs;
 
 import io.pulumi.azurenative.automanage.outputs.ConfigurationProfilePreferencePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class GetConfigurationProfilePreferenceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationProfilePreferenceResult build() {
             return new GetConfigurationProfilePreferenceResult(id, location, name, properties, tags, type);
         }

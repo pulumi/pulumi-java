@@ -5,7 +5,7 @@ package io.pulumi.azurenative.signalrservice.inputs;
 
 import io.pulumi.azurenative.signalrservice.inputs.NetworkACLResponse;
 import io.pulumi.azurenative.signalrservice.inputs.PrivateEndpointACLResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable String defaultAction;
+        private final @Nullable String defaultAction;
 
     public Optional<String> getDefaultAction() {
         return this.defaultAction == null ? Optional.empty() : Optional.ofNullable(this.defaultAction);
@@ -37,7 +37,7 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="privateEndpoints")
-    private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
+        private final @Nullable List<PrivateEndpointACLResponse> privateEndpoints;
 
     public List<PrivateEndpointACLResponse> getPrivateEndpoints() {
         return this.privateEndpoints == null ? List.of() : this.privateEndpoints;
@@ -48,7 +48,7 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="publicNetwork")
-    private final @Nullable NetworkACLResponse publicNetwork;
+        private final @Nullable NetworkACLResponse publicNetwork;
 
     public Optional<NetworkACLResponse> getPublicNetwork() {
         return this.publicNetwork == null ? Optional.empty() : Optional.ofNullable(this.publicNetwork);
@@ -107,7 +107,6 @@ public final class SignalRNetworkACLsResponse extends io.pulumi.resources.Invoke
             this.publicNetwork = publicNetwork;
             return this;
         }
-
         public SignalRNetworkACLsResponse build() {
             return new SignalRNetworkACLsResponse(defaultAction, privateEndpoints, publicNetwork);
         }

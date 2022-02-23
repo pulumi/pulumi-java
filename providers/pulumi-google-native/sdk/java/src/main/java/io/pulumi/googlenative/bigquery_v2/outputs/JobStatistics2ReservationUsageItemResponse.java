@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class JobStatistics2ReservationUsageItemResponse {
             this.slotMs = Objects.requireNonNull(slotMs);
             return this;
         }
-
         public JobStatistics2ReservationUsageItemResponse build() {
             return new JobStatistics2ReservationUsageItemResponse(name, slotMs);
         }

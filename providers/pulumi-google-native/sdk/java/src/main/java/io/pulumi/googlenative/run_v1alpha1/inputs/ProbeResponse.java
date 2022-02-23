@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ExecActionResponse;
 import io.pulumi.googlenative.run_v1alpha1.inputs.HTTPGetActionResponse;
 import io.pulumi.googlenative.run_v1alpha1.inputs.TCPSocketActionResponse;
@@ -24,7 +24,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exec", required=true)
-    private final ExecActionResponse exec;
+      private final ExecActionResponse exec;
 
     public ExecActionResponse getExec() {
         return this.exec;
@@ -35,7 +35,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="failureThreshold", required=true)
-    private final Integer failureThreshold;
+      private final Integer failureThreshold;
 
     public Integer getFailureThreshold() {
         return this.failureThreshold;
@@ -46,7 +46,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpGet", required=true)
-    private final HTTPGetActionResponse httpGet;
+      private final HTTPGetActionResponse httpGet;
 
     public HTTPGetActionResponse getHttpGet() {
         return this.httpGet;
@@ -57,7 +57,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="initialDelaySeconds", required=true)
-    private final Integer initialDelaySeconds;
+      private final Integer initialDelaySeconds;
 
     public Integer getInitialDelaySeconds() {
         return this.initialDelaySeconds;
@@ -68,7 +68,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="periodSeconds", required=true)
-    private final Integer periodSeconds;
+      private final Integer periodSeconds;
 
     public Integer getPeriodSeconds() {
         return this.periodSeconds;
@@ -79,7 +79,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="successThreshold", required=true)
-    private final Integer successThreshold;
+      private final Integer successThreshold;
 
     public Integer getSuccessThreshold() {
         return this.successThreshold;
@@ -90,7 +90,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tcpSocket", required=true)
-    private final TCPSocketActionResponse tcpSocket;
+      private final TCPSocketActionResponse tcpSocket;
 
     public TCPSocketActionResponse getTcpSocket() {
         return this.tcpSocket;
@@ -101,7 +101,7 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeoutSeconds", required=true)
-    private final Integer timeoutSeconds;
+      private final Integer timeoutSeconds;
 
     public Integer getTimeoutSeconds() {
         return this.timeoutSeconds;
@@ -210,7 +210,6 @@ public final class ProbeResponse extends io.pulumi.resources.InvokeArgs {
             this.timeoutSeconds = Objects.requireNonNull(timeoutSeconds);
             return this;
         }
-
         public ProbeResponse build() {
             return new ProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, tcpSocket, timeoutSeconds);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ImageDiskReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final String createOption;
+        private final String createOption;
 
     public String getCreateOption() {
         return this.createOption;
@@ -37,7 +37,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="galleryImageReference")
-    private final @Nullable ImageDiskReferenceResponse galleryImageReference;
+        private final @Nullable ImageDiskReferenceResponse galleryImageReference;
 
     public Optional<ImageDiskReferenceResponse> getGalleryImageReference() {
         return this.galleryImageReference == null ? Optional.empty() : Optional.ofNullable(this.galleryImageReference);
@@ -48,7 +48,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable ImageDiskReferenceResponse imageReference;
+        private final @Nullable ImageDiskReferenceResponse imageReference;
 
     public Optional<ImageDiskReferenceResponse> getImageReference() {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
@@ -59,7 +59,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logicalSectorSize")
-    private final @Nullable Integer logicalSectorSize;
+        private final @Nullable Integer logicalSectorSize;
 
     public Optional<Integer> getLogicalSectorSize() {
         return this.logicalSectorSize == null ? Optional.empty() : Optional.ofNullable(this.logicalSectorSize);
@@ -70,7 +70,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable String sourceResourceId;
+        private final @Nullable String sourceResourceId;
 
     public Optional<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Optional.empty() : Optional.ofNullable(this.sourceResourceId);
@@ -81,7 +81,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceUniqueId", required=true)
-    private final String sourceUniqueId;
+        private final String sourceUniqueId;
 
     public String getSourceUniqueId() {
         return this.sourceUniqueId;
@@ -92,7 +92,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceUri")
-    private final @Nullable String sourceUri;
+        private final @Nullable String sourceUri;
 
     public Optional<String> getSourceUri() {
         return this.sourceUri == null ? Optional.empty() : Optional.ofNullable(this.sourceUri);
@@ -103,7 +103,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-    private final @Nullable String storageAccountId;
+        private final @Nullable String storageAccountId;
 
     public Optional<String> getStorageAccountId() {
         return this.storageAccountId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountId);
@@ -114,7 +114,7 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uploadSizeBytes")
-    private final @Nullable Double uploadSizeBytes;
+        private final @Nullable Double uploadSizeBytes;
 
     public Optional<Double> getUploadSizeBytes() {
         return this.uploadSizeBytes == null ? Optional.empty() : Optional.ofNullable(this.uploadSizeBytes);
@@ -233,7 +233,6 @@ public final class CreationDataResponse extends io.pulumi.resources.InvokeArgs {
             this.uploadSizeBytes = uploadSizeBytes;
             return this;
         }
-
         public CreationDataResponse build() {
             return new CreationDataResponse(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUniqueId, sourceUri, storageAccountId, uploadSizeBytes);
         }

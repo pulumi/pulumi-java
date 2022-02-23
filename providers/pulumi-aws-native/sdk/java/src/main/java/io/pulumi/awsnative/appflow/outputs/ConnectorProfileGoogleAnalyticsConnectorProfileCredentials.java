@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,7 +140,6 @@ public final class ConnectorProfileGoogleAnalyticsConnectorProfileCredentials {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public ConnectorProfileGoogleAnalyticsConnectorProfileCredentials build() {
             return new ConnectorProfileGoogleAnalyticsConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest, refreshToken);
         }

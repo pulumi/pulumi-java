@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -30,7 +30,7 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable String repository;
+        private final @Nullable String repository;
 
     public Optional<String> getRepository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
@@ -79,7 +79,6 @@ public final class RCranPackageResponse extends io.pulumi.resources.InvokeArgs {
             this.repository = repository;
             return this;
         }
-
         public RCranPackageResponse build() {
             return new RCranPackageResponse(name, repository);
         }

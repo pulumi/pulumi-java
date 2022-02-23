@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatastoreTimestampPartition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -60,7 +60,6 @@ public final class DatastorePartition {
             this.timestampPartition = timestampPartition;
             return this;
         }
-
         public DatastorePartition build() {
             return new DatastorePartition(partition, timestampPartition);
         }

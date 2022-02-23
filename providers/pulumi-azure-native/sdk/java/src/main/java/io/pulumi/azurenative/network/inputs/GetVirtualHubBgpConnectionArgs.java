@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final String connectionName;
+        private final String connectionName;
 
     public String getConnectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-    private final String virtualHubName;
+        private final String virtualHubName;
 
     public String getVirtualHubName() {
         return this.virtualHubName;
@@ -98,7 +98,6 @@ public final class GetVirtualHubBgpConnectionArgs extends io.pulumi.resources.In
             this.virtualHubName = Objects.requireNonNull(virtualHubName);
             return this;
         }
-
         public GetVirtualHubBgpConnectionArgs build() {
             return new GetVirtualHubBgpConnectionArgs(connectionName, resourceGroupName, virtualHubName);
         }

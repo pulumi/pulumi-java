@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.PubsubResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pubsub", required=true)
-    private final PubsubResponse pubsub;
+      private final PubsubResponse pubsub;
 
     public PubsubResponse getPubsub() {
         return this.pubsub;
@@ -59,7 +59,6 @@ public final class TransportResponse extends io.pulumi.resources.InvokeArgs {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }
-
         public TransportResponse build() {
             return new TransportResponse(pubsub);
         }

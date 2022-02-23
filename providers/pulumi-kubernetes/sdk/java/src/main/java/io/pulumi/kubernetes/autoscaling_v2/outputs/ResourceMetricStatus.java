@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricValueStatus;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ResourceMetricStatus {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ResourceMetricStatus build() {
             return new ResourceMetricStatus(current, name);
         }

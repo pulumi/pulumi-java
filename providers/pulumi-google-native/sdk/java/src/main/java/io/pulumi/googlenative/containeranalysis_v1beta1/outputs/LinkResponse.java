@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ByProductsResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.GrafeasV1beta1IntotoArtifactResponse;
@@ -141,7 +141,6 @@ public final class LinkResponse {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-
         public LinkResponse build() {
             return new LinkResponse(byproducts, command, environment, materials, products);
         }

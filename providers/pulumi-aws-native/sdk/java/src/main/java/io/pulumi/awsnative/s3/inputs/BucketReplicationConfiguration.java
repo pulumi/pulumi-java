@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketReplicationRule;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BucketReplicationConfiguration extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+        private final String role;
 
     public String getRole() {
         return this.role;
@@ -34,7 +34,7 @@ public final class BucketReplicationConfiguration extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<BucketReplicationRule> rules;
+        private final List<BucketReplicationRule> rules;
 
     public List<BucketReplicationRule> getRules() {
         return this.rules;
@@ -83,7 +83,6 @@ public final class BucketReplicationConfiguration extends io.pulumi.resources.In
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketReplicationConfiguration build() {
             return new BucketReplicationConfiguration(role, rules);
         }

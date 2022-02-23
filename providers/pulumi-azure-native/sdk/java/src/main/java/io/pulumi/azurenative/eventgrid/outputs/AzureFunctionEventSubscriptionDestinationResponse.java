@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class AzureFunctionEventSubscriptionDestinationResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public AzureFunctionEventSubscriptionDestinationResponse build() {
             return new AzureFunctionEventSubscriptionDestinationResponse(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
         }

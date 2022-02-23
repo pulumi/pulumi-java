@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.eventarc_v1.outputs.CloudRunResponse;
 import io.pulumi.googlenative.eventarc_v1.outputs.GKEResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class DestinationResponse {
             this.gke = Objects.requireNonNull(gke);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudFunction, cloudRun, gke);
         }

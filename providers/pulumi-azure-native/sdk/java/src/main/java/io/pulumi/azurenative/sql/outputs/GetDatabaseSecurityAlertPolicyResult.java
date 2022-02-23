@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -290,7 +290,6 @@ public final class GetDatabaseSecurityAlertPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseSecurityAlertPolicyResult build() {
             return new GetDatabaseSecurityAlertPolicyResult(creationTime, disabledAlerts, emailAccountAdmins, emailAddresses, id, name, retentionDays, state, storageAccountAccessKey, storageEndpoint, systemData, type);
         }

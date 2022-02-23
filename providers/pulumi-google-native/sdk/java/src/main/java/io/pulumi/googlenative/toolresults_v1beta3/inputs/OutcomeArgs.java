@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.OutcomeSummary;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.FailureDetailArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.InconclusiveDetailArgs;
@@ -27,7 +27,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureDetail")
-    private final @Nullable Input<FailureDetailArgs> failureDetail;
+      private final @Nullable Input<FailureDetailArgs> failureDetail;
 
     public Input<FailureDetailArgs> getFailureDetail() {
         return this.failureDetail == null ? Input.empty() : this.failureDetail;
@@ -38,7 +38,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inconclusiveDetail")
-    private final @Nullable Input<InconclusiveDetailArgs> inconclusiveDetail;
+      private final @Nullable Input<InconclusiveDetailArgs> inconclusiveDetail;
 
     public Input<InconclusiveDetailArgs> getInconclusiveDetail() {
         return this.inconclusiveDetail == null ? Input.empty() : this.inconclusiveDetail;
@@ -49,7 +49,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skippedDetail")
-    private final @Nullable Input<SkippedDetailArgs> skippedDetail;
+      private final @Nullable Input<SkippedDetailArgs> skippedDetail;
 
     public Input<SkippedDetailArgs> getSkippedDetail() {
         return this.skippedDetail == null ? Input.empty() : this.skippedDetail;
@@ -60,7 +60,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successDetail")
-    private final @Nullable Input<SuccessDetailArgs> successDetail;
+      private final @Nullable Input<SuccessDetailArgs> successDetail;
 
     public Input<SuccessDetailArgs> getSuccessDetail() {
         return this.successDetail == null ? Input.empty() : this.successDetail;
@@ -71,7 +71,7 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="summary")
-    private final @Nullable Input<OutcomeSummary> summary;
+      private final @Nullable Input<OutcomeSummary> summary;
 
     public Input<OutcomeSummary> getSummary() {
         return this.summary == null ? Input.empty() : this.summary;
@@ -175,7 +175,6 @@ public final class OutcomeArgs extends io.pulumi.resources.ResourceArgs {
             this.summary = Input.ofNullable(summary);
             return this;
         }
-
         public OutcomeArgs build() {
             return new OutcomeArgs(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
         }

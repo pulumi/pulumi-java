@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.ConformancePackInputParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class GetConformancePackResult {
             this.deliveryS3KeyPrefix = deliveryS3KeyPrefix;
             return this;
         }
-
         public GetConformancePackResult build() {
             return new GetConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix);
         }

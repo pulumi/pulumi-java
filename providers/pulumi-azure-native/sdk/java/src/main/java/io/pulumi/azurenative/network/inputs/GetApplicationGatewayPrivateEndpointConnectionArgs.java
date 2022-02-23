@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="applicationGatewayName", required=true)
-    private final String applicationGatewayName;
+        private final String applicationGatewayName;
 
     public String getApplicationGatewayName() {
         return this.applicationGatewayName;
@@ -28,7 +28,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final String connectionName;
+        private final String connectionName;
 
     public String getConnectionName() {
         return this.connectionName;
@@ -39,7 +39,7 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetApplicationGatewayPrivateEndpointConnectionArgs extends io
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetApplicationGatewayPrivateEndpointConnectionArgs build() {
             return new GetApplicationGatewayPrivateEndpointConnectionArgs(applicationGatewayName, connectionName, resourceGroupName);
         }

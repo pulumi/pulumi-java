@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.healthcareapis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<Object> content;
+        private final @Nullable Input<Object> content;
 
     public Input<Object> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -66,7 +66,6 @@ public final class IotMappingPropertiesArgs extends io.pulumi.resources.Resource
             this.content = Input.ofNullable(content);
             return this;
         }
-
         public IotMappingPropertiesArgs build() {
             return new IotMappingPropertiesArgs(content);
         }

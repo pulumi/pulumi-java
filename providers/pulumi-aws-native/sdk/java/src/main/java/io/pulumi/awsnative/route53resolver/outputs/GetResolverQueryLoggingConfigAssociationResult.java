@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationError;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigAssociationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class GetResolverQueryLoggingConfigAssociationResult {
             this.status = status;
             return this;
         }
-
         public GetResolverQueryLoggingConfigAssociationResult build() {
             return new GetResolverQueryLoggingConfigAssociationResult(creationTime, error, errorMessage, id, status);
         }

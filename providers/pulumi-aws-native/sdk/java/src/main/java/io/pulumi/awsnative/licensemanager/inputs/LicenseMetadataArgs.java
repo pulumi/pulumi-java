@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.licensemanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class LicenseMetadataArgs extends io.pulumi.resources.ResourceArgs 
     public static final LicenseMetadataArgs Empty = new LicenseMetadataArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class LicenseMetadataArgs extends io.pulumi.resources.ResourceArgs 
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public LicenseMetadataArgs build() {
             return new LicenseMetadataArgs(name, value);
         }

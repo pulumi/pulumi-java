@@ -4,7 +4,7 @@
 package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="nextRotationTime", required=true)
-    private final Input<String> nextRotationTime;
+        private final Input<String> nextRotationTime;
 
     public Input<String> getNextRotationTime() {
         return this.nextRotationTime;
@@ -29,7 +29,7 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rotationPeriod", required=true)
-    private final Input<String> rotationPeriod;
+        private final Input<String> rotationPeriod;
 
     public Input<String> getRotationPeriod() {
         return this.rotationPeriod;
@@ -88,7 +88,6 @@ public final class WorkloadKmsSettingsArgs extends io.pulumi.resources.ResourceA
             this.rotationPeriod = Input.of(Objects.requireNonNull(rotationPeriod));
             return this;
         }
-
         public WorkloadKmsSettingsArgs build() {
             return new WorkloadKmsSettingsArgs(nextRotationTime, rotationPeriod);
         }

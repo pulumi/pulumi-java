@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mimeType")
-    private final @Nullable Input<String> mimeType;
+        private final @Nullable Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType == null ? Input.empty() : this.mimeType;
@@ -46,7 +46,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unpack")
-    private final @Nullable Input<Boolean> unpack;
+        private final @Nullable Input<Boolean> unpack;
 
     public Input<Boolean> getUnpack() {
         return this.unpack == null ? Input.empty() : this.unpack;
@@ -57,7 +57,7 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -146,7 +146,6 @@ public final class ImageAssetArgs extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public ImageAssetArgs build() {
             return new ImageAssetArgs(id, mimeType, unpack, url);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -120,7 +120,6 @@ public final class RecurrencePatternResponse {
             this.weekDays = weekDays;
             return this;
         }
-
         public RecurrencePatternResponse build() {
             return new RecurrencePatternResponse(expirationDate, frequency, interval, weekDays);
         }

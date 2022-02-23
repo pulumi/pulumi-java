@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServ
 import io.pulumi.azurenative.machinelearningservices.outputs.PersonalComputeInstanceSettingsResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SetupScriptsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -317,7 +317,6 @@ public final class ComputeInstanceResponseProperties {
             this.vmSize = vmSize;
             return this;
         }
-
         public ComputeInstanceResponseProperties build() {
             return new ComputeInstanceResponseProperties(applicationSharingPolicy, applications, computeInstanceAuthorizationType, connectivityEndpoints, createdBy, errors, lastOperation, personalComputeInstanceSettings, setupScripts, sshSettings, state, subnet, vmSize);
         }

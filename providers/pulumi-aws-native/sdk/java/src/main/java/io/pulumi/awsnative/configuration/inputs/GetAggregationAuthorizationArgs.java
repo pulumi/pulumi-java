@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAggregationAuthorizationArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="aggregationAuthorizationArn", required=true)
-    private final String aggregationAuthorizationArn;
+        private final String aggregationAuthorizationArn;
 
     public String getAggregationAuthorizationArn() {
         return this.aggregationAuthorizationArn;
@@ -55,7 +55,6 @@ public final class GetAggregationAuthorizationArgs extends io.pulumi.resources.I
             this.aggregationAuthorizationArn = Objects.requireNonNull(aggregationAuthorizationArn);
             return this;
         }
-
         public GetAggregationAuthorizationArgs build() {
             return new GetAggregationAuthorizationArgs(aggregationAuthorizationArn);
         }

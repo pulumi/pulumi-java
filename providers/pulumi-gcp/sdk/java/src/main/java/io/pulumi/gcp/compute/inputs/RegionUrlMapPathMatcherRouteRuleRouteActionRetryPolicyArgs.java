@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs ex
      * 
      */
     @InputImport(name="numRetries", required=true)
-    private final Input<Integer> numRetries;
+        private final Input<Integer> numRetries;
 
     public Input<Integer> getNumRetries() {
         return this.numRetries;
@@ -34,7 +34,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs ex
      * 
      */
     @InputImport(name="perTryTimeout")
-    private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
+        private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs> perTryTimeout;
 
     public Input<RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeoutArgs> getPerTryTimeout() {
         return this.perTryTimeout == null ? Input.empty() : this.perTryTimeout;
@@ -65,7 +65,7 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs ex
      * 
      */
     @InputImport(name="retryConditions")
-    private final @Nullable Input<List<String>> retryConditions;
+        private final @Nullable Input<List<String>> retryConditions;
 
     public Input<List<String>> getRetryConditions() {
         return this.retryConditions == null ? Input.empty() : this.retryConditions;
@@ -139,7 +139,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs ex
             this.retryConditions = Input.ofNullable(retryConditions);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyArgs(numRetries, perTryTimeout, retryConditions);
         }

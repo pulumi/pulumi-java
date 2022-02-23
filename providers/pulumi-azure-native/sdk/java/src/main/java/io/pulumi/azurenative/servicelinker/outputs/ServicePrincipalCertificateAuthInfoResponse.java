@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -118,7 +118,6 @@ public final class ServicePrincipalCertificateAuthInfoResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ServicePrincipalCertificateAuthInfoResponse build() {
             return new ServicePrincipalCertificateAuthInfoResponse(authType, certificate, clientId, principalId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<String> cpu;
+        private final @Nullable Input<String> cpu;
 
     public Input<String> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -34,7 +34,7 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="memory")
-    private final @Nullable Input<String> memory;
+        private final @Nullable Input<String> memory;
 
     public Input<String> getMemory() {
         return this.memory == null ? Input.empty() : this.memory;
@@ -93,7 +93,6 @@ public final class GatewayResourceRequestsArgs extends io.pulumi.resources.Resou
             this.memory = Input.ofNullable(memory);
             return this;
         }
-
         public GatewayResourceRequestsArgs build() {
             return new GatewayResourceRequestsArgs(cpu, memory);
         }

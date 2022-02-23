@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.apps_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1.StatefulSetListArgs;
 import io.pulumi.kubernetes.apps_v1.outputs.StatefulSet;
@@ -78,13 +78,6 @@ public class StatefulSetList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public StatefulSetList(String name) {
-        super("kubernetes:apps/v1:StatefulSetList", name, StatefulSetListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

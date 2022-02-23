@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyFilterRuleCollectionResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyNatRuleCollectionResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -186,7 +186,6 @@ public final class GetFirewallPolicyRuleCollectionGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallPolicyRuleCollectionGroupResult build() {
             return new GetFirewallPolicyRuleCollectionGroupResult(etag, id, name, priority, provisioningState, ruleCollections, type);
         }

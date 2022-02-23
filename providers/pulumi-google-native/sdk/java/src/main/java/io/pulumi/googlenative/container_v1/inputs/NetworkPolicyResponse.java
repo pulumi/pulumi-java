@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NetworkPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class NetworkPolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="provider", required=true)
-    private final String provider;
+      private final String provider;
 
     public String getProvider() {
         return this.provider;
@@ -82,7 +82,6 @@ public final class NetworkPolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.provider = Objects.requireNonNull(provider);
             return this;
         }
-
         public NetworkPolicyResponse build() {
             return new NetworkPolicyResponse(enabled, provider);
         }

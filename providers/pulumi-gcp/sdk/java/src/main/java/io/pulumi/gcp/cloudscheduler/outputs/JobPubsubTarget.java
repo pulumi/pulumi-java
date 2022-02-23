@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -110,7 +110,6 @@ public final class JobPubsubTarget {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public JobPubsubTarget build() {
             return new JobPubsubTarget(attributes, data, topicName);
         }

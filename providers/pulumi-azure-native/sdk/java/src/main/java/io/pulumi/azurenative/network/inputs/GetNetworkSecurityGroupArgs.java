@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="networkSecurityGroupName", required=true)
-    private final String networkSecurityGroupName;
+        private final String networkSecurityGroupName;
 
     public String getNetworkSecurityGroupName() {
         return this.networkSecurityGroupName;
@@ -41,7 +41,7 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class GetNetworkSecurityGroupArgs extends io.pulumi.resources.Invok
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNetworkSecurityGroupArgs build() {
             return new GetNetworkSecurityGroupArgs(expand, networkSecurityGroupName, resourceGroupName);
         }

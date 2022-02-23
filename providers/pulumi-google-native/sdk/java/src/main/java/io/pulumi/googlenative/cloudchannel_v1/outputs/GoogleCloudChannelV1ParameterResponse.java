@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1ValueResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class GoogleCloudChannelV1ParameterResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudChannelV1ParameterResponse build() {
             return new GoogleCloudChannelV1ParameterResponse(editable, name, value);
         }

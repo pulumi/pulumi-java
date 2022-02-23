@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneServiceDirectoryConfigNamespaceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +67,6 @@ public final class ManagedZoneServiceDirectoryConfigResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public ManagedZoneServiceDirectoryConfigResponse build() {
             return new ManagedZoneServiceDirectoryConfigResponse(kind, namespace);
         }

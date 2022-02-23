@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigApt;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigGoo;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPostStep;
@@ -225,7 +225,6 @@ public final class PatchDeploymentPatchConfig {
             this.zypper = zypper;
             return this;
         }
-
         public PatchDeploymentPatchConfig build() {
             return new PatchDeploymentPatchConfig(apt, goo, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

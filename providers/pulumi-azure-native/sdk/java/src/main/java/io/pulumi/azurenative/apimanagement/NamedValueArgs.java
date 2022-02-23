@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.inputs.KeyVaultContractCreatePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVault")
-    private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
+        private final @Nullable Input<KeyVaultContractCreatePropertiesArgs> keyVault;
 
     public Input<KeyVaultContractCreatePropertiesArgs> getKeyVault() {
         return this.keyVault == null ? Input.empty() : this.keyVault;
@@ -44,7 +44,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namedValueId")
-    private final @Nullable Input<String> namedValueId;
+        private final @Nullable Input<String> namedValueId;
 
     public Input<String> getNamedValueId() {
         return this.namedValueId == null ? Input.empty() : this.namedValueId;
@@ -55,7 +55,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secret")
-    private final @Nullable Input<Boolean> secret;
+        private final @Nullable Input<Boolean> secret;
 
     public Input<Boolean> getSecret() {
         return this.secret == null ? Input.empty() : this.secret;
@@ -77,7 +77,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -88,7 +88,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -248,7 +248,6 @@ public final class NamedValueArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public NamedValueArgs build() {
             return new NamedValueArgs(displayName, keyVault, namedValueId, resourceGroupName, secret, serviceName, tags, value);
         }

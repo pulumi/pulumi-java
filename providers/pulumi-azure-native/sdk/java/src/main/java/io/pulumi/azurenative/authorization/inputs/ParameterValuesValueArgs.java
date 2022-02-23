@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Object> value;
+        private final @Nullable Input<Object> value;
 
     public Input<Object> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -66,7 +66,6 @@ public final class ParameterValuesValueArgs extends io.pulumi.resources.Resource
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ParameterValuesValueArgs build() {
             return new ParameterValuesValueArgs(value);
         }

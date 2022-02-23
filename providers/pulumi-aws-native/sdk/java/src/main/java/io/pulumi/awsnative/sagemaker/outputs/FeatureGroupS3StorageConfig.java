@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class FeatureGroupS3StorageConfig {
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public FeatureGroupS3StorageConfig build() {
             return new FeatureGroupS3StorageConfig(kmsKeyId, s3Uri);
         }

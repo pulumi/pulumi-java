@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1SentimentConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class GoogleCloudDatalabelingV1beta1TextClassificationConfigRespons
             this.sentimentConfig = Objects.requireNonNull(sentimentConfig);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1TextClassificationConfigResponse(allowMultiLabel, annotationSpecSet, sentimentConfig);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.SizeInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -143,7 +143,6 @@ public final class EnvironmentSizeResponse {
             this.vmSizes = vmSizes;
             return this;
         }
-
         public EnvironmentSizeResponse build() {
             return new EnvironmentSizeResponse(maxPrice, minMemory, minNumberOfCores, name, vmSizes);
         }

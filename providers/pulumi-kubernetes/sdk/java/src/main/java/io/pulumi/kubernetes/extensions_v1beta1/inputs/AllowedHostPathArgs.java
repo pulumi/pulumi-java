@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="pathPrefix")
-    private final @Nullable Input<String> pathPrefix;
+        private final @Nullable Input<String> pathPrefix;
 
     public Input<String> getPathPrefix() {
         return this.pathPrefix == null ? Input.empty() : this.pathPrefix;
@@ -37,7 +37,7 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -96,7 +96,6 @@ public final class AllowedHostPathArgs extends io.pulumi.resources.ResourceArgs 
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public AllowedHostPathArgs build() {
             return new AllowedHostPathArgs(pathPrefix, readOnly);
         }

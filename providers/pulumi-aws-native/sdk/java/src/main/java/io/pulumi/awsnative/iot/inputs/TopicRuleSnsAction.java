@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class TopicRuleSnsAction extends io.pulumi.resources.InvokeArgs {
     public static final TopicRuleSnsAction Empty = new TopicRuleSnsAction();
 
     @InputImport(name="messageFormat")
-    private final @Nullable String messageFormat;
+        private final @Nullable String messageFormat;
 
     public Optional<String> getMessageFormat() {
         return this.messageFormat == null ? Optional.empty() : Optional.ofNullable(this.messageFormat);
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="targetArn", required=true)
-    private final String targetArn;
+        private final String targetArn;
 
     public String getTargetArn() {
         return this.targetArn;
@@ -88,7 +88,6 @@ public final class TopicRuleSnsAction extends io.pulumi.resources.InvokeArgs {
             this.targetArn = Objects.requireNonNull(targetArn);
             return this;
         }
-
         public TopicRuleSnsAction build() {
             return new TopicRuleSnsAction(messageFormat, roleArn, targetArn);
         }

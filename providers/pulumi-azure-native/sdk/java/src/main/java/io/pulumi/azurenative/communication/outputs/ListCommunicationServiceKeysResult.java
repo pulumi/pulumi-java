@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.communication.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class ListCommunicationServiceKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListCommunicationServiceKeysResult build() {
             return new ListCommunicationServiceKeysResult(primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

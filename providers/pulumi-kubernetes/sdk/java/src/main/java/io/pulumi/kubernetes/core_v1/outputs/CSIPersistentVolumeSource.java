@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SecretReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -226,7 +226,6 @@ public final class CSIPersistentVolumeSource {
             this.volumeHandle = Objects.requireNonNull(volumeHandle);
             return this;
         }
-
         public CSIPersistentVolumeSource build() {
             return new CSIPersistentVolumeSource(controllerExpandSecretRef, controllerPublishSecretRef, driver, fsType, nodePublishSecretRef, nodeStageSecretRef, readOnly, volumeAttributes, volumeHandle);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.AdditionalUnattendContentResponse;
 import io.pulumi.azurenative.compute.outputs.PatchSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.WinRMConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -165,7 +165,6 @@ public final class WindowsConfigurationResponse {
             this.winRM = winRM;
             return this;
         }
-
         public WindowsConfigurationResponse build() {
             return new WindowsConfigurationResponse(additionalUnattendContent, enableAutomaticUpdates, patchSettings, provisionVMAgent, timeZone, winRM);
         }

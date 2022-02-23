@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.VaultPrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,7 +75,6 @@ public final class PrivateEndpointConnectionVaultPropertiesResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public PrivateEndpointConnectionVaultPropertiesResponse build() {
             return new PrivateEndpointConnectionVaultPropertiesResponse(id, properties);
         }

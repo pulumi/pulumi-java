@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
     public static final SecurityPolicyDdosProtectionConfigResponse Empty = new SecurityPolicyDdosProtectionConfigResponse();
 
     @InputImport(name="ddosProtection", required=true)
-    private final String ddosProtection;
+      private final String ddosProtection;
 
     public String getDdosProtection() {
         return this.ddosProtection;
@@ -51,7 +51,6 @@ public final class SecurityPolicyDdosProtectionConfigResponse extends io.pulumi.
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
         }
-
         public SecurityPolicyDdosProtectionConfigResponse build() {
             return new SecurityPolicyDdosProtectionConfigResponse(ddosProtection);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -30,7 +30,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final Input<String> projectId;
+        private final Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId;
@@ -42,7 +42,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
      * 
      */
     @InputImport(name="tableId")
-    private final @Nullable Input<String> tableId;
+        private final @Nullable Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId == null ? Input.empty() : this.tableId;
@@ -116,7 +116,6 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigT
             this.tableId = Input.ofNullable(tableId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableGetArgs(datasetId, projectId, tableId);
         }

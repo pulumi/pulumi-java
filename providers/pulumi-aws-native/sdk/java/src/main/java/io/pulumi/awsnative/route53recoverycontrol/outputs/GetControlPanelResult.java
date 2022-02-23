@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
 import io.pulumi.awsnative.route53recoverycontrol.enums.ControlPanelStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class GetControlPanelResult {
             this.status = status;
             return this;
         }
-
         public GetControlPanelResult build() {
             return new GetControlPanelResult(controlPanelArn, defaultControlPanel, name, routingControlCount, status);
         }

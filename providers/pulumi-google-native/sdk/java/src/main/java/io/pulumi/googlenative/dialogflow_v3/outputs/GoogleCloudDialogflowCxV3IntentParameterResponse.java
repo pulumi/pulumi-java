@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3IntentParameterResponse {
             this.redact = Objects.requireNonNull(redact);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3IntentParameterResponse build() {
             return new GoogleCloudDialogflowCxV3IntentParameterResponse(entityType, isList, redact);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudrun.DomainMappingArgs;
 import io.pulumi.gcp.cloudrun.inputs.DomainMappingState;
@@ -138,13 +138,6 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
         return this.statuses;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DomainMapping(String name) {
-        super("gcp:cloudrun/domainMapping:DomainMapping", name, DomainMappingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

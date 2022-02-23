@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.ConfigMapEnvSourceArgs;
 import io.pulumi.googlenative.run_v1alpha1.inputs.SecretEnvSourceArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configMapRef")
-    private final @Nullable Input<ConfigMapEnvSourceArgs> configMapRef;
+      private final @Nullable Input<ConfigMapEnvSourceArgs> configMapRef;
 
     public Input<ConfigMapEnvSourceArgs> getConfigMapRef() {
         return this.configMapRef == null ? Input.empty() : this.configMapRef;
@@ -36,7 +36,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+      private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -47,7 +47,7 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<SecretEnvSourceArgs> secretRef;
+      private final @Nullable Input<SecretEnvSourceArgs> secretRef;
 
     public Input<SecretEnvSourceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -121,7 +121,6 @@ public final class EnvFromSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.secretRef = Input.ofNullable(secretRef);
             return this;
         }
-
         public EnvFromSourceArgs build() {
             return new EnvFromSourceArgs(configMapRef, prefix, secretRef);
         }

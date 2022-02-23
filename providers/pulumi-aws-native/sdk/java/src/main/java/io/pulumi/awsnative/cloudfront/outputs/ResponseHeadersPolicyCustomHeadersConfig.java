@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyCustomHeader;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,7 +45,6 @@ public final class ResponseHeadersPolicyCustomHeadersConfig {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public ResponseHeadersPolicyCustomHeadersConfig build() {
             return new ResponseHeadersPolicyCustomHeadersConfig(items);
         }

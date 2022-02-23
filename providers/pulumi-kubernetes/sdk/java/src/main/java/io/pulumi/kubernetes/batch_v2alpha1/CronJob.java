@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.batch_v2alpha1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.batch_v2alpha1.CronJobArgs;
 import io.pulumi.kubernetes.batch_v2alpha1.outputs.CronJobSpec;
@@ -94,13 +94,6 @@ public class CronJob extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CronJob(String name) {
-        super("kubernetes:batch/v2alpha1:CronJob", name, CronJobArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

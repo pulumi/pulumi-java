@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigtable.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -85,7 +85,6 @@ public final class GCPolicyMaxAge {
             this.duration = duration;
             return this;
         }
-
         public GCPolicyMaxAge build() {
             return new GCPolicyMaxAge(days, duration);
         }

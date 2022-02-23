@@ -20,7 +20,7 @@ import io.pulumi.awsnative.ec2.outputs.SpotFleetMemoryMiBRequest;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetNetworkInterfaceCountRequest;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTotalLocalStorageGBRequest;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetVCpuCountRangeRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -327,7 +327,6 @@ public final class SpotFleetInstanceRequirementsRequest {
             this.vCpuCount = vCpuCount;
             return this;
         }
-
         public SpotFleetInstanceRequirementsRequest build() {
             return new SpotFleetInstanceRequirementsRequest(acceleratorCount, acceleratorManufacturers, acceleratorNames, acceleratorTotalMemoryMiB, acceleratorTypes, bareMetal, baselineEbsBandwidthMbps, burstablePerformance, cpuManufacturers, excludedInstanceTypes, instanceGenerations, localStorage, localStorageTypes, memoryGiBPerVCpu, memoryMiB, networkInterfaceCount, onDemandMaxPricePercentageOverLowestPrice, requireHibernateSupport, spotMaxPricePercentageOverLowestPrice, totalLocalStorageGB, vCpuCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -141,7 +141,6 @@ public final class ConnectionMonitorTestGroupResponse {
             this.testConfigurations = Objects.requireNonNull(testConfigurations);
             return this;
         }
-
         public ConnectionMonitorTestGroupResponse build() {
             return new ConnectionMonitorTestGroupResponse(destinations, disable, name, sources, testConfigurations);
         }

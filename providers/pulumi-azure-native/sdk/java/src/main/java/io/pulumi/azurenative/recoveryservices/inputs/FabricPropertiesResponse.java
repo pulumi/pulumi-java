@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmFabricSpecificDeta
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareV2FabricSpecificDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VmmDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="bcdrState")
-    private final @Nullable String bcdrState;
+        private final @Nullable String bcdrState;
 
     public Optional<String> getBcdrState() {
         return this.bcdrState == null ? Optional.empty() : Optional.ofNullable(this.bcdrState);
@@ -44,7 +44,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="customDetails")
-    private final @Nullable Object customDetails;
+        private final @Nullable Object customDetails;
 
     public Object getCustomDetails() {
         return this.customDetails == null ? null : this.customDetails;
@@ -55,7 +55,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="encryptionDetails")
-    private final @Nullable EncryptionDetailsResponse encryptionDetails;
+        private final @Nullable EncryptionDetailsResponse encryptionDetails;
 
     public Optional<EncryptionDetailsResponse> getEncryptionDetails() {
         return this.encryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.encryptionDetails);
@@ -66,7 +66,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable String friendlyName;
+        private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -77,7 +77,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="health")
-    private final @Nullable String health;
+        private final @Nullable String health;
 
     public Optional<String> getHealth() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
@@ -88,7 +88,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="healthErrorDetails")
-    private final @Nullable List<HealthErrorResponse> healthErrorDetails;
+        private final @Nullable List<HealthErrorResponse> healthErrorDetails;
 
     public List<HealthErrorResponse> getHealthErrorDetails() {
         return this.healthErrorDetails == null ? List.of() : this.healthErrorDetails;
@@ -99,7 +99,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="internalIdentifier")
-    private final @Nullable String internalIdentifier;
+        private final @Nullable String internalIdentifier;
 
     public Optional<String> getInternalIdentifier() {
         return this.internalIdentifier == null ? Optional.empty() : Optional.ofNullable(this.internalIdentifier);
@@ -110,7 +110,7 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rolloverEncryptionDetails")
-    private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
+        private final @Nullable EncryptionDetailsResponse rolloverEncryptionDetails;
 
     public Optional<EncryptionDetailsResponse> getRolloverEncryptionDetails() {
         return this.rolloverEncryptionDetails == null ? Optional.empty() : Optional.ofNullable(this.rolloverEncryptionDetails);
@@ -219,7 +219,6 @@ public final class FabricPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
         }
-
         public FabricPropertiesResponse build() {
             return new FabricPropertiesResponse(bcdrState, customDetails, encryptionDetails, friendlyName, health, healthErrorDetails, internalIdentifier, rolloverEncryptionDetails);
         }

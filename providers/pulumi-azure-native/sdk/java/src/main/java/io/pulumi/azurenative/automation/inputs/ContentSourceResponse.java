@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.azurenative.automation.inputs.ContentHashResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="hash")
-    private final @Nullable ContentHashResponse hash;
+        private final @Nullable ContentHashResponse hash;
 
     public Optional<ContentHashResponse> getHash() {
         return this.hash == null ? Optional.empty() : Optional.ofNullable(this.hash);
@@ -35,7 +35,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -46,7 +46,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -57,7 +57,7 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -126,7 +126,6 @@ public final class ContentSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.version = version;
             return this;
         }
-
         public ContentSourceResponse build() {
             return new ContentSourceResponse(hash, type, value, version);
         }

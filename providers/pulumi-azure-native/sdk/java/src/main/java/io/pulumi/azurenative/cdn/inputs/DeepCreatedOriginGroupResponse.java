@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.inputs;
 import io.pulumi.azurenative.cdn.inputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.inputs.ResponseBasedOriginErrorDetectionParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="healthProbeSettings")
-    private final @Nullable HealthProbeParametersResponse healthProbeSettings;
+        private final @Nullable HealthProbeParametersResponse healthProbeSettings;
 
     public Optional<HealthProbeParametersResponse> getHealthProbeSettings() {
         return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
@@ -39,7 +39,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="origins", required=true)
-    private final List<ResourceReferenceResponse> origins;
+        private final List<ResourceReferenceResponse> origins;
 
     public List<ResourceReferenceResponse> getOrigins() {
         return this.origins;
@@ -61,7 +61,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="responseBasedOriginErrorDetectionSettings")
-    private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
+        private final @Nullable ResponseBasedOriginErrorDetectionParametersResponse responseBasedOriginErrorDetectionSettings;
 
     public Optional<ResponseBasedOriginErrorDetectionParametersResponse> getResponseBasedOriginErrorDetectionSettings() {
         return this.responseBasedOriginErrorDetectionSettings == null ? Optional.empty() : Optional.ofNullable(this.responseBasedOriginErrorDetectionSettings);
@@ -72,7 +72,7 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
-    private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
+        private final @Nullable Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
     public Optional<Integer> getTrafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes == null ? Optional.empty() : Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
@@ -151,7 +151,6 @@ public final class DeepCreatedOriginGroupResponse extends io.pulumi.resources.In
             this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
-
         public DeepCreatedOriginGroupResponse build() {
             return new DeepCreatedOriginGroupResponse(healthProbeSettings, name, origins, responseBasedOriginErrorDetectionSettings, trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
         }

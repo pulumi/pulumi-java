@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludeDisks")
-    private final @Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks;
+        private final @Nullable Input<List<ApiEntityReferenceArgs>> excludeDisks;
 
     public Input<List<ApiEntityReferenceArgs>> getExcludeDisks() {
         return this.excludeDisks == null ? Input.empty() : this.excludeDisks;
@@ -32,7 +32,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointCollectionName", required=true)
-    private final Input<String> restorePointCollectionName;
+        private final Input<String> restorePointCollectionName;
 
     public Input<String> getRestorePointCollectionName() {
         return this.restorePointCollectionName;
@@ -54,7 +54,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restorePointName")
-    private final @Nullable Input<String> restorePointName;
+        private final @Nullable Input<String> restorePointName;
 
     public Input<String> getRestorePointName() {
         return this.restorePointName == null ? Input.empty() : this.restorePointName;
@@ -65,7 +65,7 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeCreated")
-    private final @Nullable Input<String> timeCreated;
+        private final @Nullable Input<String> timeCreated;
 
     public Input<String> getTimeCreated() {
         return this.timeCreated == null ? Input.empty() : this.timeCreated;
@@ -169,7 +169,6 @@ public final class RestorePointArgs extends io.pulumi.resources.ResourceArgs {
             this.timeCreated = Input.ofNullable(timeCreated);
             return this;
         }
-
         public RestorePointArgs build() {
             return new RestorePointArgs(excludeDisks, resourceGroupName, restorePointCollectionName, restorePointName, timeCreated);
         }

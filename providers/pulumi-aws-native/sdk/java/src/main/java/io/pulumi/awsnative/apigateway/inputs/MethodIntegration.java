@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodIntegrationContentHandling;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationPassthroughBehavior;
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationType;
 import io.pulumi.awsnative.apigateway.inputs.MethodIntegrationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheKeyParameters")
-    private final @Nullable List<String> cacheKeyParameters;
+        private final @Nullable List<String> cacheKeyParameters;
 
     public List<String> getCacheKeyParameters() {
         return this.cacheKeyParameters == null ? List.of() : this.cacheKeyParameters;
@@ -38,7 +38,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cacheNamespace")
-    private final @Nullable String cacheNamespace;
+        private final @Nullable String cacheNamespace;
 
     public Optional<String> getCacheNamespace() {
         return this.cacheNamespace == null ? Optional.empty() : Optional.ofNullable(this.cacheNamespace);
@@ -49,7 +49,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectionId")
-    private final @Nullable String connectionId;
+        private final @Nullable String connectionId;
 
     public Optional<String> getConnectionId() {
         return this.connectionId == null ? Optional.empty() : Optional.ofNullable(this.connectionId);
@@ -60,7 +60,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectionType")
-    private final @Nullable MethodIntegrationConnectionType connectionType;
+        private final @Nullable MethodIntegrationConnectionType connectionType;
 
     public Optional<MethodIntegrationConnectionType> getConnectionType() {
         return this.connectionType == null ? Optional.empty() : Optional.ofNullable(this.connectionType);
@@ -71,7 +71,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentHandling")
-    private final @Nullable MethodIntegrationContentHandling contentHandling;
+        private final @Nullable MethodIntegrationContentHandling contentHandling;
 
     public Optional<MethodIntegrationContentHandling> getContentHandling() {
         return this.contentHandling == null ? Optional.empty() : Optional.ofNullable(this.contentHandling);
@@ -82,7 +82,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable String credentials;
+        private final @Nullable String credentials;
 
     public Optional<String> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -93,7 +93,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="integrationHttpMethod")
-    private final @Nullable String integrationHttpMethod;
+        private final @Nullable String integrationHttpMethod;
 
     public Optional<String> getIntegrationHttpMethod() {
         return this.integrationHttpMethod == null ? Optional.empty() : Optional.ofNullable(this.integrationHttpMethod);
@@ -104,7 +104,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="integrationResponses")
-    private final @Nullable List<MethodIntegrationResponse> integrationResponses;
+        private final @Nullable List<MethodIntegrationResponse> integrationResponses;
 
     public List<MethodIntegrationResponse> getIntegrationResponses() {
         return this.integrationResponses == null ? List.of() : this.integrationResponses;
@@ -115,7 +115,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="passthroughBehavior")
-    private final @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior;
+        private final @Nullable MethodIntegrationPassthroughBehavior passthroughBehavior;
 
     public Optional<MethodIntegrationPassthroughBehavior> getPassthroughBehavior() {
         return this.passthroughBehavior == null ? Optional.empty() : Optional.ofNullable(this.passthroughBehavior);
@@ -126,7 +126,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestParameters")
-    private final @Nullable Object requestParameters;
+        private final @Nullable Object requestParameters;
 
     public Optional<Object> getRequestParameters() {
         return this.requestParameters == null ? Optional.empty() : Optional.ofNullable(this.requestParameters);
@@ -137,7 +137,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requestTemplates")
-    private final @Nullable Object requestTemplates;
+        private final @Nullable Object requestTemplates;
 
     public Optional<Object> getRequestTemplates() {
         return this.requestTemplates == null ? Optional.empty() : Optional.ofNullable(this.requestTemplates);
@@ -148,7 +148,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeoutInMillis")
-    private final @Nullable Integer timeoutInMillis;
+        private final @Nullable Integer timeoutInMillis;
 
     public Optional<Integer> getTimeoutInMillis() {
         return this.timeoutInMillis == null ? Optional.empty() : Optional.ofNullable(this.timeoutInMillis);
@@ -159,7 +159,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final MethodIntegrationType type;
+        private final MethodIntegrationType type;
 
     public MethodIntegrationType getType() {
         return this.type;
@@ -170,7 +170,7 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+        private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -339,7 +339,6 @@ public final class MethodIntegration extends io.pulumi.resources.InvokeArgs {
             this.uri = uri;
             return this;
         }
-
         public MethodIntegration build() {
             return new MethodIntegration(cacheKeyParameters, cacheNamespace, connectionId, connectionType, contentHandling, credentials, integrationHttpMethod, integrationResponses, passthroughBehavior, requestParameters, requestTemplates, timeoutInMillis, type, uri);
         }

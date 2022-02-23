@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetDeltaTimeSessionWindowConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class DatasetLateDataRuleConfigurationArgs extends io.pulumi.resour
     public static final DatasetLateDataRuleConfigurationArgs Empty = new DatasetLateDataRuleConfigurationArgs();
 
     @InputImport(name="deltaTimeSessionWindowConfiguration")
-    private final @Nullable Input<DatasetDeltaTimeSessionWindowConfigurationArgs> deltaTimeSessionWindowConfiguration;
+        private final @Nullable Input<DatasetDeltaTimeSessionWindowConfigurationArgs> deltaTimeSessionWindowConfiguration;
 
     public Input<DatasetDeltaTimeSessionWindowConfigurationArgs> getDeltaTimeSessionWindowConfiguration() {
         return this.deltaTimeSessionWindowConfiguration == null ? Input.empty() : this.deltaTimeSessionWindowConfiguration;
@@ -58,7 +58,6 @@ public final class DatasetLateDataRuleConfigurationArgs extends io.pulumi.resour
             this.deltaTimeSessionWindowConfiguration = Input.ofNullable(deltaTimeSessionWindowConfiguration);
             return this;
         }
-
         public DatasetLateDataRuleConfigurationArgs build() {
             return new DatasetLateDataRuleConfigurationArgs(deltaTimeSessionWindowConfiguration);
         }

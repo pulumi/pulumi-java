@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
      * 
      */
     @InputImport(name="prometheusPort")
-    private final @Nullable Input<String> prometheusPort;
+        private final @Nullable Input<String> prometheusPort;
 
     public Input<String> getPrometheusPort() {
         return this.prometheusPort == null ? Input.empty() : this.prometheusPort;
@@ -66,7 +66,6 @@ public final class ApplicationHAClusterPrometheusExporterArgs extends io.pulumi.
             this.prometheusPort = Input.ofNullable(prometheusPort);
             return this;
         }
-
         public ApplicationHAClusterPrometheusExporterArgs build() {
             return new ApplicationHAClusterPrometheusExporterArgs(prometheusPort);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateExponentialRolloutRateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="exponentialRolloutRate")
-    private final @Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
+        private final @Nullable Input<JobTemplateExponentialRolloutRateArgs> exponentialRolloutRate;
 
     public Input<JobTemplateExponentialRolloutRateArgs> getExponentialRolloutRate() {
         return this.exponentialRolloutRate == null ? Input.empty() : this.exponentialRolloutRate;
@@ -35,7 +35,7 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="maximumPerMinute")
-    private final @Nullable Input<Integer> maximumPerMinute;
+        private final @Nullable Input<Integer> maximumPerMinute;
 
     public Input<Integer> getMaximumPerMinute() {
         return this.maximumPerMinute == null ? Input.empty() : this.maximumPerMinute;
@@ -94,7 +94,6 @@ public final class JobExecutionsRolloutConfigPropertiesArgs extends io.pulumi.re
             this.maximumPerMinute = Input.ofNullable(maximumPerMinute);
             return this;
         }
-
         public JobExecutionsRolloutConfigPropertiesArgs build() {
             return new JobExecutionsRolloutConfigPropertiesArgs(exponentialRolloutRate, maximumPerMinute);
         }

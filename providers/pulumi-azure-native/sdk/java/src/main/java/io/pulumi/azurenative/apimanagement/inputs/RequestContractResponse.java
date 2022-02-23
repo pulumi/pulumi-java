@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.ParameterContractResponse;
 import io.pulumi.azurenative.apimanagement.inputs.RepresentationContractResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -37,7 +37,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable List<ParameterContractResponse> headers;
+        private final @Nullable List<ParameterContractResponse> headers;
 
     public List<ParameterContractResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
@@ -48,7 +48,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="queryParameters")
-    private final @Nullable List<ParameterContractResponse> queryParameters;
+        private final @Nullable List<ParameterContractResponse> queryParameters;
 
     public List<ParameterContractResponse> getQueryParameters() {
         return this.queryParameters == null ? List.of() : this.queryParameters;
@@ -59,7 +59,7 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="representations")
-    private final @Nullable List<RepresentationContractResponse> representations;
+        private final @Nullable List<RepresentationContractResponse> representations;
 
     public List<RepresentationContractResponse> getRepresentations() {
         return this.representations == null ? List.of() : this.representations;
@@ -128,7 +128,6 @@ public final class RequestContractResponse extends io.pulumi.resources.InvokeArg
             this.representations = representations;
             return this;
         }
-
         public RequestContractResponse build() {
             return new RequestContractResponse(description, headers, queryParameters, representations);
         }

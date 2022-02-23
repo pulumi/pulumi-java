@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -353,7 +353,6 @@ public final class GetSyncGroupResult {
             this.usePrivateLinkConnection = usePrivateLinkConnection;
             return this;
         }
-
         public GetSyncGroupResult build() {
             return new GetSyncGroupResult(conflictLoggingRetentionInDays, conflictResolutionPolicy, enableConflictLogging, hubDatabaseUserName, id, interval, lastSyncTime, name, privateEndpointName, schema, sku, syncDatabaseId, syncState, type, usePrivateLinkConnection);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.helm.sh_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class RepositoryOpts {
             this.username = username;
             return this;
         }
-
         public RepositoryOpts build() {
             return new RepositoryOpts(caFile, certFile, keyFile, password, repo, username);
         }

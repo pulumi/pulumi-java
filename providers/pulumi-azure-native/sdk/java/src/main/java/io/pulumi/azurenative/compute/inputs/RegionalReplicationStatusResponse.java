@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="details", required=true)
-    private final String details;
+        private final String details;
 
     public String getDetails() {
         return this.details;
@@ -33,7 +33,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="progress", required=true)
-    private final Integer progress;
+        private final Integer progress;
 
     public Integer getProgress() {
         return this.progress;
@@ -44,7 +44,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+        private final String region;
 
     public String getRegion() {
         return this.region;
@@ -55,7 +55,7 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -124,7 +124,6 @@ public final class RegionalReplicationStatusResponse extends io.pulumi.resources
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public RegionalReplicationStatusResponse build() {
             return new RegionalReplicationStatusResponse(details, progress, region, state);
         }

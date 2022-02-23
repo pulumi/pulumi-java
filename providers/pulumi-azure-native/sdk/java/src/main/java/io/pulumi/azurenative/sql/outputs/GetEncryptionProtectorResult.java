@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -266,7 +266,6 @@ public final class GetEncryptionProtectorResult {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetEncryptionProtectorResult build() {
             return new GetEncryptionProtectorResult(autoRotationEnabled, id, kind, location, name, serverKeyName, serverKeyType, subregion, thumbprint, type, uri);
         }

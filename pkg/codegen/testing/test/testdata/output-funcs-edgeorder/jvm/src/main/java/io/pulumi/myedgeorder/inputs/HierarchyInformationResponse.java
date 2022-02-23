@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="configurationName")
-    private final @Nullable String configurationName;
+      private final @Nullable String configurationName;
 
     public Optional<String> getConfigurationName() {
         return this.configurationName == null ? Optional.empty() : Optional.ofNullable(this.configurationName);
@@ -34,7 +34,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="productFamilyName")
-    private final @Nullable String productFamilyName;
+      private final @Nullable String productFamilyName;
 
     public Optional<String> getProductFamilyName() {
         return this.productFamilyName == null ? Optional.empty() : Optional.ofNullable(this.productFamilyName);
@@ -45,7 +45,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="productLineName")
-    private final @Nullable String productLineName;
+      private final @Nullable String productLineName;
 
     public Optional<String> getProductLineName() {
         return this.productLineName == null ? Optional.empty() : Optional.ofNullable(this.productLineName);
@@ -56,7 +56,7 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="productName")
-    private final @Nullable String productName;
+      private final @Nullable String productName;
 
     public Optional<String> getProductName() {
         return this.productName == null ? Optional.empty() : Optional.ofNullable(this.productName);
@@ -125,7 +125,6 @@ public final class HierarchyInformationResponse extends io.pulumi.resources.Invo
             this.productName = productName;
             return this;
         }
-
         public HierarchyInformationResponse build() {
             return new HierarchyInformationResponse(configurationName, productFamilyName, productLineName, productName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class RollbackConfig {
             this.revision = revision;
             return this;
         }
-
         public RollbackConfig build() {
             return new RollbackConfig(revision);
         }

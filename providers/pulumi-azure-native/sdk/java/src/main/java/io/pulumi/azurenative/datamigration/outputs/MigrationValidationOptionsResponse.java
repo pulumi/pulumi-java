@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class MigrationValidationOptionsResponse {
             this.enableSchemaValidation = enableSchemaValidation;
             return this;
         }
-
         public MigrationValidationOptionsResponse build() {
             return new MigrationValidationOptionsResponse(enableDataIntegrityValidation, enableQueryAnalysisValidation, enableSchemaValidation);
         }

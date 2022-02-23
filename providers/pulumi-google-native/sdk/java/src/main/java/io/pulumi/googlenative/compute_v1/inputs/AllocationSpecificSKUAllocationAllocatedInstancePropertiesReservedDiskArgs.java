@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<String> diskSizeGb;
+      private final @Nullable Input<String> diskSizeGb;
 
     public Input<String> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -31,7 +31,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @InputImport(name="interface")
-    private final @Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
+      private final @Nullable Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> $interface;
 
     public Input<AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskInterface> get$interface() {
         return this.$interface == null ? Input.empty() : this.$interface;
@@ -90,7 +90,6 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.$interface = Input.ofNullable($interface);
             return this;
         }
-
         public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskArgs(diskSizeGb, $interface);
         }

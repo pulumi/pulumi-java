@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.HttpHeaderOptionArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestHeadersToAdd")
-    private final @Nullable Input<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
+      private final @Nullable Input<List<HttpHeaderOptionArgs>> requestHeadersToAdd;
 
     public Input<List<HttpHeaderOptionArgs>> getRequestHeadersToAdd() {
         return this.requestHeadersToAdd == null ? Input.empty() : this.requestHeadersToAdd;
@@ -36,7 +36,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestHeadersToRemove")
-    private final @Nullable Input<List<String>> requestHeadersToRemove;
+      private final @Nullable Input<List<String>> requestHeadersToRemove;
 
     public Input<List<String>> getRequestHeadersToRemove() {
         return this.requestHeadersToRemove == null ? Input.empty() : this.requestHeadersToRemove;
@@ -47,7 +47,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="responseHeadersToAdd")
-    private final @Nullable Input<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
+      private final @Nullable Input<List<HttpHeaderOptionArgs>> responseHeadersToAdd;
 
     public Input<List<HttpHeaderOptionArgs>> getResponseHeadersToAdd() {
         return this.responseHeadersToAdd == null ? Input.empty() : this.responseHeadersToAdd;
@@ -58,7 +58,7 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="responseHeadersToRemove")
-    private final @Nullable Input<List<String>> responseHeadersToRemove;
+      private final @Nullable Input<List<String>> responseHeadersToRemove;
 
     public Input<List<String>> getResponseHeadersToRemove() {
         return this.responseHeadersToRemove == null ? Input.empty() : this.responseHeadersToRemove;
@@ -147,7 +147,6 @@ public final class HttpHeaderActionArgs extends io.pulumi.resources.ResourceArgs
             this.responseHeadersToRemove = Input.ofNullable(responseHeadersToRemove);
             return this;
         }
-
         public HttpHeaderActionArgs build() {
             return new HttpHeaderActionArgs(requestHeadersToAdd, requestHeadersToRemove, responseHeadersToAdd, responseHeadersToRemove);
         }

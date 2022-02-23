@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lambda.enums.EventSourceMappingFunctionResponseTypesI
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingDestinationConfig;
 import io.pulumi.awsnative.lambda.outputs.EventSourceMappingSourceAccessConfiguration;
 import io.pulumi.awsnative.lambda.outputs.FilterCriteriaProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -399,7 +399,6 @@ public final class GetEventSourceMappingResult {
             this.tumblingWindowInSeconds = tumblingWindowInSeconds;
             return this;
         }
-
         public GetEventSourceMappingResult build() {
             return new GetEventSourceMappingResult(batchSize, bisectBatchOnFunctionError, destinationConfig, enabled, filterCriteria, functionName, functionResponseTypes, id, maximumBatchingWindowInSeconds, maximumRecordAgeInSeconds, maximumRetryAttempts, parallelizationFactor, queues, sourceAccessConfigurations, startingPositionTimestamp, topics, tumblingWindowInSeconds);
         }

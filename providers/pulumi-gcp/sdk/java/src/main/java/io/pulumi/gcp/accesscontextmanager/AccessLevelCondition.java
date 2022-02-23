@@ -5,8 +5,8 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelConditionArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelConditionState;
@@ -198,13 +198,6 @@ public class AccessLevelCondition extends io.pulumi.resources.CustomResource {
         return this.requiredAccessLevels;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AccessLevelCondition(String name) {
-        super("gcp:accesscontextmanager/accessLevelCondition:AccessLevelCondition", name, AccessLevelConditionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.m365securityandcompliance.enums.Kind;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesPropertiesArgs;
 import io.pulumi.azurenative.m365securityandcompliance.inputs.ServicesResourceIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ServicesResourceIdentityArgs> identity;
+        private final @Nullable Input<ServicesResourceIdentityArgs> identity;
 
     public Input<ServicesResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -34,7 +34,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Kind> kind;
+        private final Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ServicesPropertiesArgs> properties;
+        private final @Nullable Input<ServicesPropertiesArgs> properties;
 
     public Input<ServicesPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -67,7 +67,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -89,7 +89,7 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,6 @@ public final class PrivateLinkServicesForMIPPolicySyncArgs extends io.pulumi.res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PrivateLinkServicesForMIPPolicySyncArgs build() {
             return new PrivateLinkServicesForMIPPolicySyncArgs(identity, kind, location, properties, resourceGroupName, resourceName, tags);
         }

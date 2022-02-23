@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterLoadBalancerProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -245,7 +245,6 @@ public final class ContainerServiceNetworkProfileResponse {
             this.serviceCidr = serviceCidr;
             return this;
         }
-
         public ContainerServiceNetworkProfileResponse build() {
             return new ContainerServiceNetworkProfileResponse(dnsServiceIP, dockerBridgeCidr, loadBalancerProfile, loadBalancerSku, networkMode, networkPlugin, networkPolicy, outboundType, podCidr, serviceCidr);
         }

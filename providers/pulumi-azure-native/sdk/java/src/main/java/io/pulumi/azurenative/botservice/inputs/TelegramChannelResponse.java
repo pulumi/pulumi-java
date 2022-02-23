@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.TelegramChannelPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class TelegramChannelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="channelName", required=true)
-    private final String channelName;
+        private final String channelName;
 
     public String getChannelName() {
         return this.channelName;
@@ -36,7 +36,7 @@ public final class TelegramChannelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable String etag;
+        private final @Nullable String etag;
 
     public Optional<String> getEtag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
@@ -47,7 +47,7 @@ public final class TelegramChannelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -58,7 +58,7 @@ public final class TelegramChannelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable TelegramChannelPropertiesResponse properties;
+        private final @Nullable TelegramChannelPropertiesResponse properties;
 
     public Optional<TelegramChannelPropertiesResponse> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -69,7 +69,7 @@ public final class TelegramChannelResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -148,7 +148,6 @@ public final class TelegramChannelResponse extends io.pulumi.resources.InvokeArg
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public TelegramChannelResponse build() {
             return new TelegramChannelResponse(channelName, etag, location, properties, provisioningState);
         }

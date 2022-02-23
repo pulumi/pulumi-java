@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.PatchRolloutMode;
 import io.pulumi.googlenative.osconfig_v1beta.inputs.FixedOrPercentArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disruptionBudget")
-    private final @Nullable Input<FixedOrPercentArgs> disruptionBudget;
+      private final @Nullable Input<FixedOrPercentArgs> disruptionBudget;
 
     public Input<FixedOrPercentArgs> getDisruptionBudget() {
         return this.disruptionBudget == null ? Input.empty() : this.disruptionBudget;
@@ -35,7 +35,7 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<PatchRolloutMode> mode;
+      private final @Nullable Input<PatchRolloutMode> mode;
 
     public Input<PatchRolloutMode> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -94,7 +94,6 @@ public final class PatchRolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public PatchRolloutArgs build() {
             return new PatchRolloutArgs(disruptionBudget, mode);
         }

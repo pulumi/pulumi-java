@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationEntryResponse;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationRangeResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="annualizedBaseCompensationRange", required=true)
-    private final CompensationRangeResponse annualizedBaseCompensationRange;
+      private final CompensationRangeResponse annualizedBaseCompensationRange;
 
     public CompensationRangeResponse getAnnualizedBaseCompensationRange() {
         return this.annualizedBaseCompensationRange;
@@ -34,7 +34,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="annualizedTotalCompensationRange", required=true)
-    private final CompensationRangeResponse annualizedTotalCompensationRange;
+      private final CompensationRangeResponse annualizedTotalCompensationRange;
 
     public CompensationRangeResponse getAnnualizedTotalCompensationRange() {
         return this.annualizedTotalCompensationRange;
@@ -45,7 +45,7 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="entries", required=true)
-    private final List<CompensationEntryResponse> entries;
+      private final List<CompensationEntryResponse> entries;
 
     public List<CompensationEntryResponse> getEntries() {
         return this.entries;
@@ -104,7 +104,6 @@ public final class CompensationInfoResponse extends io.pulumi.resources.InvokeAr
             this.entries = Objects.requireNonNull(entries);
             return this;
         }
-
         public CompensationInfoResponse build() {
             return new CompensationInfoResponse(annualizedBaseCompensationRange, annualizedTotalCompensationRange, entries);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collection", required=true)
-    private final Input<String> collection;
+        private final Input<String> collection;
 
     public Input<String> getCollection() {
         return this.collection;
@@ -30,7 +30,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+        private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -41,7 +41,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentId", required=true)
-    private final Input<String> documentId;
+        private final Input<String> documentId;
 
     public Input<String> getDocumentId() {
         return this.documentId;
@@ -52,7 +52,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<String> fields;
+        private final Input<String> fields;
 
     public Input<String> getFields() {
         return this.fields;
@@ -64,7 +64,7 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -168,7 +168,6 @@ public final class DocumentArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DocumentArgs build() {
             return new DocumentArgs(collection, database, documentId, fields, project);
         }

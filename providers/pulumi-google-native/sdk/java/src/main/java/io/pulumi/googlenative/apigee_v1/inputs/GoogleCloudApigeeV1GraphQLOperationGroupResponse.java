@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
      * 
      */
     @InputImport(name="operationConfigType", required=true)
-    private final String operationConfigType;
+      private final String operationConfigType;
 
     public String getOperationConfigType() {
         return this.operationConfigType;
@@ -34,7 +34,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
      * 
      */
     @InputImport(name="operationConfigs", required=true)
-    private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
+      private final List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> operationConfigs;
 
     public List<GoogleCloudApigeeV1GraphQLOperationConfigResponse> getOperationConfigs() {
         return this.operationConfigs;
@@ -83,7 +83,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse extends io.p
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationGroupResponse(operationConfigType, operationConfigs);
         }

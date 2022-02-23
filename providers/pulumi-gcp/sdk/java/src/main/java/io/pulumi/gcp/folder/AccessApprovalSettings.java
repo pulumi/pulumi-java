@@ -5,8 +5,8 @@ package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.AccessApprovalSettingsArgs;
 import io.pulumi.gcp.folder.inputs.AccessApprovalSettingsState;
@@ -125,13 +125,6 @@ public class AccessApprovalSettings extends io.pulumi.resources.CustomResource {
         return this.notificationEmails;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AccessApprovalSettings(String name) {
-        super("gcp:folder/accessApprovalSettings:AccessApprovalSettings", name, AccessApprovalSettingsArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

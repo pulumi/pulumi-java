@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networksecurity_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1.AuthorizationPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1.outputs.RuleResponse;
@@ -120,13 +120,6 @@ public class AuthorizationPolicy extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AuthorizationPolicy(String name) {
-        super("google-native:networksecurity/v1:AuthorizationPolicy", name, AuthorizationPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

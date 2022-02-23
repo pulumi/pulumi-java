@@ -12,8 +12,8 @@ import io.pulumi.awsnative.eks.outputs.ClusterResourcesVpcConfig;
 import io.pulumi.awsnative.eks.outputs.ClusterTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -189,13 +189,6 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Cluster(String name) {
-        super("aws-native:eks:Cluster", name, ClusterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

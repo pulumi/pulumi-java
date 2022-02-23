@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hanaonazure.inputs;
 import io.pulumi.azurenative.hanaonazure.inputs.DiskArgs;
 import io.pulumi.azurenative.hanaonazure.inputs.SAPSystemIDArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hanaSids")
-    private final @Nullable Input<List<SAPSystemIDArgs>> hanaSids;
+        private final @Nullable Input<List<SAPSystemIDArgs>> hanaSids;
 
     public Input<List<SAPSystemIDArgs>> getHanaSids() {
         return this.hanaSids == null ? Input.empty() : this.hanaSids;
@@ -36,7 +36,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osDisks")
-    private final @Nullable Input<List<DiskArgs>> osDisks;
+        private final @Nullable Input<List<DiskArgs>> osDisks;
 
     public Input<List<DiskArgs>> getOsDisks() {
         return this.osDisks == null ? Input.empty() : this.osDisks;
@@ -95,7 +95,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.osDisks = Input.ofNullable(osDisks);
             return this;
         }
-
         public StorageProfileArgs build() {
             return new StorageProfileArgs(hanaSids, osDisks);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs;
@@ -28,7 +28,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="fullPathMatch")
-    private final @Nullable Input<String> fullPathMatch;
+        private final @Nullable Input<String> fullPathMatch;
 
     public Input<String> getFullPathMatch() {
         return this.fullPathMatch == null ? Input.empty() : this.fullPathMatch;
@@ -41,7 +41,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="headerMatches")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> headerMatches;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchGetArgs>> getHeaderMatches() {
         return this.headerMatches == null ? Input.empty() : this.headerMatches;
@@ -53,7 +53,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="ignoreCase")
-    private final @Nullable Input<Boolean> ignoreCase;
+        private final @Nullable Input<Boolean> ignoreCase;
 
     public Input<Boolean> getIgnoreCase() {
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
@@ -75,7 +75,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="metadataFilters")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> metadataFilters;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> metadataFilters;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs>> getMetadataFilters() {
         return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
@@ -88,7 +88,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<String> prefixMatch;
+        private final @Nullable Input<String> prefixMatch;
 
     public Input<String> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -101,7 +101,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="queryParameterMatches")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> queryParameterMatches;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleQueryParameterMatchGetArgs>> getQueryParameterMatches() {
         return this.queryParameterMatches == null ? Input.empty() : this.queryParameterMatches;
@@ -115,7 +115,7 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
      * 
      */
     @InputImport(name="regexMatch")
-    private final @Nullable Input<String> regexMatch;
+        private final @Nullable Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
@@ -249,7 +249,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs extends io.p
             this.regexMatch = Input.ofNullable(regexMatch);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleGetArgs(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

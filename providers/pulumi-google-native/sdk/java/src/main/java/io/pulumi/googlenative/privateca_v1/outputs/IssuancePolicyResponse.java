@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.AllowedKeyTypeResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateIdentityConstraintsResponse;
@@ -164,7 +164,6 @@ public final class IssuancePolicyResponse {
             this.passthroughExtensions = Objects.requireNonNull(passthroughExtensions);
             return this;
         }
-
         public IssuancePolicyResponse build() {
             return new IssuancePolicyResponse(allowedIssuanceModes, allowedKeyTypes, baselineValues, identityConstraints, maximumLifetime, passthroughExtensions);
         }

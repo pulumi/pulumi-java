@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateRunningArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateTerminatedArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ContainerStateWaitingArgs;
@@ -25,7 +25,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="running")
-    private final @Nullable Input<ContainerStateRunningArgs> running;
+        private final @Nullable Input<ContainerStateRunningArgs> running;
 
     public Input<ContainerStateRunningArgs> getRunning() {
         return this.running == null ? Input.empty() : this.running;
@@ -36,7 +36,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terminated")
-    private final @Nullable Input<ContainerStateTerminatedArgs> terminated;
+        private final @Nullable Input<ContainerStateTerminatedArgs> terminated;
 
     public Input<ContainerStateTerminatedArgs> getTerminated() {
         return this.terminated == null ? Input.empty() : this.terminated;
@@ -47,7 +47,7 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waiting")
-    private final @Nullable Input<ContainerStateWaitingArgs> waiting;
+        private final @Nullable Input<ContainerStateWaitingArgs> waiting;
 
     public Input<ContainerStateWaitingArgs> getWaiting() {
         return this.waiting == null ? Input.empty() : this.waiting;
@@ -121,7 +121,6 @@ public final class ContainerStateArgs extends io.pulumi.resources.ResourceArgs {
             this.waiting = Input.ofNullable(waiting);
             return this;
         }
-
         public ContainerStateArgs build() {
             return new ContainerStateArgs(running, terminated, waiting);
         }

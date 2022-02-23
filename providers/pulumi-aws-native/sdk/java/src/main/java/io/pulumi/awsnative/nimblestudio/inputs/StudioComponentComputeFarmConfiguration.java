@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="activeDirectoryUser")
-    private final @Nullable String activeDirectoryUser;
+        private final @Nullable String activeDirectoryUser;
 
     public Optional<String> getActiveDirectoryUser() {
         return this.activeDirectoryUser == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryUser);
@@ -34,7 +34,7 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+        private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -83,7 +83,6 @@ public final class StudioComponentComputeFarmConfiguration extends io.pulumi.res
             this.endpoint = endpoint;
             return this;
         }
-
         public StudioComponentComputeFarmConfiguration build() {
             return new StudioComponentComputeFarmConfiguration(activeDirectoryUser, endpoint);
         }

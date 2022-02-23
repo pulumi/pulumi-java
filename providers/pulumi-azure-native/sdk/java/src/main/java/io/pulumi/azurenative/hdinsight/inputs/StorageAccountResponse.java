@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="container")
-    private final @Nullable String container;
+        private final @Nullable String container;
 
     public Optional<String> getContainer() {
         return this.container == null ? Optional.empty() : Optional.ofNullable(this.container);
@@ -35,7 +35,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fileSystem")
-    private final @Nullable String fileSystem;
+        private final @Nullable String fileSystem;
 
     public Optional<String> getFileSystem() {
         return this.fileSystem == null ? Optional.empty() : Optional.ofNullable(this.fileSystem);
@@ -46,7 +46,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fileshare")
-    private final @Nullable String fileshare;
+        private final @Nullable String fileshare;
 
     public Optional<String> getFileshare() {
         return this.fileshare == null ? Optional.empty() : Optional.ofNullable(this.fileshare);
@@ -57,7 +57,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="isDefault")
-    private final @Nullable Boolean isDefault;
+        private final @Nullable Boolean isDefault;
 
     public Optional<Boolean> getIsDefault() {
         return this.isDefault == null ? Optional.empty() : Optional.ofNullable(this.isDefault);
@@ -68,7 +68,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -79,7 +79,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="msiResourceId")
-    private final @Nullable String msiResourceId;
+        private final @Nullable String msiResourceId;
 
     public Optional<String> getMsiResourceId() {
         return this.msiResourceId == null ? Optional.empty() : Optional.ofNullable(this.msiResourceId);
@@ -90,7 +90,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -101,7 +101,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -112,7 +112,7 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="saskey")
-    private final @Nullable String saskey;
+        private final @Nullable String saskey;
 
     public Optional<String> getSaskey() {
         return this.saskey == null ? Optional.empty() : Optional.ofNullable(this.saskey);
@@ -231,7 +231,6 @@ public final class StorageAccountResponse extends io.pulumi.resources.InvokeArgs
             this.saskey = saskey;
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(container, fileSystem, fileshare, isDefault, key, msiResourceId, name, resourceId, saskey);
         }

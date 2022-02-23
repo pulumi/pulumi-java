@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.ExprResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CustomLevelResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expr", required=true)
-    private final ExprResponse expr;
+      private final ExprResponse expr;
 
     public ExprResponse getExpr() {
         return this.expr;
@@ -59,7 +59,6 @@ public final class CustomLevelResponse extends io.pulumi.resources.InvokeArgs {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public CustomLevelResponse build() {
             return new CustomLevelResponse(expr);
         }

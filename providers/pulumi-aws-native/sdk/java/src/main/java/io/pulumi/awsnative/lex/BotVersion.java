@@ -8,8 +8,8 @@ import io.pulumi.awsnative.lex.BotVersionArgs;
 import io.pulumi.awsnative.lex.outputs.BotVersionLocaleSpecification;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -45,13 +45,6 @@ public class BotVersion extends io.pulumi.resources.CustomResource {
         return this.description;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BotVersion(String name) {
-        super("aws-native:lex:BotVersion", name, BotVersionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.AwsAccessKeyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class AwsS3DataResponse {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AwsS3DataResponse build() {
             return new AwsS3DataResponse(awsAccessKey, bucketName, path, roleArn);
         }

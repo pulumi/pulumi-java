@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class MethodResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public MethodResponse build() {
             return new MethodResponse(responseModels, responseParameters, statusCode);
         }

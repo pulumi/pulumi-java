@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowOutputEncryptionKeyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class FlowOutputEncryption {
             this.secretArn = Objects.requireNonNull(secretArn);
             return this;
         }
-
         public FlowOutputEncryption build() {
             return new FlowOutputEncryption(algorithm, keyType, roleArn, secretArn);
         }

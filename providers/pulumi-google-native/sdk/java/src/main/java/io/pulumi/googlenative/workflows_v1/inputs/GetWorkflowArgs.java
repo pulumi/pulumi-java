@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflows_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetWorkflowArgs Empty = new GetWorkflowArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="workflowId", required=true)
-    private final String workflowId;
+      private final String workflowId;
 
     public String getWorkflowId() {
         return this.workflowId;
@@ -88,7 +88,6 @@ public final class GetWorkflowArgs extends io.pulumi.resources.InvokeArgs {
             this.workflowId = Objects.requireNonNull(workflowId);
             return this;
         }
-
         public GetWorkflowArgs build() {
             return new GetWorkflowArgs(location, project, workflowId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.configuration.outputs;
 
 import io.pulumi.awsnative.configuration.outputs.OrganizationConformancePackConformancePackInputParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class GetOrganizationConformancePackResult {
             this.excludedAccounts = excludedAccounts;
             return this;
         }
-
         public GetOrganizationConformancePackResult build() {
             return new GetOrganizationConformancePackResult(conformancePackInputParameters, deliveryS3Bucket, deliveryS3KeyPrefix, excludedAccounts);
         }

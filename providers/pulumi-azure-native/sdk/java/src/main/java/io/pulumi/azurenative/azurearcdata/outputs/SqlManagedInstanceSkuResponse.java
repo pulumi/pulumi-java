@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -162,7 +162,6 @@ public final class SqlManagedInstanceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SqlManagedInstanceSkuResponse build() {
             return new SqlManagedInstanceSkuResponse(capacity, dev, family, name, size, tier);
         }

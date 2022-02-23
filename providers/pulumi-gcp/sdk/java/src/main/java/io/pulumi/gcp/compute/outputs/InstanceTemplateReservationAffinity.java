@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceTemplateReservationAffinitySpecificReservation;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class InstanceTemplateReservationAffinity {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceTemplateReservationAffinity build() {
             return new InstanceTemplateReservationAffinity(specificReservation, type);
         }

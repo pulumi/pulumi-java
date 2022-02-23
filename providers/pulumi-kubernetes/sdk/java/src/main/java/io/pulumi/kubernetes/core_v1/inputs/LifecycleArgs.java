@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LifecycleHandlerArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postStart")
-    private final @Nullable Input<LifecycleHandlerArgs> postStart;
+        private final @Nullable Input<LifecycleHandlerArgs> postStart;
 
     public Input<LifecycleHandlerArgs> getPostStart() {
         return this.postStart == null ? Input.empty() : this.postStart;
@@ -34,7 +34,7 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="preStop")
-    private final @Nullable Input<LifecycleHandlerArgs> preStop;
+        private final @Nullable Input<LifecycleHandlerArgs> preStop;
 
     public Input<LifecycleHandlerArgs> getPreStop() {
         return this.preStop == null ? Input.empty() : this.preStop;
@@ -93,7 +93,6 @@ public final class LifecycleArgs extends io.pulumi.resources.ResourceArgs {
             this.preStop = Input.ofNullable(preStop);
             return this;
         }
-
         public LifecycleArgs build() {
             return new LifecycleArgs(postStart, preStop);
         }

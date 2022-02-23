@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.inputs.ContentLinkArgs;
 import io.pulumi.azurenative.automation.inputs.RunbookDraftArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -37,7 +37,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="draft")
-    private final @Nullable Input<RunbookDraftArgs> draft;
+        private final @Nullable Input<RunbookDraftArgs> draft;
 
     public Input<RunbookDraftArgs> getDraft() {
         return this.draft == null ? Input.empty() : this.draft;
@@ -59,7 +59,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,7 +70,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logActivityTrace")
-    private final @Nullable Input<Integer> logActivityTrace;
+        private final @Nullable Input<Integer> logActivityTrace;
 
     public Input<Integer> getLogActivityTrace() {
         return this.logActivityTrace == null ? Input.empty() : this.logActivityTrace;
@@ -81,7 +81,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logProgress")
-    private final @Nullable Input<Boolean> logProgress;
+        private final @Nullable Input<Boolean> logProgress;
 
     public Input<Boolean> getLogProgress() {
         return this.logProgress == null ? Input.empty() : this.logProgress;
@@ -92,7 +92,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logVerbose")
-    private final @Nullable Input<Boolean> logVerbose;
+        private final @Nullable Input<Boolean> logVerbose;
 
     public Input<Boolean> getLogVerbose() {
         return this.logVerbose == null ? Input.empty() : this.logVerbose;
@@ -103,7 +103,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -114,7 +114,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishContentLink")
-    private final @Nullable Input<ContentLinkArgs> publishContentLink;
+        private final @Nullable Input<ContentLinkArgs> publishContentLink;
 
     public Input<ContentLinkArgs> getPublishContentLink() {
         return this.publishContentLink == null ? Input.empty() : this.publishContentLink;
@@ -125,7 +125,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -136,7 +136,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbookName")
-    private final @Nullable Input<String> runbookName;
+        private final @Nullable Input<String> runbookName;
 
     public Input<String> getRunbookName() {
         return this.runbookName == null ? Input.empty() : this.runbookName;
@@ -147,7 +147,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runbookType", required=true)
-    private final Input<Either<String,RunbookTypeEnum>> runbookType;
+        private final Input<Either<String,RunbookTypeEnum>> runbookType;
 
     public Input<Either<String,RunbookTypeEnum>> getRunbookType() {
         return this.runbookType;
@@ -158,7 +158,7 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -382,7 +382,6 @@ public final class RunbookArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RunbookArgs build() {
             return new RunbookArgs(automationAccountName, description, draft, location, logActivityTrace, logProgress, logVerbose, name, publishContentLink, resourceGroupName, runbookName, runbookType, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class OsDiskResponse {
             this.osType = osType;
             return this;
         }
-
         public OsDiskResponse build() {
             return new OsDiskResponse(diskSizeGB, name, osType);
         }

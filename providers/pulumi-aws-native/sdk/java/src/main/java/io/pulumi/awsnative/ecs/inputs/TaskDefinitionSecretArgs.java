@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
     public static final TaskDefinitionSecretArgs Empty = new TaskDefinitionSecretArgs();
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="valueFrom", required=true)
-    private final Input<String> valueFrom;
+        private final Input<String> valueFrom;
 
     public Input<String> getValueFrom() {
         return this.valueFrom;
@@ -80,7 +80,6 @@ public final class TaskDefinitionSecretArgs extends io.pulumi.resources.Resource
             this.valueFrom = Input.of(Objects.requireNonNull(valueFrom));
             return this;
         }
-
         public TaskDefinitionSecretArgs build() {
             return new TaskDefinitionSecretArgs(name, valueFrom);
         }

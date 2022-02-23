@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__MetricSpecResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GoogleCloudMlV1__AutoScalingResponse {
             this.minNodes = Objects.requireNonNull(minNodes);
             return this;
         }
-
         public GoogleCloudMlV1__AutoScalingResponse build() {
             return new GoogleCloudMlV1__AutoScalingResponse(maxNodes, metrics, minNodes);
         }

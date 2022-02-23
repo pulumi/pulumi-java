@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
      * 
      */
     @InputImport(name="issue")
-    private final @Nullable String issue;
+        private final @Nullable String issue;
 
     public Optional<String> getIssue() {
         return this.issue == null ? Optional.empty() : Optional.ofNullable(this.issue);
@@ -35,7 +35,7 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
      * 
      */
     @InputImport(name="numberOfVms")
-    private final @Nullable Double numberOfVms;
+        private final @Nullable Double numberOfVms;
 
     public Optional<Double> getNumberOfVms() {
         return this.numberOfVms == null ? Optional.empty() : Optional.ofNullable(this.numberOfVms);
@@ -84,7 +84,6 @@ public final class AdaptiveApplicationControlIssueSummaryResponse extends io.pul
             this.numberOfVms = numberOfVms;
             return this;
         }
-
         public AdaptiveApplicationControlIssueSummaryResponse build() {
             return new AdaptiveApplicationControlIssueSummaryResponse(issue, numberOfVms);
         }

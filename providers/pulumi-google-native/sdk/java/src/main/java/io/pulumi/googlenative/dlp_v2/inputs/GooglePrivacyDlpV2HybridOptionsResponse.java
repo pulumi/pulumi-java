@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TableOptionsResponse;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="requiredFindingLabelKeys", required=true)
-    private final List<String> requiredFindingLabelKeys;
+      private final List<String> requiredFindingLabelKeys;
 
     public List<String> getRequiredFindingLabelKeys() {
         return this.requiredFindingLabelKeys;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="tableOptions", required=true)
-    private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
+      private final GooglePrivacyDlpV2TableOptionsResponse tableOptions;
 
     public GooglePrivacyDlpV2TableOptionsResponse getTableOptions() {
         return this.tableOptions;
@@ -126,7 +126,6 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse extends io.pulumi.res
             this.tableOptions = Objects.requireNonNull(tableOptions);
             return this;
         }
-
         public GooglePrivacyDlpV2HybridOptionsResponse build() {
             return new GooglePrivacyDlpV2HybridOptionsResponse(description, labels, requiredFindingLabelKeys, tableOptions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="eventName")
-    private final @Nullable String eventName;
+        private final @Nullable String eventName;
 
     public Optional<String> getEventName() {
         return this.eventName == null ? Optional.empty() : Optional.ofNullable(this.eventName);
@@ -61,7 +61,6 @@ public final class EventResponse extends io.pulumi.resources.InvokeArgs {
             this.eventName = eventName;
             return this;
         }
-
         public EventResponse build() {
             return new EventResponse(eventName);
         }

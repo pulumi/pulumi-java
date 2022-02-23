@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ExplainQueryStepResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -644,7 +644,6 @@ public final class ExplainQueryStageResponse {
             this.writeRatioMax = Objects.requireNonNull(writeRatioMax);
             return this;
         }
-
         public ExplainQueryStageResponse build() {
             return new ExplainQueryStageResponse(completedParallelInputs, computeMsAvg, computeMsMax, computeRatioAvg, computeRatioMax, endMs, inputStages, name, parallelInputs, readMsAvg, readMsMax, readRatioAvg, readRatioMax, recordsRead, recordsWritten, shuffleOutputBytes, shuffleOutputBytesSpilled, slotMs, startMs, status, steps, waitMsAvg, waitMsMax, waitRatioAvg, waitRatioMax, writeMsAvg, writeMsMax, writeRatioAvg, writeRatioMax);
         }

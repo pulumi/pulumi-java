@@ -10,7 +10,7 @@ import io.pulumi.azurenative.purview.outputs.AccountResponseSku;
 import io.pulumi.azurenative.purview.outputs.CloudConnectorsResponse;
 import io.pulumi.azurenative.purview.outputs.IdentityResponse;
 import io.pulumi.azurenative.purview.outputs.PrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -444,7 +444,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(cloudConnectors, createdAt, createdBy, createdByObjectId, endpoints, friendlyName, id, identity, location, managedResourceGroupName, managedResources, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, systemData, tags, type);
         }

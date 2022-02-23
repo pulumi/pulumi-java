@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticloadbalancingv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class ListenerRuleTargetGroupStickinessConfig {
             this.enabled = enabled;
             return this;
         }
-
         public ListenerRuleTargetGroupStickinessConfig build() {
             return new ListenerRuleTargetGroupStickinessConfig(durationSeconds, enabled);
         }

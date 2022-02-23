@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GetImageVersionsImageVersion {
             this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
             return this;
         }
-
         public GetImageVersionsImageVersion build() {
             return new GetImageVersionsImageVersion(imageVersionId, supportedPythonVersions);
         }

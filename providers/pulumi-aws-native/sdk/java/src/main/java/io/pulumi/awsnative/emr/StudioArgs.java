@@ -6,7 +6,7 @@ package io.pulumi.awsnative.emr;
 import io.pulumi.awsnative.emr.enums.StudioAuthMode;
 import io.pulumi.awsnative.emr.inputs.StudioTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode", required=true)
-    private final Input<StudioAuthMode> authMode;
+        private final Input<StudioAuthMode> authMode;
 
     public Input<StudioAuthMode> getAuthMode() {
         return this.authMode;
@@ -33,7 +33,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultS3Location", required=true)
-    private final Input<String> defaultS3Location;
+        private final Input<String> defaultS3Location;
 
     public Input<String> getDefaultS3Location() {
         return this.defaultS3Location;
@@ -44,7 +44,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engineSecurityGroupId", required=true)
-    private final Input<String> engineSecurityGroupId;
+        private final Input<String> engineSecurityGroupId;
 
     public Input<String> getEngineSecurityGroupId() {
         return this.engineSecurityGroupId;
@@ -66,7 +66,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idpAuthUrl")
-    private final @Nullable Input<String> idpAuthUrl;
+        private final @Nullable Input<String> idpAuthUrl;
 
     public Input<String> getIdpAuthUrl() {
         return this.idpAuthUrl == null ? Input.empty() : this.idpAuthUrl;
@@ -77,7 +77,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idpRelayStateParameterName")
-    private final @Nullable Input<String> idpRelayStateParameterName;
+        private final @Nullable Input<String> idpRelayStateParameterName;
 
     public Input<String> getIdpRelayStateParameterName() {
         return this.idpRelayStateParameterName == null ? Input.empty() : this.idpRelayStateParameterName;
@@ -88,7 +88,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -99,7 +99,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceRole", required=true)
-    private final Input<String> serviceRole;
+        private final Input<String> serviceRole;
 
     public Input<String> getServiceRole() {
         return this.serviceRole;
@@ -110,7 +110,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+        private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -121,7 +121,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<StudioTagArgs>> tags;
+        private final @Nullable Input<List<StudioTagArgs>> tags;
 
     public Input<List<StudioTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userRole")
-    private final @Nullable Input<String> userRole;
+        private final @Nullable Input<String> userRole;
 
     public Input<String> getUserRole() {
         return this.userRole == null ? Input.empty() : this.userRole;
@@ -143,7 +143,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -154,7 +154,7 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceSecurityGroupId", required=true)
-    private final Input<String> workspaceSecurityGroupId;
+        private final Input<String> workspaceSecurityGroupId;
 
     public Input<String> getWorkspaceSecurityGroupId() {
         return this.workspaceSecurityGroupId;
@@ -378,7 +378,6 @@ public final class StudioArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceSecurityGroupId = Input.of(Objects.requireNonNull(workspaceSecurityGroupId));
             return this;
         }
-
         public StudioArgs build() {
             return new StudioArgs(authMode, defaultS3Location, description, engineSecurityGroupId, idpAuthUrl, idpRelayStateParameterName, name, serviceRole, subnetIds, tags, userRole, vpcId, workspaceSecurityGroupId);
         }

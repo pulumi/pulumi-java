@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.ClusterConfigResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionConfigResponse;
 import java.lang.Integer;
@@ -182,7 +182,6 @@ public final class GetClusterResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterConfig, defaultStorageType, encryptionConfig, location, name, serveNodes, state);
         }

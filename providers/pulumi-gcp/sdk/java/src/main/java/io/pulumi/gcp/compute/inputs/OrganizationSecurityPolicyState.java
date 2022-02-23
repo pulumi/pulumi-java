@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -41,7 +41,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fingerprint")
-    private final @Nullable Input<String> fingerprint;
+        private final @Nullable Input<String> fingerprint;
 
     public Input<String> getFingerprint() {
         return this.fingerprint == null ? Input.empty() : this.fingerprint;
@@ -53,7 +53,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -64,7 +64,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+        private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -79,7 +79,7 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -198,7 +198,6 @@ public final class OrganizationSecurityPolicyState extends io.pulumi.resources.R
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OrganizationSecurityPolicyState build() {
             return new OrganizationSecurityPolicyState(description, displayName, fingerprint, parent, policyId, type);
         }

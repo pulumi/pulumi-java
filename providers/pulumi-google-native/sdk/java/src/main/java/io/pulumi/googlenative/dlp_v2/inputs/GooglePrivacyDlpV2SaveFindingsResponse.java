@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2OutputStorageConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
+      private final GooglePrivacyDlpV2OutputStorageConfigResponse outputConfig;
 
     public GooglePrivacyDlpV2OutputStorageConfigResponse getOutputConfig() {
         return this.outputConfig;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2SaveFindingsResponse extends io.pulumi.reso
             this.outputConfig = Objects.requireNonNull(outputConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2SaveFindingsResponse build() {
             return new GooglePrivacyDlpV2SaveFindingsResponse(outputConfig);
         }

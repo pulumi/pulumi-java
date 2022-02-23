@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GetGameServerDeploymentRolloutGameServerConfigOverride;
 import java.lang.String;
 import java.util.List;
@@ -130,7 +130,6 @@ public final class GetGameServerDeploymentRolloutResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetGameServerDeploymentRolloutResult build() {
             return new GetGameServerDeploymentRolloutResult(defaultGameServerConfig, deploymentId, gameServerConfigOverrides, id, name, project);
         }

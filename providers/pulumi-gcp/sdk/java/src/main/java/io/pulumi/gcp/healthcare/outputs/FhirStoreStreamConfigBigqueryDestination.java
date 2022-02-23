@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.healthcare.outputs.FhirStoreStreamConfigBigqueryDestinationSchemaConfig;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class FhirStoreStreamConfigBigqueryDestination {
             this.schemaConfig = Objects.requireNonNull(schemaConfig);
             return this;
         }
-
         public FhirStoreStreamConfigBigqueryDestination build() {
             return new FhirStoreStreamConfigBigqueryDestination(datasetUri, schemaConfig);
         }

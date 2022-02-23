@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BucketRoutingRuleCondition extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="httpErrorCodeReturnedEquals")
-    private final @Nullable String httpErrorCodeReturnedEquals;
+        private final @Nullable String httpErrorCodeReturnedEquals;
 
     public Optional<String> getHttpErrorCodeReturnedEquals() {
         return this.httpErrorCodeReturnedEquals == null ? Optional.empty() : Optional.ofNullable(this.httpErrorCodeReturnedEquals);
@@ -34,7 +34,7 @@ public final class BucketRoutingRuleCondition extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="keyPrefixEquals")
-    private final @Nullable String keyPrefixEquals;
+        private final @Nullable String keyPrefixEquals;
 
     public Optional<String> getKeyPrefixEquals() {
         return this.keyPrefixEquals == null ? Optional.empty() : Optional.ofNullable(this.keyPrefixEquals);
@@ -83,7 +83,6 @@ public final class BucketRoutingRuleCondition extends io.pulumi.resources.Invoke
             this.keyPrefixEquals = keyPrefixEquals;
             return this;
         }
-
         public BucketRoutingRuleCondition build() {
             return new BucketRoutingRuleCondition(httpErrorCodeReturnedEquals, keyPrefixEquals);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.MongoDBDatabaseGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.MongoDBDatabaseGetPropertiesResponseResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -168,7 +168,6 @@ public final class GetMongoDBResourceMongoDBDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMongoDBResourceMongoDBDatabaseResult build() {
             return new GetMongoDBResourceMongoDBDatabaseResult(id, location, name, options, resource, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -163,7 +163,6 @@ public final class ServiceBusTopicOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceBusTopicOutputDataSourceResponse build() {
             return new ServiceBusTopicOutputDataSourceResponse(propertyColumns, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, topicName, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+        private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -34,7 +34,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="commit")
-    private final @Nullable Input<String> commit;
+        private final @Nullable Input<String> commit;
 
     public Input<String> getCommit() {
         return this.commit == null ? Input.empty() : this.commit;
@@ -45,7 +45,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="semver")
-    private final @Nullable Input<String> semver;
+        private final @Nullable Input<String> semver;
 
     public Input<String> getSemver() {
         return this.semver == null ? Input.empty() : this.semver;
@@ -56,7 +56,7 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+        private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -145,7 +145,6 @@ public final class RepositoryRefDefinitionArgs extends io.pulumi.resources.Resou
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public RepositoryRefDefinitionArgs build() {
             return new RepositoryRefDefinitionArgs(branch, commit, semver, tag);
         }

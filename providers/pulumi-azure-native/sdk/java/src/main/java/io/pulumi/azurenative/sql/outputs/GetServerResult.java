@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.ServerExternalAdministratorResponse;
 import io.pulumi.azurenative.sql.outputs.ServerPrivateEndpointConnectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -417,7 +417,6 @@ public final class GetServerResult {
             this.workspaceFeature = Objects.requireNonNull(workspaceFeature);
             return this;
         }
-
         public GetServerResult build() {
             return new GetServerResult(administratorLogin, administrators, fullyQualifiedDomainName, id, identity, keyId, kind, location, minimalTlsVersion, name, primaryUserAssignedIdentityId, privateEndpointConnections, publicNetworkAccess, state, tags, type, version, workspaceFeature);
         }

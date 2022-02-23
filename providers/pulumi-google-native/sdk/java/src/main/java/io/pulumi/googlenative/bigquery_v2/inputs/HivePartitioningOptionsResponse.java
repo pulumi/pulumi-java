@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -29,7 +29,7 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="requirePartitionFilter", required=true)
-    private final Boolean requirePartitionFilter;
+      private final Boolean requirePartitionFilter;
 
     public Boolean getRequirePartitionFilter() {
         return this.requirePartitionFilter;
@@ -40,7 +40,7 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceUriPrefix", required=true)
-    private final String sourceUriPrefix;
+      private final String sourceUriPrefix;
 
     public String getSourceUriPrefix() {
         return this.sourceUriPrefix;
@@ -99,7 +99,6 @@ public final class HivePartitioningOptionsResponse extends io.pulumi.resources.I
             this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
             return this;
         }
-
         public HivePartitioningOptionsResponse build() {
             return new HivePartitioningOptionsResponse(mode, requirePartitionFilter, sourceUriPrefix);
         }

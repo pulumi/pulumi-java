@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.VnetRouteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -270,7 +270,6 @@ public final class GetWebAppVnetConnectionResult {
             this.vnetResourceId = vnetResourceId;
             return this;
         }
-
         public GetWebAppVnetConnectionResult build() {
             return new GetWebAppVnetConnectionResult(certBlob, certThumbprint, dnsServers, id, isSwift, kind, name, resyncRequired, routes, type, vnetResourceId);
         }

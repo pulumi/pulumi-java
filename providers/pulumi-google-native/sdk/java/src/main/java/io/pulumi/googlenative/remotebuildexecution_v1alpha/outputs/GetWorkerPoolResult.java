@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaWorkerConfigResponse;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class GetWorkerPoolResult {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(autoscale, channel, name, state, workerConfig, workerCount);
         }

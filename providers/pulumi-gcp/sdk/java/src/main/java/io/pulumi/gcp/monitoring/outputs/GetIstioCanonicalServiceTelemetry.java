@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class GetIstioCanonicalServiceTelemetry {
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetIstioCanonicalServiceTelemetry build() {
             return new GetIstioCanonicalServiceTelemetry(resourceName);
         }

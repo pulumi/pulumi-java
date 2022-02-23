@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.openenergyplatform.inputs;
 
 import io.pulumi.azurenative.openenergyplatform.inputs.DataPartitionNamesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class EnergyServicePropertiesResponse extends io.pulumi.resources.I
     public static final EnergyServicePropertiesResponse Empty = new EnergyServicePropertiesResponse();
 
     @InputImport(name="authAppId")
-    private final @Nullable String authAppId;
+        private final @Nullable String authAppId;
 
     public Optional<String> getAuthAppId() {
         return this.authAppId == null ? Optional.empty() : Optional.ofNullable(this.authAppId);
     }
 
     @InputImport(name="dataPartitionNames")
-    private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
+        private final @Nullable List<DataPartitionNamesResponse> dataPartitionNames;
 
     public List<DataPartitionNamesResponse> getDataPartitionNames() {
         return this.dataPartitionNames == null ? List.of() : this.dataPartitionNames;
     }
 
     @InputImport(name="dnsName", required=true)
-    private final String dnsName;
+        private final String dnsName;
 
     public String getDnsName() {
         return this.dnsName;
     }
 
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -107,7 +107,6 @@ public final class EnergyServicePropertiesResponse extends io.pulumi.resources.I
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public EnergyServicePropertiesResponse build() {
             return new EnergyServicePropertiesResponse(authAppId, dataPartitionNames, dnsName, provisioningState);
         }

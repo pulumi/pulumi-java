@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectAllRequestsToProtocol;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+        private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -35,7 +35,7 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<BucketRedirectAllRequestsToProtocol> protocol;
+        private final @Nullable Input<BucketRedirectAllRequestsToProtocol> protocol;
 
     public Input<BucketRedirectAllRequestsToProtocol> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -94,7 +94,6 @@ public final class BucketRedirectAllRequestsToArgs extends io.pulumi.resources.R
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public BucketRedirectAllRequestsToArgs build() {
             return new BucketRedirectAllRequestsToArgs(hostName, protocol);
         }

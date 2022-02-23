@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable String end;
+        private final @Nullable String end;
 
     public Optional<String> getEnd() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
@@ -34,7 +34,7 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable String start;
+        private final @Nullable String start;
 
     public Optional<String> getStart() {
         return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
@@ -83,7 +83,6 @@ public final class TimeSpanResponse extends io.pulumi.resources.InvokeArgs {
             this.start = start;
             return this;
         }
-
         public TimeSpanResponse build() {
             return new TimeSpanResponse(end, start);
         }

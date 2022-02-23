@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelDockerSectionResponseResponseBaseImageRegistry;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class ModelEnvironmentDefinitionResponseResponseDocker {
             this.baseImageRegistry = baseImageRegistry;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseDocker build() {
             return new ModelEnvironmentDefinitionResponseResponseDocker(baseDockerfile, baseImage, baseImageRegistry);
         }

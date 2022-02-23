@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximum")
-    private final @Nullable Input<String> maximum;
+      private final @Nullable Input<String> maximum;
 
     public Input<String> getMaximum() {
         return this.maximum == null ? Input.empty() : this.maximum;
@@ -34,7 +34,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimum")
-    private final @Nullable Input<String> minimum;
+      private final @Nullable Input<String> minimum;
 
     public Input<String> getMinimum() {
         return this.minimum == null ? Input.empty() : this.minimum;
@@ -45,7 +45,7 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+      private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -119,7 +119,6 @@ public final class ResourceLimitArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public ResourceLimitArgs build() {
             return new ResourceLimitArgs(maximum, minimum, resourceType);
         }

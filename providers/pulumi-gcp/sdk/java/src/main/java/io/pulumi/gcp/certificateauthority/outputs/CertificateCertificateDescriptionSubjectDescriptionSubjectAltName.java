@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan;
 import java.lang.String;
 import java.util.List;
@@ -132,7 +132,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.uris = uris;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltName build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltName(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }

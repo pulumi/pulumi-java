@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TaxonomyIamMemberArgs;
 import io.pulumi.gcp.datacatalog.inputs.TaxonomyIamMemberState;
@@ -139,13 +139,6 @@ public class TaxonomyIamMember extends io.pulumi.resources.CustomResource {
         return this.taxonomy;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TaxonomyIamMember(String name) {
-        super("gcp:datacatalog/taxonomyIamMember:TaxonomyIamMember", name, TaxonomyIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

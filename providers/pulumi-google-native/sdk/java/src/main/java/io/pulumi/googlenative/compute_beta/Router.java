@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.RouterArgs;
 import io.pulumi.googlenative.compute_beta.outputs.RouterBgpPeerResponse;
@@ -193,13 +193,6 @@ public class Router extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Router(String name) {
-        super("google-native:compute/beta:Router", name, RouterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

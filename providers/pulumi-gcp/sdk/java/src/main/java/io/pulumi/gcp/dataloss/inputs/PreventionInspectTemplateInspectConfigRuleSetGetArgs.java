@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
      * 
      */
     @InputImport(name="infoTypes", required=true)
-    private final Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
+        private final Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> infoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigRuleSetInfoTypeGetArgs>> getInfoTypes() {
         return this.infoTypes;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
+        private final Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> rules;
 
     public Input<List<PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs>> getRules() {
         return this.rules;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetGetArgs extends 
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetGetArgs(infoTypes, rules);
         }

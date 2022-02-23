@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetSslPolicyArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSslPolicyArgs Empty = new GetSslPolicyArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sslPolicy", required=true)
-    private final String sslPolicy;
+      private final String sslPolicy;
 
     public String getSslPolicy() {
         return this.sslPolicy;
@@ -71,7 +71,6 @@ public final class GetSslPolicyArgs extends io.pulumi.resources.InvokeArgs {
             this.sslPolicy = Objects.requireNonNull(sslPolicy);
             return this;
         }
-
         public GetSslPolicyArgs build() {
             return new GetSslPolicyArgs(project, sslPolicy);
         }

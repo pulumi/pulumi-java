@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.engagementfabric.outputs;
 
 import io.pulumi.azurenative.engagementfabric.outputs.SKUResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(id, location, name, sku, tags, type);
         }

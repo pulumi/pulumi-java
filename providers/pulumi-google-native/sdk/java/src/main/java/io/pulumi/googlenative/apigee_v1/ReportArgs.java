@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CustomReportMetricArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1ReportPropertyArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="chartType")
-    private final @Nullable Input<String> chartType;
+      private final @Nullable Input<String> chartType;
 
     public Input<String> getChartType() {
         return this.chartType == null ? Input.empty() : this.chartType;
@@ -33,7 +33,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comments")
-    private final @Nullable Input<List<String>> comments;
+      private final @Nullable Input<List<String>> comments;
 
     public Input<List<String>> getComments() {
         return this.comments == null ? Input.empty() : this.comments;
@@ -44,7 +44,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<List<String>> dimensions;
+      private final @Nullable Input<List<String>> dimensions;
 
     public Input<List<String>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -55,7 +55,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -66,7 +66,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -77,7 +77,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fromTime")
-    private final @Nullable Input<String> fromTime;
+      private final @Nullable Input<String> fromTime;
 
     public Input<String> getFromTime() {
         return this.fromTime == null ? Input.empty() : this.fromTime;
@@ -88,7 +88,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<String> limit;
+      private final @Nullable Input<String> limit;
 
     public Input<String> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -99,7 +99,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics", required=true)
-    private final Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
+      private final Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> metrics;
 
     public Input<List<GoogleCloudApigeeV1CustomReportMetricArgs>> getMetrics() {
         return this.metrics;
@@ -110,7 +110,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -121,14 +121,14 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offset")
-    private final @Nullable Input<String> offset;
+      private final @Nullable Input<String> offset;
 
     public Input<String> getOffset() {
         return this.offset == null ? Input.empty() : this.offset;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -139,7 +139,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
+      private final @Nullable Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> properties;
 
     public Input<List<GoogleCloudApigeeV1ReportPropertyArgs>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -150,7 +150,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortByCols")
-    private final @Nullable Input<List<String>> sortByCols;
+      private final @Nullable Input<List<String>> sortByCols;
 
     public Input<List<String>> getSortByCols() {
         return this.sortByCols == null ? Input.empty() : this.sortByCols;
@@ -161,7 +161,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sortOrder")
-    private final @Nullable Input<String> sortOrder;
+      private final @Nullable Input<String> sortOrder;
 
     public Input<String> getSortOrder() {
         return this.sortOrder == null ? Input.empty() : this.sortOrder;
@@ -172,7 +172,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -183,7 +183,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeUnit")
-    private final @Nullable Input<String> timeUnit;
+      private final @Nullable Input<String> timeUnit;
 
     public Input<String> getTimeUnit() {
         return this.timeUnit == null ? Input.empty() : this.timeUnit;
@@ -194,7 +194,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="toTime")
-    private final @Nullable Input<String> toTime;
+      private final @Nullable Input<String> toTime;
 
     public Input<String> getToTime() {
         return this.toTime == null ? Input.empty() : this.toTime;
@@ -205,7 +205,7 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topk")
-    private final @Nullable Input<String> topk;
+      private final @Nullable Input<String> topk;
 
     public Input<String> getTopk() {
         return this.topk == null ? Input.empty() : this.topk;
@@ -504,7 +504,6 @@ public final class ReportArgs extends io.pulumi.resources.ResourceArgs {
             this.topk = Input.ofNullable(topk);
             return this;
         }
-
         public ReportArgs build() {
             return new ReportArgs(chartType, comments, dimensions, displayName, filter, fromTime, limit, metrics, name, offset, organizationId, properties, sortByCols, sortOrder, tags, timeUnit, toTime, topk);
         }

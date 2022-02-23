@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.AnthosClusterResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.ExecutionConfigResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.GkeClusterResponse;
@@ -311,7 +311,6 @@ public final class TargetResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public TargetResponse build() {
             return new TargetResponse(annotations, anthosCluster, createTime, description, etag, executionConfigs, gke, labels, name, requireApproval, targetId, uid, updateTime);
         }

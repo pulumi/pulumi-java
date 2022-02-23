@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyServices")
-    private final @Nullable Input<Integer> maxPercentDeltaUnhealthyServices;
+        private final @Nullable Input<Integer> maxPercentDeltaUnhealthyServices;
 
     public Input<Integer> getMaxPercentDeltaUnhealthyServices() {
         return this.maxPercentDeltaUnhealthyServices == null ? Input.empty() : this.maxPercentDeltaUnhealthyServices;
@@ -68,7 +68,6 @@ public final class ServiceTypeDeltaHealthPolicyArgs extends io.pulumi.resources.
             this.maxPercentDeltaUnhealthyServices = Input.ofNullable(maxPercentDeltaUnhealthyServices);
             return this;
         }
-
         public ServiceTypeDeltaHealthPolicyArgs build() {
             return new ServiceTypeDeltaHealthPolicyArgs(maxPercentDeltaUnhealthyServices);
         }

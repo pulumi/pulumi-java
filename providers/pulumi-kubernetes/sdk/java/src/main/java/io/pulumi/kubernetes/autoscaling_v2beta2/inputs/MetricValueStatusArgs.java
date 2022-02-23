@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="averageUtilization")
-    private final @Nullable Input<Integer> averageUtilization;
+        private final @Nullable Input<Integer> averageUtilization;
 
     public Input<Integer> getAverageUtilization() {
         return this.averageUtilization == null ? Input.empty() : this.averageUtilization;
@@ -35,7 +35,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="averageValue")
-    private final @Nullable Input<String> averageValue;
+        private final @Nullable Input<String> averageValue;
 
     public Input<String> getAverageValue() {
         return this.averageValue == null ? Input.empty() : this.averageValue;
@@ -46,7 +46,7 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -120,7 +120,6 @@ public final class MetricValueStatusArgs extends io.pulumi.resources.ResourceArg
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public MetricValueStatusArgs build() {
             return new MetricValueStatusArgs(averageUtilization, averageValue, value);
         }

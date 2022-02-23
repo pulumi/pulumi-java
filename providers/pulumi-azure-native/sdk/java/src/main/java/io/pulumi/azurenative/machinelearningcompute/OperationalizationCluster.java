@@ -14,8 +14,8 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountProper
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -249,13 +249,6 @@ public class OperationalizationCluster extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public OperationalizationCluster(String name) {
-        super("azure-native:machinelearningcompute:OperationalizationCluster", name, OperationalizationClusterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

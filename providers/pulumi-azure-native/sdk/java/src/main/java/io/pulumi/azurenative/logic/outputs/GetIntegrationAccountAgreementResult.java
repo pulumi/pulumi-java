@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.AgreementContentResponse;
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -332,7 +332,6 @@ public final class GetIntegrationAccountAgreementResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountAgreementResult build() {
             return new GetIntegrationAccountAgreementResult(agreementType, changedTime, content, createdTime, guestIdentity, guestPartner, hostIdentity, hostPartner, id, location, metadata, name, tags, type);
         }

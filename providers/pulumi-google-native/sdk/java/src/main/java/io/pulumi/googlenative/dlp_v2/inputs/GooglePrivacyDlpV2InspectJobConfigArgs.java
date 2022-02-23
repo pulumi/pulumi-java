@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2StorageConfigArgs;
@@ -27,7 +27,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
+      private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
     public Input<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -38,7 +38,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inspectConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2InspectConfigArgs> inspectConfig;
 
     public Input<GooglePrivacyDlpV2InspectConfigArgs> getInspectConfig() {
         return this.inspectConfig == null ? Input.empty() : this.inspectConfig;
@@ -49,7 +49,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inspectTemplateName")
-    private final @Nullable Input<String> inspectTemplateName;
+      private final @Nullable Input<String> inspectTemplateName;
 
     public Input<String> getInspectTemplateName() {
         return this.inspectTemplateName == null ? Input.empty() : this.inspectTemplateName;
@@ -60,7 +60,7 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageConfig")
-    private final @Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
+      private final @Nullable Input<GooglePrivacyDlpV2StorageConfigArgs> storageConfig;
 
     public Input<GooglePrivacyDlpV2StorageConfigArgs> getStorageConfig() {
         return this.storageConfig == null ? Input.empty() : this.storageConfig;
@@ -149,7 +149,6 @@ public final class GooglePrivacyDlpV2InspectJobConfigArgs extends io.pulumi.reso
             this.storageConfig = Input.ofNullable(storageConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectJobConfigArgs build() {
             return new GooglePrivacyDlpV2InspectJobConfigArgs(actions, inspectConfig, inspectTemplateName, storageConfig);
         }

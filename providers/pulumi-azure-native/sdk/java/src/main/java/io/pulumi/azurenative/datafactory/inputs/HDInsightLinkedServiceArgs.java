@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterUri", required=true)
-    private final Input<Object> clusterUri;
+        private final Input<Object> clusterUri;
 
     public Input<Object> getClusterUri() {
         return this.clusterUri;
@@ -54,7 +54,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -65,7 +65,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,7 +76,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -87,7 +87,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="fileSystem")
-    private final @Nullable Input<Object> fileSystem;
+        private final @Nullable Input<Object> fileSystem;
 
     public Input<Object> getFileSystem() {
         return this.fileSystem == null ? Input.empty() : this.fileSystem;
@@ -98,7 +98,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hcatalogLinkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
         return this.hcatalogLinkedServiceName == null ? Input.empty() : this.hcatalogLinkedServiceName;
@@ -109,7 +109,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isEspEnabled")
-    private final @Nullable Input<Object> isEspEnabled;
+        private final @Nullable Input<Object> isEspEnabled;
 
     public Input<Object> getIsEspEnabled() {
         return this.isEspEnabled == null ? Input.empty() : this.isEspEnabled;
@@ -120,7 +120,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -131,7 +131,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -142,7 +142,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -154,7 +154,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -165,7 +165,7 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<Object> userName;
+        private final @Nullable Input<Object> userName;
 
     public Input<Object> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -389,7 +389,6 @@ public final class HDInsightLinkedServiceArgs extends io.pulumi.resources.Resour
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public HDInsightLinkedServiceArgs build() {
             return new HDInsightLinkedServiceArgs(annotations, clusterUri, connectVia, description, encryptedCredential, fileSystem, hcatalogLinkedServiceName, isEspEnabled, linkedServiceName, parameters, password, type, userName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -128,7 +128,6 @@ public final class CapacityReservationFleetInstanceTypeSpecification {
             this.weight = weight;
             return this;
         }
-
         public CapacityReservationFleetInstanceTypeSpecification build() {
             return new CapacityReservationFleetInstanceTypeSpecification(availabilityZone, availabilityZoneId, ebsOptimized, instancePlatform, instanceType, priority, weight);
         }

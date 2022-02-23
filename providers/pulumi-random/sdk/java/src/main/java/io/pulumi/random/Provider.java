@@ -4,7 +4,7 @@
 package io.pulumi.random;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.ProviderArgs;
 import io.pulumi.random.Utilities;
 import javax.annotation.Nullable;
@@ -18,13 +18,6 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="pulumi:providers:random")
 public class Provider extends io.pulumi.resources.ProviderResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Provider(String name) {
-        super("random", name, ProviderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

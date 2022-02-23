@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingClipboardMode;
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingInstanceType;
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamConfigurationSessionStorage;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -177,7 +177,6 @@ public final class LaunchProfileStreamConfiguration {
             this.streamingImageIds = Objects.requireNonNull(streamingImageIds);
             return this;
         }
-
         public LaunchProfileStreamConfiguration build() {
             return new LaunchProfileStreamConfiguration(clipboardMode, ec2InstanceTypes, maxSessionLengthInMinutes, maxStoppedSessionLengthInMinutes, sessionStorage, streamingImageIds);
         }

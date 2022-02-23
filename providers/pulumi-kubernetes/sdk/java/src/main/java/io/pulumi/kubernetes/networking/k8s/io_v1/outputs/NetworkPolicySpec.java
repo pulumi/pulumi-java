@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyEgressRule;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicyIngressRule;
@@ -121,7 +121,6 @@ public final class NetworkPolicySpec {
             this.policyTypes = policyTypes;
             return this;
         }
-
         public NetworkPolicySpec build() {
             return new NetworkPolicySpec(egress, ingress, podSelector, policyTypes);
         }

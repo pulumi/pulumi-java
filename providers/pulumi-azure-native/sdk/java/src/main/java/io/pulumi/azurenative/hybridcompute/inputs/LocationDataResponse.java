@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="city")
-    private final @Nullable String city;
+        private final @Nullable String city;
 
     public Optional<String> getCity() {
         return this.city == null ? Optional.empty() : Optional.ofNullable(this.city);
@@ -34,7 +34,7 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="countryOrRegion")
-    private final @Nullable String countryOrRegion;
+        private final @Nullable String countryOrRegion;
 
     public Optional<String> getCountryOrRegion() {
         return this.countryOrRegion == null ? Optional.empty() : Optional.ofNullable(this.countryOrRegion);
@@ -45,7 +45,7 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="district")
-    private final @Nullable String district;
+        private final @Nullable String district;
 
     public Optional<String> getDistrict() {
         return this.district == null ? Optional.empty() : Optional.ofNullable(this.district);
@@ -56,7 +56,7 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -125,7 +125,6 @@ public final class LocationDataResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public LocationDataResponse build() {
             return new LocationDataResponse(city, countryOrRegion, district, name);
         }

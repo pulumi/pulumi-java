@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.outputs;
 
 import io.pulumi.azurenative.aad.outputs.MigrationProgressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -96,7 +96,6 @@ public final class MigrationPropertiesResponse {
             this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
             return this;
         }
-
         public MigrationPropertiesResponse build() {
             return new MigrationPropertiesResponse(migrationProgress, oldSubnetId, oldVnetSiteId);
         }

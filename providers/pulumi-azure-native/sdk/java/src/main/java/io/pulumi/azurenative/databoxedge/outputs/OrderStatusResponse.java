@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.TrackingInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -143,7 +143,6 @@ public final class OrderStatusResponse {
             this.updateDateTime = Objects.requireNonNull(updateDateTime);
             return this;
         }
-
         public OrderStatusResponse build() {
             return new OrderStatusResponse(additionalOrderDetails, comments, status, trackingInformation, updateDateTime);
         }

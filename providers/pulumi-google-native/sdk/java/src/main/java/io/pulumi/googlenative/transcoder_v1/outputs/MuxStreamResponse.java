@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.SegmentSettingsResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class MuxStreamResponse {
             this.segmentSettings = Objects.requireNonNull(segmentSettings);
             return this;
         }
-
         public MuxStreamResponse build() {
             return new MuxStreamResponse(container, elementaryStreams, fileName, key, segmentSettings);
         }

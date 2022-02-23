@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class VersionResponse {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(epoch, inclusive, kind, name, revision);
         }

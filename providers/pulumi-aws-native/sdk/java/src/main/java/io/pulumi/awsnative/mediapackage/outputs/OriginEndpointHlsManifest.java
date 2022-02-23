@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointAdsOnDeliveryRestric
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestAdTriggersItem;
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsManifestPlaylistType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -243,7 +243,6 @@ public final class OriginEndpointHlsManifest {
             this.url = url;
             return this;
         }
-
         public OriginEndpointHlsManifest build() {
             return new OriginEndpointHlsManifest(adMarkers, adTriggers, adsOnDeliveryRestrictions, id, includeIframeOnlyStream, manifestName, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, url);
         }

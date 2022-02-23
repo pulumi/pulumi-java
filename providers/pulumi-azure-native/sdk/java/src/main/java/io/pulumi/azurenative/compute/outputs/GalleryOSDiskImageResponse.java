@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.GalleryArtifactVersionSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class GalleryOSDiskImageResponse {
             this.source = source;
             return this;
         }
-
         public GalleryOSDiskImageResponse build() {
             return new GalleryOSDiskImageResponse(hostCaching, sizeInGB, source);
         }

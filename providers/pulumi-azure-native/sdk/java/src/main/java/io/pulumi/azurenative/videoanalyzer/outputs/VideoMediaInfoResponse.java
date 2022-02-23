@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class VideoMediaInfoResponse {
             this.segmentLength = Objects.requireNonNull(segmentLength);
             return this;
         }
-
         public VideoMediaInfoResponse build() {
             return new VideoMediaInfoResponse(segmentLength);
         }

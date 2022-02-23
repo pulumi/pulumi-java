@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web;
 import io.pulumi.azurenative.web.enums.BuiltInAuthenticationProvider;
 import io.pulumi.azurenative.web.enums.UnauthenticatedClientAction;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="aadClaimsAuthorization")
-    private final @Nullable Input<String> aadClaimsAuthorization;
+        private final @Nullable Input<String> aadClaimsAuthorization;
 
     public Input<String> getAadClaimsAuthorization() {
         return this.aadClaimsAuthorization == null ? Input.empty() : this.aadClaimsAuthorization;
@@ -36,7 +36,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="additionalLoginParams")
-    private final @Nullable Input<List<String>> additionalLoginParams;
+        private final @Nullable Input<List<String>> additionalLoginParams;
 
     public Input<List<String>> getAdditionalLoginParams() {
         return this.additionalLoginParams == null ? Input.empty() : this.additionalLoginParams;
@@ -49,7 +49,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowedAudiences")
-    private final @Nullable Input<List<String>> allowedAudiences;
+        private final @Nullable Input<List<String>> allowedAudiences;
 
     public Input<List<String>> getAllowedAudiences() {
         return this.allowedAudiences == null ? Input.empty() : this.allowedAudiences;
@@ -62,7 +62,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowedExternalRedirectUrls")
-    private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
+        private final @Nullable Input<List<String>> allowedExternalRedirectUrls;
 
     public Input<List<String>> getAllowedExternalRedirectUrls() {
         return this.allowedExternalRedirectUrls == null ? Input.empty() : this.allowedExternalRedirectUrls;
@@ -74,7 +74,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authFilePath")
-    private final @Nullable Input<String> authFilePath;
+        private final @Nullable Input<String> authFilePath;
 
     public Input<String> getAuthFilePath() {
         return this.authFilePath == null ? Input.empty() : this.authFilePath;
@@ -88,7 +88,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -102,7 +102,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+        private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -114,7 +114,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecretCertificateThumbprint")
-    private final @Nullable Input<String> clientSecretCertificateThumbprint;
+        private final @Nullable Input<String> clientSecretCertificateThumbprint;
 
     public Input<String> getClientSecretCertificateThumbprint() {
         return this.clientSecretCertificateThumbprint == null ? Input.empty() : this.clientSecretCertificateThumbprint;
@@ -125,7 +125,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clientSecretSettingName")
-    private final @Nullable Input<String> clientSecretSettingName;
+        private final @Nullable Input<String> clientSecretSettingName;
 
     public Input<String> getClientSecretSettingName() {
         return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
@@ -137,7 +137,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configVersion")
-    private final @Nullable Input<String> configVersion;
+        private final @Nullable Input<String> configVersion;
 
     public Input<String> getConfigVersion() {
         return this.configVersion == null ? Input.empty() : this.configVersion;
@@ -150,7 +150,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultProvider")
-    private final @Nullable Input<BuiltInAuthenticationProvider> defaultProvider;
+        private final @Nullable Input<BuiltInAuthenticationProvider> defaultProvider;
 
     public Input<BuiltInAuthenticationProvider> getDefaultProvider() {
         return this.defaultProvider == null ? Input.empty() : this.defaultProvider;
@@ -161,7 +161,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -174,7 +174,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="facebookAppId")
-    private final @Nullable Input<String> facebookAppId;
+        private final @Nullable Input<String> facebookAppId;
 
     public Input<String> getFacebookAppId() {
         return this.facebookAppId == null ? Input.empty() : this.facebookAppId;
@@ -187,7 +187,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="facebookAppSecret")
-    private final @Nullable Input<String> facebookAppSecret;
+        private final @Nullable Input<String> facebookAppSecret;
 
     public Input<String> getFacebookAppSecret() {
         return this.facebookAppSecret == null ? Input.empty() : this.facebookAppSecret;
@@ -198,7 +198,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="facebookAppSecretSettingName")
-    private final @Nullable Input<String> facebookAppSecretSettingName;
+        private final @Nullable Input<String> facebookAppSecretSettingName;
 
     public Input<String> getFacebookAppSecretSettingName() {
         return this.facebookAppSecretSettingName == null ? Input.empty() : this.facebookAppSecretSettingName;
@@ -211,7 +211,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="facebookOAuthScopes")
-    private final @Nullable Input<List<String>> facebookOAuthScopes;
+        private final @Nullable Input<List<String>> facebookOAuthScopes;
 
     public Input<List<String>> getFacebookOAuthScopes() {
         return this.facebookOAuthScopes == null ? Input.empty() : this.facebookOAuthScopes;
@@ -223,7 +223,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gitHubClientId")
-    private final @Nullable Input<String> gitHubClientId;
+        private final @Nullable Input<String> gitHubClientId;
 
     public Input<String> getGitHubClientId() {
         return this.gitHubClientId == null ? Input.empty() : this.gitHubClientId;
@@ -235,7 +235,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gitHubClientSecret")
-    private final @Nullable Input<String> gitHubClientSecret;
+        private final @Nullable Input<String> gitHubClientSecret;
 
     public Input<String> getGitHubClientSecret() {
         return this.gitHubClientSecret == null ? Input.empty() : this.gitHubClientSecret;
@@ -247,7 +247,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gitHubClientSecretSettingName")
-    private final @Nullable Input<String> gitHubClientSecretSettingName;
+        private final @Nullable Input<String> gitHubClientSecretSettingName;
 
     public Input<String> getGitHubClientSecretSettingName() {
         return this.gitHubClientSecretSettingName == null ? Input.empty() : this.gitHubClientSecretSettingName;
@@ -259,7 +259,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="gitHubOAuthScopes")
-    private final @Nullable Input<List<String>> gitHubOAuthScopes;
+        private final @Nullable Input<List<String>> gitHubOAuthScopes;
 
     public Input<List<String>> getGitHubOAuthScopes() {
         return this.gitHubOAuthScopes == null ? Input.empty() : this.gitHubOAuthScopes;
@@ -272,7 +272,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="googleClientId")
-    private final @Nullable Input<String> googleClientId;
+        private final @Nullable Input<String> googleClientId;
 
     public Input<String> getGoogleClientId() {
         return this.googleClientId == null ? Input.empty() : this.googleClientId;
@@ -285,7 +285,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="googleClientSecret")
-    private final @Nullable Input<String> googleClientSecret;
+        private final @Nullable Input<String> googleClientSecret;
 
     public Input<String> getGoogleClientSecret() {
         return this.googleClientSecret == null ? Input.empty() : this.googleClientSecret;
@@ -297,7 +297,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="googleClientSecretSettingName")
-    private final @Nullable Input<String> googleClientSecretSettingName;
+        private final @Nullable Input<String> googleClientSecretSettingName;
 
     public Input<String> getGoogleClientSecretSettingName() {
         return this.googleClientSecretSettingName == null ? Input.empty() : this.googleClientSecretSettingName;
@@ -310,7 +310,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="googleOAuthScopes")
-    private final @Nullable Input<List<String>> googleOAuthScopes;
+        private final @Nullable Input<List<String>> googleOAuthScopes;
 
     public Input<List<String>> getGoogleOAuthScopes() {
         return this.googleOAuthScopes == null ? Input.empty() : this.googleOAuthScopes;
@@ -322,7 +322,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="isAuthFromFile")
-    private final @Nullable Input<String> isAuthFromFile;
+        private final @Nullable Input<String> isAuthFromFile;
 
     public Input<String> getIsAuthFromFile() {
         return this.isAuthFromFile == null ? Input.empty() : this.isAuthFromFile;
@@ -336,7 +336,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+        private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -347,7 +347,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -360,7 +360,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="microsoftAccountClientId")
-    private final @Nullable Input<String> microsoftAccountClientId;
+        private final @Nullable Input<String> microsoftAccountClientId;
 
     public Input<String> getMicrosoftAccountClientId() {
         return this.microsoftAccountClientId == null ? Input.empty() : this.microsoftAccountClientId;
@@ -373,7 +373,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="microsoftAccountClientSecret")
-    private final @Nullable Input<String> microsoftAccountClientSecret;
+        private final @Nullable Input<String> microsoftAccountClientSecret;
 
     public Input<String> getMicrosoftAccountClientSecret() {
         return this.microsoftAccountClientSecret == null ? Input.empty() : this.microsoftAccountClientSecret;
@@ -385,7 +385,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="microsoftAccountClientSecretSettingName")
-    private final @Nullable Input<String> microsoftAccountClientSecretSettingName;
+        private final @Nullable Input<String> microsoftAccountClientSecretSettingName;
 
     public Input<String> getMicrosoftAccountClientSecretSettingName() {
         return this.microsoftAccountClientSecretSettingName == null ? Input.empty() : this.microsoftAccountClientSecretSettingName;
@@ -398,7 +398,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="microsoftAccountOAuthScopes")
-    private final @Nullable Input<List<String>> microsoftAccountOAuthScopes;
+        private final @Nullable Input<List<String>> microsoftAccountOAuthScopes;
 
     public Input<List<String>> getMicrosoftAccountOAuthScopes() {
         return this.microsoftAccountOAuthScopes == null ? Input.empty() : this.microsoftAccountOAuthScopes;
@@ -409,7 +409,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -420,7 +420,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -432,7 +432,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Input<String> runtimeVersion;
+        private final @Nullable Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
@@ -443,7 +443,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+        private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -455,7 +455,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tokenRefreshExtensionHours")
-    private final @Nullable Input<Double> tokenRefreshExtensionHours;
+        private final @Nullable Input<Double> tokenRefreshExtensionHours;
 
     public Input<Double> getTokenRefreshExtensionHours() {
         return this.tokenRefreshExtensionHours == null ? Input.empty() : this.tokenRefreshExtensionHours;
@@ -467,7 +467,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tokenStoreEnabled")
-    private final @Nullable Input<Boolean> tokenStoreEnabled;
+        private final @Nullable Input<Boolean> tokenStoreEnabled;
 
     public Input<Boolean> getTokenStoreEnabled() {
         return this.tokenStoreEnabled == null ? Input.empty() : this.tokenStoreEnabled;
@@ -480,7 +480,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="twitterConsumerKey")
-    private final @Nullable Input<String> twitterConsumerKey;
+        private final @Nullable Input<String> twitterConsumerKey;
 
     public Input<String> getTwitterConsumerKey() {
         return this.twitterConsumerKey == null ? Input.empty() : this.twitterConsumerKey;
@@ -493,7 +493,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="twitterConsumerSecret")
-    private final @Nullable Input<String> twitterConsumerSecret;
+        private final @Nullable Input<String> twitterConsumerSecret;
 
     public Input<String> getTwitterConsumerSecret() {
         return this.twitterConsumerSecret == null ? Input.empty() : this.twitterConsumerSecret;
@@ -505,7 +505,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="twitterConsumerSecretSettingName")
-    private final @Nullable Input<String> twitterConsumerSecretSettingName;
+        private final @Nullable Input<String> twitterConsumerSecretSettingName;
 
     public Input<String> getTwitterConsumerSecretSettingName() {
         return this.twitterConsumerSecretSettingName == null ? Input.empty() : this.twitterConsumerSecretSettingName;
@@ -516,7 +516,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="unauthenticatedClientAction")
-    private final @Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction;
+        private final @Nullable Input<UnauthenticatedClientAction> unauthenticatedClientAction;
 
     public Input<UnauthenticatedClientAction> getUnauthenticatedClientAction() {
         return this.unauthenticatedClientAction == null ? Input.empty() : this.unauthenticatedClientAction;
@@ -527,7 +527,7 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validateIssuer")
-    private final @Nullable Input<Boolean> validateIssuer;
+        private final @Nullable Input<Boolean> validateIssuer;
 
     public Input<Boolean> getValidateIssuer() {
         return this.validateIssuer == null ? Input.empty() : this.validateIssuer;
@@ -1186,7 +1186,6 @@ public final class WebAppAuthSettingsSlotArgs extends io.pulumi.resources.Resour
             this.validateIssuer = Input.ofNullable(validateIssuer);
             return this;
         }
-
         public WebAppAuthSettingsSlotArgs build() {
             return new WebAppAuthSettingsSlotArgs(aadClaimsAuthorization, additionalLoginParams, allowedAudiences, allowedExternalRedirectUrls, authFilePath, clientId, clientSecret, clientSecretCertificateThumbprint, clientSecretSettingName, configVersion, defaultProvider, enabled, facebookAppId, facebookAppSecret, facebookAppSecretSettingName, facebookOAuthScopes, gitHubClientId, gitHubClientSecret, gitHubClientSecretSettingName, gitHubOAuthScopes, googleClientId, googleClientSecret, googleClientSecretSettingName, googleOAuthScopes, isAuthFromFile, issuer, kind, microsoftAccountClientId, microsoftAccountClientSecret, microsoftAccountClientSecretSettingName, microsoftAccountOAuthScopes, name, resourceGroupName, runtimeVersion, slot, tokenRefreshExtensionHours, tokenStoreEnabled, twitterConsumerKey, twitterConsumerSecret, twitterConsumerSecretSettingName, unauthenticatedClientAction, validateIssuer);
         }

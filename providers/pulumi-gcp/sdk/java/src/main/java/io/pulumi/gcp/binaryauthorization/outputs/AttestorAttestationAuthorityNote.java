@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.binaryauthorization.outputs.AttestorAttestationAuthorityNotePublicKey;
 import java.lang.String;
 import java.util.List;
@@ -143,7 +143,6 @@ public final class AttestorAttestationAuthorityNote {
             this.publicKeys = publicKeys;
             return this;
         }
-
         public AttestorAttestationAuthorityNote build() {
             return new AttestorAttestationAuthorityNote(delegationServiceAccountEmail, noteReference, publicKeys);
         }

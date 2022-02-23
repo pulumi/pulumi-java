@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class CapacityReservationPropertiesResponse {
             this.minCapacity = Objects.requireNonNull(minCapacity);
             return this;
         }
-
         public CapacityReservationPropertiesResponse build() {
             return new CapacityReservationPropertiesResponse(lastSkuUpdate, minCapacity);
         }

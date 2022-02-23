@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="environmentFolderName")
-    private final @Nullable String environmentFolderName;
+        private final @Nullable String environmentFolderName;
 
     public Optional<String> getEnvironmentFolderName() {
         return this.environmentFolderName == null ? Optional.empty() : Optional.ofNullable(this.environmentFolderName);
@@ -35,7 +35,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="environmentName")
-    private final @Nullable String environmentName;
+        private final @Nullable String environmentName;
 
     public Optional<String> getEnvironmentName() {
         return this.environmentName == null ? Optional.empty() : Optional.ofNullable(this.environmentName);
@@ -46,7 +46,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Double id;
+        private final @Nullable Double id;
 
     public Optional<Double> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -57,7 +57,7 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="referenceType")
-    private final @Nullable String referenceType;
+        private final @Nullable String referenceType;
 
     public Optional<String> getReferenceType() {
         return this.referenceType == null ? Optional.empty() : Optional.ofNullable(this.referenceType);
@@ -126,7 +126,6 @@ public final class SsisEnvironmentReferenceResponse extends io.pulumi.resources.
             this.referenceType = referenceType;
             return this;
         }
-
         public SsisEnvironmentReferenceResponse build() {
             return new SsisEnvironmentReferenceResponse(environmentFolderName, environmentName, id, referenceType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -80,7 +80,6 @@ public final class CxPageTransitionRouteTriggerFulfillmentMessageText {
             this.texts = texts;
             return this;
         }
-
         public CxPageTransitionRouteTriggerFulfillmentMessageText build() {
             return new CxPageTransitionRouteTriggerFulfillmentMessageText(allowPlaybackInterruption, texts);
         }

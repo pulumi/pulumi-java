@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.enums.FavoriteType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category")
-    private final @Nullable Input<String> category;
+        private final @Nullable Input<String> category;
 
     public Input<String> getCategory() {
         return this.category == null ? Input.empty() : this.category;
@@ -33,7 +33,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<String> config;
+        private final @Nullable Input<String> config;
 
     public Input<String> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -44,7 +44,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="favoriteId")
-    private final @Nullable Input<String> favoriteId;
+        private final @Nullable Input<String> favoriteId;
 
     public Input<String> getFavoriteId() {
         return this.favoriteId == null ? Input.empty() : this.favoriteId;
@@ -55,7 +55,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="favoriteType")
-    private final @Nullable Input<FavoriteType> favoriteType;
+        private final @Nullable Input<FavoriteType> favoriteType;
 
     public Input<FavoriteType> getFavoriteType() {
         return this.favoriteType == null ? Input.empty() : this.favoriteType;
@@ -66,7 +66,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isGeneratedFromTemplate")
-    private final @Nullable Input<Boolean> isGeneratedFromTemplate;
+        private final @Nullable Input<Boolean> isGeneratedFromTemplate;
 
     public Input<Boolean> getIsGeneratedFromTemplate() {
         return this.isGeneratedFromTemplate == null ? Input.empty() : this.isGeneratedFromTemplate;
@@ -77,7 +77,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -110,7 +110,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable Input<String> sourceType;
+        private final @Nullable Input<String> sourceType;
 
     public Input<String> getSourceType() {
         return this.sourceType == null ? Input.empty() : this.sourceType;
@@ -121,7 +121,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -326,7 +326,6 @@ public final class FavoriteArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public FavoriteArgs build() {
             return new FavoriteArgs(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, resourceGroupName, resourceName, sourceType, tags, version);
         }

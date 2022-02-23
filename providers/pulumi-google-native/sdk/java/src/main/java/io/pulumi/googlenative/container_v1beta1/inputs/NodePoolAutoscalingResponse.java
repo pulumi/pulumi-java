@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="autoprovisioned", required=true)
-    private final Boolean autoprovisioned;
+      private final Boolean autoprovisioned;
 
     public Boolean getAutoprovisioned() {
         return this.autoprovisioned;
@@ -33,7 +33,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -44,7 +44,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxNodeCount", required=true)
-    private final Integer maxNodeCount;
+      private final Integer maxNodeCount;
 
     public Integer getMaxNodeCount() {
         return this.maxNodeCount;
@@ -55,7 +55,7 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="minNodeCount", required=true)
-    private final Integer minNodeCount;
+      private final Integer minNodeCount;
 
     public Integer getMinNodeCount() {
         return this.minNodeCount;
@@ -124,7 +124,6 @@ public final class NodePoolAutoscalingResponse extends io.pulumi.resources.Invok
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public NodePoolAutoscalingResponse build() {
             return new NodePoolAutoscalingResponse(autoprovisioned, enabled, maxNodeCount, minNodeCount);
         }

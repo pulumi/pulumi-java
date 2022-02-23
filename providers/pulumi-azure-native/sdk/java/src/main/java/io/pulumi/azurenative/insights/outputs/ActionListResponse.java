@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ActionGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ActionListResponse {
             this.actionGroups = actionGroups;
             return this;
         }
-
         public ActionListResponse build() {
             return new ActionListResponse(actionGroups);
         }

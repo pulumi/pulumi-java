@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.IamMemberArgs;
 import io.pulumi.gcp.bigquery.inputs.IamMemberState;
@@ -145,13 +145,6 @@ public class IamMember extends io.pulumi.resources.CustomResource {
         return this.tableId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IamMember(String name) {
-        super("gcp:bigquery/iamMember:IamMember", name, IamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

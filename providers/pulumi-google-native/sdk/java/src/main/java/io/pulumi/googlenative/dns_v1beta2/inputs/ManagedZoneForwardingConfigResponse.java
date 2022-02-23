@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ManagedZoneForwardingConfigNameServerTargetResponse;
 import java.lang.String;
 import java.util.List;
@@ -15,7 +15,7 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
     public static final ManagedZoneForwardingConfigResponse Empty = new ManagedZoneForwardingConfigResponse();
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -26,7 +26,7 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-    private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
+      private final List<ManagedZoneForwardingConfigNameServerTargetResponse> targetNameServers;
 
     public List<ManagedZoneForwardingConfigNameServerTargetResponse> getTargetNameServers() {
         return this.targetNameServers;
@@ -75,7 +75,6 @@ public final class ManagedZoneForwardingConfigResponse extends io.pulumi.resourc
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public ManagedZoneForwardingConfigResponse build() {
             return new ManagedZoneForwardingConfigResponse(kind, targetNameServers);
         }

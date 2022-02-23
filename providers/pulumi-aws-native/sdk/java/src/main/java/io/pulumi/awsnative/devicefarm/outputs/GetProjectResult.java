@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.ProjectTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -89,7 +89,6 @@ public final class GetProjectResult {
             this.tags = tags;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(arn, defaultJobTimeoutMinutes, name, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class GetClusterMonitoringConfig {
             this.enableComponents = Objects.requireNonNull(enableComponents);
             return this;
         }
-
         public GetClusterMonitoringConfig build() {
             return new GetClusterMonitoringConfig(enableComponents);
         }

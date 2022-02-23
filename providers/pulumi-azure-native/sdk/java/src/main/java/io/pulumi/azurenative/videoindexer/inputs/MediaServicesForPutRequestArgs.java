@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoindexer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -34,7 +34,7 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable Input<String> userAssignedIdentity;
+        private final @Nullable Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
@@ -93,7 +93,6 @@ public final class MediaServicesForPutRequestArgs extends io.pulumi.resources.Re
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }
-
         public MediaServicesForPutRequestArgs build() {
             return new MediaServicesForPutRequestArgs(resourceId, userAssignedIdentity);
         }

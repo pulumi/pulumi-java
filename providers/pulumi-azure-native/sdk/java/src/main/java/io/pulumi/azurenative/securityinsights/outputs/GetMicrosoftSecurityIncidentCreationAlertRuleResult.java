@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -332,7 +332,6 @@ public final class GetMicrosoftSecurityIncidentCreationAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMicrosoftSecurityIncidentCreationAlertRuleResult build() {
             return new GetMicrosoftSecurityIncidentCreationAlertRuleResult(alertRuleTemplateName, description, displayName, displayNamesExcludeFilter, displayNamesFilter, enabled, etag, id, kind, lastModifiedUtc, name, productFilter, severitiesFilter, type);
         }

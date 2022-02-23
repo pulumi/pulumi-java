@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customEntityStoreAssignmentName")
-    private final @Nullable Input<String> customEntityStoreAssignmentName;
+        private final @Nullable Input<String> customEntityStoreAssignmentName;
 
     public Input<String> getCustomEntityStoreAssignmentName() {
         return this.customEntityStoreAssignmentName == null ? Input.empty() : this.customEntityStoreAssignmentName;
@@ -30,7 +30,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="principal")
-    private final @Nullable Input<String> principal;
+        private final @Nullable Input<String> principal;
 
     public Input<String> getPrincipal() {
         return this.principal == null ? Input.empty() : this.principal;
@@ -41,7 +41,7 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -115,7 +115,6 @@ public final class CustomEntityStoreAssignmentArgs extends io.pulumi.resources.R
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public CustomEntityStoreAssignmentArgs build() {
             return new CustomEntityStoreAssignmentArgs(customEntityStoreAssignmentName, principal, resourceGroupName);
         }

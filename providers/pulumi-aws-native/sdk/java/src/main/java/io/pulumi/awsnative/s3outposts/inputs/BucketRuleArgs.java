@@ -7,7 +7,7 @@ import io.pulumi.awsnative.s3outposts.enums.BucketRuleStatus;
 import io.pulumi.awsnative.s3outposts.inputs.BucketAbortIncompleteMultipartUploadArgs;
 import io.pulumi.awsnative.s3outposts.inputs.BucketRuleFilterPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="abortIncompleteMultipartUpload")
-    private final @Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
+        private final @Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
     public Input<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Input.empty() : this.abortIncompleteMultipartUpload;
@@ -38,7 +38,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+        private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -49,7 +49,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationInDays")
-    private final @Nullable Input<Integer> expirationInDays;
+        private final @Nullable Input<Integer> expirationInDays;
 
     public Input<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Input.empty() : this.expirationInDays;
@@ -60,7 +60,7 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BucketRuleFilterPropertiesArgs> filter;
+        private final @Nullable Input<BucketRuleFilterPropertiesArgs> filter;
 
     public Input<BucketRuleFilterPropertiesArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -71,14 +71,14 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<BucketRuleStatus> status;
+        private final @Nullable Input<BucketRuleStatus> status;
 
     public Input<BucketRuleStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -197,7 +197,6 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public BucketRuleArgs build() {
             return new BucketRuleArgs(abortIncompleteMultipartUpload, expirationDate, expirationInDays, filter, id, status);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storagecache.enums.NfsAccessRuleAccess;
 import io.pulumi.azurenative.storagecache.enums.NfsAccessRuleScope;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="access", required=true)
-    private final Input<Either<String,NfsAccessRuleAccess>> access;
+        private final Input<Either<String,NfsAccessRuleAccess>> access;
 
     public Input<Either<String,NfsAccessRuleAccess>> getAccess() {
         return this.access;
@@ -38,7 +38,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anonymousGID")
-    private final @Nullable Input<String> anonymousGID;
+        private final @Nullable Input<String> anonymousGID;
 
     public Input<String> getAnonymousGID() {
         return this.anonymousGID == null ? Input.empty() : this.anonymousGID;
@@ -49,7 +49,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anonymousUID")
-    private final @Nullable Input<String> anonymousUID;
+        private final @Nullable Input<String> anonymousUID;
 
     public Input<String> getAnonymousUID() {
         return this.anonymousUID == null ? Input.empty() : this.anonymousUID;
@@ -60,7 +60,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -71,7 +71,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootSquash")
-    private final @Nullable Input<Boolean> rootSquash;
+        private final @Nullable Input<Boolean> rootSquash;
 
     public Input<Boolean> getRootSquash() {
         return this.rootSquash == null ? Input.empty() : this.rootSquash;
@@ -82,7 +82,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<Either<String,NfsAccessRuleScope>> scope;
+        private final Input<Either<String,NfsAccessRuleScope>> scope;
 
     public Input<Either<String,NfsAccessRuleScope>> getScope() {
         return this.scope;
@@ -93,7 +93,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="submountAccess")
-    private final @Nullable Input<Boolean> submountAccess;
+        private final @Nullable Input<Boolean> submountAccess;
 
     public Input<Boolean> getSubmountAccess() {
         return this.submountAccess == null ? Input.empty() : this.submountAccess;
@@ -104,7 +104,7 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="suid")
-    private final @Nullable Input<Boolean> suid;
+        private final @Nullable Input<Boolean> suid;
 
     public Input<Boolean> getSuid() {
         return this.suid == null ? Input.empty() : this.suid;
@@ -253,7 +253,6 @@ public final class NfsAccessRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.suid = Input.ofNullable(suid);
             return this;
         }
-
         public NfsAccessRuleArgs build() {
             return new NfsAccessRuleArgs(access, anonymousGID, anonymousUID, filter, rootSquash, scope, submountAccess, suid);
         }

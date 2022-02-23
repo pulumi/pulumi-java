@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -101,7 +101,6 @@ public final class ImportPipelineSourcePropertiesResponse {
             this.uri = uri;
             return this;
         }
-
         public ImportPipelineSourcePropertiesResponse build() {
             return new ImportPipelineSourcePropertiesResponse(keyVaultUri, type, uri);
         }

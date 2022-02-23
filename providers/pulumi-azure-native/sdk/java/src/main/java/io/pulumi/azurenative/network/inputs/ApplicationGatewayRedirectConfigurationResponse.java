@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -37,7 +37,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -48,7 +48,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="includePath")
-    private final @Nullable Boolean includePath;
+        private final @Nullable Boolean includePath;
 
     public Optional<Boolean> getIncludePath() {
         return this.includePath == null ? Optional.empty() : Optional.ofNullable(this.includePath);
@@ -59,7 +59,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="includeQueryString")
-    private final @Nullable Boolean includeQueryString;
+        private final @Nullable Boolean includeQueryString;
 
     public Optional<Boolean> getIncludeQueryString() {
         return this.includeQueryString == null ? Optional.empty() : Optional.ofNullable(this.includeQueryString);
@@ -70,7 +70,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="pathRules")
-    private final @Nullable List<SubResourceResponse> pathRules;
+        private final @Nullable List<SubResourceResponse> pathRules;
 
     public List<SubResourceResponse> getPathRules() {
         return this.pathRules == null ? List.of() : this.pathRules;
@@ -92,7 +92,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="redirectType")
-    private final @Nullable String redirectType;
+        private final @Nullable String redirectType;
 
     public Optional<String> getRedirectType() {
         return this.redirectType == null ? Optional.empty() : Optional.ofNullable(this.redirectType);
@@ -103,7 +103,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="requestRoutingRules")
-    private final @Nullable List<SubResourceResponse> requestRoutingRules;
+        private final @Nullable List<SubResourceResponse> requestRoutingRules;
 
     public List<SubResourceResponse> getRequestRoutingRules() {
         return this.requestRoutingRules == null ? List.of() : this.requestRoutingRules;
@@ -114,7 +114,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="targetListener")
-    private final @Nullable SubResourceResponse targetListener;
+        private final @Nullable SubResourceResponse targetListener;
 
     public Optional<SubResourceResponse> getTargetListener() {
         return this.targetListener == null ? Optional.empty() : Optional.ofNullable(this.targetListener);
@@ -125,7 +125,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="targetUrl")
-    private final @Nullable String targetUrl;
+        private final @Nullable String targetUrl;
 
     public Optional<String> getTargetUrl() {
         return this.targetUrl == null ? Optional.empty() : Optional.ofNullable(this.targetUrl);
@@ -136,7 +136,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -147,7 +147,7 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
      * 
      */
     @InputImport(name="urlPathMaps")
-    private final @Nullable List<SubResourceResponse> urlPathMaps;
+        private final @Nullable List<SubResourceResponse> urlPathMaps;
 
     public List<SubResourceResponse> getUrlPathMaps() {
         return this.urlPathMaps == null ? List.of() : this.urlPathMaps;
@@ -296,7 +296,6 @@ public final class ApplicationGatewayRedirectConfigurationResponse extends io.pu
             this.urlPathMaps = urlPathMaps;
             return this;
         }
-
         public ApplicationGatewayRedirectConfigurationResponse build() {
             return new ApplicationGatewayRedirectConfigurationResponse(etag, id, includePath, includeQueryString, name, pathRules, redirectType, requestRoutingRules, targetListener, targetUrl, type, urlPathMaps);
         }

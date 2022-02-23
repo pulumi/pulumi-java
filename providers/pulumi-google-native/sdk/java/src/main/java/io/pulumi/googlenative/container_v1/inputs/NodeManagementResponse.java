@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.AutoUpgradeOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="autoRepair", required=true)
-    private final Boolean autoRepair;
+      private final Boolean autoRepair;
 
     public Boolean getAutoRepair() {
         return this.autoRepair;
@@ -33,7 +33,7 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="autoUpgrade", required=true)
-    private final Boolean autoUpgrade;
+      private final Boolean autoUpgrade;
 
     public Boolean getAutoUpgrade() {
         return this.autoUpgrade;
@@ -44,7 +44,7 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="upgradeOptions", required=true)
-    private final AutoUpgradeOptionsResponse upgradeOptions;
+      private final AutoUpgradeOptionsResponse upgradeOptions;
 
     public AutoUpgradeOptionsResponse getUpgradeOptions() {
         return this.upgradeOptions;
@@ -103,7 +103,6 @@ public final class NodeManagementResponse extends io.pulumi.resources.InvokeArgs
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
         }
-
         public NodeManagementResponse build() {
             return new NodeManagementResponse(autoRepair, autoUpgrade, upgradeOptions);
         }

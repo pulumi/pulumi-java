@@ -5,7 +5,7 @@ package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.awsnative.forecast.inputs.AttributesItemPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
     public static final SchemaPropertiesArgs Empty = new SchemaPropertiesArgs();
 
     @InputImport(name="attributes")
-    private final @Nullable Input<List<AttributesItemPropertiesArgs>> attributes;
+        private final @Nullable Input<List<AttributesItemPropertiesArgs>> attributes;
 
     public Input<List<AttributesItemPropertiesArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -59,7 +59,6 @@ public final class SchemaPropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.attributes = Input.ofNullable(attributes);
             return this;
         }
-
         public SchemaPropertiesArgs build() {
             return new SchemaPropertiesArgs(attributes);
         }

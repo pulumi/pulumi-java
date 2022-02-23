@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -123,7 +123,6 @@ public final class ListMeta {
             this.selfLink = selfLink;
             return this;
         }
-
         public ListMeta build() {
             return new ListMeta($continue, remainingItemCount, resourceVersion, selfLink);
         }

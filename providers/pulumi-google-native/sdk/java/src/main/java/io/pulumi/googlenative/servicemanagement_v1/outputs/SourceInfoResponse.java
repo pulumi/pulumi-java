@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -54,7 +54,6 @@ public final class SourceInfoResponse {
             this.sourceFiles = Objects.requireNonNull(sourceFiles);
             return this;
         }
-
         public SourceInfoResponse build() {
             return new SourceInfoResponse(sourceFiles);
         }

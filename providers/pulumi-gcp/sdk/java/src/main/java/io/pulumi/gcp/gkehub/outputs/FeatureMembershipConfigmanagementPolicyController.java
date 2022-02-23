@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -162,7 +162,6 @@ public final class FeatureMembershipConfigmanagementPolicyController {
             this.templateLibraryInstalled = templateLibraryInstalled;
             return this;
         }
-
         public FeatureMembershipConfigmanagementPolicyController build() {
             return new FeatureMembershipConfigmanagementPolicyController(auditIntervalSeconds, enabled, exemptableNamespaces, logDeniesEnabled, referentialRulesEnabled, templateLibraryInstalled);
         }

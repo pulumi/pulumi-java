@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -156,7 +156,6 @@ public final class ResourceSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public ResourceSkuResponse build() {
             return new ResourceSkuResponse(capacity, family, name, size, tier);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ipTagType")
-    private final @Nullable Input<String> ipTagType;
+        private final @Nullable Input<String> ipTagType;
 
     public Input<String> getIpTagType() {
         return this.ipTagType == null ? Input.empty() : this.ipTagType;
@@ -34,7 +34,7 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+        private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -93,7 +93,6 @@ public final class VirtualMachineIpTagArgs extends io.pulumi.resources.ResourceA
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public VirtualMachineIpTagArgs build() {
             return new VirtualMachineIpTagArgs(ipTagType, tag);
         }

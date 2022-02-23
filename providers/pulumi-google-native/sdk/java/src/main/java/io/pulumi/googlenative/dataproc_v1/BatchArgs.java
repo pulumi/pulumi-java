@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.EnvironmentConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.PySparkBatchArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.RuntimeConfigArgs;
@@ -22,7 +22,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
     public static final BatchArgs Empty = new BatchArgs();
 
     @InputImport(name="batchId")
-    private final @Nullable Input<String> batchId;
+      private final @Nullable Input<String> batchId;
 
     public Input<String> getBatchId() {
         return this.batchId == null ? Input.empty() : this.batchId;
@@ -33,7 +33,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentConfig")
-    private final @Nullable Input<EnvironmentConfigArgs> environmentConfig;
+      private final @Nullable Input<EnvironmentConfigArgs> environmentConfig;
 
     public Input<EnvironmentConfigArgs> getEnvironmentConfig() {
         return this.environmentConfig == null ? Input.empty() : this.environmentConfig;
@@ -44,21 +44,21 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -69,14 +69,14 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pysparkBatch")
-    private final @Nullable Input<PySparkBatchArgs> pysparkBatch;
+      private final @Nullable Input<PySparkBatchArgs> pysparkBatch;
 
     public Input<PySparkBatchArgs> getPysparkBatch() {
         return this.pysparkBatch == null ? Input.empty() : this.pysparkBatch;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -87,7 +87,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeConfig")
-    private final @Nullable Input<RuntimeConfigArgs> runtimeConfig;
+      private final @Nullable Input<RuntimeConfigArgs> runtimeConfig;
 
     public Input<RuntimeConfigArgs> getRuntimeConfig() {
         return this.runtimeConfig == null ? Input.empty() : this.runtimeConfig;
@@ -98,7 +98,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkBatch")
-    private final @Nullable Input<SparkBatchArgs> sparkBatch;
+      private final @Nullable Input<SparkBatchArgs> sparkBatch;
 
     public Input<SparkBatchArgs> getSparkBatch() {
         return this.sparkBatch == null ? Input.empty() : this.sparkBatch;
@@ -109,7 +109,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkRBatch")
-    private final @Nullable Input<SparkRBatchArgs> sparkRBatch;
+      private final @Nullable Input<SparkRBatchArgs> sparkRBatch;
 
     public Input<SparkRBatchArgs> getSparkRBatch() {
         return this.sparkRBatch == null ? Input.empty() : this.sparkRBatch;
@@ -120,7 +120,7 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sparkSqlBatch")
-    private final @Nullable Input<SparkSqlBatchArgs> sparkSqlBatch;
+      private final @Nullable Input<SparkSqlBatchArgs> sparkSqlBatch;
 
     public Input<SparkSqlBatchArgs> getSparkSqlBatch() {
         return this.sparkSqlBatch == null ? Input.empty() : this.sparkSqlBatch;
@@ -314,7 +314,6 @@ public final class BatchArgs extends io.pulumi.resources.ResourceArgs {
             this.sparkSqlBatch = Input.ofNullable(sparkSqlBatch);
             return this;
         }
-
         public BatchArgs build() {
             return new BatchArgs(batchId, environmentConfig, labels, location, project, pysparkBatch, requestId, runtimeConfig, sparkBatch, sparkRBatch, sparkSqlBatch);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardBehavior;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class DashboardExportToCSVOption {
             this.availabilityStatus = availabilityStatus;
             return this;
         }
-
         public DashboardExportToCSVOption build() {
             return new DashboardExportToCSVOption(availabilityStatus);
         }

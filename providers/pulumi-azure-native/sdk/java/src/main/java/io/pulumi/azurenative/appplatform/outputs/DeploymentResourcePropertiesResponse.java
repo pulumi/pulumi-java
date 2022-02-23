@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.DeploymentSettingsResponse;
 import io.pulumi.azurenative.appplatform.outputs.UserSourceInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -207,7 +207,6 @@ public final class DeploymentResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DeploymentResourcePropertiesResponse build() {
             return new DeploymentResourcePropertiesResponse(active, appName, createdTime, deploymentSettings, instances, provisioningState, source, status);
         }

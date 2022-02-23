@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodSpecArgs;
 import io.pulumi.kubernetes.core_v1.inputs.PodStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -41,7 +41,7 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -52,7 +52,7 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -63,7 +63,7 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -74,7 +74,7 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<PodSpecArgs> spec;
+        private final @Nullable Input<PodSpecArgs> spec;
 
     public Input<PodSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -85,7 +85,7 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<PodStatusArgs> status;
+        private final @Nullable Input<PodStatusArgs> status;
 
     public Input<PodStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -189,7 +189,6 @@ public final class PodArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public PodArgs build() {
             return new PodArgs(apiVersion, kind, metadata, spec, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final String operationalInsightsResourceProvider;
+        private final String operationalInsightsResourceProvider;
 
     public String getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -39,7 +39,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -119,7 +119,6 @@ public final class GetThreatIntelligenceIndicatorArgs extends io.pulumi.resource
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetThreatIntelligenceIndicatorArgs build() {
             return new GetThreatIntelligenceIndicatorArgs(name, operationalInsightsResourceProvider, resourceGroupName, workspaceName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DiskSecurityProfileResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="securityType")
-    private final @Nullable String securityType;
+        private final @Nullable String securityType;
 
     public Optional<String> getSecurityType() {
         return this.securityType == null ? Optional.empty() : Optional.ofNullable(this.securityType);
@@ -61,7 +61,6 @@ public final class DiskSecurityProfileResponse extends io.pulumi.resources.Invok
             this.securityType = securityType;
             return this;
         }
-
         public DiskSecurityProfileResponse build() {
             return new DiskSecurityProfileResponse(securityType);
         }

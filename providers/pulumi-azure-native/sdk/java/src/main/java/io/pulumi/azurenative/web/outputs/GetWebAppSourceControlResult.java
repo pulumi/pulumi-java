@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.GitHubActionConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -267,7 +267,6 @@ public final class GetWebAppSourceControlResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSourceControlResult build() {
             return new GetWebAppSourceControlResult(branch, deploymentRollbackEnabled, gitHubActionConfiguration, id, isGitHubAction, isManualIntegration, isMercurial, kind, name, repoUrl, type);
         }

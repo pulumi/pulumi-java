@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigDatabaseConfig;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigEncryptionConfig;
 import io.pulumi.gcp.composer.inputs.GetEnvironmentConfigMaintenanceWindow;
@@ -25,105 +25,105 @@ public final class GetEnvironmentConfig extends io.pulumi.resources.InvokeArgs {
     public static final GetEnvironmentConfig Empty = new GetEnvironmentConfig();
 
     @InputImport(name="airflowUri", required=true)
-    private final String airflowUri;
+        private final String airflowUri;
 
     public String getAirflowUri() {
         return this.airflowUri;
     }
 
     @InputImport(name="dagGcsPrefix", required=true)
-    private final String dagGcsPrefix;
+        private final String dagGcsPrefix;
 
     public String getDagGcsPrefix() {
         return this.dagGcsPrefix;
     }
 
     @InputImport(name="databaseConfigs", required=true)
-    private final List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
+        private final List<GetEnvironmentConfigDatabaseConfig> databaseConfigs;
 
     public List<GetEnvironmentConfigDatabaseConfig> getDatabaseConfigs() {
         return this.databaseConfigs;
     }
 
     @InputImport(name="encryptionConfigs", required=true)
-    private final List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
+        private final List<GetEnvironmentConfigEncryptionConfig> encryptionConfigs;
 
     public List<GetEnvironmentConfigEncryptionConfig> getEncryptionConfigs() {
         return this.encryptionConfigs;
     }
 
     @InputImport(name="environmentSize", required=true)
-    private final String environmentSize;
+        private final String environmentSize;
 
     public String getEnvironmentSize() {
         return this.environmentSize;
     }
 
     @InputImport(name="gkeCluster", required=true)
-    private final String gkeCluster;
+        private final String gkeCluster;
 
     public String getGkeCluster() {
         return this.gkeCluster;
     }
 
     @InputImport(name="maintenanceWindows", required=true)
-    private final List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
+        private final List<GetEnvironmentConfigMaintenanceWindow> maintenanceWindows;
 
     public List<GetEnvironmentConfigMaintenanceWindow> getMaintenanceWindows() {
         return this.maintenanceWindows;
     }
 
     @InputImport(name="masterAuthorizedNetworksConfigs", required=true)
-    private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
+        private final List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> masterAuthorizedNetworksConfigs;
 
     public List<GetEnvironmentConfigMasterAuthorizedNetworksConfig> getMasterAuthorizedNetworksConfigs() {
         return this.masterAuthorizedNetworksConfigs;
     }
 
     @InputImport(name="nodeConfigs", required=true)
-    private final List<GetEnvironmentConfigNodeConfig> nodeConfigs;
+        private final List<GetEnvironmentConfigNodeConfig> nodeConfigs;
 
     public List<GetEnvironmentConfigNodeConfig> getNodeConfigs() {
         return this.nodeConfigs;
     }
 
     @InputImport(name="nodeCount", required=true)
-    private final Integer nodeCount;
+        private final Integer nodeCount;
 
     public Integer getNodeCount() {
         return this.nodeCount;
     }
 
     @InputImport(name="privateEnvironmentConfigs", required=true)
-    private final List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
+        private final List<GetEnvironmentConfigPrivateEnvironmentConfig> privateEnvironmentConfigs;
 
     public List<GetEnvironmentConfigPrivateEnvironmentConfig> getPrivateEnvironmentConfigs() {
         return this.privateEnvironmentConfigs;
     }
 
     @InputImport(name="softwareConfigs", required=true)
-    private final List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
+        private final List<GetEnvironmentConfigSoftwareConfig> softwareConfigs;
 
     public List<GetEnvironmentConfigSoftwareConfig> getSoftwareConfigs() {
         return this.softwareConfigs;
     }
 
     @InputImport(name="webServerConfigs", required=true)
-    private final List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
+        private final List<GetEnvironmentConfigWebServerConfig> webServerConfigs;
 
     public List<GetEnvironmentConfigWebServerConfig> getWebServerConfigs() {
         return this.webServerConfigs;
     }
 
     @InputImport(name="webServerNetworkAccessControls", required=true)
-    private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
+        private final List<GetEnvironmentConfigWebServerNetworkAccessControl> webServerNetworkAccessControls;
 
     public List<GetEnvironmentConfigWebServerNetworkAccessControl> getWebServerNetworkAccessControls() {
         return this.webServerNetworkAccessControls;
     }
 
     @InputImport(name="workloadsConfigs", required=true)
-    private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
+        private final List<GetEnvironmentConfigWorkloadsConfig> workloadsConfigs;
 
     public List<GetEnvironmentConfigWorkloadsConfig> getWorkloadsConfigs() {
         return this.workloadsConfigs;
@@ -302,7 +302,6 @@ public final class GetEnvironmentConfig extends io.pulumi.resources.InvokeArgs {
             this.workloadsConfigs = Objects.requireNonNull(workloadsConfigs);
             return this;
         }
-
         public GetEnvironmentConfig build() {
             return new GetEnvironmentConfig(airflowUri, dagGcsPrefix, databaseConfigs, encryptionConfigs, environmentSize, gkeCluster, maintenanceWindows, masterAuthorizedNetworksConfigs, nodeConfigs, nodeCount, privateEnvironmentConfigs, softwareConfigs, webServerConfigs, webServerNetworkAccessControls, workloadsConfigs);
         }

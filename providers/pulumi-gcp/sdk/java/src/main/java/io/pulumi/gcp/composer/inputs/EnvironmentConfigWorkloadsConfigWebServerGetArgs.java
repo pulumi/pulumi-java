@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class EnvironmentConfigWorkloadsConfigWebServerGetArgs extends io.p
     public static final EnvironmentConfigWorkloadsConfigWebServerGetArgs Empty = new EnvironmentConfigWorkloadsConfigWebServerGetArgs();
 
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+        private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
     }
 
     @InputImport(name="memoryGb")
-    private final @Nullable Input<Double> memoryGb;
+        private final @Nullable Input<Double> memoryGb;
 
     public Input<Double> getMemoryGb() {
         return this.memoryGb == null ? Input.empty() : this.memoryGb;
     }
 
     @InputImport(name="storageGb")
-    private final @Nullable Input<Double> storageGb;
+        private final @Nullable Input<Double> storageGb;
 
     public Input<Double> getStorageGb() {
         return this.storageGb == null ? Input.empty() : this.storageGb;
@@ -103,7 +103,6 @@ public final class EnvironmentConfigWorkloadsConfigWebServerGetArgs extends io.p
             this.storageGb = Input.ofNullable(storageGb);
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigWebServerGetArgs build() {
             return new EnvironmentConfigWorkloadsConfigWebServerGetArgs(cpu, memoryGb, storageGb);
         }

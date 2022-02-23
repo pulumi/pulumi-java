@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaRuleResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class GetControlResult {
             this.solutionTypes = Objects.requireNonNull(solutionTypes);
             return this;
         }
-
         public GetControlResult build() {
             return new GetControlResult(associatedServingConfigIds, displayName, facetSpec, name, rule, solutionTypes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionResourcesVolume;
 import java.lang.Double;
 import java.lang.Integer;
@@ -123,7 +123,6 @@ public final class FlexibleAppVersionResources {
             this.volumes = volumes;
             return this;
         }
-
         public FlexibleAppVersionResources build() {
             return new FlexibleAppVersionResources(cpu, diskGb, memoryGb, volumes);
         }

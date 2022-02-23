@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthClientCertificateConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
     public static final ClusterMasterAuthGetArgs Empty = new ClusterMasterAuthGetArgs();
 
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<String> clientCertificate;
+        private final @Nullable Input<String> clientCertificate;
 
     public Input<String> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
@@ -27,21 +27,21 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clientCertificateConfig", required=true)
-    private final Input<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig;
+        private final Input<ClusterMasterAuthClientCertificateConfigGetArgs> clientCertificateConfig;
 
     public Input<ClusterMasterAuthClientCertificateConfigGetArgs> getClientCertificateConfig() {
         return this.clientCertificateConfig;
     }
 
     @InputImport(name="clientKey")
-    private final @Nullable Input<String> clientKey;
+        private final @Nullable Input<String> clientKey;
 
     public Input<String> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
     }
 
     @InputImport(name="clusterCaCertificate")
-    private final @Nullable Input<String> clusterCaCertificate;
+        private final @Nullable Input<String> clusterCaCertificate;
 
     public Input<String> getClusterCaCertificate() {
         return this.clusterCaCertificate == null ? Input.empty() : this.clusterCaCertificate;
@@ -130,7 +130,6 @@ public final class ClusterMasterAuthGetArgs extends io.pulumi.resources.Resource
             this.clusterCaCertificate = Input.ofNullable(clusterCaCertificate);
             return this;
         }
-
         public ClusterMasterAuthGetArgs build() {
             return new ClusterMasterAuthGetArgs(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.logging.outputs.MetricBucketOptionsExplicitBuckets;
 import io.pulumi.gcp.logging.outputs.MetricBucketOptionsExponentialBuckets;
 import io.pulumi.gcp.logging.outputs.MetricBucketOptionsLinearBuckets;
@@ -109,7 +109,6 @@ public final class MetricBucketOptions {
             this.linearBuckets = linearBuckets;
             return this;
         }
-
         public MetricBucketOptions build() {
             return new MetricBucketOptions(explicitBuckets, exponentialBuckets, linearBuckets);
         }

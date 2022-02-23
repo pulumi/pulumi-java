@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class GetWorkloadIdentityPoolProviderOidc {
             this.issuerUri = Objects.requireNonNull(issuerUri);
             return this;
         }
-
         public GetWorkloadIdentityPoolProviderOidc build() {
             return new GetWorkloadIdentityPoolProviderOidc(allowedAudiences, issuerUri);
         }

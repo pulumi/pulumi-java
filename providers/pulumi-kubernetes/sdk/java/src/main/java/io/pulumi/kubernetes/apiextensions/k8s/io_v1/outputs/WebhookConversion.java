@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.WebhookClientConfig;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class WebhookConversion {
             this.conversionReviewVersions = Objects.requireNonNull(conversionReviewVersions);
             return this;
         }
-
         public WebhookConversion build() {
             return new WebhookConversion(clientConfig, conversionReviewVersions);
         }

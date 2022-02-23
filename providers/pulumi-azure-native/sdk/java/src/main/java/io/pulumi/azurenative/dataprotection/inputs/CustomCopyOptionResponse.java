@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CustomCopyOptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable String duration;
+        private final @Nullable String duration;
 
     public Optional<String> getDuration() {
         return this.duration == null ? Optional.empty() : Optional.ofNullable(this.duration);
@@ -35,7 +35,7 @@ public final class CustomCopyOptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final String objectType;
+        private final String objectType;
 
     public String getObjectType() {
         return this.objectType;
@@ -84,7 +84,6 @@ public final class CustomCopyOptionResponse extends io.pulumi.resources.InvokeAr
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public CustomCopyOptionResponse build() {
             return new CustomCopyOptionResponse(duration, objectType);
         }

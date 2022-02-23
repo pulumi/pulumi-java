@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs;
@@ -28,7 +28,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="acceleratorConfig")
-    private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
+        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> acceleratorConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -40,7 +40,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="containerImages")
-    private final @Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
+        private final @Nullable Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> containerImages;
 
     public Input<List<RuntimeVirtualMachineVirtualMachineConfigContainerImageArgs>> getContainerImages() {
         return this.containerImages == null ? Input.empty() : this.containerImages;
@@ -52,7 +52,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="dataDisk", required=true)
-    private final Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
+        private final Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> dataDisk;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigDataDiskArgs> getDataDisk() {
         return this.dataDisk;
@@ -64,7 +64,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
+        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> encryptionConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigEncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -78,7 +78,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="guestAttributes")
-    private final @Nullable Input<Map<String,String>> guestAttributes;
+        private final @Nullable Input<Map<String,String>> guestAttributes;
 
     public Input<Map<String,String>> getGuestAttributes() {
         return this.guestAttributes == null ? Input.empty() : this.guestAttributes;
@@ -94,7 +94,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="internalIpOnly")
-    private final @Nullable Input<Boolean> internalIpOnly;
+        private final @Nullable Input<Boolean> internalIpOnly;
 
     public Input<Boolean> getInternalIpOnly() {
         return this.internalIpOnly == null ? Input.empty() : this.internalIpOnly;
@@ -107,7 +107,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -118,7 +118,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final Input<String> machineType;
+        private final Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType;
@@ -132,7 +132,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -156,7 +156,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -169,7 +169,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="nicType")
-    private final @Nullable Input<String> nicType;
+        private final @Nullable Input<String> nicType;
 
     public Input<String> getNicType() {
         return this.nicType == null ? Input.empty() : this.nicType;
@@ -181,7 +181,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="shieldedInstanceConfig")
-    private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
+        private final @Nullable Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> shieldedInstanceConfig;
 
     public Input<RuntimeVirtualMachineVirtualMachineConfigShieldedInstanceConfigArgs> getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig == null ? Input.empty() : this.shieldedInstanceConfig;
@@ -197,7 +197,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<String> subnet;
+        private final @Nullable Input<String> subnet;
 
     public Input<String> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -210,7 +210,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -476,7 +476,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigArgs extends io.pulu
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigArgs(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }

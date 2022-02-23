@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -222,7 +222,6 @@ public final class GetEngineVersionsResult {
             this.versionPrefix = versionPrefix;
             return this;
         }
-
         public GetEngineVersionsResult build() {
             return new GetEngineVersionsResult(defaultClusterVersion, id, latestMasterVersion, latestNodeVersion, location, project, releaseChannelDefaultVersion, validMasterVersions, validNodeVersions, versionPrefix);
         }

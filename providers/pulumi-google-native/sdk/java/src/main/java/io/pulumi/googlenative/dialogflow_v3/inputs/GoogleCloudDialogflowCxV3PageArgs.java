@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventHandlerArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="entryFulfillment")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> entryFulfillment;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> entryFulfillment;
 
     public Input<GoogleCloudDialogflowCxV3FulfillmentArgs> getEntryFulfillment() {
         return this.entryFulfillment == null ? Input.empty() : this.entryFulfillment;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventHandlers")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> eventHandlers;
 
     public Input<List<GoogleCloudDialogflowCxV3EventHandlerArgs>> getEventHandlers() {
         return this.eventHandlers == null ? Input.empty() : this.eventHandlers;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="form")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3FormArgs> form;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3FormArgs> form;
 
     public Input<GoogleCloudDialogflowCxV3FormArgs> getForm() {
         return this.form == null ? Input.empty() : this.form;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="transitionRouteGroups")
-    private final @Nullable Input<List<String>> transitionRouteGroups;
+      private final @Nullable Input<List<String>> transitionRouteGroups;
 
     public Input<List<String>> getTransitionRouteGroups() {
         return this.transitionRouteGroups == null ? Input.empty() : this.transitionRouteGroups;
@@ -94,7 +94,7 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="transitionRoutes")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> transitionRoutes;
 
     public Input<List<GoogleCloudDialogflowCxV3TransitionRouteArgs>> getTransitionRoutes() {
         return this.transitionRoutes == null ? Input.empty() : this.transitionRoutes;
@@ -228,7 +228,6 @@ public final class GoogleCloudDialogflowCxV3PageArgs extends io.pulumi.resources
             this.transitionRoutes = Input.ofNullable(transitionRoutes);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3PageArgs build() {
             return new GoogleCloudDialogflowCxV3PageArgs(displayName, entryFulfillment, eventHandlers, form, name, transitionRouteGroups, transitionRoutes);
         }

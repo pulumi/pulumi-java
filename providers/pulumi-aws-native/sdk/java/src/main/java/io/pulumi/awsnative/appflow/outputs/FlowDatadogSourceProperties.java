@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class FlowDatadogSourceProperties {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public FlowDatadogSourceProperties build() {
             return new FlowDatadogSourceProperties(object);
         }

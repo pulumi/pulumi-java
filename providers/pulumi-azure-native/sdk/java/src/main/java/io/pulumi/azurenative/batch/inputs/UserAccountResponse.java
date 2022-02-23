@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.LinuxUserConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.WindowsUserConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elevationLevel")
-    private final @Nullable String elevationLevel;
+        private final @Nullable String elevationLevel;
 
     public Optional<String> getElevationLevel() {
         return this.elevationLevel == null ? Optional.empty() : Optional.ofNullable(this.elevationLevel);
@@ -32,21 +32,21 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linuxUserConfiguration")
-    private final @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
+        private final @Nullable LinuxUserConfigurationResponse linuxUserConfiguration;
 
     public Optional<LinuxUserConfigurationResponse> getLinuxUserConfiguration() {
         return this.linuxUserConfiguration == null ? Optional.empty() : Optional.ofNullable(this.linuxUserConfiguration);
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -57,7 +57,7 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="windowsUserConfiguration")
-    private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
+        private final @Nullable WindowsUserConfigurationResponse windowsUserConfiguration;
 
     public Optional<WindowsUserConfigurationResponse> getWindowsUserConfiguration() {
         return this.windowsUserConfiguration == null ? Optional.empty() : Optional.ofNullable(this.windowsUserConfiguration);
@@ -136,7 +136,6 @@ public final class UserAccountResponse extends io.pulumi.resources.InvokeArgs {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
-
         public UserAccountResponse build() {
             return new UserAccountResponse(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }

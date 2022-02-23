@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class AutoScaleConfigurationResponse {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AutoScaleConfigurationResponse build() {
             return new AutoScaleConfigurationResponse(maxReplicas, minReplicas, refreshPeriodInSeconds, status, targetUtilization);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cassandra.inputs;
 import io.pulumi.awsnative.cassandra.enums.TableMode;
 import io.pulumi.awsnative.cassandra.inputs.TableProvisionedThroughputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
     public static final TableBillingModeArgs Empty = new TableBillingModeArgs();
 
     @InputImport(name="mode", required=true)
-    private final Input<TableMode> mode;
+        private final Input<TableMode> mode;
 
     public Input<TableMode> getMode() {
         return this.mode;
     }
 
     @InputImport(name="provisionedThroughput")
-    private final @Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput;
+        private final @Nullable Input<TableProvisionedThroughputArgs> provisionedThroughput;
 
     public Input<TableProvisionedThroughputArgs> getProvisionedThroughput() {
         return this.provisionedThroughput == null ? Input.empty() : this.provisionedThroughput;
@@ -82,7 +82,6 @@ public final class TableBillingModeArgs extends io.pulumi.resources.ResourceArgs
             this.provisionedThroughput = Input.ofNullable(provisionedThroughput);
             return this;
         }
-
         public TableBillingModeArgs build() {
             return new TableBillingModeArgs(mode, provisionedThroughput);
         }

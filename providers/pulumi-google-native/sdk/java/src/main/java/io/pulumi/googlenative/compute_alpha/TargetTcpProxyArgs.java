@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.TargetTcpProxyProxyHeader;
 import java.lang.Boolean;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,14 +32,14 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -50,7 +50,7 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyBind")
-    private final @Nullable Input<Boolean> proxyBind;
+      private final @Nullable Input<Boolean> proxyBind;
 
     public Input<Boolean> getProxyBind() {
         return this.proxyBind == null ? Input.empty() : this.proxyBind;
@@ -61,14 +61,14 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="proxyHeader")
-    private final @Nullable Input<TargetTcpProxyProxyHeader> proxyHeader;
+      private final @Nullable Input<TargetTcpProxyProxyHeader> proxyHeader;
 
     public Input<TargetTcpProxyProxyHeader> getProxyHeader() {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -79,7 +79,7 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -213,7 +213,6 @@ public final class TargetTcpProxyArgs extends io.pulumi.resources.ResourceArgs {
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public TargetTcpProxyArgs build() {
             return new TargetTcpProxyArgs(description, name, project, proxyBind, proxyHeader, requestId, service);
         }

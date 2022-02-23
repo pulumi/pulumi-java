@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionSpec;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceDefinitionStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -134,7 +134,6 @@ public final class CustomResourceDefinition {
             this.status = status;
             return this;
         }
-
         public CustomResourceDefinition build() {
             return new CustomResourceDefinition(apiVersion, kind, metadata, spec, status);
         }

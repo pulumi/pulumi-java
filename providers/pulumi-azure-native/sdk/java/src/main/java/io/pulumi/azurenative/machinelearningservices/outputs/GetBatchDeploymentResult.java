@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 import io.pulumi.azurenative.machinelearningservices.outputs.BatchDeploymentResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class GetBatchDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBatchDeploymentResult build() {
             return new GetBatchDeploymentResult(id, identity, kind, location, name, properties, systemData, tags, type);
         }

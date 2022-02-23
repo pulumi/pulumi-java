@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -245,7 +245,6 @@ public final class GetWorkloadNetworkPortMirroringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkPortMirroringResult build() {
             return new GetWorkloadNetworkPortMirroringResult(destination, direction, displayName, id, name, provisioningState, revision, source, status, type);
         }

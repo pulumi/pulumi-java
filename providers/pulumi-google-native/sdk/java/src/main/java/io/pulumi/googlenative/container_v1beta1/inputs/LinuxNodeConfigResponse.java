@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LinuxNodeConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="sysctls", required=true)
-    private final Map<String,String> sysctls;
+      private final Map<String,String> sysctls;
 
     public Map<String,String> getSysctls() {
         return this.sysctls;
@@ -60,7 +60,6 @@ public final class LinuxNodeConfigResponse extends io.pulumi.resources.InvokeArg
             this.sysctls = Objects.requireNonNull(sysctls);
             return this;
         }
-
         public LinuxNodeConfigResponse build() {
             return new LinuxNodeConfigResponse(sysctls);
         }

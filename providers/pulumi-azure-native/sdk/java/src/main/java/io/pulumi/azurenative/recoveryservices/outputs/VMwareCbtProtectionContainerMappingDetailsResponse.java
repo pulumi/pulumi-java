@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -181,7 +181,6 @@ public final class VMwareCbtProtectionContainerMappingDetailsResponse {
             this.targetLocation = Objects.requireNonNull(targetLocation);
             return this;
         }
-
         public VMwareCbtProtectionContainerMappingDetailsResponse build() {
             return new VMwareCbtProtectionContainerMappingDetailsResponse(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
         }

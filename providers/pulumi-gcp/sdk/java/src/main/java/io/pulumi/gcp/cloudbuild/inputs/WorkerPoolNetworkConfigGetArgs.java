@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class WorkerPoolNetworkConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="peeredNetwork", required=true)
-    private final Input<String> peeredNetwork;
+        private final Input<String> peeredNetwork;
 
     public Input<String> getPeeredNetwork() {
         return this.peeredNetwork;
@@ -61,7 +61,6 @@ public final class WorkerPoolNetworkConfigGetArgs extends io.pulumi.resources.Re
             this.peeredNetwork = Input.of(Objects.requireNonNull(peeredNetwork));
             return this;
         }
-
         public WorkerPoolNetworkConfigGetArgs build() {
             return new WorkerPoolNetworkConfigGetArgs(peeredNetwork);
         }

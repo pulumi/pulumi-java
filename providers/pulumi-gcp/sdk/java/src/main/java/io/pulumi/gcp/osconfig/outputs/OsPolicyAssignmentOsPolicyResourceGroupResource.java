@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExec;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFile;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkg;
@@ -143,7 +143,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
             this.repository = repository;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResource build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResource(exec, file, id, pkg, repository);
         }

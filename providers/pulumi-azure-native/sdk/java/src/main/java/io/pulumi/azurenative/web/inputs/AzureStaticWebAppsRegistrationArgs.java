@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -66,7 +66,6 @@ public final class AzureStaticWebAppsRegistrationArgs extends io.pulumi.resource
             this.clientId = Input.ofNullable(clientId);
             return this;
         }
-
         public AzureStaticWebAppsRegistrationArgs build() {
             return new AzureStaticWebAppsRegistrationArgs(clientId);
         }

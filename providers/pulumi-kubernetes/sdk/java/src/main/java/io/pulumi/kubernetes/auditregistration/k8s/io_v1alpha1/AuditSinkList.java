@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.AuditSinkListArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.AuditSink;
@@ -70,13 +70,6 @@ public class AuditSinkList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AuditSinkList(String name) {
-        super("kubernetes:auditregistration.k8s.io/v1alpha1:AuditSinkList", name, AuditSinkListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

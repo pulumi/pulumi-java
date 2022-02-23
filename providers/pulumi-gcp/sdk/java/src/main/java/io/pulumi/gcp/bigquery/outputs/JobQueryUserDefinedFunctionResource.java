@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class JobQueryUserDefinedFunctionResource {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public JobQueryUserDefinedFunctionResource build() {
             return new JobQueryUserDefinedFunctionResource(inlineCode, resourceUri);
         }

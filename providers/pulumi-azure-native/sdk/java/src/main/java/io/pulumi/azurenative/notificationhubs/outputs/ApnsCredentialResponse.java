@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class ApnsCredentialResponse {
             this.token = token;
             return this;
         }
-
         public ApnsCredentialResponse build() {
             return new ApnsCredentialResponse(apnsCertificate, appId, appName, certificateKey, endpoint, keyId, thumbprint, token);
         }

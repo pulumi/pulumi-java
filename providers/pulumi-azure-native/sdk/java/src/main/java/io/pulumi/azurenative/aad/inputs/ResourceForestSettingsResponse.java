@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.azurenative.aad.inputs.ForestTrustResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ResourceForestSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceForest")
-    private final @Nullable String resourceForest;
+        private final @Nullable String resourceForest;
 
     public Optional<String> getResourceForest() {
         return this.resourceForest == null ? Optional.empty() : Optional.ofNullable(this.resourceForest);
@@ -36,7 +36,7 @@ public final class ResourceForestSettingsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable List<ForestTrustResponse> settings;
+        private final @Nullable List<ForestTrustResponse> settings;
 
     public List<ForestTrustResponse> getSettings() {
         return this.settings == null ? List.of() : this.settings;
@@ -85,7 +85,6 @@ public final class ResourceForestSettingsResponse extends io.pulumi.resources.In
             this.settings = settings;
             return this;
         }
-
         public ResourceForestSettingsResponse build() {
             return new ResourceForestSettingsResponse(resourceForest, settings);
         }

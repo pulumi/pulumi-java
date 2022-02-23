@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableIntegrityMonitoring")
-    private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+      private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
     public Input<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
@@ -34,7 +34,7 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableSecureBoot")
-    private final @Nullable Input<Boolean> enableSecureBoot;
+      private final @Nullable Input<Boolean> enableSecureBoot;
 
     public Input<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
@@ -93,7 +93,6 @@ public final class ShieldedInstanceConfigArgs extends io.pulumi.resources.Resour
             this.enableSecureBoot = Input.ofNullable(enableSecureBoot);
             return this;
         }
-
         public ShieldedInstanceConfigArgs build() {
             return new ShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot);
         }

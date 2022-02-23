@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.RollingUpdateDeployment;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class DeploymentStrategy {
             this.type = type;
             return this;
         }
-
         public DeploymentStrategy build() {
             return new DeploymentStrategy(rollingUpdate, type);
         }

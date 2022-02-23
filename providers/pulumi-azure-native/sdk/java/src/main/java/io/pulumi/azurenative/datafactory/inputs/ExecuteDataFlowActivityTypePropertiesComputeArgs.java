@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
      * 
      */
     @InputImport(name="computeType")
-    private final @Nullable Input<Object> computeType;
+        private final @Nullable Input<Object> computeType;
 
     public Input<Object> getComputeType() {
         return this.computeType == null ? Input.empty() : this.computeType;
@@ -34,7 +34,7 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Input<Object> coreCount;
+        private final @Nullable Input<Object> coreCount;
 
     public Input<Object> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -93,7 +93,6 @@ public final class ExecuteDataFlowActivityTypePropertiesComputeArgs extends io.p
             this.coreCount = Input.ofNullable(coreCount);
             return this;
         }
-
         public ExecuteDataFlowActivityTypePropertiesComputeArgs build() {
             return new ExecuteDataFlowActivityTypePropertiesComputeArgs(computeType, coreCount);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 import io.pulumi.azurenative.eventgrid.outputs.InboundIpRuleResponse;
 import io.pulumi.azurenative.eventgrid.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.eventgrid.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -309,7 +309,6 @@ public final class GetPartnerNamespaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPartnerNamespaceResult build() {
             return new GetPartnerNamespaceResult(disableLocalAuth, endpoint, id, inboundIpRules, location, name, partnerRegistrationFullyQualifiedId, privateEndpointConnections, provisioningState, publicNetworkAccess, systemData, tags, type);
         }

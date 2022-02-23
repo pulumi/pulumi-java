@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shell", required=true)
-    private final String shell;
+      private final String shell;
 
     public String getShell() {
         return this.shell;
@@ -59,7 +59,6 @@ public final class EntrypointResponse extends io.pulumi.resources.InvokeArgs {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public EntrypointResponse build() {
             return new EntrypointResponse(shell);
         }

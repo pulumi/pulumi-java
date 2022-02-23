@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectAttachmentPartnerMetadataResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InterconnectAttachmentPrivateInfoResponse;
 import java.lang.Boolean;
@@ -794,7 +794,6 @@ public final class GetInterconnectAttachmentResult {
             this.vlanTag8021q = Objects.requireNonNull(vlanTag8021q);
             return this;
         }
-
         public GetInterconnectAttachmentResult build() {
             return new GetInterconnectAttachmentResult(adminEnabled, bandwidth, candidateIpv6Subnets, candidateSubnets, cloudRouterIpAddress, cloudRouterIpv6Address, cloudRouterIpv6InterfaceId, creationTimestamp, customerRouterIpAddress, customerRouterIpv6Address, customerRouterIpv6InterfaceId, dataplaneVersion, description, edgeAvailabilityDomain, encryption, interconnect, ipsecInternalAddresses, kind, labelFingerprint, labels, mtu, name, operationalStatus, pairingKey, partnerAsn, partnerMetadata, privateInterconnectInfo, region, router, satisfiesPzs, selfLink, selfLinkWithId, stackType, state, type, vlanTag8021q);
         }

@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.settings.k8s.io_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.PodPresetArgs;
@@ -61,13 +61,6 @@ public class PodPreset extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PodPreset(String name) {
-        super("kubernetes:settings.k8s.io/v1alpha1:PodPreset", name, PodPresetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

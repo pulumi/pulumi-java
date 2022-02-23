@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetLongTermRetentionPolicyResult {
             this.yearlyRetention = yearlyRetention;
             return this;
         }
-
         public GetLongTermRetentionPolicyResult build() {
             return new GetLongTermRetentionPolicyResult(id, monthlyRetention, name, type, weekOfYear, weeklyRetention, yearlyRetention);
         }

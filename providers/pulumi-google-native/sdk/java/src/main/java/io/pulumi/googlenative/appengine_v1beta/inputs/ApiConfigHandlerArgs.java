@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerAuthFailAction;
 import io.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerLogin;
 import io.pulumi.googlenative.appengine_v1beta.enums.ApiConfigHandlerSecurityLevel;
@@ -26,7 +26,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authFailAction")
-    private final @Nullable Input<ApiConfigHandlerAuthFailAction> authFailAction;
+      private final @Nullable Input<ApiConfigHandlerAuthFailAction> authFailAction;
 
     public Input<ApiConfigHandlerAuthFailAction> getAuthFailAction() {
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
@@ -37,7 +37,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<ApiConfigHandlerLogin> login;
+      private final @Nullable Input<ApiConfigHandlerLogin> login;
 
     public Input<ApiConfigHandlerLogin> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -48,7 +48,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+      private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -59,7 +59,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="securityLevel")
-    private final @Nullable Input<ApiConfigHandlerSecurityLevel> securityLevel;
+      private final @Nullable Input<ApiConfigHandlerSecurityLevel> securityLevel;
 
     public Input<ApiConfigHandlerSecurityLevel> getSecurityLevel() {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
@@ -70,7 +70,7 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -174,7 +174,6 @@ public final class ApiConfigHandlerArgs extends io.pulumi.resources.ResourceArgs
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public ApiConfigHandlerArgs build() {
             return new ApiConfigHandlerArgs(authFailAction, login, script, securityLevel, url);
         }

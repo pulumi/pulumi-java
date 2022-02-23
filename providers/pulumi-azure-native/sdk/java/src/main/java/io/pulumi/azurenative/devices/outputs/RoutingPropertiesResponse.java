@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.outputs.EnrichmentPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.FallbackRoutePropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutePropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingEndpointsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -122,7 +122,6 @@ public final class RoutingPropertiesResponse {
             this.routes = routes;
             return this;
         }
-
         public RoutingPropertiesResponse build() {
             return new RoutingPropertiesResponse(endpoints, enrichments, fallbackRoute, routes);
         }

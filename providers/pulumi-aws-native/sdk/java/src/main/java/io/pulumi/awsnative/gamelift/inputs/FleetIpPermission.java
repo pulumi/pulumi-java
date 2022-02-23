@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.inputs;
 
 import io.pulumi.awsnative.gamelift.enums.FleetIpPermissionProtocol;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fromPort", required=true)
-    private final Integer fromPort;
+        private final Integer fromPort;
 
     public Integer getFromPort() {
         return this.fromPort;
@@ -34,7 +34,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipRange", required=true)
-    private final String ipRange;
+        private final String ipRange;
 
     public String getIpRange() {
         return this.ipRange;
@@ -45,7 +45,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final FleetIpPermissionProtocol protocol;
+        private final FleetIpPermissionProtocol protocol;
 
     public FleetIpPermissionProtocol getProtocol() {
         return this.protocol;
@@ -56,7 +56,7 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="toPort", required=true)
-    private final Integer toPort;
+        private final Integer toPort;
 
     public Integer getToPort() {
         return this.toPort;
@@ -125,7 +125,6 @@ public final class FleetIpPermission extends io.pulumi.resources.InvokeArgs {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public FleetIpPermission build() {
             return new FleetIpPermission(fromPort, ipRange, protocol, toPort);
         }

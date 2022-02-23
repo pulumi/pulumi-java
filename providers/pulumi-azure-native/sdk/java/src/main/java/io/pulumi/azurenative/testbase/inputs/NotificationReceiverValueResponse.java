@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.inputs.DistributionGroupListReceiverValueResponse;
 import io.pulumi.azurenative.testbase.inputs.SubscriptionReceiverValueResponse;
 import io.pulumi.azurenative.testbase.inputs.UserObjectReceiverValueResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="distributionGroupListReceiverValue")
-    private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
+        private final @Nullable DistributionGroupListReceiverValueResponse distributionGroupListReceiverValue;
 
     public Optional<DistributionGroupListReceiverValueResponse> getDistributionGroupListReceiverValue() {
         return this.distributionGroupListReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.distributionGroupListReceiverValue);
@@ -36,7 +36,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="subscriptionReceiverValue")
-    private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
+        private final @Nullable SubscriptionReceiverValueResponse subscriptionReceiverValue;
 
     public Optional<SubscriptionReceiverValueResponse> getSubscriptionReceiverValue() {
         return this.subscriptionReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.subscriptionReceiverValue);
@@ -47,7 +47,7 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="userObjectReceiverValue")
-    private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
+        private final @Nullable UserObjectReceiverValueResponse userObjectReceiverValue;
 
     public Optional<UserObjectReceiverValueResponse> getUserObjectReceiverValue() {
         return this.userObjectReceiverValue == null ? Optional.empty() : Optional.ofNullable(this.userObjectReceiverValue);
@@ -106,7 +106,6 @@ public final class NotificationReceiverValueResponse extends io.pulumi.resources
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }
-
         public NotificationReceiverValueResponse build() {
             return new NotificationReceiverValueResponse(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);
         }

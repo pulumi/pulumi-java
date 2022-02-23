@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class SsisEnvironmentReferenceResponse {
             this.referenceType = referenceType;
             return this;
         }
-
         public SsisEnvironmentReferenceResponse build() {
             return new SsisEnvironmentReferenceResponse(environmentFolderName, environmentName, id, referenceType);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iap_v1.IdentityAwareProxyClientArgs;
 import java.lang.String;
@@ -62,13 +62,6 @@ public class IdentityAwareProxyClient extends io.pulumi.resources.CustomResource
         return this.secret;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IdentityAwareProxyClient(String name) {
-        super("google-native:iap/v1:IdentityAwareProxyClient", name, IdentityAwareProxyClientArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

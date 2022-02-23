@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
     public static final CertificateCertificateDescriptionCertFingerprintArgs Empty = new CertificateCertificateDescriptionCertFingerprintArgs();
 
     @InputImport(name="sha256Hash")
-    private final @Nullable Input<String> sha256Hash;
+        private final @Nullable Input<String> sha256Hash;
 
     public Input<String> getSha256Hash() {
         return this.sha256Hash == null ? Input.empty() : this.sha256Hash;
@@ -58,7 +58,6 @@ public final class CertificateCertificateDescriptionCertFingerprintArgs extends 
             this.sha256Hash = Input.ofNullable(sha256Hash);
             return this;
         }
-
         public CertificateCertificateDescriptionCertFingerprintArgs build() {
             return new CertificateCertificateDescriptionCertFingerprintArgs(sha256Hash);
         }

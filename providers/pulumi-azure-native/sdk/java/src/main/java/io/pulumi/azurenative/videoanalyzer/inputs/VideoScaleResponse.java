@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable String height;
+        private final @Nullable String height;
 
     public Optional<String> getHeight() {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
@@ -34,7 +34,7 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -45,7 +45,7 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable String width;
+        private final @Nullable String width;
 
     public Optional<String> getWidth() {
         return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
@@ -104,7 +104,6 @@ public final class VideoScaleResponse extends io.pulumi.resources.InvokeArgs {
             this.width = width;
             return this;
         }
-
         public VideoScaleResponse build() {
             return new VideoScaleResponse(height, mode, width);
         }

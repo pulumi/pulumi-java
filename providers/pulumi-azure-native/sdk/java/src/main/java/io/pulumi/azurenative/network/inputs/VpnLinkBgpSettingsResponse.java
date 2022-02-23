@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="asn")
-    private final @Nullable Double asn;
+        private final @Nullable Double asn;
 
     public Optional<Double> getAsn() {
         return this.asn == null ? Optional.empty() : Optional.ofNullable(this.asn);
@@ -35,7 +35,7 @@ public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="bgpPeeringAddress")
-    private final @Nullable String bgpPeeringAddress;
+        private final @Nullable String bgpPeeringAddress;
 
     public Optional<String> getBgpPeeringAddress() {
         return this.bgpPeeringAddress == null ? Optional.empty() : Optional.ofNullable(this.bgpPeeringAddress);
@@ -84,7 +84,6 @@ public final class VpnLinkBgpSettingsResponse extends io.pulumi.resources.Invoke
             this.bgpPeeringAddress = bgpPeeringAddress;
             return this;
         }
-
         public VpnLinkBgpSettingsResponse build() {
             return new VpnLinkBgpSettingsResponse(asn, bgpPeeringAddress);
         }

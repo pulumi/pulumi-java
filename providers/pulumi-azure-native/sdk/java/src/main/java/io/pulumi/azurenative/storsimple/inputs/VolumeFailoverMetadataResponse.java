@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupCreatedDate")
-    private final @Nullable String backupCreatedDate;
+        private final @Nullable String backupCreatedDate;
 
     public Optional<String> getBackupCreatedDate() {
         return this.backupCreatedDate == null ? Optional.empty() : Optional.ofNullable(this.backupCreatedDate);
@@ -35,7 +35,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupElementId")
-    private final @Nullable String backupElementId;
+        private final @Nullable String backupElementId;
 
     public Optional<String> getBackupElementId() {
         return this.backupElementId == null ? Optional.empty() : Optional.ofNullable(this.backupElementId);
@@ -46,7 +46,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupId")
-    private final @Nullable String backupId;
+        private final @Nullable String backupId;
 
     public Optional<String> getBackupId() {
         return this.backupId == null ? Optional.empty() : Optional.ofNullable(this.backupId);
@@ -57,7 +57,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backupPolicyId")
-    private final @Nullable String backupPolicyId;
+        private final @Nullable String backupPolicyId;
 
     public Optional<String> getBackupPolicyId() {
         return this.backupPolicyId == null ? Optional.empty() : Optional.ofNullable(this.backupPolicyId);
@@ -68,7 +68,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sizeInBytes")
-    private final @Nullable Double sizeInBytes;
+        private final @Nullable Double sizeInBytes;
 
     public Optional<Double> getSizeInBytes() {
         return this.sizeInBytes == null ? Optional.empty() : Optional.ofNullable(this.sizeInBytes);
@@ -79,7 +79,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="volumeId")
-    private final @Nullable String volumeId;
+        private final @Nullable String volumeId;
 
     public Optional<String> getVolumeId() {
         return this.volumeId == null ? Optional.empty() : Optional.ofNullable(this.volumeId);
@@ -90,7 +90,7 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="volumeType")
-    private final @Nullable String volumeType;
+        private final @Nullable String volumeType;
 
     public Optional<String> getVolumeType() {
         return this.volumeType == null ? Optional.empty() : Optional.ofNullable(this.volumeType);
@@ -189,7 +189,6 @@ public final class VolumeFailoverMetadataResponse extends io.pulumi.resources.In
             this.volumeType = volumeType;
             return this;
         }
-
         public VolumeFailoverMetadataResponse build() {
             return new VolumeFailoverMetadataResponse(backupCreatedDate, backupElementId, backupId, backupPolicyId, sizeInBytes, volumeId, volumeType);
         }

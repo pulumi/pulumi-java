@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -101,7 +101,6 @@ public final class FeatureVariationObject {
             this.variationName = variationName;
             return this;
         }
-
         public FeatureVariationObject build() {
             return new FeatureVariationObject(booleanValue, doubleValue, longValue, stringValue, variationName);
         }

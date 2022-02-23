@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ListBotConnectionServiceProvidersResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListBotConnectionServiceProvidersResult build() {
             return new ListBotConnectionServiceProvidersResult(nextLink, value);
         }

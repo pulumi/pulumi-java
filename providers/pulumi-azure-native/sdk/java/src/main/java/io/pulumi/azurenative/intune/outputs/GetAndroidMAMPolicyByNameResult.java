@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.intune.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -401,7 +401,6 @@ public final class GetAndroidMAMPolicyByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAndroidMAMPolicyByNameResult build() {
             return new GetAndroidMAMPolicyByNameResult(accessRecheckOfflineTimeout, accessRecheckOnlineTimeout, appSharingFromLevel, appSharingToLevel, authentication, clipboardSharingLevel, dataBackup, description, deviceCompliance, fileEncryption, fileSharingSaveAs, friendlyName, groupStatus, id, lastModifiedTime, location, managedBrowser, name, numOfApps, offlineWipeTimeout, pin, pinNumRetry, screenCapture, tags, type);
         }

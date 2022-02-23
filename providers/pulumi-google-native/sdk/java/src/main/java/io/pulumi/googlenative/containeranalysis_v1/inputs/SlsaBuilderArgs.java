@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
     public static final SlsaBuilderArgs Empty = new SlsaBuilderArgs();
 
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,6 @@ public final class SlsaBuilderArgs extends io.pulumi.resources.ResourceArgs {
             this.id = Input.ofNullable(id);
             return this;
         }
-
         public SlsaBuilderArgs build() {
             return new SlsaBuilderArgs(id);
         }

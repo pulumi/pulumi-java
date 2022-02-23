@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -221,7 +221,6 @@ public final class HiveMetastoreResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public HiveMetastoreResponse build() {
             return new HiveMetastoreResponse(databaseName, id, name, nestedResourceProvisioningState, password, runtimeVersion, serverUri, type, userName);
         }

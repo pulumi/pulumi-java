@@ -7,7 +7,7 @@ import io.pulumi.azurenative.streamanalytics.enums.Encoding;
 import io.pulumi.azurenative.streamanalytics.enums.JsonOutputSerializationFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable Input<Either<String,Encoding>> encoding;
+        private final @Nullable Input<Either<String,Encoding>> encoding;
 
     public Input<Either<String,Encoding>> getEncoding() {
         return this.encoding == null ? Input.empty() : this.encoding;
@@ -37,7 +37,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Either<String,JsonOutputSerializationFormat>> format;
+        private final @Nullable Input<Either<String,JsonOutputSerializationFormat>> format;
 
     public Input<Either<String,JsonOutputSerializationFormat>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -49,7 +49,7 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class JsonSerializationArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public JsonSerializationArgs build() {
             return new JsonSerializationArgs(encoding, format, type);
         }

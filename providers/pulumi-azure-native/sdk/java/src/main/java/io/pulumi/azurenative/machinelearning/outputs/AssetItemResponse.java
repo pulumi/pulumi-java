@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.outputs.BlobLocationResponse;
 import io.pulumi.azurenative.machinelearning.outputs.InputPortResponse;
 import io.pulumi.azurenative.machinelearning.outputs.ModuleAssetParameterResponse;
 import io.pulumi.azurenative.machinelearning.outputs.OutputPortResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -208,7 +208,6 @@ public final class AssetItemResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AssetItemResponse build() {
             return new AssetItemResponse(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
         }

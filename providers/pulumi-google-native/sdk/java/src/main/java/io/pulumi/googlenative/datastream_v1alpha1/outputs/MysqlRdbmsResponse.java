@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlDatabaseResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class MysqlRdbmsResponse {
             this.mysqlDatabases = Objects.requireNonNull(mysqlDatabases);
             return this;
         }
-
         public MysqlRdbmsResponse build() {
             return new MysqlRdbmsResponse(mysqlDatabases);
         }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.outputs.ProductDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ResourceProviderDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ReverseShippingDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.StageDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -378,7 +378,6 @@ public final class OrderItemDetailsResponse {
             this.reverseShippingDetails = Objects.requireNonNull(reverseShippingDetails);
             return this;
         }
-
         public OrderItemDetailsResponse build() {
             return new OrderItemDetailsResponse(cancellationReason, cancellationStatus, currentStage, deletionStatus, error, forwardShippingDetails, managementRpDetails, managementRpDetailsList, notificationEmailList, orderItemStageHistory, orderItemType, preferences, productDetails, returnReason, returnStatus, reverseShippingDetails);
         }

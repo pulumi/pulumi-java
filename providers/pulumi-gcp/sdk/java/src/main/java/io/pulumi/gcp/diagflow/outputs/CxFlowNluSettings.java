@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -112,7 +112,6 @@ public final class CxFlowNluSettings {
             this.modelType = modelType;
             return this;
         }
-
         public CxFlowNluSettings build() {
             return new CxFlowNluSettings(classificationThreshold, modelTrainingMode, modelType);
         }

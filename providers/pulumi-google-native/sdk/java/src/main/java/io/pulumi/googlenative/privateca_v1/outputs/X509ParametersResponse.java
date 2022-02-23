@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CaOptionsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.KeyUsageResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.ObjectIdResponse;
@@ -142,7 +142,6 @@ public final class X509ParametersResponse {
             this.policyIds = Objects.requireNonNull(policyIds);
             return this;
         }
-
         public X509ParametersResponse build() {
             return new X509ParametersResponse(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

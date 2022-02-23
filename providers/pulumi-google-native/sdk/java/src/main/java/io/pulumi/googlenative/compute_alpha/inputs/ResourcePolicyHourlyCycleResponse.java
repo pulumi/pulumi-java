@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+      private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -33,7 +33,7 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="hoursInCycle", required=true)
-    private final Integer hoursInCycle;
+      private final Integer hoursInCycle;
 
     public Integer getHoursInCycle() {
         return this.hoursInCycle;
@@ -44,7 +44,7 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,6 @@ public final class ResourcePolicyHourlyCycleResponse extends io.pulumi.resources
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyHourlyCycleResponse build() {
             return new ResourcePolicyHourlyCycleResponse(duration, hoursInCycle, startTime);
         }

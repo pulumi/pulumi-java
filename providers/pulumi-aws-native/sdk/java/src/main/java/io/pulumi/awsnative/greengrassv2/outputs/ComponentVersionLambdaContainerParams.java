@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaDeviceMount;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaVolumeMount;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -90,7 +90,6 @@ public final class ComponentVersionLambdaContainerParams {
             this.volumes = volumes;
             return this;
         }
-
         public ComponentVersionLambdaContainerParams build() {
             return new ComponentVersionLambdaContainerParams(devices, memorySizeInKB, mountROSysfs, volumes);
         }

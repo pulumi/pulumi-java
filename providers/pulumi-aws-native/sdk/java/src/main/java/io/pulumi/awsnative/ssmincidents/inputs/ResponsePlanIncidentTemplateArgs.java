@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.awsnative.ssmincidents.inputs.ResponsePlanNotificationTargetItemArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dedupeString")
-    private final @Nullable Input<String> dedupeString;
+        private final @Nullable Input<String> dedupeString;
 
     public Input<String> getDedupeString() {
         return this.dedupeString == null ? Input.empty() : this.dedupeString;
@@ -37,7 +37,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="impact", required=true)
-    private final Input<Integer> impact;
+        private final Input<Integer> impact;
 
     public Input<Integer> getImpact() {
         return this.impact;
@@ -48,7 +48,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="notificationTargets")
-    private final @Nullable Input<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
+        private final @Nullable Input<List<ResponsePlanNotificationTargetItemArgs>> notificationTargets;
 
     public Input<List<ResponsePlanNotificationTargetItemArgs>> getNotificationTargets() {
         return this.notificationTargets == null ? Input.empty() : this.notificationTargets;
@@ -59,7 +59,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="summary")
-    private final @Nullable Input<String> summary;
+        private final @Nullable Input<String> summary;
 
     public Input<String> getSummary() {
         return this.summary == null ? Input.empty() : this.summary;
@@ -70,7 +70,7 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -174,7 +174,6 @@ public final class ResponsePlanIncidentTemplateArgs extends io.pulumi.resources.
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public ResponsePlanIncidentTemplateArgs build() {
             return new ResponsePlanIncidentTemplateArgs(dedupeString, impact, notificationTargets, summary, title);
         }

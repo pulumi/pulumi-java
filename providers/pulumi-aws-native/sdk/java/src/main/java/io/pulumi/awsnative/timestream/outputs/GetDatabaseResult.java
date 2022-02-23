@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.DatabaseTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,7 +91,6 @@ public final class GetDatabaseResult {
             this.tags = tags;
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(arn, kmsKeyId, tags);
         }

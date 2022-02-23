@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__ParameterSpecResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -225,7 +225,6 @@ public final class GoogleCloudMlV1__HyperparameterSpecResponse {
             this.resumePreviousJobId = Objects.requireNonNull(resumePreviousJobId);
             return this;
         }
-
         public GoogleCloudMlV1__HyperparameterSpecResponse build() {
             return new GoogleCloudMlV1__HyperparameterSpecResponse(algorithm, enableTrialEarlyStopping, goal, hyperparameterMetricTag, maxFailedTrials, maxParallelTrials, maxTrials, params, resumePreviousJobId);
         }

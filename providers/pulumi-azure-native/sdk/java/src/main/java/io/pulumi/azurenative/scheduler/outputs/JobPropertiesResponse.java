@@ -6,7 +6,7 @@ package io.pulumi.azurenative.scheduler.outputs;
 import io.pulumi.azurenative.scheduler.outputs.JobActionResponse;
 import io.pulumi.azurenative.scheduler.outputs.JobRecurrenceResponse;
 import io.pulumi.azurenative.scheduler.outputs.JobStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -142,7 +142,6 @@ public final class JobPropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public JobPropertiesResponse build() {
             return new JobPropertiesResponse(action, recurrence, startTime, state, status);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class LogStorageSettingsResponse {
             this.path = path;
             return this;
         }
-
         public LogStorageSettingsResponse build() {
             return new LogStorageSettingsResponse(enableReliableLogging, linkedServiceName, logLevel, path);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -32,7 +32,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="excludeRegexes")
-    private final @Nullable Input<List<String>> excludeRegexes;
+        private final @Nullable Input<List<String>> excludeRegexes;
 
     public Input<List<String>> getExcludeRegexes() {
         return this.excludeRegexes == null ? Input.empty() : this.excludeRegexes;
@@ -46,7 +46,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="includeRegexes")
-    private final @Nullable Input<List<String>> includeRegexes;
+        private final @Nullable Input<List<String>> includeRegexes;
 
     public Input<List<String>> getIncludeRegexes() {
         return this.includeRegexes == null ? Input.empty() : this.includeRegexes;
@@ -120,7 +120,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.includeRegexes = Input.ofNullable(includeRegexes);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetRegexFileSetArgs(bucketName, excludeRegexes, includeRegexes);
         }

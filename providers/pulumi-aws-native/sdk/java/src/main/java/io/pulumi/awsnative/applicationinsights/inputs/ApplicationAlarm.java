@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ApplicationAlarm extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="alarmName", required=true)
-    private final String alarmName;
+        private final String alarmName;
 
     public String getAlarmName() {
         return this.alarmName;
@@ -35,7 +35,7 @@ public final class ApplicationAlarm extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable ApplicationAlarmSeverity severity;
+        private final @Nullable ApplicationAlarmSeverity severity;
 
     public Optional<ApplicationAlarmSeverity> getSeverity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
@@ -84,7 +84,6 @@ public final class ApplicationAlarm extends io.pulumi.resources.InvokeArgs {
             this.severity = severity;
             return this;
         }
-
         public ApplicationAlarm build() {
             return new ApplicationAlarm(alarmName, severity);
         }

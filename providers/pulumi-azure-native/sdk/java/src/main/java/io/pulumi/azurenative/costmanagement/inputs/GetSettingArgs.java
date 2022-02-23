@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSettingArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="settingName", required=true)
-    private final String settingName;
+        private final String settingName;
 
     public String getSettingName() {
         return this.settingName;
@@ -55,7 +55,6 @@ public final class GetSettingArgs extends io.pulumi.resources.InvokeArgs {
             this.settingName = Objects.requireNonNull(settingName);
             return this;
         }
-
         public GetSettingArgs build() {
             return new GetSettingArgs(settingName);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.IPAllocationMethod;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -37,7 +37,7 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+        private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
@@ -59,7 +59,7 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="publicIPAddress")
-    private final @Nullable Input<SubResourceArgs> publicIPAddress;
+        private final @Nullable Input<SubResourceArgs> publicIPAddress;
 
     public Input<SubResourceArgs> getPublicIPAddress() {
         return this.publicIPAddress == null ? Input.empty() : this.publicIPAddress;
@@ -70,7 +70,7 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubResourceArgs> subnet;
+        private final @Nullable Input<SubResourceArgs> subnet;
 
     public Input<SubResourceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -174,7 +174,6 @@ public final class VirtualNetworkGatewayIPConfigurationArgs extends io.pulumi.re
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public VirtualNetworkGatewayIPConfigurationArgs build() {
             return new VirtualNetworkGatewayIPConfigurationArgs(id, name, privateIPAllocationMethod, publicIPAddress, subnet);
         }

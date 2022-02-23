@@ -5,7 +5,7 @@ package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<List<JSONWebKeyArgs>> keys;
+        private final @Nullable Input<List<JSONWebKeyArgs>> keys;
 
     public Input<List<JSONWebKeyArgs>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -67,7 +67,6 @@ public final class JSONWebKeySetArgs extends io.pulumi.resources.ResourceArgs {
             this.keys = Input.ofNullable(keys);
             return this;
         }
-
         public JSONWebKeySetArgs build() {
             return new JSONWebKeySetArgs(keys);
         }

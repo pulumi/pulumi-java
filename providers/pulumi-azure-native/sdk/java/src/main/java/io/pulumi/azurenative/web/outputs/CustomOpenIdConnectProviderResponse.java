@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.OpenIdConnectLoginResponse;
 import io.pulumi.azurenative.web.outputs.OpenIdConnectRegistrationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class CustomOpenIdConnectProviderResponse {
             this.registration = registration;
             return this;
         }
-
         public CustomOpenIdConnectProviderResponse build() {
             return new CustomOpenIdConnectProviderResponse(enabled, login, registration);
         }

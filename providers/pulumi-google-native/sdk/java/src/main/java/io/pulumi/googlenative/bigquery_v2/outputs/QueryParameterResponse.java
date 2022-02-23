@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterTypeResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.QueryParameterValueResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class QueryParameterResponse {
             this.parameterValue = Objects.requireNonNull(parameterValue);
             return this;
         }
-
         public QueryParameterResponse build() {
             return new QueryParameterResponse(name, parameterType, parameterValue);
         }

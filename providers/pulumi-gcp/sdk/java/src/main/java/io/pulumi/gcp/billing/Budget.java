@@ -5,8 +5,8 @@ package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.BudgetArgs;
 import io.pulumi.gcp.billing.inputs.BudgetState;
@@ -173,13 +173,6 @@ public class Budget extends io.pulumi.resources.CustomResource {
         return this.thresholdRules;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Budget(String name) {
-        super("gcp:billing/budget:Budget", name, BudgetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

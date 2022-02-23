@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.BigQueryDestinationResponse;
 import io.pulumi.googlenative.container_v1.inputs.ConsumptionMeteringConfigResponse;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-    private final BigQueryDestinationResponse bigqueryDestination;
+      private final BigQueryDestinationResponse bigqueryDestination;
 
     public BigQueryDestinationResponse getBigqueryDestination() {
         return this.bigqueryDestination;
@@ -34,7 +34,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="consumptionMeteringConfig", required=true)
-    private final ConsumptionMeteringConfigResponse consumptionMeteringConfig;
+      private final ConsumptionMeteringConfigResponse consumptionMeteringConfig;
 
     public ConsumptionMeteringConfigResponse getConsumptionMeteringConfig() {
         return this.consumptionMeteringConfig;
@@ -45,7 +45,7 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enableNetworkEgressMetering", required=true)
-    private final Boolean enableNetworkEgressMetering;
+      private final Boolean enableNetworkEgressMetering;
 
     public Boolean getEnableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering;
@@ -104,7 +104,6 @@ public final class ResourceUsageExportConfigResponse extends io.pulumi.resources
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
-
         public ResourceUsageExportConfigResponse build() {
             return new ResourceUsageExportConfigResponse(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
         }

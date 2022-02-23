@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<Integer> id;
+      private final @Nullable Input<Integer> id;
 
     public Input<Integer> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -94,7 +94,6 @@ public final class ExternalVpnGatewayInterfaceArgs extends io.pulumi.resources.R
             this.ipAddress = Input.ofNullable(ipAddress);
             return this;
         }
-
         public ExternalVpnGatewayInterfaceArgs build() {
             return new ExternalVpnGatewayInterfaceArgs(id, ipAddress);
         }

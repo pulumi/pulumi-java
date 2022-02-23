@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2IntervalResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="exclusiveMaximum", required=true)
-    private final Double exclusiveMaximum;
+      private final Double exclusiveMaximum;
 
     public Double getExclusiveMaximum() {
         return this.exclusiveMaximum;
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2IntervalResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="exclusiveMinimum", required=true)
-    private final Double exclusiveMinimum;
+      private final Double exclusiveMinimum;
 
     public Double getExclusiveMinimum() {
         return this.exclusiveMinimum;
@@ -43,7 +43,7 @@ public final class GoogleCloudRetailV2IntervalResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maximum", required=true)
-    private final Double maximum;
+      private final Double maximum;
 
     public Double getMaximum() {
         return this.maximum;
@@ -54,7 +54,7 @@ public final class GoogleCloudRetailV2IntervalResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="minimum", required=true)
-    private final Double minimum;
+      private final Double minimum;
 
     public Double getMinimum() {
         return this.minimum;
@@ -123,7 +123,6 @@ public final class GoogleCloudRetailV2IntervalResponse extends io.pulumi.resourc
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public GoogleCloudRetailV2IntervalResponse build() {
             return new GoogleCloudRetailV2IntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }

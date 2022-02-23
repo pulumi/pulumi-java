@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.JwtLocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class AuthProviderResponse {
             this.jwtLocations = Objects.requireNonNull(jwtLocations);
             return this;
         }
-
         public AuthProviderResponse build() {
             return new AuthProviderResponse(audiences, authorizationUrl, issuer, jwksUri, jwtLocations);
         }

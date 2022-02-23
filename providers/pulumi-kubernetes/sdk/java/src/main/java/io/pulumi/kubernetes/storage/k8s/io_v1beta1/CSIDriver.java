@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.storage.k8s.io_v1beta1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.CSIDriverArgs;
@@ -79,13 +79,6 @@ public class CSIDriver extends io.pulumi.resources.CustomResource {
         return this.spec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CSIDriver(String name) {
-        super("kubernetes:storage.k8s.io/v1beta1:CSIDriver", name, CSIDriverArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

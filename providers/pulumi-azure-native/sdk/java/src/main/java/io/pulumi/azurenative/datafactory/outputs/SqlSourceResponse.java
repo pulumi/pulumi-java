@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SqlPartitionSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.StoredProcedureParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -313,7 +313,6 @@ public final class SqlSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SqlSourceResponse build() {
             return new SqlSourceResponse(additionalColumns, disableMetricsCollection, isolationLevel, maxConcurrentConnections, partitionOption, partitionSettings, queryTimeout, sourceRetryCount, sourceRetryWait, sqlReaderQuery, sqlReaderStoredProcedureName, storedProcedureParameters, type);
         }

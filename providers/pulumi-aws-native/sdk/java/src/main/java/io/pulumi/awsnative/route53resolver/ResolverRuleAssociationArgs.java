@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resolverRuleId", required=true)
-    private final Input<String> resolverRuleId;
+        private final Input<String> resolverRuleId;
 
     public Input<String> getResolverRuleId() {
         return this.resolverRuleId;
@@ -41,7 +41,7 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vPCId", required=true)
-    private final Input<String> vPCId;
+        private final Input<String> vPCId;
 
     public Input<String> getVPCId() {
         return this.vPCId;
@@ -115,7 +115,6 @@ public final class ResolverRuleAssociationArgs extends io.pulumi.resources.Resou
             this.vPCId = Input.of(Objects.requireNonNull(vPCId));
             return this;
         }
-
         public ResolverRuleAssociationArgs build() {
             return new ResolverRuleAssociationArgs(name, resolverRuleId, vPCId);
         }

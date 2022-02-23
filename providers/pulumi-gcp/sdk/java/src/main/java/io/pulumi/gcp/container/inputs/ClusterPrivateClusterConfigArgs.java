@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enablePrivateEndpoint", required=true)
-    private final Input<Boolean> enablePrivateEndpoint;
+        private final Input<Boolean> enablePrivateEndpoint;
 
     public Input<Boolean> getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
@@ -38,7 +38,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enablePrivateNodes")
-    private final @Nullable Input<Boolean> enablePrivateNodes;
+        private final @Nullable Input<Boolean> enablePrivateNodes;
 
     public Input<Boolean> getEnablePrivateNodes() {
         return this.enablePrivateNodes == null ? Input.empty() : this.enablePrivateNodes;
@@ -51,7 +51,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="masterGlobalAccessConfig")
-    private final @Nullable Input<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
+        private final @Nullable Input<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> masterGlobalAccessConfig;
 
     public Input<ClusterPrivateClusterConfigMasterGlobalAccessConfigArgs> getMasterGlobalAccessConfig() {
         return this.masterGlobalAccessConfig == null ? Input.empty() : this.masterGlobalAccessConfig;
@@ -68,7 +68,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="masterIpv4CidrBlock")
-    private final @Nullable Input<String> masterIpv4CidrBlock;
+        private final @Nullable Input<String> masterIpv4CidrBlock;
 
     public Input<String> getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock == null ? Input.empty() : this.masterIpv4CidrBlock;
@@ -79,7 +79,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="peeringName")
-    private final @Nullable Input<String> peeringName;
+        private final @Nullable Input<String> peeringName;
 
     public Input<String> getPeeringName() {
         return this.peeringName == null ? Input.empty() : this.peeringName;
@@ -90,7 +90,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable Input<String> privateEndpoint;
+        private final @Nullable Input<String> privateEndpoint;
 
     public Input<String> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Input.empty() : this.privateEndpoint;
@@ -101,7 +101,7 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="publicEndpoint")
-    private final @Nullable Input<String> publicEndpoint;
+        private final @Nullable Input<String> publicEndpoint;
 
     public Input<String> getPublicEndpoint() {
         return this.publicEndpoint == null ? Input.empty() : this.publicEndpoint;
@@ -235,7 +235,6 @@ public final class ClusterPrivateClusterConfigArgs extends io.pulumi.resources.R
             this.publicEndpoint = Input.ofNullable(publicEndpoint);
             return this;
         }
-
         public ClusterPrivateClusterConfigArgs build() {
             return new ClusterPrivateClusterConfigArgs(enablePrivateEndpoint, enablePrivateNodes, masterGlobalAccessConfig, masterIpv4CidrBlock, peeringName, privateEndpoint, publicEndpoint);
         }

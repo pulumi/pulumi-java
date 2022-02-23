@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.enums.ScheduledQueryEncryptionOption;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,21 +20,21 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
     public static final ScheduledQueryS3ConfigurationArgs Empty = new ScheduledQueryS3ConfigurationArgs();
 
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="encryptionOption")
-    private final @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption;
+        private final @Nullable Input<ScheduledQueryEncryptionOption> encryptionOption;
 
     public Input<ScheduledQueryEncryptionOption> getEncryptionOption() {
         return this.encryptionOption == null ? Input.empty() : this.encryptionOption;
     }
 
     @InputImport(name="objectKeyPrefix")
-    private final @Nullable Input<String> objectKeyPrefix;
+        private final @Nullable Input<String> objectKeyPrefix;
 
     public Input<String> getObjectKeyPrefix() {
         return this.objectKeyPrefix == null ? Input.empty() : this.objectKeyPrefix;
@@ -108,7 +108,6 @@ public final class ScheduledQueryS3ConfigurationArgs extends io.pulumi.resources
             this.objectKeyPrefix = Input.ofNullable(objectKeyPrefix);
             return this;
         }
-
         public ScheduledQueryS3ConfigurationArgs build() {
             return new ScheduledQueryS3ConfigurationArgs(bucketName, encryptionOption, objectKeyPrefix);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="healthProbe")
-    private final @Nullable Input<ApiEntityReferenceArgs> healthProbe;
+        private final @Nullable Input<ApiEntityReferenceArgs> healthProbe;
 
     public Input<ApiEntityReferenceArgs> getHealthProbe() {
         return this.healthProbe == null ? Input.empty() : this.healthProbe;
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="networkApiVersion")
-    private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
+        private final @Nullable Input<Either<String,NetworkApiVersion>> networkApiVersion;
 
     public Input<Either<String,NetworkApiVersion>> getNetworkApiVersion() {
         return this.networkApiVersion == null ? Input.empty() : this.networkApiVersion;
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-    private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+        private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
     public Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
@@ -124,7 +124,6 @@ public final class VirtualMachineScaleSetNetworkProfileArgs extends io.pulumi.re
             this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
             return this;
         }
-
         public VirtualMachineScaleSetNetworkProfileArgs build() {
             return new VirtualMachineScaleSetNetworkProfileArgs(healthProbe, networkApiVersion, networkInterfaceConfigurations);
         }

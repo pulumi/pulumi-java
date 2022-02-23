@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends io.pulumi.resou
     public static final GetInstanceClusterBackupIamPolicyArgs Empty = new GetInstanceClusterBackupIamPolicyArgs();
 
     @InputImport(name="backupId", required=true)
-    private final String backupId;
+      private final String backupId;
 
     public String getBackupId() {
         return this.backupId;
     }
 
     @InputImport(name="clusterId", required=true)
-    private final String clusterId;
+      private final String clusterId;
 
     public String getClusterId() {
         return this.clusterId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetInstanceClusterBackupIamPolicyArgs extends io.pulumi.resou
             this.project = project;
             return this;
         }
-
         public GetInstanceClusterBackupIamPolicyArgs build() {
             return new GetInstanceClusterBackupIamPolicyArgs(backupId, clusterId, instanceId, project);
         }

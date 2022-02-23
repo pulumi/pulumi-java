@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
     public static final SqlScheduledMaintenanceResponse Empty = new SqlScheduledMaintenanceResponse();
 
     @InputImport(name="canDefer", required=true)
-    private final Boolean canDefer;
+      private final Boolean canDefer;
 
     public Boolean getCanDefer() {
         return this.canDefer;
@@ -29,7 +29,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="canReschedule", required=true)
-    private final Boolean canReschedule;
+      private final Boolean canReschedule;
 
     public Boolean getCanReschedule() {
         return this.canReschedule;
@@ -40,7 +40,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="scheduleDeadlineTime", required=true)
-    private final String scheduleDeadlineTime;
+      private final String scheduleDeadlineTime;
 
     public String getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime;
@@ -51,7 +51,7 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -120,7 +120,6 @@ public final class SqlScheduledMaintenanceResponse extends io.pulumi.resources.I
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public SqlScheduledMaintenanceResponse build() {
             return new SqlScheduledMaintenanceResponse(canDefer, canReschedule, scheduleDeadlineTime, startTime);
         }

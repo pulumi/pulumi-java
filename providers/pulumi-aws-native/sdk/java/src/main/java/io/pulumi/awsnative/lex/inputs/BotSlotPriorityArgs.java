@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
     public static final BotSlotPriorityArgs Empty = new BotSlotPriorityArgs();
 
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -30,7 +30,7 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="slotName", required=true)
-    private final Input<String> slotName;
+        private final Input<String> slotName;
 
     public Input<String> getSlotName() {
         return this.slotName;
@@ -89,7 +89,6 @@ public final class BotSlotPriorityArgs extends io.pulumi.resources.ResourceArgs 
             this.slotName = Input.of(Objects.requireNonNull(slotName));
             return this;
         }
-
         public BotSlotPriorityArgs build() {
             return new BotSlotPriorityArgs(priority, slotName);
         }

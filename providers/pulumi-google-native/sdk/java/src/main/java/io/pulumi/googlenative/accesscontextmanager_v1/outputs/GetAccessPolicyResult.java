@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetAccessPolicyResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(etag, name, parent, scopes, title);
         }

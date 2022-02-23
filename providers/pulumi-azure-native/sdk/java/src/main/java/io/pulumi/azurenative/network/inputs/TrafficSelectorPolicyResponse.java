@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TrafficSelectorPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="localAddressRanges", required=true)
-    private final List<String> localAddressRanges;
+        private final List<String> localAddressRanges;
 
     public List<String> getLocalAddressRanges() {
         return this.localAddressRanges;
@@ -33,7 +33,7 @@ public final class TrafficSelectorPolicyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="remoteAddressRanges", required=true)
-    private final List<String> remoteAddressRanges;
+        private final List<String> remoteAddressRanges;
 
     public List<String> getRemoteAddressRanges() {
         return this.remoteAddressRanges;
@@ -82,7 +82,6 @@ public final class TrafficSelectorPolicyResponse extends io.pulumi.resources.Inv
             this.remoteAddressRanges = Objects.requireNonNull(remoteAddressRanges);
             return this;
         }
-
         public TrafficSelectorPolicyResponse build() {
             return new TrafficSelectorPolicyResponse(localAddressRanges, remoteAddressRanges);
         }

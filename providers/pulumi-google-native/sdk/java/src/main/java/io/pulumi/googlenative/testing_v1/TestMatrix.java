@@ -5,8 +5,8 @@ package io.pulumi.googlenative.testing_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.testing_v1.TestMatrixArgs;
 import io.pulumi.googlenative.testing_v1.outputs.ClientInfoResponse;
@@ -212,13 +212,6 @@ public class TestMatrix extends io.pulumi.resources.CustomResource {
         return this.timestamp;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TestMatrix(String name) {
-        super("google-native:testing/v1:TestMatrix", name, TestMatrixArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

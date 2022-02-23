@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.identityplatform.outputs.TenantInboundSamlConfigSpConfigSpCertificate;
 import java.lang.String;
 import java.util.List;
@@ -102,7 +102,6 @@ public final class TenantInboundSamlConfigSpConfig {
             this.spEntityId = Objects.requireNonNull(spEntityId);
             return this;
         }
-
         public TenantInboundSamlConfigSpConfig build() {
             return new TenantInboundSamlConfigSpConfig(callbackUri, spCertificates, spEntityId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneCloudLoggingConfigResponse;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneDnsSecConfigResponse;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZoneForwardingConfigResponse;
@@ -361,7 +361,6 @@ public final class GetManagedZoneResult {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
         }
-
         public GetManagedZoneResult build() {
             return new GetManagedZoneResult(cloudLoggingConfig, creationTime, description, dnsName, dnssecConfig, forwardingConfig, kind, labels, name, nameServerSet, nameServers, peeringConfig, privateVisibilityConfig, reverseLookupConfig, serviceDirectoryConfig, visibility);
         }

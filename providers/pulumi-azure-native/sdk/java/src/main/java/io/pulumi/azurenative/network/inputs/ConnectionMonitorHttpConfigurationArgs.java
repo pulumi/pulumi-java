@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.HTTPConfigurationMethod;
 import io.pulumi.azurenative.network.inputs.HTTPHeaderArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<Either<String,HTTPConfigurationMethod>> method;
+        private final @Nullable Input<Either<String,HTTPConfigurationMethod>> method;
 
     public Input<Either<String,HTTPConfigurationMethod>> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -40,7 +40,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -51,7 +51,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -62,7 +62,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="preferHTTPS")
-    private final @Nullable Input<Boolean> preferHTTPS;
+        private final @Nullable Input<Boolean> preferHTTPS;
 
     public Input<Boolean> getPreferHTTPS() {
         return this.preferHTTPS == null ? Input.empty() : this.preferHTTPS;
@@ -73,7 +73,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="requestHeaders")
-    private final @Nullable Input<List<HTTPHeaderArgs>> requestHeaders;
+        private final @Nullable Input<List<HTTPHeaderArgs>> requestHeaders;
 
     public Input<List<HTTPHeaderArgs>> getRequestHeaders() {
         return this.requestHeaders == null ? Input.empty() : this.requestHeaders;
@@ -84,7 +84,7 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="validStatusCodeRanges")
-    private final @Nullable Input<List<String>> validStatusCodeRanges;
+        private final @Nullable Input<List<String>> validStatusCodeRanges;
 
     public Input<List<String>> getValidStatusCodeRanges() {
         return this.validStatusCodeRanges == null ? Input.empty() : this.validStatusCodeRanges;
@@ -203,7 +203,6 @@ public final class ConnectionMonitorHttpConfigurationArgs extends io.pulumi.reso
             this.validStatusCodeRanges = Input.ofNullable(validStatusCodeRanges);
             return this;
         }
-
         public ConnectionMonitorHttpConfigurationArgs build() {
             return new ConnectionMonitorHttpConfigurationArgs(method, path, port, preferHTTPS, requestHeaders, validStatusCodeRanges);
         }

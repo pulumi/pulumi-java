@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="serverAddress", required=true)
-    private final String serverAddress;
+        private final String serverAddress;
 
     public String getServerAddress() {
         return this.serverAddress;
@@ -32,7 +32,7 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="volumeName", required=true)
-    private final String volumeName;
+        private final String volumeName;
 
     public String getVolumeName() {
         return this.volumeName;
@@ -81,7 +81,6 @@ public final class GlusterFsSectionResponse extends io.pulumi.resources.InvokeAr
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public GlusterFsSectionResponse build() {
             return new GlusterFsSectionResponse(serverAddress, volumeName);
         }

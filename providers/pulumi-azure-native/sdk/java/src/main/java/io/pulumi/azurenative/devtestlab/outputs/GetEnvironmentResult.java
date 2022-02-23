@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.EnvironmentDeploymentPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -267,7 +267,6 @@ public final class GetEnvironmentResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(armTemplateDisplayName, createdByUser, deploymentProperties, id, location, name, provisioningState, resourceGroupId, tags, type, uniqueIdentifier);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storsimple.inputs;
 import io.pulumi.azurenative.storsimple.enums.DayOfWeek;
 import io.pulumi.azurenative.storsimple.inputs.TimeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="days", required=true)
-    private final Input<List<DayOfWeek>> days;
+        private final Input<List<DayOfWeek>> days;
 
     public Input<List<DayOfWeek>> getDays() {
         return this.days;
@@ -36,7 +36,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rateInMbps", required=true)
-    private final Input<Integer> rateInMbps;
+        private final Input<Integer> rateInMbps;
 
     public Input<Integer> getRateInMbps() {
         return this.rateInMbps;
@@ -47,7 +47,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<TimeArgs> start;
+        private final Input<TimeArgs> start;
 
     public Input<TimeArgs> getStart() {
         return this.start;
@@ -58,7 +58,7 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="stop", required=true)
-    private final Input<TimeArgs> stop;
+        private final Input<TimeArgs> stop;
 
     public Input<TimeArgs> getStop() {
         return this.stop;
@@ -147,7 +147,6 @@ public final class BandwidthScheduleArgs extends io.pulumi.resources.ResourceArg
             this.stop = Input.of(Objects.requireNonNull(stop));
             return this;
         }
-
         public BandwidthScheduleArgs build() {
             return new BandwidthScheduleArgs(days, rateInMbps, start, stop);
         }

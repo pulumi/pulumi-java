@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.RegexValidationResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.ValueValidationResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ParameterValidationResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ParameterValidationResponse build() {
             return new ParameterValidationResponse(regex, values);
         }

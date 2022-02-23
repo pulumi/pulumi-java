@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ListenerRuleTargetGroupStickinessConfigArgs extends io.pulumi
     public static final ListenerRuleTargetGroupStickinessConfigArgs Empty = new ListenerRuleTargetGroupStickinessConfigArgs();
 
     @InputImport(name="durationSeconds")
-    private final @Nullable Input<Integer> durationSeconds;
+        private final @Nullable Input<Integer> durationSeconds;
 
     public Input<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Input.empty() : this.durationSeconds;
     }
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -82,7 +82,6 @@ public final class ListenerRuleTargetGroupStickinessConfigArgs extends io.pulumi
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public ListenerRuleTargetGroupStickinessConfigArgs build() {
             return new ListenerRuleTargetGroupStickinessConfigArgs(durationSeconds, enabled);
         }

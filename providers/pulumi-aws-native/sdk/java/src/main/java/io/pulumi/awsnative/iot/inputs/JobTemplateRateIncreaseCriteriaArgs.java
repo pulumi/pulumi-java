@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
     public static final JobTemplateRateIncreaseCriteriaArgs Empty = new JobTemplateRateIncreaseCriteriaArgs();
 
     @InputImport(name="numberOfNotifiedThings")
-    private final @Nullable Input<Integer> numberOfNotifiedThings;
+        private final @Nullable Input<Integer> numberOfNotifiedThings;
 
     public Input<Integer> getNumberOfNotifiedThings() {
         return this.numberOfNotifiedThings == null ? Input.empty() : this.numberOfNotifiedThings;
     }
 
     @InputImport(name="numberOfSucceededThings")
-    private final @Nullable Input<Integer> numberOfSucceededThings;
+        private final @Nullable Input<Integer> numberOfSucceededThings;
 
     public Input<Integer> getNumberOfSucceededThings() {
         return this.numberOfSucceededThings == null ? Input.empty() : this.numberOfSucceededThings;
@@ -81,7 +81,6 @@ public final class JobTemplateRateIncreaseCriteriaArgs extends io.pulumi.resourc
             this.numberOfSucceededThings = Input.ofNullable(numberOfSucceededThings);
             return this;
         }
-
         public JobTemplateRateIncreaseCriteriaArgs build() {
             return new JobTemplateRateIncreaseCriteriaArgs(numberOfNotifiedThings, numberOfSucceededThings);
         }

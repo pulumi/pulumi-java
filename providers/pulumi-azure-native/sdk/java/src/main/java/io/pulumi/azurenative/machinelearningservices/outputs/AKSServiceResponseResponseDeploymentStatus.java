@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AKSReplicaStatusResponseError;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class AKSServiceResponseResponseDeploymentStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public AKSServiceResponseResponseDeploymentStatus build() {
             return new AKSServiceResponseResponseDeploymentStatus(availableReplicas, desiredReplicas, error, updatedReplicas);
         }

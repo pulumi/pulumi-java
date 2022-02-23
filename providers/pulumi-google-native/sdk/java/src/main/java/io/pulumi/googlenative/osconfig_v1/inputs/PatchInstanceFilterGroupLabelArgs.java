@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -67,7 +67,6 @@ public final class PatchInstanceFilterGroupLabelArgs extends io.pulumi.resources
             this.labels = Input.ofNullable(labels);
             return this;
         }
-
         public PatchInstanceFilterGroupLabelArgs build() {
             return new PatchInstanceFilterGroupLabelArgs(labels);
         }

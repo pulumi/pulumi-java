@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class HttpFaultAbortResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public HttpFaultAbortResponse build() {
             return new HttpFaultAbortResponse(httpStatus, percentage);
         }

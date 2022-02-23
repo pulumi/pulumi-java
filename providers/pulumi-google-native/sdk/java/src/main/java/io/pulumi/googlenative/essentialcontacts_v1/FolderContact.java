@@ -5,8 +5,8 @@ package io.pulumi.googlenative.essentialcontacts_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.essentialcontacts_v1.FolderContactArgs;
 import java.lang.String;
@@ -105,13 +105,6 @@ public class FolderContact extends io.pulumi.resources.CustomResource {
         return this.validationState;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FolderContact(String name) {
-        super("google-native:essentialcontacts/v1:FolderContact", name, FolderContactArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

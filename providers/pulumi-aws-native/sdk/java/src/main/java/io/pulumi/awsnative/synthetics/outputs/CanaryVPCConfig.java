@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class CanaryVPCConfig {
             this.vpcId = vpcId;
             return this;
         }
-
         public CanaryVPCConfig build() {
             return new CanaryVPCConfig(securityGroupIds, subnetIds, vpcId);
         }

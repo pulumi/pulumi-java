@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
     public static final NodePoolNodeConfigKubeletConfigArgs Empty = new NodePoolNodeConfigKubeletConfigArgs();
 
     @InputImport(name="cpuCfsQuota")
-    private final @Nullable Input<Boolean> cpuCfsQuota;
+        private final @Nullable Input<Boolean> cpuCfsQuota;
 
     public Input<Boolean> getCpuCfsQuota() {
         return this.cpuCfsQuota == null ? Input.empty() : this.cpuCfsQuota;
     }
 
     @InputImport(name="cpuCfsQuotaPeriod")
-    private final @Nullable Input<String> cpuCfsQuotaPeriod;
+        private final @Nullable Input<String> cpuCfsQuotaPeriod;
 
     public Input<String> getCpuCfsQuotaPeriod() {
         return this.cpuCfsQuotaPeriod == null ? Input.empty() : this.cpuCfsQuotaPeriod;
     }
 
     @InputImport(name="cpuManagerPolicy", required=true)
-    private final Input<String> cpuManagerPolicy;
+        private final Input<String> cpuManagerPolicy;
 
     public Input<String> getCpuManagerPolicy() {
         return this.cpuManagerPolicy;
@@ -104,7 +104,6 @@ public final class NodePoolNodeConfigKubeletConfigArgs extends io.pulumi.resourc
             this.cpuManagerPolicy = Input.of(Objects.requireNonNull(cpuManagerPolicy));
             return this;
         }
-
         public NodePoolNodeConfigKubeletConfigArgs build() {
             return new NodePoolNodeConfigKubeletConfigArgs(cpuCfsQuota, cpuCfsQuotaPeriod, cpuManagerPolicy);
         }

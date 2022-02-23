@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.SourceCostAllocationResourceResponse;
 import io.pulumi.azurenative.costmanagement.outputs.TargetCostAllocationResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class CostAllocationRuleDetailsResponse {
             this.targetResources = targetResources;
             return this;
         }
-
         public CostAllocationRuleDetailsResponse build() {
             return new CostAllocationRuleDetailsResponse(sourceResources, targetResources);
         }

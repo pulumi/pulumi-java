@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayHeaderConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayUrlConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
      * 
      */
     @InputImport(name="requestHeaderConfigurations")
-    private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
+        private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> requestHeaderConfigurations;
 
     public List<ApplicationGatewayHeaderConfigurationResponse> getRequestHeaderConfigurations() {
         return this.requestHeaderConfigurations == null ? List.of() : this.requestHeaderConfigurations;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
      * 
      */
     @InputImport(name="responseHeaderConfigurations")
-    private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
+        private final @Nullable List<ApplicationGatewayHeaderConfigurationResponse> responseHeaderConfigurations;
 
     public List<ApplicationGatewayHeaderConfigurationResponse> getResponseHeaderConfigurations() {
         return this.responseHeaderConfigurations == null ? List.of() : this.responseHeaderConfigurations;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
      * 
      */
     @InputImport(name="urlConfiguration")
-    private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
+        private final @Nullable ApplicationGatewayUrlConfigurationResponse urlConfiguration;
 
     public Optional<ApplicationGatewayUrlConfigurationResponse> getUrlConfiguration() {
         return this.urlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.urlConfiguration);
@@ -106,7 +106,6 @@ public final class ApplicationGatewayRewriteRuleActionSetResponse extends io.pul
             this.urlConfiguration = urlConfiguration;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleActionSetResponse build() {
             return new ApplicationGatewayRewriteRuleActionSetResponse(requestHeaderConfigurations, responseHeaderConfigurations, urlConfiguration);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -40,7 +40,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
      * 
      */
     @InputImport(name="requirePartitionFilter")
-    private final @Nullable Input<Boolean> requirePartitionFilter;
+        private final @Nullable Input<Boolean> requirePartitionFilter;
 
     public Input<Boolean> getRequirePartitionFilter() {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
@@ -58,7 +58,7 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
      * 
      */
     @InputImport(name="sourceUriPrefix")
-    private final @Nullable Input<String> sourceUriPrefix;
+        private final @Nullable Input<String> sourceUriPrefix;
 
     public Input<String> getSourceUriPrefix() {
         return this.sourceUriPrefix == null ? Input.empty() : this.sourceUriPrefix;
@@ -132,7 +132,6 @@ public final class TableExternalDataConfigurationHivePartitioningOptionsArgs ext
             this.sourceUriPrefix = Input.ofNullable(sourceUriPrefix);
             return this;
         }
-
         public TableExternalDataConfigurationHivePartitioningOptionsArgs build() {
             return new TableExternalDataConfigurationHivePartitioningOptionsArgs(mode, requirePartitionFilter, sourceUriPrefix);
         }

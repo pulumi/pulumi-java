@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databricks.outputs.ManagedIdentityConfigurationResp
 import io.pulumi.azurenative.databricks.outputs.SkuResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomParametersResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceProviderAuthorizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -398,7 +398,6 @@ public final class GetWorkspaceResult {
             this.workspaceUrl = Objects.requireNonNull(workspaceUrl);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(authorizations, createdBy, createdDateTime, id, location, managedResourceGroupId, name, parameters, provisioningState, sku, storageAccountIdentity, tags, type, uiDefinitionUri, updatedBy, workspaceId, workspaceUrl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class DeviceTag extends io.pulumi.resources.InvokeArgs {
     public static final DeviceTag Empty = new DeviceTag();
 
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -75,7 +75,6 @@ public final class DeviceTag extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public DeviceTag build() {
             return new DeviceTag(key, value);
         }

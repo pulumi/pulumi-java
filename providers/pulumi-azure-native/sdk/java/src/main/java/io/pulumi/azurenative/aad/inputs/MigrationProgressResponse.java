@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="completionPercentage")
-    private final @Nullable Double completionPercentage;
+        private final @Nullable Double completionPercentage;
 
     public Optional<Double> getCompletionPercentage() {
         return this.completionPercentage == null ? Optional.empty() : Optional.ofNullable(this.completionPercentage);
@@ -35,7 +35,7 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="progressMessage")
-    private final @Nullable String progressMessage;
+        private final @Nullable String progressMessage;
 
     public Optional<String> getProgressMessage() {
         return this.progressMessage == null ? Optional.empty() : Optional.ofNullable(this.progressMessage);
@@ -84,7 +84,6 @@ public final class MigrationProgressResponse extends io.pulumi.resources.InvokeA
             this.progressMessage = progressMessage;
             return this;
         }
-
         public MigrationProgressResponse build() {
             return new MigrationProgressResponse(completionPercentage, progressMessage);
         }

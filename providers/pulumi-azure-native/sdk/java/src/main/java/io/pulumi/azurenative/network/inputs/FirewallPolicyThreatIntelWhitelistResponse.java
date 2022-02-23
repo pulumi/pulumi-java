@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.
      * 
      */
     @InputImport(name="fqdns")
-    private final @Nullable List<String> fqdns;
+        private final @Nullable List<String> fqdns;
 
     public List<String> getFqdns() {
         return this.fqdns == null ? List.of() : this.fqdns;
@@ -35,7 +35,7 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable List<String> ipAddresses;
+        private final @Nullable List<String> ipAddresses;
 
     public List<String> getIpAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
@@ -84,7 +84,6 @@ public final class FirewallPolicyThreatIntelWhitelistResponse extends io.pulumi.
             this.ipAddresses = ipAddresses;
             return this;
         }
-
         public FirewallPolicyThreatIntelWhitelistResponse build() {
             return new FirewallPolicyThreatIntelWhitelistResponse(fqdns, ipAddresses);
         }

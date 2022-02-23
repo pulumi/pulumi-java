@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyDailyCycleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyHourlyCycleResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyWeeklyCycleResponse;
@@ -73,7 +73,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleResponse {
             this.weeklySchedule = Objects.requireNonNull(weeklySchedule);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleResponse(dailySchedule, hourlySchedule, weeklySchedule);
         }

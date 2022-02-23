@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeLargeCustomDictionaryArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeRegexArgs;
@@ -22,7 +22,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="dictionary")
-    private final @Nullable Input<PreventionStoredInfoTypeDictionaryArgs> dictionary;
+        private final @Nullable Input<PreventionStoredInfoTypeDictionaryArgs> dictionary;
 
     public Input<PreventionStoredInfoTypeDictionaryArgs> getDictionary() {
         return this.dictionary == null ? Input.empty() : this.dictionary;
@@ -45,7 +45,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="largeCustomDictionary")
-    private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary;
+        private final @Nullable Input<PreventionStoredInfoTypeLargeCustomDictionaryArgs> largeCustomDictionary;
 
     public Input<PreventionStoredInfoTypeLargeCustomDictionaryArgs> getLargeCustomDictionary() {
         return this.largeCustomDictionary == null ? Input.empty() : this.largeCustomDictionary;
@@ -72,7 +72,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+        private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -84,7 +84,7 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<PreventionStoredInfoTypeRegexArgs> regex;
+        private final @Nullable Input<PreventionStoredInfoTypeRegexArgs> regex;
 
     public Input<PreventionStoredInfoTypeRegexArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -203,7 +203,6 @@ public final class PreventionStoredInfoTypeArgs extends io.pulumi.resources.Reso
             this.regex = Input.ofNullable(regex);
             return this;
         }
-
         public PreventionStoredInfoTypeArgs build() {
             return new PreventionStoredInfoTypeArgs(description, dictionary, displayName, largeCustomDictionary, parent, regex);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute;
 import io.pulumi.azurenative.compute.enums.DedicatedHostLicenseTypes;
 import io.pulumi.azurenative.compute.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoReplaceOnFailure")
-    private final @Nullable Input<Boolean> autoReplaceOnFailure;
+        private final @Nullable Input<Boolean> autoReplaceOnFailure;
 
     public Input<Boolean> getAutoReplaceOnFailure() {
         return this.autoReplaceOnFailure == null ? Input.empty() : this.autoReplaceOnFailure;
@@ -35,7 +35,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostGroupName", required=true)
-    private final Input<String> hostGroupName;
+        private final Input<String> hostGroupName;
 
     public Input<String> getHostGroupName() {
         return this.hostGroupName;
@@ -46,7 +46,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable Input<String> hostName;
+        private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -57,7 +57,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<DedicatedHostLicenseTypes> licenseType;
+        private final @Nullable Input<DedicatedHostLicenseTypes> licenseType;
 
     public Input<DedicatedHostLicenseTypes> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -68,7 +68,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -79,7 +79,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformFaultDomain")
-    private final @Nullable Input<Integer> platformFaultDomain;
+        private final @Nullable Input<Integer> platformFaultDomain;
 
     public Input<Integer> getPlatformFaultDomain() {
         return this.platformFaultDomain == null ? Input.empty() : this.platformFaultDomain;
@@ -90,7 +90,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -112,7 +112,7 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -276,7 +276,6 @@ public final class DedicatedHostArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DedicatedHostArgs build() {
             return new DedicatedHostArgs(autoReplaceOnFailure, hostGroupName, hostName, licenseType, location, platformFaultDomain, resourceGroupName, sku, tags);
         }

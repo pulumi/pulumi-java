@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetTargetGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,7 +45,6 @@ public final class SpotFleetTargetGroupsConfig {
             this.targetGroups = Objects.requireNonNull(targetGroups);
             return this;
         }
-
         public SpotFleetTargetGroupsConfig build() {
             return new SpotFleetTargetGroupsConfig(targetGroups);
         }

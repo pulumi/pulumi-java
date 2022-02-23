@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1EntityMetadataResponse;
 import java.lang.String;
 import java.util.List;
@@ -140,7 +140,6 @@ public final class GetApiResult {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(labels, latestRevisionId, metaData, name, revision);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HostedZoneConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable String comment;
+        private final @Nullable String comment;
 
     public Optional<String> getComment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
@@ -63,7 +63,6 @@ public final class HostedZoneConfig extends io.pulumi.resources.InvokeArgs {
             this.comment = comment;
             return this;
         }
-
         public HostedZoneConfig build() {
             return new HostedZoneConfig(comment);
         }

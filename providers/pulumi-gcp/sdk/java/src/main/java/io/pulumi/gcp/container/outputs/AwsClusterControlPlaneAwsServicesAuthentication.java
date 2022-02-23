@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class AwsClusterControlPlaneAwsServicesAuthentication {
             this.roleSessionName = roleSessionName;
             return this;
         }
-
         public AwsClusterControlPlaneAwsServicesAuthentication build() {
             return new AwsClusterControlPlaneAwsServicesAuthentication(roleArn, roleSessionName);
         }

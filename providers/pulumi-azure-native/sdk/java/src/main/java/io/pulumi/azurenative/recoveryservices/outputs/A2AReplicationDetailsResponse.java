@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.A2AProtectedManagedDiskDet
 import io.pulumi.azurenative.recoveryservices.outputs.A2AUnprotectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureToAzureVmSyncedConfigDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -927,7 +927,6 @@ public final class A2AReplicationDetailsResponse {
             this.vmSyncedConfigDetails = vmSyncedConfigDetails;
             return this;
         }
-
         public A2AReplicationDetailsResponse build() {
             return new A2AReplicationDetailsResponse(agentVersion, fabricObjectId, initialPrimaryFabricLocation, initialPrimaryZone, initialRecoveryFabricLocation, initialRecoveryZone, instanceType, isReplicationAgentUpdateRequired, lastHeartbeat, lastRpoCalculatedTime, lifecycleId, managementId, monitoringJobType, monitoringPercentageCompletion, multiVmGroupCreateOption, multiVmGroupId, multiVmGroupName, osType, primaryFabricLocation, protectedDisks, protectedManagedDisks, recoveryAvailabilitySet, recoveryAvailabilityZone, recoveryAzureResourceGroupId, recoveryAzureVMName, recoveryAzureVMSize, recoveryBootDiagStorageAccountId, recoveryCloudService, recoveryFabricLocation, recoveryFabricObjectId, recoveryProximityPlacementGroupId, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedTfoAzureNetworkId, testFailoverRecoveryFabricObjectId, tfoAzureVMName, unprotectedDisks, vmEncryptionType, vmNics, vmProtectionState, vmProtectionStateDescription, vmSyncedConfigDetails);
         }

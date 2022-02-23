@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kendra.inputs;
 import io.pulumi.awsnative.kendra.enums.IndexDocumentAttributeValueType;
 import io.pulumi.awsnative.kendra.inputs.IndexRelevance;
 import io.pulumi.awsnative.kendra.inputs.IndexSearch;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -18,28 +18,28 @@ public final class IndexDocumentMetadataConfiguration extends io.pulumi.resource
     public static final IndexDocumentMetadataConfiguration Empty = new IndexDocumentMetadataConfiguration();
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="relevance")
-    private final @Nullable IndexRelevance relevance;
+        private final @Nullable IndexRelevance relevance;
 
     public Optional<IndexRelevance> getRelevance() {
         return this.relevance == null ? Optional.empty() : Optional.ofNullable(this.relevance);
     }
 
     @InputImport(name="search")
-    private final @Nullable IndexSearch search;
+        private final @Nullable IndexSearch search;
 
     public Optional<IndexSearch> getSearch() {
         return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
     }
 
     @InputImport(name="type", required=true)
-    private final IndexDocumentAttributeValueType type;
+        private final IndexDocumentAttributeValueType type;
 
     public IndexDocumentAttributeValueType getType() {
         return this.type;
@@ -108,7 +108,6 @@ public final class IndexDocumentMetadataConfiguration extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IndexDocumentMetadataConfiguration build() {
             return new IndexDocumentMetadataConfiguration(name, relevance, search, type);
         }

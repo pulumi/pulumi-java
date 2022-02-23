@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.windowsesu.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -302,7 +302,6 @@ public final class GetMultipleActivationKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMultipleActivationKeyResult build() {
             return new GetMultipleActivationKeyResult(agreementNumber, expirationDate, id, installedServerNumber, isEligible, location, multipleActivationKey, name, osType, provisioningState, supportType, tags, type);
         }

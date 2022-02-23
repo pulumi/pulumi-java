@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.HelmReleasePropertiesDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectReferenceDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusConditionDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class ObjectStatusDefinitionResponse {
             this.statusConditions = statusConditions;
             return this;
         }
-
         public ObjectStatusDefinitionResponse build() {
             return new ObjectStatusDefinitionResponse(appliedBy, complianceState, helmReleaseProperties, kind, name, namespace, statusConditions);
         }

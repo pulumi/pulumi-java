@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ShieldedInstanceIntegrityPolicyResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="updateAutoLearnPolicy", required=true)
-    private final Boolean updateAutoLearnPolicy;
+      private final Boolean updateAutoLearnPolicy;
 
     public Boolean getUpdateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy;
@@ -59,7 +59,6 @@ public final class ShieldedInstanceIntegrityPolicyResponse extends io.pulumi.res
             this.updateAutoLearnPolicy = Objects.requireNonNull(updateAutoLearnPolicy);
             return this;
         }
-
         public ShieldedInstanceIntegrityPolicyResponse build() {
             return new ShieldedInstanceIntegrityPolicyResponse(updateAutoLearnPolicy);
         }

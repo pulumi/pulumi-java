@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fragmentsPerTsSegment")
-    private final @Nullable Input<Integer> fragmentsPerTsSegment;
+        private final @Nullable Input<Integer> fragmentsPerTsSegment;
 
     public Input<Integer> getFragmentsPerTsSegment() {
         return this.fragmentsPerTsSegment == null ? Input.empty() : this.fragmentsPerTsSegment;
@@ -66,7 +66,6 @@ public final class HlsArgs extends io.pulumi.resources.ResourceArgs {
             this.fragmentsPerTsSegment = Input.ofNullable(fragmentsPerTsSegment);
             return this;
         }
-
         public HlsArgs build() {
             return new HlsArgs(fragmentsPerTsSegment);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
      * 
      */
     @InputImport(name="script", required=true)
-    private final Input<String> script;
+        private final Input<String> script;
 
     public Input<String> getScript() {
         return this.script;
@@ -34,7 +34,7 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
      * 
      */
     @InputImport(name="timeoutSec")
-    private final @Nullable Input<Integer> timeoutSec;
+        private final @Nullable Input<Integer> timeoutSec;
 
     public Input<Integer> getTimeoutSec() {
         return this.timeoutSec == null ? Input.empty() : this.timeoutSec;
@@ -93,7 +93,6 @@ public final class ClusterClusterConfigInitializationActionArgs extends io.pulum
             this.timeoutSec = Input.ofNullable(timeoutSec);
             return this;
         }
-
         public ClusterClusterConfigInitializationActionArgs build() {
             return new ClusterClusterConfigInitializationActionArgs(script, timeoutSec);
         }

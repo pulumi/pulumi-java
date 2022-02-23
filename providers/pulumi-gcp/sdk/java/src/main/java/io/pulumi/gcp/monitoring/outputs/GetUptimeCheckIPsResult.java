@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.GetUptimeCheckIPsUptimeCheckIp;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GetUptimeCheckIPsResult {
             this.uptimeCheckIps = Objects.requireNonNull(uptimeCheckIps);
             return this;
         }
-
         public GetUptimeCheckIPsResult build() {
             return new GetUptimeCheckIPsResult(id, uptimeCheckIps);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupId")
-    private final @Nullable Input<String> groupId;
+        private final @Nullable Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId == null ? Input.empty() : this.groupId;
@@ -34,7 +34,7 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+        private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
@@ -93,7 +93,6 @@ public final class ClientGroupInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.groupName = Input.ofNullable(groupName);
             return this;
         }
-
         public ClientGroupInfoArgs build() {
             return new ClientGroupInfoArgs(groupId, groupName);
         }

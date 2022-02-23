@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DateAfterModificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="daysAfterLastAccessTimeGreaterThan")
-    private final @Nullable Double daysAfterLastAccessTimeGreaterThan;
+        private final @Nullable Double daysAfterLastAccessTimeGreaterThan;
 
     public Optional<Double> getDaysAfterLastAccessTimeGreaterThan() {
         return this.daysAfterLastAccessTimeGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterLastAccessTimeGreaterThan);
@@ -34,7 +34,7 @@ public final class DateAfterModificationResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="daysAfterModificationGreaterThan")
-    private final @Nullable Double daysAfterModificationGreaterThan;
+        private final @Nullable Double daysAfterModificationGreaterThan;
 
     public Optional<Double> getDaysAfterModificationGreaterThan() {
         return this.daysAfterModificationGreaterThan == null ? Optional.empty() : Optional.ofNullable(this.daysAfterModificationGreaterThan);
@@ -83,7 +83,6 @@ public final class DateAfterModificationResponse extends io.pulumi.resources.Inv
             this.daysAfterModificationGreaterThan = daysAfterModificationGreaterThan;
             return this;
         }
-
         public DateAfterModificationResponse build() {
             return new DateAfterModificationResponse(daysAfterLastAccessTimeGreaterThan, daysAfterModificationGreaterThan);
         }

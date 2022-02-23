@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final List<String> permissions;
+      private final List<String> permissions;
 
     public List<String> getPermissions() {
         return this.permissions;
@@ -33,7 +33,7 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="roles", required=true)
-    private final List<String> roles;
+      private final List<String> roles;
 
     public List<String> getRoles() {
         return this.roles;
@@ -82,7 +82,6 @@ public final class AccessSelectorResponse extends io.pulumi.resources.InvokeArgs
             this.roles = Objects.requireNonNull(roles);
             return this;
         }
-
         public AccessSelectorResponse build() {
             return new AccessSelectorResponse(permissions, roles);
         }

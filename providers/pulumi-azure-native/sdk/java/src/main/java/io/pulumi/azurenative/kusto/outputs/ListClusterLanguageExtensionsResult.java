@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.outputs;
 
 import io.pulumi.azurenative.kusto.outputs.LanguageExtensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ListClusterLanguageExtensionsResult {
             this.value = value;
             return this;
         }
-
         public ListClusterLanguageExtensionsResult build() {
             return new ListClusterLanguageExtensionsResult(value);
         }

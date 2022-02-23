@@ -5,7 +5,7 @@ package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.azurenative.streamanalytics.inputs.AzureMachineLearningWebServiceInputColumnArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="columnNames")
-    private final @Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
+        private final @Nullable Input<List<AzureMachineLearningWebServiceInputColumnArgs>> columnNames;
 
     public Input<List<AzureMachineLearningWebServiceInputColumnArgs>> getColumnNames() {
         return this.columnNames == null ? Input.empty() : this.columnNames;
@@ -36,7 +36,7 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -95,7 +95,6 @@ public final class AzureMachineLearningWebServiceInputsArgs extends io.pulumi.re
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public AzureMachineLearningWebServiceInputsArgs build() {
             return new AzureMachineLearningWebServiceInputsArgs(columnNames, name);
         }

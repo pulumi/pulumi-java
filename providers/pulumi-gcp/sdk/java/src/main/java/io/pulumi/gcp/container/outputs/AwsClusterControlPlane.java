@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.AwsClusterControlPlaneAwsServicesAuthentication;
 import io.pulumi.gcp.container.outputs.AwsClusterControlPlaneConfigEncryption;
 import io.pulumi.gcp.container.outputs.AwsClusterControlPlaneDatabaseEncryption;
@@ -316,7 +316,6 @@ public final class AwsClusterControlPlane {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public AwsClusterControlPlane build() {
             return new AwsClusterControlPlane(awsServicesAuthentication, configEncryption, databaseEncryption, iamInstanceProfile, instanceType, mainVolume, proxyConfig, rootVolume, securityGroupIds, sshConfig, subnetIds, tags, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse {
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public TrafficAnalyticsConfigurationPropertiesResponse build() {
             return new TrafficAnalyticsConfigurationPropertiesResponse(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
         }

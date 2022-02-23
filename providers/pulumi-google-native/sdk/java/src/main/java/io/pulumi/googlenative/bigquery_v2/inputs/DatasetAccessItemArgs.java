@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceArgs;
@@ -22,7 +22,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<DatasetAccessEntryArgs> dataset;
+      private final @Nullable Input<DatasetAccessEntryArgs> dataset;
 
     public Input<DatasetAccessEntryArgs> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -33,7 +33,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+      private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -44,7 +44,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="groupByEmail")
-    private final @Nullable Input<String> groupByEmail;
+      private final @Nullable Input<String> groupByEmail;
 
     public Input<String> getGroupByEmail() {
         return this.groupByEmail == null ? Input.empty() : this.groupByEmail;
@@ -55,7 +55,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="iamMember")
-    private final @Nullable Input<String> iamMember;
+      private final @Nullable Input<String> iamMember;
 
     public Input<String> getIamMember() {
         return this.iamMember == null ? Input.empty() : this.iamMember;
@@ -66,7 +66,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+      private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -77,7 +77,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routine")
-    private final @Nullable Input<RoutineReferenceArgs> routine;
+      private final @Nullable Input<RoutineReferenceArgs> routine;
 
     public Input<RoutineReferenceArgs> getRoutine() {
         return this.routine == null ? Input.empty() : this.routine;
@@ -88,7 +88,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="specialGroup")
-    private final @Nullable Input<String> specialGroup;
+      private final @Nullable Input<String> specialGroup;
 
     public Input<String> getSpecialGroup() {
         return this.specialGroup == null ? Input.empty() : this.specialGroup;
@@ -99,7 +99,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userByEmail")
-    private final @Nullable Input<String> userByEmail;
+      private final @Nullable Input<String> userByEmail;
 
     public Input<String> getUserByEmail() {
         return this.userByEmail == null ? Input.empty() : this.userByEmail;
@@ -110,7 +110,7 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="view")
-    private final @Nullable Input<TableReferenceArgs> view;
+      private final @Nullable Input<TableReferenceArgs> view;
 
     public Input<TableReferenceArgs> getView() {
         return this.view == null ? Input.empty() : this.view;
@@ -274,7 +274,6 @@ public final class DatasetAccessItemArgs extends io.pulumi.resources.ResourceArg
             this.view = Input.ofNullable(view);
             return this;
         }
-
         public DatasetAccessItemArgs build() {
             return new DatasetAccessItemArgs(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
         }

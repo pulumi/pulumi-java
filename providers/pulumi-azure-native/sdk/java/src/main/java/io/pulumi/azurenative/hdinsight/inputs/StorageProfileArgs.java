@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.StorageAccountArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageaccounts")
-    private final @Nullable Input<List<StorageAccountArgs>> storageaccounts;
+        private final @Nullable Input<List<StorageAccountArgs>> storageaccounts;
 
     public Input<List<StorageAccountArgs>> getStorageaccounts() {
         return this.storageaccounts == null ? Input.empty() : this.storageaccounts;
@@ -67,7 +67,6 @@ public final class StorageProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.storageaccounts = Input.ofNullable(storageaccounts);
             return this;
         }
-
         public StorageProfileArgs build() {
             return new StorageProfileArgs(storageaccounts);
         }

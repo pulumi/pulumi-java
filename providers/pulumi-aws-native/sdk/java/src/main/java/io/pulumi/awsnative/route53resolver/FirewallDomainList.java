@@ -9,8 +9,8 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallDomainListStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallDomainListTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -183,13 +183,6 @@ public class FirewallDomainList extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FirewallDomainList(String name) {
-        super("aws-native:route53resolver:FirewallDomainList", name, FirewallDomainListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

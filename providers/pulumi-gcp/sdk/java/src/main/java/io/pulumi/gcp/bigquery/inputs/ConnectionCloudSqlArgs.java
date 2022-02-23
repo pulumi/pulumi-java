@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.ConnectionCloudSqlCredentialArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="credential", required=true)
-    private final Input<ConnectionCloudSqlCredentialArgs> credential;
+        private final Input<ConnectionCloudSqlCredentialArgs> credential;
 
     public Input<ConnectionCloudSqlCredentialArgs> getCredential() {
         return this.credential;
@@ -31,7 +31,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+        private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -42,7 +42,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+        private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -54,7 +54,7 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -143,7 +143,6 @@ public final class ConnectionCloudSqlArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ConnectionCloudSqlArgs build() {
             return new ConnectionCloudSqlArgs(credential, database, instanceId, type);
         }

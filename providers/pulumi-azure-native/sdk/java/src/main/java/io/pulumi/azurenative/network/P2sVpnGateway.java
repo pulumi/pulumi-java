@@ -11,8 +11,8 @@ import io.pulumi.azurenative.network.outputs.VpnClientConnectionHealthResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -220,13 +220,6 @@ public class P2sVpnGateway extends io.pulumi.resources.CustomResource {
         return this.vpnServerConfiguration;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public P2sVpnGateway(String name) {
-        super("azure-native:network:P2sVpnGateway", name, P2sVpnGatewayArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

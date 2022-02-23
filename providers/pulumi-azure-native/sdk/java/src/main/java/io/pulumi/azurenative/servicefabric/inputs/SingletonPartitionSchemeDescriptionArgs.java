@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionScheme", required=true)
-    private final Input<String> partitionScheme;
+        private final Input<String> partitionScheme;
 
     public Input<String> getPartitionScheme() {
         return this.partitionScheme;
@@ -66,7 +66,6 @@ public final class SingletonPartitionSchemeDescriptionArgs extends io.pulumi.res
             this.partitionScheme = Input.of(Objects.requireNonNull(partitionScheme));
             return this;
         }
-
         public SingletonPartitionSchemeDescriptionArgs build() {
             return new SingletonPartitionSchemeDescriptionArgs(partitionScheme);
         }

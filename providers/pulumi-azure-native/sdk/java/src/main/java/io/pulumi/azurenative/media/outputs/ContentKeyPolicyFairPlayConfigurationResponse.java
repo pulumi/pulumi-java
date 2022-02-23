@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyFairPlayOfflineRentalConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class ContentKeyPolicyFairPlayConfigurationResponse {
             this.rentalDuration = Objects.requireNonNull(rentalDuration);
             return this;
         }
-
         public ContentKeyPolicyFairPlayConfigurationResponse build() {
             return new ContentKeyPolicyFairPlayConfigurationResponse(ask, fairPlayPfx, fairPlayPfxPassword, odataType, offlineRentalConfiguration, rentalAndLeaseKeyType, rentalDuration);
         }

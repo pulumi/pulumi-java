@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+        private final String region;
 
     public String getRegion() {
         return this.region;
@@ -81,7 +81,6 @@ public final class HealthCheckAlarmIdentifier extends io.pulumi.resources.Invoke
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public HealthCheckAlarmIdentifier build() {
             return new HealthCheckAlarmIdentifier(name, region);
         }

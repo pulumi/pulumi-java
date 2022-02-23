@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.outputs.ActivityTimelineItemRespon
 import io.pulumi.azurenative.securityinsights.outputs.BookmarkTimelineItemResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SecurityAlertTimelineItemResponse;
 import io.pulumi.azurenative.securityinsights.outputs.TimelineResultsMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class GetEntitiesGetTimelineResult {
             this.value = value;
             return this;
         }
-
         public GetEntitiesGetTimelineResult build() {
             return new GetEntitiesGetTimelineResult(metaData, value);
         }

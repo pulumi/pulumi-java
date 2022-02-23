@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class InMageRcmLastAgentUpgradeErrorDetailsResponse {
             this.recommendedAction = Objects.requireNonNull(recommendedAction);
             return this;
         }
-
         public InMageRcmLastAgentUpgradeErrorDetailsResponse build() {
             return new InMageRcmLastAgentUpgradeErrorDetailsResponse(errorCode, errorMessage, errorMessageParameters, errorTags, possibleCauses, recommendedAction);
         }

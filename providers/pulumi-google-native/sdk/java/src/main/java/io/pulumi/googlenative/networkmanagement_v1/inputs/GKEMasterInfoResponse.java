@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterNetworkUri", required=true)
-    private final String clusterNetworkUri;
+      private final String clusterNetworkUri;
 
     public String getClusterNetworkUri() {
         return this.clusterNetworkUri;
@@ -32,7 +32,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clusterUri", required=true)
-    private final String clusterUri;
+      private final String clusterUri;
 
     public String getClusterUri() {
         return this.clusterUri;
@@ -43,7 +43,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="externalIp", required=true)
-    private final String externalIp;
+      private final String externalIp;
 
     public String getExternalIp() {
         return this.externalIp;
@@ -54,7 +54,7 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="internalIp", required=true)
-    private final String internalIp;
+      private final String internalIp;
 
     public String getInternalIp() {
         return this.internalIp;
@@ -123,7 +123,6 @@ public final class GKEMasterInfoResponse extends io.pulumi.resources.InvokeArgs 
             this.internalIp = Objects.requireNonNull(internalIp);
             return this;
         }
-
         public GKEMasterInfoResponse build() {
             return new GKEMasterInfoResponse(clusterNetworkUri, clusterUri, externalIp, internalIp);
         }

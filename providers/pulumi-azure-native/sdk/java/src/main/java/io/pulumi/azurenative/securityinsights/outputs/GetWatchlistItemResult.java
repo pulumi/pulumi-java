@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
 import io.pulumi.azurenative.securityinsights.outputs.WatchlistUserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -353,7 +353,6 @@ public final class GetWatchlistItemResult {
             this.watchlistItemType = watchlistItemType;
             return this;
         }
-
         public GetWatchlistItemResult build() {
             return new GetWatchlistItemResult(created, createdBy, entityMapping, etag, id, isDeleted, itemsKeyValue, name, systemData, tenantId, type, updated, updatedBy, watchlistItemId, watchlistItemType);
         }

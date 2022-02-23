@@ -6,7 +6,7 @@ package io.pulumi.awsnative.accessanalyzer;
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerArchiveRuleArgs;
 import io.pulumi.awsnative.accessanalyzer.inputs.AnalyzerTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="analyzerName")
-    private final @Nullable Input<String> analyzerName;
+        private final @Nullable Input<String> analyzerName;
 
     public Input<String> getAnalyzerName() {
         return this.analyzerName == null ? Input.empty() : this.analyzerName;
     }
 
     @InputImport(name="archiveRules")
-    private final @Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules;
+        private final @Nullable Input<List<AnalyzerArchiveRuleArgs>> archiveRules;
 
     public Input<List<AnalyzerArchiveRuleArgs>> getArchiveRules() {
         return this.archiveRules == null ? Input.empty() : this.archiveRules;
@@ -40,7 +40,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AnalyzerTagArgs>> tags;
+        private final @Nullable Input<List<AnalyzerTagArgs>> tags;
 
     public Input<List<AnalyzerTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -51,7 +51,7 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -140,7 +140,6 @@ public final class AnalyzerArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AnalyzerArgs build() {
             return new AnalyzerArgs(analyzerName, archiveRules, tags, type);
         }

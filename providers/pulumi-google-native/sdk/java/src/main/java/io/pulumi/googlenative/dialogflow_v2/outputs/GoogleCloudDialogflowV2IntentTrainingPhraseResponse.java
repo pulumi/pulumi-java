@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowV2IntentTrainingPhraseResponse(name, parts, timesAddedCount, type);
         }

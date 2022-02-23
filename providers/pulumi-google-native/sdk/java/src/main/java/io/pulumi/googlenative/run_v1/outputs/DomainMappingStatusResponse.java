@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.outputs.ResourceRecordResponse;
 import java.lang.Integer;
@@ -141,7 +141,6 @@ public final class DomainMappingStatusResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DomainMappingStatusResponse build() {
             return new DomainMappingStatusResponse(conditions, mappedRouteName, observedGeneration, resourceRecords, url);
         }

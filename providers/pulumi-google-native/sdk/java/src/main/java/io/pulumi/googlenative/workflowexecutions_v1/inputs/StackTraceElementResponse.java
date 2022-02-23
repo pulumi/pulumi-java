@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflowexecutions_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.workflowexecutions_v1.inputs.PositionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="position", required=true)
-    private final PositionResponse position;
+      private final PositionResponse position;
 
     public PositionResponse getPosition() {
         return this.position;
@@ -33,7 +33,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="routine", required=true)
-    private final String routine;
+      private final String routine;
 
     public String getRoutine() {
         return this.routine;
@@ -44,7 +44,7 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="step", required=true)
-    private final String step;
+      private final String step;
 
     public String getStep() {
         return this.step;
@@ -103,7 +103,6 @@ public final class StackTraceElementResponse extends io.pulumi.resources.InvokeA
             this.step = Objects.requireNonNull(step);
             return this;
         }
-
         public StackTraceElementResponse build() {
             return new StackTraceElementResponse(position, routine, step);
         }

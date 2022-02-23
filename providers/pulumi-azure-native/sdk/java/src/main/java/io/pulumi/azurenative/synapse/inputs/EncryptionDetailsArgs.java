@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.CustomerManagedKeyDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cmk")
-    private final @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
+        private final @Nullable Input<CustomerManagedKeyDetailsArgs> cmk;
 
     public Input<CustomerManagedKeyDetailsArgs> getCmk() {
         return this.cmk == null ? Input.empty() : this.cmk;
@@ -66,7 +66,6 @@ public final class EncryptionDetailsArgs extends io.pulumi.resources.ResourceArg
             this.cmk = Input.ofNullable(cmk);
             return this;
         }
-
         public EncryptionDetailsArgs build() {
             return new EncryptionDetailsArgs(cmk);
         }

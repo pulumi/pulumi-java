@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appstream.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class AppBlockTag {
             this.tagValue = Objects.requireNonNull(tagValue);
             return this;
         }
-
         public AppBlockTag build() {
             return new AppBlockTag(tagKey, tagValue);
         }

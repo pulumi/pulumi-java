@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -33,7 +33,7 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="operator", required=true)
-    private final String operator;
+      private final String operator;
 
     public String getOperator() {
         return this.operator;
@@ -44,7 +44,7 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class SchedulingNodeAffinityResponse extends io.pulumi.resources.In
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public SchedulingNodeAffinityResponse build() {
             return new SchedulingNodeAffinityResponse(key, operator, values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="deletedRowCount", required=true)
-    private final String deletedRowCount;
+      private final String deletedRowCount;
 
     public String getDeletedRowCount() {
         return this.deletedRowCount;
@@ -28,7 +28,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="insertedRowCount", required=true)
-    private final String insertedRowCount;
+      private final String insertedRowCount;
 
     public String getInsertedRowCount() {
         return this.insertedRowCount;
@@ -39,7 +39,7 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="updatedRowCount", required=true)
-    private final String updatedRowCount;
+      private final String updatedRowCount;
 
     public String getUpdatedRowCount() {
         return this.updatedRowCount;
@@ -98,7 +98,6 @@ public final class DmlStatisticsResponse extends io.pulumi.resources.InvokeArgs 
             this.updatedRowCount = Objects.requireNonNull(updatedRowCount);
             return this;
         }
-
         public DmlStatisticsResponse build() {
             return new DmlStatisticsResponse(deletedRowCount, insertedRowCount, updatedRowCount);
         }

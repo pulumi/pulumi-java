@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -199,7 +199,6 @@ public final class CSIStorageCapacity {
             this.storageClassName = Objects.requireNonNull(storageClassName);
             return this;
         }
-
         public CSIStorageCapacity build() {
             return new CSIStorageCapacity(apiVersion, capacity, kind, maximumVolumeSize, metadata, nodeTopology, storageClassName);
         }

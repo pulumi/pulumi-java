@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -56,7 +56,7 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="usageQuota", required=true)
-    private final String usageQuota;
+        private final String usageQuota;
 
     public String getUsageQuota() {
         return this.usageQuota;
@@ -125,7 +125,6 @@ public final class LabDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.usageQuota = Objects.requireNonNull(usageQuota);
             return this;
         }
-
         public LabDetailsResponse build() {
             return new LabDetailsResponse(id, name, provisioningState, usageQuota);
         }

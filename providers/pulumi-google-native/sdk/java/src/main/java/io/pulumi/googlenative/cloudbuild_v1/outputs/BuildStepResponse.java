@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.VolumeResponse;
 import java.lang.String;
@@ -308,7 +308,6 @@ public final class BuildStepResponse {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }
-
         public BuildStepResponse build() {
             return new BuildStepResponse(args, dir, entrypoint, env, name, pullTiming, script, secretEnv, status, timeout, timing, volumes, waitFor);
         }

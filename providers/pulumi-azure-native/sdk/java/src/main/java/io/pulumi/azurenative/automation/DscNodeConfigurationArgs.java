@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation;
 import io.pulumi.azurenative.automation.inputs.ContentSourceArgs;
 import io.pulumi.azurenative.automation.inputs.DscConfigurationAssociationPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -34,7 +34,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="configuration", required=true)
-    private final Input<DscConfigurationAssociationPropertyArgs> configuration;
+        private final Input<DscConfigurationAssociationPropertyArgs> configuration;
 
     public Input<DscConfigurationAssociationPropertyArgs> getConfiguration() {
         return this.configuration;
@@ -45,7 +45,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="incrementNodeConfigurationBuild")
-    private final @Nullable Input<Boolean> incrementNodeConfigurationBuild;
+        private final @Nullable Input<Boolean> incrementNodeConfigurationBuild;
 
     public Input<Boolean> getIncrementNodeConfigurationBuild() {
         return this.incrementNodeConfigurationBuild == null ? Input.empty() : this.incrementNodeConfigurationBuild;
@@ -56,7 +56,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="nodeConfigurationName")
-    private final @Nullable Input<String> nodeConfigurationName;
+        private final @Nullable Input<String> nodeConfigurationName;
 
     public Input<String> getNodeConfigurationName() {
         return this.nodeConfigurationName == null ? Input.empty() : this.nodeConfigurationName;
@@ -78,7 +78,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<ContentSourceArgs> source;
+        private final Input<ContentSourceArgs> source;
 
     public Input<ContentSourceArgs> getSource() {
         return this.source;
@@ -100,7 +100,7 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -249,7 +249,6 @@ public final class DscNodeConfigurationArgs extends io.pulumi.resources.Resource
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DscNodeConfigurationArgs build() {
             return new DscNodeConfigurationArgs(automationAccountName, configuration, incrementNodeConfigurationBuild, name, nodeConfigurationName, resourceGroupName, source, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workloadPool")
-    private final @Nullable Input<String> workloadPool;
+      private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;
@@ -66,7 +66,6 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }
-
         public WorkloadIdentityConfigArgs build() {
             return new WorkloadIdentityConfigArgs(workloadPool);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.HadoopJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.HiveJobResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.JobSchedulingResponse;
@@ -295,7 +295,6 @@ public final class OrderedJobResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public OrderedJobResponse build() {
             return new OrderedJobResponse(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

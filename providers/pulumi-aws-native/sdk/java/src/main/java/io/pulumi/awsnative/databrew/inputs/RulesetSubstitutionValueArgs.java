@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -33,7 +33,7 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="valueReference", required=true)
-    private final Input<String> valueReference;
+        private final Input<String> valueReference;
 
     public Input<String> getValueReference() {
         return this.valueReference;
@@ -92,7 +92,6 @@ public final class RulesetSubstitutionValueArgs extends io.pulumi.resources.Reso
             this.valueReference = Input.of(Objects.requireNonNull(valueReference));
             return this;
         }
-
         public RulesetSubstitutionValueArgs build() {
             return new RulesetSubstitutionValueArgs(value, valueReference);
         }

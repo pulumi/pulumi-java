@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse {
             this.starred = Objects.requireNonNull(starred);
             return this;
         }
-
         public GoogleCloudDatacatalogV1PersonalDetailsResponse build() {
             return new GoogleCloudDatacatalogV1PersonalDetailsResponse(starTime, starred);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AwsResponse {
             this.accountId = Objects.requireNonNull(accountId);
             return this;
         }
-
         public AwsResponse build() {
             return new AwsResponse(accountId);
         }

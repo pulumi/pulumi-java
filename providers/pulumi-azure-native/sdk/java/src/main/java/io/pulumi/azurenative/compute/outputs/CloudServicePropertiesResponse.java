@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.outputs.CloudServiceExtensionProfileRespons
 import io.pulumi.azurenative.compute.outputs.CloudServiceNetworkProfileResponse;
 import io.pulumi.azurenative.compute.outputs.CloudServiceOsProfileResponse;
 import io.pulumi.azurenative.compute.outputs.CloudServiceRoleProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -303,7 +303,6 @@ public final class CloudServicePropertiesResponse {
             this.upgradeMode = upgradeMode;
             return this;
         }
-
         public CloudServicePropertiesResponse build() {
             return new CloudServicePropertiesResponse(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, provisioningState, roleProfile, startCloudService, uniqueId, upgradeMode);
         }

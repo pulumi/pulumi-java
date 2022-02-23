@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsub_v1.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GetSubscriptionIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSubscriptionIamPolicyResult build() {
             return new GetSubscriptionIamPolicyResult(bindings, etag, version);
         }

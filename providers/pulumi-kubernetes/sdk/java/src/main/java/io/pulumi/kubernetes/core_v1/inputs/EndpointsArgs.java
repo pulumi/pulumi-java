@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointSubsetArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
@@ -37,7 +37,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -48,7 +48,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -59,7 +59,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -70,7 +70,7 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subsets")
-    private final @Nullable Input<List<EndpointSubsetArgs>> subsets;
+        private final @Nullable Input<List<EndpointSubsetArgs>> subsets;
 
     public Input<List<EndpointSubsetArgs>> getSubsets() {
         return this.subsets == null ? Input.empty() : this.subsets;
@@ -159,7 +159,6 @@ public final class EndpointsArgs extends io.pulumi.resources.ResourceArgs {
             this.subsets = Input.ofNullable(subsets);
             return this;
         }
-
         public EndpointsArgs build() {
             return new EndpointsArgs(apiVersion, kind, metadata, subsets);
         }

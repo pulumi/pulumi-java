@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.logs.outputs;
 
 import io.pulumi.awsnative.logs.outputs.LogGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -121,7 +121,6 @@ public final class GetLogGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetLogGroupResult build() {
             return new GetLogGroupResult(arn, kmsKeyId, retentionInDays, tags);
         }

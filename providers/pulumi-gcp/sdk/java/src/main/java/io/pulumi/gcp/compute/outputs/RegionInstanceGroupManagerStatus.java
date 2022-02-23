@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionInstanceGroupManagerStatusStateful;
 import io.pulumi.gcp.compute.outputs.RegionInstanceGroupManagerStatusVersionTarget;
 import java.lang.Boolean;
@@ -100,7 +100,6 @@ public final class RegionInstanceGroupManagerStatus {
             this.versionTargets = versionTargets;
             return this;
         }
-
         public RegionInstanceGroupManagerStatus build() {
             return new RegionInstanceGroupManagerStatus(isStable, statefuls, versionTargets);
         }

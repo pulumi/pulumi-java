@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.CustomRegistryCredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SourceRegistryCredentialsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customRegistries")
-    private final @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
+        private final @Nullable Input<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
 
     public Input<Map<String,CustomRegistryCredentialsArgs>> getCustomRegistries() {
         return this.customRegistries == null ? Input.empty() : this.customRegistries;
@@ -39,7 +39,7 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRegistry")
-    private final @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry;
+        private final @Nullable Input<SourceRegistryCredentialsArgs> sourceRegistry;
 
     public Input<SourceRegistryCredentialsArgs> getSourceRegistry() {
         return this.sourceRegistry == null ? Input.empty() : this.sourceRegistry;
@@ -98,7 +98,6 @@ public final class CredentialsArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceRegistry = Input.ofNullable(sourceRegistry);
             return this;
         }
-
         public CredentialsArgs build() {
             return new CredentialsArgs(customRegistries, sourceRegistry);
         }

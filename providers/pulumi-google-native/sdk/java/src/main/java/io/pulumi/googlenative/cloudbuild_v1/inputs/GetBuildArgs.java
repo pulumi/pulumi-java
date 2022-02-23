@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetBuildArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetBuildArgs Empty = new GetBuildArgs();
 
     @InputImport(name="buildId", required=true)
-    private final String buildId;
+      private final String buildId;
 
     public String getBuildId() {
         return this.buildId;
     }
 
     @InputImport(name="id", required=true)
-    private final String id;
+      private final String id;
 
     public String getId() {
         return this.id;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="projectId", required=true)
-    private final String projectId;
+      private final String projectId;
 
     public String getProjectId() {
         return this.projectId;
@@ -122,7 +122,6 @@ public final class GetBuildArgs extends io.pulumi.resources.InvokeArgs {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public GetBuildArgs build() {
             return new GetBuildArgs(buildId, id, location, project, projectId);
         }

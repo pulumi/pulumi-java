@@ -34,7 +34,6 @@ public final class StorageLensEncryptionArgs extends io.pulumi.resources.Resourc
         public Builder(StorageLensEncryptionArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StorageLensEncryptionArgs build() {
             return new StorageLensEncryptionArgs();
         }

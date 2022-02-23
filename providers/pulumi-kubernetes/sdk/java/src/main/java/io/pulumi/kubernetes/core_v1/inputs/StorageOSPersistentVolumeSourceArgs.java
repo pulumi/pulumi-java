@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -36,7 +36,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -47,7 +47,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<ObjectReferenceArgs> secretRef;
+        private final @Nullable Input<ObjectReferenceArgs> secretRef;
 
     public Input<ObjectReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -58,7 +58,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable Input<String> volumeName;
+        private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;
@@ -69,7 +69,7 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="volumeNamespace")
-    private final @Nullable Input<String> volumeNamespace;
+        private final @Nullable Input<String> volumeNamespace;
 
     public Input<String> getVolumeNamespace() {
         return this.volumeNamespace == null ? Input.empty() : this.volumeNamespace;
@@ -173,7 +173,6 @@ public final class StorageOSPersistentVolumeSourceArgs extends io.pulumi.resourc
             this.volumeNamespace = Input.ofNullable(volumeNamespace);
             return this;
         }
-
         public StorageOSPersistentVolumeSourceArgs build() {
             return new StorageOSPersistentVolumeSourceArgs(fsType, readOnly, secretRef, volumeName, volumeNamespace);
         }

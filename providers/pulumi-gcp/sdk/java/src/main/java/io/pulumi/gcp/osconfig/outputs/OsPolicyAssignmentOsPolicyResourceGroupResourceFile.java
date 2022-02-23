@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileFile;
 import java.lang.String;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFile {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFile build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFile(content, file, path, permissions, state);
         }

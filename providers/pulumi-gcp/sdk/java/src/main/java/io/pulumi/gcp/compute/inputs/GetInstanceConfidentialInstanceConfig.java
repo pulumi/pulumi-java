@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetInstanceConfidentialInstanceConfig extends io.pulumi.resou
     public static final GetInstanceConfidentialInstanceConfig Empty = new GetInstanceConfidentialInstanceConfig();
 
     @InputImport(name="enableConfidentialCompute", required=true)
-    private final Boolean enableConfidentialCompute;
+        private final Boolean enableConfidentialCompute;
 
     public Boolean getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
@@ -51,7 +51,6 @@ public final class GetInstanceConfidentialInstanceConfig extends io.pulumi.resou
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public GetInstanceConfidentialInstanceConfig build() {
             return new GetInstanceConfidentialInstanceConfig(enableConfidentialCompute);
         }

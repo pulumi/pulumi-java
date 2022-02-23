@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ConfigMapProjection;
 import io.pulumi.kubernetes.core_v1.outputs.DownwardAPIProjection;
 import io.pulumi.kubernetes.core_v1.outputs.SecretProjection;
@@ -121,7 +121,6 @@ public final class VolumeProjection {
             this.serviceAccountToken = serviceAccountToken;
             return this;
         }
-
         public VolumeProjection build() {
             return new VolumeProjection(configMap, downwardAPI, secret, serviceAccountToken);
         }

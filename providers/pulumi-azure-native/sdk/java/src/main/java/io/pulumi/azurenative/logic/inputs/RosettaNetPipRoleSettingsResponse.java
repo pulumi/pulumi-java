@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipBusinessDocumentResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+        private final String action;
 
     public String getAction() {
         return this.action;
@@ -35,7 +35,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="businessDocument", required=true)
-    private final RosettaNetPipBusinessDocumentResponse businessDocument;
+        private final RosettaNetPipBusinessDocumentResponse businessDocument;
 
     public RosettaNetPipBusinessDocumentResponse getBusinessDocument() {
         return this.businessDocument;
@@ -46,7 +46,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -57,7 +57,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+        private final String role;
 
     public String getRole() {
         return this.role;
@@ -68,7 +68,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="roleType", required=true)
-    private final String roleType;
+        private final String roleType;
 
     public String getRoleType() {
         return this.roleType;
@@ -79,7 +79,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+        private final String service;
 
     public String getService() {
         return this.service;
@@ -90,7 +90,7 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="serviceClassification", required=true)
-    private final String serviceClassification;
+        private final String serviceClassification;
 
     public String getServiceClassification() {
         return this.serviceClassification;
@@ -189,7 +189,6 @@ public final class RosettaNetPipRoleSettingsResponse extends io.pulumi.resources
             this.serviceClassification = Objects.requireNonNull(serviceClassification);
             return this;
         }
-
         public RosettaNetPipRoleSettingsResponse build() {
             return new RosettaNetPipRoleSettingsResponse(action, businessDocument, description, role, roleType, service, serviceClassification);
         }

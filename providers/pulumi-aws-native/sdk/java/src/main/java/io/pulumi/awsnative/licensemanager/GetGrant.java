@@ -6,7 +6,7 @@ package io.pulumi.awsnative.licensemanager;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.licensemanager.inputs.GetGrantArgs;
 import io.pulumi.awsnative.licensemanager.outputs.GetGrantResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

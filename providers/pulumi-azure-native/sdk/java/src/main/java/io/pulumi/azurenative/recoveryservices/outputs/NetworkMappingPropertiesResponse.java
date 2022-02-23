@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureToAzureNetworkMappingSettingsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmToAzureNetworkMappingSettingsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmToVmmNetworkMappingSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class NetworkMappingPropertiesResponse {
             this.state = state;
             return this;
         }
-
         public NetworkMappingPropertiesResponse build() {
             return new NetworkMappingPropertiesResponse(fabricSpecificSettings, primaryFabricFriendlyName, primaryNetworkFriendlyName, primaryNetworkId, recoveryFabricArmId, recoveryFabricFriendlyName, recoveryNetworkFriendlyName, recoveryNetworkId, state);
         }

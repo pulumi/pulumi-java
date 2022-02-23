@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="imageRepositoryUrl", required=true)
-    private final Input<String> imageRepositoryUrl;
+        private final Input<String> imageRepositoryUrl;
 
     public Input<String> getImageRepositoryUrl() {
         return this.imageRepositoryUrl;
@@ -35,7 +35,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<AsymmetricEncryptedSecretArgs> password;
+        private final @Nullable Input<AsymmetricEncryptedSecretArgs> password;
 
     public Input<AsymmetricEncryptedSecretArgs> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -46,7 +46,7 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+        private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;
@@ -120,7 +120,6 @@ public final class ImageRepositoryCredentialArgs extends io.pulumi.resources.Res
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public ImageRepositoryCredentialArgs build() {
             return new ImageRepositoryCredentialArgs(imageRepositoryUrl, password, userName);
         }

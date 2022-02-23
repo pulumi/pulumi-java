@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountId")
-    private final @Nullable String accountId;
+        private final @Nullable String accountId;
 
     public Optional<String> getAccountId() {
         return this.accountId == null ? Optional.empty() : Optional.ofNullable(this.accountId);
@@ -34,7 +34,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable String accountKey;
+        private final @Nullable String accountKey;
 
     public Optional<String> getAccountKey() {
         return this.accountKey == null ? Optional.empty() : Optional.ofNullable(this.accountKey);
@@ -45,7 +45,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="collectionNamePattern")
-    private final @Nullable String collectionNamePattern;
+        private final @Nullable String collectionNamePattern;
 
     public Optional<String> getCollectionNamePattern() {
         return this.collectionNamePattern == null ? Optional.empty() : Optional.ofNullable(this.collectionNamePattern);
@@ -56,7 +56,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="database")
-    private final @Nullable String database;
+        private final @Nullable String database;
 
     public Optional<String> getDatabase() {
         return this.database == null ? Optional.empty() : Optional.ofNullable(this.database);
@@ -67,7 +67,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="documentId")
-    private final @Nullable String documentId;
+        private final @Nullable String documentId;
 
     public Optional<String> getDocumentId() {
         return this.documentId == null ? Optional.empty() : Optional.ofNullable(this.documentId);
@@ -78,7 +78,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable String partitionKey;
+        private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
@@ -90,7 +90,7 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -189,7 +189,6 @@ public final class DocumentDbOutputDataSourceResponse extends io.pulumi.resource
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DocumentDbOutputDataSourceResponse build() {
             return new DocumentDbOutputDataSourceResponse(accountId, accountKey, collectionNamePattern, database, documentId, partitionKey, type);
         }

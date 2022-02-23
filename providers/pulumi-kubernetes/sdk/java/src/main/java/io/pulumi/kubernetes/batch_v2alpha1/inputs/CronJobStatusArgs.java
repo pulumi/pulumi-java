@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.batch_v2alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="active")
-    private final @Nullable Input<List<ObjectReferenceArgs>> active;
+        private final @Nullable Input<List<ObjectReferenceArgs>> active;
 
     public Input<List<ObjectReferenceArgs>> getActive() {
         return this.active == null ? Input.empty() : this.active;
@@ -36,7 +36,7 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastScheduleTime")
-    private final @Nullable Input<String> lastScheduleTime;
+        private final @Nullable Input<String> lastScheduleTime;
 
     public Input<String> getLastScheduleTime() {
         return this.lastScheduleTime == null ? Input.empty() : this.lastScheduleTime;
@@ -95,7 +95,6 @@ public final class CronJobStatusArgs extends io.pulumi.resources.ResourceArgs {
             this.lastScheduleTime = Input.ofNullable(lastScheduleTime);
             return this;
         }
-
         public CronJobStatusArgs build() {
             return new CronJobStatusArgs(active, lastScheduleTime);
         }

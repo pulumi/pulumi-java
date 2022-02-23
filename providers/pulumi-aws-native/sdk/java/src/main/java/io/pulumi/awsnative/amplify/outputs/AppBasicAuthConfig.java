@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class AppBasicAuthConfig {
             this.username = username;
             return this;
         }
-
         public AppBasicAuthConfig build() {
             return new AppBasicAuthConfig(enableBasicAuth, password, username);
         }

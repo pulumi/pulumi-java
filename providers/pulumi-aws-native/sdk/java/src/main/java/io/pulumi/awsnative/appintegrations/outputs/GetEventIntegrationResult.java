@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appintegrations.outputs;
 
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationAssociation;
 import io.pulumi.awsnative.appintegrations.outputs.EventIntegrationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class GetEventIntegrationResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventIntegrationResult build() {
             return new GetEventIntegrationResult(associations, description, eventIntegrationArn, tags);
         }

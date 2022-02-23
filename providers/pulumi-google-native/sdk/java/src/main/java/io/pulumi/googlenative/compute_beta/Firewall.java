@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.FirewallArgs;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallAllowedItemResponse;
@@ -277,13 +277,6 @@ public class Firewall extends io.pulumi.resources.CustomResource {
         return this.targetTags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Firewall(String name) {
-        super("google-native:compute/beta:Firewall", name, FirewallArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

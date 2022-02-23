@@ -10,7 +10,7 @@ import io.pulumi.awsnative.s3.inputs.BucketNoncurrentVersionTransitionArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilterArgs;
 import io.pulumi.awsnative.s3.inputs.BucketTransitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,112 +28,112 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final BucketRuleArgs Empty = new BucketRuleArgs();
 
     @InputImport(name="abortIncompleteMultipartUpload")
-    private final @Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
+        private final @Nullable Input<BucketAbortIncompleteMultipartUploadArgs> abortIncompleteMultipartUpload;
 
     public Input<BucketAbortIncompleteMultipartUploadArgs> getAbortIncompleteMultipartUpload() {
         return this.abortIncompleteMultipartUpload == null ? Input.empty() : this.abortIncompleteMultipartUpload;
     }
 
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+        private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
     }
 
     @InputImport(name="expirationInDays")
-    private final @Nullable Input<Integer> expirationInDays;
+        private final @Nullable Input<Integer> expirationInDays;
 
     public Input<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Input.empty() : this.expirationInDays;
     }
 
     @InputImport(name="expiredObjectDeleteMarker")
-    private final @Nullable Input<Boolean> expiredObjectDeleteMarker;
+        private final @Nullable Input<Boolean> expiredObjectDeleteMarker;
 
     public Input<Boolean> getExpiredObjectDeleteMarker() {
         return this.expiredObjectDeleteMarker == null ? Input.empty() : this.expiredObjectDeleteMarker;
     }
 
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
     }
 
     @InputImport(name="noncurrentVersionExpiration")
-    private final @Nullable Input<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration;
+        private final @Nullable Input<BucketNoncurrentVersionExpirationArgs> noncurrentVersionExpiration;
 
     public Input<BucketNoncurrentVersionExpirationArgs> getNoncurrentVersionExpiration() {
         return this.noncurrentVersionExpiration == null ? Input.empty() : this.noncurrentVersionExpiration;
     }
 
     @InputImport(name="noncurrentVersionExpirationInDays")
-    private final @Nullable Input<Integer> noncurrentVersionExpirationInDays;
+        private final @Nullable Input<Integer> noncurrentVersionExpirationInDays;
 
     public Input<Integer> getNoncurrentVersionExpirationInDays() {
         return this.noncurrentVersionExpirationInDays == null ? Input.empty() : this.noncurrentVersionExpirationInDays;
     }
 
     @InputImport(name="noncurrentVersionTransition")
-    private final @Nullable Input<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition;
+        private final @Nullable Input<BucketNoncurrentVersionTransitionArgs> noncurrentVersionTransition;
 
     public Input<BucketNoncurrentVersionTransitionArgs> getNoncurrentVersionTransition() {
         return this.noncurrentVersionTransition == null ? Input.empty() : this.noncurrentVersionTransition;
     }
 
     @InputImport(name="noncurrentVersionTransitions")
-    private final @Nullable Input<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions;
+        private final @Nullable Input<List<BucketNoncurrentVersionTransitionArgs>> noncurrentVersionTransitions;
 
     public Input<List<BucketNoncurrentVersionTransitionArgs>> getNoncurrentVersionTransitions() {
         return this.noncurrentVersionTransitions == null ? Input.empty() : this.noncurrentVersionTransitions;
     }
 
     @InputImport(name="objectSizeGreaterThan")
-    private final @Nullable Input<String> objectSizeGreaterThan;
+        private final @Nullable Input<String> objectSizeGreaterThan;
 
     public Input<String> getObjectSizeGreaterThan() {
         return this.objectSizeGreaterThan == null ? Input.empty() : this.objectSizeGreaterThan;
     }
 
     @InputImport(name="objectSizeLessThan")
-    private final @Nullable Input<String> objectSizeLessThan;
+        private final @Nullable Input<String> objectSizeLessThan;
 
     public Input<String> getObjectSizeLessThan() {
         return this.objectSizeLessThan == null ? Input.empty() : this.objectSizeLessThan;
     }
 
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
     }
 
     @InputImport(name="status", required=true)
-    private final Input<BucketRuleStatus> status;
+        private final Input<BucketRuleStatus> status;
 
     public Input<BucketRuleStatus> getStatus() {
         return this.status;
     }
 
     @InputImport(name="tagFilters")
-    private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
+        private final @Nullable Input<List<BucketTagFilterArgs>> tagFilters;
 
     public Input<List<BucketTagFilterArgs>> getTagFilters() {
         return this.tagFilters == null ? Input.empty() : this.tagFilters;
     }
 
     @InputImport(name="transition")
-    private final @Nullable Input<BucketTransitionArgs> transition;
+        private final @Nullable Input<BucketTransitionArgs> transition;
 
     public Input<BucketTransitionArgs> getTransition() {
         return this.transition == null ? Input.empty() : this.transition;
     }
 
     @InputImport(name="transitions")
-    private final @Nullable Input<List<BucketTransitionArgs>> transitions;
+        private final @Nullable Input<List<BucketTransitionArgs>> transitions;
 
     public Input<List<BucketTransitionArgs>> getTransitions() {
         return this.transitions == null ? Input.empty() : this.transitions;
@@ -402,7 +402,6 @@ public final class BucketRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.transitions = Input.ofNullable(transitions);
             return this;
         }
-
         public BucketRuleArgs build() {
             return new BucketRuleArgs(abortIncompleteMultipartUpload, expirationDate, expirationInDays, expiredObjectDeleteMarker, id, noncurrentVersionExpiration, noncurrentVersionExpirationInDays, noncurrentVersionTransition, noncurrentVersionTransitions, objectSizeGreaterThan, objectSizeLessThan, prefix, status, tagFilters, transition, transitions);
         }

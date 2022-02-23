@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.VpnGatewayVpnGatewayInterfaceResponse;
 import java.lang.String;
 import java.util.List;
@@ -266,7 +266,6 @@ public final class GetVpnGatewayResult {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }
-
         public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(creationTimestamp, description, kind, labelFingerprint, labels, name, network, region, selfLink, stackType, vpnInterfaces);
         }

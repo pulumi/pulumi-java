@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ClusterMonitoringConfigGetArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableComponents", required=true)
-    private final Input<List<String>> enableComponents;
+        private final Input<List<String>> enableComponents;
 
     public Input<List<String>> getEnableComponents() {
         return this.enableComponents;
@@ -62,7 +62,6 @@ public final class ClusterMonitoringConfigGetArgs extends io.pulumi.resources.Re
             this.enableComponents = Input.of(Objects.requireNonNull(enableComponents));
             return this;
         }
-
         public ClusterMonitoringConfigGetArgs build() {
             return new ClusterMonitoringConfigGetArgs(enableComponents);
         }

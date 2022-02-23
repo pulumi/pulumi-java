@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class PostProcessingStepResponse {
         public Builder(PostProcessingStepResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public PostProcessingStepResponse build() {
             return new PostProcessingStepResponse();
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
 import java.lang.String;
 import java.util.List;
@@ -244,7 +244,6 @@ public final class GetBackupResult {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, database, databaseDialect, encryptionInfo, expireTime, name, referencingDatabases, sizeBytes, state, versionTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class TaskDefinitionLoRaWANGatewayVersion {
             this.station = station;
             return this;
         }
-
         public TaskDefinitionLoRaWANGatewayVersion build() {
             return new TaskDefinitionLoRaWANGatewayVersion(model, packageVersion, station);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -351,7 +351,6 @@ public final class InMageAzureV2ProtectedDiskDetailsResponse {
             this.targetDataInMegaBytes = targetDataInMegaBytes;
             return this;
         }
-
         public InMageAzureV2ProtectedDiskDetailsResponse build() {
             return new InMageAzureV2ProtectedDiskDetailsResponse(diskCapacityInBytes, diskId, diskName, diskResized, fileSystemCapacityInBytes, healthErrorCode, lastRpoCalculatedTime, protectionStage, psDataInMegaBytes, resyncDurationInSeconds, resyncProgressPercentage, resyncRequired, rpoInSeconds, sourceDataInMegaBytes, targetDataInMegaBytes);
         }

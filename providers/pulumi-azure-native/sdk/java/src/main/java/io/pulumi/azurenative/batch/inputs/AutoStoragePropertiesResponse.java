@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="lastKeySync", required=true)
-    private final String lastKeySync;
+        private final String lastKeySync;
 
     public String getLastKeySync() {
         return this.lastKeySync;
@@ -32,7 +32,7 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-    private final String storageAccountId;
+        private final String storageAccountId;
 
     public String getStorageAccountId() {
         return this.storageAccountId;
@@ -81,7 +81,6 @@ public final class AutoStoragePropertiesResponse extends io.pulumi.resources.Inv
             this.storageAccountId = Objects.requireNonNull(storageAccountId);
             return this;
         }
-
         public AutoStoragePropertiesResponse build() {
             return new AutoStoragePropertiesResponse(lastKeySync, storageAccountId);
         }

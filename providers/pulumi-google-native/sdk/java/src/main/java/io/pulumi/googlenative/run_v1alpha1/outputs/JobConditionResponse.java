@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class JobConditionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JobConditionResponse build() {
             return new JobConditionResponse(lastTransitionTime, message, reason, severity, status, type);
         }

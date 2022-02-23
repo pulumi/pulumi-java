@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetClusterNotificationConfigPubsub extends io.pulumi.resource
     public static final GetClusterNotificationConfigPubsub Empty = new GetClusterNotificationConfigPubsub();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
     }
 
     @InputImport(name="topic", required=true)
-    private final String topic;
+        private final String topic;
 
     public String getTopic() {
         return this.topic;
@@ -70,7 +70,6 @@ public final class GetClusterNotificationConfigPubsub extends io.pulumi.resource
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetClusterNotificationConfigPubsub build() {
             return new GetClusterNotificationConfigPubsub(enabled, topic);
         }

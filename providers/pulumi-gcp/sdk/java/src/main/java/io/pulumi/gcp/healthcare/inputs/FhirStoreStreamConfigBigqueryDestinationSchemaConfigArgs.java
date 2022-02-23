@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
      * 
      */
     @InputImport(name="recursiveStructureDepth", required=true)
-    private final Input<Integer> recursiveStructureDepth;
+        private final Input<Integer> recursiveStructureDepth;
 
     public Input<Integer> getRecursiveStructureDepth() {
         return this.recursiveStructureDepth;
@@ -38,7 +38,7 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
      * 
      */
     @InputImport(name="schemaType")
-    private final @Nullable Input<String> schemaType;
+        private final @Nullable Input<String> schemaType;
 
     public Input<String> getSchemaType() {
         return this.schemaType == null ? Input.empty() : this.schemaType;
@@ -97,7 +97,6 @@ public final class FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs exte
             this.schemaType = Input.ofNullable(schemaType);
             return this;
         }
-
         public FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs build() {
             return new FhirStoreStreamConfigBigqueryDestinationSchemaConfigArgs(recursiveStructureDepth, schemaType);
         }

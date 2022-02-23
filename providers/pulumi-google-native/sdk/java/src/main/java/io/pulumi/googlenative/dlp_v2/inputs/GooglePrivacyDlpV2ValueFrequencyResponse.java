@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="count", required=true)
-    private final String count;
+      private final String count;
 
     public String getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="value", required=true)
-    private final GooglePrivacyDlpV2ValueResponse value;
+      private final GooglePrivacyDlpV2ValueResponse value;
 
     public GooglePrivacyDlpV2ValueResponse getValue() {
         return this.value;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2ValueFrequencyResponse extends io.pulumi.re
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueFrequencyResponse build() {
             return new GooglePrivacyDlpV2ValueFrequencyResponse(count, value);
         }

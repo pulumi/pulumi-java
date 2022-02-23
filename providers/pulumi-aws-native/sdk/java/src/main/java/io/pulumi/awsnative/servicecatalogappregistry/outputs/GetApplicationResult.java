@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.outputs.ApplicationTags;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -116,7 +116,6 @@ public final class GetApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(arn, description, id, name, tags);
         }

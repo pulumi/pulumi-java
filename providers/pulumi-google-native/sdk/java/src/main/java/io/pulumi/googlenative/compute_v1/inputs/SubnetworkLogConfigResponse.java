@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="aggregationInterval", required=true)
-    private final String aggregationInterval;
+      private final String aggregationInterval;
 
     public String getAggregationInterval() {
         return this.aggregationInterval;
@@ -35,7 +35,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enable", required=true)
-    private final Boolean enable;
+      private final Boolean enable;
 
     public Boolean getEnable() {
         return this.enable;
@@ -46,7 +46,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="filterExpr", required=true)
-    private final String filterExpr;
+      private final String filterExpr;
 
     public String getFilterExpr() {
         return this.filterExpr;
@@ -57,7 +57,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="flowSampling", required=true)
-    private final Double flowSampling;
+      private final Double flowSampling;
 
     public Double getFlowSampling() {
         return this.flowSampling;
@@ -68,7 +68,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final String metadata;
+      private final String metadata;
 
     public String getMetadata() {
         return this.metadata;
@@ -79,7 +79,7 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="metadataFields", required=true)
-    private final List<String> metadataFields;
+      private final List<String> metadataFields;
 
     public List<String> getMetadataFields() {
         return this.metadataFields;
@@ -168,7 +168,6 @@ public final class SubnetworkLogConfigResponse extends io.pulumi.resources.Invok
             this.metadataFields = Objects.requireNonNull(metadataFields);
             return this;
         }
-
         public SubnetworkLogConfigResponse build() {
             return new SubnetworkLogConfigResponse(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
         }

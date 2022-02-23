@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights;
 import io.pulumi.azurenative.timeseriesinsights.enums.AccessPolicyRole;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessPolicyName")
-    private final @Nullable Input<String> accessPolicyName;
+        private final @Nullable Input<String> accessPolicyName;
 
     public Input<String> getAccessPolicyName() {
         return this.accessPolicyName == null ? Input.empty() : this.accessPolicyName;
@@ -33,7 +33,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final Input<String> environmentName;
+        private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -55,7 +55,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalObjectId")
-    private final @Nullable Input<String> principalObjectId;
+        private final @Nullable Input<String> principalObjectId;
 
     public Input<String> getPrincipalObjectId() {
         return this.principalObjectId == null ? Input.empty() : this.principalObjectId;
@@ -66,7 +66,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<Either<String,AccessPolicyRole>>> roles;
+        private final @Nullable Input<List<Either<String,AccessPolicyRole>>> roles;
 
     public Input<List<Either<String,AccessPolicyRole>>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -196,7 +196,6 @@ public final class AccessPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public AccessPolicyArgs build() {
             return new AccessPolicyArgs(accessPolicyName, description, environmentName, principalObjectId, resourceGroupName, roles);
         }

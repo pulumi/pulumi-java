@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ekmConnectionKeyPath")
-    private final @Nullable Input<String> ekmConnectionKeyPath;
+      private final @Nullable Input<String> ekmConnectionKeyPath;
 
     public Input<String> getEkmConnectionKeyPath() {
         return this.ekmConnectionKeyPath == null ? Input.empty() : this.ekmConnectionKeyPath;
@@ -34,7 +34,7 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="externalKeyUri")
-    private final @Nullable Input<String> externalKeyUri;
+      private final @Nullable Input<String> externalKeyUri;
 
     public Input<String> getExternalKeyUri() {
         return this.externalKeyUri == null ? Input.empty() : this.externalKeyUri;
@@ -93,7 +93,6 @@ public final class ExternalProtectionLevelOptionsArgs extends io.pulumi.resource
             this.externalKeyUri = Input.ofNullable(externalKeyUri);
             return this;
         }
-
         public ExternalProtectionLevelOptionsArgs build() {
             return new ExternalProtectionLevelOptionsArgs(ekmConnectionKeyPath, externalKeyUri);
         }

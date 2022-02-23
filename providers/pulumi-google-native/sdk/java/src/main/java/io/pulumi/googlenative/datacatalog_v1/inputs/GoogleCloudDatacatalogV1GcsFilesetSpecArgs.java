@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecArgs extends io.pulumi.
      * 
      */
     @InputImport(name="filePatterns", required=true)
-    private final Input<List<String>> filePatterns;
+      private final Input<List<String>> filePatterns;
 
     public Input<List<String>> getFilePatterns() {
         return this.filePatterns;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatacatalogV1GcsFilesetSpecArgs extends io.pulumi.
             this.filePatterns = Input.of(Objects.requireNonNull(filePatterns));
             return this;
         }
-
         public GoogleCloudDatacatalogV1GcsFilesetSpecArgs build() {
             return new GoogleCloudDatacatalogV1GcsFilesetSpecArgs(filePatterns);
         }

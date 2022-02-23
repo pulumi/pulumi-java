@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serverId", required=true)
-    private final String serverId;
+        private final String serverId;
 
     public String getServerId() {
         return this.serverId;
@@ -39,7 +39,7 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-    private final String storageSyncServiceName;
+        private final String storageSyncServiceName;
 
     public String getStorageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -98,7 +98,6 @@ public final class GetRegisteredServerArgs extends io.pulumi.resources.InvokeArg
             this.storageSyncServiceName = Objects.requireNonNull(storageSyncServiceName);
             return this;
         }
-
         public GetRegisteredServerArgs build() {
             return new GetRegisteredServerArgs(resourceGroupName, serverId, storageSyncServiceName);
         }

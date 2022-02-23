@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpFaultAbortResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpFaultDelayResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class HttpFaultInjectionResponse {
             this.delay = Objects.requireNonNull(delay);
             return this;
         }
-
         public HttpFaultInjectionResponse build() {
             return new HttpFaultInjectionResponse(abort, delay);
         }

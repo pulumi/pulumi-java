@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeFieldMap;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeKeyMap;
 import io.pulumi.awsnative.customerprofiles.outputs.ObjectTypeTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -250,7 +250,6 @@ public final class GetObjectTypeResult {
             this.templateId = templateId;
             return this;
         }
-
         public GetObjectTypeResult build() {
             return new GetObjectTypeResult(allowProfileCreation, createdAt, description, encryptionKey, expirationDays, fields, keys, lastUpdatedAt, tags, templateId);
         }

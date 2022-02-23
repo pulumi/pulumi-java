@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.NotificationEndpointGrpcSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetRegionNotificationEndpointResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRegionNotificationEndpointResult build() {
             return new GetRegionNotificationEndpointResult(creationTimestamp, description, grpcSettings, kind, name, region, selfLink);
         }

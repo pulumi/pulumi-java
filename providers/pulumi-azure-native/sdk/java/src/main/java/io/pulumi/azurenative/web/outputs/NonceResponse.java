@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class NonceResponse {
             this.validateNonce = validateNonce;
             return this;
         }
-
         public NonceResponse build() {
             return new NonceResponse(nonceExpirationInterval, validateNonce);
         }

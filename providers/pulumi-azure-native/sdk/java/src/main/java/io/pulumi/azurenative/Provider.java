@@ -6,7 +6,7 @@ package io.pulumi.azurenative;
 import io.pulumi.azurenative.ProviderArgs;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 /**
@@ -15,13 +15,6 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="pulumi:providers:azure-native")
 public class Provider extends io.pulumi.resources.ProviderResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Provider(String name) {
-        super("azure-native", name, ProviderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

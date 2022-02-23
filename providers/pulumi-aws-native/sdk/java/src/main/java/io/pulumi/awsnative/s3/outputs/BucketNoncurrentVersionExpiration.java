@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class BucketNoncurrentVersionExpiration {
             this.noncurrentDays = Objects.requireNonNull(noncurrentDays);
             return this;
         }
-
         public BucketNoncurrentVersionExpiration build() {
             return new BucketNoncurrentVersionExpiration(newerNoncurrentVersions, noncurrentDays);
         }

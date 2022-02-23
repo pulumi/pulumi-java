@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class DataSourceAclConfiguration {
             this.allowedGroupsColumnName = Objects.requireNonNull(allowedGroupsColumnName);
             return this;
         }
-
         public DataSourceAclConfiguration build() {
             return new DataSourceAclConfiguration(allowedGroupsColumnName);
         }

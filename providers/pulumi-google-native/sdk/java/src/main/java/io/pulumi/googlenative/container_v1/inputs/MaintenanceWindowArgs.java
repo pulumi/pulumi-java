@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.DailyMaintenanceWindowArgs;
 import io.pulumi.googlenative.container_v1.inputs.RecurringTimeWindowArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dailyMaintenanceWindow")
-    private final @Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
+      private final @Nullable Input<DailyMaintenanceWindowArgs> dailyMaintenanceWindow;
 
     public Input<DailyMaintenanceWindowArgs> getDailyMaintenanceWindow() {
         return this.dailyMaintenanceWindow == null ? Input.empty() : this.dailyMaintenanceWindow;
@@ -37,7 +37,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maintenanceExclusions")
-    private final @Nullable Input<Map<String,String>> maintenanceExclusions;
+      private final @Nullable Input<Map<String,String>> maintenanceExclusions;
 
     public Input<Map<String,String>> getMaintenanceExclusions() {
         return this.maintenanceExclusions == null ? Input.empty() : this.maintenanceExclusions;
@@ -48,7 +48,7 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recurringWindow")
-    private final @Nullable Input<RecurringTimeWindowArgs> recurringWindow;
+      private final @Nullable Input<RecurringTimeWindowArgs> recurringWindow;
 
     public Input<RecurringTimeWindowArgs> getRecurringWindow() {
         return this.recurringWindow == null ? Input.empty() : this.recurringWindow;
@@ -122,7 +122,6 @@ public final class MaintenanceWindowArgs extends io.pulumi.resources.ResourceArg
             this.recurringWindow = Input.ofNullable(recurringWindow);
             return this;
         }
-
         public MaintenanceWindowArgs build() {
             return new MaintenanceWindowArgs(dailyMaintenanceWindow, maintenanceExclusions, recurringWindow);
         }

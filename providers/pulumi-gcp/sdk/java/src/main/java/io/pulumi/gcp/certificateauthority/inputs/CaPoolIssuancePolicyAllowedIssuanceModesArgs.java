@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
      * 
      */
     @InputImport(name="allowConfigBasedIssuance", required=true)
-    private final Input<Boolean> allowConfigBasedIssuance;
+        private final Input<Boolean> allowConfigBasedIssuance;
 
     public Input<Boolean> getAllowConfigBasedIssuance() {
         return this.allowConfigBasedIssuance;
@@ -29,7 +29,7 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
      * 
      */
     @InputImport(name="allowCsrBasedIssuance", required=true)
-    private final Input<Boolean> allowCsrBasedIssuance;
+        private final Input<Boolean> allowCsrBasedIssuance;
 
     public Input<Boolean> getAllowCsrBasedIssuance() {
         return this.allowCsrBasedIssuance;
@@ -88,7 +88,6 @@ public final class CaPoolIssuancePolicyAllowedIssuanceModesArgs extends io.pulum
             this.allowCsrBasedIssuance = Input.of(Objects.requireNonNull(allowCsrBasedIssuance));
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedIssuanceModesArgs build() {
             return new CaPoolIssuancePolicyAllowedIssuanceModesArgs(allowConfigBasedIssuance, allowCsrBasedIssuance);
         }

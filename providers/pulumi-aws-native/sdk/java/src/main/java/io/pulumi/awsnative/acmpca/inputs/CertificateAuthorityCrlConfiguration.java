@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,35 +21,35 @@ public final class CertificateAuthorityCrlConfiguration extends io.pulumi.resour
     public static final CertificateAuthorityCrlConfiguration Empty = new CertificateAuthorityCrlConfiguration();
 
     @InputImport(name="customCname")
-    private final @Nullable String customCname;
+        private final @Nullable String customCname;
 
     public Optional<String> getCustomCname() {
         return this.customCname == null ? Optional.empty() : Optional.ofNullable(this.customCname);
     }
 
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
     }
 
     @InputImport(name="expirationInDays")
-    private final @Nullable Integer expirationInDays;
+        private final @Nullable Integer expirationInDays;
 
     public Optional<Integer> getExpirationInDays() {
         return this.expirationInDays == null ? Optional.empty() : Optional.ofNullable(this.expirationInDays);
     }
 
     @InputImport(name="s3BucketName")
-    private final @Nullable String s3BucketName;
+        private final @Nullable String s3BucketName;
 
     public Optional<String> getS3BucketName() {
         return this.s3BucketName == null ? Optional.empty() : Optional.ofNullable(this.s3BucketName);
     }
 
     @InputImport(name="s3ObjectAcl")
-    private final @Nullable String s3ObjectAcl;
+        private final @Nullable String s3ObjectAcl;
 
     public Optional<String> getS3ObjectAcl() {
         return this.s3ObjectAcl == null ? Optional.empty() : Optional.ofNullable(this.s3ObjectAcl);
@@ -128,7 +128,6 @@ public final class CertificateAuthorityCrlConfiguration extends io.pulumi.resour
             this.s3ObjectAcl = s3ObjectAcl;
             return this;
         }
-
         public CertificateAuthorityCrlConfiguration build() {
             return new CertificateAuthorityCrlConfiguration(customCname, enabled, expirationInDays, s3BucketName, s3ObjectAcl);
         }

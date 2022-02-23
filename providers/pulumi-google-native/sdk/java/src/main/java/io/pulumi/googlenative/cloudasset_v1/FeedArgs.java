@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.enums.FeedContentType;
 import io.pulumi.googlenative.cloudasset_v1.inputs.ExprArgs;
 import io.pulumi.googlenative.cloudasset_v1.inputs.FeedOutputConfigArgs;
@@ -23,7 +23,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetNames")
-    private final @Nullable Input<List<String>> assetNames;
+      private final @Nullable Input<List<String>> assetNames;
 
     public Input<List<String>> getAssetNames() {
         return this.assetNames == null ? Input.empty() : this.assetNames;
@@ -34,7 +34,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetTypes")
-    private final @Nullable Input<List<String>> assetTypes;
+      private final @Nullable Input<List<String>> assetTypes;
 
     public Input<List<String>> getAssetTypes() {
         return this.assetTypes == null ? Input.empty() : this.assetTypes;
@@ -45,7 +45,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<ExprArgs> condition;
+      private final @Nullable Input<ExprArgs> condition;
 
     public Input<ExprArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -56,7 +56,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<FeedContentType> contentType;
+      private final @Nullable Input<FeedContentType> contentType;
 
     public Input<FeedContentType> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -67,7 +67,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedId", required=true)
-    private final Input<String> feedId;
+      private final Input<String> feedId;
 
     public Input<String> getFeedId() {
         return this.feedId;
@@ -78,7 +78,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="feedOutputConfig", required=true)
-    private final Input<FeedOutputConfigArgs> feedOutputConfig;
+      private final Input<FeedOutputConfigArgs> feedOutputConfig;
 
     public Input<FeedOutputConfigArgs> getFeedOutputConfig() {
         return this.feedOutputConfig;
@@ -89,7 +89,7 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -100,21 +100,21 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relationshipTypes")
-    private final @Nullable Input<List<String>> relationshipTypes;
+      private final @Nullable Input<List<String>> relationshipTypes;
 
     public Input<List<String>> getRelationshipTypes() {
         return this.relationshipTypes == null ? Input.empty() : this.relationshipTypes;
     }
 
     @InputImport(name="v1Id", required=true)
-    private final Input<String> v1Id;
+      private final Input<String> v1Id;
 
     public Input<String> getV1Id() {
         return this.v1Id;
     }
 
     @InputImport(name="v1Id1", required=true)
-    private final Input<String> v1Id1;
+      private final Input<String> v1Id1;
 
     public Input<String> getV1Id1() {
         return this.v1Id1;
@@ -293,7 +293,6 @@ public final class FeedArgs extends io.pulumi.resources.ResourceArgs {
             this.v1Id1 = Input.of(Objects.requireNonNull(v1Id1));
             return this;
         }
-
         public FeedArgs build() {
             return new FeedArgs(assetNames, assetTypes, condition, contentType, feedId, feedOutputConfig, name, relationshipTypes, v1Id, v1Id1);
         }

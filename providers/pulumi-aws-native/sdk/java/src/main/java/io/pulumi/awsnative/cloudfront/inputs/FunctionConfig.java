@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class FunctionConfig extends io.pulumi.resources.InvokeArgs {
     public static final FunctionConfig Empty = new FunctionConfig();
 
     @InputImport(name="comment", required=true)
-    private final String comment;
+        private final String comment;
 
     public String getComment() {
         return this.comment;
     }
 
     @InputImport(name="runtime", required=true)
-    private final String runtime;
+        private final String runtime;
 
     public String getRuntime() {
         return this.runtime;
@@ -69,7 +69,6 @@ public final class FunctionConfig extends io.pulumi.resources.InvokeArgs {
             this.runtime = Objects.requireNonNull(runtime);
             return this;
         }
-
         public FunctionConfig build() {
             return new FunctionConfig(comment, runtime);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.TargetVpnGatewayArgs;
 import java.lang.String;
@@ -189,13 +189,6 @@ public class TargetVpnGateway extends io.pulumi.resources.CustomResource {
         return this.tunnels;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TargetVpnGateway(String name) {
-        super("google-native:compute/beta:TargetVpnGateway", name, TargetVpnGatewayArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

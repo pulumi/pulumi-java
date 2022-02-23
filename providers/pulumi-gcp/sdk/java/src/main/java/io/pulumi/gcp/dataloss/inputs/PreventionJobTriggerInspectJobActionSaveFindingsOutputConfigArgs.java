@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigA
      * 
      */
     @InputImport(name="outputSchema")
-    private final @Nullable Input<String> outputSchema;
+        private final @Nullable Input<String> outputSchema;
 
     public Input<String> getOutputSchema() {
         return this.outputSchema == null ? Input.empty() : this.outputSchema;
@@ -39,7 +39,7 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigA
      * 
      */
     @InputImport(name="table", required=true)
-    private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table;
+        private final Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> table;
 
     public Input<PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigTableArgs> getTable() {
         return this.table;
@@ -98,7 +98,6 @@ public final class PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigA
             this.table = Input.of(Objects.requireNonNull(table));
             return this;
         }
-
         public PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs build() {
             return new PreventionJobTriggerInspectJobActionSaveFindingsOutputConfigArgs(outputSchema, table);
         }

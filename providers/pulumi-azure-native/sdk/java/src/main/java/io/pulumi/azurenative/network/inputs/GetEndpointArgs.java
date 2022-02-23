@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final String endpointName;
+        private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -28,7 +28,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final String endpointType;
+        private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -39,7 +39,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+        private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -50,7 +50,7 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointName, endpointType, profileName, resourceGroupName);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.azurenative.datafactory.outputs.SqlAlwaysEncryptedPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -255,7 +255,6 @@ public final class AmazonRdsForSqlServerLinkedServiceResponse {
             this.userName = userName;
             return this;
         }
-
         public AmazonRdsForSqlServerLinkedServiceResponse build() {
             return new AmazonRdsForSqlServerLinkedServiceResponse(alwaysEncryptedSettings, annotations, connectVia, connectionString, description, encryptedCredential, parameters, password, type, userName);
         }

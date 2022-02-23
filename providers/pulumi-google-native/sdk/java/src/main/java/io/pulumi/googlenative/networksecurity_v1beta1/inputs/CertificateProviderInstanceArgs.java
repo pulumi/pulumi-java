@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pluginInstance", required=true)
-    private final Input<String> pluginInstance;
+      private final Input<String> pluginInstance;
 
     public Input<String> getPluginInstance() {
         return this.pluginInstance;
@@ -65,7 +65,6 @@ public final class CertificateProviderInstanceArgs extends io.pulumi.resources.R
             this.pluginInstance = Input.of(Objects.requireNonNull(pluginInstance));
             return this;
         }
-
         public CertificateProviderInstanceArgs build() {
             return new CertificateProviderInstanceArgs(pluginInstance);
         }

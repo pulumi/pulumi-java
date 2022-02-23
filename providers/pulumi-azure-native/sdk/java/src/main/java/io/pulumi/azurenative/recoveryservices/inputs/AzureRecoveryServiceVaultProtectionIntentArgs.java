@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.BackupManagementType;
 import io.pulumi.azurenative.recoveryservices.enums.ProtectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -37,7 +37,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
      * 
      */
     @InputImport(name="itemId")
-    private final @Nullable Input<String> itemId;
+        private final @Nullable Input<String> itemId;
 
     public Input<String> getItemId() {
         return this.itemId == null ? Input.empty() : this.itemId;
@@ -48,7 +48,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+        private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -60,7 +60,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
      * 
      */
     @InputImport(name="protectionIntentItemType", required=true)
-    private final Input<String> protectionIntentItemType;
+        private final Input<String> protectionIntentItemType;
 
     public Input<String> getProtectionIntentItemType() {
         return this.protectionIntentItemType;
@@ -71,7 +71,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
      * 
      */
     @InputImport(name="protectionState")
-    private final @Nullable Input<Either<String,ProtectionStatus>> protectionState;
+        private final @Nullable Input<Either<String,ProtectionStatus>> protectionState;
 
     public Input<Either<String,ProtectionStatus>> getProtectionState() {
         return this.protectionState == null ? Input.empty() : this.protectionState;
@@ -82,7 +82,7 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+        private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -201,7 +201,6 @@ public final class AzureRecoveryServiceVaultProtectionIntentArgs extends io.pulu
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
-
         public AzureRecoveryServiceVaultProtectionIntentArgs build() {
             return new AzureRecoveryServiceVaultProtectionIntentArgs(backupManagementType, itemId, policyId, protectionIntentItemType, protectionState, sourceResourceId);
         }

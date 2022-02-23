@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ReportDeliveryDestinationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -52,7 +52,6 @@ public final class ReportDeliveryInfoResponse {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public ReportDeliveryInfoResponse build() {
             return new ReportDeliveryInfoResponse(destination);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementBinauthz;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementConfigSync;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementHierarchyController;
@@ -143,7 +143,6 @@ public final class FeatureMembershipConfigmanagement {
             this.version = version;
             return this;
         }
-
         public FeatureMembershipConfigmanagement build() {
             return new FeatureMembershipConfigmanagement(binauthz, configSync, hierarchyController, policyController, version);
         }

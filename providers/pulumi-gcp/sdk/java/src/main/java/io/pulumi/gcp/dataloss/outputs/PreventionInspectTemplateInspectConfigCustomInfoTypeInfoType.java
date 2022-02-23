@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeInfoType(name);
         }

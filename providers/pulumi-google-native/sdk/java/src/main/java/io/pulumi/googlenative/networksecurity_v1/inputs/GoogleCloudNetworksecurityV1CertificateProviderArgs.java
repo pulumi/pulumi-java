@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1.inputs.CertificateProviderInstanceArgs;
 import io.pulumi.googlenative.networksecurity_v1.inputs.GoogleCloudNetworksecurityV1GrpcEndpointArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderArgs extends i
      * 
      */
     @InputImport(name="certificateProviderInstance")
-    private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
+      private final @Nullable Input<CertificateProviderInstanceArgs> certificateProviderInstance;
 
     public Input<CertificateProviderInstanceArgs> getCertificateProviderInstance() {
         return this.certificateProviderInstance == null ? Input.empty() : this.certificateProviderInstance;
@@ -35,7 +35,7 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderArgs extends i
      * 
      */
     @InputImport(name="grpcEndpoint")
-    private final @Nullable Input<GoogleCloudNetworksecurityV1GrpcEndpointArgs> grpcEndpoint;
+      private final @Nullable Input<GoogleCloudNetworksecurityV1GrpcEndpointArgs> grpcEndpoint;
 
     public Input<GoogleCloudNetworksecurityV1GrpcEndpointArgs> getGrpcEndpoint() {
         return this.grpcEndpoint == null ? Input.empty() : this.grpcEndpoint;
@@ -94,7 +94,6 @@ public final class GoogleCloudNetworksecurityV1CertificateProviderArgs extends i
             this.grpcEndpoint = Input.ofNullable(grpcEndpoint);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1CertificateProviderArgs build() {
             return new GoogleCloudNetworksecurityV1CertificateProviderArgs(certificateProviderInstance, grpcEndpoint);
         }

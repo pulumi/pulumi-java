@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse {
         public Builder(GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse build() {
             return new GoogleCloudBillingBudgetsV1beta1LastPeriodAmountResponse();
         }

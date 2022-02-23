@@ -6,7 +6,7 @@ package io.pulumi.azurenative.marketplace.inputs;
 import io.pulumi.azurenative.marketplace.enums.Accessibility;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessibility")
-    private final @Nullable Input<Either<String,Accessibility>> accessibility;
+        private final @Nullable Input<Either<String,Accessibility>> accessibility;
 
     public Input<Either<String,Accessibility>> getAccessibility() {
         return this.accessibility == null ? Input.empty() : this.accessibility;
@@ -64,7 +64,6 @@ public final class PlanArgs extends io.pulumi.resources.ResourceArgs {
             this.accessibility = Input.ofNullable(accessibility);
             return this;
         }
-
         public PlanArgs build() {
             return new PlanArgs(accessibility);
         }

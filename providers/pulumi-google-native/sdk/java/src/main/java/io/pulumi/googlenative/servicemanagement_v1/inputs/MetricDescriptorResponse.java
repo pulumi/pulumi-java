@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorResponse;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.MetricDescriptorMetadataResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -35,7 +35,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -46,7 +46,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="labels", required=true)
-    private final List<LabelDescriptorResponse> labels;
+      private final List<LabelDescriptorResponse> labels;
 
     public List<LabelDescriptorResponse> getLabels() {
         return this.labels;
@@ -57,7 +57,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="launchStage", required=true)
-    private final String launchStage;
+      private final String launchStage;
 
     public String getLaunchStage() {
         return this.launchStage;
@@ -68,7 +68,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final MetricDescriptorMetadataResponse metadata;
+      private final MetricDescriptorMetadataResponse metadata;
 
     public MetricDescriptorMetadataResponse getMetadata() {
         return this.metadata;
@@ -79,7 +79,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="metricKind", required=true)
-    private final String metricKind;
+      private final String metricKind;
 
     public String getMetricKind() {
         return this.metricKind;
@@ -90,7 +90,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="monitoredResourceTypes", required=true)
-    private final List<String> monitoredResourceTypes;
+      private final List<String> monitoredResourceTypes;
 
     public List<String> getMonitoredResourceTypes() {
         return this.monitoredResourceTypes;
@@ -101,7 +101,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -112,7 +112,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -123,7 +123,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="unit", required=true)
-    private final String unit;
+      private final String unit;
 
     public String getUnit() {
         return this.unit;
@@ -134,7 +134,7 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="valueType", required=true)
-    private final String valueType;
+      private final String valueType;
 
     public String getValueType() {
         return this.valueType;
@@ -273,7 +273,6 @@ public final class MetricDescriptorResponse extends io.pulumi.resources.InvokeAr
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public MetricDescriptorResponse build() {
             return new MetricDescriptorResponse(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, type, unit, valueType);
         }

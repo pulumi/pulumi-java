@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.detective.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="graphArn", required=true)
-    private final String graphArn;
+        private final String graphArn;
 
     public String getGraphArn() {
         return this.graphArn;
@@ -28,7 +28,7 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="memberId", required=true)
-    private final String memberId;
+        private final String memberId;
 
     public String getMemberId() {
         return this.memberId;
@@ -77,7 +77,6 @@ public final class GetMemberInvitationArgs extends io.pulumi.resources.InvokeArg
             this.memberId = Objects.requireNonNull(memberId);
             return this;
         }
-
         public GetMemberInvitationArgs build() {
             return new GetMemberInvitationArgs(graphArn, memberId);
         }

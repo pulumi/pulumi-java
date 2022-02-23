@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
     public static final RuntimeIamMemberArgs Empty = new RuntimeIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<RuntimeIamMemberConditionArgs> condition;
+        private final @Nullable Input<RuntimeIamMemberConditionArgs> condition;
 
     public Input<RuntimeIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,7 +46,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -70,7 +70,7 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="runtimeName", required=true)
-    private final Input<String> runtimeName;
+        private final Input<String> runtimeName;
 
     public Input<String> getRuntimeName() {
         return this.runtimeName;
@@ -189,7 +189,6 @@ public final class RuntimeIamMemberArgs extends io.pulumi.resources.ResourceArgs
             this.runtimeName = Input.of(Objects.requireNonNull(runtimeName));
             return this;
         }
-
         public RuntimeIamMemberArgs build() {
             return new RuntimeIamMemberArgs(condition, location, member, project, role, runtimeName);
         }

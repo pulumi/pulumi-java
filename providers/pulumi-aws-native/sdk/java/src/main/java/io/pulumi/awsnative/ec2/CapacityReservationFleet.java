@@ -11,8 +11,8 @@ import io.pulumi.awsnative.ec2.outputs.CapacityReservationFleetInstanceTypeSpeci
 import io.pulumi.awsnative.ec2.outputs.CapacityReservationFleetTagSpecification;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -88,13 +88,6 @@ public class CapacityReservationFleet extends io.pulumi.resources.CustomResource
         return this.totalTargetCapacity;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CapacityReservationFleet(String name) {
-        super("aws-native:ec2:CapacityReservationFleet", name, CapacityReservationFleetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

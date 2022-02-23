@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RetentionPolicyParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Input<Integer> days;
+        private final @Nullable Input<Integer> days;
 
     public Input<Integer> getDays() {
         return this.days == null ? Input.empty() : this.days;
@@ -35,7 +35,7 @@ public final class RetentionPolicyParametersArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -94,7 +94,6 @@ public final class RetentionPolicyParametersArgs extends io.pulumi.resources.Res
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public RetentionPolicyParametersArgs build() {
             return new RetentionPolicyParametersArgs(days, enabled);
         }

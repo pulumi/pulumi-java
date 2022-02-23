@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.ReplicaSetCondition;
 import java.lang.Integer;
 import java.util.List;
@@ -162,7 +162,6 @@ public final class ReplicaSetStatus {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public ReplicaSetStatus build() {
             return new ReplicaSetStatus(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }

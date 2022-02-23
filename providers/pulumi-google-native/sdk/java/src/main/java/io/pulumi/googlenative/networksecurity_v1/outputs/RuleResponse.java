@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.DestinationResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.SourceResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class RuleResponse {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(destinations, sources);
         }

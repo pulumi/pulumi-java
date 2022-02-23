@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class ConnectionErrorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionErrorResponse build() {
             return new ConnectionErrorResponse(code, etag, id, location, message, name, tags, type);
         }

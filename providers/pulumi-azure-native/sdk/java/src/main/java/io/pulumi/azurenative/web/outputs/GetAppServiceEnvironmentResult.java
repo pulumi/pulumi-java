@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.NameValuePairResponse;
 import io.pulumi.azurenative.web.outputs.VirtualNetworkProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -483,7 +483,6 @@ public final class GetAppServiceEnvironmentResult {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
-
         public GetAppServiceEnvironmentResult build() {
             return new GetAppServiceEnvironmentResult(clusterSettings, dedicatedHostCount, dnsSuffix, frontEndScaleFactor, hasLinuxWorkers, id, internalLoadBalancingMode, ipsslAddressCount, kind, location, maximumNumberOfMachines, multiRoleCount, multiSize, name, provisioningState, status, suspended, tags, type, userWhitelistedIpRanges, virtualNetwork);
         }

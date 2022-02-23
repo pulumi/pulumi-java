@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class DataSourceServiceNowKnowledgeArticleConfigurationArgs extends
     public static final DataSourceServiceNowKnowledgeArticleConfigurationArgs Empty = new DataSourceServiceNowKnowledgeArticleConfigurationArgs();
 
     @InputImport(name="crawlAttachments")
-    private final @Nullable Input<Boolean> crawlAttachments;
+        private final @Nullable Input<Boolean> crawlAttachments;
 
     public Input<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Input.empty() : this.crawlAttachments;
     }
 
     @InputImport(name="documentDataFieldName", required=true)
-    private final Input<String> documentDataFieldName;
+        private final Input<String> documentDataFieldName;
 
     public Input<String> getDocumentDataFieldName() {
         return this.documentDataFieldName;
     }
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable Input<String> documentTitleFieldName;
+        private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="excludeAttachmentFilePatterns")
-    private final @Nullable Input<List<String>> excludeAttachmentFilePatterns;
+        private final @Nullable Input<List<String>> excludeAttachmentFilePatterns;
 
     public Input<List<String>> getExcludeAttachmentFilePatterns() {
         return this.excludeAttachmentFilePatterns == null ? Input.empty() : this.excludeAttachmentFilePatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="filterQuery")
-    private final @Nullable Input<String> filterQuery;
+        private final @Nullable Input<String> filterQuery;
 
     public Input<String> getFilterQuery() {
         return this.filterQuery == null ? Input.empty() : this.filterQuery;
     }
 
     @InputImport(name="includeAttachmentFilePatterns")
-    private final @Nullable Input<List<String>> includeAttachmentFilePatterns;
+        private final @Nullable Input<List<String>> includeAttachmentFilePatterns;
 
     public Input<List<String>> getIncludeAttachmentFilePatterns() {
         return this.includeAttachmentFilePatterns == null ? Input.empty() : this.includeAttachmentFilePatterns;
@@ -194,7 +194,6 @@ public final class DataSourceServiceNowKnowledgeArticleConfigurationArgs extends
             this.includeAttachmentFilePatterns = Input.ofNullable(includeAttachmentFilePatterns);
             return this;
         }
-
         public DataSourceServiceNowKnowledgeArticleConfigurationArgs build() {
             return new DataSourceServiceNowKnowledgeArticleConfigurationArgs(crawlAttachments, documentDataFieldName, documentTitleFieldName, excludeAttachmentFilePatterns, fieldMappings, filterQuery, includeAttachmentFilePatterns);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class LoadBalancingRuleResponse {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public LoadBalancingRuleResponse build() {
             return new LoadBalancingRuleResponse(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
         }

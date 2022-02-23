@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.DnsKeySpecResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,14 +19,14 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="defaultKeySpecs", required=true)
-    private final List<DnsKeySpecResponse> defaultKeySpecs;
+      private final List<DnsKeySpecResponse> defaultKeySpecs;
 
     public List<DnsKeySpecResponse> getDefaultKeySpecs() {
         return this.defaultKeySpecs;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -37,7 +37,7 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="nonExistence", required=true)
-    private final String nonExistence;
+      private final String nonExistence;
 
     public String getNonExistence() {
         return this.nonExistence;
@@ -48,7 +48,7 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -117,7 +117,6 @@ public final class ManagedZoneDnsSecConfigResponse extends io.pulumi.resources.I
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public ManagedZoneDnsSecConfigResponse build() {
             return new ManagedZoneDnsSecConfigResponse(defaultKeySpecs, kind, nonExistence, state);
         }

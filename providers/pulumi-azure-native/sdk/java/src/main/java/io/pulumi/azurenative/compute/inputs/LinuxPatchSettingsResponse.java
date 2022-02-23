@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LinuxPatchSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="assessmentMode")
-    private final @Nullable String assessmentMode;
+        private final @Nullable String assessmentMode;
 
     public Optional<String> getAssessmentMode() {
         return this.assessmentMode == null ? Optional.empty() : Optional.ofNullable(this.assessmentMode);
@@ -34,7 +34,7 @@ public final class LinuxPatchSettingsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="patchMode")
-    private final @Nullable String patchMode;
+        private final @Nullable String patchMode;
 
     public Optional<String> getPatchMode() {
         return this.patchMode == null ? Optional.empty() : Optional.ofNullable(this.patchMode);
@@ -83,7 +83,6 @@ public final class LinuxPatchSettingsResponse extends io.pulumi.resources.Invoke
             this.patchMode = patchMode;
             return this;
         }
-
         public LinuxPatchSettingsResponse build() {
             return new LinuxPatchSettingsResponse(assessmentMode, patchMode);
         }

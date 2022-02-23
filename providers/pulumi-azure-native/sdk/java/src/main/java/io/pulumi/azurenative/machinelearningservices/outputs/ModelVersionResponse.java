@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.FlavorDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -184,7 +184,6 @@ public final class ModelVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public ModelVersionResponse build() {
             return new ModelVersionResponse(datastoreId, description, flavors, isAnonymous, path, properties, tags);
         }

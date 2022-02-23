@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class ResourceSetR53ResourceRecord {
             this.recordSetId = recordSetId;
             return this;
         }
-
         public ResourceSetR53ResourceRecord build() {
             return new ResourceSetR53ResourceRecord(domainName, recordSetId);
         }

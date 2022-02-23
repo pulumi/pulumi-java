@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -56,7 +56,6 @@ public final class QueueStackdriverLoggingConfig {
             this.samplingRatio = Objects.requireNonNull(samplingRatio);
             return this;
         }
-
         public QueueStackdriverLoggingConfig build() {
             return new QueueStackdriverLoggingConfig(samplingRatio);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceType;
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfigurationArgs;
 import io.pulumi.awsnative.kendra.inputs.DataSourceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,42 +19,42 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     @InputImport(name="dataSourceConfiguration")
-    private final @Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration;
+        private final @Nullable Input<DataSourceConfigurationArgs> dataSourceConfiguration;
 
     public Input<DataSourceConfigurationArgs> getDataSourceConfiguration() {
         return this.dataSourceConfiguration == null ? Input.empty() : this.dataSourceConfiguration;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="indexId", required=true)
-    private final Input<String> indexId;
+        private final Input<String> indexId;
 
     public Input<String> getIndexId() {
         return this.indexId;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+        private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
     }
 
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+        private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -65,14 +65,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DataSourceTagArgs>> tags;
+        private final @Nullable Input<List<DataSourceTagArgs>> tags;
 
     public Input<List<DataSourceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<DataSourceType> type;
+        private final Input<DataSourceType> type;
 
     public Input<DataSourceType> getType() {
         return this.type;
@@ -221,7 +221,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DataSourceArgs build() {
             return new DataSourceArgs(dataSourceConfiguration, description, indexId, name, roleArn, schedule, tags, type);
         }

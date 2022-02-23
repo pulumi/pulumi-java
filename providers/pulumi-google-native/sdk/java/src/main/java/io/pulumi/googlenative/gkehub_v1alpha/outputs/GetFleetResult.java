@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class GetFleetResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetFleetResult build() {
             return new GetFleetResult(createTime, deleteTime, displayName, fleetName, name, uid, updateTime);
         }

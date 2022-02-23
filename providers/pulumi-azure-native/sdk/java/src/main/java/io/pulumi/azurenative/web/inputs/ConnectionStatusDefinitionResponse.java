@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ConnectionErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="error")
-    private final @Nullable ConnectionErrorResponse error;
+        private final @Nullable ConnectionErrorResponse error;
 
     public Optional<ConnectionErrorResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -35,7 +35,7 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -46,7 +46,7 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -105,7 +105,6 @@ public final class ConnectionStatusDefinitionResponse extends io.pulumi.resource
             this.target = target;
             return this;
         }
-
         public ConnectionStatusDefinitionResponse build() {
             return new ConnectionStatusDefinitionResponse(error, status, target);
         }

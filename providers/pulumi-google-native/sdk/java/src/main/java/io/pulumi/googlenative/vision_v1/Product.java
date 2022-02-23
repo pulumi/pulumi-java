@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ProductArgs;
 import io.pulumi.googlenative.vision_v1.outputs.KeyValueResponse;
@@ -91,13 +91,6 @@ public class Product extends io.pulumi.resources.CustomResource {
         return this.productLabels;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Product(String name) {
-        super("google-native:vision/v1:Product", name, ProductArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

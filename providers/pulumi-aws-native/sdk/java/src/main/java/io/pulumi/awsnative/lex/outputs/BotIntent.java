@@ -13,7 +13,7 @@ import io.pulumi.awsnative.lex.outputs.BotOutputContext;
 import io.pulumi.awsnative.lex.outputs.BotSampleUtterance;
 import io.pulumi.awsnative.lex.outputs.BotSlot;
 import io.pulumi.awsnative.lex.outputs.BotSlotPriority;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class BotIntent {
             this.slots = slots;
             return this;
         }
-
         public BotIntent build() {
             return new BotIntent(description, dialogCodeHook, fulfillmentCodeHook, inputContexts, intentClosingSetting, intentConfirmationSetting, kendraConfiguration, name, outputContexts, parentIntentSignature, sampleUtterances, slotPriorities, slots);
         }

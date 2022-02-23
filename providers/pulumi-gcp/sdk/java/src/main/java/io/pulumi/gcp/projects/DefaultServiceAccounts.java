@@ -5,8 +5,8 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.DefaultServiceAccountsArgs;
 import io.pulumi.gcp.projects.inputs.DefaultServiceAccountsState;
@@ -103,13 +103,6 @@ public class DefaultServiceAccounts extends io.pulumi.resources.CustomResource {
         return this.serviceAccounts;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DefaultServiceAccounts(String name) {
-        super("gcp:projects/defaultServiceAccounts:DefaultServiceAccounts", name, DefaultServiceAccountsArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

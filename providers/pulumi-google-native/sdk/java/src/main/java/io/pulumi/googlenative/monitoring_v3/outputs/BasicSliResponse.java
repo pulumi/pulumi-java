@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AvailabilityCriteriaResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.LatencyCriteriaResponse;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class BasicSliResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public BasicSliResponse build() {
             return new BasicSliResponse(availability, latency, location, method, version);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionIamMemberArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberState;
@@ -59,13 +59,6 @@ public class FunctionIamMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FunctionIamMember(String name) {
-        super("gcp:cloudfunctions/functionIamMember:FunctionIamMember", name, FunctionIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

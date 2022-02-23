@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.UpgradeDistributionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.WindowsUpdateArgs;
@@ -26,7 +26,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="distribution")
-    private final @Nullable Input<UpgradeDistributionArgs> distribution;
+      private final @Nullable Input<UpgradeDistributionArgs> distribution;
 
     public Input<UpgradeDistributionArgs> getDistribution() {
         return this.distribution == null ? Input.empty() : this.distribution;
@@ -37,7 +37,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="package")
-    private final @Nullable Input<String> $package;
+      private final @Nullable Input<String> $package;
 
     public Input<String> get$package() {
         return this.$package == null ? Input.empty() : this.$package;
@@ -48,7 +48,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parsedVersion")
-    private final @Nullable Input<VersionArgs> parsedVersion;
+      private final @Nullable Input<VersionArgs> parsedVersion;
 
     public Input<VersionArgs> getParsedVersion() {
         return this.parsedVersion == null ? Input.empty() : this.parsedVersion;
@@ -59,7 +59,7 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="windowsUpdate")
-    private final @Nullable Input<WindowsUpdateArgs> windowsUpdate;
+      private final @Nullable Input<WindowsUpdateArgs> windowsUpdate;
 
     public Input<WindowsUpdateArgs> getWindowsUpdate() {
         return this.windowsUpdate == null ? Input.empty() : this.windowsUpdate;
@@ -148,7 +148,6 @@ public final class UpgradeOccurrenceArgs extends io.pulumi.resources.ResourceArg
             this.windowsUpdate = Input.ofNullable(windowsUpdate);
             return this;
         }
-
         public UpgradeOccurrenceArgs build() {
             return new UpgradeOccurrenceArgs(distribution, $package, parsedVersion, windowsUpdate);
         }

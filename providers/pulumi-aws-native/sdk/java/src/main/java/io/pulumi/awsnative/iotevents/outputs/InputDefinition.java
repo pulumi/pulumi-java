@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.InputAttribute;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class InputDefinition {
             this.attributes = Objects.requireNonNull(attributes);
             return this;
         }
-
         public InputDefinition build() {
             return new InputDefinition(attributes);
         }

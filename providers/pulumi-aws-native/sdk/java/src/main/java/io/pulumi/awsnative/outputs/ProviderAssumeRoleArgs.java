@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.outputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -205,7 +205,6 @@ public final class ProviderAssumeRoleArgs {
             this.transitiveTagKeys = transitiveTagKeys;
             return this;
         }
-
         public ProviderAssumeRoleArgs build() {
             return new ProviderAssumeRoleArgs(durationSeconds, externalId, policy, policyArns, roleArn, sessionName, tags, transitiveTagKeys);
         }

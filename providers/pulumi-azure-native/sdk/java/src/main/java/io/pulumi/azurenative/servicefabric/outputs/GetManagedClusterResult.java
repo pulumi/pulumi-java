@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ClientCertificateResponse;
 import io.pulumi.azurenative.servicefabric.outputs.LoadBalancingRuleResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -525,7 +525,6 @@ public final class GetManagedClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedClusterResult build() {
             return new GetManagedClusterResult(addonFeatures, adminPassword, adminUserName, azureActiveDirectory, clientConnectionPort, clients, clusterCertificateThumbprint, clusterCodeVersion, clusterId, clusterState, dnsName, etag, fabricSettings, fqdn, httpGatewayConnectionPort, id, loadBalancingRules, location, name, provisioningState, sku, tags, type);
         }

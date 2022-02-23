@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
     public static final BotIntentClosingSettingArgs Empty = new BotIntentClosingSettingArgs();
 
     @InputImport(name="closingResponse", required=true)
-    private final Input<BotResponseSpecificationArgs> closingResponse;
+        private final Input<BotResponseSpecificationArgs> closingResponse;
 
     public Input<BotResponseSpecificationArgs> getClosingResponse() {
         return this.closingResponse;
     }
 
     @InputImport(name="isActive")
-    private final @Nullable Input<Boolean> isActive;
+        private final @Nullable Input<Boolean> isActive;
 
     public Input<Boolean> getIsActive() {
         return this.isActive == null ? Input.empty() : this.isActive;
@@ -86,7 +86,6 @@ public final class BotIntentClosingSettingArgs extends io.pulumi.resources.Resou
             this.isActive = Input.ofNullable(isActive);
             return this;
         }
-
         public BotIntentClosingSettingArgs build() {
             return new BotIntentClosingSettingArgs(closingResponse, isActive);
         }

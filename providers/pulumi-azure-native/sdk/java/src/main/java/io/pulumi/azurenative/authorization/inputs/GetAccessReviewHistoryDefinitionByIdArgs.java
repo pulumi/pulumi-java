@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="historyDefinitionId", required=true)
-    private final String historyDefinitionId;
+        private final String historyDefinitionId;
 
     public String getHistoryDefinitionId() {
         return this.historyDefinitionId;
@@ -55,7 +55,6 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends io.pulumi.re
             this.historyDefinitionId = Objects.requireNonNull(historyDefinitionId);
             return this;
         }
-
         public GetAccessReviewHistoryDefinitionByIdArgs build() {
             return new GetAccessReviewHistoryDefinitionByIdArgs(historyDefinitionId);
         }

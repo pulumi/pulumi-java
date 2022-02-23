@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplifyuibuilder.inputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ThemeValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +16,14 @@ public final class ThemeValues extends io.pulumi.resources.InvokeArgs {
     public static final ThemeValues Empty = new ThemeValues();
 
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
     }
 
     @InputImport(name="value")
-    private final @Nullable ThemeValue value;
+        private final @Nullable ThemeValue value;
 
     public Optional<ThemeValue> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -72,7 +72,6 @@ public final class ThemeValues extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public ThemeValues build() {
             return new ThemeValues(key, value);
         }

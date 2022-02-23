@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetGroupResult {
             this.parentName = Objects.requireNonNull(parentName);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(displayName, filter, isCluster, name, parentName);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureRecoveryServiceVaultP
 import io.pulumi.azurenative.recoveryservices.outputs.AzureResourceProtectionIntentResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadAutoProtectionIntentResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureWorkloadSQLAutoProtectionIntentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -187,7 +187,6 @@ public final class GetProtectionIntentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectionIntentResult build() {
             return new GetProtectionIntentResult(eTag, id, location, name, properties, tags, type);
         }

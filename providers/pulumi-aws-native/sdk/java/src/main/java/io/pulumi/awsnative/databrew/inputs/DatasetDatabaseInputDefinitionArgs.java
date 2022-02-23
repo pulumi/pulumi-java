@@ -5,7 +5,7 @@ package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.awsnative.databrew.inputs.DatasetS3LocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseTableName")
-    private final @Nullable Input<String> databaseTableName;
+        private final @Nullable Input<String> databaseTableName;
 
     public Input<String> getDatabaseTableName() {
         return this.databaseTableName == null ? Input.empty() : this.databaseTableName;
@@ -31,7 +31,7 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="glueConnectionName", required=true)
-    private final Input<String> glueConnectionName;
+        private final Input<String> glueConnectionName;
 
     public Input<String> getGlueConnectionName() {
         return this.glueConnectionName;
@@ -42,14 +42,14 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<String> queryString;
+        private final @Nullable Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
     }
 
     @InputImport(name="tempDirectory")
-    private final @Nullable Input<DatasetS3LocationArgs> tempDirectory;
+        private final @Nullable Input<DatasetS3LocationArgs> tempDirectory;
 
     public Input<DatasetS3LocationArgs> getTempDirectory() {
         return this.tempDirectory == null ? Input.empty() : this.tempDirectory;
@@ -138,7 +138,6 @@ public final class DatasetDatabaseInputDefinitionArgs extends io.pulumi.resource
             this.tempDirectory = Input.ofNullable(tempDirectory);
             return this;
         }
-
         public DatasetDatabaseInputDefinitionArgs build() {
             return new DatasetDatabaseInputDefinitionArgs(databaseTableName, glueConnectionName, queryString, tempDirectory);
         }

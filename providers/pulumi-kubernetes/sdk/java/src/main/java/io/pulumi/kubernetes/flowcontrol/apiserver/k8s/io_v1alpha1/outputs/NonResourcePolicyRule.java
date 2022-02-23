@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -87,7 +87,6 @@ public final class NonResourcePolicyRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public NonResourcePolicyRule build() {
             return new NonResourcePolicyRule(nonResourceURLs, verbs);
         }

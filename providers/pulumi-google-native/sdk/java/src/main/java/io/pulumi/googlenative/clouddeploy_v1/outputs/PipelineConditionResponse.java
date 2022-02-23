@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.PipelineReadyConditionResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.TargetsPresentConditionResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class PipelineConditionResponse {
             this.targetsPresentCondition = Objects.requireNonNull(targetsPresentCondition);
             return this;
         }
-
         public PipelineConditionResponse build() {
             return new PipelineConditionResponse(pipelineReadyCondition, targetsPresentCondition);
         }

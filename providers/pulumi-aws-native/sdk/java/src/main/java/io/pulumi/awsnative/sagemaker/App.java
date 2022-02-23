@@ -10,8 +10,8 @@ import io.pulumi.awsnative.sagemaker.outputs.AppResourceSpec;
 import io.pulumi.awsnative.sagemaker.outputs.AppTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -121,13 +121,6 @@ public class App extends io.pulumi.resources.CustomResource {
         return this.userProfileName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public App(String name) {
-        super("aws-native:sagemaker:App", name, AppArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

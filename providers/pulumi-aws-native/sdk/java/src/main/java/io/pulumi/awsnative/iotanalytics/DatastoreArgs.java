@@ -9,7 +9,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatastoreRetentionPeriodArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreStorageArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatastoreTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,42 +21,42 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatastoreArgs Empty = new DatastoreArgs();
 
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
     }
 
     @InputImport(name="datastorePartitions")
-    private final @Nullable Input<DatastorePartitionsArgs> datastorePartitions;
+        private final @Nullable Input<DatastorePartitionsArgs> datastorePartitions;
 
     public Input<DatastorePartitionsArgs> getDatastorePartitions() {
         return this.datastorePartitions == null ? Input.empty() : this.datastorePartitions;
     }
 
     @InputImport(name="datastoreStorage")
-    private final @Nullable Input<DatastoreStorageArgs> datastoreStorage;
+        private final @Nullable Input<DatastoreStorageArgs> datastoreStorage;
 
     public Input<DatastoreStorageArgs> getDatastoreStorage() {
         return this.datastoreStorage == null ? Input.empty() : this.datastoreStorage;
     }
 
     @InputImport(name="fileFormatConfiguration")
-    private final @Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
+        private final @Nullable Input<DatastoreFileFormatConfigurationArgs> fileFormatConfiguration;
 
     public Input<DatastoreFileFormatConfigurationArgs> getFileFormatConfiguration() {
         return this.fileFormatConfiguration == null ? Input.empty() : this.fileFormatConfiguration;
     }
 
     @InputImport(name="retentionPeriod")
-    private final @Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod;
+        private final @Nullable Input<DatastoreRetentionPeriodArgs> retentionPeriod;
 
     public Input<DatastoreRetentionPeriodArgs> getRetentionPeriod() {
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DatastoreTagArgs>> tags;
+        private final @Nullable Input<List<DatastoreTagArgs>> tags;
 
     public Input<List<DatastoreTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -175,7 +175,6 @@ public final class DatastoreArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DatastoreArgs build() {
             return new DatastoreArgs(datastoreName, datastorePartitions, datastoreStorage, fileFormatConfiguration, retentionPeriod, tags);
         }

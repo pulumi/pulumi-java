@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class DeploymentCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DeploymentCondition build() {
             return new DeploymentCondition(lastTransitionTime, lastUpdateTime, message, reason, status, type);
         }

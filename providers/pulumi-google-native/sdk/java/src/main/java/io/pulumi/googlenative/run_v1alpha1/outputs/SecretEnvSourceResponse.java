@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class SecretEnvSourceResponse {
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public SecretEnvSourceResponse build() {
             return new SecretEnvSourceResponse(localObjectReference, name, optional);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="lastTransitionTime")
-    private final @Nullable Input<String> lastTransitionTime;
+        private final @Nullable Input<String> lastTransitionTime;
 
     public Input<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Input.empty() : this.lastTransitionTime;
@@ -34,7 +34,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -45,7 +45,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable Input<String> reason;
+        private final @Nullable Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason == null ? Input.empty() : this.reason;
@@ -56,7 +56,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<String> status;
+        private final Input<String> status;
 
     public Input<String> getStatus() {
         return this.status;
@@ -67,7 +67,7 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -171,7 +171,6 @@ public final class CustomResourceDefinitionConditionArgs extends io.pulumi.resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CustomResourceDefinitionConditionArgs build() {
             return new CustomResourceDefinitionConditionArgs(lastTransitionTime, message, reason, status, type);
         }

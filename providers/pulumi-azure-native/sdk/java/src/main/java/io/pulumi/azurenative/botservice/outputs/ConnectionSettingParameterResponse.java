@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class ConnectionSettingParameterResponse {
             this.value = value;
             return this;
         }
-
         public ConnectionSettingParameterResponse build() {
             return new ConnectionSettingParameterResponse(key, value);
         }

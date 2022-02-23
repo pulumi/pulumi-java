@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -182,7 +182,6 @@ public final class GetProjectResult {
             this.skipDelete = Objects.requireNonNull(skipDelete);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(autoCreateNetwork, billingAccount, folderId, id, labels, name, number, orgId, projectId, skipDelete);
         }

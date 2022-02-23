@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networkconnectivity_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkconnectivity_v1.PolicyBasedRouteIamPolicyArgs;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class PolicyBasedRouteIamPolicy extends io.pulumi.resources.CustomResourc
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PolicyBasedRouteIamPolicy(String name) {
-        super("google-native:networkconnectivity/v1:PolicyBasedRouteIamPolicy", name, PolicyBasedRouteIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

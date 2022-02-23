@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locked", required=true)
-    private final Boolean locked;
+      private final Boolean locked;
 
     public Boolean getLocked() {
         return this.locked;
@@ -33,7 +33,7 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reason", required=true)
-    private final String reason;
+      private final String reason;
 
     public String getReason() {
         return this.reason;
@@ -82,7 +82,6 @@ public final class LockConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public LockConfigResponse build() {
             return new LockConfigResponse(locked, reason);
         }

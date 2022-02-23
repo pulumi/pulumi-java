@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.core_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.core_v1.EndpointsListArgs;
 import io.pulumi.kubernetes.core_v1.outputs.Endpoints;
@@ -78,13 +78,6 @@ public class EndpointsList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EndpointsList(String name) {
-        super("kubernetes:core/v1:EndpointsList", name, EndpointsListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

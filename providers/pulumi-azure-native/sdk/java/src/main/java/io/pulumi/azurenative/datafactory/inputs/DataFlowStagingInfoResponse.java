@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Object folderPath;
+        private final @Nullable Object folderPath;
 
     public Optional<Object> getFolderPath() {
         return this.folderPath == null ? Optional.empty() : Optional.ofNullable(this.folderPath);
@@ -35,7 +35,7 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="linkedService")
-    private final @Nullable LinkedServiceReferenceResponse linkedService;
+        private final @Nullable LinkedServiceReferenceResponse linkedService;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedService() {
         return this.linkedService == null ? Optional.empty() : Optional.ofNullable(this.linkedService);
@@ -84,7 +84,6 @@ public final class DataFlowStagingInfoResponse extends io.pulumi.resources.Invok
             this.linkedService = linkedService;
             return this;
         }
-
         public DataFlowStagingInfoResponse build() {
             return new DataFlowStagingInfoResponse(folderPath, linkedService);
         }

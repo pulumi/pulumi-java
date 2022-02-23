@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage {
             this.timeStamping = timeStamping;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage build() {
             return new CaPoolIssuancePolicyBaselineValuesKeyUsageExtendedKeyUsage(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

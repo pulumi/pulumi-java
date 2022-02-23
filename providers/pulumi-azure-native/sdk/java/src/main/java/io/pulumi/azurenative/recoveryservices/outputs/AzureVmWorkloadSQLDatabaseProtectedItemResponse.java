@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.AzureVmWorkloadProtectedItemExtendedInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ErrorDetailResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.KPIResourceHealthDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -608,7 +608,6 @@ public final class AzureVmWorkloadSQLDatabaseProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureVmWorkloadSQLDatabaseProtectedItemResponse build() {
             return new AzureVmWorkloadSQLDatabaseProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupErrorDetail, lastBackupStatus, lastBackupTime, lastRecoveryPoint, parentName, parentType, policyId, protectedItemDataSourceId, protectedItemHealthStatus, protectedItemType, protectionState, protectionStatus, serverName, sourceResourceId, workloadType);
         }

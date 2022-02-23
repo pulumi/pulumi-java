@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class DiagnosticsStorageAccountConfigResponse {
             this.tableEndpoint = Objects.requireNonNull(tableEndpoint);
             return this;
         }
-
         public DiagnosticsStorageAccountConfigResponse build() {
             return new DiagnosticsStorageAccountConfigResponse(blobEndpoint, protectedAccountKeyName, protectedAccountKeyName2, queueEndpoint, storageAccountName, tableEndpoint);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatch;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleMetadataFilter;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRuleQueryParameterMatch;
@@ -236,7 +236,6 @@ public final class URLMapPathMatcherRouteRuleMatchRule {
             this.regexMatch = regexMatch;
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRule build() {
             return new URLMapPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

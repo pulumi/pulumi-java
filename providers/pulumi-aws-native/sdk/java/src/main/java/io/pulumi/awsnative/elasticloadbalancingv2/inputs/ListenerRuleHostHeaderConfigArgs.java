@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
     public static final ListenerRuleHostHeaderConfigArgs Empty = new ListenerRuleHostHeaderConfigArgs();
 
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+        private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -59,7 +59,6 @@ public final class ListenerRuleHostHeaderConfigArgs extends io.pulumi.resources.
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ListenerRuleHostHeaderConfigArgs build() {
             return new ListenerRuleHostHeaderConfigArgs(values);
         }

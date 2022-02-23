@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
      * 
      */
     @InputImport(name="domains")
-    private final @Nullable List<ResourceReferenceResponse> domains;
+        private final @Nullable List<ResourceReferenceResponse> domains;
 
     public List<ResourceReferenceResponse> getDomains() {
         return this.domains == null ? List.of() : this.domains;
@@ -36,7 +36,7 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
      * 
      */
     @InputImport(name="patternsToMatch")
-    private final @Nullable List<String> patternsToMatch;
+        private final @Nullable List<String> patternsToMatch;
 
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
@@ -85,7 +85,6 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
             return new SecurityPolicyWebApplicationFirewallAssociationResponse(domains, patternsToMatch);
         }

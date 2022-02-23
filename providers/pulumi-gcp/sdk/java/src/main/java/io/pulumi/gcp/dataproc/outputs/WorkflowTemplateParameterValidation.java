@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateParameterValidationRegex;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateParameterValidationValues;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class WorkflowTemplateParameterValidation {
             this.values = values;
             return this;
         }
-
         public WorkflowTemplateParameterValidation build() {
             return new WorkflowTemplateParameterValidation(regex, values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class WorkspaceSkuResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WorkspaceSkuResponse build() {
             return new WorkspaceSkuResponse(capacityReservationLevel, lastSkuUpdate, name);
         }

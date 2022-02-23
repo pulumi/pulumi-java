@@ -6,7 +6,7 @@ package io.pulumi.azurenative.mixedreality.outputs;
 import io.pulumi.azurenative.mixedreality.outputs.IdentityResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SkuResponse;
 import io.pulumi.azurenative.mixedreality.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -311,7 +311,6 @@ public final class GetSpatialAnchorsAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSpatialAnchorsAccountResult build() {
             return new GetSpatialAnchorsAccountResult(accountDomain, accountId, id, identity, kind, location, name, plan, sku, storageAccountName, systemData, tags, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.budgets.inputs.BudgetsActionIamActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionScpActionDefinitionArgs;
 import io.pulumi.awsnative.budgets.inputs.BudgetsActionSsmActionDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,21 +17,21 @@ public final class BudgetsActionDefinitionArgs extends io.pulumi.resources.Resou
     public static final BudgetsActionDefinitionArgs Empty = new BudgetsActionDefinitionArgs();
 
     @InputImport(name="iamActionDefinition")
-    private final @Nullable Input<BudgetsActionIamActionDefinitionArgs> iamActionDefinition;
+        private final @Nullable Input<BudgetsActionIamActionDefinitionArgs> iamActionDefinition;
 
     public Input<BudgetsActionIamActionDefinitionArgs> getIamActionDefinition() {
         return this.iamActionDefinition == null ? Input.empty() : this.iamActionDefinition;
     }
 
     @InputImport(name="scpActionDefinition")
-    private final @Nullable Input<BudgetsActionScpActionDefinitionArgs> scpActionDefinition;
+        private final @Nullable Input<BudgetsActionScpActionDefinitionArgs> scpActionDefinition;
 
     public Input<BudgetsActionScpActionDefinitionArgs> getScpActionDefinition() {
         return this.scpActionDefinition == null ? Input.empty() : this.scpActionDefinition;
     }
 
     @InputImport(name="ssmActionDefinition")
-    private final @Nullable Input<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition;
+        private final @Nullable Input<BudgetsActionSsmActionDefinitionArgs> ssmActionDefinition;
 
     public Input<BudgetsActionSsmActionDefinitionArgs> getSsmActionDefinition() {
         return this.ssmActionDefinition == null ? Input.empty() : this.ssmActionDefinition;
@@ -105,7 +105,6 @@ public final class BudgetsActionDefinitionArgs extends io.pulumi.resources.Resou
             this.ssmActionDefinition = Input.ofNullable(ssmActionDefinition);
             return this;
         }
-
         public BudgetsActionDefinitionArgs build() {
             return new BudgetsActionDefinitionArgs(iamActionDefinition, scpActionDefinition, ssmActionDefinition);
         }

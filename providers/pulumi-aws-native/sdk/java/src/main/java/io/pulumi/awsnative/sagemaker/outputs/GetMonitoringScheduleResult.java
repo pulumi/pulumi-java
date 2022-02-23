@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleStatus;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleConfig;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringExecutionSummary;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -212,7 +212,6 @@ public final class GetMonitoringScheduleResult {
             this.tags = tags;
             return this;
         }
-
         public GetMonitoringScheduleResult build() {
             return new GetMonitoringScheduleResult(creationTime, endpointName, failureReason, lastModifiedTime, lastMonitoringExecutionSummary, monitoringScheduleArn, monitoringScheduleConfig, monitoringScheduleStatus, tags);
         }

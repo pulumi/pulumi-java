@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetResponse {
             this.includeRegex = Objects.requireNonNull(includeRegex);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageRegexFileSetResponse build() {
             return new GooglePrivacyDlpV2CloudStorageRegexFileSetResponse(bucketName, excludeRegex, includeRegex);
         }

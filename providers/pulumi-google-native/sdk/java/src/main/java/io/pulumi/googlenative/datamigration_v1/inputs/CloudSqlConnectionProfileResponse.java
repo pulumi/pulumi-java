@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.inputs.CloudSqlSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="cloudSqlId", required=true)
-    private final String cloudSqlId;
+      private final String cloudSqlId;
 
     public String getCloudSqlId() {
         return this.cloudSqlId;
@@ -33,7 +33,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="privateIp", required=true)
-    private final String privateIp;
+      private final String privateIp;
 
     public String getPrivateIp() {
         return this.privateIp;
@@ -44,7 +44,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="publicIp", required=true)
-    private final String publicIp;
+      private final String publicIp;
 
     public String getPublicIp() {
         return this.publicIp;
@@ -55,7 +55,7 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="settings", required=true)
-    private final CloudSqlSettingsResponse settings;
+      private final CloudSqlSettingsResponse settings;
 
     public CloudSqlSettingsResponse getSettings() {
         return this.settings;
@@ -124,7 +124,6 @@ public final class CloudSqlConnectionProfileResponse extends io.pulumi.resources
             this.settings = Objects.requireNonNull(settings);
             return this;
         }
-
         public CloudSqlConnectionProfileResponse build() {
             return new CloudSqlConnectionProfileResponse(cloudSqlId, privateIp, publicIp, settings);
         }

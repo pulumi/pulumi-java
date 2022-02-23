@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.binaryauthorization_v1.outputs.UserOwnedGrafeasNoteResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GetAttestorResult {
             this.userOwnedGrafeasNote = Objects.requireNonNull(userOwnedGrafeasNote);
             return this;
         }
-
         public GetAttestorResult build() {
             return new GetAttestorResult(description, name, updateTime, userOwnedGrafeasNote);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -269,7 +269,6 @@ public final class ISCSIVolumeSource {
             this.targetPortal = Objects.requireNonNull(targetPortal);
             return this;
         }
-
         public ISCSIVolumeSource build() {
             return new ISCSIVolumeSource(chapAuthDiscovery, chapAuthSession, fsType, initiatorName, iqn, iscsiInterface, lun, portals, readOnly, secretRef, targetPortal);
         }

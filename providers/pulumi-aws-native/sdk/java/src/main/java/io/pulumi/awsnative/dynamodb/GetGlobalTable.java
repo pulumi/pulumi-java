@@ -6,7 +6,7 @@ package io.pulumi.awsnative.dynamodb;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.dynamodb.inputs.GetGlobalTableArgs;
 import io.pulumi.awsnative.dynamodb.outputs.GetGlobalTableResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ThemeBorderStyle extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="show")
-    private final @Nullable Boolean show;
+        private final @Nullable Boolean show;
 
     public Optional<Boolean> getShow() {
         return this.show == null ? Optional.empty() : Optional.ofNullable(this.show);
@@ -61,7 +61,6 @@ public final class ThemeBorderStyle extends io.pulumi.resources.InvokeArgs {
             this.show = show;
             return this;
         }
-
         public ThemeBorderStyle build() {
             return new ThemeBorderStyle(show);
         }

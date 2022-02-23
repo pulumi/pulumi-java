@@ -9,8 +9,8 @@ import io.pulumi.azurenative.insights.outputs.MyWorkbookManagedIdentityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -244,13 +244,6 @@ public class MyWorkbook extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MyWorkbook(String name) {
-        super("azure-native:insights:MyWorkbook", name, MyWorkbookArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

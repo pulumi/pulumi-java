@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.InstanceTemplateArgs;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateState;
@@ -526,13 +526,6 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
         return this.tagsFingerprint;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceTemplate(String name) {
-        super("gcp:compute/instanceTemplate:InstanceTemplate", name, InstanceTemplateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

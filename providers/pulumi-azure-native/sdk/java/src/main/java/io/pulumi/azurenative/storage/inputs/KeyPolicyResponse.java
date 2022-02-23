@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyExpirationPeriodInDays", required=true)
-    private final Integer keyExpirationPeriodInDays;
+        private final Integer keyExpirationPeriodInDays;
 
     public Integer getKeyExpirationPeriodInDays() {
         return this.keyExpirationPeriodInDays;
@@ -59,7 +59,6 @@ public final class KeyPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.keyExpirationPeriodInDays = Objects.requireNonNull(keyExpirationPeriodInDays);
             return this;
         }
-
         public KeyPolicyResponse build() {
             return new KeyPolicyResponse(keyExpirationPeriodInDays);
         }

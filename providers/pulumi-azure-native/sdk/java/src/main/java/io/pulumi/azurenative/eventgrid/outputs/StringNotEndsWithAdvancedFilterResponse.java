@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class StringNotEndsWithAdvancedFilterResponse {
             this.values = values;
             return this;
         }
-
         public StringNotEndsWithAdvancedFilterResponse build() {
             return new StringNotEndsWithAdvancedFilterResponse(key, operatorType, values);
         }

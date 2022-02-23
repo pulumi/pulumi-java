@@ -5,7 +5,7 @@ package io.pulumi.azurenative.attestation.inputs;
 
 import io.pulumi.azurenative.attestation.inputs.JSONWebKeySetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
      * 
      */
     @InputImport(name="policySigningCertificates")
-    private final @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
+        private final @Nullable Input<JSONWebKeySetArgs> policySigningCertificates;
 
     public Input<JSONWebKeySetArgs> getPolicySigningCertificates() {
         return this.policySigningCertificates == null ? Input.empty() : this.policySigningCertificates;
@@ -66,7 +66,6 @@ public final class AttestationServiceCreationSpecificParamsArgs extends io.pulum
             this.policySigningCertificates = Input.ofNullable(policySigningCertificates);
             return this;
         }
-
         public AttestationServiceCreationSpecificParamsArgs build() {
             return new AttestationServiceCreationSpecificParamsArgs(policySigningCertificates);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -80,7 +80,6 @@ public final class GuestPoliciesRecipeArtifactRemote {
             this.uri = uri;
             return this;
         }
-
         public GuestPoliciesRecipeArtifactRemote build() {
             return new GuestPoliciesRecipeArtifactRemote(checkSum, uri);
         }

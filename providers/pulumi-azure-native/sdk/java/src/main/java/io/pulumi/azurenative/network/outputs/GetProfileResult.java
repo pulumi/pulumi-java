@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.DnsConfigResponse;
 import io.pulumi.azurenative.network.outputs.EndpointResponse;
 import io.pulumi.azurenative.network.outputs.MonitorConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -313,7 +313,6 @@ public final class GetProfileResult {
             this.type = type;
             return this;
         }
-
         public GetProfileResult build() {
             return new GetProfileResult(allowedEndpointRecordTypes, dnsConfig, endpoints, id, location, maxReturn, monitorConfig, name, profileStatus, tags, trafficRoutingMethod, trafficViewEnrollmentStatus, type);
         }

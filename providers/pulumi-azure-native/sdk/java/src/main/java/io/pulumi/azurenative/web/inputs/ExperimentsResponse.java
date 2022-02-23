@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.RampUpRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ExperimentsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rampUpRules")
-    private final @Nullable List<RampUpRuleResponse> rampUpRules;
+        private final @Nullable List<RampUpRuleResponse> rampUpRules;
 
     public List<RampUpRuleResponse> getRampUpRules() {
         return this.rampUpRules == null ? List.of() : this.rampUpRules;
@@ -62,7 +62,6 @@ public final class ExperimentsResponse extends io.pulumi.resources.InvokeArgs {
             this.rampUpRules = rampUpRules;
             return this;
         }
-
         public ExperimentsResponse build() {
             return new ExperimentsResponse(rampUpRules);
         }

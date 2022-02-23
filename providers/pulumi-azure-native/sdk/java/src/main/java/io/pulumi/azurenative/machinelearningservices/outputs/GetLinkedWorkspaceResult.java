@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.LinkedWorkspacePropsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -117,7 +117,6 @@ public final class GetLinkedWorkspaceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedWorkspaceResult build() {
             return new GetLinkedWorkspaceResult(id, name, properties, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FileReferenceResponse;
 import java.lang.Integer;
@@ -203,7 +203,6 @@ public final class TestSuiteOverviewResponse {
             this.xmlSource = Objects.requireNonNull(xmlSource);
             return this;
         }
-
         public TestSuiteOverviewResponse build() {
             return new TestSuiteOverviewResponse(elapsedTime, errorCount, failureCount, flakyCount, name, skippedCount, totalCount, xmlSource);
         }

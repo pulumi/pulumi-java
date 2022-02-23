@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends io.pulum
      * 
      */
     @InputImport(name="listUrl", required=true)
-    private final Input<String> listUrl;
+        private final Input<String> listUrl;
 
     public Input<String> getListUrl() {
         return this.listUrl;
@@ -61,7 +61,6 @@ public final class TransferJobTransferSpecHttpDataSourceGetArgs extends io.pulum
             this.listUrl = Input.of(Objects.requireNonNull(listUrl));
             return this;
         }
-
         public TransferJobTransferSpecHttpDataSourceGetArgs build() {
             return new TransferJobTransferSpecHttpDataSourceGetArgs(listUrl);
         }

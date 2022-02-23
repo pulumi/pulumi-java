@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.DiagnosticsDescriptionResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ServiceResourceDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -353,7 +353,6 @@ public final class GetApplicationResult {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(debugParams, description, diagnostics, healthState, id, location, name, provisioningState, serviceNames, services, status, statusDetails, tags, type, unhealthyEvaluation);
         }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.resources.outputs.ParametersLinkResponse;
 import io.pulumi.azurenative.resources.outputs.ProviderResponse;
 import io.pulumi.azurenative.resources.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.resources.outputs.TemplateLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -399,7 +399,6 @@ public final class DeploymentPropertiesExtendedResponse {
             this.validatedResources = Objects.requireNonNull(validatedResources);
             return this;
         }
-
         public DeploymentPropertiesExtendedResponse build() {
             return new DeploymentPropertiesExtendedResponse(correlationId, debugSetting, dependencies, duration, error, mode, onErrorDeployment, outputResources, outputs, parameters, parametersLink, providers, provisioningState, templateHash, templateLink, timestamp, validatedResources);
         }

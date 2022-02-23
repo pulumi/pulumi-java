@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkconnectivity_v1.outputs.RouterApplianceInstanceResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class LinkedRouterApplianceInstancesResponse {
             this.siteToSiteDataTransfer = Objects.requireNonNull(siteToSiteDataTransfer);
             return this;
         }
-
         public LinkedRouterApplianceInstancesResponse build() {
             return new LinkedRouterApplianceInstancesResponse(instances, siteToSiteDataTransfer);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.UserProfileResourceSpecInstanceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class UserProfileResourceSpec {
             this.sageMakerImageVersionArn = sageMakerImageVersionArn;
             return this;
         }
-
         public UserProfileResourceSpec build() {
             return new UserProfileResourceSpec(instanceType, sageMakerImageArn, sageMakerImageVersionArn);
         }

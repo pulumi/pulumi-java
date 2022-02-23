@@ -6,7 +6,7 @@ package io.pulumi.awsnative.emrcontainers;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterContainerProviderArgs;
 import io.pulumi.awsnative.emrcontainers.inputs.VirtualClusterTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerProvider", required=true)
-    private final Input<VirtualClusterContainerProviderArgs> containerProvider;
+        private final Input<VirtualClusterContainerProviderArgs> containerProvider;
 
     public Input<VirtualClusterContainerProviderArgs> getContainerProvider() {
         return this.containerProvider;
@@ -33,7 +33,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,7 +44,7 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<VirtualClusterTagArgs>> tags;
+        private final @Nullable Input<List<VirtualClusterTagArgs>> tags;
 
     public Input<List<VirtualClusterTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class VirtualClusterArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public VirtualClusterArgs build() {
             return new VirtualClusterArgs(containerProvider, name, tags);
         }

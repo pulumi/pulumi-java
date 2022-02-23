@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBackendConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApigatewayGatewayConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="backendConfig", required=true)
-    private final ApigatewayBackendConfigResponse backendConfig;
+      private final ApigatewayBackendConfigResponse backendConfig;
 
     public ApigatewayBackendConfigResponse getBackendConfig() {
         return this.backendConfig;
@@ -59,7 +59,6 @@ public final class ApigatewayGatewayConfigResponse extends io.pulumi.resources.I
             this.backendConfig = Objects.requireNonNull(backendConfig);
             return this;
         }
-
         public ApigatewayGatewayConfigResponse build() {
             return new ApigatewayGatewayConfigResponse(backendConfig);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.CompletionOperationTypes;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="completionOperationType")
-    private final @Nullable Input<CompletionOperationTypes> completionOperationType;
+        private final @Nullable Input<CompletionOperationTypes> completionOperationType;
 
     public Input<CompletionOperationTypes> getCompletionOperationType() {
         return this.completionOperationType == null ? Input.empty() : this.completionOperationType;
@@ -35,7 +35,7 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="destinationFolder")
-    private final @Nullable Input<String> destinationFolder;
+        private final @Nullable Input<String> destinationFolder;
 
     public Input<String> getDestinationFolder() {
         return this.destinationFolder == null ? Input.empty() : this.destinationFolder;
@@ -94,7 +94,6 @@ public final class ConnectorMappingCompleteOperationArgs extends io.pulumi.resou
             this.destinationFolder = Input.ofNullable(destinationFolder);
             return this;
         }
-
         public ConnectorMappingCompleteOperationArgs build() {
             return new ConnectorMappingCompleteOperationArgs(completionOperationType, destinationFolder);
         }

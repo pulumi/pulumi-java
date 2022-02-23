@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.outputs;
 
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -436,7 +436,6 @@ public final class GetNamespaceResult {
             this.updatedAt = updatedAt;
             return this;
         }
-
         public GetNamespaceResult build() {
             return new GetNamespaceResult(createdAt, critical, dataCenter, enabled, id, location, metricId, name, namespaceType, provisioningState, region, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, type, updatedAt);
         }

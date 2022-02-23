@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class ChannelCustomerManagedS3 {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ChannelCustomerManagedS3 build() {
             return new ChannelCustomerManagedS3(bucket, keyPrefix, roleArn);
         }

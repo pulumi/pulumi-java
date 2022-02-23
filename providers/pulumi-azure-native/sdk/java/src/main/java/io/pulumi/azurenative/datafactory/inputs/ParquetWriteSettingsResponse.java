@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="fileNamePrefix")
-    private final @Nullable Object fileNamePrefix;
+        private final @Nullable Object fileNamePrefix;
 
     public Optional<Object> getFileNamePrefix() {
         return this.fileNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.fileNamePrefix);
@@ -35,7 +35,7 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="maxRowsPerFile")
-    private final @Nullable Object maxRowsPerFile;
+        private final @Nullable Object maxRowsPerFile;
 
     public Optional<Object> getMaxRowsPerFile() {
         return this.maxRowsPerFile == null ? Optional.empty() : Optional.ofNullable(this.maxRowsPerFile);
@@ -47,7 +47,7 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -106,7 +106,6 @@ public final class ParquetWriteSettingsResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParquetWriteSettingsResponse build() {
             return new ParquetWriteSettingsResponse(fileNamePrefix, maxRowsPerFile, type);
         }

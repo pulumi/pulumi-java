@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
      * 
      */
     @InputImport(name="quickReplies", required=true)
-    private final List<String> quickReplies;
+      private final List<String> quickReplies;
 
     public List<String> getQuickReplies() {
         return this.quickReplies;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse exte
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageQuickRepliesResponse(quickReplies, title);
         }

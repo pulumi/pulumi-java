@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1NluSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class GetVersionResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetVersionResult build() {
             return new GetVersionResult(createTime, description, displayName, name, nluSettings, state);
         }

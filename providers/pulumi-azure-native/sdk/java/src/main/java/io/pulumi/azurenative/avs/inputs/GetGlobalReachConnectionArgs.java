@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="globalReachConnectionName", required=true)
-    private final String globalReachConnectionName;
+        private final String globalReachConnectionName;
 
     public String getGlobalReachConnectionName() {
         return this.globalReachConnectionName;
@@ -28,7 +28,7 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final String privateCloudName;
+        private final String privateCloudName;
 
     public String getPrivateCloudName() {
         return this.privateCloudName;
@@ -39,7 +39,7 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetGlobalReachConnectionArgs extends io.pulumi.resources.Invo
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetGlobalReachConnectionArgs build() {
             return new GetGlobalReachConnectionArgs(globalReachConnectionName, privateCloudName, resourceGroupName);
         }

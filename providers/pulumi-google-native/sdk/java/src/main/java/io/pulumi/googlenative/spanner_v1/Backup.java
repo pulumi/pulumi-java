@@ -5,8 +5,8 @@ package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.BackupArgs;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
@@ -161,13 +161,6 @@ public class Backup extends io.pulumi.resources.CustomResource {
         return this.versionTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Backup(String name) {
-        super("google-native:spanner/v1:Backup", name, BackupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

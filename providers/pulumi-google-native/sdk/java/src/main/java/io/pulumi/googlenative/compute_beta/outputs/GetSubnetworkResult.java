@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SubnetworkLogConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SubnetworkSecondaryRangeResponse;
 import java.lang.Boolean;
@@ -519,7 +519,6 @@ public final class GetSubnetworkResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetSubnetworkResult build() {
             return new GetSubnetworkResult(allowSubnetCidrRoutesOverlap, creationTimestamp, description, enableFlowLogs, externalIpv6Prefix, fingerprint, gatewayAddress, ipCidrRange, ipv6AccessType, ipv6CidrRange, kind, logConfig, name, network, privateIpGoogleAccess, privateIpv6GoogleAccess, purpose, region, role, secondaryIpRanges, selfLink, stackType, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="actionsRequired")
-    private final @Nullable String actionsRequired;
+        private final @Nullable String actionsRequired;
 
     public Optional<String> getActionsRequired() {
         return this.actionsRequired == null ? Optional.empty() : Optional.ofNullable(this.actionsRequired);
@@ -34,7 +34,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -45,7 +45,7 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -104,7 +104,6 @@ public final class PrivateLinkServiceConnectionStateResponse extends io.pulumi.r
             this.status = status;
             return this;
         }
-
         public PrivateLinkServiceConnectionStateResponse build() {
             return new PrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }

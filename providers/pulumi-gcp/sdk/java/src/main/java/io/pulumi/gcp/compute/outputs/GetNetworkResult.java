@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -166,7 +166,6 @@ public final class GetNetworkResult {
             this.subnetworksSelfLinks = Objects.requireNonNull(subnetworksSelfLinks);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(description, gatewayIpv4, id, name, project, selfLink, subnetworksSelfLinks);
         }

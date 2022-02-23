@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EnvVarSource;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class EnvVar {
             this.valueFrom = valueFrom;
             return this;
         }
-
         public EnvVar build() {
             return new EnvVar(name, value, valueFrom);
         }

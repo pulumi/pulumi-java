@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.SnapshotStorageAccountTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,SnapshotStorageAccountTypes>> name;
+        private final @Nullable Input<Either<String,SnapshotStorageAccountTypes>> name;
 
     public Input<Either<String,SnapshotStorageAccountTypes>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,6 @@ public final class SnapshotSkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SnapshotSkuArgs build() {
             return new SnapshotSkuArgs(name);
         }

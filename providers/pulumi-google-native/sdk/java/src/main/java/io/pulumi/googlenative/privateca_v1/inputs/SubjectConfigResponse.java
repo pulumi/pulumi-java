@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="subject", required=true)
-    private final SubjectResponse subject;
+      private final SubjectResponse subject;
 
     public SubjectResponse getSubject() {
         return this.subject;
@@ -33,7 +33,7 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="subjectAltName", required=true)
-    private final SubjectAltNamesResponse subjectAltName;
+      private final SubjectAltNamesResponse subjectAltName;
 
     public SubjectAltNamesResponse getSubjectAltName() {
         return this.subjectAltName;
@@ -82,7 +82,6 @@ public final class SubjectConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }
-
         public SubjectConfigResponse build() {
             return new SubjectConfigResponse(subject, subjectAltName);
         }

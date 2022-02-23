@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.MatrixDimensionDefinitionResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.OutcomeResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.SpecificationResponse;
@@ -205,7 +205,6 @@ public final class GetExecutionResult {
             this.testExecutionMatrixId = Objects.requireNonNull(testExecutionMatrixId);
             return this;
         }
-
         public GetExecutionResult build() {
             return new GetExecutionResult(completionTime, creationTime, dimensionDefinitions, executionId, outcome, specification, state, testExecutionMatrixId);
         }

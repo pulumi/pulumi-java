@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class ApiDeploymentParameterMetadataResponse {
             this.visibility = visibility;
             return this;
         }
-
         public ApiDeploymentParameterMetadataResponse build() {
             return new ApiDeploymentParameterMetadataResponse(description, displayName, isRequired, type, visibility);
         }

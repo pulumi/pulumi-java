@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="continuationToken")
-    private final @Nullable String continuationToken;
+        private final @Nullable String continuationToken;
 
     public Optional<String> getContinuationToken() {
         return this.continuationToken == null ? Optional.empty() : Optional.ofNullable(this.continuationToken);
@@ -32,7 +32,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="downloadAs", required=true)
-    private final String downloadAs;
+        private final String downloadAs;
 
     public String getDownloadAs() {
         return this.downloadAs;
@@ -43,7 +43,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="geoLocationId", required=true)
-    private final String geoLocationId;
+        private final String geoLocationId;
 
     public String getGeoLocationId() {
         return this.geoLocationId;
@@ -54,7 +54,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="testSuccessfulCriteria")
-    private final @Nullable Boolean testSuccessfulCriteria;
+        private final @Nullable Boolean testSuccessfulCriteria;
 
     public Optional<Boolean> getTestSuccessfulCriteria() {
         return this.testSuccessfulCriteria == null ? Optional.empty() : Optional.ofNullable(this.testSuccessfulCriteria);
@@ -76,7 +76,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="timeStamp", required=true)
-    private final Integer timeStamp;
+        private final Integer timeStamp;
 
     public Integer getTimeStamp() {
         return this.timeStamp;
@@ -87,7 +87,7 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="webTestName", required=true)
-    private final String webTestName;
+        private final String webTestName;
 
     public String getWebTestName() {
         return this.webTestName;
@@ -186,7 +186,6 @@ public final class GetTestResultFileArgs extends io.pulumi.resources.InvokeArgs 
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
         }
-
         public GetTestResultFileArgs build() {
             return new GetTestResultFileArgs(continuationToken, downloadAs, geoLocationId, resourceGroupName, testSuccessfulCriteria, timeStamp, webTestName);
         }

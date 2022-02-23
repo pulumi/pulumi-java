@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidateFile;
 import java.lang.String;
 import java.util.List;
@@ -141,7 +141,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate {
             this.script = script;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecValidate(args, file, interpreter, outputFilePath, script);
         }

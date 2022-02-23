@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.BindingResponse;
 import io.pulumi.googlenative.compute_beta.outputs.RuleResponse;
@@ -142,7 +142,6 @@ public final class GetImageIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetImageIamPolicyResult build() {
             return new GetImageIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

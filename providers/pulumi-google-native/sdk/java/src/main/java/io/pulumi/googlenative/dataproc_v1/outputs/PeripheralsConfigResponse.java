@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.SparkHistoryServerConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class PeripheralsConfigResponse {
             this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
             return this;
         }
-
         public PeripheralsConfigResponse build() {
             return new PeripheralsConfigResponse(metastoreService, sparkHistoryServerConfig);
         }

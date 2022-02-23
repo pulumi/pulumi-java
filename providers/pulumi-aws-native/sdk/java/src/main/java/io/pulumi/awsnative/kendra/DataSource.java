@@ -10,8 +10,8 @@ import io.pulumi.awsnative.kendra.outputs.DataSourceConfiguration;
 import io.pulumi.awsnative.kendra.outputs.DataSourceTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -85,13 +85,6 @@ public class DataSource extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DataSource(String name) {
-        super("aws-native:kendra:DataSource", name, DataSourceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -34,7 +34,7 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -83,7 +83,6 @@ public final class RestorePointCollectionSourcePropertiesResponse extends io.pul
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public RestorePointCollectionSourcePropertiesResponse build() {
             return new RestorePointCollectionSourcePropertiesResponse(id, location);
         }

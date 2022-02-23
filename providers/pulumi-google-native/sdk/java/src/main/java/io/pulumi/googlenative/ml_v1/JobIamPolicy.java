@@ -5,8 +5,8 @@ package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.ml_v1.JobIamPolicyArgs;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleIamV1__AuditConfigResponse;
@@ -81,13 +81,6 @@ public class JobIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public JobIamPolicy(String name) {
-        super("google-native:ml/v1:JobIamPolicy", name, JobIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

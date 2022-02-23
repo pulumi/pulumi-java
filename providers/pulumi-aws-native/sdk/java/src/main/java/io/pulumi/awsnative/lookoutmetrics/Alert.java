@@ -8,8 +8,8 @@ import io.pulumi.awsnative.lookoutmetrics.AlertArgs;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AlertAction;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -105,13 +105,6 @@ public class Alert extends io.pulumi.resources.CustomResource {
         return this.arn;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Alert(String name) {
-        super("aws-native:lookoutmetrics:Alert", name, AlertArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

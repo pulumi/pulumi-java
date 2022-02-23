@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+        private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -34,7 +34,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -45,7 +45,7 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="virtualNetworkResourceId", required=true)
-    private final String virtualNetworkResourceId;
+        private final String virtualNetworkResourceId;
 
     public String getVirtualNetworkResourceId() {
         return this.virtualNetworkResourceId;
@@ -104,7 +104,6 @@ public final class VirtualNetworkRuleResponse extends io.pulumi.resources.Invoke
             this.virtualNetworkResourceId = Objects.requireNonNull(virtualNetworkResourceId);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(action, state, virtualNetworkResourceId);
         }

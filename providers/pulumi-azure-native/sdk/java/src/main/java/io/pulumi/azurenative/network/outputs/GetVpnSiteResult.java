@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.DevicePropertiesResponse;
 import io.pulumi.azurenative.network.outputs.O365PolicyPropertiesResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnSiteLinkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -379,7 +379,6 @@ public final class GetVpnSiteResult {
             this.vpnSiteLinks = vpnSiteLinks;
             return this;
         }
-
         public GetVpnSiteResult build() {
             return new GetVpnSiteResult(addressSpace, bgpProperties, deviceProperties, etag, id, ipAddress, isSecuritySite, location, name, o365Policy, provisioningState, siteKey, tags, type, virtualWan, vpnSiteLinks);
         }

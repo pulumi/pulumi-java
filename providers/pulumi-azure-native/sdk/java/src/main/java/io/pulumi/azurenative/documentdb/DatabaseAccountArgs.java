@@ -20,7 +20,7 @@ import io.pulumi.azurenative.documentdb.inputs.PeriodicModeBackupPolicyArgs;
 import io.pulumi.azurenative.documentdb.inputs.VirtualNetworkRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -38,7 +38,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -49,7 +49,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apiProperties")
-    private final @Nullable Input<ApiPropertiesArgs> apiProperties;
+        private final @Nullable Input<ApiPropertiesArgs> apiProperties;
 
     public Input<ApiPropertiesArgs> getApiProperties() {
         return this.apiProperties == null ? Input.empty() : this.apiProperties;
@@ -60,7 +60,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backupPolicy")
-    private final @Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
+        private final @Nullable Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> backupPolicy;
 
     public Input<Either<ContinuousModeBackupPolicyArgs,PeriodicModeBackupPolicyArgs>> getBackupPolicy() {
         return this.backupPolicy == null ? Input.empty() : this.backupPolicy;
@@ -71,7 +71,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<CapabilityArgs>> capabilities;
+        private final @Nullable Input<List<CapabilityArgs>> capabilities;
 
     public Input<List<CapabilityArgs>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
@@ -82,7 +82,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectorOffer")
-    private final @Nullable Input<Either<String,ConnectorOffer>> connectorOffer;
+        private final @Nullable Input<Either<String,ConnectorOffer>> connectorOffer;
 
     public Input<Either<String,ConnectorOffer>> getConnectorOffer() {
         return this.connectorOffer == null ? Input.empty() : this.connectorOffer;
@@ -93,7 +93,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="consistencyPolicy")
-    private final @Nullable Input<ConsistencyPolicyArgs> consistencyPolicy;
+        private final @Nullable Input<ConsistencyPolicyArgs> consistencyPolicy;
 
     public Input<ConsistencyPolicyArgs> getConsistencyPolicy() {
         return this.consistencyPolicy == null ? Input.empty() : this.consistencyPolicy;
@@ -104,7 +104,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="cors")
-    private final @Nullable Input<List<CorsPolicyArgs>> cors;
+        private final @Nullable Input<List<CorsPolicyArgs>> cors;
 
     public Input<List<CorsPolicyArgs>> getCors() {
         return this.cors == null ? Input.empty() : this.cors;
@@ -115,7 +115,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseAccountOfferType", required=true)
-    private final Input<DatabaseAccountOfferType> databaseAccountOfferType;
+        private final Input<DatabaseAccountOfferType> databaseAccountOfferType;
 
     public Input<DatabaseAccountOfferType> getDatabaseAccountOfferType() {
         return this.databaseAccountOfferType;
@@ -126,7 +126,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="defaultIdentity")
-    private final @Nullable Input<String> defaultIdentity;
+        private final @Nullable Input<String> defaultIdentity;
 
     public Input<String> getDefaultIdentity() {
         return this.defaultIdentity == null ? Input.empty() : this.defaultIdentity;
@@ -137,7 +137,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="disableKeyBasedMetadataWriteAccess")
-    private final @Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess;
+        private final @Nullable Input<Boolean> disableKeyBasedMetadataWriteAccess;
 
     public Input<Boolean> getDisableKeyBasedMetadataWriteAccess() {
         return this.disableKeyBasedMetadataWriteAccess == null ? Input.empty() : this.disableKeyBasedMetadataWriteAccess;
@@ -148,7 +148,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableAnalyticalStorage")
-    private final @Nullable Input<Boolean> enableAnalyticalStorage;
+        private final @Nullable Input<Boolean> enableAnalyticalStorage;
 
     public Input<Boolean> getEnableAnalyticalStorage() {
         return this.enableAnalyticalStorage == null ? Input.empty() : this.enableAnalyticalStorage;
@@ -159,7 +159,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableAutomaticFailover")
-    private final @Nullable Input<Boolean> enableAutomaticFailover;
+        private final @Nullable Input<Boolean> enableAutomaticFailover;
 
     public Input<Boolean> getEnableAutomaticFailover() {
         return this.enableAutomaticFailover == null ? Input.empty() : this.enableAutomaticFailover;
@@ -170,7 +170,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableCassandraConnector")
-    private final @Nullable Input<Boolean> enableCassandraConnector;
+        private final @Nullable Input<Boolean> enableCassandraConnector;
 
     public Input<Boolean> getEnableCassandraConnector() {
         return this.enableCassandraConnector == null ? Input.empty() : this.enableCassandraConnector;
@@ -181,7 +181,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableFreeTier")
-    private final @Nullable Input<Boolean> enableFreeTier;
+        private final @Nullable Input<Boolean> enableFreeTier;
 
     public Input<Boolean> getEnableFreeTier() {
         return this.enableFreeTier == null ? Input.empty() : this.enableFreeTier;
@@ -192,7 +192,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="enableMultipleWriteLocations")
-    private final @Nullable Input<Boolean> enableMultipleWriteLocations;
+        private final @Nullable Input<Boolean> enableMultipleWriteLocations;
 
     public Input<Boolean> getEnableMultipleWriteLocations() {
         return this.enableMultipleWriteLocations == null ? Input.empty() : this.enableMultipleWriteLocations;
@@ -203,7 +203,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -214,7 +214,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable Input<List<IpAddressOrRangeArgs>> ipRules;
+        private final @Nullable Input<List<IpAddressOrRangeArgs>> ipRules;
 
     public Input<List<IpAddressOrRangeArgs>> getIpRules() {
         return this.ipRules == null ? Input.empty() : this.ipRules;
@@ -225,7 +225,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="isVirtualNetworkFilterEnabled")
-    private final @Nullable Input<Boolean> isVirtualNetworkFilterEnabled;
+        private final @Nullable Input<Boolean> isVirtualNetworkFilterEnabled;
 
     public Input<Boolean> getIsVirtualNetworkFilterEnabled() {
         return this.isVirtualNetworkFilterEnabled == null ? Input.empty() : this.isVirtualNetworkFilterEnabled;
@@ -236,7 +236,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyVaultKeyUri")
-    private final @Nullable Input<String> keyVaultKeyUri;
+        private final @Nullable Input<String> keyVaultKeyUri;
 
     public Input<String> getKeyVaultKeyUri() {
         return this.keyVaultKeyUri == null ? Input.empty() : this.keyVaultKeyUri;
@@ -247,7 +247,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,DatabaseAccountKind>> kind;
+        private final @Nullable Input<Either<String,DatabaseAccountKind>> kind;
 
     public Input<Either<String,DatabaseAccountKind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -258,7 +258,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -269,7 +269,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="locations", required=true)
-    private final Input<List<LocationArgs>> locations;
+        private final Input<List<LocationArgs>> locations;
 
     public Input<List<LocationArgs>> getLocations() {
         return this.locations;
@@ -280,7 +280,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkAclBypass")
-    private final @Nullable Input<NetworkAclBypass> networkAclBypass;
+        private final @Nullable Input<NetworkAclBypass> networkAclBypass;
 
     public Input<NetworkAclBypass> getNetworkAclBypass() {
         return this.networkAclBypass == null ? Input.empty() : this.networkAclBypass;
@@ -291,7 +291,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkAclBypassResourceIds")
-    private final @Nullable Input<List<String>> networkAclBypassResourceIds;
+        private final @Nullable Input<List<String>> networkAclBypassResourceIds;
 
     public Input<List<String>> getNetworkAclBypassResourceIds() {
         return this.networkAclBypassResourceIds == null ? Input.empty() : this.networkAclBypassResourceIds;
@@ -302,7 +302,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -313,7 +313,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -324,7 +324,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -335,7 +335,7 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
+        private final @Nullable Input<List<VirtualNetworkRuleArgs>> virtualNetworkRules;
 
     public Input<List<VirtualNetworkRuleArgs>> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
@@ -784,7 +784,6 @@ public final class DatabaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }
-
         public DatabaseAccountArgs build() {
             return new DatabaseAccountArgs(accountName, apiProperties, backupPolicy, capabilities, connectorOffer, consistencyPolicy, cors, databaseAccountOfferType, defaultIdentity, disableKeyBasedMetadataWriteAccess, enableAnalyticalStorage, enableAutomaticFailover, enableCassandraConnector, enableFreeTier, enableMultipleWriteLocations, identity, ipRules, isVirtualNetworkFilterEnabled, keyVaultKeyUri, kind, location, locations, networkAclBypass, networkAclBypassResourceIds, publicNetworkAccess, resourceGroupName, tags, virtualNetworkRules);
         }

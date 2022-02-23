@@ -18,7 +18,7 @@ import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineInstanceViewResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -745,7 +745,6 @@ public final class GetVirtualMachineResult {
             this.zones = zones;
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(additionalCapabilities, availabilitySet, billingProfile, diagnosticsProfile, evictionPolicy, extendedLocation, extensionsTimeBudget, hardwareProfile, host, hostGroup, id, identity, instanceView, licenseType, location, name, networkProfile, osProfile, plan, platformFaultDomain, priority, provisioningState, proximityPlacementGroup, resources, scheduledEventsProfile, securityProfile, storageProfile, tags, type, userData, virtualMachineScaleSet, vmId, zones);
         }

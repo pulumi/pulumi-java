@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datamigration_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.enums.ConnectionProfileProvider;
 import io.pulumi.googlenative.datamigration_v1.enums.ConnectionProfileState;
 import io.pulumi.googlenative.datamigration_v1.inputs.CloudSqlConnectionProfileArgs;
@@ -25,14 +25,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudsql")
-    private final @Nullable Input<CloudSqlConnectionProfileArgs> cloudsql;
+      private final @Nullable Input<CloudSqlConnectionProfileArgs> cloudsql;
 
     public Input<CloudSqlConnectionProfileArgs> getCloudsql() {
         return this.cloudsql == null ? Input.empty() : this.cloudsql;
     }
 
     @InputImport(name="connectionProfileId", required=true)
-    private final Input<String> connectionProfileId;
+      private final Input<String> connectionProfileId;
 
     public Input<String> getConnectionProfileId() {
         return this.connectionProfileId;
@@ -43,7 +43,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -54,14 +54,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -72,7 +72,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mysql")
-    private final @Nullable Input<MySqlConnectionProfileArgs> mysql;
+      private final @Nullable Input<MySqlConnectionProfileArgs> mysql;
 
     public Input<MySqlConnectionProfileArgs> getMysql() {
         return this.mysql == null ? Input.empty() : this.mysql;
@@ -83,7 +83,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,14 +94,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="postgresql")
-    private final @Nullable Input<PostgreSqlConnectionProfileArgs> postgresql;
+      private final @Nullable Input<PostgreSqlConnectionProfileArgs> postgresql;
 
     public Input<PostgreSqlConnectionProfileArgs> getPostgresql() {
         return this.postgresql == null ? Input.empty() : this.postgresql;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -112,14 +112,14 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="provider")
-    private final @Nullable Input<ConnectionProfileProvider> provider;
+      private final @Nullable Input<ConnectionProfileProvider> provider;
 
     public Input<ConnectionProfileProvider> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -130,7 +130,7 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<ConnectionProfileState> state;
+      private final @Nullable Input<ConnectionProfileState> state;
 
     public Input<ConnectionProfileState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -339,7 +339,6 @@ public final class ConnectionProfileArgs extends io.pulumi.resources.ResourceArg
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public ConnectionProfileArgs build() {
             return new ConnectionProfileArgs(cloudsql, connectionProfileId, displayName, labels, location, mysql, name, postgresql, project, provider, requestId, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AttachedDiskResponse;
@@ -574,7 +574,6 @@ public final class InstancePropertiesResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public InstancePropertiesResponse build() {
             return new InstancePropertiesResponse(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, description, disks, displayDevice, guestAccelerators, keyRevocationActionType, labels, machineType, metadata, minCpuPlatform, networkInterfaces, networkPerformanceConfig, postKeyRevocationActionType, privateIpv6GoogleAccess, reservationAffinity, resourceManagerTags, resourcePolicies, scheduling, secureTags, serviceAccounts, shieldedInstanceConfig, shieldedVmConfig, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class ConnectorProfileRedshiftConnectorProfileProperties {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public ConnectorProfileRedshiftConnectorProfileProperties build() {
             return new ConnectorProfileRedshiftConnectorProfileProperties(bucketName, bucketPrefix, databaseUrl, roleArn);
         }

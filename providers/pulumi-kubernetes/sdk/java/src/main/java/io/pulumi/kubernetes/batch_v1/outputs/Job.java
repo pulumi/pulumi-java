@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v1.outputs.JobSpec;
 import io.pulumi.kubernetes.batch_v1.outputs.JobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class Job {
             this.status = status;
             return this;
         }
-
         public Job build() {
             return new Job(apiVersion, kind, metadata, spec, status);
         }

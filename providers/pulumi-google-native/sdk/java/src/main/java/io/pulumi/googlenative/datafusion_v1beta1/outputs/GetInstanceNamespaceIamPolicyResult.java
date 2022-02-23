@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetInstanceNamespaceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstanceNamespaceIamPolicyResult build() {
             return new GetInstanceNamespaceIamPolicyResult(auditConfigs, bindings, etag, version);
         }

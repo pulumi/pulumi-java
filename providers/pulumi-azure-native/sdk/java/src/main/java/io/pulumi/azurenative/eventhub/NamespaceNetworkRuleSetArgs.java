@@ -8,7 +8,7 @@ import io.pulumi.azurenative.eventhub.inputs.NWRuleSetIpRulesArgs;
 import io.pulumi.azurenative.eventhub.inputs.NWRuleSetVirtualNetworkRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
+        private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
 
     public Input<Either<String,DefaultAction>> getDefaultAction() {
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
@@ -35,7 +35,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules;
+        private final @Nullable Input<List<NWRuleSetIpRulesArgs>> ipRules;
 
     public Input<List<NWRuleSetIpRulesArgs>> getIpRules() {
         return this.ipRules == null ? Input.empty() : this.ipRules;
@@ -46,7 +46,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -57,7 +57,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualNetworkRules")
-    private final @Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
+        private final @Nullable Input<List<NWRuleSetVirtualNetworkRulesArgs>> virtualNetworkRules;
 
     public Input<List<NWRuleSetVirtualNetworkRulesArgs>> getVirtualNetworkRules() {
         return this.virtualNetworkRules == null ? Input.empty() : this.virtualNetworkRules;
@@ -172,7 +172,6 @@ public final class NamespaceNetworkRuleSetArgs extends io.pulumi.resources.Resou
             this.virtualNetworkRules = Input.ofNullable(virtualNetworkRules);
             return this;
         }
-
         public NamespaceNetworkRuleSetArgs build() {
             return new NamespaceNetworkRuleSetArgs(defaultAction, ipRules, namespaceName, resourceGroupName, virtualNetworkRules);
         }

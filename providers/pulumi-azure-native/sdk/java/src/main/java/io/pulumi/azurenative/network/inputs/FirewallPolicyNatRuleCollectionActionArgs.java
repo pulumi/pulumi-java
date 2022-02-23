@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.FirewallPolicyNatRuleCollectionActionType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FirewallPolicyNatRuleCollectionActionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,FirewallPolicyNatRuleCollectionActionType>> type;
+        private final @Nullable Input<Either<String,FirewallPolicyNatRuleCollectionActionType>> type;
 
     public Input<Either<String,FirewallPolicyNatRuleCollectionActionType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -68,7 +68,6 @@ public final class FirewallPolicyNatRuleCollectionActionArgs extends io.pulumi.r
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public FirewallPolicyNatRuleCollectionActionArgs build() {
             return new FirewallPolicyNatRuleCollectionActionArgs(type);
         }

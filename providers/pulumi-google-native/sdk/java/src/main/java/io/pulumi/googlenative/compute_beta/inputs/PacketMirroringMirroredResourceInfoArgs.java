@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.PacketMirroringMirroredResourceInfoInstanceInfoArgs;
 import io.pulumi.googlenative.compute_beta.inputs.PacketMirroringMirroredResourceInfoSubnetInfoArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> instances;
+      private final @Nullable Input<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> instances;
 
     public Input<List<PacketMirroringMirroredResourceInfoInstanceInfoArgs>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -33,7 +33,7 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetworks")
-    private final @Nullable Input<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks;
+      private final @Nullable Input<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> subnetworks;
 
     public Input<List<PacketMirroringMirroredResourceInfoSubnetInfoArgs>> getSubnetworks() {
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
@@ -44,7 +44,7 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class PacketMirroringMirroredResourceInfoArgs extends io.pulumi.res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PacketMirroringMirroredResourceInfoArgs build() {
             return new PacketMirroringMirroredResourceInfoArgs(instances, subnetworks, tags);
         }

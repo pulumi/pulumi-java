@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin ext
     public static final ResourceTypeExtensionOptionsResponseResourceCreationBegin Empty = new ResourceTypeExtensionOptionsResponseResourceCreationBegin();
 
     @InputImport(name="request")
-    private final @Nullable List<String> request;
+        private final @Nullable List<String> request;
 
     public List<String> getRequest() {
         return this.request == null ? List.of() : this.request;
     }
 
     @InputImport(name="response")
-    private final @Nullable List<String> response;
+        private final @Nullable List<String> response;
 
     public List<String> getResponse() {
         return this.response == null ? List.of() : this.response;
@@ -72,7 +72,6 @@ public final class ResourceTypeExtensionOptionsResponseResourceCreationBegin ext
             this.response = response;
             return this;
         }
-
         public ResourceTypeExtensionOptionsResponseResourceCreationBegin build() {
             return new ResourceTypeExtensionOptionsResponseResourceCreationBegin(request, response);
         }

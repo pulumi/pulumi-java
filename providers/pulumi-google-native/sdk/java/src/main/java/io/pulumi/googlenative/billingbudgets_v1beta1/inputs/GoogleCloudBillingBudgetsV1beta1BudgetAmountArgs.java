@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.billingbudgets_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs;
 import io.pulumi.googlenative.billingbudgets_v1beta1.inputs.GoogleTypeMoneyArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends io.p
      * 
      */
     @InputImport(name="lastPeriodAmount")
-    private final @Nullable Input<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
+      private final @Nullable Input<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> lastPeriodAmount;
 
     public Input<GoogleCloudBillingBudgetsV1beta1LastPeriodAmountArgs> getLastPeriodAmount() {
         return this.lastPeriodAmount == null ? Input.empty() : this.lastPeriodAmount;
@@ -35,7 +35,7 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends io.p
      * 
      */
     @InputImport(name="specifiedAmount")
-    private final @Nullable Input<GoogleTypeMoneyArgs> specifiedAmount;
+      private final @Nullable Input<GoogleTypeMoneyArgs> specifiedAmount;
 
     public Input<GoogleTypeMoneyArgs> getSpecifiedAmount() {
         return this.specifiedAmount == null ? Input.empty() : this.specifiedAmount;
@@ -94,7 +94,6 @@ public final class GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs extends io.p
             this.specifiedAmount = Input.ofNullable(specifiedAmount);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs build() {
             return new GoogleCloudBillingBudgetsV1beta1BudgetAmountArgs(lastPeriodAmount, specifiedAmount);
         }

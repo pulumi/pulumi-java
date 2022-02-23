@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -120,7 +120,6 @@ public final class CanaryRunConfig {
             this.timeoutInSeconds = timeoutInSeconds;
             return this;
         }
-
         public CanaryRunConfig build() {
             return new CanaryRunConfig(activeTracing, environmentVariables, memoryInMB, timeoutInSeconds);
         }

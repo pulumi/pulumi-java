@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class CinderPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -36,7 +36,7 @@ public final class CinderPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -47,7 +47,7 @@ public final class CinderPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<SecretReferenceArgs> secretRef;
+        private final @Nullable Input<SecretReferenceArgs> secretRef;
 
     public Input<SecretReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -58,7 +58,7 @@ public final class CinderPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="volumeID", required=true)
-    private final Input<String> volumeID;
+        private final Input<String> volumeID;
 
     public Input<String> getVolumeID() {
         return this.volumeID;
@@ -147,7 +147,6 @@ public final class CinderPersistentVolumeSourceArgs extends io.pulumi.resources.
             this.volumeID = Input.of(Objects.requireNonNull(volumeID));
             return this;
         }
-
         public CinderPersistentVolumeSourceArgs build() {
             return new CinderPersistentVolumeSourceArgs(fsType, readOnly, secretRef, volumeID);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -243,7 +243,6 @@ public final class GetKeyResult {
             this.validBeforeTime = Objects.requireNonNull(validBeforeTime);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(disabled, keyAlgorithm, keyOrigin, keyType, name, privateKeyData, privateKeyType, publicKeyData, validAfterTime, validBeforeTime);
         }

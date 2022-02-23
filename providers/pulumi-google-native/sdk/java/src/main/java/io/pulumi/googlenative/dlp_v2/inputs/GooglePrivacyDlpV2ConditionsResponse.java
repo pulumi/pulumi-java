@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ConditionResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
+      private final List<GooglePrivacyDlpV2ConditionResponse> conditions;
 
     public List<GooglePrivacyDlpV2ConditionResponse> getConditions() {
         return this.conditions;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2ConditionsResponse extends io.pulumi.resour
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public GooglePrivacyDlpV2ConditionsResponse build() {
             return new GooglePrivacyDlpV2ConditionsResponse(conditions);
         }

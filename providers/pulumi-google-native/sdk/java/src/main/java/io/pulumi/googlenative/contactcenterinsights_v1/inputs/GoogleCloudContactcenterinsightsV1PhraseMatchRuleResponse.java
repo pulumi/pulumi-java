@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
      * 
      */
     @InputImport(name="config", required=true)
-    private final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
+      private final GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse config;
 
     public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse getConfig() {
         return this.config;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
      * 
      */
     @InputImport(name="negated", required=true)
-    private final Boolean negated;
+      private final Boolean negated;
 
     public Boolean getNegated() {
         return this.negated;
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
      * 
      */
     @InputImport(name="query", required=true)
-    private final String query;
+      private final String query;
 
     public String getQuery() {
         return this.query;
@@ -104,7 +104,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse ext
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(config, negated, query);
         }

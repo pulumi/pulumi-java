@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -162,7 +162,6 @@ public final class ClientCertAuthenticationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClientCertAuthenticationResponse build() {
             return new ClientCertAuthenticationResponse(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }

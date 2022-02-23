@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsub_v1.inputs.MessageStoragePolicyArgs;
 import io.pulumi.googlenative.pubsub_v1.inputs.SchemaSettingsArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+      private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -34,7 +34,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -45,7 +45,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageRetentionDuration")
-    private final @Nullable Input<String> messageRetentionDuration;
+      private final @Nullable Input<String> messageRetentionDuration;
 
     public Input<String> getMessageRetentionDuration() {
         return this.messageRetentionDuration == null ? Input.empty() : this.messageRetentionDuration;
@@ -56,7 +56,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageStoragePolicy")
-    private final @Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy;
+      private final @Nullable Input<MessageStoragePolicyArgs> messageStoragePolicy;
 
     public Input<MessageStoragePolicyArgs> getMessageStoragePolicy() {
         return this.messageStoragePolicy == null ? Input.empty() : this.messageStoragePolicy;
@@ -67,14 +67,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -85,7 +85,7 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="satisfiesPzs")
-    private final @Nullable Input<Boolean> satisfiesPzs;
+      private final @Nullable Input<Boolean> satisfiesPzs;
 
     public Input<Boolean> getSatisfiesPzs() {
         return this.satisfiesPzs == null ? Input.empty() : this.satisfiesPzs;
@@ -96,14 +96,14 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemaSettings")
-    private final @Nullable Input<SchemaSettingsArgs> schemaSettings;
+      private final @Nullable Input<SchemaSettingsArgs> schemaSettings;
 
     public Input<SchemaSettingsArgs> getSchemaSettings() {
         return this.schemaSettings == null ? Input.empty() : this.schemaSettings;
     }
 
     @InputImport(name="topicId", required=true)
-    private final Input<String> topicId;
+      private final Input<String> topicId;
 
     public Input<String> getTopicId() {
         return this.topicId;
@@ -267,7 +267,6 @@ public final class TopicArgs extends io.pulumi.resources.ResourceArgs {
             this.topicId = Input.of(Objects.requireNonNull(topicId));
             return this;
         }
-
         public TopicArgs build() {
             return new TopicArgs(kmsKeyName, labels, messageRetentionDuration, messageStoragePolicy, name, project, satisfiesPzs, schemaSettings, topicId);
         }

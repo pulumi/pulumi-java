@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class LocationNFSOnPremConfig {
             this.agentArns = Objects.requireNonNull(agentArns);
             return this;
         }
-
         public LocationNFSOnPremConfig build() {
             return new LocationNFSOnPremConfig(agentArns);
         }

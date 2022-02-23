@@ -6,7 +6,7 @@ package io.pulumi.awsnative.xray;
 import io.pulumi.awsnative.xray.inputs.GroupInsightsConfigurationArgs;
 import io.pulumi.awsnative.xray.inputs.TagsItemPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterExpression")
-    private final @Nullable Input<String> filterExpression;
+        private final @Nullable Input<String> filterExpression;
 
     public Input<String> getFilterExpression() {
         return this.filterExpression == null ? Input.empty() : this.filterExpression;
@@ -33,21 +33,21 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupName")
-    private final @Nullable Input<String> groupName;
+        private final @Nullable Input<String> groupName;
 
     public Input<String> getGroupName() {
         return this.groupName == null ? Input.empty() : this.groupName;
     }
 
     @InputImport(name="insightsConfiguration")
-    private final @Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration;
+        private final @Nullable Input<GroupInsightsConfigurationArgs> insightsConfiguration;
 
     public Input<GroupInsightsConfigurationArgs> getInsightsConfiguration() {
         return this.insightsConfiguration == null ? Input.empty() : this.insightsConfiguration;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
+        private final @Nullable Input<List<TagsItemPropertiesArgs>> tags;
 
     public Input<List<TagsItemPropertiesArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -136,7 +136,6 @@ public final class GroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GroupArgs build() {
             return new GroupArgs(filterExpression, groupName, insightsConfiguration, tags);
         }

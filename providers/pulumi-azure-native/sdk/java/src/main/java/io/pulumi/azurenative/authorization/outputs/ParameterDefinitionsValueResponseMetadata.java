@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class ParameterDefinitionsValueResponseMetadata {
             this.strongType = strongType;
             return this;
         }
-
         public ParameterDefinitionsValueResponseMetadata build() {
             return new ParameterDefinitionsValueResponseMetadata(assignPermissions, description, displayName, strongType);
         }

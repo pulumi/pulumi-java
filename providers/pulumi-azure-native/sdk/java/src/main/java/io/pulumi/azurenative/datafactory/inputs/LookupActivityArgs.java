@@ -104,7 +104,7 @@ import io.pulumi.azurenative.datafactory.inputs.XeroSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlSourceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ZohoSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -125,7 +125,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final Input<DatasetReferenceArgs> dataset;
+        private final Input<DatasetReferenceArgs> dataset;
 
     public Input<DatasetReferenceArgs> getDataset() {
         return this.dataset;
@@ -136,7 +136,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -147,7 +147,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -158,7 +158,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstRowOnly")
-    private final @Nullable Input<Object> firstRowOnly;
+        private final @Nullable Input<Object> firstRowOnly;
 
     public Input<Object> getFirstRowOnly() {
         return this.firstRowOnly == null ? Input.empty() : this.firstRowOnly;
@@ -169,7 +169,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -180,7 +180,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -191,7 +191,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -202,7 +202,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<Object> source;
+        private final Input<Object> source;
 
     public Input<Object> getSource() {
         return this.source;
@@ -214,7 +214,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -225,7 +225,7 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -404,7 +404,6 @@ public final class LookupActivityArgs extends io.pulumi.resources.ResourceArgs {
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public LookupActivityArgs build() {
             return new LookupActivityArgs(dataset, dependsOn, description, firstRowOnly, linkedServiceName, name, policy, source, type, userProperties);
         }

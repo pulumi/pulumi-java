@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -31,7 +31,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultAcl")
-    private final @Nullable Input<String> defaultAcl;
+        private final @Nullable Input<String> defaultAcl;
 
     public Input<String> getDefaultAcl() {
         return this.defaultAcl == null ? Input.empty() : this.defaultAcl;
@@ -42,7 +42,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedAcl")
-    private final @Nullable Input<String> predefinedAcl;
+        private final @Nullable Input<String> predefinedAcl;
 
     public Input<String> getPredefinedAcl() {
         return this.predefinedAcl == null ? Input.empty() : this.predefinedAcl;
@@ -53,7 +53,7 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleEntities")
-    private final @Nullable Input<List<String>> roleEntities;
+        private final @Nullable Input<List<String>> roleEntities;
 
     public Input<List<String>> getRoleEntities() {
         return this.roleEntities == null ? Input.empty() : this.roleEntities;
@@ -142,7 +142,6 @@ public final class BucketACLArgs extends io.pulumi.resources.ResourceArgs {
             this.roleEntities = Input.ofNullable(roleEntities);
             return this;
         }
-
         public BucketACLArgs build() {
             return new BucketACLArgs(bucket, defaultAcl, predefinedAcl, roleEntities);
         }

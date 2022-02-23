@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checkInterval")
-    private final @Nullable Input<String> checkInterval;
+      private final @Nullable Input<String> checkInterval;
 
     public Input<String> getCheckInterval() {
         return this.checkInterval == null ? Input.empty() : this.checkInterval;
@@ -36,7 +36,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableHealthCheck")
-    private final @Nullable Input<Boolean> disableHealthCheck;
+      private final @Nullable Input<Boolean> disableHealthCheck;
 
     public Input<Boolean> getDisableHealthCheck() {
         return this.disableHealthCheck == null ? Input.empty() : this.disableHealthCheck;
@@ -47,7 +47,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Input<Integer> healthyThreshold;
+      private final @Nullable Input<Integer> healthyThreshold;
 
     public Input<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Input.empty() : this.healthyThreshold;
@@ -58,7 +58,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -69,7 +69,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restartThreshold")
-    private final @Nullable Input<Integer> restartThreshold;
+      private final @Nullable Input<Integer> restartThreshold;
 
     public Input<Integer> getRestartThreshold() {
         return this.restartThreshold == null ? Input.empty() : this.restartThreshold;
@@ -80,7 +80,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -91,7 +91,7 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Input<Integer> unhealthyThreshold;
+      private final @Nullable Input<Integer> unhealthyThreshold;
 
     public Input<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Input.empty() : this.unhealthyThreshold;
@@ -225,7 +225,6 @@ public final class HealthCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.unhealthyThreshold = Input.ofNullable(unhealthyThreshold);
             return this;
         }
-
         public HealthCheckArgs build() {
             return new HealthCheckArgs(checkInterval, disableHealthCheck, healthyThreshold, host, restartThreshold, timeout, unhealthyThreshold);
         }

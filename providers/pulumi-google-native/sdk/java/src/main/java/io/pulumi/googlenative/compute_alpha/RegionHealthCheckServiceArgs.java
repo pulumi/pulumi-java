@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RegionHealthCheckServiceHealthStatusAggregationPolicy;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="healthChecks")
-    private final @Nullable Input<List<String>> healthChecks;
+      private final @Nullable Input<List<String>> healthChecks;
 
     public Input<List<String>> getHealthChecks() {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
@@ -43,7 +43,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="healthStatusAggregationPolicy")
-    private final @Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
+      private final @Nullable Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> healthStatusAggregationPolicy;
 
     public Input<RegionHealthCheckServiceHealthStatusAggregationPolicy> getHealthStatusAggregationPolicy() {
         return this.healthStatusAggregationPolicy == null ? Input.empty() : this.healthStatusAggregationPolicy;
@@ -54,7 +54,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="networkEndpointGroups")
-    private final @Nullable Input<List<String>> networkEndpointGroups;
+      private final @Nullable Input<List<String>> networkEndpointGroups;
 
     public Input<List<String>> getNetworkEndpointGroups() {
         return this.networkEndpointGroups == null ? Input.empty() : this.networkEndpointGroups;
@@ -76,28 +76,28 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="notificationEndpoints")
-    private final @Nullable Input<List<String>> notificationEndpoints;
+      private final @Nullable Input<List<String>> notificationEndpoints;
 
     public Input<List<String>> getNotificationEndpoints() {
         return this.notificationEndpoints == null ? Input.empty() : this.notificationEndpoints;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -261,7 +261,6 @@ public final class RegionHealthCheckServiceArgs extends io.pulumi.resources.Reso
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public RegionHealthCheckServiceArgs build() {
             return new RegionHealthCheckServiceArgs(description, healthChecks, healthStatusAggregationPolicy, name, networkEndpointGroups, notificationEndpoints, project, region, requestId);
         }

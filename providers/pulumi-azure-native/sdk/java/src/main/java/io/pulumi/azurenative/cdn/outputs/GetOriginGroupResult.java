@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.HealthProbeParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.ResponseBasedOriginErrorDetectionParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -250,7 +250,6 @@ public final class GetOriginGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOriginGroupResult build() {
             return new GetOriginGroupResult(healthProbeSettings, id, name, origins, provisioningState, resourceState, responseBasedOriginErrorDetectionSettings, systemData, trafficRestorationTimeToHealedOrNewEndpointsInMinutes, type);
         }

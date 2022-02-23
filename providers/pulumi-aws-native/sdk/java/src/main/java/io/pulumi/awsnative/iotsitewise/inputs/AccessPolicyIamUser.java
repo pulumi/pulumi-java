@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotsitewise.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AccessPolicyIamUser extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable String arn;
+        private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -61,7 +61,6 @@ public final class AccessPolicyIamUser extends io.pulumi.resources.InvokeArgs {
             this.arn = arn;
             return this;
         }
-
         public AccessPolicyIamUser build() {
             return new AccessPolicyIamUser(arn);
         }

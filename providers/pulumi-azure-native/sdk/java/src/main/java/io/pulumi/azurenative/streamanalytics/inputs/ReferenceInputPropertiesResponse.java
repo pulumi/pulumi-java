@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.BlobReferenceInputDataSource
 import io.pulumi.azurenative.streamanalytics.inputs.CsvSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="datasource")
-    private final @Nullable BlobReferenceInputDataSourceResponse datasource;
+        private final @Nullable BlobReferenceInputDataSourceResponse datasource;
 
     public Optional<BlobReferenceInputDataSourceResponse> getDatasource() {
         return this.datasource == null ? Optional.empty() : Optional.ofNullable(this.datasource);
@@ -40,7 +40,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diagnostics", required=true)
-    private final DiagnosticsResponse diagnostics;
+        private final DiagnosticsResponse diagnostics;
 
     public DiagnosticsResponse getDiagnostics() {
         return this.diagnostics;
@@ -51,7 +51,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -62,7 +62,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serialization")
-    private final @Nullable Object serialization;
+        private final @Nullable Object serialization;
 
     public Object getSerialization() {
         return this.serialization == null ? null : this.serialization;
@@ -74,7 +74,7 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -153,7 +153,6 @@ public final class ReferenceInputPropertiesResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReferenceInputPropertiesResponse build() {
             return new ReferenceInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.PublicIPPrefixSkuName;
 import io.pulumi.azurenative.network.enums.PublicIPPrefixSkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PublicIPPrefixSkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,PublicIPPrefixSkuName>> name;
+        private final @Nullable Input<Either<String,PublicIPPrefixSkuName>> name;
 
     public Input<Either<String,PublicIPPrefixSkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class PublicIPPrefixSkuArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,PublicIPPrefixSkuTier>> tier;
+        private final @Nullable Input<Either<String,PublicIPPrefixSkuTier>> tier;
 
     public Input<Either<String,PublicIPPrefixSkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -96,7 +96,6 @@ public final class PublicIPPrefixSkuArgs extends io.pulumi.resources.ResourceArg
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public PublicIPPrefixSkuArgs build() {
             return new PublicIPPrefixSkuArgs(name, tier);
         }

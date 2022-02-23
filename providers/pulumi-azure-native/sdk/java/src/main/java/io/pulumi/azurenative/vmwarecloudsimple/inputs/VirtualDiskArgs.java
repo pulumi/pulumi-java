@@ -5,7 +5,7 @@ package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
 import io.pulumi.azurenative.vmwarecloudsimple.enums.DiskIndependenceMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="controllerId", required=true)
-    private final Input<String> controllerId;
+        private final Input<String> controllerId;
 
     public Input<String> getControllerId() {
         return this.controllerId;
@@ -36,7 +36,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="independenceMode", required=true)
-    private final Input<DiskIndependenceMode> independenceMode;
+        private final Input<DiskIndependenceMode> independenceMode;
 
     public Input<DiskIndependenceMode> getIndependenceMode() {
         return this.independenceMode;
@@ -47,7 +47,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="totalSize", required=true)
-    private final Input<Integer> totalSize;
+        private final Input<Integer> totalSize;
 
     public Input<Integer> getTotalSize() {
         return this.totalSize;
@@ -58,7 +58,7 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualDiskId")
-    private final @Nullable Input<String> virtualDiskId;
+        private final @Nullable Input<String> virtualDiskId;
 
     public Input<String> getVirtualDiskId() {
         return this.virtualDiskId == null ? Input.empty() : this.virtualDiskId;
@@ -147,7 +147,6 @@ public final class VirtualDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualDiskId = Input.ofNullable(virtualDiskId);
             return this;
         }
-
         public VirtualDiskArgs build() {
             return new VirtualDiskArgs(controllerId, independenceMode, totalSize, virtualDiskId);
         }

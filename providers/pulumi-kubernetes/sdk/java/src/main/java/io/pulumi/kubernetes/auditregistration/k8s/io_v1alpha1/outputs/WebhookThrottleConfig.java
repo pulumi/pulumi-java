@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class WebhookThrottleConfig {
             this.qps = qps;
             return this;
         }
-
         public WebhookThrottleConfig build() {
             return new WebhookThrottleConfig(burst, qps);
         }

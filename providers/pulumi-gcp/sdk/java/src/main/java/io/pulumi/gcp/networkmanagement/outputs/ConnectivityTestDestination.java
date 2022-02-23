@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -160,7 +160,6 @@ public final class ConnectivityTestDestination {
             this.projectId = projectId;
             return this;
         }
-
         public ConnectivityTestDestination build() {
             return new ConnectivityTestDestination(instance, ipAddress, network, port, projectId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class CisBenchmarkResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public CisBenchmarkResponse build() {
             return new CisBenchmarkResponse(profileLevel, severity);
         }

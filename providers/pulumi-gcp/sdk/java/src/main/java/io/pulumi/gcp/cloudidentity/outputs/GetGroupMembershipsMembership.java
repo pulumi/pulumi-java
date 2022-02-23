@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipMemberKey;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipPreferredMemberKey;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupMembershipsMembershipRole;
@@ -164,7 +164,6 @@ public final class GetGroupMembershipsMembership {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupMembershipsMembership build() {
             return new GetGroupMembershipsMembership(createTime, group, memberKeys, name, preferredMemberKeys, roles, type, updateTime);
         }

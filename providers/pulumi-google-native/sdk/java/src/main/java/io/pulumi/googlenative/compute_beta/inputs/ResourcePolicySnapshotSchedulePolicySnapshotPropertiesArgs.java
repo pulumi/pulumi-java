@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="chainName")
-    private final @Nullable Input<String> chainName;
+      private final @Nullable Input<String> chainName;
 
     public Input<String> getChainName() {
         return this.chainName == null ? Input.empty() : this.chainName;
@@ -37,7 +37,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="guestFlush")
-    private final @Nullable Input<Boolean> guestFlush;
+      private final @Nullable Input<Boolean> guestFlush;
 
     public Input<Boolean> getGuestFlush() {
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
@@ -48,7 +48,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -59,7 +59,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
      * 
      */
     @InputImport(name="storageLocations")
-    private final @Nullable Input<List<String>> storageLocations;
+      private final @Nullable Input<List<String>> storageLocations;
 
     public Input<List<String>> getStorageLocations() {
         return this.storageLocations == null ? Input.empty() : this.storageLocations;
@@ -148,7 +148,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs ex
             this.storageLocations = Input.ofNullable(storageLocations);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesArgs(chainName, guestFlush, labels, storageLocations);
         }

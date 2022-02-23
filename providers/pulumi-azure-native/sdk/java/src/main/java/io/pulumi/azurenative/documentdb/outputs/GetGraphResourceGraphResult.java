@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 import io.pulumi.azurenative.documentdb.outputs.GraphResourceGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.GraphResourceGetPropertiesResponseResource;
 import io.pulumi.azurenative.documentdb.outputs.ManagedServiceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -190,7 +190,6 @@ public final class GetGraphResourceGraphResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGraphResourceGraphResult build() {
             return new GetGraphResourceGraphResult(id, identity, location, name, options, resource, tags, type);
         }

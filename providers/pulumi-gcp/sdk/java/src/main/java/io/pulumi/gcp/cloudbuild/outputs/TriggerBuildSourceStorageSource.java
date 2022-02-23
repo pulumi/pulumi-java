@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -101,7 +101,6 @@ public final class TriggerBuildSourceStorageSource {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public TriggerBuildSourceStorageSource build() {
             return new TriggerBuildSourceStorageSource(bucket, generation, object);
         }

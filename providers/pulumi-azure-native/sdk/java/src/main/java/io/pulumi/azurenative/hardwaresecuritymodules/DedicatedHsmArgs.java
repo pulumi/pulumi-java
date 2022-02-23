@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hardwaresecuritymodules;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.NetworkProfileArgs;
 import io.pulumi.azurenative.hardwaresecuritymodules.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<NetworkProfileArgs> networkProfile;
+        private final @Nullable Input<NetworkProfileArgs> networkProfile;
 
     public Input<NetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -56,7 +56,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -78,7 +78,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stampId")
-    private final @Nullable Input<String> stampId;
+        private final @Nullable Input<String> stampId;
 
     public Input<String> getStampId() {
         return this.stampId == null ? Input.empty() : this.stampId;
@@ -89,7 +89,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -249,7 +249,6 @@ public final class DedicatedHsmArgs extends io.pulumi.resources.ResourceArgs {
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public DedicatedHsmArgs build() {
             return new DedicatedHsmArgs(location, name, networkProfile, resourceGroupName, sku, stampId, tags, zones);
         }

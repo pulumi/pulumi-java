@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -207,7 +207,6 @@ public final class RerunTumblingWindowTriggerResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RerunTumblingWindowTriggerResponse build() {
             return new RerunTumblingWindowTriggerResponse(annotations, description, parentTrigger, requestedEndTime, requestedStartTime, rerunConcurrency, runtimeState, type);
         }

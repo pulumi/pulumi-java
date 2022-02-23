@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="attribute", required=true)
-    private final Input<String> attribute;
+      private final Input<String> attribute;
 
     public Input<String> getAttribute() {
         return this.attribute;
@@ -33,7 +33,7 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -92,7 +92,6 @@ public final class MatchingCriteriaArgs extends io.pulumi.resources.ResourceArgs
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public MatchingCriteriaArgs build() {
             return new MatchingCriteriaArgs(attribute, value);
         }

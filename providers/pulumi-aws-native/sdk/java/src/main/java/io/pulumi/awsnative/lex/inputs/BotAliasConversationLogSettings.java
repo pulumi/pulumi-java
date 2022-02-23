@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotAliasAudioLogSetting;
 import io.pulumi.awsnative.lex.inputs.BotAliasTextLogSetting;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,14 +21,14 @@ public final class BotAliasConversationLogSettings extends io.pulumi.resources.I
     public static final BotAliasConversationLogSettings Empty = new BotAliasConversationLogSettings();
 
     @InputImport(name="audioLogSettings")
-    private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
+        private final @Nullable List<BotAliasAudioLogSetting> audioLogSettings;
 
     public List<BotAliasAudioLogSetting> getAudioLogSettings() {
         return this.audioLogSettings == null ? List.of() : this.audioLogSettings;
     }
 
     @InputImport(name="textLogSettings")
-    private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
+        private final @Nullable List<BotAliasTextLogSetting> textLogSettings;
 
     public List<BotAliasTextLogSetting> getTextLogSettings() {
         return this.textLogSettings == null ? List.of() : this.textLogSettings;
@@ -77,7 +77,6 @@ public final class BotAliasConversationLogSettings extends io.pulumi.resources.I
             this.textLogSettings = textLogSettings;
             return this;
         }
-
         public BotAliasConversationLogSettings build() {
             return new BotAliasConversationLogSettings(audioLogSettings, textLogSettings);
         }

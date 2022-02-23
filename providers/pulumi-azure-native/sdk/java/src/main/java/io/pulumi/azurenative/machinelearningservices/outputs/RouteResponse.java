@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class RouteResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public RouteResponse build() {
             return new RouteResponse(path, port);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class InterconnectAttachmentPrivateInterconnectInfoGetArgs extends 
     public static final InterconnectAttachmentPrivateInterconnectInfoGetArgs Empty = new InterconnectAttachmentPrivateInterconnectInfoGetArgs();
 
     @InputImport(name="tag8021q")
-    private final @Nullable Input<Integer> tag8021q;
+        private final @Nullable Input<Integer> tag8021q;
 
     public Input<Integer> getTag8021q() {
         return this.tag8021q == null ? Input.empty() : this.tag8021q;
@@ -58,7 +58,6 @@ public final class InterconnectAttachmentPrivateInterconnectInfoGetArgs extends 
             this.tag8021q = Input.ofNullable(tag8021q);
             return this;
         }
-
         public InterconnectAttachmentPrivateInterconnectInfoGetArgs build() {
             return new InterconnectAttachmentPrivateInterconnectInfoGetArgs(tag8021q);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final String networkManagerName;
+        private final String networkManagerName;
 
     public String getNetworkManagerName() {
         return this.networkManagerName;
@@ -28,7 +28,7 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="scopeConnectionName", required=true)
-    private final String scopeConnectionName;
+        private final String scopeConnectionName;
 
     public String getScopeConnectionName() {
         return this.scopeConnectionName;
@@ -98,7 +98,6 @@ public final class GetScopeConnectionArgs extends io.pulumi.resources.InvokeArgs
             this.scopeConnectionName = Objects.requireNonNull(scopeConnectionName);
             return this;
         }
-
         public GetScopeConnectionArgs build() {
             return new GetScopeConnectionArgs(networkManagerName, resourceGroupName, scopeConnectionName);
         }

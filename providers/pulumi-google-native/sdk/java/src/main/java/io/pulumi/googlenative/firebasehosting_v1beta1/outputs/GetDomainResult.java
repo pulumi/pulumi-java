@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainProvisioningResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainRedirectResponse;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class GetDomainResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(domainName, domainRedirect, provisioning, site, status, updateTime);
         }

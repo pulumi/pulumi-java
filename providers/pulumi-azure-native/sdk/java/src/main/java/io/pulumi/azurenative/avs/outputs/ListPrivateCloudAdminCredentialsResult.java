@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class ListPrivateCloudAdminCredentialsResult {
             this.vcenterUsername = Objects.requireNonNull(vcenterUsername);
             return this;
         }
-
         public ListPrivateCloudAdminCredentialsResult build() {
             return new ListPrivateCloudAdminCredentialsResult(nsxtPassword, nsxtUsername, vcenterPassword, vcenterUsername);
         }

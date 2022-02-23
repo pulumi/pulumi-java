@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceHealthCheckConfigurationProtocol;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="healthyThreshold")
-    private final @Nullable Integer healthyThreshold;
+        private final @Nullable Integer healthyThreshold;
 
     public Optional<Integer> getHealthyThreshold() {
         return this.healthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.healthyThreshold);
@@ -36,7 +36,7 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Integer interval;
+        private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
@@ -47,7 +47,7 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -58,7 +58,7 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
+        private final @Nullable ServiceHealthCheckConfigurationProtocol protocol;
 
     public Optional<ServiceHealthCheckConfigurationProtocol> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -69,7 +69,7 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Integer timeout;
+        private final @Nullable Integer timeout;
 
     public Optional<Integer> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -80,7 +80,7 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="unhealthyThreshold")
-    private final @Nullable Integer unhealthyThreshold;
+        private final @Nullable Integer unhealthyThreshold;
 
     public Optional<Integer> getUnhealthyThreshold() {
         return this.unhealthyThreshold == null ? Optional.empty() : Optional.ofNullable(this.unhealthyThreshold);
@@ -169,7 +169,6 @@ public final class ServiceHealthCheckConfiguration extends io.pulumi.resources.I
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ServiceHealthCheckConfiguration build() {
             return new ServiceHealthCheckConfiguration(healthyThreshold, interval, path, protocol, timeout, unhealthyThreshold);
         }

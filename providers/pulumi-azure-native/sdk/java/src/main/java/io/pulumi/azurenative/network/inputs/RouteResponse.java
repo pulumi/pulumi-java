@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addressPrefix")
-    private final @Nullable String addressPrefix;
+        private final @Nullable String addressPrefix;
 
     public Optional<String> getAddressPrefix() {
         return this.addressPrefix == null ? Optional.empty() : Optional.ofNullable(this.addressPrefix);
@@ -35,7 +35,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -46,7 +46,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hasBgpOverride")
-    private final @Nullable Boolean hasBgpOverride;
+        private final @Nullable Boolean hasBgpOverride;
 
     public Optional<Boolean> getHasBgpOverride() {
         return this.hasBgpOverride == null ? Optional.empty() : Optional.ofNullable(this.hasBgpOverride);
@@ -57,7 +57,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -68,7 +68,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -79,7 +79,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHopIpAddress")
-    private final @Nullable String nextHopIpAddress;
+        private final @Nullable String nextHopIpAddress;
 
     public Optional<String> getNextHopIpAddress() {
         return this.nextHopIpAddress == null ? Optional.empty() : Optional.ofNullable(this.nextHopIpAddress);
@@ -90,7 +90,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nextHopType", required=true)
-    private final String nextHopType;
+        private final String nextHopType;
 
     public String getNextHopType() {
         return this.nextHopType;
@@ -101,7 +101,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -112,7 +112,7 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -231,7 +231,6 @@ public final class RouteResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public RouteResponse build() {
             return new RouteResponse(addressPrefix, etag, hasBgpOverride, id, name, nextHopIpAddress, nextHopType, provisioningState, type);
         }

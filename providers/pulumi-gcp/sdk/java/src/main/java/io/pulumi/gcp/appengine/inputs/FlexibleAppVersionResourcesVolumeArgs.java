@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="sizeGb", required=true)
-    private final Input<Integer> sizeGb;
+        private final Input<Integer> sizeGb;
 
     public Input<Integer> getSizeGb() {
         return this.sizeGb;
@@ -41,7 +41,7 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final Input<String> volumeType;
+        private final Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType;
@@ -115,7 +115,6 @@ public final class FlexibleAppVersionResourcesVolumeArgs extends io.pulumi.resou
             this.volumeType = Input.of(Objects.requireNonNull(volumeType));
             return this;
         }
-
         public FlexibleAppVersionResourcesVolumeArgs build() {
             return new FlexibleAppVersionResourcesVolumeArgs(name, sizeGb, volumeType);
         }

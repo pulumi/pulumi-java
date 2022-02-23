@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse extends 
      * 
      */
     @InputImport(name="gkeClusterName", required=true)
-    private final String gkeClusterName;
+      private final String gkeClusterName;
 
     public String getGkeClusterName() {
         return this.gkeClusterName;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -73,7 +73,6 @@ public final class ManagedZonePrivateVisibilityConfigGKEClusterResponse extends 
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigGKEClusterResponse build() {
             return new ManagedZonePrivateVisibilityConfigGKEClusterResponse(gkeClusterName, kind);
         }

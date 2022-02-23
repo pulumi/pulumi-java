@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -65,7 +65,6 @@ public final class GooglePrivacyDlpV2TransientCryptoKeyArgs extends io.pulumi.re
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public GooglePrivacyDlpV2TransientCryptoKeyArgs build() {
             return new GooglePrivacyDlpV2TransientCryptoKeyArgs(name);
         }

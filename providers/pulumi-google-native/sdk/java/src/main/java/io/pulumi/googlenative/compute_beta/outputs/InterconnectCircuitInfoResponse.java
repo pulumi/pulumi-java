@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class InterconnectCircuitInfoResponse {
             this.googleDemarcId = Objects.requireNonNull(googleDemarcId);
             return this;
         }
-
         public InterconnectCircuitInfoResponse build() {
             return new InterconnectCircuitInfoResponse(customerDemarcId, googleCircuitId, googleDemarcId);
         }

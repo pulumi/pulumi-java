@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customerEventName", required=true)
-    private final String customerEventName;
+        private final String customerEventName;
 
     public String getCustomerEventName() {
         return this.customerEventName;
@@ -28,7 +28,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testBaseAccountName", required=true)
-    private final String testBaseAccountName;
+        private final String testBaseAccountName;
 
     public String getTestBaseAccountName() {
         return this.testBaseAccountName;
@@ -98,7 +98,6 @@ public final class GetCustomerEventArgs extends io.pulumi.resources.InvokeArgs {
             this.testBaseAccountName = Objects.requireNonNull(testBaseAccountName);
             return this;
         }
-
         public GetCustomerEventArgs build() {
             return new GetCustomerEventArgs(customerEventName, resourceGroupName, testBaseAccountName);
         }

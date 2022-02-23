@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.WeekDayOfMonthArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="monthDay", required=true)
-    private final Input<Integer> monthDay;
+      private final Input<Integer> monthDay;
 
     public Input<Integer> getMonthDay() {
         return this.monthDay;
@@ -34,7 +34,7 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="weekDayOfMonth", required=true)
-    private final Input<WeekDayOfMonthArgs> weekDayOfMonth;
+      private final Input<WeekDayOfMonthArgs> weekDayOfMonth;
 
     public Input<WeekDayOfMonthArgs> getWeekDayOfMonth() {
         return this.weekDayOfMonth;
@@ -93,7 +93,6 @@ public final class MonthlyScheduleArgs extends io.pulumi.resources.ResourceArgs 
             this.weekDayOfMonth = Input.of(Objects.requireNonNull(weekDayOfMonth));
             return this;
         }
-
         public MonthlyScheduleArgs build() {
             return new MonthlyScheduleArgs(monthDay, weekDayOfMonth);
         }

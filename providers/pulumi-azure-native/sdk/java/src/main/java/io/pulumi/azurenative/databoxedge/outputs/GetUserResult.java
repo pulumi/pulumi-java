@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.ShareAccessRightResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class GetUserResult {
             this.userType = Objects.requireNonNull(userType);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(encryptedPassword, id, name, shareAccessRights, systemData, type, userType);
         }

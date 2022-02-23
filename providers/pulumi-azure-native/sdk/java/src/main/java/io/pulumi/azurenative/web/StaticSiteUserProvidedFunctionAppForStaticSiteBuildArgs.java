@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final Input<String> environmentName;
+        private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -31,7 +31,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="functionAppName")
-    private final @Nullable Input<String> functionAppName;
+        private final @Nullable Input<String> functionAppName;
 
     public Input<String> getFunctionAppName() {
         return this.functionAppName == null ? Input.empty() : this.functionAppName;
@@ -42,7 +42,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="functionAppRegion")
-    private final @Nullable Input<String> functionAppRegion;
+        private final @Nullable Input<String> functionAppRegion;
 
     public Input<String> getFunctionAppRegion() {
         return this.functionAppRegion == null ? Input.empty() : this.functionAppRegion;
@@ -53,7 +53,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="functionAppResourceId")
-    private final @Nullable Input<String> functionAppResourceId;
+        private final @Nullable Input<String> functionAppResourceId;
 
     public Input<String> getFunctionAppResourceId() {
         return this.functionAppResourceId == null ? Input.empty() : this.functionAppResourceId;
@@ -64,7 +64,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="isForced")
-    private final @Nullable Input<Boolean> isForced;
+        private final @Nullable Input<Boolean> isForced;
 
     public Input<Boolean> getIsForced() {
         return this.isForced == null ? Input.empty() : this.isForced;
@@ -75,7 +75,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -86,7 +86,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -97,7 +97,7 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -246,7 +246,6 @@ public final class StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs exten
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs build() {
             return new StaticSiteUserProvidedFunctionAppForStaticSiteBuildArgs(environmentName, functionAppName, functionAppRegion, functionAppResourceId, isForced, kind, name, resourceGroupName);
         }

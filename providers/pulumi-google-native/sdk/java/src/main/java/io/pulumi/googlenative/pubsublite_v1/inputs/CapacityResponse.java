@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publishMibPerSec", required=true)
-    private final Integer publishMibPerSec;
+      private final Integer publishMibPerSec;
 
     public Integer getPublishMibPerSec() {
         return this.publishMibPerSec;
@@ -32,7 +32,7 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscribeMibPerSec", required=true)
-    private final Integer subscribeMibPerSec;
+      private final Integer subscribeMibPerSec;
 
     public Integer getSubscribeMibPerSec() {
         return this.subscribeMibPerSec;
@@ -81,7 +81,6 @@ public final class CapacityResponse extends io.pulumi.resources.InvokeArgs {
             this.subscribeMibPerSec = Objects.requireNonNull(subscribeMibPerSec);
             return this;
         }
-
         public CapacityResponse build() {
             return new CapacityResponse(publishMibPerSec, subscribeMibPerSec);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -183,7 +183,6 @@ public final class GetDataSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(etag, id, kind, name, properties, tags, type);
         }

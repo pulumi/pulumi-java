@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -288,7 +288,6 @@ public final class GetPoolResult {
             this.utilizedThroughputMibps = Objects.requireNonNull(utilizedThroughputMibps);
             return this;
         }
-
         public GetPoolResult build() {
             return new GetPoolResult(id, location, name, poolId, provisioningState, qosType, serviceLevel, size, tags, totalThroughputMibps, type, utilizedThroughputMibps);
         }

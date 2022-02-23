@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.azurenative.servicebus.enums.AccessRights;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="authorizationRuleName")
-    private final @Nullable Input<String> authorizationRuleName;
+        private final @Nullable Input<String> authorizationRuleName;
 
     public Input<String> getAuthorizationRuleName() {
         return this.authorizationRuleName == null ? Input.empty() : this.authorizationRuleName;
@@ -32,7 +32,7 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -43,7 +43,7 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rights", required=true)
-    private final Input<List<AccessRights>> rights;
+        private final Input<List<AccessRights>> rights;
 
     public Input<List<AccessRights>> getRights() {
         return this.rights;
@@ -65,7 +65,7 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final Input<String> topicName;
+        private final Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName;
@@ -169,7 +169,6 @@ public final class TopicAuthorizationRuleArgs extends io.pulumi.resources.Resour
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }
-
         public TopicAuthorizationRuleArgs build() {
             return new TopicAuthorizationRuleArgs(authorizationRuleName, namespaceName, resourceGroupName, rights, topicName);
         }

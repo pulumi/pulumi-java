@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.BindingResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.RuleResponse;
@@ -142,7 +142,6 @@ public final class GetGameServerDeploymentIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetGameServerDeploymentIamPolicyResult build() {
             return new GetGameServerDeploymentIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs.CertificateSigningRequestCondition;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class CertificateSigningRequestStatus {
             this.conditions = conditions;
             return this;
         }
-
         public CertificateSigningRequestStatus build() {
             return new CertificateSigningRequestStatus(certificate, conditions);
         }

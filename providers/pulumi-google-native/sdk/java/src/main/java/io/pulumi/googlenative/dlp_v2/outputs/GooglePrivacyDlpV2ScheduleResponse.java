@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2ScheduleResponse {
             this.recurrencePeriodDuration = Objects.requireNonNull(recurrencePeriodDuration);
             return this;
         }
-
         public GooglePrivacyDlpV2ScheduleResponse build() {
             return new GooglePrivacyDlpV2ScheduleResponse(recurrencePeriodDuration);
         }

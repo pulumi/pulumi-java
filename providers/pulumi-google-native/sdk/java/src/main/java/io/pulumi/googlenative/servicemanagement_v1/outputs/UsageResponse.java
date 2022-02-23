@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.UsageRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class UsageResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public UsageResponse build() {
             return new UsageResponse(producerNotificationChannel, requirements, rules);
         }

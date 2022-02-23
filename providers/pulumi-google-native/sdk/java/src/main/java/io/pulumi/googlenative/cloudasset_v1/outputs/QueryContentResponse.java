@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.IamPolicyAnalysisQueryResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class QueryContentResponse {
             this.iamPolicyAnalysisQuery = Objects.requireNonNull(iamPolicyAnalysisQuery);
             return this;
         }
-
         public QueryContentResponse build() {
             return new QueryContentResponse(iamPolicyAnalysisQuery);
         }

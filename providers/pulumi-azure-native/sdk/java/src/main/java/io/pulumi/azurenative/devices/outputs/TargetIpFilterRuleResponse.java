@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class TargetIpFilterRuleResponse {
             this.target = target;
             return this;
         }
-
         public TargetIpFilterRuleResponse build() {
             return new TargetIpFilterRuleResponse(action, filterName, ipMask, target);
         }

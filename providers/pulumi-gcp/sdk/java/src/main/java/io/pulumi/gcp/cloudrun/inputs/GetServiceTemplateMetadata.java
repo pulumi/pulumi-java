@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -15,21 +15,21 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
     public static final GetServiceTemplateMetadata Empty = new GetServiceTemplateMetadata();
 
     @InputImport(name="annotations", required=true)
-    private final Map<String,String> annotations;
+        private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
         return this.annotations;
     }
 
     @InputImport(name="generation", required=true)
-    private final Integer generation;
+        private final Integer generation;
 
     public Integer getGeneration() {
         return this.generation;
     }
 
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+        private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -40,35 +40,35 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+        private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
     }
 
     @InputImport(name="resourceVersion", required=true)
-    private final String resourceVersion;
+        private final String resourceVersion;
 
     public String getResourceVersion() {
         return this.resourceVersion;
     }
 
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+        private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
     }
 
     @InputImport(name="uid", required=true)
-    private final String uid;
+        private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -177,7 +177,6 @@ public final class GetServiceTemplateMetadata extends io.pulumi.resources.Invoke
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetServiceTemplateMetadata build() {
             return new GetServiceTemplateMetadata(annotations, generation, labels, name, namespace, resourceVersion, selfLink, uid);
         }

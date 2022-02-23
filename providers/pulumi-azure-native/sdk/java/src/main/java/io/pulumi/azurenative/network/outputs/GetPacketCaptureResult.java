@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.PacketCaptureFilterResponse;
 import io.pulumi.azurenative.network.outputs.PacketCaptureStorageLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -249,7 +249,6 @@ public final class GetPacketCaptureResult {
             this.totalBytesPerSession = totalBytesPerSession;
             return this;
         }
-
         public GetPacketCaptureResult build() {
             return new GetPacketCaptureResult(bytesToCapturePerPacket, etag, filters, id, name, provisioningState, storageLocation, target, timeLimitInSeconds, totalBytesPerSession);
         }

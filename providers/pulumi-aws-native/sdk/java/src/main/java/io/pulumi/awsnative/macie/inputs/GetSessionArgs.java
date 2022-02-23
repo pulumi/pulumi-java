@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.macie.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="awsAccountId", required=true)
-    private final String awsAccountId;
+        private final String awsAccountId;
 
     public String getAwsAccountId() {
         return this.awsAccountId;
@@ -55,7 +55,6 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
             this.awsAccountId = Objects.requireNonNull(awsAccountId);
             return this;
         }
-
         public GetSessionArgs build() {
             return new GetSessionArgs(awsAccountId);
         }

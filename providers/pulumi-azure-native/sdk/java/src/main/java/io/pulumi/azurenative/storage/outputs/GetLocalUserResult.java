@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.PermissionScopeResponse;
 import io.pulumi.azurenative.storage.outputs.SshPublicKeyResponse;
 import io.pulumi.azurenative.storage.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -270,7 +270,6 @@ public final class GetLocalUserResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLocalUserResult build() {
             return new GetLocalUserResult(hasSharedKey, hasSshKey, hasSshPassword, homeDirectory, id, name, permissionScopes, sid, sshAuthorizedKeys, systemData, type);
         }

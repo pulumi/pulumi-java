@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.ApiEndpointHandlerResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.ScriptHandlerResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.StaticFilesHandlerResponse;
@@ -203,7 +203,6 @@ public final class UrlMapResponse {
             this.urlRegex = Objects.requireNonNull(urlRegex);
             return this;
         }
-
         public UrlMapResponse build() {
             return new UrlMapResponse(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

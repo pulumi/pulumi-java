@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
      * 
      */
     @InputImport(name="genericWebService")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> genericWebService;
 
     public Input<GoogleCloudDialogflowCxV3WebhookGenericWebServiceArgs> getGenericWebService() {
         return this.genericWebService == null ? Input.empty() : this.genericWebService;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+      private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs ex
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs build() {
             return new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigArgs(genericWebService, service);
         }

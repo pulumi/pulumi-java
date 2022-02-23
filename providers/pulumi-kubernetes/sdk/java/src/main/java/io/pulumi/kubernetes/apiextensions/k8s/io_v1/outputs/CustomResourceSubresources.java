@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceSubresourceScale;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class CustomResourceSubresources {
             this.status = status;
             return this;
         }
-
         public CustomResourceSubresources build() {
             return new CustomResourceSubresources(scale, status);
         }

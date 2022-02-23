@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MetricMetricDescriptorLabelGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class MetricMetricDescriptorLabelGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -44,7 +44,7 @@ public final class MetricMetricDescriptorLabelGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="valueType")
-    private final @Nullable Input<String> valueType;
+        private final @Nullable Input<String> valueType;
 
     public Input<String> getValueType() {
         return this.valueType == null ? Input.empty() : this.valueType;
@@ -118,7 +118,6 @@ public final class MetricMetricDescriptorLabelGetArgs extends io.pulumi.resource
             this.valueType = Input.ofNullable(valueType);
             return this;
         }
-
         public MetricMetricDescriptorLabelGetArgs build() {
             return new MetricMetricDescriptorLabelGetArgs(description, key, valueType);
         }

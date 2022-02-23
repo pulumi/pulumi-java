@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.workflows_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -243,7 +243,6 @@ public final class GetWorkflowResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetWorkflowResult build() {
             return new GetWorkflowResult(createTime, description, labels, name, revisionCreateTime, revisionId, serviceAccount, sourceContents, state, updateTime);
         }

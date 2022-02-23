@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.outputs.ReportAggregationResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDatasetConfigurationResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportFilterResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportGroupingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -145,7 +145,6 @@ public final class ReportDatasetResponse {
             this.grouping = grouping;
             return this;
         }
-
         public ReportDatasetResponse build() {
             return new ReportDatasetResponse(aggregation, configuration, filter, granularity, grouping);
         }

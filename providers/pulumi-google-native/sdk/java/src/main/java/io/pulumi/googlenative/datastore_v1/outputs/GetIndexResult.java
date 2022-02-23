@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastore_v1.outputs.GoogleDatastoreAdminV1IndexedPropertyResponse;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +160,6 @@ public final class GetIndexResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetIndexResult build() {
             return new GetIndexResult(ancestor, indexId, kind, project, properties, state);
         }

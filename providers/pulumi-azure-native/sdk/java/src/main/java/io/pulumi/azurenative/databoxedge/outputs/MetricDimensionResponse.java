@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class MetricDimensionResponse {
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public MetricDimensionResponse build() {
             return new MetricDimensionResponse(sourceName, sourceType);
         }

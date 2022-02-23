@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxPageFormParameterArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<CxPageFormParameterArgs>> parameters;
+        private final @Nullable Input<List<CxPageFormParameterArgs>> parameters;
 
     public Input<List<CxPageFormParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -64,7 +64,6 @@ public final class CxPageFormArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public CxPageFormArgs build() {
             return new CxPageFormArgs(parameters);
         }

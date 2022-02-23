@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudRunOpV2RevisionScalingResponse {
             this.minInstanceCount = Objects.requireNonNull(minInstanceCount);
             return this;
         }
-
         public GoogleCloudRunOpV2RevisionScalingResponse build() {
             return new GoogleCloudRunOpV2RevisionScalingResponse(maxInstanceCount, minInstanceCount);
         }

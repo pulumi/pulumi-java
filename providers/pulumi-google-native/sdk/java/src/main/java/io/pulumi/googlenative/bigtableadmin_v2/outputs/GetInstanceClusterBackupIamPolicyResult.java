@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetInstanceClusterBackupIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetInstanceClusterBackupIamPolicyResult build() {
             return new GetInstanceClusterBackupIamPolicyResult(auditConfigs, bindings, etag, version);
         }

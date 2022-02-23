@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class ConnectorMappingStructureResponse {
             this.propertyName = Objects.requireNonNull(propertyName);
             return this;
         }
-
         public ConnectorMappingStructureResponse build() {
             return new ConnectorMappingStructureResponse(columnName, customFormatSpecifier, isEncrypted, propertyName);
         }

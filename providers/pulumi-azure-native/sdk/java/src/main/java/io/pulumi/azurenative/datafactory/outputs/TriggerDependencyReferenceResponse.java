@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TriggerReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -77,7 +77,6 @@ public final class TriggerDependencyReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TriggerDependencyReferenceResponse build() {
             return new TriggerDependencyReferenceResponse(referenceTrigger, type);
         }

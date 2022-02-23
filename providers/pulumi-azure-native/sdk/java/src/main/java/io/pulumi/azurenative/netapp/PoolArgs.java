@@ -7,7 +7,7 @@ import io.pulumi.azurenative.netapp.enums.QosType;
 import io.pulumi.azurenative.netapp.enums.ServiceLevel;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="poolName")
-    private final @Nullable Input<String> poolName;
+        private final @Nullable Input<String> poolName;
 
     public Input<String> getPoolName() {
         return this.poolName == null ? Input.empty() : this.poolName;
@@ -57,7 +57,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="qosType")
-    private final @Nullable Input<Either<String,QosType>> qosType;
+        private final @Nullable Input<Either<String,QosType>> qosType;
 
     public Input<Either<String,QosType>> getQosType() {
         return this.qosType == null ? Input.empty() : this.qosType;
@@ -68,7 +68,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLevel", required=true)
-    private final Input<Either<String,ServiceLevel>> serviceLevel;
+        private final Input<Either<String,ServiceLevel>> serviceLevel;
 
     public Input<Either<String,ServiceLevel>> getServiceLevel() {
         return this.serviceLevel;
@@ -90,7 +90,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size", required=true)
-    private final Input<Double> size;
+        private final Input<Double> size;
 
     public Input<Double> getSize() {
         return this.size;
@@ -101,7 +101,7 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -250,7 +250,6 @@ public final class PoolArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PoolArgs build() {
             return new PoolArgs(accountName, location, poolName, qosType, resourceGroupName, serviceLevel, size, tags);
         }

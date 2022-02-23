@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.ApiConfigHandlerResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.AutomaticScalingResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.BasicScalingResponse;
@@ -828,7 +828,6 @@ public final class GetVersionResult {
             this.vpcAccessConnector = Objects.requireNonNull(vpcAccessConnector);
             return this;
         }
-
         public GetVersionResult build() {
             return new GetVersionResult(apiConfig, automaticScaling, basicScaling, betaSettings, buildEnvVariables, createTime, createdBy, defaultExpiration, deployment, diskUsageBytes, endpointsApiService, entrypoint, env, envVariables, errorHandlers, handlers, healthCheck, inboundServices, instanceClass, libraries, livenessCheck, manualScaling, name, network, nobuildFilesRegex, readinessCheck, resources, runtime, runtimeApiVersion, runtimeChannel, runtimeMainExecutablePath, serviceAccount, servingStatus, threadsafe, versionUrl, vm, vpcAccessConnector);
         }

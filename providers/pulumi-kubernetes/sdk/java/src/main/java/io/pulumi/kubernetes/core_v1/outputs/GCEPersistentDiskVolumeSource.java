@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class GCEPersistentDiskVolumeSource {
             this.readOnly = readOnly;
             return this;
         }
-
         public GCEPersistentDiskVolumeSource build() {
             return new GCEPersistentDiskVolumeSource(fsType, partition, pdName, readOnly);
         }

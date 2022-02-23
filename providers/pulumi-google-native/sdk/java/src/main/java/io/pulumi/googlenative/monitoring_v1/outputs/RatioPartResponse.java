@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AggregationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class RatioPartResponse {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public RatioPartResponse build() {
             return new RatioPartResponse(aggregation, filter);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.enums.AssetModelTypeName;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelAttribute;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelMetric;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelTransform;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -89,7 +89,6 @@ public final class AssetModelPropertyType {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public AssetModelPropertyType build() {
             return new AssetModelPropertyType(attribute, metric, transform, typeName);
         }

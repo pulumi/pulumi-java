@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.InputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.OutputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.SkuResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.TransformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -546,7 +546,6 @@ public final class GetStreamingJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingJobResult build() {
             return new GetStreamingJobResult(compatibilityLevel, createdDate, dataLocale, etag, eventsLateArrivalMaxDelayInSeconds, eventsOutOfOrderMaxDelayInSeconds, eventsOutOfOrderPolicy, functions, id, inputs, jobId, jobState, lastOutputEventTime, location, name, outputErrorPolicy, outputStartMode, outputStartTime, outputs, provisioningState, sku, tags, transformation, type);
         }

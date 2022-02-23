@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<DetectorModelActionArgs>> actions;
+        private final @Nullable Input<List<DetectorModelActionArgs>> actions;
 
     public Input<List<DetectorModelActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -36,7 +36,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="condition", required=true)
-    private final Input<String> condition;
+        private final Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition;
@@ -47,7 +47,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="eventName", required=true)
-    private final Input<String> eventName;
+        private final Input<String> eventName;
 
     public Input<String> getEventName() {
         return this.eventName;
@@ -58,7 +58,7 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="nextState", required=true)
-    private final Input<String> nextState;
+        private final Input<String> nextState;
 
     public Input<String> getNextState() {
         return this.nextState;
@@ -147,7 +147,6 @@ public final class DetectorModelTransitionEventArgs extends io.pulumi.resources.
             this.nextState = Input.of(Objects.requireNonNull(nextState));
             return this;
         }
-
         public DetectorModelTransitionEventArgs build() {
             return new DetectorModelTransitionEventArgs(actions, condition, eventName, nextState);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs;
@@ -22,7 +22,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="dailySchedule")
-    private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
+        private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> dailySchedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleArgs> getDailySchedule() {
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
@@ -34,7 +34,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="hourlySchedule")
-    private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
+        private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> hourlySchedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleHourlyScheduleArgs> getHourlySchedule() {
         return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
      * 
      */
     @InputImport(name="weeklySchedule")
-    private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
+        private final @Nullable Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> weeklySchedule;
 
     public Input<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleArgs> getWeeklySchedule() {
         return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
@@ -120,7 +120,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
             this.weeklySchedule = Input.ofNullable(weeklySchedule);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleArgs(dailySchedule, hourlySchedule, weeklySchedule);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.essentialcontacts_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetOrganizationContactArgs extends io.pulumi.resources.Invoke
     public static final GetOrganizationContactArgs Empty = new GetOrganizationContactArgs();
 
     @InputImport(name="contactId", required=true)
-    private final String contactId;
+      private final String contactId;
 
     public String getContactId() {
         return this.contactId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
@@ -69,7 +69,6 @@ public final class GetOrganizationContactArgs extends io.pulumi.resources.Invoke
             this.organizationId = Objects.requireNonNull(organizationId);
             return this;
         }
-
         public GetOrganizationContactArgs build() {
             return new GetOrganizationContactArgs(contactId, organizationId);
         }

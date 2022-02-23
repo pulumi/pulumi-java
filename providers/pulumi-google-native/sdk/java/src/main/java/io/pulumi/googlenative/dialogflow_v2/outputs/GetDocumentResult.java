@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2DocumentReloadStatusResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -225,7 +225,6 @@ public final class GetDocumentResult {
             this.rawContent = Objects.requireNonNull(rawContent);
             return this;
         }
-
         public GetDocumentResult build() {
             return new GetDocumentResult(contentUri, displayName, enableAutoReload, knowledgeTypes, latestReloadStatus, metadata, mimeType, name, rawContent);
         }

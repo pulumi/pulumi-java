@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -85,7 +85,6 @@ public final class AlertPolicyConditionConditionThresholdTrigger {
             this.percent = percent;
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdTrigger build() {
             return new AlertPolicyConditionConditionThresholdTrigger(count, percent);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -215,7 +215,6 @@ public final class TagField {
             this.timestampValue = timestampValue;
             return this;
         }
-
         public TagField build() {
             return new TagField(boolValue, displayName, doubleValue, enumValue, fieldName, order, stringValue, timestampValue);
         }

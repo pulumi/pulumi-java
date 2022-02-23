@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameterFillBehavior;
 import java.lang.Boolean;
 import java.lang.String;
@@ -170,7 +170,6 @@ public final class CxPageFormParameter {
             this.required = required;
             return this;
         }
-
         public CxPageFormParameter build() {
             return new CxPageFormParameter(displayName, entityType, fillBehavior, isList, redact, required);
         }

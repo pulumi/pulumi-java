@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.TargetHttpsProxyArgs;
 import io.pulumi.gcp.compute.inputs.TargetHttpsProxyState;
@@ -240,13 +240,6 @@ public class TargetHttpsProxy extends io.pulumi.resources.CustomResource {
         return this.urlMap;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TargetHttpsProxy(String name) {
-        super("gcp:compute/targetHttpsProxy:TargetHttpsProxy", name, TargetHttpsProxyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

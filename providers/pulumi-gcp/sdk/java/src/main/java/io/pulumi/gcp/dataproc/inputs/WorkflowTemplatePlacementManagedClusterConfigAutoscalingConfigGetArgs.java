@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<String> policy;
+        private final @Nullable Input<String> policy;
 
     public Input<String> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -62,7 +62,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfi
             this.policy = Input.ofNullable(policy);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs(policy);
         }

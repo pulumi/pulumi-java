@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="backendPort", required=true)
-    private final Integer backendPort;
+        private final Integer backendPort;
 
     public Integer getBackendPort() {
         return this.backendPort;
@@ -35,7 +35,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="frontendPort", required=true)
-    private final Integer frontendPort;
+        private final Integer frontendPort;
 
     public Integer getFrontendPort() {
         return this.frontendPort;
@@ -46,7 +46,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="probeProtocol", required=true)
-    private final String probeProtocol;
+        private final String probeProtocol;
 
     public String getProbeProtocol() {
         return this.probeProtocol;
@@ -57,7 +57,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="probeRequestPath")
-    private final @Nullable String probeRequestPath;
+        private final @Nullable String probeRequestPath;
 
     public Optional<String> getProbeRequestPath() {
         return this.probeRequestPath == null ? Optional.empty() : Optional.ofNullable(this.probeRequestPath);
@@ -68,7 +68,7 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+        private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -147,7 +147,6 @@ public final class LoadBalancingRuleResponse extends io.pulumi.resources.InvokeA
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public LoadBalancingRuleResponse build() {
             return new LoadBalancingRuleResponse(backendPort, frontendPort, probeProtocol, probeRequestPath, protocol);
         }

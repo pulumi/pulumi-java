@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="application", required=true)
-    private final Input<String> application;
+        private final Input<String> application;
 
     public Input<String> getApplication() {
         return this.application;
@@ -29,7 +29,7 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attributeGroup", required=true)
-    private final Input<String> attributeGroup;
+        private final Input<String> attributeGroup;
 
     public Input<String> getAttributeGroup() {
         return this.attributeGroup;
@@ -88,7 +88,6 @@ public final class AttributeGroupAssociationArgs extends io.pulumi.resources.Res
             this.attributeGroup = Input.of(Objects.requireNonNull(attributeGroup));
             return this;
         }
-
         public AttributeGroupAssociationArgs build() {
             return new AttributeGroupAssociationArgs(application, attributeGroup);
         }

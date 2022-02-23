@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.EndpointInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.StepResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class TraceResponse {
             this.steps = Objects.requireNonNull(steps);
             return this;
         }
-
         public TraceResponse build() {
             return new TraceResponse(endpointInfo, steps);
         }

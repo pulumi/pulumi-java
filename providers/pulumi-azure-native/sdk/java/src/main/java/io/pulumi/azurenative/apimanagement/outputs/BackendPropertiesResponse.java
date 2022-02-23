@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.BackendServiceFabricClusterPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class BackendPropertiesResponse {
             this.serviceFabricCluster = serviceFabricCluster;
             return this;
         }
-
         public BackendPropertiesResponse build() {
             return new BackendPropertiesResponse(serviceFabricCluster);
         }

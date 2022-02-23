@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CorsPolicyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.HttpFaultInjectionResponse;
@@ -207,7 +207,6 @@ public final class HttpRouteActionResponse {
             this.weightedBackendServices = Objects.requireNonNull(weightedBackendServices);
             return this;
         }
-
         public HttpRouteActionResponse build() {
             return new HttpRouteActionResponse(corsPolicy, faultInjectionPolicy, maxStreamDuration, requestMirrorPolicy, retryPolicy, timeout, urlRewrite, weightedBackendServices);
         }

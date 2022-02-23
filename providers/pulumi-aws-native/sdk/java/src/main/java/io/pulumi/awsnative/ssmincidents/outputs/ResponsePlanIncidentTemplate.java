@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanNotificationTargetItem;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -142,7 +142,6 @@ public final class ResponsePlanIncidentTemplate {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ResponsePlanIncidentTemplate build() {
             return new ResponsePlanIncidentTemplate(dedupeString, impact, notificationTargets, summary, title);
         }

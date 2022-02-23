@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class RelationshipTypeFieldMappingResponse {
             this.relatedProfileKeyProperty = Objects.requireNonNull(relatedProfileKeyProperty);
             return this;
         }
-
         public RelationshipTypeFieldMappingResponse build() {
             return new RelationshipTypeFieldMappingResponse(profileFieldName, relatedProfileKeyProperty);
         }

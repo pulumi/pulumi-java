@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DataSourceAmazonOpenSearchParameters {
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public DataSourceAmazonOpenSearchParameters build() {
             return new DataSourceAmazonOpenSearchParameters(domain);
         }

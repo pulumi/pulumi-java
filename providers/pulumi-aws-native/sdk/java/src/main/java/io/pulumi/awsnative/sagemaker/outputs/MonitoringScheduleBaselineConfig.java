@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleConstraintsResource;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleStatisticsResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class MonitoringScheduleBaselineConfig {
             this.statisticsResource = statisticsResource;
             return this;
         }
-
         public MonitoringScheduleBaselineConfig build() {
             return new MonitoringScheduleBaselineConfig(constraintsResource, statisticsResource);
         }

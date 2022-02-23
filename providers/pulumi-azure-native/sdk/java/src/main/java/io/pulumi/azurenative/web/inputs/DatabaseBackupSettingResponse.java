@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DatabaseBackupSettingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable String connectionString;
+        private final @Nullable String connectionString;
 
     public Optional<String> getConnectionString() {
         return this.connectionString == null ? Optional.empty() : Optional.ofNullable(this.connectionString);
@@ -35,7 +35,7 @@ public final class DatabaseBackupSettingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="connectionStringName")
-    private final @Nullable String connectionStringName;
+        private final @Nullable String connectionStringName;
 
     public Optional<String> getConnectionStringName() {
         return this.connectionStringName == null ? Optional.empty() : Optional.ofNullable(this.connectionStringName);
@@ -46,14 +46,14 @@ public final class DatabaseBackupSettingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="databaseType", required=true)
-    private final String databaseType;
+        private final String databaseType;
 
     public String getDatabaseType() {
         return this.databaseType;
     }
 
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -122,7 +122,6 @@ public final class DatabaseBackupSettingResponse extends io.pulumi.resources.Inv
             this.name = name;
             return this;
         }
-
         public DatabaseBackupSettingResponse build() {
             return new DatabaseBackupSettingResponse(connectionString, connectionStringName, databaseType, name);
         }

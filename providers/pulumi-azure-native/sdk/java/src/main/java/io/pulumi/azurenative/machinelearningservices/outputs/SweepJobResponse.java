@@ -14,7 +14,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ObjectiveResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TrialComponentResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TruncationSelectionPolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -476,7 +476,6 @@ public final class SweepJobResponse {
             this.trial = trial;
             return this;
         }
-
         public SweepJobResponse build() {
             return new SweepJobResponse(algorithm, compute, description, earlyTermination, experimentName, identity, interactionEndpoints, jobType, maxConcurrentTrials, maxTotalTrials, objective, output, priority, properties, provisioningState, searchSpace, status, tags, timeout, trial);
         }

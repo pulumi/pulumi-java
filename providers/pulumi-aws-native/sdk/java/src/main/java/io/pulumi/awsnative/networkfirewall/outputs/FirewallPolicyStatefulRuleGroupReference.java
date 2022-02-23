@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class FirewallPolicyStatefulRuleGroupReference {
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public FirewallPolicyStatefulRuleGroupReference build() {
             return new FirewallPolicyStatefulRuleGroupReference(priority, resourceArn);
         }

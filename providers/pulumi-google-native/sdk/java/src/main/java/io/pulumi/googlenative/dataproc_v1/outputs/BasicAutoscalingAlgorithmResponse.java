@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.BasicYarnAutoscalingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.SparkStandaloneAutoscalingConfigResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class BasicAutoscalingAlgorithmResponse {
             this.yarnConfig = Objects.requireNonNull(yarnConfig);
             return this;
         }
-
         public BasicAutoscalingAlgorithmResponse build() {
             return new BasicAutoscalingAlgorithmResponse(cooldownPeriod, sparkStandaloneConfig, yarnConfig);
         }

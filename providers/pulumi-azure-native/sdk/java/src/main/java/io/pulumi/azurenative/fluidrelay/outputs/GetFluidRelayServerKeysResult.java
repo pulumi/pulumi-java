@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.fluidrelay.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GetFluidRelayServerKeysResult {
             this.key2 = Objects.requireNonNull(key2);
             return this;
         }
-
         public GetFluidRelayServerKeysResult build() {
             return new GetFluidRelayServerKeysResult(key1, key2);
         }

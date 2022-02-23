@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class VersionResponse {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(availableFeatures, defaultVersion, type, versionNumber);
         }

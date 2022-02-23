@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class MembershipAuthority {
             this.issuer = Objects.requireNonNull(issuer);
             return this;
         }
-
         public MembershipAuthority build() {
             return new MembershipAuthority(issuer);
         }

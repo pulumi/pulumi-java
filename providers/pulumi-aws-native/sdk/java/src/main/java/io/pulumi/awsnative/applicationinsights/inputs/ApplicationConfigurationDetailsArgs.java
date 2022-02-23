@@ -11,7 +11,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationJMXPrometheusEx
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationWindowsEventArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="alarmMetrics")
-    private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
+        private final @Nullable Input<List<ApplicationAlarmMetricArgs>> alarmMetrics;
 
     public Input<List<ApplicationAlarmMetricArgs>> getAlarmMetrics() {
         return this.alarmMetrics == null ? Input.empty() : this.alarmMetrics;
@@ -41,7 +41,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="alarms")
-    private final @Nullable Input<List<ApplicationAlarmArgs>> alarms;
+        private final @Nullable Input<List<ApplicationAlarmArgs>> alarms;
 
     public Input<List<ApplicationAlarmArgs>> getAlarms() {
         return this.alarms == null ? Input.empty() : this.alarms;
@@ -52,7 +52,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hAClusterPrometheusExporter")
-    private final @Nullable Input<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter;
+        private final @Nullable Input<ApplicationHAClusterPrometheusExporterArgs> hAClusterPrometheusExporter;
 
     public Input<ApplicationHAClusterPrometheusExporterArgs> getHAClusterPrometheusExporter() {
         return this.hAClusterPrometheusExporter == null ? Input.empty() : this.hAClusterPrometheusExporter;
@@ -63,7 +63,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="hANAPrometheusExporter")
-    private final @Nullable Input<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter;
+        private final @Nullable Input<ApplicationHANAPrometheusExporterArgs> hANAPrometheusExporter;
 
     public Input<ApplicationHANAPrometheusExporterArgs> getHANAPrometheusExporter() {
         return this.hANAPrometheusExporter == null ? Input.empty() : this.hANAPrometheusExporter;
@@ -74,7 +74,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="jMXPrometheusExporter")
-    private final @Nullable Input<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter;
+        private final @Nullable Input<ApplicationJMXPrometheusExporterArgs> jMXPrometheusExporter;
 
     public Input<ApplicationJMXPrometheusExporterArgs> getJMXPrometheusExporter() {
         return this.jMXPrometheusExporter == null ? Input.empty() : this.jMXPrometheusExporter;
@@ -85,7 +85,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<List<ApplicationLogArgs>> logs;
+        private final @Nullable Input<List<ApplicationLogArgs>> logs;
 
     public Input<List<ApplicationLogArgs>> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -96,7 +96,7 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowsEvents")
-    private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
+        private final @Nullable Input<List<ApplicationWindowsEventArgs>> windowsEvents;
 
     public Input<List<ApplicationWindowsEventArgs>> getWindowsEvents() {
         return this.windowsEvents == null ? Input.empty() : this.windowsEvents;
@@ -230,7 +230,6 @@ public final class ApplicationConfigurationDetailsArgs extends io.pulumi.resourc
             this.windowsEvents = Input.ofNullable(windowsEvents);
             return this;
         }
-
         public ApplicationConfigurationDetailsArgs build() {
             return new ApplicationConfigurationDetailsArgs(alarmMetrics, alarms, hAClusterPrometheusExporter, hANAPrometheusExporter, jMXPrometheusExporter, logs, windowsEvents);
         }

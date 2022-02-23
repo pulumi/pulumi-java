@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareCbtProtectedDiskDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -396,7 +396,6 @@ public final class VMwareCbtMigrationDetailsResponse {
             this.vmwareMachineId = Objects.requireNonNull(vmwareMachineId);
             return this;
         }
-
         public VMwareCbtMigrationDetailsResponse build() {
             return new VMwareCbtMigrationDetailsResponse(dataMoverRunAsAccountId, instanceType, lastRecoveryPointReceived, licenseType, migrationRecoveryPointId, osType, protectedDisks, snapshotRunAsAccountId, targetAvailabilitySetId, targetBootDiagnosticsStorageAccountId, targetLocation, targetNetworkId, targetResourceGroupId, targetVmName, targetVmSize, vmNics, vmwareMachineId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanRunResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScheduleResponse;
@@ -353,7 +353,6 @@ public final class GetScanConfigResult {
             this.userAgent = Objects.requireNonNull(userAgent);
             return this;
         }
-
         public GetScanConfigResult build() {
             return new GetScanConfigResult(authentication, blacklistPatterns, displayName, exportToSecurityCommandCenter, ignoreHttpStatusErrors, latestRun, managedScan, maxQps, name, riskLevel, schedule, startingUrls, staticIpScan, targetPlatforms, userAgent);
         }

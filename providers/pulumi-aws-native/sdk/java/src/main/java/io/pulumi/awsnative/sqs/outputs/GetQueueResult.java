@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sqs.outputs;
 
 import io.pulumi.awsnative.sqs.outputs.QueueTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -354,7 +354,6 @@ public final class GetQueueResult {
             this.visibilityTimeout = visibilityTimeout;
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(arn, contentBasedDeduplication, deduplicationScope, delaySeconds, fifoThroughputLimit, kmsDataKeyReusePeriodSeconds, kmsMasterKeyId, maximumMessageSize, messageRetentionPeriod, queueUrl, receiveMessageWaitTimeSeconds, redriveAllowPolicy, redrivePolicy, tags, visibilityTimeout);
         }

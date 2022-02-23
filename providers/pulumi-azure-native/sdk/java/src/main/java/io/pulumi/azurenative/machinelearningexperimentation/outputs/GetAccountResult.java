@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningexperimentation.outputs;
 
 import io.pulumi.azurenative.machinelearningexperimentation.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -351,7 +351,6 @@ public final class GetAccountResult {
             this.vsoAccountId = Objects.requireNonNull(vsoAccountId);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, creationDate, description, discoveryUri, friendlyName, id, keyVaultId, location, name, provisioningState, seats, storageAccount, tags, type, vsoAccountId);
         }

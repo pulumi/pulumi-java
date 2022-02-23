@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.VpcPeeringConfigArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -32,35 +32,35 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="privateConnectionId", required=true)
-    private final Input<String> privateConnectionId;
+      private final Input<String> privateConnectionId;
 
     public Input<String> getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -71,7 +71,7 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vpcPeeringConfig")
-    private final @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig;
+      private final @Nullable Input<VpcPeeringConfigArgs> vpcPeeringConfig;
 
     public Input<VpcPeeringConfigArgs> getVpcPeeringConfig() {
         return this.vpcPeeringConfig == null ? Input.empty() : this.vpcPeeringConfig;
@@ -205,7 +205,6 @@ public final class PrivateConnectionArgs extends io.pulumi.resources.ResourceArg
             this.vpcPeeringConfig = Input.ofNullable(vpcPeeringConfig);
             return this;
         }
-
         public PrivateConnectionArgs build() {
             return new PrivateConnectionArgs(displayName, labels, location, privateConnectionId, project, requestId, vpcPeeringConfig);
         }

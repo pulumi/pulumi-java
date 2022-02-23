@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.LogAnalyticsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="logAnalytics")
-    private final @Nullable Input<LogAnalyticsArgs> logAnalytics;
+        private final @Nullable Input<LogAnalyticsArgs> logAnalytics;
 
     public Input<LogAnalyticsArgs> getLogAnalytics() {
         return this.logAnalytics == null ? Input.empty() : this.logAnalytics;
@@ -66,7 +66,6 @@ public final class ContainerGroupDiagnosticsArgs extends io.pulumi.resources.Res
             this.logAnalytics = Input.ofNullable(logAnalytics);
             return this;
         }
-
         public ContainerGroupDiagnosticsArgs build() {
             return new ContainerGroupDiagnosticsArgs(logAnalytics);
         }

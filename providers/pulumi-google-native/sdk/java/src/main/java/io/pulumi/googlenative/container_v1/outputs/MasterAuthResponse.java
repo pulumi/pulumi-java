@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.ClientCertificateConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class MasterAuthResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MasterAuthResponse build() {
             return new MasterAuthResponse(clientCertificate, clientCertificateConfig, clientKey, clusterCaCertificate, password, username);
         }

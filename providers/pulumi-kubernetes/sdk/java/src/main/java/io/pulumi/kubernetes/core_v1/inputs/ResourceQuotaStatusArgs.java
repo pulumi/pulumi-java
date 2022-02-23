@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hard")
-    private final @Nullable Input<Map<String,String>> hard;
+        private final @Nullable Input<Map<String,String>> hard;
 
     public Input<Map<String,String>> getHard() {
         return this.hard == null ? Input.empty() : this.hard;
@@ -35,7 +35,7 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="used")
-    private final @Nullable Input<Map<String,String>> used;
+        private final @Nullable Input<Map<String,String>> used;
 
     public Input<Map<String,String>> getUsed() {
         return this.used == null ? Input.empty() : this.used;
@@ -94,7 +94,6 @@ public final class ResourceQuotaStatusArgs extends io.pulumi.resources.ResourceA
             this.used = Input.ofNullable(used);
             return this;
         }
-
         public ResourceQuotaStatusArgs build() {
             return new ResourceQuotaStatusArgs(hard, used);
         }

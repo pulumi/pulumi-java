@@ -15,7 +15,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSProfileArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetStorageProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -34,7 +34,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="billingProfile")
-    private final @Nullable Input<BillingProfileArgs> billingProfile;
+        private final @Nullable Input<BillingProfileArgs> billingProfile;
 
     public Input<BillingProfileArgs> getBillingProfile() {
         return this.billingProfile == null ? Input.empty() : this.billingProfile;
@@ -45,7 +45,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="diagnosticsProfile")
-    private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
+        private final @Nullable Input<DiagnosticsProfileArgs> diagnosticsProfile;
 
     public Input<DiagnosticsProfileArgs> getDiagnosticsProfile() {
         return this.diagnosticsProfile == null ? Input.empty() : this.diagnosticsProfile;
@@ -56,7 +56,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="evictionPolicy")
-    private final @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
+        private final @Nullable Input<Either<String,VirtualMachineEvictionPolicyTypes>> evictionPolicy;
 
     public Input<Either<String,VirtualMachineEvictionPolicyTypes>> getEvictionPolicy() {
         return this.evictionPolicy == null ? Input.empty() : this.evictionPolicy;
@@ -67,7 +67,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="extensionProfile")
-    private final @Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
+        private final @Nullable Input<VirtualMachineScaleSetExtensionProfileArgs> extensionProfile;
 
     public Input<VirtualMachineScaleSetExtensionProfileArgs> getExtensionProfile() {
         return this.extensionProfile == null ? Input.empty() : this.extensionProfile;
@@ -78,7 +78,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<String> licenseType;
+        private final @Nullable Input<String> licenseType;
 
     public Input<String> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -89,7 +89,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
+        private final @Nullable Input<VirtualMachineScaleSetNetworkProfileArgs> networkProfile;
 
     public Input<VirtualMachineScaleSetNetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -100,7 +100,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile;
+        private final @Nullable Input<VirtualMachineScaleSetOSProfileArgs> osProfile;
 
     public Input<VirtualMachineScaleSetOSProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -111,7 +111,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
+        private final @Nullable Input<Either<String,VirtualMachinePriorityTypes>> priority;
 
     public Input<Either<String,VirtualMachinePriorityTypes>> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -122,7 +122,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scheduledEventsProfile")
-    private final @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
+        private final @Nullable Input<ScheduledEventsProfileArgs> scheduledEventsProfile;
 
     public Input<ScheduledEventsProfileArgs> getScheduledEventsProfile() {
         return this.scheduledEventsProfile == null ? Input.empty() : this.scheduledEventsProfile;
@@ -133,7 +133,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="securityProfile")
-    private final @Nullable Input<SecurityProfileArgs> securityProfile;
+        private final @Nullable Input<SecurityProfileArgs> securityProfile;
 
     public Input<SecurityProfileArgs> getSecurityProfile() {
         return this.securityProfile == null ? Input.empty() : this.securityProfile;
@@ -144,7 +144,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="storageProfile")
-    private final @Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
+        private final @Nullable Input<VirtualMachineScaleSetStorageProfileArgs> storageProfile;
 
     public Input<VirtualMachineScaleSetStorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -155,7 +155,7 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="userData")
-    private final @Nullable Input<String> userData;
+        private final @Nullable Input<String> userData;
 
     public Input<String> getUserData() {
         return this.userData == null ? Input.empty() : this.userData;
@@ -364,7 +364,6 @@ public final class VirtualMachineScaleSetVMProfileArgs extends io.pulumi.resourc
             this.userData = Input.ofNullable(userData);
             return this;
         }
-
         public VirtualMachineScaleSetVMProfileArgs build() {
             return new VirtualMachineScaleSetVMProfileArgs(billingProfile, diagnosticsProfile, evictionPolicy, extensionProfile, licenseType, networkProfile, osProfile, priority, scheduledEventsProfile, securityProfile, storageProfile, userData);
         }

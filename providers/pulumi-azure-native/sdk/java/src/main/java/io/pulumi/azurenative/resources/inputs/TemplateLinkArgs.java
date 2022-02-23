@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentVersion")
-    private final @Nullable Input<String> contentVersion;
+        private final @Nullable Input<String> contentVersion;
 
     public Input<String> getContentVersion() {
         return this.contentVersion == null ? Input.empty() : this.contentVersion;
@@ -34,7 +34,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -45,7 +45,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<String> queryString;
+        private final @Nullable Input<String> queryString;
 
     public Input<String> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -56,7 +56,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativePath")
-    private final @Nullable Input<String> relativePath;
+        private final @Nullable Input<String> relativePath;
 
     public Input<String> getRelativePath() {
         return this.relativePath == null ? Input.empty() : this.relativePath;
@@ -67,7 +67,7 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -171,7 +171,6 @@ public final class TemplateLinkArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public TemplateLinkArgs build() {
             return new TemplateLinkArgs(contentVersion, id, queryString, relativePath, uri);
         }

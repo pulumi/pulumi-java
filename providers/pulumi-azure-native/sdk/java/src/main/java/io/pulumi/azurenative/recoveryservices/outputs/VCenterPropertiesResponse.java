@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -267,7 +267,6 @@ public final class VCenterPropertiesResponse {
             this.runAsAccountId = runAsAccountId;
             return this;
         }
-
         public VCenterPropertiesResponse build() {
             return new VCenterPropertiesResponse(discoveryStatus, fabricArmResourceName, friendlyName, healthErrors, infrastructureId, internalId, ipAddress, lastHeartbeat, port, processServerId, runAsAccountId);
         }

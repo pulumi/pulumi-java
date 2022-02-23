@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.RegionBackendServiceIamPolicyArgs;
 import io.pulumi.googlenative.compute_beta.outputs.AuditConfigResponse;
@@ -96,13 +96,6 @@ public class RegionBackendServiceIamPolicy extends io.pulumi.resources.CustomRes
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionBackendServiceIamPolicy(String name) {
-        super("google-native:compute/beta:RegionBackendServiceIamPolicy", name, RegionBackendServiceIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

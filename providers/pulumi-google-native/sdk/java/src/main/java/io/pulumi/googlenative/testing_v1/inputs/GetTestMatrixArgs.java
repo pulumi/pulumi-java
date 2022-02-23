@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetTestMatrixArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTestMatrixArgs Empty = new GetTestMatrixArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="testMatrixId", required=true)
-    private final String testMatrixId;
+      private final String testMatrixId;
 
     public String getTestMatrixId() {
         return this.testMatrixId;
@@ -71,7 +71,6 @@ public final class GetTestMatrixArgs extends io.pulumi.resources.InvokeArgs {
             this.testMatrixId = Objects.requireNonNull(testMatrixId);
             return this;
         }
-
         public GetTestMatrixArgs build() {
             return new GetTestMatrixArgs(project, testMatrixId);
         }

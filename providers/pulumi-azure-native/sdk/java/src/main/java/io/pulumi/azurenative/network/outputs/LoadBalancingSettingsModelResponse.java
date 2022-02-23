@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class LoadBalancingSettingsModelResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LoadBalancingSettingsModelResponse build() {
             return new LoadBalancingSettingsModelResponse(additionalLatencyMilliseconds, id, name, resourceState, sampleSize, successfulSamplesRequired, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class IsNotNullAdvancedFilterResponse {
             this.operatorType = Objects.requireNonNull(operatorType);
             return this;
         }
-
         public IsNotNullAdvancedFilterResponse build() {
             return new IsNotNullAdvancedFilterResponse(key, operatorType);
         }

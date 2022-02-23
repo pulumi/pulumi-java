@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.DiffDiskSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualHardDiskResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetManagedDiskParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -250,7 +250,6 @@ public final class VirtualMachineScaleSetOSDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public VirtualMachineScaleSetOSDiskResponse build() {
             return new VirtualMachineScaleSetOSDiskResponse(caching, createOption, diffDiskSettings, diskSizeGB, image, managedDisk, name, osType, vhdContainers, writeAcceleratorEnabled);
         }

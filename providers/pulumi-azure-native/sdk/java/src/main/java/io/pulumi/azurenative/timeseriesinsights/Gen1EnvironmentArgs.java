@@ -8,7 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.inputs.SkuArgs;
 import io.pulumi.azurenative.timeseriesinsights.inputs.TimeSeriesIdPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataRetentionTime", required=true)
-    private final Input<String> dataRetentionTime;
+        private final Input<String> dataRetentionTime;
 
     public Input<String> getDataRetentionTime() {
         return this.dataRetentionTime;
@@ -36,7 +36,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentName")
-    private final @Nullable Input<String> environmentName;
+        private final @Nullable Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName == null ? Input.empty() : this.environmentName;
@@ -48,7 +48,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -59,7 +59,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,7 +70,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionKeyProperties")
-    private final @Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
+        private final @Nullable Input<List<TimeSeriesIdPropertyArgs>> partitionKeyProperties;
 
     public Input<List<TimeSeriesIdPropertyArgs>> getPartitionKeyProperties() {
         return this.partitionKeyProperties == null ? Input.empty() : this.partitionKeyProperties;
@@ -81,7 +81,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -92,7 +92,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<SkuArgs> sku;
+        private final Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku;
@@ -103,7 +103,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageLimitExceededBehavior")
-    private final @Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
+        private final @Nullable Input<Either<String,StorageLimitExceededBehavior>> storageLimitExceededBehavior;
 
     public Input<Either<String,StorageLimitExceededBehavior>> getStorageLimitExceededBehavior() {
         return this.storageLimitExceededBehavior == null ? Input.empty() : this.storageLimitExceededBehavior;
@@ -114,7 +114,7 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -278,7 +278,6 @@ public final class Gen1EnvironmentArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public Gen1EnvironmentArgs build() {
             return new Gen1EnvironmentArgs(dataRetentionTime, environmentName, kind, location, partitionKeyProperties, resourceGroupName, sku, storageLimitExceededBehavior, tags);
         }

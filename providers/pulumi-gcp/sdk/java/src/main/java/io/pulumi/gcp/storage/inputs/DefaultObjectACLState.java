@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="roleEntities")
-    private final @Nullable Input<List<String>> roleEntities;
+        private final @Nullable Input<List<String>> roleEntities;
 
     public Input<List<String>> getRoleEntities() {
         return this.roleEntities == null ? Input.empty() : this.roleEntities;
@@ -92,7 +92,6 @@ public final class DefaultObjectACLState extends io.pulumi.resources.ResourceArg
             this.roleEntities = Input.ofNullable(roleEntities);
             return this;
         }
-
         public DefaultObjectACLState build() {
             return new DefaultObjectACLState(bucket, roleEntities);
         }

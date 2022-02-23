@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class WeekDetailsResponse {
             this.weekdays = weekdays;
             return this;
         }
-
         public WeekDetailsResponse build() {
             return new WeekDetailsResponse(time, weekdays);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.maps;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.maps.inputs.GetPrivateAtlaseArgs;
 import io.pulumi.azurenative.maps.outputs.GetPrivateAtlaseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

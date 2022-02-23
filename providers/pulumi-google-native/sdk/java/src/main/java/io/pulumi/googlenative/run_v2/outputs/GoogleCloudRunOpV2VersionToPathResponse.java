@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudRunOpV2VersionToPathResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudRunOpV2VersionToPathResponse build() {
             return new GoogleCloudRunOpV2VersionToPathResponse(mode, path, version);
         }

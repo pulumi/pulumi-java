@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datafusion_v1.enums.AcceleratorAcceleratorType;
 import io.pulumi.googlenative.datafusion_v1.enums.AcceleratorState;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<AcceleratorAcceleratorType> acceleratorType;
+      private final @Nullable Input<AcceleratorAcceleratorType> acceleratorType;
 
     public Input<AcceleratorAcceleratorType> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -35,7 +35,7 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<AcceleratorState> state;
+      private final @Nullable Input<AcceleratorState> state;
 
     public Input<AcceleratorState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -94,7 +94,6 @@ public final class AcceleratorArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public AcceleratorArgs build() {
             return new AcceleratorArgs(acceleratorType, state);
         }

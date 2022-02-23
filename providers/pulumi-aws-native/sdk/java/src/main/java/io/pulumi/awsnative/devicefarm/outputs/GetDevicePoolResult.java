@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm.outputs;
 
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolRule;
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -116,7 +116,6 @@ public final class GetDevicePoolResult {
             this.tags = tags;
             return this;
         }
-
         public GetDevicePoolResult build() {
             return new GetDevicePoolResult(arn, description, maxDevices, name, rules, tags);
         }

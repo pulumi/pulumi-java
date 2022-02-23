@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class OwnerReferenceResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public OwnerReferenceResponse build() {
             return new OwnerReferenceResponse(apiVersion, blockOwnerDeletion, controller, kind, name, uid);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebTypeAppEngingIamBindingArgs;
 import io.pulumi.gcp.iap.inputs.WebTypeAppEngingIamBindingState;
@@ -148,13 +148,6 @@ public class WebTypeAppEngingIamBinding extends io.pulumi.resources.CustomResour
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WebTypeAppEngingIamBinding(String name) {
-        super("gcp:iap/webTypeAppEngingIamBinding:WebTypeAppEngingIamBinding", name, WebTypeAppEngingIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

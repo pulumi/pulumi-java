@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.enums.RepositoryEncryptionType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class RepositoryEncryptionConfiguration {
             this.kmsKey = kmsKey;
             return this;
         }
-
         public RepositoryEncryptionConfiguration build() {
             return new RepositoryEncryptionConfiguration(encryptionType, kmsKey);
         }

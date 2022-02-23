@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLocationEFSArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="locationArn", required=true)
-    private final String locationArn;
+        private final String locationArn;
 
     public String getLocationArn() {
         return this.locationArn;
@@ -55,7 +55,6 @@ public final class GetLocationEFSArgs extends io.pulumi.resources.InvokeArgs {
             this.locationArn = Objects.requireNonNull(locationArn);
             return this;
         }
-
         public GetLocationEFSArgs build() {
             return new GetLocationEFSArgs(locationArn);
         }

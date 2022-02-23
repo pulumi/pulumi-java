@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs;
@@ -33,7 +33,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="autoscalingConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> autoscalingConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigAutoscalingConfigGetArgs> getAutoscalingConfig() {
         return this.autoscalingConfig == null ? Input.empty() : this.autoscalingConfig;
@@ -44,7 +44,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> encryptionConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> encryptionConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigEncryptionConfigGetArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -55,7 +55,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="endpointConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> endpointConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> endpointConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigEndpointConfigGetArgs> getEndpointConfig() {
         return this.endpointConfig == null ? Input.empty() : this.endpointConfig;
@@ -66,7 +66,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="gceClusterConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> gceClusterConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigGetArgs> getGceClusterConfig() {
         return this.gceClusterConfig == null ? Input.empty() : this.gceClusterConfig;
@@ -77,7 +77,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="gkeClusterConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> gkeClusterConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> gkeClusterConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigGkeClusterConfigGetArgs> getGkeClusterConfig() {
         return this.gkeClusterConfig == null ? Input.empty() : this.gkeClusterConfig;
@@ -88,7 +88,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="initializationActions")
-    private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> initializationActions;
+        private final @Nullable Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> initializationActions;
 
     public Input<List<WorkflowTemplatePlacementManagedClusterConfigInitializationActionGetArgs>> getInitializationActions() {
         return this.initializationActions == null ? Input.empty() : this.initializationActions;
@@ -99,7 +99,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="lifecycleConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> lifecycleConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigLifecycleConfigGetArgs> getLifecycleConfig() {
         return this.lifecycleConfig == null ? Input.empty() : this.lifecycleConfig;
@@ -110,7 +110,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="masterConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> masterConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> masterConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigMasterConfigGetArgs> getMasterConfig() {
         return this.masterConfig == null ? Input.empty() : this.masterConfig;
@@ -121,7 +121,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="metastoreConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> metastoreConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> metastoreConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigMetastoreConfigGetArgs> getMetastoreConfig() {
         return this.metastoreConfig == null ? Input.empty() : this.metastoreConfig;
@@ -132,7 +132,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="secondaryWorkerConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> secondaryWorkerConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigSecondaryWorkerConfigGetArgs> getSecondaryWorkerConfig() {
         return this.secondaryWorkerConfig == null ? Input.empty() : this.secondaryWorkerConfig;
@@ -143,7 +143,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="securityConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> securityConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> securityConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs> getSecurityConfig() {
         return this.securityConfig == null ? Input.empty() : this.securityConfig;
@@ -154,7 +154,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="softwareConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> softwareConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> softwareConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigSoftwareConfigGetArgs> getSoftwareConfig() {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
@@ -165,7 +165,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="stagingBucket")
-    private final @Nullable Input<String> stagingBucket;
+        private final @Nullable Input<String> stagingBucket;
 
     public Input<String> getStagingBucket() {
         return this.stagingBucket == null ? Input.empty() : this.stagingBucket;
@@ -176,7 +176,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="tempBucket")
-    private final @Nullable Input<String> tempBucket;
+        private final @Nullable Input<String> tempBucket;
 
     public Input<String> getTempBucket() {
         return this.tempBucket == null ? Input.empty() : this.tempBucket;
@@ -187,7 +187,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> workerConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> workerConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigWorkerConfigGetArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -441,7 +441,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGetArgs extends 
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGetArgs(autoscalingConfig, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }

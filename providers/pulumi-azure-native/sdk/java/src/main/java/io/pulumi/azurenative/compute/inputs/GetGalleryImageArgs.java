@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="galleryImageName", required=true)
-    private final String galleryImageName;
+        private final String galleryImageName;
 
     public String getGalleryImageName() {
         return this.galleryImageName;
@@ -28,7 +28,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="galleryName", required=true)
-    private final String galleryName;
+        private final String galleryName;
 
     public String getGalleryName() {
         return this.galleryName;
@@ -39,7 +39,7 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetGalleryImageArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetGalleryImageArgs build() {
             return new GetGalleryImageArgs(galleryImageName, galleryName, resourceGroupName);
         }

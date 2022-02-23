@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.windowsiot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -267,7 +267,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(adminDomainName, billingDomainName, etag, id, location, name, notes, quantity, startDate, tags, type);
         }

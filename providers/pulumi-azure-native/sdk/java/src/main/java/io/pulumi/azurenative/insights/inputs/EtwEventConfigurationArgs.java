@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
     public static final EtwEventConfigurationArgs Empty = new EtwEventConfigurationArgs();
 
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
     @InputImport(name="id", required=true)
-    private final Input<Integer> id;
+        private final Input<Integer> id;
 
     public Input<Integer> getId() {
         return this.id;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -104,7 +104,6 @@ public final class EtwEventConfigurationArgs extends io.pulumi.resources.Resourc
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public EtwEventConfigurationArgs build() {
             return new EtwEventConfigurationArgs(filter, id, name);
         }

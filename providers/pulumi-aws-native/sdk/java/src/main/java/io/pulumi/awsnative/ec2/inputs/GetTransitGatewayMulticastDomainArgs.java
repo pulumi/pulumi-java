@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
-    private final String transitGatewayMulticastDomainId;
+        private final String transitGatewayMulticastDomainId;
 
     public String getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
@@ -55,7 +55,6 @@ public final class GetTransitGatewayMulticastDomainArgs extends io.pulumi.resour
             this.transitGatewayMulticastDomainId = Objects.requireNonNull(transitGatewayMulticastDomainId);
             return this;
         }
-
         public GetTransitGatewayMulticastDomainArgs build() {
             return new GetTransitGatewayMulticastDomainArgs(transitGatewayMulticastDomainId);
         }

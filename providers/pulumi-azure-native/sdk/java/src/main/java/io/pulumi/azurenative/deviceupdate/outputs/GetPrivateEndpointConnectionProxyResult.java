@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 
 import io.pulumi.azurenative.deviceupdate.outputs.RemotePrivateEndpointResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -204,7 +204,6 @@ public final class GetPrivateEndpointConnectionProxyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionProxyResult build() {
             return new GetPrivateEndpointConnectionProxyResult(eTag, id, name, provisioningState, remotePrivateEndpoint, status, systemData, type);
         }

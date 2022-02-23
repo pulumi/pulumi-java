@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AllocationSpecificSKUReservationArgs;
 import io.pulumi.googlenative.compute_v1.inputs.ShareSettingsArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -48,7 +48,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSettings")
-    private final @Nullable Input<ShareSettingsArgs> shareSettings;
+      private final @Nullable Input<ShareSettingsArgs> shareSettings;
 
     public Input<ShareSettingsArgs> getShareSettings() {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
@@ -59,7 +59,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservation")
-    private final @Nullable Input<AllocationSpecificSKUReservationArgs> specificReservation;
+      private final @Nullable Input<AllocationSpecificSKUReservationArgs> specificReservation;
 
     public Input<AllocationSpecificSKUReservationArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
@@ -70,7 +70,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specificReservationRequired")
-    private final @Nullable Input<Boolean> specificReservationRequired;
+      private final @Nullable Input<Boolean> specificReservationRequired;
 
     public Input<Boolean> getSpecificReservationRequired() {
         return this.specificReservationRequired == null ? Input.empty() : this.specificReservationRequired;
@@ -81,7 +81,7 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -200,7 +200,6 @@ public final class ReservationArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public ReservationArgs build() {
             return new ReservationArgs(description, name, shareSettings, specificReservation, specificReservationRequired, zone);
         }

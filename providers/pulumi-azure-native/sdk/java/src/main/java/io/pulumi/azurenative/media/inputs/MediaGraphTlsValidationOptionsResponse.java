@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="ignoreHostname", required=true)
-    private final Boolean ignoreHostname;
+        private final Boolean ignoreHostname;
 
     public Boolean getIgnoreHostname() {
         return this.ignoreHostname;
@@ -32,7 +32,7 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="ignoreSignature", required=true)
-    private final Boolean ignoreSignature;
+        private final Boolean ignoreSignature;
 
     public Boolean getIgnoreSignature() {
         return this.ignoreSignature;
@@ -81,7 +81,6 @@ public final class MediaGraphTlsValidationOptionsResponse extends io.pulumi.reso
             this.ignoreSignature = Objects.requireNonNull(ignoreSignature);
             return this;
         }
-
         public MediaGraphTlsValidationOptionsResponse build() {
             return new MediaGraphTlsValidationOptionsResponse(ignoreHostname, ignoreSignature);
         }

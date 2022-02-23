@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.PerfCounterDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.SyslogDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.WindowsEventLogDataSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<ExtensionDataSourceArgs>> extensions;
+        private final @Nullable Input<List<ExtensionDataSourceArgs>> extensions;
 
     public Input<List<ExtensionDataSourceArgs>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
@@ -39,7 +39,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="performanceCounters")
-    private final @Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters;
+        private final @Nullable Input<List<PerfCounterDataSourceArgs>> performanceCounters;
 
     public Input<List<PerfCounterDataSourceArgs>> getPerformanceCounters() {
         return this.performanceCounters == null ? Input.empty() : this.performanceCounters;
@@ -50,7 +50,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="syslog")
-    private final @Nullable Input<List<SyslogDataSourceArgs>> syslog;
+        private final @Nullable Input<List<SyslogDataSourceArgs>> syslog;
 
     public Input<List<SyslogDataSourceArgs>> getSyslog() {
         return this.syslog == null ? Input.empty() : this.syslog;
@@ -61,7 +61,7 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="windowsEventLogs")
-    private final @Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
+        private final @Nullable Input<List<WindowsEventLogDataSourceArgs>> windowsEventLogs;
 
     public Input<List<WindowsEventLogDataSourceArgs>> getWindowsEventLogs() {
         return this.windowsEventLogs == null ? Input.empty() : this.windowsEventLogs;
@@ -150,7 +150,6 @@ public final class DataCollectionRuleDataSourcesArgs extends io.pulumi.resources
             this.windowsEventLogs = Input.ofNullable(windowsEventLogs);
             return this;
         }
-
         public DataCollectionRuleDataSourcesArgs build() {
             return new DataCollectionRuleDataSourcesArgs(extensions, performanceCounters, syslog, windowsEventLogs);
         }

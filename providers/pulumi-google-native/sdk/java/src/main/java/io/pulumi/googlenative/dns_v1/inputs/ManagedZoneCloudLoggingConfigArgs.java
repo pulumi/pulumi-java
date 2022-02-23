@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+      private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -90,7 +90,6 @@ public final class ManagedZoneCloudLoggingConfigArgs extends io.pulumi.resources
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ManagedZoneCloudLoggingConfigArgs build() {
             return new ManagedZoneCloudLoggingConfigArgs(enableLogging, kind);
         }

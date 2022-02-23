@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.analysisservices.outputs;
 
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class IPv4FirewallSettingsResponse {
             this.firewallRules = firewallRules;
             return this;
         }
-
         public IPv4FirewallSettingsResponse build() {
             return new IPv4FirewallSettingsResponse(enablePowerBIService, firewallRules);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.outputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class KubeClientSettingsArgs {
             this.qps = qps;
             return this;
         }
-
         public KubeClientSettingsArgs build() {
             return new KubeClientSettingsArgs(burst, qps);
         }

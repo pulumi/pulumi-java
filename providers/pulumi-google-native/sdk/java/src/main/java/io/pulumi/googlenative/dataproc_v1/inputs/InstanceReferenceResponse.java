@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
@@ -32,7 +32,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final String instanceName;
+      private final String instanceName;
 
     public String getInstanceName() {
         return this.instanceName;
@@ -43,7 +43,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publicEciesKey", required=true)
-    private final String publicEciesKey;
+      private final String publicEciesKey;
 
     public String getPublicEciesKey() {
         return this.publicEciesKey;
@@ -54,7 +54,7 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final String publicKey;
+      private final String publicKey;
 
     public String getPublicKey() {
         return this.publicKey;
@@ -123,7 +123,6 @@ public final class InstanceReferenceResponse extends io.pulumi.resources.InvokeA
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public InstanceReferenceResponse build() {
             return new InstanceReferenceResponse(instanceId, instanceName, publicEciesKey, publicKey);
         }

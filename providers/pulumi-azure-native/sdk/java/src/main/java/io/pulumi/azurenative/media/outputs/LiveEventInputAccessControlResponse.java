@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.IPAccessControlResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class LiveEventInputAccessControlResponse {
             this.ip = ip;
             return this;
         }
-
         public LiveEventInputAccessControlResponse build() {
             return new LiveEventInputAccessControlResponse(ip);
         }

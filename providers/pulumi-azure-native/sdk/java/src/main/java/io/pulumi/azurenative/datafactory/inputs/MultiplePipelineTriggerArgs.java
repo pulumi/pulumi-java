@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -37,7 +37,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pipelines")
-    private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+        private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
         return this.pipelines == null ? Input.empty() : this.pipelines;
@@ -60,7 +60,7 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -149,7 +149,6 @@ public final class MultiplePipelineTriggerArgs extends io.pulumi.resources.Resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public MultiplePipelineTriggerArgs build() {
             return new MultiplePipelineTriggerArgs(annotations, description, pipelines, type);
         }

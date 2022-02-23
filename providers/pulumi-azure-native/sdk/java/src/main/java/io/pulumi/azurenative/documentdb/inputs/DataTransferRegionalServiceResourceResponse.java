@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -102,7 +102,6 @@ public final class DataTransferRegionalServiceResourceResponse extends io.pulumi
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataTransferRegionalServiceResourceResponse build() {
             return new DataTransferRegionalServiceResourceResponse(location, name, status);
         }

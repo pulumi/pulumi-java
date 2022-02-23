@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class AdmCredentialResponse {
             this.clientSecret = clientSecret;
             return this;
         }
-
         public AdmCredentialResponse build() {
             return new AdmCredentialResponse(authTokenUrl, clientId, clientSecret);
         }

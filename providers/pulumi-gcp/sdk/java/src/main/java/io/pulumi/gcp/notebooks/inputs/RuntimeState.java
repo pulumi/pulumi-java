@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeMetricGetArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigGetArgs;
@@ -25,7 +25,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessConfig")
-    private final @Nullable Input<RuntimeAccessConfigGetArgs> accessConfig;
+        private final @Nullable Input<RuntimeAccessConfigGetArgs> accessConfig;
 
     public Input<RuntimeAccessConfigGetArgs> getAccessConfig() {
         return this.accessConfig == null ? Input.empty() : this.accessConfig;
@@ -37,7 +37,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthState")
-    private final @Nullable Input<String> healthState;
+        private final @Nullable Input<String> healthState;
 
     public Input<String> getHealthState() {
         return this.healthState == null ? Input.empty() : this.healthState;
@@ -48,7 +48,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -59,7 +59,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metrics")
-    private final @Nullable Input<List<RuntimeMetricGetArgs>> metrics;
+        private final @Nullable Input<List<RuntimeMetricGetArgs>> metrics;
 
     public Input<List<RuntimeMetricGetArgs>> getMetrics() {
         return this.metrics == null ? Input.empty() : this.metrics;
@@ -70,7 +70,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -82,7 +82,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -94,7 +94,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareConfig")
-    private final @Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig;
+        private final @Nullable Input<RuntimeSoftwareConfigGetArgs> softwareConfig;
 
     public Input<RuntimeSoftwareConfigGetArgs> getSoftwareConfig() {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
@@ -105,7 +105,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -117,7 +117,7 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachine")
-    private final @Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine;
+        private final @Nullable Input<RuntimeVirtualMachineGetArgs> virtualMachine;
 
     public Input<RuntimeVirtualMachineGetArgs> getVirtualMachine() {
         return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
@@ -281,7 +281,6 @@ public final class RuntimeState extends io.pulumi.resources.ResourceArgs {
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }
-
         public RuntimeState build() {
             return new RuntimeState(accessConfig, healthState, location, metrics, name, project, softwareConfig, state, virtualMachine);
         }

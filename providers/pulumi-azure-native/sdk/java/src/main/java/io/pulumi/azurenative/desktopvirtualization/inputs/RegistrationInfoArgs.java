@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization.inputs;
 import io.pulumi.azurenative.desktopvirtualization.enums.RegistrationTokenOperation;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+        private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -36,7 +36,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="registrationTokenOperation")
-    private final @Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
+        private final @Nullable Input<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
     public Input<Either<String,RegistrationTokenOperation>> getRegistrationTokenOperation() {
         return this.registrationTokenOperation == null ? Input.empty() : this.registrationTokenOperation;
@@ -47,7 +47,7 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="token")
-    private final @Nullable Input<String> token;
+        private final @Nullable Input<String> token;
 
     public Input<String> getToken() {
         return this.token == null ? Input.empty() : this.token;
@@ -121,7 +121,6 @@ public final class RegistrationInfoArgs extends io.pulumi.resources.ResourceArgs
             this.token = Input.ofNullable(token);
             return this;
         }
-
         public RegistrationInfoArgs build() {
             return new RegistrationInfoArgs(expirationTime, registrationTokenOperation, token);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="keyReference", required=true)
-    private final String keyReference;
+      private final String keyReference;
 
     public String getKeyReference() {
         return this.keyReference;
@@ -59,7 +59,6 @@ public final class CryptoKeyConfigResponse extends io.pulumi.resources.InvokeArg
             this.keyReference = Objects.requireNonNull(keyReference);
             return this;
         }
-
         public CryptoKeyConfigResponse build() {
             return new CryptoKeyConfigResponse(keyReference);
         }

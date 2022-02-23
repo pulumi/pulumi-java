@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class ParameterValuesValueResponse {
             this.value = value;
             return this;
         }
-
         public ParameterValuesValueResponse build() {
             return new ParameterValuesValueResponse(value);
         }

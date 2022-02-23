@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
     public static final FlowLookoutMetricsDestinationPropertiesArgs Empty = new FlowLookoutMetricsDestinationPropertiesArgs();
 
     @InputImport(name="object")
-    private final @Nullable Input<String> object;
+        private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -58,7 +58,6 @@ public final class FlowLookoutMetricsDestinationPropertiesArgs extends io.pulumi
             this.object = Input.ofNullable(object);
             return this;
         }
-
         public FlowLookoutMetricsDestinationPropertiesArgs build() {
             return new FlowLookoutMetricsDestinationPropertiesArgs(object);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="time")
-    private final @Nullable Input<String> time;
+        private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -66,7 +66,6 @@ public final class DayDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.time = Input.ofNullable(time);
             return this;
         }
-
         public DayDetailsArgs build() {
             return new DayDetailsArgs(time);
         }

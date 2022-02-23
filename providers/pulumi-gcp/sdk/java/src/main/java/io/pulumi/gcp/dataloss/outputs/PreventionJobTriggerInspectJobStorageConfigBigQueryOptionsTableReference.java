@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,7 +97,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTab
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference build() {
             return new PreventionJobTriggerInspectJobStorageConfigBigQueryOptionsTableReference(datasetId, projectId, tableId);
         }

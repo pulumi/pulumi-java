@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.loadtestservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loadTestName", required=true)
-    private final String loadTestName;
+        private final String loadTestName;
 
     public String getLoadTestName() {
         return this.loadTestName;
@@ -28,7 +28,7 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetLoadTestArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLoadTestArgs build() {
             return new GetLoadTestArgs(loadTestName, resourceGroupName);
         }

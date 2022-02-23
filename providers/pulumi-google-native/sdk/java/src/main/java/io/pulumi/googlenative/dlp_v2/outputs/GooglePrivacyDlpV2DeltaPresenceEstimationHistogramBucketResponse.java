@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DeltaPresenceEstimationQuasiIdValuesResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketRespo
             this.minProbability = Objects.requireNonNull(minProbability);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, maxProbability, minProbability);
         }

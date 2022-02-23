@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable Input<String> objectId;
+        private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -34,7 +34,7 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upn")
-    private final @Nullable Input<String> upn;
+        private final @Nullable Input<String> upn;
 
     public Input<String> getUpn() {
         return this.upn == null ? Input.empty() : this.upn;
@@ -93,7 +93,6 @@ public final class PrincipalsArgs extends io.pulumi.resources.ResourceArgs {
             this.upn = Input.ofNullable(upn);
             return this;
         }
-
         public PrincipalsArgs build() {
             return new PrincipalsArgs(objectId, upn);
         }

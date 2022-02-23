@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<Boolean> arguments;
+      private final @Nullable Input<Boolean> arguments;
 
     public Input<Boolean> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -34,7 +34,7 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<Boolean> environment;
+      private final @Nullable Input<Boolean> environment;
 
     public Input<Boolean> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -45,7 +45,7 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materials")
-    private final @Nullable Input<Boolean> materials;
+      private final @Nullable Input<Boolean> materials;
 
     public Input<Boolean> getMaterials() {
         return this.materials == null ? Input.empty() : this.materials;
@@ -119,7 +119,6 @@ public final class CompletenessArgs extends io.pulumi.resources.ResourceArgs {
             this.materials = Input.ofNullable(materials);
             return this;
         }
-
         public CompletenessArgs build() {
             return new CompletenessArgs(arguments, environment, materials);
         }

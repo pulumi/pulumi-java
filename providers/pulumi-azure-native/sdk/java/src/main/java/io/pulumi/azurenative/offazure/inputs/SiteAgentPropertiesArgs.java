@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable Input<String> keyVaultId;
+        private final @Nullable Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
@@ -34,7 +34,7 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyVaultUri")
-    private final @Nullable Input<String> keyVaultUri;
+        private final @Nullable Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Input.empty() : this.keyVaultUri;
@@ -93,7 +93,6 @@ public final class SiteAgentPropertiesArgs extends io.pulumi.resources.ResourceA
             this.keyVaultUri = Input.ofNullable(keyVaultUri);
             return this;
         }
-
         public SiteAgentPropertiesArgs build() {
             return new SiteAgentPropertiesArgs(keyVaultId, keyVaultUri);
         }

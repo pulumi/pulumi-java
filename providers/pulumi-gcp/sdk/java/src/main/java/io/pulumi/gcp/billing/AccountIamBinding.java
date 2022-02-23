@@ -5,8 +5,8 @@ package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamBindingArgs;
 import io.pulumi.gcp.billing.inputs.AccountIamBindingState;
@@ -48,13 +48,6 @@ public class AccountIamBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AccountIamBinding(String name) {
-        super("gcp:billing/accountIamBinding:AccountIamBinding", name, AccountIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

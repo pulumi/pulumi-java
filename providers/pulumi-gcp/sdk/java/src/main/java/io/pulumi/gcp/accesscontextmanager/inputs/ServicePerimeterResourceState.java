@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="perimeterName")
-    private final @Nullable Input<String> perimeterName;
+        private final @Nullable Input<String> perimeterName;
 
     public Input<String> getPerimeterName() {
         return this.perimeterName == null ? Input.empty() : this.perimeterName;
@@ -32,7 +32,7 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+        private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -91,7 +91,6 @@ public final class ServicePerimeterResourceState extends io.pulumi.resources.Res
             this.resource = Input.ofNullable(resource);
             return this;
         }
-
         public ServicePerimeterResourceState build() {
             return new ServicePerimeterResourceState(perimeterName, resource);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GetManagerDevicePublicEncryptionKeyResult {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public GetManagerDevicePublicEncryptionKeyResult build() {
             return new GetManagerDevicePublicEncryptionKeyResult(key);
         }

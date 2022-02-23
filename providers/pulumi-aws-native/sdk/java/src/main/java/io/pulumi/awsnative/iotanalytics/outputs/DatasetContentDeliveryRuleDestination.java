@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetIotEventsDestinationConfiguration;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetS3DestinationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class DatasetContentDeliveryRuleDestination {
             this.s3DestinationConfiguration = s3DestinationConfiguration;
             return this;
         }
-
         public DatasetContentDeliveryRuleDestination build() {
             return new DatasetContentDeliveryRuleDestination(iotEventsDestinationConfiguration, s3DestinationConfiguration);
         }

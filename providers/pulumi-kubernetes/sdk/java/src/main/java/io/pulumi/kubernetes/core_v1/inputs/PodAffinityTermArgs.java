@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="labelSelector")
-    private final @Nullable Input<LabelSelectorArgs> labelSelector;
+        private final @Nullable Input<LabelSelectorArgs> labelSelector;
 
     public Input<LabelSelectorArgs> getLabelSelector() {
         return this.labelSelector == null ? Input.empty() : this.labelSelector;
@@ -36,7 +36,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaceSelector")
-    private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+        private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
 
     public Input<LabelSelectorArgs> getNamespaceSelector() {
         return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
@@ -47,7 +47,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaces")
-    private final @Nullable Input<List<String>> namespaces;
+        private final @Nullable Input<List<String>> namespaces;
 
     public Input<List<String>> getNamespaces() {
         return this.namespaces == null ? Input.empty() : this.namespaces;
@@ -58,7 +58,7 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="topologyKey", required=true)
-    private final Input<String> topologyKey;
+        private final Input<String> topologyKey;
 
     public Input<String> getTopologyKey() {
         return this.topologyKey;
@@ -147,7 +147,6 @@ public final class PodAffinityTermArgs extends io.pulumi.resources.ResourceArgs 
             this.topologyKey = Input.of(Objects.requireNonNull(topologyKey));
             return this;
         }
-
         public PodAffinityTermArgs build() {
             return new PodAffinityTermArgs(labelSelector, namespaceSelector, namespaces, topologyKey);
         }

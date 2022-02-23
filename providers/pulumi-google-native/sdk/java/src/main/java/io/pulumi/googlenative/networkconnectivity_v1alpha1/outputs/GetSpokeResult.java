@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.RouterApplianceInstanceResponse;
 import java.lang.String;
 import java.util.List;
@@ -266,7 +266,6 @@ public final class GetSpokeResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetSpokeResult build() {
             return new GetSpokeResult(createTime, description, hub, labels, linkedInterconnectAttachments, linkedRouterApplianceInstances, linkedVpnTunnels, name, state, uniqueId, updateTime);
         }

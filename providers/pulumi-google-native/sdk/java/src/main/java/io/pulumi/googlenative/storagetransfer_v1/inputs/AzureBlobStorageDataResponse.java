@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureCredentialsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="azureCredentials", required=true)
-    private final AzureCredentialsResponse azureCredentials;
+      private final AzureCredentialsResponse azureCredentials;
 
     public AzureCredentialsResponse getAzureCredentials() {
         return this.azureCredentials;
@@ -33,7 +33,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="container", required=true)
-    private final String container;
+      private final String container;
 
     public String getContainer() {
         return this.container;
@@ -44,7 +44,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -55,7 +55,7 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="storageAccount", required=true)
-    private final String storageAccount;
+      private final String storageAccount;
 
     public String getStorageAccount() {
         return this.storageAccount;
@@ -124,7 +124,6 @@ public final class AzureBlobStorageDataResponse extends io.pulumi.resources.Invo
             this.storageAccount = Objects.requireNonNull(storageAccount);
             return this;
         }
-
         public AzureBlobStorageDataResponse build() {
             return new AzureBlobStorageDataResponse(azureCredentials, container, path, storageAccount);
         }

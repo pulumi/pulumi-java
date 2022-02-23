@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EnvironmentVersionConfigResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class GetEnvironmentResult {
             this.versionConfigs = Objects.requireNonNull(versionConfigs);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(description, displayName, name, testCasesConfig, updateTime, versionConfigs);
         }

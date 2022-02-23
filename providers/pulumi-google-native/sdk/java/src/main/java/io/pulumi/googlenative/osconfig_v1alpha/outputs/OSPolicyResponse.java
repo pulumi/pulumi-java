@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceGroupResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class OSPolicyResponse {
             this.resourceGroups = Objects.requireNonNull(resourceGroups);
             return this;
         }
-
         public OSPolicyResponse build() {
             return new OSPolicyResponse(allowNoResourceGroupMatch, description, mode, resourceGroups);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class MigrationRequestPropertiesResponse {
             this.operation = operation;
             return this;
         }
-
         public MigrationRequestPropertiesResponse build() {
             return new MigrationRequestPropertiesResponse(migrationPath, operation);
         }

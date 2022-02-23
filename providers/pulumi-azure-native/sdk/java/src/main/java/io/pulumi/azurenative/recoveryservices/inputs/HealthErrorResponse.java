@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.InnerHealthErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="creationTimeUtc")
-    private final @Nullable String creationTimeUtc;
+        private final @Nullable String creationTimeUtc;
 
     public Optional<String> getCreationTimeUtc() {
         return this.creationTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.creationTimeUtc);
@@ -36,7 +36,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="customerResolvability")
-    private final @Nullable String customerResolvability;
+        private final @Nullable String customerResolvability;
 
     public Optional<String> getCustomerResolvability() {
         return this.customerResolvability == null ? Optional.empty() : Optional.ofNullable(this.customerResolvability);
@@ -47,7 +47,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="entityId")
-    private final @Nullable String entityId;
+        private final @Nullable String entityId;
 
     public Optional<String> getEntityId() {
         return this.entityId == null ? Optional.empty() : Optional.ofNullable(this.entityId);
@@ -58,7 +58,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorCategory")
-    private final @Nullable String errorCategory;
+        private final @Nullable String errorCategory;
 
     public Optional<String> getErrorCategory() {
         return this.errorCategory == null ? Optional.empty() : Optional.ofNullable(this.errorCategory);
@@ -69,7 +69,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorCode")
-    private final @Nullable String errorCode;
+        private final @Nullable String errorCode;
 
     public Optional<String> getErrorCode() {
         return this.errorCode == null ? Optional.empty() : Optional.ofNullable(this.errorCode);
@@ -80,7 +80,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorId")
-    private final @Nullable String errorId;
+        private final @Nullable String errorId;
 
     public Optional<String> getErrorId() {
         return this.errorId == null ? Optional.empty() : Optional.ofNullable(this.errorId);
@@ -91,7 +91,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorLevel")
-    private final @Nullable String errorLevel;
+        private final @Nullable String errorLevel;
 
     public Optional<String> getErrorLevel() {
         return this.errorLevel == null ? Optional.empty() : Optional.ofNullable(this.errorLevel);
@@ -102,7 +102,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorMessage")
-    private final @Nullable String errorMessage;
+        private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
@@ -113,7 +113,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorSource")
-    private final @Nullable String errorSource;
+        private final @Nullable String errorSource;
 
     public Optional<String> getErrorSource() {
         return this.errorSource == null ? Optional.empty() : Optional.ofNullable(this.errorSource);
@@ -124,7 +124,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errorType")
-    private final @Nullable String errorType;
+        private final @Nullable String errorType;
 
     public Optional<String> getErrorType() {
         return this.errorType == null ? Optional.empty() : Optional.ofNullable(this.errorType);
@@ -135,7 +135,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="innerHealthErrors")
-    private final @Nullable List<InnerHealthErrorResponse> innerHealthErrors;
+        private final @Nullable List<InnerHealthErrorResponse> innerHealthErrors;
 
     public List<InnerHealthErrorResponse> getInnerHealthErrors() {
         return this.innerHealthErrors == null ? List.of() : this.innerHealthErrors;
@@ -146,7 +146,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="possibleCauses")
-    private final @Nullable String possibleCauses;
+        private final @Nullable String possibleCauses;
 
     public Optional<String> getPossibleCauses() {
         return this.possibleCauses == null ? Optional.empty() : Optional.ofNullable(this.possibleCauses);
@@ -157,7 +157,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recommendedAction")
-    private final @Nullable String recommendedAction;
+        private final @Nullable String recommendedAction;
 
     public Optional<String> getRecommendedAction() {
         return this.recommendedAction == null ? Optional.empty() : Optional.ofNullable(this.recommendedAction);
@@ -168,7 +168,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recoveryProviderErrorMessage")
-    private final @Nullable String recoveryProviderErrorMessage;
+        private final @Nullable String recoveryProviderErrorMessage;
 
     public Optional<String> getRecoveryProviderErrorMessage() {
         return this.recoveryProviderErrorMessage == null ? Optional.empty() : Optional.ofNullable(this.recoveryProviderErrorMessage);
@@ -179,7 +179,7 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="summaryMessage")
-    private final @Nullable String summaryMessage;
+        private final @Nullable String summaryMessage;
 
     public Optional<String> getSummaryMessage() {
         return this.summaryMessage == null ? Optional.empty() : Optional.ofNullable(this.summaryMessage);
@@ -358,7 +358,6 @@ public final class HealthErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.summaryMessage = summaryMessage;
             return this;
         }
-
         public HealthErrorResponse build() {
             return new HealthErrorResponse(creationTimeUtc, customerResolvability, entityId, errorCategory, errorCode, errorId, errorLevel, errorMessage, errorSource, errorType, innerHealthErrors, possibleCauses, recommendedAction, recoveryProviderErrorMessage, summaryMessage);
         }

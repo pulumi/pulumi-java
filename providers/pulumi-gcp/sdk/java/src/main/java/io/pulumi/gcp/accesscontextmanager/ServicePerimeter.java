@@ -5,8 +5,8 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.ServicePerimeterArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterState;
@@ -261,13 +261,6 @@ public class ServicePerimeter extends io.pulumi.resources.CustomResource {
         return this.useExplicitDryRunSpec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ServicePerimeter(String name) {
-        super("gcp:accesscontextmanager/servicePerimeter:ServicePerimeter", name, ServicePerimeterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

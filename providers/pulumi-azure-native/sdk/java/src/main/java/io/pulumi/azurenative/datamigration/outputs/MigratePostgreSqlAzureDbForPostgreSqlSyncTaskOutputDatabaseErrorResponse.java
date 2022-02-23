@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.SyncMigrationDatabaseErrorEventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -122,7 +122,6 @@ public final class MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseEr
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse build() {
             return new MigratePostgreSqlAzureDbForPostgreSqlSyncTaskOutputDatabaseErrorResponse(errorMessage, events, id, resultType);
         }

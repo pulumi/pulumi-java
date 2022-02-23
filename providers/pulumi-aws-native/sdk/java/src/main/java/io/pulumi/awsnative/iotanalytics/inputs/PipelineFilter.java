@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class PipelineFilter extends io.pulumi.resources.InvokeArgs {
     public static final PipelineFilter Empty = new PipelineFilter();
 
     @InputImport(name="filter", required=true)
-    private final String filter;
+        private final String filter;
 
     public String getFilter() {
         return this.filter;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="next")
-    private final @Nullable String next;
+        private final @Nullable String next;
 
     public Optional<String> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
@@ -88,7 +88,6 @@ public final class PipelineFilter extends io.pulumi.resources.InvokeArgs {
             this.next = next;
             return this;
         }
-
         public PipelineFilter build() {
             return new PipelineFilter(filter, name, next);
         }

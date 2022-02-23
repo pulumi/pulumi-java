@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scopePath")
-    private final @Nullable String scopePath;
+        private final @Nullable String scopePath;
 
     public Optional<String> getScopePath() {
         return this.scopePath == null ? Optional.empty() : Optional.ofNullable(this.scopePath);
@@ -83,7 +83,6 @@ public final class AutomationScopeResponse extends io.pulumi.resources.InvokeArg
             this.scopePath = scopePath;
             return this;
         }
-
         public AutomationScopeResponse build() {
             return new AutomationScopeResponse(description, scopePath);
         }

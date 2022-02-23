@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.VirtualDirectoryResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="physicalPath")
-    private final @Nullable String physicalPath;
+        private final @Nullable String physicalPath;
 
     public Optional<String> getPhysicalPath() {
         return this.physicalPath == null ? Optional.empty() : Optional.ofNullable(this.physicalPath);
@@ -37,7 +37,7 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preloadEnabled")
-    private final @Nullable Boolean preloadEnabled;
+        private final @Nullable Boolean preloadEnabled;
 
     public Optional<Boolean> getPreloadEnabled() {
         return this.preloadEnabled == null ? Optional.empty() : Optional.ofNullable(this.preloadEnabled);
@@ -48,7 +48,7 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="virtualDirectories")
-    private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
+        private final @Nullable List<VirtualDirectoryResponse> virtualDirectories;
 
     public List<VirtualDirectoryResponse> getVirtualDirectories() {
         return this.virtualDirectories == null ? List.of() : this.virtualDirectories;
@@ -59,7 +59,7 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="virtualPath")
-    private final @Nullable String virtualPath;
+        private final @Nullable String virtualPath;
 
     public Optional<String> getVirtualPath() {
         return this.virtualPath == null ? Optional.empty() : Optional.ofNullable(this.virtualPath);
@@ -128,7 +128,6 @@ public final class VirtualApplicationResponse extends io.pulumi.resources.Invoke
             this.virtualPath = virtualPath;
             return this;
         }
-
         public VirtualApplicationResponse build() {
             return new VirtualApplicationResponse(physicalPath, preloadEnabled, virtualDirectories, virtualPath);
         }

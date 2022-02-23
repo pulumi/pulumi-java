@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebAnonymousAuthenticationResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebBasicAuthenticationResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebClientCertificateAuthenticationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -170,7 +170,6 @@ public final class WebLinkedServiceResponse {
             this.typeProperties = Objects.requireNonNull(typeProperties);
             return this;
         }
-
         public WebLinkedServiceResponse build() {
             return new WebLinkedServiceResponse(annotations, connectVia, description, parameters, type, typeProperties);
         }

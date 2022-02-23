@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.IamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class IamMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<IamMemberConditionGetArgs> condition;
+        private final @Nullable Input<IamMemberConditionGetArgs> condition;
 
     public Input<IamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="datasetId")
-    private final @Nullable Input<String> datasetId;
+        private final @Nullable Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId == null ? Input.empty() : this.datasetId;
@@ -39,14 +39,14 @@ public final class IamMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -58,7 +58,7 @@ public final class IamMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -71,14 +71,14 @@ public final class IamMemberState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
     }
 
     @InputImport(name="tableId")
-    private final @Nullable Input<String> tableId;
+        private final @Nullable Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId == null ? Input.empty() : this.tableId;
@@ -212,7 +212,6 @@ public final class IamMemberState extends io.pulumi.resources.ResourceArgs {
             this.tableId = Input.ofNullable(tableId);
             return this;
         }
-
         public IamMemberState build() {
             return new IamMemberState(condition, datasetId, etag, member, project, role, tableId);
         }

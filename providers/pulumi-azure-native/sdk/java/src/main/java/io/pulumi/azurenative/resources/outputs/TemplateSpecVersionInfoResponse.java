@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class TemplateSpecVersionInfoResponse {
             this.timeModified = Objects.requireNonNull(timeModified);
             return this;
         }
-
         public TemplateSpecVersionInfoResponse build() {
             return new TemplateSpecVersionInfoResponse(description, timeCreated, timeModified);
         }

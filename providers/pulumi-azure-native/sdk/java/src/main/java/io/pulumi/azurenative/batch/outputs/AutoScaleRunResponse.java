@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.AutoScaleRunErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +82,6 @@ public final class AutoScaleRunResponse {
             this.results = results;
             return this;
         }
-
         public AutoScaleRunResponse build() {
             return new AutoScaleRunResponse(error, evaluationTime, results);
         }

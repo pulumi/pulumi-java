@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.MySqlReplicaConfigurationResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class ReplicaConfigurationResponse {
             this.mysqlReplicaConfiguration = Objects.requireNonNull(mysqlReplicaConfiguration);
             return this;
         }
-
         public ReplicaConfigurationResponse build() {
             return new ReplicaConfigurationResponse(failoverTarget, kind, mysqlReplicaConfiguration);
         }

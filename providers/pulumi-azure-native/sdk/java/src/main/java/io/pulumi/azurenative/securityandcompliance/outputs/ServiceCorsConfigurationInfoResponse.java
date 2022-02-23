@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityandcompliance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class ServiceCorsConfigurationInfoResponse {
             this.origins = origins;
             return this;
         }
-
         public ServiceCorsConfigurationInfoResponse build() {
             return new ServiceCorsConfigurationInfoResponse(allowCredentials, headers, maxAge, methods, origins);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetEdgeOutputConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.DeviceFleetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceFleetName")
-    private final @Nullable Input<String> deviceFleetName;
+        private final @Nullable Input<String> deviceFleetName;
 
     public Input<String> getDeviceFleetName() {
         return this.deviceFleetName == null ? Input.empty() : this.deviceFleetName;
@@ -44,7 +44,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputConfig", required=true)
-    private final Input<DeviceFleetEdgeOutputConfigArgs> outputConfig;
+        private final Input<DeviceFleetEdgeOutputConfigArgs> outputConfig;
 
     public Input<DeviceFleetEdgeOutputConfigArgs> getOutputConfig() {
         return this.outputConfig;
@@ -55,7 +55,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -66,7 +66,7 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DeviceFleetTagArgs>> tags;
+        private final @Nullable Input<List<DeviceFleetTagArgs>> tags;
 
     public Input<List<DeviceFleetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -170,7 +170,6 @@ public final class DeviceFleetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeviceFleetArgs build() {
             return new DeviceFleetArgs(description, deviceFleetName, outputConfig, roleArn, tags);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointSourceMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetRestorePointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRestorePointResult build() {
             return new GetRestorePointResult(consistencyMode, excludeDisks, id, name, provisioningState, sourceMetadata, timeCreated, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.PublicKeyConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -14,7 +14,7 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
     public static final PublicKeyArgs Empty = new PublicKeyArgs();
 
     @InputImport(name="publicKeyConfig", required=true)
-    private final Input<PublicKeyConfigArgs> publicKeyConfig;
+        private final Input<PublicKeyConfigArgs> publicKeyConfig;
 
     public Input<PublicKeyConfigArgs> getPublicKeyConfig() {
         return this.publicKeyConfig;
@@ -57,7 +57,6 @@ public final class PublicKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.publicKeyConfig = Input.of(Objects.requireNonNull(publicKeyConfig));
             return this;
         }
-
         public PublicKeyArgs build() {
             return new PublicKeyArgs(publicKeyConfig);
         }

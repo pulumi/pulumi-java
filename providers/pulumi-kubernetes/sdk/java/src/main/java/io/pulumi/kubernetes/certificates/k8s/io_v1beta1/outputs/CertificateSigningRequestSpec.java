@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -197,7 +197,6 @@ public final class CertificateSigningRequestSpec {
             this.username = username;
             return this;
         }
-
         public CertificateSigningRequestSpec build() {
             return new CertificateSigningRequestSpec(extra, groups, request, signerName, uid, usages, username);
         }

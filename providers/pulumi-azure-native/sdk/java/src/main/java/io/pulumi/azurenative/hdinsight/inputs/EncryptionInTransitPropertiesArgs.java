@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="isEncryptionInTransitEnabled")
-    private final @Nullable Input<Boolean> isEncryptionInTransitEnabled;
+        private final @Nullable Input<Boolean> isEncryptionInTransitEnabled;
 
     public Input<Boolean> getIsEncryptionInTransitEnabled() {
         return this.isEncryptionInTransitEnabled == null ? Input.empty() : this.isEncryptionInTransitEnabled;
@@ -66,7 +66,6 @@ public final class EncryptionInTransitPropertiesArgs extends io.pulumi.resources
             this.isEncryptionInTransitEnabled = Input.ofNullable(isEncryptionInTransitEnabled);
             return this;
         }
-
         public EncryptionInTransitPropertiesArgs build() {
             return new EncryptionInTransitPropertiesArgs(isEncryptionInTransitEnabled);
         }

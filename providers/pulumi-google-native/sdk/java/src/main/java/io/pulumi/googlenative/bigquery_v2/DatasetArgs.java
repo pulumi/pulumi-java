@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessItemArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetReferenceArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetTagsItemArgs;
@@ -26,7 +26,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="access")
-    private final @Nullable Input<List<DatasetAccessItemArgs>> access;
+      private final @Nullable Input<List<DatasetAccessItemArgs>> access;
 
     public Input<List<DatasetAccessItemArgs>> getAccess() {
         return this.access == null ? Input.empty() : this.access;
@@ -37,14 +37,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetReference")
-    private final @Nullable Input<DatasetReferenceArgs> datasetReference;
+      private final @Nullable Input<DatasetReferenceArgs> datasetReference;
 
     public Input<DatasetReferenceArgs> getDatasetReference() {
         return this.datasetReference == null ? Input.empty() : this.datasetReference;
     }
 
     @InputImport(name="defaultEncryptionConfiguration")
-    private final @Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
+      private final @Nullable Input<EncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     public Input<EncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
@@ -55,7 +55,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPartitionExpirationMs")
-    private final @Nullable Input<String> defaultPartitionExpirationMs;
+      private final @Nullable Input<String> defaultPartitionExpirationMs;
 
     public Input<String> getDefaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
@@ -66,7 +66,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTableExpirationMs")
-    private final @Nullable Input<String> defaultTableExpirationMs;
+      private final @Nullable Input<String> defaultTableExpirationMs;
 
     public Input<String> getDefaultTableExpirationMs() {
         return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
@@ -77,7 +77,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -88,7 +88,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+      private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -99,7 +99,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isCaseInsensitive")
-    private final @Nullable Input<Boolean> isCaseInsensitive;
+      private final @Nullable Input<Boolean> isCaseInsensitive;
 
     public Input<Boolean> getIsCaseInsensitive() {
         return this.isCaseInsensitive == null ? Input.empty() : this.isCaseInsensitive;
@@ -110,7 +110,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -121,14 +121,14 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -139,7 +139,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DatasetTagsItemArgs>> tags;
+      private final @Nullable Input<List<DatasetTagsItemArgs>> tags;
 
     public Input<List<DatasetTagsItemArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -348,7 +348,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DatasetArgs build() {
             return new DatasetArgs(access, datasetReference, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, friendlyName, isCaseInsensitive, labels, location, project, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.groundstation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class ConfigS3RecordingConfig {
             this.roleArn = roleArn;
             return this;
         }
-
         public ConfigS3RecordingConfig build() {
             return new ConfigS3RecordingConfig(bucketArn, prefix, roleArn);
         }

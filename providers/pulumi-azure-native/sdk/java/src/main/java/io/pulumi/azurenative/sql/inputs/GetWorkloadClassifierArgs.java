@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="workloadClassifierName", required=true)
-    private final String workloadClassifierName;
+        private final String workloadClassifierName;
 
     public String getWorkloadClassifierName() {
         return this.workloadClassifierName;
@@ -61,7 +61,7 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="workloadGroupName", required=true)
-    private final String workloadGroupName;
+        private final String workloadGroupName;
 
     public String getWorkloadGroupName() {
         return this.workloadGroupName;
@@ -140,7 +140,6 @@ public final class GetWorkloadClassifierArgs extends io.pulumi.resources.InvokeA
             this.workloadGroupName = Objects.requireNonNull(workloadGroupName);
             return this;
         }
-
         public GetWorkloadClassifierArgs build() {
             return new GetWorkloadClassifierArgs(databaseName, resourceGroupName, serverName, workloadClassifierName, workloadGroupName);
         }

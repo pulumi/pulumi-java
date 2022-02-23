@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2CryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
      * 
      */
     @InputImport(name="commonAlphabet", required=true)
-    private final String commonAlphabet;
+      private final String commonAlphabet;
 
     public String getCommonAlphabet() {
         return this.commonAlphabet;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
      * 
      */
     @InputImport(name="context", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse context;
+      private final GooglePrivacyDlpV2FieldIdResponse context;
 
     public GooglePrivacyDlpV2FieldIdResponse getContext() {
         return this.context;
@@ -47,7 +47,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-    private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
+      private final GooglePrivacyDlpV2CryptoKeyResponse cryptoKey;
 
     public GooglePrivacyDlpV2CryptoKeyResponse getCryptoKey() {
         return this.cryptoKey;
@@ -58,7 +58,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
      * 
      */
     @InputImport(name="customAlphabet", required=true)
-    private final String customAlphabet;
+      private final String customAlphabet;
 
     public String getCustomAlphabet() {
         return this.customAlphabet;
@@ -69,7 +69,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
      * 
      */
     @InputImport(name="radix", required=true)
-    private final Integer radix;
+      private final Integer radix;
 
     public Integer getRadix() {
         return this.radix;
@@ -80,7 +80,7 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
      * 
      */
     @InputImport(name="surrogateInfoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse surrogateInfoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getSurrogateInfoType() {
         return this.surrogateInfoType;
@@ -169,7 +169,6 @@ public final class GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse extends i
             this.surrogateInfoType = Objects.requireNonNull(surrogateInfoType);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse build() {
             return new GooglePrivacyDlpV2CryptoReplaceFfxFpeConfigResponse(commonAlphabet, context, cryptoKey, customAlphabet, radix, surrogateInfoType);
         }

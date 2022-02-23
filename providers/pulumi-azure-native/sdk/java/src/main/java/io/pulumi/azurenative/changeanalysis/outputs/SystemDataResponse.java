@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.changeanalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class SystemDataResponse {
             this.lastModifiedByType = Objects.requireNonNull(lastModifiedByType);
             return this;
         }
-
         public SystemDataResponse build() {
             return new SystemDataResponse(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestIssueResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestSuiteOverviewResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.TestTimingResponse;
@@ -25,7 +25,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="testIssues", required=true)
-    private final List<TestIssueResponse> testIssues;
+      private final List<TestIssueResponse> testIssues;
 
     public List<TestIssueResponse> getTestIssues() {
         return this.testIssues;
@@ -36,7 +36,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="testSuiteOverviews", required=true)
-    private final List<TestSuiteOverviewResponse> testSuiteOverviews;
+      private final List<TestSuiteOverviewResponse> testSuiteOverviews;
 
     public List<TestSuiteOverviewResponse> getTestSuiteOverviews() {
         return this.testSuiteOverviews;
@@ -47,7 +47,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="testTiming", required=true)
-    private final TestTimingResponse testTiming;
+      private final TestTimingResponse testTiming;
 
     public TestTimingResponse getTestTiming() {
         return this.testTiming;
@@ -58,7 +58,7 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="toolExecution", required=true)
-    private final ToolExecutionResponse toolExecution;
+      private final ToolExecutionResponse toolExecution;
 
     public ToolExecutionResponse getToolExecution() {
         return this.toolExecution;
@@ -127,7 +127,6 @@ public final class TestExecutionStepResponse extends io.pulumi.resources.InvokeA
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }
-
         public TestExecutionStepResponse build() {
             return new TestExecutionStepResponse(testIssues, testSuiteOverviews, testTiming, toolExecution);
         }

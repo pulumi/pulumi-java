@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionPerInstanceConfigPreservedStateDisk;
 import java.lang.String;
 import java.util.List;
@@ -80,7 +80,6 @@ public final class RegionPerInstanceConfigPreservedState {
             this.metadata = metadata;
             return this;
         }
-
         public RegionPerInstanceConfigPreservedState build() {
             return new RegionPerInstanceConfigPreservedState(disks, metadata);
         }

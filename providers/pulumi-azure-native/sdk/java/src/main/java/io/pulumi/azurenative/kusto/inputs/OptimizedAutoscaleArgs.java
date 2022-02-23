@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+        private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -34,7 +34,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maximum", required=true)
-    private final Input<Integer> maximum;
+        private final Input<Integer> maximum;
 
     public Input<Integer> getMaximum() {
         return this.maximum;
@@ -45,7 +45,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="minimum", required=true)
-    private final Input<Integer> minimum;
+        private final Input<Integer> minimum;
 
     public Input<Integer> getMinimum() {
         return this.minimum;
@@ -56,7 +56,7 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<Integer> version;
+        private final Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version;
@@ -145,7 +145,6 @@ public final class OptimizedAutoscaleArgs extends io.pulumi.resources.ResourceAr
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public OptimizedAutoscaleArgs build() {
             return new OptimizedAutoscaleArgs(isEnabled, maximum, minimum, version);
         }

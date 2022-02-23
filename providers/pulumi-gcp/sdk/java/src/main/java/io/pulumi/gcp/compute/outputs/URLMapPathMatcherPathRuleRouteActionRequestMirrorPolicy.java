@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy {
             this.backendService = Objects.requireNonNull(backendService);
             return this;
         }
-
         public URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy build() {
             return new URLMapPathMatcherPathRuleRouteActionRequestMirrorPolicy(backendService);
         }

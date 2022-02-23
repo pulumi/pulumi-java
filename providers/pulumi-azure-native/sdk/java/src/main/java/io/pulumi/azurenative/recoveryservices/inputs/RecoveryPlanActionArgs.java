@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.enums.PossibleOperationsDirections
 import io.pulumi.azurenative.recoveryservices.enums.ReplicationProtectedItemOperation;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="actionName", required=true)
-    private final Input<String> actionName;
+        private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;
@@ -37,7 +37,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failoverDirections", required=true)
-    private final Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
+        private final Input<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
     public Input<List<Either<String,PossibleOperationsDirections>>> getFailoverDirections() {
         return this.failoverDirections;
@@ -48,7 +48,7 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failoverTypes", required=true)
-    private final Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
+        private final Input<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
     public Input<List<Either<String,ReplicationProtectedItemOperation>>> getFailoverTypes() {
         return this.failoverTypes;
@@ -122,7 +122,6 @@ public final class RecoveryPlanActionArgs extends io.pulumi.resources.ResourceAr
             this.failoverTypes = Input.of(Objects.requireNonNull(failoverTypes));
             return this;
         }
-
         public RecoveryPlanActionArgs build() {
             return new RecoveryPlanActionArgs(actionName, failoverDirections, failoverTypes);
         }

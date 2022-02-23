@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class SoftwareRecipeStepExecFileResponse {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public SoftwareRecipeStepExecFileResponse build() {
             return new SoftwareRecipeStepExecFileResponse(allowedExitCodes, args, artifactId, localPath);
         }

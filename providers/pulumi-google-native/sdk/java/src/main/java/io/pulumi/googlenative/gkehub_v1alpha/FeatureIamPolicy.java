@@ -5,8 +5,8 @@ package io.pulumi.googlenative.gkehub_v1alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1alpha.FeatureIamPolicyArgs;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class FeatureIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FeatureIamPolicy(String name) {
-        super("google-native:gkehub/v1alpha:FeatureIamPolicy", name, FeatureIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

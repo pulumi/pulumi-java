@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ActionGroupResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -164,7 +164,6 @@ public final class GetActionRuleByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActionRuleByNameResult build() {
             return new GetActionRuleByNameResult(id, location, name, properties, tags, type);
         }

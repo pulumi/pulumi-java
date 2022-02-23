@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class StandardAppVersionBasicScaling {
             this.maxInstances = Objects.requireNonNull(maxInstances);
             return this;
         }
-
         public StandardAppVersionBasicScaling build() {
             return new StandardAppVersionBasicScaling(idleTimeout, maxInstances);
         }

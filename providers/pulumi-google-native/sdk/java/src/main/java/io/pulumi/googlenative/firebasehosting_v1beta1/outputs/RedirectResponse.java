@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class RedirectResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public RedirectResponse build() {
             return new RedirectResponse(glob, location, regex, statusCode);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ptrdname")
-    private final @Nullable Input<String> ptrdname;
+        private final @Nullable Input<String> ptrdname;
 
     public Input<String> getPtrdname() {
         return this.ptrdname == null ? Input.empty() : this.ptrdname;
@@ -66,7 +66,6 @@ public final class PtrRecordArgs extends io.pulumi.resources.ResourceArgs {
             this.ptrdname = Input.ofNullable(ptrdname);
             return this;
         }
-
         public PtrRecordArgs build() {
             return new PtrRecordArgs(ptrdname);
         }

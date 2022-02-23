@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.BasicPerfSampleSeriesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class GetPerfSampleSeriesResult {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public GetPerfSampleSeriesResult build() {
             return new GetPerfSampleSeriesResult(basicPerfSampleSeries, executionId, historyId, project, sampleSeriesId, stepId);
         }

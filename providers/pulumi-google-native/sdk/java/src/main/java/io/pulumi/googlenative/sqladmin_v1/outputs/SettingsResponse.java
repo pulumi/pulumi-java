@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1.outputs.BackupConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DatabaseFlagsResponse;
 import io.pulumi.googlenative.sqladmin_v1.outputs.DenyMaintenancePeriodResponse;
@@ -549,7 +549,6 @@ public final class SettingsResponse {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public SettingsResponse build() {
             return new SettingsResponse(activationPolicy, activeDirectoryConfig, availabilityType, backupConfiguration, collation, crashSafeReplicationEnabled, dataDiskSizeGb, dataDiskType, databaseFlags, databaseReplicationEnabled, denyMaintenancePeriods, insightsConfig, ipConfiguration, kind, locationPreference, maintenanceWindow, passwordValidationPolicy, pricingPlan, settingsVersion, sqlServerAuditConfig, storageAutoResize, storageAutoResizeLimit, tier, userLabels);
         }

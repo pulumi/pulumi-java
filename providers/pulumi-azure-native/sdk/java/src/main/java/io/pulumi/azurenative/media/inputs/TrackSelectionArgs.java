@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.TrackPropertyConditionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trackSelections")
-    private final @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
+        private final @Nullable Input<List<TrackPropertyConditionArgs>> trackSelections;
 
     public Input<List<TrackPropertyConditionArgs>> getTrackSelections() {
         return this.trackSelections == null ? Input.empty() : this.trackSelections;
@@ -67,7 +67,6 @@ public final class TrackSelectionArgs extends io.pulumi.resources.ResourceArgs {
             this.trackSelections = Input.ofNullable(trackSelections);
             return this;
         }
-
         public TrackSelectionArgs build() {
             return new TrackSelectionArgs(trackSelections);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesSpecific
 import io.pulumi.azurenative.providerhub.inputs.DefaultRolloutPropertiesStatusArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,21 +23,21 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
     public static final DefaultRolloutPropertiesArgs Empty = new DefaultRolloutPropertiesArgs();
 
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
     }
 
     @InputImport(name="specification")
-    private final @Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification;
+        private final @Nullable Input<DefaultRolloutPropertiesSpecificationArgs> specification;
 
     public Input<DefaultRolloutPropertiesSpecificationArgs> getSpecification() {
         return this.specification == null ? Input.empty() : this.specification;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<DefaultRolloutPropertiesStatusArgs> status;
+        private final @Nullable Input<DefaultRolloutPropertiesStatusArgs> status;
 
     public Input<DefaultRolloutPropertiesStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -111,7 +111,6 @@ public final class DefaultRolloutPropertiesArgs extends io.pulumi.resources.Reso
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public DefaultRolloutPropertiesArgs build() {
             return new DefaultRolloutPropertiesArgs(provisioningState, specification, status);
         }

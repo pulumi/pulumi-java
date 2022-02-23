@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,7 +76,6 @@ public final class AzureResourceDetailsResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public AzureResourceDetailsResponse build() {
             return new AzureResourceDetailsResponse(id, source);
         }

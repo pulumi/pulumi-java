@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.outputs.JobColumnSelector;
 import io.pulumi.awsnative.databrew.outputs.JobColumnStatisticsConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobEntityDetectorConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobStatisticsConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,7 +90,6 @@ public final class JobProfileConfiguration {
             this.profileColumns = profileColumns;
             return this;
         }
-
         public JobProfileConfiguration build() {
             return new JobProfileConfiguration(columnStatisticsConfigurations, datasetStatisticsConfiguration, entityDetectorConfiguration, profileColumns);
         }

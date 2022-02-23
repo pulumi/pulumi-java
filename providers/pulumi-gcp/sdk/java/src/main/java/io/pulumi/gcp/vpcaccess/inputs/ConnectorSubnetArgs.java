@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vpcaccess.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -90,7 +90,6 @@ public final class ConnectorSubnetArgs extends io.pulumi.resources.ResourceArgs 
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public ConnectorSubnetArgs build() {
             return new ConnectorSubnetArgs(name, projectId);
         }

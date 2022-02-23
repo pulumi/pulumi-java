@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatch;
 import java.lang.Boolean;
 import java.lang.String;
@@ -248,7 +248,6 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch {
             this.suffixMatch = suffixMatch;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch build() {
             return new RegionUrlMapPathMatcherRouteRuleMatchRuleHeaderMatch(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

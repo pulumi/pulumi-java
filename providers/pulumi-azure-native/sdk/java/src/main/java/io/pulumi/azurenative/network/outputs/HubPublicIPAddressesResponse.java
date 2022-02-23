@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AzureFirewallPublicIPAddressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class HubPublicIPAddressesResponse {
             this.count = count;
             return this;
         }
-
         public HubPublicIPAddressesResponse build() {
             return new HubPublicIPAddressesResponse(addresses, count);
         }

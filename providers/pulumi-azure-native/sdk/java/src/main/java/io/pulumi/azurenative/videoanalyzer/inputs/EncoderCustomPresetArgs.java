@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.inputs.AudioEncoderAacArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.VideoEncoderH264Args;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audioEncoder")
-    private final @Nullable Input<AudioEncoderAacArgs> audioEncoder;
+        private final @Nullable Input<AudioEncoderAacArgs> audioEncoder;
 
     public Input<AudioEncoderAacArgs> getAudioEncoder() {
         return this.audioEncoder == null ? Input.empty() : this.audioEncoder;
@@ -37,7 +37,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -48,7 +48,7 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="videoEncoder")
-    private final @Nullable Input<VideoEncoderH264Args> videoEncoder;
+        private final @Nullable Input<VideoEncoderH264Args> videoEncoder;
 
     public Input<VideoEncoderH264Args> getVideoEncoder() {
         return this.videoEncoder == null ? Input.empty() : this.videoEncoder;
@@ -122,7 +122,6 @@ public final class EncoderCustomPresetArgs extends io.pulumi.resources.ResourceA
             this.videoEncoder = Input.ofNullable(videoEncoder);
             return this;
         }
-
         public EncoderCustomPresetArgs build() {
             return new EncoderCustomPresetArgs(audioEncoder, type, videoEncoder);
         }

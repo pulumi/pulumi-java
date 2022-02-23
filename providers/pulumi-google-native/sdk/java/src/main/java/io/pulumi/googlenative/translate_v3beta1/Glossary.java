@@ -5,8 +5,8 @@ package io.pulumi.googlenative.translate_v3beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.translate_v3beta1.GlossaryArgs;
 import io.pulumi.googlenative.translate_v3beta1.outputs.GlossaryInputConfigResponse;
@@ -121,13 +121,6 @@ public class Glossary extends io.pulumi.resources.CustomResource {
         return this.submitTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Glossary(String name) {
-        super("google-native:translate/v3beta1:Glossary", name, GlossaryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

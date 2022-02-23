@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class ResponseHeadersPolicyContentTypeOptions extends io.pulumi.res
     public static final ResponseHeadersPolicyContentTypeOptions Empty = new ResponseHeadersPolicyContentTypeOptions();
 
     @InputImport(name="override", required=true)
-    private final Boolean override;
+        private final Boolean override;
 
     public Boolean getOverride() {
         return this.override;
@@ -51,7 +51,6 @@ public final class ResponseHeadersPolicyContentTypeOptions extends io.pulumi.res
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public ResponseHeadersPolicyContentTypeOptions build() {
             return new ResponseHeadersPolicyContentTypeOptions(override);
         }

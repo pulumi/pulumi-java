@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabric.outputs.DiagnosticsStorageAccountConf
 import io.pulumi.azurenative.servicefabric.outputs.NodeTypeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ServerCertificateCommonNamesResponse;
 import io.pulumi.azurenative.servicefabric.outputs.SettingsSectionDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -718,7 +718,6 @@ public final class GetClusterResult {
             this.vmImage = vmImage;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(addOnFeatures, applicationTypeVersionsCleanupPolicy, availableClusterVersions, azureActiveDirectory, certificate, certificateCommonNames, clientCertificateCommonNames, clientCertificateThumbprints, clusterCodeVersion, clusterEndpoint, clusterId, clusterState, diagnosticsStorageAccountConfig, etag, eventStoreServiceEnabled, fabricSettings, id, location, managementEndpoint, name, nodeTypes, provisioningState, reliabilityLevel, reverseProxyCertificate, reverseProxyCertificateCommonNames, tags, type, upgradeDescription, upgradeMode, vmImage);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.confluent.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="planId")
-    private final @Nullable Input<String> planId;
+        private final @Nullable Input<String> planId;
 
     public Input<String> getPlanId() {
         return this.planId == null ? Input.empty() : this.planId;
@@ -45,7 +45,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="planName")
-    private final @Nullable Input<String> planName;
+        private final @Nullable Input<String> planName;
 
     public Input<String> getPlanName() {
         return this.planName == null ? Input.empty() : this.planName;
@@ -56,7 +56,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="publisherId")
-    private final @Nullable Input<String> publisherId;
+        private final @Nullable Input<String> publisherId;
 
     public Input<String> getPublisherId() {
         return this.publisherId == null ? Input.empty() : this.publisherId;
@@ -67,7 +67,7 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
      * 
      */
     @InputImport(name="termUnit")
-    private final @Nullable Input<String> termUnit;
+        private final @Nullable Input<String> termUnit;
 
     public Input<String> getTermUnit() {
         return this.termUnit == null ? Input.empty() : this.termUnit;
@@ -171,7 +171,6 @@ public final class OrganizationResourcePropertiesOfferDetailArgs extends io.pulu
             this.termUnit = Input.ofNullable(termUnit);
             return this;
         }
-
         public OrganizationResourcePropertiesOfferDetailArgs build() {
             return new OrganizationResourcePropertiesOfferDetailArgs(id, planId, planName, publisherId, termUnit);
         }

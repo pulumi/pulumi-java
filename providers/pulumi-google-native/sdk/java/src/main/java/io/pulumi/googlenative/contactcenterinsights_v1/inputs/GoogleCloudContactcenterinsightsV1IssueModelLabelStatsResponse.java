@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * 
      */
     @InputImport(name="analyzedConversationsCount", required=true)
-    private final String analyzedConversationsCount;
+      private final String analyzedConversationsCount;
 
     public String getAnalyzedConversationsCount() {
         return this.analyzedConversationsCount;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * 
      */
     @InputImport(name="issueStats", required=true)
-    private final Map<String,String> issueStats;
+      private final Map<String,String> issueStats;
 
     public Map<String,String> getIssueStats() {
         return this.issueStats;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
      * 
      */
     @InputImport(name="unclassifiedConversationsCount", required=true)
-    private final String unclassifiedConversationsCount;
+      private final String unclassifiedConversationsCount;
 
     public String getUnclassifiedConversationsCount() {
         return this.unclassifiedConversationsCount;
@@ -103,7 +103,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
             this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(analyzedConversationsCount, issueStats, unclassifiedConversationsCount);
         }

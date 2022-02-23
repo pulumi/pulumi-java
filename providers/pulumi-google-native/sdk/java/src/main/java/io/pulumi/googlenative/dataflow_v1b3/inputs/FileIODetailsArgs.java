@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePattern")
-    private final @Nullable Input<String> filePattern;
+      private final @Nullable Input<String> filePattern;
 
     public Input<String> getFilePattern() {
         return this.filePattern == null ? Input.empty() : this.filePattern;
@@ -66,7 +66,6 @@ public final class FileIODetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.filePattern = Input.ofNullable(filePattern);
             return this;
         }
-
         public FileIODetailsArgs build() {
             return new FileIODetailsArgs(filePattern);
         }

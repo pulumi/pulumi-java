@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class InterconnectAttachmentPrivateInfoResponse {
             this.tag8021q = Objects.requireNonNull(tag8021q);
             return this;
         }
-
         public InterconnectAttachmentPrivateInfoResponse build() {
             return new InterconnectAttachmentPrivateInfoResponse(tag8021q);
         }

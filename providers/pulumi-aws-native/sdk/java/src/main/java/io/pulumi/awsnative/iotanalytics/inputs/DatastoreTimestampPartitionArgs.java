@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
     public static final DatastoreTimestampPartitionArgs Empty = new DatastoreTimestampPartitionArgs();
 
     @InputImport(name="attributeName", required=true)
-    private final Input<String> attributeName;
+        private final Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="timestampFormat")
-    private final @Nullable Input<String> timestampFormat;
+        private final @Nullable Input<String> timestampFormat;
 
     public Input<String> getTimestampFormat() {
         return this.timestampFormat == null ? Input.empty() : this.timestampFormat;
@@ -81,7 +81,6 @@ public final class DatastoreTimestampPartitionArgs extends io.pulumi.resources.R
             this.timestampFormat = Input.ofNullable(timestampFormat);
             return this;
         }
-
         public DatastoreTimestampPartitionArgs build() {
             return new DatastoreTimestampPartitionArgs(attributeName, timestampFormat);
         }

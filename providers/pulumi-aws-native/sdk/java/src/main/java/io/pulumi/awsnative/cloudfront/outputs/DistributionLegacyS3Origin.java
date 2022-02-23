@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class DistributionLegacyS3Origin {
             this.originAccessIdentity = originAccessIdentity;
             return this;
         }
-
         public DistributionLegacyS3Origin build() {
             return new DistributionLegacyS3Origin(dNSName, originAccessIdentity);
         }

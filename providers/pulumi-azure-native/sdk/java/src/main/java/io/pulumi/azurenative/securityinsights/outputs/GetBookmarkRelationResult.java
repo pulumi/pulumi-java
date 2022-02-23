@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class GetBookmarkRelationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBookmarkRelationResult build() {
             return new GetBookmarkRelationResult(etag, id, name, relatedResourceId, relatedResourceKind, relatedResourceName, relatedResourceType, type);
         }

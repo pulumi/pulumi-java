@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.PacketMirroringMirroredResourcesInstance;
 import io.pulumi.gcp.compute.outputs.PacketMirroringMirroredResourcesSubnetwork;
 import java.lang.String;
@@ -103,7 +103,6 @@ public final class PacketMirroringMirroredResources {
             this.tags = tags;
             return this;
         }
-
         public PacketMirroringMirroredResources build() {
             return new PacketMirroringMirroredResources(instances, subnetworks, tags);
         }

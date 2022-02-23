@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class VmUptimeResponse {
             this.hoursPerDay = hoursPerDay;
             return this;
         }
-
         public VmUptimeResponse build() {
             return new VmUptimeResponse(daysPerMonth, hoursPerDay);
         }

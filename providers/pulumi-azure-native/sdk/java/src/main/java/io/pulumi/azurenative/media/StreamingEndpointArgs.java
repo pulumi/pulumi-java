@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media;
 import io.pulumi.azurenative.media.inputs.CrossSiteAccessPoliciesArgs;
 import io.pulumi.azurenative.media.inputs.StreamingEndpointAccessControlArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accessControl")
-    private final @Nullable Input<StreamingEndpointAccessControlArgs> accessControl;
+        private final @Nullable Input<StreamingEndpointAccessControlArgs> accessControl;
 
     public Input<StreamingEndpointAccessControlArgs> getAccessControl() {
         return this.accessControl == null ? Input.empty() : this.accessControl;
@@ -37,7 +37,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -48,7 +48,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoStart")
-    private final @Nullable Input<Boolean> autoStart;
+        private final @Nullable Input<Boolean> autoStart;
 
     public Input<Boolean> getAutoStart() {
         return this.autoStart == null ? Input.empty() : this.autoStart;
@@ -59,7 +59,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="availabilitySetName")
-    private final @Nullable Input<String> availabilitySetName;
+        private final @Nullable Input<String> availabilitySetName;
 
     public Input<String> getAvailabilitySetName() {
         return this.availabilitySetName == null ? Input.empty() : this.availabilitySetName;
@@ -70,7 +70,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cdnEnabled")
-    private final @Nullable Input<Boolean> cdnEnabled;
+        private final @Nullable Input<Boolean> cdnEnabled;
 
     public Input<Boolean> getCdnEnabled() {
         return this.cdnEnabled == null ? Input.empty() : this.cdnEnabled;
@@ -81,7 +81,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cdnProfile")
-    private final @Nullable Input<String> cdnProfile;
+        private final @Nullable Input<String> cdnProfile;
 
     public Input<String> getCdnProfile() {
         return this.cdnProfile == null ? Input.empty() : this.cdnProfile;
@@ -92,7 +92,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cdnProvider")
-    private final @Nullable Input<String> cdnProvider;
+        private final @Nullable Input<String> cdnProvider;
 
     public Input<String> getCdnProvider() {
         return this.cdnProvider == null ? Input.empty() : this.cdnProvider;
@@ -103,7 +103,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="crossSiteAccessPolicies")
-    private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
+        private final @Nullable Input<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
     public Input<CrossSiteAccessPoliciesArgs> getCrossSiteAccessPolicies() {
         return this.crossSiteAccessPolicies == null ? Input.empty() : this.crossSiteAccessPolicies;
@@ -114,7 +114,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="customHostNames")
-    private final @Nullable Input<List<String>> customHostNames;
+        private final @Nullable Input<List<String>> customHostNames;
 
     public Input<List<String>> getCustomHostNames() {
         return this.customHostNames == null ? Input.empty() : this.customHostNames;
@@ -125,7 +125,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -136,7 +136,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -147,7 +147,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxCacheAge")
-    private final @Nullable Input<Double> maxCacheAge;
+        private final @Nullable Input<Double> maxCacheAge;
 
     public Input<Double> getMaxCacheAge() {
         return this.maxCacheAge == null ? Input.empty() : this.maxCacheAge;
@@ -158,7 +158,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -169,7 +169,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="scaleUnits", required=true)
-    private final Input<Integer> scaleUnits;
+        private final Input<Integer> scaleUnits;
 
     public Input<Integer> getScaleUnits() {
         return this.scaleUnits;
@@ -180,7 +180,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="streamingEndpointName")
-    private final @Nullable Input<String> streamingEndpointName;
+        private final @Nullable Input<String> streamingEndpointName;
 
     public Input<String> getStreamingEndpointName() {
         return this.streamingEndpointName == null ? Input.empty() : this.streamingEndpointName;
@@ -191,7 +191,7 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -460,7 +460,6 @@ public final class StreamingEndpointArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public StreamingEndpointArgs build() {
             return new StreamingEndpointArgs(accessControl, accountName, autoStart, availabilitySetName, cdnEnabled, cdnProfile, cdnProvider, crossSiteAccessPolicies, customHostNames, description, location, maxCacheAge, resourceGroupName, scaleUnits, streamingEndpointName, tags);
         }

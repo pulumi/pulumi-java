@@ -5,7 +5,7 @@ package io.pulumi.azurenative.serialconsole;
 
 import io.pulumi.azurenative.serialconsole.enums.SerialPortState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResource", required=true)
-    private final Input<String> parentResource;
+        private final Input<String> parentResource;
 
     public Input<String> getParentResource() {
         return this.parentResource;
@@ -31,7 +31,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-    private final Input<String> parentResourceType;
+        private final Input<String> parentResourceType;
 
     public Input<String> getParentResourceType() {
         return this.parentResourceType;
@@ -42,7 +42,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-    private final Input<String> resourceProviderNamespace;
+        private final Input<String> resourceProviderNamespace;
 
     public Input<String> getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -64,7 +64,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialPort")
-    private final @Nullable Input<String> serialPort;
+        private final @Nullable Input<String> serialPort;
 
     public Input<String> getSerialPort() {
         return this.serialPort == null ? Input.empty() : this.serialPort;
@@ -75,7 +75,7 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<SerialPortState> state;
+        private final @Nullable Input<SerialPortState> state;
 
     public Input<SerialPortState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -194,7 +194,6 @@ public final class SerialPortArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public SerialPortArgs build() {
             return new SerialPortArgs(parentResource, parentResourceType, resourceGroupName, resourceProviderNamespace, serialPort, state);
         }

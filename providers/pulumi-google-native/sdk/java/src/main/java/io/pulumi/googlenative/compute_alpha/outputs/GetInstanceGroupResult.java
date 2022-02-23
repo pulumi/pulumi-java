@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.NamedPortResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -308,7 +308,6 @@ public final class GetInstanceGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceGroupResult build() {
             return new GetInstanceGroupResult(creationTimestamp, description, fingerprint, kind, name, namedPorts, network, region, selfLink, selfLinkWithId, size, subnetwork, zone);
         }

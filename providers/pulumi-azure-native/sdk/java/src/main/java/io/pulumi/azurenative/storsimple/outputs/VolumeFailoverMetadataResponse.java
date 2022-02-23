@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class VolumeFailoverMetadataResponse {
             this.volumeType = volumeType;
             return this;
         }
-
         public VolumeFailoverMetadataResponse build() {
             return new VolumeFailoverMetadataResponse(backupCreatedDate, backupElementId, backupId, backupPolicyId, sizeInBytes, volumeId, volumeType);
         }

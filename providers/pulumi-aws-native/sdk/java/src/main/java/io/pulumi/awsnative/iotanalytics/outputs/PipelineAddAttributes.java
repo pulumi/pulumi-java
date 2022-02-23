@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class PipelineAddAttributes {
             this.next = next;
             return this;
         }
-
         public PipelineAddAttributes build() {
             return new PipelineAddAttributes(attributes, name, next);
         }

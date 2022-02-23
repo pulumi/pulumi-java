@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.TunnelInstanceIAMBindingArgs;
 import io.pulumi.gcp.iap.inputs.TunnelInstanceIAMBindingState;
@@ -154,13 +154,6 @@ public class TunnelInstanceIAMBinding extends io.pulumi.resources.CustomResource
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TunnelInstanceIAMBinding(String name) {
-        super("gcp:iap/tunnelInstanceIAMBinding:TunnelInstanceIAMBinding", name, TunnelInstanceIAMBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

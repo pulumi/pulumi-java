@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accessResourcePath")
-    private final @Nullable String accessResourcePath;
+        private final @Nullable String accessResourcePath;
 
     public Optional<String> getAccessResourcePath() {
         return this.accessResourcePath == null ? Optional.empty() : Optional.ofNullable(this.accessResourcePath);
@@ -34,7 +34,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable String expireTime;
+        private final @Nullable String expireTime;
 
     public Optional<String> getExpireTime() {
         return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
@@ -45,7 +45,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable String permissions;
+        private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
@@ -56,7 +56,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="profileName")
-    private final @Nullable String profileName;
+        private final @Nullable String profileName;
 
     public Optional<String> getProfileName() {
         return this.profileName == null ? Optional.empty() : Optional.ofNullable(this.profileName);
@@ -67,7 +67,7 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -146,7 +146,6 @@ public final class UserAccessPolicyResponse extends io.pulumi.resources.InvokeAr
             this.startTime = startTime;
             return this;
         }
-
         public UserAccessPolicyResponse build() {
             return new UserAccessPolicyResponse(accessResourcePath, expireTime, permissions, profileName, startTime);
         }

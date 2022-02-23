@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2CloudStorageOptionsSampleMethod;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FileSetArgs;
@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bytesLimitPerFile")
-    private final @Nullable Input<String> bytesLimitPerFile;
+      private final @Nullable Input<String> bytesLimitPerFile;
 
     public Input<String> getBytesLimitPerFile() {
         return this.bytesLimitPerFile == null ? Input.empty() : this.bytesLimitPerFile;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="bytesLimitPerFilePercent")
-    private final @Nullable Input<Integer> bytesLimitPerFilePercent;
+      private final @Nullable Input<Integer> bytesLimitPerFilePercent;
 
     public Input<Integer> getBytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent == null ? Input.empty() : this.bytesLimitPerFilePercent;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fileSet")
-    private final @Nullable Input<GooglePrivacyDlpV2FileSetArgs> fileSet;
+      private final @Nullable Input<GooglePrivacyDlpV2FileSetArgs> fileSet;
 
     public Input<GooglePrivacyDlpV2FileSetArgs> getFileSet() {
         return this.fileSet == null ? Input.empty() : this.fileSet;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="fileTypes")
-    private final @Nullable Input<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> fileTypes;
+      private final @Nullable Input<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> fileTypes;
 
     public Input<List<GooglePrivacyDlpV2CloudStorageOptionsFileTypesItem>> getFileTypes() {
         return this.fileTypes == null ? Input.empty() : this.fileTypes;
@@ -72,14 +72,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="filesLimitPercent")
-    private final @Nullable Input<Integer> filesLimitPercent;
+      private final @Nullable Input<Integer> filesLimitPercent;
 
     public Input<Integer> getFilesLimitPercent() {
         return this.filesLimitPercent == null ? Input.empty() : this.filesLimitPercent;
     }
 
     @InputImport(name="sampleMethod")
-    private final @Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> sampleMethod;
+      private final @Nullable Input<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> sampleMethod;
 
     public Input<GooglePrivacyDlpV2CloudStorageOptionsSampleMethod> getSampleMethod() {
         return this.sampleMethod == null ? Input.empty() : this.sampleMethod;
@@ -198,7 +198,6 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsArgs extends io.pulumi.r
             this.sampleMethod = Input.ofNullable(sampleMethod);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageOptionsArgs build() {
             return new GooglePrivacyDlpV2CloudStorageOptionsArgs(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

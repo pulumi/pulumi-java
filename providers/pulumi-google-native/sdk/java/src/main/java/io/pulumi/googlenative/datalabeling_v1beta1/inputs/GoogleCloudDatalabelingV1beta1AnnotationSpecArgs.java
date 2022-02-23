@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatalabelingV1beta1AnnotationSpecArgs extends io.p
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1AnnotationSpecArgs build() {
             return new GoogleCloudDatalabelingV1beta1AnnotationSpecArgs(description, displayName);
         }

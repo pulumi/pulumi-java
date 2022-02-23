@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class CertificateDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public CertificateDetailsResponse build() {
             return new CertificateDetailsResponse(issuer, notAfter, notBefore, rawData, serialNumber, signatureAlgorithm, subject, thumbprint, version);
         }

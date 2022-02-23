@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class SettingsResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public SettingsResponse build() {
             return new SettingsResponse(isCompression, issqlcompression, timeZone);
         }

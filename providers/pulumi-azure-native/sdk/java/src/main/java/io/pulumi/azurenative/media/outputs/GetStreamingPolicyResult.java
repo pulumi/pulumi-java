@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.outputs.CommonEncryptionCencResponse;
 import io.pulumi.azurenative.media.outputs.EnvelopeEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.NoEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -249,7 +249,6 @@ public final class GetStreamingPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingPolicyResult build() {
             return new GetStreamingPolicyResult(commonEncryptionCbcs, commonEncryptionCenc, created, defaultContentKeyPolicyName, envelopeEncryption, id, name, noEncryption, systemData, type);
         }

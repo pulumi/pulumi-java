@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PublishingOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publishCaCert", required=true)
-    private final Boolean publishCaCert;
+      private final Boolean publishCaCert;
 
     public Boolean getPublishCaCert() {
         return this.publishCaCert;
@@ -32,7 +32,7 @@ public final class PublishingOptionsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="publishCrl", required=true)
-    private final Boolean publishCrl;
+      private final Boolean publishCrl;
 
     public Boolean getPublishCrl() {
         return this.publishCrl;
@@ -81,7 +81,6 @@ public final class PublishingOptionsResponse extends io.pulumi.resources.InvokeA
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }
-
         public PublishingOptionsResponse build() {
             return new PublishingOptionsResponse(publishCaCert, publishCrl);
         }

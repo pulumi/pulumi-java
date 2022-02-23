@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confidentialledger.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ledgerRoleName")
-    private final @Nullable String ledgerRoleName;
+        private final @Nullable String ledgerRoleName;
 
     public Optional<String> getLedgerRoleName() {
         return this.ledgerRoleName == null ? Optional.empty() : Optional.ofNullable(this.ledgerRoleName);
@@ -34,7 +34,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="principalId")
-    private final @Nullable String principalId;
+        private final @Nullable String principalId;
 
     public Optional<String> getPrincipalId() {
         return this.principalId == null ? Optional.empty() : Optional.ofNullable(this.principalId);
@@ -45,7 +45,7 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -104,7 +104,6 @@ public final class AADBasedSecurityPrincipalResponse extends io.pulumi.resources
             this.tenantId = tenantId;
             return this;
         }
-
         public AADBasedSecurityPrincipalResponse build() {
             return new AADBasedSecurityPrincipalResponse(ledgerRoleName, principalId, tenantId);
         }

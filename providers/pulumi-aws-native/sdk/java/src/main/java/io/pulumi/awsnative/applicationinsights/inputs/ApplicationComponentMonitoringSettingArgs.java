@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationComponentMonitoringSettingComponentConfigurationMode;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationComponentConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="componentARN")
-    private final @Nullable Input<String> componentARN;
+        private final @Nullable Input<String> componentARN;
 
     public Input<String> getComponentARN() {
         return this.componentARN == null ? Input.empty() : this.componentARN;
@@ -36,7 +36,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="componentConfigurationMode", required=true)
-    private final Input<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
+        private final Input<ApplicationComponentMonitoringSettingComponentConfigurationMode> componentConfigurationMode;
 
     public Input<ApplicationComponentMonitoringSettingComponentConfigurationMode> getComponentConfigurationMode() {
         return this.componentConfigurationMode;
@@ -47,7 +47,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="componentName")
-    private final @Nullable Input<String> componentName;
+        private final @Nullable Input<String> componentName;
 
     public Input<String> getComponentName() {
         return this.componentName == null ? Input.empty() : this.componentName;
@@ -58,7 +58,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="customComponentConfiguration")
-    private final @Nullable Input<ApplicationComponentConfigurationArgs> customComponentConfiguration;
+        private final @Nullable Input<ApplicationComponentConfigurationArgs> customComponentConfiguration;
 
     public Input<ApplicationComponentConfigurationArgs> getCustomComponentConfiguration() {
         return this.customComponentConfiguration == null ? Input.empty() : this.customComponentConfiguration;
@@ -69,7 +69,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="defaultOverwriteComponentConfiguration")
-    private final @Nullable Input<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
+        private final @Nullable Input<ApplicationComponentConfigurationArgs> defaultOverwriteComponentConfiguration;
 
     public Input<ApplicationComponentConfigurationArgs> getDefaultOverwriteComponentConfiguration() {
         return this.defaultOverwriteComponentConfiguration == null ? Input.empty() : this.defaultOverwriteComponentConfiguration;
@@ -80,7 +80,7 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<String> tier;
+        private final Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier;
@@ -199,7 +199,6 @@ public final class ApplicationComponentMonitoringSettingArgs extends io.pulumi.r
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public ApplicationComponentMonitoringSettingArgs build() {
             return new ApplicationComponentMonitoringSettingArgs(componentARN, componentConfigurationMode, componentName, customComponentConfiguration, defaultOverwriteComponentConfiguration, tier);
         }

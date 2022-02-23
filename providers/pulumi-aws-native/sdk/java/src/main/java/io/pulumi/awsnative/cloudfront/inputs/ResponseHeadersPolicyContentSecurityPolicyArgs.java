@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class ResponseHeadersPolicyContentSecurityPolicyArgs extends io.pul
     public static final ResponseHeadersPolicyContentSecurityPolicyArgs Empty = new ResponseHeadersPolicyContentSecurityPolicyArgs();
 
     @InputImport(name="contentSecurityPolicy", required=true)
-    private final Input<String> contentSecurityPolicy;
+        private final Input<String> contentSecurityPolicy;
 
     public Input<String> getContentSecurityPolicy() {
         return this.contentSecurityPolicy;
     }
 
     @InputImport(name="override", required=true)
-    private final Input<Boolean> override;
+        private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;
@@ -81,7 +81,6 @@ public final class ResponseHeadersPolicyContentSecurityPolicyArgs extends io.pul
             this.override = Input.of(Objects.requireNonNull(override));
             return this;
         }
-
         public ResponseHeadersPolicyContentSecurityPolicyArgs build() {
             return new ResponseHeadersPolicyContentSecurityPolicyArgs(contentSecurityPolicy, override);
         }

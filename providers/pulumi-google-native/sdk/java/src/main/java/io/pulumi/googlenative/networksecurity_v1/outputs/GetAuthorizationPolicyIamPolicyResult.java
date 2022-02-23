@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleIamV1AuditConfigResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleIamV1BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetAuthorizationPolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetAuthorizationPolicyIamPolicyResult build() {
             return new GetAuthorizationPolicyIamPolicyResult(auditConfigs, bindings, etag, version);
         }

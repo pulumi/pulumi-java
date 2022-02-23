@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ExecActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.HTTPGetActionArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TCPSocketActionArgs;
@@ -25,7 +25,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="exec")
-    private final @Nullable Input<ExecActionArgs> exec;
+        private final @Nullable Input<ExecActionArgs> exec;
 
     public Input<ExecActionArgs> getExec() {
         return this.exec == null ? Input.empty() : this.exec;
@@ -36,7 +36,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="httpGet")
-    private final @Nullable Input<HTTPGetActionArgs> httpGet;
+        private final @Nullable Input<HTTPGetActionArgs> httpGet;
 
     public Input<HTTPGetActionArgs> getHttpGet() {
         return this.httpGet == null ? Input.empty() : this.httpGet;
@@ -47,7 +47,7 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tcpSocket")
-    private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
+        private final @Nullable Input<TCPSocketActionArgs> tcpSocket;
 
     public Input<TCPSocketActionArgs> getTcpSocket() {
         return this.tcpSocket == null ? Input.empty() : this.tcpSocket;
@@ -121,7 +121,6 @@ public final class LifecycleHandlerArgs extends io.pulumi.resources.ResourceArgs
             this.tcpSocket = Input.ofNullable(tcpSocket);
             return this;
         }
-
         public LifecycleHandlerArgs build() {
             return new LifecycleHandlerArgs(exec, httpGet, tcpSocket);
         }

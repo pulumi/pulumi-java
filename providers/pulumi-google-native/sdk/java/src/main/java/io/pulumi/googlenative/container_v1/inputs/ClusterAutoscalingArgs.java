@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.ClusterAutoscalingAutoscalingProfile;
 import io.pulumi.googlenative.container_v1.inputs.AutoprovisioningNodePoolDefaultsArgs;
 import io.pulumi.googlenative.container_v1.inputs.ResourceLimitArgs;
@@ -28,7 +28,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoprovisioningLocations")
-    private final @Nullable Input<List<String>> autoprovisioningLocations;
+      private final @Nullable Input<List<String>> autoprovisioningLocations;
 
     public Input<List<String>> getAutoprovisioningLocations() {
         return this.autoprovisioningLocations == null ? Input.empty() : this.autoprovisioningLocations;
@@ -39,7 +39,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoprovisioningNodePoolDefaults")
-    private final @Nullable Input<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
+      private final @Nullable Input<AutoprovisioningNodePoolDefaultsArgs> autoprovisioningNodePoolDefaults;
 
     public Input<AutoprovisioningNodePoolDefaultsArgs> getAutoprovisioningNodePoolDefaults() {
         return this.autoprovisioningNodePoolDefaults == null ? Input.empty() : this.autoprovisioningNodePoolDefaults;
@@ -50,7 +50,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="autoscalingProfile")
-    private final @Nullable Input<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
+      private final @Nullable Input<ClusterAutoscalingAutoscalingProfile> autoscalingProfile;
 
     public Input<ClusterAutoscalingAutoscalingProfile> getAutoscalingProfile() {
         return this.autoscalingProfile == null ? Input.empty() : this.autoscalingProfile;
@@ -61,7 +61,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableNodeAutoprovisioning")
-    private final @Nullable Input<Boolean> enableNodeAutoprovisioning;
+      private final @Nullable Input<Boolean> enableNodeAutoprovisioning;
 
     public Input<Boolean> getEnableNodeAutoprovisioning() {
         return this.enableNodeAutoprovisioning == null ? Input.empty() : this.enableNodeAutoprovisioning;
@@ -72,7 +72,7 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceLimits")
-    private final @Nullable Input<List<ResourceLimitArgs>> resourceLimits;
+      private final @Nullable Input<List<ResourceLimitArgs>> resourceLimits;
 
     public Input<List<ResourceLimitArgs>> getResourceLimits() {
         return this.resourceLimits == null ? Input.empty() : this.resourceLimits;
@@ -176,7 +176,6 @@ public final class ClusterAutoscalingArgs extends io.pulumi.resources.ResourceAr
             this.resourceLimits = Input.ofNullable(resourceLimits);
             return this;
         }
-
         public ClusterAutoscalingArgs build() {
             return new ClusterAutoscalingArgs(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+      private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -45,7 +45,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionCode")
-    private final @Nullable Input<String> versionCode;
+      private final @Nullable Input<String> versionCode;
 
     public Input<String> getVersionCode() {
         return this.versionCode == null ? Input.empty() : this.versionCode;
@@ -56,7 +56,7 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionName")
-    private final @Nullable Input<String> versionName;
+      private final @Nullable Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName == null ? Input.empty() : this.versionName;
@@ -145,7 +145,6 @@ public final class AndroidAppInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.versionName = Input.ofNullable(versionName);
             return this;
         }
-
         public AndroidAppInfoArgs build() {
             return new AndroidAppInfoArgs(name, packageName, versionCode, versionName);
         }

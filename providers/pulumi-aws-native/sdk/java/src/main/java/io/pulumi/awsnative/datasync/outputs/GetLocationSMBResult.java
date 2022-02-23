@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationSMBMountOptions;
 import io.pulumi.awsnative.datasync.outputs.LocationSMBTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -176,7 +176,6 @@ public final class GetLocationSMBResult {
             this.user = user;
             return this;
         }
-
         public GetLocationSMBResult build() {
             return new GetLocationSMBResult(agentArns, domain, locationArn, locationUri, mountOptions, tags, user);
         }

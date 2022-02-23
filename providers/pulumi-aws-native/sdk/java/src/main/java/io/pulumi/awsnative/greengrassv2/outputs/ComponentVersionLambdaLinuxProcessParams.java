@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.outputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaLinuxProcessParamsIsolationMode;
 import io.pulumi.awsnative.greengrassv2.outputs.ComponentVersionLambdaContainerParams;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class ComponentVersionLambdaLinuxProcessParams {
             this.isolationMode = isolationMode;
             return this;
         }
-
         public ComponentVersionLambdaLinuxProcessParams build() {
             return new ComponentVersionLambdaLinuxProcessParams(containerParams, isolationMode);
         }

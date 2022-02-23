@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+        private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -32,7 +32,7 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+        private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -43,7 +43,7 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="noExternalIp")
-    private final @Nullable Input<Boolean> noExternalIp;
+        private final @Nullable Input<Boolean> noExternalIp;
 
     public Input<Boolean> getNoExternalIp() {
         return this.noExternalIp == null ? Input.empty() : this.noExternalIp;
@@ -117,7 +117,6 @@ public final class WorkerPoolWorkerConfigArgs extends io.pulumi.resources.Resour
             this.noExternalIp = Input.ofNullable(noExternalIp);
             return this;
         }
-
         public WorkerPoolWorkerConfigArgs build() {
             return new WorkerPoolWorkerConfigArgs(diskSizeGb, machineType, noExternalIp);
         }

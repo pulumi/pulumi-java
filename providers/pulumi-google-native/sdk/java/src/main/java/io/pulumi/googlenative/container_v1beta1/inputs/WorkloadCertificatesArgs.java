@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WorkloadCertificatesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enableCertificates")
-    private final @Nullable Input<Boolean> enableCertificates;
+      private final @Nullable Input<Boolean> enableCertificates;
 
     public Input<Boolean> getEnableCertificates() {
         return this.enableCertificates == null ? Input.empty() : this.enableCertificates;
@@ -66,7 +66,6 @@ public final class WorkloadCertificatesArgs extends io.pulumi.resources.Resource
             this.enableCertificates = Input.ofNullable(enableCertificates);
             return this;
         }
-
         public WorkloadCertificatesArgs build() {
             return new WorkloadCertificatesArgs(enableCertificates);
         }

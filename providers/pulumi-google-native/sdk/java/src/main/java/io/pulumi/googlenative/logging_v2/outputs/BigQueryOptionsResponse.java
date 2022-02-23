@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class BigQueryOptionsResponse {
             this.usesTimestampColumnPartitioning = Objects.requireNonNull(usesTimestampColumnPartitioning);
             return this;
         }
-
         public BigQueryOptionsResponse build() {
             return new BigQueryOptionsResponse(usePartitionedTables, usesTimestampColumnPartitioning);
         }

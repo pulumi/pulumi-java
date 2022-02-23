@@ -15,7 +15,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.StorageConfigurationSettin
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.WsfcDomainCredentialsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoBackupSettings")
-    private final @Nullable Input<AutoBackupSettingsArgs> autoBackupSettings;
+        private final @Nullable Input<AutoBackupSettingsArgs> autoBackupSettings;
 
     public Input<AutoBackupSettingsArgs> getAutoBackupSettings() {
         return this.autoBackupSettings == null ? Input.empty() : this.autoBackupSettings;
@@ -42,7 +42,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="autoPatchingSettings")
-    private final @Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings;
+        private final @Nullable Input<AutoPatchingSettingsArgs> autoPatchingSettings;
 
     public Input<AutoPatchingSettingsArgs> getAutoPatchingSettings() {
         return this.autoPatchingSettings == null ? Input.empty() : this.autoPatchingSettings;
@@ -53,7 +53,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+        private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -64,7 +64,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="keyVaultCredentialSettings")
-    private final @Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
+        private final @Nullable Input<KeyVaultCredentialSettingsArgs> keyVaultCredentialSettings;
 
     public Input<KeyVaultCredentialSettingsArgs> getKeyVaultCredentialSettings() {
         return this.keyVaultCredentialSettings == null ? Input.empty() : this.keyVaultCredentialSettings;
@@ -75,7 +75,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -86,7 +86,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -97,7 +97,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serverConfigurationsManagementSettings")
-    private final @Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
+        private final @Nullable Input<ServerConfigurationsManagementSettingsArgs> serverConfigurationsManagementSettings;
 
     public Input<ServerConfigurationsManagementSettingsArgs> getServerConfigurationsManagementSettings() {
         return this.serverConfigurationsManagementSettings == null ? Input.empty() : this.serverConfigurationsManagementSettings;
@@ -108,7 +108,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlImageOffer")
-    private final @Nullable Input<String> sqlImageOffer;
+        private final @Nullable Input<String> sqlImageOffer;
 
     public Input<String> getSqlImageOffer() {
         return this.sqlImageOffer == null ? Input.empty() : this.sqlImageOffer;
@@ -119,7 +119,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlImageSku")
-    private final @Nullable Input<Either<String,SqlImageSku>> sqlImageSku;
+        private final @Nullable Input<Either<String,SqlImageSku>> sqlImageSku;
 
     public Input<Either<String,SqlImageSku>> getSqlImageSku() {
         return this.sqlImageSku == null ? Input.empty() : this.sqlImageSku;
@@ -130,7 +130,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlManagement")
-    private final @Nullable Input<Either<String,SqlManagementMode>> sqlManagement;
+        private final @Nullable Input<Either<String,SqlManagementMode>> sqlManagement;
 
     public Input<Either<String,SqlManagementMode>> getSqlManagement() {
         return this.sqlManagement == null ? Input.empty() : this.sqlManagement;
@@ -141,7 +141,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlServerLicenseType")
-    private final @Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
+        private final @Nullable Input<Either<String,SqlServerLicenseType>> sqlServerLicenseType;
 
     public Input<Either<String,SqlServerLicenseType>> getSqlServerLicenseType() {
         return this.sqlServerLicenseType == null ? Input.empty() : this.sqlServerLicenseType;
@@ -152,7 +152,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlVirtualMachineGroupResourceId")
-    private final @Nullable Input<String> sqlVirtualMachineGroupResourceId;
+        private final @Nullable Input<String> sqlVirtualMachineGroupResourceId;
 
     public Input<String> getSqlVirtualMachineGroupResourceId() {
         return this.sqlVirtualMachineGroupResourceId == null ? Input.empty() : this.sqlVirtualMachineGroupResourceId;
@@ -163,7 +163,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sqlVirtualMachineName")
-    private final @Nullable Input<String> sqlVirtualMachineName;
+        private final @Nullable Input<String> sqlVirtualMachineName;
 
     public Input<String> getSqlVirtualMachineName() {
         return this.sqlVirtualMachineName == null ? Input.empty() : this.sqlVirtualMachineName;
@@ -174,7 +174,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="storageConfigurationSettings")
-    private final @Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings;
+        private final @Nullable Input<StorageConfigurationSettingsArgs> storageConfigurationSettings;
 
     public Input<StorageConfigurationSettingsArgs> getStorageConfigurationSettings() {
         return this.storageConfigurationSettings == null ? Input.empty() : this.storageConfigurationSettings;
@@ -185,7 +185,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="virtualMachineResourceId")
-    private final @Nullable Input<String> virtualMachineResourceId;
+        private final @Nullable Input<String> virtualMachineResourceId;
 
     public Input<String> getVirtualMachineResourceId() {
         return this.virtualMachineResourceId == null ? Input.empty() : this.virtualMachineResourceId;
@@ -207,7 +207,7 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="wsfcDomainCredentials")
-    private final @Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
+        private final @Nullable Input<WsfcDomainCredentialsArgs> wsfcDomainCredentials;
 
     public Input<WsfcDomainCredentialsArgs> getWsfcDomainCredentials() {
         return this.wsfcDomainCredentials == null ? Input.empty() : this.wsfcDomainCredentials;
@@ -491,7 +491,6 @@ public final class SqlVirtualMachineArgs extends io.pulumi.resources.ResourceArg
             this.wsfcDomainCredentials = Input.ofNullable(wsfcDomainCredentials);
             return this;
         }
-
         public SqlVirtualMachineArgs build() {
             return new SqlVirtualMachineArgs(autoBackupSettings, autoPatchingSettings, identity, keyVaultCredentialSettings, location, resourceGroupName, serverConfigurationsManagementSettings, sqlImageOffer, sqlImageSku, sqlManagement, sqlServerLicenseType, sqlVirtualMachineGroupResourceId, sqlVirtualMachineName, storageConfigurationSettings, tags, virtualMachineResourceId, wsfcDomainCredentials);
         }

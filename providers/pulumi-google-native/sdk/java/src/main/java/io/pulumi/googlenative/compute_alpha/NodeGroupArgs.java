@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.NodeGroupMaintenancePolicy;
 import io.pulumi.googlenative.compute_alpha.enums.NodeGroupStatus;
 import io.pulumi.googlenative.compute_alpha.inputs.NodeGroupAutoscalingPolicyArgs;
@@ -24,7 +24,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoscalingPolicy")
-    private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
+      private final @Nullable Input<NodeGroupAutoscalingPolicyArgs> autoscalingPolicy;
 
     public Input<NodeGroupAutoscalingPolicyArgs> getAutoscalingPolicy() {
         return this.autoscalingPolicy == null ? Input.empty() : this.autoscalingPolicy;
@@ -35,14 +35,14 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="initialNodeCount", required=true)
-    private final Input<String> initialNodeCount;
+      private final Input<String> initialNodeCount;
 
     public Input<String> getInitialNodeCount() {
         return this.initialNodeCount;
@@ -53,7 +53,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationHint")
-    private final @Nullable Input<String> locationHint;
+      private final @Nullable Input<String> locationHint;
 
     public Input<String> getLocationHint() {
         return this.locationHint == null ? Input.empty() : this.locationHint;
@@ -64,14 +64,14 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenancePolicy")
-    private final @Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy;
+      private final @Nullable Input<NodeGroupMaintenancePolicy> maintenancePolicy;
 
     public Input<NodeGroupMaintenancePolicy> getMaintenancePolicy() {
         return this.maintenancePolicy == null ? Input.empty() : this.maintenancePolicy;
     }
 
     @InputImport(name="maintenanceWindow")
-    private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
+      private final @Nullable Input<NodeGroupMaintenanceWindowArgs> maintenanceWindow;
 
     public Input<NodeGroupMaintenanceWindowArgs> getMaintenanceWindow() {
         return this.maintenanceWindow == null ? Input.empty() : this.maintenanceWindow;
@@ -82,7 +82,7 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,21 +93,21 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeTemplate")
-    private final @Nullable Input<String> nodeTemplate;
+      private final @Nullable Input<String> nodeTemplate;
 
     public Input<String> getNodeTemplate() {
         return this.nodeTemplate == null ? Input.empty() : this.nodeTemplate;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -118,21 +118,21 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareSettings")
-    private final @Nullable Input<ShareSettingsArgs> shareSettings;
+      private final @Nullable Input<ShareSettingsArgs> shareSettings;
 
     public Input<ShareSettingsArgs> getShareSettings() {
         return this.shareSettings == null ? Input.empty() : this.shareSettings;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<NodeGroupStatus> status;
+      private final @Nullable Input<NodeGroupStatus> status;
 
     public Input<NodeGroupStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -356,7 +356,6 @@ public final class NodeGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public NodeGroupArgs build() {
             return new NodeGroupArgs(autoscalingPolicy, description, initialNodeCount, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, project, requestId, shareSettings, status, zone);
         }

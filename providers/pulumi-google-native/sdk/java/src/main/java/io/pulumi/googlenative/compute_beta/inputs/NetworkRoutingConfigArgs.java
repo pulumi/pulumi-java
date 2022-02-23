@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.NetworkRoutingConfigRoutingMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="routingMode")
-    private final @Nullable Input<NetworkRoutingConfigRoutingMode> routingMode;
+      private final @Nullable Input<NetworkRoutingConfigRoutingMode> routingMode;
 
     public Input<NetworkRoutingConfigRoutingMode> getRoutingMode() {
         return this.routingMode == null ? Input.empty() : this.routingMode;
@@ -66,7 +66,6 @@ public final class NetworkRoutingConfigArgs extends io.pulumi.resources.Resource
             this.routingMode = Input.ofNullable(routingMode);
             return this;
         }
-
         public NetworkRoutingConfigArgs build() {
             return new NetworkRoutingConfigArgs(routingMode);
         }

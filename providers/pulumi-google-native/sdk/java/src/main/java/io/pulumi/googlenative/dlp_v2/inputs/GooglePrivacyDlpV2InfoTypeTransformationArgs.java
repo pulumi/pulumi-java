@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrimitiveTransformationArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
      * 
      */
     @InputImport(name="infoTypes")
-    private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
+      private final @Nullable Input<List<GooglePrivacyDlpV2InfoTypeArgs>> infoTypes;
 
     public Input<List<GooglePrivacyDlpV2InfoTypeArgs>> getInfoTypes() {
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
      * 
      */
     @InputImport(name="primitiveTransformation", required=true)
-    private final Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
+      private final Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> primitiveTransformation;
 
     public Input<GooglePrivacyDlpV2PrimitiveTransformationArgs> getPrimitiveTransformation() {
         return this.primitiveTransformation;
@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2InfoTypeTransformationArgs extends io.pulum
             this.primitiveTransformation = Input.of(Objects.requireNonNull(primitiveTransformation));
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeTransformationArgs build() {
             return new GooglePrivacyDlpV2InfoTypeTransformationArgs(infoTypes, primitiveTransformation);
         }

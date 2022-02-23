@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deviceupdate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="customerVisibleFqdns")
-    private final @Nullable Input<List<String>> customerVisibleFqdns;
+        private final @Nullable Input<List<String>> customerVisibleFqdns;
 
     public Input<List<String>> getCustomerVisibleFqdns() {
         return this.customerVisibleFqdns == null ? Input.empty() : this.customerVisibleFqdns;
@@ -35,7 +35,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="privateLinkServiceArmRegion")
-    private final @Nullable Input<String> privateLinkServiceArmRegion;
+        private final @Nullable Input<String> privateLinkServiceArmRegion;
 
     public Input<String> getPrivateLinkServiceArmRegion() {
         return this.privateLinkServiceArmRegion == null ? Input.empty() : this.privateLinkServiceArmRegion;
@@ -46,7 +46,7 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="redirectMapId")
-    private final @Nullable Input<String> redirectMapId;
+        private final @Nullable Input<String> redirectMapId;
 
     public Input<String> getRedirectMapId() {
         return this.redirectMapId == null ? Input.empty() : this.redirectMapId;
@@ -120,7 +120,6 @@ public final class GroupConnectivityInformationArgs extends io.pulumi.resources.
             this.redirectMapId = Input.ofNullable(redirectMapId);
             return this;
         }
-
         public GroupConnectivityInformationArgs build() {
             return new GroupConnectivityInformationArgs(customerVisibleFqdns, privateLinkServiceArmRegion, redirectMapId);
         }

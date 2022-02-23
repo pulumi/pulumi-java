@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -99,7 +99,6 @@ public final class DeploymentCanarySettings {
             this.useStageCache = useStageCache;
             return this;
         }
-
         public DeploymentCanarySettings build() {
             return new DeploymentCanarySettings(percentTraffic, stageVariableOverrides, useStageCache);
         }

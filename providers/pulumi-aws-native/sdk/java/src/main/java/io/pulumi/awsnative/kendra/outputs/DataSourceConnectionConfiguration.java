@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class DataSourceConnectionConfiguration {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public DataSourceConnectionConfiguration build() {
             return new DataSourceConnectionConfiguration(databaseHost, databaseName, databasePort, secretArn, tableName);
         }

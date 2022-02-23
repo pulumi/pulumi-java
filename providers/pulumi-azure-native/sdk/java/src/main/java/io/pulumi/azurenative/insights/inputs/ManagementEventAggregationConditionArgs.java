@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.enums.ConditionOperator;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<ConditionOperator> operator;
+        private final @Nullable Input<ConditionOperator> operator;
 
     public Input<ConditionOperator> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -36,7 +36,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<Double> threshold;
+        private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -47,7 +47,7 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="windowSize")
-    private final @Nullable Input<String> windowSize;
+        private final @Nullable Input<String> windowSize;
 
     public Input<String> getWindowSize() {
         return this.windowSize == null ? Input.empty() : this.windowSize;
@@ -121,7 +121,6 @@ public final class ManagementEventAggregationConditionArgs extends io.pulumi.res
             this.windowSize = Input.ofNullable(windowSize);
             return this;
         }
-
         public ManagementEventAggregationConditionArgs build() {
             return new ManagementEventAggregationConditionArgs(operator, threshold, windowSize);
         }

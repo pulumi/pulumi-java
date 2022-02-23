@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataprocMetastoreService", required=true)
-    private final Input<String> dataprocMetastoreService;
+      private final Input<String> dataprocMetastoreService;
 
     public Input<String> getDataprocMetastoreService() {
         return this.dataprocMetastoreService;
@@ -65,7 +65,6 @@ public final class MetastoreConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.dataprocMetastoreService = Input.of(Objects.requireNonNull(dataprocMetastoreService));
             return this;
         }
-
         public MetastoreConfigArgs build() {
             return new MetastoreConfigArgs(dataprocMetastoreService);
         }

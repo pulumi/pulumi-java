@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetClusterAddonsConfigCloudrunConfig extends io.pulumi.resour
     public static final GetClusterAddonsConfigCloudrunConfig Empty = new GetClusterAddonsConfigCloudrunConfig();
 
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+        private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
     }
 
     @InputImport(name="loadBalancerType", required=true)
-    private final String loadBalancerType;
+        private final String loadBalancerType;
 
     public String getLoadBalancerType() {
         return this.loadBalancerType;
@@ -70,7 +70,6 @@ public final class GetClusterAddonsConfigCloudrunConfig extends io.pulumi.resour
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public GetClusterAddonsConfigCloudrunConfig build() {
             return new GetClusterAddonsConfigCloudrunConfig(disabled, loadBalancerType);
         }

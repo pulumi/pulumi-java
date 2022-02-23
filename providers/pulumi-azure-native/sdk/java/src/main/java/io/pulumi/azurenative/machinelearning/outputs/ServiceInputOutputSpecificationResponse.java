@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.TableSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ServiceInputOutputSpecificationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceInputOutputSpecificationResponse build() {
             return new ServiceInputOutputSpecificationResponse(description, properties, title, type);
         }

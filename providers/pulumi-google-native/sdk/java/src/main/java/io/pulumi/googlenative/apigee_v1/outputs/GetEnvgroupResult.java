@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetEnvgroupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEnvgroupResult build() {
             return new GetEnvgroupResult(createdAt, hostnames, lastModifiedAt, name, state);
         }

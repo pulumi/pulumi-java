@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobExtractSourceModel;
 import io.pulumi.gcp.bigquery.outputs.JobExtractSourceTable;
 import java.lang.Boolean;
@@ -218,7 +218,6 @@ public final class JobExtract {
             this.useAvroLogicalTypes = useAvroLogicalTypes;
             return this;
         }
-
         public JobExtract build() {
             return new JobExtract(compression, destinationFormat, destinationUris, fieldDelimiter, printHeader, sourceModel, sourceTable, useAvroLogicalTypes);
         }

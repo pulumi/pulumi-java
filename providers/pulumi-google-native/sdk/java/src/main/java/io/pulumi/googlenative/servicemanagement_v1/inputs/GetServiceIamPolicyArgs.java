@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetServiceIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetServiceIamPolicyArgs Empty = new GetServiceIamPolicyArgs();
 
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -51,7 +51,6 @@ public final class GetServiceIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public GetServiceIamPolicyArgs build() {
             return new GetServiceIamPolicyArgs(serviceId);
         }

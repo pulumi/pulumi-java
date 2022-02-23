@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ContainerResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.VolumeResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class InstanceSpecResponse {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public InstanceSpecResponse build() {
             return new InstanceSpecResponse(activeDeadlineSeconds, containers, restartPolicy, serviceAccountName, terminationGracePeriodSeconds, volumes);
         }

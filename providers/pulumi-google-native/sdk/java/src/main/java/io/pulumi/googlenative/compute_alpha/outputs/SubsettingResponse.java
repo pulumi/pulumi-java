@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +67,6 @@ public final class SubsettingResponse {
             this.subsetSize = Objects.requireNonNull(subsetSize);
             return this;
         }
-
         public SubsettingResponse build() {
             return new SubsettingResponse(policy, subsetSize);
         }

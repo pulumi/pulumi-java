@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.HttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_beta.inputs.HttpRedirectActionArgs;
 import io.pulumi.googlenative.compute_beta.inputs.HttpRouteActionArgs;
@@ -29,7 +29,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultRouteAction")
-    private final @Nullable Input<HttpRouteActionArgs> defaultRouteAction;
+      private final @Nullable Input<HttpRouteActionArgs> defaultRouteAction;
 
     public Input<HttpRouteActionArgs> getDefaultRouteAction() {
         return this.defaultRouteAction == null ? Input.empty() : this.defaultRouteAction;
@@ -40,7 +40,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultService")
-    private final @Nullable Input<String> defaultService;
+      private final @Nullable Input<String> defaultService;
 
     public Input<String> getDefaultService() {
         return this.defaultService == null ? Input.empty() : this.defaultService;
@@ -51,7 +51,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultUrlRedirect")
-    private final @Nullable Input<HttpRedirectActionArgs> defaultUrlRedirect;
+      private final @Nullable Input<HttpRedirectActionArgs> defaultUrlRedirect;
 
     public Input<HttpRedirectActionArgs> getDefaultUrlRedirect() {
         return this.defaultUrlRedirect == null ? Input.empty() : this.defaultUrlRedirect;
@@ -62,7 +62,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<HttpHeaderActionArgs> headerAction;
+      private final @Nullable Input<HttpHeaderActionArgs> headerAction;
 
     public Input<HttpHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -84,7 +84,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -95,7 +95,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pathRules")
-    private final @Nullable Input<List<PathRuleArgs>> pathRules;
+      private final @Nullable Input<List<PathRuleArgs>> pathRules;
 
     public Input<List<PathRuleArgs>> getPathRules() {
         return this.pathRules == null ? Input.empty() : this.pathRules;
@@ -106,7 +106,7 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeRules")
-    private final @Nullable Input<List<HttpRouteRuleArgs>> routeRules;
+      private final @Nullable Input<List<HttpRouteRuleArgs>> routeRules;
 
     public Input<List<HttpRouteRuleArgs>> getRouteRules() {
         return this.routeRules == null ? Input.empty() : this.routeRules;
@@ -255,7 +255,6 @@ public final class PathMatcherArgs extends io.pulumi.resources.ResourceArgs {
             this.routeRules = Input.ofNullable(routeRules);
             return this;
         }
-
         public PathMatcherArgs build() {
             return new PathMatcherArgs(defaultRouteAction, defaultService, defaultUrlRedirect, description, headerAction, name, pathRules, routeRules);
         }

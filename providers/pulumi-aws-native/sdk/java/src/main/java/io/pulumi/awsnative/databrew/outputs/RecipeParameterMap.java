@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class RecipeParameterMap {
         public Builder(RecipeParameterMap defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RecipeParameterMap build() {
             return new RecipeParameterMap();
         }

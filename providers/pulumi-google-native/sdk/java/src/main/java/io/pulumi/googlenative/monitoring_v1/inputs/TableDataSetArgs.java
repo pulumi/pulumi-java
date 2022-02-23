@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TableDisplayOptionsArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesQueryArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minAlignmentPeriod")
-    private final @Nullable Input<String> minAlignmentPeriod;
+      private final @Nullable Input<String> minAlignmentPeriod;
 
     public Input<String> getMinAlignmentPeriod() {
         return this.minAlignmentPeriod == null ? Input.empty() : this.minAlignmentPeriod;
@@ -36,7 +36,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableDisplayOptions")
-    private final @Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions;
+      private final @Nullable Input<TableDisplayOptionsArgs> tableDisplayOptions;
 
     public Input<TableDisplayOptionsArgs> getTableDisplayOptions() {
         return this.tableDisplayOptions == null ? Input.empty() : this.tableDisplayOptions;
@@ -47,7 +47,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableTemplate")
-    private final @Nullable Input<String> tableTemplate;
+      private final @Nullable Input<String> tableTemplate;
 
     public Input<String> getTableTemplate() {
         return this.tableTemplate == null ? Input.empty() : this.tableTemplate;
@@ -58,7 +58,7 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesQuery", required=true)
-    private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
+      private final Input<TimeSeriesQueryArgs> timeSeriesQuery;
 
     public Input<TimeSeriesQueryArgs> getTimeSeriesQuery() {
         return this.timeSeriesQuery;
@@ -147,7 +147,6 @@ public final class TableDataSetArgs extends io.pulumi.resources.ResourceArgs {
             this.timeSeriesQuery = Input.of(Objects.requireNonNull(timeSeriesQuery));
             return this;
         }
-
         public TableDataSetArgs build() {
             return new TableDataSetArgs(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
         }

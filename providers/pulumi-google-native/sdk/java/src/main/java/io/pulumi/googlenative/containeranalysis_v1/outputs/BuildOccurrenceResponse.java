@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.BuildProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.InTotoStatementResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class BuildOccurrenceResponse {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }
-
         public BuildOccurrenceResponse build() {
             return new BuildOccurrenceResponse(intotoStatement, provenance, provenanceBytes);
         }

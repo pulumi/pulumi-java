@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clientApplication")
-    private final @Nullable String clientApplication;
+        private final @Nullable String clientApplication;
 
     public Optional<String> getClientApplication() {
         return this.clientApplication == null ? Optional.empty() : Optional.ofNullable(this.clientApplication);
@@ -34,7 +34,7 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterApplication")
-    private final @Nullable String clusterApplication;
+        private final @Nullable String clusterApplication;
 
     public Optional<String> getClusterApplication() {
         return this.clusterApplication == null ? Optional.empty() : Optional.ofNullable(this.clusterApplication);
@@ -45,7 +45,7 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -104,7 +104,6 @@ public final class AzureActiveDirectoryResponse extends io.pulumi.resources.Invo
             this.tenantId = tenantId;
             return this;
         }
-
         public AzureActiveDirectoryResponse build() {
             return new AzureActiveDirectoryResponse(clientApplication, clusterApplication, tenantId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -25,7 +25,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="retry")
-    private final @Nullable Object retry;
+        private final @Nullable Object retry;
 
     public Optional<Object> getRetry() {
         return this.retry == null ? Optional.empty() : Optional.ofNullable(this.retry);
@@ -36,7 +36,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="retryIntervalInSeconds")
-    private final @Nullable Integer retryIntervalInSeconds;
+        private final @Nullable Integer retryIntervalInSeconds;
 
     public Optional<Integer> getRetryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalInSeconds);
@@ -47,7 +47,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="secureInput")
-    private final @Nullable Boolean secureInput;
+        private final @Nullable Boolean secureInput;
 
     public Optional<Boolean> getSecureInput() {
         return this.secureInput == null ? Optional.empty() : Optional.ofNullable(this.secureInput);
@@ -58,7 +58,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="secureOutput")
-    private final @Nullable Boolean secureOutput;
+        private final @Nullable Boolean secureOutput;
 
     public Optional<Boolean> getSecureOutput() {
         return this.secureOutput == null ? Optional.empty() : Optional.ofNullable(this.secureOutput);
@@ -69,7 +69,7 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Object timeout;
+        private final @Nullable Object timeout;
 
     public Optional<Object> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -148,7 +148,6 @@ public final class ActivityPolicyResponse extends io.pulumi.resources.InvokeArgs
             this.timeout = timeout;
             return this;
         }
-
         public ActivityPolicyResponse build() {
             return new ActivityPolicyResponse(retry, retryIntervalInSeconds, secureInput, secureOutput, timeout);
         }

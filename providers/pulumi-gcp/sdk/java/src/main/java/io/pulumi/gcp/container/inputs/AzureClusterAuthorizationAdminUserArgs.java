@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AzureClusterAuthorizationAdminUserArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -61,7 +61,6 @@ public final class AzureClusterAuthorizationAdminUserArgs extends io.pulumi.reso
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public AzureClusterAuthorizationAdminUserArgs build() {
             return new AzureClusterAuthorizationAdminUserArgs(username);
         }

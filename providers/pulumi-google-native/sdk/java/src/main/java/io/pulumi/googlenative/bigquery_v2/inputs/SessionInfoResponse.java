@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sessionId", required=true)
-    private final String sessionId;
+      private final String sessionId;
 
     public String getSessionId() {
         return this.sessionId;
@@ -55,7 +55,6 @@ public final class SessionInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public SessionInfoResponse build() {
             return new SessionInfoResponse(sessionId);
         }

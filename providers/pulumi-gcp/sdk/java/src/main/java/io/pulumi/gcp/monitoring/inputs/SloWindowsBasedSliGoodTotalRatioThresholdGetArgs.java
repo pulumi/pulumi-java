@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs;
 import java.lang.Double;
@@ -22,7 +22,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
      * 
      */
     @InputImport(name="basicSliPerformance")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
+        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> basicSliPerformance;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceGetArgs> getBasicSliPerformance() {
         return this.basicSliPerformance == null ? Input.empty() : this.basicSliPerformance;
@@ -34,7 +34,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
      * 
      */
     @InputImport(name="performance")
-    private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
+        private final @Nullable Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> performance;
 
     public Input<SloWindowsBasedSliGoodTotalRatioThresholdPerformanceGetArgs> getPerformance() {
         return this.performance == null ? Input.empty() : this.performance;
@@ -47,7 +47,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<Double> threshold;
+        private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -121,7 +121,6 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdGetArgs extends io.p
             this.threshold = Input.ofNullable(threshold);
             return this;
         }
-
         public SloWindowsBasedSliGoodTotalRatioThresholdGetArgs build() {
             return new SloWindowsBasedSliGoodTotalRatioThresholdGetArgs(basicSliPerformance, performance, threshold);
         }

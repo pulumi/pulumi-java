@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final Input<String> namespace;
+        private final Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace;
@@ -92,7 +92,6 @@ public final class ServiceAccountSubjectArgs extends io.pulumi.resources.Resourc
             this.namespace = Input.of(Objects.requireNonNull(namespace));
             return this;
         }
-
         public ServiceAccountSubjectArgs build() {
             return new ServiceAccountSubjectArgs(name, namespace);
         }

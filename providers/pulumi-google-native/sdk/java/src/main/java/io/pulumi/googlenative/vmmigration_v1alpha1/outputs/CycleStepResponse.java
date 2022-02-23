@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.InitializingReplicationStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.PostProcessingStepResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ReplicatingStepResponse;
@@ -140,7 +140,6 @@ public final class CycleStepResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public CycleStepResponse build() {
             return new CycleStepResponse(endTime, initializingReplication, postProcessing, replicating, startTime);
         }

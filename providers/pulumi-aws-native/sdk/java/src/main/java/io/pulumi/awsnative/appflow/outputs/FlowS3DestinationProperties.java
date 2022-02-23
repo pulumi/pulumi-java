@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.FlowS3OutputFormatConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class FlowS3DestinationProperties {
             this.s3OutputFormatConfig = s3OutputFormatConfig;
             return this;
         }
-
         public FlowS3DestinationProperties build() {
             return new FlowS3DestinationProperties(bucketName, bucketPrefix, s3OutputFormatConfig);
         }

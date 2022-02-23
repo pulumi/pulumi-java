@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.AutoScalingPolicyResponse
 import io.pulumi.azurenative.servicefabricmesh.outputs.ContainerCodePackagePropertiesResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.DiagnosticsRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.NetworkRefResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -355,7 +355,6 @@ public final class ServiceResourceDescriptionResponse {
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }
-
         public ServiceResourceDescriptionResponse build() {
             return new ServiceResourceDescriptionResponse(autoScalingPolicies, codePackages, description, diagnostics, healthState, id, name, networkRefs, osType, provisioningState, replicaCount, status, statusDetails, type, unhealthyEvaluation);
         }

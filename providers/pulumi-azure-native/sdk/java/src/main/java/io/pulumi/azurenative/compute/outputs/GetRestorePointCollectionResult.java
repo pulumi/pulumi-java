@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.RestorePointCollectionSourcePropertiesResponse;
 import io.pulumi.azurenative.compute.outputs.RestorePointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -227,7 +227,6 @@ public final class GetRestorePointCollectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRestorePointCollectionResult build() {
             return new GetRestorePointCollectionResult(id, location, name, provisioningState, restorePointCollectionId, restorePoints, source, tags, type);
         }

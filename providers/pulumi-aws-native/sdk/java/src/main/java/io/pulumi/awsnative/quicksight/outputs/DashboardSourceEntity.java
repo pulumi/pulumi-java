@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DashboardSourceTemplate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class DashboardSourceEntity {
             this.sourceTemplate = sourceTemplate;
             return this;
         }
-
         public DashboardSourceEntity build() {
             return new DashboardSourceEntity(sourceTemplate);
         }

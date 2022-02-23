@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -143,7 +143,6 @@ public final class ImageTemplateWindowsUpdateCustomizerResponse {
             this.updateLimit = updateLimit;
             return this;
         }
-
         public ImageTemplateWindowsUpdateCustomizerResponse build() {
             return new ImageTemplateWindowsUpdateCustomizerResponse(filters, name, searchCriteria, type, updateLimit);
         }

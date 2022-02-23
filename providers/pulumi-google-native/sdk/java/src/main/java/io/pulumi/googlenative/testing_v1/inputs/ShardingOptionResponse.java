@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.ManualShardingResponse;
 import io.pulumi.googlenative.testing_v1.inputs.UniformShardingResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="manualSharding", required=true)
-    private final ManualShardingResponse manualSharding;
+      private final ManualShardingResponse manualSharding;
 
     public ManualShardingResponse getManualSharding() {
         return this.manualSharding;
@@ -33,7 +33,7 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="uniformSharding", required=true)
-    private final UniformShardingResponse uniformSharding;
+      private final UniformShardingResponse uniformSharding;
 
     public UniformShardingResponse getUniformSharding() {
         return this.uniformSharding;
@@ -82,7 +82,6 @@ public final class ShardingOptionResponse extends io.pulumi.resources.InvokeArgs
             this.uniformSharding = Objects.requireNonNull(uniformSharding);
             return this;
         }
-
         public ShardingOptionResponse build() {
             return new ShardingOptionResponse(manualSharding, uniformSharding);
         }

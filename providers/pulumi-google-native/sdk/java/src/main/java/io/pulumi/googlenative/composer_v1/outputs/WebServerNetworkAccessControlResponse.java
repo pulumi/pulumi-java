@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.composer_v1.outputs.AllowedIpRangeResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class WebServerNetworkAccessControlResponse {
             this.allowedIpRanges = Objects.requireNonNull(allowedIpRanges);
             return this;
         }
-
         public WebServerNetworkAccessControlResponse build() {
             return new WebServerNetworkAccessControlResponse(allowedIpRanges);
         }

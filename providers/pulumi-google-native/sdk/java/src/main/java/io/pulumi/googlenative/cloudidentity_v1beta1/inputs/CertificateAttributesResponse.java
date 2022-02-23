@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.CertificateTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificateTemplate", required=true)
-    private final CertificateTemplateResponse certificateTemplate;
+      private final CertificateTemplateResponse certificateTemplate;
 
     public CertificateTemplateResponse getCertificateTemplate() {
         return this.certificateTemplate;
@@ -33,7 +33,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final String fingerprint;
+      private final String fingerprint;
 
     public String getFingerprint() {
         return this.fingerprint;
@@ -44,7 +44,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+      private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -55,7 +55,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+      private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -66,7 +66,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="subject", required=true)
-    private final String subject;
+      private final String subject;
 
     public String getSubject() {
         return this.subject;
@@ -77,7 +77,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final String thumbprint;
+      private final String thumbprint;
 
     public String getThumbprint() {
         return this.thumbprint;
@@ -88,7 +88,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validationState", required=true)
-    private final String validationState;
+      private final String validationState;
 
     public String getValidationState() {
         return this.validationState;
@@ -99,7 +99,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validityExpirationTime", required=true)
-    private final String validityExpirationTime;
+      private final String validityExpirationTime;
 
     public String getValidityExpirationTime() {
         return this.validityExpirationTime;
@@ -110,7 +110,7 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="validityStartTime", required=true)
-    private final String validityStartTime;
+      private final String validityStartTime;
 
     public String getValidityStartTime() {
         return this.validityStartTime;
@@ -229,7 +229,6 @@ public final class CertificateAttributesResponse extends io.pulumi.resources.Inv
             this.validityStartTime = Objects.requireNonNull(validityStartTime);
             return this;
         }
-
         public CertificateAttributesResponse build() {
             return new CertificateAttributesResponse(certificateTemplate, fingerprint, issuer, serialNumber, subject, thumbprint, validationState, validityExpirationTime, validityStartTime);
         }

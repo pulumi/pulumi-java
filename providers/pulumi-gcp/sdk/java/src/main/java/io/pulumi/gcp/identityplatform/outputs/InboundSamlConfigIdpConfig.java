@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.identityplatform.outputs.InboundSamlConfigIdpConfigIdpCertificate;
 import java.lang.Boolean;
 import java.lang.String;
@@ -123,7 +123,6 @@ public final class InboundSamlConfigIdpConfig {
             this.ssoUrl = Objects.requireNonNull(ssoUrl);
             return this;
         }
-
         public InboundSamlConfigIdpConfig build() {
             return new InboundSamlConfigIdpConfig(idpCertificates, idpEntityId, signRequest, ssoUrl);
         }

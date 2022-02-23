@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
      * 
      */
     @InputImport(name="allowAllBundleIds", required=true)
-    private final Boolean allowAllBundleIds;
+      private final Boolean allowAllBundleIds;
 
     public Boolean getAllowAllBundleIds() {
         return this.allowAllBundleIds;
@@ -34,7 +34,7 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
      * 
      */
     @InputImport(name="allowedBundleIds", required=true)
-    private final List<String> allowedBundleIds;
+      private final List<String> allowedBundleIds;
 
     public List<String> getAllowedBundleIds() {
         return this.allowedBundleIds;
@@ -83,7 +83,6 @@ public final class GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse extend
             this.allowedBundleIds = Objects.requireNonNull(allowedBundleIds);
             return this;
         }
-
         public GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse build() {
             return new GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse(allowAllBundleIds, allowedBundleIds);
         }

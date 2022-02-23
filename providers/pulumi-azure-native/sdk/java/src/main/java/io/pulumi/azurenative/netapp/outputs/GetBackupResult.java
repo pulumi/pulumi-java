@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -287,7 +287,6 @@ public final class GetBackupResult {
             this.volumeName = Objects.requireNonNull(volumeName);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(backupId, backupType, creationDate, failureReason, id, label, location, name, provisioningState, size, type, volumeName);
         }

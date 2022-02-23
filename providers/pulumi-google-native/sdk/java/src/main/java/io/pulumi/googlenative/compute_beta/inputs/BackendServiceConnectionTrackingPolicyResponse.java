@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="connectionPersistenceOnUnhealthyBackends", required=true)
-    private final String connectionPersistenceOnUnhealthyBackends;
+      private final String connectionPersistenceOnUnhealthyBackends;
 
     public String getConnectionPersistenceOnUnhealthyBackends() {
         return this.connectionPersistenceOnUnhealthyBackends;
@@ -34,7 +34,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="enableStrongAffinity", required=true)
-    private final Boolean enableStrongAffinity;
+      private final Boolean enableStrongAffinity;
 
     public Boolean getEnableStrongAffinity() {
         return this.enableStrongAffinity;
@@ -45,7 +45,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="idleTimeoutSec", required=true)
-    private final Integer idleTimeoutSec;
+      private final Integer idleTimeoutSec;
 
     public Integer getIdleTimeoutSec() {
         return this.idleTimeoutSec;
@@ -56,7 +56,7 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
      * 
      */
     @InputImport(name="trackingMode", required=true)
-    private final String trackingMode;
+      private final String trackingMode;
 
     public String getTrackingMode() {
         return this.trackingMode;
@@ -125,7 +125,6 @@ public final class BackendServiceConnectionTrackingPolicyResponse extends io.pul
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
         }
-
         public BackendServiceConnectionTrackingPolicyResponse build() {
             return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }

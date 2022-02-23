@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -275,7 +275,6 @@ public final class GetKeyValueResult {
             this.value = value;
             return this;
         }
-
         public GetKeyValueResult build() {
             return new GetKeyValueResult(contentType, eTag, id, key, label, lastModified, locked, name, tags, type, value);
         }

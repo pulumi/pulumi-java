@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRatePlanArgs Empty = new GetRatePlanArgs();
 
     @InputImport(name="apiproductId", required=true)
-    private final String apiproductId;
+      private final String apiproductId;
 
     public String getApiproductId() {
         return this.apiproductId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="rateplanId", required=true)
-    private final String rateplanId;
+      private final String rateplanId;
 
     public String getRateplanId() {
         return this.rateplanId;
@@ -86,7 +86,6 @@ public final class GetRatePlanArgs extends io.pulumi.resources.InvokeArgs {
             this.rateplanId = Objects.requireNonNull(rateplanId);
             return this;
         }
-
         public GetRatePlanArgs build() {
             return new GetRatePlanArgs(apiproductId, organizationId, rateplanId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.LinuxOsState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxOsState")
-    private final @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
+        private final @Nullable Input<Either<String,LinuxOsState>> linuxOsState;
 
     public Input<Either<String,LinuxOsState>> getLinuxOsState() {
         return this.linuxOsState == null ? Input.empty() : this.linuxOsState;
@@ -68,7 +68,6 @@ public final class LinuxOsInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.linuxOsState = Input.ofNullable(linuxOsState);
             return this;
         }
-
         public LinuxOsInfoArgs build() {
             return new LinuxOsInfoArgs(linuxOsState);
         }

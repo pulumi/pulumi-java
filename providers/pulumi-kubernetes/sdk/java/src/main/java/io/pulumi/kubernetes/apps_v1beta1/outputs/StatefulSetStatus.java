@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta1.outputs.StatefulSetCondition;
 import java.lang.Integer;
 import java.lang.String;
@@ -226,7 +226,6 @@ public final class StatefulSetStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public StatefulSetStatus build() {
             return new StatefulSetStatus(collisionCount, conditions, currentReplicas, currentRevision, observedGeneration, readyReplicas, replicas, updateRevision, updatedReplicas);
         }

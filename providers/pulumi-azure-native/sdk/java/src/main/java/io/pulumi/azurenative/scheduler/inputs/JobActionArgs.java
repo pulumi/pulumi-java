@@ -11,7 +11,7 @@ import io.pulumi.azurenative.scheduler.inputs.ServiceBusQueueMessageArgs;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusTopicMessageArgs;
 import io.pulumi.azurenative.scheduler.inputs.StorageQueueMessageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="errorAction")
-    private final @Nullable Input<JobErrorActionArgs> errorAction;
+        private final @Nullable Input<JobErrorActionArgs> errorAction;
 
     public Input<JobErrorActionArgs> getErrorAction() {
         return this.errorAction == null ? Input.empty() : this.errorAction;
@@ -36,7 +36,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queueMessage")
-    private final @Nullable Input<StorageQueueMessageArgs> queueMessage;
+        private final @Nullable Input<StorageQueueMessageArgs> queueMessage;
 
     public Input<StorageQueueMessageArgs> getQueueMessage() {
         return this.queueMessage == null ? Input.empty() : this.queueMessage;
@@ -47,7 +47,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="request")
-    private final @Nullable Input<HttpRequestArgs> request;
+        private final @Nullable Input<HttpRequestArgs> request;
 
     public Input<HttpRequestArgs> getRequest() {
         return this.request == null ? Input.empty() : this.request;
@@ -58,7 +58,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable Input<RetryPolicyArgs> retryPolicy;
+        private final @Nullable Input<RetryPolicyArgs> retryPolicy;
 
     public Input<RetryPolicyArgs> getRetryPolicy() {
         return this.retryPolicy == null ? Input.empty() : this.retryPolicy;
@@ -69,7 +69,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusQueueMessage")
-    private final @Nullable Input<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
+        private final @Nullable Input<ServiceBusQueueMessageArgs> serviceBusQueueMessage;
 
     public Input<ServiceBusQueueMessageArgs> getServiceBusQueueMessage() {
         return this.serviceBusQueueMessage == null ? Input.empty() : this.serviceBusQueueMessage;
@@ -80,7 +80,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusTopicMessage")
-    private final @Nullable Input<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
+        private final @Nullable Input<ServiceBusTopicMessageArgs> serviceBusTopicMessage;
 
     public Input<ServiceBusTopicMessageArgs> getServiceBusTopicMessage() {
         return this.serviceBusTopicMessage == null ? Input.empty() : this.serviceBusTopicMessage;
@@ -91,7 +91,7 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<JobActionType> type;
+        private final @Nullable Input<JobActionType> type;
 
     public Input<JobActionType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -225,7 +225,6 @@ public final class JobActionArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public JobActionArgs build() {
             return new JobActionArgs(errorAction, queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }

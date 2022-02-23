@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.azurenative.testbase.inputs.NotificationReceiverValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="receiverType")
-    private final @Nullable Input<String> receiverType;
+        private final @Nullable Input<String> receiverType;
 
     public Input<String> getReceiverType() {
         return this.receiverType == null ? Input.empty() : this.receiverType;
@@ -35,7 +35,7 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="receiverValue")
-    private final @Nullable Input<NotificationReceiverValueArgs> receiverValue;
+        private final @Nullable Input<NotificationReceiverValueArgs> receiverValue;
 
     public Input<NotificationReceiverValueArgs> getReceiverValue() {
         return this.receiverValue == null ? Input.empty() : this.receiverValue;
@@ -94,7 +94,6 @@ public final class NotificationEventReceiverArgs extends io.pulumi.resources.Res
             this.receiverValue = Input.ofNullable(receiverValue);
             return this;
         }
-
         public NotificationEventReceiverArgs build() {
             return new NotificationEventReceiverArgs(receiverType, receiverValue);
         }

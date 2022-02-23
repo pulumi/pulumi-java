@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.enums.AuditLogConfigLogType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,14 +26,14 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exemptedMembers")
-    private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Input<List<String>> exemptedMembers;
 
     public Input<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
     }
 
     @InputImport(name="ignoreChildExemptions")
-    private final @Nullable Input<Boolean> ignoreChildExemptions;
+      private final @Nullable Input<Boolean> ignoreChildExemptions;
 
     public Input<Boolean> getIgnoreChildExemptions() {
         return this.ignoreChildExemptions == null ? Input.empty() : this.ignoreChildExemptions;
@@ -44,7 +44,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logType")
-    private final @Nullable Input<AuditLogConfigLogType> logType;
+      private final @Nullable Input<AuditLogConfigLogType> logType;
 
     public Input<AuditLogConfigLogType> getLogType() {
         return this.logType == null ? Input.empty() : this.logType;
@@ -118,7 +118,6 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.logType = Input.ofNullable(logType);
             return this;
         }
-
         public AuditLogConfigArgs build() {
             return new AuditLogConfigArgs(exemptedMembers, ignoreChildExemptions, logType);
         }

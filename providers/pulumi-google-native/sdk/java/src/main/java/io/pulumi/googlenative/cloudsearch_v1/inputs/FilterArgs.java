@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.CompositeFilterArgs;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.ValueFilterArgs;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
     public static final FilterArgs Empty = new FilterArgs();
 
     @InputImport(name="compositeFilter")
-    private final @Nullable Input<CompositeFilterArgs> compositeFilter;
+      private final @Nullable Input<CompositeFilterArgs> compositeFilter;
 
     public Input<CompositeFilterArgs> getCompositeFilter() {
         return this.compositeFilter == null ? Input.empty() : this.compositeFilter;
     }
 
     @InputImport(name="valueFilter")
-    private final @Nullable Input<ValueFilterArgs> valueFilter;
+      private final @Nullable Input<ValueFilterArgs> valueFilter;
 
     public Input<ValueFilterArgs> getValueFilter() {
         return this.valueFilter == null ? Input.empty() : this.valueFilter;
@@ -86,7 +86,6 @@ public final class FilterArgs extends io.pulumi.resources.ResourceArgs {
             this.valueFilter = Input.ofNullable(valueFilter);
             return this;
         }
-
         public FilterArgs build() {
             return new FilterArgs(compositeFilter, valueFilter);
         }

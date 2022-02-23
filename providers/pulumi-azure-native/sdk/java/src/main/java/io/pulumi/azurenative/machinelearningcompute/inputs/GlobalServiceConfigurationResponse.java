@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningcompute.inputs;
 import io.pulumi.azurenative.machinelearningcompute.inputs.AutoScaleConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServiceAuthConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.inputs.SslConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoScale")
-    private final @Nullable AutoScaleConfigurationResponse autoScale;
+        private final @Nullable AutoScaleConfigurationResponse autoScale;
 
     public Optional<AutoScaleConfigurationResponse> getAutoScale() {
         return this.autoScale == null ? Optional.empty() : Optional.ofNullable(this.autoScale);
@@ -37,7 +37,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable String etag;
+        private final @Nullable String etag;
 
     public Optional<String> getEtag() {
         return this.etag == null ? Optional.empty() : Optional.ofNullable(this.etag);
@@ -48,7 +48,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceAuth")
-    private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
+        private final @Nullable ServiceAuthConfigurationResponse serviceAuth;
 
     public Optional<ServiceAuthConfigurationResponse> getServiceAuth() {
         return this.serviceAuth == null ? Optional.empty() : Optional.ofNullable(this.serviceAuth);
@@ -59,7 +59,7 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="ssl")
-    private final @Nullable SslConfigurationResponse ssl;
+        private final @Nullable SslConfigurationResponse ssl;
 
     public Optional<SslConfigurationResponse> getSsl() {
         return this.ssl == null ? Optional.empty() : Optional.ofNullable(this.ssl);
@@ -128,7 +128,6 @@ public final class GlobalServiceConfigurationResponse extends io.pulumi.resource
             this.ssl = ssl;
             return this;
         }
-
         public GlobalServiceConfigurationResponse build() {
             return new GlobalServiceConfigurationResponse(autoScale, etag, serviceAuth, ssl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1AnnotationSpecResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class GetAnnotationSpecSetResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetAnnotationSpecSetResult build() {
             return new GetAnnotationSpecSetResult(annotationSpecs, blockingResources, description, displayName, name);
         }

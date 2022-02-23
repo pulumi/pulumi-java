@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceRequirements;
 import io.pulumi.kubernetes.core_v1.outputs.TypedLocalObjectReference;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
@@ -216,7 +216,6 @@ public final class PersistentVolumeClaimSpec {
             this.volumeName = volumeName;
             return this;
         }
-
         public PersistentVolumeClaimSpec build() {
             return new PersistentVolumeClaimSpec(accessModes, dataSource, dataSourceRef, resources, selector, storageClassName, volumeMode, volumeName);
         }

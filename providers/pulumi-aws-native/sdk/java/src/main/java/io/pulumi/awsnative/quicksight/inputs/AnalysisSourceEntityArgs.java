@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.AnalysisSourceTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
     public static final AnalysisSourceEntityArgs Empty = new AnalysisSourceEntityArgs();
 
     @InputImport(name="sourceTemplate")
-    private final @Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate;
+        private final @Nullable Input<AnalysisSourceTemplateArgs> sourceTemplate;
 
     public Input<AnalysisSourceTemplateArgs> getSourceTemplate() {
         return this.sourceTemplate == null ? Input.empty() : this.sourceTemplate;
@@ -62,7 +62,6 @@ public final class AnalysisSourceEntityArgs extends io.pulumi.resources.Resource
             this.sourceTemplate = Input.ofNullable(sourceTemplate);
             return this;
         }
-
         public AnalysisSourceEntityArgs build() {
             return new AnalysisSourceEntityArgs(sourceTemplate);
         }

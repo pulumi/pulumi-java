@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class BackupRetentionSettingsResponse {
             this.retentionUnit = Objects.requireNonNull(retentionUnit);
             return this;
         }
-
         public BackupRetentionSettingsResponse build() {
             return new BackupRetentionSettingsResponse(retainedBackups, retentionUnit);
         }

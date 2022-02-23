@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class ClusterEncryptionConfigProviderProperties {
             this.keyArn = keyArn;
             return this;
         }
-
         public ClusterEncryptionConfigProviderProperties build() {
             return new ClusterEncryptionConfigProviderProperties(keyArn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class ExternalMetricSource {
             this.targetValue = targetValue;
             return this;
         }
-
         public ExternalMetricSource build() {
             return new ExternalMetricSource(metricName, metricSelector, targetAverageValue, targetValue);
         }

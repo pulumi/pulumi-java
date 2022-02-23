@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<Integer> height;
+      private final @Nullable Input<Integer> height;
 
     public Input<Integer> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -35,7 +35,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -46,7 +46,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<Integer> width;
+      private final @Nullable Input<Integer> width;
 
     public Input<Integer> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -120,7 +120,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageArgs extends io.pu
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ImageArgs build() {
             return new GoogleCloudRecommendationengineV1beta1ImageArgs(height, uri, width);
         }

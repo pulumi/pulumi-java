@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.outputs.MaintenanceRedeployStatusResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineAgentInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineHealthStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -295,7 +295,6 @@ public final class VirtualMachineScaleSetVMInstanceViewResponse {
             this.vmHealth = Objects.requireNonNull(vmHealth);
             return this;
         }
-
         public VirtualMachineScaleSetVMInstanceViewResponse build() {
             return new VirtualMachineScaleSetVMInstanceViewResponse(assignedHost, bootDiagnostics, disks, extensions, maintenanceRedeployStatus, placementGroupId, platformFaultDomain, platformUpdateDomain, rdpThumbPrint, statuses, vmAgent, vmHealth);
         }

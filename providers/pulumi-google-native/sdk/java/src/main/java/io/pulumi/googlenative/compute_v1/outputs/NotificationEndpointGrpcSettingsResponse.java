@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class NotificationEndpointGrpcSettingsResponse {
             this.retryDurationSec = Objects.requireNonNull(retryDurationSec);
             return this;
         }
-
         public NotificationEndpointGrpcSettingsResponse build() {
             return new NotificationEndpointGrpcSettingsResponse(authority, endpoint, payloadName, resendInterval, retryDurationSec);
         }

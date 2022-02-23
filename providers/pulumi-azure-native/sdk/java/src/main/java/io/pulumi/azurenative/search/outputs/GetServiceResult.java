@@ -8,7 +8,7 @@ import io.pulumi.azurenative.search.outputs.NetworkRuleSetResponse;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.search.outputs.SharedPrivateLinkResourceResponse;
 import io.pulumi.azurenative.search.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -399,7 +399,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(hostingMode, id, identity, location, name, networkRuleSet, partitionCount, privateEndpointConnections, provisioningState, publicNetworkAccess, replicaCount, sharedPrivateLinkResources, sku, status, statusDetails, tags, type);
         }

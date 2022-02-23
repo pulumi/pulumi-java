@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="emails", required=true)
-    private final List<String> emails;
+      private final List<String> emails;
 
     public List<String> getEmails() {
         return this.emails;
@@ -33,7 +33,7 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="instruction", required=true)
-    private final String instruction;
+      private final String instruction;
 
     public String getInstruction() {
         return this.instruction;
@@ -44,7 +44,7 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uris", required=true)
-    private final List<String> uris;
+      private final List<String> uris;
 
     public List<String> getUris() {
         return this.uris;
@@ -103,7 +103,6 @@ public final class ApplicationInfoResponse extends io.pulumi.resources.InvokeArg
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public ApplicationInfoResponse build() {
             return new ApplicationInfoResponse(emails, instruction, uris);
         }

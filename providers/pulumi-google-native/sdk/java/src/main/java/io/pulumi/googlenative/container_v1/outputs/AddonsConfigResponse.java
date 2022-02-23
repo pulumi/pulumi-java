@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.CloudRunConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.ConfigConnectorConfigResponse;
 import io.pulumi.googlenative.container_v1.outputs.DnsCacheConfigResponse;
@@ -229,7 +229,6 @@ public final class AddonsConfigResponse {
             this.networkPolicyConfig = Objects.requireNonNull(networkPolicyConfig);
             return this;
         }
-
         public AddonsConfigResponse build() {
             return new AddonsConfigResponse(cloudRunConfig, configConnectorConfig, dnsCacheConfig, gcePersistentDiskCsiDriverConfig, gcpFilestoreCsiDriverConfig, horizontalPodAutoscaling, httpLoadBalancing, kubernetesDashboard, networkPolicyConfig);
         }

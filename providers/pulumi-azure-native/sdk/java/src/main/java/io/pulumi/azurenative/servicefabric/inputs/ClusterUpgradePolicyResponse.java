@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ClusterHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.inputs.ClusterUpgradeDeltaHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="deltaHealthPolicy")
-    private final @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy;
+        private final @Nullable ClusterUpgradeDeltaHealthPolicyResponse deltaHealthPolicy;
 
     public Optional<ClusterUpgradeDeltaHealthPolicyResponse> getDeltaHealthPolicy() {
         return this.deltaHealthPolicy == null ? Optional.empty() : Optional.ofNullable(this.deltaHealthPolicy);
@@ -37,7 +37,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="forceRestart")
-    private final @Nullable Boolean forceRestart;
+        private final @Nullable Boolean forceRestart;
 
     public Optional<Boolean> getForceRestart() {
         return this.forceRestart == null ? Optional.empty() : Optional.ofNullable(this.forceRestart);
@@ -48,7 +48,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="healthCheckRetryTimeout", required=true)
-    private final String healthCheckRetryTimeout;
+        private final String healthCheckRetryTimeout;
 
     public String getHealthCheckRetryTimeout() {
         return this.healthCheckRetryTimeout;
@@ -59,7 +59,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="healthCheckStableDuration", required=true)
-    private final String healthCheckStableDuration;
+        private final String healthCheckStableDuration;
 
     public String getHealthCheckStableDuration() {
         return this.healthCheckStableDuration;
@@ -70,7 +70,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="healthCheckWaitDuration", required=true)
-    private final String healthCheckWaitDuration;
+        private final String healthCheckWaitDuration;
 
     public String getHealthCheckWaitDuration() {
         return this.healthCheckWaitDuration;
@@ -81,7 +81,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="healthPolicy", required=true)
-    private final ClusterHealthPolicyResponse healthPolicy;
+        private final ClusterHealthPolicyResponse healthPolicy;
 
     public ClusterHealthPolicyResponse getHealthPolicy() {
         return this.healthPolicy;
@@ -92,7 +92,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="upgradeDomainTimeout", required=true)
-    private final String upgradeDomainTimeout;
+        private final String upgradeDomainTimeout;
 
     public String getUpgradeDomainTimeout() {
         return this.upgradeDomainTimeout;
@@ -103,7 +103,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="upgradeReplicaSetCheckTimeout", required=true)
-    private final String upgradeReplicaSetCheckTimeout;
+        private final String upgradeReplicaSetCheckTimeout;
 
     public String getUpgradeReplicaSetCheckTimeout() {
         return this.upgradeReplicaSetCheckTimeout;
@@ -114,7 +114,7 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="upgradeTimeout", required=true)
-    private final String upgradeTimeout;
+        private final String upgradeTimeout;
 
     public String getUpgradeTimeout() {
         return this.upgradeTimeout;
@@ -233,7 +233,6 @@ public final class ClusterUpgradePolicyResponse extends io.pulumi.resources.Invo
             this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
             return this;
         }
-
         public ClusterUpgradePolicyResponse build() {
             return new ClusterUpgradePolicyResponse(deltaHealthPolicy, forceRestart, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, healthPolicy, upgradeDomainTimeout, upgradeReplicaSetCheckTimeout, upgradeTimeout);
         }

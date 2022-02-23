@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.AmlComputeNodeInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class ListMachineLearningComputeNodesResult {
             this.nodes = Objects.requireNonNull(nodes);
             return this;
         }
-
         public ListMachineLearningComputeNodesResult build() {
             return new ListMachineLearningComputeNodesResult(computeType, nextLink, nodes);
         }

@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.authorization.k8s.io_v1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.SelfSubjectRulesReviewArgs;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.SelfSubjectRulesReviewSpec;
@@ -94,13 +94,6 @@ public class SelfSubjectRulesReview extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SelfSubjectRulesReview(String name) {
-        super("kubernetes:authorization.k8s.io/v1:SelfSubjectRulesReview", name, SelfSubjectRulesReviewArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

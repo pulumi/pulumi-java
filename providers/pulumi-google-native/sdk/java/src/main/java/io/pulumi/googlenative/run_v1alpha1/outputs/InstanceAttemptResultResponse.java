@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.GoogleRpcStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class InstanceAttemptResultResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public InstanceAttemptResultResponse build() {
             return new InstanceAttemptResultResponse(exitCode, status);
         }

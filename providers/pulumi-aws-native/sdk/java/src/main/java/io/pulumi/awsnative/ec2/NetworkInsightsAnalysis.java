@@ -12,8 +12,8 @@ import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPathComponent;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -104,13 +104,6 @@ public class NetworkInsightsAnalysis extends io.pulumi.resources.CustomResource 
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NetworkInsightsAnalysis(String name) {
-        super("aws-native:ec2:NetworkInsightsAnalysis", name, NetworkInsightsAnalysisArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

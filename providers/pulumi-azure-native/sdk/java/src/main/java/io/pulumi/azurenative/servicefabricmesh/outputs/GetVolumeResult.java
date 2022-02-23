@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.VolumeProviderParametersAzureFileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -267,7 +267,6 @@ public final class GetVolumeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVolumeResult build() {
             return new GetVolumeResult(azureFileParameters, description, id, location, name, provider, provisioningState, status, statusDetails, tags, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+        private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -31,7 +31,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -42,7 +42,7 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="settingName")
-    private final @Nullable Input<String> settingName;
+        private final @Nullable Input<String> settingName;
 
     public Input<String> getSettingName() {
         return this.settingName == null ? Input.empty() : this.settingName;
@@ -116,7 +116,6 @@ public final class AdvancedThreatProtectionArgs extends io.pulumi.resources.Reso
             this.settingName = Input.ofNullable(settingName);
             return this;
         }
-
         public AdvancedThreatProtectionArgs build() {
             return new AdvancedThreatProtectionArgs(isEnabled, resourceId, settingName);
         }

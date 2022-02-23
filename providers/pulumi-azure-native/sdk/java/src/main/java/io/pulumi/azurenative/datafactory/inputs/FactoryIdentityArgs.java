@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.enums.FactoryIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,FactoryIdentityType>> type;
+        private final Input<Either<String,FactoryIdentityType>> type;
 
     public Input<Either<String,FactoryIdentityType>> getType() {
         return this.type;
@@ -38,7 +38,7 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -97,7 +97,6 @@ public final class FactoryIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public FactoryIdentityArgs build() {
             return new FactoryIdentityArgs(type, userAssignedIdentities);
         }

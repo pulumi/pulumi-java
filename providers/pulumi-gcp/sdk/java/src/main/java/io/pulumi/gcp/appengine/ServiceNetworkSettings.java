@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.ServiceNetworkSettingsArgs;
 import io.pulumi.gcp.appengine.inputs.ServiceNetworkSettingsState;
@@ -89,13 +89,6 @@ public class ServiceNetworkSettings extends io.pulumi.resources.CustomResource {
         return this.service;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ServiceNetworkSettings(String name) {
-        super("gcp:appengine/serviceNetworkSettings:ServiceNetworkSettings", name, ServiceNetworkSettingsArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

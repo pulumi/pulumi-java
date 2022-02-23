@@ -34,7 +34,6 @@ public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs ex
         public Builder(GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs build() {
             return new GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataArgs();
         }

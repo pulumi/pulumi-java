@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.WorkflowTriggerListCallbackUrlQueriesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class ListIntegrationAccountPartnerContentCallbackUrlResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListIntegrationAccountPartnerContentCallbackUrlResult build() {
             return new ListIntegrationAccountPartnerContentCallbackUrlResult(basePath, method, queries, relativePath, relativePathParameters, value);
         }

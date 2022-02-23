@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class KeyIdResponse {
             this.keyId = Objects.requireNonNull(keyId);
             return this;
         }
-
         public KeyIdResponse build() {
             return new KeyIdResponse(keyId);
         }

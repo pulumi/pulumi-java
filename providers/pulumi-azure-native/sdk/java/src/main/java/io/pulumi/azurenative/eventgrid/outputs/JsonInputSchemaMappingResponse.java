@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventgrid.outputs;
 
 import io.pulumi.azurenative.eventgrid.outputs.JsonFieldResponse;
 import io.pulumi.azurenative.eventgrid.outputs.JsonFieldWithDefaultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -185,7 +185,6 @@ public final class JsonInputSchemaMappingResponse {
             this.topic = topic;
             return this;
         }
-
         public JsonInputSchemaMappingResponse build() {
             return new JsonInputSchemaMappingResponse(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
         }

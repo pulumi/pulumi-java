@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetReferenceArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetReferenceArgs Empty = new GetReferenceArgs();
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="referenceId", required=true)
-    private final String referenceId;
+      private final String referenceId;
 
     public String getReferenceId() {
         return this.referenceId;
@@ -86,7 +86,6 @@ public final class GetReferenceArgs extends io.pulumi.resources.InvokeArgs {
             this.referenceId = Objects.requireNonNull(referenceId);
             return this;
         }
-
         public GetReferenceArgs build() {
             return new GetReferenceArgs(environmentId, organizationId, referenceId);
         }

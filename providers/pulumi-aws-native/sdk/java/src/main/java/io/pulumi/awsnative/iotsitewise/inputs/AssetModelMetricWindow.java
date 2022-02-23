@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelTumblingWindow;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AssetModelMetricWindow extends io.pulumi.resources.InvokeArgs
     public static final AssetModelMetricWindow Empty = new AssetModelMetricWindow();
 
     @InputImport(name="tumbling")
-    private final @Nullable AssetModelTumblingWindow tumbling;
+        private final @Nullable AssetModelTumblingWindow tumbling;
 
     public Optional<AssetModelTumblingWindow> getTumbling() {
         return this.tumbling == null ? Optional.empty() : Optional.ofNullable(this.tumbling);
@@ -57,7 +57,6 @@ public final class AssetModelMetricWindow extends io.pulumi.resources.InvokeArgs
             this.tumbling = tumbling;
             return this;
         }
-
         public AssetModelMetricWindow build() {
             return new AssetModelMetricWindow(tumbling);
         }

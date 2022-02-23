@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -194,7 +194,6 @@ public final class FeatureMembershipConfigmanagementConfigSyncGit {
             this.syncWaitSecs = syncWaitSecs;
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSyncGit build() {
             return new FeatureMembershipConfigmanagementConfigSyncGit(gcpServiceAccountEmail, httpsProxy, policyDir, secretType, syncBranch, syncRepo, syncRev, syncWaitSecs);
         }

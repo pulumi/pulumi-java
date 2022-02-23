@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="canonicalService", required=true)
-    private final String canonicalService;
+      private final String canonicalService;
 
     public String getCanonicalService() {
         return this.canonicalService;
@@ -32,7 +32,7 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="canonicalServiceNamespace", required=true)
-    private final String canonicalServiceNamespace;
+      private final String canonicalServiceNamespace;
 
     public String getCanonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
@@ -43,7 +43,7 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="meshUid", required=true)
-    private final String meshUid;
+      private final String meshUid;
 
     public String getMeshUid() {
         return this.meshUid;
@@ -102,7 +102,6 @@ public final class IstioCanonicalServiceResponse extends io.pulumi.resources.Inv
             this.meshUid = Objects.requireNonNull(meshUid);
             return this;
         }
-
         public IstioCanonicalServiceResponse build() {
             return new IstioCanonicalServiceResponse(canonicalService, canonicalServiceNamespace, meshUid);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.BindingResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RuleResponse;
@@ -142,7 +142,6 @@ public final class GetResourcePolicyIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetResourcePolicyIamPolicyResult build() {
             return new GetResourcePolicyIamPolicyResult(auditConfigs, bindings, etag, rules, version);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.certificatemanager.outputs;
 
 import io.pulumi.awsnative.certificatemanager.outputs.AccountExpiryEventsConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class GetAccountResult {
             this.expiryEventsConfiguration = expiryEventsConfiguration;
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, expiryEventsConfiguration);
         }

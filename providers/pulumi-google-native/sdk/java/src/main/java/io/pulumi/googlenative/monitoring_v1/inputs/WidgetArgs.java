@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AlertChartArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.EmptyArgs;
 import io.pulumi.googlenative.monitoring_v1.inputs.LogsPanelArgs;
@@ -30,7 +30,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertChart")
-    private final @Nullable Input<AlertChartArgs> alertChart;
+      private final @Nullable Input<AlertChartArgs> alertChart;
 
     public Input<AlertChartArgs> getAlertChart() {
         return this.alertChart == null ? Input.empty() : this.alertChart;
@@ -41,7 +41,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blank")
-    private final @Nullable Input<EmptyArgs> blank;
+      private final @Nullable Input<EmptyArgs> blank;
 
     public Input<EmptyArgs> getBlank() {
         return this.blank == null ? Input.empty() : this.blank;
@@ -52,7 +52,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logsPanel")
-    private final @Nullable Input<LogsPanelArgs> logsPanel;
+      private final @Nullable Input<LogsPanelArgs> logsPanel;
 
     public Input<LogsPanelArgs> getLogsPanel() {
         return this.logsPanel == null ? Input.empty() : this.logsPanel;
@@ -63,7 +63,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scorecard")
-    private final @Nullable Input<ScorecardArgs> scorecard;
+      private final @Nullable Input<ScorecardArgs> scorecard;
 
     public Input<ScorecardArgs> getScorecard() {
         return this.scorecard == null ? Input.empty() : this.scorecard;
@@ -74,7 +74,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<TextArgs> text;
+      private final @Nullable Input<TextArgs> text;
 
     public Input<TextArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -85,7 +85,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeSeriesTable")
-    private final @Nullable Input<TimeSeriesTableArgs> timeSeriesTable;
+      private final @Nullable Input<TimeSeriesTableArgs> timeSeriesTable;
 
     public Input<TimeSeriesTableArgs> getTimeSeriesTable() {
         return this.timeSeriesTable == null ? Input.empty() : this.timeSeriesTable;
@@ -96,7 +96,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -107,7 +107,7 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="xyChart")
-    private final @Nullable Input<XyChartArgs> xyChart;
+      private final @Nullable Input<XyChartArgs> xyChart;
 
     public Input<XyChartArgs> getXyChart() {
         return this.xyChart == null ? Input.empty() : this.xyChart;
@@ -256,7 +256,6 @@ public final class WidgetArgs extends io.pulumi.resources.ResourceArgs {
             this.xyChart = Input.ofNullable(xyChart);
             return this;
         }
-
         public WidgetArgs build() {
             return new WidgetArgs(alertChart, blank, logsPanel, scorecard, text, timeSeriesTable, title, xyChart);
         }

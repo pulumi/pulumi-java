@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class LoadBalancingSettingsParametersResponse {
             this.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
-
         public LoadBalancingSettingsParametersResponse build() {
             return new LoadBalancingSettingsParametersResponse(additionalLatencyInMilliseconds, sampleSize, successfulSamplesRequired);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -28,7 +28,7 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
      * 
      */
     @InputImport(name="interface", required=true)
-    private final String $interface;
+      private final String $interface;
 
     public String get$interface() {
         return this.$interface;
@@ -77,7 +77,6 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, $interface);
         }

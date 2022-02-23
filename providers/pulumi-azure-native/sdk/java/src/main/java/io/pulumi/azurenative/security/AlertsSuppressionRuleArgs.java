@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.RuleState;
 import io.pulumi.azurenative.security.inputs.SuppressionAlertsScopeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alertType", required=true)
-    private final Input<String> alertType;
+        private final Input<String> alertType;
 
     public Input<String> getAlertType() {
         return this.alertType;
@@ -33,7 +33,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="alertsSuppressionRuleName")
-    private final @Nullable Input<String> alertsSuppressionRuleName;
+        private final @Nullable Input<String> alertsSuppressionRuleName;
 
     public Input<String> getAlertsSuppressionRuleName() {
         return this.alertsSuppressionRuleName == null ? Input.empty() : this.alertsSuppressionRuleName;
@@ -44,7 +44,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+        private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -55,7 +55,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="expirationDateUtc")
-    private final @Nullable Input<String> expirationDateUtc;
+        private final @Nullable Input<String> expirationDateUtc;
 
     public Input<String> getExpirationDateUtc() {
         return this.expirationDateUtc == null ? Input.empty() : this.expirationDateUtc;
@@ -66,7 +66,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="reason", required=true)
-    private final Input<String> reason;
+        private final Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason;
@@ -77,7 +77,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<Either<String,RuleState>> state;
+        private final Input<Either<String,RuleState>> state;
 
     public Input<Either<String,RuleState>> getState() {
         return this.state;
@@ -88,7 +88,7 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="suppressionAlertsScope")
-    private final @Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope;
+        private final @Nullable Input<SuppressionAlertsScopeArgs> suppressionAlertsScope;
 
     public Input<SuppressionAlertsScopeArgs> getSuppressionAlertsScope() {
         return this.suppressionAlertsScope == null ? Input.empty() : this.suppressionAlertsScope;
@@ -222,7 +222,6 @@ public final class AlertsSuppressionRuleArgs extends io.pulumi.resources.Resourc
             this.suppressionAlertsScope = Input.ofNullable(suppressionAlertsScope);
             return this;
         }
-
         public AlertsSuppressionRuleArgs build() {
             return new AlertsSuppressionRuleArgs(alertType, alertsSuppressionRuleName, comment, expirationDateUtc, reason, state, suppressionAlertsScope);
         }

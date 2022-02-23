@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.BackendServiceArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendResponse;
@@ -543,13 +543,6 @@ public class BackendService extends io.pulumi.resources.CustomResource {
         return this.timeoutSec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BackendService(String name) {
-        super("google-native:compute/alpha:BackendService", name, BackendServiceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

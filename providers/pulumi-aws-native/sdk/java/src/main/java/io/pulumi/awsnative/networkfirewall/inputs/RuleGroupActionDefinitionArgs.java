@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupPublishMetricActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
     public static final RuleGroupActionDefinitionArgs Empty = new RuleGroupActionDefinitionArgs();
 
     @InputImport(name="publishMetricAction")
-    private final @Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction;
+        private final @Nullable Input<RuleGroupPublishMetricActionArgs> publishMetricAction;
 
     public Input<RuleGroupPublishMetricActionArgs> getPublishMetricAction() {
         return this.publishMetricAction == null ? Input.empty() : this.publishMetricAction;
@@ -58,7 +58,6 @@ public final class RuleGroupActionDefinitionArgs extends io.pulumi.resources.Res
             this.publishMetricAction = Input.ofNullable(publishMetricAction);
             return this;
         }
-
         public RuleGroupActionDefinitionArgs build() {
             return new RuleGroupActionDefinitionArgs(publishMetricAction);
         }

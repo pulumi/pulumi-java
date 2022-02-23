@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networkservices_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkservices_v1.EdgeCacheServiceIamPolicyArgs;
 import io.pulumi.googlenative.networkservices_v1.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class EdgeCacheServiceIamPolicy extends io.pulumi.resources.CustomResourc
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EdgeCacheServiceIamPolicy(String name) {
-        super("google-native:networkservices/v1:EdgeCacheServiceIamPolicy", name, EdgeCacheServiceIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

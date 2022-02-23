@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkconnectivity_v1.inputs.RouterApplianceInstanceArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<RouterApplianceInstanceArgs>> instances;
+      private final @Nullable Input<List<RouterApplianceInstanceArgs>> instances;
 
     public Input<List<RouterApplianceInstanceArgs>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -36,7 +36,7 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="siteToSiteDataTransfer")
-    private final @Nullable Input<Boolean> siteToSiteDataTransfer;
+      private final @Nullable Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer == null ? Input.empty() : this.siteToSiteDataTransfer;
@@ -95,7 +95,6 @@ public final class LinkedRouterApplianceInstancesArgs extends io.pulumi.resource
             this.siteToSiteDataTransfer = Input.ofNullable(siteToSiteDataTransfer);
             return this;
         }
-
         public LinkedRouterApplianceInstancesArgs build() {
             return new LinkedRouterApplianceInstancesArgs(instances, siteToSiteDataTransfer);
         }

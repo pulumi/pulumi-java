@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.AwsCloudTrailDataConnectorDataTypesLogsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="logs")
-    private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
+        private final @Nullable Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> logs;
 
     public Input<AwsCloudTrailDataConnectorDataTypesLogsArgs> getLogs() {
         return this.logs == null ? Input.empty() : this.logs;
@@ -66,7 +66,6 @@ public final class AwsCloudTrailDataConnectorDataTypesArgs extends io.pulumi.res
             this.logs = Input.ofNullable(logs);
             return this;
         }
-
         public AwsCloudTrailDataConnectorDataTypesArgs build() {
             return new AwsCloudTrailDataConnectorDataTypesArgs(logs);
         }

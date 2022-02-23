@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMHealthDetailsRe
 import io.pulumi.azurenative.recoveryservices.outputs.AzureIaaSVMProtectedItemExtendedInfoResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ExtendedPropertiesResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.KPIResourceHealthDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -589,7 +589,6 @@ public final class AzureIaaSVMProtectedItemResponse {
             this.workloadType = workloadType;
             return this;
         }
-
         public AzureIaaSVMProtectedItemResponse build() {
             return new AzureIaaSVMProtectedItemResponse(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, extendedProperties, friendlyName, healthDetails, healthStatus, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, policyId, protectedItemDataId, protectedItemType, protectionState, protectionStatus, sourceResourceId, virtualMachineId, workloadType);
         }

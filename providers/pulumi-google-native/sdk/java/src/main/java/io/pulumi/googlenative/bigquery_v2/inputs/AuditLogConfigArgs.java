@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.enums.AuditLogConfigLogType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exemptedMembers")
-    private final @Nullable Input<List<String>> exemptedMembers;
+      private final @Nullable Input<List<String>> exemptedMembers;
 
     public Input<List<String>> getExemptedMembers() {
         return this.exemptedMembers == null ? Input.empty() : this.exemptedMembers;
@@ -36,7 +36,7 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logType")
-    private final @Nullable Input<AuditLogConfigLogType> logType;
+      private final @Nullable Input<AuditLogConfigLogType> logType;
 
     public Input<AuditLogConfigLogType> getLogType() {
         return this.logType == null ? Input.empty() : this.logType;
@@ -95,7 +95,6 @@ public final class AuditLogConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.logType = Input.ofNullable(logType);
             return this;
         }
-
         public AuditLogConfigArgs build() {
             return new AuditLogConfigArgs(exemptedMembers, logType);
         }

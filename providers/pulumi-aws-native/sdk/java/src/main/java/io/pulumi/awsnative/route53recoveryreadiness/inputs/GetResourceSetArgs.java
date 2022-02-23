@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetResourceSetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceSetName", required=true)
-    private final String resourceSetName;
+        private final String resourceSetName;
 
     public String getResourceSetName() {
         return this.resourceSetName;
@@ -55,7 +55,6 @@ public final class GetResourceSetArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceSetName = Objects.requireNonNull(resourceSetName);
             return this;
         }
-
         public GetResourceSetArgs build() {
             return new GetResourceSetArgs(resourceSetName);
         }

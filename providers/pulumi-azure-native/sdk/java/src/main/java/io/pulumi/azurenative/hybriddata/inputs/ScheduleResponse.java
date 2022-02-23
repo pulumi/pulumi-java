@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybriddata.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -35,7 +35,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyList")
-    private final @Nullable List<String> policyList;
+        private final @Nullable List<String> policyList;
 
     public List<String> getPolicyList() {
         return this.policyList == null ? List.of() : this.policyList;
@@ -84,7 +84,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.policyList = policyList;
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(name, policyList);
         }

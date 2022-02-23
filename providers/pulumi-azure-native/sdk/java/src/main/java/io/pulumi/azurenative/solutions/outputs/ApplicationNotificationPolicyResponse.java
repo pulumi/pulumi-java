@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.outputs;
 
 import io.pulumi.azurenative.solutions.outputs.ApplicationNotificationEndpointResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class ApplicationNotificationPolicyResponse {
             this.notificationEndpoints = Objects.requireNonNull(notificationEndpoints);
             return this;
         }
-
         public ApplicationNotificationPolicyResponse build() {
             return new ApplicationNotificationPolicyResponse(notificationEndpoints);
         }

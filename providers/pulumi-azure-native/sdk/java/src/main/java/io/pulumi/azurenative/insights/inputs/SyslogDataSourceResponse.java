@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="facilityNames")
-    private final @Nullable List<String> facilityNames;
+        private final @Nullable List<String> facilityNames;
 
     public List<String> getFacilityNames() {
         return this.facilityNames == null ? List.of() : this.facilityNames;
@@ -36,7 +36,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="logLevels")
-    private final @Nullable List<String> logLevels;
+        private final @Nullable List<String> logLevels;
 
     public List<String> getLogLevels() {
         return this.logLevels == null ? List.of() : this.logLevels;
@@ -48,7 +48,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -60,7 +60,7 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable List<String> streams;
+        private final @Nullable List<String> streams;
 
     public List<String> getStreams() {
         return this.streams == null ? List.of() : this.streams;
@@ -129,7 +129,6 @@ public final class SyslogDataSourceResponse extends io.pulumi.resources.InvokeAr
             this.streams = streams;
             return this;
         }
-
         public SyslogDataSourceResponse build() {
             return new SyslogDataSourceResponse(facilityNames, logLevels, name, streams);
         }

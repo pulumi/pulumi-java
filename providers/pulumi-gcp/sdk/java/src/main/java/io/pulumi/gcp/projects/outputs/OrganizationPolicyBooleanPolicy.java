@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class OrganizationPolicyBooleanPolicy {
             this.enforced = Objects.requireNonNull(enforced);
             return this;
         }
-
         public OrganizationPolicyBooleanPolicy build() {
             return new OrganizationPolicyBooleanPolicy(enforced);
         }

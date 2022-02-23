@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.servicecatalogappregistry.AttributeGroupAssociationArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -59,13 +59,6 @@ public class AttributeGroupAssociation extends io.pulumi.resources.CustomResourc
         return this.attributeGroupArn;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AttributeGroupAssociation(String name) {
-        super("aws-native:servicecatalogappregistry:AttributeGroupAssociation", name, AttributeGroupAssociationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

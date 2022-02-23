@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.SubnetSharedPublicIpAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="labSubnetName")
-    private final @Nullable String labSubnetName;
+        private final @Nullable String labSubnetName;
 
     public Optional<String> getLabSubnetName() {
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
@@ -35,7 +35,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -46,7 +46,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sharedPublicIpAddressConfiguration")
-    private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
+        private final @Nullable SubnetSharedPublicIpAddressConfigurationResponse sharedPublicIpAddressConfiguration;
 
     public Optional<SubnetSharedPublicIpAddressConfigurationResponse> getSharedPublicIpAddressConfiguration() {
         return this.sharedPublicIpAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedPublicIpAddressConfiguration);
@@ -57,7 +57,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="useInVmCreationPermission")
-    private final @Nullable String useInVmCreationPermission;
+        private final @Nullable String useInVmCreationPermission;
 
     public Optional<String> getUseInVmCreationPermission() {
         return this.useInVmCreationPermission == null ? Optional.empty() : Optional.ofNullable(this.useInVmCreationPermission);
@@ -68,7 +68,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="usePublicIpAddressPermission")
-    private final @Nullable String usePublicIpAddressPermission;
+        private final @Nullable String usePublicIpAddressPermission;
 
     public Optional<String> getUsePublicIpAddressPermission() {
         return this.usePublicIpAddressPermission == null ? Optional.empty() : Optional.ofNullable(this.usePublicIpAddressPermission);
@@ -79,7 +79,7 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="virtualNetworkPoolName")
-    private final @Nullable String virtualNetworkPoolName;
+        private final @Nullable String virtualNetworkPoolName;
 
     public Optional<String> getVirtualNetworkPoolName() {
         return this.virtualNetworkPoolName == null ? Optional.empty() : Optional.ofNullable(this.virtualNetworkPoolName);
@@ -168,7 +168,6 @@ public final class SubnetOverrideResponse extends io.pulumi.resources.InvokeArgs
             this.virtualNetworkPoolName = virtualNetworkPoolName;
             return this;
         }
-
         public SubnetOverrideResponse build() {
             return new SubnetOverrideResponse(labSubnetName, resourceId, sharedPublicIpAddressConfiguration, useInVmCreationPermission, usePublicIpAddressPermission, virtualNetworkPoolName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -28,7 +28,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+        private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -119,7 +119,6 @@ public final class GetWebAppDeploymentSlotArgs extends io.pulumi.resources.Invok
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public GetWebAppDeploymentSlotArgs build() {
             return new GetWebAppDeploymentSlotArgs(id, name, resourceGroupName, slot);
         }

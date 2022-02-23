@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable Input<String> lastRefreshedAt;
+        private final @Nullable Input<String> lastRefreshedAt;
 
     public Input<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
@@ -35,7 +35,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="oldestRecoveryPoint")
-    private final @Nullable Input<String> oldestRecoveryPoint;
+        private final @Nullable Input<String> oldestRecoveryPoint;
 
     public Input<String> getOldestRecoveryPoint() {
         return this.oldestRecoveryPoint == null ? Input.empty() : this.oldestRecoveryPoint;
@@ -46,7 +46,7 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
      * 
      */
     @InputImport(name="recoveryPointCount")
-    private final @Nullable Input<Integer> recoveryPointCount;
+        private final @Nullable Input<Integer> recoveryPointCount;
 
     public Input<Integer> getRecoveryPointCount() {
         return this.recoveryPointCount == null ? Input.empty() : this.recoveryPointCount;
@@ -120,7 +120,6 @@ public final class MabFileFolderProtectedItemExtendedInfoArgs extends io.pulumi.
             this.recoveryPointCount = Input.ofNullable(recoveryPointCount);
             return this;
         }
-
         public MabFileFolderProtectedItemExtendedInfoArgs build() {
             return new MabFileFolderProtectedItemExtendedInfoArgs(lastRefreshedAt, oldestRecoveryPoint, recoveryPointCount);
         }

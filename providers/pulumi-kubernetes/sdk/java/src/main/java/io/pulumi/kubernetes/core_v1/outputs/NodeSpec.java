@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeConfigSource;
 import io.pulumi.kubernetes.core_v1.outputs.Taint;
 import java.lang.Boolean;
@@ -185,7 +185,6 @@ public final class NodeSpec {
             this.unschedulable = unschedulable;
             return this;
         }
-
         public NodeSpec build() {
             return new NodeSpec(configSource, externalID, podCIDR, podCIDRs, providerID, taints, unschedulable);
         }

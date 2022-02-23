@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
      * 
      */
     @InputImport(name="onewayTerms")
-    private final @Nullable Input<List<String>> onewayTerms;
+      private final @Nullable Input<List<String>> onewayTerms;
 
     public Input<List<String>> getOnewayTerms() {
         return this.onewayTerms == null ? Input.empty() : this.onewayTerms;
@@ -35,7 +35,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
      * 
      */
     @InputImport(name="queryTerms")
-    private final @Nullable Input<List<String>> queryTerms;
+      private final @Nullable Input<List<String>> queryTerms;
 
     public Input<List<String>> getQueryTerms() {
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
@@ -46,7 +46,7 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
      * 
      */
     @InputImport(name="synonyms")
-    private final @Nullable Input<List<String>> synonyms;
+      private final @Nullable Input<List<String>> synonyms;
 
     public Input<List<String>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs extends i
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs build() {
             return new GoogleCloudRetailV2betaRuleOnewaySynonymsActionArgs(onewayTerms, queryTerms, synonyms);
         }

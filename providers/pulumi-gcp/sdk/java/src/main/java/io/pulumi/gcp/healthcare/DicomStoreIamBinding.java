@@ -5,8 +5,8 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DicomStoreIamBindingArgs;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamBindingState;
@@ -126,13 +126,6 @@ public class DicomStoreIamBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DicomStoreIamBinding(String name) {
-        super("gcp:healthcare/dicomStoreIamBinding:DicomStoreIamBinding", name, DicomStoreIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

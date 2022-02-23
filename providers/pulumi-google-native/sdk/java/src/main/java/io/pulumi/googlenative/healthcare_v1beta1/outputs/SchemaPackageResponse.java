@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7SchemaConfigResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.Hl7TypesConfigResponse;
 import java.lang.Boolean;
@@ -141,7 +141,6 @@ public final class SchemaPackageResponse {
             this.unexpectedSegmentHandling = Objects.requireNonNull(unexpectedSegmentHandling);
             return this;
         }
-
         public SchemaPackageResponse build() {
             return new SchemaPackageResponse(ignoreMinOccurs, schemas, schematizedParsingType, types, unexpectedSegmentHandling);
         }

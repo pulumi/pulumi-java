@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupSelectionConditionParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -86,7 +86,6 @@ public final class BackupSelectionResourceTypeConditionsProperties {
             this.stringNotLike = stringNotLike;
             return this;
         }
-
         public BackupSelectionResourceTypeConditionsProperties build() {
             return new BackupSelectionResourceTypeConditionsProperties(stringEquals, stringLike, stringNotEquals, stringNotLike);
         }

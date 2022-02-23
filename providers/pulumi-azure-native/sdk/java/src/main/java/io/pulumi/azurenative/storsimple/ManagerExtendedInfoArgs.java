@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storsimple;
 
 import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final Input<String> algorithm;
+        private final Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm;
@@ -31,7 +31,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionKey")
-    private final @Nullable Input<String> encryptionKey;
+        private final @Nullable Input<String> encryptionKey;
 
     public Input<String> getEncryptionKey() {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
@@ -42,7 +42,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionKeyThumbprint")
-    private final @Nullable Input<String> encryptionKeyThumbprint;
+        private final @Nullable Input<String> encryptionKeyThumbprint;
 
     public Input<String> getEncryptionKeyThumbprint() {
         return this.encryptionKeyThumbprint == null ? Input.empty() : this.encryptionKeyThumbprint;
@@ -53,7 +53,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="integrityKey", required=true)
-    private final Input<String> integrityKey;
+        private final Input<String> integrityKey;
 
     public Input<String> getIntegrityKey() {
         return this.integrityKey;
@@ -64,7 +64,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Kind> kind;
+        private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -75,7 +75,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final Input<String> managerName;
+        private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -86,7 +86,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="portalCertificateThumbprint")
-    private final @Nullable Input<String> portalCertificateThumbprint;
+        private final @Nullable Input<String> portalCertificateThumbprint;
 
     public Input<String> getPortalCertificateThumbprint() {
         return this.portalCertificateThumbprint == null ? Input.empty() : this.portalCertificateThumbprint;
@@ -97,7 +97,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -108,7 +108,7 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -272,7 +272,6 @@ public final class ManagerExtendedInfoArgs extends io.pulumi.resources.ResourceA
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ManagerExtendedInfoArgs build() {
             return new ManagerExtendedInfoArgs(algorithm, encryptionKey, encryptionKeyThumbprint, integrityKey, kind, managerName, portalCertificateThumbprint, resourceGroupName, version);
         }

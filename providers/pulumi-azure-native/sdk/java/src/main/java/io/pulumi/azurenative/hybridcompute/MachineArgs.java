@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridcompute;
 import io.pulumi.azurenative.hybridcompute.inputs.LocationDataArgs;
 import io.pulumi.azurenative.hybridcompute.inputs.MachineIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,14 +22,14 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientPublicKey")
-    private final @Nullable Input<String> clientPublicKey;
+        private final @Nullable Input<String> clientPublicKey;
 
     public Input<String> getClientPublicKey() {
         return this.clientPublicKey == null ? Input.empty() : this.clientPublicKey;
     }
 
     @InputImport(name="identity")
-    private final @Nullable Input<MachineIdentityArgs> identity;
+        private final @Nullable Input<MachineIdentityArgs> identity;
 
     public Input<MachineIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -40,7 +40,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -51,7 +51,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationData")
-    private final @Nullable Input<LocationDataArgs> locationData;
+        private final @Nullable Input<LocationDataArgs> locationData;
 
     public Input<LocationDataArgs> getLocationData() {
         return this.locationData == null ? Input.empty() : this.locationData;
@@ -62,7 +62,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -73,7 +73,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -84,7 +84,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -95,7 +95,7 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable Input<String> vmId;
+        private final @Nullable Input<String> vmId;
 
     public Input<String> getVmId() {
         return this.vmId == null ? Input.empty() : this.vmId;
@@ -244,7 +244,6 @@ public final class MachineArgs extends io.pulumi.resources.ResourceArgs {
             this.vmId = Input.ofNullable(vmId);
             return this;
         }
-
         public MachineArgs build() {
             return new MachineArgs(clientPublicKey, identity, location, locationData, name, resourceGroupName, tags, vmId);
         }

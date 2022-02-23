@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authentication.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.inputs.BoundObjectReferenceArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="audiences", required=true)
-    private final Input<List<String>> audiences;
+        private final Input<List<String>> audiences;
 
     public Input<List<String>> getAudiences() {
         return this.audiences;
@@ -37,7 +37,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="boundObjectRef")
-    private final @Nullable Input<BoundObjectReferenceArgs> boundObjectRef;
+        private final @Nullable Input<BoundObjectReferenceArgs> boundObjectRef;
 
     public Input<BoundObjectReferenceArgs> getBoundObjectRef() {
         return this.boundObjectRef == null ? Input.empty() : this.boundObjectRef;
@@ -48,7 +48,7 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationSeconds")
-    private final @Nullable Input<Integer> expirationSeconds;
+        private final @Nullable Input<Integer> expirationSeconds;
 
     public Input<Integer> getExpirationSeconds() {
         return this.expirationSeconds == null ? Input.empty() : this.expirationSeconds;
@@ -122,7 +122,6 @@ public final class TokenRequestSpecArgs extends io.pulumi.resources.ResourceArgs
             this.expirationSeconds = Input.ofNullable(expirationSeconds);
             return this;
         }
-
         public TokenRequestSpecArgs build() {
             return new TokenRequestSpecArgs(audiences, boundObjectRef, expirationSeconds);
         }

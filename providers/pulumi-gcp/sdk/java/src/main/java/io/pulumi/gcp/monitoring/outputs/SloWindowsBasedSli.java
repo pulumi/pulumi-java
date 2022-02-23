@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliGoodTotalRatioThreshold;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricMeanInRange;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricSumInRange;
@@ -190,7 +190,6 @@ public final class SloWindowsBasedSli {
             this.windowPeriod = windowPeriod;
             return this;
         }
-
         public SloWindowsBasedSli build() {
             return new SloWindowsBasedSli(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -349,7 +349,6 @@ public final class SynchronizationDetailsResponse {
             this.vCore = Objects.requireNonNull(vCore);
             return this;
         }
-
         public SynchronizationDetailsResponse build() {
             return new SynchronizationDetailsResponse(dataSetId, dataSetType, durationMs, endTime, filesRead, filesWritten, message, name, rowsCopied, rowsRead, sizeRead, sizeWritten, startTime, status, vCore);
         }

@@ -10,8 +10,8 @@ import io.pulumi.azurenative.documentdb.outputs.RoleResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -118,13 +118,6 @@ public class MongoDBResourceMongoRoleDefinition extends io.pulumi.resources.Cust
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MongoDBResourceMongoRoleDefinition(String name) {
-        super("azure-native:documentdb:MongoDBResourceMongoRoleDefinition", name, MongoDBResourceMongoRoleDefinitionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

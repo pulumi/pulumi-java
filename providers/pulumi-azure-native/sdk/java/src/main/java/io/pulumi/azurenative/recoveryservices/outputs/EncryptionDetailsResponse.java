@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class EncryptionDetailsResponse {
             this.kekState = kekState;
             return this;
         }
-
         public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(kekCertExpiryDate, kekCertThumbprint, kekState);
         }

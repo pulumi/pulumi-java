@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class InstanceTemplateGuestAcceleratorGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="count", required=true)
-    private final Input<Integer> count;
+        private final Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count;
@@ -30,7 +30,7 @@ public final class InstanceTemplateGuestAcceleratorGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -89,7 +89,6 @@ public final class InstanceTemplateGuestAcceleratorGetArgs extends io.pulumi.res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceTemplateGuestAcceleratorGetArgs build() {
             return new InstanceTemplateGuestAcceleratorGetArgs(count, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.fis.outputs;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateActionMap;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateStopCondition;
 import io.pulumi.awsnative.fis.outputs.ExperimentTemplateTargetMap;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -116,7 +116,6 @@ public final class GetExperimentTemplateResult {
             this.targets = targets;
             return this;
         }
-
         public GetExperimentTemplateResult build() {
             return new GetExperimentTemplateResult(actions, description, id, roleArn, stopConditions, targets);
         }

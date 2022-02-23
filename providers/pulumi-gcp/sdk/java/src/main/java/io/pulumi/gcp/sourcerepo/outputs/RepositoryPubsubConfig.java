@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -109,7 +109,6 @@ public final class RepositoryPubsubConfig {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public RepositoryPubsubConfig build() {
             return new RepositoryPubsubConfig(messageFormat, serviceAccountEmail, topic);
         }

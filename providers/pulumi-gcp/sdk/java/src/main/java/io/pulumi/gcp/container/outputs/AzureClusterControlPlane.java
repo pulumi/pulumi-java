@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.AzureClusterControlPlaneDatabaseEncryption;
 import io.pulumi.gcp.container.outputs.AzureClusterControlPlaneMainVolume;
 import io.pulumi.gcp.container.outputs.AzureClusterControlPlaneProxyConfig;
@@ -252,7 +252,6 @@ public final class AzureClusterControlPlane {
             this.vmSize = vmSize;
             return this;
         }
-
         public AzureClusterControlPlane build() {
             return new AzureClusterControlPlane(databaseEncryption, mainVolume, proxyConfig, replicaPlacements, rootVolume, sshConfig, subnetId, tags, version, vmSize);
         }

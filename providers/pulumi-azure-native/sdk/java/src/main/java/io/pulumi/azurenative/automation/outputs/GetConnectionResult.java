@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.ConnectionTypeAssociationPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -204,7 +204,6 @@ public final class GetConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(connectionType, creationTime, description, fieldDefinitionValues, id, lastModifiedTime, name, type);
         }

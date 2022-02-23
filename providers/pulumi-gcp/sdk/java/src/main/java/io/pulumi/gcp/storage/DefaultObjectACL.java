@@ -5,8 +5,8 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.DefaultObjectACLArgs;
 import io.pulumi.gcp.storage.inputs.DefaultObjectACLState;
@@ -71,13 +71,6 @@ public class DefaultObjectACL extends io.pulumi.resources.CustomResource {
         return this.roleEntities;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DefaultObjectACL(String name) {
-        super("gcp:storage/defaultObjectACL:DefaultObjectACL", name, DefaultObjectACLArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

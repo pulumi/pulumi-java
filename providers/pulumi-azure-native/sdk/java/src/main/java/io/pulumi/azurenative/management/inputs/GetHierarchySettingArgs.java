@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetHierarchySettingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+        private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -55,7 +55,6 @@ public final class GetHierarchySettingArgs extends io.pulumi.resources.InvokeArg
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public GetHierarchySettingArgs build() {
             return new GetHierarchySettingArgs(groupId);
         }

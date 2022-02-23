@@ -9,8 +9,8 @@ import io.pulumi.awsnative.memorydb.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.memorydb.outputs.ClusterTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -410,13 +410,6 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Cluster(String name) {
-        super("aws-native:memorydb:Cluster", name, ClusterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

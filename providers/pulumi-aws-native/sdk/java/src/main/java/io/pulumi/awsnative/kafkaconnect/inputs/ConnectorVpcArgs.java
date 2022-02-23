@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups", required=true)
-    private final Input<List<String>> securityGroups;
+        private final Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups;
@@ -34,7 +34,7 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+        private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;
@@ -93,7 +93,6 @@ public final class ConnectorVpcArgs extends io.pulumi.resources.ResourceArgs {
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }
-
         public ConnectorVpcArgs build() {
             return new ConnectorVpcArgs(securityGroups, subnets);
         }

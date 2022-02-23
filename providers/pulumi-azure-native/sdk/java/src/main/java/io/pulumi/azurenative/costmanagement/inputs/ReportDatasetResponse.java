@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportAggregationResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportDatasetConfigurationResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportFilterResponse;
 import io.pulumi.azurenative.costmanagement.inputs.ReportGroupingResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Map<String,ReportAggregationResponse> aggregation;
+        private final @Nullable Map<String,ReportAggregationResponse> aggregation;
 
     public Map<String,ReportAggregationResponse> getAggregation() {
         return this.aggregation == null ? Map.of() : this.aggregation;
@@ -40,7 +40,7 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable ReportDatasetConfigurationResponse configuration;
+        private final @Nullable ReportDatasetConfigurationResponse configuration;
 
     public Optional<ReportDatasetConfigurationResponse> getConfiguration() {
         return this.configuration == null ? Optional.empty() : Optional.ofNullable(this.configuration);
@@ -51,7 +51,7 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable ReportFilterResponse filter;
+        private final @Nullable ReportFilterResponse filter;
 
     public Optional<ReportFilterResponse> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -62,7 +62,7 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="granularity")
-    private final @Nullable String granularity;
+        private final @Nullable String granularity;
 
     public Optional<String> getGranularity() {
         return this.granularity == null ? Optional.empty() : Optional.ofNullable(this.granularity);
@@ -73,7 +73,7 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="grouping")
-    private final @Nullable List<ReportGroupingResponse> grouping;
+        private final @Nullable List<ReportGroupingResponse> grouping;
 
     public List<ReportGroupingResponse> getGrouping() {
         return this.grouping == null ? List.of() : this.grouping;
@@ -152,7 +152,6 @@ public final class ReportDatasetResponse extends io.pulumi.resources.InvokeArgs 
             this.grouping = grouping;
             return this;
         }
-
         public ReportDatasetResponse build() {
             return new ReportDatasetResponse(aggregation, configuration, filter, granularity, grouping);
         }

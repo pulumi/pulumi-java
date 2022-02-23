@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="certificateThumbprint")
-    private final @Nullable String certificateThumbprint;
+        private final @Nullable String certificateThumbprint;
 
     public Optional<String> getCertificateThumbprint() {
         return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
@@ -35,7 +35,7 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Object value;
+        private final @Nullable Object value;
 
     public Optional<Object> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -84,7 +84,6 @@ public final class WebServiceParameterResponse extends io.pulumi.resources.Invok
             this.value = value;
             return this;
         }
-
         public WebServiceParameterResponse build() {
             return new WebServiceParameterResponse(certificateThumbprint, value);
         }

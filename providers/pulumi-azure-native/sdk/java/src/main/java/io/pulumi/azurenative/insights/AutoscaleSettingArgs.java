@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights;
 import io.pulumi.azurenative.insights.inputs.AutoscaleNotificationArgs;
 import io.pulumi.azurenative.insights.inputs.AutoscaleProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoscaleSettingName")
-    private final @Nullable Input<String> autoscaleSettingName;
+        private final @Nullable Input<String> autoscaleSettingName;
 
     public Input<String> getAutoscaleSettingName() {
         return this.autoscaleSettingName == null ? Input.empty() : this.autoscaleSettingName;
@@ -35,7 +35,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -46,7 +46,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -57,7 +57,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -68,7 +68,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable Input<List<AutoscaleNotificationArgs>> notifications;
+        private final @Nullable Input<List<AutoscaleNotificationArgs>> notifications;
 
     public Input<List<AutoscaleNotificationArgs>> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;
@@ -79,7 +79,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="profiles", required=true)
-    private final Input<List<AutoscaleProfileArgs>> profiles;
+        private final Input<List<AutoscaleProfileArgs>> profiles;
 
     public Input<List<AutoscaleProfileArgs>> getProfiles() {
         return this.profiles;
@@ -90,7 +90,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -112,7 +112,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetResourceLocation")
-    private final @Nullable Input<String> targetResourceLocation;
+        private final @Nullable Input<String> targetResourceLocation;
 
     public Input<String> getTargetResourceLocation() {
         return this.targetResourceLocation == null ? Input.empty() : this.targetResourceLocation;
@@ -123,7 +123,7 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="targetResourceUri")
-    private final @Nullable Input<String> targetResourceUri;
+        private final @Nullable Input<String> targetResourceUri;
 
     public Input<String> getTargetResourceUri() {
         return this.targetResourceUri == null ? Input.empty() : this.targetResourceUri;
@@ -302,7 +302,6 @@ public final class AutoscaleSettingArgs extends io.pulumi.resources.ResourceArgs
             this.targetResourceUri = Input.ofNullable(targetResourceUri);
             return this;
         }
-
         public AutoscaleSettingArgs build() {
             return new AutoscaleSettingArgs(autoscaleSettingName, enabled, location, name, notifications, profiles, resourceGroupName, tags, targetResourceLocation, targetResourceUri);
         }

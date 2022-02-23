@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,42 +16,42 @@ public final class FunctionIamMemberArgs extends io.pulumi.resources.ResourceArg
     public static final FunctionIamMemberArgs Empty = new FunctionIamMemberArgs();
 
     @InputImport(name="cloudFunction", required=true)
-    private final Input<String> cloudFunction;
+        private final Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<FunctionIamMemberConditionArgs> condition;
+        private final @Nullable Input<FunctionIamMemberConditionArgs> condition;
 
     public Input<FunctionIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
     }
 
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -170,7 +170,6 @@ public final class FunctionIamMemberArgs extends io.pulumi.resources.ResourceArg
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public FunctionIamMemberArgs build() {
             return new FunctionIamMemberArgs(cloudFunction, condition, member, project, region, role);
         }

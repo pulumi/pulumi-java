@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.node.k8s.io_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.node.k8s.io_v1.RuntimeClassListArgs;
@@ -78,13 +78,6 @@ public class RuntimeClassList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RuntimeClassList(String name) {
-        super("kubernetes:node.k8s.io/v1:RuntimeClassList", name, RuntimeClassListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

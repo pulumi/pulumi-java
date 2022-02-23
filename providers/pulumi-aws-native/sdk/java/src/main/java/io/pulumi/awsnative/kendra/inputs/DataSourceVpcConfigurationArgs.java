@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -15,14 +15,14 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
     public static final DataSourceVpcConfigurationArgs Empty = new DataSourceVpcConfigurationArgs();
 
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+        private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
     }
 
     @InputImport(name="subnetIds", required=true)
-    private final Input<List<String>> subnetIds;
+        private final Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds;
@@ -81,7 +81,6 @@ public final class DataSourceVpcConfigurationArgs extends io.pulumi.resources.Re
             this.subnetIds = Input.of(Objects.requireNonNull(subnetIds));
             return this;
         }
-
         public DataSourceVpcConfigurationArgs build() {
             return new DataSourceVpcConfigurationArgs(securityGroupIds, subnetIds);
         }

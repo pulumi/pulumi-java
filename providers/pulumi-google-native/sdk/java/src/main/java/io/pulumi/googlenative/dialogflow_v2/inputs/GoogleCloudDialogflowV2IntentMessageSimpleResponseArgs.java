@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * 
      */
     @InputImport(name="displayText")
-    private final @Nullable Input<String> displayText;
+      private final @Nullable Input<String> displayText;
 
     public Input<String> getDisplayText() {
         return this.displayText == null ? Input.empty() : this.displayText;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * 
      */
     @InputImport(name="ssml")
-    private final @Nullable Input<String> ssml;
+      private final @Nullable Input<String> ssml;
 
     public Input<String> getSsml() {
         return this.ssml == null ? Input.empty() : this.ssml;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
      * 
      */
     @InputImport(name="textToSpeech")
-    private final @Nullable Input<String> textToSpeech;
+      private final @Nullable Input<String> textToSpeech;
 
     public Input<String> getTextToSpeech() {
         return this.textToSpeech == null ? Input.empty() : this.textToSpeech;
@@ -119,7 +119,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs extend
             this.textToSpeech = Input.ofNullable(textToSpeech);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponseArgs(displayText, ssml, textToSpeech);
         }

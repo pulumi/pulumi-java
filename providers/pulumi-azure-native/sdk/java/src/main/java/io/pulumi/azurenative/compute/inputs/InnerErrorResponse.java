@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="errordetail")
-    private final @Nullable String errordetail;
+        private final @Nullable String errordetail;
 
     public Optional<String> getErrordetail() {
         return this.errordetail == null ? Optional.empty() : Optional.ofNullable(this.errordetail);
@@ -34,7 +34,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exceptiontype")
-    private final @Nullable String exceptiontype;
+        private final @Nullable String exceptiontype;
 
     public Optional<String> getExceptiontype() {
         return this.exceptiontype == null ? Optional.empty() : Optional.ofNullable(this.exceptiontype);
@@ -83,7 +83,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.exceptiontype = exceptiontype;
             return this;
         }
-
         public InnerErrorResponse build() {
             return new InnerErrorResponse(errordetail, exceptiontype);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class DatasetTriggeringDataset extends io.pulumi.resources.InvokeAr
     public static final DatasetTriggeringDataset Empty = new DatasetTriggeringDataset();
 
     @InputImport(name="datasetName", required=true)
-    private final String datasetName;
+        private final String datasetName;
 
     public String getDatasetName() {
         return this.datasetName;
@@ -51,7 +51,6 @@ public final class DatasetTriggeringDataset extends io.pulumi.resources.InvokeAr
             this.datasetName = Objects.requireNonNull(datasetName);
             return this;
         }
-
         public DatasetTriggeringDataset build() {
             return new DatasetTriggeringDataset(datasetName);
         }

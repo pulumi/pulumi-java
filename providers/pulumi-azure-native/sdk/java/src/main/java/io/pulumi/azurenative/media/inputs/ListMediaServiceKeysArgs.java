@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="mediaServiceName", required=true)
-    private final String mediaServiceName;
+        private final String mediaServiceName;
 
     public String getMediaServiceName() {
         return this.mediaServiceName;
@@ -28,7 +28,7 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListMediaServiceKeysArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListMediaServiceKeysArgs build() {
             return new ListMediaServiceKeysArgs(mediaServiceName, resourceGroupName);
         }

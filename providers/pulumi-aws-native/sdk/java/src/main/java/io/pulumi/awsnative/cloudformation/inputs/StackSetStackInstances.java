@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.awsnative.cloudformation.inputs.StackSetDeploymentTargets;
 import io.pulumi.awsnative.cloudformation.inputs.StackSetParameter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
     public static final StackSetStackInstances Empty = new StackSetStackInstances();
 
     @InputImport(name="deploymentTargets", required=true)
-    private final StackSetDeploymentTargets deploymentTargets;
+        private final StackSetDeploymentTargets deploymentTargets;
 
     public StackSetDeploymentTargets getDeploymentTargets() {
         return this.deploymentTargets;
@@ -33,7 +33,7 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="parameterOverrides")
-    private final @Nullable List<StackSetParameter> parameterOverrides;
+        private final @Nullable List<StackSetParameter> parameterOverrides;
 
     public List<StackSetParameter> getParameterOverrides() {
         return this.parameterOverrides == null ? List.of() : this.parameterOverrides;
@@ -44,7 +44,7 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="regions", required=true)
-    private final List<String> regions;
+        private final List<String> regions;
 
     public List<String> getRegions() {
         return this.regions;
@@ -103,7 +103,6 @@ public final class StackSetStackInstances extends io.pulumi.resources.InvokeArgs
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public StackSetStackInstances build() {
             return new StackSetStackInstances(deploymentTargets, parameterOverrides, regions);
         }

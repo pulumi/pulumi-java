@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.RepoSourceResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.StorageSourceResponse;
@@ -163,7 +163,6 @@ public final class SourceResponse {
             this.storageSource = Objects.requireNonNull(storageSource);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
         }

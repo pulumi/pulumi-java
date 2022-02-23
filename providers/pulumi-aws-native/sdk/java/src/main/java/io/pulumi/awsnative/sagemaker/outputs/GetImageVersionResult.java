@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -87,7 +87,6 @@ public final class GetImageVersionResult {
             this.version = version;
             return this;
         }
-
         public GetImageVersionResult build() {
             return new GetImageVersionResult(containerImage, imageArn, imageVersionArn, version);
         }

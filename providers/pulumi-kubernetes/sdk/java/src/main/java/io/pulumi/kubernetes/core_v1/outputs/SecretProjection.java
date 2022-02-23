@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.KeyToPath;
 import java.lang.Boolean;
 import java.lang.String;
@@ -100,7 +100,6 @@ public final class SecretProjection {
             this.optional = optional;
             return this;
         }
-
         public SecretProjection build() {
             return new SecretProjection(items, name, optional);
         }

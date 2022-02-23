@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MyWorkbookUserAssignedIdentitiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class MyWorkbookUserAssignedIdentitiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -81,7 +81,6 @@ public final class MyWorkbookUserAssignedIdentitiesResponse extends io.pulumi.re
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public MyWorkbookUserAssignedIdentitiesResponse build() {
             return new MyWorkbookUserAssignedIdentitiesResponse(principalId, tenantId);
         }

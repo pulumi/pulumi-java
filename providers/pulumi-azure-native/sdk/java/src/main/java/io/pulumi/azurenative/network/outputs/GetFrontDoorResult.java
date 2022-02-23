@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.HealthProbeSettingsModelResponse;
 import io.pulumi.azurenative.network.outputs.LoadBalancingSettingsModelResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleResponse;
 import io.pulumi.azurenative.network.outputs.RulesEngineResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -421,7 +421,6 @@ public final class GetFrontDoorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFrontDoorResult build() {
             return new GetFrontDoorResult(backendPools, backendPoolsSettings, cname, enabledState, friendlyName, frontdoorId, frontendEndpoints, healthProbeSettings, id, loadBalancingSettings, location, name, provisioningState, resourceState, routingRules, rulesEngines, tags, type);
         }

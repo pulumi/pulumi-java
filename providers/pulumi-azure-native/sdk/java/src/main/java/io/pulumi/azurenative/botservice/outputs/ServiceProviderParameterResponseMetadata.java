@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.ServiceProviderParameterResponseConstraints;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ServiceProviderParameterResponseMetadata {
             this.constraints = constraints;
             return this;
         }
-
         public ServiceProviderParameterResponseMetadata build() {
             return new ServiceProviderParameterResponseMetadata(constraints);
         }

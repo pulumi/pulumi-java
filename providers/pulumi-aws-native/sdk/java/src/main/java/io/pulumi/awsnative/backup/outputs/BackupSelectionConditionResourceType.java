@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -71,7 +71,6 @@ public final class BackupSelectionConditionResourceType {
             this.conditionValue = Objects.requireNonNull(conditionValue);
             return this;
         }
-
         public BackupSelectionConditionResourceType build() {
             return new BackupSelectionConditionResourceType(conditionKey, conditionType, conditionValue);
         }

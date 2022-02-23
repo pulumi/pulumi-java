@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DataSourceRestrictionResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FacetOptionsResponse;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.QueryInterpretationConfigResponse;
@@ -271,7 +271,6 @@ public final class GetSearchApplicationResult {
             this.sourceConfig = Objects.requireNonNull(sourceConfig);
             return this;
         }
-
         public GetSearchApplicationResult build() {
             return new GetSearchApplicationResult(dataSourceRestrictions, defaultFacetOptions, defaultSortOptions, displayName, enableAuditLog, name, operationIds, queryInterpretationConfig, returnResultThumbnailUrls, scoringConfig, sourceConfig);
         }

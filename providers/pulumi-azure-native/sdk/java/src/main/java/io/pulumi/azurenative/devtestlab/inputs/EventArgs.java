@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.NotificationChannelEventType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventName")
-    private final @Nullable Input<Either<String,NotificationChannelEventType>> eventName;
+        private final @Nullable Input<Either<String,NotificationChannelEventType>> eventName;
 
     public Input<Either<String,NotificationChannelEventType>> getEventName() {
         return this.eventName == null ? Input.empty() : this.eventName;
@@ -68,7 +68,6 @@ public final class EventArgs extends io.pulumi.resources.ResourceArgs {
             this.eventName = Input.ofNullable(eventName);
             return this;
         }
-
         public EventArgs build() {
             return new EventArgs(eventName);
         }

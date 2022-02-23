@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class DynamicExecutorAllocationResponse {
             this.enabled = enabled;
             return this;
         }
-
         public DynamicExecutorAllocationResponse build() {
             return new DynamicExecutorAllocationResponse(enabled);
         }

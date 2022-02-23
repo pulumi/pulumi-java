@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.VirtualMachineConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class VirtualMachineResponse {
             this.virtualMachineConfig = Objects.requireNonNull(virtualMachineConfig);
             return this;
         }
-
         public VirtualMachineResponse build() {
             return new VirtualMachineResponse(instanceId, instanceName, virtualMachineConfig);
         }

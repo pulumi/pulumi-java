@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudDatacatalogV1EntryOverviewResponse {
             this.overview = Objects.requireNonNull(overview);
             return this;
         }
-
         public GoogleCloudDatacatalogV1EntryOverviewResponse build() {
             return new GoogleCloudDatacatalogV1EntryOverviewResponse(overview);
         }

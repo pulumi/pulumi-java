@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionBlockPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCaptchaPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupRuleActionCountPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -26,7 +26,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<RuleGroupRuleActionAllowPropertiesArgs> allow;
+        private final @Nullable Input<RuleGroupRuleActionAllowPropertiesArgs> allow;
 
     public Input<RuleGroupRuleActionAllowPropertiesArgs> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -37,7 +37,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="block")
-    private final @Nullable Input<RuleGroupRuleActionBlockPropertiesArgs> block;
+        private final @Nullable Input<RuleGroupRuleActionBlockPropertiesArgs> block;
 
     public Input<RuleGroupRuleActionBlockPropertiesArgs> getBlock() {
         return this.block == null ? Input.empty() : this.block;
@@ -48,7 +48,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="captcha")
-    private final @Nullable Input<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
+        private final @Nullable Input<RuleGroupRuleActionCaptchaPropertiesArgs> captcha;
 
     public Input<RuleGroupRuleActionCaptchaPropertiesArgs> getCaptcha() {
         return this.captcha == null ? Input.empty() : this.captcha;
@@ -59,7 +59,7 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<RuleGroupRuleActionCountPropertiesArgs> count;
+        private final @Nullable Input<RuleGroupRuleActionCountPropertiesArgs> count;
 
     public Input<RuleGroupRuleActionCountPropertiesArgs> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -148,7 +148,6 @@ public final class RuleGroupRuleActionArgs extends io.pulumi.resources.ResourceA
             this.count = Input.ofNullable(count);
             return this;
         }
-
         public RuleGroupRuleActionArgs build() {
             return new RuleGroupRuleActionArgs(allow, block, captcha, count);
         }

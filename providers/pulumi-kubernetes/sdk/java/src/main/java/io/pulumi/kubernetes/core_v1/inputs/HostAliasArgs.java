@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames")
-    private final @Nullable Input<List<String>> hostnames;
+        private final @Nullable Input<List<String>> hostnames;
 
     public Input<List<String>> getHostnames() {
         return this.hostnames == null ? Input.empty() : this.hostnames;
@@ -35,7 +35,7 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+        private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -94,7 +94,6 @@ public final class HostAliasArgs extends io.pulumi.resources.ResourceArgs {
             this.ip = Input.ofNullable(ip);
             return this;
         }
-
         public HostAliasArgs build() {
             return new HostAliasArgs(hostnames, ip);
         }

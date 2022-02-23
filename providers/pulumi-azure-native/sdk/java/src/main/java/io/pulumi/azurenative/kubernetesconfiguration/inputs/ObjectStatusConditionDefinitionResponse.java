@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastTransitionTime")
-    private final @Nullable String lastTransitionTime;
+        private final @Nullable String lastTransitionTime;
 
     public Optional<String> getLastTransitionTime() {
         return this.lastTransitionTime == null ? Optional.empty() : Optional.ofNullable(this.lastTransitionTime);
@@ -34,7 +34,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -45,7 +45,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="reason")
-    private final @Nullable String reason;
+        private final @Nullable String reason;
 
     public Optional<String> getReason() {
         return this.reason == null ? Optional.empty() : Optional.ofNullable(this.reason);
@@ -56,7 +56,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -67,7 +67,7 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -146,7 +146,6 @@ public final class ObjectStatusConditionDefinitionResponse extends io.pulumi.res
             this.type = type;
             return this;
         }
-
         public ObjectStatusConditionDefinitionResponse build() {
             return new ObjectStatusConditionDefinitionResponse(lastTransitionTime, message, reason, status, type);
         }

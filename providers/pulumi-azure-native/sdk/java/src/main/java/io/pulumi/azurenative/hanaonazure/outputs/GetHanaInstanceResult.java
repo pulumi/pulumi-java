@@ -7,7 +7,7 @@ import io.pulumi.azurenative.hanaonazure.outputs.HardwareProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.OSProfileResponse;
 import io.pulumi.azurenative.hanaonazure.outputs.StorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -354,7 +354,6 @@ public final class GetHanaInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHanaInstanceResult build() {
             return new GetHanaInstanceResult(hanaInstanceId, hardwareProfile, hwRevision, id, location, name, networkProfile, osProfile, partnerNodeId, powerState, provisioningState, proximityPlacementGroup, storageProfile, tags, type);
         }

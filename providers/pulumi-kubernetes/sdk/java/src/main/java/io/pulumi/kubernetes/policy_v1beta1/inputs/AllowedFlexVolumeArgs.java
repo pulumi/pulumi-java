@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="driver", required=true)
-    private final Input<String> driver;
+        private final Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver;
@@ -65,7 +65,6 @@ public final class AllowedFlexVolumeArgs extends io.pulumi.resources.ResourceArg
             this.driver = Input.of(Objects.requireNonNull(driver));
             return this;
         }
-
         public AllowedFlexVolumeArgs build() {
             return new AllowedFlexVolumeArgs(driver);
         }

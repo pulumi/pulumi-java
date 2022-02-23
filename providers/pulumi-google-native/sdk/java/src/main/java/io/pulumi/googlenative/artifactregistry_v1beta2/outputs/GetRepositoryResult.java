@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.artifactregistry_v1beta2.outputs.MavenRepositoryConfigResponse;
 import java.lang.String;
 import java.util.Map;
@@ -202,7 +202,6 @@ public final class GetRepositoryResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, mavenConfig, name, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.GoogleMonitoringV3RangeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="range", required=true)
-    private final GoogleMonitoringV3RangeResponse range;
+      private final GoogleMonitoringV3RangeResponse range;
 
     public GoogleMonitoringV3RangeResponse getRange() {
         return this.range;
@@ -33,7 +33,7 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeSeries", required=true)
-    private final String timeSeries;
+      private final String timeSeries;
 
     public String getTimeSeries() {
         return this.timeSeries;
@@ -82,7 +82,6 @@ public final class MetricRangeResponse extends io.pulumi.resources.InvokeArgs {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public MetricRangeResponse build() {
             return new MetricRangeResponse(range, timeSeries);
         }

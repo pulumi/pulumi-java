@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="argumentKind")
-    private final @Nullable Input<String> argumentKind;
+        private final @Nullable Input<String> argumentKind;
 
     public Input<String> getArgumentKind() {
         return this.argumentKind == null ? Input.empty() : this.argumentKind;
@@ -38,7 +38,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataType")
-    private final @Nullable Input<String> dataType;
+        private final @Nullable Input<String> dataType;
 
     public Input<String> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
@@ -50,7 +50,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -61,7 +61,7 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -150,7 +150,6 @@ public final class RoutineArgumentGetArgs extends io.pulumi.resources.ResourceAr
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public RoutineArgumentGetArgs build() {
             return new RoutineArgumentGetArgs(argumentKind, dataType, mode, name);
         }

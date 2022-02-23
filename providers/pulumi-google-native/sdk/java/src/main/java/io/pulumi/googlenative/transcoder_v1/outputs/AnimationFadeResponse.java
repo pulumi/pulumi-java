@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.NormalizedCoordinateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class AnimationFadeResponse {
             this.xy = Objects.requireNonNull(xy);
             return this;
         }
-
         public AnimationFadeResponse build() {
             return new AnimationFadeResponse(endTimeOffset, fadeType, startTimeOffset, xy);
         }

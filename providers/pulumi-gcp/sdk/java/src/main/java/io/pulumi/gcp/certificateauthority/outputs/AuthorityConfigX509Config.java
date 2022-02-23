@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.AuthorityConfigX509ConfigKeyUsage;
@@ -153,7 +153,6 @@ public final class AuthorityConfigX509Config {
             this.policyIds = policyIds;
             return this;
         }
-
         public AuthorityConfigX509Config build() {
             return new AuthorityConfigX509Config(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsArgs;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkExclusionArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bigqueryOptions")
-    private final @Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
+        private final @Nullable Input<OrganizationSinkBigqueryOptionsArgs> bigqueryOptions;
 
     public Input<OrganizationSinkBigqueryOptionsArgs> getBigqueryOptions() {
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
@@ -34,7 +34,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+        private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -59,7 +59,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -70,7 +70,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions;
+        private final @Nullable Input<List<OrganizationSinkExclusionArgs>> exclusions;
 
     public Input<List<OrganizationSinkExclusionArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -82,7 +82,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -94,7 +94,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="includeChildren")
-    private final @Nullable Input<Boolean> includeChildren;
+        private final @Nullable Input<Boolean> includeChildren;
 
     public Input<Boolean> getIncludeChildren() {
         return this.includeChildren == null ? Input.empty() : this.includeChildren;
@@ -105,7 +105,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,7 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="orgId", required=true)
-    private final Input<String> orgId;
+        private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -280,7 +280,6 @@ public final class OrganizationSinkArgs extends io.pulumi.resources.ResourceArgs
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public OrganizationSinkArgs build() {
             return new OrganizationSinkArgs(bigqueryOptions, description, destination, disabled, exclusions, filter, includeChildren, name, orgId);
         }

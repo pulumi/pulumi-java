@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class StatefulSetCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StatefulSetCondition build() {
             return new StatefulSetCondition(lastTransitionTime, message, reason, status, type);
         }

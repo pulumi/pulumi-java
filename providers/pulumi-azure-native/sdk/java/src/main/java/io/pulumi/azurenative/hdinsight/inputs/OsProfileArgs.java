@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.LinuxOperatingSystemProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxOperatingSystemProfile")
-    private final @Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
+        private final @Nullable Input<LinuxOperatingSystemProfileArgs> linuxOperatingSystemProfile;
 
     public Input<LinuxOperatingSystemProfileArgs> getLinuxOperatingSystemProfile() {
         return this.linuxOperatingSystemProfile == null ? Input.empty() : this.linuxOperatingSystemProfile;
@@ -66,7 +66,6 @@ public final class OsProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.linuxOperatingSystemProfile = Input.ofNullable(linuxOperatingSystemProfile);
             return this;
         }
-
         public OsProfileArgs build() {
             return new OsProfileArgs(linuxOperatingSystemProfile);
         }

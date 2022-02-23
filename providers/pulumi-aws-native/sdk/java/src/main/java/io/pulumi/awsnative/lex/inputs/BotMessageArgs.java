@@ -8,7 +8,7 @@ import io.pulumi.awsnative.lex.inputs.BotImageResponseCardArgs;
 import io.pulumi.awsnative.lex.inputs.BotPlainTextMessageArgs;
 import io.pulumi.awsnative.lex.inputs.BotSSMLMessageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -22,28 +22,28 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
     public static final BotMessageArgs Empty = new BotMessageArgs();
 
     @InputImport(name="customPayload")
-    private final @Nullable Input<BotCustomPayloadArgs> customPayload;
+        private final @Nullable Input<BotCustomPayloadArgs> customPayload;
 
     public Input<BotCustomPayloadArgs> getCustomPayload() {
         return this.customPayload == null ? Input.empty() : this.customPayload;
     }
 
     @InputImport(name="imageResponseCard")
-    private final @Nullable Input<BotImageResponseCardArgs> imageResponseCard;
+        private final @Nullable Input<BotImageResponseCardArgs> imageResponseCard;
 
     public Input<BotImageResponseCardArgs> getImageResponseCard() {
         return this.imageResponseCard == null ? Input.empty() : this.imageResponseCard;
     }
 
     @InputImport(name="plainTextMessage")
-    private final @Nullable Input<BotPlainTextMessageArgs> plainTextMessage;
+        private final @Nullable Input<BotPlainTextMessageArgs> plainTextMessage;
 
     public Input<BotPlainTextMessageArgs> getPlainTextMessage() {
         return this.plainTextMessage == null ? Input.empty() : this.plainTextMessage;
     }
 
     @InputImport(name="sSMLMessage")
-    private final @Nullable Input<BotSSMLMessageArgs> sSMLMessage;
+        private final @Nullable Input<BotSSMLMessageArgs> sSMLMessage;
 
     public Input<BotSSMLMessageArgs> getSSMLMessage() {
         return this.sSMLMessage == null ? Input.empty() : this.sSMLMessage;
@@ -132,7 +132,6 @@ public final class BotMessageArgs extends io.pulumi.resources.ResourceArgs {
             this.sSMLMessage = Input.ofNullable(sSMLMessage);
             return this;
         }
-
         public BotMessageArgs build() {
             return new BotMessageArgs(customPayload, imageResponseCard, plainTextMessage, sSMLMessage);
         }

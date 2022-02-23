@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.EC2FleetCapacityRebalanceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
     public static final EC2FleetMaintenanceStrategiesArgs Empty = new EC2FleetMaintenanceStrategiesArgs();
 
     @InputImport(name="capacityRebalance")
-    private final @Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance;
+        private final @Nullable Input<EC2FleetCapacityRebalanceArgs> capacityRebalance;
 
     public Input<EC2FleetCapacityRebalanceArgs> getCapacityRebalance() {
         return this.capacityRebalance == null ? Input.empty() : this.capacityRebalance;
@@ -58,7 +58,6 @@ public final class EC2FleetMaintenanceStrategiesArgs extends io.pulumi.resources
             this.capacityRebalance = Input.ofNullable(capacityRebalance);
             return this;
         }
-
         public EC2FleetMaintenanceStrategiesArgs build() {
             return new EC2FleetMaintenanceStrategiesArgs(capacityRebalance);
         }

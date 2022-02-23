@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
      * 
      */
     @InputImport(name="imageDisplayOptions", required=true)
-    private final String imageDisplayOptions;
+      private final String imageDisplayOptions;
 
     public String getImageDisplayOptions() {
         return this.imageDisplayOptions;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
+      private final List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> items;
 
     public List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemResponse> getItems() {
         return this.items;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardRespons
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardResponse(imageDisplayOptions, items);
         }

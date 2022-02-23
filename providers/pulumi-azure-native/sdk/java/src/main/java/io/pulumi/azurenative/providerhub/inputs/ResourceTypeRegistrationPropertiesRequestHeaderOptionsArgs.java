@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.OptInHeaderType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
     public static final ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs Empty = new ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs();
 
     @InputImport(name="optInHeaders")
-    private final @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
+        private final @Nullable Input<Either<String,OptInHeaderType>> optInHeaders;
 
     public Input<Either<String,OptInHeaderType>> getOptInHeaders() {
         return this.optInHeaders == null ? Input.empty() : this.optInHeaders;
@@ -60,7 +60,6 @@ public final class ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs ex
             this.optInHeaders = Input.ofNullable(optInHeaders);
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs build() {
             return new ResourceTypeRegistrationPropertiesRequestHeaderOptionsArgs(optInHeaders);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.DistributionStatusCodes;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class DistributionOriginGroupFailoverCriteria {
             this.statusCodes = Objects.requireNonNull(statusCodes);
             return this;
         }
-
         public DistributionOriginGroupFailoverCriteria build() {
             return new DistributionOriginGroupFailoverCriteria(statusCodes);
         }

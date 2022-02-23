@@ -5,8 +5,8 @@ package io.pulumi.googlenative.deploymentmanager_v2beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.deploymentmanager_v2beta.CompositeTypeArgs;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.CompositeTypeLabelEntryResponse;
@@ -127,13 +127,6 @@ public class CompositeType extends io.pulumi.resources.CustomResource {
         return this.templateContents;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CompositeType(String name) {
-        super("google-native:deploymentmanager/v2beta:CompositeType", name, CompositeTypeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

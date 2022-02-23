@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquerydatatransfer_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.inputs.EmailPreferencesArgs;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.inputs.ScheduleOptionsArgs;
 import java.lang.Boolean;
@@ -20,7 +20,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
     public static final TransferConfigArgs Empty = new TransferConfigArgs();
 
     @InputImport(name="authorizationCode")
-    private final @Nullable Input<String> authorizationCode;
+      private final @Nullable Input<String> authorizationCode;
 
     public Input<String> getAuthorizationCode() {
         return this.authorizationCode == null ? Input.empty() : this.authorizationCode;
@@ -31,7 +31,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataRefreshWindowDays")
-    private final @Nullable Input<Integer> dataRefreshWindowDays;
+      private final @Nullable Input<Integer> dataRefreshWindowDays;
 
     public Input<Integer> getDataRefreshWindowDays() {
         return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
@@ -42,7 +42,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceId")
-    private final @Nullable Input<String> dataSourceId;
+      private final @Nullable Input<String> dataSourceId;
 
     public Input<String> getDataSourceId() {
         return this.dataSourceId == null ? Input.empty() : this.dataSourceId;
@@ -53,7 +53,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationDatasetId")
-    private final @Nullable Input<String> destinationDatasetId;
+      private final @Nullable Input<String> destinationDatasetId;
 
     public Input<String> getDestinationDatasetId() {
         return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
@@ -64,7 +64,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -75,7 +75,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -86,14 +86,14 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailPreferences")
-    private final @Nullable Input<EmailPreferencesArgs> emailPreferences;
+      private final @Nullable Input<EmailPreferencesArgs> emailPreferences;
 
     public Input<EmailPreferencesArgs> getEmailPreferences() {
         return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -104,7 +104,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -115,7 +115,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationPubsubTopic")
-    private final @Nullable Input<String> notificationPubsubTopic;
+      private final @Nullable Input<String> notificationPubsubTopic;
 
     public Input<String> getNotificationPubsubTopic() {
         return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
@@ -126,14 +126,14 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="params")
-    private final @Nullable Input<Map<String,String>> params;
+      private final @Nullable Input<Map<String,String>> params;
 
     public Input<Map<String,String>> getParams() {
         return this.params == null ? Input.empty() : this.params;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -144,7 +144,7 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -155,21 +155,21 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleOptions")
-    private final @Nullable Input<ScheduleOptionsArgs> scheduleOptions;
+      private final @Nullable Input<ScheduleOptionsArgs> scheduleOptions;
 
     public Input<ScheduleOptionsArgs> getScheduleOptions() {
         return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
     }
 
     @InputImport(name="serviceAccountName")
-    private final @Nullable Input<String> serviceAccountName;
+      private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
     }
 
     @InputImport(name="versionInfo")
-    private final @Nullable Input<String> versionInfo;
+      private final @Nullable Input<String> versionInfo;
 
     public Input<String> getVersionInfo() {
         return this.versionInfo == null ? Input.empty() : this.versionInfo;
@@ -438,7 +438,6 @@ public final class TransferConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.versionInfo = Input.ofNullable(versionInfo);
             return this;
         }
-
         public TransferConfigArgs build() {
             return new TransferConfigArgs(authorizationCode, dataRefreshWindowDays, dataSourceId, destinationDatasetId, disabled, displayName, emailPreferences, location, name, notificationPubsubTopic, params, project, schedule, scheduleOptions, serviceAccountName, versionInfo);
         }

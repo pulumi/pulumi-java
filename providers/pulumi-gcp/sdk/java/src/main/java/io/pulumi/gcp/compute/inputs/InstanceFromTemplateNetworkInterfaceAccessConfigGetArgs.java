@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs exten
     public static final InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs Empty = new InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs();
 
     @InputImport(name="natIp")
-    private final @Nullable Input<String> natIp;
+        private final @Nullable Input<String> natIp;
 
     public Input<String> getNatIp() {
         return this.natIp == null ? Input.empty() : this.natIp;
     }
 
     @InputImport(name="networkTier")
-    private final @Nullable Input<String> networkTier;
+        private final @Nullable Input<String> networkTier;
 
     public Input<String> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName")
-    private final @Nullable Input<String> publicPtrDomainName;
+        private final @Nullable Input<String> publicPtrDomainName;
 
     public Input<String> getPublicPtrDomainName() {
         return this.publicPtrDomainName == null ? Input.empty() : this.publicPtrDomainName;
@@ -103,7 +103,6 @@ public final class InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs exten
             this.publicPtrDomainName = Input.ofNullable(publicPtrDomainName);
             return this;
         }
-
         public InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs build() {
             return new InstanceFromTemplateNetworkInterfaceAccessConfigGetArgs(natIp, networkTier, publicPtrDomainName);
         }

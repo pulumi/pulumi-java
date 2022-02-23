@@ -4,7 +4,7 @@
 package io.pulumi.foobar;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.foobar.enums.EnumThing;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -19,119 +19,119 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ModuleResourceArgs Empty = new ModuleResourceArgs();
 
     @InputImport(name="optional_bool")
-    private final @Nullable Input<Boolean> optional_bool;
+      private final @Nullable Input<Boolean> optional_bool;
 
     public Input<Boolean> getOptional_bool() {
         return this.optional_bool == null ? Input.empty() : this.optional_bool;
     }
 
     @InputImport(name="optional_const")
-    private final @Nullable Input<String> optional_const;
+      private final @Nullable Input<String> optional_const;
 
     public Input<String> getOptional_const() {
         return this.optional_const == null ? Input.empty() : this.optional_const;
     }
 
     @InputImport(name="optional_enum")
-    private final @Nullable Input<EnumThing> optional_enum;
+      private final @Nullable Input<EnumThing> optional_enum;
 
     public Input<EnumThing> getOptional_enum() {
         return this.optional_enum == null ? Input.empty() : this.optional_enum;
     }
 
     @InputImport(name="optional_number")
-    private final @Nullable Input<Double> optional_number;
+      private final @Nullable Input<Double> optional_number;
 
     public Input<Double> getOptional_number() {
         return this.optional_number == null ? Input.empty() : this.optional_number;
     }
 
     @InputImport(name="optional_string")
-    private final @Nullable Input<String> optional_string;
+      private final @Nullable Input<String> optional_string;
 
     public Input<String> getOptional_string() {
         return this.optional_string == null ? Input.empty() : this.optional_string;
     }
 
     @InputImport(name="plain_optional_bool")
-    private final @Nullable Boolean plain_optional_bool;
+      private final @Nullable Boolean plain_optional_bool;
 
     public Optional<Boolean> getPlain_optional_bool() {
         return this.plain_optional_bool == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_bool);
     }
 
     @InputImport(name="plain_optional_const")
-    private final @Nullable String plain_optional_const;
+      private final @Nullable String plain_optional_const;
 
     public Optional<String> getPlain_optional_const() {
         return this.plain_optional_const == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_const);
     }
 
     @InputImport(name="plain_optional_number")
-    private final @Nullable Double plain_optional_number;
+      private final @Nullable Double plain_optional_number;
 
     public Optional<Double> getPlain_optional_number() {
         return this.plain_optional_number == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_number);
     }
 
     @InputImport(name="plain_optional_string")
-    private final @Nullable String plain_optional_string;
+      private final @Nullable String plain_optional_string;
 
     public Optional<String> getPlain_optional_string() {
         return this.plain_optional_string == null ? Optional.empty() : Optional.ofNullable(this.plain_optional_string);
     }
 
     @InputImport(name="plain_required_bool", required=true)
-    private final Boolean plain_required_bool;
+      private final Boolean plain_required_bool;
 
     public Boolean getPlain_required_bool() {
         return this.plain_required_bool;
     }
 
     @InputImport(name="plain_required_const", required=true)
-    private final String plain_required_const;
+      private final String plain_required_const;
 
     public String getPlain_required_const() {
         return this.plain_required_const;
     }
 
     @InputImport(name="plain_required_number", required=true)
-    private final Double plain_required_number;
+      private final Double plain_required_number;
 
     public Double getPlain_required_number() {
         return this.plain_required_number;
     }
 
     @InputImport(name="plain_required_string", required=true)
-    private final String plain_required_string;
+      private final String plain_required_string;
 
     public String getPlain_required_string() {
         return this.plain_required_string;
     }
 
     @InputImport(name="required_bool", required=true)
-    private final Input<Boolean> required_bool;
+      private final Input<Boolean> required_bool;
 
     public Input<Boolean> getRequired_bool() {
         return this.required_bool;
     }
 
     @InputImport(name="required_enum", required=true)
-    private final Input<EnumThing> required_enum;
+      private final Input<EnumThing> required_enum;
 
     public Input<EnumThing> getRequired_enum() {
         return this.required_enum;
     }
 
     @InputImport(name="required_number", required=true)
-    private final Input<Double> required_number;
+      private final Input<Double> required_number;
 
     public Input<Double> getRequired_number() {
         return this.required_number;
     }
 
     @InputImport(name="required_string", required=true)
-    private final Input<String> required_string;
+      private final Input<String> required_string;
 
     public Input<String> getRequired_string() {
         return this.required_string;
@@ -375,7 +375,6 @@ public final class ModuleResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.required_string = Input.of(Objects.requireNonNull(required_string));
             return this;
         }
-
         public ModuleResourceArgs build() {
             return new ModuleResourceArgs(optional_bool, optional_const, optional_enum, optional_number, optional_string, plain_optional_bool, plain_optional_const, plain_optional_number, plain_optional_string, plain_required_bool, plain_required_const, plain_required_number, plain_required_string, required_bool, required_enum, required_number, required_string);
         }

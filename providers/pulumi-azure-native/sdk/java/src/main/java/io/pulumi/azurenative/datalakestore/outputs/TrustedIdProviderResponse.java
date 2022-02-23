@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class TrustedIdProviderResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TrustedIdProviderResponse build() {
             return new TrustedIdProviderResponse(id, idProvider, name, type);
         }

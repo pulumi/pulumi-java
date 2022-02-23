@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="aadTenantId")
-    private final @Nullable String aadTenantId;
+        private final @Nullable String aadTenantId;
 
     public Optional<String> getAadTenantId() {
         return this.aadTenantId == null ? Optional.empty() : Optional.ofNullable(this.aadTenantId);
@@ -34,7 +34,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable String audience;
+        private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
@@ -45,7 +45,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="servicePrincipalClientId")
-    private final @Nullable String servicePrincipalClientId;
+        private final @Nullable String servicePrincipalClientId;
 
     public Optional<String> getServicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
@@ -56,7 +56,7 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="uniqueName")
-    private final @Nullable String uniqueName;
+        private final @Nullable String uniqueName;
 
     public Optional<String> getUniqueName() {
         return this.uniqueName == null ? Optional.empty() : Optional.ofNullable(this.uniqueName);
@@ -125,7 +125,6 @@ public final class ContainerIdentityInfoResponse extends io.pulumi.resources.Inv
             this.uniqueName = uniqueName;
             return this;
         }
-
         public ContainerIdentityInfoResponse build() {
             return new ContainerIdentityInfoResponse(aadTenantId, audience, servicePrincipalClientId, uniqueName);
         }

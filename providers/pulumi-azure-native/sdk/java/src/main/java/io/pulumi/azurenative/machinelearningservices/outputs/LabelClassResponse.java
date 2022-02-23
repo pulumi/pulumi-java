@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class LabelClassResponse {
             this.subclasses = subclasses;
             return this;
         }
-
         public LabelClassResponse build() {
             return new LabelClassResponse(displayName, subclasses);
         }

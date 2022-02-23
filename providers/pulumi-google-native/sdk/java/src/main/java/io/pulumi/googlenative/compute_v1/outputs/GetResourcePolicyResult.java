@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyGroupPlacementPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyInstanceSchedulePolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.ResourcePolicyResourceStatusResponse;
@@ -251,7 +251,6 @@ public final class GetResourcePolicyResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(creationTimestamp, description, groupPlacementPolicy, instanceSchedulePolicy, kind, name, region, resourceStatus, selfLink, snapshotSchedulePolicy, status);
         }

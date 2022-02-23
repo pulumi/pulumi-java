@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
      * 
      */
     @InputImport(name="abortedCount", required=true)
-    private final String abortedCount;
+      private final String abortedCount;
 
     public String getAbortedCount() {
         return this.abortedCount;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
      * 
      */
     @InputImport(name="pendingCount", required=true)
-    private final String pendingCount;
+      private final String pendingCount;
 
     public String getPendingCount() {
         return this.pendingCount;
@@ -43,7 +43,7 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
      * 
      */
     @InputImport(name="processedCount", required=true)
-    private final String processedCount;
+      private final String processedCount;
 
     public String getProcessedCount() {
         return this.processedCount;
@@ -102,7 +102,6 @@ public final class GooglePrivacyDlpV2HybridInspectStatisticsResponse extends io.
             this.processedCount = Objects.requireNonNull(processedCount);
             return this;
         }
-
         public GooglePrivacyDlpV2HybridInspectStatisticsResponse build() {
             return new GooglePrivacyDlpV2HybridInspectStatisticsResponse(abortedCount, pendingCount, processedCount);
         }

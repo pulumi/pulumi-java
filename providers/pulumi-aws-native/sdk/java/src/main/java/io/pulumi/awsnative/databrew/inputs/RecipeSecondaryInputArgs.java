@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeDataCatalogInputDefinitionArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeS3LocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,14 +20,14 @@ public final class RecipeSecondaryInputArgs extends io.pulumi.resources.Resource
     public static final RecipeSecondaryInputArgs Empty = new RecipeSecondaryInputArgs();
 
     @InputImport(name="dataCatalogInputDefinition")
-    private final @Nullable Input<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
+        private final @Nullable Input<RecipeDataCatalogInputDefinitionArgs> dataCatalogInputDefinition;
 
     public Input<RecipeDataCatalogInputDefinitionArgs> getDataCatalogInputDefinition() {
         return this.dataCatalogInputDefinition == null ? Input.empty() : this.dataCatalogInputDefinition;
     }
 
     @InputImport(name="s3InputDefinition")
-    private final @Nullable Input<RecipeS3LocationArgs> s3InputDefinition;
+        private final @Nullable Input<RecipeS3LocationArgs> s3InputDefinition;
 
     public Input<RecipeS3LocationArgs> getS3InputDefinition() {
         return this.s3InputDefinition == null ? Input.empty() : this.s3InputDefinition;
@@ -86,7 +86,6 @@ public final class RecipeSecondaryInputArgs extends io.pulumi.resources.Resource
             this.s3InputDefinition = Input.ofNullable(s3InputDefinition);
             return this;
         }
-
         public RecipeSecondaryInputArgs build() {
             return new RecipeSecondaryInputArgs(dataCatalogInputDefinition, s3InputDefinition);
         }

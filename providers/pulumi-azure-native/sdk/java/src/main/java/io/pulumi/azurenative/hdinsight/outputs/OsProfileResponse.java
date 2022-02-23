@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.outputs;
 
 import io.pulumi.azurenative.hdinsight.outputs.LinuxOperatingSystemProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class OsProfileResponse {
             this.linuxOperatingSystemProfile = linuxOperatingSystemProfile;
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(linuxOperatingSystemProfile);
         }

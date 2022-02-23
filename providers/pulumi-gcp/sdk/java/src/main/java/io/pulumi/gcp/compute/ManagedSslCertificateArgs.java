@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.ManagedSslCertificateManagedArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<Integer> certificateId;
+        private final @Nullable Input<Integer> certificateId;
 
     public Input<Integer> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -32,7 +32,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managed")
-    private final @Nullable Input<ManagedSslCertificateManagedArgs> managed;
+        private final @Nullable Input<ManagedSslCertificateManagedArgs> managed;
 
     public Input<ManagedSslCertificateManagedArgs> getManaged() {
         return this.managed == null ? Input.empty() : this.managed;
@@ -62,7 +62,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -74,7 +74,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -207,7 +207,6 @@ public final class ManagedSslCertificateArgs extends io.pulumi.resources.Resourc
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ManagedSslCertificateArgs build() {
             return new ManagedSslCertificateArgs(certificateId, description, managed, name, project, type);
         }

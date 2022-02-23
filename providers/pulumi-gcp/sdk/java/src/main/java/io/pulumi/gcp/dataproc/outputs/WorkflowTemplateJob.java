@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHadoopJob;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHiveJob;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobPigJob;
@@ -297,7 +297,6 @@ public final class WorkflowTemplateJob {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public WorkflowTemplateJob build() {
             return new WorkflowTemplateJob(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

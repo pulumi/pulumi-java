@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.AuthorityResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.MembershipEndpointResponse;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.MembershipStateResponse;
@@ -288,7 +288,6 @@ public final class GetMembershipResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMembershipResult build() {
             return new GetMembershipResult(authority, createTime, deleteTime, description, endpoint, externalId, labels, lastConnectionTime, name, state, uniqueId, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="driverLogLevels", required=true)
-    private final Map<String,String> driverLogLevels;
+      private final Map<String,String> driverLogLevels;
 
     public Map<String,String> getDriverLogLevels() {
         return this.driverLogLevels;
@@ -60,7 +60,6 @@ public final class LoggingConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.driverLogLevels = Objects.requireNonNull(driverLogLevels);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(driverLogLevels);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class ListTenantAccessGitSecretsResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListTenantAccessGitSecretsResult build() {
             return new ListTenantAccessGitSecretsResult(enabled, id, primaryKey, secondaryKey);
         }

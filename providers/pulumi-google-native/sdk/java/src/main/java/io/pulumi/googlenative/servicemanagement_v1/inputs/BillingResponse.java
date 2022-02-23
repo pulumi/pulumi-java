@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.BillingDestinationResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BillingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="consumerDestinations", required=true)
-    private final List<BillingDestinationResponse> consumerDestinations;
+      private final List<BillingDestinationResponse> consumerDestinations;
 
     public List<BillingDestinationResponse> getConsumerDestinations() {
         return this.consumerDestinations;
@@ -60,7 +60,6 @@ public final class BillingResponse extends io.pulumi.resources.InvokeArgs {
             this.consumerDestinations = Objects.requireNonNull(consumerDestinations);
             return this;
         }
-
         public BillingResponse build() {
             return new BillingResponse(consumerDestinations);
         }

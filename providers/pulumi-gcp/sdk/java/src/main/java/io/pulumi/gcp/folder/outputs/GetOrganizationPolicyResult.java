@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.folder.outputs.GetOrganizationPolicyBooleanPolicy;
 import io.pulumi.gcp.folder.outputs.GetOrganizationPolicyListPolicy;
 import io.pulumi.gcp.folder.outputs.GetOrganizationPolicyRestorePolicy;
@@ -162,7 +162,6 @@ public final class GetOrganizationPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetOrganizationPolicyResult build() {
             return new GetOrganizationPolicyResult(booleanPolicies, constraint, etag, folder, id, listPolicies, restorePolicies, updateTime, version);
         }

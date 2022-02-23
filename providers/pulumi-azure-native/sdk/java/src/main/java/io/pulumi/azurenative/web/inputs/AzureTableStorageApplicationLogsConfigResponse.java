@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
      * 
      */
     @InputImport(name="level")
-    private final @Nullable String level;
+        private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -34,7 +34,7 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
      * 
      */
     @InputImport(name="sasUrl", required=true)
-    private final String sasUrl;
+        private final String sasUrl;
 
     public String getSasUrl() {
         return this.sasUrl;
@@ -83,7 +83,6 @@ public final class AzureTableStorageApplicationLogsConfigResponse extends io.pul
             this.sasUrl = Objects.requireNonNull(sasUrl);
             return this;
         }
-
         public AzureTableStorageApplicationLogsConfigResponse build() {
             return new AzureTableStorageApplicationLogsConfigResponse(level, sasUrl);
         }

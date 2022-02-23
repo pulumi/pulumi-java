@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyActionDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -15,14 +15,14 @@ public final class FirewallPolicyCustomActionArgs extends io.pulumi.resources.Re
     public static final FirewallPolicyCustomActionArgs Empty = new FirewallPolicyCustomActionArgs();
 
     @InputImport(name="actionDefinition", required=true)
-    private final Input<FirewallPolicyActionDefinitionArgs> actionDefinition;
+        private final Input<FirewallPolicyActionDefinitionArgs> actionDefinition;
 
     public Input<FirewallPolicyActionDefinitionArgs> getActionDefinition() {
         return this.actionDefinition;
     }
 
     @InputImport(name="actionName", required=true)
-    private final Input<String> actionName;
+        private final Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName;
@@ -81,7 +81,6 @@ public final class FirewallPolicyCustomActionArgs extends io.pulumi.resources.Re
             this.actionName = Input.of(Objects.requireNonNull(actionName));
             return this;
         }
-
         public FirewallPolicyCustomActionArgs build() {
             return new FirewallPolicyCustomActionArgs(actionDefinition, actionName);
         }

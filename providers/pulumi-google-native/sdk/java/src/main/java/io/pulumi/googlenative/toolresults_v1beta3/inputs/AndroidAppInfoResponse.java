@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="packageName", required=true)
-    private final String packageName;
+      private final String packageName;
 
     public String getPackageName() {
         return this.packageName;
@@ -43,7 +43,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="versionCode", required=true)
-    private final String versionCode;
+      private final String versionCode;
 
     public String getVersionCode() {
         return this.versionCode;
@@ -54,7 +54,7 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="versionName", required=true)
-    private final String versionName;
+      private final String versionName;
 
     public String getVersionName() {
         return this.versionName;
@@ -123,7 +123,6 @@ public final class AndroidAppInfoResponse extends io.pulumi.resources.InvokeArgs
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public AndroidAppInfoResponse build() {
             return new AndroidAppInfoResponse(name, packageName, versionCode, versionName);
         }

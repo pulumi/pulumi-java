@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable List<ScaleRuleAuthResponse> auth;
+        private final @Nullable List<ScaleRuleAuthResponse> auth;
 
     public List<ScaleRuleAuthResponse> getAuth() {
         return this.auth == null ? List.of() : this.auth;
@@ -37,7 +37,7 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Map<String,String> metadata;
+        private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -49,7 +49,7 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -108,7 +108,6 @@ public final class CustomScaleRuleResponse extends io.pulumi.resources.InvokeArg
             this.type = type;
             return this;
         }
-
         public CustomScaleRuleResponse build() {
             return new CustomScaleRuleResponse(auth, metadata, type);
         }

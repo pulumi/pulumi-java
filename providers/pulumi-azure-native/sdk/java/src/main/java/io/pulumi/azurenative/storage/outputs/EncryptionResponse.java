@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storage.outputs;
 import io.pulumi.azurenative.storage.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.storage.outputs.EncryptionServicesResponse;
 import io.pulumi.azurenative.storage.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -143,7 +143,6 @@ public final class EncryptionResponse {
             this.services = services;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(encryptionIdentity, keySource, keyVaultProperties, requireInfrastructureEncryption, services);
         }

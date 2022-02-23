@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.MultiClusterRoutingUseAnyResponse;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.SingleClusterRoutingResponse;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class GetAppProfileResult {
             this.singleClusterRouting = Objects.requireNonNull(singleClusterRouting);
             return this;
         }
-
         public GetAppProfileResult build() {
             return new GetAppProfileResult(description, etag, multiClusterRoutingUseAny, name, singleClusterRouting);
         }

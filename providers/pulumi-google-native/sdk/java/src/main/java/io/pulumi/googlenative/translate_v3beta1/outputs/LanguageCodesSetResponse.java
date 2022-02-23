@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class LanguageCodesSetResponse {
             this.languageCodes = Objects.requireNonNull(languageCodes);
             return this;
         }
-
         public LanguageCodesSetResponse build() {
             return new LanguageCodesSetResponse(languageCodes);
         }

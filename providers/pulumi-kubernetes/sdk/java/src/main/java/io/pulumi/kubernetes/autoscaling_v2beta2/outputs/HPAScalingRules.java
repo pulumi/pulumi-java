@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HPAScalingPolicy;
 import java.lang.Integer;
 import java.lang.String;
@@ -100,7 +100,6 @@ public final class HPAScalingRules {
             this.stabilizationWindowSeconds = stabilizationWindowSeconds;
             return this;
         }
-
         public HPAScalingRules build() {
             return new HPAScalingRules(policies, selectPolicy, stabilizationWindowSeconds);
         }

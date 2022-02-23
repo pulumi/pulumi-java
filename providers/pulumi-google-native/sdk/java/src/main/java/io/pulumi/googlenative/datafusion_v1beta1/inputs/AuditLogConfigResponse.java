@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exemptedMembers", required=true)
-    private final List<String> exemptedMembers;
+      private final List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
@@ -33,7 +33,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+      private final String logType;
 
     public String getLogType() {
         return this.logType;
@@ -82,7 +82,6 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public AuditLogConfigResponse build() {
             return new AuditLogConfigResponse(exemptedMembers, logType);
         }

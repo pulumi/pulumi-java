@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeSpec;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class VolumeAttachmentSource {
             this.persistentVolumeName = persistentVolumeName;
             return this;
         }
-
         public VolumeAttachmentSource build() {
             return new VolumeAttachmentSource(inlineVolumeSpec, persistentVolumeName);
         }

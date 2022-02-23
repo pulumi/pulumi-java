@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class RuleGroupRuleVariables {
             this.portSets = portSets;
             return this;
         }
-
         public RuleGroupRuleVariables build() {
             return new RuleGroupRuleVariables(iPSets, portSets);
         }

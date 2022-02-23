@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="externalIp", required=true)
-    private final String externalIp;
+      private final String externalIp;
 
     public String getExternalIp() {
         return this.externalIp;
@@ -32,7 +32,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="internalIp", required=true)
-    private final String internalIp;
+      private final String internalIp;
 
     public String getInternalIp() {
         return this.internalIp;
@@ -43,7 +43,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -54,7 +54,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -123,7 +123,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(externalIp, internalIp, network, subnetwork);
         }

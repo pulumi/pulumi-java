@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appstream.outputs;
 
 import io.pulumi.awsnative.appstream.outputs.ApplicationS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -166,7 +166,6 @@ public final class GetApplicationResult {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(appBlockArn, arn, attributesToDelete, createdTime, description, displayName, iconS3Location, launchParameters, launchPath, workingDirectory);
         }

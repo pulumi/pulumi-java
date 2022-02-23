@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.outputs;
 
 import io.pulumi.azurenative.confidentialledger.outputs.LedgerPropertiesResponse;
 import io.pulumi.azurenative.confidentialledger.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -184,7 +184,6 @@ public final class GetLedgerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLedgerResult build() {
             return new GetLedgerResult(id, location, name, properties, systemData, tags, type);
         }

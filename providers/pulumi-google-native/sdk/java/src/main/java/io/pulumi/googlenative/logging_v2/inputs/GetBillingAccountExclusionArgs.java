@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
     public static final GetBillingAccountExclusionArgs Empty = new GetBillingAccountExclusionArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final String billingAccountId;
+      private final String billingAccountId;
 
     public String getBillingAccountId() {
         return this.billingAccountId;
     }
 
     @InputImport(name="exclusionId", required=true)
-    private final String exclusionId;
+      private final String exclusionId;
 
     public String getExclusionId() {
         return this.exclusionId;
@@ -69,7 +69,6 @@ public final class GetBillingAccountExclusionArgs extends io.pulumi.resources.In
             this.exclusionId = Objects.requireNonNull(exclusionId);
             return this;
         }
-
         public GetBillingAccountExclusionArgs build() {
             return new GetBillingAccountExclusionArgs(billingAccountId, exclusionId);
         }

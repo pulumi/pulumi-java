@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.subscription.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -34,7 +34,7 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+        private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -83,7 +83,6 @@ public final class PutAliasResponsePropertiesResponse extends io.pulumi.resource
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public PutAliasResponsePropertiesResponse build() {
             return new PutAliasResponsePropertiesResponse(provisioningState, subscriptionId);
         }

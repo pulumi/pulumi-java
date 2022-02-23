@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class DeviceFleetEdgeOutputConfig {
             this.s3OutputLocation = Objects.requireNonNull(s3OutputLocation);
             return this;
         }
-
         public DeviceFleetEdgeOutputConfig build() {
             return new DeviceFleetEdgeOutputConfig(kmsKeyId, s3OutputLocation);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.CustomRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CustomRuleListResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable List<CustomRuleResponse> rules;
+        private final @Nullable List<CustomRuleResponse> rules;
 
     public List<CustomRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -62,7 +62,6 @@ public final class CustomRuleListResponse extends io.pulumi.resources.InvokeArgs
             this.rules = rules;
             return this;
         }
-
         public CustomRuleListResponse build() {
             return new CustomRuleListResponse(rules);
         }

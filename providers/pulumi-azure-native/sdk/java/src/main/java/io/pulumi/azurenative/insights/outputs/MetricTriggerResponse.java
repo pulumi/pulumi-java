@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ScaleRuleMetricDimensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -290,7 +290,6 @@ public final class MetricTriggerResponse {
             this.timeWindow = Objects.requireNonNull(timeWindow);
             return this;
         }
-
         public MetricTriggerResponse build() {
             return new MetricTriggerResponse(dimensions, dividePerInstance, metricName, metricNamespace, metricResourceLocation, metricResourceUri, operator, statistic, threshold, timeAggregation, timeGrain, timeWindow);
         }

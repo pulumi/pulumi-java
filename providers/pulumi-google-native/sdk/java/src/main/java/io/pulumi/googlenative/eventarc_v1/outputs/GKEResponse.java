@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class GKEResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GKEResponse build() {
             return new GKEResponse(cluster, location, namespace, path, service);
         }

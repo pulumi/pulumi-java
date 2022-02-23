@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.documentai_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -200,7 +200,6 @@ public final class GetProcessorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProcessorResult build() {
             return new GetProcessorResult(createTime, defaultProcessorVersion, displayName, kmsKeyName, name, processEndpoint, state, type);
         }

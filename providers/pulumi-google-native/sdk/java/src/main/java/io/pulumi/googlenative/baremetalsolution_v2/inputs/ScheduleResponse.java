@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="crontabSpec", required=true)
-    private final String crontabSpec;
+      private final String crontabSpec;
 
     public String getCrontabSpec() {
         return this.crontabSpec;
@@ -33,7 +33,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prefix", required=true)
-    private final String prefix;
+      private final String prefix;
 
     public String getPrefix() {
         return this.prefix;
@@ -44,7 +44,7 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retentionCount", required=true)
-    private final Integer retentionCount;
+      private final Integer retentionCount;
 
     public Integer getRetentionCount() {
         return this.retentionCount;
@@ -103,7 +103,6 @@ public final class ScheduleResponse extends io.pulumi.resources.InvokeArgs {
             this.retentionCount = Objects.requireNonNull(retentionCount);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(crontabSpec, prefix, retentionCount);
         }

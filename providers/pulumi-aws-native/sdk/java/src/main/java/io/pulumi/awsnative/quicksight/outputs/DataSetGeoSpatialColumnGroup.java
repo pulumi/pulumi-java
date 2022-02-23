@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -91,7 +91,6 @@ public final class DataSetGeoSpatialColumnGroup {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public DataSetGeoSpatialColumnGroup build() {
             return new DataSetGeoSpatialColumnGroup(columns, countryCode, name);
         }

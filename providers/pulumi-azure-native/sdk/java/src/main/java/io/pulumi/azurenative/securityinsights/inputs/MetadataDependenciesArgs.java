@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.Kind;
 import io.pulumi.azurenative.securityinsights.enums.Operator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="contentId")
-    private final @Nullable Input<String> contentId;
+        private final @Nullable Input<String> contentId;
 
     public Input<String> getContentId() {
         return this.contentId == null ? Input.empty() : this.contentId;
@@ -38,7 +38,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="criteria")
-    private final @Nullable Input<List<MetadataDependenciesArgs>> criteria;
+        private final @Nullable Input<List<MetadataDependenciesArgs>> criteria;
 
     public Input<List<MetadataDependenciesArgs>> getCriteria() {
         return this.criteria == null ? Input.empty() : this.criteria;
@@ -49,7 +49,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,Kind>> kind;
+        private final @Nullable Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -60,7 +60,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -71,7 +71,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="operator")
-    private final @Nullable Input<Either<String,Operator>> operator;
+        private final @Nullable Input<Either<String,Operator>> operator;
 
     public Input<Either<String,Operator>> getOperator() {
         return this.operator == null ? Input.empty() : this.operator;
@@ -82,7 +82,7 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -201,7 +201,6 @@ public final class MetadataDependenciesArgs extends io.pulumi.resources.Resource
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public MetadataDependenciesArgs build() {
             return new MetadataDependenciesArgs(contentId, criteria, kind, name, operator, version);
         }

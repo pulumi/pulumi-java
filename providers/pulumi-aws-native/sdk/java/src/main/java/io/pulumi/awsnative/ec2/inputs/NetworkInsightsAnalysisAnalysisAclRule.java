@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,42 +18,42 @@ public final class NetworkInsightsAnalysisAnalysisAclRule extends io.pulumi.reso
     public static final NetworkInsightsAnalysisAnalysisAclRule Empty = new NetworkInsightsAnalysisAnalysisAclRule();
 
     @InputImport(name="cidr")
-    private final @Nullable String cidr;
+        private final @Nullable String cidr;
 
     public Optional<String> getCidr() {
         return this.cidr == null ? Optional.empty() : Optional.ofNullable(this.cidr);
     }
 
     @InputImport(name="egress")
-    private final @Nullable Boolean egress;
+        private final @Nullable Boolean egress;
 
     public Optional<Boolean> getEgress() {
         return this.egress == null ? Optional.empty() : Optional.ofNullable(this.egress);
     }
 
     @InputImport(name="portRange")
-    private final @Nullable NetworkInsightsAnalysisPortRange portRange;
+        private final @Nullable NetworkInsightsAnalysisPortRange portRange;
 
     public Optional<NetworkInsightsAnalysisPortRange> getPortRange() {
         return this.portRange == null ? Optional.empty() : Optional.ofNullable(this.portRange);
     }
 
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
     }
 
     @InputImport(name="ruleAction")
-    private final @Nullable String ruleAction;
+        private final @Nullable String ruleAction;
 
     public Optional<String> getRuleAction() {
         return this.ruleAction == null ? Optional.empty() : Optional.ofNullable(this.ruleAction);
     }
 
     @InputImport(name="ruleNumber")
-    private final @Nullable Integer ruleNumber;
+        private final @Nullable Integer ruleNumber;
 
     public Optional<Integer> getRuleNumber() {
         return this.ruleNumber == null ? Optional.empty() : Optional.ofNullable(this.ruleNumber);
@@ -142,7 +142,6 @@ public final class NetworkInsightsAnalysisAnalysisAclRule extends io.pulumi.reso
             this.ruleNumber = ruleNumber;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisAclRule build() {
             return new NetworkInsightsAnalysisAnalysisAclRule(cidr, egress, portRange, protocol, ruleAction, ruleNumber);
         }

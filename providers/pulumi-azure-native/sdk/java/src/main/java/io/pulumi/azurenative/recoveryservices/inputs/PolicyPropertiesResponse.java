@@ -14,7 +14,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMagePolicyDetailsResponse
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.RcmAzureMigrationPolicyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VmwareCbtPolicyDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -35,7 +35,7 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable String friendlyName;
+        private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -46,7 +46,7 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="providerSpecificDetails")
-    private final @Nullable Object providerSpecificDetails;
+        private final @Nullable Object providerSpecificDetails;
 
     public Object getProviderSpecificDetails() {
         return this.providerSpecificDetails == null ? null : this.providerSpecificDetails;
@@ -95,7 +95,6 @@ public final class PolicyPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.providerSpecificDetails = providerSpecificDetails;
             return this;
         }
-
         public PolicyPropertiesResponse build() {
             return new PolicyPropertiesResponse(friendlyName, providerSpecificDetails);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
      * 
      */
     @InputImport(name="metadataBasedReadinessSignal")
-    private final @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
+      private final @Nullable Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> metadataBasedReadinessSignal;
 
     public Input<InstanceGroupManagerInstanceLifecyclePolicyMetadataBasedReadinessSignalArgs> getMetadataBasedReadinessSignal() {
         return this.metadataBasedReadinessSignal == null ? Input.empty() : this.metadataBasedReadinessSignal;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerInstanceLifecyclePolicyArgs extends io.pu
             this.metadataBasedReadinessSignal = Input.ofNullable(metadataBasedReadinessSignal);
             return this;
         }
-
         public InstanceGroupManagerInstanceLifecyclePolicyArgs build() {
             return new InstanceGroupManagerInstanceLifecyclePolicyArgs(metadataBasedReadinessSignal);
         }

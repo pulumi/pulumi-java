@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class LivenessCheckResponse {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public LivenessCheckResponse build() {
             return new LivenessCheckResponse(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }

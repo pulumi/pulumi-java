@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="advertisedCommunities")
-    private final @Nullable List<String> advertisedCommunities;
+        private final @Nullable List<String> advertisedCommunities;
 
     public List<String> getAdvertisedCommunities() {
         return this.advertisedCommunities == null ? List.of() : this.advertisedCommunities;
@@ -36,7 +36,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="advertisedPublicPrefixes")
-    private final @Nullable List<String> advertisedPublicPrefixes;
+        private final @Nullable List<String> advertisedPublicPrefixes;
 
     public List<String> getAdvertisedPublicPrefixes() {
         return this.advertisedPublicPrefixes == null ? List.of() : this.advertisedPublicPrefixes;
@@ -47,7 +47,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="advertisedPublicPrefixesState", required=true)
-    private final String advertisedPublicPrefixesState;
+        private final String advertisedPublicPrefixesState;
 
     public String getAdvertisedPublicPrefixesState() {
         return this.advertisedPublicPrefixesState;
@@ -58,7 +58,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="customerASN")
-    private final @Nullable Integer customerASN;
+        private final @Nullable Integer customerASN;
 
     public Optional<Integer> getCustomerASN() {
         return this.customerASN == null ? Optional.empty() : Optional.ofNullable(this.customerASN);
@@ -69,7 +69,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="legacyMode")
-    private final @Nullable Integer legacyMode;
+        private final @Nullable Integer legacyMode;
 
     public Optional<Integer> getLegacyMode() {
         return this.legacyMode == null ? Optional.empty() : Optional.ofNullable(this.legacyMode);
@@ -80,7 +80,7 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="routingRegistryName")
-    private final @Nullable String routingRegistryName;
+        private final @Nullable String routingRegistryName;
 
     public Optional<String> getRoutingRegistryName() {
         return this.routingRegistryName == null ? Optional.empty() : Optional.ofNullable(this.routingRegistryName);
@@ -169,7 +169,6 @@ public final class ExpressRouteCircuitPeeringConfigResponse extends io.pulumi.re
             this.routingRegistryName = routingRegistryName;
             return this;
         }
-
         public ExpressRouteCircuitPeeringConfigResponse build() {
             return new ExpressRouteCircuitPeeringConfigResponse(advertisedCommunities, advertisedPublicPrefixes, advertisedPublicPrefixesState, customerASN, legacyMode, routingRegistryName);
         }

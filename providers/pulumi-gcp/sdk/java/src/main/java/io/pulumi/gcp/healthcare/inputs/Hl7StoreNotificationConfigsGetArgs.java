@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -43,7 +43,7 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final Input<String> pubsubTopic;
+        private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;
@@ -102,7 +102,6 @@ public final class Hl7StoreNotificationConfigsGetArgs extends io.pulumi.resource
             this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
-
         public Hl7StoreNotificationConfigsGetArgs build() {
             return new Hl7StoreNotificationConfigsGetArgs(filter, pubsubTopic);
         }

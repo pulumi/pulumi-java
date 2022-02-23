@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,7 +66,6 @@ public final class GetServiceTemplateSpecContainerVolumeMount {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetServiceTemplateSpecContainerVolumeMount build() {
             return new GetServiceTemplateSpecContainerVolumeMount(mountPath, name);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.inputs.RegistrationAssignmentPropertiesResponseProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable PlanResponse plan;
+        private final @Nullable PlanResponse plan;
 
     public Optional<PlanResponse> getPlan() {
         return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
@@ -58,7 +58,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
+        private final @Nullable RegistrationAssignmentPropertiesResponseProperties properties;
 
     public Optional<RegistrationAssignmentPropertiesResponseProperties> getProperties() {
         return this.properties == null ? Optional.empty() : Optional.ofNullable(this.properties);
@@ -69,7 +69,7 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -148,7 +148,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
             return new RegistrationAssignmentPropertiesResponseRegistrationDefinition(id, name, plan, properties, type);
         }

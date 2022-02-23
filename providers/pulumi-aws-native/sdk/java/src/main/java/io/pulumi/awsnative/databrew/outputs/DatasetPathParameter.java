@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.DatasetParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class DatasetPathParameter {
             this.pathParameterName = Objects.requireNonNull(pathParameterName);
             return this;
         }
-
         public DatasetPathParameter build() {
             return new DatasetPathParameter(datasetParameter, pathParameterName);
         }

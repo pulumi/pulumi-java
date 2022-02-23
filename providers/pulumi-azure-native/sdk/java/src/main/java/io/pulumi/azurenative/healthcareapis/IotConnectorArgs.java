@@ -7,7 +7,7 @@ import io.pulumi.azurenative.healthcareapis.inputs.IotEventHubIngestionEndpointC
 import io.pulumi.azurenative.healthcareapis.inputs.IotMappingPropertiesArgs;
 import io.pulumi.azurenative.healthcareapis.inputs.ServiceManagedIdentityIdentityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceMapping")
-    private final @Nullable Input<IotMappingPropertiesArgs> deviceMapping;
+        private final @Nullable Input<IotMappingPropertiesArgs> deviceMapping;
 
     public Input<IotMappingPropertiesArgs> getDeviceMapping() {
         return this.deviceMapping == null ? Input.empty() : this.deviceMapping;
@@ -34,7 +34,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
+        private final @Nullable Input<ServiceManagedIdentityIdentityArgs> identity;
 
     public Input<ServiceManagedIdentityIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -45,7 +45,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingestionEndpointConfiguration")
-    private final @Nullable Input<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
+        private final @Nullable Input<IotEventHubIngestionEndpointConfigurationArgs> ingestionEndpointConfiguration;
 
     public Input<IotEventHubIngestionEndpointConfigurationArgs> getIngestionEndpointConfiguration() {
         return this.ingestionEndpointConfiguration == null ? Input.empty() : this.ingestionEndpointConfiguration;
@@ -56,7 +56,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iotConnectorName")
-    private final @Nullable Input<String> iotConnectorName;
+        private final @Nullable Input<String> iotConnectorName;
 
     public Input<String> getIotConnectorName() {
         return this.iotConnectorName == null ? Input.empty() : this.iotConnectorName;
@@ -67,7 +67,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -100,7 +100,7 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -249,7 +249,6 @@ public final class IotConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public IotConnectorArgs build() {
             return new IotConnectorArgs(deviceMapping, identity, ingestionEndpointConfiguration, iotConnectorName, location, resourceGroupName, tags, workspaceName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstancePropertiesPatchResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class InstanceGroupManagerAllInstancesConfigResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public InstanceGroupManagerAllInstancesConfigResponse build() {
             return new InstanceGroupManagerAllInstancesConfigResponse(properties);
         }

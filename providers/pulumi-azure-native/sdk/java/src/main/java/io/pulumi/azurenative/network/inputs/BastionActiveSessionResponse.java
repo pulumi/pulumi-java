@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+        private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -34,7 +34,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -45,7 +45,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sessionDurationInMins", required=true)
-    private final Double sessionDurationInMins;
+        private final Double sessionDurationInMins;
 
     public Double getSessionDurationInMins() {
         return this.sessionDurationInMins;
@@ -56,7 +56,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sessionId", required=true)
-    private final String sessionId;
+        private final String sessionId;
 
     public String getSessionId() {
         return this.sessionId;
@@ -67,7 +67,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Object startTime;
+        private final Object startTime;
 
     public Object getStartTime() {
         return this.startTime;
@@ -78,7 +78,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetHostName", required=true)
-    private final String targetHostName;
+        private final String targetHostName;
 
     public String getTargetHostName() {
         return this.targetHostName;
@@ -89,7 +89,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetIpAddress", required=true)
-    private final String targetIpAddress;
+        private final String targetIpAddress;
 
     public String getTargetIpAddress() {
         return this.targetIpAddress;
@@ -100,7 +100,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetResourceGroup", required=true)
-    private final String targetResourceGroup;
+        private final String targetResourceGroup;
 
     public String getTargetResourceGroup() {
         return this.targetResourceGroup;
@@ -111,7 +111,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetResourceId", required=true)
-    private final String targetResourceId;
+        private final String targetResourceId;
 
     public String getTargetResourceId() {
         return this.targetResourceId;
@@ -122,7 +122,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="targetSubscriptionId", required=true)
-    private final String targetSubscriptionId;
+        private final String targetSubscriptionId;
 
     public String getTargetSubscriptionId() {
         return this.targetSubscriptionId;
@@ -133,7 +133,7 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -272,7 +272,6 @@ public final class BastionActiveSessionResponse extends io.pulumi.resources.Invo
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public BastionActiveSessionResponse build() {
             return new BastionActiveSessionResponse(protocol, resourceType, sessionDurationInMins, sessionId, startTime, targetHostName, targetIpAddress, targetResourceGroup, targetResourceId, targetSubscriptionId, userName);
         }

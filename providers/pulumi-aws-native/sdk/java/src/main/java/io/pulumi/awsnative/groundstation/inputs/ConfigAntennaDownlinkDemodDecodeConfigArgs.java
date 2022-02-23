@@ -7,7 +7,7 @@ import io.pulumi.awsnative.groundstation.inputs.ConfigDecodeConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigDemodulationConfigArgs;
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -17,21 +17,21 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
     public static final ConfigAntennaDownlinkDemodDecodeConfigArgs Empty = new ConfigAntennaDownlinkDemodDecodeConfigArgs();
 
     @InputImport(name="decodeConfig")
-    private final @Nullable Input<ConfigDecodeConfigArgs> decodeConfig;
+        private final @Nullable Input<ConfigDecodeConfigArgs> decodeConfig;
 
     public Input<ConfigDecodeConfigArgs> getDecodeConfig() {
         return this.decodeConfig == null ? Input.empty() : this.decodeConfig;
     }
 
     @InputImport(name="demodulationConfig")
-    private final @Nullable Input<ConfigDemodulationConfigArgs> demodulationConfig;
+        private final @Nullable Input<ConfigDemodulationConfigArgs> demodulationConfig;
 
     public Input<ConfigDemodulationConfigArgs> getDemodulationConfig() {
         return this.demodulationConfig == null ? Input.empty() : this.demodulationConfig;
     }
 
     @InputImport(name="spectrumConfig")
-    private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
+        private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Input<ConfigSpectrumConfigArgs> getSpectrumConfig() {
         return this.spectrumConfig == null ? Input.empty() : this.spectrumConfig;
@@ -105,7 +105,6 @@ public final class ConfigAntennaDownlinkDemodDecodeConfigArgs extends io.pulumi.
             this.spectrumConfig = Input.ofNullable(spectrumConfig);
             return this;
         }
-
         public ConfigAntennaDownlinkDemodDecodeConfigArgs build() {
             return new ConfigAntennaDownlinkDemodDecodeConfigArgs(decodeConfig, demodulationConfig, spectrumConfig);
         }

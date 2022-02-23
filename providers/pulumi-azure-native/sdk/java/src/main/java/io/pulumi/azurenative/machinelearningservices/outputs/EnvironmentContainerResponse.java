@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class EnvironmentContainerResponse {
             this.tags = tags;
             return this;
         }
-
         public EnvironmentContainerResponse build() {
             return new EnvironmentContainerResponse(description, properties, tags);
         }

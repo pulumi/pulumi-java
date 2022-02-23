@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+        private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -67,7 +67,6 @@ public final class PodIPArgs extends io.pulumi.resources.ResourceArgs {
             this.ip = Input.ofNullable(ip);
             return this;
         }
-
         public PodIPArgs build() {
             return new PodIPArgs(ip);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
     public static final ContainerPublicDomainName Empty = new ContainerPublicDomainName();
 
     @InputImport(name="certificateName")
-    private final @Nullable String certificateName;
+        private final @Nullable String certificateName;
 
     public Optional<String> getCertificateName() {
         return this.certificateName == null ? Optional.empty() : Optional.ofNullable(this.certificateName);
@@ -31,7 +31,7 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="domainNames")
-    private final @Nullable List<String> domainNames;
+        private final @Nullable List<String> domainNames;
 
     public List<String> getDomainNames() {
         return this.domainNames == null ? List.of() : this.domainNames;
@@ -80,7 +80,6 @@ public final class ContainerPublicDomainName extends io.pulumi.resources.InvokeA
             this.domainNames = domainNames;
             return this;
         }
-
         public ContainerPublicDomainName build() {
             return new ContainerPublicDomainName(certificateName, domainNames);
         }

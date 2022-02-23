@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="caPool", required=true)
-    private final Input<String> caPool;
+        private final Input<String> caPool;
 
     public Input<String> getCaPool() {
         return this.caPool;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<CaPoolIamMemberConditionArgs> condition;
+        private final @Nullable Input<CaPoolIamMemberConditionArgs> condition;
 
     public Input<CaPoolIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -40,14 +40,14 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -59,7 +59,7 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -72,7 +72,7 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -191,7 +191,6 @@ public final class CaPoolIamMemberArgs extends io.pulumi.resources.ResourceArgs 
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public CaPoolIamMemberArgs build() {
             return new CaPoolIamMemberArgs(caPool, condition, location, member, project, role);
         }

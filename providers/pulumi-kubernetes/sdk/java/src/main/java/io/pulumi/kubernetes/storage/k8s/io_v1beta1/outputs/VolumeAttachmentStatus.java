@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs.VolumeError;
 import java.lang.Boolean;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class VolumeAttachmentStatus {
             this.detachError = detachError;
             return this;
         }
-
         public VolumeAttachmentStatus build() {
             return new VolumeAttachmentStatus(attachError, attached, attachmentMetadata, detachError);
         }

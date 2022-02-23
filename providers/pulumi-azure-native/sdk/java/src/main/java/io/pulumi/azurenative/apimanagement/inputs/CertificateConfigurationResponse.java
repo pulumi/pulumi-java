@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.inputs.CertificateInformationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable CertificateInformationResponse certificate;
+        private final @Nullable CertificateInformationResponse certificate;
 
     public Optional<CertificateInformationResponse> getCertificate() {
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
@@ -35,7 +35,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificatePassword")
-    private final @Nullable String certificatePassword;
+        private final @Nullable String certificatePassword;
 
     public Optional<String> getCertificatePassword() {
         return this.certificatePassword == null ? Optional.empty() : Optional.ofNullable(this.certificatePassword);
@@ -46,7 +46,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="encodedCertificate")
-    private final @Nullable String encodedCertificate;
+        private final @Nullable String encodedCertificate;
 
     public Optional<String> getEncodedCertificate() {
         return this.encodedCertificate == null ? Optional.empty() : Optional.ofNullable(this.encodedCertificate);
@@ -57,7 +57,7 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="storeName", required=true)
-    private final String storeName;
+        private final String storeName;
 
     public String getStoreName() {
         return this.storeName;
@@ -126,7 +126,6 @@ public final class CertificateConfigurationResponse extends io.pulumi.resources.
             this.storeName = Objects.requireNonNull(storeName);
             return this;
         }
-
         public CertificateConfigurationResponse build() {
             return new CertificateConfigurationResponse(certificate, certificatePassword, encodedCertificate, storeName);
         }

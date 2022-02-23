@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.inputs.BuildInfoResponse;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CloudBuildOptionsResponse;
 import io.pulumi.googlenative.appengine_v1beta.inputs.ContainerInfoResponse;
@@ -26,7 +26,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="build", required=true)
-    private final BuildInfoResponse build;
+      private final BuildInfoResponse build;
 
     public BuildInfoResponse getBuild() {
         return this.build;
@@ -37,7 +37,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudBuildOptions", required=true)
-    private final CloudBuildOptionsResponse cloudBuildOptions;
+      private final CloudBuildOptionsResponse cloudBuildOptions;
 
     public CloudBuildOptionsResponse getCloudBuildOptions() {
         return this.cloudBuildOptions;
@@ -48,7 +48,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="container", required=true)
-    private final ContainerInfoResponse container;
+      private final ContainerInfoResponse container;
 
     public ContainerInfoResponse getContainer() {
         return this.container;
@@ -59,7 +59,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="files", required=true)
-    private final Map<String,String> files;
+      private final Map<String,String> files;
 
     public Map<String,String> getFiles() {
         return this.files;
@@ -70,7 +70,7 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zip", required=true)
-    private final ZipInfoResponse zip;
+      private final ZipInfoResponse zip;
 
     public ZipInfoResponse getZip() {
         return this.zip;
@@ -149,7 +149,6 @@ public final class DeploymentResponse extends io.pulumi.resources.InvokeArgs {
             this.zip = Objects.requireNonNull(zip);
             return this;
         }
-
         public DeploymentResponse build() {
             return new DeploymentResponse(build, cloudBuildOptions, container, files, zip);
         }

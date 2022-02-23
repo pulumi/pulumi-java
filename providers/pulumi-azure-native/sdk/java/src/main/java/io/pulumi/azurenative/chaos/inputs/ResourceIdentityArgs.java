@@ -5,7 +5,7 @@ package io.pulumi.azurenative.chaos.inputs;
 
 import io.pulumi.azurenative.chaos.enums.ResourceIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ResourceIdentityType> type;
+        private final Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type;
@@ -65,7 +65,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ResourceIdentityArgs build() {
             return new ResourceIdentityArgs(type);
         }

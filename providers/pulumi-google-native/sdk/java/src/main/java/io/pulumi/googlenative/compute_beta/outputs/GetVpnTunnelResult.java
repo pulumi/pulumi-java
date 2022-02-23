@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -518,7 +518,6 @@ public final class GetVpnTunnelResult {
             this.vpnGatewayInterface = Objects.requireNonNull(vpnGatewayInterface);
             return this;
         }
-
         public GetVpnTunnelResult build() {
             return new GetVpnTunnelResult(creationTimestamp, description, detailedStatus, ikeVersion, kind, labelFingerprint, labels, localTrafficSelector, name, peerExternalGateway, peerExternalGatewayInterface, peerGcpGateway, peerIp, region, remoteTrafficSelector, router, selfLink, sharedSecret, sharedSecretHash, status, targetVpnGateway, vpnGateway, vpnGatewayInterface);
         }

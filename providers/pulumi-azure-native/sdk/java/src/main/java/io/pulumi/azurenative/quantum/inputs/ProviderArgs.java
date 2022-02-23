@@ -6,7 +6,7 @@ package io.pulumi.azurenative.quantum.inputs;
 import io.pulumi.azurenative.quantum.enums.Status;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+        private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -36,7 +36,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceUri")
-    private final @Nullable Input<String> instanceUri;
+        private final @Nullable Input<String> instanceUri;
 
     public Input<String> getInstanceUri() {
         return this.instanceUri == null ? Input.empty() : this.instanceUri;
@@ -47,7 +47,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerId")
-    private final @Nullable Input<String> providerId;
+        private final @Nullable Input<String> providerId;
 
     public Input<String> getProviderId() {
         return this.providerId == null ? Input.empty() : this.providerId;
@@ -58,7 +58,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providerSku")
-    private final @Nullable Input<String> providerSku;
+        private final @Nullable Input<String> providerSku;
 
     public Input<String> getProviderSku() {
         return this.providerSku == null ? Input.empty() : this.providerSku;
@@ -69,7 +69,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,Status>> provisioningState;
+        private final @Nullable Input<Either<String,Status>> provisioningState;
 
     public Input<Either<String,Status>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -80,7 +80,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUsageId")
-    private final @Nullable Input<String> resourceUsageId;
+        private final @Nullable Input<String> resourceUsageId;
 
     public Input<String> getResourceUsageId() {
         return this.resourceUsageId == null ? Input.empty() : this.resourceUsageId;
@@ -199,7 +199,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUsageId = Input.ofNullable(resourceUsageId);
             return this;
         }
-
         public ProviderArgs build() {
             return new ProviderArgs(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
         }

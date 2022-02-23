@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -37,7 +37,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="paths")
-    private final @Nullable List<String> paths;
+        private final @Nullable List<String> paths;
 
     public List<String> getPaths() {
         return this.paths == null ? List.of() : this.paths;
@@ -48,7 +48,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="systemKey", required=true)
-    private final Boolean systemKey;
+        private final Boolean systemKey;
 
     public Boolean getSystemKey() {
         return this.systemKey;
@@ -59,7 +59,7 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Integer version;
+        private final @Nullable Integer version;
 
     public Optional<Integer> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -128,7 +128,6 @@ public final class ContainerPartitionKeyResponse extends io.pulumi.resources.Inv
             this.version = version;
             return this;
         }
-
         public ContainerPartitionKeyResponse build() {
             return new ContainerPartitionKeyResponse(kind, paths, systemKey, version);
         }

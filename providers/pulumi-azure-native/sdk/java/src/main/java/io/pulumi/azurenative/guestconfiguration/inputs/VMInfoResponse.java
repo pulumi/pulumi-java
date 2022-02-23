@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uuid", required=true)
-    private final String uuid;
+        private final String uuid;
 
     public String getUuid() {
         return this.uuid;
@@ -81,7 +81,6 @@ public final class VMInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public VMInfoResponse build() {
             return new VMInfoResponse(id, uuid);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyAlternativeNameServerConfigResponse;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyNetworkResponse;
 import java.lang.Boolean;
@@ -175,7 +175,6 @@ public final class GetPolicyResult {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(alternativeNameServerConfig, description, enableInboundForwarding, enableLogging, kind, name, networks);
         }

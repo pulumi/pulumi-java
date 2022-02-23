@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.FixedOrPercentResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse;
 import java.lang.Integer;
@@ -20,7 +20,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * 
      */
     @InputImport(name="autoHealingTriggers", required=true)
-    private final InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers;
+      private final InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse autoHealingTriggers;
 
     public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse getAutoHealingTriggers() {
         return this.autoHealingTriggers;
@@ -31,7 +31,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * 
      */
     @InputImport(name="healthCheck", required=true)
-    private final String healthCheck;
+      private final String healthCheck;
 
     public String getHealthCheck() {
         return this.healthCheck;
@@ -42,7 +42,7 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * 
      */
     @InputImport(name="initialDelaySec", required=true)
-    private final Integer initialDelaySec;
+      private final Integer initialDelaySec;
 
     public Integer getInitialDelaySec() {
         return this.initialDelaySec;
@@ -53,14 +53,14 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
      * 
      */
     @InputImport(name="maxUnavailable", required=true)
-    private final FixedOrPercentResponse maxUnavailable;
+      private final FixedOrPercentResponse maxUnavailable;
 
     public FixedOrPercentResponse getMaxUnavailable() {
         return this.maxUnavailable;
     }
 
     @InputImport(name="updateInstances", required=true)
-    private final String updateInstances;
+      private final String updateInstances;
 
     public String getUpdateInstances() {
         return this.updateInstances;
@@ -139,7 +139,6 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse extends io.pulu
             this.updateInstances = Objects.requireNonNull(updateInstances);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyResponse(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);
         }

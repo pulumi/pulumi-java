@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="maxReplicas")
-    private final @Nullable Integer maxReplicas;
+        private final @Nullable Integer maxReplicas;
 
     public Optional<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
@@ -36,7 +36,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="minReplicas")
-    private final @Nullable Integer minReplicas;
+        private final @Nullable Integer minReplicas;
 
     public Optional<Integer> getMinReplicas() {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
@@ -47,7 +47,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="refreshPeriodInSeconds")
-    private final @Nullable Integer refreshPeriodInSeconds;
+        private final @Nullable Integer refreshPeriodInSeconds;
 
     public Optional<Integer> getRefreshPeriodInSeconds() {
         return this.refreshPeriodInSeconds == null ? Optional.empty() : Optional.ofNullable(this.refreshPeriodInSeconds);
@@ -58,7 +58,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -69,7 +69,7 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="targetUtilization")
-    private final @Nullable Double targetUtilization;
+        private final @Nullable Double targetUtilization;
 
     public Optional<Double> getTargetUtilization() {
         return this.targetUtilization == null ? Optional.empty() : Optional.ofNullable(this.targetUtilization);
@@ -148,7 +148,6 @@ public final class AutoScaleConfigurationResponse extends io.pulumi.resources.In
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AutoScaleConfigurationResponse build() {
             return new AutoScaleConfigurationResponse(maxReplicas, minReplicas, refreshPeriodInSeconds, status, targetUtilization);
         }

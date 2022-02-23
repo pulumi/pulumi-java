@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.LoadBalancerBackendAddressResponse;
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="backendIPConfigurations", required=true)
-    private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
+        private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
 
     public List<NetworkInterfaceIPConfigurationResponse> getBackendIPConfigurations() {
         return this.backendIPConfigurations;
@@ -38,7 +38,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -49,7 +49,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -60,7 +60,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="loadBalancerBackendAddresses")
-    private final @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
+        private final @Nullable List<LoadBalancerBackendAddressResponse> loadBalancerBackendAddresses;
 
     public List<LoadBalancerBackendAddressResponse> getLoadBalancerBackendAddresses() {
         return this.loadBalancerBackendAddresses == null ? List.of() : this.loadBalancerBackendAddresses;
@@ -71,7 +71,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="loadBalancingRules", required=true)
-    private final List<SubResourceResponse> loadBalancingRules;
+        private final List<SubResourceResponse> loadBalancingRules;
 
     public List<SubResourceResponse> getLoadBalancingRules() {
         return this.loadBalancingRules;
@@ -82,7 +82,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -93,7 +93,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -104,7 +104,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="outboundRule", required=true)
-    private final SubResourceResponse outboundRule;
+        private final SubResourceResponse outboundRule;
 
     public SubResourceResponse getOutboundRule() {
         return this.outboundRule;
@@ -115,7 +115,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="outboundRules", required=true)
-    private final List<SubResourceResponse> outboundRules;
+        private final List<SubResourceResponse> outboundRules;
 
     public List<SubResourceResponse> getOutboundRules() {
         return this.outboundRules;
@@ -126,7 +126,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -137,7 +137,7 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -276,7 +276,6 @@ public final class BackendAddressPoolResponse extends io.pulumi.resources.Invoke
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BackendAddressPoolResponse build() {
             return new BackendAddressPoolResponse(backendIPConfigurations, etag, id, loadBalancerBackendAddresses, loadBalancingRules, location, name, outboundRule, outboundRules, provisioningState, type);
         }

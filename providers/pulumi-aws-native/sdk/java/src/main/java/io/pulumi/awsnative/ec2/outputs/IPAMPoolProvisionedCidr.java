@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class IPAMPoolProvisionedCidr {
             this.cidr = Objects.requireNonNull(cidr);
             return this;
         }
-
         public IPAMPoolProvisionedCidr build() {
             return new IPAMPoolProvisionedCidr(cidr);
         }

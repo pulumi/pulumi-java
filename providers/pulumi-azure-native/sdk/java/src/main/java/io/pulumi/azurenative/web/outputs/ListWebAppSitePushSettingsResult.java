@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -209,7 +209,6 @@ public final class ListWebAppSitePushSettingsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppSitePushSettingsResult build() {
             return new ListWebAppSitePushSettingsResult(dynamicTagsJson, id, isPushEnabled, kind, name, tagWhitelistJson, tagsRequiringAuth, type);
         }

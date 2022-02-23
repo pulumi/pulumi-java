@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="sha256Checksum")
-    private final @Nullable Input<String> sha256Checksum;
+        private final @Nullable Input<String> sha256Checksum;
 
     public Input<String> getSha256Checksum() {
         return this.sha256Checksum == null ? Input.empty() : this.sha256Checksum;
@@ -30,7 +30,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+        private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -89,7 +89,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFil
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFileRemoteArgs(sha256Checksum, uri);
         }

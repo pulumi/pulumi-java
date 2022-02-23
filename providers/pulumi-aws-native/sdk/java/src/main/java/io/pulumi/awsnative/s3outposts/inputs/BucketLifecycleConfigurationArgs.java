@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts.inputs;
 
 import io.pulumi.awsnative.s3outposts.inputs.BucketRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<BucketRuleArgs>> rules;
+        private final Input<List<BucketRuleArgs>> rules;
 
     public Input<List<BucketRuleArgs>> getRules() {
         return this.rules;
@@ -62,7 +62,6 @@ public final class BucketLifecycleConfigurationArgs extends io.pulumi.resources.
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public BucketLifecycleConfigurationArgs build() {
             return new BucketLifecycleConfigurationArgs(rules);
         }

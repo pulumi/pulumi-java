@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.KeyVaultSigningKeyParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,7 +75,6 @@ public final class UrlSigningKeyResponse {
             this.keySourceParameters = Objects.requireNonNull(keySourceParameters);
             return this;
         }
-
         public UrlSigningKeyResponse build() {
             return new UrlSigningKeyResponse(keyId, keySourceParameters);
         }

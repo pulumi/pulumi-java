@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmUtilizationMetricsResponse;
 import io.pulumi.googlenative.vmmigration_v1.outputs.VmwareVmDetailsResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class VmUtilizationInfoResponse {
             this.vmwareVmDetails = Objects.requireNonNull(vmwareVmDetails);
             return this;
         }
-
         public VmUtilizationInfoResponse build() {
             return new VmUtilizationInfoResponse(utilization, vmId, vmwareVmDetails);
         }

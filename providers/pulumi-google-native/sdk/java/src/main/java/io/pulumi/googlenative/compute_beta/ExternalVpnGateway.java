@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.ExternalVpnGatewayArgs;
 import io.pulumi.googlenative.compute_beta.outputs.ExternalVpnGatewayInterfaceResponse;
@@ -148,13 +148,6 @@ public class ExternalVpnGateway extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ExternalVpnGateway(String name) {
-        super("google-native:compute/beta:ExternalVpnGateway", name, ExternalVpnGatewayArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="date")
-    private final @Nullable Input<Integer> date;
+        private final @Nullable Input<Integer> date;
 
     public Input<Integer> getDate() {
         return this.date == null ? Input.empty() : this.date;
@@ -35,7 +35,7 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isLast")
-    private final @Nullable Input<Boolean> isLast;
+        private final @Nullable Input<Boolean> isLast;
 
     public Input<Boolean> getIsLast() {
         return this.isLast == null ? Input.empty() : this.isLast;
@@ -94,7 +94,6 @@ public final class DayArgs extends io.pulumi.resources.ResourceArgs {
             this.isLast = Input.ofNullable(isLast);
             return this;
         }
-
         public DayArgs build() {
             return new DayArgs(date, isLast);
         }

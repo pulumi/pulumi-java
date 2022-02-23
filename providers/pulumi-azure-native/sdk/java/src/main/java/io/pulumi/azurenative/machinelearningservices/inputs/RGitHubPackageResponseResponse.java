@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class RGitHubPackageResponseResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable String repository;
+        private final @Nullable String repository;
 
     public Optional<String> getRepository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
@@ -57,7 +57,6 @@ public final class RGitHubPackageResponseResponse extends io.pulumi.resources.In
             this.repository = repository;
             return this;
         }
-
         public RGitHubPackageResponseResponse build() {
             return new RGitHubPackageResponseResponse(repository);
         }

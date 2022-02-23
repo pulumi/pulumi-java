@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.memcache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class InstanceNodeConfig {
             this.memorySizeMb = Objects.requireNonNull(memorySizeMb);
             return this;
         }
-
         public InstanceNodeConfig build() {
             return new InstanceNodeConfig(cpuCount, memorySizeMb);
         }

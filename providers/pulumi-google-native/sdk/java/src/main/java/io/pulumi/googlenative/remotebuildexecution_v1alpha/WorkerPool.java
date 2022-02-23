@@ -5,8 +5,8 @@ package io.pulumi.googlenative.remotebuildexecution_v1alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.WorkerPoolArgs;
 import io.pulumi.googlenative.remotebuildexecution_v1alpha.outputs.GoogleDevtoolsRemotebuildexecutionAdminV1alphaAutoscaleResponse;
@@ -105,13 +105,6 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
         return this.workerCount;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WorkerPool(String name) {
-        super("google-native:remotebuildexecution/v1alpha:WorkerPool", name, WorkerPoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

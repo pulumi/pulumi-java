@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorDetailResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ErrorResponseResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ErrorResponseResponse build() {
             return new ErrorResponseResponse(code, details, message);
         }

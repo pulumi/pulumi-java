@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class GroupContractPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public GroupContractPropertiesResponse build() {
             return new GroupContractPropertiesResponse(builtIn, description, displayName, externalId, type);
         }

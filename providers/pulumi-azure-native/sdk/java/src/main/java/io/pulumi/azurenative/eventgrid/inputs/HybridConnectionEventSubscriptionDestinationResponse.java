@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final String endpointType;
+        private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -35,7 +35,7 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -84,7 +84,6 @@ public final class HybridConnectionEventSubscriptionDestinationResponse extends 
             this.resourceId = resourceId;
             return this;
         }
-
         public HybridConnectionEventSubscriptionDestinationResponse build() {
             return new HybridConnectionEventSubscriptionDestinationResponse(endpointType, resourceId);
         }

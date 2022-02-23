@@ -5,8 +5,8 @@ package io.pulumi.googlenative.monitoring_v3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.monitoring_v3.UptimeCheckConfigArgs;
 import io.pulumi.googlenative.monitoring_v3.outputs.ContentMatcherResponse;
@@ -209,13 +209,6 @@ public class UptimeCheckConfig extends io.pulumi.resources.CustomResource {
         return this.timeout;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public UptimeCheckConfig(String name) {
-        super("google-native:monitoring/v3:UptimeCheckConfig", name, UptimeCheckConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

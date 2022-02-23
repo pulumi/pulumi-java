@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.kms.outputs.GetKMSCryptoKeyVersionPublicKey;
 import java.lang.Integer;
 import java.lang.String;
@@ -189,7 +189,6 @@ public final class GetKMSCryptoKeyVersionResult {
             this.version = version;
             return this;
         }
-
         public GetKMSCryptoKeyVersionResult build() {
             return new GetKMSCryptoKeyVersionResult(algorithm, cryptoKey, id, name, protectionLevel, publicKeys, state, version);
         }

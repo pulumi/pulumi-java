@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualHardDiskArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetManagedDiskParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -33,7 +33,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable Input<CachingTypes> caching;
+        private final @Nullable Input<CachingTypes> caching;
 
     public Input<CachingTypes> getCaching() {
         return this.caching == null ? Input.empty() : this.caching;
@@ -44,7 +44,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final Input<Either<String,DiskCreateOptionTypes>> createOption;
+        private final Input<Either<String,DiskCreateOptionTypes>> createOption;
 
     public Input<Either<String,DiskCreateOptionTypes>> getCreateOption() {
         return this.createOption;
@@ -55,7 +55,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diffDiskSettings")
-    private final @Nullable Input<DiffDiskSettingsArgs> diffDiskSettings;
+        private final @Nullable Input<DiffDiskSettingsArgs> diffDiskSettings;
 
     public Input<DiffDiskSettingsArgs> getDiffDiskSettings() {
         return this.diffDiskSettings == null ? Input.empty() : this.diffDiskSettings;
@@ -66,7 +66,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Input<Integer> diskSizeGB;
+        private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -77,7 +77,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<VirtualHardDiskArgs> image;
+        private final @Nullable Input<VirtualHardDiskArgs> image;
 
     public Input<VirtualHardDiskArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -88,7 +88,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
+        private final @Nullable Input<VirtualMachineScaleSetManagedDiskParametersArgs> managedDisk;
 
     public Input<VirtualMachineScaleSetManagedDiskParametersArgs> getManagedDisk() {
         return this.managedDisk == null ? Input.empty() : this.managedDisk;
@@ -99,7 +99,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -110,7 +110,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<OperatingSystemTypes> osType;
+        private final @Nullable Input<OperatingSystemTypes> osType;
 
     public Input<OperatingSystemTypes> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -121,7 +121,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="vhdContainers")
-    private final @Nullable Input<List<String>> vhdContainers;
+        private final @Nullable Input<List<String>> vhdContainers;
 
     public Input<List<String>> getVhdContainers() {
         return this.vhdContainers == null ? Input.empty() : this.vhdContainers;
@@ -132,7 +132,7 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="writeAcceleratorEnabled")
-    private final @Nullable Input<Boolean> writeAcceleratorEnabled;
+        private final @Nullable Input<Boolean> writeAcceleratorEnabled;
 
     public Input<Boolean> getWriteAcceleratorEnabled() {
         return this.writeAcceleratorEnabled == null ? Input.empty() : this.writeAcceleratorEnabled;
@@ -311,7 +311,6 @@ public final class VirtualMachineScaleSetOSDiskArgs extends io.pulumi.resources.
             this.writeAcceleratorEnabled = Input.ofNullable(writeAcceleratorEnabled);
             return this;
         }
-
         public VirtualMachineScaleSetOSDiskArgs build() {
             return new VirtualMachineScaleSetOSDiskArgs(caching, createOption, diffDiskSettings, diskSizeGB, image, managedDisk, name, osType, vhdContainers, writeAcceleratorEnabled);
         }

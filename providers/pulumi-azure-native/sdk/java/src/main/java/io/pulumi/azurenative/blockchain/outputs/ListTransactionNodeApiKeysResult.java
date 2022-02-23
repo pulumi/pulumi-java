@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.ApiKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ListTransactionNodeApiKeysResult {
             this.keys = keys;
             return this;
         }
-
         public ListTransactionNodeApiKeysResult build() {
             return new ListTransactionNodeApiKeysResult(keys);
         }

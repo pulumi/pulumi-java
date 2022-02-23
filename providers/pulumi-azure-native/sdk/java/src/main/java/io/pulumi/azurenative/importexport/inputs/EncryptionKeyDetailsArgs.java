@@ -6,7 +6,7 @@ package io.pulumi.azurenative.importexport.inputs;
 import io.pulumi.azurenative.importexport.enums.EncryptionKekType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kekType")
-    private final @Nullable Input<Either<String,EncryptionKekType>> kekType;
+        private final @Nullable Input<Either<String,EncryptionKekType>> kekType;
 
     public Input<Either<String,EncryptionKekType>> getKekType() {
         return this.kekType == null ? Input.empty() : this.kekType;
@@ -36,7 +36,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kekUrl")
-    private final @Nullable Input<String> kekUrl;
+        private final @Nullable Input<String> kekUrl;
 
     public Input<String> getKekUrl() {
         return this.kekUrl == null ? Input.empty() : this.kekUrl;
@@ -47,7 +47,7 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="kekVaultResourceID")
-    private final @Nullable Input<String> kekVaultResourceID;
+        private final @Nullable Input<String> kekVaultResourceID;
 
     public Input<String> getKekVaultResourceID() {
         return this.kekVaultResourceID == null ? Input.empty() : this.kekVaultResourceID;
@@ -121,7 +121,6 @@ public final class EncryptionKeyDetailsArgs extends io.pulumi.resources.Resource
             this.kekVaultResourceID = Input.ofNullable(kekVaultResourceID);
             return this;
         }
-
         public EncryptionKeyDetailsArgs build() {
             return new EncryptionKeyDetailsArgs(kekType, kekUrl, kekVaultResourceID);
         }

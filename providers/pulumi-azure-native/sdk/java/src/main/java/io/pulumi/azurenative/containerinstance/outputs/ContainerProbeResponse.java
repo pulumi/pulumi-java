@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.ContainerExecResponse;
 import io.pulumi.azurenative.containerinstance.outputs.ContainerHttpGetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class ContainerProbeResponse {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public ContainerProbeResponse build() {
             return new ContainerProbeResponse(exec, failureThreshold, httpGet, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelBiasJobDefinitionClusterConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
     public static final ModelBiasJobDefinitionMonitoringResourcesArgs Empty = new ModelBiasJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-    private final Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
+        private final Input<ModelBiasJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Input<ModelBiasJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
@@ -61,7 +61,6 @@ public final class ModelBiasJobDefinitionMonitoringResourcesArgs extends io.pulu
             this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
-
         public ModelBiasJobDefinitionMonitoringResourcesArgs build() {
             return new ModelBiasJobDefinitionMonitoringResourcesArgs(clusterConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSyncAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSyncAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -39,7 +39,7 @@ public final class GetSyncAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="syncAgentName", required=true)
-    private final String syncAgentName;
+        private final String syncAgentName;
 
     public String getSyncAgentName() {
         return this.syncAgentName;
@@ -98,7 +98,6 @@ public final class GetSyncAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.syncAgentName = Objects.requireNonNull(syncAgentName);
             return this;
         }
-
         public GetSyncAgentArgs build() {
             return new GetSyncAgentArgs(resourceGroupName, serverName, syncAgentName);
         }

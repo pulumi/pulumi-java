@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigGetArgs;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigSpConfigGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -45,7 +45,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="idpConfig")
-    private final @Nullable Input<TenantInboundSamlConfigIdpConfigGetArgs> idpConfig;
+        private final @Nullable Input<TenantInboundSamlConfigIdpConfigGetArgs> idpConfig;
 
     public Input<TenantInboundSamlConfigIdpConfigGetArgs> getIdpConfig() {
         return this.idpConfig == null ? Input.empty() : this.idpConfig;
@@ -58,7 +58,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -70,7 +70,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="spConfig")
-    private final @Nullable Input<TenantInboundSamlConfigSpConfigGetArgs> spConfig;
+        private final @Nullable Input<TenantInboundSamlConfigSpConfigGetArgs> spConfig;
 
     public Input<TenantInboundSamlConfigSpConfigGetArgs> getSpConfig() {
         return this.spConfig == null ? Input.empty() : this.spConfig;
@@ -94,7 +94,7 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Input<String> tenant;
+        private final @Nullable Input<String> tenant;
 
     public Input<String> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -228,7 +228,6 @@ public final class TenantInboundSamlConfigState extends io.pulumi.resources.Reso
             this.tenant = Input.ofNullable(tenant);
             return this;
         }
-
         public TenantInboundSamlConfigState build() {
             return new TenantInboundSamlConfigState(displayName, enabled, idpConfig, name, project, spConfig, tenant);
         }

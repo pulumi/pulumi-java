@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ServerCertificateCommonNameResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ServerCertificateCommonNamesResponse {
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public ServerCertificateCommonNamesResponse build() {
             return new ServerCertificateCommonNamesResponse(commonNames, x509StoreName);
         }

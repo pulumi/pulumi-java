@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.inputs.AliasResponse;
 import io.pulumi.azurenative.resources.inputs.ApiProfileResponse;
 import io.pulumi.azurenative.resources.inputs.ProviderExtendedLocationResponse;
 import io.pulumi.azurenative.resources.inputs.ZoneMappingResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="aliases")
-    private final @Nullable List<AliasResponse> aliases;
+        private final @Nullable List<AliasResponse> aliases;
 
     public List<AliasResponse> getAliases() {
         return this.aliases == null ? List.of() : this.aliases;
@@ -40,7 +40,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="apiProfiles", required=true)
-    private final List<ApiProfileResponse> apiProfiles;
+        private final List<ApiProfileResponse> apiProfiles;
 
     public List<ApiProfileResponse> getApiProfiles() {
         return this.apiProfiles;
@@ -51,7 +51,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="apiVersions")
-    private final @Nullable List<String> apiVersions;
+        private final @Nullable List<String> apiVersions;
 
     public List<String> getApiVersions() {
         return this.apiVersions == null ? List.of() : this.apiVersions;
@@ -62,7 +62,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="capabilities")
-    private final @Nullable String capabilities;
+        private final @Nullable String capabilities;
 
     public Optional<String> getCapabilities() {
         return this.capabilities == null ? Optional.empty() : Optional.ofNullable(this.capabilities);
@@ -73,7 +73,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="defaultApiVersion", required=true)
-    private final String defaultApiVersion;
+        private final String defaultApiVersion;
 
     public String getDefaultApiVersion() {
         return this.defaultApiVersion;
@@ -84,7 +84,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="locationMappings")
-    private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
+        private final @Nullable List<ProviderExtendedLocationResponse> locationMappings;
 
     public List<ProviderExtendedLocationResponse> getLocationMappings() {
         return this.locationMappings == null ? List.of() : this.locationMappings;
@@ -95,7 +95,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable List<String> locations;
+        private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
@@ -106,7 +106,7 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -117,14 +117,14 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable String resourceType;
+        private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
     }
 
     @InputImport(name="zoneMappings")
-    private final @Nullable List<ZoneMappingResponse> zoneMappings;
+        private final @Nullable List<ZoneMappingResponse> zoneMappings;
 
     public List<ZoneMappingResponse> getZoneMappings() {
         return this.zoneMappings == null ? List.of() : this.zoneMappings;
@@ -253,7 +253,6 @@ public final class ProviderResourceTypeResponse extends io.pulumi.resources.Invo
             this.zoneMappings = zoneMappings;
             return this;
         }
-
         public ProviderResourceTypeResponse build() {
             return new ProviderResourceTypeResponse(aliases, apiProfiles, apiVersions, capabilities, defaultApiVersion, locationMappings, locations, properties, resourceType, zoneMappings);
         }

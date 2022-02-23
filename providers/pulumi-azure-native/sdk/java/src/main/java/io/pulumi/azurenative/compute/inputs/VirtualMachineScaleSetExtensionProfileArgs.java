@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetExtensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions;
+        private final @Nullable Input<List<VirtualMachineScaleSetExtensionArgs>> extensions;
 
     public Input<List<VirtualMachineScaleSetExtensionArgs>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
@@ -36,7 +36,7 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
      * 
      */
     @InputImport(name="extensionsTimeBudget")
-    private final @Nullable Input<String> extensionsTimeBudget;
+        private final @Nullable Input<String> extensionsTimeBudget;
 
     public Input<String> getExtensionsTimeBudget() {
         return this.extensionsTimeBudget == null ? Input.empty() : this.extensionsTimeBudget;
@@ -95,7 +95,6 @@ public final class VirtualMachineScaleSetExtensionProfileArgs extends io.pulumi.
             this.extensionsTimeBudget = Input.ofNullable(extensionsTimeBudget);
             return this;
         }
-
         public VirtualMachineScaleSetExtensionProfileArgs build() {
             return new VirtualMachineScaleSetExtensionProfileArgs(extensions, extensionsTimeBudget);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.InstanceTemplateArgs;
 import io.pulumi.googlenative.compute_beta.outputs.InstancePropertiesResponse;
@@ -133,13 +133,6 @@ public class InstanceTemplate extends io.pulumi.resources.CustomResource {
         return this.sourceInstanceParams;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceTemplate(String name) {
-        super("google-native:compute/beta:InstanceTemplate", name, InstanceTemplateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

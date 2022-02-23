@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.GalleryImageReferenceResponse;
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -395,7 +395,6 @@ public final class GetGalleryImageResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetGalleryImageResult build() {
             return new GetGalleryImageResult(author, createdDate, description, icon, id, imageReference, isEnabled, isOverride, isPlanAuthorized, latestOperationResult, location, name, planId, provisioningState, tags, type, uniqueIdentifier);
         }

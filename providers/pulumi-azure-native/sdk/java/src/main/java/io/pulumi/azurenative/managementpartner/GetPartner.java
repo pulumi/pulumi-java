@@ -6,7 +6,7 @@ package io.pulumi.azurenative.managementpartner;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.managementpartner.inputs.GetPartnerArgs;
 import io.pulumi.azurenative.managementpartner.outputs.GetPartnerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

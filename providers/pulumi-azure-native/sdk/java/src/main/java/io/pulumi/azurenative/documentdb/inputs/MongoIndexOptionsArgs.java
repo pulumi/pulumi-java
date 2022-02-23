@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expireAfterSeconds")
-    private final @Nullable Input<Integer> expireAfterSeconds;
+        private final @Nullable Input<Integer> expireAfterSeconds;
 
     public Input<Integer> getExpireAfterSeconds() {
         return this.expireAfterSeconds == null ? Input.empty() : this.expireAfterSeconds;
@@ -35,7 +35,7 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="unique")
-    private final @Nullable Input<Boolean> unique;
+        private final @Nullable Input<Boolean> unique;
 
     public Input<Boolean> getUnique() {
         return this.unique == null ? Input.empty() : this.unique;
@@ -94,7 +94,6 @@ public final class MongoIndexOptionsArgs extends io.pulumi.resources.ResourceArg
             this.unique = Input.ofNullable(unique);
             return this;
         }
-
         public MongoIndexOptionsArgs build() {
             return new MongoIndexOptionsArgs(expireAfterSeconds, unique);
         }

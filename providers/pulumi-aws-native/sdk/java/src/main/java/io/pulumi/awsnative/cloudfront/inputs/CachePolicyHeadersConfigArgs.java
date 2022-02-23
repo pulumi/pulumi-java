@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
     public static final CachePolicyHeadersConfigArgs Empty = new CachePolicyHeadersConfigArgs();
 
     @InputImport(name="headerBehavior", required=true)
-    private final Input<String> headerBehavior;
+        private final Input<String> headerBehavior;
 
     public Input<String> getHeaderBehavior() {
         return this.headerBehavior;
     }
 
     @InputImport(name="headers")
-    private final @Nullable Input<List<String>> headers;
+        private final @Nullable Input<List<String>> headers;
 
     public Input<List<String>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
@@ -82,7 +82,6 @@ public final class CachePolicyHeadersConfigArgs extends io.pulumi.resources.Reso
             this.headers = Input.ofNullable(headers);
             return this;
         }
-
         public CachePolicyHeadersConfigArgs build() {
             return new CachePolicyHeadersConfigArgs(headerBehavior, headers);
         }

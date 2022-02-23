@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="admin")
-    private final @Nullable String admin;
+        private final @Nullable String admin;
 
     public Optional<String> getAdmin() {
         return this.admin == null ? Optional.empty() : Optional.ofNullable(this.admin);
@@ -36,7 +36,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="basicLoginInformation")
-    private final @Nullable BasicLoginInformationResponse basicLoginInformation;
+        private final @Nullable BasicLoginInformationResponse basicLoginInformation;
 
     public Optional<BasicLoginInformationResponse> getBasicLoginInformation() {
         return this.basicLoginInformation == null ? Optional.empty() : Optional.ofNullable(this.basicLoginInformation);
@@ -47,7 +47,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="dataControllerId")
-    private final @Nullable String dataControllerId;
+        private final @Nullable String dataControllerId;
 
     public Optional<String> getDataControllerId() {
         return this.dataControllerId == null ? Optional.empty() : Optional.ofNullable(this.dataControllerId);
@@ -58,7 +58,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable String endTime;
+        private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -69,7 +69,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="k8sRaw")
-    private final @Nullable Object k8sRaw;
+        private final @Nullable Object k8sRaw;
 
     public Optional<Object> getK8sRaw() {
         return this.k8sRaw == null ? Optional.empty() : Optional.ofNullable(this.k8sRaw);
@@ -80,14 +80,14 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastUploadedDate")
-    private final @Nullable String lastUploadedDate;
+        private final @Nullable String lastUploadedDate;
 
     public Optional<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Optional.empty() : Optional.ofNullable(this.lastUploadedDate);
     }
 
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -98,7 +98,7 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -207,7 +207,6 @@ public final class SqlManagedInstancePropertiesResponse extends io.pulumi.resour
             this.startTime = startTime;
             return this;
         }
-
         public SqlManagedInstancePropertiesResponse build() {
             return new SqlManagedInstancePropertiesResponse(admin, basicLoginInformation, dataControllerId, endTime, k8sRaw, lastUploadedDate, provisioningState, startTime);
         }

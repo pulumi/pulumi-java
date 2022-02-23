@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="allowedAadTenantIdsForLinking")
-    private final @Nullable List<String> allowedAadTenantIdsForLinking;
+        private final @Nullable List<String> allowedAadTenantIdsForLinking;
 
     public List<String> getAllowedAadTenantIdsForLinking() {
         return this.allowedAadTenantIdsForLinking == null ? List.of() : this.allowedAadTenantIdsForLinking;
@@ -36,7 +36,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="linkedAccessCheckOnTargetResource")
-    private final @Nullable Boolean linkedAccessCheckOnTargetResource;
+        private final @Nullable Boolean linkedAccessCheckOnTargetResource;
 
     public Optional<Boolean> getLinkedAccessCheckOnTargetResource() {
         return this.linkedAccessCheckOnTargetResource == null ? Optional.empty() : Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
@@ -47,7 +47,7 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="preventDataExfiltration")
-    private final @Nullable Boolean preventDataExfiltration;
+        private final @Nullable Boolean preventDataExfiltration;
 
     public Optional<Boolean> getPreventDataExfiltration() {
         return this.preventDataExfiltration == null ? Optional.empty() : Optional.ofNullable(this.preventDataExfiltration);
@@ -106,7 +106,6 @@ public final class ManagedVirtualNetworkSettingsResponse extends io.pulumi.resou
             this.preventDataExfiltration = preventDataExfiltration;
             return this;
         }
-
         public ManagedVirtualNetworkSettingsResponse build() {
             return new ManagedVirtualNetworkSettingsResponse(allowedAadTenantIdsForLinking, linkedAccessCheckOnTargetResource, preventDataExfiltration);
         }

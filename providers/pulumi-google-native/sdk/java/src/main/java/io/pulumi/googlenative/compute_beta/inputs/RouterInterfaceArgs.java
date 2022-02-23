@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipRange")
-    private final @Nullable Input<String> ipRange;
+      private final @Nullable Input<String> ipRange;
 
     public Input<String> getIpRange() {
         return this.ipRange == null ? Input.empty() : this.ipRange;
@@ -30,7 +30,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedInterconnectAttachment")
-    private final @Nullable Input<String> linkedInterconnectAttachment;
+      private final @Nullable Input<String> linkedInterconnectAttachment;
 
     public Input<String> getLinkedInterconnectAttachment() {
         return this.linkedInterconnectAttachment == null ? Input.empty() : this.linkedInterconnectAttachment;
@@ -41,7 +41,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkedVpnTunnel")
-    private final @Nullable Input<String> linkedVpnTunnel;
+      private final @Nullable Input<String> linkedVpnTunnel;
 
     public Input<String> getLinkedVpnTunnel() {
         return this.linkedVpnTunnel == null ? Input.empty() : this.linkedVpnTunnel;
@@ -52,7 +52,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+      private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -74,7 +74,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="redundantInterface")
-    private final @Nullable Input<String> redundantInterface;
+      private final @Nullable Input<String> redundantInterface;
 
     public Input<String> getRedundantInterface() {
         return this.redundantInterface == null ? Input.empty() : this.redundantInterface;
@@ -85,7 +85,7 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -219,7 +219,6 @@ public final class RouterInterfaceArgs extends io.pulumi.resources.ResourceArgs 
             this.subnetwork = Input.ofNullable(subnetwork);
             return this;
         }
-
         public RouterInterfaceArgs build() {
             return new RouterInterfaceArgs(ipRange, linkedInterconnectAttachment, linkedVpnTunnel, name, privateIpAddress, redundantInterface, subnetwork);
         }

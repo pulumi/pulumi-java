@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class PasswordValidationPolicyResponse {
             this.reuseInterval = Objects.requireNonNull(reuseInterval);
             return this;
         }
-
         public PasswordValidationPolicyResponse build() {
             return new PasswordValidationPolicyResponse(complexity, disallowUsernameSubstring, minLength, passwordChangeInterval, reuseInterval);
         }

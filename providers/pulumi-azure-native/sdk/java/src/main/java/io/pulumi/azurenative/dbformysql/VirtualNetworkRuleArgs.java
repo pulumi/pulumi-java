@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformysql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
-    private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
+        private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
 
     public Input<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVnetServiceEndpoint;
@@ -31,7 +31,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -53,7 +53,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkRuleName")
-    private final @Nullable Input<String> virtualNetworkRuleName;
+        private final @Nullable Input<String> virtualNetworkRuleName;
 
     public Input<String> getVirtualNetworkRuleName() {
         return this.virtualNetworkRuleName == null ? Input.empty() : this.virtualNetworkRuleName;
@@ -64,7 +64,7 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="virtualNetworkSubnetId", required=true)
-    private final Input<String> virtualNetworkSubnetId;
+        private final Input<String> virtualNetworkSubnetId;
 
     public Input<String> getVirtualNetworkSubnetId() {
         return this.virtualNetworkSubnetId;
@@ -168,7 +168,6 @@ public final class VirtualNetworkRuleArgs extends io.pulumi.resources.ResourceAr
             this.virtualNetworkSubnetId = Input.of(Objects.requireNonNull(virtualNetworkSubnetId));
             return this;
         }
-
         public VirtualNetworkRuleArgs build() {
             return new VirtualNetworkRuleArgs(ignoreMissingVnetServiceEndpoint, resourceGroupName, serverName, virtualNetworkRuleName, virtualNetworkSubnetId);
         }

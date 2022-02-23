@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RoutingPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class GetRoutingIntentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoutingIntentResult build() {
             return new GetRoutingIntentResult(etag, id, name, provisioningState, routingPolicies, type);
         }

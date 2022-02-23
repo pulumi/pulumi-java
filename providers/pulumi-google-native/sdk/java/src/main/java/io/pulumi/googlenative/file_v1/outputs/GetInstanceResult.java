@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.file_v1.outputs.FileShareConfigResponse;
 import io.pulumi.googlenative.file_v1.outputs.NetworkConfigResponse;
 import java.lang.Boolean;
@@ -310,7 +310,6 @@ public final class GetInstanceResult {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(createTime, description, etag, fileShares, kmsKeyName, labels, name, networks, satisfiesPzs, state, statusMessage, suspensionReasons, tier);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.LabelDescriptorResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="labels", required=true)
-    private final List<LabelDescriptorResponse> labels;
+      private final List<LabelDescriptorResponse> labels;
 
     public List<LabelDescriptorResponse> getLabels() {
         return this.labels;
@@ -56,7 +56,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="launchStage", required=true)
-    private final String launchStage;
+      private final String launchStage;
 
     public String getLaunchStage() {
         return this.launchStage;
@@ -67,7 +67,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -78,7 +78,7 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -167,7 +167,6 @@ public final class MonitoredResourceDescriptorResponse extends io.pulumi.resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MonitoredResourceDescriptorResponse build() {
             return new MonitoredResourceDescriptorResponse(description, displayName, labels, launchStage, name, type);
         }

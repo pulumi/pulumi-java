@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class IotHubDefinitionDescriptionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public IotHubDefinitionDescriptionResponse build() {
             return new IotHubDefinitionDescriptionResponse(allocationWeight, applyAllocationPolicy, connectionString, location, name);
         }

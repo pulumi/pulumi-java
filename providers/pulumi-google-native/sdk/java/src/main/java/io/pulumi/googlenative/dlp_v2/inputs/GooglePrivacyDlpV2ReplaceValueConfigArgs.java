@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="newValue")
-    private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> newValue;
+      private final @Nullable Input<GooglePrivacyDlpV2ValueArgs> newValue;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getNewValue() {
         return this.newValue == null ? Input.empty() : this.newValue;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2ReplaceValueConfigArgs extends io.pulumi.re
             this.newValue = Input.ofNullable(newValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ReplaceValueConfigArgs build() {
             return new GooglePrivacyDlpV2ReplaceValueConfigArgs(newValue);
         }

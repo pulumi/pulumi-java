@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetInfoType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRule;
 import java.util.List;
@@ -80,7 +80,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSet {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSet build() {
             return new PreventionInspectTemplateInspectConfigRuleSet(infoTypes, rules);
         }

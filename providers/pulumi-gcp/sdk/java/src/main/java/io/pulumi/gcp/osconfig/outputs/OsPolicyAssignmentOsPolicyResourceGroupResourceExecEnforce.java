@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforceFile;
 import java.lang.String;
 import java.util.List;
@@ -141,7 +141,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce {
             this.script = script;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceExecEnforce(args, file, interpreter, outputFilePath, script);
         }

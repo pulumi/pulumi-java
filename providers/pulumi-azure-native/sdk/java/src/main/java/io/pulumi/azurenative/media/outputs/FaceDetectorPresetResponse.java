@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class FaceDetectorPresetResponse {
             this.resolution = resolution;
             return this;
         }
-
         public FaceDetectorPresetResponse build() {
             return new FaceDetectorPresetResponse(blurType, experimentalOptions, mode, odataType, resolution);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchHeaderResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpRouteMatchPathResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="headers")
-    private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
+        private final @Nullable List<HttpRouteMatchHeaderResponse> headers;
 
     public List<HttpRouteMatchHeaderResponse> getHeaders() {
         return this.headers == null ? List.of() : this.headers;
@@ -36,7 +36,7 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="path", required=true)
-    private final HttpRouteMatchPathResponse path;
+        private final HttpRouteMatchPathResponse path;
 
     public HttpRouteMatchPathResponse getPath() {
         return this.path;
@@ -85,7 +85,6 @@ public final class HttpRouteMatchRuleResponse extends io.pulumi.resources.Invoke
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public HttpRouteMatchRuleResponse build() {
             return new HttpRouteMatchRuleResponse(headers, path);
         }

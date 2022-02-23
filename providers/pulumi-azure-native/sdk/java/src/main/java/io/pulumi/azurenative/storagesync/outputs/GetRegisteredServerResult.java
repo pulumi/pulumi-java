@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -560,7 +560,6 @@ public final class GetRegisteredServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredServerResult build() {
             return new GetRegisteredServerResult(agentVersion, agentVersionExpirationDate, agentVersionStatus, clusterId, clusterName, discoveryEndpointUri, friendlyName, id, lastHeartBeat, lastOperationName, lastWorkflowId, managementEndpointUri, monitoringConfiguration, monitoringEndpointUri, name, provisioningState, resourceLocation, serverCertificate, serverId, serverManagementErrorCode, serverOSVersion, serverRole, serviceLocation, storageSyncServiceUid, type);
         }

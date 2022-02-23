@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -18,49 +18,49 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
     public static final CapacityReservationFleetInstanceTypeSpecificationArgs Empty = new CapacityReservationFleetInstanceTypeSpecificationArgs();
 
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+        private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
     @InputImport(name="availabilityZoneId")
-    private final @Nullable Input<String> availabilityZoneId;
+        private final @Nullable Input<String> availabilityZoneId;
 
     public Input<String> getAvailabilityZoneId() {
         return this.availabilityZoneId == null ? Input.empty() : this.availabilityZoneId;
     }
 
     @InputImport(name="ebsOptimized")
-    private final @Nullable Input<Boolean> ebsOptimized;
+        private final @Nullable Input<Boolean> ebsOptimized;
 
     public Input<Boolean> getEbsOptimized() {
         return this.ebsOptimized == null ? Input.empty() : this.ebsOptimized;
     }
 
     @InputImport(name="instancePlatform")
-    private final @Nullable Input<String> instancePlatform;
+        private final @Nullable Input<String> instancePlatform;
 
     public Input<String> getInstancePlatform() {
         return this.instancePlatform == null ? Input.empty() : this.instancePlatform;
     }
 
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
     }
 
     @InputImport(name="weight")
-    private final @Nullable Input<Double> weight;
+        private final @Nullable Input<Double> weight;
 
     public Input<Double> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -194,7 +194,6 @@ public final class CapacityReservationFleetInstanceTypeSpecificationArgs extends
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public CapacityReservationFleetInstanceTypeSpecificationArgs build() {
             return new CapacityReservationFleetInstanceTypeSpecificationArgs(availabilityZone, availabilityZoneId, ebsOptimized, instancePlatform, instanceType, priority, weight);
         }

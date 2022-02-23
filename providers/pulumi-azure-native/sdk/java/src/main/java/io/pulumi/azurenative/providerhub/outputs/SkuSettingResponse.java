@@ -7,7 +7,7 @@ import io.pulumi.azurenative.providerhub.outputs.SkuCapabilityResponse;
 import io.pulumi.azurenative.providerhub.outputs.SkuCostResponse;
 import io.pulumi.azurenative.providerhub.outputs.SkuLocationInfoResponse;
 import io.pulumi.azurenative.providerhub.outputs.SkuSettingResponseCapacity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -195,7 +195,6 @@ public final class SkuSettingResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuSettingResponse build() {
             return new SkuSettingResponse(capabilities, capacity, costs, family, kind, locationInfo, locations, name, requiredFeatures, requiredQuotaIds, size, tier);
         }

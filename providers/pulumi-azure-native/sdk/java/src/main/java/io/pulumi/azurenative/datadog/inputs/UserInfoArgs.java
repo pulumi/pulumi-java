@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable Input<String> emailAddress;
+        private final @Nullable Input<String> emailAddress;
 
     public Input<String> getEmailAddress() {
         return this.emailAddress == null ? Input.empty() : this.emailAddress;
@@ -34,7 +34,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phoneNumber")
-    private final @Nullable Input<String> phoneNumber;
+        private final @Nullable Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber == null ? Input.empty() : this.phoneNumber;
@@ -119,7 +119,6 @@ public final class UserInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.phoneNumber = Input.ofNullable(phoneNumber);
             return this;
         }
-
         public UserInfoArgs build() {
             return new UserInfoArgs(emailAddress, name, phoneNumber);
         }

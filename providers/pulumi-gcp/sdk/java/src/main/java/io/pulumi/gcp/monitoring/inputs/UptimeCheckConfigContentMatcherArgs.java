@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="content", required=true)
-    private final Input<String> content;
+        private final Input<String> content;
 
     public Input<String> getContent() {
         return this.content;
@@ -32,7 +32,7 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="matcher")
-    private final @Nullable Input<String> matcher;
+        private final @Nullable Input<String> matcher;
 
     public Input<String> getMatcher() {
         return this.matcher == null ? Input.empty() : this.matcher;
@@ -91,7 +91,6 @@ public final class UptimeCheckConfigContentMatcherArgs extends io.pulumi.resourc
             this.matcher = Input.ofNullable(matcher);
             return this;
         }
-
         public UptimeCheckConfigContentMatcherArgs build() {
             return new UptimeCheckConfigContentMatcherArgs(content, matcher);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * 
      */
     @InputImport(name="column", required=true)
-    private final String column;
+      private final String column;
 
     public String getColumn() {
         return this.column;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -55,7 +55,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * 
      */
     @InputImport(name="subcolumns", required=true)
-    private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns;
+      private final List<GoogleCloudDatacatalogV1ColumnSchemaResponse> subcolumns;
 
     public List<GoogleCloudDatacatalogV1ColumnSchemaResponse> getSubcolumns() {
         return this.subcolumns;
@@ -66,7 +66,7 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -145,7 +145,6 @@ public final class GoogleCloudDatacatalogV1ColumnSchemaResponse extends io.pulum
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ColumnSchemaResponse build() {
             return new GoogleCloudDatacatalogV1ColumnSchemaResponse(column, description, mode, subcolumns, type);
         }

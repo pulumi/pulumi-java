@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KmsWrappedCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TransientCryptoKeyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2UnwrappedCryptoKeyResponse;
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2CryptoKeyResponse {
             this.unwrapped = Objects.requireNonNull(unwrapped);
             return this;
         }
-
         public GooglePrivacyDlpV2CryptoKeyResponse build() {
             return new GooglePrivacyDlpV2CryptoKeyResponse(kmsWrapped, $transient, unwrapped);
         }

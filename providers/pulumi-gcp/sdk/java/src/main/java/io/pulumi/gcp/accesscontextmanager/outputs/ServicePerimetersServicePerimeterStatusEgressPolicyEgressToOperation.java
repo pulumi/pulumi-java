@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperationMethodSelector;
 import java.lang.String;
 import java.util.List;
@@ -90,7 +90,6 @@ public final class ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOp
             this.serviceName = serviceName;
             return this;
         }
-
         public ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation build() {
             return new ServicePerimetersServicePerimeterStatusEgressPolicyEgressToOperation(methodSelectors, serviceName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.EntityTypeEntityArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -33,7 +33,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableFuzzyExtraction")
-    private final @Nullable Input<Boolean> enableFuzzyExtraction;
+        private final @Nullable Input<Boolean> enableFuzzyExtraction;
 
     public Input<Boolean> getEnableFuzzyExtraction() {
         return this.enableFuzzyExtraction == null ? Input.empty() : this.enableFuzzyExtraction;
@@ -45,7 +45,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entities")
-    private final @Nullable Input<List<EntityTypeEntityArgs>> entities;
+        private final @Nullable Input<List<EntityTypeEntityArgs>> entities;
 
     public Input<List<EntityTypeEntityArgs>> getEntities() {
         return this.entities == null ? Input.empty() : this.entities;
@@ -61,7 +61,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -73,7 +73,7 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -177,7 +177,6 @@ public final class EntityTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public EntityTypeArgs build() {
             return new EntityTypeArgs(displayName, enableFuzzyExtraction, entities, kind, project);
         }

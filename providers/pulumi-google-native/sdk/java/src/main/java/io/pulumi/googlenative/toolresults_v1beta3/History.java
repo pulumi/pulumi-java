@@ -5,8 +5,8 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.HistoryArgs;
 import java.lang.String;
@@ -77,13 +77,6 @@ public class History extends io.pulumi.resources.CustomResource {
         return this.testPlatform;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public History(String name) {
-        super("google-native:toolresults/v1beta3:History", name, HistoryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames", required=true)
-    private final Input<List<String>> hostnames;
+      private final Input<List<String>> hostnames;
 
     public Input<List<String>> getHostnames() {
         return this.hostnames;
@@ -31,14 +31,14 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -112,7 +112,6 @@ public final class EnvgroupArgs extends io.pulumi.resources.ResourceArgs {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public EnvgroupArgs build() {
             return new EnvgroupArgs(hostnames, name, organizationId);
         }

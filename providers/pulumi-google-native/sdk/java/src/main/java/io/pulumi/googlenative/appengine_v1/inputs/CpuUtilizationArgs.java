@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregationWindowLength")
-    private final @Nullable Input<String> aggregationWindowLength;
+      private final @Nullable Input<String> aggregationWindowLength;
 
     public Input<String> getAggregationWindowLength() {
         return this.aggregationWindowLength == null ? Input.empty() : this.aggregationWindowLength;
@@ -35,7 +35,7 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetUtilization")
-    private final @Nullable Input<Double> targetUtilization;
+      private final @Nullable Input<Double> targetUtilization;
 
     public Input<Double> getTargetUtilization() {
         return this.targetUtilization == null ? Input.empty() : this.targetUtilization;
@@ -94,7 +94,6 @@ public final class CpuUtilizationArgs extends io.pulumi.resources.ResourceArgs {
             this.targetUtilization = Input.ofNullable(targetUtilization);
             return this;
         }
-
         public CpuUtilizationArgs build() {
             return new CpuUtilizationArgs(aggregationWindowLength, targetUtilization);
         }

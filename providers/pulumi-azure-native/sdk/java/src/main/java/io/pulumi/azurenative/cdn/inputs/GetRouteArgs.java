@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final String endpointName;
+        private final String endpointName;
 
     public String getEndpointName() {
         return this.endpointName;
@@ -28,7 +28,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+        private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -39,7 +39,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeName", required=true)
-    private final String routeName;
+        private final String routeName;
 
     public String getRouteName() {
         return this.routeName;
@@ -119,7 +119,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }
-
         public GetRouteArgs build() {
             return new GetRouteArgs(endpointName, profileName, resourceGroupName, routeName);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AttachedDiskArgs;
 import io.pulumi.gcp.compute.inputs.AttachedDiskState;
@@ -152,13 +152,6 @@ public class AttachedDisk extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AttachedDisk(String name) {
-        super("gcp:compute/attachedDisk:AttachedDisk", name, AttachedDiskArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

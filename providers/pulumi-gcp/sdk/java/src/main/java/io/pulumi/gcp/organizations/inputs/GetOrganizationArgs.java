@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable String domain;
+        private final @Nullable String domain;
 
     public Optional<String> getDomain() {
         return this.domain == null ? Optional.empty() : Optional.ofNullable(this.domain);
@@ -30,7 +30,7 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="organization")
-    private final @Nullable String organization;
+        private final @Nullable String organization;
 
     public Optional<String> getOrganization() {
         return this.organization == null ? Optional.empty() : Optional.ofNullable(this.organization);
@@ -79,7 +79,6 @@ public final class GetOrganizationArgs extends io.pulumi.resources.InvokeArgs {
             this.organization = organization;
             return this;
         }
-
         public GetOrganizationArgs build() {
             return new GetOrganizationArgs(domain, organization);
         }

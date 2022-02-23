@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
      * 
      */
     @InputImport(name="starTime", required=true)
-    private final String starTime;
+      private final String starTime;
 
     public String getStarTime() {
         return this.starTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
      * 
      */
     @InputImport(name="starred", required=true)
-    private final Boolean starred;
+      private final Boolean starred;
 
     public Boolean getStarred() {
         return this.starred;
@@ -82,7 +82,6 @@ public final class GoogleCloudDatacatalogV1PersonalDetailsResponse extends io.pu
             this.starred = Objects.requireNonNull(starred);
             return this;
         }
-
         public GoogleCloudDatacatalogV1PersonalDetailsResponse build() {
             return new GoogleCloudDatacatalogV1PersonalDetailsResponse(starTime, starred);
         }

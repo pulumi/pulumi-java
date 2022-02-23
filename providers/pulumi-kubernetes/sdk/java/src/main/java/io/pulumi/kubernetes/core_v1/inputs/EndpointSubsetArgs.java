@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointAddressArgs;
 import io.pulumi.kubernetes.core_v1.inputs.EndpointPortArgs;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addresses")
-    private final @Nullable Input<List<EndpointAddressArgs>> addresses;
+        private final @Nullable Input<List<EndpointAddressArgs>> addresses;
 
     public Input<List<EndpointAddressArgs>> getAddresses() {
         return this.addresses == null ? Input.empty() : this.addresses;
@@ -43,7 +43,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notReadyAddresses")
-    private final @Nullable Input<List<EndpointAddressArgs>> notReadyAddresses;
+        private final @Nullable Input<List<EndpointAddressArgs>> notReadyAddresses;
 
     public Input<List<EndpointAddressArgs>> getNotReadyAddresses() {
         return this.notReadyAddresses == null ? Input.empty() : this.notReadyAddresses;
@@ -54,7 +54,7 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<EndpointPortArgs>> ports;
+        private final @Nullable Input<List<EndpointPortArgs>> ports;
 
     public Input<List<EndpointPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -128,7 +128,6 @@ public final class EndpointSubsetArgs extends io.pulumi.resources.ResourceArgs {
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public EndpointSubsetArgs build() {
             return new EndpointSubsetArgs(addresses, notReadyAddresses, ports);
         }

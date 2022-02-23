@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AptSettingsResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.ExecStepResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.GooSettingsResponse;
@@ -228,7 +228,6 @@ public final class PatchConfigResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public PatchConfigResponse build() {
             return new PatchConfigResponse(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

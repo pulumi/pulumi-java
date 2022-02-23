@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InstanceParamsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceManagerTags", required=true)
-    private final Map<String,String> resourceManagerTags;
+      private final Map<String,String> resourceManagerTags;
 
     public Map<String,String> getResourceManagerTags() {
         return this.resourceManagerTags;
@@ -60,7 +60,6 @@ public final class InstanceParamsResponse extends io.pulumi.resources.InvokeArgs
             this.resourceManagerTags = Objects.requireNonNull(resourceManagerTags);
             return this;
         }
-
         public InstanceParamsResponse build() {
             return new InstanceParamsResponse(resourceManagerTags);
         }

@@ -34,7 +34,6 @@ public final class LauncherActivityIntentResponse extends io.pulumi.resources.In
         public Builder(LauncherActivityIntentResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public LauncherActivityIntentResponse build() {
             return new LauncherActivityIntentResponse();
         }

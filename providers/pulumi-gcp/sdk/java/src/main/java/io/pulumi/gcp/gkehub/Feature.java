@@ -5,8 +5,8 @@ package io.pulumi.gcp.gkehub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gkehub.FeatureArgs;
 import io.pulumi.gcp.gkehub.outputs.FeatureResourceState;
@@ -178,13 +178,6 @@ public class Feature extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Feature(String name) {
-        super("gcp:gkehub/feature:Feature", name, FeatureArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

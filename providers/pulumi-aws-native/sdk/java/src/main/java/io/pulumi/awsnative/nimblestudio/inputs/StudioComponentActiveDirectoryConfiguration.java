@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryComputerAttribute;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
      * 
      */
     @InputImport(name="computerAttributes")
-    private final @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
+        private final @Nullable List<StudioComponentActiveDirectoryComputerAttribute> computerAttributes;
 
     public List<StudioComponentActiveDirectoryComputerAttribute> getComputerAttributes() {
         return this.computerAttributes == null ? List.of() : this.computerAttributes;
@@ -36,7 +36,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
      * 
      */
     @InputImport(name="directoryId")
-    private final @Nullable String directoryId;
+        private final @Nullable String directoryId;
 
     public Optional<String> getDirectoryId() {
         return this.directoryId == null ? Optional.empty() : Optional.ofNullable(this.directoryId);
@@ -47,7 +47,7 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
      * 
      */
     @InputImport(name="organizationalUnitDistinguishedName")
-    private final @Nullable String organizationalUnitDistinguishedName;
+        private final @Nullable String organizationalUnitDistinguishedName;
 
     public Optional<String> getOrganizationalUnitDistinguishedName() {
         return this.organizationalUnitDistinguishedName == null ? Optional.empty() : Optional.ofNullable(this.organizationalUnitDistinguishedName);
@@ -106,7 +106,6 @@ public final class StudioComponentActiveDirectoryConfiguration extends io.pulumi
             this.organizationalUnitDistinguishedName = organizationalUnitDistinguishedName;
             return this;
         }
-
         public StudioComponentActiveDirectoryConfiguration build() {
             return new StudioComponentActiveDirectoryConfiguration(computerAttributes, directoryId, organizationalUnitDistinguishedName);
         }

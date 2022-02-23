@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.WorkloadInquiryDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inquiryDetails")
-    private final @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
+        private final @Nullable Input<List<WorkloadInquiryDetailsArgs>> inquiryDetails;
 
     public Input<List<WorkloadInquiryDetailsArgs>> getInquiryDetails() {
         return this.inquiryDetails == null ? Input.empty() : this.inquiryDetails;
@@ -38,7 +38,7 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+        private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -97,7 +97,6 @@ public final class InquiryInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public InquiryInfoArgs build() {
             return new InquiryInfoArgs(inquiryDetails, status);
         }

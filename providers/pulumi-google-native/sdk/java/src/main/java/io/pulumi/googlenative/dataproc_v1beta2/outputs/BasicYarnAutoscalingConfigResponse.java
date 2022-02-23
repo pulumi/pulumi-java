@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class BasicYarnAutoscalingConfigResponse {
             this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
             return this;
         }
-
         public BasicYarnAutoscalingConfigResponse build() {
             return new BasicYarnAutoscalingConfigResponse(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }

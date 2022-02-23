@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datadog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="apiKey")
-    private final @Nullable Input<String> apiKey;
+        private final @Nullable Input<String> apiKey;
 
     public Input<String> getApiKey() {
         return this.apiKey == null ? Input.empty() : this.apiKey;
@@ -34,7 +34,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="applicationKey")
-    private final @Nullable Input<String> applicationKey;
+        private final @Nullable Input<String> applicationKey;
 
     public Input<String> getApplicationKey() {
         return this.applicationKey == null ? Input.empty() : this.applicationKey;
@@ -45,7 +45,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="enterpriseAppId")
-    private final @Nullable Input<String> enterpriseAppId;
+        private final @Nullable Input<String> enterpriseAppId;
 
     public Input<String> getEnterpriseAppId() {
         return this.enterpriseAppId == null ? Input.empty() : this.enterpriseAppId;
@@ -56,7 +56,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkingAuthCode")
-    private final @Nullable Input<String> linkingAuthCode;
+        private final @Nullable Input<String> linkingAuthCode;
 
     public Input<String> getLinkingAuthCode() {
         return this.linkingAuthCode == null ? Input.empty() : this.linkingAuthCode;
@@ -67,7 +67,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkingClientId")
-    private final @Nullable Input<String> linkingClientId;
+        private final @Nullable Input<String> linkingClientId;
 
     public Input<String> getLinkingClientId() {
         return this.linkingClientId == null ? Input.empty() : this.linkingClientId;
@@ -78,7 +78,7 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="redirectUri")
-    private final @Nullable Input<String> redirectUri;
+        private final @Nullable Input<String> redirectUri;
 
     public Input<String> getRedirectUri() {
         return this.redirectUri == null ? Input.empty() : this.redirectUri;
@@ -197,7 +197,6 @@ public final class DatadogOrganizationPropertiesArgs extends io.pulumi.resources
             this.redirectUri = Input.ofNullable(redirectUri);
             return this;
         }
-
         public DatadogOrganizationPropertiesArgs build() {
             return new DatadogOrganizationPropertiesArgs(apiKey, applicationKey, enterpriseAppId, linkingAuthCode, linkingClientId, redirectUri);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.UtilizationReportTimeFrame;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.VmUtilizationInfoArgs;
 import java.lang.String;
@@ -22,35 +22,35 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="sourceId", required=true)
-    private final Input<String> sourceId;
+      private final Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId;
@@ -61,14 +61,14 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeFrame")
-    private final @Nullable Input<UtilizationReportTimeFrame> timeFrame;
+      private final @Nullable Input<UtilizationReportTimeFrame> timeFrame;
 
     public Input<UtilizationReportTimeFrame> getTimeFrame() {
         return this.timeFrame == null ? Input.empty() : this.timeFrame;
     }
 
     @InputImport(name="utilizationReportId", required=true)
-    private final Input<String> utilizationReportId;
+      private final Input<String> utilizationReportId;
 
     public Input<String> getUtilizationReportId() {
         return this.utilizationReportId;
@@ -79,7 +79,7 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vms")
-    private final @Nullable Input<List<VmUtilizationInfoArgs>> vms;
+      private final @Nullable Input<List<VmUtilizationInfoArgs>> vms;
 
     public Input<List<VmUtilizationInfoArgs>> getVms() {
         return this.vms == null ? Input.empty() : this.vms;
@@ -228,7 +228,6 @@ public final class UtilizationReportArgs extends io.pulumi.resources.ResourceArg
             this.vms = Input.ofNullable(vms);
             return this;
         }
-
         public UtilizationReportArgs build() {
             return new UtilizationReportArgs(displayName, location, project, requestId, sourceId, timeFrame, utilizationReportId, vms);
         }

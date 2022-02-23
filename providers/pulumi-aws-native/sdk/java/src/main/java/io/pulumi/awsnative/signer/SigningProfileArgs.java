@@ -7,7 +7,7 @@ import io.pulumi.awsnative.signer.enums.SigningProfilePlatformId;
 import io.pulumi.awsnative.signer.inputs.SigningProfileSignatureValidityPeriodArgs;
 import io.pulumi.awsnative.signer.inputs.SigningProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platformId", required=true)
-    private final Input<SigningProfilePlatformId> platformId;
+        private final Input<SigningProfilePlatformId> platformId;
 
     public Input<SigningProfilePlatformId> getPlatformId() {
         return this.platformId;
@@ -33,7 +33,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="signatureValidityPeriod")
-    private final @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
+        private final @Nullable Input<SigningProfileSignatureValidityPeriodArgs> signatureValidityPeriod;
 
     public Input<SigningProfileSignatureValidityPeriodArgs> getSignatureValidityPeriod() {
         return this.signatureValidityPeriod == null ? Input.empty() : this.signatureValidityPeriod;
@@ -44,7 +44,7 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<SigningProfileTagArgs>> tags;
+        private final @Nullable Input<List<SigningProfileTagArgs>> tags;
 
     public Input<List<SigningProfileTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class SigningProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SigningProfileArgs build() {
             return new SigningProfileArgs(platformId, signatureValidityPeriod, tags);
         }

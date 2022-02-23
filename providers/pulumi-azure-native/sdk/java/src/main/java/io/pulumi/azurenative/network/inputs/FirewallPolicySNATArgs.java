@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privateRanges")
-    private final @Nullable Input<List<String>> privateRanges;
+        private final @Nullable Input<List<String>> privateRanges;
 
     public Input<List<String>> getPrivateRanges() {
         return this.privateRanges == null ? Input.empty() : this.privateRanges;
@@ -67,7 +67,6 @@ public final class FirewallPolicySNATArgs extends io.pulumi.resources.ResourceAr
             this.privateRanges = Input.ofNullable(privateRanges);
             return this;
         }
-
         public FirewallPolicySNATArgs build() {
             return new FirewallPolicySNATArgs(privateRanges);
         }

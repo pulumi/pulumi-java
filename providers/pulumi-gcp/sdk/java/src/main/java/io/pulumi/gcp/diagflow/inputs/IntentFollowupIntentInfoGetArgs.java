@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class IntentFollowupIntentInfoGetArgs extends io.pulumi.resources.R
     public static final IntentFollowupIntentInfoGetArgs Empty = new IntentFollowupIntentInfoGetArgs();
 
     @InputImport(name="followupIntentName")
-    private final @Nullable Input<String> followupIntentName;
+        private final @Nullable Input<String> followupIntentName;
 
     public Input<String> getFollowupIntentName() {
         return this.followupIntentName == null ? Input.empty() : this.followupIntentName;
@@ -27,7 +27,7 @@ public final class IntentFollowupIntentInfoGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="parentFollowupIntentName")
-    private final @Nullable Input<String> parentFollowupIntentName;
+        private final @Nullable Input<String> parentFollowupIntentName;
 
     public Input<String> getParentFollowupIntentName() {
         return this.parentFollowupIntentName == null ? Input.empty() : this.parentFollowupIntentName;
@@ -86,7 +86,6 @@ public final class IntentFollowupIntentInfoGetArgs extends io.pulumi.resources.R
             this.parentFollowupIntentName = Input.ofNullable(parentFollowupIntentName);
             return this;
         }
-
         public IntentFollowupIntentInfoGetArgs build() {
             return new IntentFollowupIntentInfoGetArgs(followupIntentName, parentFollowupIntentName);
         }

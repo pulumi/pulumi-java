@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devops.outputs;
 
 import io.pulumi.azurenative.devops.outputs.AuthorizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -141,7 +141,6 @@ public final class CodeRepositoryResponse {
             this.repositoryType = Objects.requireNonNull(repositoryType);
             return this;
         }
-
         public CodeRepositoryResponse build() {
             return new CodeRepositoryResponse(authorization, defaultBranch, id, properties, repositoryType);
         }

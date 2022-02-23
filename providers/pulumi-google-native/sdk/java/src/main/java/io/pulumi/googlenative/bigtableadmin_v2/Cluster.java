@@ -5,8 +5,8 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.ClusterArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.ClusterConfigResponse;
@@ -120,13 +120,6 @@ public class Cluster extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Cluster(String name) {
-        super("google-native:bigtableadmin/v2:Cluster", name, ClusterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.enums.DashboardResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.DashboardError;
 import io.pulumi.awsnative.quicksight.outputs.DashboardSheet;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -243,7 +243,6 @@ public final class DashboardVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public DashboardVersion build() {
             return new DashboardVersion(arn, createdTime, dataSetArns, description, errors, sheets, sourceEntityArn, status, themeArn, versionNumber);
         }

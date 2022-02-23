@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.StandardAppVersionAutomaticScalingStandardSchedulerSettings;
 import java.lang.Integer;
 import java.lang.String;
@@ -170,7 +170,6 @@ public final class StandardAppVersionAutomaticScaling {
             this.standardSchedulerSettings = standardSchedulerSettings;
             return this;
         }
-
         public StandardAppVersionAutomaticScaling build() {
             return new StandardAppVersionAutomaticScaling(maxConcurrentRequests, maxIdleInstances, maxPendingLatency, minIdleInstances, minPendingLatency, standardSchedulerSettings);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class HostedZoneVPC {
             this.vPCRegion = Objects.requireNonNull(vPCRegion);
             return this;
         }
-
         public HostedZoneVPC build() {
             return new HostedZoneVPC(vPCId, vPCRegion);
         }

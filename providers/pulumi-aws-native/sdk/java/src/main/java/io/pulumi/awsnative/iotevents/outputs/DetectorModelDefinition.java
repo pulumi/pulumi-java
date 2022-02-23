@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelState;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class DetectorModelDefinition {
             this.states = Objects.requireNonNull(states);
             return this;
         }
-
         public DetectorModelDefinition build() {
             return new DetectorModelDefinition(initialStateName, states);
         }

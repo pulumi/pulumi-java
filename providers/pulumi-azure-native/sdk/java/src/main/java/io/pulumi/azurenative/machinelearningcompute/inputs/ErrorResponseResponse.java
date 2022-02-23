@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.ErrorDetailResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
@@ -36,7 +36,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="details")
-    private final @Nullable List<ErrorDetailResponse> details;
+        private final @Nullable List<ErrorDetailResponse> details;
 
     public List<ErrorDetailResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -47,7 +47,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -106,7 +106,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public ErrorResponseResponse build() {
             return new ErrorResponseResponse(code, details, message);
         }

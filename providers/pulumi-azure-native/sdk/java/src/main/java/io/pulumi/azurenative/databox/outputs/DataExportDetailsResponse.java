@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databox.outputs.ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.StorageAccountDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.TransferConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -101,7 +101,6 @@ public final class DataExportDetailsResponse {
             this.transferConfiguration = Objects.requireNonNull(transferConfiguration);
             return this;
         }
-
         public DataExportDetailsResponse build() {
             return new DataExportDetailsResponse(accountDetails, logCollectionLevel, transferConfiguration);
         }

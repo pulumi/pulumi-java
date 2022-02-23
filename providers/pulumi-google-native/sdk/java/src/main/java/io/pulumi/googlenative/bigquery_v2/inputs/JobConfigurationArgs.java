@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationExtractArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationLoadArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.JobConfigurationQueryArgs;
@@ -25,7 +25,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="copy")
-    private final @Nullable Input<JobConfigurationTableCopyArgs> copy;
+      private final @Nullable Input<JobConfigurationTableCopyArgs> copy;
 
     public Input<JobConfigurationTableCopyArgs> getCopy() {
         return this.copy == null ? Input.empty() : this.copy;
@@ -36,7 +36,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dryRun")
-    private final @Nullable Input<Boolean> dryRun;
+      private final @Nullable Input<Boolean> dryRun;
 
     public Input<Boolean> getDryRun() {
         return this.dryRun == null ? Input.empty() : this.dryRun;
@@ -47,7 +47,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extract")
-    private final @Nullable Input<JobConfigurationExtractArgs> extract;
+      private final @Nullable Input<JobConfigurationExtractArgs> extract;
 
     public Input<JobConfigurationExtractArgs> getExtract() {
         return this.extract == null ? Input.empty() : this.extract;
@@ -58,7 +58,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="jobTimeoutMs")
-    private final @Nullable Input<String> jobTimeoutMs;
+      private final @Nullable Input<String> jobTimeoutMs;
 
     public Input<String> getJobTimeoutMs() {
         return this.jobTimeoutMs == null ? Input.empty() : this.jobTimeoutMs;
@@ -69,7 +69,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -80,7 +80,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="load")
-    private final @Nullable Input<JobConfigurationLoadArgs> load;
+      private final @Nullable Input<JobConfigurationLoadArgs> load;
 
     public Input<JobConfigurationLoadArgs> getLoad() {
         return this.load == null ? Input.empty() : this.load;
@@ -91,7 +91,7 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<JobConfigurationQueryArgs> query;
+      private final @Nullable Input<JobConfigurationQueryArgs> query;
 
     public Input<JobConfigurationQueryArgs> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -225,7 +225,6 @@ public final class JobConfigurationArgs extends io.pulumi.resources.ResourceArgs
             this.query = Input.ofNullable(query);
             return this;
         }
-
         public JobConfigurationArgs build() {
             return new JobConfigurationArgs(copy, dryRun, extract, jobTimeoutMs, labels, load, query);
         }

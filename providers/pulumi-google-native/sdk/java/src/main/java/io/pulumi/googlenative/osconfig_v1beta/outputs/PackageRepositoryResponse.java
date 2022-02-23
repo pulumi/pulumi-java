@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AptRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.GooRepositoryResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.YumRepositoryResponse;
@@ -119,7 +119,6 @@ public final class PackageRepositoryResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public PackageRepositoryResponse build() {
             return new PackageRepositoryResponse(apt, goo, yum, zypper);
         }

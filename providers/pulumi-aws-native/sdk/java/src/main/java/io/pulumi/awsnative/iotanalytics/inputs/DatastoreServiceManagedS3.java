@@ -30,7 +30,6 @@ public final class DatastoreServiceManagedS3 extends io.pulumi.resources.InvokeA
         public Builder(DatastoreServiceManagedS3 defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DatastoreServiceManagedS3 build() {
             return new DatastoreServiceManagedS3();
         }

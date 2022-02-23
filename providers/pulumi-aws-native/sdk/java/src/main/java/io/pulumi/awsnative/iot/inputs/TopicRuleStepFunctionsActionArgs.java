@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class TopicRuleStepFunctionsActionArgs extends io.pulumi.resources.
     public static final TopicRuleStepFunctionsActionArgs Empty = new TopicRuleStepFunctionsActionArgs();
 
     @InputImport(name="executionNamePrefix")
-    private final @Nullable Input<String> executionNamePrefix;
+        private final @Nullable Input<String> executionNamePrefix;
 
     public Input<String> getExecutionNamePrefix() {
         return this.executionNamePrefix == null ? Input.empty() : this.executionNamePrefix;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stateMachineName", required=true)
-    private final Input<String> stateMachineName;
+        private final Input<String> stateMachineName;
 
     public Input<String> getStateMachineName() {
         return this.stateMachineName;
@@ -103,7 +103,6 @@ public final class TopicRuleStepFunctionsActionArgs extends io.pulumi.resources.
             this.stateMachineName = Input.of(Objects.requireNonNull(stateMachineName));
             return this;
         }
-
         public TopicRuleStepFunctionsActionArgs build() {
             return new TopicRuleStepFunctionsActionArgs(executionNamePrefix, roleArn, stateMachineName);
         }

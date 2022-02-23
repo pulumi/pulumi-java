@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageTableCardCellArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
      * 
      */
     @InputImport(name="cells")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs>> cells;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs>> cells;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageTableCardCellArgs>> getCells() {
         return this.cells == null ? Input.empty() : this.cells;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
      * 
      */
     @InputImport(name="dividerAfter")
-    private final @Nullable Input<Boolean> dividerAfter;
+      private final @Nullable Input<Boolean> dividerAfter;
 
     public Input<Boolean> getDividerAfter() {
         return this.dividerAfter == null ? Input.empty() : this.dividerAfter;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2IntentMessageTableCardRowArgs extends 
             this.dividerAfter = Input.ofNullable(dividerAfter);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageTableCardRowArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageTableCardRowArgs(cells, dividerAfter);
         }

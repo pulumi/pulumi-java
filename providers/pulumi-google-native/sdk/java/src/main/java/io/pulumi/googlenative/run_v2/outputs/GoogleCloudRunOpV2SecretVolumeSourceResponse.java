@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2VersionToPathResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GoogleCloudRunOpV2SecretVolumeSourceResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public GoogleCloudRunOpV2SecretVolumeSourceResponse build() {
             return new GoogleCloudRunOpV2SecretVolumeSourceResponse(defaultMode, items, secret);
         }

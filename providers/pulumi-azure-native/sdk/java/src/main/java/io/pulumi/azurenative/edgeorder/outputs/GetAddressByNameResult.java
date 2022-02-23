@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.outputs;
 import io.pulumi.azurenative.edgeorder.outputs.ContactDetailsResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ShippingAddressResponse;
 import io.pulumi.azurenative.edgeorder.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class GetAddressByNameResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAddressByNameResult build() {
             return new GetAddressByNameResult(addressValidationStatus, contactDetails, id, location, name, shippingAddress, systemData, tags, type);
         }

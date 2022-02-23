@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.outputs.DataDiskPropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.GalleryImageReferenceResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NetworkInterfacePropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleCreationParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -610,7 +610,6 @@ public final class LabVirtualMachineCreationParameterResponse {
             this.userName = userName;
             return this;
         }
-
         public LabVirtualMachineCreationParameterResponse build() {
             return new LabVirtualMachineCreationParameterResponse(allowClaim, artifacts, bulkCreationParameters, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, scheduleParameters, size, sshKey, storageType, tags, userName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWebServerNetworkAccessControlAllowedIpRange;
 import java.util.List;
 import java.util.Objects;
@@ -46,7 +46,6 @@ public final class EnvironmentConfigWebServerNetworkAccessControl {
             this.allowedIpRanges = allowedIpRanges;
             return this;
         }
-
         public EnvironmentConfigWebServerNetworkAccessControl build() {
             return new EnvironmentConfigWebServerNetworkAccessControl(allowedIpRanges);
         }

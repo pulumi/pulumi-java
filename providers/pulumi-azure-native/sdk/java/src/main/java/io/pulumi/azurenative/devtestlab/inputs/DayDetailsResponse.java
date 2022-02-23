@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="time")
-    private final @Nullable String time;
+        private final @Nullable String time;
 
     public Optional<String> getTime() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
@@ -61,7 +61,6 @@ public final class DayDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.time = time;
             return this;
         }
-
         public DayDetailsResponse build() {
             return new DayDetailsResponse(time);
         }

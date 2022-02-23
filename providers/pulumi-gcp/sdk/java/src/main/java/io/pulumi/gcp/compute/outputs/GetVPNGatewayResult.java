@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -163,7 +163,6 @@ public final class GetVPNGatewayResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetVPNGatewayResult build() {
             return new GetVPNGatewayResult(description, id, name, network, project, region, selfLink);
         }

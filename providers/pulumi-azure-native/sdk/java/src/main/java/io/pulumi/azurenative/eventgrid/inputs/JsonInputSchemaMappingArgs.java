@@ -6,7 +6,7 @@ package io.pulumi.azurenative.eventgrid.inputs;
 import io.pulumi.azurenative.eventgrid.inputs.JsonFieldArgs;
 import io.pulumi.azurenative.eventgrid.inputs.JsonFieldWithDefaultArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataVersion")
-    private final @Nullable Input<JsonFieldWithDefaultArgs> dataVersion;
+        private final @Nullable Input<JsonFieldWithDefaultArgs> dataVersion;
 
     public Input<JsonFieldWithDefaultArgs> getDataVersion() {
         return this.dataVersion == null ? Input.empty() : this.dataVersion;
@@ -36,7 +36,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventTime")
-    private final @Nullable Input<JsonFieldArgs> eventTime;
+        private final @Nullable Input<JsonFieldArgs> eventTime;
 
     public Input<JsonFieldArgs> getEventTime() {
         return this.eventTime == null ? Input.empty() : this.eventTime;
@@ -47,7 +47,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="eventType")
-    private final @Nullable Input<JsonFieldWithDefaultArgs> eventType;
+        private final @Nullable Input<JsonFieldWithDefaultArgs> eventType;
 
     public Input<JsonFieldWithDefaultArgs> getEventType() {
         return this.eventType == null ? Input.empty() : this.eventType;
@@ -58,7 +58,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<JsonFieldArgs> id;
+        private final @Nullable Input<JsonFieldArgs> id;
 
     public Input<JsonFieldArgs> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -70,7 +70,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputSchemaMappingType", required=true)
-    private final Input<String> inputSchemaMappingType;
+        private final Input<String> inputSchemaMappingType;
 
     public Input<String> getInputSchemaMappingType() {
         return this.inputSchemaMappingType;
@@ -81,7 +81,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subject")
-    private final @Nullable Input<JsonFieldWithDefaultArgs> subject;
+        private final @Nullable Input<JsonFieldWithDefaultArgs> subject;
 
     public Input<JsonFieldWithDefaultArgs> getSubject() {
         return this.subject == null ? Input.empty() : this.subject;
@@ -92,7 +92,7 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<JsonFieldArgs> topic;
+        private final @Nullable Input<JsonFieldArgs> topic;
 
     public Input<JsonFieldArgs> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -226,7 +226,6 @@ public final class JsonInputSchemaMappingArgs extends io.pulumi.resources.Resour
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public JsonInputSchemaMappingArgs build() {
             return new JsonInputSchemaMappingArgs(dataVersion, eventTime, eventType, id, inputSchemaMappingType, subject, topic);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.DatabaseEncryptionState;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+      private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -35,7 +35,7 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<DatabaseEncryptionState> state;
+      private final @Nullable Input<DatabaseEncryptionState> state;
 
     public Input<DatabaseEncryptionState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -94,7 +94,6 @@ public final class DatabaseEncryptionArgs extends io.pulumi.resources.ResourceAr
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public DatabaseEncryptionArgs build() {
             return new DatabaseEncryptionArgs(keyName, state);
         }

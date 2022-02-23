@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
      * 
      */
     @InputImport(name="identities")
-    private final @Nullable Input<List<String>> identities;
+        private final @Nullable Input<List<String>> identities;
 
     public Input<List<String>> getIdentities() {
         return this.identities == null ? Input.empty() : this.identities;
@@ -36,7 +36,7 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
      * 
      */
     @InputImport(name="identityType")
-    private final @Nullable Input<String> identityType;
+        private final @Nullable Input<String> identityType;
 
     public Input<String> getIdentityType() {
         return this.identityType == null ? Input.empty() : this.identityType;
@@ -95,7 +95,6 @@ public final class ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGe
             this.identityType = Input.ofNullable(identityType);
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs build() {
             return new ServicePerimetersServicePerimeterSpecEgressPolicyEgressFromGetArgs(identities, identityType);
         }

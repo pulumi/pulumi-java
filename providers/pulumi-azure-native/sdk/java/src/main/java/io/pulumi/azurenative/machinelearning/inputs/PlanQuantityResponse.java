@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowance", required=true)
-    private final Double allowance;
+        private final Double allowance;
 
     public Double getAllowance() {
         return this.allowance;
@@ -33,7 +33,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-    private final Double amount;
+        private final Double amount;
 
     public Double getAmount() {
         return this.amount;
@@ -44,7 +44,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="includedQuantityMeter", required=true)
-    private final String includedQuantityMeter;
+        private final String includedQuantityMeter;
 
     public String getIncludedQuantityMeter() {
         return this.includedQuantityMeter;
@@ -55,7 +55,7 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="overageMeter", required=true)
-    private final String overageMeter;
+        private final String overageMeter;
 
     public String getOverageMeter() {
         return this.overageMeter;
@@ -124,7 +124,6 @@ public final class PlanQuantityResponse extends io.pulumi.resources.InvokeArgs {
             this.overageMeter = Objects.requireNonNull(overageMeter);
             return this;
         }
-
         public PlanQuantityResponse build() {
             return new PlanQuantityResponse(allowance, amount, includedQuantityMeter, overageMeter);
         }

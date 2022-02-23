@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -141,7 +141,6 @@ public final class EnterpriseKeyWebSettings {
             this.integrationType = Objects.requireNonNull(integrationType);
             return this;
         }
-
         public EnterpriseKeyWebSettings build() {
             return new EnterpriseKeyWebSettings(allowAllDomains, allowAmpTraffic, allowedDomains, challengeSecurityPreference, integrationType);
         }

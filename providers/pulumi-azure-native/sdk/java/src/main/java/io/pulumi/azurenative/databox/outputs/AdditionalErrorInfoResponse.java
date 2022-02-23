@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class AdditionalErrorInfoResponse {
             this.type = type;
             return this;
         }
-
         public AdditionalErrorInfoResponse build() {
             return new AdditionalErrorInfoResponse(info, type);
         }

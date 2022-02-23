@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.TagTemplateFieldType;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -192,7 +192,6 @@ public final class TagTemplateField {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TagTemplateField build() {
             return new TagTemplateField(description, displayName, fieldId, isRequired, name, order, type);
         }

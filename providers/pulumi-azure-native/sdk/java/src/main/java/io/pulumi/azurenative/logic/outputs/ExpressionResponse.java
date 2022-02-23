@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.AzureResourceErrorInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -113,7 +113,6 @@ public final class ExpressionResponse {
             this.value = value;
             return this;
         }
-
         public ExpressionResponse build() {
             return new ExpressionResponse(error, subexpressions, text, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetInstanceTemplateSchedulingNodeAffinity;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,14 +23,14 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="automaticRestart", required=true)
-    private final Boolean automaticRestart;
+        private final Boolean automaticRestart;
 
     public Boolean getAutomaticRestart() {
         return this.automaticRestart;
     }
 
     @InputImport(name="minNodeCpus", required=true)
-    private final Integer minNodeCpus;
+        private final Integer minNodeCpus;
 
     public Integer getMinNodeCpus() {
         return this.minNodeCpus;
@@ -45,7 +45,7 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="nodeAffinities", required=true)
-    private final List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities;
+        private final List<GetInstanceTemplateSchedulingNodeAffinity> nodeAffinities;
 
     public List<GetInstanceTemplateSchedulingNodeAffinity> getNodeAffinities() {
         return this.nodeAffinities;
@@ -57,7 +57,7 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="onHostMaintenance", required=true)
-    private final String onHostMaintenance;
+        private final String onHostMaintenance;
 
     public String getOnHostMaintenance() {
         return this.onHostMaintenance;
@@ -70,7 +70,7 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="preemptible", required=true)
-    private final Boolean preemptible;
+        private final Boolean preemptible;
 
     public Boolean getPreemptible() {
         return this.preemptible;
@@ -149,7 +149,6 @@ public final class GetInstanceTemplateScheduling extends io.pulumi.resources.Inv
             this.preemptible = Objects.requireNonNull(preemptible);
             return this;
         }
-
         public GetInstanceTemplateScheduling build() {
             return new GetInstanceTemplateScheduling(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

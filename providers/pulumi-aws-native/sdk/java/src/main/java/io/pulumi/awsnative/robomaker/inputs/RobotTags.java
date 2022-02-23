@@ -34,7 +34,6 @@ public final class RobotTags extends io.pulumi.resources.InvokeArgs {
         public Builder(RobotTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public RobotTags build() {
             return new RobotTags();
         }

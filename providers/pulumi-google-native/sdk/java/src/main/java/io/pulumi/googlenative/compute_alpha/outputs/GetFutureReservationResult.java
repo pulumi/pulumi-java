@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationSpecificSKUPropertiesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationStatusResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FutureReservationTimeWindowResponse;
@@ -280,7 +280,6 @@ public final class GetFutureReservationResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetFutureReservationResult build() {
             return new GetFutureReservationResult(creationTimestamp, description, kind, name, namePrefix, selfLink, selfLinkWithId, shareSettings, specificSkuProperties, status, timeWindow, zone);
         }

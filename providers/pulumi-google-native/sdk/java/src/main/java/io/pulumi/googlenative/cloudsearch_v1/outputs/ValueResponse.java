@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.DateResponse;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -113,7 +113,6 @@ public final class ValueResponse {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
-
         public ValueResponse build() {
             return new ValueResponse(booleanValue, dateValue, doubleValue, integerValue, stringValue, timestampValue);
         }

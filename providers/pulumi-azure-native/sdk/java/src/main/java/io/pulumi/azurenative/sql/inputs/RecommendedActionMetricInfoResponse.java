@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final String metricName;
+        private final String metricName;
 
     public String getMetricName() {
         return this.metricName;
@@ -33,7 +33,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -44,7 +44,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timeGrain", required=true)
-    private final String timeGrain;
+        private final String timeGrain;
 
     public String getTimeGrain() {
         return this.timeGrain;
@@ -55,7 +55,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="unit", required=true)
-    private final String unit;
+        private final String unit;
 
     public String getUnit() {
         return this.unit;
@@ -66,7 +66,7 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="value", required=true)
-    private final Double value;
+        private final Double value;
 
     public Double getValue() {
         return this.value;
@@ -145,7 +145,6 @@ public final class RecommendedActionMetricInfoResponse extends io.pulumi.resourc
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecommendedActionMetricInfoResponse build() {
             return new RecommendedActionMetricInfoResponse(metricName, startTime, timeGrain, unit, value);
         }

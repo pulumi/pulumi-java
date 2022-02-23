@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_v2beta.outputs.DiagnosticResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class PollingOptionsResponse {
             this.targetLink = Objects.requireNonNull(targetLink);
             return this;
         }
-
         public PollingOptionsResponse build() {
             return new PollingOptionsResponse(diagnostics, failCondition, finishCondition, pollingLink, targetLink);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RegionSslPolicyWarningsItemResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ServerTlsSettingsResponse;
 import java.lang.String;
@@ -329,7 +329,6 @@ public final class GetRegionSslPolicyResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetRegionSslPolicyResult build() {
             return new GetRegionSslPolicyResult(creationTimestamp, customFeatures, description, enabledFeatures, fingerprint, kind, minTlsVersion, name, profile, region, selfLink, selfLinkWithId, tlsSettings, warnings);
         }

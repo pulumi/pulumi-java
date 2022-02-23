@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.SqlDedicatedGatewayRegionalServiceResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -186,7 +186,6 @@ public final class SqlDedicatedGatewayServiceResourcePropertiesResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SqlDedicatedGatewayServiceResourcePropertiesResponse build() {
             return new SqlDedicatedGatewayServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, sqlDedicatedGatewayEndpoint, status);
         }

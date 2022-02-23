@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<String> model;
+      private final @Nullable Input<String> model;
 
     public Input<String> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationM
             this.model = Input.ofNullable(model);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigConversationModelConfigArgs(model);
         }

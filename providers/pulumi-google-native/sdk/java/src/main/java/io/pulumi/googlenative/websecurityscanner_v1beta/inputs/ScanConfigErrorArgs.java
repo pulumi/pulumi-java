@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.websecurityscanner_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.websecurityscanner_v1beta.enums.ScanConfigErrorCode;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Input<ScanConfigErrorCode> code;
+      private final @Nullable Input<ScanConfigErrorCode> code;
 
     public Input<ScanConfigErrorCode> getCode() {
         return this.code == null ? Input.empty() : this.code;
@@ -35,7 +35,7 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fieldName")
-    private final @Nullable Input<String> fieldName;
+      private final @Nullable Input<String> fieldName;
 
     public Input<String> getFieldName() {
         return this.fieldName == null ? Input.empty() : this.fieldName;
@@ -94,7 +94,6 @@ public final class ScanConfigErrorArgs extends io.pulumi.resources.ResourceArgs 
             this.fieldName = Input.ofNullable(fieldName);
             return this;
         }
-
         public ScanConfigErrorArgs build() {
             return new ScanConfigErrorArgs(code, fieldName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs.Overhead;
 import io.pulumi.kubernetes.node.k8s.io_v1alpha1.outputs.Scheduling;
 import java.lang.String;
@@ -99,7 +99,6 @@ public final class RuntimeClassSpec {
             this.scheduling = scheduling;
             return this;
         }
-
         public RuntimeClassSpec build() {
             return new RuntimeClassSpec(overhead, runtimeHandler, scheduling);
         }

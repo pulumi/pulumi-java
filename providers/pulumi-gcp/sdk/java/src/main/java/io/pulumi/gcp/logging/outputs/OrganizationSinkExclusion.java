@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class OrganizationSinkExclusion {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public OrganizationSinkExclusion build() {
             return new OrganizationSinkExclusion(description, disabled, filter, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.AdBreakResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.EditAtomResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.ElementaryStreamResponse;
@@ -252,7 +252,6 @@ public final class JobConfigResponse {
             this.spriteSheets = Objects.requireNonNull(spriteSheets);
             return this;
         }
-
         public JobConfigResponse build() {
             return new JobConfigResponse(adBreaks, editList, elementaryStreams, inputs, manifests, muxStreams, output, overlays, pubsubDestination, spriteSheets);
         }

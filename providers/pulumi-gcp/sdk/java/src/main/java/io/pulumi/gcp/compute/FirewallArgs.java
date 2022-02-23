@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.FirewallAllowArgs;
 import io.pulumi.gcp.compute.inputs.FirewallDenyArgs;
 import io.pulumi.gcp.compute.inputs.FirewallLogConfigArgs;
@@ -28,7 +28,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allows")
-    private final @Nullable Input<List<FirewallAllowArgs>> allows;
+        private final @Nullable Input<List<FirewallAllowArgs>> allows;
 
     public Input<List<FirewallAllowArgs>> getAllows() {
         return this.allows == null ? Input.empty() : this.allows;
@@ -41,7 +41,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="denies")
-    private final @Nullable Input<List<FirewallDenyArgs>> denies;
+        private final @Nullable Input<List<FirewallDenyArgs>> denies;
 
     public Input<List<FirewallDenyArgs>> getDenies() {
         return this.denies == null ? Input.empty() : this.denies;
@@ -53,7 +53,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -66,7 +66,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationRanges")
-    private final @Nullable Input<List<String>> destinationRanges;
+        private final @Nullable Input<List<String>> destinationRanges;
 
     public Input<List<String>> getDestinationRanges() {
         return this.destinationRanges == null ? Input.empty() : this.destinationRanges;
@@ -82,7 +82,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<String> direction;
+        private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -96,7 +96,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -112,7 +112,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      */
     @Deprecated /* Deprecated in favor of log_config */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+        private final @Nullable Input<Boolean> enableLogging;
 
     @Deprecated /* Deprecated in favor of log_config */
     public Input<Boolean> getEnableLogging() {
@@ -126,7 +126,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<FirewallLogConfigArgs> logConfig;
+        private final @Nullable Input<FirewallLogConfigArgs> logConfig;
 
     public Input<FirewallLogConfigArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -143,7 +143,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -154,7 +154,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -170,7 +170,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -182,7 +182,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -201,7 +201,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceRanges")
-    private final @Nullable Input<List<String>> sourceRanges;
+        private final @Nullable Input<List<String>> sourceRanges;
 
     public Input<List<String>> getSourceRanges() {
         return this.sourceRanges == null ? Input.empty() : this.sourceRanges;
@@ -223,7 +223,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceServiceAccounts")
-    private final @Nullable Input<List<String>> sourceServiceAccounts;
+        private final @Nullable Input<List<String>> sourceServiceAccounts;
 
     public Input<List<String>> getSourceServiceAccounts() {
         return this.sourceServiceAccounts == null ? Input.empty() : this.sourceServiceAccounts;
@@ -243,7 +243,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTags")
-    private final @Nullable Input<List<String>> sourceTags;
+        private final @Nullable Input<List<String>> sourceTags;
 
     public Input<List<String>> getSourceTags() {
         return this.sourceTags == null ? Input.empty() : this.sourceTags;
@@ -259,7 +259,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetServiceAccounts")
-    private final @Nullable Input<List<String>> targetServiceAccounts;
+        private final @Nullable Input<List<String>> targetServiceAccounts;
 
     public Input<List<String>> getTargetServiceAccounts() {
         return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
@@ -273,7 +273,7 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetTags")
-    private final @Nullable Input<List<String>> targetTags;
+        private final @Nullable Input<List<String>> targetTags;
 
     public Input<List<String>> getTargetTags() {
         return this.targetTags == null ? Input.empty() : this.targetTags;
@@ -557,7 +557,6 @@ public final class FirewallArgs extends io.pulumi.resources.ResourceArgs {
             this.targetTags = Input.ofNullable(targetTags);
             return this;
         }
-
         public FirewallArgs build() {
             return new FirewallArgs(allows, denies, description, destinationRanges, direction, disabled, enableLogging, logConfig, name, network, priority, project, sourceRanges, sourceServiceAccounts, sourceTags, targetServiceAccounts, targetTags);
         }

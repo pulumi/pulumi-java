@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -37,7 +37,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="events", required=true)
-    private final Input<List<Object>> events;
+        private final Input<List<Object>> events;
 
     public Input<List<Object>> getEvents() {
         return this.events;
@@ -59,7 +59,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pipelines")
-    private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
+        private final @Nullable Input<List<TriggerPipelineReferenceArgs>> pipelines;
 
     public Input<List<TriggerPipelineReferenceArgs>> getPipelines() {
         return this.pipelines == null ? Input.empty() : this.pipelines;
@@ -70,7 +70,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -81,7 +81,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subjectBeginsWith")
-    private final @Nullable Input<String> subjectBeginsWith;
+        private final @Nullable Input<String> subjectBeginsWith;
 
     public Input<String> getSubjectBeginsWith() {
         return this.subjectBeginsWith == null ? Input.empty() : this.subjectBeginsWith;
@@ -92,7 +92,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="subjectEndsWith")
-    private final @Nullable Input<String> subjectEndsWith;
+        private final @Nullable Input<String> subjectEndsWith;
 
     public Input<String> getSubjectEndsWith() {
         return this.subjectEndsWith == null ? Input.empty() : this.subjectEndsWith;
@@ -104,7 +104,7 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -253,7 +253,6 @@ public final class CustomEventsTriggerArgs extends io.pulumi.resources.ResourceA
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CustomEventsTriggerArgs build() {
             return new CustomEventsTriggerArgs(annotations, description, events, pipelines, scope, subjectBeginsWith, subjectEndsWith, type);
         }

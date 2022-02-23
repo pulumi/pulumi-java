@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.UpstreamAuthSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -135,7 +135,6 @@ public final class EventHandlerTemplateResponse {
             this.userEventPattern = userEventPattern;
             return this;
         }
-
         public EventHandlerTemplateResponse build() {
             return new EventHandlerTemplateResponse(auth, systemEventPattern, urlTemplate, userEventPattern);
         }

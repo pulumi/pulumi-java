@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxSurge")
-    private final @Nullable Input<Either<Integer,String>> maxSurge;
+        private final @Nullable Input<Either<Integer,String>> maxSurge;
 
     public Input<Either<Integer,String>> getMaxSurge() {
         return this.maxSurge == null ? Input.empty() : this.maxSurge;
@@ -36,7 +36,7 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxUnavailable")
-    private final @Nullable Input<Either<Integer,String>> maxUnavailable;
+        private final @Nullable Input<Either<Integer,String>> maxUnavailable;
 
     public Input<Either<Integer,String>> getMaxUnavailable() {
         return this.maxUnavailable == null ? Input.empty() : this.maxUnavailable;
@@ -95,7 +95,6 @@ public final class RollingUpdateDeploymentArgs extends io.pulumi.resources.Resou
             this.maxUnavailable = Input.ofNullable(maxUnavailable);
             return this;
         }
-
         public RollingUpdateDeploymentArgs build() {
             return new RollingUpdateDeploymentArgs(maxSurge, maxUnavailable);
         }

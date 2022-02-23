@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.inputs;
 
 import io.pulumi.awsnative.iotevents.inputs.DetectorModelState;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="initialStateName", required=true)
-    private final String initialStateName;
+        private final String initialStateName;
 
     public String getInitialStateName() {
         return this.initialStateName;
@@ -34,7 +34,7 @@ public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="states", required=true)
-    private final List<DetectorModelState> states;
+        private final List<DetectorModelState> states;
 
     public List<DetectorModelState> getStates() {
         return this.states;
@@ -83,7 +83,6 @@ public final class DetectorModelDefinition extends io.pulumi.resources.InvokeArg
             this.states = Objects.requireNonNull(states);
             return this;
         }
-
         public DetectorModelDefinition build() {
             return new DetectorModelDefinition(initialStateName, states);
         }

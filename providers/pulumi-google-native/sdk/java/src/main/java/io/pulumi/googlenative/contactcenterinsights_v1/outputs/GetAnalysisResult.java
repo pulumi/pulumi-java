@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResultResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GetAnalysisResult {
             this.requestTime = Objects.requireNonNull(requestTime);
             return this;
         }
-
         public GetAnalysisResult build() {
             return new GetAnalysisResult(analysisResult, createTime, name, requestTime);
         }

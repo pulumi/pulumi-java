@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsAccessKeyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="awsAccessKey", required=true)
-    private final AwsAccessKeyResponse awsAccessKey;
+      private final AwsAccessKeyResponse awsAccessKey;
 
     public AwsAccessKeyResponse getAwsAccessKey() {
         return this.awsAccessKey;
@@ -33,7 +33,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+      private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
@@ -44,7 +44,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -55,7 +55,7 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+      private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -124,7 +124,6 @@ public final class AwsS3DataResponse extends io.pulumi.resources.InvokeArgs {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AwsS3DataResponse build() {
             return new AwsS3DataResponse(awsAccessKey, bucketName, path, roleArn);
         }

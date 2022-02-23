@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineVersionIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberState;
@@ -175,13 +175,6 @@ public class AppEngineVersionIamMember extends io.pulumi.resources.CustomResourc
         return this.versionId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AppEngineVersionIamMember(String name) {
-        super("gcp:iap/appEngineVersionIamMember:AppEngineVersionIamMember", name, AppEngineVersionIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

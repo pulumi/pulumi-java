@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.inputs.QuarantinePolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.RetentionPolicyArgs;
 import io.pulumi.azurenative.containerregistry.inputs.TrustPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="quarantinePolicy")
-    private final @Nullable Input<QuarantinePolicyArgs> quarantinePolicy;
+        private final @Nullable Input<QuarantinePolicyArgs> quarantinePolicy;
 
     public Input<QuarantinePolicyArgs> getQuarantinePolicy() {
         return this.quarantinePolicy == null ? Input.empty() : this.quarantinePolicy;
@@ -36,7 +36,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
+        private final @Nullable Input<RetentionPolicyArgs> retentionPolicy;
 
     public Input<RetentionPolicyArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -47,7 +47,7 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustPolicy")
-    private final @Nullable Input<TrustPolicyArgs> trustPolicy;
+        private final @Nullable Input<TrustPolicyArgs> trustPolicy;
 
     public Input<TrustPolicyArgs> getTrustPolicy() {
         return this.trustPolicy == null ? Input.empty() : this.trustPolicy;
@@ -121,7 +121,6 @@ public final class PoliciesArgs extends io.pulumi.resources.ResourceArgs {
             this.trustPolicy = Input.ofNullable(trustPolicy);
             return this;
         }
-
         public PoliciesArgs build() {
             return new PoliciesArgs(quarantinePolicy, retentionPolicy, trustPolicy);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConnectionGatewayDefinitionResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -175,7 +175,6 @@ public final class GetConnectionGatewayResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionGatewayResult build() {
             return new GetConnectionGatewayResult(etag, id, location, name, properties, tags, type);
         }

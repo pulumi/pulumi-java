@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetAutoscalingPolicyIamPolicyArgs extends io.pulumi.resources
     public static final GetAutoscalingPolicyIamPolicyArgs Empty = new GetAutoscalingPolicyIamPolicyArgs();
 
     @InputImport(name="autoscalingPolicyId", required=true)
-    private final String autoscalingPolicyId;
+      private final String autoscalingPolicyId;
 
     public String getAutoscalingPolicyId() {
         return this.autoscalingPolicyId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetAutoscalingPolicyIamPolicyArgs extends io.pulumi.resources
             this.project = project;
             return this;
         }
-
         public GetAutoscalingPolicyIamPolicyArgs build() {
             return new GetAutoscalingPolicyIamPolicyArgs(autoscalingPolicyId, location, project);
         }

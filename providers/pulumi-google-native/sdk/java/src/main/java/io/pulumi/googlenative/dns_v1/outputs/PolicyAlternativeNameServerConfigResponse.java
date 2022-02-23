@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.PolicyAlternativeNameServerConfigTargetNameServerResponse;
 import java.lang.String;
 import java.util.List;
@@ -68,7 +68,6 @@ public final class PolicyAlternativeNameServerConfigResponse {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigResponse build() {
             return new PolicyAlternativeNameServerConfigResponse(kind, targetNameServers);
         }

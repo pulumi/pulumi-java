@@ -5,8 +5,8 @@ package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.DatasetIamPolicyArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DatasetIamPolicy(String name) {
-        super("google-native:healthcare/v1:DatasetIamPolicy", name, DatasetIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

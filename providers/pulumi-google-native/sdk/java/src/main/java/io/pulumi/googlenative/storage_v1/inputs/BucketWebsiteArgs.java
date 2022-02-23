@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mainPageSuffix")
-    private final @Nullable Input<String> mainPageSuffix;
+      private final @Nullable Input<String> mainPageSuffix;
 
     public Input<String> getMainPageSuffix() {
         return this.mainPageSuffix == null ? Input.empty() : this.mainPageSuffix;
@@ -34,7 +34,7 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notFoundPage")
-    private final @Nullable Input<String> notFoundPage;
+      private final @Nullable Input<String> notFoundPage;
 
     public Input<String> getNotFoundPage() {
         return this.notFoundPage == null ? Input.empty() : this.notFoundPage;
@@ -93,7 +93,6 @@ public final class BucketWebsiteArgs extends io.pulumi.resources.ResourceArgs {
             this.notFoundPage = Input.ofNullable(notFoundPage);
             return this;
         }
-
         public BucketWebsiteArgs build() {
             return new BucketWebsiteArgs(mainPageSuffix, notFoundPage);
         }

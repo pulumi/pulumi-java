@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="categoricalValues", required=true)
-    private final List<String> categoricalValues;
+      private final List<String> categoricalValues;
 
     public List<String> getCategoricalValues() {
         return this.categoricalValues;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="discreteValues", required=true)
-    private final List<Double> discreteValues;
+      private final List<Double> discreteValues;
 
     public List<Double> getDiscreteValues() {
         return this.discreteValues;
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="maxValue", required=true)
-    private final Double maxValue;
+      private final Double maxValue;
 
     public Double getMaxValue() {
         return this.maxValue;
@@ -56,7 +56,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="minValue", required=true)
-    private final Double minValue;
+      private final Double minValue;
 
     public Double getMinValue() {
         return this.minValue;
@@ -67,7 +67,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="parameterName", required=true)
-    private final String parameterName;
+      private final String parameterName;
 
     public String getParameterName() {
         return this.parameterName;
@@ -78,7 +78,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="scaleType", required=true)
-    private final String scaleType;
+      private final String scaleType;
 
     public String getScaleType() {
         return this.scaleType;
@@ -89,7 +89,7 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -188,7 +188,6 @@ public final class GoogleCloudMlV1__ParameterSpecResponse extends io.pulumi.reso
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1__ParameterSpecResponse build() {
             return new GoogleCloudMlV1__ParameterSpecResponse(categoricalValues, discreteValues, maxValue, minValue, parameterName, scaleType, type);
         }

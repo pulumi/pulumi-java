@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigOpenapiDocumentDocumentGetArgs;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ApiConfigOpenapiDocumentGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="document", required=true)
-    private final Input<ApiConfigOpenapiDocumentDocumentGetArgs> document;
+        private final Input<ApiConfigOpenapiDocumentDocumentGetArgs> document;
 
     public Input<ApiConfigOpenapiDocumentDocumentGetArgs> getDocument() {
         return this.document;
@@ -62,7 +62,6 @@ public final class ApiConfigOpenapiDocumentGetArgs extends io.pulumi.resources.R
             this.document = Input.of(Objects.requireNonNull(document));
             return this;
         }
-
         public ApiConfigOpenapiDocumentGetArgs build() {
             return new ApiConfigOpenapiDocumentGetArgs(document);
         }

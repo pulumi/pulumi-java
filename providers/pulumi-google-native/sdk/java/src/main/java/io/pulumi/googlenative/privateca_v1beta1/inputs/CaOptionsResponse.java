@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CaOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isCa", required=true)
-    private final Boolean isCa;
+      private final Boolean isCa;
 
     public Boolean getIsCa() {
         return this.isCa;
@@ -33,7 +33,7 @@ public final class CaOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxIssuerPathLength", required=true)
-    private final Integer maxIssuerPathLength;
+      private final Integer maxIssuerPathLength;
 
     public Integer getMaxIssuerPathLength() {
         return this.maxIssuerPathLength;
@@ -82,7 +82,6 @@ public final class CaOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.maxIssuerPathLength = Objects.requireNonNull(maxIssuerPathLength);
             return this;
         }
-
         public CaOptionsResponse build() {
             return new CaOptionsResponse(isCa, maxIssuerPathLength);
         }

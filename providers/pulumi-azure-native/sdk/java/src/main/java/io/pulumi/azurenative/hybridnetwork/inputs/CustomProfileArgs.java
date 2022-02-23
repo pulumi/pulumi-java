@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataConfigurationPath")
-    private final @Nullable Input<String> metadataConfigurationPath;
+        private final @Nullable Input<String> metadataConfigurationPath;
 
     public Input<String> getMetadataConfigurationPath() {
         return this.metadataConfigurationPath == null ? Input.empty() : this.metadataConfigurationPath;
@@ -66,7 +66,6 @@ public final class CustomProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.metadataConfigurationPath = Input.ofNullable(metadataConfigurationPath);
             return this;
         }
-
         public CustomProfileArgs build() {
             return new CustomProfileArgs(metadataConfigurationPath);
         }

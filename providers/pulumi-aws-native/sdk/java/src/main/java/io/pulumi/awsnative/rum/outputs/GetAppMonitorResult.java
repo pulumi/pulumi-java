@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rum.outputs;
 
 import io.pulumi.awsnative.rum.outputs.AppMonitorConfiguration;
 import io.pulumi.awsnative.rum.outputs.AppMonitorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -106,7 +106,6 @@ public final class GetAppMonitorResult {
             this.tags = tags;
             return this;
         }
-
         public GetAppMonitorResult build() {
             return new GetAppMonitorResult(appMonitorConfiguration, cwLogEnabled, domain, tags);
         }

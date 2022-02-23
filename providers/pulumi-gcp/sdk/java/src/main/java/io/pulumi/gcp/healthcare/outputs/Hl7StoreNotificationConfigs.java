@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -102,7 +102,6 @@ public final class Hl7StoreNotificationConfigs {
             this.pubsubTopic = Objects.requireNonNull(pubsubTopic);
             return this;
         }
-
         public Hl7StoreNotificationConfigs build() {
             return new Hl7StoreNotificationConfigs(filter, pubsubTopic);
         }

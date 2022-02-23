@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blockchain;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.blockchain.inputs.GetTransactionNodeArgs;
 import io.pulumi.azurenative.blockchain.outputs.GetTransactionNodeResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

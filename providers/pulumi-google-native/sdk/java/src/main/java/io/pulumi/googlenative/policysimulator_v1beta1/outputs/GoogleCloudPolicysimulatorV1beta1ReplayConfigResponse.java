@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse {
             this.policyOverlay = Objects.requireNonNull(policyOverlay);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse build() {
             return new GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse(logSource, policyOverlay);
         }

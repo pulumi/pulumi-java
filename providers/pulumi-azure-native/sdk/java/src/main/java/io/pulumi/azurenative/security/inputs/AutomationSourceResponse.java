@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.AutomationRuleSetResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="eventSource")
-    private final @Nullable String eventSource;
+        private final @Nullable String eventSource;
 
     public Optional<String> getEventSource() {
         return this.eventSource == null ? Optional.empty() : Optional.ofNullable(this.eventSource);
@@ -36,7 +36,7 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ruleSets")
-    private final @Nullable List<AutomationRuleSetResponse> ruleSets;
+        private final @Nullable List<AutomationRuleSetResponse> ruleSets;
 
     public List<AutomationRuleSetResponse> getRuleSets() {
         return this.ruleSets == null ? List.of() : this.ruleSets;
@@ -85,7 +85,6 @@ public final class AutomationSourceResponse extends io.pulumi.resources.InvokeAr
             this.ruleSets = ruleSets;
             return this;
         }
-
         public AutomationSourceResponse build() {
             return new AutomationSourceResponse(eventSource, ruleSets);
         }

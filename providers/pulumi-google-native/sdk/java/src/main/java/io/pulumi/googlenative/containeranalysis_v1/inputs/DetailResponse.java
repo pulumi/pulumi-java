@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedCpeUri", required=true)
-    private final String affectedCpeUri;
+      private final String affectedCpeUri;
 
     public String getAffectedCpeUri() {
         return this.affectedCpeUri;
@@ -34,7 +34,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedPackage", required=true)
-    private final String affectedPackage;
+      private final String affectedPackage;
 
     public String getAffectedPackage() {
         return this.affectedPackage;
@@ -45,7 +45,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedVersionEnd", required=true)
-    private final VersionResponse affectedVersionEnd;
+      private final VersionResponse affectedVersionEnd;
 
     public VersionResponse getAffectedVersionEnd() {
         return this.affectedVersionEnd;
@@ -56,7 +56,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="affectedVersionStart", required=true)
-    private final VersionResponse affectedVersionStart;
+      private final VersionResponse affectedVersionStart;
 
     public VersionResponse getAffectedVersionStart() {
         return this.affectedVersionStart;
@@ -67,7 +67,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -78,7 +78,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedCpeUri", required=true)
-    private final String fixedCpeUri;
+      private final String fixedCpeUri;
 
     public String getFixedCpeUri() {
         return this.fixedCpeUri;
@@ -89,7 +89,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedPackage", required=true)
-    private final String fixedPackage;
+      private final String fixedPackage;
 
     public String getFixedPackage() {
         return this.fixedPackage;
@@ -100,7 +100,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedVersion", required=true)
-    private final VersionResponse fixedVersion;
+      private final VersionResponse fixedVersion;
 
     public VersionResponse getFixedVersion() {
         return this.fixedVersion;
@@ -111,7 +111,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isObsolete", required=true)
-    private final Boolean isObsolete;
+      private final Boolean isObsolete;
 
     public Boolean getIsObsolete() {
         return this.isObsolete;
@@ -122,7 +122,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packageType", required=true)
-    private final String packageType;
+      private final String packageType;
 
     public String getPackageType() {
         return this.packageType;
@@ -133,7 +133,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severityName", required=true)
-    private final String severityName;
+      private final String severityName;
 
     public String getSeverityName() {
         return this.severityName;
@@ -144,7 +144,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -155,7 +155,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceUpdateTime", required=true)
-    private final String sourceUpdateTime;
+      private final String sourceUpdateTime;
 
     public String getSourceUpdateTime() {
         return this.sourceUpdateTime;
@@ -166,7 +166,7 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vendor", required=true)
-    private final String vendor;
+      private final String vendor;
 
     public String getVendor() {
         return this.vendor;
@@ -335,7 +335,6 @@ public final class DetailResponse extends io.pulumi.resources.InvokeArgs {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }
-
         public DetailResponse build() {
             return new DetailResponse(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
         }

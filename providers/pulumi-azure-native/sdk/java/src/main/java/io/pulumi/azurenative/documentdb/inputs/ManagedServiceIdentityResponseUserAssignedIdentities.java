@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+        private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -28,7 +28,7 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -77,7 +77,6 @@ public final class ManagedServiceIdentityResponseUserAssignedIdentities extends 
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ManagedServiceIdentityResponseUserAssignedIdentities build() {
             return new ManagedServiceIdentityResponseUserAssignedIdentities(clientId, principalId);
         }

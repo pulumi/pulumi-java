@@ -10,8 +10,8 @@ import io.pulumi.awsnative.cloudtrail.outputs.TrailInsightSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -230,13 +230,6 @@ public class Trail extends io.pulumi.resources.CustomResource {
         return this.trailName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Trail(String name) {
-        super("aws-native:cloudtrail:Trail", name, TrailArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

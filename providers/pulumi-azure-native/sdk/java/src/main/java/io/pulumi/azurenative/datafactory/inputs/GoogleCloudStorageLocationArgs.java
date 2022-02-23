@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudStorageLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<Object> bucketName;
+        private final @Nullable Input<Object> bucketName;
 
     public Input<Object> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -35,7 +35,7 @@ public final class GoogleCloudStorageLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="fileName")
-    private final @Nullable Input<Object> fileName;
+        private final @Nullable Input<Object> fileName;
 
     public Input<Object> getFileName() {
         return this.fileName == null ? Input.empty() : this.fileName;
@@ -46,7 +46,7 @@ public final class GoogleCloudStorageLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Input<Object> folderPath;
+        private final @Nullable Input<Object> folderPath;
 
     public Input<Object> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -58,7 +58,7 @@ public final class GoogleCloudStorageLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -69,7 +69,7 @@ public final class GoogleCloudStorageLocationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Object> version;
+        private final @Nullable Input<Object> version;
 
     public Input<Object> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -173,7 +173,6 @@ public final class GoogleCloudStorageLocationArgs extends io.pulumi.resources.Re
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GoogleCloudStorageLocationArgs build() {
             return new GoogleCloudStorageLocationArgs(bucketName, fileName, folderPath, type, version);
         }

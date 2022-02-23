@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class GetIPv6FirewallRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIPv6FirewallRuleResult build() {
             return new GetIPv6FirewallRuleResult(endIPv6Address, id, name, startIPv6Address, type);
         }

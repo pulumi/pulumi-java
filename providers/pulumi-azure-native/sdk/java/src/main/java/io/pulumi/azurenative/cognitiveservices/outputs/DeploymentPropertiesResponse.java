@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.DeploymentModelResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.DeploymentScaleSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class DeploymentPropertiesResponse {
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public DeploymentPropertiesResponse build() {
             return new DeploymentPropertiesResponse(model, provisioningState, scaleSettings);
         }

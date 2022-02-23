@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.DockerBuildResponse
 import io.pulumi.azurenative.machinelearningservices.outputs.DockerImageResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.InferenceContainerPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -212,7 +212,6 @@ public final class EnvironmentSpecificationVersionResponse {
             this.tags = tags;
             return this;
         }
-
         public EnvironmentSpecificationVersionResponse build() {
             return new EnvironmentSpecificationVersionResponse(condaFile, description, docker, environmentSpecificationType, inferenceContainerProperties, isAnonymous, properties, tags);
         }

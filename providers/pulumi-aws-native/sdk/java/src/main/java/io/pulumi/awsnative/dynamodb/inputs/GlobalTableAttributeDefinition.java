@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GlobalTableAttributeDefinition extends io.pulumi.resources.In
     public static final GlobalTableAttributeDefinition Empty = new GlobalTableAttributeDefinition();
 
     @InputImport(name="attributeName", required=true)
-    private final String attributeName;
+        private final String attributeName;
 
     public String getAttributeName() {
         return this.attributeName;
     }
 
     @InputImport(name="attributeType", required=true)
-    private final String attributeType;
+        private final String attributeType;
 
     public String getAttributeType() {
         return this.attributeType;
@@ -69,7 +69,6 @@ public final class GlobalTableAttributeDefinition extends io.pulumi.resources.In
             this.attributeType = Objects.requireNonNull(attributeType);
             return this;
         }
-
         public GlobalTableAttributeDefinition build() {
             return new GlobalTableAttributeDefinition(attributeName, attributeType);
         }

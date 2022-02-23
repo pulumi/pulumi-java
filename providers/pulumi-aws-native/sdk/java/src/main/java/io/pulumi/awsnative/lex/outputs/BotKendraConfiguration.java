@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -82,7 +82,6 @@ public final class BotKendraConfiguration {
             this.queryFilterStringEnabled = queryFilterStringEnabled;
             return this;
         }
-
         public BotKendraConfiguration build() {
             return new BotKendraConfiguration(kendraIndex, queryFilterString, queryFilterStringEnabled);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudfunctions.FunctionArgs;
 import io.pulumi.gcp.cloudfunctions.inputs.FunctionState;
@@ -376,13 +376,6 @@ public class Function extends io.pulumi.resources.CustomResource {
         return this.vpcConnectorEgressSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Function(String name) {
-        super("gcp:cloudfunctions/function:Function", name, FunctionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

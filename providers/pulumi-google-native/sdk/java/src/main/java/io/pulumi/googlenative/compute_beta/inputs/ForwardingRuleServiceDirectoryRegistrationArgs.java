@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+      private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -34,7 +34,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -45,7 +45,7 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
      * 
      */
     @InputImport(name="serviceDirectoryRegion")
-    private final @Nullable Input<String> serviceDirectoryRegion;
+      private final @Nullable Input<String> serviceDirectoryRegion;
 
     public Input<String> getServiceDirectoryRegion() {
         return this.serviceDirectoryRegion == null ? Input.empty() : this.serviceDirectoryRegion;
@@ -119,7 +119,6 @@ public final class ForwardingRuleServiceDirectoryRegistrationArgs extends io.pul
             this.serviceDirectoryRegion = Input.ofNullable(serviceDirectoryRegion);
             return this;
         }
-
         public ForwardingRuleServiceDirectoryRegistrationArgs build() {
             return new ForwardingRuleServiceDirectoryRegistrationArgs(namespace, service, serviceDirectoryRegion);
         }

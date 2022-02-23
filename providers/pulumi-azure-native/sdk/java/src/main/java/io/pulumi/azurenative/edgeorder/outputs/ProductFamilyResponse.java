@@ -11,7 +11,7 @@ import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ImageInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ProductLineResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ResourceProviderDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -231,7 +231,6 @@ public final class ProductFamilyResponse {
             this.resourceProviderDetails = resourceProviderDetails;
             return this;
         }
-
         public ProductFamilyResponse build() {
             return new ProductFamilyResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, productLines, resourceProviderDetails);
         }

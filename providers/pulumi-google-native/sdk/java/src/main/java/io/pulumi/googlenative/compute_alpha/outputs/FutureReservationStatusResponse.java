@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class FutureReservationStatusResponse {
             this.procurementStatus = Objects.requireNonNull(procurementStatus);
             return this;
         }
-
         public FutureReservationStatusResponse build() {
             return new FutureReservationStatusResponse(autoCreatedReservations, fulfilledCount, lockTime, procurementStatus);
         }

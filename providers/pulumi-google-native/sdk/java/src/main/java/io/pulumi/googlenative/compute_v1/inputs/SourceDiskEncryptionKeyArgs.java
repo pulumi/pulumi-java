@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
+      private final @Nullable Input<CustomerEncryptionKeyArgs> diskEncryptionKey;
 
     public Input<CustomerEncryptionKeyArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -31,7 +31,7 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -90,7 +90,6 @@ public final class SourceDiskEncryptionKeyArgs extends io.pulumi.resources.Resou
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
-
         public SourceDiskEncryptionKeyArgs build() {
             return new SourceDiskEncryptionKeyArgs(diskEncryptionKey, sourceDisk);
         }

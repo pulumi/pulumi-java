@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -120,7 +120,6 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse {
             this.targetDatabaseName = targetDatabaseName;
             return this;
         }
-
         public MigrateSqlServerSqlDbDatabaseInputResponse build() {
             return new MigrateSqlServerSqlDbDatabaseInputResponse(makeSourceDbReadOnly, name, tableMap, targetDatabaseName);
         }

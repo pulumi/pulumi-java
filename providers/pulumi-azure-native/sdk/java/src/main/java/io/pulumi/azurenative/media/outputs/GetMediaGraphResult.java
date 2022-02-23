@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.MediaGraphAssetSinkResponse;
 import io.pulumi.azurenative.media.outputs.MediaGraphRtspSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class GetMediaGraphResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMediaGraphResult build() {
             return new GetMediaGraphResult(created, description, id, lastModified, name, sinks, sources, state, type);
         }

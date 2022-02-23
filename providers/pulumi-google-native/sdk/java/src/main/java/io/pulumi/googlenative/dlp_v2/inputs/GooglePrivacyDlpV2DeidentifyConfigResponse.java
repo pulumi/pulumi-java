@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2RecordTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TransformationErrorHandlingResponse;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="infoTypeTransformations", required=true)
-    private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
+      private final GooglePrivacyDlpV2InfoTypeTransformationsResponse infoTypeTransformations;
 
     public GooglePrivacyDlpV2InfoTypeTransformationsResponse getInfoTypeTransformations() {
         return this.infoTypeTransformations;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="recordTransformations", required=true)
-    private final GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
+      private final GooglePrivacyDlpV2RecordTransformationsResponse recordTransformations;
 
     public GooglePrivacyDlpV2RecordTransformationsResponse getRecordTransformations() {
         return this.recordTransformations;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="transformationErrorHandling", required=true)
-    private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
+      private final GooglePrivacyDlpV2TransformationErrorHandlingResponse transformationErrorHandling;
 
     public GooglePrivacyDlpV2TransformationErrorHandlingResponse getTransformationErrorHandling() {
         return this.transformationErrorHandling;
@@ -104,7 +104,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse extends io.pulumi.
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
         }
-
         public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
             return new GooglePrivacyDlpV2DeidentifyConfigResponse(infoTypeTransformations, recordTransformations, transformationErrorHandling);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class WindowsUserConfigurationResponse {
             this.loginMode = loginMode;
             return this;
         }
-
         public WindowsUserConfigurationResponse build() {
             return new WindowsUserConfigurationResponse(loginMode);
         }

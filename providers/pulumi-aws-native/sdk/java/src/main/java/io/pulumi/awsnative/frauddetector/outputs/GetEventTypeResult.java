@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.outputs.EventTypeEntityType;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeEventVariable;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeLabel;
 import io.pulumi.awsnative.frauddetector.outputs.EventTypeTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -183,7 +183,6 @@ public final class GetEventTypeResult {
             this.tags = tags;
             return this;
         }
-
         public GetEventTypeResult build() {
             return new GetEventTypeResult(arn, createdTime, description, entityTypes, eventVariables, labels, lastUpdatedTime, tags);
         }

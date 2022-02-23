@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class ConnectionApiKeyAuthParameters {
             this.apiKeyValue = Objects.requireNonNull(apiKeyValue);
             return this;
         }
-
         public ConnectionApiKeyAuthParameters build() {
             return new ConnectionApiKeyAuthParameters(apiKeyName, apiKeyValue);
         }

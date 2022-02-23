@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.MetricAlertActionResponse;
 import io.pulumi.azurenative.insights.outputs.MetricAlertMultipleResourceMultipleMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.MetricAlertSingleResourceMultipleMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.WebtestLocationAvailabilityCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -421,7 +421,6 @@ public final class GetMetricAlertResult {
             this.windowSize = Objects.requireNonNull(windowSize);
             return this;
         }
-
         public GetMetricAlertResult build() {
             return new GetMetricAlertResult(actions, autoMitigate, criteria, description, enabled, evaluationFrequency, id, isMigrated, lastUpdatedTime, location, name, scopes, severity, tags, targetResourceRegion, targetResourceType, type, windowSize);
         }

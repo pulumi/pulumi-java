@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.notebooks.inputs.RuntimeAccessConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeSoftwareConfigArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeVirtualMachineArgs;
@@ -23,7 +23,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessConfig")
-    private final @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
+        private final @Nullable Input<RuntimeAccessConfigArgs> accessConfig;
 
     public Input<RuntimeAccessConfigArgs> getAccessConfig() {
         return this.accessConfig == null ? Input.empty() : this.accessConfig;
@@ -34,7 +34,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -45,7 +45,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -69,7 +69,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="softwareConfig")
-    private final @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
+        private final @Nullable Input<RuntimeSoftwareConfigArgs> softwareConfig;
 
     public Input<RuntimeSoftwareConfigArgs> getSoftwareConfig() {
         return this.softwareConfig == null ? Input.empty() : this.softwareConfig;
@@ -81,7 +81,7 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachine")
-    private final @Nullable Input<RuntimeVirtualMachineArgs> virtualMachine;
+        private final @Nullable Input<RuntimeVirtualMachineArgs> virtualMachine;
 
     public Input<RuntimeVirtualMachineArgs> getVirtualMachine() {
         return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
@@ -200,7 +200,6 @@ public final class RuntimeArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }
-
         public RuntimeArgs build() {
             return new RuntimeArgs(accessConfig, location, name, project, softwareConfig, virtualMachine);
         }

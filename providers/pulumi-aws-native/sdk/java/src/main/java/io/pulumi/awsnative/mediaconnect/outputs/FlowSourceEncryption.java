@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceEncryptionKeyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -225,7 +225,6 @@ public final class FlowSourceEncryption {
             this.url = url;
             return this;
         }
-
         public FlowSourceEncryption build() {
             return new FlowSourceEncryption(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }

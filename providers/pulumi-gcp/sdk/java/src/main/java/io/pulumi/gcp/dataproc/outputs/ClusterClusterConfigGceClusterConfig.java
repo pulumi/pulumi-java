@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigGceClusterConfigShieldedInstanceConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -267,7 +267,6 @@ public final class ClusterClusterConfigGceClusterConfig {
             this.zone = zone;
             return this;
         }
-
         public ClusterClusterConfigGceClusterConfig build() {
             return new ClusterClusterConfigGceClusterConfig(internalIpOnly, metadata, network, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetwork, tags, zone);
         }

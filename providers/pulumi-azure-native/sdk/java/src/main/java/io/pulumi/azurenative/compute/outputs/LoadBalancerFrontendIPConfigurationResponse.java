@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerFrontendIPConfigurationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,7 +75,6 @@ public final class LoadBalancerFrontendIPConfigurationResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public LoadBalancerFrontendIPConfigurationResponse build() {
             return new LoadBalancerFrontendIPConfigurationResponse(name, properties);
         }

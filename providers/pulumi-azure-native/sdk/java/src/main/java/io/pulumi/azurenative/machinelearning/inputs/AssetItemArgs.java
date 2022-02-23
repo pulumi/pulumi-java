@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearning.inputs.ModuleAssetParameterArgs;
 import io.pulumi.azurenative.machinelearning.inputs.OutputPortArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -31,7 +31,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -42,7 +42,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputPorts")
-    private final @Nullable Input<Map<String,InputPortArgs>> inputPorts;
+        private final @Nullable Input<Map<String,InputPortArgs>> inputPorts;
 
     public Input<Map<String,InputPortArgs>> getInputPorts() {
         return this.inputPorts == null ? Input.empty() : this.inputPorts;
@@ -53,7 +53,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationInfo", required=true)
-    private final Input<BlobLocationArgs> locationInfo;
+        private final Input<BlobLocationArgs> locationInfo;
 
     public Input<BlobLocationArgs> getLocationInfo() {
         return this.locationInfo;
@@ -64,7 +64,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -75,7 +75,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -86,7 +86,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputPorts")
-    private final @Nullable Input<Map<String,OutputPortArgs>> outputPorts;
+        private final @Nullable Input<Map<String,OutputPortArgs>> outputPorts;
 
     public Input<Map<String,OutputPortArgs>> getOutputPorts() {
         return this.outputPorts == null ? Input.empty() : this.outputPorts;
@@ -97,7 +97,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
+        private final @Nullable Input<List<ModuleAssetParameterArgs>> parameters;
 
     public Input<List<ModuleAssetParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -108,7 +108,7 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,AssetType>> type;
+        private final Input<Either<String,AssetType>> type;
 
     public Input<Either<String,AssetType>> getType() {
         return this.type;
@@ -257,7 +257,6 @@ public final class AssetItemArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AssetItemArgs build() {
             return new AssetItemArgs(id, inputPorts, locationInfo, metadata, name, outputPorts, parameters, type);
         }

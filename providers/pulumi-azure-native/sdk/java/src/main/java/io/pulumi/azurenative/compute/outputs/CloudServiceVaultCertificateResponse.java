@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class CloudServiceVaultCertificateResponse {
             this.certificateUrl = certificateUrl;
             return this;
         }
-
         public CloudServiceVaultCertificateResponse build() {
             return new CloudServiceVaultCertificateResponse(certificateUrl);
         }

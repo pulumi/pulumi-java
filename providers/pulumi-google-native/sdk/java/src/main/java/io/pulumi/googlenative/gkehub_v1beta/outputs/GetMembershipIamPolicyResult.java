@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1beta.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.gkehub_v1beta.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetMembershipIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetMembershipIamPolicyResult build() {
             return new GetMembershipIamPolicyResult(auditConfigs, bindings, etag, version);
         }

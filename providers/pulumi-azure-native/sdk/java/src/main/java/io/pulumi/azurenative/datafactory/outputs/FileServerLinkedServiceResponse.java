@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -233,7 +233,6 @@ public final class FileServerLinkedServiceResponse {
             this.userId = userId;
             return this;
         }
-
         public FileServerLinkedServiceResponse build() {
             return new FileServerLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, type, userId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ConditionResponse;
 import io.pulumi.googlenative.compute_beta.outputs.LogConfigResponse;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class RuleResponse {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(action, conditions, description, ins, logConfigs, notIns, permissions);
         }

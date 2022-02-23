@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.AgentAutoUpdateStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="agentAutoUpdateStatus")
-    private final @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
+        private final @Nullable Input<Either<String,AgentAutoUpdateStatus>> agentAutoUpdateStatus;
 
     public Input<Either<String,AgentAutoUpdateStatus>> getAgentAutoUpdateStatus() {
         return this.agentAutoUpdateStatus == null ? Input.empty() : this.agentAutoUpdateStatus;
@@ -36,7 +36,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="automationAccountArmId")
-    private final @Nullable Input<String> automationAccountArmId;
+        private final @Nullable Input<String> automationAccountArmId;
 
     public Input<String> getAutomationAccountArmId() {
         return this.automationAccountArmId == null ? Input.empty() : this.automationAccountArmId;
@@ -48,7 +48,7 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -122,7 +122,6 @@ public final class A2AContainerMappingInputArgs extends io.pulumi.resources.Reso
             this.instanceType = Input.ofNullable(instanceType);
             return this;
         }
-
         public A2AContainerMappingInputArgs build() {
             return new A2AContainerMappingInputArgs(agentAutoUpdateStatus, automationAccountArmId, instanceType);
         }

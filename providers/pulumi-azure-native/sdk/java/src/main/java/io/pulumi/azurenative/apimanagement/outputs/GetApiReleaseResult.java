@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -181,7 +181,6 @@ public final class GetApiReleaseResult {
             this.updatedDateTime = Objects.requireNonNull(updatedDateTime);
             return this;
         }
-
         public GetApiReleaseResult build() {
             return new GetApiReleaseResult(apiId, createdDateTime, id, name, notes, type, updatedDateTime);
         }

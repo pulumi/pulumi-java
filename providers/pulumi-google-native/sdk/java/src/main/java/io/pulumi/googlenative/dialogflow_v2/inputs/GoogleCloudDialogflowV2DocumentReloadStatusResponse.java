@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleRpcStatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
      * 
      */
     @InputImport(name="status", required=true)
-    private final GoogleRpcStatusResponse status;
+      private final GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
      * 
      */
     @InputImport(name="time", required=true)
-    private final String time;
+      private final String time;
 
     public String getTime() {
         return this.time;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2DocumentReloadStatusResponse extends i
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public GoogleCloudDialogflowV2DocumentReloadStatusResponse build() {
             return new GoogleCloudDialogflowV2DocumentReloadStatusResponse(status, time);
         }

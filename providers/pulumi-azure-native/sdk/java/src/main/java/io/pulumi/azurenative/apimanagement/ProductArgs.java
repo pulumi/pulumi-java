@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.ProductState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="approvalRequired")
-    private final @Nullable Input<Boolean> approvalRequired;
+        private final @Nullable Input<Boolean> approvalRequired;
 
     public Input<Boolean> getApprovalRequired() {
         return this.approvalRequired == null ? Input.empty() : this.approvalRequired;
@@ -33,7 +33,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productId")
-    private final @Nullable Input<String> productId;
+        private final @Nullable Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId == null ? Input.empty() : this.productId;
@@ -66,7 +66,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -88,7 +88,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<ProductState> state;
+        private final @Nullable Input<ProductState> state;
 
     public Input<ProductState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -99,7 +99,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionRequired")
-    private final @Nullable Input<Boolean> subscriptionRequired;
+        private final @Nullable Input<Boolean> subscriptionRequired;
 
     public Input<Boolean> getSubscriptionRequired() {
         return this.subscriptionRequired == null ? Input.empty() : this.subscriptionRequired;
@@ -110,7 +110,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionsLimit")
-    private final @Nullable Input<Integer> subscriptionsLimit;
+        private final @Nullable Input<Integer> subscriptionsLimit;
 
     public Input<Integer> getSubscriptionsLimit() {
         return this.subscriptionsLimit == null ? Input.empty() : this.subscriptionsLimit;
@@ -121,7 +121,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="terms")
-    private final @Nullable Input<String> terms;
+        private final @Nullable Input<String> terms;
 
     public Input<String> getTerms() {
         return this.terms == null ? Input.empty() : this.terms;
@@ -300,7 +300,6 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.terms = Input.ofNullable(terms);
             return this;
         }
-
         public ProductArgs build() {
             return new ProductArgs(approvalRequired, description, displayName, productId, resourceGroupName, serviceName, state, subscriptionRequired, subscriptionsLimit, terms);
         }

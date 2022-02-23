@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -96,7 +96,6 @@ public final class GroupMembershipMemberKey {
             this.namespace = namespace;
             return this;
         }
-
         public GroupMembershipMemberKey build() {
             return new GroupMembershipMemberKey(id, namespace);
         }

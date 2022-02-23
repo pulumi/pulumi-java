@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @InputImport(name="containerArguments")
-    private final @Nullable Input<List<String>> containerArguments;
+        private final @Nullable Input<List<String>> containerArguments;
 
     public Input<List<String>> getContainerArguments() {
         return this.containerArguments == null ? Input.empty() : this.containerArguments;
@@ -36,7 +36,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @InputImport(name="containerEntrypoint")
-    private final @Nullable Input<List<String>> containerEntrypoint;
+        private final @Nullable Input<List<String>> containerEntrypoint;
 
     public Input<List<String>> getContainerEntrypoint() {
         return this.containerEntrypoint == null ? Input.empty() : this.containerEntrypoint;
@@ -47,7 +47,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<Object> environment;
+        private final @Nullable Input<Object> environment;
 
     public Input<Object> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -58,7 +58,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final Input<String> imageUri;
+        private final Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri;
@@ -69,7 +69,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @InputImport(name="postAnalyticsProcessorSourceUri")
-    private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
+        private final @Nullable Input<String> postAnalyticsProcessorSourceUri;
 
     public Input<String> getPostAnalyticsProcessorSourceUri() {
         return this.postAnalyticsProcessorSourceUri == null ? Input.empty() : this.postAnalyticsProcessorSourceUri;
@@ -80,7 +80,7 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
      * 
      */
     @InputImport(name="recordPreprocessorSourceUri")
-    private final @Nullable Input<String> recordPreprocessorSourceUri;
+        private final @Nullable Input<String> recordPreprocessorSourceUri;
 
     public Input<String> getRecordPreprocessorSourceUri() {
         return this.recordPreprocessorSourceUri == null ? Input.empty() : this.recordPreprocessorSourceUri;
@@ -199,7 +199,6 @@ public final class DataQualityJobDefinitionDataQualityAppSpecificationArgs exten
             this.recordPreprocessorSourceUri = Input.ofNullable(recordPreprocessorSourceUri);
             return this;
         }
-
         public DataQualityJobDefinitionDataQualityAppSpecificationArgs build() {
             return new DataQualityJobDefinitionDataQualityAppSpecificationArgs(containerArguments, containerEntrypoint, environment, imageUri, postAnalyticsProcessorSourceUri, recordPreprocessorSourceUri);
         }

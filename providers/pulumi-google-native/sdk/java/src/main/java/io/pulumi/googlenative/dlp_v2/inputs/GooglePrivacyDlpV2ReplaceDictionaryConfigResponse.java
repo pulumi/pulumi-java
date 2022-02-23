@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2WordListResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
      * 
      */
     @InputImport(name="wordList", required=true)
-    private final GooglePrivacyDlpV2WordListResponse wordList;
+      private final GooglePrivacyDlpV2WordListResponse wordList;
 
     public GooglePrivacyDlpV2WordListResponse getWordList() {
         return this.wordList;
@@ -59,7 +59,6 @@ public final class GooglePrivacyDlpV2ReplaceDictionaryConfigResponse extends io.
             this.wordList = Objects.requireNonNull(wordList);
             return this;
         }
-
         public GooglePrivacyDlpV2ReplaceDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2ReplaceDictionaryConfigResponse(wordList);
         }

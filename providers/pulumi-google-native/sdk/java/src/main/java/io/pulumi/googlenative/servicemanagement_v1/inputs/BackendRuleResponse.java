@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="address", required=true)
-    private final String address;
+      private final String address;
 
     public String getAddress() {
         return this.address;
@@ -34,7 +34,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deadline", required=true)
-    private final Double deadline;
+      private final Double deadline;
 
     public Double getDeadline() {
         return this.deadline;
@@ -45,7 +45,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableAuth", required=true)
-    private final Boolean disableAuth;
+      private final Boolean disableAuth;
 
     public Boolean getDisableAuth() {
         return this.disableAuth;
@@ -56,7 +56,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jwtAudience", required=true)
-    private final String jwtAudience;
+      private final String jwtAudience;
 
     public String getJwtAudience() {
         return this.jwtAudience;
@@ -67,14 +67,14 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="operationDeadline", required=true)
-    private final Double operationDeadline;
+      private final Double operationDeadline;
 
     public Double getOperationDeadline() {
         return this.operationDeadline;
     }
 
     @InputImport(name="pathTranslation", required=true)
-    private final String pathTranslation;
+      private final String pathTranslation;
 
     public String getPathTranslation() {
         return this.pathTranslation;
@@ -85,7 +85,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final String protocol;
+      private final String protocol;
 
     public String getProtocol() {
         return this.protocol;
@@ -96,7 +96,7 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -205,7 +205,6 @@ public final class BackendRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public BackendRuleResponse build() {
             return new BackendRuleResponse(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
         }

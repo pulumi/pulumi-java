@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionStoredInfoTypeArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeState;
@@ -155,13 +155,6 @@ public class PreventionStoredInfoType extends io.pulumi.resources.CustomResource
         return this.regex;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PreventionStoredInfoType(String name) {
-        super("gcp:dataloss/preventionStoredInfoType:PreventionStoredInfoType", name, PreventionStoredInfoTypeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

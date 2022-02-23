@@ -20,7 +20,7 @@ import io.pulumi.azurenative.media.inputs.PngFormatResponse;
 import io.pulumi.azurenative.media.inputs.PngImageResponse;
 import io.pulumi.azurenative.media.inputs.TransportStreamFormatResponse;
 import io.pulumi.azurenative.media.inputs.VideoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -42,7 +42,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="codecs", required=true)
-    private final List<Object> codecs;
+        private final List<Object> codecs;
 
     public List<Object> getCodecs() {
         return this.codecs;
@@ -53,7 +53,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable FiltersResponse filters;
+        private final @Nullable FiltersResponse filters;
 
     public Optional<FiltersResponse> getFilters() {
         return this.filters == null ? Optional.empty() : Optional.ofNullable(this.filters);
@@ -64,7 +64,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="formats", required=true)
-    private final List<Object> formats;
+        private final List<Object> formats;
 
     public List<Object> getFormats() {
         return this.formats;
@@ -76,7 +76,7 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -145,7 +145,6 @@ public final class StandardEncoderPresetResponse extends io.pulumi.resources.Inv
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public StandardEncoderPresetResponse build() {
             return new StandardEncoderPresetResponse(codecs, filters, formats, odataType);
         }

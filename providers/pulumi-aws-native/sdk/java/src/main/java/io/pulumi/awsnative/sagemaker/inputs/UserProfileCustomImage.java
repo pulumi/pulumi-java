@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="appImageConfigName", required=true)
-    private final String appImageConfigName;
+        private final String appImageConfigName;
 
     public String getAppImageConfigName() {
         return this.appImageConfigName;
@@ -35,7 +35,7 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final String imageName;
+        private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -46,7 +46,7 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageVersionNumber")
-    private final @Nullable Integer imageVersionNumber;
+        private final @Nullable Integer imageVersionNumber;
 
     public Optional<Integer> getImageVersionNumber() {
         return this.imageVersionNumber == null ? Optional.empty() : Optional.ofNullable(this.imageVersionNumber);
@@ -105,7 +105,6 @@ public final class UserProfileCustomImage extends io.pulumi.resources.InvokeArgs
             this.imageVersionNumber = imageVersionNumber;
             return this;
         }
-
         public UserProfileCustomImage build() {
             return new UserProfileCustomImage(appImageConfigName, imageName, imageVersionNumber);
         }

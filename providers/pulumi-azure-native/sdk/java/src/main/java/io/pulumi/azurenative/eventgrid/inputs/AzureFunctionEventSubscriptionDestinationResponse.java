@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
      * 
      */
     @InputImport(name="endpointType", required=true)
-    private final String endpointType;
+        private final String endpointType;
 
     public String getEndpointType() {
         return this.endpointType;
@@ -36,7 +36,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
      * 
      */
     @InputImport(name="maxEventsPerBatch")
-    private final @Nullable Integer maxEventsPerBatch;
+        private final @Nullable Integer maxEventsPerBatch;
 
     public Optional<Integer> getMaxEventsPerBatch() {
         return this.maxEventsPerBatch == null ? Optional.empty() : Optional.ofNullable(this.maxEventsPerBatch);
@@ -47,7 +47,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
      * 
      */
     @InputImport(name="preferredBatchSizeInKilobytes")
-    private final @Nullable Integer preferredBatchSizeInKilobytes;
+        private final @Nullable Integer preferredBatchSizeInKilobytes;
 
     public Optional<Integer> getPreferredBatchSizeInKilobytes() {
         return this.preferredBatchSizeInKilobytes == null ? Optional.empty() : Optional.ofNullable(this.preferredBatchSizeInKilobytes);
@@ -58,7 +58,7 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -127,7 +127,6 @@ public final class AzureFunctionEventSubscriptionDestinationResponse extends io.
             this.resourceId = resourceId;
             return this;
         }
-
         public AzureFunctionEventSubscriptionDestinationResponse build() {
             return new AzureFunctionEventSubscriptionDestinationResponse(endpointType, maxEventsPerBatch, preferredBatchSizeInKilobytes, resourceId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.AzureResourceErrorInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="error")
-    private final @Nullable AzureResourceErrorInfoResponse error;
+        private final @Nullable AzureResourceErrorInfoResponse error;
 
     public Optional<AzureResourceErrorInfoResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -37,7 +37,7 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subexpressions")
-    private final @Nullable List<ExpressionResponse> subexpressions;
+        private final @Nullable List<ExpressionResponse> subexpressions;
 
     public List<ExpressionResponse> getSubexpressions() {
         return this.subexpressions == null ? List.of() : this.subexpressions;
@@ -48,14 +48,14 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="text")
-    private final @Nullable String text;
+        private final @Nullable String text;
 
     public Optional<String> getText() {
         return this.text == null ? Optional.empty() : Optional.ofNullable(this.text);
     }
 
     @InputImport(name="value")
-    private final @Nullable Object value;
+        private final @Nullable Object value;
 
     public Optional<Object> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -124,7 +124,6 @@ public final class ExpressionResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public ExpressionResponse build() {
             return new ExpressionResponse(error, subexpressions, text, value);
         }

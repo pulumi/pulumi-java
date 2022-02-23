@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.enums.GoogleCloudMlV1__TrainingInputScaleTier;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__EncryptionConfigArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__HyperparameterSpecArgs;
@@ -30,7 +30,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -41,7 +41,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableWebAccess")
-    private final @Nullable Input<Boolean> enableWebAccess;
+      private final @Nullable Input<Boolean> enableWebAccess;
 
     public Input<Boolean> getEnableWebAccess() {
         return this.enableWebAccess == null ? Input.empty() : this.enableWebAccess;
@@ -52,7 +52,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<GoogleCloudMlV1__EncryptionConfigArgs> encryptionConfig;
 
     public Input<GoogleCloudMlV1__EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -63,7 +63,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="evaluatorConfig")
-    private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig;
+      private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> evaluatorConfig;
 
     public Input<GoogleCloudMlV1__ReplicaConfigArgs> getEvaluatorConfig() {
         return this.evaluatorConfig == null ? Input.empty() : this.evaluatorConfig;
@@ -74,7 +74,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="evaluatorCount")
-    private final @Nullable Input<String> evaluatorCount;
+      private final @Nullable Input<String> evaluatorCount;
 
     public Input<String> getEvaluatorCount() {
         return this.evaluatorCount == null ? Input.empty() : this.evaluatorCount;
@@ -85,7 +85,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="evaluatorType")
-    private final @Nullable Input<String> evaluatorType;
+      private final @Nullable Input<String> evaluatorType;
 
     public Input<String> getEvaluatorType() {
         return this.evaluatorType == null ? Input.empty() : this.evaluatorType;
@@ -96,7 +96,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hyperparameters")
-    private final @Nullable Input<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters;
+      private final @Nullable Input<GoogleCloudMlV1__HyperparameterSpecArgs> hyperparameters;
 
     public Input<GoogleCloudMlV1__HyperparameterSpecArgs> getHyperparameters() {
         return this.hyperparameters == null ? Input.empty() : this.hyperparameters;
@@ -107,7 +107,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="jobDir")
-    private final @Nullable Input<String> jobDir;
+      private final @Nullable Input<String> jobDir;
 
     public Input<String> getJobDir() {
         return this.jobDir == null ? Input.empty() : this.jobDir;
@@ -118,7 +118,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="masterConfig")
-    private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig;
+      private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> masterConfig;
 
     public Input<GoogleCloudMlV1__ReplicaConfigArgs> getMasterConfig() {
         return this.masterConfig == null ? Input.empty() : this.masterConfig;
@@ -129,7 +129,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="masterType")
-    private final @Nullable Input<String> masterType;
+      private final @Nullable Input<String> masterType;
 
     public Input<String> getMasterType() {
         return this.masterType == null ? Input.empty() : this.masterType;
@@ -140,7 +140,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -151,7 +151,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="packageUris", required=true)
-    private final Input<List<String>> packageUris;
+      private final Input<List<String>> packageUris;
 
     public Input<List<String>> getPackageUris() {
         return this.packageUris;
@@ -162,7 +162,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameterServerConfig")
-    private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig;
+      private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> parameterServerConfig;
 
     public Input<GoogleCloudMlV1__ReplicaConfigArgs> getParameterServerConfig() {
         return this.parameterServerConfig == null ? Input.empty() : this.parameterServerConfig;
@@ -173,7 +173,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameterServerCount")
-    private final @Nullable Input<String> parameterServerCount;
+      private final @Nullable Input<String> parameterServerCount;
 
     public Input<String> getParameterServerCount() {
         return this.parameterServerCount == null ? Input.empty() : this.parameterServerCount;
@@ -184,7 +184,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameterServerType")
-    private final @Nullable Input<String> parameterServerType;
+      private final @Nullable Input<String> parameterServerType;
 
     public Input<String> getParameterServerType() {
         return this.parameterServerType == null ? Input.empty() : this.parameterServerType;
@@ -195,7 +195,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pythonModule", required=true)
-    private final Input<String> pythonModule;
+      private final Input<String> pythonModule;
 
     public Input<String> getPythonModule() {
         return this.pythonModule;
@@ -206,7 +206,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="pythonVersion")
-    private final @Nullable Input<String> pythonVersion;
+      private final @Nullable Input<String> pythonVersion;
 
     public Input<String> getPythonVersion() {
         return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
@@ -217,7 +217,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -228,7 +228,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Input<String> runtimeVersion;
+      private final @Nullable Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion == null ? Input.empty() : this.runtimeVersion;
@@ -239,7 +239,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleTier", required=true)
-    private final Input<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier;
+      private final Input<GoogleCloudMlV1__TrainingInputScaleTier> scaleTier;
 
     public Input<GoogleCloudMlV1__TrainingInputScaleTier> getScaleTier() {
         return this.scaleTier;
@@ -250,7 +250,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<GoogleCloudMlV1__SchedulingArgs> scheduling;
+      private final @Nullable Input<GoogleCloudMlV1__SchedulingArgs> scheduling;
 
     public Input<GoogleCloudMlV1__SchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -261,7 +261,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -272,7 +272,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="useChiefInTfConfig")
-    private final @Nullable Input<Boolean> useChiefInTfConfig;
+      private final @Nullable Input<Boolean> useChiefInTfConfig;
 
     public Input<Boolean> getUseChiefInTfConfig() {
         return this.useChiefInTfConfig == null ? Input.empty() : this.useChiefInTfConfig;
@@ -283,7 +283,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig;
+      private final @Nullable Input<GoogleCloudMlV1__ReplicaConfigArgs> workerConfig;
 
     public Input<GoogleCloudMlV1__ReplicaConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -294,7 +294,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workerCount")
-    private final @Nullable Input<String> workerCount;
+      private final @Nullable Input<String> workerCount;
 
     public Input<String> getWorkerCount() {
         return this.workerCount == null ? Input.empty() : this.workerCount;
@@ -305,7 +305,7 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="workerType")
-    private final @Nullable Input<String> workerType;
+      private final @Nullable Input<String> workerType;
 
     public Input<String> getWorkerType() {
         return this.workerType == null ? Input.empty() : this.workerType;
@@ -724,7 +724,6 @@ public final class GoogleCloudMlV1__TrainingInputArgs extends io.pulumi.resource
             this.workerType = Input.ofNullable(workerType);
             return this;
         }
-
         public GoogleCloudMlV1__TrainingInputArgs build() {
             return new GoogleCloudMlV1__TrainingInputArgs(args, enableWebAccess, encryptionConfig, evaluatorConfig, evaluatorCount, evaluatorType, hyperparameters, jobDir, masterConfig, masterType, network, packageUris, parameterServerConfig, parameterServerCount, parameterServerType, pythonModule, pythonVersion, region, runtimeVersion, scaleTier, scheduling, serviceAccount, useChiefInTfConfig, workerConfig, workerCount, workerType);
         }

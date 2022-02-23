@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketAccelerateConfigurationAccelerationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -52,7 +52,6 @@ public final class BucketAccelerateConfiguration {
             this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
             return this;
         }
-
         public BucketAccelerateConfiguration build() {
             return new BucketAccelerateConfiguration(accelerationStatus);
         }

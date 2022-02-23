@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="documentationVersion", required=true)
-    private final Input<String> documentationVersion;
+        private final Input<String> documentationVersion;
 
     public Input<String> getDocumentationVersion() {
         return this.documentationVersion;
@@ -41,7 +41,7 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final Input<String> restApiId;
+        private final Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId;
@@ -115,7 +115,6 @@ public final class DocumentationVersionArgs extends io.pulumi.resources.Resource
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
-
         public DocumentationVersionArgs build() {
             return new DocumentationVersionArgs(description, documentationVersion, restApiId);
         }

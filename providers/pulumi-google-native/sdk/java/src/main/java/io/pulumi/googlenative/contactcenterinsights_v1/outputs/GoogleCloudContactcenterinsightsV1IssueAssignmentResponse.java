@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueAssignmentResponse {
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueAssignmentResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueAssignmentResponse(displayName, issue, score);
         }

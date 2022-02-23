@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ScriptStackFrameResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class ScriptStatisticsResponse {
             this.stackFrames = Objects.requireNonNull(stackFrames);
             return this;
         }
-
         public ScriptStatisticsResponse build() {
             return new ScriptStatisticsResponse(evaluationKind, stackFrames);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.m365securityandcompliance.outputs;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -184,7 +184,6 @@ public final class GetPrivateEndpointConnectionsCompResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionsCompResult build() {
             return new GetPrivateEndpointConnectionsCompResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, systemData, type);
         }

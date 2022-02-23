@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.ConditionalOperator;
 import io.pulumi.azurenative.insights.enums.MetricTriggerType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricColumn")
-    private final @Nullable Input<String> metricColumn;
+        private final @Nullable Input<String> metricColumn;
 
     public Input<String> getMetricColumn() {
         return this.metricColumn == null ? Input.empty() : this.metricColumn;
@@ -38,7 +38,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricTriggerType")
-    private final @Nullable Input<Either<String,MetricTriggerType>> metricTriggerType;
+        private final @Nullable Input<Either<String,MetricTriggerType>> metricTriggerType;
 
     public Input<Either<String,MetricTriggerType>> getMetricTriggerType() {
         return this.metricTriggerType == null ? Input.empty() : this.metricTriggerType;
@@ -49,7 +49,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="threshold")
-    private final @Nullable Input<Double> threshold;
+        private final @Nullable Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold == null ? Input.empty() : this.threshold;
@@ -60,7 +60,7 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="thresholdOperator")
-    private final @Nullable Input<Either<String,ConditionalOperator>> thresholdOperator;
+        private final @Nullable Input<Either<String,ConditionalOperator>> thresholdOperator;
 
     public Input<Either<String,ConditionalOperator>> getThresholdOperator() {
         return this.thresholdOperator == null ? Input.empty() : this.thresholdOperator;
@@ -149,7 +149,6 @@ public final class LogMetricTriggerArgs extends io.pulumi.resources.ResourceArgs
             this.thresholdOperator = Input.ofNullable(thresholdOperator);
             return this;
         }
-
         public LogMetricTriggerArgs build() {
             return new LogMetricTriggerArgs(metricColumn, metricTriggerType, threshold, thresholdOperator);
         }

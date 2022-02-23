@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.PortResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -141,7 +141,6 @@ public final class IpAddressResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IpAddressResponse build() {
             return new IpAddressResponse(dnsNameLabel, fqdn, ip, ports, type);
         }

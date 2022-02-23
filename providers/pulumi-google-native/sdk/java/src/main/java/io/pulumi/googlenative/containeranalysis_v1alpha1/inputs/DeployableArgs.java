@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<List<String>> resourceUri;
+      private final @Nullable Input<List<String>> resourceUri;
 
     public Input<List<String>> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -67,7 +67,6 @@ public final class DeployableArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public DeployableArgs build() {
             return new DeployableArgs(resourceUri);
         }

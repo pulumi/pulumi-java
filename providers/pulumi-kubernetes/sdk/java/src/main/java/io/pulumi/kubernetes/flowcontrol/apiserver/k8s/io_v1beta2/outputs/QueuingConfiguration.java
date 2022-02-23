@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class QueuingConfiguration {
             this.queues = queues;
             return this;
         }
-
         public QueuingConfiguration build() {
             return new QueuingConfiguration(handSize, queueLengthLimit, queues);
         }

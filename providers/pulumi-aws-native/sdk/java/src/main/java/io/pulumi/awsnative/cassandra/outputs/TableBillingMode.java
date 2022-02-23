@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cassandra.outputs;
 
 import io.pulumi.awsnative.cassandra.enums.TableMode;
 import io.pulumi.awsnative.cassandra.outputs.TableProvisionedThroughput;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class TableBillingMode {
             this.provisionedThroughput = provisionedThroughput;
             return this;
         }
-
         public TableBillingMode build() {
             return new TableBillingMode(mode, provisionedThroughput);
         }

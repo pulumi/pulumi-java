@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.UserProfileSharingSettingsNotebookOutputOption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class UserProfileSharingSettings {
             this.s3OutputPath = s3OutputPath;
             return this;
         }
-
         public UserProfileSharingSettings build() {
             return new UserProfileSharingSettings(notebookOutputOption, s3KmsKeyId, s3OutputPath);
         }

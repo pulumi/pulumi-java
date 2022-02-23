@@ -6,7 +6,7 @@ package io.pulumi.awsnative.globalaccelerator.outputs;
 import io.pulumi.awsnative.globalaccelerator.enums.EndpointGroupHealthCheckProtocol;
 import io.pulumi.awsnative.globalaccelerator.outputs.EndpointGroupEndpointConfiguration;
 import io.pulumi.awsnative.globalaccelerator.outputs.EndpointGroupPortOverride;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -213,7 +213,6 @@ public final class GetEndpointGroupResult {
             this.trafficDialPercentage = trafficDialPercentage;
             return this;
         }
-
         public GetEndpointGroupResult build() {
             return new GetEndpointGroupResult(endpointConfigurations, endpointGroupArn, healthCheckIntervalSeconds, healthCheckPath, healthCheckPort, healthCheckProtocol, portOverrides, thresholdCount, trafficDialPercentage);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2InfoTypeLimitResponse {
             this.maxFindings = Objects.requireNonNull(maxFindings);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeLimitResponse build() {
             return new GooglePrivacyDlpV2InfoTypeLimitResponse(infoType, maxFindings);
         }

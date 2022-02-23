@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.DeploymentPropertiesResponse;
 import io.pulumi.azurenative.cognitiveservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -160,7 +160,6 @@ public final class GetDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeploymentResult build() {
             return new GetDeploymentResult(etag, id, name, properties, systemData, type);
         }

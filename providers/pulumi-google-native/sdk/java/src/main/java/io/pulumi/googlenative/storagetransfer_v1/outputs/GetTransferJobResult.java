@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.NotificationConfigResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.ScheduleResponse;
@@ -288,7 +288,6 @@ public final class GetTransferJobResult {
             this.transferSpec = Objects.requireNonNull(transferSpec);
             return this;
         }
-
         public GetTransferJobResult build() {
             return new GetTransferJobResult(creationTime, deletionTime, description, lastModificationTime, latestOperationName, loggingConfig, name, notificationConfig, project, schedule, status, transferSpec);
         }

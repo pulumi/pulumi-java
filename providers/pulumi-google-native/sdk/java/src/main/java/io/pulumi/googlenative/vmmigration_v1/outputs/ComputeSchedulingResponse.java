@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1.outputs.SchedulingNodeAffinityResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class ComputeSchedulingResponse {
             this.restartType = Objects.requireNonNull(restartType);
             return this;
         }
-
         public ComputeSchedulingResponse build() {
             return new ComputeSchedulingResponse(minNodeCpus, nodeAffinities, onHostMaintenance, restartType);
         }

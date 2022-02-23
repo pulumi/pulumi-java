@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.connect.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class HoursOfOperationTimeSlice {
             this.minutes = Objects.requireNonNull(minutes);
             return this;
         }
-
         public HoursOfOperationTimeSlice build() {
             return new HoursOfOperationTimeSlice(hours, minutes);
         }

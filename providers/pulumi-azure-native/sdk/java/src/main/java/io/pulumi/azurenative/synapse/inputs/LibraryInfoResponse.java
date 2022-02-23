@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable String containerName;
+        private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
@@ -34,7 +34,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="creatorId", required=true)
-    private final String creatorId;
+        private final String creatorId;
 
     public String getCreatorId() {
         return this.creatorId;
@@ -45,7 +45,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -67,7 +67,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningStatus", required=true)
-    private final String provisioningStatus;
+        private final String provisioningStatus;
 
     public String getProvisioningStatus() {
         return this.provisioningStatus;
@@ -78,7 +78,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -89,7 +89,7 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uploadedTimestamp", required=true)
-    private final String uploadedTimestamp;
+        private final String uploadedTimestamp;
 
     public String getUploadedTimestamp() {
         return this.uploadedTimestamp;
@@ -188,7 +188,6 @@ public final class LibraryInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uploadedTimestamp = Objects.requireNonNull(uploadedTimestamp);
             return this;
         }
-
         public LibraryInfoResponse build() {
             return new LibraryInfoResponse(containerName, creatorId, name, path, provisioningStatus, type, uploadedTimestamp);
         }

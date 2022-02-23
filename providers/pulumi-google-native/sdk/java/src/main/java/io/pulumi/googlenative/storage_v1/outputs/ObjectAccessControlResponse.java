@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlProjectTeamResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -307,7 +307,6 @@ public final class ObjectAccessControlResponse {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public ObjectAccessControlResponse build() {
             return new ObjectAccessControlResponse(bucket, domain, email, entity, entityId, etag, generation, kind, object, projectTeam, role, selfLink);
         }

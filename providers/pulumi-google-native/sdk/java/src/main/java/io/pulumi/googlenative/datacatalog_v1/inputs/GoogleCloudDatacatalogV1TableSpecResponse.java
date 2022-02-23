@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="groupedEntry", required=true)
-    private final String groupedEntry;
+      private final String groupedEntry;
 
     public String getGroupedEntry() {
         return this.groupedEntry;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatacatalogV1TableSpecResponse extends io.pulumi.r
             this.groupedEntry = Objects.requireNonNull(groupedEntry);
             return this;
         }
-
         public GoogleCloudDatacatalogV1TableSpecResponse build() {
             return new GoogleCloudDatacatalogV1TableSpecResponse(groupedEntry);
         }

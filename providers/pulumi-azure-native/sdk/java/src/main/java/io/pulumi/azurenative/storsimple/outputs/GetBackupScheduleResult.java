@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.ScheduleRecurrenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetBackupScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBackupScheduleResult build() {
             return new GetBackupScheduleResult(backupType, id, kind, lastSuccessfulRun, name, retentionCount, scheduleRecurrence, scheduleStatus, startTime, type);
         }

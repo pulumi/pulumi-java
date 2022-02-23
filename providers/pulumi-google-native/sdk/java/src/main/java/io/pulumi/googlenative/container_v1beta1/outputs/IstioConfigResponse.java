@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class IstioConfigResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public IstioConfigResponse build() {
             return new IstioConfigResponse(auth, disabled);
         }

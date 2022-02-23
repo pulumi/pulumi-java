@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicyPerTryTimeout;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy {
             this.retryConditions = retryConditions;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy build() {
             return new RegionUrlMapPathMatcherRouteRuleRouteActionRetryPolicy(numRetries, perTryTimeout, retryConditions);
         }

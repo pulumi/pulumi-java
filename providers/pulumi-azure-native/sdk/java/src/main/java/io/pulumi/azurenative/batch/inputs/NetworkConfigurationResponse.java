@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.PoolEndpointConfigurationResponse;
 import io.pulumi.azurenative.batch.inputs.PublicIPAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endpointConfiguration")
-    private final @Nullable PoolEndpointConfigurationResponse endpointConfiguration;
+        private final @Nullable PoolEndpointConfigurationResponse endpointConfiguration;
 
     public Optional<PoolEndpointConfigurationResponse> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Optional.empty() : Optional.ofNullable(this.endpointConfiguration);
@@ -36,7 +36,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-    private final @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration;
+        private final @Nullable PublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
     public Optional<PublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
@@ -47,7 +47,7 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+        private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -106,7 +106,6 @@ public final class NetworkConfigurationResponse extends io.pulumi.resources.Invo
             this.subnetId = subnetId;
             return this;
         }
-
         public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(endpointConfiguration, publicIPAddressConfiguration, subnetId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.LinkResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final List<String> attributes;
+        private final List<String> attributes;
 
     public List<String> getAttributes() {
         return this.attributes;
@@ -34,7 +34,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="descriptionType", required=true)
-    private final String descriptionType;
+        private final String descriptionType;
 
     public String getDescriptionType() {
         return this.descriptionType;
@@ -45,7 +45,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keywords", required=true)
-    private final List<String> keywords;
+        private final List<String> keywords;
 
     public List<String> getKeywords() {
         return this.keywords;
@@ -56,7 +56,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="links", required=true)
-    private final List<LinkResponse> links;
+        private final List<LinkResponse> links;
 
     public List<LinkResponse> getLinks() {
         return this.links;
@@ -67,7 +67,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="longDescription", required=true)
-    private final String longDescription;
+        private final String longDescription;
 
     public String getLongDescription() {
         return this.longDescription;
@@ -78,7 +78,7 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shortDescription", required=true)
-    private final String shortDescription;
+        private final String shortDescription;
 
     public String getShortDescription() {
         return this.shortDescription;
@@ -167,7 +167,6 @@ public final class DescriptionResponse extends io.pulumi.resources.InvokeArgs {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public DescriptionResponse build() {
             return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
         }

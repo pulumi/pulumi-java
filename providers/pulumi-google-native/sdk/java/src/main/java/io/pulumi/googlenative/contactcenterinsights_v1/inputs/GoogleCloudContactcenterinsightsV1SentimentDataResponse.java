@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
      * 
      */
     @InputImport(name="magnitude", required=true)
-    private final Double magnitude;
+      private final Double magnitude;
 
     public Double getMagnitude() {
         return this.magnitude;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
      * 
      */
     @InputImport(name="score", required=true)
-    private final Double score;
+      private final Double score;
 
     public Double getScore() {
         return this.score;
@@ -81,7 +81,6 @@ public final class GoogleCloudContactcenterinsightsV1SentimentDataResponse exten
             this.score = Objects.requireNonNull(score);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1SentimentDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SentimentDataResponse(magnitude, score);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codeartifact.outputs;
 
 import io.pulumi.awsnative.codeartifact.outputs.RepositoryTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -184,7 +184,6 @@ public final class GetRepositoryResult {
             this.upstreams = upstreams;
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(arn, description, externalConnections, name, permissionsPolicyDocument, tags, upstreams);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,42 +15,42 @@ public final class ListenerRuleRedirectConfigArgs extends io.pulumi.resources.Re
     public static final ListenerRuleRedirectConfigArgs Empty = new ListenerRuleRedirectConfigArgs();
 
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
     }
 
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
     }
 
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+        private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
     }
 
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
     }
 
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+        private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
     }
 
     @InputImport(name="statusCode", required=true)
-    private final Input<String> statusCode;
+        private final Input<String> statusCode;
 
     public Input<String> getStatusCode() {
         return this.statusCode;
@@ -169,7 +169,6 @@ public final class ListenerRuleRedirectConfigArgs extends io.pulumi.resources.Re
             this.statusCode = Input.of(Objects.requireNonNull(statusCode));
             return this;
         }
-
         public ListenerRuleRedirectConfigArgs build() {
             return new ListenerRuleRedirectConfigArgs(host, path, port, protocol, query, statusCode);
         }

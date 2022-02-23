@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="propertyColumns")
-    private final @Nullable List<String> propertyColumns;
+        private final @Nullable List<String> propertyColumns;
 
     public List<String> getPropertyColumns() {
         return this.propertyColumns == null ? List.of() : this.propertyColumns;
@@ -35,7 +35,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="serviceBusNamespace")
-    private final @Nullable String serviceBusNamespace;
+        private final @Nullable String serviceBusNamespace;
 
     public Optional<String> getServiceBusNamespace() {
         return this.serviceBusNamespace == null ? Optional.empty() : Optional.ofNullable(this.serviceBusNamespace);
@@ -46,7 +46,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-    private final @Nullable String sharedAccessPolicyKey;
+        private final @Nullable String sharedAccessPolicyKey;
 
     public Optional<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyKey);
@@ -57,7 +57,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-    private final @Nullable String sharedAccessPolicyName;
+        private final @Nullable String sharedAccessPolicyName;
 
     public Optional<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Optional.empty() : Optional.ofNullable(this.sharedAccessPolicyName);
@@ -68,7 +68,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="topicName")
-    private final @Nullable String topicName;
+        private final @Nullable String topicName;
 
     public Optional<String> getTopicName() {
         return this.topicName == null ? Optional.empty() : Optional.ofNullable(this.topicName);
@@ -80,7 +80,7 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -169,7 +169,6 @@ public final class ServiceBusTopicOutputDataSourceResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceBusTopicOutputDataSourceResponse build() {
             return new ServiceBusTopicOutputDataSourceResponse(propertyColumns, serviceBusNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, topicName, type);
         }

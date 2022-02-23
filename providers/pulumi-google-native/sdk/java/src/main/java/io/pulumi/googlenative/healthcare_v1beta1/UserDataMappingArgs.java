@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.AttributeArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
     public static final UserDataMappingArgs Empty = new UserDataMappingArgs();
 
     @InputImport(name="consentStoreId", required=true)
-    private final Input<String> consentStoreId;
+      private final Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId;
@@ -28,21 +28,21 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dataId", required=true)
-    private final Input<String> dataId;
+      private final Input<String> dataId;
 
     public Input<String> getDataId() {
         return this.dataId;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -53,14 +53,14 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -71,7 +71,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceAttributes")
-    private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
+      private final @Nullable Input<List<AttributeArgs>> resourceAttributes;
 
     public Input<List<AttributeArgs>> getResourceAttributes() {
         return this.resourceAttributes == null ? Input.empty() : this.resourceAttributes;
@@ -82,7 +82,7 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userId", required=true)
-    private final Input<String> userId;
+      private final Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId;
@@ -231,7 +231,6 @@ public final class UserDataMappingArgs extends io.pulumi.resources.ResourceArgs 
             this.userId = Input.of(Objects.requireNonNull(userId));
             return this;
         }
-
         public UserDataMappingArgs build() {
             return new UserDataMappingArgs(consentStoreId, dataId, datasetId, location, name, project, resourceAttributes, userId);
         }

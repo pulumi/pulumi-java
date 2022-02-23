@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customBlockResponseBody")
-    private final @Nullable String customBlockResponseBody;
+        private final @Nullable String customBlockResponseBody;
 
     public Optional<String> getCustomBlockResponseBody() {
         return this.customBlockResponseBody == null ? Optional.empty() : Optional.ofNullable(this.customBlockResponseBody);
@@ -35,7 +35,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customBlockResponseStatusCode")
-    private final @Nullable Integer customBlockResponseStatusCode;
+        private final @Nullable Integer customBlockResponseStatusCode;
 
     public Optional<Integer> getCustomBlockResponseStatusCode() {
         return this.customBlockResponseStatusCode == null ? Optional.empty() : Optional.ofNullable(this.customBlockResponseStatusCode);
@@ -46,7 +46,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable String enabledState;
+        private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -57,7 +57,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -68,7 +68,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="redirectUrl")
-    private final @Nullable String redirectUrl;
+        private final @Nullable String redirectUrl;
 
     public Optional<String> getRedirectUrl() {
         return this.redirectUrl == null ? Optional.empty() : Optional.ofNullable(this.redirectUrl);
@@ -79,7 +79,7 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="requestBodyCheck")
-    private final @Nullable String requestBodyCheck;
+        private final @Nullable String requestBodyCheck;
 
     public Optional<String> getRequestBodyCheck() {
         return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
@@ -168,7 +168,6 @@ public final class FrontDoorPolicySettingsResponse extends io.pulumi.resources.I
             this.requestBodyCheck = requestBodyCheck;
             return this;
         }
-
         public FrontDoorPolicySettingsResponse build() {
             return new FrontDoorPolicySettingsResponse(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetDefaultServiceAccountArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -57,7 +57,6 @@ public final class GetDefaultServiceAccountArgs extends io.pulumi.resources.Invo
             this.project = project;
             return this;
         }
-
         public GetDefaultServiceAccountArgs build() {
             return new GetDefaultServiceAccountArgs(project);
         }

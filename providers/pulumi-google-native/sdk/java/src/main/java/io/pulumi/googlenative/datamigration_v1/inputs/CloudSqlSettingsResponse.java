@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datamigration_v1.inputs.SqlIpConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="activationPolicy", required=true)
-    private final String activationPolicy;
+      private final String activationPolicy;
 
     public String getActivationPolicy() {
         return this.activationPolicy;
@@ -35,7 +35,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="autoStorageIncrease", required=true)
-    private final Boolean autoStorageIncrease;
+      private final Boolean autoStorageIncrease;
 
     public Boolean getAutoStorageIncrease() {
         return this.autoStorageIncrease;
@@ -46,7 +46,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cmekKeyName", required=true)
-    private final String cmekKeyName;
+      private final String cmekKeyName;
 
     public String getCmekKeyName() {
         return this.cmekKeyName;
@@ -57,7 +57,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="collation", required=true)
-    private final String collation;
+      private final String collation;
 
     public String getCollation() {
         return this.collation;
@@ -68,7 +68,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataDiskSizeGb", required=true)
-    private final String dataDiskSizeGb;
+      private final String dataDiskSizeGb;
 
     public String getDataDiskSizeGb() {
         return this.dataDiskSizeGb;
@@ -79,7 +79,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataDiskType", required=true)
-    private final String dataDiskType;
+      private final String dataDiskType;
 
     public String getDataDiskType() {
         return this.dataDiskType;
@@ -90,7 +90,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="databaseFlags", required=true)
-    private final Map<String,String> databaseFlags;
+      private final Map<String,String> databaseFlags;
 
     public Map<String,String> getDatabaseFlags() {
         return this.databaseFlags;
@@ -101,7 +101,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="databaseVersion", required=true)
-    private final String databaseVersion;
+      private final String databaseVersion;
 
     public String getDatabaseVersion() {
         return this.databaseVersion;
@@ -112,7 +112,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipConfig", required=true)
-    private final SqlIpConfigResponse ipConfig;
+      private final SqlIpConfigResponse ipConfig;
 
     public SqlIpConfigResponse getIpConfig() {
         return this.ipConfig;
@@ -123,7 +123,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rootPassword", required=true)
-    private final String rootPassword;
+      private final String rootPassword;
 
     public String getRootPassword() {
         return this.rootPassword;
@@ -134,7 +134,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rootPasswordSet", required=true)
-    private final Boolean rootPasswordSet;
+      private final Boolean rootPasswordSet;
 
     public Boolean getRootPasswordSet() {
         return this.rootPasswordSet;
@@ -145,7 +145,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sourceId", required=true)
-    private final String sourceId;
+      private final String sourceId;
 
     public String getSourceId() {
         return this.sourceId;
@@ -156,7 +156,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="storageAutoResizeLimit", required=true)
-    private final String storageAutoResizeLimit;
+      private final String storageAutoResizeLimit;
 
     public String getStorageAutoResizeLimit() {
         return this.storageAutoResizeLimit;
@@ -167,7 +167,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="tier", required=true)
-    private final String tier;
+      private final String tier;
 
     public String getTier() {
         return this.tier;
@@ -178,7 +178,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="userLabels", required=true)
-    private final Map<String,String> userLabels;
+      private final Map<String,String> userLabels;
 
     public Map<String,String> getUserLabels() {
         return this.userLabels;
@@ -189,7 +189,7 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -378,7 +378,6 @@ public final class CloudSqlSettingsResponse extends io.pulumi.resources.InvokeAr
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public CloudSqlSettingsResponse build() {
             return new CloudSqlSettingsResponse(activationPolicy, autoStorageIncrease, cmekKeyName, collation, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, rootPasswordSet, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
         }

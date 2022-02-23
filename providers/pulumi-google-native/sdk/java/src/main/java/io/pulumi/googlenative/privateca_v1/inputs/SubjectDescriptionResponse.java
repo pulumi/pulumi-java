@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="hexSerialNumber", required=true)
-    private final String hexSerialNumber;
+      private final String hexSerialNumber;
 
     public String getHexSerialNumber() {
         return this.hexSerialNumber;
@@ -34,7 +34,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="lifetime", required=true)
-    private final String lifetime;
+      private final String lifetime;
 
     public String getLifetime() {
         return this.lifetime;
@@ -45,7 +45,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="notAfterTime", required=true)
-    private final String notAfterTime;
+      private final String notAfterTime;
 
     public String getNotAfterTime() {
         return this.notAfterTime;
@@ -56,7 +56,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="notBeforeTime", required=true)
-    private final String notBeforeTime;
+      private final String notBeforeTime;
 
     public String getNotBeforeTime() {
         return this.notBeforeTime;
@@ -67,7 +67,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="subject", required=true)
-    private final SubjectResponse subject;
+      private final SubjectResponse subject;
 
     public SubjectResponse getSubject() {
         return this.subject;
@@ -78,7 +78,7 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="subjectAltName", required=true)
-    private final SubjectAltNamesResponse subjectAltName;
+      private final SubjectAltNamesResponse subjectAltName;
 
     public SubjectAltNamesResponse getSubjectAltName() {
         return this.subjectAltName;
@@ -167,7 +167,6 @@ public final class SubjectDescriptionResponse extends io.pulumi.resources.Invoke
             this.subjectAltName = Objects.requireNonNull(subjectAltName);
             return this;
         }
-
         public SubjectDescriptionResponse build() {
             return new SubjectDescriptionResponse(hexSerialNumber, lifetime, notAfterTime, notBeforeTime, subject, subjectAltName);
         }

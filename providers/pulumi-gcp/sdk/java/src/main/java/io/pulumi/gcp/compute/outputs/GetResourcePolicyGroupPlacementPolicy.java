@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class GetResourcePolicyGroupPlacementPolicy {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public GetResourcePolicyGroupPlacementPolicy build() {
             return new GetResourcePolicyGroupPlacementPolicy(availabilityDomainCount, collocation, vmCount);
         }

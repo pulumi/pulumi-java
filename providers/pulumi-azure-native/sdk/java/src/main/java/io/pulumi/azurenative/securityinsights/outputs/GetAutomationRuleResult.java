@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleRunPlaybookA
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRuleTriggeringLogicResponse;
 import io.pulumi.azurenative.securityinsights.outputs.ClientInfoResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -293,7 +293,6 @@ public final class GetAutomationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationRuleResult build() {
             return new GetAutomationRuleResult(actions, createdBy, createdTimeUtc, displayName, etag, id, lastModifiedBy, lastModifiedTimeUtc, name, order, triggeringLogic, type);
         }

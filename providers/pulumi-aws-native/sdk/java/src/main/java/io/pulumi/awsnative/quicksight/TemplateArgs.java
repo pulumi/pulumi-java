@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.TemplateResourcePermissionArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateSourceEntityArgs;
 import io.pulumi.awsnative.quicksight.inputs.TemplateTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
     public static final TemplateArgs Empty = new TemplateArgs();
 
     @InputImport(name="awsAccountId", required=true)
-    private final Input<String> awsAccountId;
+        private final Input<String> awsAccountId;
 
     public Input<String> getAwsAccountId() {
         return this.awsAccountId;
@@ -30,7 +30,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,14 +41,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Input<List<TemplateResourcePermissionArgs>> permissions;
+        private final @Nullable Input<List<TemplateResourcePermissionArgs>> permissions;
 
     public Input<List<TemplateResourcePermissionArgs>> getPermissions() {
         return this.permissions == null ? Input.empty() : this.permissions;
     }
 
     @InputImport(name="sourceEntity", required=true)
-    private final Input<TemplateSourceEntityArgs> sourceEntity;
+        private final Input<TemplateSourceEntityArgs> sourceEntity;
 
     public Input<TemplateSourceEntityArgs> getSourceEntity() {
         return this.sourceEntity;
@@ -59,14 +59,14 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<TemplateTagArgs>> tags;
+        private final @Nullable Input<List<TemplateTagArgs>> tags;
 
     public Input<List<TemplateTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="templateId", required=true)
-    private final Input<String> templateId;
+        private final Input<String> templateId;
 
     public Input<String> getTemplateId() {
         return this.templateId;
@@ -80,7 +80,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionDescription")
-    private final @Nullable Input<String> versionDescription;
+        private final @Nullable Input<String> versionDescription;
 
     public Input<String> getVersionDescription() {
         return this.versionDescription == null ? Input.empty() : this.versionDescription;
@@ -214,7 +214,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.versionDescription = Input.ofNullable(versionDescription);
             return this;
         }
-
         public TemplateArgs build() {
             return new TemplateArgs(awsAccountId, name, permissions, sourceEntity, tags, templateId, versionDescription);
         }

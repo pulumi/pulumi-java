@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.AliasContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.RepoIdResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class CloudRepoSourceContextResponse {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public CloudRepoSourceContextResponse build() {
             return new CloudRepoSourceContextResponse(aliasContext, repoId, revisionId);
         }

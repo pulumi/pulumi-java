@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationCmafEncryptionArgs;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationHlsManifestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
     public static final PackagingConfigurationCmafPackageArgs Empty = new PackagingConfigurationCmafPackageArgs();
 
     @InputImport(name="encryption")
-    private final @Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption;
+        private final @Nullable Input<PackagingConfigurationCmafEncryptionArgs> encryption;
 
     public Input<PackagingConfigurationCmafEncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -34,7 +34,7 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="hlsManifests", required=true)
-    private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
+        private final Input<List<PackagingConfigurationHlsManifestArgs>> hlsManifests;
 
     public Input<List<PackagingConfigurationHlsManifestArgs>> getHlsManifests() {
         return this.hlsManifests;
@@ -45,14 +45,14 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="includeEncoderConfigurationInSegments")
-    private final @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
+        private final @Nullable Input<Boolean> includeEncoderConfigurationInSegments;
 
     public Input<Boolean> getIncludeEncoderConfigurationInSegments() {
         return this.includeEncoderConfigurationInSegments == null ? Input.empty() : this.includeEncoderConfigurationInSegments;
     }
 
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Input<Integer> segmentDurationSeconds;
+        private final @Nullable Input<Integer> segmentDurationSeconds;
 
     public Input<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Input.empty() : this.segmentDurationSeconds;
@@ -141,7 +141,6 @@ public final class PackagingConfigurationCmafPackageArgs extends io.pulumi.resou
             this.segmentDurationSeconds = Input.ofNullable(segmentDurationSeconds);
             return this;
         }
-
         public PackagingConfigurationCmafPackageArgs build() {
             return new PackagingConfigurationCmafPackageArgs(encryption, hlsManifests, includeEncoderConfigurationInSegments, segmentDurationSeconds);
         }

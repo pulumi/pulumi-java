@@ -5,7 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.awsnative.opensearchservice.inputs.DomainZoneAwarenessConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,70 +18,70 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
     public static final DomainClusterConfigArgs Empty = new DomainClusterConfigArgs();
 
     @InputImport(name="dedicatedMasterCount")
-    private final @Nullable Input<Integer> dedicatedMasterCount;
+        private final @Nullable Input<Integer> dedicatedMasterCount;
 
     public Input<Integer> getDedicatedMasterCount() {
         return this.dedicatedMasterCount == null ? Input.empty() : this.dedicatedMasterCount;
     }
 
     @InputImport(name="dedicatedMasterEnabled")
-    private final @Nullable Input<Boolean> dedicatedMasterEnabled;
+        private final @Nullable Input<Boolean> dedicatedMasterEnabled;
 
     public Input<Boolean> getDedicatedMasterEnabled() {
         return this.dedicatedMasterEnabled == null ? Input.empty() : this.dedicatedMasterEnabled;
     }
 
     @InputImport(name="dedicatedMasterType")
-    private final @Nullable Input<String> dedicatedMasterType;
+        private final @Nullable Input<String> dedicatedMasterType;
 
     public Input<String> getDedicatedMasterType() {
         return this.dedicatedMasterType == null ? Input.empty() : this.dedicatedMasterType;
     }
 
     @InputImport(name="instanceCount")
-    private final @Nullable Input<Integer> instanceCount;
+        private final @Nullable Input<Integer> instanceCount;
 
     public Input<Integer> getInstanceCount() {
         return this.instanceCount == null ? Input.empty() : this.instanceCount;
     }
 
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
     @InputImport(name="warmCount")
-    private final @Nullable Input<Integer> warmCount;
+        private final @Nullable Input<Integer> warmCount;
 
     public Input<Integer> getWarmCount() {
         return this.warmCount == null ? Input.empty() : this.warmCount;
     }
 
     @InputImport(name="warmEnabled")
-    private final @Nullable Input<Boolean> warmEnabled;
+        private final @Nullable Input<Boolean> warmEnabled;
 
     public Input<Boolean> getWarmEnabled() {
         return this.warmEnabled == null ? Input.empty() : this.warmEnabled;
     }
 
     @InputImport(name="warmType")
-    private final @Nullable Input<String> warmType;
+        private final @Nullable Input<String> warmType;
 
     public Input<String> getWarmType() {
         return this.warmType == null ? Input.empty() : this.warmType;
     }
 
     @InputImport(name="zoneAwarenessConfig")
-    private final @Nullable Input<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
+        private final @Nullable Input<DomainZoneAwarenessConfigArgs> zoneAwarenessConfig;
 
     public Input<DomainZoneAwarenessConfigArgs> getZoneAwarenessConfig() {
         return this.zoneAwarenessConfig == null ? Input.empty() : this.zoneAwarenessConfig;
     }
 
     @InputImport(name="zoneAwarenessEnabled")
-    private final @Nullable Input<Boolean> zoneAwarenessEnabled;
+        private final @Nullable Input<Boolean> zoneAwarenessEnabled;
 
     public Input<Boolean> getZoneAwarenessEnabled() {
         return this.zoneAwarenessEnabled == null ? Input.empty() : this.zoneAwarenessEnabled;
@@ -260,7 +260,6 @@ public final class DomainClusterConfigArgs extends io.pulumi.resources.ResourceA
             this.zoneAwarenessEnabled = Input.ofNullable(zoneAwarenessEnabled);
             return this;
         }
-
         public DomainClusterConfigArgs build() {
             return new DomainClusterConfigArgs(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }

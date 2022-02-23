@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EnvironmentImageRequestEnvironmentReferenceArgs extends io.pu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class EnvironmentImageRequestEnvironmentReferenceArgs extends io.pu
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -93,7 +93,6 @@ public final class EnvironmentImageRequestEnvironmentReferenceArgs extends io.pu
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public EnvironmentImageRequestEnvironmentReferenceArgs build() {
             return new EnvironmentImageRequestEnvironmentReferenceArgs(name, version);
         }

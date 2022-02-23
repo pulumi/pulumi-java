@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="controllerId", required=true)
-    private final String controllerId;
+        private final String controllerId;
 
     public String getControllerId() {
         return this.controllerId;
@@ -35,7 +35,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="independenceMode", required=true)
-    private final String independenceMode;
+        private final String independenceMode;
 
     public String getIndependenceMode() {
         return this.independenceMode;
@@ -46,7 +46,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="totalSize", required=true)
-    private final Integer totalSize;
+        private final Integer totalSize;
 
     public Integer getTotalSize() {
         return this.totalSize;
@@ -57,7 +57,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualDiskId")
-    private final @Nullable String virtualDiskId;
+        private final @Nullable String virtualDiskId;
 
     public Optional<String> getVirtualDiskId() {
         return this.virtualDiskId == null ? Optional.empty() : Optional.ofNullable(this.virtualDiskId);
@@ -68,7 +68,7 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualDiskName", required=true)
-    private final String virtualDiskName;
+        private final String virtualDiskName;
 
     public String getVirtualDiskName() {
         return this.virtualDiskName;
@@ -147,7 +147,6 @@ public final class VirtualDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.virtualDiskName = Objects.requireNonNull(virtualDiskName);
             return this;
         }
-
         public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerId, independenceMode, totalSize, virtualDiskId, virtualDiskName);
         }

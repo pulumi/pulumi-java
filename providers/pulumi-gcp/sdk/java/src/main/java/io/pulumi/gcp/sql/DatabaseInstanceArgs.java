@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceCloneArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceReplicaConfigurationArgs;
 import io.pulumi.gcp.sql.inputs.DatabaseInstanceRestoreBackupContextArgs;
@@ -26,7 +26,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="clone")
-    private final @Nullable Input<DatabaseInstanceCloneArgs> clone;
+        private final @Nullable Input<DatabaseInstanceCloneArgs> clone;
 
     public Input<DatabaseInstanceCloneArgs> getClone() {
         return this.clone == null ? Input.empty() : this.clone;
@@ -45,7 +45,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="databaseVersion", required=true)
-    private final Input<String> databaseVersion;
+        private final Input<String> databaseVersion;
 
     public Input<String> getDatabaseVersion() {
         return this.databaseVersion;
@@ -57,7 +57,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deletionProtection")
-    private final @Nullable Input<Boolean> deletionProtection;
+        private final @Nullable Input<Boolean> deletionProtection;
 
     public Input<Boolean> getDeletionProtection() {
         return this.deletionProtection == null ? Input.empty() : this.deletionProtection;
@@ -75,7 +75,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptionKeyName")
-    private final @Nullable Input<String> encryptionKeyName;
+        private final @Nullable Input<String> encryptionKeyName;
 
     public Input<String> getEncryptionKeyName() {
         return this.encryptionKeyName == null ? Input.empty() : this.encryptionKeyName;
@@ -88,7 +88,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="masterInstanceName")
-    private final @Nullable Input<String> masterInstanceName;
+        private final @Nullable Input<String> masterInstanceName;
 
     public Input<String> getMasterInstanceName() {
         return this.masterInstanceName == null ? Input.empty() : this.masterInstanceName;
@@ -99,7 +99,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -110,7 +110,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -126,7 +126,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -138,7 +138,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="replicaConfiguration")
-    private final @Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
+        private final @Nullable Input<DatabaseInstanceReplicaConfigurationArgs> replicaConfiguration;
 
     public Input<DatabaseInstanceReplicaConfigurationArgs> getReplicaConfiguration() {
         return this.replicaConfiguration == null ? Input.empty() : this.replicaConfiguration;
@@ -152,7 +152,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="restoreBackupContext")
-    private final @Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
+        private final @Nullable Input<DatabaseInstanceRestoreBackupContextArgs> restoreBackupContext;
 
     public Input<DatabaseInstanceRestoreBackupContextArgs> getRestoreBackupContext() {
         return this.restoreBackupContext == null ? Input.empty() : this.restoreBackupContext;
@@ -163,7 +163,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rootPassword")
-    private final @Nullable Input<String> rootPassword;
+        private final @Nullable Input<String> rootPassword;
 
     public Input<String> getRootPassword() {
         return this.rootPassword == null ? Input.empty() : this.rootPassword;
@@ -175,7 +175,7 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<DatabaseInstanceSettingsArgs> settings;
+        private final @Nullable Input<DatabaseInstanceSettingsArgs> settings;
 
     public Input<DatabaseInstanceSettingsArgs> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -384,7 +384,6 @@ public final class DatabaseInstanceArgs extends io.pulumi.resources.ResourceArgs
             this.settings = Input.ofNullable(settings);
             return this;
         }
-
         public DatabaseInstanceArgs build() {
             return new DatabaseInstanceArgs(clone, databaseVersion, deletionProtection, encryptionKeyName, masterInstanceName, name, project, region, replicaConfiguration, restoreBackupContext, rootPassword, settings);
         }

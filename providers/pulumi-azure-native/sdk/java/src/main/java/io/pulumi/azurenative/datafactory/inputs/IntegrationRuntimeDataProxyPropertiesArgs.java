@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.EntityReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<EntityReferenceArgs> connectVia;
+        private final @Nullable Input<EntityReferenceArgs> connectVia;
 
     public Input<EntityReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="stagingLinkedService")
-    private final @Nullable Input<EntityReferenceArgs> stagingLinkedService;
+        private final @Nullable Input<EntityReferenceArgs> stagingLinkedService;
 
     public Input<EntityReferenceArgs> getStagingLinkedService() {
         return this.stagingLinkedService == null ? Input.empty() : this.stagingLinkedService;
@@ -120,7 +120,6 @@ public final class IntegrationRuntimeDataProxyPropertiesArgs extends io.pulumi.r
             this.stagingLinkedService = Input.ofNullable(stagingLinkedService);
             return this;
         }
-
         public IntegrationRuntimeDataProxyPropertiesArgs build() {
             return new IntegrationRuntimeDataProxyPropertiesArgs(connectVia, path, stagingLinkedService);
         }

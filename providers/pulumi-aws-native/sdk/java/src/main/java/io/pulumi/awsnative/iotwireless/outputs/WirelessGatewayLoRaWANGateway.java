@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class WirelessGatewayLoRaWANGateway {
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
-
         public WirelessGatewayLoRaWANGateway build() {
             return new WirelessGatewayLoRaWANGateway(gatewayEui, rfRegion);
         }

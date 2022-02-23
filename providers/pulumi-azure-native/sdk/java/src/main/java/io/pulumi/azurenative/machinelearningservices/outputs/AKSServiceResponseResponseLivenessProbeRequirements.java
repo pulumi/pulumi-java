@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class AKSServiceResponseResponseLivenessProbeRequirements {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public AKSServiceResponseResponseLivenessProbeRequirements build() {
             return new AKSServiceResponseResponseLivenessProbeRequirements(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }

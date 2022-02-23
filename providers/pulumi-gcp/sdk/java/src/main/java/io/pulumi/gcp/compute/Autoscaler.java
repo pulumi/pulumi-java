@@ -6,8 +6,8 @@ package io.pulumi.gcp.compute;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.AutoscalerArgs;
 import io.pulumi.gcp.compute.inputs.AutoscalerState;
@@ -183,13 +183,6 @@ public class Autoscaler extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Autoscaler(String name) {
-        super("gcp:compute/autoscaler:Autoscaler", name, AutoscalerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

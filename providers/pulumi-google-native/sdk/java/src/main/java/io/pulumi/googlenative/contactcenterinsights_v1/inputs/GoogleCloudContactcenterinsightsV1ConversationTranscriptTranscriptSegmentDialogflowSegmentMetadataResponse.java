@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
      * 
      */
     @InputImport(name="smartReplyAllowlistCovered", required=true)
-    private final Boolean smartReplyAllowlistCovered;
+      private final Boolean smartReplyAllowlistCovered;
 
     public Boolean getSmartReplyAllowlistCovered() {
         return this.smartReplyAllowlistCovered;
@@ -59,7 +59,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptTrans
             this.smartReplyAllowlistCovered = Objects.requireNonNull(smartReplyAllowlistCovered);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentDialogflowSegmentMetadataResponse(smartReplyAllowlistCovered);
         }

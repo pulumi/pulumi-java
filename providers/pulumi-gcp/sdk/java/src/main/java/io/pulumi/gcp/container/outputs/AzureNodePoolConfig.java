@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.AzureNodePoolConfigRootVolume;
 import io.pulumi.gcp.container.outputs.AzureNodePoolConfigSshConfig;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class AzureNodePoolConfig {
             this.vmSize = vmSize;
             return this;
         }
-
         public AzureNodePoolConfig build() {
             return new AzureNodePoolConfig(rootVolume, sshConfig, tags, vmSize);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.WorkerPoolArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PrivatePoolV1ConfigResponse;
@@ -162,13 +162,6 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WorkerPool(String name) {
-        super("google-native:cloudbuild/v1:WorkerPool", name, WorkerPoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

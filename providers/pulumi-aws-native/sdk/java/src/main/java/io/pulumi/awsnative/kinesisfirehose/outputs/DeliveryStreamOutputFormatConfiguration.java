@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamSerializer;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class DeliveryStreamOutputFormatConfiguration {
             this.serializer = serializer;
             return this;
         }
-
         public DeliveryStreamOutputFormatConfiguration build() {
             return new DeliveryStreamOutputFormatConfiguration(serializer);
         }

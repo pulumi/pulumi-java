@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateExtensions;
 import io.pulumi.awsnative.acmpca.outputs.CertificateSubject;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class CertificateApiPassthrough {
             this.subject = subject;
             return this;
         }
-
         public CertificateApiPassthrough build() {
             return new CertificateApiPassthrough(extensions, subject);
         }

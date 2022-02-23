@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.EtwEventConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class EtwProviderConfigurationArgs extends io.pulumi.resources.Reso
     public static final EtwProviderConfigurationArgs Empty = new EtwProviderConfigurationArgs();
 
     @InputImport(name="events", required=true)
-    private final Input<List<EtwEventConfigurationArgs>> events;
+        private final Input<List<EtwEventConfigurationArgs>> events;
 
     public Input<List<EtwEventConfigurationArgs>> getEvents() {
         return this.events;
     }
 
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -82,7 +82,6 @@ public final class EtwProviderConfigurationArgs extends io.pulumi.resources.Reso
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public EtwProviderConfigurationArgs build() {
             return new EtwProviderConfigurationArgs(events, id);
         }

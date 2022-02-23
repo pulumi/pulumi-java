@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.EmailPreferencesResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.ScheduleOptionsResponse;
 import io.pulumi.googlenative.bigquerydatatransfer_v1.outputs.UserInfoResponse;
@@ -374,7 +374,6 @@ public final class GetTransferConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTransferConfigResult build() {
             return new GetTransferConfigResult(dataRefreshWindowDays, dataSourceId, datasetRegion, destinationDatasetId, disabled, displayName, emailPreferences, name, nextRunTime, notificationPubsubTopic, ownerInfo, params, schedule, scheduleOptions, state, updateTime);
         }

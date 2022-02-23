@@ -13,7 +13,7 @@ import io.pulumi.azurenative.datamigration.outputs.MigrateMySqlAzureDbForMySqlSy
 import io.pulumi.azurenative.datamigration.outputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.outputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -174,7 +174,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

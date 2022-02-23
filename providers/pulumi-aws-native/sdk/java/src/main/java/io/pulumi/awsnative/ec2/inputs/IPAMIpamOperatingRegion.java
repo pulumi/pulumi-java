@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IPAMIpamOperatingRegion extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="regionName", required=true)
-    private final String regionName;
+        private final String regionName;
 
     public String getRegionName() {
         return this.regionName;
@@ -59,7 +59,6 @@ public final class IPAMIpamOperatingRegion extends io.pulumi.resources.InvokeArg
             this.regionName = Objects.requireNonNull(regionName);
             return this;
         }
-
         public IPAMIpamOperatingRegion build() {
             return new IPAMIpamOperatingRegion(regionName);
         }

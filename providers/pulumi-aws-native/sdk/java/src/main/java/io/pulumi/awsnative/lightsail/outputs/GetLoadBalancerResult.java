@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.outputs;
 
 import io.pulumi.awsnative.lightsail.outputs.LoadBalancerTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -155,7 +155,6 @@ public final class GetLoadBalancerResult {
             this.tags = tags;
             return this;
         }
-
         public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(attachedInstances, healthCheckPath, loadBalancerArn, sessionStickinessEnabled, sessionStickinessLBCookieDurationSeconds, tags);
         }

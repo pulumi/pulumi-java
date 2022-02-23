@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rekognition;
 
 import io.pulumi.awsnative.rekognition.inputs.CollectionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,7 +17,7 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
     public static final CollectionArgs Empty = new CollectionArgs();
 
     @InputImport(name="collectionId", required=true)
-    private final Input<String> collectionId;
+        private final Input<String> collectionId;
 
     public Input<String> getCollectionId() {
         return this.collectionId;
@@ -28,7 +28,7 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<CollectionTagArgs>> tags;
+        private final @Nullable Input<List<CollectionTagArgs>> tags;
 
     public Input<List<CollectionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,6 @@ public final class CollectionArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CollectionArgs build() {
             return new CollectionArgs(collectionId, tags);
         }

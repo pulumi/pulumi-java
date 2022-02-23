@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class DeliveryStreamRetryOptions {
             this.durationInSeconds = durationInSeconds;
             return this;
         }
-
         public DeliveryStreamRetryOptions build() {
             return new DeliveryStreamRetryOptions(durationInSeconds);
         }

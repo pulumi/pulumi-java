@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudidentity_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudidentity_v1.MembershipArgs;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.EntityKeyResponse;
@@ -107,13 +107,6 @@ public class Membership extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Membership(String name) {
-        super("google-native:cloudidentity/v1:Membership", name, MembershipArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

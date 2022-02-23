@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.CreateNetworkMappingInputPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final Input<String> fabricName;
+        private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkMappingName")
-    private final @Nullable Input<String> networkMappingName;
+        private final @Nullable Input<String> networkMappingName;
 
     public Input<String> getNetworkMappingName() {
         return this.networkMappingName == null ? Input.empty() : this.networkMappingName;
@@ -42,7 +42,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="networkName", required=true)
-    private final Input<String> networkName;
+        private final Input<String> networkName;
 
     public Input<String> getNetworkName() {
         return this.networkName;
@@ -53,7 +53,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties;
+        private final @Nullable Input<CreateNetworkMappingInputPropertiesArgs> properties;
 
     public Input<CreateNetworkMappingInputPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -64,7 +64,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -194,7 +194,6 @@ public final class ReplicationNetworkMappingArgs extends io.pulumi.resources.Res
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public ReplicationNetworkMappingArgs build() {
             return new ReplicationNetworkMappingArgs(fabricName, networkMappingName, networkName, properties, resourceGroupName, resourceName);
         }

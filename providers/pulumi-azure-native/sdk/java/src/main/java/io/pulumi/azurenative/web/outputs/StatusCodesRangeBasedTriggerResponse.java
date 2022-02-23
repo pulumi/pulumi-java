@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -111,7 +111,6 @@ public final class StatusCodesRangeBasedTriggerResponse {
             this.timeInterval = timeInterval;
             return this;
         }
-
         public StatusCodesRangeBasedTriggerResponse build() {
             return new StatusCodesRangeBasedTriggerResponse(count, path, statusCodes, timeInterval);
         }

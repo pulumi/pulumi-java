@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.MachineImageIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<MachineImageIamBindingConditionArgs> condition;
+        private final @Nullable Input<MachineImageIamBindingConditionArgs> condition;
 
     public Input<MachineImageIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,14 +33,14 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="machineImage", required=true)
-    private final Input<String> machineImage;
+        private final Input<String> machineImage;
 
     public Input<String> getMachineImage() {
         return this.machineImage;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -52,7 +52,7 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -169,7 +169,6 @@ public final class MachineImageIamBindingArgs extends io.pulumi.resources.Resour
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public MachineImageIamBindingArgs build() {
             return new MachineImageIamBindingArgs(condition, machineImage, members, project, role);
         }

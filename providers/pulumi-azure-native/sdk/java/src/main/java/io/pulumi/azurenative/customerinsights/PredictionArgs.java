@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.inputs.PredictionGradesArgs;
 import io.pulumi.azurenative.customerinsights.inputs.PredictionMappingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoAnalyze", required=true)
-    private final Input<Boolean> autoAnalyze;
+        private final Input<Boolean> autoAnalyze;
 
     public Input<Boolean> getAutoAnalyze() {
         return this.autoAnalyze;
@@ -35,7 +35,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<Map<String,String>> description;
+        private final @Nullable Input<Map<String,String>> description;
 
     public Input<Map<String,String>> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<Map<String,String>> displayName;
+        private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -57,7 +57,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grades")
-    private final @Nullable Input<List<PredictionGradesArgs>> grades;
+        private final @Nullable Input<List<PredictionGradesArgs>> grades;
 
     public Input<List<PredictionGradesArgs>> getGrades() {
         return this.grades == null ? Input.empty() : this.grades;
@@ -68,7 +68,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+        private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -79,7 +79,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="involvedInteractionTypes")
-    private final @Nullable Input<List<String>> involvedInteractionTypes;
+        private final @Nullable Input<List<String>> involvedInteractionTypes;
 
     public Input<List<String>> getInvolvedInteractionTypes() {
         return this.involvedInteractionTypes == null ? Input.empty() : this.involvedInteractionTypes;
@@ -90,7 +90,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="involvedKpiTypes")
-    private final @Nullable Input<List<String>> involvedKpiTypes;
+        private final @Nullable Input<List<String>> involvedKpiTypes;
 
     public Input<List<String>> getInvolvedKpiTypes() {
         return this.involvedKpiTypes == null ? Input.empty() : this.involvedKpiTypes;
@@ -101,7 +101,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="involvedRelationships")
-    private final @Nullable Input<List<String>> involvedRelationships;
+        private final @Nullable Input<List<String>> involvedRelationships;
 
     public Input<List<String>> getInvolvedRelationships() {
         return this.involvedRelationships == null ? Input.empty() : this.involvedRelationships;
@@ -112,7 +112,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mappings", required=true)
-    private final Input<PredictionMappingsArgs> mappings;
+        private final Input<PredictionMappingsArgs> mappings;
 
     public Input<PredictionMappingsArgs> getMappings() {
         return this.mappings;
@@ -123,7 +123,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="negativeOutcomeExpression", required=true)
-    private final Input<String> negativeOutcomeExpression;
+        private final Input<String> negativeOutcomeExpression;
 
     public Input<String> getNegativeOutcomeExpression() {
         return this.negativeOutcomeExpression;
@@ -134,7 +134,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="positiveOutcomeExpression", required=true)
-    private final Input<String> positiveOutcomeExpression;
+        private final Input<String> positiveOutcomeExpression;
 
     public Input<String> getPositiveOutcomeExpression() {
         return this.positiveOutcomeExpression;
@@ -145,7 +145,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictionName")
-    private final @Nullable Input<String> predictionName;
+        private final @Nullable Input<String> predictionName;
 
     public Input<String> getPredictionName() {
         return this.predictionName == null ? Input.empty() : this.predictionName;
@@ -156,7 +156,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryProfileType", required=true)
-    private final Input<String> primaryProfileType;
+        private final Input<String> primaryProfileType;
 
     public Input<String> getPrimaryProfileType() {
         return this.primaryProfileType;
@@ -167,7 +167,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -178,7 +178,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopeExpression", required=true)
-    private final Input<String> scopeExpression;
+        private final Input<String> scopeExpression;
 
     public Input<String> getScopeExpression() {
         return this.scopeExpression;
@@ -189,7 +189,7 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scoreLabel", required=true)
-    private final Input<String> scoreLabel;
+        private final Input<String> scoreLabel;
 
     public Input<String> getScoreLabel() {
         return this.scoreLabel;
@@ -458,7 +458,6 @@ public final class PredictionArgs extends io.pulumi.resources.ResourceArgs {
             this.scoreLabel = Input.of(Objects.requireNonNull(scoreLabel));
             return this;
         }
-
         public PredictionArgs build() {
             return new PredictionArgs(autoAnalyze, description, displayName, grades, hubName, involvedInteractionTypes, involvedKpiTypes, involvedRelationships, mappings, negativeOutcomeExpression, positiveOutcomeExpression, predictionName, primaryProfileType, resourceGroupName, scopeExpression, scoreLabel);
         }

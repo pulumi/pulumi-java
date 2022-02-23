@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.RepositoryResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -373,7 +373,6 @@ public final class GetSourceControlResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSourceControlResult build() {
             return new GetSourceControlResult(contentTypes, createdAt, createdBy, createdByType, description, displayName, etag, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, repoType, repository, systemData, type);
         }

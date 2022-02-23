@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class ExpressRouteCircuitStatsResponse {
             this.secondarybytesOut = secondarybytesOut;
             return this;
         }
-
         public ExpressRouteCircuitStatsResponse build() {
             return new ExpressRouteCircuitStatsResponse(primarybytesIn, primarybytesOut, secondarybytesIn, secondarybytesOut);
         }

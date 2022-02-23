@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.NetworkEdgeSecurityServiceArgs;
 import java.lang.String;
@@ -137,13 +137,6 @@ public class NetworkEdgeSecurityService extends io.pulumi.resources.CustomResour
         return this.selfLinkWithId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NetworkEdgeSecurityService(String name) {
-        super("google-native:compute/alpha:NetworkEdgeSecurityService", name, NetworkEdgeSecurityServiceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

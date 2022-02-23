@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.AuditLogConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -89,7 +89,6 @@ public final class AuditConfigResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public AuditConfigResponse build() {
             return new AuditConfigResponse(auditLogConfigs, exemptedMembers, service);
         }

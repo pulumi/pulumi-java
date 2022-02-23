@@ -5,8 +5,8 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.HmacKeyArgs;
 import io.pulumi.gcp.storage.inputs.HmacKeyState;
@@ -157,13 +157,6 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
         return this.updated;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public HmacKey(String name) {
-        super("gcp:storage/hmacKey:HmacKey", name, HmacKeyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

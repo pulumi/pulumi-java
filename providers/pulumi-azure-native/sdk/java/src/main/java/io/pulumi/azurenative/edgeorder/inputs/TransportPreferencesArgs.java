@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.enums.TransportShipmentTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredShipmentType", required=true)
-    private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
+        private final Input<Either<String,TransportShipmentTypes>> preferredShipmentType;
 
     public Input<Either<String,TransportShipmentTypes>> getPreferredShipmentType() {
         return this.preferredShipmentType;
@@ -67,7 +67,6 @@ public final class TransportPreferencesArgs extends io.pulumi.resources.Resource
             this.preferredShipmentType = Input.of(Objects.requireNonNull(preferredShipmentType));
             return this;
         }
-
         public TransportPreferencesArgs build() {
             return new TransportPreferencesArgs(preferredShipmentType);
         }

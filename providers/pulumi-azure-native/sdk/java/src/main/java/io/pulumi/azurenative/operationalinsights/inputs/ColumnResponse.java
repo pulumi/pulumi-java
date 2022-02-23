@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataTypeHint")
-    private final @Nullable String dataTypeHint;
+        private final @Nullable String dataTypeHint;
 
     public Optional<String> getDataTypeHint() {
         return this.dataTypeHint == null ? Optional.empty() : Optional.ofNullable(this.dataTypeHint);
@@ -35,7 +35,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -46,7 +46,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -57,7 +57,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isDefaultDisplay", required=true)
-    private final Boolean isDefaultDisplay;
+        private final Boolean isDefaultDisplay;
 
     public Boolean getIsDefaultDisplay() {
         return this.isDefaultDisplay;
@@ -68,7 +68,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isHidden", required=true)
-    private final Boolean isHidden;
+        private final Boolean isHidden;
 
     public Boolean getIsHidden() {
         return this.isHidden;
@@ -79,7 +79,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -90,7 +90,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -189,7 +189,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.type = type;
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(dataTypeHint, description, displayName, isDefaultDisplay, isHidden, name, type);
         }

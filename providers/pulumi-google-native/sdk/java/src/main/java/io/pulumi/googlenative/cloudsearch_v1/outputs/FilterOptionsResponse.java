@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.FilterResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class FilterOptionsResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public FilterOptionsResponse build() {
             return new FilterOptionsResponse(filter, objectType);
         }

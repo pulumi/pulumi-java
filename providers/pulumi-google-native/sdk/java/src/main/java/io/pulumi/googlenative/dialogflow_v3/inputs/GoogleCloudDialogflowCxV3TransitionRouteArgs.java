@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FulfillmentArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+      private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
      * 
      */
     @InputImport(name="intent")
-    private final @Nullable Input<String> intent;
+      private final @Nullable Input<String> intent;
 
     public Input<String> getIntent() {
         return this.intent == null ? Input.empty() : this.intent;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
      * 
      */
     @InputImport(name="targetFlow")
-    private final @Nullable Input<String> targetFlow;
+      private final @Nullable Input<String> targetFlow;
 
     public Input<String> getTargetFlow() {
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
      * 
      */
     @InputImport(name="targetPage")
-    private final @Nullable Input<String> targetPage;
+      private final @Nullable Input<String> targetPage;
 
     public Input<String> getTargetPage() {
         return this.targetPage == null ? Input.empty() : this.targetPage;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
      * 
      */
     @InputImport(name="triggerFulfillment")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3FulfillmentArgs> triggerFulfillment;
 
     public Input<GoogleCloudDialogflowCxV3FulfillmentArgs> getTriggerFulfillment() {
         return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
@@ -172,7 +172,6 @@ public final class GoogleCloudDialogflowCxV3TransitionRouteArgs extends io.pulum
             this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3TransitionRouteArgs build() {
             return new GoogleCloudDialogflowCxV3TransitionRouteArgs(condition, intent, targetFlow, targetPage, triggerFulfillment);
         }

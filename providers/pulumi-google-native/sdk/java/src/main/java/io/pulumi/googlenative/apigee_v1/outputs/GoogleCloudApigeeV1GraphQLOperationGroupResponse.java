@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1GraphQLOperationConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationGroupResponse {
             this.operationConfigs = Objects.requireNonNull(operationConfigs);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationGroupResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationGroupResponse(operationConfigType, operationConfigs);
         }

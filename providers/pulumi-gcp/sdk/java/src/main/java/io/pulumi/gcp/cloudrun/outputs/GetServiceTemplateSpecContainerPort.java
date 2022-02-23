@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -80,7 +80,6 @@ public final class GetServiceTemplateSpecContainerPort {
             this.protocol = Objects.requireNonNull(protocol);
             return this;
         }
-
         public GetServiceTemplateSpecContainerPort build() {
             return new GetServiceTemplateSpecContainerPort(containerPort, name, protocol);
         }

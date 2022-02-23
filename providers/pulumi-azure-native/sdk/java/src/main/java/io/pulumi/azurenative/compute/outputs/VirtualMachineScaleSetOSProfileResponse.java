@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.LinuxConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.VaultSecretGroupResponse;
 import io.pulumi.azurenative.compute.outputs.WindowsConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class VirtualMachineScaleSetOSProfileResponse {
             this.windowsConfiguration = windowsConfiguration;
             return this;
         }
-
         public VirtualMachineScaleSetOSProfileResponse build() {
             return new VirtualMachineScaleSetOSProfileResponse(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
         }

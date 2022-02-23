@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteAction;
@@ -218,7 +218,6 @@ public final class URLMapPathMatcherRouteRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public URLMapPathMatcherRouteRule build() {
             return new URLMapPathMatcherRouteRule(headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }

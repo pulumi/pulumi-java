@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.outputs.LogToMetricActionResponse;
 import io.pulumi.azurenative.insights.outputs.ScheduleResponse;
 import io.pulumi.azurenative.insights.outputs.SourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -419,7 +419,6 @@ public final class GetScheduledQueryRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduledQueryRuleResult build() {
             return new GetScheduledQueryRuleResult(action, autoMitigate, createdWithApiVersion, description, displayName, enabled, etag, id, isLegacyLogAnalyticsRule, kind, lastUpdatedTime, location, name, provisioningState, schedule, source, tags, type);
         }

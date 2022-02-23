@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.LocationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class PackageOccurrenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<List<LocationArgs>> location;
+      private final Input<List<LocationArgs>> location;
 
     public Input<List<LocationArgs>> getLocation() {
         return this.location;
@@ -66,7 +66,6 @@ public final class PackageOccurrenceArgs extends io.pulumi.resources.ResourceArg
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
-
         public PackageOccurrenceArgs build() {
             return new PackageOccurrenceArgs(location);
         }

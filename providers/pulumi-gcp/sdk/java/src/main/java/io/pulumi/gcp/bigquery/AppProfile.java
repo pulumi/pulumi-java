@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.AppProfileArgs;
 import io.pulumi.gcp.bigquery.inputs.AppProfileState;
@@ -166,13 +166,6 @@ public class AppProfile extends io.pulumi.resources.CustomResource {
         return this.singleClusterRouting;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AppProfile(String name) {
-        super("gcp:bigquery/appProfile:AppProfile", name, AppProfileArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

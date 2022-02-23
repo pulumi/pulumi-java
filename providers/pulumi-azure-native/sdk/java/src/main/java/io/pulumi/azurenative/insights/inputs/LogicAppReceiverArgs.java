@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="callbackUrl", required=true)
-    private final Input<String> callbackUrl;
+        private final Input<String> callbackUrl;
 
     public Input<String> getCallbackUrl() {
         return this.callbackUrl;
@@ -35,7 +35,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -57,7 +57,7 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Input<Boolean> useCommonAlertSchema;
+        private final @Nullable Input<Boolean> useCommonAlertSchema;
 
     public Input<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;
@@ -146,7 +146,6 @@ public final class LogicAppReceiverArgs extends io.pulumi.resources.ResourceArgs
             this.useCommonAlertSchema = Input.ofNullable(useCommonAlertSchema);
             return this;
         }
-
         public LogicAppReceiverArgs build() {
             return new LogicAppReceiverArgs(callbackUrl, name, resourceId, useCommonAlertSchema);
         }

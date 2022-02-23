@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class MoveResourceErrorBodyResponse {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public MoveResourceErrorBodyResponse build() {
             return new MoveResourceErrorBodyResponse(code, details, message, target);
         }

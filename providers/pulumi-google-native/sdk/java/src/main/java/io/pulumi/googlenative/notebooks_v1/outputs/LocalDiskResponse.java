@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.LocalDiskInitializeParamsResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeGuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -289,7 +289,6 @@ public final class LocalDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LocalDiskResponse build() {
             return new LocalDiskResponse(autoDelete, boot, deviceName, guestOsFeatures, index, initializeParams, $interface, kind, licenses, mode, source, type);
         }

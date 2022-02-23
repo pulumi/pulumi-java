@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ResourceLimitsResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.ResourceRequestsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class ResourceRequirementsResponse {
             this.requests = Objects.requireNonNull(requests);
             return this;
         }
-
         public ResourceRequirementsResponse build() {
             return new ResourceRequirementsResponse(limits, requests);
         }

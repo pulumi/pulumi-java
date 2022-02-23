@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.OsPolicyAssignmentRolloutDisruptionBudget;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class OsPolicyAssignmentRollout {
             this.minWaitDuration = Objects.requireNonNull(minWaitDuration);
             return this;
         }
-
         public OsPolicyAssignmentRollout build() {
             return new OsPolicyAssignmentRollout(disruptionBudget, minWaitDuration);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -308,7 +308,6 @@ public final class GetArcAddonResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetArcAddonResult build() {
             return new GetArcAddonResult(hostPlatform, hostPlatformType, id, kind, name, provisioningState, resourceGroupName, resourceLocation, resourceName, subscriptionId, systemData, type, version);
         }

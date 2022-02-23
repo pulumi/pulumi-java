@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="consumeReservationType", required=true)
-    private final String consumeReservationType;
+      private final String consumeReservationType;
 
     public String getConsumeReservationType() {
         return this.consumeReservationType;
@@ -33,7 +33,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -44,7 +44,7 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -103,7 +103,6 @@ public final class ReservationAffinityResponse extends io.pulumi.resources.Invok
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ReservationAffinityResponse build() {
             return new ReservationAffinityResponse(consumeReservationType, key, values);
         }

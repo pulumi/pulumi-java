@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentTypeConfigurationSubComponentType;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentConfigurationDetails;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.re
      * 
      */
     @InputImport(name="subComponentConfigurationDetails", required=true)
-    private final ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
+        private final ApplicationSubComponentConfigurationDetails subComponentConfigurationDetails;
 
     public ApplicationSubComponentConfigurationDetails getSubComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
@@ -33,7 +33,7 @@ public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.re
      * 
      */
     @InputImport(name="subComponentType", required=true)
-    private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
+        private final ApplicationSubComponentTypeConfigurationSubComponentType subComponentType;
 
     public ApplicationSubComponentTypeConfigurationSubComponentType getSubComponentType() {
         return this.subComponentType;
@@ -82,7 +82,6 @@ public final class ApplicationSubComponentTypeConfiguration extends io.pulumi.re
             this.subComponentType = Objects.requireNonNull(subComponentType);
             return this;
         }
-
         public ApplicationSubComponentTypeConfiguration build() {
             return new ApplicationSubComponentTypeConfiguration(subComponentConfigurationDetails, subComponentType);
         }

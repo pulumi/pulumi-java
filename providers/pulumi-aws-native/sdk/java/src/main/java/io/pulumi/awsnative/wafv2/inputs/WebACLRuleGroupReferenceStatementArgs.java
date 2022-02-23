@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLExcludedRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
     public static final WebACLRuleGroupReferenceStatementArgs Empty = new WebACLRuleGroupReferenceStatementArgs();
 
     @InputImport(name="arn", required=true)
-    private final Input<String> arn;
+        private final Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn;
     }
 
     @InputImport(name="excludedRules")
-    private final @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules;
+        private final @Nullable Input<List<WebACLExcludedRuleArgs>> excludedRules;
 
     public Input<List<WebACLExcludedRuleArgs>> getExcludedRules() {
         return this.excludedRules == null ? Input.empty() : this.excludedRules;
@@ -83,7 +83,6 @@ public final class WebACLRuleGroupReferenceStatementArgs extends io.pulumi.resou
             this.excludedRules = Input.ofNullable(excludedRules);
             return this;
         }
-
         public WebACLRuleGroupReferenceStatementArgs build() {
             return new WebACLRuleGroupReferenceStatementArgs(arn, excludedRules);
         }

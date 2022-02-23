@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class ConnectionMonitorIcmpConfigurationResponse {
             this.disableTraceRoute = disableTraceRoute;
             return this;
         }
-
         public ConnectionMonitorIcmpConfigurationResponse build() {
             return new ConnectionMonitorIcmpConfigurationResponse(disableTraceRoute);
         }

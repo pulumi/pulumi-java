@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.DataMaskingState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataMaskingPolicyName")
-    private final @Nullable Input<String> dataMaskingPolicyName;
+        private final @Nullable Input<String> dataMaskingPolicyName;
 
     public Input<String> getDataMaskingPolicyName() {
         return this.dataMaskingPolicyName == null ? Input.empty() : this.dataMaskingPolicyName;
@@ -31,7 +31,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataMaskingState", required=true)
-    private final Input<DataMaskingState> dataMaskingState;
+        private final Input<DataMaskingState> dataMaskingState;
 
     public Input<DataMaskingState> getDataMaskingState() {
         return this.dataMaskingState;
@@ -42,7 +42,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -53,7 +53,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="exemptPrincipals")
-    private final @Nullable Input<String> exemptPrincipals;
+        private final @Nullable Input<String> exemptPrincipals;
 
     public Input<String> getExemptPrincipals() {
         return this.exemptPrincipals == null ? Input.empty() : this.exemptPrincipals;
@@ -64,7 +64,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -194,7 +194,6 @@ public final class DataMaskingPolicyArgs extends io.pulumi.resources.ResourceArg
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public DataMaskingPolicyArgs build() {
             return new DataMaskingPolicyArgs(dataMaskingPolicyName, dataMaskingState, databaseName, exemptPrincipals, resourceGroupName, serverName);
         }

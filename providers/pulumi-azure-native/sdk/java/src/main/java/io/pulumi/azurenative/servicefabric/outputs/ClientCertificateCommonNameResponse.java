@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class ClientCertificateCommonNameResponse {
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public ClientCertificateCommonNameResponse build() {
             return new ClientCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }

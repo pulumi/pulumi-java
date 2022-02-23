@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class FlexibleAppVersionDeploymentZip {
             this.sourceUrl = Objects.requireNonNull(sourceUrl);
             return this;
         }
-
         public FlexibleAppVersionDeploymentZip build() {
             return new FlexibleAppVersionDeploymentZip(filesCount, sourceUrl);
         }

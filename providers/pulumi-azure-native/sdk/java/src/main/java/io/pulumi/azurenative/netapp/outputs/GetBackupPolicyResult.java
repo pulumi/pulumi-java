@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.netapp.outputs;
 
 import io.pulumi.azurenative.netapp.outputs.VolumeBackupsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -312,7 +312,6 @@ public final class GetBackupPolicyResult {
             this.yearlyBackupsToKeep = yearlyBackupsToKeep;
             return this;
         }
-
         public GetBackupPolicyResult build() {
             return new GetBackupPolicyResult(dailyBackupsToKeep, enabled, id, location, monthlyBackupsToKeep, name, provisioningState, tags, type, volumeBackups, volumesAssigned, weeklyBackupsToKeep, yearlyBackupsToKeep);
         }

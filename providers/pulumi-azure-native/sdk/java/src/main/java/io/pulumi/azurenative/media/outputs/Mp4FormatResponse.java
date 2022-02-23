@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.OutputFileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class Mp4FormatResponse {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public Mp4FormatResponse build() {
             return new Mp4FormatResponse(filenamePattern, odataType, outputFiles);
         }

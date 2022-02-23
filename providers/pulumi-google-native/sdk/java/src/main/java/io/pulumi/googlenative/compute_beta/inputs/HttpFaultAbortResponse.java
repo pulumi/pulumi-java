@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="httpStatus", required=true)
-    private final Integer httpStatus;
+      private final Integer httpStatus;
 
     public Integer getHttpStatus() {
         return this.httpStatus;
@@ -33,7 +33,7 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="percentage", required=true)
-    private final Double percentage;
+      private final Double percentage;
 
     public Double getPercentage() {
         return this.percentage;
@@ -82,7 +82,6 @@ public final class HttpFaultAbortResponse extends io.pulumi.resources.InvokeArgs
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public HttpFaultAbortResponse build() {
             return new HttpFaultAbortResponse(httpStatus, percentage);
         }

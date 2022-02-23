@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dailyQuotaGb")
-    private final @Nullable Double dailyQuotaGb;
+        private final @Nullable Double dailyQuotaGb;
 
     public Optional<Double> getDailyQuotaGb() {
         return this.dailyQuotaGb == null ? Optional.empty() : Optional.ofNullable(this.dailyQuotaGb);
@@ -35,7 +35,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="dataIngestionStatus", required=true)
-    private final String dataIngestionStatus;
+        private final String dataIngestionStatus;
 
     public String getDataIngestionStatus() {
         return this.dataIngestionStatus;
@@ -46,7 +46,7 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="quotaNextResetTime", required=true)
-    private final String quotaNextResetTime;
+        private final String quotaNextResetTime;
 
     public String getQuotaNextResetTime() {
         return this.quotaNextResetTime;
@@ -105,7 +105,6 @@ public final class WorkspaceCappingResponse extends io.pulumi.resources.InvokeAr
             this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
             return this;
         }
-
         public WorkspaceCappingResponse build() {
             return new WorkspaceCappingResponse(dailyQuotaGb, dataIngestionStatus, quotaNextResetTime);
         }

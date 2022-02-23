@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CharsToIgnoreResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2CharacterMaskConfigResponse {
             this.reverseOrder = Objects.requireNonNull(reverseOrder);
             return this;
         }
-
         public GooglePrivacyDlpV2CharacterMaskConfigResponse build() {
             return new GooglePrivacyDlpV2CharacterMaskConfigResponse(charactersToIgnore, maskingCharacter, numberToMask, reverseOrder);
         }

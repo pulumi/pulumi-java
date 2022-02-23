@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -307,7 +307,6 @@ public final class GetBillingRoleAssignmentByEnrollmentAccountResult {
             this.userEmailAddress = userEmailAddress;
             return this;
         }
-
         public GetBillingRoleAssignmentByEnrollmentAccountResult build() {
             return new GetBillingRoleAssignmentByEnrollmentAccountResult(createdByPrincipalId, createdByPrincipalTenantId, createdByUserEmailAddress, createdOn, id, name, principalId, principalTenantId, roleDefinitionId, scope, type, userAuthenticationType, userEmailAddress);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz.outputs;
 import io.pulumi.azurenative.logz.outputs.IdentityPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.MonitorPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMonitorResult build() {
             return new GetMonitorResult(id, identity, location, name, properties, systemData, tags, type);
         }

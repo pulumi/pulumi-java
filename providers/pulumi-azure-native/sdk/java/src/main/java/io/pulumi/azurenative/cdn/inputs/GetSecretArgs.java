@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+        private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -28,7 +28,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final String secretName;
+        private final String secretName;
 
     public String getSecretName() {
         return this.secretName;
@@ -98,7 +98,6 @@ public final class GetSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public GetSecretArgs build() {
             return new GetSecretArgs(profileName, resourceGroupName, secretName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class FieldResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FieldResponse build() {
             return new FieldResponse(maxOccurs, minOccurs, name, table, type);
         }

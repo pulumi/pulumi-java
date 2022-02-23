@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotSampleValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
     public static final BotSlotTypeValueArgs Empty = new BotSlotTypeValueArgs();
 
     @InputImport(name="sampleValue", required=true)
-    private final Input<BotSampleValueArgs> sampleValue;
+        private final Input<BotSampleValueArgs> sampleValue;
 
     public Input<BotSampleValueArgs> getSampleValue() {
         return this.sampleValue;
     }
 
     @InputImport(name="synonyms")
-    private final @Nullable Input<List<BotSampleValueArgs>> synonyms;
+        private final @Nullable Input<List<BotSampleValueArgs>> synonyms;
 
     public Input<List<BotSampleValueArgs>> getSynonyms() {
         return this.synonyms == null ? Input.empty() : this.synonyms;
@@ -86,7 +86,6 @@ public final class BotSlotTypeValueArgs extends io.pulumi.resources.ResourceArgs
             this.synonyms = Input.ofNullable(synonyms);
             return this;
         }
-
         public BotSlotTypeValueArgs build() {
             return new BotSlotTypeValueArgs(sampleValue, synonyms);
         }

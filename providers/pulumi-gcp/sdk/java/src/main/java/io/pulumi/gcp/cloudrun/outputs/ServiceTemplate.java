@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateMetadata;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpec;
 import java.util.Objects;
@@ -83,7 +83,6 @@ public final class ServiceTemplate {
             this.spec = spec;
             return this;
         }
-
         public ServiceTemplate build() {
             return new ServiceTemplate(metadata, spec);
         }

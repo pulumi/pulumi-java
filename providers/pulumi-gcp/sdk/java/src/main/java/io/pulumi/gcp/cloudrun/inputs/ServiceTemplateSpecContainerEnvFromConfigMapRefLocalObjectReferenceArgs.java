@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,6 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs build() {
             return new ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs(name);
         }

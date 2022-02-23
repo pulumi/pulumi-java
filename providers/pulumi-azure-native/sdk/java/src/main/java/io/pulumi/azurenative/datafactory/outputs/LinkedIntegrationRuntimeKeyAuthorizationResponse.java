@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -77,7 +77,6 @@ public final class LinkedIntegrationRuntimeKeyAuthorizationResponse {
             this.key = Objects.requireNonNull(key);
             return this;
         }
-
         public LinkedIntegrationRuntimeKeyAuthorizationResponse build() {
             return new LinkedIntegrationRuntimeKeyAuthorizationResponse(authorizationType, key);
         }

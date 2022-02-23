@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configurationProfileAssignmentName", required=true)
-    private final String configurationProfileAssignmentName;
+        private final String configurationProfileAssignmentName;
 
     public String getConfigurationProfileAssignmentName() {
         return this.configurationProfileAssignmentName;
@@ -28,7 +28,7 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final String vmName;
+        private final String vmName;
 
     public String getVmName() {
         return this.vmName;
@@ -98,7 +98,6 @@ public final class GetConfigurationProfileAssignmentArgs extends io.pulumi.resou
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public GetConfigurationProfileAssignmentArgs build() {
             return new GetConfigurationProfileAssignmentArgs(configurationProfileAssignmentName, resourceGroupName, vmName);
         }

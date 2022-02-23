@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.RuntimeAccessConfigAccessType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accessType")
-    private final @Nullable Input<RuntimeAccessConfigAccessType> accessType;
+      private final @Nullable Input<RuntimeAccessConfigAccessType> accessType;
 
     public Input<RuntimeAccessConfigAccessType> getAccessType() {
         return this.accessType == null ? Input.empty() : this.accessType;
@@ -35,7 +35,7 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="runtimeOwner")
-    private final @Nullable Input<String> runtimeOwner;
+      private final @Nullable Input<String> runtimeOwner;
 
     public Input<String> getRuntimeOwner() {
         return this.runtimeOwner == null ? Input.empty() : this.runtimeOwner;
@@ -94,7 +94,6 @@ public final class RuntimeAccessConfigArgs extends io.pulumi.resources.ResourceA
             this.runtimeOwner = Input.ofNullable(runtimeOwner);
             return this;
         }
-
         public RuntimeAccessConfigArgs build() {
             return new RuntimeAccessConfigArgs(accessType, runtimeOwner);
         }

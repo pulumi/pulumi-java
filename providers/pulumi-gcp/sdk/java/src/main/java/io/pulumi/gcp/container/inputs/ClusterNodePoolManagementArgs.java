@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ClusterNodePoolManagementArgs extends io.pulumi.resources.Res
     public static final ClusterNodePoolManagementArgs Empty = new ClusterNodePoolManagementArgs();
 
     @InputImport(name="autoRepair")
-    private final @Nullable Input<Boolean> autoRepair;
+        private final @Nullable Input<Boolean> autoRepair;
 
     public Input<Boolean> getAutoRepair() {
         return this.autoRepair == null ? Input.empty() : this.autoRepair;
     }
 
     @InputImport(name="autoUpgrade")
-    private final @Nullable Input<Boolean> autoUpgrade;
+        private final @Nullable Input<Boolean> autoUpgrade;
 
     public Input<Boolean> getAutoUpgrade() {
         return this.autoUpgrade == null ? Input.empty() : this.autoUpgrade;
@@ -81,7 +81,6 @@ public final class ClusterNodePoolManagementArgs extends io.pulumi.resources.Res
             this.autoUpgrade = Input.ofNullable(autoUpgrade);
             return this;
         }
-
         public ClusterNodePoolManagementArgs build() {
             return new ClusterNodePoolManagementArgs(autoRepair, autoUpgrade);
         }

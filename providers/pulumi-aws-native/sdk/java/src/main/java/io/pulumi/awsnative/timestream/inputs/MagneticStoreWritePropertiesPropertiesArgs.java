@@ -5,7 +5,7 @@ package io.pulumi.awsnative.timestream.inputs;
 
 import io.pulumi.awsnative.timestream.inputs.MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableMagneticStoreWrites", required=true)
-    private final Input<Boolean> enableMagneticStoreWrites;
+        private final Input<Boolean> enableMagneticStoreWrites;
 
     public Input<Boolean> getEnableMagneticStoreWrites() {
         return this.enableMagneticStoreWrites;
@@ -35,7 +35,7 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="magneticStoreRejectedDataLocation")
-    private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
+        private final @Nullable Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> magneticStoreRejectedDataLocation;
 
     public Input<MagneticStoreWritePropertiesPropertiesMagneticStoreRejectedDataLocationPropertiesArgs> getMagneticStoreRejectedDataLocation() {
         return this.magneticStoreRejectedDataLocation == null ? Input.empty() : this.magneticStoreRejectedDataLocation;
@@ -94,7 +94,6 @@ public final class MagneticStoreWritePropertiesPropertiesArgs extends io.pulumi.
             this.magneticStoreRejectedDataLocation = Input.ofNullable(magneticStoreRejectedDataLocation);
             return this;
         }
-
         public MagneticStoreWritePropertiesPropertiesArgs build() {
             return new MagneticStoreWritePropertiesPropertiesArgs(enableMagneticStoreWrites, magneticStoreRejectedDataLocation);
         }

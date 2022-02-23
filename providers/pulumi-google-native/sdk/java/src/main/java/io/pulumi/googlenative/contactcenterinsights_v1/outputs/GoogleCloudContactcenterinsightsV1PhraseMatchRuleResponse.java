@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleResponse(config, negated, query);
         }

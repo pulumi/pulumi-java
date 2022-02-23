@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
      * 
      */
     @InputImport(name="iouThreshold", required=true)
-    private final Double iouThreshold;
+      private final Double iouThreshold;
 
     public Double getIouThreshold() {
         return this.iouThreshold;
@@ -59,7 +59,6 @@ public final class GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsRes
             this.iouThreshold = Objects.requireNonNull(iouThreshold);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse build() {
             return new GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsResponse(iouThreshold);
         }

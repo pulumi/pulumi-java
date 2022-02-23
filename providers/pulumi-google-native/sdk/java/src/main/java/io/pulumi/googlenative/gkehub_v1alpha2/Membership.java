@@ -5,8 +5,8 @@ package io.pulumi.googlenative.gkehub_v1alpha2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1alpha2.MembershipArgs;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.AuthorityResponse;
@@ -206,13 +206,6 @@ public class Membership extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Membership(String name) {
-        super("google-native:gkehub/v1alpha2:Membership", name, MembershipArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

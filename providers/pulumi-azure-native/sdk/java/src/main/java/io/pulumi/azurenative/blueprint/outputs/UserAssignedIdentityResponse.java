@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class UserAssignedIdentityResponse {
             this.principalId = principalId;
             return this;
         }
-
         public UserAssignedIdentityResponse build() {
             return new UserAssignedIdentityResponse(clientId, principalId);
         }

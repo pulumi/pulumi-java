@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.folder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -124,7 +124,6 @@ public final class AccessApprovalSettingsEnrolledService {
             this.enrollmentLevel = enrollmentLevel;
             return this;
         }
-
         public AccessApprovalSettingsEnrolledService build() {
             return new AccessApprovalSettingsEnrolledService(cloudProduct, enrollmentLevel);
         }

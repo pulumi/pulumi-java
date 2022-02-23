@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="privateLinkScopeId", required=true)
-    private final String privateLinkScopeId;
+        private final String privateLinkScopeId;
 
     public String getPrivateLinkScopeId() {
         return this.privateLinkScopeId;
@@ -34,7 +34,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -45,7 +45,7 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable String publicNetworkAccess;
+        private final @Nullable String publicNetworkAccess;
 
     public Optional<String> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Optional.empty() : Optional.ofNullable(this.publicNetworkAccess);
@@ -104,7 +104,6 @@ public final class HybridComputePrivateLinkScopePropertiesResponse extends io.pu
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public HybridComputePrivateLinkScopePropertiesResponse build() {
             return new HybridComputePrivateLinkScopePropertiesResponse(privateLinkScopeId, provisioningState, publicNetworkAccess);
         }

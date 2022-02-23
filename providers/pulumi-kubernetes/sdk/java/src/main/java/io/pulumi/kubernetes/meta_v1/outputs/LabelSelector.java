@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelectorRequirement;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class LabelSelector {
             this.matchLabels = matchLabels;
             return this;
         }
-
         public LabelSelector build() {
             return new LabelSelector(matchExpressions, matchLabels);
         }

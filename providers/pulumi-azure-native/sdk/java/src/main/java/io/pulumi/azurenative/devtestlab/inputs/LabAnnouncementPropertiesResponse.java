@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable String enabled;
+        private final @Nullable String enabled;
 
     public Optional<String> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -35,7 +35,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable String expirationDate;
+        private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
@@ -46,7 +46,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="expired")
-    private final @Nullable Boolean expired;
+        private final @Nullable Boolean expired;
 
     public Optional<Boolean> getExpired() {
         return this.expired == null ? Optional.empty() : Optional.ofNullable(this.expired);
@@ -57,7 +57,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="markdown")
-    private final @Nullable String markdown;
+        private final @Nullable String markdown;
 
     public Optional<String> getMarkdown() {
         return this.markdown == null ? Optional.empty() : Optional.ofNullable(this.markdown);
@@ -68,7 +68,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -79,7 +79,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="title")
-    private final @Nullable String title;
+        private final @Nullable String title;
 
     public Optional<String> getTitle() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
@@ -90,7 +90,7 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="uniqueIdentifier", required=true)
-    private final String uniqueIdentifier;
+        private final String uniqueIdentifier;
 
     public String getUniqueIdentifier() {
         return this.uniqueIdentifier;
@@ -189,7 +189,6 @@ public final class LabAnnouncementPropertiesResponse extends io.pulumi.resources
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public LabAnnouncementPropertiesResponse build() {
             return new LabAnnouncementPropertiesResponse(enabled, expirationDate, expired, markdown, provisioningState, title, uniqueIdentifier);
         }

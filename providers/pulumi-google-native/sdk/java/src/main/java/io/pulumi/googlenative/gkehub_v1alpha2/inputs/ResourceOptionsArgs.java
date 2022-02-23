@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="connectVersion")
-    private final @Nullable Input<String> connectVersion;
+      private final @Nullable Input<String> connectVersion;
 
     public Input<String> getConnectVersion() {
         return this.connectVersion == null ? Input.empty() : this.connectVersion;
@@ -35,7 +35,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="k8sVersion")
-    private final @Nullable Input<String> k8sVersion;
+      private final @Nullable Input<String> k8sVersion;
 
     public Input<String> getK8sVersion() {
         return this.k8sVersion == null ? Input.empty() : this.k8sVersion;
@@ -46,7 +46,7 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="v1beta1Crd")
-    private final @Nullable Input<Boolean> v1beta1Crd;
+      private final @Nullable Input<Boolean> v1beta1Crd;
 
     public Input<Boolean> getV1beta1Crd() {
         return this.v1beta1Crd == null ? Input.empty() : this.v1beta1Crd;
@@ -120,7 +120,6 @@ public final class ResourceOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.v1beta1Crd = Input.ofNullable(v1beta1Crd);
             return this;
         }
-
         public ResourceOptionsArgs build() {
             return new ResourceOptionsArgs(connectVersion, k8sVersion, v1beta1Crd);
         }

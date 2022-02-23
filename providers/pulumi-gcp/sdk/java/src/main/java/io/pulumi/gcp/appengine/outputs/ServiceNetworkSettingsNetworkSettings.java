@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -58,7 +58,6 @@ public final class ServiceNetworkSettingsNetworkSettings {
             this.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
-
         public ServiceNetworkSettingsNetworkSettings build() {
             return new ServiceNetworkSettingsNetworkSettings(ingressTrafficAllowed);
         }

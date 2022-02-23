@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ConsistentHashLoadBalancerSettingsHttpCookieArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpCookie")
-    private final @Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
+      private final @Nullable Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> httpCookie;
 
     public Input<ConsistentHashLoadBalancerSettingsHttpCookieArgs> getHttpCookie() {
         return this.httpCookie == null ? Input.empty() : this.httpCookie;
@@ -35,7 +35,7 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="httpHeaderName")
-    private final @Nullable Input<String> httpHeaderName;
+      private final @Nullable Input<String> httpHeaderName;
 
     public Input<String> getHttpHeaderName() {
         return this.httpHeaderName == null ? Input.empty() : this.httpHeaderName;
@@ -46,7 +46,7 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minimumRingSize")
-    private final @Nullable Input<String> minimumRingSize;
+      private final @Nullable Input<String> minimumRingSize;
 
     public Input<String> getMinimumRingSize() {
         return this.minimumRingSize == null ? Input.empty() : this.minimumRingSize;
@@ -120,7 +120,6 @@ public final class ConsistentHashLoadBalancerSettingsArgs extends io.pulumi.reso
             this.minimumRingSize = Input.ofNullable(minimumRingSize);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsArgs build() {
             return new ConsistentHashLoadBalancerSettingsArgs(httpCookie, httpHeaderName, minimumRingSize);
         }

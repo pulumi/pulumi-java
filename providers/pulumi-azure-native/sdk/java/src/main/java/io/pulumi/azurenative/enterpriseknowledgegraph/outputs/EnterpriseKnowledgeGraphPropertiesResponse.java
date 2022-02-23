@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.enterpriseknowledgegraph.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class EnterpriseKnowledgeGraphPropertiesResponse {
             this.provisioningState = provisioningState;
             return this;
         }
-
         public EnterpriseKnowledgeGraphPropertiesResponse build() {
             return new EnterpriseKnowledgeGraphPropertiesResponse(description, metadata, provisioningState);
         }

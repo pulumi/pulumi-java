@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetIpTagArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
+        private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
     public Input<Either<String,DeleteOptions>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -43,7 +43,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings;
+        private final @Nullable Input<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> dnsSettings;
 
     public Input<VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -54,7 +54,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Input<Integer> idleTimeoutInMinutes;
+        private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -65,7 +65,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="ipTags")
-    private final @Nullable Input<List<VirtualMachineScaleSetIpTagArgs>> ipTags;
+        private final @Nullable Input<List<VirtualMachineScaleSetIpTagArgs>> ipTags;
 
     public Input<List<VirtualMachineScaleSetIpTagArgs>> getIpTags() {
         return this.ipTags == null ? Input.empty() : this.ipTags;
@@ -76,7 +76,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -87,7 +87,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="publicIPAddressVersion")
-    private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
+        private final @Nullable Input<Either<String,IPVersion>> publicIPAddressVersion;
 
     public Input<Either<String,IPVersion>> getPublicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
@@ -98,7 +98,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="publicIPPrefix")
-    private final @Nullable Input<SubResourceArgs> publicIPPrefix;
+        private final @Nullable Input<SubResourceArgs> publicIPPrefix;
 
     public Input<SubResourceArgs> getPublicIPPrefix() {
         return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
@@ -109,7 +109,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<PublicIPAddressSkuArgs> sku;
+        private final @Nullable Input<PublicIPAddressSkuArgs> sku;
 
     public Input<PublicIPAddressSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -258,7 +258,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationArgs extend
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public VirtualMachineScaleSetPublicIPAddressConfigurationArgs build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationArgs(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPPrefix, sku);
         }

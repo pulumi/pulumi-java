@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class SecurityAssessmentMetadataPartnerDataResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public SecurityAssessmentMetadataPartnerDataResponse build() {
             return new SecurityAssessmentMetadataPartnerDataResponse(partnerName, productName, secret);
         }

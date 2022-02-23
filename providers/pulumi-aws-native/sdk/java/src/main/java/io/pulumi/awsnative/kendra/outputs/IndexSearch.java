@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class IndexSearch {
             this.sortable = sortable;
             return this;
         }
-
         public IndexSearch build() {
             return new IndexSearch(displayable, facetable, searchable, sortable);
         }

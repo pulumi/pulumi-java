@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.NetworkSecurityGroupResponse;
 import io.pulumi.azurenative.network.outputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.network.outputs.PrivateLinkServiceResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -549,7 +549,6 @@ public final class NetworkInterfaceResponse {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableIPForwarding, etag, extendedLocation, hostedWorkloads, id, ipConfigurations, location, macAddress, migrationPhase, name, networkSecurityGroup, nicType, primary, privateEndpoint, privateLinkService, provisioningState, resourceGuid, tags, tapConfigurations, type, virtualMachine);
         }

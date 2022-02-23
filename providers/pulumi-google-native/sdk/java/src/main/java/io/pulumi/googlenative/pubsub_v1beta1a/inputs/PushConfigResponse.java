@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pushEndpoint", required=true)
-    private final String pushEndpoint;
+      private final String pushEndpoint;
 
     public String getPushEndpoint() {
         return this.pushEndpoint;
@@ -59,7 +59,6 @@ public final class PushConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public PushConfigResponse build() {
             return new PushConfigResponse(pushEndpoint);
         }

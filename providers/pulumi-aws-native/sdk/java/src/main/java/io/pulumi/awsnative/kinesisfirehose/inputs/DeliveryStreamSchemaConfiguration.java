@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,42 +15,42 @@ public final class DeliveryStreamSchemaConfiguration extends io.pulumi.resources
     public static final DeliveryStreamSchemaConfiguration Empty = new DeliveryStreamSchemaConfiguration();
 
     @InputImport(name="catalogId")
-    private final @Nullable String catalogId;
+        private final @Nullable String catalogId;
 
     public Optional<String> getCatalogId() {
         return this.catalogId == null ? Optional.empty() : Optional.ofNullable(this.catalogId);
     }
 
     @InputImport(name="databaseName")
-    private final @Nullable String databaseName;
+        private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
     }
 
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
     }
 
     @InputImport(name="roleARN")
-    private final @Nullable String roleARN;
+        private final @Nullable String roleARN;
 
     public Optional<String> getRoleARN() {
         return this.roleARN == null ? Optional.empty() : Optional.ofNullable(this.roleARN);
     }
 
     @InputImport(name="tableName")
-    private final @Nullable String tableName;
+        private final @Nullable String tableName;
 
     public Optional<String> getTableName() {
         return this.tableName == null ? Optional.empty() : Optional.ofNullable(this.tableName);
     }
 
     @InputImport(name="versionId")
-    private final @Nullable String versionId;
+        private final @Nullable String versionId;
 
     public Optional<String> getVersionId() {
         return this.versionId == null ? Optional.empty() : Optional.ofNullable(this.versionId);
@@ -139,7 +139,6 @@ public final class DeliveryStreamSchemaConfiguration extends io.pulumi.resources
             this.versionId = versionId;
             return this;
         }
-
         public DeliveryStreamSchemaConfiguration build() {
             return new DeliveryStreamSchemaConfiguration(catalogId, databaseName, region, roleARN, tableName, versionId);
         }

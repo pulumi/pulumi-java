@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="codeId")
-    private final @Nullable String codeId;
+        private final @Nullable String codeId;
 
     public Optional<String> getCodeId() {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
@@ -34,7 +34,7 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="scoringScript", required=true)
-    private final String scoringScript;
+        private final String scoringScript;
 
     public String getScoringScript() {
         return this.scoringScript;
@@ -83,7 +83,6 @@ public final class CodeConfigurationResponse extends io.pulumi.resources.InvokeA
             this.scoringScript = Objects.requireNonNull(scoringScript);
             return this;
         }
-
         public CodeConfigurationResponse build() {
             return new CodeConfigurationResponse(codeId, scoringScript);
         }

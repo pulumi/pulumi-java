@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.inputs.FailoverGroupReadOnlyEndpointArgs;
 import io.pulumi.azurenative.sql.inputs.FailoverGroupReadWriteEndpointArgs;
 import io.pulumi.azurenative.sql.inputs.PartnerInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databases")
-    private final @Nullable Input<List<String>> databases;
+        private final @Nullable Input<List<String>> databases;
 
     public Input<List<String>> getDatabases() {
         return this.databases == null ? Input.empty() : this.databases;
@@ -35,7 +35,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverGroupName")
-    private final @Nullable Input<String> failoverGroupName;
+        private final @Nullable Input<String> failoverGroupName;
 
     public Input<String> getFailoverGroupName() {
         return this.failoverGroupName == null ? Input.empty() : this.failoverGroupName;
@@ -46,7 +46,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnerServers", required=true)
-    private final Input<List<PartnerInfoArgs>> partnerServers;
+        private final Input<List<PartnerInfoArgs>> partnerServers;
 
     public Input<List<PartnerInfoArgs>> getPartnerServers() {
         return this.partnerServers;
@@ -57,7 +57,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnlyEndpoint")
-    private final @Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
+        private final @Nullable Input<FailoverGroupReadOnlyEndpointArgs> readOnlyEndpoint;
 
     public Input<FailoverGroupReadOnlyEndpointArgs> getReadOnlyEndpoint() {
         return this.readOnlyEndpoint == null ? Input.empty() : this.readOnlyEndpoint;
@@ -68,7 +68,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readWriteEndpoint", required=true)
-    private final Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
+        private final Input<FailoverGroupReadWriteEndpointArgs> readWriteEndpoint;
 
     public Input<FailoverGroupReadWriteEndpointArgs> getReadWriteEndpoint() {
         return this.readWriteEndpoint;
@@ -79,7 +79,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -101,7 +101,7 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -250,7 +250,6 @@ public final class FailoverGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FailoverGroupArgs build() {
             return new FailoverGroupArgs(databases, failoverGroupName, partnerServers, readOnlyEndpoint, readWriteEndpoint, resourceGroupName, serverName, tags);
         }

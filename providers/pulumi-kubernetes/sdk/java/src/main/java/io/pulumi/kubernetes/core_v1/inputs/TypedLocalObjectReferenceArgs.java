@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="apiGroup")
-    private final @Nullable Input<String> apiGroup;
+        private final @Nullable Input<String> apiGroup;
 
     public Input<String> getApiGroup() {
         return this.apiGroup == null ? Input.empty() : this.apiGroup;
@@ -34,7 +34,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,6 @@ public final class TypedLocalObjectReferenceArgs extends io.pulumi.resources.Res
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public TypedLocalObjectReferenceArgs build() {
             return new TypedLocalObjectReferenceArgs(apiGroup, kind, name);
         }

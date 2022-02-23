@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="connectivityType")
-    private final @Nullable String connectivityType;
+        private final @Nullable String connectivityType;
 
     public Optional<String> getConnectivityType() {
         return this.connectivityType == null ? Optional.empty() : Optional.ofNullable(this.connectivityType);
@@ -35,7 +35,7 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -84,7 +84,6 @@ public final class SqlConnectivityUpdateSettingsResponse extends io.pulumi.resou
             this.port = port;
             return this;
         }
-
         public SqlConnectivityUpdateSettingsResponse build() {
             return new SqlConnectivityUpdateSettingsResponse(connectivityType, port);
         }

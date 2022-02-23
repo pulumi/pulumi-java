@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networksecurity_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networksecurity_v1beta1.enums.AuthorizationPolicyAction;
 import io.pulumi.googlenative.networksecurity_v1beta1.inputs.RuleArgs;
 import java.lang.String;
@@ -23,14 +23,14 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<AuthorizationPolicyAction> action;
+      private final Input<AuthorizationPolicyAction> action;
 
     public Input<AuthorizationPolicyAction> getAction() {
         return this.action;
     }
 
     @InputImport(name="authorizationPolicyId", required=true)
-    private final Input<String> authorizationPolicyId;
+      private final Input<String> authorizationPolicyId;
 
     public Input<String> getAuthorizationPolicyId() {
         return this.authorizationPolicyId;
@@ -41,7 +41,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,14 +52,14 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -70,14 +70,14 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleArgs>> rules;
+      private final @Nullable Input<List<RuleArgs>> rules;
 
     public Input<List<RuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -237,7 +237,6 @@ public final class AuthorizationPolicyArgs extends io.pulumi.resources.ResourceA
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public AuthorizationPolicyArgs build() {
             return new AuthorizationPolicyArgs(action, authorizationPolicyId, description, labels, location, name, project, rules);
         }

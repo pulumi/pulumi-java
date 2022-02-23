@@ -34,7 +34,6 @@ public final class MembershipRoleRestrictionEvaluationArgs extends io.pulumi.res
         public Builder(MembershipRoleRestrictionEvaluationArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MembershipRoleRestrictionEvaluationArgs build() {
             return new MembershipRoleRestrictionEvaluationArgs();
         }

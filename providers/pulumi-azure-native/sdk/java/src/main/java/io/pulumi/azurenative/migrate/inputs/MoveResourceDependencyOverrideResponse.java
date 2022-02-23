@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -35,7 +35,7 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="targetId")
-    private final @Nullable String targetId;
+        private final @Nullable String targetId;
 
     public Optional<String> getTargetId() {
         return this.targetId == null ? Optional.empty() : Optional.ofNullable(this.targetId);
@@ -84,7 +84,6 @@ public final class MoveResourceDependencyOverrideResponse extends io.pulumi.reso
             this.targetId = targetId;
             return this;
         }
-
         public MoveResourceDependencyOverrideResponse build() {
             return new MoveResourceDependencyOverrideResponse(id, targetId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageResponse;
 import java.lang.String;
 import java.util.Map;
@@ -118,7 +118,6 @@ public final class SignatureResponse {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public SignatureResponse build() {
             return new SignatureResponse(image, metadata, signatureTime, userId);
         }

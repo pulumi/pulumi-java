@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkservices_v1.inputs.EndpointMatcherMetadataLabelMatcherResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metadataLabelMatcher", required=true)
-    private final EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher;
+      private final EndpointMatcherMetadataLabelMatcherResponse metadataLabelMatcher;
 
     public EndpointMatcherMetadataLabelMatcherResponse getMetadataLabelMatcher() {
         return this.metadataLabelMatcher;
@@ -59,7 +59,6 @@ public final class EndpointMatcherResponse extends io.pulumi.resources.InvokeArg
             this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
             return this;
         }
-
         public EndpointMatcherResponse build() {
             return new EndpointMatcherResponse(metadataLabelMatcher);
         }

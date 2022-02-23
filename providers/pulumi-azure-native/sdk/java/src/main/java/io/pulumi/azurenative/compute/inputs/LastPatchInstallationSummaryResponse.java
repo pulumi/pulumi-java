@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.ApiErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="error", required=true)
-    private final ApiErrorResponse error;
+        private final ApiErrorResponse error;
 
     public ApiErrorResponse getError() {
         return this.error;
@@ -35,7 +35,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="excludedPatchCount", required=true)
-    private final Integer excludedPatchCount;
+        private final Integer excludedPatchCount;
 
     public Integer getExcludedPatchCount() {
         return this.excludedPatchCount;
@@ -46,7 +46,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="failedPatchCount", required=true)
-    private final Integer failedPatchCount;
+        private final Integer failedPatchCount;
 
     public Integer getFailedPatchCount() {
         return this.failedPatchCount;
@@ -57,7 +57,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="installationActivityId", required=true)
-    private final String installationActivityId;
+        private final String installationActivityId;
 
     public String getInstallationActivityId() {
         return this.installationActivityId;
@@ -68,7 +68,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="installedPatchCount", required=true)
-    private final Integer installedPatchCount;
+        private final Integer installedPatchCount;
 
     public Integer getInstalledPatchCount() {
         return this.installedPatchCount;
@@ -79,7 +79,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="lastModifiedTime", required=true)
-    private final String lastModifiedTime;
+        private final String lastModifiedTime;
 
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
@@ -90,7 +90,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maintenanceWindowExceeded", required=true)
-    private final Boolean maintenanceWindowExceeded;
+        private final Boolean maintenanceWindowExceeded;
 
     public Boolean getMaintenanceWindowExceeded() {
         return this.maintenanceWindowExceeded;
@@ -101,7 +101,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="notSelectedPatchCount", required=true)
-    private final Integer notSelectedPatchCount;
+        private final Integer notSelectedPatchCount;
 
     public Integer getNotSelectedPatchCount() {
         return this.notSelectedPatchCount;
@@ -112,7 +112,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="pendingPatchCount", required=true)
-    private final Integer pendingPatchCount;
+        private final Integer pendingPatchCount;
 
     public Integer getPendingPatchCount() {
         return this.pendingPatchCount;
@@ -123,7 +123,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -134,7 +134,7 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -273,7 +273,6 @@ public final class LastPatchInstallationSummaryResponse extends io.pulumi.resour
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public LastPatchInstallationSummaryResponse build() {
             return new LastPatchInstallationSummaryResponse(error, excludedPatchCount, failedPatchCount, installationActivityId, installedPatchCount, lastModifiedTime, maintenanceWindowExceeded, notSelectedPatchCount, pendingPatchCount, startTime, status);
         }

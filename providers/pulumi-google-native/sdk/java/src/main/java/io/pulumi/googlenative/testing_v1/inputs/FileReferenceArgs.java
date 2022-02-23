@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsPath")
-    private final @Nullable Input<String> gcsPath;
+      private final @Nullable Input<String> gcsPath;
 
     public Input<String> getGcsPath() {
         return this.gcsPath == null ? Input.empty() : this.gcsPath;
@@ -66,7 +66,6 @@ public final class FileReferenceArgs extends io.pulumi.resources.ResourceArgs {
             this.gcsPath = Input.ofNullable(gcsPath);
             return this;
         }
-
         public FileReferenceArgs build() {
             return new FileReferenceArgs(gcsPath);
         }

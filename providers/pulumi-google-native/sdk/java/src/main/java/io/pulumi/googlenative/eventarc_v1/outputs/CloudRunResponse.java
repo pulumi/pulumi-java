@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class CloudRunResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public CloudRunResponse build() {
             return new CloudRunResponse(path, region, service);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MonitoringScheduleStatisticsResource extends io.pulumi.resour
      * 
      */
     @InputImport(name="s3Uri")
-    private final @Nullable String s3Uri;
+        private final @Nullable String s3Uri;
 
     public Optional<String> getS3Uri() {
         return this.s3Uri == null ? Optional.empty() : Optional.ofNullable(this.s3Uri);
@@ -61,7 +61,6 @@ public final class MonitoringScheduleStatisticsResource extends io.pulumi.resour
             this.s3Uri = s3Uri;
             return this;
         }
-
         public MonitoringScheduleStatisticsResource build() {
             return new MonitoringScheduleStatisticsResource(s3Uri);
         }

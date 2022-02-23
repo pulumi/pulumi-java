@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * 
      */
     @InputImport(name="clusterLabels", required=true)
-    private final Input<Map<String,String>> clusterLabels;
+        private final Input<Map<String,String>> clusterLabels;
 
     public Input<Map<String,String>> getClusterLabels() {
         return this.clusterLabels;
@@ -31,7 +31,7 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -90,7 +90,6 @@ public final class WorkflowTemplatePlacementClusterSelectorGetArgs extends io.pu
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public WorkflowTemplatePlacementClusterSelectorGetArgs build() {
             return new WorkflowTemplatePlacementClusterSelectorGetArgs(clusterLabels, zone);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.events.inputs.ConnectionApiKeyAuthParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionBasicAuthParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionHttpParameters;
 import io.pulumi.awsnative.events.inputs.ConnectionOAuthParameters;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -18,28 +18,28 @@ public final class AuthParametersProperties extends io.pulumi.resources.InvokeAr
     public static final AuthParametersProperties Empty = new AuthParametersProperties();
 
     @InputImport(name="apiKeyAuthParameters")
-    private final @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters;
+        private final @Nullable ConnectionApiKeyAuthParameters apiKeyAuthParameters;
 
     public Optional<ConnectionApiKeyAuthParameters> getApiKeyAuthParameters() {
         return this.apiKeyAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.apiKeyAuthParameters);
     }
 
     @InputImport(name="basicAuthParameters")
-    private final @Nullable ConnectionBasicAuthParameters basicAuthParameters;
+        private final @Nullable ConnectionBasicAuthParameters basicAuthParameters;
 
     public Optional<ConnectionBasicAuthParameters> getBasicAuthParameters() {
         return this.basicAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.basicAuthParameters);
     }
 
     @InputImport(name="invocationHttpParameters")
-    private final @Nullable ConnectionHttpParameters invocationHttpParameters;
+        private final @Nullable ConnectionHttpParameters invocationHttpParameters;
 
     public Optional<ConnectionHttpParameters> getInvocationHttpParameters() {
         return this.invocationHttpParameters == null ? Optional.empty() : Optional.ofNullable(this.invocationHttpParameters);
     }
 
     @InputImport(name="oAuthParameters")
-    private final @Nullable ConnectionOAuthParameters oAuthParameters;
+        private final @Nullable ConnectionOAuthParameters oAuthParameters;
 
     public Optional<ConnectionOAuthParameters> getOAuthParameters() {
         return this.oAuthParameters == null ? Optional.empty() : Optional.ofNullable(this.oAuthParameters);
@@ -108,7 +108,6 @@ public final class AuthParametersProperties extends io.pulumi.resources.InvokeAr
             this.oAuthParameters = oAuthParameters;
             return this;
         }
-
         public AuthParametersProperties build() {
             return new AuthParametersProperties(apiKeyAuthParameters, basicAuthParameters, invocationHttpParameters, oAuthParameters);
         }

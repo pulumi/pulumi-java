@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextStreamResponse;
 import io.pulumi.googlenative.transcoder_v1.inputs.VideoStreamResponse;
@@ -24,7 +24,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="audioStream", required=true)
-    private final AudioStreamResponse audioStream;
+      private final AudioStreamResponse audioStream;
 
     public AudioStreamResponse getAudioStream() {
         return this.audioStream;
@@ -35,7 +35,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -46,7 +46,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="textStream", required=true)
-    private final TextStreamResponse textStream;
+      private final TextStreamResponse textStream;
 
     public TextStreamResponse getTextStream() {
         return this.textStream;
@@ -57,7 +57,7 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="videoStream", required=true)
-    private final VideoStreamResponse videoStream;
+      private final VideoStreamResponse videoStream;
 
     public VideoStreamResponse getVideoStream() {
         return this.videoStream;
@@ -126,7 +126,6 @@ public final class ElementaryStreamResponse extends io.pulumi.resources.InvokeAr
             this.videoStream = Objects.requireNonNull(videoStream);
             return this;
         }
-
         public ElementaryStreamResponse build() {
             return new ElementaryStreamResponse(audioStream, key, textStream, videoStream);
         }

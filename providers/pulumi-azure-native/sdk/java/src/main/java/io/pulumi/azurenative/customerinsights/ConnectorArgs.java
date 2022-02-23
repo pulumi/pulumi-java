@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.customerinsights.enums.ConnectorTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorName")
-    private final @Nullable Input<String> connectorName;
+        private final @Nullable Input<String> connectorName;
 
     public Input<String> getConnectorName() {
         return this.connectorName == null ? Input.empty() : this.connectorName;
@@ -35,7 +35,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorProperties", required=true)
-    private final Input<Map<String,Object>> connectorProperties;
+        private final Input<Map<String,Object>> connectorProperties;
 
     public Input<Map<String,Object>> getConnectorProperties() {
         return this.connectorProperties;
@@ -46,7 +46,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectorType", required=true)
-    private final Input<Either<String,ConnectorTypes>> connectorType;
+        private final Input<Either<String,ConnectorTypes>> connectorType;
 
     public Input<Either<String,ConnectorTypes>> getConnectorType() {
         return this.connectorType;
@@ -57,7 +57,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -79,7 +79,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+        private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -90,7 +90,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isInternal")
-    private final @Nullable Input<Boolean> isInternal;
+        private final @Nullable Input<Boolean> isInternal;
 
     public Input<Boolean> getIsInternal() {
         return this.isInternal == null ? Input.empty() : this.isInternal;
@@ -101,7 +101,7 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -250,7 +250,6 @@ public final class ConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ConnectorArgs build() {
             return new ConnectorArgs(connectorName, connectorProperties, connectorType, description, displayName, hubName, isInternal, resourceGroupName);
         }

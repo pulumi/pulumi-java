@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class JwtClaimsResponse {
             this.subject = Objects.requireNonNull(subject);
             return this;
         }
-
         public JwtClaimsResponse build() {
             return new JwtClaimsResponse(audience, issuer, subject);
         }

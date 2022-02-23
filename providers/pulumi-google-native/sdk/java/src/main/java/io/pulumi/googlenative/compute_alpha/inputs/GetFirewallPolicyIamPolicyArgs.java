@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetFirewallPolicyIamPolicyArgs extends io.pulumi.resources.In
     public static final GetFirewallPolicyIamPolicyArgs Empty = new GetFirewallPolicyIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -71,7 +71,6 @@ public final class GetFirewallPolicyIamPolicyArgs extends io.pulumi.resources.In
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public GetFirewallPolicyIamPolicyArgs build() {
             return new GetFirewallPolicyIamPolicyArgs(optionsRequestedPolicyVersion, resource);
         }

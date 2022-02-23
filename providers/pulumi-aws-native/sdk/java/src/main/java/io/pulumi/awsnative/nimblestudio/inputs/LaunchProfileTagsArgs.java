@@ -30,7 +30,6 @@ public final class LaunchProfileTagsArgs extends io.pulumi.resources.ResourceArg
         public Builder(LaunchProfileTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public LaunchProfileTagsArgs build() {
             return new LaunchProfileTagsArgs();
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.InstanceTableIamPolicyArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class InstanceTableIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceTableIamPolicy(String name) {
-        super("google-native:bigtableadmin/v2:InstanceTableIamPolicy", name, InstanceTableIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.MetadataOptionsArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deleteObjectsFromSourceAfterTransfer")
-    private final @Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer;
+      private final @Nullable Input<Boolean> deleteObjectsFromSourceAfterTransfer;
 
     public Input<Boolean> getDeleteObjectsFromSourceAfterTransfer() {
         return this.deleteObjectsFromSourceAfterTransfer == null ? Input.empty() : this.deleteObjectsFromSourceAfterTransfer;
@@ -35,7 +35,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deleteObjectsUniqueInSink")
-    private final @Nullable Input<Boolean> deleteObjectsUniqueInSink;
+      private final @Nullable Input<Boolean> deleteObjectsUniqueInSink;
 
     public Input<Boolean> getDeleteObjectsUniqueInSink() {
         return this.deleteObjectsUniqueInSink == null ? Input.empty() : this.deleteObjectsUniqueInSink;
@@ -46,7 +46,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="metadataOptions")
-    private final @Nullable Input<MetadataOptionsArgs> metadataOptions;
+      private final @Nullable Input<MetadataOptionsArgs> metadataOptions;
 
     public Input<MetadataOptionsArgs> getMetadataOptions() {
         return this.metadataOptions == null ? Input.empty() : this.metadataOptions;
@@ -57,7 +57,7 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="overwriteObjectsAlreadyExistingInSink")
-    private final @Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink;
+      private final @Nullable Input<Boolean> overwriteObjectsAlreadyExistingInSink;
 
     public Input<Boolean> getOverwriteObjectsAlreadyExistingInSink() {
         return this.overwriteObjectsAlreadyExistingInSink == null ? Input.empty() : this.overwriteObjectsAlreadyExistingInSink;
@@ -146,7 +146,6 @@ public final class TransferOptionsArgs extends io.pulumi.resources.ResourceArgs 
             this.overwriteObjectsAlreadyExistingInSink = Input.ofNullable(overwriteObjectsAlreadyExistingInSink);
             return this;
         }
-
         public TransferOptionsArgs build() {
             return new TransferOptionsArgs(deleteObjectsFromSourceAfterTransfer, deleteObjectsUniqueInSink, metadataOptions, overwriteObjectsAlreadyExistingInSink);
         }

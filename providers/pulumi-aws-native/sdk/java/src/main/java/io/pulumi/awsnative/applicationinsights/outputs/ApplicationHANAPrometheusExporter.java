@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -146,7 +146,6 @@ public final class ApplicationHANAPrometheusExporter {
             this.prometheusPort = prometheusPort;
             return this;
         }
-
         public ApplicationHANAPrometheusExporter build() {
             return new ApplicationHANAPrometheusExporter(agreeToInstallHANADBClient, hANAPort, hANASID, hANASecretName, prometheusPort);
         }

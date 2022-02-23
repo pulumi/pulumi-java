@@ -9,7 +9,7 @@ import io.pulumi.awsnative.gamelift.outputs.GameServerGroupAutoScalingPolicy;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupInstanceDefinition;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupLaunchTemplate;
 import io.pulumi.awsnative.gamelift.outputs.GameServerGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -315,7 +315,6 @@ public final class GetGameServerGroupResult {
             this.vpcSubnets = vpcSubnets;
             return this;
         }
-
         public GetGameServerGroupResult build() {
             return new GetGameServerGroupResult(autoScalingGroupArn, autoScalingPolicy, balancingStrategy, gameServerGroupArn, gameServerGroupName, gameServerProtectionPolicy, instanceDefinitions, launchTemplate, maxSize, minSize, roleArn, tags, vpcSubnets);
         }

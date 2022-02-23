@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<String> regex;
+        private final @Nullable Input<String> regex;
 
     public Input<String> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -93,7 +93,6 @@ public final class RulesetColumnSelectorArgs extends io.pulumi.resources.Resourc
             this.regex = Input.ofNullable(regex);
             return this;
         }
-
         public RulesetColumnSelectorArgs build() {
             return new RulesetColumnSelectorArgs(name, regex);
         }

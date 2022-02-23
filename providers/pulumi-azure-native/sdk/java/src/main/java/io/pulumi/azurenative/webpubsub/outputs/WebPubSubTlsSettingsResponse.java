@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.webpubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class WebPubSubTlsSettingsResponse {
             this.clientCertEnabled = clientCertEnabled;
             return this;
         }
-
         public WebPubSubTlsSettingsResponse build() {
             return new WebPubSubTlsSettingsResponse(clientCertEnabled);
         }

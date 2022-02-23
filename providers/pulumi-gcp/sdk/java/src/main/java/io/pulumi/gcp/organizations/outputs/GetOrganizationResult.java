@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -186,7 +186,6 @@ public final class GetOrganizationResult {
             this.organization = organization;
             return this;
         }
-
         public GetOrganizationResult build() {
             return new GetOrganizationResult(createTime, directoryCustomerId, domain, id, lifecycleState, name, orgId, organization);
         }

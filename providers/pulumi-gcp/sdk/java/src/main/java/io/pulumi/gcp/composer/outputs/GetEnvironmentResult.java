@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfig;
 import java.lang.String;
 import java.util.List;
@@ -131,7 +131,6 @@ public final class GetEnvironmentResult {
             this.region = region;
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(configs, id, labels, name, project, region);
         }

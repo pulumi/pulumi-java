@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketLifecycleRuleItemResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class BucketLifecycleResponse {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public BucketLifecycleResponse build() {
             return new BucketLifecycleResponse(rule);
         }

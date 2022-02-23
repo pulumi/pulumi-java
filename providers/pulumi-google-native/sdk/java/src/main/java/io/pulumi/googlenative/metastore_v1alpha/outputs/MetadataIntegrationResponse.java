@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DataCatalogConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DataplexConfigResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class MetadataIntegrationResponse {
             this.dataplexConfig = Objects.requireNonNull(dataplexConfig);
             return this;
         }
-
         public MetadataIntegrationResponse build() {
             return new MetadataIntegrationResponse(dataCatalogConfig, dataplexConfig);
         }

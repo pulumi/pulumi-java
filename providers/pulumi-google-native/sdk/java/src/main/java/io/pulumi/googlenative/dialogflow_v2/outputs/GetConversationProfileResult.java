@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2AutomatedAgentConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse;
@@ -332,7 +332,6 @@ public final class GetConversationProfileResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConversationProfileResult build() {
             return new GetConversationProfileResult(automatedAgentConfig, createTime, displayName, humanAgentAssistantConfig, humanAgentHandoffConfig, languageCode, loggingConfig, name, newMessageEventNotificationConfig, notificationConfig, securitySettings, sttConfig, timeZone, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionAutomaticScalingCpuUtilization;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionAutomaticScalingDiskUtilization;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionAutomaticScalingNetworkUtilization;
@@ -305,7 +305,6 @@ public final class FlexibleAppVersionAutomaticScaling {
             this.requestUtilization = requestUtilization;
             return this;
         }
-
         public FlexibleAppVersionAutomaticScaling build() {
             return new FlexibleAppVersionAutomaticScaling(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.GcsObjectResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="allowedSuccessCodes", required=true)
-    private final List<Integer> allowedSuccessCodes;
+      private final List<Integer> allowedSuccessCodes;
 
     public List<Integer> getAllowedSuccessCodes() {
         return this.allowedSuccessCodes;
@@ -35,7 +35,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="gcsObject", required=true)
-    private final GcsObjectResponse gcsObject;
+      private final GcsObjectResponse gcsObject;
 
     public GcsObjectResponse getGcsObject() {
         return this.gcsObject;
@@ -46,7 +46,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="interpreter", required=true)
-    private final String interpreter;
+      private final String interpreter;
 
     public String getInterpreter() {
         return this.interpreter;
@@ -57,7 +57,7 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final String localPath;
+      private final String localPath;
 
     public String getLocalPath() {
         return this.localPath;
@@ -126,7 +126,6 @@ public final class ExecStepConfigResponse extends io.pulumi.resources.InvokeArgs
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public ExecStepConfigResponse build() {
             return new ExecStepConfigResponse(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

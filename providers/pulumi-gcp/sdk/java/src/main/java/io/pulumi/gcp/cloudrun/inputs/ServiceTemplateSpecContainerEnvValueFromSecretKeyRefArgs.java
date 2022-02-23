@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -30,7 +30,7 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -89,7 +89,6 @@ public final class ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs exte
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs build() {
             return new ServiceTemplateSpecContainerEnvValueFromSecretKeyRefArgs(key, name);
         }

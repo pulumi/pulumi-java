@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class MultiRegionAccessPointRegionArgs extends io.pulumi.resources.
     public static final MultiRegionAccessPointRegionArgs Empty = new MultiRegionAccessPointRegionArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -57,7 +57,6 @@ public final class MultiRegionAccessPointRegionArgs extends io.pulumi.resources.
             this.bucket = Input.of(Objects.requireNonNull(bucket));
             return this;
         }
-
         public MultiRegionAccessPointRegionArgs build() {
             return new MultiRegionAccessPointRegionArgs(bucket);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.iotcentral;
 
 import io.pulumi.azurenative.iotcentral.inputs.AppSkuInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -32,7 +32,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -43,7 +43,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -65,7 +65,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<AppSkuInfoArgs> sku;
+        private final Input<AppSkuInfoArgs> sku;
 
     public Input<AppSkuInfoArgs> getSku() {
         return this.sku;
@@ -76,7 +76,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subdomain")
-    private final @Nullable Input<String> subdomain;
+        private final @Nullable Input<String> subdomain;
 
     public Input<String> getSubdomain() {
         return this.subdomain == null ? Input.empty() : this.subdomain;
@@ -87,7 +87,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -98,7 +98,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<String> template;
+        private final @Nullable Input<String> template;
 
     public Input<String> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -247,7 +247,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.template = Input.ofNullable(template);
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(displayName, location, resourceGroupName, resourceName, sku, subdomain, tags, template);
         }

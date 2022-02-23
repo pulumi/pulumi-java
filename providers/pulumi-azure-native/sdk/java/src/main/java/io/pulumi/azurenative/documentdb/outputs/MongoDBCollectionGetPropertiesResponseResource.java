@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.MongoIndexResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -186,7 +186,6 @@ public final class MongoDBCollectionGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public MongoDBCollectionGetPropertiesResponseResource build() {
             return new MongoDBCollectionGetPropertiesResponseResource(analyticalStorageTtl, etag, id, indexes, rid, shardKey, ts);
         }

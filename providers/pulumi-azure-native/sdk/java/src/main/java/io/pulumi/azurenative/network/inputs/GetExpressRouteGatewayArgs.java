@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="expressRouteGatewayName", required=true)
-    private final String expressRouteGatewayName;
+        private final String expressRouteGatewayName;
 
     public String getExpressRouteGatewayName() {
         return this.expressRouteGatewayName;
@@ -28,7 +28,7 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetExpressRouteGatewayArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetExpressRouteGatewayArgs build() {
             return new GetExpressRouteGatewayArgs(expressRouteGatewayName, resourceGroupName);
         }

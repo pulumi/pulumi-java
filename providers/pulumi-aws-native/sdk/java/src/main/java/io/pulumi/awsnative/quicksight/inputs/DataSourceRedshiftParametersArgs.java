@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clusterId")
-    private final @Nullable Input<String> clusterId;
+        private final @Nullable Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId == null ? Input.empty() : this.clusterId;
@@ -38,7 +38,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="database", required=true)
-    private final Input<String> database;
+        private final Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database;
@@ -49,7 +49,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -60,7 +60,7 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Double> port;
+        private final @Nullable Input<Double> port;
 
     public Input<Double> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -149,7 +149,6 @@ public final class DataSourceRedshiftParametersArgs extends io.pulumi.resources.
             this.port = Input.ofNullable(port);
             return this;
         }
-
         public DataSourceRedshiftParametersArgs build() {
             return new DataSourceRedshiftParametersArgs(clusterId, database, host, port);
         }

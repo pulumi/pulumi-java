@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigtableColumnResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class BigtableColumnFamilyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BigtableColumnFamilyResponse build() {
             return new BigtableColumnFamilyResponse(columns, encoding, familyId, onlyReadLatest, type);
         }

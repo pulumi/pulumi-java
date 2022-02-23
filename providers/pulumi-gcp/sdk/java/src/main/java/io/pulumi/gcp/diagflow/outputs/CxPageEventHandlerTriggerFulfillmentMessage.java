@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageEventHandlerTriggerFulfillmentMessageText;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class CxPageEventHandlerTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxPageEventHandlerTriggerFulfillmentMessage build() {
             return new CxPageEventHandlerTriggerFulfillmentMessage(text);
         }

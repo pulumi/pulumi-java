@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryDestination")
-    private final @Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination;
+      private final @Nullable Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> bigqueryDestination;
 
     public Input<GoogleCloudHealthcareV1beta1FhirBigQueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
@@ -36,7 +36,7 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceTypes")
-    private final @Nullable Input<List<String>> resourceTypes;
+      private final @Nullable Input<List<String>> resourceTypes;
 
     public Input<List<String>> getResourceTypes() {
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
@@ -95,7 +95,6 @@ public final class StreamConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }
-
         public StreamConfigArgs build() {
             return new StreamConfigArgs(bigqueryDestination, resourceTypes);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateEndpointResponse;
 import io.pulumi.azurenative.keyvault.outputs.MHSMPrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class MHSMPrivateEndpointConnectionItemResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public MHSMPrivateEndpointConnectionItemResponse build() {
             return new MHSMPrivateEndpointConnectionItemResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

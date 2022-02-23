@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactGcsResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactRemoteResponse;
 import java.lang.Boolean;
@@ -97,7 +97,6 @@ public final class SoftwareRecipeArtifactResponse {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public SoftwareRecipeArtifactResponse build() {
             return new SoftwareRecipeArtifactResponse(allowInsecure, gcs, remote);
         }

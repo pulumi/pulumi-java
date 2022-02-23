@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurestack;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="customerSubscriptionName")
-    private final @Nullable Input<String> customerSubscriptionName;
+        private final @Nullable Input<String> customerSubscriptionName;
 
     public Input<String> getCustomerSubscriptionName() {
         return this.customerSubscriptionName == null ? Input.empty() : this.customerSubscriptionName;
@@ -30,7 +30,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="registrationName", required=true)
-    private final Input<String> registrationName;
+        private final Input<String> registrationName;
 
     public Input<String> getRegistrationName() {
         return this.registrationName;
@@ -41,7 +41,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final Input<String> resourceGroup;
+        private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -52,7 +52,7 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -141,7 +141,6 @@ public final class CustomerSubscriptionArgs extends io.pulumi.resources.Resource
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public CustomerSubscriptionArgs build() {
             return new CustomerSubscriptionArgs(customerSubscriptionName, registrationName, resourceGroup, tenantId);
         }

@@ -6,18 +6,11 @@ package io.pulumi.awsnative;
 import io.pulumi.awsnative.ProviderArgs;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import javax.annotation.Nullable;
 
 @ResourceType(type="pulumi:providers:aws-native")
 public class Provider extends io.pulumi.resources.ProviderResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Provider(String name) {
-        super("aws-native", name, ProviderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

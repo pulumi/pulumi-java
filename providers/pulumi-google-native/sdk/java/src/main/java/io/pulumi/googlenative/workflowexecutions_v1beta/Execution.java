@@ -5,8 +5,8 @@ package io.pulumi.googlenative.workflowexecutions_v1beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.workflowexecutions_v1beta.ExecutionArgs;
 import io.pulumi.googlenative.workflowexecutions_v1beta.outputs.ErrorResponse;
@@ -149,13 +149,6 @@ public class Execution extends io.pulumi.resources.CustomResource {
         return this.workflowRevisionId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Execution(String name) {
-        super("google-native:workflowexecutions/v1beta:Execution", name, ExecutionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

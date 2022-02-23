@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.inputs.EndpointPropertiesCustomHeadersArgs;
 import io.pulumi.azurenative.network.inputs.EndpointPropertiesSubnetsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customHeaders")
-    private final @Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
+        private final @Nullable Input<List<EndpointPropertiesCustomHeadersArgs>> customHeaders;
 
     public Input<List<EndpointPropertiesCustomHeadersArgs>> getCustomHeaders() {
         return this.customHeaders == null ? Input.empty() : this.customHeaders;
@@ -41,7 +41,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointLocation")
-    private final @Nullable Input<String> endpointLocation;
+        private final @Nullable Input<String> endpointLocation;
 
     public Input<String> getEndpointLocation() {
         return this.endpointLocation == null ? Input.empty() : this.endpointLocation;
@@ -52,7 +52,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointMonitorStatus")
-    private final @Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
+        private final @Nullable Input<Either<String,EndpointMonitorStatus>> endpointMonitorStatus;
 
     public Input<Either<String,EndpointMonitorStatus>> getEndpointMonitorStatus() {
         return this.endpointMonitorStatus == null ? Input.empty() : this.endpointMonitorStatus;
@@ -63,7 +63,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointStatus")
-    private final @Nullable Input<Either<String,EndpointStatus>> endpointStatus;
+        private final @Nullable Input<Either<String,EndpointStatus>> endpointStatus;
 
     public Input<Either<String,EndpointStatus>> getEndpointStatus() {
         return this.endpointStatus == null ? Input.empty() : this.endpointStatus;
@@ -74,7 +74,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="geoMapping")
-    private final @Nullable Input<List<String>> geoMapping;
+        private final @Nullable Input<List<String>> geoMapping;
 
     public Input<List<String>> getGeoMapping() {
         return this.geoMapping == null ? Input.empty() : this.geoMapping;
@@ -85,7 +85,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -96,7 +96,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minChildEndpoints")
-    private final @Nullable Input<Double> minChildEndpoints;
+        private final @Nullable Input<Double> minChildEndpoints;
 
     public Input<Double> getMinChildEndpoints() {
         return this.minChildEndpoints == null ? Input.empty() : this.minChildEndpoints;
@@ -107,7 +107,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minChildEndpointsIPv4")
-    private final @Nullable Input<Double> minChildEndpointsIPv4;
+        private final @Nullable Input<Double> minChildEndpointsIPv4;
 
     public Input<Double> getMinChildEndpointsIPv4() {
         return this.minChildEndpointsIPv4 == null ? Input.empty() : this.minChildEndpointsIPv4;
@@ -118,7 +118,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minChildEndpointsIPv6")
-    private final @Nullable Input<Double> minChildEndpointsIPv6;
+        private final @Nullable Input<Double> minChildEndpointsIPv6;
 
     public Input<Double> getMinChildEndpointsIPv6() {
         return this.minChildEndpointsIPv6 == null ? Input.empty() : this.minChildEndpointsIPv6;
@@ -129,7 +129,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -140,7 +140,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Double> priority;
+        private final @Nullable Input<Double> priority;
 
     public Input<Double> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -151,7 +151,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets;
+        private final @Nullable Input<List<EndpointPropertiesSubnetsArgs>> subnets;
 
     public Input<List<EndpointPropertiesSubnetsArgs>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -162,7 +162,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+        private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -173,7 +173,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceId")
-    private final @Nullable Input<String> targetResourceId;
+        private final @Nullable Input<String> targetResourceId;
 
     public Input<String> getTargetResourceId() {
         return this.targetResourceId == null ? Input.empty() : this.targetResourceId;
@@ -184,7 +184,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -195,7 +195,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Double> weight;
+        private final @Nullable Input<Double> weight;
 
     public Input<Double> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -464,7 +464,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
         }

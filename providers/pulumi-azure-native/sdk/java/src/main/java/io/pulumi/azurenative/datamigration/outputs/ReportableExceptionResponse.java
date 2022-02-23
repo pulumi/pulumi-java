@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class ReportableExceptionResponse {
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ReportableExceptionResponse build() {
             return new ReportableExceptionResponse(actionableMessage, filePath, hResult, lineNumber, message, stackTrace);
         }

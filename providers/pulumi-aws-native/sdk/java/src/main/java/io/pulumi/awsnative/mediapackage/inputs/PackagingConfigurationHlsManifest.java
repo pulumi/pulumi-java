@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationHlsManifestAdMarkers;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class PackagingConfigurationHlsManifest extends io.pulumi.resources
      * 
      */
     @InputImport(name="adMarkers")
-    private final @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
+        private final @Nullable PackagingConfigurationHlsManifestAdMarkers adMarkers;
 
     public Optional<PackagingConfigurationHlsManifestAdMarkers> getAdMarkers() {
         return this.adMarkers == null ? Optional.empty() : Optional.ofNullable(this.adMarkers);
@@ -38,14 +38,14 @@ public final class PackagingConfigurationHlsManifest extends io.pulumi.resources
      * 
      */
     @InputImport(name="includeIframeOnlyStream")
-    private final @Nullable Boolean includeIframeOnlyStream;
+        private final @Nullable Boolean includeIframeOnlyStream;
 
     public Optional<Boolean> getIncludeIframeOnlyStream() {
         return this.includeIframeOnlyStream == null ? Optional.empty() : Optional.ofNullable(this.includeIframeOnlyStream);
     }
 
     @InputImport(name="manifestName")
-    private final @Nullable String manifestName;
+        private final @Nullable String manifestName;
 
     public Optional<String> getManifestName() {
         return this.manifestName == null ? Optional.empty() : Optional.ofNullable(this.manifestName);
@@ -56,7 +56,7 @@ public final class PackagingConfigurationHlsManifest extends io.pulumi.resources
      * 
      */
     @InputImport(name="programDateTimeIntervalSeconds")
-    private final @Nullable Integer programDateTimeIntervalSeconds;
+        private final @Nullable Integer programDateTimeIntervalSeconds;
 
     public Optional<Integer> getProgramDateTimeIntervalSeconds() {
         return this.programDateTimeIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.programDateTimeIntervalSeconds);
@@ -67,14 +67,14 @@ public final class PackagingConfigurationHlsManifest extends io.pulumi.resources
      * 
      */
     @InputImport(name="repeatExtXKey")
-    private final @Nullable Boolean repeatExtXKey;
+        private final @Nullable Boolean repeatExtXKey;
 
     public Optional<Boolean> getRepeatExtXKey() {
         return this.repeatExtXKey == null ? Optional.empty() : Optional.ofNullable(this.repeatExtXKey);
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable PackagingConfigurationStreamSelection streamSelection;
+        private final @Nullable PackagingConfigurationStreamSelection streamSelection;
 
     public Optional<PackagingConfigurationStreamSelection> getStreamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
@@ -163,7 +163,6 @@ public final class PackagingConfigurationHlsManifest extends io.pulumi.resources
             this.streamSelection = streamSelection;
             return this;
         }
-
         public PackagingConfigurationHlsManifest build() {
             return new PackagingConfigurationHlsManifest(adMarkers, includeIframeOnlyStream, manifestName, programDateTimeIntervalSeconds, repeatExtXKey, streamSelection);
         }

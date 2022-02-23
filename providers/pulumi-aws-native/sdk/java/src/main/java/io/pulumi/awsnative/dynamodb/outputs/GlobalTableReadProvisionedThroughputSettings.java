@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.outputs;
 
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableCapacityAutoScalingSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class GlobalTableReadProvisionedThroughputSettings {
             this.readCapacityUnits = readCapacityUnits;
             return this;
         }
-
         public GlobalTableReadProvisionedThroughputSettings build() {
             return new GlobalTableReadProvisionedThroughputSettings(readCapacityAutoScalingSettings, readCapacityUnits);
         }

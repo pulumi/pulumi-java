@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class KeyTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public KeyTag build() {
             return new KeyTag(key, value);
         }

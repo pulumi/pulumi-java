@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -584,7 +584,6 @@ public final class A2AProtectedManagedDiskDetailsResponse {
             this.tfoDiskName = tfoDiskName;
             return this;
         }
-
         public A2AProtectedManagedDiskDetailsResponse build() {
             return new A2AProtectedManagedDiskDetailsResponse(allowedDiskLevelOperation, dataPendingAtSourceAgentInMB, dataPendingInStagingStorageAccountInMB, dekKeyVaultArmId, diskCapacityInBytes, diskId, diskName, diskState, diskType, failoverDiskName, isDiskEncrypted, isDiskKeyEncrypted, kekKeyVaultArmId, keyIdentifier, monitoringJobType, monitoringPercentageCompletion, primaryStagingAzureStorageAccountId, recoveryDiskEncryptionSetId, recoveryReplicaDiskAccountType, recoveryReplicaDiskId, recoveryResourceGroupId, recoveryTargetDiskAccountType, recoveryTargetDiskId, resyncRequired, secretIdentifier, tfoDiskName);
         }

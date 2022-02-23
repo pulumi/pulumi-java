@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -30,7 +30,7 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -89,7 +89,6 @@ public final class BucketIAMPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public BucketIAMPolicyArgs build() {
             return new BucketIAMPolicyArgs(bucket, policyData);
         }

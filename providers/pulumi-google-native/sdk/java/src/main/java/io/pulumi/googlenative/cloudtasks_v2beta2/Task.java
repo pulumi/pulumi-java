@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudtasks_v2beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudtasks_v2beta2.TaskArgs;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineHttpRequestResponse;
@@ -120,13 +120,6 @@ public class Task extends io.pulumi.resources.CustomResource {
         return this.view;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Task(String name) {
-        super("google-native:cloudtasks/v2beta2:Task", name, TaskArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

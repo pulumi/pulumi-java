@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cert")
-    private final @Nullable Input<String> cert;
+      private final @Nullable Input<String> cert;
 
     public Input<String> getCert() {
         return this.cert == null ? Input.empty() : this.cert;
@@ -34,7 +34,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certSerialNumber")
-    private final @Nullable Input<String> certSerialNumber;
+      private final @Nullable Input<String> certSerialNumber;
 
     public Input<String> getCertSerialNumber() {
         return this.certSerialNumber == null ? Input.empty() : this.certSerialNumber;
@@ -45,7 +45,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commonName")
-    private final @Nullable Input<String> commonName;
+      private final @Nullable Input<String> commonName;
 
     public Input<String> getCommonName() {
         return this.commonName == null ? Input.empty() : this.commonName;
@@ -56,7 +56,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -67,7 +67,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+      private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -78,7 +78,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+      private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
@@ -89,7 +89,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -100,7 +100,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -111,7 +111,7 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sha1Fingerprint")
-    private final @Nullable Input<String> sha1Fingerprint;
+      private final @Nullable Input<String> sha1Fingerprint;
 
     public Input<String> getSha1Fingerprint() {
         return this.sha1Fingerprint == null ? Input.empty() : this.sha1Fingerprint;
@@ -275,7 +275,6 @@ public final class SslCertArgs extends io.pulumi.resources.ResourceArgs {
             this.sha1Fingerprint = Input.ofNullable(sha1Fingerprint);
             return this;
         }
-
         public SslCertArgs build() {
             return new SslCertArgs(cert, certSerialNumber, commonName, createTime, expirationTime, instance, kind, selfLink, sha1Fingerprint);
         }

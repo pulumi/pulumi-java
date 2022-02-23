@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends io
     public static final ReplicationConfigurationReplicationDestinationArgs Empty = new ReplicationConfigurationReplicationDestinationArgs();
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+        private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="registryId", required=true)
-    private final Input<String> registryId;
+        private final Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId;
@@ -84,7 +84,6 @@ public final class ReplicationConfigurationReplicationDestinationArgs extends io
             this.registryId = Input.of(Objects.requireNonNull(registryId));
             return this;
         }
-
         public ReplicationConfigurationReplicationDestinationArgs build() {
             return new ReplicationConfigurationReplicationDestinationArgs(region, registryId);
         }

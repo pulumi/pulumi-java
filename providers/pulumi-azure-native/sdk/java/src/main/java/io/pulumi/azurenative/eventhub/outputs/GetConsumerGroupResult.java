@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class GetConsumerGroupResult {
             this.userMetadata = userMetadata;
             return this;
         }
-
         public GetConsumerGroupResult build() {
             return new GetConsumerGroupResult(createdAt, id, name, type, updatedAt, userMetadata);
         }

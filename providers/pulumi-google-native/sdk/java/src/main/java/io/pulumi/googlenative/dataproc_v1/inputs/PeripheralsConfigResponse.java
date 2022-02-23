@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.SparkHistoryServerConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="metastoreService", required=true)
-    private final String metastoreService;
+      private final String metastoreService;
 
     public String getMetastoreService() {
         return this.metastoreService;
@@ -33,7 +33,7 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sparkHistoryServerConfig", required=true)
-    private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
+      private final SparkHistoryServerConfigResponse sparkHistoryServerConfig;
 
     public SparkHistoryServerConfigResponse getSparkHistoryServerConfig() {
         return this.sparkHistoryServerConfig;
@@ -82,7 +82,6 @@ public final class PeripheralsConfigResponse extends io.pulumi.resources.InvokeA
             this.sparkHistoryServerConfig = Objects.requireNonNull(sparkHistoryServerConfig);
             return this;
         }
-
         public PeripheralsConfigResponse build() {
             return new PeripheralsConfigResponse(metastoreService, sparkHistoryServerConfig);
         }

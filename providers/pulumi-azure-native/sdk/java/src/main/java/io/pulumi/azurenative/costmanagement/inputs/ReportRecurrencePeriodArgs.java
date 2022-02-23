@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="from", required=true)
-    private final Input<String> from;
+        private final Input<String> from;
 
     public Input<String> getFrom() {
         return this.from;
@@ -34,7 +34,7 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="to")
-    private final @Nullable Input<String> to;
+        private final @Nullable Input<String> to;
 
     public Input<String> getTo() {
         return this.to == null ? Input.empty() : this.to;
@@ -93,7 +93,6 @@ public final class ReportRecurrencePeriodArgs extends io.pulumi.resources.Resour
             this.to = Input.ofNullable(to);
             return this;
         }
-
         public ReportRecurrencePeriodArgs build() {
             return new ReportRecurrencePeriodArgs(from, to);
         }

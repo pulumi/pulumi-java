@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
      * 
      */
     @InputImport(name="enableSpeechAdaptation")
-    private final @Nullable Input<Boolean> enableSpeechAdaptation;
+      private final @Nullable Input<Boolean> enableSpeechAdaptation;
 
     public Input<Boolean> getEnableSpeechAdaptation() {
         return this.enableSpeechAdaptation == null ? Input.empty() : this.enableSpeechAdaptation;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs extends io.
             this.enableSpeechAdaptation = Input.ofNullable(enableSpeechAdaptation);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3SpeechToTextSettingsArgs(enableSpeechAdaptation);
         }

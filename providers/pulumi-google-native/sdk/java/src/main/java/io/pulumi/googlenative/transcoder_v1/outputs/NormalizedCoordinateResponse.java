@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class NormalizedCoordinateResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public NormalizedCoordinateResponse build() {
             return new NormalizedCoordinateResponse(x, y);
         }

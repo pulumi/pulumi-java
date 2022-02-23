@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+      private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -66,7 +66,6 @@ public final class ResourceAnnotationArgs extends io.pulumi.resources.ResourceAr
             this.label = Input.ofNullable(label);
             return this;
         }
-
         public ResourceAnnotationArgs build() {
             return new ResourceAnnotationArgs(label);
         }

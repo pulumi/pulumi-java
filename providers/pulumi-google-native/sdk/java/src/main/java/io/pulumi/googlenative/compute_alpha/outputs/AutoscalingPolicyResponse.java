@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalingPolicyCpuUtilizationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalingPolicyCustomMetricUtilizationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AutoscalingPolicyLoadBalancingUtilizationResponse;
@@ -234,7 +234,6 @@ public final class AutoscalingPolicyResponse {
             this.scalingSchedules = Objects.requireNonNull(scalingSchedules);
             return this;
         }
-
         public AutoscalingPolicyResponse build() {
             return new AutoscalingPolicyResponse(coolDownPeriodSec, cpuUtilization, customMetricUtilizations, loadBalancingUtilization, maxNumReplicas, minNumReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }

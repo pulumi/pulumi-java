@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.MonitoringComponentConfigEnableComponentsItem;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enableComponents")
-    private final @Nullable Input<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
+      private final @Nullable Input<List<MonitoringComponentConfigEnableComponentsItem>> enableComponents;
 
     public Input<List<MonitoringComponentConfigEnableComponentsItem>> getEnableComponents() {
         return this.enableComponents == null ? Input.empty() : this.enableComponents;
@@ -67,7 +67,6 @@ public final class MonitoringComponentConfigArgs extends io.pulumi.resources.Res
             this.enableComponents = Input.ofNullable(enableComponents);
             return this;
         }
-
         public MonitoringComponentConfigArgs build() {
             return new MonitoringComponentConfigArgs(enableComponents);
         }

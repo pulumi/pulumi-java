@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ApplicationGatewayBackendHealthServerResponse {
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public ApplicationGatewayBackendHealthServerResponse build() {
             return new ApplicationGatewayBackendHealthServerResponse(address, health, healthProbeLog, ipConfiguration);
         }

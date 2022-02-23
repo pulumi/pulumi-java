@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iap.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class AppEngineVersionIamBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public AppEngineVersionIamBindingCondition build() {
             return new AppEngineVersionIamBindingCondition(description, expression, title);
         }

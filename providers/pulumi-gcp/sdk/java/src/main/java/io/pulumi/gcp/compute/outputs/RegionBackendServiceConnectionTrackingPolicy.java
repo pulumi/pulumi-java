@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -144,7 +144,6 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
             this.trackingMode = trackingMode;
             return this;
         }
-
         public RegionBackendServiceConnectionTrackingPolicy build() {
             return new RegionBackendServiceConnectionTrackingPolicy(connectionPersistenceOnUnhealthyBackends, idleTimeoutSec, trackingMode);
         }

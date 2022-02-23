@@ -8,8 +8,8 @@ import io.pulumi.awsnative.devicefarm.VPCEConfigurationArgs;
 import io.pulumi.awsnative.devicefarm.outputs.VPCEConfigurationTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -57,13 +57,6 @@ public class VPCEConfiguration extends io.pulumi.resources.CustomResource {
         return this.vpceServiceName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public VPCEConfiguration(String name) {
-        super("aws-native:devicefarm:VPCEConfiguration", name, VPCEConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.elasticache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGlobalReplicationGroupArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="globalReplicationGroupId", required=true)
-    private final String globalReplicationGroupId;
+        private final String globalReplicationGroupId;
 
     public String getGlobalReplicationGroupId() {
         return this.globalReplicationGroupId;
@@ -55,7 +55,6 @@ public final class GetGlobalReplicationGroupArgs extends io.pulumi.resources.Inv
             this.globalReplicationGroupId = Objects.requireNonNull(globalReplicationGroupId);
             return this;
         }
-
         public GetGlobalReplicationGroupArgs build() {
             return new GetGlobalReplicationGroupArgs(globalReplicationGroupId);
         }

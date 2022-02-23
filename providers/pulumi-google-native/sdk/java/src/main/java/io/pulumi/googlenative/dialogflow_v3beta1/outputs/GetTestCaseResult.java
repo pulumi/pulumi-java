@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ConversationTurnResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TestCaseResultResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TestConfigResponse;
@@ -204,7 +204,6 @@ public final class GetTestCaseResult {
             this.testConfig = Objects.requireNonNull(testConfig);
             return this;
         }
-
         public GetTestCaseResult build() {
             return new GetTestCaseResult(creationTime, displayName, lastTestResult, name, notes, tags, testCaseConversationTurns, testConfig);
         }

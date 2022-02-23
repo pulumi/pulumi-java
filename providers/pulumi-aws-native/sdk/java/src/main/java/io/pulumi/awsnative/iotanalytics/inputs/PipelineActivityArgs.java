@@ -14,7 +14,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.PipelineMathArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineRemoveAttributesArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineSelectAttributesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,70 +24,70 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
     public static final PipelineActivityArgs Empty = new PipelineActivityArgs();
 
     @InputImport(name="addAttributes")
-    private final @Nullable Input<PipelineAddAttributesArgs> addAttributes;
+        private final @Nullable Input<PipelineAddAttributesArgs> addAttributes;
 
     public Input<PipelineAddAttributesArgs> getAddAttributes() {
         return this.addAttributes == null ? Input.empty() : this.addAttributes;
     }
 
     @InputImport(name="channel")
-    private final @Nullable Input<PipelineChannelArgs> channel;
+        private final @Nullable Input<PipelineChannelArgs> channel;
 
     public Input<PipelineChannelArgs> getChannel() {
         return this.channel == null ? Input.empty() : this.channel;
     }
 
     @InputImport(name="datastore")
-    private final @Nullable Input<PipelineDatastoreArgs> datastore;
+        private final @Nullable Input<PipelineDatastoreArgs> datastore;
 
     public Input<PipelineDatastoreArgs> getDatastore() {
         return this.datastore == null ? Input.empty() : this.datastore;
     }
 
     @InputImport(name="deviceRegistryEnrich")
-    private final @Nullable Input<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
+        private final @Nullable Input<PipelineDeviceRegistryEnrichArgs> deviceRegistryEnrich;
 
     public Input<PipelineDeviceRegistryEnrichArgs> getDeviceRegistryEnrich() {
         return this.deviceRegistryEnrich == null ? Input.empty() : this.deviceRegistryEnrich;
     }
 
     @InputImport(name="deviceShadowEnrich")
-    private final @Nullable Input<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
+        private final @Nullable Input<PipelineDeviceShadowEnrichArgs> deviceShadowEnrich;
 
     public Input<PipelineDeviceShadowEnrichArgs> getDeviceShadowEnrich() {
         return this.deviceShadowEnrich == null ? Input.empty() : this.deviceShadowEnrich;
     }
 
     @InputImport(name="filter")
-    private final @Nullable Input<PipelineFilterArgs> filter;
+        private final @Nullable Input<PipelineFilterArgs> filter;
 
     public Input<PipelineFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
     }
 
     @InputImport(name="lambda")
-    private final @Nullable Input<PipelineLambdaArgs> lambda;
+        private final @Nullable Input<PipelineLambdaArgs> lambda;
 
     public Input<PipelineLambdaArgs> getLambda() {
         return this.lambda == null ? Input.empty() : this.lambda;
     }
 
     @InputImport(name="math")
-    private final @Nullable Input<PipelineMathArgs> math;
+        private final @Nullable Input<PipelineMathArgs> math;
 
     public Input<PipelineMathArgs> getMath() {
         return this.math == null ? Input.empty() : this.math;
     }
 
     @InputImport(name="removeAttributes")
-    private final @Nullable Input<PipelineRemoveAttributesArgs> removeAttributes;
+        private final @Nullable Input<PipelineRemoveAttributesArgs> removeAttributes;
 
     public Input<PipelineRemoveAttributesArgs> getRemoveAttributes() {
         return this.removeAttributes == null ? Input.empty() : this.removeAttributes;
     }
 
     @InputImport(name="selectAttributes")
-    private final @Nullable Input<PipelineSelectAttributesArgs> selectAttributes;
+        private final @Nullable Input<PipelineSelectAttributesArgs> selectAttributes;
 
     public Input<PipelineSelectAttributesArgs> getSelectAttributes() {
         return this.selectAttributes == null ? Input.empty() : this.selectAttributes;
@@ -266,7 +266,6 @@ public final class PipelineActivityArgs extends io.pulumi.resources.ResourceArgs
             this.selectAttributes = Input.ofNullable(selectAttributes);
             return this;
         }
-
         public PipelineActivityArgs build() {
             return new PipelineActivityArgs(addAttributes, channel, datastore, deviceRegistryEnrich, deviceShadowEnrich, filter, lambda, math, removeAttributes, selectAttributes);
         }

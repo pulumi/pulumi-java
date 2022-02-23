@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DisplayDataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageSummaryResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.TransformSummaryResponse;
@@ -98,7 +98,6 @@ public final class PipelineDescriptionResponse {
             this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
             return this;
         }
-
         public PipelineDescriptionResponse build() {
             return new PipelineDescriptionResponse(displayData, executionPipelineStage, originalPipelineTransform);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
     public static final SubscriptionIAMMemberState Empty = new SubscriptionIAMMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<SubscriptionIAMMemberConditionGetArgs> condition;
+        private final @Nullable Input<SubscriptionIAMMemberConditionGetArgs> condition;
 
     public Input<SubscriptionIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -46,7 +46,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -70,7 +70,7 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription")
-    private final @Nullable Input<String> subscription;
+        private final @Nullable Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription == null ? Input.empty() : this.subscription;
@@ -189,7 +189,6 @@ public final class SubscriptionIAMMemberState extends io.pulumi.resources.Resour
             this.subscription = Input.ofNullable(subscription);
             return this;
         }
-
         public SubscriptionIAMMemberState build() {
             return new SubscriptionIAMMemberState(condition, etag, member, project, role, subscription);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.ConnectionDetailsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceConnectionResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.PrivateLinkServiceProxyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -164,7 +164,6 @@ public final class RemotePrivateEndpointResponse {
             this.vnetTrafficTag = Objects.requireNonNull(vnetTrafficTag);
             return this;
         }
-
         public RemotePrivateEndpointResponse build() {
             return new RemotePrivateEndpointResponse(connectionDetails, id, manualPrivateLinkServiceConnections, privateLinkServiceConnections, privateLinkServiceProxies, vnetTrafficTag);
         }

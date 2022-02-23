@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class StageDetailsResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public StageDetailsResponse build() {
             return new StageDetailsResponse(displayName, stageName, stageStatus, startTime);
         }

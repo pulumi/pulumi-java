@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="functionAlias")
-    private final @Nullable String functionAlias;
+        private final @Nullable String functionAlias;
 
     public Optional<String> getFunctionAlias() {
         return this.functionAlias == null ? Optional.empty() : Optional.ofNullable(this.functionAlias);
@@ -34,7 +34,7 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable String workspaceId;
+        private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
@@ -83,7 +83,6 @@ public final class NonAzureQueryPropertiesResponse extends io.pulumi.resources.I
             this.workspaceId = workspaceId;
             return this;
         }
-
         public NonAzureQueryPropertiesResponse build() {
             return new NonAzureQueryPropertiesResponse(functionAlias, workspaceId);
         }

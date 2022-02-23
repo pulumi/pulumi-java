@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.SnapshotArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
@@ -458,13 +458,6 @@ public class Snapshot extends io.pulumi.resources.CustomResource {
         return this.userLicenses;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Snapshot(String name) {
-        super("google-native:compute/alpha:Snapshot", name, SnapshotArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

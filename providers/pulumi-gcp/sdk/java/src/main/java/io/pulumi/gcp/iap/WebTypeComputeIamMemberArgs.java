@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.WebTypeComputeIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<WebTypeComputeIamMemberConditionArgs> condition;
+        private final @Nullable Input<WebTypeComputeIamMemberConditionArgs> condition;
 
     public Input<WebTypeComputeIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -40,7 +40,7 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -53,7 +53,7 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -142,7 +142,6 @@ public final class WebTypeComputeIamMemberArgs extends io.pulumi.resources.Resou
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public WebTypeComputeIamMemberArgs build() {
             return new WebTypeComputeIamMemberArgs(condition, member, project, role);
         }

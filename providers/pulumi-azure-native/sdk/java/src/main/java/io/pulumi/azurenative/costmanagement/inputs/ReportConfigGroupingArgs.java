@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.inputs;
 import io.pulumi.azurenative.costmanagement.enums.ReportConfigColumnType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ReportConfigColumnType>> type;
+        private final Input<Either<String,ReportConfigColumnType>> type;
 
     public Input<Either<String,ReportConfigColumnType>> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class ReportConfigGroupingArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ReportConfigGroupingArgs build() {
             return new ReportConfigGroupingArgs(name, type);
         }

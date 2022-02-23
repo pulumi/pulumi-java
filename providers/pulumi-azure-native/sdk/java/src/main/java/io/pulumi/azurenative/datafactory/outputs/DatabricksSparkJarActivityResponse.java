@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.outputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -253,7 +253,6 @@ public final class DatabricksSparkJarActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DatabricksSparkJarActivityResponse build() {
             return new DatabricksSparkJarActivityResponse(dependsOn, description, libraries, linkedServiceName, mainClassName, name, parameters, policy, type, userProperties);
         }

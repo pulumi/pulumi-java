@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -352,7 +352,6 @@ public final class AttachedDiskInitializeParamsResponse {
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public AttachedDiskInitializeParamsResponse build() {
             return new AttachedDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenses, multiWriter, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);
         }

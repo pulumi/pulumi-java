@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.SubnetGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class GetSubnetGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetSubnetGroupResult build() {
             return new GetSubnetGroupResult(aRN, description, subnetIds, tags);
         }

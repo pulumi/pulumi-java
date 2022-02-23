@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupPositionalConstraint;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupFieldToMatchArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupTextTransformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,35 +23,35 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
     public static final RuleGroupByteMatchStatementArgs Empty = new RuleGroupByteMatchStatementArgs();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
+        private final Input<RuleGroupFieldToMatchArgs> fieldToMatch;
 
     public Input<RuleGroupFieldToMatchArgs> getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="positionalConstraint", required=true)
-    private final Input<RuleGroupPositionalConstraint> positionalConstraint;
+        private final Input<RuleGroupPositionalConstraint> positionalConstraint;
 
     public Input<RuleGroupPositionalConstraint> getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
     @InputImport(name="searchString")
-    private final @Nullable Input<String> searchString;
+        private final @Nullable Input<String> searchString;
 
     public Input<String> getSearchString() {
         return this.searchString == null ? Input.empty() : this.searchString;
     }
 
     @InputImport(name="searchStringBase64")
-    private final @Nullable Input<String> searchStringBase64;
+        private final @Nullable Input<String> searchStringBase64;
 
     public Input<String> getSearchStringBase64() {
         return this.searchStringBase64 == null ? Input.empty() : this.searchStringBase64;
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
+        private final Input<List<RuleGroupTextTransformationArgs>> textTransformations;
 
     public Input<List<RuleGroupTextTransformationArgs>> getTextTransformations() {
         return this.textTransformations;
@@ -155,7 +155,6 @@ public final class RuleGroupByteMatchStatementArgs extends io.pulumi.resources.R
             this.textTransformations = Input.of(Objects.requireNonNull(textTransformations));
             return this;
         }
-
         public RuleGroupByteMatchStatementArgs build() {
             return new RuleGroupByteMatchStatementArgs(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.container;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.NodePoolArgs;
 import io.pulumi.gcp.container.inputs.NodePoolState;
@@ -343,13 +343,6 @@ public class NodePool extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NodePool(String name) {
-        super("gcp:container/nodePool:NodePool", name, NodePoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

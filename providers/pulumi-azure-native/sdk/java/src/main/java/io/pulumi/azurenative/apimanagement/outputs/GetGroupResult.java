@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(builtIn, description, displayName, externalId, id, name, type);
         }

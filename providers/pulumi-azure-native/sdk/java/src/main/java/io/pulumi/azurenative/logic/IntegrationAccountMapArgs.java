@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.MapType;
 import io.pulumi.azurenative.logic.inputs.IntegrationAccountMapPropertiesParametersSchemaArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -35,7 +35,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -46,7 +46,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final Input<String> integrationAccountName;
+        private final Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -57,7 +57,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -68,7 +68,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mapName")
-    private final @Nullable Input<String> mapName;
+        private final @Nullable Input<String> mapName;
 
     public Input<String> getMapName() {
         return this.mapName == null ? Input.empty() : this.mapName;
@@ -79,7 +79,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mapType", required=true)
-    private final Input<Either<String,MapType>> mapType;
+        private final Input<Either<String,MapType>> mapType;
 
     public Input<Either<String,MapType>> getMapType() {
         return this.mapType;
@@ -90,7 +90,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Object> metadata;
+        private final @Nullable Input<Object> metadata;
 
     public Input<Object> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -101,7 +101,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="parametersSchema")
-    private final @Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
+        private final @Nullable Input<IntegrationAccountMapPropertiesParametersSchemaArgs> parametersSchema;
 
     public Input<IntegrationAccountMapPropertiesParametersSchemaArgs> getParametersSchema() {
         return this.parametersSchema == null ? Input.empty() : this.parametersSchema;
@@ -112,7 +112,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -123,7 +123,7 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -302,7 +302,6 @@ public final class IntegrationAccountMapArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public IntegrationAccountMapArgs build() {
             return new IntegrationAccountMapArgs(content, contentType, integrationAccountName, location, mapName, mapType, metadata, parametersSchema, resourceGroupName, tags);
         }

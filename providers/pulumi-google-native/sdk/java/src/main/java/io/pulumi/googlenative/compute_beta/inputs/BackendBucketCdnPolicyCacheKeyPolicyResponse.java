@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="includeHttpHeaders", required=true)
-    private final List<String> includeHttpHeaders;
+      private final List<String> includeHttpHeaders;
 
     public List<String> getIncludeHttpHeaders() {
         return this.includeHttpHeaders;
@@ -33,7 +33,7 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
      * 
      */
     @InputImport(name="queryStringWhitelist", required=true)
-    private final List<String> queryStringWhitelist;
+      private final List<String> queryStringWhitelist;
 
     public List<String> getQueryStringWhitelist() {
         return this.queryStringWhitelist;
@@ -82,7 +82,6 @@ public final class BackendBucketCdnPolicyCacheKeyPolicyResponse extends io.pulum
             this.queryStringWhitelist = Objects.requireNonNull(queryStringWhitelist);
             return this;
         }
-
         public BackendBucketCdnPolicyCacheKeyPolicyResponse build() {
             return new BackendBucketCdnPolicyCacheKeyPolicyResponse(includeHttpHeaders, queryStringWhitelist);
         }

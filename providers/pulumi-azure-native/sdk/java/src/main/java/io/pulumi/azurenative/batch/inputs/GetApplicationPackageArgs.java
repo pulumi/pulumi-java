@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApplicationPackageArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetApplicationPackageArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final String applicationName;
+        private final String applicationName;
 
     public String getApplicationName() {
         return this.applicationName;
@@ -39,7 +39,7 @@ public final class GetApplicationPackageArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetApplicationPackageArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="versionName", required=true)
-    private final String versionName;
+        private final String versionName;
 
     public String getVersionName() {
         return this.versionName;
@@ -119,7 +119,6 @@ public final class GetApplicationPackageArgs extends io.pulumi.resources.InvokeA
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public GetApplicationPackageArgs build() {
             return new GetApplicationPackageArgs(accountName, applicationName, resourceGroupName, versionName);
         }

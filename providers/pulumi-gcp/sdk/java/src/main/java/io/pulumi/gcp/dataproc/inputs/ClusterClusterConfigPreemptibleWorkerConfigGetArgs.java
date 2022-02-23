@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
      * 
      */
     @InputImport(name="diskConfig")
-    private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
+        private final @Nullable Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> diskConfig;
 
     public Input<ClusterClusterConfigPreemptibleWorkerConfigDiskConfigGetArgs> getDiskConfig() {
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
     }
 
     @InputImport(name="instanceNames")
-    private final @Nullable Input<List<String>> instanceNames;
+        private final @Nullable Input<List<String>> instanceNames;
 
     public Input<List<String>> getInstanceNames() {
         return this.instanceNames == null ? Input.empty() : this.instanceNames;
@@ -41,7 +41,7 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
      * 
      */
     @InputImport(name="numInstances")
-    private final @Nullable Input<Integer> numInstances;
+        private final @Nullable Input<Integer> numInstances;
 
     public Input<Integer> getNumInstances() {
         return this.numInstances == null ? Input.empty() : this.numInstances;
@@ -115,7 +115,6 @@ public final class ClusterClusterConfigPreemptibleWorkerConfigGetArgs extends io
             this.numInstances = Input.ofNullable(numInstances);
             return this;
         }
-
         public ClusterClusterConfigPreemptibleWorkerConfigGetArgs build() {
             return new ClusterClusterConfigPreemptibleWorkerConfigGetArgs(diskConfig, instanceNames, numInstances);
         }

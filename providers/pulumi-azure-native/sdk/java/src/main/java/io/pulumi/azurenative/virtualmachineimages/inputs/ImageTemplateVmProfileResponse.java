@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
 import io.pulumi.azurenative.virtualmachineimages.inputs.VirtualNetworkConfigResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="osDiskSizeGB")
-    private final @Nullable Integer osDiskSizeGB;
+        private final @Nullable Integer osDiskSizeGB;
 
     public Optional<Integer> getOsDiskSizeGB() {
         return this.osDiskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.osDiskSizeGB);
@@ -36,7 +36,7 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable String vmSize;
+        private final @Nullable String vmSize;
 
     public Optional<String> getVmSize() {
         return this.vmSize == null ? Optional.empty() : Optional.ofNullable(this.vmSize);
@@ -47,7 +47,7 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vnetConfig")
-    private final @Nullable VirtualNetworkConfigResponse vnetConfig;
+        private final @Nullable VirtualNetworkConfigResponse vnetConfig;
 
     public Optional<VirtualNetworkConfigResponse> getVnetConfig() {
         return this.vnetConfig == null ? Optional.empty() : Optional.ofNullable(this.vnetConfig);
@@ -106,7 +106,6 @@ public final class ImageTemplateVmProfileResponse extends io.pulumi.resources.In
             this.vnetConfig = vnetConfig;
             return this;
         }
-
         public ImageTemplateVmProfileResponse build() {
             return new ImageTemplateVmProfileResponse(osDiskSizeGB, vmSize, vnetConfig);
         }

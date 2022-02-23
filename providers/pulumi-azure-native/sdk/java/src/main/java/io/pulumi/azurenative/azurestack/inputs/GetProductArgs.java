@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestack.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="productName", required=true)
-    private final String productName;
+        private final String productName;
 
     public String getProductName() {
         return this.productName;
@@ -28,7 +28,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="registrationName", required=true)
-    private final String registrationName;
+        private final String registrationName;
 
     public String getRegistrationName() {
         return this.registrationName;
@@ -39,7 +39,7 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final String resourceGroup;
+        private final String resourceGroup;
 
     public String getResourceGroup() {
         return this.resourceGroup;
@@ -98,7 +98,6 @@ public final class GetProductArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroup = Objects.requireNonNull(resourceGroup);
             return this;
         }
-
         public GetProductArgs build() {
             return new GetProductArgs(productName, registrationName, resourceGroup);
         }

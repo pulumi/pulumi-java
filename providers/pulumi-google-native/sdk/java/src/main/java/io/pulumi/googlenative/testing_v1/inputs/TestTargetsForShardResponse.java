@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TestTargetsForShardResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="testTargets", required=true)
-    private final List<String> testTargets;
+      private final List<String> testTargets;
 
     public List<String> getTestTargets() {
         return this.testTargets;
@@ -60,7 +60,6 @@ public final class TestTargetsForShardResponse extends io.pulumi.resources.Invok
             this.testTargets = Objects.requireNonNull(testTargets);
             return this;
         }
-
         public TestTargetsForShardResponse build() {
             return new TestTargetsForShardResponse(testTargets);
         }

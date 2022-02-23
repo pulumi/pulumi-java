@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.JitNetworkAccessRequestVirtualMachineArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="justification")
-    private final @Nullable Input<String> justification;
+        private final @Nullable Input<String> justification;
 
     public Input<String> getJustification() {
         return this.justification == null ? Input.empty() : this.justification;
@@ -32,7 +32,7 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requestor", required=true)
-    private final Input<String> requestor;
+        private final Input<String> requestor;
 
     public Input<String> getRequestor() {
         return this.requestor;
@@ -43,14 +43,14 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="startTimeUtc", required=true)
-    private final Input<String> startTimeUtc;
+        private final Input<String> startTimeUtc;
 
     public Input<String> getStartTimeUtc() {
         return this.startTimeUtc;
     }
 
     @InputImport(name="virtualMachines", required=true)
-    private final Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
+        private final Input<List<JitNetworkAccessRequestVirtualMachineArgs>> virtualMachines;
 
     public Input<List<JitNetworkAccessRequestVirtualMachineArgs>> getVirtualMachines() {
         return this.virtualMachines;
@@ -139,7 +139,6 @@ public final class JitNetworkAccessRequestArgs extends io.pulumi.resources.Resou
             this.virtualMachines = Input.of(Objects.requireNonNull(virtualMachines));
             return this;
         }
-
         public JitNetworkAccessRequestArgs build() {
             return new JitNetworkAccessRequestArgs(justification, requestor, startTimeUtc, virtualMachines);
         }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.outputs.JobInputSequenceResponse;
 import io.pulumi.azurenative.media.outputs.JobInputsResponse;
 import io.pulumi.azurenative.media.outputs.JobOutputAssetResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -338,7 +338,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(correlationData, created, description, endTime, id, input, lastModified, name, outputs, priority, startTime, state, systemData, type);
         }

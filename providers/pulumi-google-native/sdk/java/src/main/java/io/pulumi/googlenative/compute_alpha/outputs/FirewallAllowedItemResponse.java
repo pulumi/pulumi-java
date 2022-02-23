@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class FirewallAllowedItemResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public FirewallAllowedItemResponse build() {
             return new FirewallAllowedItemResponse(ipProtocol, ports);
         }

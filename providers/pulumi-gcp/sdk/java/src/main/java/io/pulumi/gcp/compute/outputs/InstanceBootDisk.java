@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceBootDiskInitializeParams;
 import java.lang.Boolean;
 import java.lang.String;
@@ -220,7 +220,6 @@ public final class InstanceBootDisk {
             this.source = source;
             return this;
         }
-
         public InstanceBootDisk build() {
             return new InstanceBootDisk(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.CredentialResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.DeploymentUpdateLabelEntryResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class DeploymentUpdateResponse {
             this.manifest = Objects.requireNonNull(manifest);
             return this;
         }
-
         public DeploymentUpdateResponse build() {
             return new DeploymentUpdateResponse(credential, description, labels, manifest);
         }

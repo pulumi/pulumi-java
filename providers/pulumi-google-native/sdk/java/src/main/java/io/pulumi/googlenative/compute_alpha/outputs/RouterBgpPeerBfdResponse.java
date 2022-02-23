@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class RouterBgpPeerBfdResponse {
             this.slowTimerInterval = Objects.requireNonNull(slowTimerInterval);
             return this;
         }
-
         public RouterBgpPeerBfdResponse build() {
             return new RouterBgpPeerBfdResponse(minReceiveInterval, minTransmitInterval, mode, multiplier, packetMode, sessionInitializationMode, slowTimerInterval);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories", required=true)
-    private final Input<List<String>> categories;
+        private final Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories;
@@ -33,7 +33,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-    private final Input<List<String>> locations;
+        private final Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations;
@@ -55,7 +55,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logProfileName")
-    private final @Nullable Input<String> logProfileName;
+        private final @Nullable Input<String> logProfileName;
 
     public Input<String> getLogProfileName() {
         return this.logProfileName == null ? Input.empty() : this.logProfileName;
@@ -66,7 +66,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy", required=true)
-    private final Input<RetentionPolicyArgs> retentionPolicy;
+        private final Input<RetentionPolicyArgs> retentionPolicy;
 
     public Input<RetentionPolicyArgs> getRetentionPolicy() {
         return this.retentionPolicy;
@@ -77,7 +77,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusRuleId")
-    private final @Nullable Input<String> serviceBusRuleId;
+        private final @Nullable Input<String> serviceBusRuleId;
 
     public Input<String> getServiceBusRuleId() {
         return this.serviceBusRuleId == null ? Input.empty() : this.serviceBusRuleId;
@@ -88,7 +88,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-    private final @Nullable Input<String> storageAccountId;
+        private final @Nullable Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
@@ -99,7 +99,7 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -248,7 +248,6 @@ public final class LogProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LogProfileArgs build() {
             return new LogProfileArgs(categories, location, locations, logProfileName, retentionPolicy, serviceBusRuleId, storageAccountId, tags);
         }

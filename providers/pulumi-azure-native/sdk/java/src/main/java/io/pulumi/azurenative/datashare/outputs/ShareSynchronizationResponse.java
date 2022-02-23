@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -245,7 +245,6 @@ public final class ShareSynchronizationResponse {
             this.synchronizationMode = Objects.requireNonNull(synchronizationMode);
             return this;
         }
-
         public ShareSynchronizationResponse build() {
             return new ShareSynchronizationResponse(consumerEmail, consumerName, consumerTenantName, durationMs, endTime, message, startTime, status, synchronizationId, synchronizationMode);
         }

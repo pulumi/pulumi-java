@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileName", required=true)
-    private final String fileName;
+      private final String fileName;
 
     public String getFileName() {
         return this.fileName;
@@ -33,7 +33,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="muxStreams", required=true)
-    private final List<String> muxStreams;
+      private final List<String> muxStreams;
 
     public List<String> getMuxStreams() {
         return this.muxStreams;
@@ -44,7 +44,7 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class ManifestResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManifestResponse build() {
             return new ManifestResponse(fileName, muxStreams, type);
         }

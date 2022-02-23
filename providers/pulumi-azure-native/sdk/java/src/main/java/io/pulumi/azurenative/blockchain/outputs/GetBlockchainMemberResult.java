@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blockchain.outputs;
 import io.pulumi.azurenative.blockchain.outputs.BlockchainMemberNodesSkuResponse;
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.blockchain.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -459,7 +459,6 @@ public final class GetBlockchainMemberResult {
             this.validatorNodesSku = validatorNodesSku;
             return this;
         }
-
         public GetBlockchainMemberResult build() {
             return new GetBlockchainMemberResult(consortium, consortiumManagementAccountAddress, consortiumManagementAccountPassword, consortiumMemberDisplayName, consortiumRole, dns, firewallRules, id, location, name, password, protocol, provisioningState, publicKey, rootContractAddress, sku, tags, type, userName, validatorNodesSku);
         }

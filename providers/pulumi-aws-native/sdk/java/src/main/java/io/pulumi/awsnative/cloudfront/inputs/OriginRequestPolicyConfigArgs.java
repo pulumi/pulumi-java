@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyCookiesConfigArg
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyHeadersConfigArgs;
 import io.pulumi.awsnative.cloudfront.inputs.OriginRequestPolicyQueryStringsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,35 +18,35 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
     public static final OriginRequestPolicyConfigArgs Empty = new OriginRequestPolicyConfigArgs();
 
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+        private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
     }
 
     @InputImport(name="cookiesConfig", required=true)
-    private final Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
+        private final Input<OriginRequestPolicyCookiesConfigArgs> cookiesConfig;
 
     public Input<OriginRequestPolicyCookiesConfigArgs> getCookiesConfig() {
         return this.cookiesConfig;
     }
 
     @InputImport(name="headersConfig", required=true)
-    private final Input<OriginRequestPolicyHeadersConfigArgs> headersConfig;
+        private final Input<OriginRequestPolicyHeadersConfigArgs> headersConfig;
 
     public Input<OriginRequestPolicyHeadersConfigArgs> getHeadersConfig() {
         return this.headersConfig;
     }
 
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="queryStringsConfig", required=true)
-    private final Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
+        private final Input<OriginRequestPolicyQueryStringsConfigArgs> queryStringsConfig;
 
     public Input<OriginRequestPolicyQueryStringsConfigArgs> getQueryStringsConfig() {
         return this.queryStringsConfig;
@@ -150,7 +150,6 @@ public final class OriginRequestPolicyConfigArgs extends io.pulumi.resources.Res
             this.queryStringsConfig = Input.of(Objects.requireNonNull(queryStringsConfig));
             return this;
         }
-
         public OriginRequestPolicyConfigArgs build() {
             return new OriginRequestPolicyConfigArgs(comment, cookiesConfig, headersConfig, name, queryStringsConfig);
         }

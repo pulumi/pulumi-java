@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork", required=true)
-    private final Input<String> authorizedNetwork;
+      private final Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork;
@@ -31,7 +31,7 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainResource", required=true)
-    private final Input<String> domainResource;
+      private final Input<String> domainResource;
 
     public Input<String> getDomainResource() {
         return this.domainResource;
@@ -42,21 +42,21 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="peeringId", required=true)
-    private final Input<String> peeringId;
+      private final Input<String> peeringId;
 
     public Input<String> getPeeringId() {
         return this.peeringId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -160,7 +160,6 @@ public final class PeeringArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public PeeringArgs build() {
             return new PeeringArgs(authorizedNetwork, domainResource, labels, peeringId, project);
         }

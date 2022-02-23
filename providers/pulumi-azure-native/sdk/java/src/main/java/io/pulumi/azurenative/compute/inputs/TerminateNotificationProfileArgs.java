@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+        private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -31,7 +31,7 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="notBeforeTimeout")
-    private final @Nullable Input<String> notBeforeTimeout;
+        private final @Nullable Input<String> notBeforeTimeout;
 
     public Input<String> getNotBeforeTimeout() {
         return this.notBeforeTimeout == null ? Input.empty() : this.notBeforeTimeout;
@@ -90,7 +90,6 @@ public final class TerminateNotificationProfileArgs extends io.pulumi.resources.
             this.notBeforeTimeout = Input.ofNullable(notBeforeTimeout);
             return this;
         }
-
         public TerminateNotificationProfileArgs build() {
             return new TerminateNotificationProfileArgs(enable, notBeforeTimeout);
         }

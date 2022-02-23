@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class MongoDBDatabaseGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public MongoDBDatabaseGetPropertiesResponseResource build() {
             return new MongoDBDatabaseGetPropertiesResponseResource(etag, id, rid, ts);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ConnectivityCollectionResponse;
 import io.pulumi.azurenative.managednetwork.outputs.ScopeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class GetManagedNetworkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagedNetworkResult build() {
             return new GetManagedNetworkResult(connectivity, etag, id, location, name, provisioningState, scope, tags, type);
         }

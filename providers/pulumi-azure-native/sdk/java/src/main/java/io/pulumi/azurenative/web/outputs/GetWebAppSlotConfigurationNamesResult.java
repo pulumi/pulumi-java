@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetWebAppSlotConfigurationNamesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppSlotConfigurationNamesResult build() {
             return new GetWebAppSlotConfigurationNamesResult(appSettingNames, azureStorageConfigNames, connectionStringNames, id, kind, name, type);
         }

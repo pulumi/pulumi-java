@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -38,7 +38,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretCertificateIssuer")
-    private final @Nullable Input<String> clientSecretCertificateIssuer;
+        private final @Nullable Input<String> clientSecretCertificateIssuer;
 
     public Input<String> getClientSecretCertificateIssuer() {
         return this.clientSecretCertificateIssuer == null ? Input.empty() : this.clientSecretCertificateIssuer;
@@ -50,7 +50,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretCertificateSubjectAlternativeName")
-    private final @Nullable Input<String> clientSecretCertificateSubjectAlternativeName;
+        private final @Nullable Input<String> clientSecretCertificateSubjectAlternativeName;
 
     public Input<String> getClientSecretCertificateSubjectAlternativeName() {
         return this.clientSecretCertificateSubjectAlternativeName == null ? Input.empty() : this.clientSecretCertificateSubjectAlternativeName;
@@ -62,7 +62,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretCertificateThumbprint")
-    private final @Nullable Input<String> clientSecretCertificateThumbprint;
+        private final @Nullable Input<String> clientSecretCertificateThumbprint;
 
     public Input<String> getClientSecretCertificateThumbprint() {
         return this.clientSecretCertificateThumbprint == null ? Input.empty() : this.clientSecretCertificateThumbprint;
@@ -73,7 +73,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientSecretSettingName")
-    private final @Nullable Input<String> clientSecretSettingName;
+        private final @Nullable Input<String> clientSecretSettingName;
 
     public Input<String> getClientSecretSettingName() {
         return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
@@ -87,7 +87,7 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="openIdIssuer")
-    private final @Nullable Input<String> openIdIssuer;
+        private final @Nullable Input<String> openIdIssuer;
 
     public Input<String> getOpenIdIssuer() {
         return this.openIdIssuer == null ? Input.empty() : this.openIdIssuer;
@@ -206,7 +206,6 @@ public final class AzureActiveDirectoryRegistrationArgs extends io.pulumi.resour
             this.openIdIssuer = Input.ofNullable(openIdIssuer);
             return this;
         }
-
         public AzureActiveDirectoryRegistrationArgs build() {
             return new AzureActiveDirectoryRegistrationArgs(clientId, clientSecretCertificateIssuer, clientSecretCertificateSubjectAlternativeName, clientSecretCertificateThumbprint, clientSecretSettingName, openIdIssuer);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.DiskConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.InstanceReferenceResponse;
@@ -270,7 +270,6 @@ public final class InstanceGroupConfigResponse {
             this.preemptibility = Objects.requireNonNull(preemptibility);
             return this;
         }
-
         public InstanceGroupConfigResponse build() {
             return new InstanceGroupConfigResponse(accelerators, diskConfig, imageUri, instanceNames, instanceReferences, isPreemptible, machineTypeUri, managedGroupConfig, minCpuPlatform, numInstances, preemptibility);
         }

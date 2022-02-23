@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class GetTargetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTargetResult build() {
             return new GetTargetResult(id, location, name, properties, systemData, type);
         }

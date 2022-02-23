@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudfront.outputs;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyCookiesConfig;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyHeadersConfig;
 import io.pulumi.awsnative.cloudfront.outputs.CachePolicyQueryStringsConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -102,7 +102,6 @@ public final class CachePolicyParametersInCacheKeyAndForwardedToOrigin {
             this.queryStringsConfig = Objects.requireNonNull(queryStringsConfig);
             return this;
         }
-
         public CachePolicyParametersInCacheKeyAndForwardedToOrigin build() {
             return new CachePolicyParametersInCacheKeyAndForwardedToOrigin(cookiesConfig, enableAcceptEncodingBrotli, enableAcceptEncodingGzip, headersConfig, queryStringsConfig);
         }

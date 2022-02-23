@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ServiceProviderParameterResponseConstraints;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ServiceProviderParameterResponseMetadata extends io.pulumi.re
      * 
      */
     @InputImport(name="constraints")
-    private final @Nullable ServiceProviderParameterResponseConstraints constraints;
+        private final @Nullable ServiceProviderParameterResponseConstraints constraints;
 
     public Optional<ServiceProviderParameterResponseConstraints> getConstraints() {
         return this.constraints == null ? Optional.empty() : Optional.ofNullable(this.constraints);
@@ -61,7 +61,6 @@ public final class ServiceProviderParameterResponseMetadata extends io.pulumi.re
             this.constraints = constraints;
             return this;
         }
-
         public ServiceProviderParameterResponseMetadata build() {
             return new ServiceProviderParameterResponseMetadata(constraints);
         }

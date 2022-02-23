@@ -5,7 +5,7 @@ package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableCapacityAutoScalingSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
     public static final GlobalTableReadProvisionedThroughputSettingsArgs Empty = new GlobalTableReadProvisionedThroughputSettingsArgs();
 
     @InputImport(name="readCapacityAutoScalingSettings")
-    private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
+        private final @Nullable Input<GlobalTableCapacityAutoScalingSettingsArgs> readCapacityAutoScalingSettings;
 
     public Input<GlobalTableCapacityAutoScalingSettingsArgs> getReadCapacityAutoScalingSettings() {
         return this.readCapacityAutoScalingSettings == null ? Input.empty() : this.readCapacityAutoScalingSettings;
     }
 
     @InputImport(name="readCapacityUnits")
-    private final @Nullable Input<Integer> readCapacityUnits;
+        private final @Nullable Input<Integer> readCapacityUnits;
 
     public Input<Integer> getReadCapacityUnits() {
         return this.readCapacityUnits == null ? Input.empty() : this.readCapacityUnits;
@@ -82,7 +82,6 @@ public final class GlobalTableReadProvisionedThroughputSettingsArgs extends io.p
             this.readCapacityUnits = Input.ofNullable(readCapacityUnits);
             return this;
         }
-
         public GlobalTableReadProvisionedThroughputSettingsArgs build() {
             return new GlobalTableReadProvisionedThroughputSettingsArgs(readCapacityAutoScalingSettings, readCapacityUnits);
         }

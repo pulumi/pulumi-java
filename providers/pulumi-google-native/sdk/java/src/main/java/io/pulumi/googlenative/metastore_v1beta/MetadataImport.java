@@ -5,8 +5,8 @@ package io.pulumi.googlenative.metastore_v1beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1beta.MetadataImportArgs;
 import io.pulumi.googlenative.metastore_v1beta.outputs.DatabaseDumpResponse;
@@ -120,13 +120,6 @@ public class MetadataImport extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MetadataImport(String name) {
-        super("google-native:metastore/v1beta:MetadataImport", name, MetadataImportArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
      * 
      */
     @InputImport(name="enableAutoPopulationOfTimespanConfig")
-    private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
+        private final @Nullable Input<Boolean> enableAutoPopulationOfTimespanConfig;
 
     public Input<Boolean> getEnableAutoPopulationOfTimespanConfig() {
         return this.enableAutoPopulationOfTimespanConfig == null ? Input.empty() : this.enableAutoPopulationOfTimespanConfig;
@@ -34,7 +34,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+        private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -57,7 +57,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
      * 
      */
     @InputImport(name="timestampField", required=true)
-    private final Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldGetArgs> timestampField;
+        private final Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldGetArgs> timestampField;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampFieldGetArgs> getTimestampField() {
         return this.timestampField;
@@ -146,7 +146,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetA
             this.timestampField = Input.of(Objects.requireNonNull(timestampField));
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigTimespanConfigGetArgs(enableAutoPopulationOfTimespanConfig, endTime, startTime, timestampField);
         }

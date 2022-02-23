@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResourceRecordSetResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -153,7 +153,6 @@ public final class GetChangeResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetChangeResult build() {
             return new GetChangeResult(additions, deletions, isServing, kind, startTime, status);
         }

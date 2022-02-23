@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final List<String> securityGroupIds;
+        private final List<String> securityGroupIds;
 
     public List<String> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -33,7 +33,7 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final List<String> subnets;
+        private final List<String> subnets;
 
     public List<String> getSubnets() {
         return this.subnets;
@@ -82,7 +82,6 @@ public final class MonitoringScheduleVpcConfig extends io.pulumi.resources.Invok
             this.subnets = Objects.requireNonNull(subnets);
             return this;
         }
-
         public MonitoringScheduleVpcConfig build() {
             return new MonitoringScheduleVpcConfig(securityGroupIds, subnets);
         }

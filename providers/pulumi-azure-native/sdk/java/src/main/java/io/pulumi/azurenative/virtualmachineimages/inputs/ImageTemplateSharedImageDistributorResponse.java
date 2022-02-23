@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="artifactTags")
-    private final @Nullable Map<String,String> artifactTags;
+        private final @Nullable Map<String,String> artifactTags;
 
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
@@ -37,7 +37,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="excludeFromLatest")
-    private final @Nullable Boolean excludeFromLatest;
+        private final @Nullable Boolean excludeFromLatest;
 
     public Optional<Boolean> getExcludeFromLatest() {
         return this.excludeFromLatest == null ? Optional.empty() : Optional.ofNullable(this.excludeFromLatest);
@@ -48,7 +48,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="galleryImageId", required=true)
-    private final String galleryImageId;
+        private final String galleryImageId;
 
     public String getGalleryImageId() {
         return this.galleryImageId;
@@ -59,7 +59,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="replicationRegions", required=true)
-    private final List<String> replicationRegions;
+        private final List<String> replicationRegions;
 
     public List<String> getReplicationRegions() {
         return this.replicationRegions;
@@ -70,7 +70,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="runOutputName", required=true)
-    private final String runOutputName;
+        private final String runOutputName;
 
     public String getRunOutputName() {
         return this.runOutputName;
@@ -81,7 +81,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="storageAccountType")
-    private final @Nullable String storageAccountType;
+        private final @Nullable String storageAccountType;
 
     public Optional<String> getStorageAccountType() {
         return this.storageAccountType == null ? Optional.empty() : Optional.ofNullable(this.storageAccountType);
@@ -93,7 +93,7 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -192,7 +192,6 @@ public final class ImageTemplateSharedImageDistributorResponse extends io.pulumi
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateSharedImageDistributorResponse build() {
             return new ImageTemplateSharedImageDistributorResponse(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
         }

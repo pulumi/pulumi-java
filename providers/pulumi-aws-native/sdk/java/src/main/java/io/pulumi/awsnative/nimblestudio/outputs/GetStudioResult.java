@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.StudioEncryptionConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -187,7 +187,6 @@ public final class GetStudioResult {
             this.userRoleArn = userRoleArn;
             return this;
         }
-
         public GetStudioResult build() {
             return new GetStudioResult(adminRoleArn, displayName, homeRegion, ssoClientId, studioEncryptionConfiguration, studioId, studioUrl, userRoleArn);
         }

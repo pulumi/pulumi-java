@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -62,7 +62,6 @@ public final class ResourceProviderManifestPropertiesResponseTemplateDeploymentO
             this.preflightSupported = preflightSupported;
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions build() {
             return new ResourceProviderManifestPropertiesResponseTemplateDeploymentOptions(preflightOptions, preflightSupported);
         }

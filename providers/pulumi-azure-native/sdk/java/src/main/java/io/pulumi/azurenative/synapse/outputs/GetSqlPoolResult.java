@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -389,7 +389,6 @@ public final class GetSqlPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlPoolResult build() {
             return new GetSqlPoolResult(collation, createMode, creationDate, id, location, maxSizeBytes, name, provisioningState, recoverableDatabaseId, restorePointInTime, sku, sourceDatabaseId, status, storageAccountType, tags, type);
         }

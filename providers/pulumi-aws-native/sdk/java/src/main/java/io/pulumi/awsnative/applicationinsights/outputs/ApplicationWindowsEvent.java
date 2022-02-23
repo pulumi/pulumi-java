@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationEventLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ApplicationWindowsEvent {
             this.patternSet = patternSet;
             return this;
         }
-
         public ApplicationWindowsEvent build() {
             return new ApplicationWindowsEvent(eventLevels, eventName, logGroupName, patternSet);
         }

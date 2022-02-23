@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageBootDiskInitializeParamsGetArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -17,56 +17,56 @@ public final class InstanceFromMachineImageBootDiskGetArgs extends io.pulumi.res
     public static final InstanceFromMachineImageBootDiskGetArgs Empty = new InstanceFromMachineImageBootDiskGetArgs();
 
     @InputImport(name="autoDelete")
-    private final @Nullable Input<Boolean> autoDelete;
+        private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
     }
 
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+        private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
     }
 
     @InputImport(name="diskEncryptionKeyRaw")
-    private final @Nullable Input<String> diskEncryptionKeyRaw;
+        private final @Nullable Input<String> diskEncryptionKeyRaw;
 
     public Input<String> getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw == null ? Input.empty() : this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256")
-    private final @Nullable Input<String> diskEncryptionKeySha256;
+        private final @Nullable Input<String> diskEncryptionKeySha256;
 
     public Input<String> getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256 == null ? Input.empty() : this.diskEncryptionKeySha256;
     }
 
     @InputImport(name="initializeParams")
-    private final @Nullable Input<InstanceFromMachineImageBootDiskInitializeParamsGetArgs> initializeParams;
+        private final @Nullable Input<InstanceFromMachineImageBootDiskInitializeParamsGetArgs> initializeParams;
 
     public Input<InstanceFromMachineImageBootDiskInitializeParamsGetArgs> getInitializeParams() {
         return this.initializeParams == null ? Input.empty() : this.initializeParams;
     }
 
     @InputImport(name="kmsKeySelfLink")
-    private final @Nullable Input<String> kmsKeySelfLink;
+        private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
     }
 
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
     }
 
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+        private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -215,7 +215,6 @@ public final class InstanceFromMachineImageBootDiskGetArgs extends io.pulumi.res
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public InstanceFromMachineImageBootDiskGetArgs build() {
             return new InstanceFromMachineImageBootDiskGetArgs(autoDelete, deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, initializeParams, kmsKeySelfLink, mode, source);
         }

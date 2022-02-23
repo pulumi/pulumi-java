@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.HeaderResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.I18nConfigResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.RedirectResponse;
@@ -185,7 +185,6 @@ public final class ServingConfigResponse {
             this.trailingSlashBehavior = Objects.requireNonNull(trailingSlashBehavior);
             return this;
         }
-
         public ServingConfigResponse build() {
             return new ServingConfigResponse(appAssociation, cleanUrls, headers, i18n, redirects, rewrites, trailingSlashBehavior);
         }

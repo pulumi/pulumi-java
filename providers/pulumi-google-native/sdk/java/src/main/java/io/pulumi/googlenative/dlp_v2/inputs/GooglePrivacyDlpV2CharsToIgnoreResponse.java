@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="charactersToSkip", required=true)
-    private final String charactersToSkip;
+      private final String charactersToSkip;
 
     public String getCharactersToSkip() {
         return this.charactersToSkip;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="commonCharactersToIgnore", required=true)
-    private final String commonCharactersToIgnore;
+      private final String commonCharactersToIgnore;
 
     public String getCommonCharactersToIgnore() {
         return this.commonCharactersToIgnore;
@@ -81,7 +81,6 @@ public final class GooglePrivacyDlpV2CharsToIgnoreResponse extends io.pulumi.res
             this.commonCharactersToIgnore = Objects.requireNonNull(commonCharactersToIgnore);
             return this;
         }
-
         public GooglePrivacyDlpV2CharsToIgnoreResponse build() {
             return new GooglePrivacyDlpV2CharsToIgnoreResponse(charactersToSkip, commonCharactersToIgnore);
         }

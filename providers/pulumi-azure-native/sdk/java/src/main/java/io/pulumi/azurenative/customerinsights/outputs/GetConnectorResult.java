@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -332,7 +332,6 @@ public final class GetConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(connectorId, connectorName, connectorProperties, connectorType, created, description, displayName, id, isInternal, lastModified, name, state, tenantId, type);
         }

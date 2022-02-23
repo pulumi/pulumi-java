@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.enums.GenericSignedAttestationContentType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.SignatureArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<GenericSignedAttestationContentType> contentType;
+      private final @Nullable Input<GenericSignedAttestationContentType> contentType;
 
     public Input<GenericSignedAttestationContentType> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -37,7 +37,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serializedPayload")
-    private final @Nullable Input<String> serializedPayload;
+      private final @Nullable Input<String> serializedPayload;
 
     public Input<String> getSerializedPayload() {
         return this.serializedPayload == null ? Input.empty() : this.serializedPayload;
@@ -48,7 +48,7 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="signatures")
-    private final @Nullable Input<List<SignatureArgs>> signatures;
+      private final @Nullable Input<List<SignatureArgs>> signatures;
 
     public Input<List<SignatureArgs>> getSignatures() {
         return this.signatures == null ? Input.empty() : this.signatures;
@@ -122,7 +122,6 @@ public final class GenericSignedAttestationArgs extends io.pulumi.resources.Reso
             this.signatures = Input.ofNullable(signatures);
             return this;
         }
-
         public GenericSignedAttestationArgs build() {
             return new GenericSignedAttestationArgs(contentType, serializedPayload, signatures);
         }

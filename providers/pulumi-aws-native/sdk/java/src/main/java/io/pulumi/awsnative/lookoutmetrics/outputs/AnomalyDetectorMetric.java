@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricAggregationFunction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +82,6 @@ public final class AnomalyDetectorMetric {
             this.namespace = namespace;
             return this;
         }
-
         public AnomalyDetectorMetric build() {
             return new AnomalyDetectorMetric(aggregationFunction, metricName, namespace);
         }

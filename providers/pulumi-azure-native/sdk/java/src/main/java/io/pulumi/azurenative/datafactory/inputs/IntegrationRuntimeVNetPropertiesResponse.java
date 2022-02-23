@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="publicIPs")
-    private final @Nullable List<String> publicIPs;
+        private final @Nullable List<String> publicIPs;
 
     public List<String> getPublicIPs() {
         return this.publicIPs == null ? List.of() : this.publicIPs;
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable String subnet;
+        private final @Nullable String subnet;
 
     public Optional<String> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+        private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -57,7 +57,7 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="vNetId")
-    private final @Nullable String vNetId;
+        private final @Nullable String vNetId;
 
     public Optional<String> getVNetId() {
         return this.vNetId == null ? Optional.empty() : Optional.ofNullable(this.vNetId);
@@ -126,7 +126,6 @@ public final class IntegrationRuntimeVNetPropertiesResponse extends io.pulumi.re
             this.vNetId = vNetId;
             return this;
         }
-
         public IntegrationRuntimeVNetPropertiesResponse build() {
             return new IntegrationRuntimeVNetPropertiesResponse(publicIPs, subnet, subnetId, vNetId);
         }

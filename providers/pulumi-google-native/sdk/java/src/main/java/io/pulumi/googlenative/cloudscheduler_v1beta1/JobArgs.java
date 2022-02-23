@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudscheduler_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.AppEngineHttpTargetArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.HttpTargetArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.inputs.PubsubTargetArgs;
@@ -24,7 +24,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appEngineHttpTarget")
-    private final @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget;
+      private final @Nullable Input<AppEngineHttpTargetArgs> appEngineHttpTarget;
 
     public Input<AppEngineHttpTargetArgs> getAppEngineHttpTarget() {
         return this.appEngineHttpTarget == null ? Input.empty() : this.appEngineHttpTarget;
@@ -35,7 +35,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attemptDeadline")
-    private final @Nullable Input<String> attemptDeadline;
+      private final @Nullable Input<String> attemptDeadline;
 
     public Input<String> getAttemptDeadline() {
         return this.attemptDeadline == null ? Input.empty() : this.attemptDeadline;
@@ -46,7 +46,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -57,7 +57,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpTarget")
-    private final @Nullable Input<HttpTargetArgs> httpTarget;
+      private final @Nullable Input<HttpTargetArgs> httpTarget;
 
     public Input<HttpTargetArgs> getHttpTarget() {
         return this.httpTarget == null ? Input.empty() : this.httpTarget;
@@ -68,14 +68,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="legacyAppEngineCron")
-    private final @Nullable Input<Boolean> legacyAppEngineCron;
+      private final @Nullable Input<Boolean> legacyAppEngineCron;
 
     public Input<Boolean> getLegacyAppEngineCron() {
         return this.legacyAppEngineCron == null ? Input.empty() : this.legacyAppEngineCron;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -86,14 +86,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -104,7 +104,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubTarget")
-    private final @Nullable Input<PubsubTargetArgs> pubsubTarget;
+      private final @Nullable Input<PubsubTargetArgs> pubsubTarget;
 
     public Input<PubsubTargetArgs> getPubsubTarget() {
         return this.pubsubTarget == null ? Input.empty() : this.pubsubTarget;
@@ -115,7 +115,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryConfig")
-    private final @Nullable Input<RetryConfigArgs> retryConfig;
+      private final @Nullable Input<RetryConfigArgs> retryConfig;
 
     public Input<RetryConfigArgs> getRetryConfig() {
         return this.retryConfig == null ? Input.empty() : this.retryConfig;
@@ -126,7 +126,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+      private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -137,7 +137,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+      private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -346,7 +346,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(appEngineHttpTarget, attemptDeadline, description, httpTarget, legacyAppEngineCron, location, name, project, pubsubTarget, retryConfig, schedule, timeZone);
         }

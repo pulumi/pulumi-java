@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.QueuingConfigurationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queuing")
-    private final @Nullable Input<QueuingConfigurationArgs> queuing;
+        private final @Nullable Input<QueuingConfigurationArgs> queuing;
 
     public Input<QueuingConfigurationArgs> getQueuing() {
         return this.queuing == null ? Input.empty() : this.queuing;
@@ -35,7 +35,7 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class LimitResponseArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public LimitResponseArgs build() {
             return new LimitResponseArgs(queuing, type);
         }

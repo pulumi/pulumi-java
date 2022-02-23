@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -413,7 +413,6 @@ public final class SelfHostedIntegrationRuntimeNodeResponse {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeNodeResponse build() {
             return new SelfHostedIntegrationRuntimeNodeResponse(capabilities, concurrentJobsLimit, expiryTime, hostServiceUri, isActiveDispatcher, lastConnectTime, lastEndUpdateTime, lastStartTime, lastStartUpdateTime, lastStopTime, lastUpdateResult, machineName, maxConcurrentJobs, nodeName, registerTime, status, version, versionStatus);
         }

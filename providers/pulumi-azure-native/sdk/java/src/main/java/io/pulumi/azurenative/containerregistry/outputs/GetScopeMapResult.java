@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -208,7 +208,6 @@ public final class GetScopeMapResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScopeMapResult build() {
             return new GetScopeMapResult(actions, creationDate, description, id, name, provisioningState, systemData, type);
         }

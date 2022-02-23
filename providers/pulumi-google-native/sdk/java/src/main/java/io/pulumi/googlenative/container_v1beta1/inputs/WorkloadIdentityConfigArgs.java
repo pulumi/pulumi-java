@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identityNamespace")
-    private final @Nullable Input<String> identityNamespace;
+      private final @Nullable Input<String> identityNamespace;
 
     public Input<String> getIdentityNamespace() {
         return this.identityNamespace == null ? Input.empty() : this.identityNamespace;
@@ -34,7 +34,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identityProvider")
-    private final @Nullable Input<String> identityProvider;
+      private final @Nullable Input<String> identityProvider;
 
     public Input<String> getIdentityProvider() {
         return this.identityProvider == null ? Input.empty() : this.identityProvider;
@@ -45,7 +45,7 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="workloadPool")
-    private final @Nullable Input<String> workloadPool;
+      private final @Nullable Input<String> workloadPool;
 
     public Input<String> getWorkloadPool() {
         return this.workloadPool == null ? Input.empty() : this.workloadPool;
@@ -119,7 +119,6 @@ public final class WorkloadIdentityConfigArgs extends io.pulumi.resources.Resour
             this.workloadPool = Input.ofNullable(workloadPool);
             return this;
         }
-
         public WorkloadIdentityConfigArgs build() {
             return new WorkloadIdentityConfigArgs(identityNamespace, identityProvider, workloadPool);
         }

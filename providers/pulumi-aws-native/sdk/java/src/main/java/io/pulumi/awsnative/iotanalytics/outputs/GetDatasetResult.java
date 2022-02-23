@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iotanalytics.outputs.DatasetRetentionPeriod;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetTag;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetTrigger;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetVersioningConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -146,7 +146,6 @@ public final class GetDatasetResult {
             this.versioningConfiguration = versioningConfiguration;
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(actions, contentDeliveryRules, id, lateDataRules, retentionPeriod, tags, triggers, versioningConfiguration);
         }

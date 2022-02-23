@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.SizeInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="maxPrice", required=true)
-    private final Double maxPrice;
+        private final Double maxPrice;
 
     public Double getMaxPrice() {
         return this.maxPrice;
@@ -38,7 +38,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="minMemory", required=true)
-    private final Double minMemory;
+        private final Double minMemory;
 
     public Double getMinMemory() {
         return this.minMemory;
@@ -49,7 +49,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="minNumberOfCores", required=true)
-    private final Integer minNumberOfCores;
+        private final Integer minNumberOfCores;
 
     public Integer getMinNumberOfCores() {
         return this.minNumberOfCores;
@@ -60,7 +60,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -71,7 +71,7 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="vmSizes")
-    private final @Nullable List<SizeInfoResponse> vmSizes;
+        private final @Nullable List<SizeInfoResponse> vmSizes;
 
     public List<SizeInfoResponse> getVmSizes() {
         return this.vmSizes == null ? List.of() : this.vmSizes;
@@ -150,7 +150,6 @@ public final class EnvironmentSizeResponse extends io.pulumi.resources.InvokeArg
             this.vmSizes = vmSizes;
             return this;
         }
-
         public EnvironmentSizeResponse build() {
             return new EnvironmentSizeResponse(maxPrice, minMemory, minNumberOfCores, name, vmSizes);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AlarmsProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -245,7 +245,6 @@ public final class GetPortalResult {
             this.roleArn = roleArn;
             return this;
         }
-
         public GetPortalResult build() {
             return new GetPortalResult(alarms, notificationSenderEmail, portalArn, portalClientId, portalContactEmail, portalDescription, portalId, portalName, portalStartUrl, roleArn);
         }

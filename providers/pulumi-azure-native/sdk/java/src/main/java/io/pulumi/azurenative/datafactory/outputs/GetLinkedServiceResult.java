@@ -105,7 +105,7 @@ import io.pulumi.azurenative.datafactory.outputs.VerticaLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.WebLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroLinkedServiceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoLinkedServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -240,7 +240,6 @@ public final class GetLinkedServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedServiceResult build() {
             return new GetLinkedServiceResult(etag, id, name, properties, type);
         }

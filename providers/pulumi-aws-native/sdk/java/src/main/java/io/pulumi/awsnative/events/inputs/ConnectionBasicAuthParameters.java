@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class ConnectionBasicAuthParameters extends io.pulumi.resources.Inv
     public static final ConnectionBasicAuthParameters Empty = new ConnectionBasicAuthParameters();
 
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
     }
 
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -69,7 +69,6 @@ public final class ConnectionBasicAuthParameters extends io.pulumi.resources.Inv
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public ConnectionBasicAuthParameters build() {
             return new ConnectionBasicAuthParameters(password, username);
         }

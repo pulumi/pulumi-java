@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.DateAfterModificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ManagementPolicyBaseBlobResponse {
             this.tierToCool = tierToCool;
             return this;
         }
-
         public ManagementPolicyBaseBlobResponse build() {
             return new ManagementPolicyBaseBlobResponse(delete, enableAutoTierToHotFromCool, tierToArchive, tierToCool);
         }

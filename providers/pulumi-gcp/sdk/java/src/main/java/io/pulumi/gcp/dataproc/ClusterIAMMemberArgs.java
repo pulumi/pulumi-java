@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.ClusterIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cluster", required=true)
-    private final Input<String> cluster;
+        private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<ClusterIAMMemberConditionArgs> condition;
+        private final @Nullable Input<ClusterIAMMemberConditionArgs> condition;
 
     public Input<ClusterIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,7 +46,7 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,7 +58,7 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -71,7 +71,7 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -190,7 +190,6 @@ public final class ClusterIAMMemberArgs extends io.pulumi.resources.ResourceArgs
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public ClusterIAMMemberArgs build() {
             return new ClusterIAMMemberArgs(cluster, condition, member, project, region, role);
         }

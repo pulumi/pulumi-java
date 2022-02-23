@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyTypeEllipticCurve;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyAllowedKeyTypeRsa;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class CaPoolIssuancePolicyAllowedKeyType {
             this.rsa = rsa;
             return this;
         }
-
         public CaPoolIssuancePolicyAllowedKeyType build() {
             return new CaPoolIssuancePolicyAllowedKeyType(ellipticCurve, rsa);
         }

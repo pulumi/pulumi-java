@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.InlineSecretArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.SecretManagerSecretArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inline")
-    private final @Nullable Input<List<InlineSecretArgs>> inline;
+      private final @Nullable Input<List<InlineSecretArgs>> inline;
 
     public Input<List<InlineSecretArgs>> getInline() {
         return this.inline == null ? Input.empty() : this.inline;
@@ -36,7 +36,7 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretManager")
-    private final @Nullable Input<List<SecretManagerSecretArgs>> secretManager;
+      private final @Nullable Input<List<SecretManagerSecretArgs>> secretManager;
 
     public Input<List<SecretManagerSecretArgs>> getSecretManager() {
         return this.secretManager == null ? Input.empty() : this.secretManager;
@@ -95,7 +95,6 @@ public final class SecretsArgs extends io.pulumi.resources.ResourceArgs {
             this.secretManager = Input.ofNullable(secretManager);
             return this;
         }
-
         public SecretsArgs build() {
             return new SecretsArgs(inline, secretManager);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.MetricRulesResponse;
 import io.pulumi.azurenative.logz.inputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
     public static final MetricsTagRulesPropertiesResponse Empty = new MetricsTagRulesPropertiesResponse();
 
     @InputImport(name="metricRules")
-    private final @Nullable List<MetricRulesResponse> metricRules;
+        private final @Nullable List<MetricRulesResponse> metricRules;
 
     public List<MetricRulesResponse> getMetricRules() {
         return this.metricRules == null ? List.of() : this.metricRules;
@@ -34,7 +34,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -45,7 +45,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sendMetrics")
-    private final @Nullable Boolean sendMetrics;
+        private final @Nullable Boolean sendMetrics;
 
     public Optional<Boolean> getSendMetrics() {
         return this.sendMetrics == null ? Optional.empty() : Optional.ofNullable(this.sendMetrics);
@@ -56,7 +56,7 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="systemData", required=true)
-    private final SystemDataResponse systemData;
+        private final SystemDataResponse systemData;
 
     public SystemDataResponse getSystemData() {
         return this.systemData;
@@ -125,7 +125,6 @@ public final class MetricsTagRulesPropertiesResponse extends io.pulumi.resources
             this.systemData = Objects.requireNonNull(systemData);
             return this;
         }
-
         public MetricsTagRulesPropertiesResponse build() {
             return new MetricsTagRulesPropertiesResponse(metricRules, provisioningState, sendMetrics, systemData);
         }

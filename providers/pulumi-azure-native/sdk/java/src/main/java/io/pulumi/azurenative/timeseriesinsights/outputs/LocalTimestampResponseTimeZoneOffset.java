@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class LocalTimestampResponseTimeZoneOffset {
             this.propertyName = propertyName;
             return this;
         }
-
         public LocalTimestampResponseTimeZoneOffset build() {
             return new LocalTimestampResponseTimeZoneOffset(propertyName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -34,7 +34,7 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -83,7 +83,6 @@ public final class ConnectionMonitorEndpointFilterItemResponse extends io.pulumi
             this.type = type;
             return this;
         }
-
         public ConnectionMonitorEndpointFilterItemResponse build() {
             return new ConnectionMonitorEndpointFilterItemResponse(address, type);
         }

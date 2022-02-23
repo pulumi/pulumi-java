@@ -5,7 +5,7 @@ package io.pulumi.awsnative.events.inputs;
 
 import io.pulumi.awsnative.events.inputs.ConnectionParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
     public static final ConnectionHttpParametersArgs Empty = new ConnectionHttpParametersArgs();
 
     @InputImport(name="bodyParameters")
-    private final @Nullable Input<List<ConnectionParameterArgs>> bodyParameters;
+        private final @Nullable Input<List<ConnectionParameterArgs>> bodyParameters;
 
     public Input<List<ConnectionParameterArgs>> getBodyParameters() {
         return this.bodyParameters == null ? Input.empty() : this.bodyParameters;
     }
 
     @InputImport(name="headerParameters")
-    private final @Nullable Input<List<ConnectionParameterArgs>> headerParameters;
+        private final @Nullable Input<List<ConnectionParameterArgs>> headerParameters;
 
     public Input<List<ConnectionParameterArgs>> getHeaderParameters() {
         return this.headerParameters == null ? Input.empty() : this.headerParameters;
     }
 
     @InputImport(name="queryStringParameters")
-    private final @Nullable Input<List<ConnectionParameterArgs>> queryStringParameters;
+        private final @Nullable Input<List<ConnectionParameterArgs>> queryStringParameters;
 
     public Input<List<ConnectionParameterArgs>> getQueryStringParameters() {
         return this.queryStringParameters == null ? Input.empty() : this.queryStringParameters;
@@ -104,7 +104,6 @@ public final class ConnectionHttpParametersArgs extends io.pulumi.resources.Reso
             this.queryStringParameters = Input.ofNullable(queryStringParameters);
             return this;
         }
-
         public ConnectionHttpParametersArgs build() {
             return new ConnectionHttpParametersArgs(bodyParameters, headerParameters, queryStringParameters);
         }

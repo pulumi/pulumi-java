@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final String environmentName;
+        private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="eventSourceName", required=true)
-    private final String eventSourceName;
+        private final String eventSourceName;
 
     public String getEventSourceName() {
         return this.eventSourceName;
@@ -39,7 +39,7 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetEventHubEventSourceArgs extends io.pulumi.resources.Invoke
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetEventHubEventSourceArgs build() {
             return new GetEventHubEventSourceArgs(environmentName, eventSourceName, resourceGroupName);
         }

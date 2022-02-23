@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ApiConnectionTestLinkArgs;
 import io.pulumi.azurenative.web.inputs.ApiReferenceArgs;
 import io.pulumi.azurenative.web.inputs.ConnectionStatusDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
     public static final ApiConnectionDefinitionPropertiesArgs Empty = new ApiConnectionDefinitionPropertiesArgs();
 
     @InputImport(name="api")
-    private final @Nullable Input<ApiReferenceArgs> api;
+        private final @Nullable Input<ApiReferenceArgs> api;
 
     public Input<ApiReferenceArgs> getApi() {
         return this.api == null ? Input.empty() : this.api;
@@ -31,7 +31,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="changedTime")
-    private final @Nullable Input<String> changedTime;
+        private final @Nullable Input<String> changedTime;
 
     public Input<String> getChangedTime() {
         return this.changedTime == null ? Input.empty() : this.changedTime;
@@ -42,7 +42,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+        private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
@@ -53,7 +53,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="customParameterValues")
-    private final @Nullable Input<Map<String,String>> customParameterValues;
+        private final @Nullable Input<Map<String,String>> customParameterValues;
 
     public Input<Map<String,String>> getCustomParameterValues() {
         return this.customParameterValues == null ? Input.empty() : this.customParameterValues;
@@ -64,7 +64,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -75,7 +75,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="nonSecretParameterValues")
-    private final @Nullable Input<Map<String,String>> nonSecretParameterValues;
+        private final @Nullable Input<Map<String,String>> nonSecretParameterValues;
 
     public Input<Map<String,String>> getNonSecretParameterValues() {
         return this.nonSecretParameterValues == null ? Input.empty() : this.nonSecretParameterValues;
@@ -86,7 +86,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameterValues")
-    private final @Nullable Input<Map<String,String>> parameterValues;
+        private final @Nullable Input<Map<String,String>> parameterValues;
 
     public Input<Map<String,String>> getParameterValues() {
         return this.parameterValues == null ? Input.empty() : this.parameterValues;
@@ -97,7 +97,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses;
+        private final @Nullable Input<List<ConnectionStatusDefinitionArgs>> statuses;
 
     public Input<List<ConnectionStatusDefinitionArgs>> getStatuses() {
         return this.statuses == null ? Input.empty() : this.statuses;
@@ -108,7 +108,7 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="testLinks")
-    private final @Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks;
+        private final @Nullable Input<List<ApiConnectionTestLinkArgs>> testLinks;
 
     public Input<List<ApiConnectionTestLinkArgs>> getTestLinks() {
         return this.testLinks == null ? Input.empty() : this.testLinks;
@@ -272,7 +272,6 @@ public final class ApiConnectionDefinitionPropertiesArgs extends io.pulumi.resou
             this.testLinks = Input.ofNullable(testLinks);
             return this;
         }
-
         public ApiConnectionDefinitionPropertiesArgs build() {
             return new ApiConnectionDefinitionPropertiesArgs(api, changedTime, createdTime, customParameterValues, displayName, nonSecretParameterValues, parameterValues, statuses, testLinks);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageNetworkInterfaceAccessConfig;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageNetworkInterfaceAliasIpRange;
 import io.pulumi.gcp.compute.outputs.InstanceFromMachineImageNetworkInterfaceIpv6AccessConfig;
@@ -205,7 +205,6 @@ public final class InstanceFromMachineImageNetworkInterface {
             this.subnetworkProject = subnetworkProject;
             return this;
         }
-
         public InstanceFromMachineImageNetworkInterface build() {
             return new InstanceFromMachineImageNetworkInterface(accessConfigs, aliasIpRanges, ipv6AccessConfigs, ipv6AccessType, name, network, networkIp, nicType, queueCount, stackType, subnetwork, subnetworkProject);
         }

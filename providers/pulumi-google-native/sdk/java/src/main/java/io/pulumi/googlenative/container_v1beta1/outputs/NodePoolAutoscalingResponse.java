@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class NodePoolAutoscalingResponse {
             this.minNodeCount = Objects.requireNonNull(minNodeCount);
             return this;
         }
-
         public NodePoolAutoscalingResponse build() {
             return new NodePoolAutoscalingResponse(autoprovisioned, enabled, maxNodeCount, minNodeCount);
         }

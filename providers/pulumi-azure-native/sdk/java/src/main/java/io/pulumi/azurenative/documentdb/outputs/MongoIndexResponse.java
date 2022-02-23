@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.MongoIndexKeysResponse;
 import io.pulumi.azurenative.documentdb.outputs.MongoIndexOptionsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class MongoIndexResponse {
             this.options = options;
             return this;
         }
-
         public MongoIndexResponse build() {
             return new MongoIndexResponse(key, options);
         }

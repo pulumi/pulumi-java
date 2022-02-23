@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.secretmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextRotationTime")
-    private final @Nullable Input<String> nextRotationTime;
+      private final @Nullable Input<String> nextRotationTime;
 
     public Input<String> getNextRotationTime() {
         return this.nextRotationTime == null ? Input.empty() : this.nextRotationTime;
@@ -34,7 +34,7 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationPeriod")
-    private final @Nullable Input<String> rotationPeriod;
+      private final @Nullable Input<String> rotationPeriod;
 
     public Input<String> getRotationPeriod() {
         return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
@@ -93,7 +93,6 @@ public final class RotationArgs extends io.pulumi.resources.ResourceArgs {
             this.rotationPeriod = Input.ofNullable(rotationPeriod);
             return this;
         }
-
         public RotationArgs build() {
             return new RotationArgs(nextRotationTime, rotationPeriod);
         }

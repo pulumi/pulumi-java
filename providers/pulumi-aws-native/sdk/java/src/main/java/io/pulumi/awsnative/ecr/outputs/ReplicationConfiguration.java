@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecr.outputs;
 
 import io.pulumi.awsnative.ecr.outputs.ReplicationConfigurationReplicationRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class ReplicationConfiguration {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public ReplicationConfiguration build() {
             return new ReplicationConfiguration(rules);
         }

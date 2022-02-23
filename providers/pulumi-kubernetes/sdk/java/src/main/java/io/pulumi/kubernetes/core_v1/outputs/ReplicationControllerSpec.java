@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import java.lang.Integer;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class ReplicationControllerSpec {
             this.template = template;
             return this;
         }
-
         public ReplicationControllerSpec build() {
             return new ReplicationControllerSpec(minReadySeconds, replicas, selector, template);
         }

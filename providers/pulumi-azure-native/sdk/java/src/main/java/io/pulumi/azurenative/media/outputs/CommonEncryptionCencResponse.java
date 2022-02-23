@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.CencDrmConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.EnabledProtocolsResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyContentKeysResponse;
 import io.pulumi.azurenative.media.outputs.TrackSelectionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -122,7 +122,6 @@ public final class CommonEncryptionCencResponse {
             this.enabledProtocols = enabledProtocols;
             return this;
         }
-
         public CommonEncryptionCencResponse build() {
             return new CommonEncryptionCencResponse(clearTracks, contentKeys, drm, enabledProtocols);
         }

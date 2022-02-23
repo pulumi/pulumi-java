@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tags.inputs.TagKeyIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,14 +17,14 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
     public static final TagKeyIamBindingArgs Empty = new TagKeyIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TagKeyIamBindingConditionArgs> condition;
+        private final @Nullable Input<TagKeyIamBindingConditionArgs> condition;
 
     public Input<TagKeyIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -37,7 +37,7 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -48,7 +48,7 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tagKey", required=true)
-    private final Input<String> tagKey;
+        private final Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey;
@@ -137,7 +137,6 @@ public final class TagKeyIamBindingArgs extends io.pulumi.resources.ResourceArgs
             this.tagKey = Input.of(Objects.requireNonNull(tagKey));
             return this;
         }
-
         public TagKeyIamBindingArgs build() {
             return new TagKeyIamBindingArgs(condition, members, role, tagKey);
         }

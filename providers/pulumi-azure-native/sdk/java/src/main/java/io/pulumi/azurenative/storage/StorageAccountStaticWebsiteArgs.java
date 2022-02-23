@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="error404Document")
-    private final @Nullable Input<String> error404Document;
+        private final @Nullable Input<String> error404Document;
 
     public Input<String> getError404Document() {
         return this.error404Document == null ? Input.empty() : this.error404Document;
@@ -41,7 +41,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="indexDocument")
-    private final @Nullable Input<String> indexDocument;
+        private final @Nullable Input<String> indexDocument;
 
     public Input<String> getIndexDocument() {
         return this.indexDocument == null ? Input.empty() : this.indexDocument;
@@ -52,7 +52,7 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -141,7 +141,6 @@ public final class StorageAccountStaticWebsiteArgs extends io.pulumi.resources.R
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public StorageAccountStaticWebsiteArgs build() {
             return new StorageAccountStaticWebsiteArgs(accountName, error404Document, indexDocument, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -160,7 +160,6 @@ public final class TableLevelSharingPropertiesResponse {
             this.tablesToInclude = tablesToInclude;
             return this;
         }
-
         public TableLevelSharingPropertiesResponse build() {
             return new TableLevelSharingPropertiesResponse(externalTablesToExclude, externalTablesToInclude, materializedViewsToExclude, materializedViewsToInclude, tablesToExclude, tablesToInclude);
         }

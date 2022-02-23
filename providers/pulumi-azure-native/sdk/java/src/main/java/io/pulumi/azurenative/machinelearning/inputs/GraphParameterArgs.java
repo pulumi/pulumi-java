@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearning.enums.ParameterType;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterLinkArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="links", required=true)
-    private final Input<List<GraphParameterLinkArgs>> links;
+        private final Input<List<GraphParameterLinkArgs>> links;
 
     public Input<List<GraphParameterLinkArgs>> getLinks() {
         return this.links;
@@ -49,7 +49,7 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ParameterType>> type;
+        private final Input<Either<String,ParameterType>> type;
 
     public Input<Either<String,ParameterType>> getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class GraphParameterArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public GraphParameterArgs build() {
             return new GraphParameterArgs(description, links, type);
         }

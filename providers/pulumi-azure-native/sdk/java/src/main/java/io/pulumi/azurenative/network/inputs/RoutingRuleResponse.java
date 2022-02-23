@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.RedirectConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acceptedProtocols")
-    private final @Nullable List<String> acceptedProtocols;
+        private final @Nullable List<String> acceptedProtocols;
 
     public List<String> getAcceptedProtocols() {
         return this.acceptedProtocols == null ? List.of() : this.acceptedProtocols;
@@ -40,7 +40,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable String enabledState;
+        private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -51,7 +51,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frontendEndpoints")
-    private final @Nullable List<SubResourceResponse> frontendEndpoints;
+        private final @Nullable List<SubResourceResponse> frontendEndpoints;
 
     public List<SubResourceResponse> getFrontendEndpoints() {
         return this.frontendEndpoints == null ? List.of() : this.frontendEndpoints;
@@ -62,7 +62,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -73,7 +73,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -84,7 +84,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="patternsToMatch")
-    private final @Nullable List<String> patternsToMatch;
+        private final @Nullable List<String> patternsToMatch;
 
     public List<String> getPatternsToMatch() {
         return this.patternsToMatch == null ? List.of() : this.patternsToMatch;
@@ -95,7 +95,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceState", required=true)
-    private final String resourceState;
+        private final String resourceState;
 
     public String getResourceState() {
         return this.resourceState;
@@ -106,7 +106,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="routeConfiguration")
-    private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
+        private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfiguration;
 
     public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> getRouteConfiguration() {
         return this.routeConfiguration == null ? null : this.routeConfiguration;
@@ -117,7 +117,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rulesEngine")
-    private final @Nullable SubResourceResponse rulesEngine;
+        private final @Nullable SubResourceResponse rulesEngine;
 
     public Optional<SubResourceResponse> getRulesEngine() {
         return this.rulesEngine == null ? Optional.empty() : Optional.ofNullable(this.rulesEngine);
@@ -128,7 +128,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -139,7 +139,7 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-    private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
+        private final @Nullable RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink webApplicationFirewallPolicyLink;
 
     public Optional<RoutingRuleUpdateParametersResponseWebApplicationFirewallPolicyLink> getWebApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Optional.empty() : Optional.ofNullable(this.webApplicationFirewallPolicyLink);
@@ -278,7 +278,6 @@ public final class RoutingRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.webApplicationFirewallPolicyLink = webApplicationFirewallPolicyLink;
             return this;
         }
-
         public RoutingRuleResponse build() {
             return new RoutingRuleResponse(acceptedProtocols, enabledState, frontendEndpoints, id, name, patternsToMatch, resourceState, routeConfiguration, rulesEngine, type, webApplicationFirewallPolicyLink);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerStateRunning;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerStateTerminated;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerStateWaiting;
@@ -99,7 +99,6 @@ public final class ContainerState {
             this.waiting = waiting;
             return this;
         }
-
         public ContainerState build() {
             return new ContainerState(running, terminated, waiting);
         }

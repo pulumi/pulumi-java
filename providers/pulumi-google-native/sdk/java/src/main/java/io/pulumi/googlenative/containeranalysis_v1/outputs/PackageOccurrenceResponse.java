@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.LocationResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class PackageOccurrenceResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageOccurrenceResponse build() {
             return new PackageOccurrenceResponse(location, name);
         }

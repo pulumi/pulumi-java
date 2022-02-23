@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable String deleteOption;
+        private final @Nullable String deleteOption;
 
     public Optional<String> getDeleteOption() {
         return this.deleteOption == null ? Optional.empty() : Optional.ofNullable(this.deleteOption);
@@ -35,7 +35,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -46,7 +46,7 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Boolean primary;
+        private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
@@ -105,7 +105,6 @@ public final class NetworkInterfaceReferenceResponse extends io.pulumi.resources
             this.primary = primary;
             return this;
         }
-
         public NetworkInterfaceReferenceResponse build() {
             return new NetworkInterfaceReferenceResponse(deleteOption, id, primary);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DetectionRuleResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DictionaryResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
@@ -28,7 +28,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="detectionRules", required=true)
-    private final List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
+      private final List<GooglePrivacyDlpV2DetectionRuleResponse> detectionRules;
 
     public List<GooglePrivacyDlpV2DetectionRuleResponse> getDetectionRules() {
         return this.detectionRules;
@@ -39,7 +39,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="dictionary", required=true)
-    private final GooglePrivacyDlpV2DictionaryResponse dictionary;
+      private final GooglePrivacyDlpV2DictionaryResponse dictionary;
 
     public GooglePrivacyDlpV2DictionaryResponse getDictionary() {
         return this.dictionary;
@@ -50,7 +50,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="exclusionType", required=true)
-    private final String exclusionType;
+      private final String exclusionType;
 
     public String getExclusionType() {
         return this.exclusionType;
@@ -61,7 +61,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="infoType", required=true)
-    private final GooglePrivacyDlpV2InfoTypeResponse infoType;
+      private final GooglePrivacyDlpV2InfoTypeResponse infoType;
 
     public GooglePrivacyDlpV2InfoTypeResponse getInfoType() {
         return this.infoType;
@@ -72,7 +72,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="likelihood", required=true)
-    private final String likelihood;
+      private final String likelihood;
 
     public String getLikelihood() {
         return this.likelihood;
@@ -83,7 +83,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="regex", required=true)
-    private final GooglePrivacyDlpV2RegexResponse regex;
+      private final GooglePrivacyDlpV2RegexResponse regex;
 
     public GooglePrivacyDlpV2RegexResponse getRegex() {
         return this.regex;
@@ -94,7 +94,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="storedType", required=true)
-    private final GooglePrivacyDlpV2StoredTypeResponse storedType;
+      private final GooglePrivacyDlpV2StoredTypeResponse storedType;
 
     public GooglePrivacyDlpV2StoredTypeResponse getStoredType() {
         return this.storedType;
@@ -105,7 +105,7 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="surrogateType", required=true)
-    private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
+      private final GooglePrivacyDlpV2SurrogateTypeResponse surrogateType;
 
     public GooglePrivacyDlpV2SurrogateTypeResponse getSurrogateType() {
         return this.surrogateType;
@@ -214,7 +214,6 @@ public final class GooglePrivacyDlpV2CustomInfoTypeResponse extends io.pulumi.re
             this.surrogateType = Objects.requireNonNull(surrogateType);
             return this;
         }
-
         public GooglePrivacyDlpV2CustomInfoTypeResponse build() {
             return new GooglePrivacyDlpV2CustomInfoTypeResponse(detectionRules, dictionary, exclusionType, infoType, likelihood, regex, storedType, surrogateType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -111,7 +111,6 @@ public final class NetworkSecurityGroupRuleResponse {
             this.sourcePortRanges = sourcePortRanges;
             return this;
         }
-
         public NetworkSecurityGroupRuleResponse build() {
             return new NetworkSecurityGroupRuleResponse(access, priority, sourceAddressPrefix, sourcePortRanges);
         }

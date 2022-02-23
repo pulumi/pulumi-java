@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageCardButtonResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
      * 
      */
     @InputImport(name="buttons", required=true)
-    private final List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons;
+      private final List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2IntentMessageCardButtonResponse> getButtons() {
         return this.buttons;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
      * 
      */
     @InputImport(name="imageUri", required=true)
-    private final String imageUri;
+      private final String imageUri;
 
     public String getImageUri() {
         return this.imageUri;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
      * 
      */
     @InputImport(name="subtitle", required=true)
-    private final String subtitle;
+      private final String subtitle;
 
     public String getSubtitle() {
         return this.subtitle;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -125,7 +125,6 @@ public final class GoogleCloudDialogflowV2IntentMessageCardResponse extends io.p
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageCardResponse(buttons, imageUri, subtitle, title);
         }

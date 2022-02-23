@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoDeleteTime")
-    private final @Nullable Input<String> autoDeleteTime;
+      private final @Nullable Input<String> autoDeleteTime;
 
     public Input<String> getAutoDeleteTime() {
         return this.autoDeleteTime == null ? Input.empty() : this.autoDeleteTime;
@@ -34,7 +34,7 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoDeleteTtl")
-    private final @Nullable Input<String> autoDeleteTtl;
+      private final @Nullable Input<String> autoDeleteTtl;
 
     public Input<String> getAutoDeleteTtl() {
         return this.autoDeleteTtl == null ? Input.empty() : this.autoDeleteTtl;
@@ -45,7 +45,7 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="idleDeleteTtl")
-    private final @Nullable Input<String> idleDeleteTtl;
+      private final @Nullable Input<String> idleDeleteTtl;
 
     public Input<String> getIdleDeleteTtl() {
         return this.idleDeleteTtl == null ? Input.empty() : this.idleDeleteTtl;
@@ -119,7 +119,6 @@ public final class LifecycleConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.idleDeleteTtl = Input.ofNullable(idleDeleteTtl);
             return this;
         }
-
         public LifecycleConfigArgs build() {
             return new LifecycleConfigArgs(autoDeleteTime, autoDeleteTtl, idleDeleteTtl);
         }

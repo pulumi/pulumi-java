@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="assignmentState", required=true)
-    private final String assignmentState;
+        private final String assignmentState;
 
     public String getAssignmentState() {
         return this.assignmentState;
@@ -35,7 +35,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="expandNestedMemberships")
-    private final @Nullable Boolean expandNestedMemberships;
+        private final @Nullable Boolean expandNestedMemberships;
 
     public Optional<Boolean> getExpandNestedMemberships() {
         return this.expandNestedMemberships == null ? Optional.empty() : Optional.ofNullable(this.expandNestedMemberships);
@@ -46,7 +46,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="inactiveDuration")
-    private final @Nullable String inactiveDuration;
+        private final @Nullable String inactiveDuration;
 
     public Optional<String> getInactiveDuration() {
         return this.inactiveDuration == null ? Optional.empty() : Optional.ofNullable(this.inactiveDuration);
@@ -57,7 +57,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final String principalType;
+        private final String principalType;
 
     public String getPrincipalType() {
         return this.principalType;
@@ -68,7 +68,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -79,7 +79,7 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final String roleDefinitionId;
+        private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -168,7 +168,6 @@ public final class AccessReviewScopeResponse extends io.pulumi.resources.InvokeA
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public AccessReviewScopeResponse build() {
             return new AccessReviewScopeResponse(assignmentState, expandNestedMemberships, inactiveDuration, principalType, resourceId, roleDefinitionId);
         }

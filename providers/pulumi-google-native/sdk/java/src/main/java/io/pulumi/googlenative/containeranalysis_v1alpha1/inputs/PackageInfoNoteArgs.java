@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.ExternalRefArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LicenseArgs;
 import java.lang.Boolean;
@@ -27,7 +27,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="analyzed")
-    private final @Nullable Input<Boolean> analyzed;
+      private final @Nullable Input<Boolean> analyzed;
 
     public Input<Boolean> getAnalyzed() {
         return this.analyzed == null ? Input.empty() : this.analyzed;
@@ -38,7 +38,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="attribution")
-    private final @Nullable Input<String> attribution;
+      private final @Nullable Input<String> attribution;
 
     public Input<String> getAttribution() {
         return this.attribution == null ? Input.empty() : this.attribution;
@@ -49,7 +49,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="checksum")
-    private final @Nullable Input<String> checksum;
+      private final @Nullable Input<String> checksum;
 
     public Input<String> getChecksum() {
         return this.checksum == null ? Input.empty() : this.checksum;
@@ -60,7 +60,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="copyright")
-    private final @Nullable Input<String> copyright;
+      private final @Nullable Input<String> copyright;
 
     public Input<String> getCopyright() {
         return this.copyright == null ? Input.empty() : this.copyright;
@@ -71,7 +71,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="detailedDescription")
-    private final @Nullable Input<String> detailedDescription;
+      private final @Nullable Input<String> detailedDescription;
 
     public Input<String> getDetailedDescription() {
         return this.detailedDescription == null ? Input.empty() : this.detailedDescription;
@@ -82,7 +82,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="downloadLocation")
-    private final @Nullable Input<String> downloadLocation;
+      private final @Nullable Input<String> downloadLocation;
 
     public Input<String> getDownloadLocation() {
         return this.downloadLocation == null ? Input.empty() : this.downloadLocation;
@@ -93,7 +93,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="externalRefs")
-    private final @Nullable Input<List<ExternalRefArgs>> externalRefs;
+      private final @Nullable Input<List<ExternalRefArgs>> externalRefs;
 
     public Input<List<ExternalRefArgs>> getExternalRefs() {
         return this.externalRefs == null ? Input.empty() : this.externalRefs;
@@ -104,7 +104,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filesLicenseInfo")
-    private final @Nullable Input<List<String>> filesLicenseInfo;
+      private final @Nullable Input<List<String>> filesLicenseInfo;
 
     public Input<List<String>> getFilesLicenseInfo() {
         return this.filesLicenseInfo == null ? Input.empty() : this.filesLicenseInfo;
@@ -115,7 +115,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="homePage")
-    private final @Nullable Input<String> homePage;
+      private final @Nullable Input<String> homePage;
 
     public Input<String> getHomePage() {
         return this.homePage == null ? Input.empty() : this.homePage;
@@ -126,7 +126,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="licenseDeclared")
-    private final @Nullable Input<LicenseArgs> licenseDeclared;
+      private final @Nullable Input<LicenseArgs> licenseDeclared;
 
     public Input<LicenseArgs> getLicenseDeclared() {
         return this.licenseDeclared == null ? Input.empty() : this.licenseDeclared;
@@ -137,7 +137,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="originator")
-    private final @Nullable Input<String> originator;
+      private final @Nullable Input<String> originator;
 
     public Input<String> getOriginator() {
         return this.originator == null ? Input.empty() : this.originator;
@@ -148,7 +148,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="packageType")
-    private final @Nullable Input<String> packageType;
+      private final @Nullable Input<String> packageType;
 
     public Input<String> getPackageType() {
         return this.packageType == null ? Input.empty() : this.packageType;
@@ -159,7 +159,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="summaryDescription")
-    private final @Nullable Input<String> summaryDescription;
+      private final @Nullable Input<String> summaryDescription;
 
     public Input<String> getSummaryDescription() {
         return this.summaryDescription == null ? Input.empty() : this.summaryDescription;
@@ -170,7 +170,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="supplier")
-    private final @Nullable Input<String> supplier;
+      private final @Nullable Input<String> supplier;
 
     public Input<String> getSupplier() {
         return this.supplier == null ? Input.empty() : this.supplier;
@@ -181,7 +181,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -192,7 +192,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="verificationCode")
-    private final @Nullable Input<String> verificationCode;
+      private final @Nullable Input<String> verificationCode;
 
     public Input<String> getVerificationCode() {
         return this.verificationCode == null ? Input.empty() : this.verificationCode;
@@ -203,7 +203,7 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -487,7 +487,6 @@ public final class PackageInfoNoteArgs extends io.pulumi.resources.ResourceArgs 
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public PackageInfoNoteArgs build() {
             return new PackageInfoNoteArgs(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
         }

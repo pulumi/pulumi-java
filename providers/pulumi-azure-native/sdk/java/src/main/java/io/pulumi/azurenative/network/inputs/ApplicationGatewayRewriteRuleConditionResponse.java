@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
      * 
      */
     @InputImport(name="ignoreCase")
-    private final @Nullable Boolean ignoreCase;
+        private final @Nullable Boolean ignoreCase;
 
     public Optional<Boolean> getIgnoreCase() {
         return this.ignoreCase == null ? Optional.empty() : Optional.ofNullable(this.ignoreCase);
@@ -35,7 +35,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
      * 
      */
     @InputImport(name="negate")
-    private final @Nullable Boolean negate;
+        private final @Nullable Boolean negate;
 
     public Optional<Boolean> getNegate() {
         return this.negate == null ? Optional.empty() : Optional.ofNullable(this.negate);
@@ -46,7 +46,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
      * 
      */
     @InputImport(name="pattern")
-    private final @Nullable String pattern;
+        private final @Nullable String pattern;
 
     public Optional<String> getPattern() {
         return this.pattern == null ? Optional.empty() : Optional.ofNullable(this.pattern);
@@ -57,7 +57,7 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
      * 
      */
     @InputImport(name="variable")
-    private final @Nullable String variable;
+        private final @Nullable String variable;
 
     public Optional<String> getVariable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
@@ -126,7 +126,6 @@ public final class ApplicationGatewayRewriteRuleConditionResponse extends io.pul
             this.variable = variable;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleConditionResponse build() {
             return new ApplicationGatewayRewriteRuleConditionResponse(ignoreCase, negate, pattern, variable);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.StandardSqlDataTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="argumentKind", required=true)
-    private final String argumentKind;
+      private final String argumentKind;
 
     public String getArgumentKind() {
         return this.argumentKind;
@@ -33,7 +33,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final StandardSqlDataTypeResponse dataType;
+      private final StandardSqlDataTypeResponse dataType;
 
     public StandardSqlDataTypeResponse getDataType() {
         return this.dataType;
@@ -44,7 +44,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -55,7 +55,7 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -124,7 +124,6 @@ public final class ArgumentResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ArgumentResponse build() {
             return new ArgumentResponse(argumentKind, dataType, mode, name);
         }

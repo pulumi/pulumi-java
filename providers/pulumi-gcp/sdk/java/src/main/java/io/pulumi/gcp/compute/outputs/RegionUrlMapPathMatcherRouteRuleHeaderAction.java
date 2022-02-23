@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderActionRequestHeadersToAdd;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherRouteRuleHeaderActionResponseHeadersToAdd;
 import java.lang.String;
@@ -130,7 +130,6 @@ public final class RegionUrlMapPathMatcherRouteRuleHeaderAction {
             this.responseHeadersToRemoves = responseHeadersToRemoves;
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleHeaderAction build() {
             return new RegionUrlMapPathMatcherRouteRuleHeaderAction(requestHeadersToAdds, requestHeadersToRemoves, responseHeadersToAdds, responseHeadersToRemoves);
         }

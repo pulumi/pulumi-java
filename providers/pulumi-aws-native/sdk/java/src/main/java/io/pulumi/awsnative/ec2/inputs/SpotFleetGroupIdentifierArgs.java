@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
     public static final SpotFleetGroupIdentifierArgs Empty = new SpotFleetGroupIdentifierArgs();
 
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+        private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -57,7 +57,6 @@ public final class SpotFleetGroupIdentifierArgs extends io.pulumi.resources.Reso
             this.groupId = Input.of(Objects.requireNonNull(groupId));
             return this;
         }
-
         public SpotFleetGroupIdentifierArgs build() {
             return new SpotFleetGroupIdentifierArgs(groupId);
         }

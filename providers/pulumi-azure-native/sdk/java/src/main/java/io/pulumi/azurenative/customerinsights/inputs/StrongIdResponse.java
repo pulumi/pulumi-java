@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Map<String,String> description;
+        private final @Nullable Map<String,String> description;
 
     public Map<String,String> getDescription() {
         return this.description == null ? Map.of() : this.description;
@@ -36,7 +36,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Map<String,String> displayName;
+        private final @Nullable Map<String,String> displayName;
 
     public Map<String,String> getDisplayName() {
         return this.displayName == null ? Map.of() : this.displayName;
@@ -47,7 +47,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyPropertyNames", required=true)
-    private final List<String> keyPropertyNames;
+        private final List<String> keyPropertyNames;
 
     public List<String> getKeyPropertyNames() {
         return this.keyPropertyNames;
@@ -58,7 +58,7 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="strongIdName", required=true)
-    private final String strongIdName;
+        private final String strongIdName;
 
     public String getStrongIdName() {
         return this.strongIdName;
@@ -127,7 +127,6 @@ public final class StrongIdResponse extends io.pulumi.resources.InvokeArgs {
             this.strongIdName = Objects.requireNonNull(strongIdName);
             return this;
         }
-
         public StrongIdResponse build() {
             return new StrongIdResponse(description, displayName, keyPropertyNames, strongIdName);
         }

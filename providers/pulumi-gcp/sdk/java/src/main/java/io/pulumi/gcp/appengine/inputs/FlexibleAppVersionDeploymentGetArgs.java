@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentContainerGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionDeploymentFileGetArgs;
@@ -24,7 +24,7 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="cloudBuildOptions")
-    private final @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
+        private final @Nullable Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> cloudBuildOptions;
 
     public Input<FlexibleAppVersionDeploymentCloudBuildOptionsGetArgs> getCloudBuildOptions() {
         return this.cloudBuildOptions == null ? Input.empty() : this.cloudBuildOptions;
@@ -36,7 +36,7 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container;
+        private final @Nullable Input<FlexibleAppVersionDeploymentContainerGetArgs> container;
 
     public Input<FlexibleAppVersionDeploymentContainerGetArgs> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -49,7 +49,7 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="files")
-    private final @Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
+        private final @Nullable Input<List<FlexibleAppVersionDeploymentFileGetArgs>> files;
 
     public Input<List<FlexibleAppVersionDeploymentFileGetArgs>> getFiles() {
         return this.files == null ? Input.empty() : this.files;
@@ -61,7 +61,7 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="zip")
-    private final @Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip;
+        private final @Nullable Input<FlexibleAppVersionDeploymentZipGetArgs> zip;
 
     public Input<FlexibleAppVersionDeploymentZipGetArgs> getZip() {
         return this.zip == null ? Input.empty() : this.zip;
@@ -150,7 +150,6 @@ public final class FlexibleAppVersionDeploymentGetArgs extends io.pulumi.resourc
             this.zip = Input.ofNullable(zip);
             return this;
         }
-
         public FlexibleAppVersionDeploymentGetArgs build() {
             return new FlexibleAppVersionDeploymentGetArgs(cloudBuildOptions, container, files, zip);
         }

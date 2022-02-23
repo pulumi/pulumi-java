@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class CustomHttpPatternResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public CustomHttpPatternResponse build() {
             return new CustomHttpPatternResponse(kind, path);
         }

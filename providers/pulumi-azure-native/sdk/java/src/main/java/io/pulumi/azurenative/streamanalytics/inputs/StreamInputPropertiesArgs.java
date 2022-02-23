@@ -10,7 +10,7 @@ import io.pulumi.azurenative.streamanalytics.inputs.EventHubStreamInputDataSourc
 import io.pulumi.azurenative.streamanalytics.inputs.IoTHubStreamInputDataSourceArgs;
 import io.pulumi.azurenative.streamanalytics.inputs.JsonSerializationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="datasource")
-    private final @Nullable Input<Object> datasource;
+        private final @Nullable Input<Object> datasource;
 
     public Input<Object> getDatasource() {
         return this.datasource == null ? Input.empty() : this.datasource;
@@ -41,7 +41,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serialization")
-    private final @Nullable Input<Object> serialization;
+        private final @Nullable Input<Object> serialization;
 
     public Input<Object> getSerialization() {
         return this.serialization == null ? Input.empty() : this.serialization;
@@ -53,7 +53,7 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class StreamInputPropertiesArgs extends io.pulumi.resources.Resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public StreamInputPropertiesArgs build() {
             return new StreamInputPropertiesArgs(datasource, serialization, type);
         }

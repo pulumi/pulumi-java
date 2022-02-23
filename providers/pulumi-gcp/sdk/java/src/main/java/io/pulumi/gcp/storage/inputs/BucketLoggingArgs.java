@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logBucket", required=true)
-    private final Input<String> logBucket;
+        private final Input<String> logBucket;
 
     public Input<String> getLogBucket() {
         return this.logBucket;
@@ -31,7 +31,7 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logObjectPrefix")
-    private final @Nullable Input<String> logObjectPrefix;
+        private final @Nullable Input<String> logObjectPrefix;
 
     public Input<String> getLogObjectPrefix() {
         return this.logObjectPrefix == null ? Input.empty() : this.logObjectPrefix;
@@ -90,7 +90,6 @@ public final class BucketLoggingArgs extends io.pulumi.resources.ResourceArgs {
             this.logObjectPrefix = Input.ofNullable(logObjectPrefix);
             return this;
         }
-
         public BucketLoggingArgs build() {
             return new BucketLoggingArgs(logBucket, logObjectPrefix);
         }

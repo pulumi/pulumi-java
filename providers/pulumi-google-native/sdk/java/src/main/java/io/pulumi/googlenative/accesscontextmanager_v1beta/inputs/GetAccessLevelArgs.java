@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAccessLevelArgs Empty = new GetAccessLevelArgs();
 
     @InputImport(name="accessLevelFormat")
-    private final @Nullable String accessLevelFormat;
+      private final @Nullable String accessLevelFormat;
 
     public Optional<String> getAccessLevelFormat() {
         return this.accessLevelFormat == null ? Optional.empty() : Optional.ofNullable(this.accessLevelFormat);
     }
 
     @InputImport(name="accessLevelId", required=true)
-    private final String accessLevelId;
+      private final String accessLevelId;
 
     public String getAccessLevelId() {
         return this.accessLevelId;
     }
 
     @InputImport(name="accessPolicyId", required=true)
-    private final String accessPolicyId;
+      private final String accessPolicyId;
 
     public String getAccessPolicyId() {
         return this.accessPolicyId;
@@ -88,7 +88,6 @@ public final class GetAccessLevelArgs extends io.pulumi.resources.InvokeArgs {
             this.accessPolicyId = Objects.requireNonNull(accessPolicyId);
             return this;
         }
-
         public GetAccessLevelArgs build() {
             return new GetAccessLevelArgs(accessLevelFormat, accessLevelId, accessPolicyId);
         }

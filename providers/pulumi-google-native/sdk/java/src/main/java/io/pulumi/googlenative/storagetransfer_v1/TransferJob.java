@@ -5,8 +5,8 @@ package io.pulumi.googlenative.storagetransfer_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storagetransfer_v1.TransferJobArgs;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.LoggingConfigResponse;
@@ -193,13 +193,6 @@ public class TransferJob extends io.pulumi.resources.CustomResource {
         return this.transferSpec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TransferJob(String name) {
-        super("google-native:storagetransfer/v1:TransferJob", name, TransferJobArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

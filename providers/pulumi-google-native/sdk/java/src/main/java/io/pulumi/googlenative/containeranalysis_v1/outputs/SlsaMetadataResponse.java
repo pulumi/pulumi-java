@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SlsaCompletenessResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class SlsaMetadataResponse {
             this.reproducible = Objects.requireNonNull(reproducible);
             return this;
         }
-
         public SlsaMetadataResponse build() {
             return new SlsaMetadataResponse(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }

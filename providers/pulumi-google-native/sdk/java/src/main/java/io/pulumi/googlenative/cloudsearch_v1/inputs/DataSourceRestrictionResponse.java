@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.FilterOptionsResponse;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.SourceResponse;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="filterOptions", required=true)
-    private final List<FilterOptionsResponse> filterOptions;
+      private final List<FilterOptionsResponse> filterOptions;
 
     public List<FilterOptionsResponse> getFilterOptions() {
         return this.filterOptions;
@@ -34,7 +34,7 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="source", required=true)
-    private final SourceResponse source;
+      private final SourceResponse source;
 
     public SourceResponse getSource() {
         return this.source;
@@ -83,7 +83,6 @@ public final class DataSourceRestrictionResponse extends io.pulumi.resources.Inv
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public DataSourceRestrictionResponse build() {
             return new DataSourceRestrictionResponse(filterOptions, source);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.RuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -182,7 +182,6 @@ public final class GetAuthorizationPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetAuthorizationPolicyResult build() {
             return new GetAuthorizationPolicyResult(action, createTime, description, labels, name, rules, updateTime);
         }

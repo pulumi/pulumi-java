@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.ConversationConversationStage;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConversationArgs Empty = new ConversationArgs();
 
     @InputImport(name="conversationId")
-    private final @Nullable Input<String> conversationId;
+      private final @Nullable Input<String> conversationId;
 
     public Input<String> getConversationId() {
         return this.conversationId == null ? Input.empty() : this.conversationId;
@@ -27,7 +27,7 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationProfile", required=true)
-    private final Input<String> conversationProfile;
+      private final Input<String> conversationProfile;
 
     public Input<String> getConversationProfile() {
         return this.conversationProfile;
@@ -38,21 +38,21 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conversationStage")
-    private final @Nullable Input<ConversationConversationStage> conversationStage;
+      private final @Nullable Input<ConversationConversationStage> conversationStage;
 
     public Input<ConversationConversationStage> getConversationStage() {
         return this.conversationStage == null ? Input.empty() : this.conversationStage;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -156,7 +156,6 @@ public final class ConversationArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ConversationArgs build() {
             return new ConversationArgs(conversationId, conversationProfile, conversationStage, location, project);
         }

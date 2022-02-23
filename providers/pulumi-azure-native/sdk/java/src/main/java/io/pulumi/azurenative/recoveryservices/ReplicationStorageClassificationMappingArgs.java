@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.StorageMappingInputPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final Input<String> fabricName;
+        private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<StorageMappingInputPropertiesArgs> properties;
+        private final @Nullable Input<StorageMappingInputPropertiesArgs> properties;
 
     public Input<StorageMappingInputPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -42,7 +42,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -64,7 +64,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="storageClassificationMappingName")
-    private final @Nullable Input<String> storageClassificationMappingName;
+        private final @Nullable Input<String> storageClassificationMappingName;
 
     public Input<String> getStorageClassificationMappingName() {
         return this.storageClassificationMappingName == null ? Input.empty() : this.storageClassificationMappingName;
@@ -75,7 +75,7 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
      * 
      */
     @InputImport(name="storageClassificationName", required=true)
-    private final Input<String> storageClassificationName;
+        private final Input<String> storageClassificationName;
 
     public Input<String> getStorageClassificationName() {
         return this.storageClassificationName;
@@ -194,7 +194,6 @@ public final class ReplicationStorageClassificationMappingArgs extends io.pulumi
             this.storageClassificationName = Input.of(Objects.requireNonNull(storageClassificationName));
             return this;
         }
-
         public ReplicationStorageClassificationMappingArgs build() {
             return new ReplicationStorageClassificationMappingArgs(fabricName, properties, resourceGroupName, resourceName, storageClassificationMappingName, storageClassificationName);
         }

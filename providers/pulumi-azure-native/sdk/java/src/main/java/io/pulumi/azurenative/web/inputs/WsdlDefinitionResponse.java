@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.WsdlServiceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="content")
-    private final @Nullable String content;
+        private final @Nullable String content;
 
     public Optional<String> getContent() {
         return this.content == null ? Optional.empty() : Optional.ofNullable(this.content);
@@ -35,7 +35,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="importMethod")
-    private final @Nullable String importMethod;
+        private final @Nullable String importMethod;
 
     public Optional<String> getImportMethod() {
         return this.importMethod == null ? Optional.empty() : Optional.ofNullable(this.importMethod);
@@ -46,7 +46,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="service")
-    private final @Nullable WsdlServiceResponse service;
+        private final @Nullable WsdlServiceResponse service;
 
     public Optional<WsdlServiceResponse> getService() {
         return this.service == null ? Optional.empty() : Optional.ofNullable(this.service);
@@ -57,7 +57,7 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -126,7 +126,6 @@ public final class WsdlDefinitionResponse extends io.pulumi.resources.InvokeArgs
             this.url = url;
             return this;
         }
-
         public WsdlDefinitionResponse build() {
             return new WsdlDefinitionResponse(content, importMethod, service, url);
         }

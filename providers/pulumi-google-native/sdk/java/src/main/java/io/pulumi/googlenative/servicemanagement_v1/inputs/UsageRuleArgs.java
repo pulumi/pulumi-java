@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowUnregisteredCalls")
-    private final @Nullable Input<Boolean> allowUnregisteredCalls;
+      private final @Nullable Input<Boolean> allowUnregisteredCalls;
 
     public Input<Boolean> getAllowUnregisteredCalls() {
         return this.allowUnregisteredCalls == null ? Input.empty() : this.allowUnregisteredCalls;
@@ -35,7 +35,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -46,7 +46,7 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipServiceControl")
-    private final @Nullable Input<Boolean> skipServiceControl;
+      private final @Nullable Input<Boolean> skipServiceControl;
 
     public Input<Boolean> getSkipServiceControl() {
         return this.skipServiceControl == null ? Input.empty() : this.skipServiceControl;
@@ -120,7 +120,6 @@ public final class UsageRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.skipServiceControl = Input.ofNullable(skipServiceControl);
             return this;
         }
-
         public UsageRuleArgs build() {
             return new UsageRuleArgs(allowUnregisteredCalls, selector, skipServiceControl);
         }

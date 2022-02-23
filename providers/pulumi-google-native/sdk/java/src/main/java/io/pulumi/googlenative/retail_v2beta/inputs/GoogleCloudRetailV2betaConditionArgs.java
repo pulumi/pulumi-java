@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionQueryTermArgs;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaConditionTimeRangeArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="activeTimeRange")
-    private final @Nullable Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
+      private final @Nullable Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> activeTimeRange;
 
     public Input<List<GoogleCloudRetailV2betaConditionTimeRangeArgs>> getActiveTimeRange() {
         return this.activeTimeRange == null ? Input.empty() : this.activeTimeRange;
@@ -36,7 +36,7 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="queryTerms")
-    private final @Nullable Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
+      private final @Nullable Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> queryTerms;
 
     public Input<List<GoogleCloudRetailV2betaConditionQueryTermArgs>> getQueryTerms() {
         return this.queryTerms == null ? Input.empty() : this.queryTerms;
@@ -95,7 +95,6 @@ public final class GoogleCloudRetailV2betaConditionArgs extends io.pulumi.resour
             this.queryTerms = Input.ofNullable(queryTerms);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionArgs build() {
             return new GoogleCloudRetailV2betaConditionArgs(activeTimeRange, queryTerms);
         }

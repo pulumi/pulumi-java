@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.DynamicMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.inputs.MetricCriteriaResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
      * 
      */
     @InputImport(name="allOf")
-    private final @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf;
+        private final @Nullable List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> allOf;
 
     public List<Either<DynamicMetricCriteriaResponse,MetricCriteriaResponse>> getAllOf() {
         return this.allOf == null ? List.of() : this.allOf;
@@ -39,7 +39,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -88,7 +88,6 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse ext
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MetricAlertMultipleResourceMultipleMetricCriteriaResponse build() {
             return new MetricAlertMultipleResourceMultipleMetricCriteriaResponse(allOf, odataType);
         }

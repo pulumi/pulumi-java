@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="height", required=true)
-    private final Integer height;
+      private final Integer height;
 
     public Integer getHeight() {
         return this.height;
@@ -33,7 +33,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="widget", required=true)
-    private final WidgetResponse widget;
+      private final WidgetResponse widget;
 
     public WidgetResponse getWidget() {
         return this.widget;
@@ -44,7 +44,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="width", required=true)
-    private final Integer width;
+      private final Integer width;
 
     public Integer getWidth() {
         return this.width;
@@ -55,7 +55,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xPos", required=true)
-    private final Integer xPos;
+      private final Integer xPos;
 
     public Integer getXPos() {
         return this.xPos;
@@ -66,7 +66,7 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="yPos", required=true)
-    private final Integer yPos;
+      private final Integer yPos;
 
     public Integer getYPos() {
         return this.yPos;
@@ -145,7 +145,6 @@ public final class TileResponse extends io.pulumi.resources.InvokeArgs {
             this.yPos = Objects.requireNonNull(yPos);
             return this;
         }
-
         public TileResponse build() {
             return new TileResponse(height, widget, width, xPos, yPos);
         }

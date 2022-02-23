@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * 
      */
     @InputImport(name="publicKeyPem")
-    private final @Nullable Input<String> publicKeyPem;
+        private final @Nullable Input<String> publicKeyPem;
 
     public Input<String> getPublicKeyPem() {
         return this.publicKeyPem == null ? Input.empty() : this.publicKeyPem;
@@ -35,7 +35,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
      * 
      */
     @InputImport(name="signatureAlgorithm")
-    private final @Nullable Input<String> signatureAlgorithm;
+        private final @Nullable Input<String> signatureAlgorithm;
 
     public Input<String> getSignatureAlgorithm() {
         return this.signatureAlgorithm == null ? Input.empty() : this.signatureAlgorithm;
@@ -94,7 +94,6 @@ public final class AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs ex
             this.signatureAlgorithm = Input.ofNullable(signatureAlgorithm);
             return this;
         }
-
         public AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs build() {
             return new AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyArgs(publicKeyPem, signatureAlgorithm);
         }

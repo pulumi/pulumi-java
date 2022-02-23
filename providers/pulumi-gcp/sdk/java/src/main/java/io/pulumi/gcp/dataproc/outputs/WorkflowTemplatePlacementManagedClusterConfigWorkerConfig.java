@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigAccelerator;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigDiskConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigWorkerConfigManagedGroupConfig;
@@ -256,7 +256,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigWorkerConfig {
             this.preemptibility = preemptibility;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigWorkerConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigWorkerConfig(accelerators, diskConfig, image, instanceNames, isPreemptible, machineType, managedGroupConfigs, minCpuPlatform, numInstances, preemptibility);
         }

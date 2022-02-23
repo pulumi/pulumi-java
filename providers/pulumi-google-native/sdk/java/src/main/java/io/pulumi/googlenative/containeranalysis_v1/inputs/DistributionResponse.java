@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.VersionResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="architecture", required=true)
-    private final String architecture;
+      private final String architecture;
 
     public String getArchitecture() {
         return this.architecture;
@@ -33,7 +33,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final String cpeUri;
+      private final String cpeUri;
 
     public String getCpeUri() {
         return this.cpeUri;
@@ -44,7 +44,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -55,7 +55,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="latestVersion", required=true)
-    private final VersionResponse latestVersion;
+      private final VersionResponse latestVersion;
 
     public VersionResponse getLatestVersion() {
         return this.latestVersion;
@@ -66,7 +66,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maintainer", required=true)
-    private final String maintainer;
+      private final String maintainer;
 
     public String getMaintainer() {
         return this.maintainer;
@@ -77,7 +77,7 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -166,7 +166,6 @@ public final class DistributionResponse extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DistributionResponse build() {
             return new DistributionResponse(architecture, cpeUri, description, latestVersion, maintainer, url);
         }

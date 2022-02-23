@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionByDefaultArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="bucketKeyEnabled")
-    private final @Nullable Input<Boolean> bucketKeyEnabled;
+        private final @Nullable Input<Boolean> bucketKeyEnabled;
 
     public Input<Boolean> getBucketKeyEnabled() {
         return this.bucketKeyEnabled == null ? Input.empty() : this.bucketKeyEnabled;
     }
 
     @InputImport(name="serverSideEncryptionByDefault")
-    private final @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
+        private final @Nullable Input<BucketServerSideEncryptionByDefaultArgs> serverSideEncryptionByDefault;
 
     public Input<BucketServerSideEncryptionByDefaultArgs> getServerSideEncryptionByDefault() {
         return this.serverSideEncryptionByDefault == null ? Input.empty() : this.serverSideEncryptionByDefault;
@@ -90,7 +90,6 @@ public final class BucketServerSideEncryptionRuleArgs extends io.pulumi.resource
             this.serverSideEncryptionByDefault = Input.ofNullable(serverSideEncryptionByDefault);
             return this;
         }
-
         public BucketServerSideEncryptionRuleArgs build() {
             return new BucketServerSideEncryptionRuleArgs(bucketKeyEnabled, serverSideEncryptionByDefault);
         }

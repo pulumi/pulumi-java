@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AzNsActionGroupResponse;
 import io.pulumi.azurenative.insights.outputs.TriggerConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -144,7 +144,6 @@ public final class AlertingActionResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AlertingActionResponse build() {
             return new AlertingActionResponse(aznsAction, odataType, severity, throttlingInMin, trigger);
         }

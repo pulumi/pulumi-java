@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.ResourceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class StorageAccountResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(id, identity, status);
         }

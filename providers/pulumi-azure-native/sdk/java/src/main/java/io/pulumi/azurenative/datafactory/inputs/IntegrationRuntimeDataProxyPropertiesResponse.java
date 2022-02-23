@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.EntityReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable EntityReferenceResponse connectVia;
+        private final @Nullable EntityReferenceResponse connectVia;
 
     public Optional<EntityReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -35,7 +35,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -46,7 +46,7 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="stagingLinkedService")
-    private final @Nullable EntityReferenceResponse stagingLinkedService;
+        private final @Nullable EntityReferenceResponse stagingLinkedService;
 
     public Optional<EntityReferenceResponse> getStagingLinkedService() {
         return this.stagingLinkedService == null ? Optional.empty() : Optional.ofNullable(this.stagingLinkedService);
@@ -105,7 +105,6 @@ public final class IntegrationRuntimeDataProxyPropertiesResponse extends io.pulu
             this.stagingLinkedService = stagingLinkedService;
             return this;
         }
-
         public IntegrationRuntimeDataProxyPropertiesResponse build() {
             return new IntegrationRuntimeDataProxyPropertiesResponse(connectVia, path, stagingLinkedService);
         }

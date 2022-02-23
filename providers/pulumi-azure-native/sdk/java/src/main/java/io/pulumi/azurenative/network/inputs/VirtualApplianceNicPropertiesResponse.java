@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+        private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -43,7 +43,7 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="publicIpAddress", required=true)
-    private final String publicIpAddress;
+        private final String publicIpAddress;
 
     public String getPublicIpAddress() {
         return this.publicIpAddress;
@@ -102,7 +102,6 @@ public final class VirtualApplianceNicPropertiesResponse extends io.pulumi.resou
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
-
         public VirtualApplianceNicPropertiesResponse build() {
             return new VirtualApplianceNicPropertiesResponse(name, privateIpAddress, publicIpAddress);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.inputs.EventSourceMappingFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class FilterCriteriaPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<List<EventSourceMappingFilterArgs>> filters;
+        private final @Nullable Input<List<EventSourceMappingFilterArgs>> filters;
 
     public Input<List<EventSourceMappingFilterArgs>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -67,7 +67,6 @@ public final class FilterCriteriaPropertiesArgs extends io.pulumi.resources.Reso
             this.filters = Input.ofNullable(filters);
             return this;
         }
-
         public FilterCriteriaPropertiesArgs build() {
             return new FilterCriteriaPropertiesArgs(filters);
         }

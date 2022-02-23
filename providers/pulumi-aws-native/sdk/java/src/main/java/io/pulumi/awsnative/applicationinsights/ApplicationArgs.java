@@ -8,7 +8,7 @@ import io.pulumi.awsnative.applicationinsights.inputs.ApplicationCustomComponent
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationLogPatternSetArgs;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoConfigurationEnabled")
-    private final @Nullable Input<Boolean> autoConfigurationEnabled;
+        private final @Nullable Input<Boolean> autoConfigurationEnabled;
 
     public Input<Boolean> getAutoConfigurationEnabled() {
         return this.autoConfigurationEnabled == null ? Input.empty() : this.autoConfigurationEnabled;
@@ -36,7 +36,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cWEMonitorEnabled")
-    private final @Nullable Input<Boolean> cWEMonitorEnabled;
+        private final @Nullable Input<Boolean> cWEMonitorEnabled;
 
     public Input<Boolean> getCWEMonitorEnabled() {
         return this.cWEMonitorEnabled == null ? Input.empty() : this.cWEMonitorEnabled;
@@ -47,7 +47,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="componentMonitoringSettings")
-    private final @Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
+        private final @Nullable Input<List<ApplicationComponentMonitoringSettingArgs>> componentMonitoringSettings;
 
     public Input<List<ApplicationComponentMonitoringSettingArgs>> getComponentMonitoringSettings() {
         return this.componentMonitoringSettings == null ? Input.empty() : this.componentMonitoringSettings;
@@ -58,7 +58,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customComponents")
-    private final @Nullable Input<List<ApplicationCustomComponentArgs>> customComponents;
+        private final @Nullable Input<List<ApplicationCustomComponentArgs>> customComponents;
 
     public Input<List<ApplicationCustomComponentArgs>> getCustomComponents() {
         return this.customComponents == null ? Input.empty() : this.customComponents;
@@ -69,7 +69,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logPatternSets")
-    private final @Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets;
+        private final @Nullable Input<List<ApplicationLogPatternSetArgs>> logPatternSets;
 
     public Input<List<ApplicationLogPatternSetArgs>> getLogPatternSets() {
         return this.logPatternSets == null ? Input.empty() : this.logPatternSets;
@@ -80,7 +80,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="opsCenterEnabled")
-    private final @Nullable Input<Boolean> opsCenterEnabled;
+        private final @Nullable Input<Boolean> opsCenterEnabled;
 
     public Input<Boolean> getOpsCenterEnabled() {
         return this.opsCenterEnabled == null ? Input.empty() : this.opsCenterEnabled;
@@ -91,7 +91,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="opsItemSNSTopicArn")
-    private final @Nullable Input<String> opsItemSNSTopicArn;
+        private final @Nullable Input<String> opsItemSNSTopicArn;
 
     public Input<String> getOpsItemSNSTopicArn() {
         return this.opsItemSNSTopicArn == null ? Input.empty() : this.opsItemSNSTopicArn;
@@ -102,7 +102,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -113,7 +113,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ApplicationTagArgs>> tags;
+        private final @Nullable Input<List<ApplicationTagArgs>> tags;
 
     public Input<List<ApplicationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -277,7 +277,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(autoConfigurationEnabled, cWEMonitorEnabled, componentMonitoringSettings, customComponents, logPatternSets, opsCenterEnabled, opsItemSNSTopicArn, resourceGroupName, tags);
         }

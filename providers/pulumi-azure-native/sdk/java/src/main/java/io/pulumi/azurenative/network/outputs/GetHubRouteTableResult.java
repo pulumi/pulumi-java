@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.HubRouteResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -225,7 +225,6 @@ public final class GetHubRouteTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHubRouteTableResult build() {
             return new GetHubRouteTableResult(associatedConnections, etag, id, labels, name, propagatingConnections, provisioningState, routes, type);
         }

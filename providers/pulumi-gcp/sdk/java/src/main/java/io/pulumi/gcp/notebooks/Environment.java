@@ -5,8 +5,8 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.EnvironmentArgs;
 import io.pulumi.gcp.notebooks.inputs.EnvironmentState;
@@ -182,13 +182,6 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.vmImage;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Environment(String name) {
-        super("gcp:notebooks/environment:Environment", name, EnvironmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

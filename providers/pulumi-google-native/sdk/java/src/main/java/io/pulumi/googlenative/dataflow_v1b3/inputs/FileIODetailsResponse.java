@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="filePattern", required=true)
-    private final String filePattern;
+      private final String filePattern;
 
     public String getFilePattern() {
         return this.filePattern;
@@ -59,7 +59,6 @@ public final class FileIODetailsResponse extends io.pulumi.resources.InvokeArgs 
             this.filePattern = Objects.requireNonNull(filePattern);
             return this;
         }
-
         public FileIODetailsResponse build() {
             return new FileIODetailsResponse(filePattern);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.WebTestGeolocationResponse;
 import io.pulumi.azurenative.insights.outputs.WebTestPropertiesResponseConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -397,7 +397,6 @@ public final class GetWebTestResult {
             this.webTestName = Objects.requireNonNull(webTestName);
             return this;
         }
-
         public GetWebTestResult build() {
             return new GetWebTestResult(configuration, description, enabled, frequency, id, kind, location, locations, name, provisioningState, retryEnabled, syntheticMonitorId, tags, timeout, type, webTestKind, webTestName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class ExperimentTreatmentObject {
             this.variation = Objects.requireNonNull(variation);
             return this;
         }
-
         public ExperimentTreatmentObject build() {
             return new ExperimentTreatmentObject(description, feature, treatmentName, variation);
         }

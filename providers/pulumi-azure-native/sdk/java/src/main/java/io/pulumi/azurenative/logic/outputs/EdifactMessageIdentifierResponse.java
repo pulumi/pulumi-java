@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class EdifactMessageIdentifierResponse {
             this.messageId = Objects.requireNonNull(messageId);
             return this;
         }
-
         public EdifactMessageIdentifierResponse build() {
             return new EdifactMessageIdentifierResponse(messageId);
         }

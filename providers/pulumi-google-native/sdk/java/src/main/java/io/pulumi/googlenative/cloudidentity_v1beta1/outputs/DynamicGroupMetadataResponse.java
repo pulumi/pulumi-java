@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.DynamicGroupQueryResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.DynamicGroupStatusResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class DynamicGroupMetadataResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DynamicGroupMetadataResponse build() {
             return new DynamicGroupMetadataResponse(queries, status);
         }

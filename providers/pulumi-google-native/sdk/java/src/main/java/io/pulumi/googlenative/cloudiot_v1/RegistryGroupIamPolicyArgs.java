@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -33,35 +33,35 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+      private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="registryId", required=true)
-    private final Input<String> registryId;
+      private final Input<String> registryId;
 
     public Input<String> getRegistryId() {
         return this.registryId;
@@ -72,7 +72,7 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -206,7 +206,6 @@ public final class RegistryGroupIamPolicyArgs extends io.pulumi.resources.Resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public RegistryGroupIamPolicyArgs build() {
             return new RegistryGroupIamPolicyArgs(bindings, etag, groupId, location, project, registryId, version);
         }

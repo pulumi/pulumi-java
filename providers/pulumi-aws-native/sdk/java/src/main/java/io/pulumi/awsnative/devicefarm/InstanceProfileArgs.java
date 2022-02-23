@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devicefarm;
 
 import io.pulumi.awsnative.devicefarm.inputs.InstanceProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
     public static final InstanceProfileArgs Empty = new InstanceProfileArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="excludeAppPackagesFromCleanup")
-    private final @Nullable Input<List<String>> excludeAppPackagesFromCleanup;
+        private final @Nullable Input<List<String>> excludeAppPackagesFromCleanup;
 
     public Input<List<String>> getExcludeAppPackagesFromCleanup() {
         return this.excludeAppPackagesFromCleanup == null ? Input.empty() : this.excludeAppPackagesFromCleanup;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="packageCleanup")
-    private final @Nullable Input<Boolean> packageCleanup;
+        private final @Nullable Input<Boolean> packageCleanup;
 
     public Input<Boolean> getPackageCleanup() {
         return this.packageCleanup == null ? Input.empty() : this.packageCleanup;
     }
 
     @InputImport(name="rebootAfterUse")
-    private final @Nullable Input<Boolean> rebootAfterUse;
+        private final @Nullable Input<Boolean> rebootAfterUse;
 
     public Input<Boolean> getRebootAfterUse() {
         return this.rebootAfterUse == null ? Input.empty() : this.rebootAfterUse;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<InstanceProfileTagArgs>> tags;
+        private final @Nullable Input<List<InstanceProfileTagArgs>> tags;
 
     public Input<List<InstanceProfileTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,6 @@ public final class InstanceProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public InstanceProfileArgs build() {
             return new InstanceProfileArgs(description, excludeAppPackagesFromCleanup, name, packageCleanup, rebootAfterUse, tags);
         }

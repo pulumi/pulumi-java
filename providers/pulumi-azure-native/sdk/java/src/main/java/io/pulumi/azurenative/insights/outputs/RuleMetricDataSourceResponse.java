@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -162,7 +162,6 @@ public final class RuleMetricDataSourceResponse {
             this.resourceUri = resourceUri;
             return this;
         }
-
         public RuleMetricDataSourceResponse build() {
             return new RuleMetricDataSourceResponse(legacyResourceId, metricName, metricNamespace, odataType, resourceLocation, resourceUri);
         }

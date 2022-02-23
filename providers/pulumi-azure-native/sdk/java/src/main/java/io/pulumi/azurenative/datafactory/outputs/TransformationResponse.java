@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.DatasetReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -142,7 +142,6 @@ public final class TransformationResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public TransformationResponse build() {
             return new TransformationResponse(dataset, description, flowlet, linkedService, name);
         }

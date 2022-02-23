@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -248,7 +248,6 @@ public final class GetRoleAssignmentArtifactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRoleAssignmentArtifactResult build() {
             return new GetRoleAssignmentArtifactResult(dependsOn, description, displayName, id, kind, name, principalIds, resourceGroup, roleDefinitionId, type);
         }

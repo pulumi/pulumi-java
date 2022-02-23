@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudRecommendationengineV1beta1ProductCatalogItemExact
             this.originalPrice = Objects.requireNonNull(originalPrice);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ProductCatalogItemExactPriceResponse(displayPrice, originalPrice);
         }

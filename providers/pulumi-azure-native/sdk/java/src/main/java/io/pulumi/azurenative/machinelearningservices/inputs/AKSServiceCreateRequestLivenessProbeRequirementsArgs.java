@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Integer> failureThreshold;
+        private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -34,7 +34,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * 
      */
     @InputImport(name="initialDelaySeconds")
-    private final @Nullable Input<Integer> initialDelaySeconds;
+        private final @Nullable Input<Integer> initialDelaySeconds;
 
     public Input<Integer> getInitialDelaySeconds() {
         return this.initialDelaySeconds == null ? Input.empty() : this.initialDelaySeconds;
@@ -45,7 +45,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * 
      */
     @InputImport(name="periodSeconds")
-    private final @Nullable Input<Integer> periodSeconds;
+        private final @Nullable Input<Integer> periodSeconds;
 
     public Input<Integer> getPeriodSeconds() {
         return this.periodSeconds == null ? Input.empty() : this.periodSeconds;
@@ -56,7 +56,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * 
      */
     @InputImport(name="successThreshold")
-    private final @Nullable Input<Integer> successThreshold;
+        private final @Nullable Input<Integer> successThreshold;
 
     public Input<Integer> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -67,7 +67,7 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+        private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -171,7 +171,6 @@ public final class AKSServiceCreateRequestLivenessProbeRequirementsArgs extends 
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public AKSServiceCreateRequestLivenessProbeRequirementsArgs build() {
             return new AKSServiceCreateRequestLivenessProbeRequirementsArgs(failureThreshold, initialDelaySeconds, periodSeconds, successThreshold, timeoutSeconds);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DurationResponse;
 import java.lang.Double;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class HttpFaultDelayResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public HttpFaultDelayResponse build() {
             return new HttpFaultDelayResponse(fixedDelay, percentage);
         }

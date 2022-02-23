@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.TopologySelectorLabelRequirementArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="matchLabelExpressions")
-    private final @Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
+        private final @Nullable Input<List<TopologySelectorLabelRequirementArgs>> matchLabelExpressions;
 
     public Input<List<TopologySelectorLabelRequirementArgs>> getMatchLabelExpressions() {
         return this.matchLabelExpressions == null ? Input.empty() : this.matchLabelExpressions;
@@ -67,7 +67,6 @@ public final class TopologySelectorTermArgs extends io.pulumi.resources.Resource
             this.matchLabelExpressions = Input.ofNullable(matchLabelExpressions);
             return this;
         }
-
         public TopologySelectorTermArgs build() {
             return new TopologySelectorTermArgs(matchLabelExpressions);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeA
     public static final EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs Empty = new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeA
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs build() {
             return new EnvironmentConfigWebServerNetworkAccessControlAllowedIpRangeArgs(description, value);
         }

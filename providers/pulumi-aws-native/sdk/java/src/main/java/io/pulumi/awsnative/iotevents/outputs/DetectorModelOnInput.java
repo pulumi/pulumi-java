@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelEvent;
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelTransitionEvent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class DetectorModelOnInput {
             this.transitionEvents = transitionEvents;
             return this;
         }
-
         public DetectorModelOnInput build() {
             return new DetectorModelOnInput(events, transitionEvents);
         }

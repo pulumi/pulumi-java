@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.jobs_v3.enums.CompensationEntryType;
 import io.pulumi.googlenative.jobs_v3.enums.CompensationEntryUnit;
 import io.pulumi.googlenative.jobs_v3.inputs.CompensationRangeArgs;
@@ -28,7 +28,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="amount")
-    private final @Nullable Input<MoneyArgs> amount;
+      private final @Nullable Input<MoneyArgs> amount;
 
     public Input<MoneyArgs> getAmount() {
         return this.amount == null ? Input.empty() : this.amount;
@@ -39,7 +39,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="expectedUnitsPerYear")
-    private final @Nullable Input<Double> expectedUnitsPerYear;
+      private final @Nullable Input<Double> expectedUnitsPerYear;
 
     public Input<Double> getExpectedUnitsPerYear() {
         return this.expectedUnitsPerYear == null ? Input.empty() : this.expectedUnitsPerYear;
@@ -61,7 +61,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<CompensationRangeArgs> range;
+      private final @Nullable Input<CompensationRangeArgs> range;
 
     public Input<CompensationRangeArgs> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -72,7 +72,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<CompensationEntryType> type;
+      private final @Nullable Input<CompensationEntryType> type;
 
     public Input<CompensationEntryType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -83,7 +83,7 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="unit")
-    private final @Nullable Input<CompensationEntryUnit> unit;
+      private final @Nullable Input<CompensationEntryUnit> unit;
 
     public Input<CompensationEntryUnit> getUnit() {
         return this.unit == null ? Input.empty() : this.unit;
@@ -202,7 +202,6 @@ public final class CompensationEntryArgs extends io.pulumi.resources.ResourceArg
             this.unit = Input.ofNullable(unit);
             return this;
         }
-
         public CompensationEntryArgs build() {
             return new CompensationEntryArgs(amount, description, expectedUnitsPerYear, range, type, unit);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.SegmentSettingsResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="container", required=true)
-    private final String container;
+      private final String container;
 
     public String getContainer() {
         return this.container;
@@ -34,7 +34,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="elementaryStreams", required=true)
-    private final List<String> elementaryStreams;
+      private final List<String> elementaryStreams;
 
     public List<String> getElementaryStreams() {
         return this.elementaryStreams;
@@ -45,7 +45,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileName", required=true)
-    private final String fileName;
+      private final String fileName;
 
     public String getFileName() {
         return this.fileName;
@@ -56,7 +56,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -67,7 +67,7 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="segmentSettings", required=true)
-    private final SegmentSettingsResponse segmentSettings;
+      private final SegmentSettingsResponse segmentSettings;
 
     public SegmentSettingsResponse getSegmentSettings() {
         return this.segmentSettings;
@@ -146,7 +146,6 @@ public final class MuxStreamResponse extends io.pulumi.resources.InvokeArgs {
             this.segmentSettings = Objects.requireNonNull(segmentSettings);
             return this;
         }
-
         public MuxStreamResponse build() {
             return new MuxStreamResponse(container, elementaryStreams, fileName, key, segmentSettings);
         }

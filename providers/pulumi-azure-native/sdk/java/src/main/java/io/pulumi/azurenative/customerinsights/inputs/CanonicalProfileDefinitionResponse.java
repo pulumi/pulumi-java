@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.CanonicalProfileDefinitionResponseProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="canonicalProfileId")
-    private final @Nullable Integer canonicalProfileId;
+        private final @Nullable Integer canonicalProfileId;
 
     public Optional<Integer> getCanonicalProfileId() {
         return this.canonicalProfileId == null ? Optional.empty() : Optional.ofNullable(this.canonicalProfileId);
@@ -36,7 +36,7 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
+        private final @Nullable List<CanonicalProfileDefinitionResponseProperties> properties;
 
     public List<CanonicalProfileDefinitionResponseProperties> getProperties() {
         return this.properties == null ? List.of() : this.properties;
@@ -85,7 +85,6 @@ public final class CanonicalProfileDefinitionResponse extends io.pulumi.resource
             this.properties = properties;
             return this;
         }
-
         public CanonicalProfileDefinitionResponse build() {
             return new CanonicalProfileDefinitionResponse(canonicalProfileId, properties);
         }

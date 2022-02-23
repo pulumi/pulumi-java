@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class GetRegisteredPrefixResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegisteredPrefixResult build() {
             return new GetRegisteredPrefixResult(errorMessage, id, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }

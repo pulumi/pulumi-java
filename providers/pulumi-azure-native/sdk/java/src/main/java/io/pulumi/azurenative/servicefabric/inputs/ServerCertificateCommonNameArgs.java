@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateCommonName", required=true)
-    private final Input<String> certificateCommonName;
+        private final Input<String> certificateCommonName;
 
     public Input<String> getCertificateCommonName() {
         return this.certificateCommonName;
@@ -33,7 +33,7 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="certificateIssuerThumbprint", required=true)
-    private final Input<String> certificateIssuerThumbprint;
+        private final Input<String> certificateIssuerThumbprint;
 
     public Input<String> getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
@@ -92,7 +92,6 @@ public final class ServerCertificateCommonNameArgs extends io.pulumi.resources.R
             this.certificateIssuerThumbprint = Input.of(Objects.requireNonNull(certificateIssuerThumbprint));
             return this;
         }
-
         public ServerCertificateCommonNameArgs build() {
             return new ServerCertificateCommonNameArgs(certificateCommonName, certificateIssuerThumbprint);
         }

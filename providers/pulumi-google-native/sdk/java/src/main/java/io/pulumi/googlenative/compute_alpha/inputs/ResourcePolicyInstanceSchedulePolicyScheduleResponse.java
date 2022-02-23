@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final String schedule;
+      private final String schedule;
 
     public String getSchedule() {
         return this.schedule;
@@ -59,7 +59,6 @@ public final class ResourcePolicyInstanceSchedulePolicyScheduleResponse extends 
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyScheduleResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyScheduleResponse(schedule);
         }

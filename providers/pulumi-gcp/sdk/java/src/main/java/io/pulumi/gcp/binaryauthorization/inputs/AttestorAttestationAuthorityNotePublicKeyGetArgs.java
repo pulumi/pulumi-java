@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.binaryauthorization.inputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * 
      */
     @InputImport(name="asciiArmoredPgpPublicKey")
-    private final @Nullable Input<String> asciiArmoredPgpPublicKey;
+        private final @Nullable Input<String> asciiArmoredPgpPublicKey;
 
     public Input<String> getAsciiArmoredPgpPublicKey() {
         return this.asciiArmoredPgpPublicKey == null ? Input.empty() : this.asciiArmoredPgpPublicKey;
@@ -39,7 +39,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * 
      */
     @InputImport(name="comment")
-    private final @Nullable Input<String> comment;
+        private final @Nullable Input<String> comment;
 
     public Input<String> getComment() {
         return this.comment == null ? Input.empty() : this.comment;
@@ -55,7 +55,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -71,7 +71,7 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
      * 
      */
     @InputImport(name="pkixPublicKey")
-    private final @Nullable Input<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey;
+        private final @Nullable Input<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> pkixPublicKey;
 
     public Input<AttestorAttestationAuthorityNotePublicKeyPkixPublicKeyGetArgs> getPkixPublicKey() {
         return this.pkixPublicKey == null ? Input.empty() : this.pkixPublicKey;
@@ -160,7 +160,6 @@ public final class AttestorAttestationAuthorityNotePublicKeyGetArgs extends io.p
             this.pkixPublicKey = Input.ofNullable(pkixPublicKey);
             return this;
         }
-
         public AttestorAttestationAuthorityNotePublicKeyGetArgs build() {
             return new AttestorAttestationAuthorityNotePublicKeyGetArgs(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);
         }

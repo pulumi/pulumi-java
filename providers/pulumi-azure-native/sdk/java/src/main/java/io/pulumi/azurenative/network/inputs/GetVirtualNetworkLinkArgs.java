@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="privateZoneName", required=true)
-    private final String privateZoneName;
+        private final String privateZoneName;
 
     public String getPrivateZoneName() {
         return this.privateZoneName;
@@ -28,7 +28,7 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="virtualNetworkLinkName", required=true)
-    private final String virtualNetworkLinkName;
+        private final String virtualNetworkLinkName;
 
     public String getVirtualNetworkLinkName() {
         return this.virtualNetworkLinkName;
@@ -98,7 +98,6 @@ public final class GetVirtualNetworkLinkArgs extends io.pulumi.resources.InvokeA
             this.virtualNetworkLinkName = Objects.requireNonNull(virtualNetworkLinkName);
             return this;
         }
-
         public GetVirtualNetworkLinkArgs build() {
             return new GetVirtualNetworkLinkArgs(privateZoneName, resourceGroupName, virtualNetworkLinkName);
         }

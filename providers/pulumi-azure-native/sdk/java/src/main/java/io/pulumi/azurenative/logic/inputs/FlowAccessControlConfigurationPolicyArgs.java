@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.IpAddressRangeArgs;
 import io.pulumi.azurenative.logic.inputs.OpenAuthenticationAccessPoliciesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="allowedCallerIpAddresses")
-    private final @Nullable Input<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
+        private final @Nullable Input<List<IpAddressRangeArgs>> allowedCallerIpAddresses;
 
     public Input<List<IpAddressRangeArgs>> getAllowedCallerIpAddresses() {
         return this.allowedCallerIpAddresses == null ? Input.empty() : this.allowedCallerIpAddresses;
@@ -36,7 +36,7 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="openAuthenticationPolicies")
-    private final @Nullable Input<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
+        private final @Nullable Input<OpenAuthenticationAccessPoliciesArgs> openAuthenticationPolicies;
 
     public Input<OpenAuthenticationAccessPoliciesArgs> getOpenAuthenticationPolicies() {
         return this.openAuthenticationPolicies == null ? Input.empty() : this.openAuthenticationPolicies;
@@ -95,7 +95,6 @@ public final class FlowAccessControlConfigurationPolicyArgs extends io.pulumi.re
             this.openAuthenticationPolicies = Input.ofNullable(openAuthenticationPolicies);
             return this;
         }
-
         public FlowAccessControlConfigurationPolicyArgs build() {
             return new FlowAccessControlConfigurationPolicyArgs(allowedCallerIpAddresses, openAuthenticationPolicies);
         }

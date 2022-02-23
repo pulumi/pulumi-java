@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkProviderName")
-    private final @Nullable Input<String> linkProviderName;
+        private final @Nullable Input<String> linkProviderName;
 
     public Input<String> getLinkProviderName() {
         return this.linkProviderName == null ? Input.empty() : this.linkProviderName;
@@ -35,7 +35,7 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="linkSpeedInMbps")
-    private final @Nullable Input<Integer> linkSpeedInMbps;
+        private final @Nullable Input<Integer> linkSpeedInMbps;
 
     public Input<Integer> getLinkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Input.empty() : this.linkSpeedInMbps;
@@ -94,7 +94,6 @@ public final class VpnLinkProviderPropertiesArgs extends io.pulumi.resources.Res
             this.linkSpeedInMbps = Input.ofNullable(linkSpeedInMbps);
             return this;
         }
-
         public VpnLinkProviderPropertiesArgs build() {
             return new VpnLinkProviderPropertiesArgs(linkProviderName, linkSpeedInMbps);
         }

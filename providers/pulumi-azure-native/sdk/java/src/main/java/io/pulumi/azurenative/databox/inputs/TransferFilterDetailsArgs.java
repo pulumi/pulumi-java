@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databox.inputs.BlobFilterDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.FilterFileDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="azureFileFilterDetails")
-    private final @Nullable Input<AzureFileFilterDetailsArgs> azureFileFilterDetails;
+        private final @Nullable Input<AzureFileFilterDetailsArgs> azureFileFilterDetails;
 
     public Input<AzureFileFilterDetailsArgs> getAzureFileFilterDetails() {
         return this.azureFileFilterDetails == null ? Input.empty() : this.azureFileFilterDetails;
@@ -40,7 +40,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="blobFilterDetails")
-    private final @Nullable Input<BlobFilterDetailsArgs> blobFilterDetails;
+        private final @Nullable Input<BlobFilterDetailsArgs> blobFilterDetails;
 
     public Input<BlobFilterDetailsArgs> getBlobFilterDetails() {
         return this.blobFilterDetails == null ? Input.empty() : this.blobFilterDetails;
@@ -51,7 +51,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-    private final Input<Either<String,DataAccountType>> dataAccountType;
+        private final Input<Either<String,DataAccountType>> dataAccountType;
 
     public Input<Either<String,DataAccountType>> getDataAccountType() {
         return this.dataAccountType;
@@ -62,7 +62,7 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filterFileDetails")
-    private final @Nullable Input<List<FilterFileDetailsArgs>> filterFileDetails;
+        private final @Nullable Input<List<FilterFileDetailsArgs>> filterFileDetails;
 
     public Input<List<FilterFileDetailsArgs>> getFilterFileDetails() {
         return this.filterFileDetails == null ? Input.empty() : this.filterFileDetails;
@@ -151,7 +151,6 @@ public final class TransferFilterDetailsArgs extends io.pulumi.resources.Resourc
             this.filterFileDetails = Input.ofNullable(filterFileDetails);
             return this;
         }
-
         public TransferFilterDetailsArgs build() {
             return new TransferFilterDetailsArgs(azureFileFilterDetails, blobFilterDetails, dataAccountType, filterFileDetails);
         }

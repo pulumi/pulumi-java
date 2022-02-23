@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.CidrBlockResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class MasterAuthorizedNetworksConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public MasterAuthorizedNetworksConfigResponse build() {
             return new MasterAuthorizedNetworksConfigResponse(cidrBlocks, enabled);
         }

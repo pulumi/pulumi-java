@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="days")
-    private final @Nullable Integer days;
+        private final @Nullable Integer days;
 
     public Optional<Integer> getDays() {
         return this.days == null ? Optional.empty() : Optional.ofNullable(this.days);
@@ -36,7 +36,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -47,7 +47,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="lastEnabledTime", required=true)
-    private final String lastEnabledTime;
+        private final String lastEnabledTime;
 
     public String getLastEnabledTime() {
         return this.lastEnabledTime;
@@ -58,7 +58,7 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="minRestoreTime", required=true)
-    private final String minRestoreTime;
+        private final String minRestoreTime;
 
     public String getMinRestoreTime() {
         return this.minRestoreTime;
@@ -127,7 +127,6 @@ public final class RestorePolicyPropertiesResponse extends io.pulumi.resources.I
             this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
             return this;
         }
-
         public RestorePolicyPropertiesResponse build() {
             return new RestorePolicyPropertiesResponse(days, enabled, lastEnabledTime, minRestoreTime);
         }

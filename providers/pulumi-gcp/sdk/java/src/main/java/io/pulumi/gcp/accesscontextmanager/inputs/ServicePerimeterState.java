@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterSpecGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimeterStatusGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -34,7 +34,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -85,7 +85,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="perimeterType")
-    private final @Nullable Input<String> perimeterType;
+        private final @Nullable Input<String> perimeterType;
 
     public Input<String> getPerimeterType() {
         return this.perimeterType == null ? Input.empty() : this.perimeterType;
@@ -100,7 +100,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<ServicePerimeterSpecGetArgs> spec;
+        private final @Nullable Input<ServicePerimeterSpecGetArgs> spec;
 
     public Input<ServicePerimeterSpecGetArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -114,7 +114,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<ServicePerimeterStatusGetArgs> status;
+        private final @Nullable Input<ServicePerimeterStatusGetArgs> status;
 
     public Input<ServicePerimeterStatusGetArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -125,7 +125,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -136,7 +136,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -155,7 +155,7 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="useExplicitDryRunSpec")
-    private final @Nullable Input<Boolean> useExplicitDryRunSpec;
+        private final @Nullable Input<Boolean> useExplicitDryRunSpec;
 
     public Input<Boolean> getUseExplicitDryRunSpec() {
         return this.useExplicitDryRunSpec == null ? Input.empty() : this.useExplicitDryRunSpec;
@@ -334,7 +334,6 @@ public final class ServicePerimeterState extends io.pulumi.resources.ResourceArg
             this.useExplicitDryRunSpec = Input.ofNullable(useExplicitDryRunSpec);
             return this;
         }
-
         public ServicePerimeterState build() {
             return new ServicePerimeterState(createTime, description, name, parent, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);
         }

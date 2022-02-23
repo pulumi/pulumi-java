@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -117,7 +117,6 @@ public final class InstanceMaintenanceSchedule {
             this.startTime = startTime;
             return this;
         }
-
         public InstanceMaintenanceSchedule build() {
             return new InstanceMaintenanceSchedule(endTime, scheduleDeadlineTime, startTime);
         }

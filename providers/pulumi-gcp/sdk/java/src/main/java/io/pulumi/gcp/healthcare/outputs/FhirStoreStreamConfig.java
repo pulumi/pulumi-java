@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.healthcare.outputs.FhirStoreStreamConfigBigqueryDestination;
 import java.lang.String;
 import java.util.List;
@@ -91,7 +91,6 @@ public final class FhirStoreStreamConfig {
             this.resourceTypes = resourceTypes;
             return this;
         }
-
         public FhirStoreStreamConfig build() {
             return new FhirStoreStreamConfig(bigqueryDestination, resourceTypes);
         }

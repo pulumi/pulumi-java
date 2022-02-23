@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dns.outputs.PolicyAlternativeNameServerConfigTargetNameServer;
 import java.util.List;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class PolicyAlternativeNameServerConfig {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public PolicyAlternativeNameServerConfig build() {
             return new PolicyAlternativeNameServerConfig(targetNameServers);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.EnvelopeArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.InTotoStatementArgs;
 import java.util.Objects;
@@ -24,14 +24,14 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="envelope")
-    private final @Nullable Input<EnvelopeArgs> envelope;
+      private final @Nullable Input<EnvelopeArgs> envelope;
 
     public Input<EnvelopeArgs> getEnvelope() {
         return this.envelope == null ? Input.empty() : this.envelope;
     }
 
     @InputImport(name="statement")
-    private final @Nullable Input<InTotoStatementArgs> statement;
+      private final @Nullable Input<InTotoStatementArgs> statement;
 
     public Input<InTotoStatementArgs> getStatement() {
         return this.statement == null ? Input.empty() : this.statement;
@@ -90,7 +90,6 @@ public final class DSSEAttestationOccurrenceArgs extends io.pulumi.resources.Res
             this.statement = Input.ofNullable(statement);
             return this;
         }
-
         public DSSEAttestationOccurrenceArgs build() {
             return new DSSEAttestationOccurrenceArgs(envelope, statement);
         }

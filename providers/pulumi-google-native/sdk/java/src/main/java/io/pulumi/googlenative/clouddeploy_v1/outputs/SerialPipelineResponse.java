@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.StageResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class SerialPipelineResponse {
             this.stages = Objects.requireNonNull(stages);
             return this;
         }
-
         public SerialPipelineResponse build() {
             return new SerialPipelineResponse(stages);
         }

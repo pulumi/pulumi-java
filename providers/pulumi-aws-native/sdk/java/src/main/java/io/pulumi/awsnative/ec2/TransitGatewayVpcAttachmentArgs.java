@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayVpcAttachmentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
     public static final TransitGatewayVpcAttachmentArgs Empty = new TransitGatewayVpcAttachmentArgs();
 
     @InputImport(name="addSubnetIds")
-    private final @Nullable Input<List<String>> addSubnetIds;
+        private final @Nullable Input<List<String>> addSubnetIds;
 
     public Input<List<String>> getAddSubnetIds() {
         return this.addSubnetIds == null ? Input.empty() : this.addSubnetIds;
@@ -29,42 +29,42 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<OptionsPropertiesArgs> options;
+        private final @Nullable Input<OptionsPropertiesArgs> options;
 
     public Input<OptionsPropertiesArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
     }
 
     @InputImport(name="removeSubnetIds")
-    private final @Nullable Input<List<String>> removeSubnetIds;
+        private final @Nullable Input<List<String>> removeSubnetIds;
 
     public Input<List<String>> getRemoveSubnetIds() {
         return this.removeSubnetIds == null ? Input.empty() : this.removeSubnetIds;
     }
 
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+        private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<TransitGatewayVpcAttachmentTagArgs>> tags;
+        private final @Nullable Input<List<TransitGatewayVpcAttachmentTagArgs>> tags;
 
     public Input<List<TransitGatewayVpcAttachmentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="transitGatewayId")
-    private final @Nullable Input<String> transitGatewayId;
+        private final @Nullable Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId == null ? Input.empty() : this.transitGatewayId;
     }
 
     @InputImport(name="vpcId")
-    private final @Nullable Input<String> vpcId;
+        private final @Nullable Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId == null ? Input.empty() : this.vpcId;
@@ -198,7 +198,6 @@ public final class TransitGatewayVpcAttachmentArgs extends io.pulumi.resources.R
             this.vpcId = Input.ofNullable(vpcId);
             return this;
         }
-
         public TransitGatewayVpcAttachmentArgs build() {
             return new TransitGatewayVpcAttachmentArgs(addSubnetIds, options, removeSubnetIds, subnetIds, tags, transitGatewayId, vpcId);
         }

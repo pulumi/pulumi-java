@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class DetectorModelSetTimer {
             this.timerName = Objects.requireNonNull(timerName);
             return this;
         }
-
         public DetectorModelSetTimer build() {
             return new DetectorModelSetTimer(durationExpression, seconds, timerName);
         }

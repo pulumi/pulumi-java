@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class RolePolicy {
             this.policyName = Objects.requireNonNull(policyName);
             return this;
         }
-
         public RolePolicy build() {
             return new RolePolicy(policyDocument, policyName);
         }

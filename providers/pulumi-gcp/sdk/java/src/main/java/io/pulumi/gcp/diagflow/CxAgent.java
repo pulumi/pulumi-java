@@ -5,8 +5,8 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxAgentArgs;
 import io.pulumi.gcp.diagflow.inputs.CxAgentState;
@@ -261,13 +261,6 @@ public class CxAgent extends io.pulumi.resources.CustomResource {
         return this.timeZone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CxAgent(String name) {
-        super("gcp:diagflow/cxAgent:CxAgent", name, CxAgentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

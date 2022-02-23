@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
     public static final FhirStoreIamMemberArgs Empty = new FhirStoreIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<FhirStoreIamMemberConditionArgs> condition;
+        private final @Nullable Input<FhirStoreIamMemberConditionArgs> condition;
 
     public Input<FhirStoreIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,14 +30,14 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="fhirStoreId", required=true)
-    private final Input<String> fhirStoreId;
+        private final Input<String> fhirStoreId;
 
     public Input<String> getFhirStoreId() {
         return this.fhirStoreId;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -50,7 +50,7 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -139,7 +139,6 @@ public final class FhirStoreIamMemberArgs extends io.pulumi.resources.ResourceAr
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public FhirStoreIamMemberArgs build() {
             return new FhirStoreIamMemberArgs(condition, fhirStoreId, member, role);
         }

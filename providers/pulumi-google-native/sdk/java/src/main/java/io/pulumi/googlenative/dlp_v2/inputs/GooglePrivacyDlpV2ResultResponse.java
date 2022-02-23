@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2HybridInspectStatisticsResponse;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeStatsResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hybridStats", required=true)
-    private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
+      private final GooglePrivacyDlpV2HybridInspectStatisticsResponse hybridStats;
 
     public GooglePrivacyDlpV2HybridInspectStatisticsResponse getHybridStats() {
         return this.hybridStats;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="infoTypeStats", required=true)
-    private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
+      private final List<GooglePrivacyDlpV2InfoTypeStatsResponse> infoTypeStats;
 
     public List<GooglePrivacyDlpV2InfoTypeStatsResponse> getInfoTypeStats() {
         return this.infoTypeStats;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="processedBytes", required=true)
-    private final String processedBytes;
+      private final String processedBytes;
 
     public String getProcessedBytes() {
         return this.processedBytes;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="totalEstimatedBytes", required=true)
-    private final String totalEstimatedBytes;
+      private final String totalEstimatedBytes;
 
     public String getTotalEstimatedBytes() {
         return this.totalEstimatedBytes;
@@ -126,7 +126,6 @@ public final class GooglePrivacyDlpV2ResultResponse extends io.pulumi.resources.
             this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
             return this;
         }
-
         public GooglePrivacyDlpV2ResultResponse build() {
             return new GooglePrivacyDlpV2ResultResponse(hybridStats, infoTypeStats, processedBytes, totalEstimatedBytes);
         }

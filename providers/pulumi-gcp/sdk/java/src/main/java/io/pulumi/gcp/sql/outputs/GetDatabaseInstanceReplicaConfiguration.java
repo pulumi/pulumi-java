@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -177,7 +177,6 @@ public final class GetDatabaseInstanceReplicaConfiguration {
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }
-
         public GetDatabaseInstanceReplicaConfiguration build() {
             return new GetDatabaseInstanceReplicaConfiguration(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, failoverTarget, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfacePrivateIpAddressSpecification;
 import io.pulumi.awsnative.ec2.outputs.NetworkInterfaceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -271,7 +271,6 @@ public final class GetNetworkInterfaceResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInterfaceResult build() {
             return new GetNetworkInterfaceResult(description, groupSet, id, ipv6AddressCount, ipv6Addresses, primaryPrivateIpAddress, privateIpAddresses, secondaryPrivateIpAddressCount, secondaryPrivateIpAddresses, sourceDestCheck, tags);
         }

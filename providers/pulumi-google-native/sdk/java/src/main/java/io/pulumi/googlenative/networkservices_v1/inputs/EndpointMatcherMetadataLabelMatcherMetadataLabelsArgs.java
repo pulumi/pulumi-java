@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkservices_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final Input<String> labelName;
+      private final Input<String> labelName;
 
     public Input<String> getLabelName() {
         return this.labelName;
@@ -33,7 +33,7 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
      * 
      */
     @InputImport(name="labelValue", required=true)
-    private final Input<String> labelValue;
+      private final Input<String> labelValue;
 
     public Input<String> getLabelValue() {
         return this.labelValue;
@@ -92,7 +92,6 @@ public final class EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs extends
             this.labelValue = Input.of(Objects.requireNonNull(labelValue));
             return this;
         }
-
         public EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs build() {
             return new EndpointMatcherMetadataLabelMatcherMetadataLabelsArgs(labelName, labelValue);
         }

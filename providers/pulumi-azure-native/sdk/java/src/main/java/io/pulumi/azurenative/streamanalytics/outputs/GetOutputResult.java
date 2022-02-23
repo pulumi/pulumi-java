@@ -16,7 +16,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.JsonSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.PowerBIOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusQueueOutputDataSourceResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.ServiceBusTopicOutputDataSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -195,7 +195,6 @@ public final class GetOutputResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOutputResult build() {
             return new GetOutputResult(datasource, diagnostics, etag, id, name, serialization, type);
         }

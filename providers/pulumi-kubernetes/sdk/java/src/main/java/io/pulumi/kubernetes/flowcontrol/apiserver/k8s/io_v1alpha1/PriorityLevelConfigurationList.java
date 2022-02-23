@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.PriorityLevelConfigurationListArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs.PriorityLevelConfiguration;
@@ -78,13 +78,6 @@ public class PriorityLevelConfigurationList extends io.pulumi.resources.CustomRe
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PriorityLevelConfigurationList(String name) {
-        super("kubernetes:flowcontrol.apiserver.k8s.io/v1alpha1:PriorityLevelConfigurationList", name, PriorityLevelConfigurationListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

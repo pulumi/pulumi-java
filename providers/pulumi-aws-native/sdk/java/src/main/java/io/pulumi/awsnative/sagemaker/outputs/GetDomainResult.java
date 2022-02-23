@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.DomainUserSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -161,7 +161,6 @@ public final class GetDomainResult {
             this.url = url;
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(defaultUserSettings, domainArn, domainId, homeEfsFileSystemId, singleSignOnManagedApplicationInstanceId, url);
         }

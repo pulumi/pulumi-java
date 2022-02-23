@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="aadAuthority", required=true)
-    private final Input<String> aadAuthority;
+        private final Input<String> aadAuthority;
 
     public Input<String> getAadAuthority() {
         return this.aadAuthority;
@@ -33,7 +33,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final Input<String> applicationId;
+        private final Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId;
@@ -44,7 +44,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="audience", required=true)
-    private final Input<String> audience;
+        private final Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience;
@@ -55,7 +55,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+        private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -66,7 +66,7 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Input<String> tenantId;
+        private final Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId;
@@ -170,7 +170,6 @@ public final class IdentityProviderInputArgs extends io.pulumi.resources.Resourc
             this.tenantId = Input.of(Objects.requireNonNull(tenantId));
             return this;
         }
-
         public IdentityProviderInputArgs build() {
             return new IdentityProviderInputArgs(aadAuthority, applicationId, audience, objectId, tenantId);
         }

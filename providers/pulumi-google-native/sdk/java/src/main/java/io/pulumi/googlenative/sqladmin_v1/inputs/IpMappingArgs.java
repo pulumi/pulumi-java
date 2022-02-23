@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.enums.IpMappingType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -35,7 +35,7 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeToRetire")
-    private final @Nullable Input<String> timeToRetire;
+      private final @Nullable Input<String> timeToRetire;
 
     public Input<String> getTimeToRetire() {
         return this.timeToRetire == null ? Input.empty() : this.timeToRetire;
@@ -46,7 +46,7 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<IpMappingType> type;
+      private final @Nullable Input<IpMappingType> type;
 
     public Input<IpMappingType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -120,7 +120,6 @@ public final class IpMappingArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public IpMappingArgs build() {
             return new IpMappingArgs(ipAddress, timeToRetire, type);
         }

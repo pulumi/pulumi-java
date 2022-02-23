@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.enums.DataAccessOptionsLogMode;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArg
     public static final DataAccessOptionsArgs Empty = new DataAccessOptionsArgs();
 
     @InputImport(name="logMode")
-    private final @Nullable Input<DataAccessOptionsLogMode> logMode;
+      private final @Nullable Input<DataAccessOptionsLogMode> logMode;
 
     public Input<DataAccessOptionsLogMode> getLogMode() {
         return this.logMode == null ? Input.empty() : this.logMode;
@@ -62,7 +62,6 @@ public final class DataAccessOptionsArgs extends io.pulumi.resources.ResourceArg
             this.logMode = Input.ofNullable(logMode);
             return this;
         }
-
         public DataAccessOptionsArgs build() {
             return new DataAccessOptionsArgs(logMode);
         }

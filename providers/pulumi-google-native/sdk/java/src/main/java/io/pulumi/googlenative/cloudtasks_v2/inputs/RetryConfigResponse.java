@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxAttempts", required=true)
-    private final Integer maxAttempts;
+      private final Integer maxAttempts;
 
     public Integer getMaxAttempts() {
         return this.maxAttempts;
@@ -33,7 +33,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxBackoff", required=true)
-    private final String maxBackoff;
+      private final String maxBackoff;
 
     public String getMaxBackoff() {
         return this.maxBackoff;
@@ -44,7 +44,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxDoublings", required=true)
-    private final Integer maxDoublings;
+      private final Integer maxDoublings;
 
     public Integer getMaxDoublings() {
         return this.maxDoublings;
@@ -55,7 +55,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxRetryDuration", required=true)
-    private final String maxRetryDuration;
+      private final String maxRetryDuration;
 
     public String getMaxRetryDuration() {
         return this.maxRetryDuration;
@@ -66,7 +66,7 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minBackoff", required=true)
-    private final String minBackoff;
+      private final String minBackoff;
 
     public String getMinBackoff() {
         return this.minBackoff;
@@ -145,7 +145,6 @@ public final class RetryConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.minBackoff = Objects.requireNonNull(minBackoff);
             return this;
         }
-
         public RetryConfigResponse build() {
             return new RetryConfigResponse(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }

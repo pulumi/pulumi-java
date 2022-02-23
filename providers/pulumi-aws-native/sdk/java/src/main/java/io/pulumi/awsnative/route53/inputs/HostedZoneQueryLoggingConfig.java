@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HostedZoneQueryLoggingConfig extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="cloudWatchLogsLogGroupArn", required=true)
-    private final String cloudWatchLogsLogGroupArn;
+        private final String cloudWatchLogsLogGroupArn;
 
     public String getCloudWatchLogsLogGroupArn() {
         return this.cloudWatchLogsLogGroupArn;
@@ -59,7 +59,6 @@ public final class HostedZoneQueryLoggingConfig extends io.pulumi.resources.Invo
             this.cloudWatchLogsLogGroupArn = Objects.requireNonNull(cloudWatchLogsLogGroupArn);
             return this;
         }
-
         public HostedZoneQueryLoggingConfig build() {
             return new HostedZoneQueryLoggingConfig(cloudWatchLogsLogGroupArn);
         }

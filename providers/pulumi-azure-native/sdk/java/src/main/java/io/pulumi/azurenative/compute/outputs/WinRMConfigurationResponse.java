@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.WinRMListenerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class WinRMConfigurationResponse {
             this.listeners = listeners;
             return this;
         }
-
         public WinRMConfigurationResponse build() {
             return new WinRMConfigurationResponse(listeners);
         }

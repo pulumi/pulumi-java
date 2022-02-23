@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="countryCode", required=true)
-    private final String countryCode;
+        private final String countryCode;
 
     public String getCountryCode() {
         return this.countryCode;
@@ -32,7 +32,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+        private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -54,7 +54,7 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -123,7 +123,6 @@ public final class SmsReceiverResponse extends io.pulumi.resources.InvokeArgs {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SmsReceiverResponse build() {
             return new SmsReceiverResponse(countryCode, name, phoneNumber, status);
         }

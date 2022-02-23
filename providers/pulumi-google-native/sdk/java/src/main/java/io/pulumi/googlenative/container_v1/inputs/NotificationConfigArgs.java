@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.PubSubArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="pubsub")
-    private final @Nullable Input<PubSubArgs> pubsub;
+      private final @Nullable Input<PubSubArgs> pubsub;
 
     public Input<PubSubArgs> getPubsub() {
         return this.pubsub == null ? Input.empty() : this.pubsub;
@@ -66,7 +66,6 @@ public final class NotificationConfigArgs extends io.pulumi.resources.ResourceAr
             this.pubsub = Input.ofNullable(pubsub);
             return this;
         }
-
         public NotificationConfigArgs build() {
             return new NotificationConfigArgs(pubsub);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cardinality")
-    private final @Nullable Input<CardinalityArgs> cardinality;
+      private final @Nullable Input<CardinalityArgs> cardinality;
 
     public Input<CardinalityArgs> getCardinality() {
         return this.cardinality == null ? Input.empty() : this.cardinality;
@@ -66,7 +66,6 @@ public final class EndConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.cardinality = Input.ofNullable(cardinality);
             return this;
         }
-
         public EndConditionArgs build() {
             return new EndConditionArgs(cardinality);
         }

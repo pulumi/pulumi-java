@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.FailureDetailResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.InconclusiveDetailResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.SkippedDetailResponse;
@@ -141,7 +141,6 @@ public final class OutcomeResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public OutcomeResponse build() {
             return new OutcomeResponse(failureDetail, inconclusiveDetail, skippedDetail, successDetail, summary);
         }

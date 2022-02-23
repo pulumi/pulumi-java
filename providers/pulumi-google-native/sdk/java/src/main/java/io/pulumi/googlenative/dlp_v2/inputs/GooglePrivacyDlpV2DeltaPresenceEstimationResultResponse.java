@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
      * 
      */
     @InputImport(name="deltaPresenceEstimationHistogram", required=true)
-    private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
+      private final List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> deltaPresenceEstimationHistogram;
 
     public List<GooglePrivacyDlpV2DeltaPresenceEstimationHistogramBucketResponse> getDeltaPresenceEstimationHistogram() {
         return this.deltaPresenceEstimationHistogram;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse exten
             this.deltaPresenceEstimationHistogram = Objects.requireNonNull(deltaPresenceEstimationHistogram);
             return this;
         }
-
         public GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse build() {
             return new GooglePrivacyDlpV2DeltaPresenceEstimationResultResponse(deltaPresenceEstimationHistogram);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.BasicYarnAutoscalingConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.SparkStandaloneAutoscalingConfigArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="cooldownPeriod")
-    private final @Nullable Input<String> cooldownPeriod;
+      private final @Nullable Input<String> cooldownPeriod;
 
     public Input<String> getCooldownPeriod() {
         return this.cooldownPeriod == null ? Input.empty() : this.cooldownPeriod;
@@ -36,7 +36,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sparkStandaloneConfig")
-    private final @Nullable Input<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig;
+      private final @Nullable Input<SparkStandaloneAutoscalingConfigArgs> sparkStandaloneConfig;
 
     public Input<SparkStandaloneAutoscalingConfigArgs> getSparkStandaloneConfig() {
         return this.sparkStandaloneConfig == null ? Input.empty() : this.sparkStandaloneConfig;
@@ -47,7 +47,7 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="yarnConfig")
-    private final @Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig;
+      private final @Nullable Input<BasicYarnAutoscalingConfigArgs> yarnConfig;
 
     public Input<BasicYarnAutoscalingConfigArgs> getYarnConfig() {
         return this.yarnConfig == null ? Input.empty() : this.yarnConfig;
@@ -121,7 +121,6 @@ public final class BasicAutoscalingAlgorithmArgs extends io.pulumi.resources.Res
             this.yarnConfig = Input.ofNullable(yarnConfig);
             return this;
         }
-
         public BasicAutoscalingAlgorithmArgs build() {
             return new BasicAutoscalingAlgorithmArgs(cooldownPeriod, sparkStandaloneConfig, yarnConfig);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
      * 
      */
     @InputImport(name="objectiveValue")
-    private final @Nullable Input<Double> objectiveValue;
+      private final @Nullable Input<Double> objectiveValue;
 
     public Input<Double> getObjectiveValue() {
         return this.objectiveValue == null ? Input.empty() : this.objectiveValue;
@@ -35,7 +35,7 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
      * 
      */
     @InputImport(name="trainingStep")
-    private final @Nullable Input<String> trainingStep;
+      private final @Nullable Input<String> trainingStep;
 
     public Input<String> getTrainingStep() {
         return this.trainingStep == null ? Input.empty() : this.trainingStep;
@@ -94,7 +94,6 @@ public final class GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs
             this.trainingStep = Input.ofNullable(trainingStep);
             return this;
         }
-
         public GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs build() {
             return new GoogleCloudMlV1_HyperparameterOutput_HyperparameterMetricArgs(objectiveValue, trainingStep);
         }

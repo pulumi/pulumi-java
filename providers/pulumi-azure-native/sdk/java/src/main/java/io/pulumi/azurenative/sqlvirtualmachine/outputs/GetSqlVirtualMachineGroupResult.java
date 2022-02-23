@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -288,7 +288,6 @@ public final class GetSqlVirtualMachineGroupResult {
             this.wsfcDomainProfile = wsfcDomainProfile;
             return this;
         }
-
         public GetSqlVirtualMachineGroupResult build() {
             return new GetSqlVirtualMachineGroupResult(clusterConfiguration, clusterManagerType, id, location, name, provisioningState, scaleType, sqlImageOffer, sqlImageSku, tags, type, wsfcDomainProfile);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.ContentMatcherResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.HttpCheckResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.InternalCheckerResponse;
@@ -313,7 +313,6 @@ public final class GetUptimeCheckConfigResult {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public GetUptimeCheckConfigResult build() {
             return new GetUptimeCheckConfigResult(checkerType, contentMatchers, displayName, httpCheck, internalCheckers, isInternal, monitoredResource, name, period, resourceGroup, selectedRegions, tcpCheck, timeout);
         }

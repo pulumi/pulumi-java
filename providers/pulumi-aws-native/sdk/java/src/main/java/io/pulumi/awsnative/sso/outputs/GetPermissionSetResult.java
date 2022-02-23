@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sso.outputs;
 
 import io.pulumi.awsnative.sso.outputs.PermissionSetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -168,7 +168,6 @@ public final class GetPermissionSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetPermissionSetResult build() {
             return new GetPermissionSetResult(description, inlinePolicy, managedPolicies, permissionSetArn, relayStateType, sessionDuration, tags);
         }

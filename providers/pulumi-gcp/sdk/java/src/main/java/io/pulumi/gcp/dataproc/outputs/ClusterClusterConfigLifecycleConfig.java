@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -95,7 +95,6 @@ public final class ClusterClusterConfigLifecycleConfig {
             this.idleStartTime = idleStartTime;
             return this;
         }
-
         public ClusterClusterConfigLifecycleConfig build() {
             return new ClusterClusterConfigLifecycleConfig(autoDeleteTime, idleDeleteTtl, idleStartTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -33,7 +33,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dir", required=true)
-    private final String dir;
+      private final String dir;
 
     public String getDir() {
         return this.dir;
@@ -44,7 +44,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="env", required=true)
-    private final List<String> env;
+      private final List<String> env;
 
     public List<String> getEnv() {
         return this.env;
@@ -55,7 +55,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="waitFor", required=true)
-    private final List<String> waitFor;
+      private final List<String> waitFor;
 
     public List<String> getWaitFor() {
         return this.waitFor;
@@ -145,7 +145,6 @@ public final class CommandResponse extends io.pulumi.resources.InvokeArgs {
             this.waitFor = Objects.requireNonNull(waitFor);
             return this;
         }
-
         public CommandResponse build() {
             return new CommandResponse(args, dir, env, name, waitFor);
         }

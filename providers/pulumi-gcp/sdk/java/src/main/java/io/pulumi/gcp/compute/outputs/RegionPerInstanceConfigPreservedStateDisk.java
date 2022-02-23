@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -136,7 +136,6 @@ public final class RegionPerInstanceConfigPreservedStateDisk {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public RegionPerInstanceConfigPreservedStateDisk build() {
             return new RegionPerInstanceConfigPreservedStateDisk(deleteRule, deviceName, mode, source);
         }

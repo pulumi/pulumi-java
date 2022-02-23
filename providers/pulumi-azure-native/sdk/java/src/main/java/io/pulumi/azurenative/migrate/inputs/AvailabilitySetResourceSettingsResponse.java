@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AvailabilitySetResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="faultDomain")
-    private final @Nullable Integer faultDomain;
+        private final @Nullable Integer faultDomain;
 
     public Optional<Integer> getFaultDomain() {
         return this.faultDomain == null ? Optional.empty() : Optional.ofNullable(this.faultDomain);
@@ -36,7 +36,7 @@ public final class AvailabilitySetResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -47,7 +47,7 @@ public final class AvailabilitySetResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final String targetResourceName;
+        private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -58,7 +58,7 @@ public final class AvailabilitySetResourceSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="updateDomain")
-    private final @Nullable Integer updateDomain;
+        private final @Nullable Integer updateDomain;
 
     public Optional<Integer> getUpdateDomain() {
         return this.updateDomain == null ? Optional.empty() : Optional.ofNullable(this.updateDomain);
@@ -127,7 +127,6 @@ public final class AvailabilitySetResourceSettingsResponse extends io.pulumi.res
             this.updateDomain = updateDomain;
             return this;
         }
-
         public AvailabilitySetResourceSettingsResponse build() {
             return new AvailabilitySetResourceSettingsResponse(faultDomain, resourceType, targetResourceName, updateDomain);
         }

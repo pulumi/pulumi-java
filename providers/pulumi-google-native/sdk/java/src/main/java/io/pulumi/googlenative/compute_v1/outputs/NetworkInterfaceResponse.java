@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.AccessConfigResponse;
 import io.pulumi.googlenative.compute_v1.outputs.AliasIpRangeResponse;
 import java.lang.Integer;
@@ -330,7 +330,6 @@ public final class NetworkInterfaceResponse {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(accessConfigs, aliasIpRanges, fingerprint, ipv6AccessConfigs, ipv6AccessType, ipv6Address, kind, name, network, networkIP, nicType, queueCount, stackType, subnetwork);
         }

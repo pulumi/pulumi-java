@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -41,7 +41,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="libraries")
-    private final @Nullable Input<List<Map<String,Object>>> libraries;
+        private final @Nullable Input<List<Map<String,Object>>> libraries;
 
     public Input<List<Map<String,Object>>> getLibraries() {
         return this.libraries == null ? Input.empty() : this.libraries;
@@ -63,7 +63,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -74,7 +74,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -85,7 +85,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<Object>> parameters;
+        private final @Nullable Input<List<Object>> parameters;
 
     public Input<List<Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -96,7 +96,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -107,7 +107,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="pythonFile", required=true)
-    private final Input<Object> pythonFile;
+        private final Input<Object> pythonFile;
 
     public Input<Object> getPythonFile() {
         return this.pythonFile;
@@ -119,7 +119,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -130,7 +130,7 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -309,7 +309,6 @@ public final class DatabricksSparkPythonActivityArgs extends io.pulumi.resources
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public DatabricksSparkPythonActivityArgs build() {
             return new DatabricksSparkPythonActivityArgs(dependsOn, description, libraries, linkedServiceName, name, parameters, policy, pythonFile, type, userProperties);
         }

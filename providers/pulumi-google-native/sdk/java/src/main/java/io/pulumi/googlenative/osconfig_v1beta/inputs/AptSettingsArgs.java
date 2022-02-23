@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.AptSettingsType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="excludes")
-    private final @Nullable Input<List<String>> excludes;
+      private final @Nullable Input<List<String>> excludes;
 
     public Input<List<String>> getExcludes() {
         return this.excludes == null ? Input.empty() : this.excludes;
@@ -36,7 +36,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exclusivePackages")
-    private final @Nullable Input<List<String>> exclusivePackages;
+      private final @Nullable Input<List<String>> exclusivePackages;
 
     public Input<List<String>> getExclusivePackages() {
         return this.exclusivePackages == null ? Input.empty() : this.exclusivePackages;
@@ -47,7 +47,7 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<AptSettingsType> type;
+      private final @Nullable Input<AptSettingsType> type;
 
     public Input<AptSettingsType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -121,7 +121,6 @@ public final class AptSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AptSettingsArgs build() {
             return new AptSettingsArgs(excludes, exclusivePackages, type);
         }

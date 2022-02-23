@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends io.p
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable List<String> subscriptions;
+        private final @Nullable List<String> subscriptions;
 
     public List<String> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
@@ -62,7 +62,6 @@ public final class PrivateLinkServicePropertiesResponseAutoApproval extends io.p
             this.subscriptions = subscriptions;
             return this;
         }
-
         public PrivateLinkServicePropertiesResponseAutoApproval build() {
             return new PrivateLinkServicePropertiesResponseAutoApproval(subscriptions);
         }

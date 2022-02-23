@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.PublicKeyArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.SubjectConfigArgs;
 import io.pulumi.googlenative.privateca_v1.inputs.X509ParametersArgs;
@@ -25,7 +25,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<PublicKeyArgs> publicKey;
+      private final @Nullable Input<PublicKeyArgs> publicKey;
 
     public Input<PublicKeyArgs> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -36,7 +36,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-    private final Input<SubjectConfigArgs> subjectConfig;
+      private final Input<SubjectConfigArgs> subjectConfig;
 
     public Input<SubjectConfigArgs> getSubjectConfig() {
         return this.subjectConfig;
@@ -47,7 +47,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="x509Config", required=true)
-    private final Input<X509ParametersArgs> x509Config;
+      private final Input<X509ParametersArgs> x509Config;
 
     public Input<X509ParametersArgs> getX509Config() {
         return this.x509Config;
@@ -121,7 +121,6 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
             this.x509Config = Input.of(Objects.requireNonNull(x509Config));
             return this;
         }
-
         public CertificateConfigArgs build() {
             return new CertificateConfigArgs(publicKey, subjectConfig, x509Config);
         }

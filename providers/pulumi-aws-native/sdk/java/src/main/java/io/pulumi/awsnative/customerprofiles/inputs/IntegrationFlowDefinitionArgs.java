@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.IntegrationSourceFlowConfigAr
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTaskArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.IntegrationTriggerConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,42 +19,42 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
     public static final IntegrationFlowDefinitionArgs Empty = new IntegrationFlowDefinitionArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="flowName", required=true)
-    private final Input<String> flowName;
+        private final Input<String> flowName;
 
     public Input<String> getFlowName() {
         return this.flowName;
     }
 
     @InputImport(name="kmsArn", required=true)
-    private final Input<String> kmsArn;
+        private final Input<String> kmsArn;
 
     public Input<String> getKmsArn() {
         return this.kmsArn;
     }
 
     @InputImport(name="sourceFlowConfig", required=true)
-    private final Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
+        private final Input<IntegrationSourceFlowConfigArgs> sourceFlowConfig;
 
     public Input<IntegrationSourceFlowConfigArgs> getSourceFlowConfig() {
         return this.sourceFlowConfig;
     }
 
     @InputImport(name="tasks", required=true)
-    private final Input<List<IntegrationTaskArgs>> tasks;
+        private final Input<List<IntegrationTaskArgs>> tasks;
 
     public Input<List<IntegrationTaskArgs>> getTasks() {
         return this.tasks;
     }
 
     @InputImport(name="triggerConfig", required=true)
-    private final Input<IntegrationTriggerConfigArgs> triggerConfig;
+        private final Input<IntegrationTriggerConfigArgs> triggerConfig;
 
     public Input<IntegrationTriggerConfigArgs> getTriggerConfig() {
         return this.triggerConfig;
@@ -173,7 +173,6 @@ public final class IntegrationFlowDefinitionArgs extends io.pulumi.resources.Res
             this.triggerConfig = Input.of(Objects.requireNonNull(triggerConfig));
             return this;
         }
-
         public IntegrationFlowDefinitionArgs build() {
             return new IntegrationFlowDefinitionArgs(description, flowName, kmsArn, sourceFlowConfig, tasks, triggerConfig);
         }

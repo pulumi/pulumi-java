@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.ConsentStoreIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
     public static final ConsentStoreIamBindingState Empty = new ConsentStoreIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<ConsentStoreIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<ConsentStoreIamBindingConditionGetArgs> condition;
 
     public Input<ConsentStoreIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="consentStoreId")
-    private final @Nullable Input<String> consentStoreId;
+        private final @Nullable Input<String> consentStoreId;
 
     public Input<String> getConsentStoreId() {
         return this.consentStoreId == null ? Input.empty() : this.consentStoreId;
@@ -41,7 +41,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+        private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -52,14 +52,14 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -72,7 +72,7 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -191,7 +191,6 @@ public final class ConsentStoreIamBindingState extends io.pulumi.resources.Resou
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public ConsentStoreIamBindingState build() {
             return new ConsentStoreIamBindingState(condition, consentStoreId, dataset, etag, members, role);
         }

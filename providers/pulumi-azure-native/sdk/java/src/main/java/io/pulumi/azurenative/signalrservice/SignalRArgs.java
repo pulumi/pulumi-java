@@ -11,7 +11,7 @@ import io.pulumi.azurenative.signalrservice.inputs.SignalRFeatureArgs;
 import io.pulumi.azurenative.signalrservice.inputs.SignalRNetworkACLsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cors")
-    private final @Nullable Input<SignalRCorsSettingsArgs> cors;
+        private final @Nullable Input<SignalRCorsSettingsArgs> cors;
 
     public Input<SignalRCorsSettingsArgs> getCors() {
         return this.cors == null ? Input.empty() : this.cors;
@@ -44,7 +44,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="features")
-    private final @Nullable Input<List<SignalRFeatureArgs>> features;
+        private final @Nullable Input<List<SignalRFeatureArgs>> features;
 
     public Input<List<SignalRFeatureArgs>> getFeatures() {
         return this.features == null ? Input.empty() : this.features;
@@ -55,7 +55,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,ServiceKind>> kind;
+        private final @Nullable Input<Either<String,ServiceKind>> kind;
 
     public Input<Either<String,ServiceKind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -66,7 +66,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -77,7 +77,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkACLs")
-    private final @Nullable Input<SignalRNetworkACLsArgs> networkACLs;
+        private final @Nullable Input<SignalRNetworkACLsArgs> networkACLs;
 
     public Input<SignalRNetworkACLsArgs> getNetworkACLs() {
         return this.networkACLs == null ? Input.empty() : this.networkACLs;
@@ -88,7 +88,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -99,7 +99,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -110,7 +110,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<ResourceSkuArgs> sku;
+        private final @Nullable Input<ResourceSkuArgs> sku;
 
     public Input<ResourceSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -121,7 +121,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upstream")
-    private final @Nullable Input<ServerlessUpstreamSettingsArgs> upstream;
+        private final @Nullable Input<ServerlessUpstreamSettingsArgs> upstream;
 
     public Input<ServerlessUpstreamSettingsArgs> getUpstream() {
         return this.upstream == null ? Input.empty() : this.upstream;
@@ -311,7 +311,6 @@ public final class SignalRArgs extends io.pulumi.resources.ResourceArgs {
             this.upstream = Input.ofNullable(upstream);
             return this;
         }
-
         public SignalRArgs build() {
             return new SignalRArgs(cors, features, kind, location, networkACLs, resourceGroupName, resourceName, sku, tags, upstream);
         }

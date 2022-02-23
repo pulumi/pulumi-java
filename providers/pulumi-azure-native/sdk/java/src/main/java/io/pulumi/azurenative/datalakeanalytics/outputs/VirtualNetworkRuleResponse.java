@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class VirtualNetworkRuleResponse {
             this.virtualNetworkRuleState = Objects.requireNonNull(virtualNetworkRuleState);
             return this;
         }
-
         public VirtualNetworkRuleResponse build() {
             return new VirtualNetworkRuleResponse(id, name, subnetId, type, virtualNetworkRuleState);
         }

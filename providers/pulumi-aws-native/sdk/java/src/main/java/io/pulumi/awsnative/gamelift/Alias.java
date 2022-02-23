@@ -8,8 +8,8 @@ import io.pulumi.awsnative.gamelift.AliasArgs;
 import io.pulumi.awsnative.gamelift.outputs.AliasRoutingStrategy;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -78,13 +78,6 @@ public class Alias extends io.pulumi.resources.CustomResource {
         return this.routingStrategy;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Alias(String name) {
-        super("aws-native:gamelift:Alias", name, AliasArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

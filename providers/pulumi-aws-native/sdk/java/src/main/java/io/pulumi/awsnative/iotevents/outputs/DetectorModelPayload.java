@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotevents.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class DetectorModelPayload {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DetectorModelPayload build() {
             return new DetectorModelPayload(contentExpression, type);
         }

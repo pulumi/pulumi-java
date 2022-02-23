@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class ProvisioningTemplateProvisioningHook extends io.pulumi.resour
     public static final ProvisioningTemplateProvisioningHook Empty = new ProvisioningTemplateProvisioningHook();
 
     @InputImport(name="payloadVersion")
-    private final @Nullable String payloadVersion;
+        private final @Nullable String payloadVersion;
 
     public Optional<String> getPayloadVersion() {
         return this.payloadVersion == null ? Optional.empty() : Optional.ofNullable(this.payloadVersion);
     }
 
     @InputImport(name="targetArn")
-    private final @Nullable String targetArn;
+        private final @Nullable String targetArn;
 
     public Optional<String> getTargetArn() {
         return this.targetArn == null ? Optional.empty() : Optional.ofNullable(this.targetArn);
@@ -71,7 +71,6 @@ public final class ProvisioningTemplateProvisioningHook extends io.pulumi.resour
             this.targetArn = targetArn;
             return this;
         }
-
         public ProvisioningTemplateProvisioningHook build() {
             return new ProvisioningTemplateProvisioningHook(payloadVersion, targetArn);
         }

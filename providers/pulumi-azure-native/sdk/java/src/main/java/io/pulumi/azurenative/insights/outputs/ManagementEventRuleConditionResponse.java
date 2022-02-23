@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.ManagementEventAggregationConditio
 import io.pulumi.azurenative.insights.outputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -103,7 +103,6 @@ public final class ManagementEventRuleConditionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ManagementEventRuleConditionResponse build() {
             return new ManagementEventRuleConditionResponse(aggregation, dataSource, odataType);
         }

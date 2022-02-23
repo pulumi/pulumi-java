@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStepArchiveExtraction;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStepDpkgInstallation;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeUpdateStepFileCopy;
@@ -201,7 +201,6 @@ public final class GuestPoliciesRecipeUpdateStep {
             this.scriptRun = scriptRun;
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStep build() {
             return new GuestPoliciesRecipeUpdateStep(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

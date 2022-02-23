@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.ProviderArgs;
 import io.pulumi.kubernetes.Utilities;
 import javax.annotation.Nullable;
@@ -15,13 +15,6 @@ import javax.annotation.Nullable;
  */
 @ResourceType(type="pulumi:providers:kubernetes")
 public class Provider extends io.pulumi.resources.ProviderResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Provider(String name) {
-        super("kubernetes", name, ProviderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class DiagnosticsResponse {
         public Builder(DiagnosticsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse();
         }

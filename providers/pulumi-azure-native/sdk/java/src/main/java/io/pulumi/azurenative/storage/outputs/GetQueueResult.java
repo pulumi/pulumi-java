@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -140,7 +140,6 @@ public final class GetQueueResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(approximateMessageCount, id, metadata, name, type);
         }

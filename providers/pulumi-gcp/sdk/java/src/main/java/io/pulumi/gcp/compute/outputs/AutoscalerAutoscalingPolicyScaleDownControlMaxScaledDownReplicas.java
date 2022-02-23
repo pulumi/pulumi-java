@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -80,7 +80,6 @@ public final class AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownRepli
             this.percent = percent;
             return this;
         }
-
         public AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas build() {
             return new AutoscalerAutoscalingPolicyScaleDownControlMaxScaledDownReplicas(fixed, percent);
         }

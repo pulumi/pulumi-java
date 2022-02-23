@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.ContainerRegistryResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="containerRunOptions")
-    private final @Nullable String containerRunOptions;
+        private final @Nullable String containerRunOptions;
 
     public Optional<String> getContainerRunOptions() {
         return this.containerRunOptions == null ? Optional.empty() : Optional.ofNullable(this.containerRunOptions);
@@ -31,7 +31,7 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="imageName", required=true)
-    private final String imageName;
+        private final String imageName;
 
     public String getImageName() {
         return this.imageName;
@@ -42,14 +42,14 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="registry")
-    private final @Nullable ContainerRegistryResponse registry;
+        private final @Nullable ContainerRegistryResponse registry;
 
     public Optional<ContainerRegistryResponse> getRegistry() {
         return this.registry == null ? Optional.empty() : Optional.ofNullable(this.registry);
     }
 
     @InputImport(name="workingDirectory")
-    private final @Nullable String workingDirectory;
+        private final @Nullable String workingDirectory;
 
     public Optional<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Optional.empty() : Optional.ofNullable(this.workingDirectory);
@@ -118,7 +118,6 @@ public final class TaskContainerSettingsResponse extends io.pulumi.resources.Inv
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public TaskContainerSettingsResponse build() {
             return new TaskContainerSettingsResponse(containerRunOptions, imageName, registry, workingDirectory);
         }

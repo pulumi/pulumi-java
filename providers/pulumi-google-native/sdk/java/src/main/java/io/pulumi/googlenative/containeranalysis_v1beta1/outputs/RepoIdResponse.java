@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ProjectRepoIdResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class RepoIdResponse {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public RepoIdResponse build() {
             return new RepoIdResponse(projectRepoId, uid);
         }

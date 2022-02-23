@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="amount", required=true)
-    private final String amount;
+      private final String amount;
 
     public String getAmount() {
         return this.amount;
@@ -32,7 +32,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="coresPerLicense", required=true)
-    private final String coresPerLicense;
+      private final String coresPerLicense;
 
     public String getCoresPerLicense() {
         return this.coresPerLicense;
@@ -43,7 +43,7 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="license", required=true)
-    private final String license;
+      private final String license;
 
     public String getLicense() {
         return this.license;
@@ -102,7 +102,6 @@ public final class LicenseResourceCommitmentResponse extends io.pulumi.resources
             this.license = Objects.requireNonNull(license);
             return this;
         }
-
         public LicenseResourceCommitmentResponse build() {
             return new LicenseResourceCommitmentResponse(amount, coresPerLicense, license);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterSelectorArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ManagedClusterArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clusterSelector")
-    private final @Nullable Input<ClusterSelectorArgs> clusterSelector;
+      private final @Nullable Input<ClusterSelectorArgs> clusterSelector;
 
     public Input<ClusterSelectorArgs> getClusterSelector() {
         return this.clusterSelector == null ? Input.empty() : this.clusterSelector;
@@ -35,7 +35,7 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="managedCluster")
-    private final @Nullable Input<ManagedClusterArgs> managedCluster;
+      private final @Nullable Input<ManagedClusterArgs> managedCluster;
 
     public Input<ManagedClusterArgs> getManagedCluster() {
         return this.managedCluster == null ? Input.empty() : this.managedCluster;
@@ -94,7 +94,6 @@ public final class WorkflowTemplatePlacementArgs extends io.pulumi.resources.Res
             this.managedCluster = Input.ofNullable(managedCluster);
             return this;
         }
-
         public WorkflowTemplatePlacementArgs build() {
             return new WorkflowTemplatePlacementArgs(clusterSelector, managedCluster);
         }

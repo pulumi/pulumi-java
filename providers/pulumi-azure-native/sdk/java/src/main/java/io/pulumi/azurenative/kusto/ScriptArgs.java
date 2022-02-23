@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -31,7 +31,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="continueOnErrors")
-    private final @Nullable Input<Boolean> continueOnErrors;
+        private final @Nullable Input<Boolean> continueOnErrors;
 
     public Input<Boolean> getContinueOnErrors() {
         return this.continueOnErrors == null ? Input.empty() : this.continueOnErrors;
@@ -42,7 +42,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -53,7 +53,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable Input<String> forceUpdateTag;
+        private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -64,7 +64,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptName")
-    private final @Nullable Input<String> scriptName;
+        private final @Nullable Input<String> scriptName;
 
     public Input<String> getScriptName() {
         return this.scriptName == null ? Input.empty() : this.scriptName;
@@ -86,7 +86,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptUrl", required=true)
-    private final Input<String> scriptUrl;
+        private final Input<String> scriptUrl;
 
     public Input<String> getScriptUrl() {
         return this.scriptUrl;
@@ -97,7 +97,7 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptUrlSasToken", required=true)
-    private final Input<String> scriptUrlSasToken;
+        private final Input<String> scriptUrlSasToken;
 
     public Input<String> getScriptUrlSasToken() {
         return this.scriptUrlSasToken;
@@ -246,7 +246,6 @@ public final class ScriptArgs extends io.pulumi.resources.ResourceArgs {
             this.scriptUrlSasToken = Input.of(Objects.requireNonNull(scriptUrlSasToken));
             return this;
         }
-
         public ScriptArgs build() {
             return new ScriptArgs(clusterName, continueOnErrors, databaseName, forceUpdateTag, resourceGroupName, scriptName, scriptUrl, scriptUrlSasToken);
         }

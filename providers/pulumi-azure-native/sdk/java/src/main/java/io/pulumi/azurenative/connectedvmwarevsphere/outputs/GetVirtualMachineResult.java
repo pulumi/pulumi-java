@@ -13,7 +13,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.outputs.PlacementProfileResp
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.ResourceStatusResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.StorageProfileResponse;
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -699,7 +699,6 @@ public final class GetVirtualMachineResult {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(customResourceName, extendedLocation, firmwareType, folderPath, guestAgentProfile, hardwareProfile, id, identity, instanceUuid, inventoryItemId, kind, location, moName, moRefId, name, networkProfile, osProfile, placementProfile, powerState, provisioningState, resourcePoolId, smbiosUuid, statuses, storageProfile, systemData, tags, templateId, type, uuid, vCenterId, vmId);
         }

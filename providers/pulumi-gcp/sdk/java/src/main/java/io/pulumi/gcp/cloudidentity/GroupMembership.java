@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudidentity;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudidentity.GroupMembershipArgs;
 import io.pulumi.gcp.cloudidentity.inputs.GroupMembershipState;
@@ -168,13 +168,6 @@ public class GroupMembership extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GroupMembership(String name) {
-        super("gcp:cloudidentity/groupMembership:GroupMembership", name, GroupMembershipArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.AutomationTriggeringRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class AutomationRuleSetResponse {
             this.rules = rules;
             return this;
         }
-
         public AutomationRuleSetResponse build() {
             return new AutomationRuleSetResponse(rules);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class PublicIPAddressResourceSettingsResponse {
             this.zones = zones;
             return this;
         }
-
         public PublicIPAddressResourceSettingsResponse build() {
             return new PublicIPAddressResourceSettingsResponse(domainNameLabel, fqdn, publicIpAllocationMethod, resourceType, sku, targetResourceName, zones);
         }

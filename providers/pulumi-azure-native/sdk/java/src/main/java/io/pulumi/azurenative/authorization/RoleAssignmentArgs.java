@@ -6,7 +6,7 @@ package io.pulumi.azurenative.authorization;
 import io.pulumi.azurenative.authorization.enums.PrincipalType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+        private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,7 +32,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditionVersion")
-    private final @Nullable Input<String> conditionVersion;
+        private final @Nullable Input<String> conditionVersion;
 
     public Input<String> getConditionVersion() {
         return this.conditionVersion == null ? Input.empty() : this.conditionVersion;
@@ -43,7 +43,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delegatedManagedIdentityResourceId")
-    private final @Nullable Input<String> delegatedManagedIdentityResourceId;
+        private final @Nullable Input<String> delegatedManagedIdentityResourceId;
 
     public Input<String> getDelegatedManagedIdentityResourceId() {
         return this.delegatedManagedIdentityResourceId == null ? Input.empty() : this.delegatedManagedIdentityResourceId;
@@ -54,7 +54,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -76,7 +76,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="principalType")
-    private final @Nullable Input<Either<String,PrincipalType>> principalType;
+        private final @Nullable Input<Either<String,PrincipalType>> principalType;
 
     public Input<Either<String,PrincipalType>> getPrincipalType() {
         return this.principalType == null ? Input.empty() : this.principalType;
@@ -87,7 +87,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleAssignmentName")
-    private final @Nullable Input<String> roleAssignmentName;
+        private final @Nullable Input<String> roleAssignmentName;
 
     public Input<String> getRoleAssignmentName() {
         return this.roleAssignmentName == null ? Input.empty() : this.roleAssignmentName;
@@ -98,7 +98,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final Input<String> roleDefinitionId;
+        private final Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -109,7 +109,7 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -273,7 +273,6 @@ public final class RoleAssignmentArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public RoleAssignmentArgs build() {
             return new RoleAssignmentArgs(condition, conditionVersion, delegatedManagedIdentityResourceId, description, principalId, principalType, roleAssignmentName, roleDefinitionId, scope);
         }

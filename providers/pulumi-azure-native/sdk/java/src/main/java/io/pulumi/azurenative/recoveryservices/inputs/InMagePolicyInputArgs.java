@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.enums.SetMultiVmSyncStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appConsistentFrequencyInMinutes")
-    private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
+        private final @Nullable Input<Integer> appConsistentFrequencyInMinutes;
 
     public Input<Integer> getAppConsistentFrequencyInMinutes() {
         return this.appConsistentFrequencyInMinutes == null ? Input.empty() : this.appConsistentFrequencyInMinutes;
@@ -38,7 +38,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -49,7 +49,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="multiVmSyncStatus", required=true)
-    private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
+        private final Input<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
     public Input<Either<String,SetMultiVmSyncStatus>> getMultiVmSyncStatus() {
         return this.multiVmSyncStatus;
@@ -60,7 +60,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recoveryPointHistory")
-    private final @Nullable Input<Integer> recoveryPointHistory;
+        private final @Nullable Input<Integer> recoveryPointHistory;
 
     public Input<Integer> getRecoveryPointHistory() {
         return this.recoveryPointHistory == null ? Input.empty() : this.recoveryPointHistory;
@@ -71,7 +71,7 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recoveryPointThresholdInMinutes")
-    private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
+        private final @Nullable Input<Integer> recoveryPointThresholdInMinutes;
 
     public Input<Integer> getRecoveryPointThresholdInMinutes() {
         return this.recoveryPointThresholdInMinutes == null ? Input.empty() : this.recoveryPointThresholdInMinutes;
@@ -175,7 +175,6 @@ public final class InMagePolicyInputArgs extends io.pulumi.resources.ResourceArg
             this.recoveryPointThresholdInMinutes = Input.ofNullable(recoveryPointThresholdInMinutes);
             return this;
         }
-
         public InMagePolicyInputArgs build() {
             return new InMagePolicyInputArgs(appConsistentFrequencyInMinutes, instanceType, multiVmSyncStatus, recoveryPointHistory, recoveryPointThresholdInMinutes);
         }

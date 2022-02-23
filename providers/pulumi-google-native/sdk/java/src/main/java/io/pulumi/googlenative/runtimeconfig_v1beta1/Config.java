@@ -5,8 +5,8 @@ package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.ConfigArgs;
 import java.lang.String;
@@ -47,13 +47,6 @@ public class Config extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Config(String name) {
-        super("google-native:runtimeconfig/v1beta1:Config", name, ConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

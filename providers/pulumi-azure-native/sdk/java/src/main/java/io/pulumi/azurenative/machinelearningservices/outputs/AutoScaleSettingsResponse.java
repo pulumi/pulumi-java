@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class AutoScaleSettingsResponse {
             this.targetUtilizationPercentage = targetUtilizationPercentage;
             return this;
         }
-
         public AutoScaleSettingsResponse build() {
             return new AutoScaleSettingsResponse(maxInstances, minInstances, pollingInterval, scaleType, targetUtilizationPercentage);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.file_v1.outputs.NfsExportOptionsResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class FileShareConfigResponse {
             this.sourceBackup = Objects.requireNonNull(sourceBackup);
             return this;
         }
-
         public FileShareConfigResponse build() {
             return new FileShareConfigResponse(capacityGb, name, nfsExportOptions, sourceBackup);
         }

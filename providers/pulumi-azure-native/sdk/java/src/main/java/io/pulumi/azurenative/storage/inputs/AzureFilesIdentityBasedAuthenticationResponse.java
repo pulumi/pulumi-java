@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.ActiveDirectoryPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends io.pulu
      * 
      */
     @InputImport(name="activeDirectoryProperties")
-    private final @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
+        private final @Nullable ActiveDirectoryPropertiesResponse activeDirectoryProperties;
 
     public Optional<ActiveDirectoryPropertiesResponse> getActiveDirectoryProperties() {
         return this.activeDirectoryProperties == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryProperties);
@@ -35,7 +35,7 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends io.pulu
      * 
      */
     @InputImport(name="directoryServiceOptions", required=true)
-    private final String directoryServiceOptions;
+        private final String directoryServiceOptions;
 
     public String getDirectoryServiceOptions() {
         return this.directoryServiceOptions;
@@ -84,7 +84,6 @@ public final class AzureFilesIdentityBasedAuthenticationResponse extends io.pulu
             this.directoryServiceOptions = Objects.requireNonNull(directoryServiceOptions);
             return this;
         }
-
         public AzureFilesIdentityBasedAuthenticationResponse build() {
             return new AzureFilesIdentityBasedAuthenticationResponse(activeDirectoryProperties, directoryServiceOptions);
         }

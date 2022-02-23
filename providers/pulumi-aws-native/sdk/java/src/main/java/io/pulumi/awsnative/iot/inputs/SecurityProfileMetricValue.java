@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cidrs")
-    private final @Nullable List<String> cidrs;
+        private final @Nullable List<String> cidrs;
 
     public List<String> getCidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
@@ -37,7 +37,7 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="count")
-    private final @Nullable String count;
+        private final @Nullable String count;
 
     public Optional<String> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -48,7 +48,7 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Double number;
+        private final @Nullable Double number;
 
     public Optional<Double> getNumber() {
         return this.number == null ? Optional.empty() : Optional.ofNullable(this.number);
@@ -59,7 +59,7 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="numbers")
-    private final @Nullable List<Double> numbers;
+        private final @Nullable List<Double> numbers;
 
     public List<Double> getNumbers() {
         return this.numbers == null ? List.of() : this.numbers;
@@ -70,7 +70,7 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable List<Integer> ports;
+        private final @Nullable List<Integer> ports;
 
     public List<Integer> getPorts() {
         return this.ports == null ? List.of() : this.ports;
@@ -81,7 +81,7 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="strings")
-    private final @Nullable List<String> strings;
+        private final @Nullable List<String> strings;
 
     public List<String> getStrings() {
         return this.strings == null ? List.of() : this.strings;
@@ -170,7 +170,6 @@ public final class SecurityProfileMetricValue extends io.pulumi.resources.Invoke
             this.strings = strings;
             return this;
         }
-
         public SecurityProfileMetricValue build() {
             return new SecurityProfileMetricValue(cidrs, count, number, numbers, ports, strings);
         }

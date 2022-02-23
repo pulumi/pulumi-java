@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authentication", required=true)
-    private final Boolean authentication;
+        private final Boolean authentication;
 
     public Boolean getAuthentication() {
         return this.authentication;
@@ -32,7 +32,7 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prodModeWriteProtect", required=true)
-    private final Boolean prodModeWriteProtect;
+        private final Boolean prodModeWriteProtect;
 
     public Boolean getProdModeWriteProtect() {
         return this.prodModeWriteProtect;
@@ -81,7 +81,6 @@ public final class AttributesResponse extends io.pulumi.resources.InvokeArgs {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }
-
         public AttributesResponse build() {
             return new AttributesResponse(authentication, prodModeWriteProtect);
         }

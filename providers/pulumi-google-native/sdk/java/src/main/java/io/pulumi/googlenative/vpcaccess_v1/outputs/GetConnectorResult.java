@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vpcaccess_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -266,7 +266,6 @@ public final class GetConnectorResult {
             this.subnet = Objects.requireNonNull(subnet);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(connectedProjects, ipCidrRange, machineType, maxInstances, maxThroughput, minInstances, minThroughput, name, network, state, subnet);
         }

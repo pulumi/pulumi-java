@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class DistributionFunctionAssociation {
             this.functionARN = functionARN;
             return this;
         }
-
         public DistributionFunctionAssociation build() {
             return new DistributionFunctionAssociation(eventType, functionARN);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -206,7 +206,6 @@ public final class GetLoggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLoggerResult build() {
             return new GetLoggerResult(credentials, description, id, isBuffered, loggerType, name, resourceId, type);
         }

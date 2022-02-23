@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="buildTaskName", required=true)
-    private final String buildTaskName;
+        private final String buildTaskName;
 
     public String getBuildTaskName() {
         return this.buildTaskName;
@@ -28,7 +28,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final String registryName;
+        private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -39,7 +39,7 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class ListBuildTaskSourceRepositoryPropertiesArgs extends io.pulumi
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListBuildTaskSourceRepositoryPropertiesArgs build() {
             return new ListBuildTaskSourceRepositoryPropertiesArgs(buildTaskName, registryName, resourceGroupName);
         }

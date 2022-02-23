@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ModelBiasJobDefinitionModelBiasAppSpecification {
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public ModelBiasJobDefinitionModelBiasAppSpecification build() {
             return new ModelBiasJobDefinitionModelBiasAppSpecification(configUri, environment, imageUri);
         }

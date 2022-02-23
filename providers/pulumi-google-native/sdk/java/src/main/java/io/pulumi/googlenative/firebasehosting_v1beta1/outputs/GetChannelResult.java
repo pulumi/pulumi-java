@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ReleaseResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class GetChannelResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(createTime, expireTime, labels, name, release, retainedReleaseCount, ttl, updateTime, url);
         }

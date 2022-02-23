@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackendPoolsSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enforceCertificateNameCheck")
-    private final @Nullable String enforceCertificateNameCheck;
+        private final @Nullable String enforceCertificateNameCheck;
 
     public Optional<String> getEnforceCertificateNameCheck() {
         return this.enforceCertificateNameCheck == null ? Optional.empty() : Optional.ofNullable(this.enforceCertificateNameCheck);
@@ -35,7 +35,7 @@ public final class BackendPoolsSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sendRecvTimeoutSeconds")
-    private final @Nullable Integer sendRecvTimeoutSeconds;
+        private final @Nullable Integer sendRecvTimeoutSeconds;
 
     public Optional<Integer> getSendRecvTimeoutSeconds() {
         return this.sendRecvTimeoutSeconds == null ? Optional.empty() : Optional.ofNullable(this.sendRecvTimeoutSeconds);
@@ -84,7 +84,6 @@ public final class BackendPoolsSettingsResponse extends io.pulumi.resources.Invo
             this.sendRecvTimeoutSeconds = sendRecvTimeoutSeconds;
             return this;
         }
-
         public BackendPoolsSettingsResponse build() {
             return new BackendPoolsSettingsResponse(enforceCertificateNameCheck, sendRecvTimeoutSeconds);
         }

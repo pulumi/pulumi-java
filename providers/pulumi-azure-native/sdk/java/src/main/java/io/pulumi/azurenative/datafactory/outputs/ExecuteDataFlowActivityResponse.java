@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.outputs.ExecuteDataFlowActivityTypeProp
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -340,7 +340,6 @@ public final class ExecuteDataFlowActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteDataFlowActivityResponse build() {
             return new ExecuteDataFlowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, linkedServiceName, name, policy, runConcurrently, staging, traceLevel, type, userProperties);
         }

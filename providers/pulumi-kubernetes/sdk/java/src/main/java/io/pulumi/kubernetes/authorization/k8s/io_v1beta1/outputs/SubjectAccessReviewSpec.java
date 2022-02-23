@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.NonResourceAttributes;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs.ResourceAttributes;
 import java.lang.String;
@@ -164,7 +164,6 @@ public final class SubjectAccessReviewSpec {
             this.user = user;
             return this;
         }
-
         public SubjectAccessReviewSpec build() {
             return new SubjectAccessReviewSpec(extra, group, nonResourceAttributes, resourceAttributes, uid, user);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -247,7 +247,6 @@ public final class CommonDataServiceForAppsSinkResponse {
             this.writeBehavior = Objects.requireNonNull(writeBehavior);
             return this;
         }
-
         public CommonDataServiceForAppsSinkResponse build() {
             return new CommonDataServiceForAppsSinkResponse(alternateKeyName, disableMetricsCollection, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

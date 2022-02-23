@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
     }
 
     @InputImport(name="ipAllocationMode", required=true)
-    private final String ipAllocationMode;
+      private final String ipAllocationMode;
 
     public String getIpAllocationMode() {
         return this.ipAllocationMode;
@@ -36,7 +36,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -47,7 +47,7 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="vlan", required=true)
-    private final Integer vlan;
+      private final Integer vlan;
 
     public Integer getVlan() {
         return this.vlan;
@@ -116,7 +116,6 @@ public final class NetworkInterfaceSubInterfaceResponse extends io.pulumi.resour
             this.vlan = Objects.requireNonNull(vlan);
             return this;
         }
-
         public NetworkInterfaceSubInterfaceResponse build() {
             return new NetworkInterfaceSubInterfaceResponse(ipAddress, ipAllocationMode, subnetwork, vlan);
         }

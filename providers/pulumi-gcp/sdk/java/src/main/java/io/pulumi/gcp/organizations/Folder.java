@@ -5,8 +5,8 @@ package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.organizations.FolderArgs;
 import io.pulumi.gcp.organizations.inputs.FolderState;
@@ -136,13 +136,6 @@ public class Folder extends io.pulumi.resources.CustomResource {
         return this.parent;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Folder(String name) {
-        super("gcp:organizations/folder:Folder", name, FolderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

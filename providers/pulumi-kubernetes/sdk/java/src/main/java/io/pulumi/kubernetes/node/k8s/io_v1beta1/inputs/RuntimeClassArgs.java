@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs.OverheadArgs;
 import io.pulumi.kubernetes.node.k8s.io_v1beta1.inputs.SchedulingArgs;
@@ -26,7 +26,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="handler", required=true)
-    private final Input<String> handler;
+        private final Input<String> handler;
 
     public Input<String> getHandler() {
         return this.handler;
@@ -48,7 +48,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -59,7 +59,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -70,7 +70,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="overhead")
-    private final @Nullable Input<OverheadArgs> overhead;
+        private final @Nullable Input<OverheadArgs> overhead;
 
     public Input<OverheadArgs> getOverhead() {
         return this.overhead == null ? Input.empty() : this.overhead;
@@ -81,7 +81,7 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<SchedulingArgs> scheduling;
+        private final @Nullable Input<SchedulingArgs> scheduling;
 
     public Input<SchedulingArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -200,7 +200,6 @@ public final class RuntimeClassArgs extends io.pulumi.resources.ResourceArgs {
             this.scheduling = Input.ofNullable(scheduling);
             return this;
         }
-
         public RuntimeClassArgs build() {
             return new RuntimeClassArgs(apiVersion, handler, kind, metadata, overhead, scheduling);
         }

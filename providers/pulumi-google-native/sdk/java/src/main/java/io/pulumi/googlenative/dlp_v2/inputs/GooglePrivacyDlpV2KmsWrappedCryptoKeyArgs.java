@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cryptoKeyName", required=true)
-    private final Input<String> cryptoKeyName;
+      private final Input<String> cryptoKeyName;
 
     public Input<String> getCryptoKeyName() {
         return this.cryptoKeyName;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="wrappedKey", required=true)
-    private final Input<String> wrappedKey;
+      private final Input<String> wrappedKey;
 
     public Input<String> getWrappedKey() {
         return this.wrappedKey;
@@ -92,7 +92,6 @@ public final class GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs extends io.pulumi.r
             this.wrappedKey = Input.of(Objects.requireNonNull(wrappedKey));
             return this;
         }
-
         public GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs build() {
             return new GooglePrivacyDlpV2KmsWrappedCryptoKeyArgs(cryptoKeyName, wrappedKey);
         }

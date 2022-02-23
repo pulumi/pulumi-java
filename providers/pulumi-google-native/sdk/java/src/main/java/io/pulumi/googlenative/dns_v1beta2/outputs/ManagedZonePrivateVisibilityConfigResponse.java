@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZonePrivateVisibilityConfigGKEClusterResponse;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZonePrivateVisibilityConfigNetworkResponse;
 import java.lang.String;
@@ -90,7 +90,6 @@ public final class ManagedZonePrivateVisibilityConfigResponse {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigResponse build() {
             return new ManagedZonePrivateVisibilityConfigResponse(gkeClusters, kind, networks);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.organizations.outputs.GetIAMPolicyBindingCondition;
 import java.lang.String;
 import java.util.List;
@@ -117,7 +117,6 @@ public final class GetIAMPolicyBinding {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GetIAMPolicyBinding build() {
             return new GetIAMPolicyBinding(condition, members, role);
         }

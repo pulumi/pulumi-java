@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.outputs.AttestorPublicKeyResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class UserOwnedDrydockNoteResponse {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public UserOwnedDrydockNoteResponse build() {
             return new UserOwnedDrydockNoteResponse(delegationServiceAccountEmail, noteReference, publicKeys);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="datastoreName")
-    private final @Nullable Input<String> datastoreName;
+        private final @Nullable Input<String> datastoreName;
 
     public Input<String> getDatastoreName() {
         return this.datastoreName == null ? Input.empty() : this.datastoreName;
@@ -30,7 +30,7 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+        private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -89,7 +89,6 @@ public final class DatasetCreateRequestQueryArgs extends io.pulumi.resources.Res
             this.query = Input.ofNullable(query);
             return this;
         }
-
         public DatasetCreateRequestQueryArgs build() {
             return new DatasetCreateRequestQueryArgs(datastoreName, query);
         }

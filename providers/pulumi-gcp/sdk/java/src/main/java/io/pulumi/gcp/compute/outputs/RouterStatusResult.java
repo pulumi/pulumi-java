@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RouterStatusBestRoute;
 import io.pulumi.gcp.compute.outputs.RouterStatusBestRoutesForRouter;
 import java.lang.String;
@@ -146,7 +146,6 @@ public final class RouterStatusResult {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public RouterStatusResult build() {
             return new RouterStatusResult(bestRoutes, bestRoutesForRouters, id, name, network, project, region);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apikeys_v2.inputs.V2AndroidApplicationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedApplications")
-    private final @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
+      private final @Nullable Input<List<V2AndroidApplicationArgs>> allowedApplications;
 
     public Input<List<V2AndroidApplicationArgs>> getAllowedApplications() {
         return this.allowedApplications == null ? Input.empty() : this.allowedApplications;
@@ -67,7 +67,6 @@ public final class V2AndroidKeyRestrictionsArgs extends io.pulumi.resources.Reso
             this.allowedApplications = Input.ofNullable(allowedApplications);
             return this;
         }
-
         public V2AndroidKeyRestrictionsArgs build() {
             return new V2AndroidKeyRestrictionsArgs(allowedApplications);
         }

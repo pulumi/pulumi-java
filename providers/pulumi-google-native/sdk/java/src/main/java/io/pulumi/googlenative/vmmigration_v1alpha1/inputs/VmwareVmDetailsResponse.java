@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="bootOption", required=true)
-    private final String bootOption;
+      private final String bootOption;
 
     public String getBootOption() {
         return this.bootOption;
@@ -33,7 +33,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="committedStorage", required=true)
-    private final String committedStorage;
+      private final String committedStorage;
 
     public String getCommittedStorage() {
         return this.committedStorage;
@@ -44,7 +44,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="committedStorageMb", required=true)
-    private final String committedStorageMb;
+      private final String committedStorageMb;
 
     public String getCommittedStorageMb() {
         return this.committedStorageMb;
@@ -55,7 +55,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="cpuCount", required=true)
-    private final Integer cpuCount;
+      private final Integer cpuCount;
 
     public Integer getCpuCount() {
         return this.cpuCount;
@@ -66,7 +66,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="datacenterDescription", required=true)
-    private final String datacenterDescription;
+      private final String datacenterDescription;
 
     public String getDatacenterDescription() {
         return this.datacenterDescription;
@@ -77,7 +77,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="datacenterId", required=true)
-    private final String datacenterId;
+      private final String datacenterId;
 
     public String getDatacenterId() {
         return this.datacenterId;
@@ -88,7 +88,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="diskCount", required=true)
-    private final Integer diskCount;
+      private final Integer diskCount;
 
     public Integer getDiskCount() {
         return this.diskCount;
@@ -99,7 +99,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -110,7 +110,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="guestDescription", required=true)
-    private final String guestDescription;
+      private final String guestDescription;
 
     public String getGuestDescription() {
         return this.guestDescription;
@@ -121,7 +121,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="memoryMb", required=true)
-    private final Integer memoryMb;
+      private final Integer memoryMb;
 
     public Integer getMemoryMb() {
         return this.memoryMb;
@@ -132,7 +132,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="powerState", required=true)
-    private final String powerState;
+      private final String powerState;
 
     public String getPowerState() {
         return this.powerState;
@@ -143,7 +143,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="uuid", required=true)
-    private final String uuid;
+      private final String uuid;
 
     public String getUuid() {
         return this.uuid;
@@ -154,7 +154,7 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="vmId", required=true)
-    private final String vmId;
+      private final String vmId;
 
     public String getVmId() {
         return this.vmId;
@@ -313,7 +313,6 @@ public final class VmwareVmDetailsResponse extends io.pulumi.resources.InvokeArg
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public VmwareVmDetailsResponse build() {
             return new VmwareVmDetailsResponse(bootOption, committedStorage, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
         }

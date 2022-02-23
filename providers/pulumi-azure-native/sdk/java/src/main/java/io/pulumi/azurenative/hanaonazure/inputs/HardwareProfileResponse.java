@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hanaInstanceSize", required=true)
-    private final String hanaInstanceSize;
+        private final String hanaInstanceSize;
 
     public String getHanaInstanceSize() {
         return this.hanaInstanceSize;
@@ -32,7 +32,7 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hardwareType", required=true)
-    private final String hardwareType;
+        private final String hardwareType;
 
     public String getHardwareType() {
         return this.hardwareType;
@@ -81,7 +81,6 @@ public final class HardwareProfileResponse extends io.pulumi.resources.InvokeArg
             this.hardwareType = Objects.requireNonNull(hardwareType);
             return this;
         }
-
         public HardwareProfileResponse build() {
             return new HardwareProfileResponse(hanaInstanceSize, hardwareType);
         }

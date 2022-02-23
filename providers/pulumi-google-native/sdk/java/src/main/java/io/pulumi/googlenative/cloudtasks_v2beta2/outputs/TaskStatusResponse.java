@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AttemptStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class TaskStatusResponse {
             this.lastAttemptStatus = Objects.requireNonNull(lastAttemptStatus);
             return this;
         }
-
         public TaskStatusResponse build() {
             return new TaskStatusResponse(attemptDispatchCount, attemptResponseCount, firstAttemptStatus, lastAttemptStatus);
         }

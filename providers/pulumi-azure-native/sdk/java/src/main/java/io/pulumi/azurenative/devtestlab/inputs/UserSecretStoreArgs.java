@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyVaultId")
-    private final @Nullable Input<String> keyVaultId;
+        private final @Nullable Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId == null ? Input.empty() : this.keyVaultId;
@@ -34,7 +34,7 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyVaultUri")
-    private final @Nullable Input<String> keyVaultUri;
+        private final @Nullable Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri == null ? Input.empty() : this.keyVaultUri;
@@ -93,7 +93,6 @@ public final class UserSecretStoreArgs extends io.pulumi.resources.ResourceArgs 
             this.keyVaultUri = Input.ofNullable(keyVaultUri);
             return this;
         }
-
         public UserSecretStoreArgs build() {
             return new UserSecretStoreArgs(keyVaultId, keyVaultUri);
         }

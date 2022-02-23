@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.networking.k8s.io_v1.inputs;
 
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="endPort")
-    private final @Nullable Input<Integer> endPort;
+        private final @Nullable Input<Integer> endPort;
 
     public Input<Integer> getEndPort() {
         return this.endPort == null ? Input.empty() : this.endPort;
@@ -36,7 +36,7 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Either<Integer,String>> port;
+        private final @Nullable Input<Either<Integer,String>> port;
 
     public Input<Either<Integer,String>> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -47,7 +47,7 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -121,7 +121,6 @@ public final class NetworkPolicyPortArgs extends io.pulumi.resources.ResourceArg
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public NetworkPolicyPortArgs build() {
             return new NetworkPolicyPortArgs(endPort, port, protocol);
         }

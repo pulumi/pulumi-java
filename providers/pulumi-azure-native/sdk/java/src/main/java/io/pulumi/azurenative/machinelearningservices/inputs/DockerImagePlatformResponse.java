@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DockerImagePlatformResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="operatingSystemType")
-    private final @Nullable String operatingSystemType;
+        private final @Nullable String operatingSystemType;
 
     public Optional<String> getOperatingSystemType() {
         return this.operatingSystemType == null ? Optional.empty() : Optional.ofNullable(this.operatingSystemType);
@@ -57,7 +57,6 @@ public final class DockerImagePlatformResponse extends io.pulumi.resources.Invok
             this.operatingSystemType = operatingSystemType;
             return this;
         }
-
         public DockerImagePlatformResponse build() {
             return new DockerImagePlatformResponse(operatingSystemType);
         }

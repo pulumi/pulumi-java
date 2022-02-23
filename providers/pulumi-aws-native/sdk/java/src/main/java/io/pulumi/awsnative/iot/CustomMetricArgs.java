@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.CustomMetricMetricType;
 import io.pulumi.awsnative.iot.inputs.CustomMetricTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -33,7 +33,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName")
-    private final @Nullable Input<String> metricName;
+        private final @Nullable Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName == null ? Input.empty() : this.metricName;
@@ -44,7 +44,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricType", required=true)
-    private final Input<CustomMetricMetricType> metricType;
+        private final Input<CustomMetricMetricType> metricType;
 
     public Input<CustomMetricMetricType> getMetricType() {
         return this.metricType;
@@ -55,7 +55,7 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<CustomMetricTagArgs>> tags;
+        private final @Nullable Input<List<CustomMetricTagArgs>> tags;
 
     public Input<List<CustomMetricTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -144,7 +144,6 @@ public final class CustomMetricArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public CustomMetricArgs build() {
             return new CustomMetricArgs(displayName, metricName, metricType, tags);
         }

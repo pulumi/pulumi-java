@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointFilesNotSyncingErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -204,7 +204,6 @@ public final class ServerEndpointSyncSessionStatusResponse {
             this.transientFilesNotSyncingCount = Objects.requireNonNull(transientFilesNotSyncingCount);
             return this;
         }
-
         public ServerEndpointSyncSessionStatusResponse build() {
             return new ServerEndpointSyncSessionStatusResponse(filesNotSyncingErrors, lastSyncMode, lastSyncPerItemErrorCount, lastSyncResult, lastSyncSuccessTimestamp, lastSyncTimestamp, persistentFilesNotSyncingCount, transientFilesNotSyncingCount);
         }

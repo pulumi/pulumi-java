@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="destinationUriFileCounts", required=true)
-    private final List<String> destinationUriFileCounts;
+      private final List<String> destinationUriFileCounts;
 
     public List<String> getDestinationUriFileCounts() {
         return this.destinationUriFileCounts;
@@ -29,7 +29,7 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="inputBytes", required=true)
-    private final String inputBytes;
+      private final String inputBytes;
 
     public String getInputBytes() {
         return this.inputBytes;
@@ -78,7 +78,6 @@ public final class JobStatistics4Response extends io.pulumi.resources.InvokeArgs
             this.inputBytes = Objects.requireNonNull(inputBytes);
             return this;
         }
-
         public JobStatistics4Response build() {
             return new JobStatistics4Response(destinationUriFileCounts, inputBytes);
         }

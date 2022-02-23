@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.BackendResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backends")
-    private final @Nullable List<BackendResponse> backends;
+        private final @Nullable List<BackendResponse> backends;
 
     public List<BackendResponse> getBackends() {
         return this.backends == null ? List.of() : this.backends;
@@ -37,7 +37,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="healthProbeSettings")
-    private final @Nullable SubResourceResponse healthProbeSettings;
+        private final @Nullable SubResourceResponse healthProbeSettings;
 
     public Optional<SubResourceResponse> getHealthProbeSettings() {
         return this.healthProbeSettings == null ? Optional.empty() : Optional.ofNullable(this.healthProbeSettings);
@@ -48,7 +48,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -59,7 +59,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loadBalancingSettings")
-    private final @Nullable SubResourceResponse loadBalancingSettings;
+        private final @Nullable SubResourceResponse loadBalancingSettings;
 
     public Optional<SubResourceResponse> getLoadBalancingSettings() {
         return this.loadBalancingSettings == null ? Optional.empty() : Optional.ofNullable(this.loadBalancingSettings);
@@ -70,7 +70,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceState", required=true)
-    private final String resourceState;
+        private final String resourceState;
 
     public String getResourceState() {
         return this.resourceState;
@@ -92,7 +92,7 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -191,7 +191,6 @@ public final class BackendPoolResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BackendPoolResponse build() {
             return new BackendPoolResponse(backends, healthProbeSettings, id, loadBalancingSettings, name, resourceState, type);
         }

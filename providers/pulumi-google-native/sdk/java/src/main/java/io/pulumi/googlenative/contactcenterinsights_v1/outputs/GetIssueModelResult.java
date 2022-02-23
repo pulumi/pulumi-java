@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelInputDataConfigResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class GetIssueModelResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetIssueModelResult build() {
             return new GetIssueModelResult(createTime, displayName, inputDataConfig, name, state, trainingStats, updateTime);
         }

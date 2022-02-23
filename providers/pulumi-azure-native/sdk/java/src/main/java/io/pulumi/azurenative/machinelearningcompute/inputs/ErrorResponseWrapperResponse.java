@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.ErrorResponseResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ErrorResponseWrapperResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="error")
-    private final @Nullable ErrorResponseResponse error;
+        private final @Nullable ErrorResponseResponse error;
 
     public Optional<ErrorResponseResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -61,7 +61,6 @@ public final class ErrorResponseWrapperResponse extends io.pulumi.resources.Invo
             this.error = error;
             return this;
         }
-
         public ErrorResponseWrapperResponse build() {
             return new ErrorResponseWrapperResponse(error);
         }

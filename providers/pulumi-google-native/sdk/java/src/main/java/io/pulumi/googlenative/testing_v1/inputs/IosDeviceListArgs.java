@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.IosDeviceArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iosDevices", required=true)
-    private final Input<List<IosDeviceArgs>> iosDevices;
+      private final Input<List<IosDeviceArgs>> iosDevices;
 
     public Input<List<IosDeviceArgs>> getIosDevices() {
         return this.iosDevices;
@@ -66,7 +66,6 @@ public final class IosDeviceListArgs extends io.pulumi.resources.ResourceArgs {
             this.iosDevices = Input.of(Objects.requireNonNull(iosDevices));
             return this;
         }
-
         public IosDeviceListArgs build() {
             return new IosDeviceListArgs(iosDevices);
         }

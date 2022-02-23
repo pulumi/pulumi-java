@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.ApplicationInfoResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.CompensationInfoResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.JobDerivedInfoResponse;
@@ -648,7 +648,6 @@ public final class GetJobResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(addresses, applicationInfo, company, companyDisplayName, compensationInfo, customAttributes, degreeTypes, department, derivedInfo, description, employmentTypes, incentives, jobBenefits, jobEndTime, jobLevel, jobStartTime, languageCode, name, postingCreateTime, postingExpireTime, postingPublishTime, postingRegion, postingUpdateTime, processingOptions, promotionValue, qualifications, requisitionId, responsibilities, title);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class HttpServerLocationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpServerLocationResponse build() {
             return new HttpServerLocationResponse(fileName, folderPath, relativeUrl, type);
         }

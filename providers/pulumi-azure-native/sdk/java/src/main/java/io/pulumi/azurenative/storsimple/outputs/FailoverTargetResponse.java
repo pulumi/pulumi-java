@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.TargetEligibilityResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -268,7 +268,6 @@ public final class FailoverTargetResponse {
             this.volumesCount = volumesCount;
             return this;
         }
-
         public FailoverTargetResponse build() {
             return new FailoverTargetResponse(availableLocalStorageInBytes, availableTieredStorageInBytes, dataContainersCount, deviceId, deviceLocation, deviceSoftwareVersion, deviceStatus, eligibilityResult, friendlyDeviceSoftwareVersion, modelDescription, volumesCount);
         }

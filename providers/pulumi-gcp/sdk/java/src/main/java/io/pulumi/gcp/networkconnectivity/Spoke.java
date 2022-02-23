@@ -5,8 +5,8 @@ package io.pulumi.gcp.networkconnectivity;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkconnectivity.SpokeArgs;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeState;
@@ -226,13 +226,6 @@ public class Spoke extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Spoke(String name) {
-        super("gcp:networkconnectivity/spoke:Spoke", name, SpokeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

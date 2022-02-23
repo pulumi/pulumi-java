@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.MysqlRdbmsResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.OracleRdbmsResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class BackfillAllStrategyResponse {
             this.oracleExcludedObjects = Objects.requireNonNull(oracleExcludedObjects);
             return this;
         }
-
         public BackfillAllStrategyResponse build() {
             return new BackfillAllStrategyResponse(mysqlExcludedObjects, oracleExcludedObjects);
         }

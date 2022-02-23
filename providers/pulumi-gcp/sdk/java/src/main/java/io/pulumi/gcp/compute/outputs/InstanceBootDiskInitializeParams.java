@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class InstanceBootDiskInitializeParams {
             this.type = type;
             return this;
         }
-
         public InstanceBootDiskInitializeParams build() {
             return new InstanceBootDiskInitializeParams(image, labels, size, type);
         }

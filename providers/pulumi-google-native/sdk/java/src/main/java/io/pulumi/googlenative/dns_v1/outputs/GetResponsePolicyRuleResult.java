@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ResponsePolicyRuleLocalDataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -130,7 +130,6 @@ public final class GetResponsePolicyRuleResult {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public GetResponsePolicyRuleResult build() {
             return new GetResponsePolicyRuleResult(behavior, dnsName, kind, localData, ruleName);
         }

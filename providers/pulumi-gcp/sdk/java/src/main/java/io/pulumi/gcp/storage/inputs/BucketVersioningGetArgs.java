@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -61,7 +61,6 @@ public final class BucketVersioningGetArgs extends io.pulumi.resources.ResourceA
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public BucketVersioningGetArgs build() {
             return new BucketVersioningGetArgs(enabled);
         }

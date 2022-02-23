@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class DashboardIntegerParameter {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public DashboardIntegerParameter build() {
             return new DashboardIntegerParameter(name, values);
         }

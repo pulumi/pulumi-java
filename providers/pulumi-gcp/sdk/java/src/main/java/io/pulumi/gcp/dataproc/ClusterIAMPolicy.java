@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataproc;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataproc.ClusterIAMPolicyArgs;
 import io.pulumi.gcp.dataproc.inputs.ClusterIAMPolicyState;
@@ -128,13 +128,6 @@ public class ClusterIAMPolicy extends io.pulumi.resources.CustomResource {
         return this.region;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ClusterIAMPolicy(String name) {
-        super("gcp:dataproc/clusterIAMPolicy:ClusterIAMPolicy", name, ClusterIAMPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

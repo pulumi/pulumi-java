@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.KnownDataFlowStreams;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations")
-    private final @Nullable Input<List<String>> destinations;
+        private final @Nullable Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations == null ? Input.empty() : this.destinations;
@@ -37,7 +37,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streams")
-    private final @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
+        private final @Nullable Input<List<Either<String,KnownDataFlowStreams>>> streams;
 
     public Input<List<Either<String,KnownDataFlowStreams>>> getStreams() {
         return this.streams == null ? Input.empty() : this.streams;
@@ -96,7 +96,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
             this.streams = Input.ofNullable(streams);
             return this;
         }
-
         public DataFlowArgs build() {
             return new DataFlowArgs(destinations, streams);
         }

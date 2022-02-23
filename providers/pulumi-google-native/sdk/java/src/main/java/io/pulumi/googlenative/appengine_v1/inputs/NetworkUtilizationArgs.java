@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetReceivedBytesPerSecond")
-    private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
+      private final @Nullable Input<Integer> targetReceivedBytesPerSecond;
 
     public Input<Integer> getTargetReceivedBytesPerSecond() {
         return this.targetReceivedBytesPerSecond == null ? Input.empty() : this.targetReceivedBytesPerSecond;
@@ -34,7 +34,7 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetReceivedPacketsPerSecond")
-    private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
+      private final @Nullable Input<Integer> targetReceivedPacketsPerSecond;
 
     public Input<Integer> getTargetReceivedPacketsPerSecond() {
         return this.targetReceivedPacketsPerSecond == null ? Input.empty() : this.targetReceivedPacketsPerSecond;
@@ -45,7 +45,7 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetSentBytesPerSecond")
-    private final @Nullable Input<Integer> targetSentBytesPerSecond;
+      private final @Nullable Input<Integer> targetSentBytesPerSecond;
 
     public Input<Integer> getTargetSentBytesPerSecond() {
         return this.targetSentBytesPerSecond == null ? Input.empty() : this.targetSentBytesPerSecond;
@@ -56,7 +56,7 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetSentPacketsPerSecond")
-    private final @Nullable Input<Integer> targetSentPacketsPerSecond;
+      private final @Nullable Input<Integer> targetSentPacketsPerSecond;
 
     public Input<Integer> getTargetSentPacketsPerSecond() {
         return this.targetSentPacketsPerSecond == null ? Input.empty() : this.targetSentPacketsPerSecond;
@@ -145,7 +145,6 @@ public final class NetworkUtilizationArgs extends io.pulumi.resources.ResourceAr
             this.targetSentPacketsPerSecond = Input.ofNullable(targetSentPacketsPerSecond);
             return this;
         }
-
         public NetworkUtilizationArgs build() {
             return new NetworkUtilizationArgs(targetReceivedBytesPerSecond, targetReceivedPacketsPerSecond, targetSentBytesPerSecond, targetSentPacketsPerSecond);
         }

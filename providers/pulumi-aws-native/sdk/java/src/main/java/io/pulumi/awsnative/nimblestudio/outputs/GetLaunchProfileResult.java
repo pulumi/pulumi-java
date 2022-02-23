@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -150,7 +150,6 @@ public final class GetLaunchProfileResult {
             this.studioComponentIds = studioComponentIds;
             return this;
         }
-
         public GetLaunchProfileResult build() {
             return new GetLaunchProfileResult(description, launchProfileId, launchProfileProtocolVersions, name, streamConfiguration, studioComponentIds);
         }

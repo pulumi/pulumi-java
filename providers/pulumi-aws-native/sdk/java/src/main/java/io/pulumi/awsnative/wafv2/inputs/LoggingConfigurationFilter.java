@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFilterRequirement;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationCondition;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class LoggingConfigurationFilter extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="behavior", required=true)
-    private final LoggingConfigurationFilterBehavior behavior;
+        private final LoggingConfigurationFilterBehavior behavior;
 
     public LoggingConfigurationFilterBehavior getBehavior() {
         return this.behavior;
@@ -31,7 +31,7 @@ public final class LoggingConfigurationFilter extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<LoggingConfigurationCondition> conditions;
+        private final List<LoggingConfigurationCondition> conditions;
 
     public List<LoggingConfigurationCondition> getConditions() {
         return this.conditions;
@@ -42,7 +42,7 @@ public final class LoggingConfigurationFilter extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="requirement", required=true)
-    private final LoggingConfigurationFilterRequirement requirement;
+        private final LoggingConfigurationFilterRequirement requirement;
 
     public LoggingConfigurationFilterRequirement getRequirement() {
         return this.requirement;
@@ -101,7 +101,6 @@ public final class LoggingConfigurationFilter extends io.pulumi.resources.Invoke
             this.requirement = Objects.requireNonNull(requirement);
             return this;
         }
-
         public LoggingConfigurationFilter build() {
             return new LoggingConfigurationFilter(behavior, conditions, requirement);
         }

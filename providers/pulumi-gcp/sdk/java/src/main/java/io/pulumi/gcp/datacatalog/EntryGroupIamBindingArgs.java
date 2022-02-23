@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
     public static final EntryGroupIamBindingArgs Empty = new EntryGroupIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<EntryGroupIamBindingConditionArgs> condition;
+        private final @Nullable Input<EntryGroupIamBindingConditionArgs> condition;
 
     public Input<EntryGroupIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="entryGroup", required=true)
-    private final Input<String> entryGroup;
+        private final Input<String> entryGroup;
 
     public Input<String> getEntryGroup() {
         return this.entryGroup;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -47,14 +47,14 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -67,7 +67,7 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -186,7 +186,6 @@ public final class EntryGroupIamBindingArgs extends io.pulumi.resources.Resource
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public EntryGroupIamBindingArgs build() {
             return new EntryGroupIamBindingArgs(condition, entryGroup, members, project, region, role);
         }

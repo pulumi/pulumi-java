@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ArtifactResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="checksum", required=true)
-    private final String checksum;
+      private final String checksum;
 
     public String getChecksum() {
         return this.checksum;
@@ -33,7 +33,7 @@ public final class ArtifactResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="names", required=true)
-    private final List<String> names;
+      private final List<String> names;
 
     public List<String> getNames() {
         return this.names;
@@ -82,7 +82,6 @@ public final class ArtifactResponse extends io.pulumi.resources.InvokeArgs {
             this.names = Objects.requireNonNull(names);
             return this;
         }
-
         public ArtifactResponse build() {
             return new ArtifactResponse(checksum, names);
         }

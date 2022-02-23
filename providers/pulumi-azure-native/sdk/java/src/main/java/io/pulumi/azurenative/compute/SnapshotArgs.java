@@ -14,7 +14,7 @@ import io.pulumi.azurenative.compute.inputs.PurchasePlanArgs;
 import io.pulumi.azurenative.compute.inputs.SnapshotSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="creationData", required=true)
-    private final Input<CreationDataArgs> creationData;
+        private final Input<CreationDataArgs> creationData;
 
     public Input<CreationDataArgs> getCreationData() {
         return this.creationData;
@@ -43,7 +43,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskAccessId")
-    private final @Nullable Input<String> diskAccessId;
+        private final @Nullable Input<String> diskAccessId;
 
     public Input<String> getDiskAccessId() {
         return this.diskAccessId == null ? Input.empty() : this.diskAccessId;
@@ -54,7 +54,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Input<Integer> diskSizeGB;
+        private final @Nullable Input<Integer> diskSizeGB;
 
     public Input<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Input.empty() : this.diskSizeGB;
@@ -65,7 +65,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionArgs> encryption;
+        private final @Nullable Input<EncryptionArgs> encryption;
 
     public Input<EncryptionArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -76,7 +76,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionSettingsCollection")
-    private final @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
+        private final @Nullable Input<EncryptionSettingsCollectionArgs> encryptionSettingsCollection;
 
     public Input<EncryptionSettingsCollectionArgs> getEncryptionSettingsCollection() {
         return this.encryptionSettingsCollection == null ? Input.empty() : this.encryptionSettingsCollection;
@@ -87,7 +87,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -98,7 +98,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hyperVGeneration")
-    private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
+        private final @Nullable Input<Either<String,HyperVGeneration>> hyperVGeneration;
 
     public Input<Either<String,HyperVGeneration>> getHyperVGeneration() {
         return this.hyperVGeneration == null ? Input.empty() : this.hyperVGeneration;
@@ -109,7 +109,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incremental")
-    private final @Nullable Input<Boolean> incremental;
+        private final @Nullable Input<Boolean> incremental;
 
     public Input<Boolean> getIncremental() {
         return this.incremental == null ? Input.empty() : this.incremental;
@@ -120,7 +120,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -131,7 +131,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkAccessPolicy")
-    private final @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
+        private final @Nullable Input<Either<String,NetworkAccessPolicy>> networkAccessPolicy;
 
     public Input<Either<String,NetworkAccessPolicy>> getNetworkAccessPolicy() {
         return this.networkAccessPolicy == null ? Input.empty() : this.networkAccessPolicy;
@@ -142,7 +142,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<OperatingSystemTypes> osType;
+        private final @Nullable Input<OperatingSystemTypes> osType;
 
     public Input<OperatingSystemTypes> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -153,7 +153,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purchasePlan")
-    private final @Nullable Input<PurchasePlanArgs> purchasePlan;
+        private final @Nullable Input<PurchasePlanArgs> purchasePlan;
 
     public Input<PurchasePlanArgs> getPurchasePlan() {
         return this.purchasePlan == null ? Input.empty() : this.purchasePlan;
@@ -164,7 +164,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -175,7 +175,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SnapshotSkuArgs> sku;
+        private final @Nullable Input<SnapshotSkuArgs> sku;
 
     public Input<SnapshotSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -186,7 +186,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotName")
-    private final @Nullable Input<String> snapshotName;
+        private final @Nullable Input<String> snapshotName;
 
     public Input<String> getSnapshotName() {
         return this.snapshotName == null ? Input.empty() : this.snapshotName;
@@ -197,7 +197,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportsHibernation")
-    private final @Nullable Input<Boolean> supportsHibernation;
+        private final @Nullable Input<Boolean> supportsHibernation;
 
     public Input<Boolean> getSupportsHibernation() {
         return this.supportsHibernation == null ? Input.empty() : this.supportsHibernation;
@@ -208,7 +208,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -492,7 +492,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SnapshotArgs build() {
             return new SnapshotArgs(creationData, diskAccessId, diskSizeGB, encryption, encryptionSettingsCollection, extendedLocation, hyperVGeneration, incremental, location, networkAccessPolicy, osType, purchasePlan, resourceGroupName, sku, snapshotName, supportsHibernation, tags);
         }

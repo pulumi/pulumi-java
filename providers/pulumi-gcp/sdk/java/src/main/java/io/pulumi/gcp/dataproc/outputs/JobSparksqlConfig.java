@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.JobSparksqlConfigLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -159,7 +159,6 @@ public final class JobSparksqlConfig {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public JobSparksqlConfig build() {
             return new JobSparksqlConfig(jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
         }

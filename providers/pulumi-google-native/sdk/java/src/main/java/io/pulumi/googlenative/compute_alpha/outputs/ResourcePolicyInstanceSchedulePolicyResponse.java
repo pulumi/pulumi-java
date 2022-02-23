@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyInstanceSchedulePolicyScheduleResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class ResourcePolicyInstanceSchedulePolicyResponse {
             this.vmStopSchedule = Objects.requireNonNull(vmStopSchedule);
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyResponse build() {
             return new ResourcePolicyInstanceSchedulePolicyResponse(expirationTime, startTime, timeZone, vmStartSchedule, vmStopSchedule);
         }

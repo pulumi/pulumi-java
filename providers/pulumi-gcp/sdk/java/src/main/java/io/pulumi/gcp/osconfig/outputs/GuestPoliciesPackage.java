@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -127,7 +127,6 @@ public final class GuestPoliciesPackage {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GuestPoliciesPackage build() {
             return new GuestPoliciesPackage(desiredState, manager, name);
         }

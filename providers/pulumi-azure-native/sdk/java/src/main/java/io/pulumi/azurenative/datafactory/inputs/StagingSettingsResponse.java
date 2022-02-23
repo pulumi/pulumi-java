@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enableCompression")
-    private final @Nullable Object enableCompression;
+        private final @Nullable Object enableCompression;
 
     public Optional<Object> getEnableCompression() {
         return this.enableCompression == null ? Optional.empty() : Optional.ofNullable(this.enableCompression);
@@ -35,7 +35,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+        private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -46,7 +46,7 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Object path;
+        private final @Nullable Object path;
 
     public Optional<Object> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -105,7 +105,6 @@ public final class StagingSettingsResponse extends io.pulumi.resources.InvokeArg
             this.path = path;
             return this;
         }
-
         public StagingSettingsResponse build() {
             return new StagingSettingsResponse(enableCompression, linkedServiceName, path);
         }

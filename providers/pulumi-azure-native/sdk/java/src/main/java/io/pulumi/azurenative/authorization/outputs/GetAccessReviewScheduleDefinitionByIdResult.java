@@ -5,7 +5,7 @@ package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.AccessReviewInstanceResponse;
 import io.pulumi.azurenative.authorization.outputs.AccessReviewReviewerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -690,7 +690,6 @@ public final class GetAccessReviewScheduleDefinitionByIdResult {
             this.userPrincipalName = Objects.requireNonNull(userPrincipalName);
             return this;
         }
-
         public GetAccessReviewScheduleDefinitionByIdResult build() {
             return new GetAccessReviewScheduleDefinitionByIdResult(assignmentState, autoApplyDecisionsEnabled, backupReviewers, defaultDecision, defaultDecisionEnabled, descriptionForAdmins, descriptionForReviewers, displayName, endDate, id, inactiveDuration, instanceDurationInDays, instances, interval, justificationRequiredOnApproval, mailNotificationsEnabled, name, numberOfOccurrences, principalId, principalName, principalType, recommendationsEnabled, reminderNotificationsEnabled, resourceId, reviewers, reviewersType, roleDefinitionId, startDate, status, type, userPrincipalName);
         }

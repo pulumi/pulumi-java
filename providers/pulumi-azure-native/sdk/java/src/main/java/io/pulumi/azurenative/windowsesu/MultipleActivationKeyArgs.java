@@ -7,7 +7,7 @@ import io.pulumi.azurenative.windowsesu.enums.OsType;
 import io.pulumi.azurenative.windowsesu.enums.SupportType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agreementNumber")
-    private final @Nullable Input<String> agreementNumber;
+        private final @Nullable Input<String> agreementNumber;
 
     public Input<String> getAgreementNumber() {
         return this.agreementNumber == null ? Input.empty() : this.agreementNumber;
@@ -36,7 +36,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="installedServerNumber")
-    private final @Nullable Input<Integer> installedServerNumber;
+        private final @Nullable Input<Integer> installedServerNumber;
 
     public Input<Integer> getInstalledServerNumber() {
         return this.installedServerNumber == null ? Input.empty() : this.installedServerNumber;
@@ -47,7 +47,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isEligible")
-    private final @Nullable Input<Boolean> isEligible;
+        private final @Nullable Input<Boolean> isEligible;
 
     public Input<Boolean> getIsEligible() {
         return this.isEligible == null ? Input.empty() : this.isEligible;
@@ -58,7 +58,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -69,7 +69,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="multipleActivationKeyName")
-    private final @Nullable Input<String> multipleActivationKeyName;
+        private final @Nullable Input<String> multipleActivationKeyName;
 
     public Input<String> getMultipleActivationKeyName() {
         return this.multipleActivationKeyName == null ? Input.empty() : this.multipleActivationKeyName;
@@ -80,7 +80,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<Either<String,OsType>> osType;
+        private final @Nullable Input<Either<String,OsType>> osType;
 
     public Input<Either<String,OsType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -91,7 +91,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="supportType")
-    private final @Nullable Input<Either<String,SupportType>> supportType;
+        private final @Nullable Input<Either<String,SupportType>> supportType;
 
     public Input<Either<String,SupportType>> getSupportType() {
         return this.supportType == null ? Input.empty() : this.supportType;
@@ -113,7 +113,7 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -277,7 +277,6 @@ public final class MultipleActivationKeyArgs extends io.pulumi.resources.Resourc
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public MultipleActivationKeyArgs build() {
             return new MultipleActivationKeyArgs(agreementNumber, installedServerNumber, isEligible, location, multipleActivationKeyName, osType, resourceGroupName, supportType, tags);
         }

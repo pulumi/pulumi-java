@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.redis.inputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -37,7 +37,7 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -65,7 +65,7 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="weeklyMaintenanceWindows")
-    private final @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
+        private final @Nullable Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
 
     public Input<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> getWeeklyMaintenanceWindows() {
         return this.weeklyMaintenanceWindows == null ? Input.empty() : this.weeklyMaintenanceWindows;
@@ -154,7 +154,6 @@ public final class InstanceMaintenancePolicyGetArgs extends io.pulumi.resources.
             this.weeklyMaintenanceWindows = Input.ofNullable(weeklyMaintenanceWindows);
             return this;
         }
-
         public InstanceMaintenancePolicyGetArgs build() {
             return new InstanceMaintenancePolicyGetArgs(createTime, description, updateTime, weeklyMaintenanceWindows);
         }

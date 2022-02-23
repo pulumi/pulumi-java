@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class GitHubActionContainerConfigurationResponse {
             this.username = username;
             return this;
         }
-
         public GitHubActionContainerConfigurationResponse build() {
             return new GitHubActionContainerConfigurationResponse(imageName, password, serverUrl, username);
         }

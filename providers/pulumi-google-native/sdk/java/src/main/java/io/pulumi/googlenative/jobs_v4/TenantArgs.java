@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.jobs_v4;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalId", required=true)
-    private final Input<String> externalId;
+      private final Input<String> externalId;
 
     public Input<String> getExternalId() {
         return this.externalId;
@@ -30,14 +30,14 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -111,7 +111,6 @@ public final class TenantArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public TenantArgs build() {
             return new TenantArgs(externalId, name, project);
         }

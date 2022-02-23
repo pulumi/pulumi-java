@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.StreamingPolicyFairPlayConfigurationAr
 import io.pulumi.azurenative.media.inputs.StreamingPolicyPlayReadyConfigurationArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyWidevineConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class CbcsDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="fairPlay")
-    private final @Nullable Input<StreamingPolicyFairPlayConfigurationArgs> fairPlay;
+        private final @Nullable Input<StreamingPolicyFairPlayConfigurationArgs> fairPlay;
 
     public Input<StreamingPolicyFairPlayConfigurationArgs> getFairPlay() {
         return this.fairPlay == null ? Input.empty() : this.fairPlay;
@@ -36,7 +36,7 @@ public final class CbcsDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="playReady")
-    private final @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
+        private final @Nullable Input<StreamingPolicyPlayReadyConfigurationArgs> playReady;
 
     public Input<StreamingPolicyPlayReadyConfigurationArgs> getPlayReady() {
         return this.playReady == null ? Input.empty() : this.playReady;
@@ -47,7 +47,7 @@ public final class CbcsDrmConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="widevine")
-    private final @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
+        private final @Nullable Input<StreamingPolicyWidevineConfigurationArgs> widevine;
 
     public Input<StreamingPolicyWidevineConfigurationArgs> getWidevine() {
         return this.widevine == null ? Input.empty() : this.widevine;
@@ -121,7 +121,6 @@ public final class CbcsDrmConfigurationArgs extends io.pulumi.resources.Resource
             this.widevine = Input.ofNullable(widevine);
             return this;
         }
-
         public CbcsDrmConfigurationArgs build() {
             return new CbcsDrmConfigurationArgs(fairPlay, playReady, widevine);
         }

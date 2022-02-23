@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -31,7 +31,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="correlationId")
-    private final @Nullable Input<String> correlationId;
+        private final @Nullable Input<String> correlationId;
 
     public Input<String> getCorrelationId() {
         return this.correlationId == null ? Input.empty() : this.correlationId;
@@ -42,7 +42,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="forcePersistence")
-    private final @Nullable Input<Boolean> forcePersistence;
+        private final @Nullable Input<Boolean> forcePersistence;
 
     public Input<Boolean> getForcePersistence() {
         return this.forcePersistence == null ? Input.empty() : this.forcePersistence;
@@ -53,7 +53,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -64,7 +64,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="messageId")
-    private final @Nullable Input<String> messageId;
+        private final @Nullable Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId == null ? Input.empty() : this.messageId;
@@ -75,7 +75,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable Input<String> partitionKey;
+        private final @Nullable Input<String> partitionKey;
 
     public Input<String> getPartitionKey() {
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
@@ -86,7 +86,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replyTo")
-    private final @Nullable Input<String> replyTo;
+        private final @Nullable Input<String> replyTo;
 
     public Input<String> getReplyTo() {
         return this.replyTo == null ? Input.empty() : this.replyTo;
@@ -97,7 +97,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="replyToSessionId")
-    private final @Nullable Input<String> replyToSessionId;
+        private final @Nullable Input<String> replyToSessionId;
 
     public Input<String> getReplyToSessionId() {
         return this.replyToSessionId == null ? Input.empty() : this.replyToSessionId;
@@ -108,7 +108,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="scheduledEnqueueTimeUtc")
-    private final @Nullable Input<String> scheduledEnqueueTimeUtc;
+        private final @Nullable Input<String> scheduledEnqueueTimeUtc;
 
     public Input<String> getScheduledEnqueueTimeUtc() {
         return this.scheduledEnqueueTimeUtc == null ? Input.empty() : this.scheduledEnqueueTimeUtc;
@@ -119,7 +119,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sessionId")
-    private final @Nullable Input<String> sessionId;
+        private final @Nullable Input<String> sessionId;
 
     public Input<String> getSessionId() {
         return this.sessionId == null ? Input.empty() : this.sessionId;
@@ -130,7 +130,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeToLive")
-    private final @Nullable Input<String> timeToLive;
+        private final @Nullable Input<String> timeToLive;
 
     public Input<String> getTimeToLive() {
         return this.timeToLive == null ? Input.empty() : this.timeToLive;
@@ -141,7 +141,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="to")
-    private final @Nullable Input<String> to;
+        private final @Nullable Input<String> to;
 
     public Input<String> getTo() {
         return this.to == null ? Input.empty() : this.to;
@@ -152,7 +152,7 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="viaPartitionKey")
-    private final @Nullable Input<String> viaPartitionKey;
+        private final @Nullable Input<String> viaPartitionKey;
 
     public Input<String> getViaPartitionKey() {
         return this.viaPartitionKey == null ? Input.empty() : this.viaPartitionKey;
@@ -376,7 +376,6 @@ public final class ServiceBusBrokeredMessagePropertiesArgs extends io.pulumi.res
             this.viaPartitionKey = Input.ofNullable(viaPartitionKey);
             return this;
         }
-
         public ServiceBusBrokeredMessagePropertiesArgs build() {
             return new ServiceBusBrokeredMessagePropertiesArgs(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);
         }

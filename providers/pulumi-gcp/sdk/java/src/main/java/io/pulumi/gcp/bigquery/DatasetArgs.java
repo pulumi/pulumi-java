@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessArgs;
 import io.pulumi.gcp.bigquery.inputs.DatasetDefaultEncryptionConfigurationArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accesses")
-    private final @Nullable Input<List<DatasetAccessArgs>> accesses;
+        private final @Nullable Input<List<DatasetAccessArgs>> accesses;
 
     public Input<List<DatasetAccessArgs>> getAccesses() {
         return this.accesses == null ? Input.empty() : this.accesses;
@@ -37,7 +37,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -51,7 +51,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultEncryptionConfiguration")
-    private final @Nullable Input<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
+        private final @Nullable Input<DatasetDefaultEncryptionConfigurationArgs> defaultEncryptionConfiguration;
 
     public Input<DatasetDefaultEncryptionConfigurationArgs> getDefaultEncryptionConfiguration() {
         return this.defaultEncryptionConfiguration == null ? Input.empty() : this.defaultEncryptionConfiguration;
@@ -63,7 +63,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultPartitionExpirationMs")
-    private final @Nullable Input<Integer> defaultPartitionExpirationMs;
+        private final @Nullable Input<Integer> defaultPartitionExpirationMs;
 
     public Input<Integer> getDefaultPartitionExpirationMs() {
         return this.defaultPartitionExpirationMs == null ? Input.empty() : this.defaultPartitionExpirationMs;
@@ -75,7 +75,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultTableExpirationMs")
-    private final @Nullable Input<Integer> defaultTableExpirationMs;
+        private final @Nullable Input<Integer> defaultTableExpirationMs;
 
     public Input<Integer> getDefaultTableExpirationMs() {
         return this.defaultTableExpirationMs == null ? Input.empty() : this.defaultTableExpirationMs;
@@ -88,7 +88,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteContentsOnDestroy")
-    private final @Nullable Input<Boolean> deleteContentsOnDestroy;
+        private final @Nullable Input<Boolean> deleteContentsOnDestroy;
 
     public Input<Boolean> getDeleteContentsOnDestroy() {
         return this.deleteContentsOnDestroy == null ? Input.empty() : this.deleteContentsOnDestroy;
@@ -99,7 +99,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -110,7 +110,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -122,7 +122,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -134,7 +134,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -146,7 +146,7 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -340,7 +340,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatasetArgs build() {
             return new DatasetArgs(accesses, datasetId, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, deleteContentsOnDestroy, description, friendlyName, labels, location, project);
         }

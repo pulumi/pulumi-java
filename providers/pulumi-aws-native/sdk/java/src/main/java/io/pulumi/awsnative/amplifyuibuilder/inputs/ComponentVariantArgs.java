@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplifyuibuilder.inputs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentOverridesArgs;
 import io.pulumi.awsnative.amplifyuibuilder.inputs.ComponentVariantValuesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
     public static final ComponentVariantArgs Empty = new ComponentVariantArgs();
 
     @InputImport(name="overrides")
-    private final @Nullable Input<ComponentOverridesArgs> overrides;
+        private final @Nullable Input<ComponentOverridesArgs> overrides;
 
     public Input<ComponentOverridesArgs> getOverrides() {
         return this.overrides == null ? Input.empty() : this.overrides;
     }
 
     @InputImport(name="variantValues")
-    private final @Nullable Input<ComponentVariantValuesArgs> variantValues;
+        private final @Nullable Input<ComponentVariantValuesArgs> variantValues;
 
     public Input<ComponentVariantValuesArgs> getVariantValues() {
         return this.variantValues == null ? Input.empty() : this.variantValues;
@@ -82,7 +82,6 @@ public final class ComponentVariantArgs extends io.pulumi.resources.ResourceArgs
             this.variantValues = Input.ofNullable(variantValues);
             return this;
         }
-
         public ComponentVariantArgs build() {
             return new ComponentVariantArgs(overrides, variantValues);
         }

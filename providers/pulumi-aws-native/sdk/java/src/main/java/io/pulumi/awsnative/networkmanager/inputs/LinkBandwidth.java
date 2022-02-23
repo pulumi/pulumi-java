@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="downloadSpeed")
-    private final @Nullable Integer downloadSpeed;
+        private final @Nullable Integer downloadSpeed;
 
     public Optional<Integer> getDownloadSpeed() {
         return this.downloadSpeed == null ? Optional.empty() : Optional.ofNullable(this.downloadSpeed);
@@ -34,7 +34,7 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uploadSpeed")
-    private final @Nullable Integer uploadSpeed;
+        private final @Nullable Integer uploadSpeed;
 
     public Optional<Integer> getUploadSpeed() {
         return this.uploadSpeed == null ? Optional.empty() : Optional.ofNullable(this.uploadSpeed);
@@ -83,7 +83,6 @@ public final class LinkBandwidth extends io.pulumi.resources.InvokeArgs {
             this.uploadSpeed = uploadSpeed;
             return this;
         }
-
         public LinkBandwidth build() {
             return new LinkBandwidth(downloadSpeed, uploadSpeed);
         }

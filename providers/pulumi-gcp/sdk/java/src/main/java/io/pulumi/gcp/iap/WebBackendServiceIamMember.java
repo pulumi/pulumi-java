@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.WebBackendServiceIamMemberArgs;
 import io.pulumi.gcp.iap.inputs.WebBackendServiceIamMemberState;
@@ -147,13 +147,6 @@ public class WebBackendServiceIamMember extends io.pulumi.resources.CustomResour
         return this.webBackendService;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WebBackendServiceIamMember(String name) {
-        super("gcp:iap/webBackendServiceIamMember:WebBackendServiceIamMember", name, WebBackendServiceIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

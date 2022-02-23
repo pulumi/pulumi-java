@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto.inputs;
 
 import io.pulumi.azurenative.kusto.inputs.LanguageExtensionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class LanguageExtensionsListResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="value")
-    private final @Nullable List<LanguageExtensionResponse> value;
+        private final @Nullable List<LanguageExtensionResponse> value;
 
     public List<LanguageExtensionResponse> getValue() {
         return this.value == null ? List.of() : this.value;
@@ -62,7 +62,6 @@ public final class LanguageExtensionsListResponse extends io.pulumi.resources.In
             this.value = value;
             return this;
         }
-
         public LanguageExtensionsListResponse build() {
             return new LanguageExtensionsListResponse(value);
         }

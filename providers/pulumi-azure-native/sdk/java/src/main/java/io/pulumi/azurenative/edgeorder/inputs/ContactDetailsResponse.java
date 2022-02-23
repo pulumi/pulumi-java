@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="contactName", required=true)
-    private final String contactName;
+        private final String contactName;
 
     public String getContactName() {
         return this.contactName;
@@ -35,7 +35,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="emailList", required=true)
-    private final List<String> emailList;
+        private final List<String> emailList;
 
     public List<String> getEmailList() {
         return this.emailList;
@@ -46,7 +46,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mobile")
-    private final @Nullable String mobile;
+        private final @Nullable String mobile;
 
     public Optional<String> getMobile() {
         return this.mobile == null ? Optional.empty() : Optional.ofNullable(this.mobile);
@@ -57,7 +57,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="phone", required=true)
-    private final String phone;
+        private final String phone;
 
     public String getPhone() {
         return this.phone;
@@ -68,7 +68,7 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="phoneExtension")
-    private final @Nullable String phoneExtension;
+        private final @Nullable String phoneExtension;
 
     public Optional<String> getPhoneExtension() {
         return this.phoneExtension == null ? Optional.empty() : Optional.ofNullable(this.phoneExtension);
@@ -147,7 +147,6 @@ public final class ContactDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.phoneExtension = phoneExtension;
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(contactName, emailList, mobile, phone, phoneExtension);
         }

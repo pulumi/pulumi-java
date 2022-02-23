@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.ResourceGroupPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -183,7 +183,6 @@ public final class GetResourceGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetResourceGroupResult build() {
             return new GetResourceGroupResult(id, location, managedBy, name, properties, tags, type);
         }

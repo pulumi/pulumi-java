@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.EnvVarSourceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class EnvVarResponse {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }
-
         public EnvVarResponse build() {
             return new EnvVarResponse(name, value, valueFrom);
         }

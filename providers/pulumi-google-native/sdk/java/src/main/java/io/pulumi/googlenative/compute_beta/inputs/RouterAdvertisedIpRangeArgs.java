@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<String> range;
+      private final @Nullable Input<String> range;
 
     public Input<String> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -93,7 +93,6 @@ public final class RouterAdvertisedIpRangeArgs extends io.pulumi.resources.Resou
             this.range = Input.ofNullable(range);
             return this;
         }
-
         public RouterAdvertisedIpRangeArgs build() {
             return new RouterAdvertisedIpRangeArgs(description, range);
         }

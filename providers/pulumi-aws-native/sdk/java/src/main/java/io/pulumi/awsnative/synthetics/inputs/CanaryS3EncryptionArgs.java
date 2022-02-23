@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="encryptionMode")
-    private final @Nullable Input<String> encryptionMode;
+        private final @Nullable Input<String> encryptionMode;
 
     public Input<String> getEncryptionMode() {
         return this.encryptionMode == null ? Input.empty() : this.encryptionMode;
@@ -30,7 +30,7 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+        private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -89,7 +89,6 @@ public final class CanaryS3EncryptionArgs extends io.pulumi.resources.ResourceAr
             this.kmsKeyArn = Input.ofNullable(kmsKeyArn);
             return this;
         }
-
         public CanaryS3EncryptionArgs build() {
             return new CanaryS3EncryptionArgs(encryptionMode, kmsKeyArn);
         }

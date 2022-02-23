@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class SubscriptionStateOverrideActionResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public SubscriptionStateOverrideActionResponse build() {
             return new SubscriptionStateOverrideActionResponse(action, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter {
             this.osVersion = osVersion;
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupInventoryFilter(osShortName, osVersion);
         }

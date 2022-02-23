@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.pinpoint.outputs;
 
 import io.pulumi.awsnative.pinpoint.enums.InAppTemplateAlignment;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class InAppTemplateHeaderConfig {
             this.textColor = textColor;
             return this;
         }
-
         public InAppTemplateHeaderConfig build() {
             return new InAppTemplateHeaderConfig(alignment, header, textColor);
         }

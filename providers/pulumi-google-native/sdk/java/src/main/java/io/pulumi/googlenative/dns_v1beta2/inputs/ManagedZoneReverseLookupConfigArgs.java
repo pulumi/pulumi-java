@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
     public static final ManagedZoneReverseLookupConfigArgs Empty = new ManagedZoneReverseLookupConfigArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -58,7 +58,6 @@ public final class ManagedZoneReverseLookupConfigArgs extends io.pulumi.resource
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public ManagedZoneReverseLookupConfigArgs build() {
             return new ManagedZoneReverseLookupConfigArgs(kind);
         }

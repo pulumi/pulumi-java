@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.ApiDeploymentParameterMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -76,7 +76,6 @@ public final class ApiDeploymentParameterMetadataSetResponse {
             this.redisCacheConnectionString = redisCacheConnectionString;
             return this;
         }
-
         public ApiDeploymentParameterMetadataSetResponse build() {
             return new ApiDeploymentParameterMetadataSetResponse(packageContentLink, redisCacheConnectionString);
         }

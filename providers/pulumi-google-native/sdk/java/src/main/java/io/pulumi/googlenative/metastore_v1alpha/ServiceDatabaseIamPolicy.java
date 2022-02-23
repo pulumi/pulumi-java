@@ -5,8 +5,8 @@ package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.metastore_v1alpha.ServiceDatabaseIamPolicyArgs;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class ServiceDatabaseIamPolicy extends io.pulumi.resources.CustomResource
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ServiceDatabaseIamPolicy(String name) {
-        super("google-native:metastore/v1alpha:ServiceDatabaseIamPolicy", name, ServiceDatabaseIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

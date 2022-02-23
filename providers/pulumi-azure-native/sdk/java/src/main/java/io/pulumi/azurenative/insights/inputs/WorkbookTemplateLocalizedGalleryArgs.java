@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.WorkbookTemplateGalleryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="galleries")
-    private final @Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries;
+        private final @Nullable Input<List<WorkbookTemplateGalleryArgs>> galleries;
 
     public Input<List<WorkbookTemplateGalleryArgs>> getGalleries() {
         return this.galleries == null ? Input.empty() : this.galleries;
@@ -36,7 +36,7 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="templateData")
-    private final @Nullable Input<Object> templateData;
+        private final @Nullable Input<Object> templateData;
 
     public Input<Object> getTemplateData() {
         return this.templateData == null ? Input.empty() : this.templateData;
@@ -95,7 +95,6 @@ public final class WorkbookTemplateLocalizedGalleryArgs extends io.pulumi.resour
             this.templateData = Input.ofNullable(templateData);
             return this;
         }
-
         public WorkbookTemplateLocalizedGalleryArgs build() {
             return new WorkbookTemplateLocalizedGalleryArgs(galleries, templateData);
         }

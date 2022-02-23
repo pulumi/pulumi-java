@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
      * 
      */
     @InputImport(name="coreCount")
-    private final @Nullable Input<Integer> coreCount;
+        private final @Nullable Input<Integer> coreCount;
 
     public Input<Integer> getCoreCount() {
         return this.coreCount == null ? Input.empty() : this.coreCount;
@@ -33,7 +33,7 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -92,7 +92,6 @@ public final class RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGet
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs build() {
             return new RuntimeVirtualMachineVirtualMachineConfigAcceleratorConfigGetArgs(coreCount, type);
         }

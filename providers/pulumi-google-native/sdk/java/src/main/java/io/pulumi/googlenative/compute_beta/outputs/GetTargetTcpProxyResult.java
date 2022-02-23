@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -201,7 +201,6 @@ public final class GetTargetTcpProxyResult {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GetTargetTcpProxyResult build() {
             return new GetTargetTcpProxyResult(creationTimestamp, description, kind, name, proxyBind, proxyHeader, selfLink, service);
         }

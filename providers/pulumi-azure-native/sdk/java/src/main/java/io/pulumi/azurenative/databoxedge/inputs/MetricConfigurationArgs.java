@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.MetricCounterSetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="counterSets", required=true)
-    private final Input<List<MetricCounterSetArgs>> counterSets;
+        private final Input<List<MetricCounterSetArgs>> counterSets;
 
     public Input<List<MetricCounterSetArgs>> getCounterSets() {
         return this.counterSets;
@@ -36,7 +36,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="mdmAccount")
-    private final @Nullable Input<String> mdmAccount;
+        private final @Nullable Input<String> mdmAccount;
 
     public Input<String> getMdmAccount() {
         return this.mdmAccount == null ? Input.empty() : this.mdmAccount;
@@ -47,7 +47,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="metricNameSpace")
-    private final @Nullable Input<String> metricNameSpace;
+        private final @Nullable Input<String> metricNameSpace;
 
     public Input<String> getMetricNameSpace() {
         return this.metricNameSpace == null ? Input.empty() : this.metricNameSpace;
@@ -58,7 +58,7 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -147,7 +147,6 @@ public final class MetricConfigurationArgs extends io.pulumi.resources.ResourceA
             this.resourceId = Input.of(Objects.requireNonNull(resourceId));
             return this;
         }
-
         public MetricConfigurationArgs build() {
             return new MetricConfigurationArgs(counterSets, mdmAccount, metricNameSpace, resourceId);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.Hl7V2StoreArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.Hl7V2NotificationConfigResponse;
@@ -94,13 +94,6 @@ public class Hl7V2Store extends io.pulumi.resources.CustomResource {
         return this.rejectDuplicateMessage;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Hl7V2Store(String name) {
-        super("google-native:healthcare/v1:Hl7V2Store", name, Hl7V2StoreArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.CloudBuildOptionsResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ContainerInfoResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.ZipInfoResponse;
@@ -120,7 +120,6 @@ public final class DeploymentResponse {
             this.zip = Objects.requireNonNull(zip);
             return this;
         }
-
         public DeploymentResponse build() {
             return new DeploymentResponse(cloudBuildOptions, container, files, zip);
         }

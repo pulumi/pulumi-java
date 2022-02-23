@@ -14,7 +14,7 @@ import io.pulumi.azurenative.servicefabricmesh.outputs.ReliableCollectionsRefRes
 import io.pulumi.azurenative.servicefabricmesh.outputs.ResourceRequirementsResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.SettingResponse;
 import io.pulumi.azurenative.servicefabricmesh.outputs.VolumeReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -361,7 +361,6 @@ public final class ContainerCodePackagePropertiesResponse {
             this.volumes = volumes;
             return this;
         }
-
         public ContainerCodePackagePropertiesResponse build() {
             return new ContainerCodePackagePropertiesResponse(commands, diagnostics, endpoints, entrypoint, environmentVariables, image, imageRegistryCredential, instanceView, labels, name, reliableCollectionsRefs, resources, settings, volumeRefs, volumes);
         }

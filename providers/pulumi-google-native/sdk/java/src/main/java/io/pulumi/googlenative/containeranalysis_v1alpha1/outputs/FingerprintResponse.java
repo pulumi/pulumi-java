@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class FingerprintResponse {
             this.v2Name = Objects.requireNonNull(v2Name);
             return this;
         }
-
         public FingerprintResponse build() {
             return new FingerprintResponse(v1Name, v2Blob, v2Name);
         }

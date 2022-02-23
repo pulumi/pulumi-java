@@ -9,7 +9,7 @@ import io.pulumi.awsnative.cloudformation.outputs.StackSetAutoDeployment;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetParameter;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetStackInstances;
 import io.pulumi.awsnative.cloudformation.outputs.StackSetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -272,7 +272,6 @@ public final class GetStackSetResult {
             this.templateBody = templateBody;
             return this;
         }
-
         public GetStackSetResult build() {
             return new GetStackSetResult(administrationRoleARN, autoDeployment, capabilities, description, executionRoleName, managedExecution, parameters, stackInstancesGroup, stackSetId, tags, templateBody);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1ExperimentResultMetricResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsR
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1ExperimentResultVersionMetricsResponse(metrics, sessionCount, version);
         }

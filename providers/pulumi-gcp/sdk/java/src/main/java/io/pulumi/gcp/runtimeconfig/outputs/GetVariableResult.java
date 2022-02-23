@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.runtimeconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -133,7 +133,6 @@ public final class GetVariableResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(id, name, parent, project, text, updateTime, value);
         }

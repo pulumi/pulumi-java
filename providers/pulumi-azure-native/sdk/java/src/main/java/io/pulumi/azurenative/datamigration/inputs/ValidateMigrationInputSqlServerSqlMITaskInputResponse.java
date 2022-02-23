@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.BlobShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.FileShareResponse;
 import io.pulumi.azurenative.datamigration.inputs.MigrateSqlServerSqlMIDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="backupBlobShare", required=true)
-    private final BlobShareResponse backupBlobShare;
+        private final BlobShareResponse backupBlobShare;
 
     public BlobShareResponse getBackupBlobShare() {
         return this.backupBlobShare;
@@ -39,7 +39,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="backupFileShare")
-    private final @Nullable FileShareResponse backupFileShare;
+        private final @Nullable FileShareResponse backupFileShare;
 
     public Optional<FileShareResponse> getBackupFileShare() {
         return this.backupFileShare == null ? Optional.empty() : Optional.ofNullable(this.backupFileShare);
@@ -50,7 +50,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="backupMode")
-    private final @Nullable String backupMode;
+        private final @Nullable String backupMode;
 
     public Optional<String> getBackupMode() {
         return this.backupMode == null ? Optional.empty() : Optional.ofNullable(this.backupMode);
@@ -61,7 +61,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="selectedDatabases", required=true)
-    private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
+        private final List<MigrateSqlServerSqlMIDatabaseInputResponse> selectedDatabases;
 
     public List<MigrateSqlServerSqlMIDatabaseInputResponse> getSelectedDatabases() {
         return this.selectedDatabases;
@@ -72,7 +72,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="selectedLogins")
-    private final @Nullable List<String> selectedLogins;
+        private final @Nullable List<String> selectedLogins;
 
     public List<String> getSelectedLogins() {
         return this.selectedLogins == null ? List.of() : this.selectedLogins;
@@ -83,7 +83,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="sourceConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse sourceConnectionInfo;
+        private final SqlConnectionInfoResponse sourceConnectionInfo;
 
     public SqlConnectionInfoResponse getSourceConnectionInfo() {
         return this.sourceConnectionInfo;
@@ -94,7 +94,7 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final SqlConnectionInfoResponse targetConnectionInfo;
+        private final SqlConnectionInfoResponse targetConnectionInfo;
 
     public SqlConnectionInfoResponse getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -193,7 +193,6 @@ public final class ValidateMigrationInputSqlServerSqlMITaskInputResponse extends
             this.targetConnectionInfo = Objects.requireNonNull(targetConnectionInfo);
             return this;
         }
-
         public ValidateMigrationInputSqlServerSqlMITaskInputResponse build() {
             return new ValidateMigrationInputSqlServerSqlMITaskInputResponse(backupBlobShare, backupFileShare, backupMode, selectedDatabases, selectedLogins, sourceConnectionInfo, targetConnectionInfo);
         }

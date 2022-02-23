@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.EntryGroupArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGroupState;
@@ -126,13 +126,6 @@ public class EntryGroup extends io.pulumi.resources.CustomResource {
         return this.region;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EntryGroup(String name) {
-        super("gcp:datacatalog/entryGroup:EntryGroup", name, EntryGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

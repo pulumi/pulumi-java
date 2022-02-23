@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFile
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet(url);
         }

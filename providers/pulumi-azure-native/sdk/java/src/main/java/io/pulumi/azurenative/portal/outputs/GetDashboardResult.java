@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.DashboardLensResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -184,7 +184,6 @@ public final class GetDashboardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDashboardResult build() {
             return new GetDashboardResult(id, lenses, location, metadata, name, tags, type);
         }

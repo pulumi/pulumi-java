@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ServiceKeyValuePairArgs extends io.pulumi.resources.ResourceA
     public static final ServiceKeyValuePairArgs Empty = new ServiceKeyValuePairArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class ServiceKeyValuePairArgs extends io.pulumi.resources.ResourceA
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ServiceKeyValuePairArgs build() {
             return new ServiceKeyValuePairArgs(name, value);
         }

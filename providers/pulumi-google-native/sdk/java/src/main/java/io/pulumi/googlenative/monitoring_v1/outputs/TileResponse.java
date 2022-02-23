@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.WidgetResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class TileResponse {
             this.yPos = Objects.requireNonNull(yPos);
             return this;
         }
-
         public TileResponse build() {
             return new TileResponse(height, widget, width, xPos, yPos);
         }

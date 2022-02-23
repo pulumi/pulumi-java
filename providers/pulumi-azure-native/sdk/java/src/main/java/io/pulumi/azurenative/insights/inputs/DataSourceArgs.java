@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.inputs.DataSourceConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.SinkConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final DataSourceArgs Empty = new DataSourceArgs();
 
     @InputImport(name="configuration", required=true)
-    private final Input<DataSourceConfigurationArgs> configuration;
+        private final Input<DataSourceConfigurationArgs> configuration;
 
     public Input<DataSourceConfigurationArgs> getConfiguration() {
         return this.configuration;
@@ -32,14 +32,14 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
     }
 
     @InputImport(name="sinks", required=true)
-    private final Input<List<SinkConfigurationArgs>> sinks;
+        private final Input<List<SinkConfigurationArgs>> sinks;
 
     public Input<List<SinkConfigurationArgs>> getSinks() {
         return this.sinks;
@@ -113,7 +113,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.sinks = Input.of(Objects.requireNonNull(sinks));
             return this;
         }
-
         public DataSourceArgs build() {
             return new DataSourceArgs(configuration, kind, sinks);
         }

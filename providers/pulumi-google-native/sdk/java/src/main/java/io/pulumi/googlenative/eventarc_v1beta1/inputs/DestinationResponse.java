@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.eventarc_v1beta1.inputs.CloudRunServiceResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cloudRunService", required=true)
-    private final CloudRunServiceResponse cloudRunService;
+      private final CloudRunServiceResponse cloudRunService;
 
     public CloudRunServiceResponse getCloudRunService() {
         return this.cloudRunService;
@@ -59,7 +59,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
             this.cloudRunService = Objects.requireNonNull(cloudRunService);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(cloudRunService);
         }

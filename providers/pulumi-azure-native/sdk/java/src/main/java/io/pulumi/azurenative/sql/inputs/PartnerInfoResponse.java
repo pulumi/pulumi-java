@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -43,7 +43,7 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="replicationRole", required=true)
-    private final String replicationRole;
+        private final String replicationRole;
 
     public String getReplicationRole() {
         return this.replicationRole;
@@ -102,7 +102,6 @@ public final class PartnerInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.replicationRole = Objects.requireNonNull(replicationRole);
             return this;
         }
-
         public PartnerInfoResponse build() {
             return new PartnerInfoResponse(id, location, replicationRole);
         }

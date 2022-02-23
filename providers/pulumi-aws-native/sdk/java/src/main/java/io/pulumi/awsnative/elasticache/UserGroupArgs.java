@@ -5,7 +5,7 @@ package io.pulumi.awsnative.elasticache;
 
 import io.pulumi.awsnative.elasticache.enums.UserGroupEngine;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="engine", required=true)
-    private final Input<UserGroupEngine> engine;
+        private final Input<UserGroupEngine> engine;
 
     public Input<UserGroupEngine> getEngine() {
         return this.engine;
@@ -32,7 +32,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userGroupId", required=true)
-    private final Input<String> userGroupId;
+        private final Input<String> userGroupId;
 
     public Input<String> getUserGroupId() {
         return this.userGroupId;
@@ -43,7 +43,7 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userIds")
-    private final @Nullable Input<List<String>> userIds;
+        private final @Nullable Input<List<String>> userIds;
 
     public Input<List<String>> getUserIds() {
         return this.userIds == null ? Input.empty() : this.userIds;
@@ -117,7 +117,6 @@ public final class UserGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.userIds = Input.ofNullable(userIds);
             return this;
         }
-
         public UserGroupArgs build() {
             return new UserGroupArgs(engine, userGroupId, userIds);
         }

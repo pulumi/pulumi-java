@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -266,7 +266,6 @@ public final class GetGalleryApplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryApplicationResult build() {
             return new GetGalleryApplicationResult(description, endOfLifeDate, eula, id, location, name, privacyStatementUri, releaseNoteUri, supportedOSType, tags, type);
         }

@@ -11,8 +11,8 @@ import io.pulumi.awsnative.lex.outputs.BotTag;
 import io.pulumi.awsnative.lex.outputs.DataPrivacyProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,13 +142,6 @@ public class Bot extends io.pulumi.resources.CustomResource {
         return this.testBotAliasTags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Bot(String name) {
-        super("aws-native:lex:Bot", name, BotArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

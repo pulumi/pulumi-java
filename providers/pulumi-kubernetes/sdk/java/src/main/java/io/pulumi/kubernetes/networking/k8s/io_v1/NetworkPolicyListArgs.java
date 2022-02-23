@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import io.pulumi.kubernetes.networking.k8s.io_v1.inputs.NetworkPolicyArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -33,7 +33,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<NetworkPolicyArgs>> items;
+        private final Input<List<NetworkPolicyArgs>> items;
 
     public Input<List<NetworkPolicyArgs>> getItems() {
         return this.items;
@@ -44,7 +44,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -55,7 +55,7 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ListMetaArgs> metadata;
+        private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -144,7 +144,6 @@ public final class NetworkPolicyListArgs extends io.pulumi.resources.ResourceArg
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public NetworkPolicyListArgs build() {
             return new NetworkPolicyListArgs(apiVersion, items, kind, metadata);
         }

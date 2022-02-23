@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class ActiveDirectoryPropertiesResponse {
             this.netBiosDomainName = Objects.requireNonNull(netBiosDomainName);
             return this;
         }
-
         public ActiveDirectoryPropertiesResponse build() {
             return new ActiveDirectoryPropertiesResponse(azureStorageSid, domainGuid, domainName, domainSid, forestName, netBiosDomainName);
         }

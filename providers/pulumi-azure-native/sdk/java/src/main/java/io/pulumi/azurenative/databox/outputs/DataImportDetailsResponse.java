@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databox.outputs;
 import io.pulumi.azurenative.databox.outputs.ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.StorageAccountDetailsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -54,7 +54,6 @@ public final class DataImportDetailsResponse {
             this.accountDetails = Objects.requireNonNull(accountDetails);
             return this;
         }
-
         public DataImportDetailsResponse build() {
             return new DataImportDetailsResponse(accountDetails);
         }

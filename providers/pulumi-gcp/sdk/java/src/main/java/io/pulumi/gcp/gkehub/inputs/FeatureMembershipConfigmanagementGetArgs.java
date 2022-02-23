@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementBinauthzGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementConfigSyncGetArgs;
 import io.pulumi.gcp.gkehub.inputs.FeatureMembershipConfigmanagementHierarchyControllerGetArgs;
@@ -23,7 +23,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="binauthz")
-    private final @Nullable Input<FeatureMembershipConfigmanagementBinauthzGetArgs> binauthz;
+        private final @Nullable Input<FeatureMembershipConfigmanagementBinauthzGetArgs> binauthz;
 
     public Input<FeatureMembershipConfigmanagementBinauthzGetArgs> getBinauthz() {
         return this.binauthz == null ? Input.empty() : this.binauthz;
@@ -34,7 +34,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="configSync")
-    private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGetArgs> configSync;
+        private final @Nullable Input<FeatureMembershipConfigmanagementConfigSyncGetArgs> configSync;
 
     public Input<FeatureMembershipConfigmanagementConfigSyncGetArgs> getConfigSync() {
         return this.configSync == null ? Input.empty() : this.configSync;
@@ -45,7 +45,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="hierarchyController")
-    private final @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> hierarchyController;
+        private final @Nullable Input<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> hierarchyController;
 
     public Input<FeatureMembershipConfigmanagementHierarchyControllerGetArgs> getHierarchyController() {
         return this.hierarchyController == null ? Input.empty() : this.hierarchyController;
@@ -56,7 +56,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="policyController")
-    private final @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerGetArgs> policyController;
+        private final @Nullable Input<FeatureMembershipConfigmanagementPolicyControllerGetArgs> policyController;
 
     public Input<FeatureMembershipConfigmanagementPolicyControllerGetArgs> getPolicyController() {
         return this.policyController == null ? Input.empty() : this.policyController;
@@ -67,7 +67,7 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -171,7 +171,6 @@ public final class FeatureMembershipConfigmanagementGetArgs extends io.pulumi.re
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public FeatureMembershipConfigmanagementGetArgs build() {
             return new FeatureMembershipConfigmanagementGetArgs(binauthz, configSync, hierarchyController, policyController, version);
         }

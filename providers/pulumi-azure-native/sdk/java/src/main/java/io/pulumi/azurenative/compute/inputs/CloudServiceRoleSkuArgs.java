@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Double> capacity;
+        private final @Nullable Input<Double> capacity;
 
     public Input<Double> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -35,7 +35,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -46,7 +46,7 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<String> tier;
+        private final @Nullable Input<String> tier;
 
     public Input<String> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -120,7 +120,6 @@ public final class CloudServiceRoleSkuArgs extends io.pulumi.resources.ResourceA
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public CloudServiceRoleSkuArgs build() {
             return new CloudServiceRoleSkuArgs(capacity, name, tier);
         }

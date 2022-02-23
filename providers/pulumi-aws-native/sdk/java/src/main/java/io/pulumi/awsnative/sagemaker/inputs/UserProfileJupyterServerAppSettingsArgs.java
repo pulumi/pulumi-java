@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.UserProfileResourceSpecArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
     public static final UserProfileJupyterServerAppSettingsArgs Empty = new UserProfileJupyterServerAppSettingsArgs();
 
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
+        private final @Nullable Input<UserProfileResourceSpecArgs> defaultResourceSpec;
 
     public Input<UserProfileResourceSpecArgs> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Input.empty() : this.defaultResourceSpec;
@@ -62,7 +62,6 @@ public final class UserProfileJupyterServerAppSettingsArgs extends io.pulumi.res
             this.defaultResourceSpec = Input.ofNullable(defaultResourceSpec);
             return this;
         }
-
         public UserProfileJupyterServerAppSettingsArgs build() {
             return new UserProfileJupyterServerAppSettingsArgs(defaultResourceSpec);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse {
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public GoogleCloudApigeeV1RevenueShareRangeResponse build() {
             return new GoogleCloudApigeeV1RevenueShareRangeResponse(end, sharePercentage, start);
         }

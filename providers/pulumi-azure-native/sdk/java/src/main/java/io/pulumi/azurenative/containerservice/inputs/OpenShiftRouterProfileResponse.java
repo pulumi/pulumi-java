@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="fqdn", required=true)
-    private final String fqdn;
+        private final String fqdn;
 
     public String getFqdn() {
         return this.fqdn;
@@ -34,7 +34,7 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicSubdomain", required=true)
-    private final String publicSubdomain;
+        private final String publicSubdomain;
 
     public String getPublicSubdomain() {
         return this.publicSubdomain;
@@ -104,7 +104,6 @@ public final class OpenShiftRouterProfileResponse extends io.pulumi.resources.In
             this.publicSubdomain = Objects.requireNonNull(publicSubdomain);
             return this;
         }
-
         public OpenShiftRouterProfileResponse build() {
             return new OpenShiftRouterProfileResponse(fqdn, name, publicSubdomain);
         }

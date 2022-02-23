@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.PatchInstanceFilterGroupLabelResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="all", required=true)
-    private final Boolean all;
+      private final Boolean all;
 
     public Boolean getAll() {
         return this.all;
@@ -35,7 +35,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="groupLabels", required=true)
-    private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
+      private final List<PatchInstanceFilterGroupLabelResponse> groupLabels;
 
     public List<PatchInstanceFilterGroupLabelResponse> getGroupLabels() {
         return this.groupLabels;
@@ -46,7 +46,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="instanceNamePrefixes", required=true)
-    private final List<String> instanceNamePrefixes;
+      private final List<String> instanceNamePrefixes;
 
     public List<String> getInstanceNamePrefixes() {
         return this.instanceNamePrefixes;
@@ -57,7 +57,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<String> instances;
+      private final List<String> instances;
 
     public List<String> getInstances() {
         return this.instances;
@@ -68,7 +68,7 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="zones", required=true)
-    private final List<String> zones;
+      private final List<String> zones;
 
     public List<String> getZones() {
         return this.zones;
@@ -147,7 +147,6 @@ public final class PatchInstanceFilterResponse extends io.pulumi.resources.Invok
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public PatchInstanceFilterResponse build() {
             return new PatchInstanceFilterResponse(all, groupLabels, instanceNamePrefixes, instances, zones);
         }

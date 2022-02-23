@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs e
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -61,7 +61,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs e
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs build() {
             return new PreventionStoredInfoTypeLargeCustomDictionaryOutputPathArgs(path);
         }

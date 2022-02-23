@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DistributionPolicyZoneConfigurationResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class DistributionPolicyResponse {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public DistributionPolicyResponse build() {
             return new DistributionPolicyResponse(targetShape, zones);
         }

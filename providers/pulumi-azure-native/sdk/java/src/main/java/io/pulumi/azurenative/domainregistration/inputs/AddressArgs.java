@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address1", required=true)
-    private final Input<String> address1;
+        private final Input<String> address1;
 
     public Input<String> getAddress1() {
         return this.address1;
@@ -34,7 +34,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address2")
-    private final @Nullable Input<String> address2;
+        private final @Nullable Input<String> address2;
 
     public Input<String> getAddress2() {
         return this.address2 == null ? Input.empty() : this.address2;
@@ -45,7 +45,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="city", required=true)
-    private final Input<String> city;
+        private final Input<String> city;
 
     public Input<String> getCity() {
         return this.city;
@@ -56,7 +56,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="country", required=true)
-    private final Input<String> country;
+        private final Input<String> country;
 
     public Input<String> getCountry() {
         return this.country;
@@ -67,7 +67,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="postalCode", required=true)
-    private final Input<String> postalCode;
+        private final Input<String> postalCode;
 
     public Input<String> getPostalCode() {
         return this.postalCode;
@@ -78,7 +78,7 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<String> state;
+        private final Input<String> state;
 
     public Input<String> getState() {
         return this.state;
@@ -197,7 +197,6 @@ public final class AddressArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.of(Objects.requireNonNull(state));
             return this;
         }
-
         public AddressArgs build() {
             return new AddressArgs(address1, address2, city, country, postalCode, state);
         }

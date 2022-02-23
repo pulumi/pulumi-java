@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="appYamlPath")
-    private final @Nullable Input<String> appYamlPath;
+      private final @Nullable Input<String> appYamlPath;
 
     public Input<String> getAppYamlPath() {
         return this.appYamlPath == null ? Input.empty() : this.appYamlPath;
@@ -34,7 +34,7 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudBuildTimeout")
-    private final @Nullable Input<String> cloudBuildTimeout;
+      private final @Nullable Input<String> cloudBuildTimeout;
 
     public Input<String> getCloudBuildTimeout() {
         return this.cloudBuildTimeout == null ? Input.empty() : this.cloudBuildTimeout;
@@ -93,7 +93,6 @@ public final class CloudBuildOptionsArgs extends io.pulumi.resources.ResourceArg
             this.cloudBuildTimeout = Input.ofNullable(cloudBuildTimeout);
             return this;
         }
-
         public CloudBuildOptionsArgs build() {
             return new CloudBuildOptionsArgs(appYamlPath, cloudBuildTimeout);
         }

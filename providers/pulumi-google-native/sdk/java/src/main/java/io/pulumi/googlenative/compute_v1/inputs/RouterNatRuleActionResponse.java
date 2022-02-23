@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceNatActiveIps", required=true)
-    private final List<String> sourceNatActiveIps;
+      private final List<String> sourceNatActiveIps;
 
     public List<String> getSourceNatActiveIps() {
         return this.sourceNatActiveIps;
@@ -29,7 +29,7 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sourceNatDrainIps", required=true)
-    private final List<String> sourceNatDrainIps;
+      private final List<String> sourceNatDrainIps;
 
     public List<String> getSourceNatDrainIps() {
         return this.sourceNatDrainIps;
@@ -78,7 +78,6 @@ public final class RouterNatRuleActionResponse extends io.pulumi.resources.Invok
             this.sourceNatDrainIps = Objects.requireNonNull(sourceNatDrainIps);
             return this;
         }
-
         public RouterNatRuleActionResponse build() {
             return new RouterNatRuleActionResponse(sourceNatActiveIps, sourceNatDrainIps);
         }

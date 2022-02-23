@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class ClientIPConfig {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public ClientIPConfig build() {
             return new ClientIPConfig(timeoutSeconds);
         }

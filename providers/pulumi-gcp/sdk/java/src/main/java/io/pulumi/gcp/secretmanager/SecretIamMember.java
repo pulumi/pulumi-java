@@ -5,8 +5,8 @@ package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretIamMemberArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretIamMemberState;
@@ -125,13 +125,6 @@ public class SecretIamMember extends io.pulumi.resources.CustomResource {
         return this.secretId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SecretIamMember(String name) {
-        super("gcp:secretmanager/secretIamMember:SecretIamMember", name, SecretIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.iam_v1.outputs.AwsResponse;
 import io.pulumi.googlenative.iam_v1.outputs.OidcResponse;
 import java.lang.Boolean;
@@ -225,7 +225,6 @@ public final class GetProviderResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetProviderResult build() {
             return new GetProviderResult(attributeCondition, attributeMapping, aws, description, disabled, displayName, name, oidc, state);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.AlertRuleAnyOfOrLeafConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AlertRuleAllOfConditionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="allOf", required=true)
-    private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
+        private final List<AlertRuleAnyOfOrLeafConditionResponse> allOf;
 
     public List<AlertRuleAnyOfOrLeafConditionResponse> getAllOf() {
         return this.allOf;
@@ -60,7 +60,6 @@ public final class AlertRuleAllOfConditionResponse extends io.pulumi.resources.I
             this.allOf = Objects.requireNonNull(allOf);
             return this;
         }
-
         public AlertRuleAllOfConditionResponse build() {
             return new AlertRuleAllOfConditionResponse(allOf);
         }

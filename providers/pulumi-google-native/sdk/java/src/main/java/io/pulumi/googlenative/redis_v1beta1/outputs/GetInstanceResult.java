@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.redis_v1beta1.outputs.MaintenancePolicyResponse;
 import io.pulumi.googlenative.redis_v1beta1.outputs.MaintenanceScheduleResponse;
 import io.pulumi.googlenative.redis_v1beta1.outputs.NodeInfoResponse;
@@ -692,7 +692,6 @@ public final class GetInstanceResult {
             this.transitEncryptionMode = Objects.requireNonNull(transitEncryptionMode);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(alternativeLocationId, authEnabled, authorizedNetwork, connectMode, createTime, currentLocationId, displayName, host, labels, location, maintenancePolicy, maintenanceSchedule, memorySizeGb, name, nodes, persistenceConfig, persistenceIamIdentity, port, readEndpoint, readEndpointPort, readReplicasMode, redisConfigs, redisVersion, replicaCount, reservedIpRange, secondaryIpRange, serverCaCerts, state, statusMessage, tier, transitEncryptionMode);
         }

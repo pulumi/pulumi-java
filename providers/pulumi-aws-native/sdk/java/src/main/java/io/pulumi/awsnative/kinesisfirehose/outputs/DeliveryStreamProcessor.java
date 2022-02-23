@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamProcessorType;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessorParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class DeliveryStreamProcessor {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DeliveryStreamProcessor build() {
             return new DeliveryStreamProcessor(parameters, type);
         }

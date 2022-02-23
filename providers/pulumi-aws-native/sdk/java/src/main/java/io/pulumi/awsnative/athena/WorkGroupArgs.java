@@ -8,7 +8,7 @@ import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupConfigurationUpdatesArgs;
 import io.pulumi.awsnative.athena.inputs.WorkGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recursiveDeleteOption")
-    private final @Nullable Input<Boolean> recursiveDeleteOption;
+        private final @Nullable Input<Boolean> recursiveDeleteOption;
 
     public Input<Boolean> getRecursiveDeleteOption() {
         return this.recursiveDeleteOption == null ? Input.empty() : this.recursiveDeleteOption;
@@ -58,7 +58,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<WorkGroupState> state;
+        private final @Nullable Input<WorkGroupState> state;
 
     public Input<WorkGroupState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -69,7 +69,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<WorkGroupTagArgs>> tags;
+        private final @Nullable Input<List<WorkGroupTagArgs>> tags;
 
     public Input<List<WorkGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -80,7 +80,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workGroupConfiguration")
-    private final @Nullable Input<WorkGroupConfigurationArgs> workGroupConfiguration;
+        private final @Nullable Input<WorkGroupConfigurationArgs> workGroupConfiguration;
 
     public Input<WorkGroupConfigurationArgs> getWorkGroupConfiguration() {
         return this.workGroupConfiguration == null ? Input.empty() : this.workGroupConfiguration;
@@ -91,7 +91,7 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workGroupConfigurationUpdates")
-    private final @Nullable Input<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
+        private final @Nullable Input<WorkGroupConfigurationUpdatesArgs> workGroupConfigurationUpdates;
 
     public Input<WorkGroupConfigurationUpdatesArgs> getWorkGroupConfigurationUpdates() {
         return this.workGroupConfigurationUpdates == null ? Input.empty() : this.workGroupConfigurationUpdates;
@@ -225,7 +225,6 @@ public final class WorkGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.workGroupConfigurationUpdates = Input.ofNullable(workGroupConfigurationUpdates);
             return this;
         }
-
         public WorkGroupArgs build() {
             return new WorkGroupArgs(description, name, recursiveDeleteOption, state, tags, workGroupConfiguration, workGroupConfigurationUpdates);
         }

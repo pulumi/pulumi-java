@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class LinkedIntegrationRuntimeResponse {
             this.subscriptionId = Objects.requireNonNull(subscriptionId);
             return this;
         }
-
         public LinkedIntegrationRuntimeResponse build() {
             return new LinkedIntegrationRuntimeResponse(createTime, dataFactoryLocation, dataFactoryName, name, subscriptionId);
         }

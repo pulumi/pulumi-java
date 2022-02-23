@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="allowedPersistenceRegions", required=true)
-    private final Input<List<String>> allowedPersistenceRegions;
+        private final Input<List<String>> allowedPersistenceRegions;
 
     public Input<List<String>> getAllowedPersistenceRegions() {
         return this.allowedPersistenceRegions;
@@ -67,7 +67,6 @@ public final class TopicMessageStoragePolicyArgs extends io.pulumi.resources.Res
             this.allowedPersistenceRegions = Input.of(Objects.requireNonNull(allowedPersistenceRegions));
             return this;
         }
-
         public TopicMessageStoragePolicyArgs build() {
             return new TopicMessageStoragePolicyArgs(allowedPersistenceRegions);
         }

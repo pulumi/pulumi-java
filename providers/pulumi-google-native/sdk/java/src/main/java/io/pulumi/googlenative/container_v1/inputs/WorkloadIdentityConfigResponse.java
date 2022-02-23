@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="workloadPool", required=true)
-    private final String workloadPool;
+      private final String workloadPool;
 
     public String getWorkloadPool() {
         return this.workloadPool;
@@ -59,7 +59,6 @@ public final class WorkloadIdentityConfigResponse extends io.pulumi.resources.In
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }
-
         public WorkloadIdentityConfigResponse build() {
             return new WorkloadIdentityConfigResponse(workloadPool);
         }

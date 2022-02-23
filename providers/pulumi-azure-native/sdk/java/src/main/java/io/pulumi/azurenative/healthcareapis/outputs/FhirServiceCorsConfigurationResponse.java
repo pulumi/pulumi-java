@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class FhirServiceCorsConfigurationResponse {
             this.origins = origins;
             return this;
         }
-
         public FhirServiceCorsConfigurationResponse build() {
             return new FhirServiceCorsConfigurationResponse(allowCredentials, headers, maxAge, methods, origins);
         }

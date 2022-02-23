@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.EntityInsightItemResponseQueryTimeInterval;
 import io.pulumi.azurenative.securityinsights.outputs.InsightsTableResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class EntityInsightItemResponse {
             this.tableQueryResults = tableQueryResults;
             return this;
         }
-
         public EntityInsightItemResponse build() {
             return new EntityInsightItemResponse(chartQueryResults, queryId, queryTimeInterval, tableQueryResults);
         }

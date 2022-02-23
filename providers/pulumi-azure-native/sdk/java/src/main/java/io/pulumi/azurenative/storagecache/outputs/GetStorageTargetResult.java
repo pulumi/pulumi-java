@@ -9,7 +9,7 @@ import io.pulumi.azurenative.storagecache.outputs.NamespaceJunctionResponse;
 import io.pulumi.azurenative.storagecache.outputs.Nfs3TargetResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
 import io.pulumi.azurenative.storagecache.outputs.UnknownTargetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -293,7 +293,6 @@ public final class GetStorageTargetResult {
             this.unknown = unknown;
             return this;
         }
-
         public GetStorageTargetResult build() {
             return new GetStorageTargetResult(blobNfs, clfs, id, junctions, location, name, nfs3, provisioningState, systemData, targetType, type, unknown);
         }

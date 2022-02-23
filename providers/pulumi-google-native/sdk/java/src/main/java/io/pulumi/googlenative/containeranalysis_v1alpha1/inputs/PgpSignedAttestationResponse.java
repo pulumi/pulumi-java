@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="contentType", required=true)
-    private final String contentType;
+      private final String contentType;
 
     public String getContentType() {
         return this.contentType;
@@ -32,7 +32,7 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="pgpKeyId", required=true)
-    private final String pgpKeyId;
+      private final String pgpKeyId;
 
     public String getPgpKeyId() {
         return this.pgpKeyId;
@@ -43,7 +43,7 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="signature", required=true)
-    private final String signature;
+      private final String signature;
 
     public String getSignature() {
         return this.signature;
@@ -102,7 +102,6 @@ public final class PgpSignedAttestationResponse extends io.pulumi.resources.Invo
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public PgpSignedAttestationResponse build() {
             return new PgpSignedAttestationResponse(contentType, pgpKeyId, signature);
         }

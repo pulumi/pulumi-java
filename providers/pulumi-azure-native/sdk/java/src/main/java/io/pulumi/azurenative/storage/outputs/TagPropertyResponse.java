@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class TagPropertyResponse {
             this.upn = Objects.requireNonNull(upn);
             return this;
         }
-
         public TagPropertyResponse build() {
             return new TagPropertyResponse(objectIdentifier, tag, tenantId, timestamp, upn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.offazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class SiteAgentPropertiesResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SiteAgentPropertiesResponse build() {
             return new SiteAgentPropertiesResponse(id, keyVaultId, keyVaultUri, lastHeartBeatUtc, version);
         }

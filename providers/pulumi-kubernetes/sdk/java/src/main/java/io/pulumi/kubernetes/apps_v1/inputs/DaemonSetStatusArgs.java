@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1.inputs.DaemonSetConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collisionCount")
-    private final @Nullable Input<Integer> collisionCount;
+        private final @Nullable Input<Integer> collisionCount;
 
     public Input<Integer> getCollisionCount() {
         return this.collisionCount == null ? Input.empty() : this.collisionCount;
@@ -36,7 +36,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<DaemonSetConditionArgs>> conditions;
+        private final @Nullable Input<List<DaemonSetConditionArgs>> conditions;
 
     public Input<List<DaemonSetConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -47,7 +47,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="currentNumberScheduled", required=true)
-    private final Input<Integer> currentNumberScheduled;
+        private final Input<Integer> currentNumberScheduled;
 
     public Input<Integer> getCurrentNumberScheduled() {
         return this.currentNumberScheduled;
@@ -58,7 +58,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="desiredNumberScheduled", required=true)
-    private final Input<Integer> desiredNumberScheduled;
+        private final Input<Integer> desiredNumberScheduled;
 
     public Input<Integer> getDesiredNumberScheduled() {
         return this.desiredNumberScheduled;
@@ -69,7 +69,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberAvailable")
-    private final @Nullable Input<Integer> numberAvailable;
+        private final @Nullable Input<Integer> numberAvailable;
 
     public Input<Integer> getNumberAvailable() {
         return this.numberAvailable == null ? Input.empty() : this.numberAvailable;
@@ -80,7 +80,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberMisscheduled", required=true)
-    private final Input<Integer> numberMisscheduled;
+        private final Input<Integer> numberMisscheduled;
 
     public Input<Integer> getNumberMisscheduled() {
         return this.numberMisscheduled;
@@ -91,7 +91,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberReady", required=true)
-    private final Input<Integer> numberReady;
+        private final Input<Integer> numberReady;
 
     public Input<Integer> getNumberReady() {
         return this.numberReady;
@@ -102,7 +102,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="numberUnavailable")
-    private final @Nullable Input<Integer> numberUnavailable;
+        private final @Nullable Input<Integer> numberUnavailable;
 
     public Input<Integer> getNumberUnavailable() {
         return this.numberUnavailable == null ? Input.empty() : this.numberUnavailable;
@@ -113,7 +113,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+        private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -124,7 +124,7 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="updatedNumberScheduled")
-    private final @Nullable Input<Integer> updatedNumberScheduled;
+        private final @Nullable Input<Integer> updatedNumberScheduled;
 
     public Input<Integer> getUpdatedNumberScheduled() {
         return this.updatedNumberScheduled == null ? Input.empty() : this.updatedNumberScheduled;
@@ -303,7 +303,6 @@ public final class DaemonSetStatusArgs extends io.pulumi.resources.ResourceArgs 
             this.updatedNumberScheduled = Input.ofNullable(updatedNumberScheduled);
             return this;
         }
-
         public DaemonSetStatusArgs build() {
             return new DaemonSetStatusArgs(collisionCount, conditions, currentNumberScheduled, desiredNumberScheduled, numberAvailable, numberMisscheduled, numberReady, numberUnavailable, observedGeneration, updatedNumberScheduled);
         }

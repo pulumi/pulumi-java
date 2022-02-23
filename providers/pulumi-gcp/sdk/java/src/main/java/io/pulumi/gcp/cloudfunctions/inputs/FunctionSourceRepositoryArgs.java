@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class FunctionSourceRepositoryArgs extends io.pulumi.resources.Reso
     public static final FunctionSourceRepositoryArgs Empty = new FunctionSourceRepositoryArgs();
 
     @InputImport(name="deployedUrl")
-    private final @Nullable Input<String> deployedUrl;
+        private final @Nullable Input<String> deployedUrl;
 
     public Input<String> getDeployedUrl() {
         return this.deployedUrl == null ? Input.empty() : this.deployedUrl;
@@ -26,7 +26,7 @@ public final class FunctionSourceRepositoryArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -85,7 +85,6 @@ public final class FunctionSourceRepositoryArgs extends io.pulumi.resources.Reso
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public FunctionSourceRepositoryArgs build() {
             return new FunctionSourceRepositoryArgs(deployedUrl, url);
         }

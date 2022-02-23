@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class AuthenticatorGroupsConfigResponse {
             this.securityGroup = Objects.requireNonNull(securityGroup);
             return this;
         }
-
         public AuthenticatorGroupsConfigResponse build() {
             return new AuthenticatorGroupsConfigResponse(enabled, securityGroup);
         }

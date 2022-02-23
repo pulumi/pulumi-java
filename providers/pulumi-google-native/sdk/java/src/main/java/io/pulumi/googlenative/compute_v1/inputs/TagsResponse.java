@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final String fingerprint;
+      private final String fingerprint;
 
     public String getFingerprint() {
         return this.fingerprint;
@@ -33,7 +33,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="items", required=true)
-    private final List<String> items;
+      private final List<String> items;
 
     public List<String> getItems() {
         return this.items;
@@ -82,7 +82,6 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public TagsResponse build() {
             return new TagsResponse(fingerprint, items);
         }

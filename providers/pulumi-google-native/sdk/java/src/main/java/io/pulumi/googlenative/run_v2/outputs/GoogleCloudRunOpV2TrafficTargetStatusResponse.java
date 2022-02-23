@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GoogleCloudRunOpV2TrafficTargetStatusResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetStatusResponse build() {
             return new GoogleCloudRunOpV2TrafficTargetStatusResponse(percent, revision, tag, type, uri);
         }

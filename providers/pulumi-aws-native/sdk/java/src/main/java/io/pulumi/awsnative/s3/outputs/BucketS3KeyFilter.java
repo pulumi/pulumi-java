@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketFilterRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,7 +45,6 @@ public final class BucketS3KeyFilter {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketS3KeyFilter build() {
             return new BucketS3KeyFilter(rules);
         }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineAgentInstanceViewRespo
 import io.pulumi.azurenative.compute.inputs.VirtualMachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineHealthStatusResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePatchStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="assignedHost", required=true)
-    private final String assignedHost;
+        private final String assignedHost;
 
     public String getAssignedHost() {
         return this.assignedHost;
@@ -44,7 +44,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="bootDiagnostics")
-    private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
+        private final @Nullable BootDiagnosticsInstanceViewResponse bootDiagnostics;
 
     public Optional<BootDiagnosticsInstanceViewResponse> getBootDiagnostics() {
         return this.bootDiagnostics == null ? Optional.empty() : Optional.ofNullable(this.bootDiagnostics);
@@ -55,7 +55,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable String computerName;
+        private final @Nullable String computerName;
 
     public Optional<String> getComputerName() {
         return this.computerName == null ? Optional.empty() : Optional.ofNullable(this.computerName);
@@ -66,7 +66,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable List<DiskInstanceViewResponse> disks;
+        private final @Nullable List<DiskInstanceViewResponse> disks;
 
     public List<DiskInstanceViewResponse> getDisks() {
         return this.disks == null ? List.of() : this.disks;
@@ -77,7 +77,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
+        private final @Nullable List<VirtualMachineExtensionInstanceViewResponse> extensions;
 
     public List<VirtualMachineExtensionInstanceViewResponse> getExtensions() {
         return this.extensions == null ? List.of() : this.extensions;
@@ -88,7 +88,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="hyperVGeneration")
-    private final @Nullable String hyperVGeneration;
+        private final @Nullable String hyperVGeneration;
 
     public Optional<String> getHyperVGeneration() {
         return this.hyperVGeneration == null ? Optional.empty() : Optional.ofNullable(this.hyperVGeneration);
@@ -99,7 +99,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maintenanceRedeployStatus")
-    private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
+        private final @Nullable MaintenanceRedeployStatusResponse maintenanceRedeployStatus;
 
     public Optional<MaintenanceRedeployStatusResponse> getMaintenanceRedeployStatus() {
         return this.maintenanceRedeployStatus == null ? Optional.empty() : Optional.ofNullable(this.maintenanceRedeployStatus);
@@ -110,7 +110,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="osName")
-    private final @Nullable String osName;
+        private final @Nullable String osName;
 
     public Optional<String> getOsName() {
         return this.osName == null ? Optional.empty() : Optional.ofNullable(this.osName);
@@ -121,7 +121,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="osVersion")
-    private final @Nullable String osVersion;
+        private final @Nullable String osVersion;
 
     public Optional<String> getOsVersion() {
         return this.osVersion == null ? Optional.empty() : Optional.ofNullable(this.osVersion);
@@ -132,7 +132,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="patchStatus")
-    private final @Nullable VirtualMachinePatchStatusResponse patchStatus;
+        private final @Nullable VirtualMachinePatchStatusResponse patchStatus;
 
     public Optional<VirtualMachinePatchStatusResponse> getPatchStatus() {
         return this.patchStatus == null ? Optional.empty() : Optional.ofNullable(this.patchStatus);
@@ -143,7 +143,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="platformFaultDomain")
-    private final @Nullable Integer platformFaultDomain;
+        private final @Nullable Integer platformFaultDomain;
 
     public Optional<Integer> getPlatformFaultDomain() {
         return this.platformFaultDomain == null ? Optional.empty() : Optional.ofNullable(this.platformFaultDomain);
@@ -154,7 +154,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="platformUpdateDomain")
-    private final @Nullable Integer platformUpdateDomain;
+        private final @Nullable Integer platformUpdateDomain;
 
     public Optional<Integer> getPlatformUpdateDomain() {
         return this.platformUpdateDomain == null ? Optional.empty() : Optional.ofNullable(this.platformUpdateDomain);
@@ -165,7 +165,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="rdpThumbPrint")
-    private final @Nullable String rdpThumbPrint;
+        private final @Nullable String rdpThumbPrint;
 
     public Optional<String> getRdpThumbPrint() {
         return this.rdpThumbPrint == null ? Optional.empty() : Optional.ofNullable(this.rdpThumbPrint);
@@ -176,7 +176,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+        private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -187,7 +187,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmAgent")
-    private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
+        private final @Nullable VirtualMachineAgentInstanceViewResponse vmAgent;
 
     public Optional<VirtualMachineAgentInstanceViewResponse> getVmAgent() {
         return this.vmAgent == null ? Optional.empty() : Optional.ofNullable(this.vmAgent);
@@ -198,7 +198,7 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmHealth", required=true)
-    private final VirtualMachineHealthStatusResponse vmHealth;
+        private final VirtualMachineHealthStatusResponse vmHealth;
 
     public VirtualMachineHealthStatusResponse getVmHealth() {
         return this.vmHealth;
@@ -387,7 +387,6 @@ public final class VirtualMachineInstanceViewResponse extends io.pulumi.resource
             this.vmHealth = Objects.requireNonNull(vmHealth);
             return this;
         }
-
         public VirtualMachineInstanceViewResponse build() {
             return new VirtualMachineInstanceViewResponse(assignedHost, bootDiagnostics, computerName, disks, extensions, hyperVGeneration, maintenanceRedeployStatus, osName, osVersion, patchStatus, platformFaultDomain, platformUpdateDomain, rdpThumbPrint, statuses, vmAgent, vmHealth);
         }

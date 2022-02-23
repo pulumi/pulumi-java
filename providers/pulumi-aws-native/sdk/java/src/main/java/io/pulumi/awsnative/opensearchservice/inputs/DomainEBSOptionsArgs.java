@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,28 +17,28 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
     public static final DomainEBSOptionsArgs Empty = new DomainEBSOptionsArgs();
 
     @InputImport(name="eBSEnabled")
-    private final @Nullable Input<Boolean> eBSEnabled;
+        private final @Nullable Input<Boolean> eBSEnabled;
 
     public Input<Boolean> getEBSEnabled() {
         return this.eBSEnabled == null ? Input.empty() : this.eBSEnabled;
     }
 
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+        private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
     }
 
     @InputImport(name="volumeSize")
-    private final @Nullable Input<Integer> volumeSize;
+        private final @Nullable Input<Integer> volumeSize;
 
     public Input<Integer> getVolumeSize() {
         return this.volumeSize == null ? Input.empty() : this.volumeSize;
     }
 
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+        private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;
@@ -127,7 +127,6 @@ public final class DomainEBSOptionsArgs extends io.pulumi.resources.ResourceArgs
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }
-
         public DomainEBSOptionsArgs build() {
             return new DomainEBSOptionsArgs(eBSEnabled, iops, volumeSize, volumeType);
         }

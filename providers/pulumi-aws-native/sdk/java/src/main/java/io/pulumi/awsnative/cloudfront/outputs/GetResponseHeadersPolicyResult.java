@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.ResponseHeadersPolicyConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class GetResponseHeadersPolicyResult {
             this.responseHeadersPolicyConfig = responseHeadersPolicyConfig;
             return this;
         }
-
         public GetResponseHeadersPolicyResult build() {
             return new GetResponseHeadersPolicyResult(id, lastModifiedTime, responseHeadersPolicyConfig);
         }

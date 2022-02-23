@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iam.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetVirtualMFADeviceArgs extends io.pulumi.resources.InvokeArg
     public static final GetVirtualMFADeviceArgs Empty = new GetVirtualMFADeviceArgs();
 
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+        private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -51,7 +51,6 @@ public final class GetVirtualMFADeviceArgs extends io.pulumi.resources.InvokeArg
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public GetVirtualMFADeviceArgs build() {
             return new GetVirtualMFADeviceArgs(serialNumber);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CloudRunServiceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -32,7 +32,7 @@ public final class CloudRunServiceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -43,7 +43,7 @@ public final class CloudRunServiceResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -102,7 +102,6 @@ public final class CloudRunServiceResponse extends io.pulumi.resources.InvokeArg
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public CloudRunServiceResponse build() {
             return new CloudRunServiceResponse(path, region, service);
         }

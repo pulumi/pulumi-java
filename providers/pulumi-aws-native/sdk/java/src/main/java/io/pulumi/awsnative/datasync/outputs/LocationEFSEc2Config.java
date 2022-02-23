@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class LocationEFSEc2Config {
             this.subnetArn = Objects.requireNonNull(subnetArn);
             return this;
         }
-
         public LocationEFSEc2Config build() {
             return new LocationEFSEc2Config(securityGroupArns, subnetArn);
         }

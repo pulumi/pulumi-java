@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.RuleGroupRateBasedStatementAggregateKeyTy
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupForwardedIPConfigurationArgs;
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupStatementArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -18,28 +18,28 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
     public static final RuleGroupRateBasedStatementArgs Empty = new RuleGroupRateBasedStatementArgs();
 
     @InputImport(name="aggregateKeyType", required=true)
-    private final Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
+        private final Input<RuleGroupRateBasedStatementAggregateKeyType> aggregateKeyType;
 
     public Input<RuleGroupRateBasedStatementAggregateKeyType> getAggregateKeyType() {
         return this.aggregateKeyType;
     }
 
     @InputImport(name="forwardedIPConfig")
-    private final @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
+        private final @Nullable Input<RuleGroupForwardedIPConfigurationArgs> forwardedIPConfig;
 
     public Input<RuleGroupForwardedIPConfigurationArgs> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
     }
 
     @InputImport(name="limit", required=true)
-    private final Input<Integer> limit;
+        private final Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit;
     }
 
     @InputImport(name="scopeDownStatement")
-    private final @Nullable Input<RuleGroupStatementArgs> scopeDownStatement;
+        private final @Nullable Input<RuleGroupStatementArgs> scopeDownStatement;
 
     public Input<RuleGroupStatementArgs> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Input.empty() : this.scopeDownStatement;
@@ -128,7 +128,6 @@ public final class RuleGroupRateBasedStatementArgs extends io.pulumi.resources.R
             this.scopeDownStatement = Input.ofNullable(scopeDownStatement);
             return this;
         }
-
         public RuleGroupRateBasedStatementArgs build() {
             return new RuleGroupRateBasedStatementArgs(aggregateKeyType, forwardedIPConfig, limit, scopeDownStatement);
         }

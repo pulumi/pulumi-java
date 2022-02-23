@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketDestinationFormat;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class BucketDestination extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucketAccountId")
-    private final @Nullable String bucketAccountId;
+        private final @Nullable String bucketAccountId;
 
     public Optional<String> getBucketAccountId() {
         return this.bucketAccountId == null ? Optional.empty() : Optional.ofNullable(this.bucketAccountId);
@@ -35,7 +35,7 @@ public final class BucketDestination extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucketArn", required=true)
-    private final String bucketArn;
+        private final String bucketArn;
 
     public String getBucketArn() {
         return this.bucketArn;
@@ -46,7 +46,7 @@ public final class BucketDestination extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format", required=true)
-    private final BucketDestinationFormat format;
+        private final BucketDestinationFormat format;
 
     public BucketDestinationFormat getFormat() {
         return this.format;
@@ -57,7 +57,7 @@ public final class BucketDestination extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+        private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
@@ -126,7 +126,6 @@ public final class BucketDestination extends io.pulumi.resources.InvokeArgs {
             this.prefix = prefix;
             return this;
         }
-
         public BucketDestination build() {
             return new BucketDestination(bucketAccountId, bucketArn, format, prefix);
         }

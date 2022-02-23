@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -31,7 +31,7 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -42,7 +42,7 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -116,7 +116,6 @@ public final class ProjectMetadataItemArgs extends io.pulumi.resources.ResourceA
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public ProjectMetadataItemArgs build() {
             return new ProjectMetadataItemArgs(key, project, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class ResponseHeadersPolicyAccessControlAllowOrigins extends io.pul
     public static final ResponseHeadersPolicyAccessControlAllowOrigins Empty = new ResponseHeadersPolicyAccessControlAllowOrigins();
 
     @InputImport(name="items", required=true)
-    private final List<String> items;
+        private final List<String> items;
 
     public List<String> getItems() {
         return this.items;
@@ -52,7 +52,6 @@ public final class ResponseHeadersPolicyAccessControlAllowOrigins extends io.pul
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public ResponseHeadersPolicyAccessControlAllowOrigins build() {
             return new ResponseHeadersPolicyAccessControlAllowOrigins(items);
         }

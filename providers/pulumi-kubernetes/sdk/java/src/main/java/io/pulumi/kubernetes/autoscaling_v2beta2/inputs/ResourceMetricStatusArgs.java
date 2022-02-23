@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta2.inputs.MetricValueStatusArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="current", required=true)
-    private final Input<MetricValueStatusArgs> current;
+        private final Input<MetricValueStatusArgs> current;
 
     public Input<MetricValueStatusArgs> getCurrent() {
         return this.current;
@@ -34,7 +34,7 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -93,7 +93,6 @@ public final class ResourceMetricStatusArgs extends io.pulumi.resources.Resource
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ResourceMetricStatusArgs build() {
             return new ResourceMetricStatusArgs(current, name);
         }

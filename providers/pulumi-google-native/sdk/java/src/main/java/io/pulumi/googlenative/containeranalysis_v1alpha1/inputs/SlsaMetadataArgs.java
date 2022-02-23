@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.SlsaCompletenessArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildFinishedOn")
-    private final @Nullable Input<String> buildFinishedOn;
+      private final @Nullable Input<String> buildFinishedOn;
 
     public Input<String> getBuildFinishedOn() {
         return this.buildFinishedOn == null ? Input.empty() : this.buildFinishedOn;
@@ -36,7 +36,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildInvocationId")
-    private final @Nullable Input<String> buildInvocationId;
+      private final @Nullable Input<String> buildInvocationId;
 
     public Input<String> getBuildInvocationId() {
         return this.buildInvocationId == null ? Input.empty() : this.buildInvocationId;
@@ -47,7 +47,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildStartedOn")
-    private final @Nullable Input<String> buildStartedOn;
+      private final @Nullable Input<String> buildStartedOn;
 
     public Input<String> getBuildStartedOn() {
         return this.buildStartedOn == null ? Input.empty() : this.buildStartedOn;
@@ -58,7 +58,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="completeness")
-    private final @Nullable Input<SlsaCompletenessArgs> completeness;
+      private final @Nullable Input<SlsaCompletenessArgs> completeness;
 
     public Input<SlsaCompletenessArgs> getCompleteness() {
         return this.completeness == null ? Input.empty() : this.completeness;
@@ -69,7 +69,7 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reproducible")
-    private final @Nullable Input<Boolean> reproducible;
+      private final @Nullable Input<Boolean> reproducible;
 
     public Input<Boolean> getReproducible() {
         return this.reproducible == null ? Input.empty() : this.reproducible;
@@ -173,7 +173,6 @@ public final class SlsaMetadataArgs extends io.pulumi.resources.ResourceArgs {
             this.reproducible = Input.ofNullable(reproducible);
             return this;
         }
-
         public SlsaMetadataArgs build() {
             return new SlsaMetadataArgs(buildFinishedOn, buildInvocationId, buildStartedOn, completeness, reproducible);
         }

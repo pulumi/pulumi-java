@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.MitigationActionActionParams;
 import io.pulumi.awsnative.iot.outputs.MitigationActionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -110,7 +110,6 @@ public final class GetMitigationActionResult {
             this.tags = tags;
             return this;
         }
-
         public GetMitigationActionResult build() {
             return new GetMitigationActionResult(actionParams, mitigationActionArn, mitigationActionId, roleArn, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<Integer> day;
+        private final @Nullable Input<Integer> day;
 
     public Input<Integer> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -31,7 +31,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="month")
-    private final @Nullable Input<Integer> month;
+        private final @Nullable Input<Integer> month;
 
     public Input<Integer> getMonth() {
         return this.month == null ? Input.empty() : this.month;
@@ -42,7 +42,7 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
      * 
      */
     @InputImport(name="year")
-    private final @Nullable Input<Integer> year;
+        private final @Nullable Input<Integer> year;
 
     public Input<Integer> getYear() {
         return this.year == null ? Input.empty() : this.year;
@@ -116,7 +116,6 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             this.year = Input.ofNullable(year);
             return this;
         }
-
         public PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs build() {
             return new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationReplaceConfigNewValueDateValueArgs(day, month, year);
         }

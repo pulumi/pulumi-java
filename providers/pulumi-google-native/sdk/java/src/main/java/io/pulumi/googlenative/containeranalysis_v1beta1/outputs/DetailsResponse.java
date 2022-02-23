@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.AttestationResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DetailsResponse {
             this.attestation = Objects.requireNonNull(attestation);
             return this;
         }
-
         public DetailsResponse build() {
             return new DetailsResponse(attestation);
         }

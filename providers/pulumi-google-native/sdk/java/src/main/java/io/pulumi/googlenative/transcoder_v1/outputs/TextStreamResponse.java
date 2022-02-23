@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.TextMappingResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class TextStreamResponse {
             this.mapping = Objects.requireNonNull(mapping);
             return this;
         }
-
         public TextStreamResponse build() {
             return new TextStreamResponse(codec, mapping);
         }

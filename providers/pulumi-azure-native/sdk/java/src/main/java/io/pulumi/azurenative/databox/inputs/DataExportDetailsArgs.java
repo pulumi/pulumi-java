@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databox.inputs.StorageAccountDetailsArgs;
 import io.pulumi.azurenative.databox.inputs.TransferConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="accountDetails", required=true)
-    private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
+        private final Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
     public Input<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> getAccountDetails() {
         return this.accountDetails;
@@ -39,7 +39,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logCollectionLevel")
-    private final @Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel;
+        private final @Nullable Input<Either<String,LogCollectionLevel>> logCollectionLevel;
 
     public Input<Either<String,LogCollectionLevel>> getLogCollectionLevel() {
         return this.logCollectionLevel == null ? Input.empty() : this.logCollectionLevel;
@@ -50,7 +50,7 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="transferConfiguration", required=true)
-    private final Input<TransferConfigurationArgs> transferConfiguration;
+        private final Input<TransferConfigurationArgs> transferConfiguration;
 
     public Input<TransferConfigurationArgs> getTransferConfiguration() {
         return this.transferConfiguration;
@@ -124,7 +124,6 @@ public final class DataExportDetailsArgs extends io.pulumi.resources.ResourceArg
             this.transferConfiguration = Input.of(Objects.requireNonNull(transferConfiguration));
             return this;
         }
-
         public DataExportDetailsArgs build() {
             return new DataExportDetailsArgs(accountDetails, logCollectionLevel, transferConfiguration);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.DeleteOptions;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
+        private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
     public Input<Either<String,DeleteOptions>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -37,7 +37,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -48,7 +48,7 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Input<Boolean> primary;
+        private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -122,7 +122,6 @@ public final class NetworkInterfaceReferenceArgs extends io.pulumi.resources.Res
             this.primary = Input.ofNullable(primary);
             return this;
         }
-
         public NetworkInterfaceReferenceArgs build() {
             return new NetworkInterfaceReferenceArgs(deleteOption, id, primary);
         }

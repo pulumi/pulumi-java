@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -30,7 +30,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -41,7 +41,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+        private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
@@ -52,7 +52,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="privateLinkServiceName")
-    private final @Nullable Input<String> privateLinkServiceName;
+        private final @Nullable Input<String> privateLinkServiceName;
 
     public Input<String> getPrivateLinkServiceName() {
         return this.privateLinkServiceName == null ? Input.empty() : this.privateLinkServiceName;
@@ -63,7 +63,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -75,7 +75,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="stage", required=true)
-    private final Input<String> stage;
+        private final Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage;
@@ -86,7 +86,7 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
      * 
      */
     @InputImport(name="warehouse", required=true)
-    private final Input<String> warehouse;
+        private final Input<String> warehouse;
 
     public Input<String> getWarehouse() {
         return this.warehouse;
@@ -220,7 +220,6 @@ public final class ConnectorProfileSnowflakeConnectorProfilePropertiesArgs exten
             this.warehouse = Input.of(Objects.requireNonNull(warehouse));
             return this;
         }
-
         public ConnectorProfileSnowflakeConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileSnowflakeConnectorProfilePropertiesArgs(accountName, bucketName, bucketPrefix, privateLinkServiceName, region, stage, warehouse);
         }

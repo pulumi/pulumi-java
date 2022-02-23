@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.outputs.FleetServerProcess;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class FleetRuntimeConfiguration {
             this.serverProcesses = serverProcesses;
             return this;
         }
-
         public FleetRuntimeConfiguration build() {
             return new FleetRuntimeConfiguration(gameSessionActivationTimeoutSeconds, maxConcurrentGameSessionActivations, serverProcesses);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -32,7 +32,7 @@ public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -81,7 +81,6 @@ public final class CustomHttpPatternResponse extends io.pulumi.resources.InvokeA
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public CustomHttpPatternResponse build() {
             return new CustomHttpPatternResponse(kind, path);
         }

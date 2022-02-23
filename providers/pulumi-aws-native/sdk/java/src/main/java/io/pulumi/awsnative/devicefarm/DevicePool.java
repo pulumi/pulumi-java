@@ -9,8 +9,8 @@ import io.pulumi.awsnative.devicefarm.outputs.DevicePoolRule;
 import io.pulumi.awsnative.devicefarm.outputs.DevicePoolTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -65,13 +65,6 @@ public class DevicePool extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DevicePool(String name) {
-        super("aws-native:devicefarm:DevicePool", name, DevicePoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

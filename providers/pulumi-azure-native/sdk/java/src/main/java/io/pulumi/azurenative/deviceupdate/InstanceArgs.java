@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate;
 import io.pulumi.azurenative.deviceupdate.inputs.DiagnosticStoragePropertiesArgs;
 import io.pulumi.azurenative.deviceupdate.inputs.IotHubSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -35,7 +35,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diagnosticStorageProperties")
-    private final @Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
+        private final @Nullable Input<DiagnosticStoragePropertiesArgs> diagnosticStorageProperties;
 
     public Input<DiagnosticStoragePropertiesArgs> getDiagnosticStorageProperties() {
         return this.diagnosticStorageProperties == null ? Input.empty() : this.diagnosticStorageProperties;
@@ -46,7 +46,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDiagnostics")
-    private final @Nullable Input<Boolean> enableDiagnostics;
+        private final @Nullable Input<Boolean> enableDiagnostics;
 
     public Input<Boolean> getEnableDiagnostics() {
         return this.enableDiagnostics == null ? Input.empty() : this.enableDiagnostics;
@@ -57,7 +57,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+        private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
@@ -68,7 +68,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iotHubs")
-    private final @Nullable Input<List<IotHubSettingsArgs>> iotHubs;
+        private final @Nullable Input<List<IotHubSettingsArgs>> iotHubs;
 
     public Input<List<IotHubSettingsArgs>> getIotHubs() {
         return this.iotHubs == null ? Input.empty() : this.iotHubs;
@@ -79,7 +79,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -250,7 +250,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(accountName, diagnosticStorageProperties, enableDiagnostics, instanceName, iotHubs, location, resourceGroupName, tags);
         }

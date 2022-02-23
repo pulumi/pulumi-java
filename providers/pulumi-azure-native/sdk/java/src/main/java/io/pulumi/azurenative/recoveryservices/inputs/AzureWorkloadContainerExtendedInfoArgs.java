@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DistributedNodesInfoArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="hostServerName")
-    private final @Nullable Input<String> hostServerName;
+        private final @Nullable Input<String> hostServerName;
 
     public Input<String> getHostServerName() {
         return this.hostServerName == null ? Input.empty() : this.hostServerName;
@@ -37,7 +37,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="inquiryInfo")
-    private final @Nullable Input<InquiryInfoArgs> inquiryInfo;
+        private final @Nullable Input<InquiryInfoArgs> inquiryInfo;
 
     public Input<InquiryInfoArgs> getInquiryInfo() {
         return this.inquiryInfo == null ? Input.empty() : this.inquiryInfo;
@@ -48,7 +48,7 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="nodesList")
-    private final @Nullable Input<List<DistributedNodesInfoArgs>> nodesList;
+        private final @Nullable Input<List<DistributedNodesInfoArgs>> nodesList;
 
     public Input<List<DistributedNodesInfoArgs>> getNodesList() {
         return this.nodesList == null ? Input.empty() : this.nodesList;
@@ -122,7 +122,6 @@ public final class AzureWorkloadContainerExtendedInfoArgs extends io.pulumi.reso
             this.nodesList = Input.ofNullable(nodesList);
             return this;
         }
-
         public AzureWorkloadContainerExtendedInfoArgs build() {
             return new AzureWorkloadContainerExtendedInfoArgs(hostServerName, inquiryInfo, nodesList);
         }

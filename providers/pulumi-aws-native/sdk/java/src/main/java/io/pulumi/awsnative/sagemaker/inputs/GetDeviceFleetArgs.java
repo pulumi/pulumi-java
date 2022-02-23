@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeviceFleetArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceFleetName", required=true)
-    private final String deviceFleetName;
+        private final String deviceFleetName;
 
     public String getDeviceFleetName() {
         return this.deviceFleetName;
@@ -55,7 +55,6 @@ public final class GetDeviceFleetArgs extends io.pulumi.resources.InvokeArgs {
             this.deviceFleetName = Objects.requireNonNull(deviceFleetName);
             return this;
         }
-
         public GetDeviceFleetArgs build() {
             return new GetDeviceFleetArgs(deviceFleetName);
         }

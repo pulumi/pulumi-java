@@ -7,7 +7,7 @@ import io.pulumi.azurenative.costmanagement.enums.GranularityType;
 import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<ExportDatasetConfigurationArgs> configuration;
+        private final @Nullable Input<ExportDatasetConfigurationArgs> configuration;
 
     public Input<ExportDatasetConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -37,7 +37,7 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="granularity")
-    private final @Nullable Input<Either<String,GranularityType>> granularity;
+        private final @Nullable Input<Either<String,GranularityType>> granularity;
 
     public Input<Either<String,GranularityType>> getGranularity() {
         return this.granularity == null ? Input.empty() : this.granularity;
@@ -96,7 +96,6 @@ public final class ExportDatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.granularity = Input.ofNullable(granularity);
             return this;
         }
-
         public ExportDatasetArgs build() {
             return new ExportDatasetArgs(configuration, granularity);
         }

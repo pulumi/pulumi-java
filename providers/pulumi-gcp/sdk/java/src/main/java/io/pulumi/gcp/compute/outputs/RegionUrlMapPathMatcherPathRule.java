@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleRouteAction;
 import io.pulumi.gcp.compute.outputs.RegionUrlMapPathMatcherPathRuleUrlRedirect;
 import java.lang.String;
@@ -145,7 +145,6 @@ public final class RegionUrlMapPathMatcherPathRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public RegionUrlMapPathMatcherPathRule build() {
             return new RegionUrlMapPathMatcherPathRule(paths, routeAction, service, urlRedirect);
         }

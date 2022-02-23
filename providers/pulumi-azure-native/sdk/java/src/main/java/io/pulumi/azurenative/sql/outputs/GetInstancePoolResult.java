@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -226,7 +226,6 @@ public final class GetInstancePoolResult {
             this.vCores = Objects.requireNonNull(vCores);
             return this;
         }
-
         public GetInstancePoolResult build() {
             return new GetInstancePoolResult(id, licenseType, location, name, sku, subnetId, tags, type, vCores);
         }

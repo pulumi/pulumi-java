@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoScaleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -121,7 +121,6 @@ public final class VideoEncoderH264Response {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VideoEncoderH264Response build() {
             return new VideoEncoderH264Response(bitrateKbps, frameRate, scale, type);
         }

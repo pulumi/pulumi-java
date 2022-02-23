@@ -6,7 +6,7 @@ package io.pulumi.awsnative.rds;
 import io.pulumi.awsnative.rds.enums.DBProxyTargetGroupTargetGroupName;
 import io.pulumi.awsnative.rds.inputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
     public static final DBProxyTargetGroupArgs Empty = new DBProxyTargetGroupArgs();
 
     @InputImport(name="connectionPoolConfigurationInfo")
-    private final @Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
+        private final @Nullable Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> connectionPoolConfigurationInfo;
 
     public Input<DBProxyTargetGroupConnectionPoolConfigurationInfoFormatArgs> getConnectionPoolConfigurationInfo() {
         return this.connectionPoolConfigurationInfo == null ? Input.empty() : this.connectionPoolConfigurationInfo;
     }
 
     @InputImport(name="dBClusterIdentifiers")
-    private final @Nullable Input<List<String>> dBClusterIdentifiers;
+        private final @Nullable Input<List<String>> dBClusterIdentifiers;
 
     public Input<List<String>> getDBClusterIdentifiers() {
         return this.dBClusterIdentifiers == null ? Input.empty() : this.dBClusterIdentifiers;
     }
 
     @InputImport(name="dBInstanceIdentifiers")
-    private final @Nullable Input<List<String>> dBInstanceIdentifiers;
+        private final @Nullable Input<List<String>> dBInstanceIdentifiers;
 
     public Input<List<String>> getDBInstanceIdentifiers() {
         return this.dBInstanceIdentifiers == null ? Input.empty() : this.dBInstanceIdentifiers;
@@ -43,7 +43,7 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dBProxyName", required=true)
-    private final Input<String> dBProxyName;
+        private final Input<String> dBProxyName;
 
     public Input<String> getDBProxyName() {
         return this.dBProxyName;
@@ -54,7 +54,7 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetGroupName", required=true)
-    private final Input<DBProxyTargetGroupTargetGroupName> targetGroupName;
+        private final Input<DBProxyTargetGroupTargetGroupName> targetGroupName;
 
     public Input<DBProxyTargetGroupTargetGroupName> getTargetGroupName() {
         return this.targetGroupName;
@@ -158,7 +158,6 @@ public final class DBProxyTargetGroupArgs extends io.pulumi.resources.ResourceAr
             this.targetGroupName = Input.of(Objects.requireNonNull(targetGroupName));
             return this;
         }
-
         public DBProxyTargetGroupArgs build() {
             return new DBProxyTargetGroupArgs(connectionPoolConfigurationInfo, dBClusterIdentifiers, dBInstanceIdentifiers, dBProxyName, targetGroupName);
         }

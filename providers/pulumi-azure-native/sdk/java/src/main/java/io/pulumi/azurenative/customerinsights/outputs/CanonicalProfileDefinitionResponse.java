@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.CanonicalProfileDefinitionResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class CanonicalProfileDefinitionResponse {
             this.properties = properties;
             return this;
         }
-
         public CanonicalProfileDefinitionResponse build() {
             return new CanonicalProfileDefinitionResponse(canonicalProfileId, properties);
         }

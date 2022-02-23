@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AggregationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregation")
-    private final @Nullable Input<AggregationArgs> aggregation;
+      private final @Nullable Input<AggregationArgs> aggregation;
 
     public Input<AggregationArgs> getAggregation() {
         return this.aggregation == null ? Input.empty() : this.aggregation;
@@ -35,7 +35,7 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -94,7 +94,6 @@ public final class RatioPartArgs extends io.pulumi.resources.ResourceArgs {
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public RatioPartArgs build() {
             return new RatioPartArgs(aggregation, filter);
         }

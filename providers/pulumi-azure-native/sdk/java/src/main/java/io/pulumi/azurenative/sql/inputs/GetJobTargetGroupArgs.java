@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-    private final String jobAgentName;
+        private final String jobAgentName;
 
     public String getJobAgentName() {
         return this.jobAgentName;
@@ -28,7 +28,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="targetGroupName", required=true)
-    private final String targetGroupName;
+        private final String targetGroupName;
 
     public String getTargetGroupName() {
         return this.targetGroupName;
@@ -119,7 +119,6 @@ public final class GetJobTargetGroupArgs extends io.pulumi.resources.InvokeArgs 
             this.targetGroupName = Objects.requireNonNull(targetGroupName);
             return this;
         }
-
         public GetJobTargetGroupArgs build() {
             return new GetJobTargetGroupArgs(jobAgentName, resourceGroupName, serverName, targetGroupName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupAppEngineArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudFunctionArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupCloudRunArgs;
@@ -24,7 +24,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="appEngine")
-    private final @Nullable Input<RegionNetworkEndpointGroupAppEngineArgs> appEngine;
+        private final @Nullable Input<RegionNetworkEndpointGroupAppEngineArgs> appEngine;
 
     public Input<RegionNetworkEndpointGroupAppEngineArgs> getAppEngine() {
         return this.appEngine == null ? Input.empty() : this.appEngine;
@@ -37,7 +37,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cloudFunction")
-    private final @Nullable Input<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction;
+        private final @Nullable Input<RegionNetworkEndpointGroupCloudFunctionArgs> cloudFunction;
 
     public Input<RegionNetworkEndpointGroupCloudFunctionArgs> getCloudFunction() {
         return this.cloudFunction == null ? Input.empty() : this.cloudFunction;
@@ -50,7 +50,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cloudRun")
-    private final @Nullable Input<RegionNetworkEndpointGroupCloudRunArgs> cloudRun;
+        private final @Nullable Input<RegionNetworkEndpointGroupCloudRunArgs> cloudRun;
 
     public Input<RegionNetworkEndpointGroupCloudRunArgs> getCloudRun() {
         return this.cloudRun == null ? Input.empty() : this.cloudRun;
@@ -62,7 +62,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -79,7 +79,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -92,7 +92,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="networkEndpointType")
-    private final @Nullable Input<String> networkEndpointType;
+        private final @Nullable Input<String> networkEndpointType;
 
     public Input<String> getNetworkEndpointType() {
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
@@ -104,7 +104,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,7 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+        private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -264,7 +264,6 @@ public final class RegionNetworkEndpointGroupArgs extends io.pulumi.resources.Re
             this.region = Input.of(Objects.requireNonNull(region));
             return this;
         }
-
         public RegionNetworkEndpointGroupArgs build() {
             return new RegionNetworkEndpointGroupArgs(appEngine, cloudFunction, cloudRun, description, name, networkEndpointType, project, region);
         }

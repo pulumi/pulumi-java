@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final Input<String> permissions;
+        private final Input<String> permissions;
 
     public Input<String> getPermissions() {
         return this.permissions;
@@ -29,7 +29,7 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -40,7 +40,7 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -114,7 +114,6 @@ public final class PermissionScopeArgs extends io.pulumi.resources.ResourceArgs 
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public PermissionScopeArgs build() {
             return new PermissionScopeArgs(permissions, resourceName, service);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="groupIpAddress", required=true)
-    private final Input<String> groupIpAddress;
+        private final Input<String> groupIpAddress;
 
     public Input<String> getGroupIpAddress() {
         return this.groupIpAddress;
@@ -29,7 +29,7 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkInterfaceId", required=true)
-    private final Input<String> networkInterfaceId;
+        private final Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId;
@@ -40,7 +40,7 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
-    private final Input<String> transitGatewayMulticastDomainId;
+        private final Input<String> transitGatewayMulticastDomainId;
 
     public Input<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
@@ -114,7 +114,6 @@ public final class TransitGatewayMulticastGroupMemberArgs extends io.pulumi.reso
             this.transitGatewayMulticastDomainId = Input.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
             return this;
         }
-
         public TransitGatewayMulticastGroupMemberArgs build() {
             return new TransitGatewayMulticastGroupMemberArgs(groupIpAddress, networkInterfaceId, transitGatewayMulticastDomainId);
         }

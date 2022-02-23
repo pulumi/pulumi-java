@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.ConnectionCloudSqlCredential;
 import java.lang.String;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class ConnectionCloudSql {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ConnectionCloudSql build() {
             return new ConnectionCloudSql(credential, database, instanceId, type);
         }

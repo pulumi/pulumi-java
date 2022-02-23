@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -117,7 +117,6 @@ public final class GetDeviceGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceGroupResult build() {
             return new GetDeviceGroupResult(id, name, systemData, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeComputePropertiesResponse;
 import io.pulumi.azurenative.synapse.inputs.IntegrationRuntimeSsisPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="computeProperties")
-    private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
+        private final @Nullable IntegrationRuntimeComputePropertiesResponse computeProperties;
 
     public Optional<IntegrationRuntimeComputePropertiesResponse> getComputeProperties() {
         return this.computeProperties == null ? Optional.empty() : Optional.ofNullable(this.computeProperties);
@@ -36,7 +36,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="ssisProperties")
-    private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
+        private final @Nullable IntegrationRuntimeSsisPropertiesResponse ssisProperties;
 
     public Optional<IntegrationRuntimeSsisPropertiesResponse> getSsisProperties() {
         return this.ssisProperties == null ? Optional.empty() : Optional.ofNullable(this.ssisProperties);
@@ -58,7 +58,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -70,7 +70,7 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -149,7 +149,6 @@ public final class ManagedIntegrationRuntimeResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeResponse build() {
             return new ManagedIntegrationRuntimeResponse(computeProperties, description, ssisProperties, state, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLForwardedIPConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
     public static final WebACLGeoMatchStatementArgs Empty = new WebACLGeoMatchStatementArgs();
 
     @InputImport(name="countryCodes")
-    private final @Nullable Input<List<String>> countryCodes;
+        private final @Nullable Input<List<String>> countryCodes;
 
     public Input<List<String>> getCountryCodes() {
         return this.countryCodes == null ? Input.empty() : this.countryCodes;
     }
 
     @InputImport(name="forwardedIPConfig")
-    private final @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
+        private final @Nullable Input<WebACLForwardedIPConfigurationArgs> forwardedIPConfig;
 
     public Input<WebACLForwardedIPConfigurationArgs> getForwardedIPConfig() {
         return this.forwardedIPConfig == null ? Input.empty() : this.forwardedIPConfig;
@@ -83,7 +83,6 @@ public final class WebACLGeoMatchStatementArgs extends io.pulumi.resources.Resou
             this.forwardedIPConfig = Input.ofNullable(forwardedIPConfig);
             return this;
         }
-
         public WebACLGeoMatchStatementArgs build() {
             return new WebACLGeoMatchStatementArgs(countryCodes, forwardedIPConfig);
         }

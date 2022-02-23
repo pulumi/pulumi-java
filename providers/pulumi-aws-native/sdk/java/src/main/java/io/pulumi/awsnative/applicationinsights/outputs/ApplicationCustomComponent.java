@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ApplicationCustomComponent {
             this.resourceList = Objects.requireNonNull(resourceList);
             return this;
         }
-
         public ApplicationCustomComponent build() {
             return new ApplicationCustomComponent(componentName, resourceList);
         }

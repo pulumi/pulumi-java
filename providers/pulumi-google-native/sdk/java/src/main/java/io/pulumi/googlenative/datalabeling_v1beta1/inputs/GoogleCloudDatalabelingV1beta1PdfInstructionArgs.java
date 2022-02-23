@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
      * 
      */
     @InputImport(name="gcsFileUri")
-    private final @Nullable Input<String> gcsFileUri;
+      private final @Nullable Input<String> gcsFileUri;
 
     public Input<String> getGcsFileUri() {
         return this.gcsFileUri == null ? Input.empty() : this.gcsFileUri;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1PdfInstructionArgs extends io.p
             this.gcsFileUri = Input.ofNullable(gcsFileUri);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1PdfInstructionArgs build() {
             return new GoogleCloudDatalabelingV1beta1PdfInstructionArgs(gcsFileUri);
         }

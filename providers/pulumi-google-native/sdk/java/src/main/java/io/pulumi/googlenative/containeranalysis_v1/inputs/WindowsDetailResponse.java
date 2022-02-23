@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.KnowledgeBaseResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="cpeUri", required=true)
-    private final String cpeUri;
+      private final String cpeUri;
 
     public String getCpeUri() {
         return this.cpeUri;
@@ -30,7 +30,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -41,7 +41,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fixingKbs", required=true)
-    private final List<KnowledgeBaseResponse> fixingKbs;
+      private final List<KnowledgeBaseResponse> fixingKbs;
 
     public List<KnowledgeBaseResponse> getFixingKbs() {
         return this.fixingKbs;
@@ -52,7 +52,7 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -121,7 +121,6 @@ public final class WindowsDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WindowsDetailResponse build() {
             return new WindowsDetailResponse(cpeUri, description, fixingKbs, name);
         }

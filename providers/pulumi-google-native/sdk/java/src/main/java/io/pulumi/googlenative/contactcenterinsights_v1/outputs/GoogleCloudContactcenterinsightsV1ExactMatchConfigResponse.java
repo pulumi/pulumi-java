@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse {
             this.caseSensitive = Objects.requireNonNull(caseSensitive);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse(caseSensitive);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -34,7 +34,7 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rangeName")
-    private final @Nullable Input<String> rangeName;
+      private final @Nullable Input<String> rangeName;
 
     public Input<String> getRangeName() {
         return this.rangeName == null ? Input.empty() : this.rangeName;
@@ -93,7 +93,6 @@ public final class SubnetworkSecondaryRangeArgs extends io.pulumi.resources.Reso
             this.rangeName = Input.ofNullable(rangeName);
             return this;
         }
-
         public SubnetworkSecondaryRangeArgs build() {
             return new SubnetworkSecondaryRangeArgs(ipCidrRange, rangeName);
         }

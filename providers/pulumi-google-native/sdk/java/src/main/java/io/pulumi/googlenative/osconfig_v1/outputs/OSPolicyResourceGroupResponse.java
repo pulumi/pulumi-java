@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyInventoryFilterResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourceResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class OSPolicyResourceGroupResponse {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public OSPolicyResourceGroupResponse build() {
             return new OSPolicyResourceGroupResponse(inventoryFilters, resources);
         }

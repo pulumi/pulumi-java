@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -757,7 +757,6 @@ public final class GetDatabaseResult {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(autoPauseDelay, catalogCollation, collation, creationDate, currentBackupStorageRedundancy, currentServiceObjectiveName, currentSku, databaseId, defaultSecondaryLocation, earliestRestoreDate, elasticPoolId, failoverGroupId, highAvailabilityReplicaCount, id, kind, licenseType, location, maintenanceConfigurationId, managedBy, maxLogSizeBytes, maxSizeBytes, minCapacity, name, pausedDate, readScale, requestedBackupStorageRedundancy, requestedServiceObjectiveName, resumedDate, secondaryType, sku, status, tags, type, zoneRedundant);
         }

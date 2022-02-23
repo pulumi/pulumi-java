@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -66,7 +66,6 @@ public final class UserAssignedPropertiesArgs extends io.pulumi.resources.Resour
             this.resourceId = Input.ofNullable(resourceId);
             return this;
         }
-
         public UserAssignedPropertiesArgs build() {
             return new UserAssignedPropertiesArgs(resourceId);
         }

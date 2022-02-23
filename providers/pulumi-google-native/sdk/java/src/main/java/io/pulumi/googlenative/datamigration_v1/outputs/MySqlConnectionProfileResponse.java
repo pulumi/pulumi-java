@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1.outputs.SslConfigResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -182,7 +182,6 @@ public final class MySqlConnectionProfileResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public MySqlConnectionProfileResponse build() {
             return new MySqlConnectionProfileResponse(cloudSqlId, host, password, passwordSet, port, ssl, username);
         }

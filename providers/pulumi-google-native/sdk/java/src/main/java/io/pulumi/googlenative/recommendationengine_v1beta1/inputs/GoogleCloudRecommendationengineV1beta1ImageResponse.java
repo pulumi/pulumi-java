@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
      * 
      */
     @InputImport(name="height", required=true)
-    private final Integer height;
+      private final Integer height;
 
     public Integer getHeight() {
         return this.height;
@@ -33,7 +33,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -44,7 +44,7 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
      * 
      */
     @InputImport(name="width", required=true)
-    private final Integer width;
+      private final Integer width;
 
     public Integer getWidth() {
         return this.width;
@@ -103,7 +103,6 @@ public final class GoogleCloudRecommendationengineV1beta1ImageResponse extends i
             this.width = Objects.requireNonNull(width);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1ImageResponse build() {
             return new GoogleCloudRecommendationengineV1beta1ImageResponse(height, uri, width);
         }

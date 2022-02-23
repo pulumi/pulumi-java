@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifacts;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildAvailableSecrets;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildOptions;
@@ -328,7 +328,6 @@ public final class TriggerBuild {
             this.timeout = timeout;
             return this;
         }
-
         public TriggerBuild build() {
             return new TriggerBuild(artifacts, availableSecrets, images, logsBucket, options, queueTtl, secrets, source, steps, substitutions, tags, timeout);
         }

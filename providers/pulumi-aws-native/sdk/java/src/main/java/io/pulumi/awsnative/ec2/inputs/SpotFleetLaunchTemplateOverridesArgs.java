@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceRequirementsRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -17,42 +17,42 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
     public static final SpotFleetLaunchTemplateOverridesArgs Empty = new SpotFleetLaunchTemplateOverridesArgs();
 
     @InputImport(name="availabilityZone")
-    private final @Nullable Input<String> availabilityZone;
+        private final @Nullable Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone == null ? Input.empty() : this.availabilityZone;
     }
 
     @InputImport(name="instanceRequirements")
-    private final @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
+        private final @Nullable Input<SpotFleetInstanceRequirementsRequestArgs> instanceRequirements;
 
     public Input<SpotFleetInstanceRequirementsRequestArgs> getInstanceRequirements() {
         return this.instanceRequirements == null ? Input.empty() : this.instanceRequirements;
     }
 
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
     }
 
     @InputImport(name="spotPrice")
-    private final @Nullable Input<String> spotPrice;
+        private final @Nullable Input<String> spotPrice;
 
     public Input<String> getSpotPrice() {
         return this.spotPrice == null ? Input.empty() : this.spotPrice;
     }
 
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
     }
 
     @InputImport(name="weightedCapacity")
-    private final @Nullable Input<Double> weightedCapacity;
+        private final @Nullable Input<Double> weightedCapacity;
 
     public Input<Double> getWeightedCapacity() {
         return this.weightedCapacity == null ? Input.empty() : this.weightedCapacity;
@@ -171,7 +171,6 @@ public final class SpotFleetLaunchTemplateOverridesArgs extends io.pulumi.resour
             this.weightedCapacity = Input.ofNullable(weightedCapacity);
             return this;
         }
-
         public SpotFleetLaunchTemplateOverridesArgs build() {
             return new SpotFleetLaunchTemplateOverridesArgs(availabilityZone, instanceRequirements, instanceType, spotPrice, subnetId, weightedCapacity);
         }

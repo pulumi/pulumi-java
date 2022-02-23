@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.AzureClusterAuthorizationAdminUser;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class AzureClusterAuthorization {
             this.adminUsers = Objects.requireNonNull(adminUsers);
             return this;
         }
-
         public AzureClusterAuthorization build() {
             return new AzureClusterAuthorization(adminUsers);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LocalObjectReference;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -165,7 +165,6 @@ public final class ServiceAccount {
             this.secrets = secrets;
             return this;
         }
-
         public ServiceAccount build() {
             return new ServiceAccount(apiVersion, automountServiceAccountToken, imagePullSecrets, kind, metadata, secrets);
         }

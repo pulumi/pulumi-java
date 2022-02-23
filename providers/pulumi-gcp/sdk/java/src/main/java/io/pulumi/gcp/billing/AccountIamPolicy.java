@@ -5,8 +5,8 @@ package io.pulumi.gcp.billing;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.billing.AccountIamPolicyArgs;
 import io.pulumi.gcp.billing.inputs.AccountIamPolicyState;
@@ -34,13 +34,6 @@ public class AccountIamPolicy extends io.pulumi.resources.CustomResource {
         return this.policyData;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AccountIamPolicy(String name) {
-        super("gcp:billing/accountIamPolicy:AccountIamPolicy", name, AccountIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

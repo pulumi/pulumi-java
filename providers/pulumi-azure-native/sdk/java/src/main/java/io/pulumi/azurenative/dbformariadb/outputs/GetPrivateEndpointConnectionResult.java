@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbformariadb.outputs;
 
 import io.pulumi.azurenative.dbformariadb.outputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbformariadb.outputs.PrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -162,7 +162,6 @@ public final class GetPrivateEndpointConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateEndpointConnectionResult build() {
             return new GetPrivateEndpointConnectionResult(id, name, privateEndpoint, privateLinkServiceConnectionState, provisioningState, type);
         }

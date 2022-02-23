@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class StageSourceResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public StageSourceResponse build() {
             return new StageSourceResponse(name, originalTransformOrCollection, sizeBytes, userName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ModelBiasJobDefinitionConstraintsResourceArgs extends io.pulu
      * 
      */
     @InputImport(name="s3Uri")
-    private final @Nullable Input<String> s3Uri;
+        private final @Nullable Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri == null ? Input.empty() : this.s3Uri;
@@ -66,7 +66,6 @@ public final class ModelBiasJobDefinitionConstraintsResourceArgs extends io.pulu
             this.s3Uri = Input.ofNullable(s3Uri);
             return this;
         }
-
         public ModelBiasJobDefinitionConstraintsResourceArgs build() {
             return new ModelBiasJobDefinitionConstraintsResourceArgs(s3Uri);
         }

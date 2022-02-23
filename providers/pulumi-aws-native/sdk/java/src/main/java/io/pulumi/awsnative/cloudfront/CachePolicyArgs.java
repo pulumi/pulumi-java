@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.CachePolicyConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -14,7 +14,7 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final CachePolicyArgs Empty = new CachePolicyArgs();
 
     @InputImport(name="cachePolicyConfig", required=true)
-    private final Input<CachePolicyConfigArgs> cachePolicyConfig;
+        private final Input<CachePolicyConfigArgs> cachePolicyConfig;
 
     public Input<CachePolicyConfigArgs> getCachePolicyConfig() {
         return this.cachePolicyConfig;
@@ -57,7 +57,6 @@ public final class CachePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.cachePolicyConfig = Input.of(Objects.requireNonNull(cachePolicyConfig));
             return this;
         }
-
         public CachePolicyArgs build() {
             return new CachePolicyArgs(cachePolicyConfig);
         }

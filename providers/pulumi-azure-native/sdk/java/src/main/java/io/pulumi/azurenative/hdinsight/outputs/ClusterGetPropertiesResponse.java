@@ -16,7 +16,7 @@ import io.pulumi.azurenative.hdinsight.outputs.NetworkPropertiesResponse;
 import io.pulumi.azurenative.hdinsight.outputs.QuotaInfoResponse;
 import io.pulumi.azurenative.hdinsight.outputs.SecurityProfileResponse;
 import io.pulumi.azurenative.hdinsight.outputs.StorageProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -510,7 +510,6 @@ public final class ClusterGetPropertiesResponse {
             this.tier = tier;
             return this;
         }
-
         public ClusterGetPropertiesResponse build() {
             return new ClusterGetPropertiesResponse(clusterDefinition, clusterHdpVersion, clusterId, clusterState, clusterVersion, computeIsolationProperties, computeProfile, connectivityEndpoints, createdDate, diskEncryptionProperties, encryptionInTransitProperties, errors, excludedServicesConfig, kafkaRestProperties, minSupportedTlsVersion, networkProperties, osType, provisioningState, quotaInfo, securityProfile, storageProfile, tier);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.ApiResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthenticationResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.BackendResponse;
@@ -601,7 +601,6 @@ public final class GetConfigResult {
             this.usage = Objects.requireNonNull(usage);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(apis, authentication, backend, billing, configVersion, context, control, customError, documentation, endpoints, enums, http, logging, logs, metrics, monitoredResources, monitoring, name, producerProjectId, quota, sourceInfo, systemParameters, systemTypes, title, types, usage);
         }

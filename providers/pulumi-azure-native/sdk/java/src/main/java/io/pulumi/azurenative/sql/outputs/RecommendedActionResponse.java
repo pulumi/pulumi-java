@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.outputs.RecommendedActionImpactRecordResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionImplementationInfoResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionMetricInfoResponse;
 import io.pulumi.azurenative.sql.outputs.RecommendedActionStateInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -630,7 +630,6 @@ public final class RecommendedActionResponse {
             this.validSince = Objects.requireNonNull(validSince);
             return this;
         }
-
         public RecommendedActionResponse build() {
             return new RecommendedActionResponse(details, errorDetails, estimatedImpact, executeActionDuration, executeActionInitiatedBy, executeActionInitiatedTime, executeActionStartTime, id, implementationDetails, isArchivedAction, isExecutableAction, isRevertableAction, kind, lastRefresh, linkedObjects, location, name, observedImpact, recommendationReason, revertActionDuration, revertActionInitiatedBy, revertActionInitiatedTime, revertActionStartTime, score, state, timeSeries, type, validSince);
         }

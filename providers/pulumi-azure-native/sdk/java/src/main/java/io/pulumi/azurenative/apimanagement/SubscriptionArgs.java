@@ -5,7 +5,7 @@ package io.pulumi.azurenative.apimanagement;
 
 import io.pulumi.azurenative.apimanagement.enums.SubscriptionState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowTracing")
-    private final @Nullable Input<Boolean> allowTracing;
+        private final @Nullable Input<Boolean> allowTracing;
 
     public Input<Boolean> getAllowTracing() {
         return this.allowTracing == null ? Input.empty() : this.allowTracing;
@@ -32,7 +32,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType")
-    private final @Nullable Input<String> appType;
+        private final @Nullable Input<String> appType;
 
     public Input<String> getAppType() {
         return this.appType == null ? Input.empty() : this.appType;
@@ -43,7 +43,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -56,7 +56,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notify")
-    private final @Nullable Input<Boolean> notify;
+        private final @Nullable Input<Boolean> notify;
 
     public Input<Boolean> getNotify() {
         return this.notify == null ? Input.empty() : this.notify;
@@ -67,7 +67,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ownerId")
-    private final @Nullable Input<String> ownerId;
+        private final @Nullable Input<String> ownerId;
 
     public Input<String> getOwnerId() {
         return this.ownerId == null ? Input.empty() : this.ownerId;
@@ -78,7 +78,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKey")
-    private final @Nullable Input<String> primaryKey;
+        private final @Nullable Input<String> primaryKey;
 
     public Input<String> getPrimaryKey() {
         return this.primaryKey == null ? Input.empty() : this.primaryKey;
@@ -89,7 +89,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -111,7 +111,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondaryKey")
-    private final @Nullable Input<String> secondaryKey;
+        private final @Nullable Input<String> secondaryKey;
 
     public Input<String> getSecondaryKey() {
         return this.secondaryKey == null ? Input.empty() : this.secondaryKey;
@@ -122,7 +122,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -133,7 +133,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sid")
-    private final @Nullable Input<String> sid;
+        private final @Nullable Input<String> sid;
 
     public Input<String> getSid() {
         return this.sid == null ? Input.empty() : this.sid;
@@ -144,7 +144,7 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<SubscriptionState> state;
+        private final @Nullable Input<SubscriptionState> state;
 
     public Input<SubscriptionState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -353,7 +353,6 @@ public final class SubscriptionArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public SubscriptionArgs build() {
             return new SubscriptionArgs(allowTracing, appType, displayName, notify, ownerId, primaryKey, resourceGroupName, scope, secondaryKey, serviceName, sid, state);
         }

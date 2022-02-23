@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="connections")
-    private final @Nullable Input<List<String>> connections;
+      private final @Nullable Input<List<String>> connections;
 
     public Input<List<String>> getConnections() {
         return this.connections == null ? Input.empty() : this.connections;
@@ -67,7 +67,6 @@ public final class GoogleCloudRunOpV2CloudSqlInstanceArgs extends io.pulumi.reso
             this.connections = Input.ofNullable(connections);
             return this;
         }
-
         public GoogleCloudRunOpV2CloudSqlInstanceArgs build() {
             return new GoogleCloudRunOpV2CloudSqlInstanceArgs(connections);
         }

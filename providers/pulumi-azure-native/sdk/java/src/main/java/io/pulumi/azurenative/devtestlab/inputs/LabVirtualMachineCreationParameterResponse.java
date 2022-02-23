@@ -9,7 +9,7 @@ import io.pulumi.azurenative.devtestlab.inputs.DataDiskPropertiesResponse;
 import io.pulumi.azurenative.devtestlab.inputs.GalleryImageReferenceResponse;
 import io.pulumi.azurenative.devtestlab.inputs.NetworkInterfacePropertiesResponse;
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleCreationParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="allowClaim")
-    private final @Nullable Boolean allowClaim;
+        private final @Nullable Boolean allowClaim;
 
     public Optional<Boolean> getAllowClaim() {
         return this.allowClaim == null ? Optional.empty() : Optional.ofNullable(this.allowClaim);
@@ -43,7 +43,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable List<ArtifactInstallPropertiesResponse> artifacts;
+        private final @Nullable List<ArtifactInstallPropertiesResponse> artifacts;
 
     public List<ArtifactInstallPropertiesResponse> getArtifacts() {
         return this.artifacts == null ? List.of() : this.artifacts;
@@ -54,7 +54,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="bulkCreationParameters")
-    private final @Nullable BulkCreationParametersResponse bulkCreationParameters;
+        private final @Nullable BulkCreationParametersResponse bulkCreationParameters;
 
     public Optional<BulkCreationParametersResponse> getBulkCreationParameters() {
         return this.bulkCreationParameters == null ? Optional.empty() : Optional.ofNullable(this.bulkCreationParameters);
@@ -65,7 +65,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable String createdDate;
+        private final @Nullable String createdDate;
 
     public Optional<String> getCreatedDate() {
         return this.createdDate == null ? Optional.empty() : Optional.ofNullable(this.createdDate);
@@ -76,7 +76,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="customImageId")
-    private final @Nullable String customImageId;
+        private final @Nullable String customImageId;
 
     public Optional<String> getCustomImageId() {
         return this.customImageId == null ? Optional.empty() : Optional.ofNullable(this.customImageId);
@@ -87,7 +87,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="dataDiskParameters")
-    private final @Nullable List<DataDiskPropertiesResponse> dataDiskParameters;
+        private final @Nullable List<DataDiskPropertiesResponse> dataDiskParameters;
 
     public List<DataDiskPropertiesResponse> getDataDiskParameters() {
         return this.dataDiskParameters == null ? List.of() : this.dataDiskParameters;
@@ -98,7 +98,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="disallowPublicIpAddress")
-    private final @Nullable Boolean disallowPublicIpAddress;
+        private final @Nullable Boolean disallowPublicIpAddress;
 
     public Optional<Boolean> getDisallowPublicIpAddress() {
         return this.disallowPublicIpAddress == null ? Optional.empty() : Optional.ofNullable(this.disallowPublicIpAddress);
@@ -109,7 +109,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable String environmentId;
+        private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
@@ -120,7 +120,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable String expirationDate;
+        private final @Nullable String expirationDate;
 
     public Optional<String> getExpirationDate() {
         return this.expirationDate == null ? Optional.empty() : Optional.ofNullable(this.expirationDate);
@@ -131,7 +131,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="galleryImageReference")
-    private final @Nullable GalleryImageReferenceResponse galleryImageReference;
+        private final @Nullable GalleryImageReferenceResponse galleryImageReference;
 
     public Optional<GalleryImageReferenceResponse> getGalleryImageReference() {
         return this.galleryImageReference == null ? Optional.empty() : Optional.ofNullable(this.galleryImageReference);
@@ -142,7 +142,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="isAuthenticationWithSshKey")
-    private final @Nullable Boolean isAuthenticationWithSshKey;
+        private final @Nullable Boolean isAuthenticationWithSshKey;
 
     public Optional<Boolean> getIsAuthenticationWithSshKey() {
         return this.isAuthenticationWithSshKey == null ? Optional.empty() : Optional.ofNullable(this.isAuthenticationWithSshKey);
@@ -153,7 +153,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="labSubnetName")
-    private final @Nullable String labSubnetName;
+        private final @Nullable String labSubnetName;
 
     public Optional<String> getLabSubnetName() {
         return this.labSubnetName == null ? Optional.empty() : Optional.ofNullable(this.labSubnetName);
@@ -164,7 +164,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="labVirtualNetworkId")
-    private final @Nullable String labVirtualNetworkId;
+        private final @Nullable String labVirtualNetworkId;
 
     public Optional<String> getLabVirtualNetworkId() {
         return this.labVirtualNetworkId == null ? Optional.empty() : Optional.ofNullable(this.labVirtualNetworkId);
@@ -175,7 +175,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -186,7 +186,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -197,7 +197,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="networkInterface")
-    private final @Nullable NetworkInterfacePropertiesResponse networkInterface;
+        private final @Nullable NetworkInterfacePropertiesResponse networkInterface;
 
     public Optional<NetworkInterfacePropertiesResponse> getNetworkInterface() {
         return this.networkInterface == null ? Optional.empty() : Optional.ofNullable(this.networkInterface);
@@ -208,7 +208,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable String notes;
+        private final @Nullable String notes;
 
     public Optional<String> getNotes() {
         return this.notes == null ? Optional.empty() : Optional.ofNullable(this.notes);
@@ -219,7 +219,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="ownerObjectId")
-    private final @Nullable String ownerObjectId;
+        private final @Nullable String ownerObjectId;
 
     public Optional<String> getOwnerObjectId() {
         return this.ownerObjectId == null ? Optional.empty() : Optional.ofNullable(this.ownerObjectId);
@@ -230,7 +230,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="ownerUserPrincipalName")
-    private final @Nullable String ownerUserPrincipalName;
+        private final @Nullable String ownerUserPrincipalName;
 
     public Optional<String> getOwnerUserPrincipalName() {
         return this.ownerUserPrincipalName == null ? Optional.empty() : Optional.ofNullable(this.ownerUserPrincipalName);
@@ -241,7 +241,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -252,7 +252,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="planId")
-    private final @Nullable String planId;
+        private final @Nullable String planId;
 
     public Optional<String> getPlanId() {
         return this.planId == null ? Optional.empty() : Optional.ofNullable(this.planId);
@@ -263,7 +263,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="scheduleParameters")
-    private final @Nullable List<ScheduleCreationParameterResponse> scheduleParameters;
+        private final @Nullable List<ScheduleCreationParameterResponse> scheduleParameters;
 
     public List<ScheduleCreationParameterResponse> getScheduleParameters() {
         return this.scheduleParameters == null ? List.of() : this.scheduleParameters;
@@ -274,7 +274,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="size")
-    private final @Nullable String size;
+        private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -285,7 +285,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="sshKey")
-    private final @Nullable String sshKey;
+        private final @Nullable String sshKey;
 
     public Optional<String> getSshKey() {
         return this.sshKey == null ? Optional.empty() : Optional.ofNullable(this.sshKey);
@@ -296,7 +296,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable String storageType;
+        private final @Nullable String storageType;
 
     public Optional<String> getStorageType() {
         return this.storageType == null ? Optional.empty() : Optional.ofNullable(this.storageType);
@@ -307,7 +307,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -318,7 +318,7 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable String userName;
+        private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -617,7 +617,6 @@ public final class LabVirtualMachineCreationParameterResponse extends io.pulumi.
             this.userName = userName;
             return this;
         }
-
         public LabVirtualMachineCreationParameterResponse build() {
             return new LabVirtualMachineCreationParameterResponse(allowClaim, artifacts, bulkCreationParameters, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, scheduleParameters, size, sshKey, storageType, tags, userName);
         }

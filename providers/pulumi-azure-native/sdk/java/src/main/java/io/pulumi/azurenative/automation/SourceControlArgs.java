@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.SourceType;
 import io.pulumi.azurenative.automation.inputs.SourceControlSecurityTokenPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoSync")
-    private final @Nullable Input<Boolean> autoSync;
+        private final @Nullable Input<Boolean> autoSync;
 
     public Input<Boolean> getAutoSync() {
         return this.autoSync == null ? Input.empty() : this.autoSync;
@@ -34,7 +34,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -45,7 +45,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+        private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -56,7 +56,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -67,7 +67,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Input<String> folderPath;
+        private final @Nullable Input<String> folderPath;
 
     public Input<String> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -78,7 +78,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishRunbook")
-    private final @Nullable Input<Boolean> publishRunbook;
+        private final @Nullable Input<Boolean> publishRunbook;
 
     public Input<Boolean> getPublishRunbook() {
         return this.publishRunbook == null ? Input.empty() : this.publishRunbook;
@@ -89,7 +89,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoUrl")
-    private final @Nullable Input<String> repoUrl;
+        private final @Nullable Input<String> repoUrl;
 
     public Input<String> getRepoUrl() {
         return this.repoUrl == null ? Input.empty() : this.repoUrl;
@@ -100,7 +100,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityToken")
-    private final @Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken;
+        private final @Nullable Input<SourceControlSecurityTokenPropertiesArgs> securityToken;
 
     public Input<SourceControlSecurityTokenPropertiesArgs> getSecurityToken() {
         return this.securityToken == null ? Input.empty() : this.securityToken;
@@ -122,7 +122,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceControlName")
-    private final @Nullable Input<String> sourceControlName;
+        private final @Nullable Input<String> sourceControlName;
 
     public Input<String> getSourceControlName() {
         return this.sourceControlName == null ? Input.empty() : this.sourceControlName;
@@ -133,7 +133,7 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable Input<Either<String,SourceType>> sourceType;
+        private final @Nullable Input<Either<String,SourceType>> sourceType;
 
     public Input<Either<String,SourceType>> getSourceType() {
         return this.sourceType == null ? Input.empty() : this.sourceType;
@@ -327,7 +327,6 @@ public final class SourceControlArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceType = Input.ofNullable(sourceType);
             return this;
         }
-
         public SourceControlArgs build() {
             return new SourceControlArgs(autoSync, automationAccountName, branch, description, folderPath, publishRunbook, repoUrl, resourceGroupName, securityToken, sourceControlName, sourceType);
         }

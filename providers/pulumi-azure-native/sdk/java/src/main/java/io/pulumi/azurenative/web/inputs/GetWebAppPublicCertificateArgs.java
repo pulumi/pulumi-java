@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publicCertificateName", required=true)
-    private final String publicCertificateName;
+        private final String publicCertificateName;
 
     public String getPublicCertificateName() {
         return this.publicCertificateName;
@@ -39,7 +39,7 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetWebAppPublicCertificateArgs extends io.pulumi.resources.In
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetWebAppPublicCertificateArgs build() {
             return new GetWebAppPublicCertificateArgs(name, publicCertificateName, resourceGroupName);
         }

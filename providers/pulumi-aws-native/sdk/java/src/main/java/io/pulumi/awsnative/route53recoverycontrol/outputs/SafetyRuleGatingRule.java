@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -99,7 +99,6 @@ public final class SafetyRuleGatingRule {
             this.waitPeriodMs = Objects.requireNonNull(waitPeriodMs);
             return this;
         }
-
         public SafetyRuleGatingRule build() {
             return new SafetyRuleGatingRule(gatingControls, targetControls, waitPeriodMs);
         }

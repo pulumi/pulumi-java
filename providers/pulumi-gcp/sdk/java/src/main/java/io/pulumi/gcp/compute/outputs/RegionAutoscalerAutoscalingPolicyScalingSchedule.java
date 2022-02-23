@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -183,7 +183,6 @@ public final class RegionAutoscalerAutoscalingPolicyScalingSchedule {
             this.timeZone = timeZone;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScalingSchedule build() {
             return new RegionAutoscalerAutoscalingPolicyScalingSchedule(description, disabled, durationSec, minRequiredReplicas, name, schedule, timeZone);
         }

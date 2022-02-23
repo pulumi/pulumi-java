@@ -8,7 +8,7 @@ import io.pulumi.azurenative.consumption.enums.OperatorType;
 import io.pulumi.azurenative.consumption.enums.ThresholdType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactEmails", required=true)
-    private final Input<List<String>> contactEmails;
+        private final Input<List<String>> contactEmails;
 
     public Input<List<String>> getContactEmails() {
         return this.contactEmails;
@@ -41,7 +41,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactGroups")
-    private final @Nullable Input<List<String>> contactGroups;
+        private final @Nullable Input<List<String>> contactGroups;
 
     public Input<List<String>> getContactGroups() {
         return this.contactGroups == null ? Input.empty() : this.contactGroups;
@@ -52,7 +52,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactRoles")
-    private final @Nullable Input<List<String>> contactRoles;
+        private final @Nullable Input<List<String>> contactRoles;
 
     public Input<List<String>> getContactRoles() {
         return this.contactRoles == null ? Input.empty() : this.contactRoles;
@@ -63,7 +63,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -74,7 +74,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locale")
-    private final @Nullable Input<Either<String,CultureCode>> locale;
+        private final @Nullable Input<Either<String,CultureCode>> locale;
 
     public Input<Either<String,CultureCode>> getLocale() {
         return this.locale == null ? Input.empty() : this.locale;
@@ -85,7 +85,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,OperatorType>> operator;
+        private final Input<Either<String,OperatorType>> operator;
 
     public Input<Either<String,OperatorType>> getOperator() {
         return this.operator;
@@ -96,7 +96,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Double> threshold;
+        private final Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold;
@@ -107,7 +107,7 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thresholdType")
-    private final @Nullable Input<Either<String,ThresholdType>> thresholdType;
+        private final @Nullable Input<Either<String,ThresholdType>> thresholdType;
 
     public Input<Either<String,ThresholdType>> getThresholdType() {
         return this.thresholdType == null ? Input.empty() : this.thresholdType;
@@ -256,7 +256,6 @@ public final class NotificationArgs extends io.pulumi.resources.ResourceArgs {
             this.thresholdType = Input.ofNullable(thresholdType);
             return this;
         }
-
         public NotificationArgs build() {
             return new NotificationArgs(contactEmails, contactGroups, contactRoles, enabled, locale, operator, threshold, thresholdType);
         }

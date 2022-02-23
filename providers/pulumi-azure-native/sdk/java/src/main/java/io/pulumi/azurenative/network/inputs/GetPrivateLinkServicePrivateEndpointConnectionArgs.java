@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="peConnectionName", required=true)
-    private final String peConnectionName;
+        private final String peConnectionName;
 
     public String getPeConnectionName() {
         return this.peConnectionName;
@@ -41,7 +41,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -121,7 +121,6 @@ public final class GetPrivateLinkServicePrivateEndpointConnectionArgs extends io
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetPrivateLinkServicePrivateEndpointConnectionArgs build() {
             return new GetPrivateLinkServicePrivateEndpointConnectionArgs(expand, peConnectionName, resourceGroupName, serviceName);
         }

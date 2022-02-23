@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.iam_v1.inputs.AwsArgs;
 import io.pulumi.googlenative.iam_v1.inputs.OidcArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeCondition")
-    private final @Nullable Input<String> attributeCondition;
+      private final @Nullable Input<String> attributeCondition;
 
     public Input<String> getAttributeCondition() {
         return this.attributeCondition == null ? Input.empty() : this.attributeCondition;
@@ -34,7 +34,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributeMapping")
-    private final @Nullable Input<Map<String,String>> attributeMapping;
+      private final @Nullable Input<Map<String,String>> attributeMapping;
 
     public Input<Map<String,String>> getAttributeMapping() {
         return this.attributeMapping == null ? Input.empty() : this.attributeMapping;
@@ -45,7 +45,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aws")
-    private final @Nullable Input<AwsArgs> aws;
+      private final @Nullable Input<AwsArgs> aws;
 
     public Input<AwsArgs> getAws() {
         return this.aws == null ? Input.empty() : this.aws;
@@ -56,7 +56,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -67,7 +67,7 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -78,14 +78,14 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -96,28 +96,28 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidc")
-    private final @Nullable Input<OidcArgs> oidc;
+      private final @Nullable Input<OidcArgs> oidc;
 
     public Input<OidcArgs> getOidc() {
         return this.oidc == null ? Input.empty() : this.oidc;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="workloadIdentityPoolId", required=true)
-    private final Input<String> workloadIdentityPoolId;
+      private final Input<String> workloadIdentityPoolId;
 
     public Input<String> getWorkloadIdentityPoolId() {
         return this.workloadIdentityPoolId;
     }
 
     @InputImport(name="workloadIdentityPoolProviderId", required=true)
-    private final Input<String> workloadIdentityPoolProviderId;
+      private final Input<String> workloadIdentityPoolProviderId;
 
     public Input<String> getWorkloadIdentityPoolProviderId() {
         return this.workloadIdentityPoolProviderId;
@@ -311,7 +311,6 @@ public final class ProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.workloadIdentityPoolProviderId = Input.of(Objects.requireNonNull(workloadIdentityPoolProviderId));
             return this;
         }
-
         public ProviderArgs build() {
             return new ProviderArgs(attributeCondition, attributeMapping, aws, description, disabled, displayName, location, oidc, project, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.BucketArgs;
 import io.pulumi.googlenative.storage_v1.outputs.BucketAccessControlResponse;
@@ -442,13 +442,6 @@ public class Bucket extends io.pulumi.resources.CustomResource {
         return this.website;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Bucket(String name) {
-        super("google-native:storage/v1:Bucket", name, BucketArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

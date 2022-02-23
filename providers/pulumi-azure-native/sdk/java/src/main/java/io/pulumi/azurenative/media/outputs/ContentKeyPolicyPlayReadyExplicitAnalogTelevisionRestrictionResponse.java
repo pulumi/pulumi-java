@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
             this.configurationData = Objects.requireNonNull(configurationData);
             return this;
         }
-
         public ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse build() {
             return new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(bestEffort, configurationData);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+        private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -34,7 +34,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="s3BucketName", required=true)
-    private final Input<String> s3BucketName;
+        private final Input<String> s3BucketName;
 
     public Input<String> getS3BucketName() {
         return this.s3BucketName;
@@ -45,7 +45,7 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="s3ObjectKey", required=true)
-    private final Input<String> s3ObjectKey;
+        private final Input<String> s3ObjectKey;
 
     public Input<String> getS3ObjectKey() {
         return this.s3ObjectKey;
@@ -119,7 +119,6 @@ public final class BotGrammarSlotTypeSourceArgs extends io.pulumi.resources.Reso
             this.s3ObjectKey = Input.of(Objects.requireNonNull(s3ObjectKey));
             return this;
         }
-
         public BotGrammarSlotTypeSourceArgs build() {
             return new BotGrammarSlotTypeSourceArgs(kmsKeyArn, s3BucketName, s3ObjectKey);
         }

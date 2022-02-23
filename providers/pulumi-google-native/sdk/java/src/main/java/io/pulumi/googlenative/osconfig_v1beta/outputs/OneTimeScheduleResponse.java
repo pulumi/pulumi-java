@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class OneTimeScheduleResponse {
             this.executeTime = Objects.requireNonNull(executeTime);
             return this;
         }
-
         public OneTimeScheduleResponse build() {
             return new OneTimeScheduleResponse(executeTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.AptSettingsResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.ExecStepResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.GooSettingsResponse;
@@ -28,7 +28,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="apt", required=true)
-    private final AptSettingsResponse apt;
+      private final AptSettingsResponse apt;
 
     public AptSettingsResponse getApt() {
         return this.apt;
@@ -39,7 +39,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="goo", required=true)
-    private final GooSettingsResponse goo;
+      private final GooSettingsResponse goo;
 
     public GooSettingsResponse getGoo() {
         return this.goo;
@@ -50,7 +50,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="migInstancesAllowed", required=true)
-    private final Boolean migInstancesAllowed;
+      private final Boolean migInstancesAllowed;
 
     public Boolean getMigInstancesAllowed() {
         return this.migInstancesAllowed;
@@ -61,7 +61,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postStep", required=true)
-    private final ExecStepResponse postStep;
+      private final ExecStepResponse postStep;
 
     public ExecStepResponse getPostStep() {
         return this.postStep;
@@ -72,7 +72,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preStep", required=true)
-    private final ExecStepResponse preStep;
+      private final ExecStepResponse preStep;
 
     public ExecStepResponse getPreStep() {
         return this.preStep;
@@ -83,7 +83,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rebootConfig", required=true)
-    private final String rebootConfig;
+      private final String rebootConfig;
 
     public String getRebootConfig() {
         return this.rebootConfig;
@@ -94,7 +94,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="windowsUpdate", required=true)
-    private final WindowsUpdateSettingsResponse windowsUpdate;
+      private final WindowsUpdateSettingsResponse windowsUpdate;
 
     public WindowsUpdateSettingsResponse getWindowsUpdate() {
         return this.windowsUpdate;
@@ -105,7 +105,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="yum", required=true)
-    private final YumSettingsResponse yum;
+      private final YumSettingsResponse yum;
 
     public YumSettingsResponse getYum() {
         return this.yum;
@@ -116,7 +116,7 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="zypper", required=true)
-    private final ZypperSettingsResponse zypper;
+      private final ZypperSettingsResponse zypper;
 
     public ZypperSettingsResponse getZypper() {
         return this.zypper;
@@ -235,7 +235,6 @@ public final class PatchConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public PatchConfigResponse build() {
             return new PatchConfigResponse(apt, goo, migInstancesAllowed, postStep, preStep, rebootConfig, windowsUpdate, yum, zypper);
         }

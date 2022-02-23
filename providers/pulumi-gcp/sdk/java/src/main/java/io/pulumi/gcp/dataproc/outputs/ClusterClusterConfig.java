@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigAutoscalingConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEncryptionConfig;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigEndpointConfig;
@@ -404,7 +404,6 @@ public final class ClusterClusterConfig {
             this.workerConfig = workerConfig;
             return this;
         }
-
         public ClusterClusterConfig build() {
             return new ClusterClusterConfig(autoscalingConfig, bucket, encryptionConfig, endpointConfig, gceClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, preemptibleWorkerConfig, securityConfig, softwareConfig, stagingBucket, tempBucket, workerConfig);
         }

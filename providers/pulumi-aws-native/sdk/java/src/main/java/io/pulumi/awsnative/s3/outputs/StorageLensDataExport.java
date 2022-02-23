@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.StorageLensCloudWatchMetrics;
 import io.pulumi.awsnative.s3.outputs.StorageLensS3BucketDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class StorageLensDataExport {
             this.s3BucketDestination = s3BucketDestination;
             return this;
         }
-
         public StorageLensDataExport build() {
             return new StorageLensDataExport(cloudWatchMetrics, s3BucketDestination);
         }

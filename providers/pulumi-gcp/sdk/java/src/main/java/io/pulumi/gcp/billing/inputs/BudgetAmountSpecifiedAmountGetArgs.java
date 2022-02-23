@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="currencyCode")
-    private final @Nullable Input<String> currencyCode;
+        private final @Nullable Input<String> currencyCode;
 
     public Input<String> getCurrencyCode() {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
@@ -37,7 +37,7 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -49,7 +49,7 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="units")
-    private final @Nullable Input<String> units;
+        private final @Nullable Input<String> units;
 
     public Input<String> getUnits() {
         return this.units == null ? Input.empty() : this.units;
@@ -123,7 +123,6 @@ public final class BudgetAmountSpecifiedAmountGetArgs extends io.pulumi.resource
             this.units = Input.ofNullable(units);
             return this;
         }
-
         public BudgetAmountSpecifiedAmountGetArgs build() {
             return new BudgetAmountSpecifiedAmountGetArgs(currencyCode, nanos, units);
         }

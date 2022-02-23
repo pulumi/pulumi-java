@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="autoUpgradeMinorVersion")
-    private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
+        private final @Nullable Input<Boolean> autoUpgradeMinorVersion;
 
     public Input<Boolean> getAutoUpgradeMinorVersion() {
         return this.autoUpgradeMinorVersion == null ? Input.empty() : this.autoUpgradeMinorVersion;
@@ -33,7 +33,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="extensionName")
-    private final @Nullable Input<String> extensionName;
+        private final @Nullable Input<String> extensionName;
 
     public Input<String> getExtensionName() {
         return this.extensionName == null ? Input.empty() : this.extensionName;
@@ -44,7 +44,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable Input<String> forceUpdateTag;
+        private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -55,7 +55,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protectedSettings")
-    private final @Nullable Input<Object> protectedSettings;
+        private final @Nullable Input<Object> protectedSettings;
 
     public Input<Object> getProtectedSettings() {
         return this.protectedSettings == null ? Input.empty() : this.protectedSettings;
@@ -88,7 +88,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="publisher")
-    private final @Nullable Input<String> publisher;
+        private final @Nullable Input<String> publisher;
 
     public Input<String> getPublisher() {
         return this.publisher == null ? Input.empty() : this.publisher;
@@ -99,7 +99,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -110,7 +110,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable Input<Object> settings;
+        private final @Nullable Input<Object> settings;
 
     public Input<Object> getSettings() {
         return this.settings == null ? Input.empty() : this.settings;
@@ -121,7 +121,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -132,7 +132,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -143,7 +143,7 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="typeHandlerVersion")
-    private final @Nullable Input<String> typeHandlerVersion;
+        private final @Nullable Input<String> typeHandlerVersion;
 
     public Input<String> getTypeHandlerVersion() {
         return this.typeHandlerVersion == null ? Input.empty() : this.typeHandlerVersion;
@@ -352,7 +352,6 @@ public final class MachineExtensionArgs extends io.pulumi.resources.ResourceArgs
             this.typeHandlerVersion = Input.ofNullable(typeHandlerVersion);
             return this;
         }
-
         public MachineExtensionArgs build() {
             return new MachineExtensionArgs(autoUpgradeMinorVersion, extensionName, forceUpdateTag, location, name, protectedSettings, publisher, resourceGroupName, settings, tags, type, typeHandlerVersion);
         }

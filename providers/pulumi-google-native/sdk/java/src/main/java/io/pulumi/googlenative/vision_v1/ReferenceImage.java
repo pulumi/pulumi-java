@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ReferenceImageArgs;
 import io.pulumi.googlenative.vision_v1.outputs.BoundingPolyResponse;
@@ -63,13 +63,6 @@ public class ReferenceImage extends io.pulumi.resources.CustomResource {
         return this.uri;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ReferenceImage(String name) {
-        super("google-native:vision/v1:ReferenceImage", name, ReferenceImageArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

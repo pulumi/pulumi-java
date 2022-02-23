@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class SelectedCertificateInputResponse {
             this.password = Objects.requireNonNull(password);
             return this;
         }
-
         public SelectedCertificateInputResponse build() {
             return new SelectedCertificateInputResponse(certificateName, password);
         }

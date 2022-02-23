@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JpgLayerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -249,7 +249,6 @@ public final class JpgImageResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public JpgImageResponse build() {
             return new JpgImageResponse(keyFrameInterval, label, layers, odataType, range, spriteColumn, start, step, stretchMode, syncMode);
         }

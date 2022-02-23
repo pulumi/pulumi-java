@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeManagementResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ShieldedInstanceConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.UpgradeSettingsResponse;
@@ -247,7 +247,6 @@ public final class AutoprovisioningNodePoolDefaultsResponse {
             this.upgradeSettings = Objects.requireNonNull(upgradeSettings);
             return this;
         }
-
         public AutoprovisioningNodePoolDefaultsResponse build() {
             return new AutoprovisioningNodePoolDefaultsResponse(bootDiskKmsKey, diskSizeGb, diskType, imageType, management, minCpuPlatform, oauthScopes, serviceAccount, shieldedInstanceConfig, upgradeSettings);
         }

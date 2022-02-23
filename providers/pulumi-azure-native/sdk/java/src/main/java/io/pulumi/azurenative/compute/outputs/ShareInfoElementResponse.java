@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ShareInfoElementResponse {
             this.vmUri = Objects.requireNonNull(vmUri);
             return this;
         }
-
         public ShareInfoElementResponse build() {
             return new ShareInfoElementResponse(vmUri);
         }

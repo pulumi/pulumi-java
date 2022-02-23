@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appstream.inputs.AppBlockS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockScriptDetailsArgs;
 import io.pulumi.awsnative.appstream.inputs.AppBlockTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,42 +19,42 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
     public static final AppBlockArgs Empty = new AppBlockArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="setupScriptDetails", required=true)
-    private final Input<AppBlockScriptDetailsArgs> setupScriptDetails;
+        private final Input<AppBlockScriptDetailsArgs> setupScriptDetails;
 
     public Input<AppBlockScriptDetailsArgs> getSetupScriptDetails() {
         return this.setupScriptDetails;
     }
 
     @InputImport(name="sourceS3Location", required=true)
-    private final Input<AppBlockS3LocationArgs> sourceS3Location;
+        private final Input<AppBlockS3LocationArgs> sourceS3Location;
 
     public Input<AppBlockS3LocationArgs> getSourceS3Location() {
         return this.sourceS3Location;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<AppBlockTagArgs>> tags;
+        private final @Nullable Input<List<AppBlockTagArgs>> tags;
 
     public Input<List<AppBlockTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -173,7 +173,6 @@ public final class AppBlockArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AppBlockArgs build() {
             return new AppBlockArgs(description, displayName, name, setupScriptDetails, sourceS3Location, tags);
         }

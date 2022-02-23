@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
     public static final GetGameServerClusterArgs Empty = new GetGameServerClusterArgs();
 
     @InputImport(name="gameServerClusterId", required=true)
-    private final String gameServerClusterId;
+      private final String gameServerClusterId;
 
     public String getGameServerClusterId() {
         return this.gameServerClusterId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="realmId", required=true)
-    private final String realmId;
+      private final String realmId;
 
     public String getRealmId() {
         return this.realmId;
     }
 
     @InputImport(name="view")
-    private final @Nullable String view;
+      private final @Nullable String view;
 
     public Optional<String> getView() {
         return this.view == null ? Optional.empty() : Optional.ofNullable(this.view);
@@ -122,7 +122,6 @@ public final class GetGameServerClusterArgs extends io.pulumi.resources.InvokeAr
             this.view = view;
             return this;
         }
-
         public GetGameServerClusterArgs build() {
             return new GetGameServerClusterArgs(gameServerClusterId, location, project, realmId, view);
         }

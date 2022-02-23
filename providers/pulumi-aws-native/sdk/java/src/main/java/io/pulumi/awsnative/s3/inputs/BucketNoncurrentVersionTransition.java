@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
      * 
      */
     @InputImport(name="newerNoncurrentVersions")
-    private final @Nullable Integer newerNoncurrentVersions;
+        private final @Nullable Integer newerNoncurrentVersions;
 
     public Optional<Integer> getNewerNoncurrentVersions() {
         return this.newerNoncurrentVersions == null ? Optional.empty() : Optional.ofNullable(this.newerNoncurrentVersions);
@@ -35,7 +35,7 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
      * 
      */
     @InputImport(name="storageClass", required=true)
-    private final BucketNoncurrentVersionTransitionStorageClass storageClass;
+        private final BucketNoncurrentVersionTransitionStorageClass storageClass;
 
     public BucketNoncurrentVersionTransitionStorageClass getStorageClass() {
         return this.storageClass;
@@ -46,7 +46,7 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
      * 
      */
     @InputImport(name="transitionInDays", required=true)
-    private final Integer transitionInDays;
+        private final Integer transitionInDays;
 
     public Integer getTransitionInDays() {
         return this.transitionInDays;
@@ -105,7 +105,6 @@ public final class BucketNoncurrentVersionTransition extends io.pulumi.resources
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }
-
         public BucketNoncurrentVersionTransition build() {
             return new BucketNoncurrentVersionTransition(newerNoncurrentVersions, storageClass, transitionInDays);
         }

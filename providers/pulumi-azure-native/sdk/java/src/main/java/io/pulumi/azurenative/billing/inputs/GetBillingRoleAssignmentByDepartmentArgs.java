@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.billing.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="billingAccountName", required=true)
-    private final String billingAccountName;
+        private final String billingAccountName;
 
     public String getBillingAccountName() {
         return this.billingAccountName;
@@ -28,7 +28,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="billingRoleAssignmentName", required=true)
-    private final String billingRoleAssignmentName;
+        private final String billingRoleAssignmentName;
 
     public String getBillingRoleAssignmentName() {
         return this.billingRoleAssignmentName;
@@ -39,7 +39,7 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="departmentName", required=true)
-    private final String departmentName;
+        private final String departmentName;
 
     public String getDepartmentName() {
         return this.departmentName;
@@ -98,7 +98,6 @@ public final class GetBillingRoleAssignmentByDepartmentArgs extends io.pulumi.re
             this.departmentName = Objects.requireNonNull(departmentName);
             return this;
         }
-
         public GetBillingRoleAssignmentByDepartmentArgs build() {
             return new GetBillingRoleAssignmentByDepartmentArgs(billingAccountName, billingRoleAssignmentName, departmentName);
         }

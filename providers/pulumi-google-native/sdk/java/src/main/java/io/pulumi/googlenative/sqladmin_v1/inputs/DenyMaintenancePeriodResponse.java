@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="endDate", required=true)
-    private final String endDate;
+      private final String endDate;
 
     public String getEndDate() {
         return this.endDate;
@@ -32,7 +32,7 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="startDate", required=true)
-    private final String startDate;
+      private final String startDate;
 
     public String getStartDate() {
         return this.startDate;
@@ -43,7 +43,7 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="time", required=true)
-    private final String time;
+      private final String time;
 
     public String getTime() {
         return this.time;
@@ -102,7 +102,6 @@ public final class DenyMaintenancePeriodResponse extends io.pulumi.resources.Inv
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public DenyMaintenancePeriodResponse build() {
             return new DenyMaintenancePeriodResponse(endDate, startDate, time);
         }

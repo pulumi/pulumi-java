@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="datasetName")
-    private final @Nullable Input<String> datasetName;
+        private final @Nullable Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName == null ? Input.empty() : this.datasetName;
@@ -34,7 +34,7 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="datasetUUID")
-    private final @Nullable Input<String> datasetUUID;
+        private final @Nullable Input<String> datasetUUID;
 
     public Input<String> getDatasetUUID() {
         return this.datasetUUID == null ? Input.empty() : this.datasetUUID;
@@ -93,7 +93,6 @@ public final class FlockerVolumeSourceArgs extends io.pulumi.resources.ResourceA
             this.datasetUUID = Input.ofNullable(datasetUUID);
             return this;
         }
-
         public FlockerVolumeSourceArgs build() {
             return new FlockerVolumeSourceArgs(datasetName, datasetUUID);
         }

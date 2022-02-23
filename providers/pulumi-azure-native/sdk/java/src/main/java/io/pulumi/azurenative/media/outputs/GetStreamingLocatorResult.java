@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.StreamingLocatorContentKeyResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -331,7 +331,6 @@ public final class GetStreamingLocatorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingLocatorResult build() {
             return new GetStreamingLocatorResult(alternativeMediaId, assetName, contentKeys, created, defaultContentKeyPolicyName, endTime, filters, id, name, startTime, streamingLocatorId, streamingPolicyName, systemData, type);
         }

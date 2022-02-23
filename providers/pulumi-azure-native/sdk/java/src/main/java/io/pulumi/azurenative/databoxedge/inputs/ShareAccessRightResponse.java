@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accessType", required=true)
-    private final String accessType;
+        private final String accessType;
 
     public String getAccessType() {
         return this.accessType;
@@ -32,7 +32,7 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="shareId", required=true)
-    private final String shareId;
+        private final String shareId;
 
     public String getShareId() {
         return this.shareId;
@@ -81,7 +81,6 @@ public final class ShareAccessRightResponse extends io.pulumi.resources.InvokeAr
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public ShareAccessRightResponse build() {
             return new ShareAccessRightResponse(accessType, shareId);
         }

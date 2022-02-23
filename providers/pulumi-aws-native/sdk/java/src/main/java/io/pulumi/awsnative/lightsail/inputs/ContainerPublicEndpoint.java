@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerHealthCheckConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable String containerName;
+        private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
@@ -36,7 +36,7 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="containerPort")
-    private final @Nullable Integer containerPort;
+        private final @Nullable Integer containerPort;
 
     public Optional<Integer> getContainerPort() {
         return this.containerPort == null ? Optional.empty() : Optional.ofNullable(this.containerPort);
@@ -47,7 +47,7 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="healthCheckConfig")
-    private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
+        private final @Nullable ContainerHealthCheckConfig healthCheckConfig;
 
     public Optional<ContainerHealthCheckConfig> getHealthCheckConfig() {
         return this.healthCheckConfig == null ? Optional.empty() : Optional.ofNullable(this.healthCheckConfig);
@@ -106,7 +106,6 @@ public final class ContainerPublicEndpoint extends io.pulumi.resources.InvokeArg
             this.healthCheckConfig = healthCheckConfig;
             return this;
         }
-
         public ContainerPublicEndpoint build() {
             return new ContainerPublicEndpoint(containerName, containerPort, healthCheckConfig);
         }

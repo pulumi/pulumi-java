@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentCondition;
 import java.lang.Integer;
 import java.util.List;
@@ -204,7 +204,6 @@ public final class DeploymentStatus {
             this.updatedReplicas = updatedReplicas;
             return this;
         }
-
         public DeploymentStatus build() {
             return new DeploymentStatus(availableReplicas, collisionCount, conditions, observedGeneration, readyReplicas, replicas, unavailableReplicas, updatedReplicas);
         }

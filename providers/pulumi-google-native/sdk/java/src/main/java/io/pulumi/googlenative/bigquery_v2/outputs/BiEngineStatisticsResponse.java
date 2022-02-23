@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.BiEngineReasonResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class BiEngineStatisticsResponse {
             this.biEngineReasons = Objects.requireNonNull(biEngineReasons);
             return this;
         }
-
         public BiEngineStatisticsResponse build() {
             return new BiEngineStatisticsResponse(biEngineMode, biEngineReasons);
         }

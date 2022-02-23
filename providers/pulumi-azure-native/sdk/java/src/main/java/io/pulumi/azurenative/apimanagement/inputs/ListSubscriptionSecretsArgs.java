@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -39,7 +39,7 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sid", required=true)
-    private final String sid;
+        private final String sid;
 
     public String getSid() {
         return this.sid;
@@ -98,7 +98,6 @@ public final class ListSubscriptionSecretsArgs extends io.pulumi.resources.Invok
             this.sid = Objects.requireNonNull(sid);
             return this;
         }
-
         public ListSubscriptionSecretsArgs build() {
             return new ListSubscriptionSecretsArgs(resourceGroupName, serviceName, sid);
         }

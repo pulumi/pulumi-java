@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fleetSpec", required=true)
-    private final String fleetSpec;
+      private final String fleetSpec;
 
     public String getFleetSpec() {
         return this.fleetSpec;
@@ -32,7 +32,7 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,6 @@ public final class FleetConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public FleetConfigResponse build() {
             return new FleetConfigResponse(fleetSpec, name);
         }

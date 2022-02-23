@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final String monitorName;
+        private final String monitorName;
 
     public String getMonitorName() {
         return this.monitorName;
@@ -28,7 +28,7 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subAccountName", required=true)
-    private final String subAccountName;
+        private final String subAccountName;
 
     public String getSubAccountName() {
         return this.subAccountName;
@@ -98,7 +98,6 @@ public final class GetSubAccountArgs extends io.pulumi.resources.InvokeArgs {
             this.subAccountName = Objects.requireNonNull(subAccountName);
             return this;
         }
-
         public GetSubAccountArgs build() {
             return new GetSubAccountArgs(monitorName, resourceGroupName, subAccountName);
         }

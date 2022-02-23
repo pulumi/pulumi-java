@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="diskEncryptionSetId")
-    private final @Nullable String diskEncryptionSetId;
+        private final @Nullable String diskEncryptionSetId;
 
     public Optional<String> getDiskEncryptionSetId() {
         return this.diskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.diskEncryptionSetId);
@@ -35,7 +35,7 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Integer lun;
+        private final Integer lun;
 
     public Integer getLun() {
         return this.lun;
@@ -84,7 +84,6 @@ public final class DataDiskImageEncryptionResponse extends io.pulumi.resources.I
             this.lun = Objects.requireNonNull(lun);
             return this;
         }
-
         public DataDiskImageEncryptionResponse build() {
             return new DataDiskImageEncryptionResponse(diskEncryptionSetId, lun);
         }

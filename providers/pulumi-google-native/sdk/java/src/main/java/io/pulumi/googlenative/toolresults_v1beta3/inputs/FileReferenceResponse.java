@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="fileUri", required=true)
-    private final String fileUri;
+      private final String fileUri;
 
     public String getFileUri() {
         return this.fileUri;
@@ -59,7 +59,6 @@ public final class FileReferenceResponse extends io.pulumi.resources.InvokeArgs 
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
-
         public FileReferenceResponse build() {
             return new FileReferenceResponse(fileUri);
         }

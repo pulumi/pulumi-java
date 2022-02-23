@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="certificatePath", required=true)
-    private final String certificatePath;
+      private final String certificatePath;
 
     public String getCertificatePath() {
         return this.certificatePath;
@@ -32,7 +32,7 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="privateKeyPath", required=true)
-    private final String privateKeyPath;
+      private final String privateKeyPath;
 
     public String getPrivateKeyPath() {
         return this.privateKeyPath;
@@ -81,7 +81,6 @@ public final class TlsCertificatePathsResponse extends io.pulumi.resources.Invok
             this.privateKeyPath = Objects.requireNonNull(privateKeyPath);
             return this;
         }
-
         public TlsCertificatePathsResponse build() {
             return new TlsCertificatePathsResponse(certificatePath, privateKeyPath);
         }

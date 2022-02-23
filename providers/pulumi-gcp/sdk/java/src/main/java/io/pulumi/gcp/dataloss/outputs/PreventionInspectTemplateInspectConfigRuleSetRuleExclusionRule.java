@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex;
@@ -129,7 +129,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
             this.regex = regex;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule(dictionary, excludeInfoTypes, matchingType, regex);
         }

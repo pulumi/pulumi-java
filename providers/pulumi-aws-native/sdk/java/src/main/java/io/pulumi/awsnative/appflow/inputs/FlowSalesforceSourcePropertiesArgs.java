@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class FlowSalesforceSourcePropertiesArgs extends io.pulumi.resource
     public static final FlowSalesforceSourcePropertiesArgs Empty = new FlowSalesforceSourcePropertiesArgs();
 
     @InputImport(name="enableDynamicFieldUpdate")
-    private final @Nullable Input<Boolean> enableDynamicFieldUpdate;
+        private final @Nullable Input<Boolean> enableDynamicFieldUpdate;
 
     public Input<Boolean> getEnableDynamicFieldUpdate() {
         return this.enableDynamicFieldUpdate == null ? Input.empty() : this.enableDynamicFieldUpdate;
     }
 
     @InputImport(name="includeDeletedRecords")
-    private final @Nullable Input<Boolean> includeDeletedRecords;
+        private final @Nullable Input<Boolean> includeDeletedRecords;
 
     public Input<Boolean> getIncludeDeletedRecords() {
         return this.includeDeletedRecords == null ? Input.empty() : this.includeDeletedRecords;
     }
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -104,7 +104,6 @@ public final class FlowSalesforceSourcePropertiesArgs extends io.pulumi.resource
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public FlowSalesforceSourcePropertiesArgs build() {
             return new FlowSalesforceSourcePropertiesArgs(enableDynamicFieldUpdate, includeDeletedRecords, object);
         }

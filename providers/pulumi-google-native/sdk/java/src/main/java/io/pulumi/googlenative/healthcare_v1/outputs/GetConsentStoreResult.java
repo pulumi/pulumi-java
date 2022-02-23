@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -118,7 +118,6 @@ public final class GetConsentStoreResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConsentStoreResult build() {
             return new GetConsentStoreResult(defaultConsentTtl, enableConsentCreateOnUpdate, labels, name);
         }

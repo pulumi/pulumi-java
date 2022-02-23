@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsConfigResponse {
             this.field = Objects.requireNonNull(field);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsConfigResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsConfigResponse(field);
         }

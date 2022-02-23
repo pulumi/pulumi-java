@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endTimeUtc", required=true)
-    private final String endTimeUtc;
+        private final String endTimeUtc;
 
     public String getEndTimeUtc() {
         return this.endTimeUtc;
@@ -32,7 +32,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastUpdatedTimeUtc", required=true)
-    private final String lastUpdatedTimeUtc;
+        private final String lastUpdatedTimeUtc;
 
     public String getLastUpdatedTimeUtc() {
         return this.lastUpdatedTimeUtc;
@@ -43,7 +43,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -54,7 +54,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="operationId", required=true)
-    private final String operationId;
+        private final String operationId;
 
     public String getOperationId() {
         return this.operationId;
@@ -65,7 +65,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="previousResourceId", required=true)
-    private final String previousResourceId;
+        private final String previousResourceId;
 
     public String getPreviousResourceId() {
         return this.previousResourceId;
@@ -76,7 +76,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="startTimeUtc", required=true)
-    private final String startTimeUtc;
+        private final String startTimeUtc;
 
     public String getStartTimeUtc() {
         return this.startTimeUtc;
@@ -87,7 +87,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -98,7 +98,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="triggerType", required=true)
-    private final String triggerType;
+        private final String triggerType;
 
     public String getTriggerType() {
         return this.triggerType;
@@ -109,7 +109,7 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="upgradedResourceId", required=true)
-    private final String upgradedResourceId;
+        private final String upgradedResourceId;
 
     public String getUpgradedResourceId() {
         return this.upgradedResourceId;
@@ -228,7 +228,6 @@ public final class UpgradeDetailsResponse extends io.pulumi.resources.InvokeArgs
             this.upgradedResourceId = Objects.requireNonNull(upgradedResourceId);
             return this;
         }
-
         public UpgradeDetailsResponse build() {
             return new UpgradeDetailsResponse(endTimeUtc, lastUpdatedTimeUtc, message, operationId, previousResourceId, startTimeUtc, status, triggerType, upgradedResourceId);
         }

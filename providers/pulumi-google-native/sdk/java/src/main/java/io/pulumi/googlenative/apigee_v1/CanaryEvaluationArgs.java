@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="control", required=true)
-    private final Input<String> control;
+      private final Input<String> control;
 
     public Input<String> getControl() {
         return this.control;
@@ -30,14 +30,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final Input<String> endTime;
+      private final Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
@@ -48,14 +48,14 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metricLabels", required=true)
-    private final Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
+      private final Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> metricLabels;
 
     public Input<GoogleCloudApigeeV1CanaryEvaluationMetricLabelsArgs> getMetricLabels() {
         return this.metricLabels;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -66,7 +66,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+      private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -77,7 +77,7 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="treatment", required=true)
-    private final Input<String> treatment;
+      private final Input<String> treatment;
 
     public Input<String> getTreatment() {
         return this.treatment;
@@ -211,7 +211,6 @@ public final class CanaryEvaluationArgs extends io.pulumi.resources.ResourceArgs
             this.treatment = Input.of(Objects.requireNonNull(treatment));
             return this;
         }
-
         public CanaryEvaluationArgs build() {
             return new CanaryEvaluationArgs(control, endTime, instanceId, metricLabels, organizationId, startTime, treatment);
         }

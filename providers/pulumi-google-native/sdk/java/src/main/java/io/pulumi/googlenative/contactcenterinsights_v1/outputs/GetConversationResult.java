@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1AnalysisResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ConversationDataSourceResponse;
@@ -439,7 +439,6 @@ public final class GetConversationResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConversationResult build() {
             return new GetConversationResult(agentId, callMetadata, createTime, dataSource, dialogflowIntents, duration, expireTime, labels, languageCode, latestAnalysis, medium, name, obfuscatedUserId, runtimeAnnotations, startTime, transcript, ttl, turnCount, updateTime);
         }

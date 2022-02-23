@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="canonicalScopes")
-    private final @Nullable Input<String> canonicalScopes;
+      private final @Nullable Input<String> canonicalScopes;
 
     public Input<String> getCanonicalScopes() {
         return this.canonicalScopes == null ? Input.empty() : this.canonicalScopes;
@@ -66,7 +66,6 @@ public final class OAuthRequirementsArgs extends io.pulumi.resources.ResourceArg
             this.canonicalScopes = Input.ofNullable(canonicalScopes);
             return this;
         }
-
         public OAuthRequirementsArgs build() {
             return new OAuthRequirementsArgs(canonicalScopes);
         }

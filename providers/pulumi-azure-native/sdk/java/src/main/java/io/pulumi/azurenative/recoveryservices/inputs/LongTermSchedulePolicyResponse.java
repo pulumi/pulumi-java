@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LongTermSchedulePolicyResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-    private final String schedulePolicyType;
+        private final String schedulePolicyType;
 
     public String getSchedulePolicyType() {
         return this.schedulePolicyType;
@@ -60,7 +60,6 @@ public final class LongTermSchedulePolicyResponse extends io.pulumi.resources.In
             this.schedulePolicyType = Objects.requireNonNull(schedulePolicyType);
             return this;
         }
-
         public LongTermSchedulePolicyResponse build() {
             return new LongTermSchedulePolicyResponse(schedulePolicyType);
         }

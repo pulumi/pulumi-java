@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.NodeGroupAutoscalingPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.NodeGroupMaintenanceWindowResponse;
 import java.lang.Integer;
@@ -305,7 +305,6 @@ public final class GetNodeGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetNodeGroupResult build() {
             return new GetNodeGroupResult(autoscalingPolicy, creationTimestamp, description, fingerprint, kind, locationHint, maintenancePolicy, maintenanceWindow, name, nodeTemplate, selfLink, size, status, zone);
         }

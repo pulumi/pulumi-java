@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.X12OneWayAgreementResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -74,7 +74,6 @@ public final class X12AgreementContentResponse {
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public X12AgreementContentResponse build() {
             return new X12AgreementContentResponse(receiveAgreement, sendAgreement);
         }

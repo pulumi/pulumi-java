@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.LongTermSchedulePolicyResp
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleRetentionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.SimpleSchedulePolicyResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -104,7 +104,6 @@ public final class SubProtectionPolicyResponse {
             this.schedulePolicy = schedulePolicy;
             return this;
         }
-
         public SubProtectionPolicyResponse build() {
             return new SubProtectionPolicyResponse(policyType, retentionPolicy, schedulePolicy);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceQuotaSpec;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceQuotaStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class ResourceQuota {
             this.status = status;
             return this;
         }
-
         public ResourceQuota build() {
             return new ResourceQuota(apiVersion, kind, metadata, spec, status);
         }

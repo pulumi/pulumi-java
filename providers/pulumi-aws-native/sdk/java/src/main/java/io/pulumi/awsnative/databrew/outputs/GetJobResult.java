@@ -13,7 +13,7 @@ import io.pulumi.awsnative.databrew.outputs.JobProfileConfiguration;
 import io.pulumi.awsnative.databrew.outputs.JobRecipe;
 import io.pulumi.awsnative.databrew.outputs.JobSample;
 import io.pulumi.awsnative.databrew.outputs.JobValidationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -371,7 +371,6 @@ public final class GetJobResult {
             this.validationConfigurations = validationConfigurations;
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(dataCatalogOutputs, databaseOutputs, datasetName, encryptionKeyArn, encryptionMode, jobSample, logSubscription, maxCapacity, maxRetries, outputLocation, outputs, profileConfiguration, projectName, recipe, roleArn, timeout, validationConfigurations);
         }

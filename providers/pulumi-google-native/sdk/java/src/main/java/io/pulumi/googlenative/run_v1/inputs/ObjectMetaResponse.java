@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.OwnerReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="annotations", required=true)
-    private final Map<String,String> annotations;
+      private final Map<String,String> annotations;
 
     public Map<String,String> getAnnotations() {
         return this.annotations;
@@ -36,7 +36,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+      private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -47,7 +47,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="creationTimestamp", required=true)
-    private final String creationTimestamp;
+      private final String creationTimestamp;
 
     public String getCreationTimestamp() {
         return this.creationTimestamp;
@@ -58,7 +58,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deletionGracePeriodSeconds", required=true)
-    private final Integer deletionGracePeriodSeconds;
+      private final Integer deletionGracePeriodSeconds;
 
     public Integer getDeletionGracePeriodSeconds() {
         return this.deletionGracePeriodSeconds;
@@ -69,7 +69,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deletionTimestamp", required=true)
-    private final String deletionTimestamp;
+      private final String deletionTimestamp;
 
     public String getDeletionTimestamp() {
         return this.deletionTimestamp;
@@ -80,7 +80,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="finalizers", required=true)
-    private final List<String> finalizers;
+      private final List<String> finalizers;
 
     public List<String> getFinalizers() {
         return this.finalizers;
@@ -91,7 +91,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="generateName", required=true)
-    private final String generateName;
+      private final String generateName;
 
     public String getGenerateName() {
         return this.generateName;
@@ -102,7 +102,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="generation", required=true)
-    private final Integer generation;
+      private final Integer generation;
 
     public Integer getGeneration() {
         return this.generation;
@@ -113,7 +113,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -124,7 +124,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -135,7 +135,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -146,7 +146,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ownerReferences", required=true)
-    private final List<OwnerReferenceResponse> ownerReferences;
+      private final List<OwnerReferenceResponse> ownerReferences;
 
     public List<OwnerReferenceResponse> getOwnerReferences() {
         return this.ownerReferences;
@@ -157,7 +157,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceVersion", required=true)
-    private final String resourceVersion;
+      private final String resourceVersion;
 
     public String getResourceVersion() {
         return this.resourceVersion;
@@ -168,7 +168,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+      private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
@@ -179,7 +179,7 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uid", required=true)
-    private final String uid;
+      private final String uid;
 
     public String getUid() {
         return this.uid;
@@ -358,7 +358,6 @@ public final class ObjectMetaResponse extends io.pulumi.resources.InvokeArgs {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public ObjectMetaResponse build() {
             return new ObjectMetaResponse(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketRedirectAllRequestsTo;
 import io.pulumi.awsnative.s3.outputs.BucketRoutingRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -105,7 +105,6 @@ public final class BucketWebsiteConfiguration {
             this.routingRules = routingRules;
             return this;
         }
-
         public BucketWebsiteConfiguration build() {
             return new BucketWebsiteConfiguration(errorDocument, indexDocument, redirectAllRequestsTo, routingRules);
         }

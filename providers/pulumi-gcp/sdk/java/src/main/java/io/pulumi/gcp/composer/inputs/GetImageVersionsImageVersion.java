@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="imageVersionId", required=true)
-    private final String imageVersionId;
+        private final String imageVersionId;
 
     public String getImageVersionId() {
         return this.imageVersionId;
@@ -29,7 +29,7 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="supportedPythonVersions", required=true)
-    private final List<String> supportedPythonVersions;
+        private final List<String> supportedPythonVersions;
 
     public List<String> getSupportedPythonVersions() {
         return this.supportedPythonVersions;
@@ -78,7 +78,6 @@ public final class GetImageVersionsImageVersion extends io.pulumi.resources.Invo
             this.supportedPythonVersions = Objects.requireNonNull(supportedPythonVersions);
             return this;
         }
-
         public GetImageVersionsImageVersion build() {
             return new GetImageVersionsImageVersion(imageVersionId, supportedPythonVersions);
         }

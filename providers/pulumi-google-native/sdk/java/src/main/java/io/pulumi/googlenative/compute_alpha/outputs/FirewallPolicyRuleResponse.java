@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.Boolean;
@@ -289,7 +289,6 @@ public final class FirewallPolicyRuleResponse {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
         public FirewallPolicyRuleResponse build() {
             return new FirewallPolicyRuleResponse(action, description, direction, disabled, enableLogging, kind, match, priority, ruleTupleCount, targetResources, targetSecureTags, targetServiceAccounts);
         }

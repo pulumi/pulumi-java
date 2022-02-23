@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="encryptionSettings")
-    private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
+        private final @Nullable List<DiskEncryptionSettingsResponse> encryptionSettings;
 
     public List<DiskEncryptionSettingsResponse> getEncryptionSettings() {
         return this.encryptionSettings == null ? List.of() : this.encryptionSettings;
@@ -37,7 +37,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -48,7 +48,7 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="statuses")
-    private final @Nullable List<InstanceViewStatusResponse> statuses;
+        private final @Nullable List<InstanceViewStatusResponse> statuses;
 
     public List<InstanceViewStatusResponse> getStatuses() {
         return this.statuses == null ? List.of() : this.statuses;
@@ -107,7 +107,6 @@ public final class DiskInstanceViewResponse extends io.pulumi.resources.InvokeAr
             this.statuses = statuses;
             return this;
         }
-
         public DiskInstanceViewResponse build() {
             return new DiskInstanceViewResponse(encryptionSettings, name, statuses);
         }

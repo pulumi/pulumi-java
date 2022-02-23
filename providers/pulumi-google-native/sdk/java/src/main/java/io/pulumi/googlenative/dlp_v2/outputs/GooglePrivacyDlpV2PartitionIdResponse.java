@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GooglePrivacyDlpV2PartitionIdResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GooglePrivacyDlpV2PartitionIdResponse build() {
             return new GooglePrivacyDlpV2PartitionIdResponse(namespaceId, project);
         }

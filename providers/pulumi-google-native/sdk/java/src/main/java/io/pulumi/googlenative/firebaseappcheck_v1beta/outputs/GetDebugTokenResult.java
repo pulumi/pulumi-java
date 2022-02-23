@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseappcheck_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class GetDebugTokenResult {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public GetDebugTokenResult build() {
             return new GetDebugTokenResult(displayName, name, token);
         }

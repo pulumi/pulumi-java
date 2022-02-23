@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.VaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class GetVaultResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVaultResult build() {
             return new GetVaultResult(id, location, name, properties, tags, type);
         }

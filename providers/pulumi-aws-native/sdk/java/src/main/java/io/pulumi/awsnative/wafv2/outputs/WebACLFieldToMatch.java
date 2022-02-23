@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.outputs.WebACLFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.outputs.WebACLJsonBody;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -189,7 +189,6 @@ public final class WebACLFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public WebACLFieldToMatch build() {
             return new WebACLFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

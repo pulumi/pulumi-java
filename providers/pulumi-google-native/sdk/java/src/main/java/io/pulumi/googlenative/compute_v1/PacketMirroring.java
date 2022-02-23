@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.PacketMirroringArgs;
 import io.pulumi.googlenative.compute_v1.outputs.PacketMirroringFilterResponse;
@@ -192,13 +192,6 @@ public class PacketMirroring extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PacketMirroring(String name) {
-        super("google-native:compute/v1:PacketMirroring", name, PacketMirroringArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

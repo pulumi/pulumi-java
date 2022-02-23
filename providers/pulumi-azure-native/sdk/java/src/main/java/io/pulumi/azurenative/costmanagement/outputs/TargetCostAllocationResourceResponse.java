@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.CostAllocationProportionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -118,7 +118,6 @@ public final class TargetCostAllocationResourceResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public TargetCostAllocationResourceResponse build() {
             return new TargetCostAllocationResourceResponse(name, policyType, resourceType, values);
         }

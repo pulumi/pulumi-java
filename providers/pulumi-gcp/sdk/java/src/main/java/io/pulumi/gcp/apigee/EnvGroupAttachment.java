@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.EnvGroupAttachmentArgs;
 import io.pulumi.gcp.apigee.inputs.EnvGroupAttachmentState;
@@ -84,13 +84,6 @@ public class EnvGroupAttachment extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EnvGroupAttachment(String name) {
-        super("gcp:apigee/envGroupAttachment:EnvGroupAttachment", name, EnvGroupAttachmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

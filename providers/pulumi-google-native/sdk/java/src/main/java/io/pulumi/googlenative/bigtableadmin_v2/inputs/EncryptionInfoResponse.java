@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.StatusResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="encryptionStatus", required=true)
-    private final StatusResponse encryptionStatus;
+      private final StatusResponse encryptionStatus;
 
     public StatusResponse getEncryptionStatus() {
         return this.encryptionStatus;
@@ -33,7 +33,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="encryptionType", required=true)
-    private final String encryptionType;
+      private final String encryptionType;
 
     public String getEncryptionType() {
         return this.encryptionType;
@@ -44,7 +44,7 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="kmsKeyVersion", required=true)
-    private final String kmsKeyVersion;
+      private final String kmsKeyVersion;
 
     public String getKmsKeyVersion() {
         return this.kmsKeyVersion;
@@ -103,7 +103,6 @@ public final class EncryptionInfoResponse extends io.pulumi.resources.InvokeArgs
             this.kmsKeyVersion = Objects.requireNonNull(kmsKeyVersion);
             return this;
         }
-
         public EncryptionInfoResponse build() {
             return new EncryptionInfoResponse(encryptionStatus, encryptionType, kmsKeyVersion);
         }

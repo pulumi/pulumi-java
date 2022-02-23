@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1.outputs.GameServerClusterConnectionInfoResponse;
 import io.pulumi.googlenative.gameservices_v1.outputs.KubernetesClusterStateResponse;
 import java.lang.String;
@@ -203,7 +203,6 @@ public final class GetGameServerClusterResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGameServerClusterResult build() {
             return new GetGameServerClusterResult(clusterState, connectionInfo, createTime, description, etag, labels, name, updateTime);
         }

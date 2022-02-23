@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class BillingAccountSinkBigqueryOptions {
             this.usePartitionedTables = Objects.requireNonNull(usePartitionedTables);
             return this;
         }
-
         public BillingAccountSinkBigqueryOptions build() {
             return new BillingAccountSinkBigqueryOptions(usePartitionedTables);
         }

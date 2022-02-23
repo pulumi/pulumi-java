@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -370,7 +370,6 @@ public final class GetAddressResult {
             this.users = Objects.requireNonNull(users);
             return this;
         }
-
         public GetAddressResult build() {
             return new GetAddressResult(address, addressType, creationTimestamp, description, ipVersion, kind, name, network, networkTier, prefixLength, purpose, region, selfLink, status, subnetwork, users);
         }

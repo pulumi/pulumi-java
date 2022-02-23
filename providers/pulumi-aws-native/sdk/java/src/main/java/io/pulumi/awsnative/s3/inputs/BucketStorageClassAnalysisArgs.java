@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketDataExportArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
     public static final BucketStorageClassAnalysisArgs Empty = new BucketStorageClassAnalysisArgs();
 
     @InputImport(name="dataExport")
-    private final @Nullable Input<BucketDataExportArgs> dataExport;
+        private final @Nullable Input<BucketDataExportArgs> dataExport;
 
     public Input<BucketDataExportArgs> getDataExport() {
         return this.dataExport == null ? Input.empty() : this.dataExport;
@@ -62,7 +62,6 @@ public final class BucketStorageClassAnalysisArgs extends io.pulumi.resources.Re
             this.dataExport = Input.ofNullable(dataExport);
             return this;
         }
-
         public BucketStorageClassAnalysisArgs build() {
             return new BucketStorageClassAnalysisArgs(dataExport);
         }

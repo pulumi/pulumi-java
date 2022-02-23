@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.apigateway.outputs.ApiConfigOpenapiDocumentDocument;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class ApiConfigOpenapiDocument {
             this.document = Objects.requireNonNull(document);
             return this;
         }
-
         public ApiConfigOpenapiDocument build() {
             return new ApiConfigOpenapiDocument(document);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmenEncryptionKeyReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class IntegrationServiceEnvironmenEncryptionConfigurationResponse {
             this.encryptionKeyReference = encryptionKeyReference;
             return this;
         }
-
         public IntegrationServiceEnvironmenEncryptionConfigurationResponse build() {
             return new IntegrationServiceEnvironmenEncryptionConfigurationResponse(encryptionKeyReference);
         }

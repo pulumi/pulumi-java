@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<String> context;
+        private final @Nullable Input<String> context;
 
     public Input<String> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -38,7 +38,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-    private final Input<String> dockerSpecificationType;
+        private final Input<String> dockerSpecificationType;
 
     public Input<String> getDockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -50,7 +50,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerfile", required=true)
-    private final Input<String> dockerfile;
+        private final Input<String> dockerfile;
 
     public Input<String> getDockerfile() {
         return this.dockerfile;
@@ -61,7 +61,7 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<DockerImagePlatformArgs> platform;
+        private final @Nullable Input<DockerImagePlatformArgs> platform;
 
     public Input<DockerImagePlatformArgs> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -150,7 +150,6 @@ public final class DockerBuildArgs extends io.pulumi.resources.ResourceArgs {
             this.platform = Input.ofNullable(platform);
             return this;
         }
-
         public DockerBuildArgs build() {
             return new DockerBuildArgs(context, dockerSpecificationType, dockerfile, platform);
         }

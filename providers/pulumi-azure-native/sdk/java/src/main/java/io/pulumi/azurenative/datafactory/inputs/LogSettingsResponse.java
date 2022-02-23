@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CopyActivityLogSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.LogLocationSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="copyActivityLogSettings")
-    private final @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
+        private final @Nullable CopyActivityLogSettingsResponse copyActivityLogSettings;
 
     public Optional<CopyActivityLogSettingsResponse> getCopyActivityLogSettings() {
         return this.copyActivityLogSettings == null ? Optional.empty() : Optional.ofNullable(this.copyActivityLogSettings);
@@ -36,7 +36,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableCopyActivityLog")
-    private final @Nullable Object enableCopyActivityLog;
+        private final @Nullable Object enableCopyActivityLog;
 
     public Optional<Object> getEnableCopyActivityLog() {
         return this.enableCopyActivityLog == null ? Optional.empty() : Optional.ofNullable(this.enableCopyActivityLog);
@@ -47,7 +47,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logLocationSettings", required=true)
-    private final LogLocationSettingsResponse logLocationSettings;
+        private final LogLocationSettingsResponse logLocationSettings;
 
     public LogLocationSettingsResponse getLogLocationSettings() {
         return this.logLocationSettings;
@@ -106,7 +106,6 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.logLocationSettings = Objects.requireNonNull(logLocationSettings);
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(copyActivityLogSettings, enableCopyActivityLog, logLocationSettings);
         }

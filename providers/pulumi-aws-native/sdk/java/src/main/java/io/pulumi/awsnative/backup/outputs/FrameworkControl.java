@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.FrameworkControlControlScopeProperties;
 import io.pulumi.awsnative.backup.outputs.FrameworkControlInputParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class FrameworkControl {
             this.controlScope = controlScope;
             return this;
         }
-
         public FrameworkControl build() {
             return new FrameworkControl(controlInputParameters, controlName, controlScope);
         }

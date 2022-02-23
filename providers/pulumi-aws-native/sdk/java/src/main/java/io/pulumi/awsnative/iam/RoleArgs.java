@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iam;
 import io.pulumi.awsnative.iam.inputs.RolePolicyArgs;
 import io.pulumi.awsnative.iam.inputs.RoleTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assumeRolePolicyDocument", required=true)
-    private final Input<Object> assumeRolePolicyDocument;
+        private final Input<Object> assumeRolePolicyDocument;
 
     public Input<Object> getAssumeRolePolicyDocument() {
         return this.assumeRolePolicyDocument;
@@ -35,7 +35,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedPolicyArns")
-    private final @Nullable Input<List<String>> managedPolicyArns;
+        private final @Nullable Input<List<String>> managedPolicyArns;
 
     public Input<List<String>> getManagedPolicyArns() {
         return this.managedPolicyArns == null ? Input.empty() : this.managedPolicyArns;
@@ -57,7 +57,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxSessionDuration")
-    private final @Nullable Input<Integer> maxSessionDuration;
+        private final @Nullable Input<Integer> maxSessionDuration;
 
     public Input<Integer> getMaxSessionDuration() {
         return this.maxSessionDuration == null ? Input.empty() : this.maxSessionDuration;
@@ -68,7 +68,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -79,7 +79,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsBoundary")
-    private final @Nullable Input<String> permissionsBoundary;
+        private final @Nullable Input<String> permissionsBoundary;
 
     public Input<String> getPermissionsBoundary() {
         return this.permissionsBoundary == null ? Input.empty() : this.permissionsBoundary;
@@ -90,7 +90,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policies")
-    private final @Nullable Input<List<RolePolicyArgs>> policies;
+        private final @Nullable Input<List<RolePolicyArgs>> policies;
 
     public Input<List<RolePolicyArgs>> getPolicies() {
         return this.policies == null ? Input.empty() : this.policies;
@@ -101,7 +101,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName")
-    private final @Nullable Input<String> roleName;
+        private final @Nullable Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName == null ? Input.empty() : this.roleName;
@@ -112,7 +112,7 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<RoleTagArgs>> tags;
+        private final @Nullable Input<List<RoleTagArgs>> tags;
 
     public Input<List<RoleTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -276,7 +276,6 @@ public final class RoleArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RoleArgs build() {
             return new RoleArgs(assumeRolePolicyDocument, description, managedPolicyArns, maxSessionDuration, path, permissionsBoundary, policies, roleName, tags);
         }

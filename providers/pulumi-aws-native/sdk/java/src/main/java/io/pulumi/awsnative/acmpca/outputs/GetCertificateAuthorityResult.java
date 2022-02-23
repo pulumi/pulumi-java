@@ -5,7 +5,7 @@ package io.pulumi.awsnative.acmpca.outputs;
 
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityRevocationConfiguration;
 import io.pulumi.awsnative.acmpca.outputs.CertificateAuthorityTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -113,7 +113,6 @@ public final class GetCertificateAuthorityResult {
             this.tags = tags;
             return this;
         }
-
         public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(arn, certificateSigningRequest, revocationConfiguration, tags);
         }

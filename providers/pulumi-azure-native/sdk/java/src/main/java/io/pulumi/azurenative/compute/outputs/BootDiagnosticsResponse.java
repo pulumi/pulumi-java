@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class BootDiagnosticsResponse {
             this.storageUri = storageUri;
             return this;
         }
-
         public BootDiagnosticsResponse build() {
             return new BootDiagnosticsResponse(enabled, storageUri);
         }

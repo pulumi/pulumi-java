@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SSLPolicyArgs;
 import io.pulumi.gcp.compute.inputs.SSLPolicyState;
@@ -238,13 +238,6 @@ public class SSLPolicy extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SSLPolicy(String name) {
-        super("gcp:compute/sSLPolicy:SSLPolicy", name, SSLPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.DescendantParentGroupInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -182,7 +182,6 @@ public final class GetManagementGroupSubscriptionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupSubscriptionResult build() {
             return new GetManagementGroupSubscriptionResult(displayName, id, name, parent, state, tenant, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="comments", required=true)
-    private final String comments;
+      private final String comments;
 
     public String getComments() {
         return this.comments;
@@ -32,7 +32,7 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expression", required=true)
-    private final String expression;
+      private final String expression;
 
     public String getExpression() {
         return this.expression;
@@ -81,7 +81,6 @@ public final class LicenseResponse extends io.pulumi.resources.InvokeArgs {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public LicenseResponse build() {
             return new LicenseResponse(comments, expression);
         }

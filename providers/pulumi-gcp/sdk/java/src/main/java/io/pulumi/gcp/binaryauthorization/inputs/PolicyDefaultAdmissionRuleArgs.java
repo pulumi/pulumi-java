@@ -4,7 +4,7 @@
 package io.pulumi.gcp.binaryauthorization.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enforcementMode", required=true)
-    private final Input<String> enforcementMode;
+        private final Input<String> enforcementMode;
 
     public Input<String> getEnforcementMode() {
         return this.enforcementMode;
@@ -33,7 +33,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="evaluationMode", required=true)
-    private final Input<String> evaluationMode;
+        private final Input<String> evaluationMode;
 
     public Input<String> getEvaluationMode() {
         return this.evaluationMode;
@@ -51,7 +51,7 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="requireAttestationsBies")
-    private final @Nullable Input<List<String>> requireAttestationsBies;
+        private final @Nullable Input<List<String>> requireAttestationsBies;
 
     public Input<List<String>> getRequireAttestationsBies() {
         return this.requireAttestationsBies == null ? Input.empty() : this.requireAttestationsBies;
@@ -125,7 +125,6 @@ public final class PolicyDefaultAdmissionRuleArgs extends io.pulumi.resources.Re
             this.requireAttestationsBies = Input.ofNullable(requireAttestationsBies);
             return this;
         }
-
         public PolicyDefaultAdmissionRuleArgs build() {
             return new PolicyDefaultAdmissionRuleArgs(enforcementMode, evaluationMode, requireAttestationsBies);
         }

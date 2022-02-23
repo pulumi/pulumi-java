@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.ManagedRulesDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.PolicySettingsResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.WebApplicationFirewallCustomRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -335,7 +335,6 @@ public final class GetWebApplicationFirewallPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebApplicationFirewallPolicyResult build() {
             return new GetWebApplicationFirewallPolicyResult(applicationGateways, customRules, etag, httpListeners, id, location, managedRules, name, pathBasedRules, policySettings, provisioningState, resourceState, tags, type);
         }

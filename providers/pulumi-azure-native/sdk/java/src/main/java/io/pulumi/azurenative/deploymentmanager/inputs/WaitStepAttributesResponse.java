@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WaitStepAttributesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="duration", required=true)
-    private final String duration;
+        private final String duration;
 
     public String getDuration() {
         return this.duration;
@@ -59,7 +59,6 @@ public final class WaitStepAttributesResponse extends io.pulumi.resources.Invoke
             this.duration = Objects.requireNonNull(duration);
             return this;
         }
-
         public WaitStepAttributesResponse build() {
             return new WaitStepAttributesResponse(duration);
         }

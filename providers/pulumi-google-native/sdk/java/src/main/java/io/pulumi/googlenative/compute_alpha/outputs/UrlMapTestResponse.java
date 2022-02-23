@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.UrlMapTestHeaderResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -203,7 +203,6 @@ public final class UrlMapTestResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public UrlMapTestResponse build() {
             return new UrlMapTestResponse(backendServiceWeight, description, expectedOutputUrl, expectedRedirectResponseCode, headers, host, path, service);
         }

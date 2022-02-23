@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.DistributionCutResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.TimeSeriesRatioResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class RequestBasedSliResponse {
             this.goodTotalRatio = Objects.requireNonNull(goodTotalRatio);
             return this;
         }
-
         public RequestBasedSliResponse build() {
             return new RequestBasedSliResponse(distributionCut, goodTotalRatio);
         }

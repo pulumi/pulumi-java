@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.ManagedZonePeeringConfigTargetNetworkResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -67,7 +67,6 @@ public final class ManagedZonePeeringConfigResponse {
             this.targetNetwork = Objects.requireNonNull(targetNetwork);
             return this;
         }
-
         public ManagedZonePeeringConfigResponse build() {
             return new ManagedZonePeeringConfigResponse(kind, targetNetwork);
         }

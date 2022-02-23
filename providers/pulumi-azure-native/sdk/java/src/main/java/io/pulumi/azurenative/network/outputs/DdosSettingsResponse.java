@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class DdosSettingsResponse {
             this.protectionCoverage = protectionCoverage;
             return this;
         }
-
         public DdosSettingsResponse build() {
             return new DdosSettingsResponse(ddosCustomPolicy, protectedIP, protectionCoverage);
         }

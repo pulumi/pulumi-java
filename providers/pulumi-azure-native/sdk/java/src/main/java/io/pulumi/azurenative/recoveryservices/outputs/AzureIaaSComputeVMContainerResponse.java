@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -210,7 +210,6 @@ public final class AzureIaaSComputeVMContainerResponse {
             this.virtualMachineVersion = virtualMachineVersion;
             return this;
         }
-
         public AzureIaaSComputeVMContainerResponse build() {
             return new AzureIaaSComputeVMContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
         }

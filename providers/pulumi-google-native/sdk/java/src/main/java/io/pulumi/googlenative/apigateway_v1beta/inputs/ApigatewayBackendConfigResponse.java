@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApigatewayBackendConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="googleServiceAccount", required=true)
-    private final String googleServiceAccount;
+      private final String googleServiceAccount;
 
     public String getGoogleServiceAccount() {
         return this.googleServiceAccount;
@@ -59,7 +59,6 @@ public final class ApigatewayBackendConfigResponse extends io.pulumi.resources.I
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
-
         public ApigatewayBackendConfigResponse build() {
             return new ApigatewayBackendConfigResponse(googleServiceAccount);
         }

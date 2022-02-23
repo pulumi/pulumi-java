@@ -6,7 +6,7 @@ package io.pulumi.azurenative.powerplatform.inputs;
 import io.pulumi.azurenative.powerplatform.enums.State;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,State>> state;
+        private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -68,7 +68,6 @@ public final class PropertiesLockboxArgs extends io.pulumi.resources.ResourceArg
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public PropertiesLockboxArgs build() {
             return new PropertiesLockboxArgs(state);
         }

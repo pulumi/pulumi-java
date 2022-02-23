@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.finspace.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class EnvironmentFederationParameters {
             this.samlMetadataURL = samlMetadataURL;
             return this;
         }
-
         public EnvironmentFederationParameters build() {
             return new EnvironmentFederationParameters(applicationCallBackURL, attributeMap, federationProviderName, federationURN, samlMetadataDocument, samlMetadataURL);
         }

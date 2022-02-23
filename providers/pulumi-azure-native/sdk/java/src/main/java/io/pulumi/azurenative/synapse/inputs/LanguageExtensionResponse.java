@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="languageExtensionName")
-    private final @Nullable String languageExtensionName;
+        private final @Nullable String languageExtensionName;
 
     public Optional<String> getLanguageExtensionName() {
         return this.languageExtensionName == null ? Optional.empty() : Optional.ofNullable(this.languageExtensionName);
@@ -61,7 +61,6 @@ public final class LanguageExtensionResponse extends io.pulumi.resources.InvokeA
             this.languageExtensionName = languageExtensionName;
             return this;
         }
-
         public LanguageExtensionResponse build() {
             return new LanguageExtensionResponse(languageExtensionName);
         }

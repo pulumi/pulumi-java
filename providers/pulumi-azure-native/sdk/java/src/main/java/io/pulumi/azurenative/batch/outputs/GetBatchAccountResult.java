@@ -9,7 +9,7 @@ import io.pulumi.azurenative.batch.outputs.EncryptionPropertiesResponse;
 import io.pulumi.azurenative.batch.outputs.KeyVaultReferenceResponse;
 import io.pulumi.azurenative.batch.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.batch.outputs.VirtualMachineFamilyCoreQuotaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -448,7 +448,6 @@ public final class GetBatchAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBatchAccountResult build() {
             return new GetBatchAccountResult(accountEndpoint, activeJobAndJobScheduleQuota, autoStorage, dedicatedCoreQuota, dedicatedCoreQuotaPerVMFamily, dedicatedCoreQuotaPerVMFamilyEnforced, encryption, id, identity, keyVaultReference, location, lowPriorityCoreQuota, name, poolAllocationMode, poolQuota, privateEndpointConnections, provisioningState, publicNetworkAccess, tags, type);
         }

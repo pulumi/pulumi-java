@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -16,77 +16,77 @@ public final class ListenerAuthenticateOidcConfigArgs extends io.pulumi.resource
     public static final ListenerAuthenticateOidcConfigArgs Empty = new ListenerAuthenticateOidcConfigArgs();
 
     @InputImport(name="authenticationRequestExtraParams")
-    private final @Nullable Input<Object> authenticationRequestExtraParams;
+        private final @Nullable Input<Object> authenticationRequestExtraParams;
 
     public Input<Object> getAuthenticationRequestExtraParams() {
         return this.authenticationRequestExtraParams == null ? Input.empty() : this.authenticationRequestExtraParams;
     }
 
     @InputImport(name="authorizationEndpoint", required=true)
-    private final Input<String> authorizationEndpoint;
+        private final Input<String> authorizationEndpoint;
 
     public Input<String> getAuthorizationEndpoint() {
         return this.authorizationEndpoint;
     }
 
     @InputImport(name="clientId", required=true)
-    private final Input<String> clientId;
+        private final Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId;
     }
 
     @InputImport(name="clientSecret", required=true)
-    private final Input<String> clientSecret;
+        private final Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret;
     }
 
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+        private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;
     }
 
     @InputImport(name="onUnauthenticatedRequest")
-    private final @Nullable Input<String> onUnauthenticatedRequest;
+        private final @Nullable Input<String> onUnauthenticatedRequest;
 
     public Input<String> getOnUnauthenticatedRequest() {
         return this.onUnauthenticatedRequest == null ? Input.empty() : this.onUnauthenticatedRequest;
     }
 
     @InputImport(name="scope")
-    private final @Nullable Input<String> scope;
+        private final @Nullable Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
     }
 
     @InputImport(name="sessionCookieName")
-    private final @Nullable Input<String> sessionCookieName;
+        private final @Nullable Input<String> sessionCookieName;
 
     public Input<String> getSessionCookieName() {
         return this.sessionCookieName == null ? Input.empty() : this.sessionCookieName;
     }
 
     @InputImport(name="sessionTimeout")
-    private final @Nullable Input<String> sessionTimeout;
+        private final @Nullable Input<String> sessionTimeout;
 
     public Input<String> getSessionTimeout() {
         return this.sessionTimeout == null ? Input.empty() : this.sessionTimeout;
     }
 
     @InputImport(name="tokenEndpoint", required=true)
-    private final Input<String> tokenEndpoint;
+        private final Input<String> tokenEndpoint;
 
     public Input<String> getTokenEndpoint() {
         return this.tokenEndpoint;
     }
 
     @InputImport(name="userInfoEndpoint", required=true)
-    private final Input<String> userInfoEndpoint;
+        private final Input<String> userInfoEndpoint;
 
     public Input<String> getUserInfoEndpoint() {
         return this.userInfoEndpoint;
@@ -280,7 +280,6 @@ public final class ListenerAuthenticateOidcConfigArgs extends io.pulumi.resource
             this.userInfoEndpoint = Input.of(Objects.requireNonNull(userInfoEndpoint));
             return this;
         }
-
         public ListenerAuthenticateOidcConfigArgs build() {
             return new ListenerAuthenticateOidcConfigArgs(authenticationRequestExtraParams, authorizationEndpoint, clientId, clientSecret, issuer, onUnauthenticatedRequest, scope, sessionCookieName, sessionTimeout, tokenEndpoint, userInfoEndpoint);
         }

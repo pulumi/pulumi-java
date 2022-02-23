@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.dynamodb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
     public static final GlobalTableStreamSpecificationArgs Empty = new GlobalTableStreamSpecificationArgs();
 
     @InputImport(name="streamViewType", required=true)
-    private final Input<String> streamViewType;
+        private final Input<String> streamViewType;
 
     public Input<String> getStreamViewType() {
         return this.streamViewType;
@@ -57,7 +57,6 @@ public final class GlobalTableStreamSpecificationArgs extends io.pulumi.resource
             this.streamViewType = Input.of(Objects.requireNonNull(streamViewType));
             return this;
         }
-
         public GlobalTableStreamSpecificationArgs build() {
             return new GlobalTableStreamSpecificationArgs(streamViewType);
         }

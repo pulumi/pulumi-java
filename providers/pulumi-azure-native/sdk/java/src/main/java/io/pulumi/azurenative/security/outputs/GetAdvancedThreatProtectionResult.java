@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class GetAdvancedThreatProtectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAdvancedThreatProtectionResult build() {
             return new GetAdvancedThreatProtectionResult(id, isEnabled, name, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.DatasetFolderArgs;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="additionalHeaders")
-    private final @Nullable Input<Object> additionalHeaders;
+        private final @Nullable Input<Object> additionalHeaders;
 
     public Input<Object> getAdditionalHeaders() {
         return this.additionalHeaders == null ? Input.empty() : this.additionalHeaders;
@@ -40,7 +40,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -51,7 +51,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -62,7 +62,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<DatasetFolderArgs> folder;
+        private final @Nullable Input<DatasetFolderArgs> folder;
 
     public Input<DatasetFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -73,7 +73,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -84,7 +84,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="paginationRules")
-    private final @Nullable Input<Object> paginationRules;
+        private final @Nullable Input<Object> paginationRules;
 
     public Input<Object> getPaginationRules() {
         return this.paginationRules == null ? Input.empty() : this.paginationRules;
@@ -95,7 +95,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -106,7 +106,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="relativeUrl")
-    private final @Nullable Input<Object> relativeUrl;
+        private final @Nullable Input<Object> relativeUrl;
 
     public Input<Object> getRelativeUrl() {
         return this.relativeUrl == null ? Input.empty() : this.relativeUrl;
@@ -117,7 +117,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requestBody")
-    private final @Nullable Input<Object> requestBody;
+        private final @Nullable Input<Object> requestBody;
 
     public Input<Object> getRequestBody() {
         return this.requestBody == null ? Input.empty() : this.requestBody;
@@ -128,7 +128,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="requestMethod")
-    private final @Nullable Input<Object> requestMethod;
+        private final @Nullable Input<Object> requestMethod;
 
     public Input<Object> getRequestMethod() {
         return this.requestMethod == null ? Input.empty() : this.requestMethod;
@@ -139,7 +139,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<Object> schema;
+        private final @Nullable Input<Object> schema;
 
     public Input<Object> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -150,7 +150,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Input<Object> structure;
+        private final @Nullable Input<Object> structure;
 
     public Input<Object> getStructure() {
         return this.structure == null ? Input.empty() : this.structure;
@@ -162,7 +162,7 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -386,7 +386,6 @@ public final class RestResourceDatasetArgs extends io.pulumi.resources.ResourceA
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public RestResourceDatasetArgs build() {
             return new RestResourceDatasetArgs(additionalHeaders, annotations, description, folder, linkedServiceName, paginationRules, parameters, relativeUrl, requestBody, requestMethod, schema, structure, type);
         }

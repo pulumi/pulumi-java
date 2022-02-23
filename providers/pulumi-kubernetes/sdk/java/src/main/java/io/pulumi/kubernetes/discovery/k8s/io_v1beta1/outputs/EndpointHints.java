@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.discovery.k8s.io_v1beta1.outputs.ForZone;
 import java.util.List;
 import java.util.Objects;
@@ -54,7 +54,6 @@ public final class EndpointHints {
             this.forZones = forZones;
             return this;
         }
-
         public EndpointHints build() {
             return new EndpointHints(forZones);
         }

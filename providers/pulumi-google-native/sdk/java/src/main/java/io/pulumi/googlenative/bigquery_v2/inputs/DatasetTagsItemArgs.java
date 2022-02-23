@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagKey")
-    private final @Nullable Input<String> tagKey;
+      private final @Nullable Input<String> tagKey;
 
     public Input<String> getTagKey() {
         return this.tagKey == null ? Input.empty() : this.tagKey;
@@ -30,7 +30,7 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tagValue")
-    private final @Nullable Input<String> tagValue;
+      private final @Nullable Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue == null ? Input.empty() : this.tagValue;
@@ -89,7 +89,6 @@ public final class DatasetTagsItemArgs extends io.pulumi.resources.ResourceArgs 
             this.tagValue = Input.ofNullable(tagValue);
             return this;
         }
-
         public DatasetTagsItemArgs build() {
             return new DatasetTagsItemArgs(tagKey, tagValue);
         }

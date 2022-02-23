@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -203,7 +203,6 @@ public final class PySparkJobResponse {
             this.pythonFileUris = Objects.requireNonNull(pythonFileUris);
             return this;
         }
-
         public PySparkJobResponse build() {
             return new PySparkJobResponse(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

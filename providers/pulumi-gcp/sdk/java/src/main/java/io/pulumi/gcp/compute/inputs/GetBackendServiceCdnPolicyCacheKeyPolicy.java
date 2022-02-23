@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -15,35 +15,35 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy extends io.pulumi.re
     public static final GetBackendServiceCdnPolicyCacheKeyPolicy Empty = new GetBackendServiceCdnPolicyCacheKeyPolicy();
 
     @InputImport(name="includeHost", required=true)
-    private final Boolean includeHost;
+        private final Boolean includeHost;
 
     public Boolean getIncludeHost() {
         return this.includeHost;
     }
 
     @InputImport(name="includeProtocol", required=true)
-    private final Boolean includeProtocol;
+        private final Boolean includeProtocol;
 
     public Boolean getIncludeProtocol() {
         return this.includeProtocol;
     }
 
     @InputImport(name="includeQueryString", required=true)
-    private final Boolean includeQueryString;
+        private final Boolean includeQueryString;
 
     public Boolean getIncludeQueryString() {
         return this.includeQueryString;
     }
 
     @InputImport(name="queryStringBlacklists", required=true)
-    private final List<String> queryStringBlacklists;
+        private final List<String> queryStringBlacklists;
 
     public List<String> getQueryStringBlacklists() {
         return this.queryStringBlacklists;
     }
 
     @InputImport(name="queryStringWhitelists", required=true)
-    private final List<String> queryStringWhitelists;
+        private final List<String> queryStringWhitelists;
 
     public List<String> getQueryStringWhitelists() {
         return this.queryStringWhitelists;
@@ -122,7 +122,6 @@ public final class GetBackendServiceCdnPolicyCacheKeyPolicy extends io.pulumi.re
             this.queryStringWhitelists = Objects.requireNonNull(queryStringWhitelists);
             return this;
         }
-
         public GetBackendServiceCdnPolicyCacheKeyPolicy build() {
             return new GetBackendServiceCdnPolicyCacheKeyPolicy(includeHost, includeProtocol, includeQueryString, queryStringBlacklists, queryStringWhitelists);
         }

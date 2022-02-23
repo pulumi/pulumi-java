@@ -8,7 +8,7 @@ import io.pulumi.azurenative.servicebus.inputs.ActionArgs;
 import io.pulumi.azurenative.servicebus.inputs.CorrelationFilterArgs;
 import io.pulumi.azurenative.servicebus.inputs.SqlFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<ActionArgs> action;
+        private final @Nullable Input<ActionArgs> action;
 
     public Input<ActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -34,7 +34,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="correlationFilter")
-    private final @Nullable Input<CorrelationFilterArgs> correlationFilter;
+        private final @Nullable Input<CorrelationFilterArgs> correlationFilter;
 
     public Input<CorrelationFilterArgs> getCorrelationFilter() {
         return this.correlationFilter == null ? Input.empty() : this.correlationFilter;
@@ -45,7 +45,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterType")
-    private final @Nullable Input<FilterType> filterType;
+        private final @Nullable Input<FilterType> filterType;
 
     public Input<FilterType> getFilterType() {
         return this.filterType == null ? Input.empty() : this.filterType;
@@ -56,7 +56,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -67,7 +67,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -89,7 +89,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sqlFilter")
-    private final @Nullable Input<SqlFilterArgs> sqlFilter;
+        private final @Nullable Input<SqlFilterArgs> sqlFilter;
 
     public Input<SqlFilterArgs> getSqlFilter() {
         return this.sqlFilter == null ? Input.empty() : this.sqlFilter;
@@ -100,7 +100,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-    private final Input<String> subscriptionName;
+        private final Input<String> subscriptionName;
 
     public Input<String> getSubscriptionName() {
         return this.subscriptionName;
@@ -111,7 +111,7 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final Input<String> topicName;
+        private final Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName;
@@ -275,7 +275,6 @@ public final class RuleArgs extends io.pulumi.resources.ResourceArgs {
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }
-
         public RuleArgs build() {
             return new RuleArgs(action, correlationFilter, filterType, namespaceName, resourceGroupName, ruleName, sqlFilter, subscriptionName, topicName);
         }

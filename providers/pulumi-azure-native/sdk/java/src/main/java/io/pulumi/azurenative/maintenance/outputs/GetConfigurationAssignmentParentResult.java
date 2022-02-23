@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.maintenance.outputs;
 
 import io.pulumi.azurenative.maintenance.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -182,7 +182,6 @@ public final class GetConfigurationAssignmentParentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationAssignmentParentResult build() {
             return new GetConfigurationAssignmentParentResult(id, location, maintenanceConfigurationId, name, resourceId, systemData, type);
         }

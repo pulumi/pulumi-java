@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.managedidentities_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditLogsEnabled")
-    private final @Nullable Input<Boolean> auditLogsEnabled;
+      private final @Nullable Input<Boolean> auditLogsEnabled;
 
     public Input<Boolean> getAuditLogsEnabled() {
         return this.auditLogsEnabled == null ? Input.empty() : this.auditLogsEnabled;
@@ -33,14 +33,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetworks")
-    private final @Nullable Input<List<String>> authorizedNetworks;
+      private final @Nullable Input<List<String>> authorizedNetworks;
 
     public Input<List<String>> getAuthorizedNetworks() {
         return this.authorizedNetworks == null ? Input.empty() : this.authorizedNetworks;
     }
 
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+      private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -51,7 +51,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -62,7 +62,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-    private final Input<List<String>> locations;
+      private final Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations;
@@ -73,14 +73,14 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedIdentitiesAdminName")
-    private final @Nullable Input<String> managedIdentitiesAdminName;
+      private final @Nullable Input<String> managedIdentitiesAdminName;
 
     public Input<String> getManagedIdentitiesAdminName() {
         return this.managedIdentitiesAdminName == null ? Input.empty() : this.managedIdentitiesAdminName;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reservedIpRange", required=true)
-    private final Input<String> reservedIpRange;
+      private final Input<String> reservedIpRange;
 
     public Input<String> getReservedIpRange() {
         return this.reservedIpRange;
@@ -240,7 +240,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.reservedIpRange = Input.of(Objects.requireNonNull(reservedIpRange));
             return this;
         }
-
         public DomainArgs build() {
             return new DomainArgs(auditLogsEnabled, authorizedNetworks, domainName, labels, locations, managedIdentitiesAdminName, project, reservedIpRange);
         }

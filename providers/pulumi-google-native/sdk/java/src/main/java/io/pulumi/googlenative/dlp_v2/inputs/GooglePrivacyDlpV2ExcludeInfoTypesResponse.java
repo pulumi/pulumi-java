@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends io.pulumi.
      * 
      */
     @InputImport(name="infoTypes", required=true)
-    private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
+      private final List<GooglePrivacyDlpV2InfoTypeResponse> infoTypes;
 
     public List<GooglePrivacyDlpV2InfoTypeResponse> getInfoTypes() {
         return this.infoTypes;
@@ -60,7 +60,6 @@ public final class GooglePrivacyDlpV2ExcludeInfoTypesResponse extends io.pulumi.
             this.infoTypes = Objects.requireNonNull(infoTypes);
             return this;
         }
-
         public GooglePrivacyDlpV2ExcludeInfoTypesResponse build() {
             return new GooglePrivacyDlpV2ExcludeInfoTypesResponse(infoTypes);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.JobStepActionResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepExecutionOptionsResponse;
 import io.pulumi.azurenative.sql.outputs.JobStepOutputResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class GetJobStepResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobStepResult build() {
             return new GetJobStepResult(action, credential, executionOptions, id, name, output, stepId, targetGroup, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
      * 
      */
     @InputImport(name="interconnectName", required=true)
-    private final String interconnectName;
+      private final String interconnectName;
 
     public String getInterconnectName() {
         return this.interconnectName;
@@ -32,7 +32,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
      * 
      */
     @InputImport(name="partnerName", required=true)
-    private final String partnerName;
+      private final String partnerName;
 
     public String getPartnerName() {
         return this.partnerName;
@@ -43,7 +43,7 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
      * 
      */
     @InputImport(name="portalUrl", required=true)
-    private final String portalUrl;
+      private final String portalUrl;
 
     public String getPortalUrl() {
         return this.portalUrl;
@@ -102,7 +102,6 @@ public final class InterconnectAttachmentPartnerMetadataResponse extends io.pulu
             this.portalUrl = Objects.requireNonNull(portalUrl);
             return this;
         }
-
         public InterconnectAttachmentPartnerMetadataResponse build() {
             return new InterconnectAttachmentPartnerMetadataResponse(interconnectName, partnerName, portalUrl);
         }

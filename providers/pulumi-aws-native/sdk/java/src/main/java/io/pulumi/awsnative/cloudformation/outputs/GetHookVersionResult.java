@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.HookVersionVisibility;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -153,7 +153,6 @@ public final class GetHookVersionResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetHookVersionResult build() {
             return new GetHookVersionResult(arn, isDefaultVersion, typeArn, versionId, visibility);
         }

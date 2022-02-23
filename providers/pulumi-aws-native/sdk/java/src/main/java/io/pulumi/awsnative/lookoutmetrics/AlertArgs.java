@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AlertActionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<AlertActionArgs> action;
+        private final Input<AlertActionArgs> action;
 
     public Input<AlertActionArgs> getAction() {
         return this.action;
@@ -32,7 +32,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertDescription")
-    private final @Nullable Input<String> alertDescription;
+        private final @Nullable Input<String> alertDescription;
 
     public Input<String> getAlertDescription() {
         return this.alertDescription == null ? Input.empty() : this.alertDescription;
@@ -43,7 +43,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertName")
-    private final @Nullable Input<String> alertName;
+        private final @Nullable Input<String> alertName;
 
     public Input<String> getAlertName() {
         return this.alertName == null ? Input.empty() : this.alertName;
@@ -54,7 +54,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alertSensitivityThreshold", required=true)
-    private final Input<Integer> alertSensitivityThreshold;
+        private final Input<Integer> alertSensitivityThreshold;
 
     public Input<Integer> getAlertSensitivityThreshold() {
         return this.alertSensitivityThreshold;
@@ -65,7 +65,7 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="anomalyDetectorArn", required=true)
-    private final Input<String> anomalyDetectorArn;
+        private final Input<String> anomalyDetectorArn;
 
     public Input<String> getAnomalyDetectorArn() {
         return this.anomalyDetectorArn;
@@ -169,7 +169,6 @@ public final class AlertArgs extends io.pulumi.resources.ResourceArgs {
             this.anomalyDetectorArn = Input.of(Objects.requireNonNull(anomalyDetectorArn));
             return this;
         }
-
         public AlertArgs build() {
             return new AlertArgs(action, alertDescription, alertName, alertSensitivityThreshold, anomalyDetectorArn);
         }

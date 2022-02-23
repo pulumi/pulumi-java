@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="allowProtectedAppendWrites")
-    private final @Nullable Input<Boolean> allowProtectedAppendWrites;
+        private final @Nullable Input<Boolean> allowProtectedAppendWrites;
 
     public Input<Boolean> getAllowProtectedAppendWrites() {
         return this.allowProtectedAppendWrites == null ? Input.empty() : this.allowProtectedAppendWrites;
@@ -43,7 +43,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+        private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -54,7 +54,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="immutabilityPeriodSinceCreationInDays")
-    private final @Nullable Input<Integer> immutabilityPeriodSinceCreationInDays;
+        private final @Nullable Input<Integer> immutabilityPeriodSinceCreationInDays;
 
     public Input<Integer> getImmutabilityPeriodSinceCreationInDays() {
         return this.immutabilityPeriodSinceCreationInDays == null ? Input.empty() : this.immutabilityPeriodSinceCreationInDays;
@@ -65,7 +65,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="immutabilityPolicyName")
-    private final @Nullable Input<String> immutabilityPolicyName;
+        private final @Nullable Input<String> immutabilityPolicyName;
 
     public Input<String> getImmutabilityPolicyName() {
         return this.immutabilityPolicyName == null ? Input.empty() : this.immutabilityPolicyName;
@@ -76,7 +76,7 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -195,7 +195,6 @@ public final class BlobContainerImmutabilityPolicyArgs extends io.pulumi.resourc
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public BlobContainerImmutabilityPolicyArgs build() {
             return new BlobContainerImmutabilityPolicyArgs(accountName, allowProtectedAppendWrites, containerName, immutabilityPeriodSinceCreationInDays, immutabilityPolicyName, resourceGroupName);
         }

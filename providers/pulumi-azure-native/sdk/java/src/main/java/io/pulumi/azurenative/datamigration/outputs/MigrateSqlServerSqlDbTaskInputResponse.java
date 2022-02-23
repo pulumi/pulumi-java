@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.MigrateSqlServerSqlDbDatabaseInputResponse;
 import io.pulumi.azurenative.datamigration.outputs.MigrationValidationOptionsResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -125,7 +125,6 @@ public final class MigrateSqlServerSqlDbTaskInputResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskInputResponse build() {
             return new MigrateSqlServerSqlDbTaskInputResponse(selectedDatabases, sourceConnectionInfo, targetConnectionInfo, validationOptions);
         }

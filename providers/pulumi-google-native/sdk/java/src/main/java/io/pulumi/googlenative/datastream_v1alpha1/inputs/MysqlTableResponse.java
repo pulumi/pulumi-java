@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1alpha1.inputs.MysqlColumnResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mysqlColumns", required=true)
-    private final List<MysqlColumnResponse> mysqlColumns;
+      private final List<MysqlColumnResponse> mysqlColumns;
 
     public List<MysqlColumnResponse> getMysqlColumns() {
         return this.mysqlColumns;
@@ -34,7 +34,7 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+      private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -83,7 +83,6 @@ public final class MysqlTableResponse extends io.pulumi.resources.InvokeArgs {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, tableName);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.StorageAccountArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<StorageAccountArgs> properties;
+        private final @Nullable Input<StorageAccountArgs> properties;
 
     public Input<StorageAccountArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -31,7 +31,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -42,7 +42,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -53,7 +53,7 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageName")
-    private final @Nullable Input<String> storageName;
+        private final @Nullable Input<String> storageName;
 
     public Input<String> getStorageName() {
         return this.storageName == null ? Input.empty() : this.storageName;
@@ -142,7 +142,6 @@ public final class StorageArgs extends io.pulumi.resources.ResourceArgs {
             this.storageName = Input.ofNullable(storageName);
             return this;
         }
-
         public StorageArgs build() {
             return new StorageArgs(properties, resourceGroupName, serviceName, storageName);
         }

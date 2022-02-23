@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.DataConnectorDataTypeCommonResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -76,7 +76,6 @@ public final class MCASDataConnectorDataTypesResponse {
             this.discoveryLogs = discoveryLogs;
             return this;
         }
-
         public MCASDataConnectorDataTypesResponse build() {
             return new MCASDataConnectorDataTypesResponse(alerts, discoveryLogs);
         }

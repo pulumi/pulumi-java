@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ascLocation", required=true)
-    private final String ascLocation;
+        private final String ascLocation;
 
     public String getAscLocation() {
         return this.ascLocation;
@@ -28,7 +28,7 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="groupName", required=true)
-    private final String groupName;
+        private final String groupName;
 
     public String getGroupName() {
         return this.groupName;
@@ -77,7 +77,6 @@ public final class GetAdaptiveApplicationControlArgs extends io.pulumi.resources
             this.groupName = Objects.requireNonNull(groupName);
             return this;
         }
-
         public GetAdaptiveApplicationControlArgs build() {
             return new GetAdaptiveApplicationControlArgs(ascLocation, groupName);
         }

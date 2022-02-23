@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.RetentionTagResponse;
 import io.pulumi.azurenative.dataprotection.inputs.ScheduleBasedBackupCriteriaResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="criteria")
-    private final @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
+        private final @Nullable List<ScheduleBasedBackupCriteriaResponse> criteria;
 
     public List<ScheduleBasedBackupCriteriaResponse> getCriteria() {
         return this.criteria == null ? List.of() : this.criteria;
@@ -38,7 +38,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="isDefault", required=true)
-    private final Boolean isDefault;
+        private final Boolean isDefault;
 
     public Boolean getIsDefault() {
         return this.isDefault;
@@ -49,7 +49,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tagInfo", required=true)
-    private final RetentionTagResponse tagInfo;
+        private final RetentionTagResponse tagInfo;
 
     public RetentionTagResponse getTagInfo() {
         return this.tagInfo;
@@ -60,7 +60,7 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="taggingPriority", required=true)
-    private final Double taggingPriority;
+        private final Double taggingPriority;
 
     public Double getTaggingPriority() {
         return this.taggingPriority;
@@ -129,7 +129,6 @@ public final class TaggingCriteriaResponse extends io.pulumi.resources.InvokeArg
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }
-
         public TaggingCriteriaResponse build() {
             return new TaggingCriteriaResponse(criteria, isDefault, tagInfo, taggingPriority);
         }

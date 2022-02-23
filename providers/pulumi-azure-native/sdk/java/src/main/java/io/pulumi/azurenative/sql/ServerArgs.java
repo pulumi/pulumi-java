@@ -8,7 +8,7 @@ import io.pulumi.azurenative.sql.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.sql.inputs.ServerExternalAdministratorArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorLogin")
-    private final @Nullable Input<String> administratorLogin;
+        private final @Nullable Input<String> administratorLogin;
 
     public Input<String> getAdministratorLogin() {
         return this.administratorLogin == null ? Input.empty() : this.administratorLogin;
@@ -35,7 +35,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administratorLoginPassword")
-    private final @Nullable Input<String> administratorLoginPassword;
+        private final @Nullable Input<String> administratorLoginPassword;
 
     public Input<String> getAdministratorLoginPassword() {
         return this.administratorLoginPassword == null ? Input.empty() : this.administratorLoginPassword;
@@ -46,7 +46,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="administrators")
-    private final @Nullable Input<ServerExternalAdministratorArgs> administrators;
+        private final @Nullable Input<ServerExternalAdministratorArgs> administrators;
 
     public Input<ServerExternalAdministratorArgs> getAdministrators() {
         return this.administrators == null ? Input.empty() : this.administrators;
@@ -57,7 +57,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+        private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -68,7 +68,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+        private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -79,7 +79,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimalTlsVersion")
-    private final @Nullable Input<String> minimalTlsVersion;
+        private final @Nullable Input<String> minimalTlsVersion;
 
     public Input<String> getMinimalTlsVersion() {
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
@@ -101,7 +101,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryUserAssignedIdentityId")
-    private final @Nullable Input<String> primaryUserAssignedIdentityId;
+        private final @Nullable Input<String> primaryUserAssignedIdentityId;
 
     public Input<String> getPrimaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId == null ? Input.empty() : this.primaryUserAssignedIdentityId;
@@ -112,7 +112,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,ServerPublicNetworkAccess>> publicNetworkAccess;
 
     public Input<Either<String,ServerPublicNetworkAccess>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -123,7 +123,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -134,7 +134,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+        private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
@@ -145,7 +145,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -156,7 +156,7 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -380,7 +380,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ServerArgs build() {
             return new ServerArgs(administratorLogin, administratorLoginPassword, administrators, identity, keyId, location, minimalTlsVersion, primaryUserAssignedIdentityId, publicNetworkAccess, resourceGroupName, serverName, tags, version);
         }

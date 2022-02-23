@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+        private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -35,7 +35,7 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="secretSource", required=true)
-    private final ResourceReferenceResponse secretSource;
+        private final ResourceReferenceResponse secretSource;
 
     public ResourceReferenceResponse getSecretSource() {
         return this.secretSource;
@@ -46,7 +46,7 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable String secretVersion;
+        private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
@@ -58,7 +58,7 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class UrlSigningKeyParametersResponse extends io.pulumi.resources.I
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UrlSigningKeyParametersResponse build() {
             return new UrlSigningKeyParametersResponse(keyId, secretSource, secretVersion, type);
         }

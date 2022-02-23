@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databoxedge;
 import io.pulumi.azurenative.databoxedge.enums.AddonType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addonName")
-    private final @Nullable Input<String> addonName;
+        private final @Nullable Input<String> addonName;
 
     public Input<String> getAddonName() {
         return this.addonName == null ? Input.empty() : this.addonName;
@@ -32,7 +32,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -43,7 +43,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,AddonType>> kind;
+        private final Input<Either<String,AddonType>> kind;
 
     public Input<Either<String,AddonType>> getKind() {
         return this.kind;
@@ -54,7 +54,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleName", required=true)
-    private final Input<String> roleName;
+        private final Input<String> roleName;
 
     public Input<String> getRoleName() {
         return this.roleName;
@@ -169,7 +169,6 @@ public final class AddonArgs extends io.pulumi.resources.ResourceArgs {
             this.roleName = Input.of(Objects.requireNonNull(roleName));
             return this;
         }
-
         public AddonArgs build() {
             return new AddonArgs(addonName, deviceName, kind, resourceGroupName, roleName);
         }

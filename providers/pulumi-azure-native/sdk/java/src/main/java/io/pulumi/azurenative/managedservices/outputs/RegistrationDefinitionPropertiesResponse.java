@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.AuthorizationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class RegistrationDefinitionPropertiesResponse {
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public RegistrationDefinitionPropertiesResponse build() {
             return new RegistrationDefinitionPropertiesResponse(authorizations, description, managedByTenantId, managedByTenantName, provisioningState, registrationDefinitionName);
         }

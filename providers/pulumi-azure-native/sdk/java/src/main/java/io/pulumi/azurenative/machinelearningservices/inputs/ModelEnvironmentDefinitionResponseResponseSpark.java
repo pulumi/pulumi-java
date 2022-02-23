@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.SparkMavenPackageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
      * 
      */
     @InputImport(name="packages")
-    private final @Nullable List<SparkMavenPackageResponse> packages;
+        private final @Nullable List<SparkMavenPackageResponse> packages;
 
     public List<SparkMavenPackageResponse> getPackages() {
         return this.packages == null ? List.of() : this.packages;
@@ -37,7 +37,7 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
      * 
      */
     @InputImport(name="precachePackages")
-    private final @Nullable Boolean precachePackages;
+        private final @Nullable Boolean precachePackages;
 
     public Optional<Boolean> getPrecachePackages() {
         return this.precachePackages == null ? Optional.empty() : Optional.ofNullable(this.precachePackages);
@@ -48,7 +48,7 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
      * 
      */
     @InputImport(name="repositories")
-    private final @Nullable List<String> repositories;
+        private final @Nullable List<String> repositories;
 
     public List<String> getRepositories() {
         return this.repositories == null ? List.of() : this.repositories;
@@ -107,7 +107,6 @@ public final class ModelEnvironmentDefinitionResponseResponseSpark extends io.pu
             this.repositories = repositories;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponseSpark build() {
             return new ModelEnvironmentDefinitionResponseResponseSpark(packages, precachePackages, repositories);
         }

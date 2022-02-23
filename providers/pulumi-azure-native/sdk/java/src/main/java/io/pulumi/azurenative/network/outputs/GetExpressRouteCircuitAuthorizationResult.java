@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -181,7 +181,6 @@ public final class GetExpressRouteCircuitAuthorizationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExpressRouteCircuitAuthorizationResult build() {
             return new GetExpressRouteCircuitAuthorizationResult(authorizationKey, authorizationUseStatus, etag, id, name, provisioningState, type);
         }

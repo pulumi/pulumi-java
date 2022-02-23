@@ -8,8 +8,8 @@ import io.pulumi.awsnative.route53.KeySigningKeyArgs;
 import io.pulumi.awsnative.route53.enums.KeySigningKeyStatus;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -76,13 +76,6 @@ public class KeySigningKey extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public KeySigningKey(String name) {
-        super("aws-native:route53:KeySigningKey", name, KeySigningKeyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

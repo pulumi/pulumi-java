@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="incidentId")
-    private final @Nullable String incidentId;
+        private final @Nullable String incidentId;
 
     public Optional<String> getIncidentId() {
         return this.incidentId == null ? Optional.empty() : Optional.ofNullable(this.incidentId);
@@ -34,7 +34,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="relationName")
-    private final @Nullable String relationName;
+        private final @Nullable String relationName;
 
     public Optional<String> getRelationName() {
         return this.relationName == null ? Optional.empty() : Optional.ofNullable(this.relationName);
@@ -45,7 +45,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable String severity;
+        private final @Nullable String severity;
 
     public Optional<String> getSeverity() {
         return this.severity == null ? Optional.empty() : Optional.ofNullable(this.severity);
@@ -56,7 +56,7 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="title")
-    private final @Nullable String title;
+        private final @Nullable String title;
 
     public Optional<String> getTitle() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
@@ -125,7 +125,6 @@ public final class IncidentInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.title = title;
             return this;
         }
-
         public IncidentInfoResponse build() {
             return new IncidentInfoResponse(incidentId, relationName, severity, title);
         }

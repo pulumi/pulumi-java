@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SdsConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.TlsCertificatePathsResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class TlsCertificateContextResponse {
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
         }
-
         public TlsCertificateContextResponse build() {
             return new TlsCertificateContextResponse(certificatePaths, certificateSource, sdsConfig);
         }

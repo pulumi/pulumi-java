@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualMachineName", required=true)
-    private final String virtualMachineName;
+        private final String virtualMachineName;
 
     public String getVirtualMachineName() {
         return this.virtualMachineName;
@@ -98,7 +98,6 @@ public final class GetGuestAgentArgs extends io.pulumi.resources.InvokeArgs {
             this.virtualMachineName = Objects.requireNonNull(virtualMachineName);
             return this;
         }
-
         public GetGuestAgentArgs build() {
             return new GetGuestAgentArgs(name, resourceGroupName, virtualMachineName);
         }

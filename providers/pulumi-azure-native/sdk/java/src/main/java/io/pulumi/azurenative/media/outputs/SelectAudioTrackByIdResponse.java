@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class SelectAudioTrackByIdResponse {
             this.trackId = Objects.requireNonNull(trackId);
             return this;
         }
-
         public SelectAudioTrackByIdResponse build() {
             return new SelectAudioTrackByIdResponse(channelMapping, odataType, trackId);
         }

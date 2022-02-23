@@ -10,7 +10,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.ServerConfigurationsManagementSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.StorageConfigurationSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -441,7 +441,6 @@ public final class GetSqlVirtualMachineResult {
             this.wsfcDomainCredentials = wsfcDomainCredentials;
             return this;
         }
-
         public GetSqlVirtualMachineResult build() {
             return new GetSqlVirtualMachineResult(autoBackupSettings, autoPatchingSettings, id, identity, keyVaultCredentialSettings, location, name, provisioningState, serverConfigurationsManagementSettings, sqlImageOffer, sqlImageSku, sqlManagement, sqlServerLicenseType, sqlVirtualMachineGroupResourceId, storageConfigurationSettings, tags, type, virtualMachineResourceId, wsfcDomainCredentials);
         }

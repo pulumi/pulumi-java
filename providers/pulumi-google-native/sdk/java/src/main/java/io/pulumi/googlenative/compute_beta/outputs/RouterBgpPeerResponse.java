@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.RouterAdvertisedIpRangeResponse;
 import io.pulumi.googlenative.compute_beta.outputs.RouterBgpPeerBfdResponse;
 import java.lang.Boolean;
@@ -373,7 +373,6 @@ public final class RouterBgpPeerResponse {
             this.routerApplianceInstance = Objects.requireNonNull(routerApplianceInstance);
             return this;
         }
-
         public RouterBgpPeerResponse build() {
             return new RouterBgpPeerResponse(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, managementType, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
         }

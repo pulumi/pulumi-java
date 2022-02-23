@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.iam_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -181,7 +181,6 @@ public final class GetRoleResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetRoleResult build() {
             return new GetRoleResult(deleted, description, etag, includedPermissions, name, stage, title);
         }

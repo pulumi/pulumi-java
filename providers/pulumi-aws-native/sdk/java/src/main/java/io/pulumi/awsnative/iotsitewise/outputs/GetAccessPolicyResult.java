@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyIdentity;
 import io.pulumi.awsnative.iotsitewise.outputs.AccessPolicyResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class GetAccessPolicyResult {
             this.accessPolicyResource = accessPolicyResource;
             return this;
         }
-
         public GetAccessPolicyResult build() {
             return new GetAccessPolicyResult(accessPolicyArn, accessPolicyId, accessPolicyIdentity, accessPolicyPermission, accessPolicyResource);
         }

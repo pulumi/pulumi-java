@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.inputs.CacheConfigurationArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="backendPool")
-    private final @Nullable Input<SubResourceArgs> backendPool;
+        private final @Nullable Input<SubResourceArgs> backendPool;
 
     public Input<SubResourceArgs> getBackendPool() {
         return this.backendPool == null ? Input.empty() : this.backendPool;
@@ -38,7 +38,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="cacheConfiguration")
-    private final @Nullable Input<CacheConfigurationArgs> cacheConfiguration;
+        private final @Nullable Input<CacheConfigurationArgs> cacheConfiguration;
 
     public Input<CacheConfigurationArgs> getCacheConfiguration() {
         return this.cacheConfiguration == null ? Input.empty() : this.cacheConfiguration;
@@ -49,7 +49,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customForwardingPath")
-    private final @Nullable Input<String> customForwardingPath;
+        private final @Nullable Input<String> customForwardingPath;
 
     public Input<String> getCustomForwardingPath() {
         return this.customForwardingPath == null ? Input.empty() : this.customForwardingPath;
@@ -60,7 +60,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="forwardingProtocol")
-    private final @Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
+        private final @Nullable Input<Either<String,FrontDoorForwardingProtocol>> forwardingProtocol;
 
     public Input<Either<String,FrontDoorForwardingProtocol>> getForwardingProtocol() {
         return this.forwardingProtocol == null ? Input.empty() : this.forwardingProtocol;
@@ -71,7 +71,7 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -175,7 +175,6 @@ public final class ForwardingConfigurationArgs extends io.pulumi.resources.Resou
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public ForwardingConfigurationArgs build() {
             return new ForwardingConfigurationArgs(backendPool, cacheConfiguration, customForwardingPath, forwardingProtocol, odataType);
         }

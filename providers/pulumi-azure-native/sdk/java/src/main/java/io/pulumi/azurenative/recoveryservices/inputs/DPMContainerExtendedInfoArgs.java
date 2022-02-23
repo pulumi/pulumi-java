@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable Input<String> lastRefreshedAt;
+        private final @Nullable Input<String> lastRefreshedAt;
 
     public Input<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Input.empty() : this.lastRefreshedAt;
@@ -66,7 +66,6 @@ public final class DPMContainerExtendedInfoArgs extends io.pulumi.resources.Reso
             this.lastRefreshedAt = Input.ofNullable(lastRefreshedAt);
             return this;
         }
-
         public DPMContainerExtendedInfoArgs build() {
             return new DPMContainerExtendedInfoArgs(lastRefreshedAt);
         }

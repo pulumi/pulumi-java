@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
      * 
      */
     @InputImport(name="livePersonConfig", required=true)
-    private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
+      private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse livePersonConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigLivePersonConfigResponse getLivePersonConfig() {
         return this.livePersonConfig;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
      * 
      */
     @InputImport(name="salesforceLiveAgentConfig", required=true)
-    private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
+      private final GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse salesforceLiveAgentConfig;
 
     public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse getSalesforceLiveAgentConfig() {
         return this.salesforceLiveAgentConfig;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse e
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse build() {
             return new GoogleCloudDialogflowV2beta1HumanAgentHandoffConfigResponse(livePersonConfig, salesforceLiveAgentConfig);
         }

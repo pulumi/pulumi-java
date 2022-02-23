@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.AvailabilityInformationResponse;
 import io.pulumi.myedgeorder.outputs.ConfigurationResponse;
 import io.pulumi.myedgeorder.outputs.CostInformationResponse;
@@ -208,7 +208,6 @@ public final class ProductResponse {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
-
         public ProductResponse build() {
             return new ProductResponse(availabilityInformation, configurations, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation);
         }

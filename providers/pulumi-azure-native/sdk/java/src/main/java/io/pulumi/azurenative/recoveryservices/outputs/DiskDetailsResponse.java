@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class DiskDetailsResponse {
             this.vhdType = vhdType;
             return this;
         }
-
         public DiskDetailsResponse build() {
             return new DiskDetailsResponse(maxSizeMB, vhdId, vhdName, vhdType);
         }

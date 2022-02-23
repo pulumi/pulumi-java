@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.AndroidAttributesResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.EndpointVerificationSpecificAttributesResponse;
 import java.lang.Boolean;
@@ -645,7 +645,6 @@ public final class GetDeviceResult {
             this.wifiMacAddresses = Objects.requireNonNull(wifiMacAddresses);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(androidSpecificAttributes, assetTag, basebandVersion, bootloaderVersion, brand, buildNumber, compromisedState, createTime, deviceType, enabledDeveloperOptions, enabledUsbDebugging, encryptionState, endpointVerificationSpecificAttributes, imei, kernelVersion, lastSyncTime, managementState, manufacturer, meid, model, name, networkOperator, osVersion, otherAccounts, ownerType, releaseVersion, securityPatchTime, serialNumber, wifiMacAddresses);
         }

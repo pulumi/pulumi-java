@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.MetadataFilterFilterMatchCriteria;
 import io.pulumi.googlenative.compute_v1.inputs.MetadataFilterLabelMatchArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterLabels")
-    private final @Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels;
+      private final @Nullable Input<List<MetadataFilterLabelMatchArgs>> filterLabels;
 
     public Input<List<MetadataFilterLabelMatchArgs>> getFilterLabels() {
         return this.filterLabels == null ? Input.empty() : this.filterLabels;
@@ -36,7 +36,7 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterMatchCriteria")
-    private final @Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
+      private final @Nullable Input<MetadataFilterFilterMatchCriteria> filterMatchCriteria;
 
     public Input<MetadataFilterFilterMatchCriteria> getFilterMatchCriteria() {
         return this.filterMatchCriteria == null ? Input.empty() : this.filterMatchCriteria;
@@ -95,7 +95,6 @@ public final class MetadataFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.filterMatchCriteria = Input.ofNullable(filterMatchCriteria);
             return this;
         }
-
         public MetadataFilterArgs build() {
             return new MetadataFilterArgs(filterLabels, filterMatchCriteria);
         }

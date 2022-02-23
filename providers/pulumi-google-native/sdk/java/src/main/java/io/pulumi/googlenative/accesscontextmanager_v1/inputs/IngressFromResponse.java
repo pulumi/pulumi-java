@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.IngressSourceResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class IngressFromResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identities", required=true)
-    private final List<String> identities;
+      private final List<String> identities;
 
     public List<String> getIdentities() {
         return this.identities;
@@ -34,7 +34,7 @@ public final class IngressFromResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="identityType", required=true)
-    private final String identityType;
+      private final String identityType;
 
     public String getIdentityType() {
         return this.identityType;
@@ -45,7 +45,7 @@ public final class IngressFromResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sources", required=true)
-    private final List<IngressSourceResponse> sources;
+      private final List<IngressSourceResponse> sources;
 
     public List<IngressSourceResponse> getSources() {
         return this.sources;
@@ -104,7 +104,6 @@ public final class IngressFromResponse extends io.pulumi.resources.InvokeArgs {
             this.sources = Objects.requireNonNull(sources);
             return this;
         }
-
         public IngressFromResponse build() {
             return new IngressFromResponse(identities, identityType, sources);
         }

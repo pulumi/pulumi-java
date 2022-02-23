@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class AudioMappingResponse {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }
-
         public AudioMappingResponse build() {
             return new AudioMappingResponse(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }

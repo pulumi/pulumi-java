@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datalabeling_v1beta1.FeedbackMessageArgs;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse;
@@ -89,13 +89,6 @@ public class FeedbackMessage extends io.pulumi.resources.CustomResource {
         return this.requesterFeedbackMetadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FeedbackMessage(String name) {
-        super("google-native:datalabeling/v1beta1:FeedbackMessage", name, FeedbackMessageArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

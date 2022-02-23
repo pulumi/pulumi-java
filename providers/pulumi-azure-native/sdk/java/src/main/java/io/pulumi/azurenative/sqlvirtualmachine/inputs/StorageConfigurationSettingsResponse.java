@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SQLStorageSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskConfigurationType")
-    private final @Nullable String diskConfigurationType;
+        private final @Nullable String diskConfigurationType;
 
     public Optional<String> getDiskConfigurationType() {
         return this.diskConfigurationType == null ? Optional.empty() : Optional.ofNullable(this.diskConfigurationType);
@@ -35,7 +35,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sqlDataSettings")
-    private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
+        private final @Nullable SQLStorageSettingsResponse sqlDataSettings;
 
     public Optional<SQLStorageSettingsResponse> getSqlDataSettings() {
         return this.sqlDataSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlDataSettings);
@@ -46,7 +46,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sqlLogSettings")
-    private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
+        private final @Nullable SQLStorageSettingsResponse sqlLogSettings;
 
     public Optional<SQLStorageSettingsResponse> getSqlLogSettings() {
         return this.sqlLogSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlLogSettings);
@@ -57,7 +57,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sqlTempDbSettings")
-    private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
+        private final @Nullable SQLStorageSettingsResponse sqlTempDbSettings;
 
     public Optional<SQLStorageSettingsResponse> getSqlTempDbSettings() {
         return this.sqlTempDbSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlTempDbSettings);
@@ -68,7 +68,7 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageWorkloadType")
-    private final @Nullable String storageWorkloadType;
+        private final @Nullable String storageWorkloadType;
 
     public Optional<String> getStorageWorkloadType() {
         return this.storageWorkloadType == null ? Optional.empty() : Optional.ofNullable(this.storageWorkloadType);
@@ -147,7 +147,6 @@ public final class StorageConfigurationSettingsResponse extends io.pulumi.resour
             this.storageWorkloadType = storageWorkloadType;
             return this;
         }
-
         public StorageConfigurationSettingsResponse build() {
             return new StorageConfigurationSettingsResponse(diskConfigurationType, sqlDataSettings, sqlLogSettings, sqlTempDbSettings, storageWorkloadType);
         }

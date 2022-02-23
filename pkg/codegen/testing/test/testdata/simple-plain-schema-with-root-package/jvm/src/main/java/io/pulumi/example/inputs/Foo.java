@@ -3,7 +3,7 @@
 
 package io.pulumi.example.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -17,42 +17,42 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
     public static final Foo Empty = new Foo();
 
     @InputImport(name="a", required=true)
-    private final Boolean a;
+      private final Boolean a;
 
     public Boolean getA() {
         return this.a;
     }
 
     @InputImport(name="b")
-    private final @Nullable Boolean b;
+      private final @Nullable Boolean b;
 
     public Optional<Boolean> getB() {
         return this.b == null ? Optional.empty() : Optional.ofNullable(this.b);
     }
 
     @InputImport(name="c", required=true)
-    private final Integer c;
+      private final Integer c;
 
     public Integer getC() {
         return this.c;
     }
 
     @InputImport(name="d")
-    private final @Nullable Integer d;
+      private final @Nullable Integer d;
 
     public Optional<Integer> getD() {
         return this.d == null ? Optional.empty() : Optional.ofNullable(this.d);
     }
 
     @InputImport(name="e", required=true)
-    private final String e;
+      private final String e;
 
     public String getE() {
         return this.e;
     }
 
     @InputImport(name="f")
-    private final @Nullable String f;
+      private final @Nullable String f;
 
     public Optional<String> getF() {
         return this.f == null ? Optional.empty() : Optional.ofNullable(this.f);
@@ -141,7 +141,6 @@ public final class Foo extends io.pulumi.resources.InvokeArgs {
             this.f = f;
             return this;
         }
-
         public Foo build() {
             return new Foo(a, b, c, d, e, f);
         }

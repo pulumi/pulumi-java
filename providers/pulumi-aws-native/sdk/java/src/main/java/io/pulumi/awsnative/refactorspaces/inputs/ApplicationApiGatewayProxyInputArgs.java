@@ -5,7 +5,7 @@ package io.pulumi.awsnative.refactorspaces.inputs;
 
 import io.pulumi.awsnative.refactorspaces.enums.ApplicationApiGatewayEndpointType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
     public static final ApplicationApiGatewayProxyInputArgs Empty = new ApplicationApiGatewayProxyInputArgs();
 
     @InputImport(name="endpointType")
-    private final @Nullable Input<ApplicationApiGatewayEndpointType> endpointType;
+        private final @Nullable Input<ApplicationApiGatewayEndpointType> endpointType;
 
     public Input<ApplicationApiGatewayEndpointType> getEndpointType() {
         return this.endpointType == null ? Input.empty() : this.endpointType;
     }
 
     @InputImport(name="stageName")
-    private final @Nullable Input<String> stageName;
+        private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;
@@ -82,7 +82,6 @@ public final class ApplicationApiGatewayProxyInputArgs extends io.pulumi.resourc
             this.stageName = Input.ofNullable(stageName);
             return this;
         }
-
         public ApplicationApiGatewayProxyInputArgs build() {
             return new ApplicationApiGatewayProxyInputArgs(endpointType, stageName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SslCertificateManagedSslCertificateResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SslCertificateSelfManagedSslCertificateResponse;
 import java.lang.String;
@@ -308,7 +308,6 @@ public final class GetRegionSslCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegionSslCertificateResult build() {
             return new GetRegionSslCertificateResult(certificate, creationTimestamp, description, expireTime, kind, managed, name, privateKey, region, selfLink, selfManaged, subjectAlternativeNames, type);
         }

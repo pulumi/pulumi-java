@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VideoAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="audioLanguage")
-    private final @Nullable String audioLanguage;
+        private final @Nullable String audioLanguage;
 
     public Optional<String> getAudioLanguage() {
         return this.audioLanguage == null ? Optional.empty() : Optional.ofNullable(this.audioLanguage);
@@ -35,7 +35,7 @@ public final class VideoAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="experimentalOptions")
-    private final @Nullable Map<String,String> experimentalOptions;
+        private final @Nullable Map<String,String> experimentalOptions;
 
     public Map<String,String> getExperimentalOptions() {
         return this.experimentalOptions == null ? Map.of() : this.experimentalOptions;
@@ -46,7 +46,7 @@ public final class VideoAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="insightsToExtract")
-    private final @Nullable String insightsToExtract;
+        private final @Nullable String insightsToExtract;
 
     public Optional<String> getInsightsToExtract() {
         return this.insightsToExtract == null ? Optional.empty() : Optional.ofNullable(this.insightsToExtract);
@@ -57,7 +57,7 @@ public final class VideoAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -69,7 +69,7 @@ public final class VideoAnalyzerPresetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -148,7 +148,6 @@ public final class VideoAnalyzerPresetResponse extends io.pulumi.resources.Invok
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public VideoAnalyzerPresetResponse build() {
             return new VideoAnalyzerPresetResponse(audioLanguage, experimentalOptions, insightsToExtract, mode, odataType);
         }

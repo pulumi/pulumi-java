@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.Office365PolicyPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -182,7 +182,6 @@ public final class GetVirtualApplianceSiteResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualApplianceSiteResult build() {
             return new GetVirtualApplianceSiteResult(addressPrefix, etag, id, name, o365Policy, provisioningState, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.identityplatform;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.identityplatform.DefaultSupportedIdpConfigArgs;
 import io.pulumi.gcp.identityplatform.inputs.DefaultSupportedIdpConfigState;
@@ -149,13 +149,6 @@ public class DefaultSupportedIdpConfig extends io.pulumi.resources.CustomResourc
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DefaultSupportedIdpConfig(String name) {
-        super("gcp:identityplatform/defaultSupportedIdpConfig:DefaultSupportedIdpConfig", name, DefaultSupportedIdpConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

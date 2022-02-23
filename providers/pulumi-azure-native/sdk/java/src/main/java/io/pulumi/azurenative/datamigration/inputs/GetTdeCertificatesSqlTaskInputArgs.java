@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datamigration.inputs.FileShareArgs;
 import io.pulumi.azurenative.datamigration.inputs.SelectedCertificateInputArgs;
 import io.pulumi.azurenative.datamigration.inputs.SqlConnectionInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="backupFileShare", required=true)
-    private final Input<FileShareArgs> backupFileShare;
+        private final Input<FileShareArgs> backupFileShare;
 
     public Input<FileShareArgs> getBackupFileShare() {
         return this.backupFileShare;
@@ -36,7 +36,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectionInfo", required=true)
-    private final Input<SqlConnectionInfoArgs> connectionInfo;
+        private final Input<SqlConnectionInfoArgs> connectionInfo;
 
     public Input<SqlConnectionInfoArgs> getConnectionInfo() {
         return this.connectionInfo;
@@ -47,7 +47,7 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="selectedCertificates", required=true)
-    private final Input<List<SelectedCertificateInputArgs>> selectedCertificates;
+        private final Input<List<SelectedCertificateInputArgs>> selectedCertificates;
 
     public Input<List<SelectedCertificateInputArgs>> getSelectedCertificates() {
         return this.selectedCertificates;
@@ -121,7 +121,6 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends io.pulumi.resource
             this.selectedCertificates = Input.of(Objects.requireNonNull(selectedCertificates));
             return this;
         }
-
         public GetTdeCertificatesSqlTaskInputArgs build() {
             return new GetTdeCertificatesSqlTaskInputArgs(backupFileShare, connectionInfo, selectedCertificates);
         }

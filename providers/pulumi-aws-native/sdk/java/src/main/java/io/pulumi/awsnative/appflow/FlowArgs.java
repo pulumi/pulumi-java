@@ -9,7 +9,7 @@ import io.pulumi.awsnative.appflow.inputs.FlowTagArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTaskArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowTriggerConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationFlowConfigList", required=true)
-    private final Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
+        private final Input<List<FlowDestinationFlowConfigArgs>> destinationFlowConfigList;
 
     public Input<List<FlowDestinationFlowConfigArgs>> getDestinationFlowConfigList() {
         return this.destinationFlowConfigList;
@@ -47,7 +47,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowName")
-    private final @Nullable Input<String> flowName;
+        private final @Nullable Input<String> flowName;
 
     public Input<String> getFlowName() {
         return this.flowName == null ? Input.empty() : this.flowName;
@@ -58,7 +58,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kMSArn")
-    private final @Nullable Input<String> kMSArn;
+        private final @Nullable Input<String> kMSArn;
 
     public Input<String> getKMSArn() {
         return this.kMSArn == null ? Input.empty() : this.kMSArn;
@@ -69,7 +69,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceFlowConfig", required=true)
-    private final Input<FlowSourceFlowConfigArgs> sourceFlowConfig;
+        private final Input<FlowSourceFlowConfigArgs> sourceFlowConfig;
 
     public Input<FlowSourceFlowConfigArgs> getSourceFlowConfig() {
         return this.sourceFlowConfig;
@@ -80,7 +80,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FlowTagArgs>> tags;
+        private final @Nullable Input<List<FlowTagArgs>> tags;
 
     public Input<List<FlowTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -91,7 +91,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tasks", required=true)
-    private final Input<List<FlowTaskArgs>> tasks;
+        private final Input<List<FlowTaskArgs>> tasks;
 
     public Input<List<FlowTaskArgs>> getTasks() {
         return this.tasks;
@@ -102,7 +102,7 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="triggerConfig", required=true)
-    private final Input<FlowTriggerConfigArgs> triggerConfig;
+        private final Input<FlowTriggerConfigArgs> triggerConfig;
 
     public Input<FlowTriggerConfigArgs> getTriggerConfig() {
         return this.triggerConfig;
@@ -251,7 +251,6 @@ public final class FlowArgs extends io.pulumi.resources.ResourceArgs {
             this.triggerConfig = Input.of(Objects.requireNonNull(triggerConfig));
             return this;
         }
-
         public FlowArgs build() {
             return new FlowArgs(description, destinationFlowConfigList, flowName, kMSArn, sourceFlowConfig, tags, tasks, triggerConfig);
         }

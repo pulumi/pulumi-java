@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn;
 import io.pulumi.azurenative.cdn.inputs.AFDDomainHttpsParametersArgs;
 import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="azureDnsZone")
-    private final @Nullable Input<ResourceReferenceArgs> azureDnsZone;
+        private final @Nullable Input<ResourceReferenceArgs> azureDnsZone;
 
     public Input<ResourceReferenceArgs> getAzureDnsZone() {
         return this.azureDnsZone == null ? Input.empty() : this.azureDnsZone;
@@ -32,7 +32,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customDomainName")
-    private final @Nullable Input<String> customDomainName;
+        private final @Nullable Input<String> customDomainName;
 
     public Input<String> getCustomDomainName() {
         return this.customDomainName == null ? Input.empty() : this.customDomainName;
@@ -43,7 +43,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+        private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -54,7 +54,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -65,7 +65,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -76,7 +76,7 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tlsSettings")
-    private final @Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings;
+        private final @Nullable Input<AFDDomainHttpsParametersArgs> tlsSettings;
 
     public Input<AFDDomainHttpsParametersArgs> getTlsSettings() {
         return this.tlsSettings == null ? Input.empty() : this.tlsSettings;
@@ -195,7 +195,6 @@ public final class AFDCustomDomainArgs extends io.pulumi.resources.ResourceArgs 
             this.tlsSettings = Input.ofNullable(tlsSettings);
             return this;
         }
-
         public AFDCustomDomainArgs build() {
             return new AFDCustomDomainArgs(azureDnsZone, customDomainName, hostName, profileName, resourceGroupName, tlsSettings);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class MongoDbCursorMethodsPropertiesResponse {
             this.sort = sort;
             return this;
         }
-
         public MongoDbCursorMethodsPropertiesResponse build() {
             return new MongoDbCursorMethodsPropertiesResponse(limit, project, skip, sort);
         }

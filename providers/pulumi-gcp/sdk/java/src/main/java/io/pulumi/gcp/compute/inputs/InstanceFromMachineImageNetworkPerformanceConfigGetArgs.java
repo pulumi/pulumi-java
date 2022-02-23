@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigGetArgs exten
     public static final InstanceFromMachineImageNetworkPerformanceConfigGetArgs Empty = new InstanceFromMachineImageNetworkPerformanceConfigGetArgs();
 
     @InputImport(name="totalEgressBandwidthTier", required=true)
-    private final Input<String> totalEgressBandwidthTier;
+        private final Input<String> totalEgressBandwidthTier;
 
     public Input<String> getTotalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
@@ -57,7 +57,6 @@ public final class InstanceFromMachineImageNetworkPerformanceConfigGetArgs exten
             this.totalEgressBandwidthTier = Input.of(Objects.requireNonNull(totalEgressBandwidthTier));
             return this;
         }
-
         public InstanceFromMachineImageNetworkPerformanceConfigGetArgs build() {
             return new InstanceFromMachineImageNetworkPerformanceConfigGetArgs(totalEgressBandwidthTier);
         }

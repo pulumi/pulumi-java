@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomHttpPatternResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalBindings", required=true)
-    private final List<HttpRuleResponse> additionalBindings;
+      private final List<HttpRuleResponse> additionalBindings;
 
     public List<HttpRuleResponse> getAdditionalBindings() {
         return this.additionalBindings;
@@ -34,7 +34,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="body", required=true)
-    private final String body;
+      private final String body;
 
     public String getBody() {
         return this.body;
@@ -45,7 +45,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="custom", required=true)
-    private final CustomHttpPatternResponse custom;
+      private final CustomHttpPatternResponse custom;
 
     public CustomHttpPatternResponse getCustom() {
         return this.custom;
@@ -56,7 +56,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="delete", required=true)
-    private final String delete;
+      private final String delete;
 
     public String getDelete() {
         return this.delete;
@@ -67,7 +67,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="get", required=true)
-    private final String get;
+      private final String get;
 
     public String getGet() {
         return this.get;
@@ -78,7 +78,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="patch", required=true)
-    private final String patch;
+      private final String patch;
 
     public String getPatch() {
         return this.patch;
@@ -89,7 +89,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="post", required=true)
-    private final String post;
+      private final String post;
 
     public String getPost() {
         return this.post;
@@ -100,7 +100,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="put", required=true)
-    private final String put;
+      private final String put;
 
     public String getPut() {
         return this.put;
@@ -111,7 +111,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="responseBody", required=true)
-    private final String responseBody;
+      private final String responseBody;
 
     public String getResponseBody() {
         return this.responseBody;
@@ -122,7 +122,7 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="selector", required=true)
-    private final String selector;
+      private final String selector;
 
     public String getSelector() {
         return this.selector;
@@ -251,7 +251,6 @@ public final class HttpRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public HttpRuleResponse build() {
             return new HttpRuleResponse(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
         }

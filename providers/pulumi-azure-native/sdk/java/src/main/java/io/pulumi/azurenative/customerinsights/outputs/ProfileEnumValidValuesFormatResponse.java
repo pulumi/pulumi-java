@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -78,7 +78,6 @@ public final class ProfileEnumValidValuesFormatResponse {
             this.value = value;
             return this;
         }
-
         public ProfileEnumValidValuesFormatResponse build() {
             return new ProfileEnumValidValuesFormatResponse(localizedValueNames, value);
         }

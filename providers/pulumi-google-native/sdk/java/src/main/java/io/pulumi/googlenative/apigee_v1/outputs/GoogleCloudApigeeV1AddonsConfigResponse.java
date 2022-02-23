@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AdvancedApiOpsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ConnectorsPlatformConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1IntegrationConfigResponse;
@@ -119,7 +119,6 @@ public final class GoogleCloudApigeeV1AddonsConfigResponse {
             this.monetizationConfig = Objects.requireNonNull(monetizationConfig);
             return this;
         }
-
         public GoogleCloudApigeeV1AddonsConfigResponse build() {
             return new GoogleCloudApigeeV1AddonsConfigResponse(advancedApiOpsConfig, connectorsPlatformConfig, integrationConfig, monetizationConfig);
         }

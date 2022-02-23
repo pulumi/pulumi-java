@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.DedicatedHostInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -335,7 +335,6 @@ public final class GetDedicatedHostResult {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public GetDedicatedHostResult build() {
             return new GetDedicatedHostResult(autoReplaceOnFailure, hostId, id, instanceView, licenseType, location, name, platformFaultDomain, provisioningState, provisioningTime, sku, tags, type, virtualMachines);
         }

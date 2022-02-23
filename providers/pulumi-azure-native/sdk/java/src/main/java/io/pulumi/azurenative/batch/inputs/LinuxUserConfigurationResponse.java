@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LinuxUserConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="gid")
-    private final @Nullable Integer gid;
+        private final @Nullable Integer gid;
 
     public Optional<Integer> getGid() {
         return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
@@ -31,7 +31,7 @@ public final class LinuxUserConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="sshPrivateKey")
-    private final @Nullable String sshPrivateKey;
+        private final @Nullable String sshPrivateKey;
 
     public Optional<String> getSshPrivateKey() {
         return this.sshPrivateKey == null ? Optional.empty() : Optional.ofNullable(this.sshPrivateKey);
@@ -42,7 +42,7 @@ public final class LinuxUserConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Integer uid;
+        private final @Nullable Integer uid;
 
     public Optional<Integer> getUid() {
         return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
@@ -101,7 +101,6 @@ public final class LinuxUserConfigurationResponse extends io.pulumi.resources.In
             this.uid = uid;
             return this;
         }
-
         public LinuxUserConfigurationResponse build() {
             return new LinuxUserConfigurationResponse(gid, sshPrivateKey, uid);
         }

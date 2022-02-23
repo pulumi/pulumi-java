@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourcePredefinedSource;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predefinedSource")
-    private final @Nullable Input<SourcePredefinedSource> predefinedSource;
+      private final @Nullable Input<SourcePredefinedSource> predefinedSource;
 
     public Input<SourcePredefinedSource> getPredefinedSource() {
         return this.predefinedSource == null ? Input.empty() : this.predefinedSource;
@@ -94,7 +94,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.predefinedSource = Input.ofNullable(predefinedSource);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(name, predefinedSource);
         }

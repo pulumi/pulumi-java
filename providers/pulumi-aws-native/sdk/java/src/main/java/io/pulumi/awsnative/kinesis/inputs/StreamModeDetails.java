@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesis.inputs;
 
 import io.pulumi.awsnative.kinesis.enums.StreamModeDetailsStreamMode;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class StreamModeDetails extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="streamMode", required=true)
-    private final StreamModeDetailsStreamMode streamMode;
+        private final StreamModeDetailsStreamMode streamMode;
 
     public StreamModeDetailsStreamMode getStreamMode() {
         return this.streamMode;
@@ -59,7 +59,6 @@ public final class StreamModeDetails extends io.pulumi.resources.InvokeArgs {
             this.streamMode = Objects.requireNonNull(streamMode);
             return this;
         }
-
         public StreamModeDetails build() {
             return new StreamModeDetails(streamMode);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.awsnative.transfer.inputs.WorkflowS3TagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<WorkflowS3TagArgs>> tags;
+        private final @Nullable Input<List<WorkflowS3TagArgs>> tags;
 
     public Input<List<WorkflowS3TagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -95,7 +95,6 @@ public final class WorkflowStepTagStepDetailsPropertiesArgs extends io.pulumi.re
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public WorkflowStepTagStepDetailsPropertiesArgs build() {
             return new WorkflowStepTagStepDetailsPropertiesArgs(name, tags);
         }

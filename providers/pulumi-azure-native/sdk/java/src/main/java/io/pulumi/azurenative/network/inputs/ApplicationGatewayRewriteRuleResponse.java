@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleActionSetResponse;
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleConditionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="actionSet")
-    private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
+        private final @Nullable ApplicationGatewayRewriteRuleActionSetResponse actionSet;
 
     public Optional<ApplicationGatewayRewriteRuleActionSetResponse> getActionSet() {
         return this.actionSet == null ? Optional.empty() : Optional.ofNullable(this.actionSet);
@@ -38,7 +38,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
+        private final @Nullable List<ApplicationGatewayRewriteRuleConditionResponse> conditions;
 
     public List<ApplicationGatewayRewriteRuleConditionResponse> getConditions() {
         return this.conditions == null ? List.of() : this.conditions;
@@ -49,7 +49,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -60,7 +60,7 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="ruleSequence")
-    private final @Nullable Integer ruleSequence;
+        private final @Nullable Integer ruleSequence;
 
     public Optional<Integer> getRuleSequence() {
         return this.ruleSequence == null ? Optional.empty() : Optional.ofNullable(this.ruleSequence);
@@ -129,7 +129,6 @@ public final class ApplicationGatewayRewriteRuleResponse extends io.pulumi.resou
             this.ruleSequence = ruleSequence;
             return this;
         }
-
         public ApplicationGatewayRewriteRuleResponse build() {
             return new ApplicationGatewayRewriteRuleResponse(actionSet, conditions, name, ruleSequence);
         }

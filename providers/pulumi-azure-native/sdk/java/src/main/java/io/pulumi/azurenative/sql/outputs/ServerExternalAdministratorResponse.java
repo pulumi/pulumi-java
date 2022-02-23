@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class ServerExternalAdministratorResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public ServerExternalAdministratorResponse build() {
             return new ServerExternalAdministratorResponse(administratorType, azureADOnlyAuthentication, login, principalType, sid, tenantId);
         }

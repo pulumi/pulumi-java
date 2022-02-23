@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.CredentialReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="alwaysEncryptedAkvAuthType", required=true)
-    private final Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
+        private final Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> alwaysEncryptedAkvAuthType;
 
     public Input<Either<String,SqlAlwaysEncryptedAkvAuthType>> getAlwaysEncryptedAkvAuthType() {
         return this.alwaysEncryptedAkvAuthType;
@@ -40,7 +40,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+        private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -51,7 +51,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Input<Object> servicePrincipalId;
+        private final @Nullable Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
@@ -62,7 +62,7 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
@@ -151,7 +151,6 @@ public final class SqlAlwaysEncryptedPropertiesArgs extends io.pulumi.resources.
             this.servicePrincipalKey = Input.ofNullable(servicePrincipalKey);
             return this;
         }
-
         public SqlAlwaysEncryptedPropertiesArgs build() {
             return new SqlAlwaysEncryptedPropertiesArgs(alwaysEncryptedAkvAuthType, credential, servicePrincipalId, servicePrincipalKey);
         }

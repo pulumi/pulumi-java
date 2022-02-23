@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanBillingPeriod;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanConsumptionPricingType;
 import io.pulumi.googlenative.apigee_v1.enums.RatePlanRevenueShareType;
@@ -28,14 +28,14 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiproduct")
-    private final @Nullable Input<String> apiproduct;
+      private final @Nullable Input<String> apiproduct;
 
     public Input<String> getApiproduct() {
         return this.apiproduct == null ? Input.empty() : this.apiproduct;
     }
 
     @InputImport(name="apiproductId", required=true)
-    private final Input<String> apiproductId;
+      private final Input<String> apiproductId;
 
     public Input<String> getApiproductId() {
         return this.apiproductId;
@@ -46,7 +46,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="billingPeriod")
-    private final @Nullable Input<RatePlanBillingPeriod> billingPeriod;
+      private final @Nullable Input<RatePlanBillingPeriod> billingPeriod;
 
     public Input<RatePlanBillingPeriod> getBillingPeriod() {
         return this.billingPeriod == null ? Input.empty() : this.billingPeriod;
@@ -57,7 +57,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumptionPricingRates")
-    private final @Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
+      private final @Nullable Input<List<GoogleCloudApigeeV1RateRangeArgs>> consumptionPricingRates;
 
     public Input<List<GoogleCloudApigeeV1RateRangeArgs>> getConsumptionPricingRates() {
         return this.consumptionPricingRates == null ? Input.empty() : this.consumptionPricingRates;
@@ -68,7 +68,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumptionPricingType")
-    private final @Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType;
+      private final @Nullable Input<RatePlanConsumptionPricingType> consumptionPricingType;
 
     public Input<RatePlanConsumptionPricingType> getConsumptionPricingType() {
         return this.consumptionPricingType == null ? Input.empty() : this.consumptionPricingType;
@@ -79,7 +79,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="currencyCode")
-    private final @Nullable Input<String> currencyCode;
+      private final @Nullable Input<String> currencyCode;
 
     public Input<String> getCurrencyCode() {
         return this.currencyCode == null ? Input.empty() : this.currencyCode;
@@ -90,7 +90,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -101,7 +101,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -112,7 +112,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -123,7 +123,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedFeeFrequency")
-    private final @Nullable Input<Integer> fixedFeeFrequency;
+      private final @Nullable Input<Integer> fixedFeeFrequency;
 
     public Input<Integer> getFixedFeeFrequency() {
         return this.fixedFeeFrequency == null ? Input.empty() : this.fixedFeeFrequency;
@@ -134,14 +134,14 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedRecurringFee")
-    private final @Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee;
+      private final @Nullable Input<GoogleTypeMoneyArgs> fixedRecurringFee;
 
     public Input<GoogleTypeMoneyArgs> getFixedRecurringFee() {
         return this.fixedRecurringFee == null ? Input.empty() : this.fixedRecurringFee;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -152,7 +152,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revenueShareRates")
-    private final @Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
+      private final @Nullable Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> revenueShareRates;
 
     public Input<List<GoogleCloudApigeeV1RevenueShareRangeArgs>> getRevenueShareRates() {
         return this.revenueShareRates == null ? Input.empty() : this.revenueShareRates;
@@ -163,7 +163,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revenueShareType")
-    private final @Nullable Input<RatePlanRevenueShareType> revenueShareType;
+      private final @Nullable Input<RatePlanRevenueShareType> revenueShareType;
 
     public Input<RatePlanRevenueShareType> getRevenueShareType() {
         return this.revenueShareType == null ? Input.empty() : this.revenueShareType;
@@ -174,7 +174,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="setupFee")
-    private final @Nullable Input<GoogleTypeMoneyArgs> setupFee;
+      private final @Nullable Input<GoogleTypeMoneyArgs> setupFee;
 
     public Input<GoogleTypeMoneyArgs> getSetupFee() {
         return this.setupFee == null ? Input.empty() : this.setupFee;
@@ -185,7 +185,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -196,7 +196,7 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<RatePlanState> state;
+      private final @Nullable Input<RatePlanState> state;
 
     public Input<RatePlanState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -480,7 +480,6 @@ public final class RatePlanArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public RatePlanArgs build() {
             return new RatePlanArgs(apiproduct, apiproductId, billingPeriod, consumptionPricingRates, consumptionPricingType, currencyCode, description, displayName, endTime, fixedFeeFrequency, fixedRecurringFee, organizationId, revenueShareRates, revenueShareType, setupFee, startTime, state);
         }

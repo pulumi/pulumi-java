@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
     public static final RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs Empty = new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -31,14 +31,14 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="rrdatas")
-    private final @Nullable Input<List<String>> rrdatas;
+      private final @Nullable Input<List<String>> rrdatas;
 
     public Input<List<String>> getRrdatas() {
         return this.rrdatas == null ? Input.empty() : this.rrdatas;
@@ -49,7 +49,7 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
      * 
      */
     @InputImport(name="signatureRrdatas")
-    private final @Nullable Input<List<String>> signatureRrdatas;
+      private final @Nullable Input<List<String>> signatureRrdatas;
 
     public Input<List<String>> getSignatureRrdatas() {
         return this.signatureRrdatas == null ? Input.empty() : this.signatureRrdatas;
@@ -138,7 +138,6 @@ public final class RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs extends io.pulum
             this.signatureRrdatas = Input.ofNullable(signatureRrdatas);
             return this;
         }
-
         public RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs build() {
             return new RRSetRoutingPolicyGeoPolicyGeoPolicyItemArgs(kind, location, rrdatas, signatureRrdatas);
         }

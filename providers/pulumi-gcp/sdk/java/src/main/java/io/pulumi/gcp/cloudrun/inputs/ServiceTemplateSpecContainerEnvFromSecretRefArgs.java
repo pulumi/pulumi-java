@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
      * 
      */
     @InputImport(name="localObjectReference")
-    private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference;
+        private final @Nullable Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> localObjectReference;
 
     public Input<ServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReferenceArgs> getLocalObjectReference() {
         return this.localObjectReference == null ? Input.empty() : this.localObjectReference;
@@ -32,7 +32,7 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
      * 
      */
     @InputImport(name="optional")
-    private final @Nullable Input<Boolean> optional;
+        private final @Nullable Input<Boolean> optional;
 
     public Input<Boolean> getOptional() {
         return this.optional == null ? Input.empty() : this.optional;
@@ -91,7 +91,6 @@ public final class ServiceTemplateSpecContainerEnvFromSecretRefArgs extends io.p
             this.optional = Input.ofNullable(optional);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvFromSecretRefArgs build() {
             return new ServiceTemplateSpecContainerEnvFromSecretRefArgs(localObjectReference, optional);
         }

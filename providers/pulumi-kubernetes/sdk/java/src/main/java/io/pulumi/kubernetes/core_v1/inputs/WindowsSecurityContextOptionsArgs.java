@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="gmsaCredentialSpec")
-    private final @Nullable Input<String> gmsaCredentialSpec;
+        private final @Nullable Input<String> gmsaCredentialSpec;
 
     public Input<String> getGmsaCredentialSpec() {
         return this.gmsaCredentialSpec == null ? Input.empty() : this.gmsaCredentialSpec;
@@ -35,7 +35,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="gmsaCredentialSpecName")
-    private final @Nullable Input<String> gmsaCredentialSpecName;
+        private final @Nullable Input<String> gmsaCredentialSpecName;
 
     public Input<String> getGmsaCredentialSpecName() {
         return this.gmsaCredentialSpecName == null ? Input.empty() : this.gmsaCredentialSpecName;
@@ -46,7 +46,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="hostProcess")
-    private final @Nullable Input<Boolean> hostProcess;
+        private final @Nullable Input<Boolean> hostProcess;
 
     public Input<Boolean> getHostProcess() {
         return this.hostProcess == null ? Input.empty() : this.hostProcess;
@@ -57,7 +57,7 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="runAsUserName")
-    private final @Nullable Input<String> runAsUserName;
+        private final @Nullable Input<String> runAsUserName;
 
     public Input<String> getRunAsUserName() {
         return this.runAsUserName == null ? Input.empty() : this.runAsUserName;
@@ -146,7 +146,6 @@ public final class WindowsSecurityContextOptionsArgs extends io.pulumi.resources
             this.runAsUserName = Input.ofNullable(runAsUserName);
             return this;
         }
-
         public WindowsSecurityContextOptionsArgs build() {
             return new WindowsSecurityContextOptionsArgs(gmsaCredentialSpec, gmsaCredentialSpecName, hostProcess, runAsUserName);
         }

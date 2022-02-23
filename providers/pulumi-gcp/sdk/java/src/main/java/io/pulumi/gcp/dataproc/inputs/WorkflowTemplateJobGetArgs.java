@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHadoopJobGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobHiveJobGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateJobPigJobGetArgs;
@@ -30,7 +30,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hadoopJob")
-    private final @Nullable Input<WorkflowTemplateJobHadoopJobGetArgs> hadoopJob;
+        private final @Nullable Input<WorkflowTemplateJobHadoopJobGetArgs> hadoopJob;
 
     public Input<WorkflowTemplateJobHadoopJobGetArgs> getHadoopJob() {
         return this.hadoopJob == null ? Input.empty() : this.hadoopJob;
@@ -41,7 +41,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hiveJob")
-    private final @Nullable Input<WorkflowTemplateJobHiveJobGetArgs> hiveJob;
+        private final @Nullable Input<WorkflowTemplateJobHiveJobGetArgs> hiveJob;
 
     public Input<WorkflowTemplateJobHiveJobGetArgs> getHiveJob() {
         return this.hiveJob == null ? Input.empty() : this.hiveJob;
@@ -52,7 +52,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -63,7 +63,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="pigJob")
-    private final @Nullable Input<WorkflowTemplateJobPigJobGetArgs> pigJob;
+        private final @Nullable Input<WorkflowTemplateJobPigJobGetArgs> pigJob;
 
     public Input<WorkflowTemplateJobPigJobGetArgs> getPigJob() {
         return this.pigJob == null ? Input.empty() : this.pigJob;
@@ -74,7 +74,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prerequisiteStepIds")
-    private final @Nullable Input<List<String>> prerequisiteStepIds;
+        private final @Nullable Input<List<String>> prerequisiteStepIds;
 
     public Input<List<String>> getPrerequisiteStepIds() {
         return this.prerequisiteStepIds == null ? Input.empty() : this.prerequisiteStepIds;
@@ -85,7 +85,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prestoJob")
-    private final @Nullable Input<WorkflowTemplateJobPrestoJobGetArgs> prestoJob;
+        private final @Nullable Input<WorkflowTemplateJobPrestoJobGetArgs> prestoJob;
 
     public Input<WorkflowTemplateJobPrestoJobGetArgs> getPrestoJob() {
         return this.prestoJob == null ? Input.empty() : this.prestoJob;
@@ -96,7 +96,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="pysparkJob")
-    private final @Nullable Input<WorkflowTemplateJobPysparkJobGetArgs> pysparkJob;
+        private final @Nullable Input<WorkflowTemplateJobPysparkJobGetArgs> pysparkJob;
 
     public Input<WorkflowTemplateJobPysparkJobGetArgs> getPysparkJob() {
         return this.pysparkJob == null ? Input.empty() : this.pysparkJob;
@@ -107,7 +107,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scheduling")
-    private final @Nullable Input<WorkflowTemplateJobSchedulingGetArgs> scheduling;
+        private final @Nullable Input<WorkflowTemplateJobSchedulingGetArgs> scheduling;
 
     public Input<WorkflowTemplateJobSchedulingGetArgs> getScheduling() {
         return this.scheduling == null ? Input.empty() : this.scheduling;
@@ -118,7 +118,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sparkJob")
-    private final @Nullable Input<WorkflowTemplateJobSparkJobGetArgs> sparkJob;
+        private final @Nullable Input<WorkflowTemplateJobSparkJobGetArgs> sparkJob;
 
     public Input<WorkflowTemplateJobSparkJobGetArgs> getSparkJob() {
         return this.sparkJob == null ? Input.empty() : this.sparkJob;
@@ -129,7 +129,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sparkRJob")
-    private final @Nullable Input<WorkflowTemplateJobSparkRJobGetArgs> sparkRJob;
+        private final @Nullable Input<WorkflowTemplateJobSparkRJobGetArgs> sparkRJob;
 
     public Input<WorkflowTemplateJobSparkRJobGetArgs> getSparkRJob() {
         return this.sparkRJob == null ? Input.empty() : this.sparkRJob;
@@ -140,7 +140,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sparkSqlJob")
-    private final @Nullable Input<WorkflowTemplateJobSparkSqlJobGetArgs> sparkSqlJob;
+        private final @Nullable Input<WorkflowTemplateJobSparkSqlJobGetArgs> sparkSqlJob;
 
     public Input<WorkflowTemplateJobSparkSqlJobGetArgs> getSparkSqlJob() {
         return this.sparkSqlJob == null ? Input.empty() : this.sparkSqlJob;
@@ -151,7 +151,7 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="stepId", required=true)
-    private final Input<String> stepId;
+        private final Input<String> stepId;
 
     public Input<String> getStepId() {
         return this.stepId;
@@ -360,7 +360,6 @@ public final class WorkflowTemplateJobGetArgs extends io.pulumi.resources.Resour
             this.stepId = Input.of(Objects.requireNonNull(stepId));
             return this;
         }
-
         public WorkflowTemplateJobGetArgs build() {
             return new WorkflowTemplateJobGetArgs(hadoopJob, hiveJob, labels, pigJob, prerequisiteStepIds, prestoJob, pysparkJob, scheduling, sparkJob, sparkRJob, sparkSqlJob, stepId);
         }

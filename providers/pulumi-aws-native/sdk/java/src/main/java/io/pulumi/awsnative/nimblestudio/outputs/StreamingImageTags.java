@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class StreamingImageTags {
         public Builder(StreamingImageTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StreamingImageTags build() {
             return new StreamingImageTags();
         }

@@ -9,8 +9,8 @@ import io.pulumi.azurenative.recoveryservices.outputs.PrivateEndpointConnectionR
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -118,13 +118,6 @@ public class PrivateEndpointConnection extends io.pulumi.resources.CustomResourc
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PrivateEndpointConnection(String name) {
-        super("azure-native:recoveryservices:PrivateEndpointConnection", name, PrivateEndpointConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

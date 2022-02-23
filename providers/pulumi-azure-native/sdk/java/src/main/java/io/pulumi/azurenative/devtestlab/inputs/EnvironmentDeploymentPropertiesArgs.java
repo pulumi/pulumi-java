@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 
 import io.pulumi.azurenative.devtestlab.inputs.ArmTemplateParameterPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="armTemplateId")
-    private final @Nullable Input<String> armTemplateId;
+        private final @Nullable Input<String> armTemplateId;
 
     public Input<String> getArmTemplateId() {
         return this.armTemplateId == null ? Input.empty() : this.armTemplateId;
@@ -36,7 +36,7 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters;
+        private final @Nullable Input<List<ArmTemplateParameterPropertiesArgs>> parameters;
 
     public Input<List<ArmTemplateParameterPropertiesArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -95,7 +95,6 @@ public final class EnvironmentDeploymentPropertiesArgs extends io.pulumi.resourc
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public EnvironmentDeploymentPropertiesArgs build() {
             return new EnvironmentDeploymentPropertiesArgs(armTemplateId, parameters);
         }

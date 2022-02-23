@@ -5,7 +5,7 @@ package io.pulumi.awsnative.greengrassv2.inputs;
 
 import io.pulumi.awsnative.greengrassv2.enums.ComponentVersionLambdaFilesystemPermission;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
     public static final ComponentVersionLambdaVolumeMountArgs Empty = new ComponentVersionLambdaVolumeMountArgs();
 
     @InputImport(name="addGroupOwner")
-    private final @Nullable Input<Boolean> addGroupOwner;
+        private final @Nullable Input<Boolean> addGroupOwner;
 
     public Input<Boolean> getAddGroupOwner() {
         return this.addGroupOwner == null ? Input.empty() : this.addGroupOwner;
     }
 
     @InputImport(name="destinationPath")
-    private final @Nullable Input<String> destinationPath;
+        private final @Nullable Input<String> destinationPath;
 
     public Input<String> getDestinationPath() {
         return this.destinationPath == null ? Input.empty() : this.destinationPath;
     }
 
     @InputImport(name="permission")
-    private final @Nullable Input<ComponentVersionLambdaFilesystemPermission> permission;
+        private final @Nullable Input<ComponentVersionLambdaFilesystemPermission> permission;
 
     public Input<ComponentVersionLambdaFilesystemPermission> getPermission() {
         return this.permission == null ? Input.empty() : this.permission;
     }
 
     @InputImport(name="sourcePath")
-    private final @Nullable Input<String> sourcePath;
+        private final @Nullable Input<String> sourcePath;
 
     public Input<String> getSourcePath() {
         return this.sourcePath == null ? Input.empty() : this.sourcePath;
@@ -127,7 +127,6 @@ public final class ComponentVersionLambdaVolumeMountArgs extends io.pulumi.resou
             this.sourcePath = Input.ofNullable(sourcePath);
             return this;
         }
-
         public ComponentVersionLambdaVolumeMountArgs build() {
             return new ComponentVersionLambdaVolumeMountArgs(addGroupOwner, destinationPath, permission, sourcePath);
         }

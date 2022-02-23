@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkGroupName", required=true)
-    private final Input<String> networkGroupName;
+        private final Input<String> networkGroupName;
 
     public Input<String> getNetworkGroupName() {
         return this.networkGroupName;
@@ -30,7 +30,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final Input<String> networkManagerName;
+        private final Input<String> networkManagerName;
 
     public Input<String> getNetworkManagerName() {
         return this.networkManagerName;
@@ -41,7 +41,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -63,7 +63,7 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticMemberName")
-    private final @Nullable Input<String> staticMemberName;
+        private final @Nullable Input<String> staticMemberName;
 
     public Input<String> getStaticMemberName() {
         return this.staticMemberName == null ? Input.empty() : this.staticMemberName;
@@ -167,7 +167,6 @@ public final class StaticMemberArgs extends io.pulumi.resources.ResourceArgs {
             this.staticMemberName = Input.ofNullable(staticMemberName);
             return this;
         }
-
         public StaticMemberArgs build() {
             return new StaticMemberArgs(networkGroupName, networkManagerName, resourceGroupName, resourceId, staticMemberName);
         }

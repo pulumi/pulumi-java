@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.detective;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="disableEmailNotification")
-    private final @Nullable Input<Boolean> disableEmailNotification;
+        private final @Nullable Input<Boolean> disableEmailNotification;
 
     public Input<Boolean> getDisableEmailNotification() {
         return this.disableEmailNotification == null ? Input.empty() : this.disableEmailNotification;
@@ -31,7 +31,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="graphArn", required=true)
-    private final Input<String> graphArn;
+        private final Input<String> graphArn;
 
     public Input<String> getGraphArn() {
         return this.graphArn;
@@ -42,7 +42,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memberEmailAddress", required=true)
-    private final Input<String> memberEmailAddress;
+        private final Input<String> memberEmailAddress;
 
     public Input<String> getMemberEmailAddress() {
         return this.memberEmailAddress;
@@ -53,7 +53,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="memberId", required=true)
-    private final Input<String> memberId;
+        private final Input<String> memberId;
 
     public Input<String> getMemberId() {
         return this.memberId;
@@ -64,7 +64,7 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
@@ -168,7 +168,6 @@ public final class MemberInvitationArgs extends io.pulumi.resources.ResourceArgs
             this.message = Input.ofNullable(message);
             return this;
         }
-
         public MemberInvitationArgs build() {
             return new MemberInvitationArgs(disableEmailNotification, graphArn, memberEmailAddress, memberId, message);
         }

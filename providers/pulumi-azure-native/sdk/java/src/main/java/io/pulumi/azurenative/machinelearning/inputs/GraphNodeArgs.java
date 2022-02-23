@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetId")
-    private final @Nullable Input<String> assetId;
+        private final @Nullable Input<String> assetId;
 
     public Input<String> getAssetId() {
         return this.assetId == null ? Input.empty() : this.assetId;
@@ -36,7 +36,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputId")
-    private final @Nullable Input<String> inputId;
+        private final @Nullable Input<String> inputId;
 
     public Input<String> getInputId() {
         return this.inputId == null ? Input.empty() : this.inputId;
@@ -47,7 +47,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputId")
-    private final @Nullable Input<String> outputId;
+        private final @Nullable Input<String> outputId;
 
     public Input<String> getOutputId() {
         return this.outputId == null ? Input.empty() : this.outputId;
@@ -58,7 +58,7 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
+        private final @Nullable Input<Map<String,WebServiceParameterArgs>> parameters;
 
     public Input<Map<String,WebServiceParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -147,7 +147,6 @@ public final class GraphNodeArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public GraphNodeArgs build() {
             return new GraphNodeArgs(assetId, inputId, outputId, parameters);
         }

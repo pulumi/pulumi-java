@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="certificates", required=true)
-    private final List<String> certificates;
+        private final List<String> certificates;
 
     public List<String> getCertificates() {
         return this.certificates;
@@ -34,7 +34,7 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -83,7 +83,6 @@ public final class MediaGraphPemCertificateListResponse extends io.pulumi.resour
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphPemCertificateListResponse build() {
             return new MediaGraphPemCertificateListResponse(certificates, odataType);
         }

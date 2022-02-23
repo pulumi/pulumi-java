@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom {
             this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvValueFrom build() {
             return new GetServiceTemplateSpecContainerEnvValueFrom(secretKeyReves);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ManualScalingResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="instances", required=true)
-    private final Integer instances;
+      private final Integer instances;
 
     public Integer getInstances() {
         return this.instances;
@@ -59,7 +59,6 @@ public final class ManualScalingResponse extends io.pulumi.resources.InvokeArgs 
             this.instances = Objects.requireNonNull(instances);
             return this;
         }
-
         public ManualScalingResponse build() {
             return new ManualScalingResponse(instances);
         }

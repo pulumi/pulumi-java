@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customproviders.inputs;
 import io.pulumi.azurenative.customproviders.enums.ActionRouting;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<String> endpoint;
+        private final Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint;
@@ -36,7 +36,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="routingType")
-    private final @Nullable Input<Either<String,ActionRouting>> routingType;
+        private final @Nullable Input<Either<String,ActionRouting>> routingType;
 
     public Input<Either<String,ActionRouting>> getRoutingType() {
         return this.routingType == null ? Input.empty() : this.routingType;
@@ -121,7 +121,6 @@ public final class CustomRPActionRouteDefinitionArgs extends io.pulumi.resources
             this.routingType = Input.ofNullable(routingType);
             return this;
         }
-
         public CustomRPActionRouteDefinitionArgs build() {
             return new CustomRPActionRouteDefinitionArgs(endpoint, name, routingType);
         }

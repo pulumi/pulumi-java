@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
      * 
      */
     @InputImport(name="validationErrors", required=true)
-    private final List<ReportableExceptionResponse> validationErrors;
+        private final List<ReportableExceptionResponse> validationErrors;
 
     public List<ReportableExceptionResponse> getValidationErrors() {
         return this.validationErrors;
@@ -104,7 +104,6 @@ public final class ValidateSyncMigrationInputSqlServerTaskOutputResponse extends
             this.validationErrors = Objects.requireNonNull(validationErrors);
             return this;
         }
-
         public ValidateSyncMigrationInputSqlServerTaskOutputResponse build() {
             return new ValidateSyncMigrationInputSqlServerTaskOutputResponse(id, name, validationErrors);
         }

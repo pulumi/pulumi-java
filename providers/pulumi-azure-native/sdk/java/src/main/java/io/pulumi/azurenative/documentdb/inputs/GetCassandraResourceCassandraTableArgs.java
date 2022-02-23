@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyspaceName", required=true)
-    private final String keyspaceName;
+        private final String keyspaceName;
 
     public String getKeyspaceName() {
         return this.keyspaceName;
@@ -39,7 +39,7 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+        private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -119,7 +119,6 @@ public final class GetCassandraResourceCassandraTableArgs extends io.pulumi.reso
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public GetCassandraResourceCassandraTableArgs build() {
             return new GetCassandraResourceCassandraTableArgs(accountName, keyspaceName, resourceGroupName, tableName);
         }

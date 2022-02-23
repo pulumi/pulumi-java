@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation.outputs;
 
 import io.pulumi.azurenative.automation.outputs.RunbookAssociationPropertyResponse;
 import io.pulumi.azurenative.automation.outputs.ScheduleAssociationPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetJobScheduleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobScheduleResult build() {
             return new GetJobScheduleResult(id, jobScheduleId, name, parameters, runOn, runbook, schedule, type);
         }

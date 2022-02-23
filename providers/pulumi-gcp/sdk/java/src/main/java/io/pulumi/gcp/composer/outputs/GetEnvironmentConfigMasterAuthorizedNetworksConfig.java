@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.GetEnvironmentConfigMasterAuthorizedNetworksConfigCidrBlock;
 import java.lang.Boolean;
 import java.util.List;
@@ -60,7 +60,6 @@ public final class GetEnvironmentConfigMasterAuthorizedNetworksConfig {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetEnvironmentConfigMasterAuthorizedNetworksConfig build() {
             return new GetEnvironmentConfigMasterAuthorizedNetworksConfig(cidrBlocks, enabled);
         }

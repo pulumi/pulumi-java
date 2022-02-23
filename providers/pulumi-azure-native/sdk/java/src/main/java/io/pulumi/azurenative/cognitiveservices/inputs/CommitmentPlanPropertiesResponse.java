@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.CommitmentPeriodResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoRenew")
-    private final @Nullable Boolean autoRenew;
+        private final @Nullable Boolean autoRenew;
 
     public Optional<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
@@ -36,7 +36,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="current")
-    private final @Nullable CommitmentPeriodResponse current;
+        private final @Nullable CommitmentPeriodResponse current;
 
     public Optional<CommitmentPeriodResponse> getCurrent() {
         return this.current == null ? Optional.empty() : Optional.ofNullable(this.current);
@@ -47,7 +47,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostingModel")
-    private final @Nullable String hostingModel;
+        private final @Nullable String hostingModel;
 
     public Optional<String> getHostingModel() {
         return this.hostingModel == null ? Optional.empty() : Optional.ofNullable(this.hostingModel);
@@ -58,7 +58,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="last", required=true)
-    private final CommitmentPeriodResponse last;
+        private final CommitmentPeriodResponse last;
 
     public CommitmentPeriodResponse getLast() {
         return this.last;
@@ -69,7 +69,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="next")
-    private final @Nullable CommitmentPeriodResponse next;
+        private final @Nullable CommitmentPeriodResponse next;
 
     public Optional<CommitmentPeriodResponse> getNext() {
         return this.next == null ? Optional.empty() : Optional.ofNullable(this.next);
@@ -80,7 +80,7 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="planType")
-    private final @Nullable String planType;
+        private final @Nullable String planType;
 
     public Optional<String> getPlanType() {
         return this.planType == null ? Optional.empty() : Optional.ofNullable(this.planType);
@@ -169,7 +169,6 @@ public final class CommitmentPlanPropertiesResponse extends io.pulumi.resources.
             this.planType = planType;
             return this;
         }
-
         public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(autoRenew, current, hostingModel, last, next, planType);
         }

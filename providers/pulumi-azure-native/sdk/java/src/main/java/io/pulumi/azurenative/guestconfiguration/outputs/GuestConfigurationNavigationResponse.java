@@ -5,7 +5,7 @@ package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationParameterResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.ConfigurationSettingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -247,7 +247,6 @@ public final class GuestConfigurationNavigationResponse {
             this.version = version;
             return this;
         }
-
         public GuestConfigurationNavigationResponse build() {
             return new GuestConfigurationNavigationResponse(assignmentType, configurationParameter, configurationProtectedParameter, configurationSetting, contentHash, contentType, contentUri, kind, name, version);
         }

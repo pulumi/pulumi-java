@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class PackagingConfigurationSpekeKeyProvider {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PackagingConfigurationSpekeKeyProvider build() {
             return new PackagingConfigurationSpekeKeyProvider(roleArn, systemIds, url);
         }

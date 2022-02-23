@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class AssociatedWorkspaceResponse {
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public AssociatedWorkspaceResponse build() {
             return new AssociatedWorkspaceResponse(associateDate, resourceId, workspaceId, workspaceName);
         }

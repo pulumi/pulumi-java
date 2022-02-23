@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="publicCertData", required=true)
-    private final Input<String> publicCertData;
+        private final Input<String> publicCertData;
 
     public Input<String> getPublicCertData() {
         return this.publicCertData;
@@ -119,7 +119,6 @@ public final class VpnClientRootCertificateArgs extends io.pulumi.resources.Reso
             this.publicCertData = Input.of(Objects.requireNonNull(publicCertData));
             return this;
         }
-
         public VpnClientRootCertificateArgs build() {
             return new VpnClientRootCertificateArgs(id, name, publicCertData);
         }

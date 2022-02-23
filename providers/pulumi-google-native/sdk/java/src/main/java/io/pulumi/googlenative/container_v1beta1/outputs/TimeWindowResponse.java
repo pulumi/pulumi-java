@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.MaintenanceExclusionOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class TimeWindowResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public TimeWindowResponse build() {
             return new TimeWindowResponse(endTime, maintenanceExclusionOptions, startTime);
         }

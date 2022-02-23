@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ExprResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleMatcherConfigResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class SecurityPolicyRuleMatcherResponse {
             this.versionedExpr = Objects.requireNonNull(versionedExpr);
             return this;
         }
-
         public SecurityPolicyRuleMatcherResponse build() {
             return new SecurityPolicyRuleMatcherResponse(config, expr, versionedExpr);
         }

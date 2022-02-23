@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_beta.InterconnectArgs;
 import io.pulumi.googlenative.compute_beta.outputs.InterconnectCircuitInfoResponse;
@@ -361,13 +361,6 @@ public class Interconnect extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Interconnect(String name) {
-        super("google-native:compute/beta:Interconnect", name, InterconnectArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

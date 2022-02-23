@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class SiteLimitsResponse {
             this.maxPercentageCpu = maxPercentageCpu;
             return this;
         }
-
         public SiteLimitsResponse build() {
             return new SiteLimitsResponse(maxDiskSizeInMb, maxMemoryInMb, maxPercentageCpu);
         }

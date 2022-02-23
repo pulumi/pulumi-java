@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediaconnect.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="flowArn", required=true)
-    private final String flowArn;
+        private final String flowArn;
 
     public String getFlowArn() {
         return this.flowArn;
@@ -28,7 +28,7 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,6 @@ public final class GetFlowVpcInterfaceArgs extends io.pulumi.resources.InvokeArg
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetFlowVpcInterfaceArgs build() {
             return new GetFlowVpcInterfaceArgs(flowArn, name);
         }

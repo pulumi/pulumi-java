@@ -19,7 +19,7 @@ import io.pulumi.awsnative.appflow.outputs.ConnectorProfileSnowflakeConnectorPro
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileTrendmicroConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileVeevaConnectorProfileCredentials;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileZendeskConnectorProfileCredentials;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -257,7 +257,6 @@ public final class ConnectorProfileCredentials {
             this.zendesk = zendesk;
             return this;
         }
-
         public ConnectorProfileCredentials build() {
             return new ConnectorProfileCredentials(amplitude, datadog, dynatrace, googleAnalytics, inforNexus, marketo, redshift, sAPOData, salesforce, serviceNow, singular, slack, snowflake, trendmicro, veeva, zendesk);
         }

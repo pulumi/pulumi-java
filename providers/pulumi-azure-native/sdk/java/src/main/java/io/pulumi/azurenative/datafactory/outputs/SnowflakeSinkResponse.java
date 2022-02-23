@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SnowflakeImportCopyCommandResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class SnowflakeSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public SnowflakeSinkResponse build() {
             return new SnowflakeSinkResponse(disableMetricsCollection, importSettings, maxConcurrentConnections, preCopyScript, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout);
         }

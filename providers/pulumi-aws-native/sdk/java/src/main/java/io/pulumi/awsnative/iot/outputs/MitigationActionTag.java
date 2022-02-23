@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class MitigationActionTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MitigationActionTag build() {
             return new MitigationActionTag(key, value);
         }

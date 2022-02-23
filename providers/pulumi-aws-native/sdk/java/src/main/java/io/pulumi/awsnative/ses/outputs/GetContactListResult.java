@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ses.outputs;
 
 import io.pulumi.awsnative.ses.outputs.ContactListTag;
 import io.pulumi.awsnative.ses.outputs.ContactListTopic;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class GetContactListResult {
             this.topics = topics;
             return this;
         }
-
         public GetContactListResult build() {
             return new GetContactListResult(description, tags, topics);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetViewByScopeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -28,7 +28,7 @@ public final class GetViewByScopeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="viewName", required=true)
-    private final String viewName;
+        private final String viewName;
 
     public String getViewName() {
         return this.viewName;
@@ -77,7 +77,6 @@ public final class GetViewByScopeArgs extends io.pulumi.resources.InvokeArgs {
             this.viewName = Objects.requireNonNull(viewName);
             return this;
         }
-
         public GetViewByScopeArgs build() {
             return new GetViewByScopeArgs(scope, viewName);
         }

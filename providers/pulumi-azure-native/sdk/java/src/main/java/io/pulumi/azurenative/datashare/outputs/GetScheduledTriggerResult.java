@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -289,7 +289,6 @@ public final class GetScheduledTriggerResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetScheduledTriggerResult build() {
             return new GetScheduledTriggerResult(createdAt, id, kind, name, provisioningState, recurrenceInterval, synchronizationMode, synchronizationTime, systemData, triggerStatus, type, userName);
         }

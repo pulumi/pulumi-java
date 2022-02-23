@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyIdentityConstraintsCelExpression;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -108,7 +108,6 @@ public final class CaPoolIssuancePolicyIdentityConstraints {
             this.celExpression = celExpression;
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraints build() {
             return new CaPoolIssuancePolicyIdentityConstraints(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

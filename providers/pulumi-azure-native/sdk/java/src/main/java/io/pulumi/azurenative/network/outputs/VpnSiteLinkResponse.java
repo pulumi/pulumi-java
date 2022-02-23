@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VpnLinkBgpSettingsResponse;
 import io.pulumi.azurenative.network.outputs.VpnLinkProviderPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -225,7 +225,6 @@ public final class VpnSiteLinkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VpnSiteLinkResponse build() {
             return new VpnSiteLinkResponse(bgpProperties, etag, fqdn, id, ipAddress, linkProperties, name, provisioningState, type);
         }

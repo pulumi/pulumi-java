@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionClusterConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
     public static final ModelQualityJobDefinitionMonitoringResourcesArgs Empty = new ModelQualityJobDefinitionMonitoringResourcesArgs();
 
     @InputImport(name="clusterConfig", required=true)
-    private final Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
+        private final Input<ModelQualityJobDefinitionClusterConfigArgs> clusterConfig;
 
     public Input<ModelQualityJobDefinitionClusterConfigArgs> getClusterConfig() {
         return this.clusterConfig;
@@ -61,7 +61,6 @@ public final class ModelQualityJobDefinitionMonitoringResourcesArgs extends io.p
             this.clusterConfig = Input.of(Objects.requireNonNull(clusterConfig));
             return this;
         }
-
         public ModelQualityJobDefinitionMonitoringResourcesArgs build() {
             return new ModelQualityJobDefinitionMonitoringResourcesArgs(clusterConfig);
         }

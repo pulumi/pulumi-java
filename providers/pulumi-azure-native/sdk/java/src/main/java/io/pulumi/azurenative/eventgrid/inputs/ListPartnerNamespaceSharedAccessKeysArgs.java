@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="partnerNamespaceName", required=true)
-    private final String partnerNamespaceName;
+        private final String partnerNamespaceName;
 
     public String getPartnerNamespaceName() {
         return this.partnerNamespaceName;
@@ -28,7 +28,7 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class ListPartnerNamespaceSharedAccessKeysArgs extends io.pulumi.re
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListPartnerNamespaceSharedAccessKeysArgs build() {
             return new ListPartnerNamespaceSharedAccessKeysArgs(partnerNamespaceName, resourceGroupName);
         }

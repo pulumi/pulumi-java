@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2beta1.outputs.GoogleCloudDialogflowV2beta1ConversationPhoneNumberResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetConversationResult {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetConversationResult build() {
             return new GetConversationResult(conversationProfile, conversationStage, endTime, lifecycleState, name, phoneNumber, startTime);
         }

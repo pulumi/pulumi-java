@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -181,7 +181,6 @@ public final class GetObjectSignedUrlResult {
             this.signedUrl = Objects.requireNonNull(signedUrl);
             return this;
         }
-
         public GetObjectSignedUrlResult build() {
             return new GetObjectSignedUrlResult(bucket, contentMd5, contentType, credentials, duration, extensionHeaders, httpMethod, id, path, signedUrl);
         }

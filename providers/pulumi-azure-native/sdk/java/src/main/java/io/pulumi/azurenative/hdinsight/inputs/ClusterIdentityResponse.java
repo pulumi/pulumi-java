@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.ClusterIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -36,7 +36,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -47,7 +47,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -58,7 +58,7 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
+        private final @Nullable Map<String,ClusterIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
     public Map<String,ClusterIdentityResponseUserAssignedIdentities> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
@@ -127,7 +127,6 @@ public final class ClusterIdentityResponse extends io.pulumi.resources.InvokeArg
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ClusterIdentityResponse build() {
             return new ClusterIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

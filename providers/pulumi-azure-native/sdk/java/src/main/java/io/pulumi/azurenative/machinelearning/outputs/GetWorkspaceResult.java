@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -308,7 +308,6 @@ public final class GetWorkspaceResult {
             this.workspaceType = Objects.requireNonNull(workspaceType);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(creationTime, id, keyVaultIdentifierId, location, name, ownerEmail, studioEndpoint, tags, type, userStorageAccountId, workspaceId, workspaceState, workspaceType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.enums.ClusterKubernetesNetworkConfigIpFamily;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class ClusterKubernetesNetworkConfig {
             this.serviceIpv6Cidr = serviceIpv6Cidr;
             return this;
         }
-
         public ClusterKubernetesNetworkConfig build() {
             return new ClusterKubernetesNetworkConfig(ipFamily, serviceIpv4Cidr, serviceIpv6Cidr);
         }

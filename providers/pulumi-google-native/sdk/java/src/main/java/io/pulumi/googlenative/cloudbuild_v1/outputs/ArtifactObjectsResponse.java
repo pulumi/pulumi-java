@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.TimeSpanResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class ArtifactObjectsResponse {
             this.timing = Objects.requireNonNull(timing);
             return this;
         }
-
         public ArtifactObjectsResponse build() {
             return new ArtifactObjectsResponse(location, paths, timing);
         }

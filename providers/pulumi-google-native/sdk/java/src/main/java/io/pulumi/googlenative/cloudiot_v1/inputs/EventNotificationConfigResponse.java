@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="pubsubTopicName", required=true)
-    private final String pubsubTopicName;
+      private final String pubsubTopicName;
 
     public String getPubsubTopicName() {
         return this.pubsubTopicName;
@@ -32,7 +32,7 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subfolderMatches", required=true)
-    private final String subfolderMatches;
+      private final String subfolderMatches;
 
     public String getSubfolderMatches() {
         return this.subfolderMatches;
@@ -81,7 +81,6 @@ public final class EventNotificationConfigResponse extends io.pulumi.resources.I
             this.subfolderMatches = Objects.requireNonNull(subfolderMatches);
             return this;
         }
-
         public EventNotificationConfigResponse build() {
             return new EventNotificationConfigResponse(pubsubTopicName, subfolderMatches);
         }

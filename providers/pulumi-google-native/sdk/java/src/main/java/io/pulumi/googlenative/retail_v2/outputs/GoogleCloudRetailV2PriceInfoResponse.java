@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2PriceInfoPriceRangeResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class GoogleCloudRetailV2PriceInfoResponse {
             this.priceRange = Objects.requireNonNull(priceRange);
             return this;
         }
-
         public GoogleCloudRetailV2PriceInfoResponse build() {
             return new GoogleCloudRetailV2PriceInfoResponse(cost, currencyCode, originalPrice, price, priceEffectiveTime, priceExpireTime, priceRange);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.TwitterRegistrationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registration")
-    private final @Nullable Input<TwitterRegistrationArgs> registration;
+        private final @Nullable Input<TwitterRegistrationArgs> registration;
 
     public Input<TwitterRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;
@@ -94,7 +94,6 @@ public final class TwitterArgs extends io.pulumi.resources.ResourceArgs {
             this.registration = Input.ofNullable(registration);
             return this;
         }
-
         public TwitterArgs build() {
             return new TwitterArgs(enabled, registration);
         }

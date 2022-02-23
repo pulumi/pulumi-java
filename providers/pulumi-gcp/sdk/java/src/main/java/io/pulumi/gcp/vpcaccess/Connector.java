@@ -5,8 +5,8 @@ package io.pulumi.gcp.vpcaccess;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.vpcaccess.ConnectorArgs;
 import io.pulumi.gcp.vpcaccess.inputs.ConnectorState;
@@ -238,13 +238,6 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return this.subnet;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Connector(String name) {
-        super("gcp:vpcaccess/connector:Connector", name, ConnectorArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

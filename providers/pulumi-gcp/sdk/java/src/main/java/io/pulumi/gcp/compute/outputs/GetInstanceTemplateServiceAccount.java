@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class GetInstanceTemplateServiceAccount {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public GetInstanceTemplateServiceAccount build() {
             return new GetInstanceTemplateServiceAccount(email, scopes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.inputs.ConditionResponse;
 import io.pulumi.googlenative.gameservices_v1.inputs.LogConfigResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -35,7 +35,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="conditions", required=true)
-    private final List<ConditionResponse> conditions;
+      private final List<ConditionResponse> conditions;
 
     public List<ConditionResponse> getConditions() {
         return this.conditions;
@@ -46,7 +46,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -57,7 +57,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="in", required=true)
-    private final List<String> in;
+      private final List<String> in;
 
     public List<String> getIn() {
         return this.in;
@@ -68,7 +68,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logConfig", required=true)
-    private final List<LogConfigResponse> logConfig;
+      private final List<LogConfigResponse> logConfig;
 
     public List<LogConfigResponse> getLogConfig() {
         return this.logConfig;
@@ -79,7 +79,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="notIn", required=true)
-    private final List<String> notIn;
+      private final List<String> notIn;
 
     public List<String> getNotIn() {
         return this.notIn;
@@ -90,7 +90,7 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final List<String> permissions;
+      private final List<String> permissions;
 
     public List<String> getPermissions() {
         return this.permissions;
@@ -189,7 +189,6 @@ public final class RuleResponse extends io.pulumi.resources.InvokeArgs {
             this.permissions = Objects.requireNonNull(permissions);
             return this;
         }
-
         public RuleResponse build() {
             return new RuleResponse(action, conditions, description, in, logConfig, notIn, permissions);
         }

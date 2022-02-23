@@ -10,7 +10,7 @@ import io.pulumi.awsnative.iot.inputs.JobTemplateTagArgs;
 import io.pulumi.awsnative.iot.inputs.PresignedUrlConfigPropertiesArgs;
 import io.pulumi.awsnative.iot.inputs.TimeoutConfigPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="abortConfig")
-    private final @Nullable Input<AbortConfigPropertiesArgs> abortConfig;
+        private final @Nullable Input<AbortConfigPropertiesArgs> abortConfig;
 
     public Input<AbortConfigPropertiesArgs> getAbortConfig() {
         return this.abortConfig == null ? Input.empty() : this.abortConfig;
@@ -37,7 +37,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -48,7 +48,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="document")
-    private final @Nullable Input<String> document;
+        private final @Nullable Input<String> document;
 
     public Input<String> getDocument() {
         return this.document == null ? Input.empty() : this.document;
@@ -59,7 +59,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentSource")
-    private final @Nullable Input<String> documentSource;
+        private final @Nullable Input<String> documentSource;
 
     public Input<String> getDocumentSource() {
         return this.documentSource == null ? Input.empty() : this.documentSource;
@@ -70,14 +70,14 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobArn")
-    private final @Nullable Input<String> jobArn;
+        private final @Nullable Input<String> jobArn;
 
     public Input<String> getJobArn() {
         return this.jobArn == null ? Input.empty() : this.jobArn;
     }
 
     @InputImport(name="jobExecutionsRetryConfig")
-    private final @Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
+        private final @Nullable Input<JobExecutionsRetryConfigPropertiesArgs> jobExecutionsRetryConfig;
 
     public Input<JobExecutionsRetryConfigPropertiesArgs> getJobExecutionsRetryConfig() {
         return this.jobExecutionsRetryConfig == null ? Input.empty() : this.jobExecutionsRetryConfig;
@@ -88,14 +88,14 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobExecutionsRolloutConfig")
-    private final @Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
+        private final @Nullable Input<JobExecutionsRolloutConfigPropertiesArgs> jobExecutionsRolloutConfig;
 
     public Input<JobExecutionsRolloutConfigPropertiesArgs> getJobExecutionsRolloutConfig() {
         return this.jobExecutionsRolloutConfig == null ? Input.empty() : this.jobExecutionsRolloutConfig;
     }
 
     @InputImport(name="jobTemplateId", required=true)
-    private final Input<String> jobTemplateId;
+        private final Input<String> jobTemplateId;
 
     public Input<String> getJobTemplateId() {
         return this.jobTemplateId;
@@ -106,7 +106,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="presignedUrlConfig")
-    private final @Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
+        private final @Nullable Input<PresignedUrlConfigPropertiesArgs> presignedUrlConfig;
 
     public Input<PresignedUrlConfigPropertiesArgs> getPresignedUrlConfig() {
         return this.presignedUrlConfig == null ? Input.empty() : this.presignedUrlConfig;
@@ -117,7 +117,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<JobTemplateTagArgs>> tags;
+        private final @Nullable Input<List<JobTemplateTagArgs>> tags;
 
     public Input<List<JobTemplateTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -128,7 +128,7 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeoutConfig")
-    private final @Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig;
+        private final @Nullable Input<TimeoutConfigPropertiesArgs> timeoutConfig;
 
     public Input<TimeoutConfigPropertiesArgs> getTimeoutConfig() {
         return this.timeoutConfig == null ? Input.empty() : this.timeoutConfig;
@@ -322,7 +322,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.timeoutConfig = Input.ofNullable(timeoutConfig);
             return this;
         }
-
         public JobTemplateArgs build() {
             return new JobTemplateArgs(abortConfig, description, document, documentSource, jobArn, jobExecutionsRetryConfig, jobExecutionsRolloutConfig, jobTemplateId, presignedUrlConfig, tags, timeoutConfig);
         }

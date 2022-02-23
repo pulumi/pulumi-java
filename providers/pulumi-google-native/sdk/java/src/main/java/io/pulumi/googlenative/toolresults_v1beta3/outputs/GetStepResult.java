@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.MultiStepResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.OutcomeResponse;
@@ -357,7 +357,6 @@ public final class GetStepResult {
             this.toolExecutionStep = Objects.requireNonNull(toolExecutionStep);
             return this;
         }
-
         public GetStepResult build() {
             return new GetStepResult(completionTime, creationTime, description, deviceUsageDuration, dimensionValue, hasImages, labels, multiStep, name, outcome, runDuration, state, stepId, testExecutionStep, toolExecutionStep);
         }

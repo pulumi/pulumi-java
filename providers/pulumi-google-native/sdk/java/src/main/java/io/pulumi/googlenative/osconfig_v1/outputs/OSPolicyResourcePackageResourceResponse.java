@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceAPTResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceDebResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResourcePackageResourceGooGetResponse;
@@ -207,7 +207,6 @@ public final class OSPolicyResourcePackageResourceResponse {
             this.zypper = Objects.requireNonNull(zypper);
             return this;
         }
-
         public OSPolicyResourcePackageResourceResponse build() {
             return new OSPolicyResourcePackageResourceResponse(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

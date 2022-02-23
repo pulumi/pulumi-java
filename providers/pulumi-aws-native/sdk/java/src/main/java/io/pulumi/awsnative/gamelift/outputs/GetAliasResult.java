@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.gamelift.outputs;
 
 import io.pulumi.awsnative.gamelift.outputs.AliasRoutingStrategy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class GetAliasResult {
             this.routingStrategy = routingStrategy;
             return this;
         }
-
         public GetAliasResult build() {
             return new GetAliasResult(aliasId, description, name, routingStrategy);
         }

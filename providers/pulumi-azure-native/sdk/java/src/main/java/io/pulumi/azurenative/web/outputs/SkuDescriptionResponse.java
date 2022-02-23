@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.CapabilityResponse;
 import io.pulumi.azurenative.web.outputs.SkuCapacityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -206,7 +206,6 @@ public final class SkuDescriptionResponse {
             this.tier = tier;
             return this;
         }
-
         public SkuDescriptionResponse build() {
             return new SkuDescriptionResponse(capabilities, capacity, family, locations, name, size, skuCapacity, tier);
         }

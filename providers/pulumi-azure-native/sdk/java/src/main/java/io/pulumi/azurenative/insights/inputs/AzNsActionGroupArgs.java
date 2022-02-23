@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="actionGroup")
-    private final @Nullable Input<List<String>> actionGroup;
+        private final @Nullable Input<List<String>> actionGroup;
 
     public Input<List<String>> getActionGroup() {
         return this.actionGroup == null ? Input.empty() : this.actionGroup;
@@ -35,7 +35,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customWebhookPayload")
-    private final @Nullable Input<String> customWebhookPayload;
+        private final @Nullable Input<String> customWebhookPayload;
 
     public Input<String> getCustomWebhookPayload() {
         return this.customWebhookPayload == null ? Input.empty() : this.customWebhookPayload;
@@ -46,7 +46,7 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="emailSubject")
-    private final @Nullable Input<String> emailSubject;
+        private final @Nullable Input<String> emailSubject;
 
     public Input<String> getEmailSubject() {
         return this.emailSubject == null ? Input.empty() : this.emailSubject;
@@ -120,7 +120,6 @@ public final class AzNsActionGroupArgs extends io.pulumi.resources.ResourceArgs 
             this.emailSubject = Input.ofNullable(emailSubject);
             return this;
         }
-
         public AzNsActionGroupArgs build() {
             return new AzNsActionGroupArgs(actionGroup, customWebhookPayload, emailSubject);
         }

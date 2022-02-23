@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab;
 import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskBlobName")
-    private final @Nullable Input<String> diskBlobName;
+        private final @Nullable Input<String> diskBlobName;
 
     public Input<String> getDiskBlobName() {
         return this.diskBlobName == null ? Input.empty() : this.diskBlobName;
@@ -34,7 +34,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGiB")
-    private final @Nullable Input<Integer> diskSizeGiB;
+        private final @Nullable Input<Integer> diskSizeGiB;
 
     public Input<Integer> getDiskSizeGiB() {
         return this.diskSizeGiB == null ? Input.empty() : this.diskSizeGiB;
@@ -45,7 +45,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<Either<String,StorageType>> diskType;
+        private final @Nullable Input<Either<String,StorageType>> diskType;
 
     public Input<Either<String,StorageType>> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -56,7 +56,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskUri")
-    private final @Nullable Input<String> diskUri;
+        private final @Nullable Input<String> diskUri;
 
     public Input<String> getDiskUri() {
         return this.diskUri == null ? Input.empty() : this.diskUri;
@@ -67,7 +67,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostCaching")
-    private final @Nullable Input<String> hostCaching;
+        private final @Nullable Input<String> hostCaching;
 
     public Input<String> getHostCaching() {
         return this.hostCaching == null ? Input.empty() : this.hostCaching;
@@ -78,7 +78,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -89,7 +89,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="leasedByLabVmId")
-    private final @Nullable Input<String> leasedByLabVmId;
+        private final @Nullable Input<String> leasedByLabVmId;
 
     public Input<String> getLeasedByLabVmId() {
         return this.leasedByLabVmId == null ? Input.empty() : this.leasedByLabVmId;
@@ -100,7 +100,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -111,7 +111,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managedDiskId")
-    private final @Nullable Input<String> managedDiskId;
+        private final @Nullable Input<String> managedDiskId;
 
     public Input<String> getManagedDiskId() {
         return this.managedDiskId == null ? Input.empty() : this.managedDiskId;
@@ -122,7 +122,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -133,7 +133,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-    private final @Nullable Input<String> storageAccountId;
+        private final @Nullable Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
@@ -155,7 +155,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -166,7 +166,7 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<String> userName;
+        private final Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName;
@@ -405,7 +405,6 @@ public final class DiskArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public DiskArgs build() {
             return new DiskArgs(diskBlobName, diskSizeGiB, diskType, diskUri, hostCaching, labName, leasedByLabVmId, location, managedDiskId, name, resourceGroupName, storageAccountId, tags, userName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse;
 import java.lang.Integer;
@@ -183,7 +183,6 @@ public final class AllocationSpecificSKUAllocationReservedInstancePropertiesResp
             this.minCpuPlatform = Objects.requireNonNull(minCpuPlatform);
             return this;
         }
-
         public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse build() {
             return new AllocationSpecificSKUAllocationReservedInstancePropertiesResponse(guestAccelerators, localSsds, locationHint, machineType, maintenanceFreezeDurationHours, maintenanceInterval, minCpuPlatform);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.enums.UebaDataSources;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSources")
-    private final @Nullable Input<List<Either<String,UebaDataSources>>> dataSources;
+        private final @Nullable Input<List<Either<String,UebaDataSources>>> dataSources;
 
     public Input<List<Either<String,UebaDataSources>>> getDataSources() {
         return this.dataSources == null ? Input.empty() : this.dataSources;
@@ -34,7 +34,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+        private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -56,7 +56,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="settingsName")
-    private final @Nullable Input<String> settingsName;
+        private final @Nullable Input<String> settingsName;
 
     public Input<String> getSettingsName() {
         return this.settingsName == null ? Input.empty() : this.settingsName;
@@ -78,7 +78,7 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -197,7 +197,6 @@ public final class UebaArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public UebaArgs build() {
             return new UebaArgs(dataSources, kind, operationalInsightsResourceProvider, resourceGroupName, settingsName, workspaceName);
         }

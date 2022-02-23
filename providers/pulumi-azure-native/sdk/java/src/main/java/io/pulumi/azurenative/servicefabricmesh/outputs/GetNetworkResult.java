@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.NetworkResourcePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class GetNetworkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(id, location, name, properties, tags, type);
         }

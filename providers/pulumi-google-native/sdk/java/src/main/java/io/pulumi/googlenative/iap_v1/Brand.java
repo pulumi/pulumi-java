@@ -5,8 +5,8 @@ package io.pulumi.googlenative.iap_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iap_v1.BrandArgs;
 import java.lang.Boolean;
@@ -79,13 +79,6 @@ public class Brand extends io.pulumi.resources.CustomResource {
         return this.supportEmail;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Brand(String name) {
-        super("google-native:iap/v1:Brand", name, BrandArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

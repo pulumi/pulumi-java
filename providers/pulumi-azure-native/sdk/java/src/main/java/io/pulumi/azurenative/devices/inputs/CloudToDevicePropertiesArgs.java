@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.azurenative.devices.inputs.FeedbackPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultTtlAsIso8601")
-    private final @Nullable Input<String> defaultTtlAsIso8601;
+        private final @Nullable Input<String> defaultTtlAsIso8601;
 
     public Input<String> getDefaultTtlAsIso8601() {
         return this.defaultTtlAsIso8601 == null ? Input.empty() : this.defaultTtlAsIso8601;
@@ -36,7 +36,7 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="feedback")
-    private final @Nullable Input<FeedbackPropertiesArgs> feedback;
+        private final @Nullable Input<FeedbackPropertiesArgs> feedback;
 
     public Input<FeedbackPropertiesArgs> getFeedback() {
         return this.feedback == null ? Input.empty() : this.feedback;
@@ -47,7 +47,7 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="maxDeliveryCount")
-    private final @Nullable Input<Integer> maxDeliveryCount;
+        private final @Nullable Input<Integer> maxDeliveryCount;
 
     public Input<Integer> getMaxDeliveryCount() {
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
@@ -121,7 +121,6 @@ public final class CloudToDevicePropertiesArgs extends io.pulumi.resources.Resou
             this.maxDeliveryCount = Input.ofNullable(maxDeliveryCount);
             return this;
         }
-
         public CloudToDevicePropertiesArgs build() {
             return new CloudToDevicePropertiesArgs(defaultTtlAsIso8601, feedback, maxDeliveryCount);
         }

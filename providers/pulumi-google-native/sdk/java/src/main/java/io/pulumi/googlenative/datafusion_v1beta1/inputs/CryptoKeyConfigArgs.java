@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datafusion_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyReference")
-    private final @Nullable Input<String> keyReference;
+      private final @Nullable Input<String> keyReference;
 
     public Input<String> getKeyReference() {
         return this.keyReference == null ? Input.empty() : this.keyReference;
@@ -66,7 +66,6 @@ public final class CryptoKeyConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.keyReference = Input.ofNullable(keyReference);
             return this;
         }
-
         public CryptoKeyConfigArgs build() {
             return new CryptoKeyConfigArgs(keyReference);
         }

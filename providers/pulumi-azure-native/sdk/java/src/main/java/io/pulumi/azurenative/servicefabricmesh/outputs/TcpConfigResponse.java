@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.GatewayDestinationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -97,7 +97,6 @@ public final class TcpConfigResponse {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public TcpConfigResponse build() {
             return new TcpConfigResponse(destination, name, port);
         }

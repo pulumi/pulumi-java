@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -89,7 +89,6 @@ public final class GetDefaultServiceAccountResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetDefaultServiceAccountResult build() {
             return new GetDefaultServiceAccountResult(email, id, project);
         }

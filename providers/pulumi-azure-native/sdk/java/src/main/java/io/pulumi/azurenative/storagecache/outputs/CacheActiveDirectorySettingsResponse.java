@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.outputs;
 
 import io.pulumi.azurenative.storagecache.outputs.CacheActiveDirectorySettingsResponseCredentials;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -182,7 +182,6 @@ public final class CacheActiveDirectorySettingsResponse {
             this.secondaryDnsIpAddress = secondaryDnsIpAddress;
             return this;
         }
-
         public CacheActiveDirectorySettingsResponse build() {
             return new CacheActiveDirectorySettingsResponse(cacheNetBiosName, credentials, domainJoined, domainName, domainNetBiosName, primaryDnsIpAddress, secondaryDnsIpAddress);
         }

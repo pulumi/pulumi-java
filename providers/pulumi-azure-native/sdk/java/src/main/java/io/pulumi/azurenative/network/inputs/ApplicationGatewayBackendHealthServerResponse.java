@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.NetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -35,7 +35,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * 
      */
     @InputImport(name="health")
-    private final @Nullable String health;
+        private final @Nullable String health;
 
     public Optional<String> getHealth() {
         return this.health == null ? Optional.empty() : Optional.ofNullable(this.health);
@@ -46,7 +46,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * 
      */
     @InputImport(name="healthProbeLog")
-    private final @Nullable String healthProbeLog;
+        private final @Nullable String healthProbeLog;
 
     public Optional<String> getHealthProbeLog() {
         return this.healthProbeLog == null ? Optional.empty() : Optional.ofNullable(this.healthProbeLog);
@@ -57,7 +57,7 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
      * 
      */
     @InputImport(name="ipConfiguration")
-    private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
+        private final @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
     public Optional<NetworkInterfaceIPConfigurationResponse> getIpConfiguration() {
         return this.ipConfiguration == null ? Optional.empty() : Optional.ofNullable(this.ipConfiguration);
@@ -126,7 +126,6 @@ public final class ApplicationGatewayBackendHealthServerResponse extends io.pulu
             this.ipConfiguration = ipConfiguration;
             return this;
         }
-
         public ApplicationGatewayBackendHealthServerResponse build() {
             return new ApplicationGatewayBackendHealthServerResponse(address, health, healthProbeLog, ipConfiguration);
         }

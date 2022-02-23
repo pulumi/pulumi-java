@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.SignatureResponse;
 import java.lang.String;
@@ -204,7 +204,6 @@ public final class GetConsentArtifactResult {
             this.witnessSignature = Objects.requireNonNull(witnessSignature);
             return this;
         }
-
         public GetConsentArtifactResult build() {
             return new GetConsentArtifactResult(consentContentScreenshots, consentContentVersion, guardianSignature, metadata, name, userId, userSignature, witnessSignature);
         }

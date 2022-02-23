@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.inputs.SrvRecordArgs;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.azurenative.network.inputs.TxtRecordArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aRecords")
-    private final @Nullable Input<List<ARecordArgs>> aRecords;
+        private final @Nullable Input<List<ARecordArgs>> aRecords;
 
     public Input<List<ARecordArgs>> getARecords() {
         return this.aRecords == null ? Input.empty() : this.aRecords;
@@ -44,7 +44,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aaaaRecords")
-    private final @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
+        private final @Nullable Input<List<AaaaRecordArgs>> aaaaRecords;
 
     public Input<List<AaaaRecordArgs>> getAaaaRecords() {
         return this.aaaaRecords == null ? Input.empty() : this.aaaaRecords;
@@ -55,7 +55,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caaRecords")
-    private final @Nullable Input<List<CaaRecordArgs>> caaRecords;
+        private final @Nullable Input<List<CaaRecordArgs>> caaRecords;
 
     public Input<List<CaaRecordArgs>> getCaaRecords() {
         return this.caaRecords == null ? Input.empty() : this.caaRecords;
@@ -66,7 +66,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cnameRecord")
-    private final @Nullable Input<CnameRecordArgs> cnameRecord;
+        private final @Nullable Input<CnameRecordArgs> cnameRecord;
 
     public Input<CnameRecordArgs> getCnameRecord() {
         return this.cnameRecord == null ? Input.empty() : this.cnameRecord;
@@ -77,7 +77,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -88,7 +88,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mxRecords")
-    private final @Nullable Input<List<MxRecordArgs>> mxRecords;
+        private final @Nullable Input<List<MxRecordArgs>> mxRecords;
 
     public Input<List<MxRecordArgs>> getMxRecords() {
         return this.mxRecords == null ? Input.empty() : this.mxRecords;
@@ -99,7 +99,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nsRecords")
-    private final @Nullable Input<List<NsRecordArgs>> nsRecords;
+        private final @Nullable Input<List<NsRecordArgs>> nsRecords;
 
     public Input<List<NsRecordArgs>> getNsRecords() {
         return this.nsRecords == null ? Input.empty() : this.nsRecords;
@@ -110,7 +110,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ptrRecords")
-    private final @Nullable Input<List<PtrRecordArgs>> ptrRecords;
+        private final @Nullable Input<List<PtrRecordArgs>> ptrRecords;
 
     public Input<List<PtrRecordArgs>> getPtrRecords() {
         return this.ptrRecords == null ? Input.empty() : this.ptrRecords;
@@ -121,7 +121,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordType", required=true)
-    private final Input<String> recordType;
+        private final Input<String> recordType;
 
     public Input<String> getRecordType() {
         return this.recordType;
@@ -132,7 +132,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="relativeRecordSetName")
-    private final @Nullable Input<String> relativeRecordSetName;
+        private final @Nullable Input<String> relativeRecordSetName;
 
     public Input<String> getRelativeRecordSetName() {
         return this.relativeRecordSetName == null ? Input.empty() : this.relativeRecordSetName;
@@ -143,7 +143,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -154,7 +154,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="soaRecord")
-    private final @Nullable Input<SoaRecordArgs> soaRecord;
+        private final @Nullable Input<SoaRecordArgs> soaRecord;
 
     public Input<SoaRecordArgs> getSoaRecord() {
         return this.soaRecord == null ? Input.empty() : this.soaRecord;
@@ -165,7 +165,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="srvRecords")
-    private final @Nullable Input<List<SrvRecordArgs>> srvRecords;
+        private final @Nullable Input<List<SrvRecordArgs>> srvRecords;
 
     public Input<List<SrvRecordArgs>> getSrvRecords() {
         return this.srvRecords == null ? Input.empty() : this.srvRecords;
@@ -176,7 +176,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResource")
-    private final @Nullable Input<SubResourceArgs> targetResource;
+        private final @Nullable Input<SubResourceArgs> targetResource;
 
     public Input<SubResourceArgs> getTargetResource() {
         return this.targetResource == null ? Input.empty() : this.targetResource;
@@ -187,7 +187,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<Double> ttl;
+        private final @Nullable Input<Double> ttl;
 
     public Input<Double> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -198,7 +198,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="txtRecords")
-    private final @Nullable Input<List<TxtRecordArgs>> txtRecords;
+        private final @Nullable Input<List<TxtRecordArgs>> txtRecords;
 
     public Input<List<TxtRecordArgs>> getTxtRecords() {
         return this.txtRecords == null ? Input.empty() : this.txtRecords;
@@ -209,7 +209,7 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zoneName", required=true)
-    private final Input<String> zoneName;
+        private final Input<String> zoneName;
 
     public Input<String> getZoneName() {
         return this.zoneName;
@@ -493,7 +493,6 @@ public final class RecordSetArgs extends io.pulumi.resources.ResourceArgs {
             this.zoneName = Input.of(Objects.requireNonNull(zoneName));
             return this;
         }
-
         public RecordSetArgs build() {
             return new RecordSetArgs(aRecords, aaaaRecords, caaRecords, cnameRecord, metadata, mxRecords, nsRecords, ptrRecords, recordType, relativeRecordSetName, resourceGroupName, soaRecord, srvRecords, targetResource, ttl, txtRecords, zoneName);
         }

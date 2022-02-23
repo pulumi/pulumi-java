@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -34,7 +34,7 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kmsKeyVersion")
-    private final @Nullable Input<String> kmsKeyVersion;
+        private final @Nullable Input<String> kmsKeyVersion;
 
     public Input<String> getKmsKeyVersion() {
         return this.kmsKeyVersion == null ? Input.empty() : this.kmsKeyVersion;
@@ -93,7 +93,6 @@ public final class TableEncryptionConfigurationArgs extends io.pulumi.resources.
             this.kmsKeyVersion = Input.ofNullable(kmsKeyVersion);
             return this;
         }
-
         public TableEncryptionConfigurationArgs build() {
             return new TableEncryptionConfigurationArgs(kmsKeyName, kmsKeyVersion);
         }

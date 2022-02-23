@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * 
      */
     @InputImport(name="body")
-    private final @Nullable String body;
+        private final @Nullable String body;
 
     public Optional<String> getBody() {
         return this.body == null ? Optional.empty() : Optional.ofNullable(this.body);
@@ -31,7 +31,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -42,7 +42,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -53,7 +53,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * 
      */
     @InputImport(name="rid", required=true)
-    private final String rid;
+        private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -64,7 +64,7 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
      * 
      */
     @InputImport(name="ts", required=true)
-    private final Double ts;
+        private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -143,7 +143,6 @@ public final class SqlUserDefinedFunctionGetPropertiesResponseResource extends i
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public SqlUserDefinedFunctionGetPropertiesResponseResource build() {
             return new SqlUserDefinedFunctionGetPropertiesResponseResource(body, etag, id, rid, ts);
         }

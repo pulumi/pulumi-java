@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class OriginRequestPolicyCookiesConfig extends io.pulumi.resources.
     public static final OriginRequestPolicyCookiesConfig Empty = new OriginRequestPolicyCookiesConfig();
 
     @InputImport(name="cookieBehavior", required=true)
-    private final String cookieBehavior;
+        private final String cookieBehavior;
 
     public String getCookieBehavior() {
         return this.cookieBehavior;
     }
 
     @InputImport(name="cookies")
-    private final @Nullable List<String> cookies;
+        private final @Nullable List<String> cookies;
 
     public List<String> getCookies() {
         return this.cookies == null ? List.of() : this.cookies;
@@ -72,7 +72,6 @@ public final class OriginRequestPolicyCookiesConfig extends io.pulumi.resources.
             this.cookies = cookies;
             return this;
         }
-
         public OriginRequestPolicyCookiesConfig build() {
             return new OriginRequestPolicyCookiesConfig(cookieBehavior, cookies);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ActionListResponse;
 import io.pulumi.azurenative.insights.outputs.AlertRuleAllOfConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -249,7 +249,6 @@ public final class GetActivityLogAlertResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetActivityLogAlertResult build() {
             return new GetActivityLogAlertResult(actions, condition, description, enabled, id, location, name, scopes, tags, type);
         }

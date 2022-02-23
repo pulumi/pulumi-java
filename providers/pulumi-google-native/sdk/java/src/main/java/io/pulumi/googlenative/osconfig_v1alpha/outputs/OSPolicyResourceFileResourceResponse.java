@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class OSPolicyResourceFileResourceResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public OSPolicyResourceFileResourceResponse build() {
             return new OSPolicyResourceFileResourceResponse(content, file, path, permissions, state);
         }

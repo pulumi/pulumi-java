@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="idleNodeCount", required=true)
-    private final Integer idleNodeCount;
+        private final Integer idleNodeCount;
 
     public Integer getIdleNodeCount() {
         return this.idleNodeCount;
@@ -32,7 +32,7 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="leavingNodeCount", required=true)
-    private final Integer leavingNodeCount;
+        private final Integer leavingNodeCount;
 
     public Integer getLeavingNodeCount() {
         return this.leavingNodeCount;
@@ -43,7 +43,7 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="preemptedNodeCount", required=true)
-    private final Integer preemptedNodeCount;
+        private final Integer preemptedNodeCount;
 
     public Integer getPreemptedNodeCount() {
         return this.preemptedNodeCount;
@@ -54,7 +54,7 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="preparingNodeCount", required=true)
-    private final Integer preparingNodeCount;
+        private final Integer preparingNodeCount;
 
     public Integer getPreparingNodeCount() {
         return this.preparingNodeCount;
@@ -65,7 +65,7 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="runningNodeCount", required=true)
-    private final Integer runningNodeCount;
+        private final Integer runningNodeCount;
 
     public Integer getRunningNodeCount() {
         return this.runningNodeCount;
@@ -76,7 +76,7 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="unusableNodeCount", required=true)
-    private final Integer unusableNodeCount;
+        private final Integer unusableNodeCount;
 
     public Integer getUnusableNodeCount() {
         return this.unusableNodeCount;
@@ -165,7 +165,6 @@ public final class NodeStateCountsResponse extends io.pulumi.resources.InvokeArg
             this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount);
             return this;
         }
-
         public NodeStateCountsResponse build() {
             return new NodeStateCountsResponse(idleNodeCount, leavingNodeCount, preemptedNodeCount, preparingNodeCount, runningNodeCount, unusableNodeCount);
         }

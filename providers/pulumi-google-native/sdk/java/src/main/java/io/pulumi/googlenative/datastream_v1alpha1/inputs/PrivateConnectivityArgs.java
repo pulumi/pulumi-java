@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
     public static final PrivateConnectivityArgs Empty = new PrivateConnectivityArgs();
 
     @InputImport(name="privateConnectionName")
-    private final @Nullable Input<String> privateConnectionName;
+      private final @Nullable Input<String> privateConnectionName;
 
     public Input<String> getPrivateConnectionName() {
         return this.privateConnectionName == null ? Input.empty() : this.privateConnectionName;
@@ -62,7 +62,6 @@ public final class PrivateConnectivityArgs extends io.pulumi.resources.ResourceA
             this.privateConnectionName = Input.ofNullable(privateConnectionName);
             return this;
         }
-
         public PrivateConnectivityArgs build() {
             return new PrivateConnectivityArgs(privateConnectionName);
         }

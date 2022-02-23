@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecVolumeSecretItem;
 import java.lang.Integer;
 import java.lang.String;
@@ -74,7 +74,6 @@ public final class GetServiceTemplateSpecVolumeSecret {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public GetServiceTemplateSpecVolumeSecret build() {
             return new GetServiceTemplateSpecVolumeSecret(defaultMode, items, secretName);
         }

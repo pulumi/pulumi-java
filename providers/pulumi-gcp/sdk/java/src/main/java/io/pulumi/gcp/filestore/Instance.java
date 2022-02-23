@@ -5,8 +5,8 @@ package io.pulumi.gcp.filestore;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.filestore.InstanceArgs;
 import io.pulumi.gcp.filestore.inputs.InstanceState;
@@ -224,13 +224,6 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Instance(String name) {
-        super("gcp:filestore/instance:Instance", name, InstanceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

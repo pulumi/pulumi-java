@@ -5,8 +5,8 @@ package io.pulumi.gcp.container;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.container.AwsClusterArgs;
 import io.pulumi.gcp.container.inputs.AwsClusterState;
@@ -304,13 +304,6 @@ public class AwsCluster extends io.pulumi.resources.CustomResource {
         return this.workloadIdentityConfigs;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AwsCluster(String name) {
-        super("gcp:container/awsCluster:AwsCluster", name, AwsClusterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeEbsInstanceBlockDeviceSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ImageRecipeInstanceBlockDeviceMapping {
             this.virtualName = virtualName;
             return this;
         }
-
         public ImageRecipeInstanceBlockDeviceMapping build() {
             return new ImageRecipeInstanceBlockDeviceMapping(deviceName, ebs, noDevice, virtualName);
         }

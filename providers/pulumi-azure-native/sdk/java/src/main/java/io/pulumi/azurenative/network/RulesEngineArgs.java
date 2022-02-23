@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.RulesEngineRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontDoorName", required=true)
-    private final Input<String> frontDoorName;
+        private final Input<String> frontDoorName;
 
     public Input<String> getFrontDoorName() {
         return this.frontDoorName;
@@ -32,7 +32,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RulesEngineRuleArgs>> rules;
+        private final @Nullable Input<List<RulesEngineRuleArgs>> rules;
 
     public Input<List<RulesEngineRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -54,7 +54,7 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rulesEngineName")
-    private final @Nullable Input<String> rulesEngineName;
+        private final @Nullable Input<String> rulesEngineName;
 
     public Input<String> getRulesEngineName() {
         return this.rulesEngineName == null ? Input.empty() : this.rulesEngineName;
@@ -143,7 +143,6 @@ public final class RulesEngineArgs extends io.pulumi.resources.ResourceArgs {
             this.rulesEngineName = Input.ofNullable(rulesEngineName);
             return this;
         }
-
         public RulesEngineArgs build() {
             return new RulesEngineArgs(frontDoorName, resourceGroupName, rules, rulesEngineName);
         }

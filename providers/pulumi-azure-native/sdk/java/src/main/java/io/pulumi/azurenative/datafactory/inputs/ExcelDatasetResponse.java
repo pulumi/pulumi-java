@@ -20,7 +20,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -43,7 +43,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -54,7 +54,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="compression")
-    private final @Nullable DatasetCompressionResponse compression;
+        private final @Nullable DatasetCompressionResponse compression;
 
     public Optional<DatasetCompressionResponse> getCompression() {
         return this.compression == null ? Optional.empty() : Optional.ofNullable(this.compression);
@@ -65,7 +65,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -76,7 +76,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="firstRowAsHeader")
-    private final @Nullable Object firstRowAsHeader;
+        private final @Nullable Object firstRowAsHeader;
 
     public Optional<Object> getFirstRowAsHeader() {
         return this.firstRowAsHeader == null ? Optional.empty() : Optional.ofNullable(this.firstRowAsHeader);
@@ -87,7 +87,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable DatasetResponseFolder folder;
+        private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -98,7 +98,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+        private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -109,7 +109,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final Object location;
+        private final Object location;
 
     public Object getLocation() {
         return this.location;
@@ -120,7 +120,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nullValue")
-    private final @Nullable Object nullValue;
+        private final @Nullable Object nullValue;
 
     public Optional<Object> getNullValue() {
         return this.nullValue == null ? Optional.empty() : Optional.ofNullable(this.nullValue);
@@ -131,7 +131,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -142,7 +142,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Object range;
+        private final @Nullable Object range;
 
     public Optional<Object> getRange() {
         return this.range == null ? Optional.empty() : Optional.ofNullable(this.range);
@@ -153,7 +153,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Object schema;
+        private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -164,7 +164,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sheetIndex")
-    private final @Nullable Object sheetIndex;
+        private final @Nullable Object sheetIndex;
 
     public Optional<Object> getSheetIndex() {
         return this.sheetIndex == null ? Optional.empty() : Optional.ofNullable(this.sheetIndex);
@@ -175,7 +175,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sheetName")
-    private final @Nullable Object sheetName;
+        private final @Nullable Object sheetName;
 
     public Optional<Object> getSheetName() {
         return this.sheetName == null ? Optional.empty() : Optional.ofNullable(this.sheetName);
@@ -186,7 +186,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Object structure;
+        private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -198,7 +198,7 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -377,7 +377,6 @@ public final class ExcelDatasetResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExcelDatasetResponse build() {
             return new ExcelDatasetResponse(annotations, compression, description, firstRowAsHeader, folder, linkedServiceName, location, nullValue, parameters, range, schema, sheetIndex, sheetName, structure, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CertInfoResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class GoogleCloudApigeeV1CertificateResponse {
             this.certInfo = Objects.requireNonNull(certInfo);
             return this;
         }
-
         public GoogleCloudApigeeV1CertificateResponse build() {
             return new GoogleCloudApigeeV1CertificateResponse(certInfo);
         }

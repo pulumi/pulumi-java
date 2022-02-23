@@ -5,8 +5,8 @@ package io.pulumi.gcp.serviceAccount;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.serviceAccount.AccountArgs;
 import io.pulumi.gcp.serviceAccount.inputs.AccountState;
@@ -171,13 +171,6 @@ public class Account extends io.pulumi.resources.CustomResource {
         return this.uniqueId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Account(String name) {
-        super("gcp:serviceAccount/account:Account", name, AccountArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

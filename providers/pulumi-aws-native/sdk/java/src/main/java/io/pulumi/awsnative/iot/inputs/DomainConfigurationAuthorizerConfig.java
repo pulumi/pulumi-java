@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DomainConfigurationAuthorizerConfig extends io.pulumi.resourc
     public static final DomainConfigurationAuthorizerConfig Empty = new DomainConfigurationAuthorizerConfig();
 
     @InputImport(name="allowAuthorizerOverride")
-    private final @Nullable Boolean allowAuthorizerOverride;
+        private final @Nullable Boolean allowAuthorizerOverride;
 
     public Optional<Boolean> getAllowAuthorizerOverride() {
         return this.allowAuthorizerOverride == null ? Optional.empty() : Optional.ofNullable(this.allowAuthorizerOverride);
     }
 
     @InputImport(name="defaultAuthorizerName")
-    private final @Nullable String defaultAuthorizerName;
+        private final @Nullable String defaultAuthorizerName;
 
     public Optional<String> getDefaultAuthorizerName() {
         return this.defaultAuthorizerName == null ? Optional.empty() : Optional.ofNullable(this.defaultAuthorizerName);
@@ -72,7 +72,6 @@ public final class DomainConfigurationAuthorizerConfig extends io.pulumi.resourc
             this.defaultAuthorizerName = defaultAuthorizerName;
             return this;
         }
-
         public DomainConfigurationAuthorizerConfig build() {
             return new DomainConfigurationAuthorizerConfig(allowAuthorizerOverride, defaultAuthorizerName);
         }

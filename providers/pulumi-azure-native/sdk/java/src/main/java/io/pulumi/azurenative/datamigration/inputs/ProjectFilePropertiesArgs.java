@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="extension")
-    private final @Nullable Input<String> extension;
+        private final @Nullable Input<String> extension;
 
     public Input<String> getExtension() {
         return this.extension == null ? Input.empty() : this.extension;
@@ -34,7 +34,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="filePath")
-    private final @Nullable Input<String> filePath;
+        private final @Nullable Input<String> filePath;
 
     public Input<String> getFilePath() {
         return this.filePath == null ? Input.empty() : this.filePath;
@@ -45,7 +45,7 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mediaType")
-    private final @Nullable Input<String> mediaType;
+        private final @Nullable Input<String> mediaType;
 
     public Input<String> getMediaType() {
         return this.mediaType == null ? Input.empty() : this.mediaType;
@@ -119,7 +119,6 @@ public final class ProjectFilePropertiesArgs extends io.pulumi.resources.Resourc
             this.mediaType = Input.ofNullable(mediaType);
             return this;
         }
-
         public ProjectFilePropertiesArgs build() {
             return new ProjectFilePropertiesArgs(extension, filePath, mediaType);
         }

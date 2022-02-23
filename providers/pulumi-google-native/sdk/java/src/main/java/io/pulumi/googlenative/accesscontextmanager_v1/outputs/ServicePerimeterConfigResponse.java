@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.EgressPolicyResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.IngressPolicyResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.VpcAccessibleServicesResponse;
@@ -162,7 +162,6 @@ public final class ServicePerimeterConfigResponse {
             this.vpcAccessibleServices = Objects.requireNonNull(vpcAccessibleServices);
             return this;
         }
-
         public ServicePerimeterConfigResponse build() {
             return new ServicePerimeterConfigResponse(accessLevels, egressPolicies, ingressPolicies, resources, restrictedServices, vpcAccessibleServices);
         }

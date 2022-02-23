@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ReportDeliveryInfoArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ReportScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="definition", required=true)
-    private final Input<ReportDefinitionArgs> definition;
+        private final Input<ReportDefinitionArgs> definition;
 
     public Input<ReportDefinitionArgs> getDefinition() {
         return this.definition;
@@ -35,7 +35,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="deliveryInfo", required=true)
-    private final Input<ReportDeliveryInfoArgs> deliveryInfo;
+        private final Input<ReportDeliveryInfoArgs> deliveryInfo;
 
     public Input<ReportDeliveryInfoArgs> getDeliveryInfo() {
         return this.deliveryInfo;
@@ -46,7 +46,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<Either<String,FormatType>> format;
+        private final @Nullable Input<Either<String,FormatType>> format;
 
     public Input<Either<String,FormatType>> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -57,7 +57,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="reportName")
-    private final @Nullable Input<String> reportName;
+        private final @Nullable Input<String> reportName;
 
     public Input<String> getReportName() {
         return this.reportName == null ? Input.empty() : this.reportName;
@@ -68,7 +68,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<ReportScheduleArgs> schedule;
+        private final @Nullable Input<ReportScheduleArgs> schedule;
 
     public Input<ReportScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -198,7 +198,6 @@ public final class ReportByResourceGroupNameArgs extends io.pulumi.resources.Res
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
-
         public ReportByResourceGroupNameArgs build() {
             return new ReportByResourceGroupNameArgs(definition, deliveryInfo, format, reportName, resourceGroupName, schedule);
         }

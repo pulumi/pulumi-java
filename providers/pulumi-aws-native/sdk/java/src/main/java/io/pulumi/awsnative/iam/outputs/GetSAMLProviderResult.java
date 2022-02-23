@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iam.outputs;
 
 import io.pulumi.awsnative.iam.outputs.SAMLProviderTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -83,7 +83,6 @@ public final class GetSAMLProviderResult {
             this.tags = tags;
             return this;
         }
-
         public GetSAMLProviderResult build() {
             return new GetSAMLProviderResult(arn, samlMetadataDocument, tags);
         }

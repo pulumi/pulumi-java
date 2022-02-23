@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class ListenerPortRange extends io.pulumi.resources.InvokeArgs {
     public static final ListenerPortRange Empty = new ListenerPortRange();
 
     @InputImport(name="fromPort", required=true)
-    private final Integer fromPort;
+        private final Integer fromPort;
 
     public Integer getFromPort() {
         return this.fromPort;
     }
 
     @InputImport(name="toPort", required=true)
-    private final Integer toPort;
+        private final Integer toPort;
 
     public Integer getToPort() {
         return this.toPort;
@@ -73,7 +73,6 @@ public final class ListenerPortRange extends io.pulumi.resources.InvokeArgs {
             this.toPort = Objects.requireNonNull(toPort);
             return this;
         }
-
         public ListenerPortRange build() {
             return new ListenerPortRange(fromPort, toPort);
         }

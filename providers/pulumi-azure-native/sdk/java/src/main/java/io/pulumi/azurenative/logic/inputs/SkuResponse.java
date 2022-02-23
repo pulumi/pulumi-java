@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable ResourceReferenceResponse plan;
+        private final @Nullable ResourceReferenceResponse plan;
 
     public Optional<ResourceReferenceResponse> getPlan() {
         return this.plan == null ? Optional.empty() : Optional.ofNullable(this.plan);
@@ -84,7 +84,6 @@ public final class SkuResponse extends io.pulumi.resources.InvokeArgs {
             this.plan = plan;
             return this;
         }
-
         public SkuResponse build() {
             return new SkuResponse(name, plan);
         }

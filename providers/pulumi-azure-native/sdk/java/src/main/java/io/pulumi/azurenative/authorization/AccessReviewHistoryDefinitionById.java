@@ -10,8 +10,8 @@ import io.pulumi.azurenative.authorization.outputs.AccessReviewScopeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -287,13 +287,6 @@ public class AccessReviewHistoryDefinitionById extends io.pulumi.resources.Custo
         return this.userPrincipalName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AccessReviewHistoryDefinitionById(String name) {
-        super("azure-native:authorization:AccessReviewHistoryDefinitionById", name, AccessReviewHistoryDefinitionByIdArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentials {
             this.refreshToken = refreshToken;
             return this;
         }
-
         public ConnectorProfileSalesforceConnectorProfileCredentials build() {
             return new ConnectorProfileSalesforceConnectorProfileCredentials(accessToken, clientCredentialsArn, connectorOAuthRequest, refreshToken);
         }

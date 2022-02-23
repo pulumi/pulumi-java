@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscalerSpec;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscalerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class HorizontalPodAutoscaler {
             this.status = status;
             return this;
         }
-
         public HorizontalPodAutoscaler build() {
             return new HorizontalPodAutoscaler(apiVersion, kind, metadata, spec, status);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.outputs;
 import io.pulumi.awsnative.lex.outputs.BotIntent;
 import io.pulumi.awsnative.lex.outputs.BotSlotType;
 import io.pulumi.awsnative.lex.outputs.BotVoiceSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -133,7 +133,6 @@ public final class BotLocale {
             this.voiceSettings = voiceSettings;
             return this;
         }
-
         public BotLocale build() {
             return new BotLocale(description, intents, localeId, nluConfidenceThreshold, slotTypes, voiceSettings);
         }

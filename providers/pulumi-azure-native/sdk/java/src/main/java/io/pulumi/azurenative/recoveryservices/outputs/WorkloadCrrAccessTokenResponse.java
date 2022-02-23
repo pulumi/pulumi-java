@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -726,7 +726,6 @@ public final class WorkloadCrrAccessTokenResponse {
             this.tokenExtendedInformation = tokenExtendedInformation;
             return this;
         }
-
         public WorkloadCrrAccessTokenResponse build() {
             return new WorkloadCrrAccessTokenResponse(accessTokenString, bMSActiveRegion, backupManagementType, containerId, containerName, containerType, coordinatorServiceStampId, coordinatorServiceStampUri, datasourceContainerName, datasourceId, datasourceName, datasourceType, objectType, policyId, policyName, protectableObjectContainerHostOsName, protectableObjectFriendlyName, protectableObjectParentLogicalContainerName, protectableObjectProtectionState, protectableObjectUniqueName, protectableObjectWorkloadType, protectionContainerId, protectionServiceStampId, protectionServiceStampUri, recoveryPointId, recoveryPointTime, resourceGroupName, resourceId, resourceName, rpIsManagedVirtualMachine, rpOriginalSAOption, rpTierInformation, rpVMSizeDescription, subscriptionId, tokenExtendedInformation);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyCacheKeyPolicyGetArgs;
 import io.pulumi.gcp.compute.inputs.RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs;
 import java.lang.Boolean;
@@ -25,7 +25,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cacheKeyPolicy")
-    private final @Nullable Input<RegionBackendServiceCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy;
+        private final @Nullable Input<RegionBackendServiceCdnPolicyCacheKeyPolicyGetArgs> cacheKeyPolicy;
 
     public Input<RegionBackendServiceCdnPolicyCacheKeyPolicyGetArgs> getCacheKeyPolicy() {
         return this.cacheKeyPolicy == null ? Input.empty() : this.cacheKeyPolicy;
@@ -38,7 +38,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="cacheMode")
-    private final @Nullable Input<String> cacheMode;
+        private final @Nullable Input<String> cacheMode;
 
     public Input<String> getCacheMode() {
         return this.cacheMode == null ? Input.empty() : this.cacheMode;
@@ -49,7 +49,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="clientTtl")
-    private final @Nullable Input<Integer> clientTtl;
+        private final @Nullable Input<Integer> clientTtl;
 
     public Input<Integer> getClientTtl() {
         return this.clientTtl == null ? Input.empty() : this.clientTtl;
@@ -61,7 +61,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<Integer> defaultTtl;
+        private final @Nullable Input<Integer> defaultTtl;
 
     public Input<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -72,7 +72,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxTtl")
-    private final @Nullable Input<Integer> maxTtl;
+        private final @Nullable Input<Integer> maxTtl;
 
     public Input<Integer> getMaxTtl() {
         return this.maxTtl == null ? Input.empty() : this.maxTtl;
@@ -83,7 +83,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="negativeCaching")
-    private final @Nullable Input<Boolean> negativeCaching;
+        private final @Nullable Input<Boolean> negativeCaching;
 
     public Input<Boolean> getNegativeCaching() {
         return this.negativeCaching == null ? Input.empty() : this.negativeCaching;
@@ -96,7 +96,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="negativeCachingPolicies")
-    private final @Nullable Input<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> negativeCachingPolicies;
+        private final @Nullable Input<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> negativeCachingPolicies;
 
     public Input<List<RegionBackendServiceCdnPolicyNegativeCachingPolicyGetArgs>> getNegativeCachingPolicies() {
         return this.negativeCachingPolicies == null ? Input.empty() : this.negativeCachingPolicies;
@@ -107,7 +107,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="serveWhileStale")
-    private final @Nullable Input<Integer> serveWhileStale;
+        private final @Nullable Input<Integer> serveWhileStale;
 
     public Input<Integer> getServeWhileStale() {
         return this.serveWhileStale == null ? Input.empty() : this.serveWhileStale;
@@ -126,7 +126,7 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="signedUrlCacheMaxAgeSec")
-    private final @Nullable Input<Integer> signedUrlCacheMaxAgeSec;
+        private final @Nullable Input<Integer> signedUrlCacheMaxAgeSec;
 
     public Input<Integer> getSignedUrlCacheMaxAgeSec() {
         return this.signedUrlCacheMaxAgeSec == null ? Input.empty() : this.signedUrlCacheMaxAgeSec;
@@ -290,7 +290,6 @@ public final class RegionBackendServiceCdnPolicyGetArgs extends io.pulumi.resour
             this.signedUrlCacheMaxAgeSec = Input.ofNullable(signedUrlCacheMaxAgeSec);
             return this;
         }
-
         public RegionBackendServiceCdnPolicyGetArgs build() {
             return new RegionBackendServiceCdnPolicyGetArgs(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

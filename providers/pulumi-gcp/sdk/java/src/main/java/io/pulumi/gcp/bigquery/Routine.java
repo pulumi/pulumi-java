@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.RoutineArgs;
 import io.pulumi.gcp.bigquery.inputs.RoutineState;
@@ -279,13 +279,6 @@ public class Routine extends io.pulumi.resources.CustomResource {
         return this.routineType;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Routine(String name) {
-        super("gcp:bigquery/routine:Routine", name, RoutineArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

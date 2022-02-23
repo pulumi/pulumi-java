@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.LinuxUserConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.WindowsUserConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -125,7 +125,6 @@ public final class UserAccountResponse {
             this.windowsUserConfiguration = windowsUserConfiguration;
             return this;
         }
-
         public UserAccountResponse build() {
             return new UserAccountResponse(elevationLevel, linuxUserConfiguration, name, password, windowsUserConfiguration);
         }

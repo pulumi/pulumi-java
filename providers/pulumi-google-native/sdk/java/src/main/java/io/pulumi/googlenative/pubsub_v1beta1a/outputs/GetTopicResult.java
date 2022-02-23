@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta1a.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GetTopicResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -128,7 +128,6 @@ public final class PerfCounterDataSourceResponse {
             this.streams = streams;
             return this;
         }
-
         public PerfCounterDataSourceResponse build() {
             return new PerfCounterDataSourceResponse(counterSpecifiers, name, samplingFrequencyInSeconds, streams);
         }

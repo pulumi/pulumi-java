@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.BlobReferenceInputDataSourc
 import io.pulumi.azurenative.streamanalytics.outputs.CsvSerializationResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.DiagnosticsResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JsonSerializationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -147,7 +147,6 @@ public final class ReferenceInputPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ReferenceInputPropertiesResponse build() {
             return new ReferenceInputPropertiesResponse(datasource, diagnostics, etag, serialization, type);
         }

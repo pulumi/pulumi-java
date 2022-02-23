@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="bytesLimitPerFile")
-    private final @Nullable Input<Integer> bytesLimitPerFile;
+        private final @Nullable Input<Integer> bytesLimitPerFile;
 
     public Input<Integer> getBytesLimitPerFile() {
         return this.bytesLimitPerFile == null ? Input.empty() : this.bytesLimitPerFile;
@@ -35,7 +35,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="bytesLimitPerFilePercent")
-    private final @Nullable Input<Integer> bytesLimitPerFilePercent;
+        private final @Nullable Input<Integer> bytesLimitPerFilePercent;
 
     public Input<Integer> getBytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent == null ? Input.empty() : this.bytesLimitPerFilePercent;
@@ -47,7 +47,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="fileSet", required=true)
-    private final Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet;
+        private final Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> fileSet;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSetArgs> getFileSet() {
         return this.fileSet;
@@ -61,7 +61,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="fileTypes")
-    private final @Nullable Input<List<String>> fileTypes;
+        private final @Nullable Input<List<String>> fileTypes;
 
     public Input<List<String>> getFileTypes() {
         return this.fileTypes == null ? Input.empty() : this.fileTypes;
@@ -73,7 +73,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="filesLimitPercent")
-    private final @Nullable Input<Integer> filesLimitPercent;
+        private final @Nullable Input<Integer> filesLimitPercent;
 
     public Input<Integer> getFilesLimitPercent() {
         return this.filesLimitPercent == null ? Input.empty() : this.filesLimitPercent;
@@ -86,7 +86,7 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
      * 
      */
     @InputImport(name="sampleMethod")
-    private final @Nullable Input<String> sampleMethod;
+        private final @Nullable Input<String> sampleMethod;
 
     public Input<String> getSampleMethod() {
         return this.sampleMethod == null ? Input.empty() : this.sampleMethod;
@@ -205,7 +205,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.sampleMethod = Input.ofNullable(sampleMethod);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsArgs(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

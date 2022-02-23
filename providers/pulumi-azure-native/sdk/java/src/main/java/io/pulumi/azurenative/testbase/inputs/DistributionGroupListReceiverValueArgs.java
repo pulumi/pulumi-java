@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="distributionGroups")
-    private final @Nullable Input<List<String>> distributionGroups;
+        private final @Nullable Input<List<String>> distributionGroups;
 
     public Input<List<String>> getDistributionGroups() {
         return this.distributionGroups == null ? Input.empty() : this.distributionGroups;
@@ -67,7 +67,6 @@ public final class DistributionGroupListReceiverValueArgs extends io.pulumi.reso
             this.distributionGroups = Input.ofNullable(distributionGroups);
             return this;
         }
-
         public DistributionGroupListReceiverValueArgs build() {
             return new DistributionGroupListReceiverValueArgs(distributionGroups);
         }

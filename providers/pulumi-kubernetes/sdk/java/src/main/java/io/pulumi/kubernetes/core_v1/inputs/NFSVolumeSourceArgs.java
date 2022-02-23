@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -35,7 +35,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -46,7 +46,7 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="server", required=true)
-    private final Input<String> server;
+        private final Input<String> server;
 
     public Input<String> getServer() {
         return this.server;
@@ -120,7 +120,6 @@ public final class NFSVolumeSourceArgs extends io.pulumi.resources.ResourceArgs 
             this.server = Input.of(Objects.requireNonNull(server));
             return this;
         }
-
         public NFSVolumeSourceArgs build() {
             return new NFSVolumeSourceArgs(path, readOnly, server);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteLinkMacSecConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -266,7 +266,6 @@ public final class ExpressRouteLinkResponse {
             this.routerName = Objects.requireNonNull(routerName);
             return this;
         }
-
         public ExpressRouteLinkResponse build() {
             return new ExpressRouteLinkResponse(adminState, connectorType, etag, id, interfaceName, macSecConfig, name, patchPanelId, provisioningState, rackId, routerName);
         }

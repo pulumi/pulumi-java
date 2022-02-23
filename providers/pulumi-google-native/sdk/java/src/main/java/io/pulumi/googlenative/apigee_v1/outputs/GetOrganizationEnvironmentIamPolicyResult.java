@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleIamV1AuditConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleIamV1BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetOrganizationEnvironmentIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetOrganizationEnvironmentIamPolicyResult build() {
             return new GetOrganizationEnvironmentIamPolicyResult(auditConfigs, bindings, etag, version);
         }

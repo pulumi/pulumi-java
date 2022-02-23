@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.translate_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.translate_v3.inputs.GcsSourceArgs;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gcsSource", required=true)
-    private final Input<GcsSourceArgs> gcsSource;
+      private final Input<GcsSourceArgs> gcsSource;
 
     public Input<GcsSourceArgs> getGcsSource() {
         return this.gcsSource;
@@ -65,7 +65,6 @@ public final class GlossaryInputConfigArgs extends io.pulumi.resources.ResourceA
             this.gcsSource = Input.of(Objects.requireNonNull(gcsSource));
             return this;
         }
-
         public GlossaryInputConfigArgs build() {
             return new GlossaryInputConfigArgs(gcsSource);
         }

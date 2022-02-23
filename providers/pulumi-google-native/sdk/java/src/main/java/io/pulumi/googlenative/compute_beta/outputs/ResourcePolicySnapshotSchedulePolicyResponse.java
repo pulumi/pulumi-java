@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicyRetentionPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicyScheduleResponse;
 import io.pulumi.googlenative.compute_beta.outputs.ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse;
@@ -97,7 +97,6 @@ public final class ResourcePolicySnapshotSchedulePolicyResponse {
             this.snapshotProperties = Objects.requireNonNull(snapshotProperties);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyResponse build() {
             return new ResourcePolicySnapshotSchedulePolicyResponse(retentionPolicy, schedule, snapshotProperties);
         }

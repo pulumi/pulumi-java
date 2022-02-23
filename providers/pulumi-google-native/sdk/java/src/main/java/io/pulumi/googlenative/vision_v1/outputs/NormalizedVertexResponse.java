@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class NormalizedVertexResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public NormalizedVertexResponse build() {
             return new NormalizedVertexResponse(x, y);
         }

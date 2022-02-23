@@ -46,7 +46,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -65,7 +65,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities")
-    private final @Nullable Input<List<Object>> activities;
+        private final @Nullable Input<List<Object>> activities;
 
     public Input<List<Object>> getActivities() {
         return this.activities == null ? Input.empty() : this.activities;
@@ -76,7 +76,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -87,7 +87,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="concurrency")
-    private final @Nullable Input<Integer> concurrency;
+        private final @Nullable Input<Integer> concurrency;
 
     public Input<Integer> getConcurrency() {
         return this.concurrency == null ? Input.empty() : this.concurrency;
@@ -98,7 +98,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -109,7 +109,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final Input<String> factoryName;
+        private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -120,7 +120,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable Input<PipelineFolderArgs> folder;
+        private final @Nullable Input<PipelineFolderArgs> folder;
 
     public Input<PipelineFolderArgs> getFolder() {
         return this.folder == null ? Input.empty() : this.folder;
@@ -131,7 +131,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -142,7 +142,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineName")
-    private final @Nullable Input<String> pipelineName;
+        private final @Nullable Input<String> pipelineName;
 
     public Input<String> getPipelineName() {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
@@ -153,7 +153,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<PipelinePolicyArgs> policy;
+        private final @Nullable Input<PipelinePolicyArgs> policy;
 
     public Input<PipelinePolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -164,7 +164,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -175,7 +175,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runDimensions")
-    private final @Nullable Input<Map<String,Object>> runDimensions;
+        private final @Nullable Input<Map<String,Object>> runDimensions;
 
     public Input<Map<String,Object>> getRunDimensions() {
         return this.runDimensions == null ? Input.empty() : this.runDimensions;
@@ -186,7 +186,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Map<String,VariableSpecificationArgs>> variables;
+        private final @Nullable Input<Map<String,VariableSpecificationArgs>> variables;
 
     public Input<Map<String,VariableSpecificationArgs>> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;
@@ -395,7 +395,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.variables = Input.ofNullable(variables);
             return this;
         }
-
         public PipelineArgs build() {
             return new PipelineArgs(activities, annotations, concurrency, description, factoryName, folder, parameters, pipelineName, policy, resourceGroupName, runDimensions, variables);
         }

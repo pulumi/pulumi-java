@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TileResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class MosaicLayoutResponse {
             this.tiles = Objects.requireNonNull(tiles);
             return this;
         }
-
         public MosaicLayoutResponse build() {
             return new MosaicLayoutResponse(columns, tiles);
         }

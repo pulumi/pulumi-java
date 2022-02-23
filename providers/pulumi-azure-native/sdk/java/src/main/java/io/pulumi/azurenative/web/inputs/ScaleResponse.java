@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxReplicas")
-    private final @Nullable Integer maxReplicas;
+        private final @Nullable Integer maxReplicas;
 
     public Optional<Integer> getMaxReplicas() {
         return this.maxReplicas == null ? Optional.empty() : Optional.ofNullable(this.maxReplicas);
@@ -36,7 +36,7 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minReplicas")
-    private final @Nullable Integer minReplicas;
+        private final @Nullable Integer minReplicas;
 
     public Optional<Integer> getMinReplicas() {
         return this.minReplicas == null ? Optional.empty() : Optional.ofNullable(this.minReplicas);
@@ -47,7 +47,7 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable List<ScaleRuleResponse> rules;
+        private final @Nullable List<ScaleRuleResponse> rules;
 
     public List<ScaleRuleResponse> getRules() {
         return this.rules == null ? List.of() : this.rules;
@@ -106,7 +106,6 @@ public final class ScaleResponse extends io.pulumi.resources.InvokeArgs {
             this.rules = rules;
             return this;
         }
-
         public ScaleResponse build() {
             return new ScaleResponse(maxReplicas, minReplicas, rules);
         }

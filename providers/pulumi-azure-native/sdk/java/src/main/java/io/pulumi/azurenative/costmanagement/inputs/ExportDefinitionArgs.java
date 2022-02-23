@@ -9,7 +9,7 @@ import io.pulumi.azurenative.costmanagement.inputs.ExportDatasetArgs;
 import io.pulumi.azurenative.costmanagement.inputs.ExportTimePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -28,7 +28,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="dataSet")
-    private final @Nullable Input<ExportDatasetArgs> dataSet;
+        private final @Nullable Input<ExportDatasetArgs> dataSet;
 
     public Input<ExportDatasetArgs> getDataSet() {
         return this.dataSet == null ? Input.empty() : this.dataSet;
@@ -39,7 +39,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timePeriod")
-    private final @Nullable Input<ExportTimePeriodArgs> timePeriod;
+        private final @Nullable Input<ExportTimePeriodArgs> timePeriod;
 
     public Input<ExportTimePeriodArgs> getTimePeriod() {
         return this.timePeriod == null ? Input.empty() : this.timePeriod;
@@ -50,7 +50,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeframe", required=true)
-    private final Input<Either<String,TimeframeType>> timeframe;
+        private final Input<Either<String,TimeframeType>> timeframe;
 
     public Input<Either<String,TimeframeType>> getTimeframe() {
         return this.timeframe;
@@ -61,7 +61,7 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ExportType>> type;
+        private final Input<Either<String,ExportType>> type;
 
     public Input<Either<String,ExportType>> getType() {
         return this.type;
@@ -150,7 +150,6 @@ public final class ExportDefinitionArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ExportDefinitionArgs build() {
             return new ExportDefinitionArgs(dataSet, timePeriod, timeframe, type);
         }

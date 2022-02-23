@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayApiConfigFileResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
      * 
      */
     @InputImport(name="fileDescriptorSet", required=true)
-    private final ApigatewayApiConfigFileResponse fileDescriptorSet;
+      private final ApigatewayApiConfigFileResponse fileDescriptorSet;
 
     public ApigatewayApiConfigFileResponse getFileDescriptorSet() {
         return this.fileDescriptorSet;
@@ -33,7 +33,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
      * 
      */
     @InputImport(name="source", required=true)
-    private final List<ApigatewayApiConfigFileResponse> source;
+      private final List<ApigatewayApiConfigFileResponse> source;
 
     public List<ApigatewayApiConfigFileResponse> getSource() {
         return this.source;
@@ -82,7 +82,6 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionResponse extends io.p
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public ApigatewayApiConfigGrpcServiceDefinitionResponse build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionResponse(fileDescriptorSet, source);
         }

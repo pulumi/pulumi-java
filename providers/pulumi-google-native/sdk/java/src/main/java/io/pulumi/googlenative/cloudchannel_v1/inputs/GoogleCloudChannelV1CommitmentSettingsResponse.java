@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudchannel_v1.inputs.GoogleCloudChannelV1RenewalSettingsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -33,7 +33,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="renewalSettings", required=true)
-    private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
+      private final GoogleCloudChannelV1RenewalSettingsResponse renewalSettings;
 
     public GoogleCloudChannelV1RenewalSettingsResponse getRenewalSettings() {
         return this.renewalSettings;
@@ -44,7 +44,7 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,6 @@ public final class GoogleCloudChannelV1CommitmentSettingsResponse extends io.pul
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GoogleCloudChannelV1CommitmentSettingsResponse build() {
             return new GoogleCloudChannelV1CommitmentSettingsResponse(endTime, renewalSettings, startTime);
         }

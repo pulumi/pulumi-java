@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<Integer> revision;
+        private final @Nullable Input<Integer> revision;
 
     public Input<Integer> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -66,7 +66,6 @@ public final class RollbackConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.revision = Input.ofNullable(revision);
             return this;
         }
-
         public RollbackConfigArgs build() {
             return new RollbackConfigArgs(revision);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bitrate")
-    private final @Nullable Integer bitrate;
+        private final @Nullable Integer bitrate;
 
     public Optional<Integer> getBitrate() {
         return this.bitrate == null ? Optional.empty() : Optional.ofNullable(this.bitrate);
@@ -35,7 +35,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="channels")
-    private final @Nullable Integer channels;
+        private final @Nullable Integer channels;
 
     public Optional<Integer> getChannels() {
         return this.channels == null ? Optional.empty() : Optional.ofNullable(this.channels);
@@ -46,7 +46,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable String label;
+        private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -58,7 +58,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -69,7 +69,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable String profile;
+        private final @Nullable String profile;
 
     public Optional<String> getProfile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
@@ -80,7 +80,7 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="samplingRate")
-    private final @Nullable Integer samplingRate;
+        private final @Nullable Integer samplingRate;
 
     public Optional<Integer> getSamplingRate() {
         return this.samplingRate == null ? Optional.empty() : Optional.ofNullable(this.samplingRate);
@@ -169,7 +169,6 @@ public final class AacAudioResponse extends io.pulumi.resources.InvokeArgs {
             this.samplingRate = samplingRate;
             return this;
         }
-
         public AacAudioResponse build() {
             return new AacAudioResponse(bitrate, channels, label, odataType, profile, samplingRate);
         }

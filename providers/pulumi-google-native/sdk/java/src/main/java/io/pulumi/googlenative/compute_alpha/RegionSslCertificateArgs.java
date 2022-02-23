@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.RegionSslCertificateType;
 import io.pulumi.googlenative.compute_alpha.inputs.SslCertificateManagedSslCertificateArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.SslCertificateSelfManagedSslCertificateArgs;
@@ -22,7 +22,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+      private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -33,7 +33,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="managed")
-    private final @Nullable Input<SslCertificateManagedSslCertificateArgs> managed;
+      private final @Nullable Input<SslCertificateManagedSslCertificateArgs> managed;
 
     public Input<SslCertificateManagedSslCertificateArgs> getManaged() {
         return this.managed == null ? Input.empty() : this.managed;
@@ -55,7 +55,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -66,28 +66,28 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="privateKey")
-    private final @Nullable Input<String> privateKey;
+      private final @Nullable Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey == null ? Input.empty() : this.privateKey;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -98,7 +98,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="selfManaged")
-    private final @Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
+      private final @Nullable Input<SslCertificateSelfManagedSslCertificateArgs> selfManaged;
 
     public Input<SslCertificateSelfManagedSslCertificateArgs> getSelfManaged() {
         return this.selfManaged == null ? Input.empty() : this.selfManaged;
@@ -109,7 +109,7 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<RegionSslCertificateType> type;
+      private final @Nullable Input<RegionSslCertificateType> type;
 
     public Input<RegionSslCertificateType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -288,7 +288,6 @@ public final class RegionSslCertificateArgs extends io.pulumi.resources.Resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public RegionSslCertificateArgs build() {
             return new RegionSslCertificateArgs(certificate, description, managed, name, privateKey, project, region, requestId, selfManaged, type);
         }

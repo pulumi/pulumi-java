@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
     public static final AliasArgs Empty = new AliasArgs();
 
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+      private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -28,7 +28,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+      private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -39,14 +39,14 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -57,42 +57,42 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<Map<String,String>>> extensions;
+      private final @Nullable Input<List<Map<String,String>>> extensions;
 
     public Input<List<Map<String,String>>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="format", required=true)
-    private final Input<String> format;
+      private final Input<String> format;
 
     public Input<String> getFormat() {
         return this.format;
     }
 
     @InputImport(name="ignoreExpiryValidation")
-    private final @Nullable Input<String> ignoreExpiryValidation;
+      private final @Nullable Input<String> ignoreExpiryValidation;
 
     public Input<String> getIgnoreExpiryValidation() {
         return this.ignoreExpiryValidation == null ? Input.empty() : this.ignoreExpiryValidation;
     }
 
     @InputImport(name="ignoreNewlineValidation")
-    private final @Nullable Input<String> ignoreNewlineValidation;
+      private final @Nullable Input<String> ignoreNewlineValidation;
 
     public Input<String> getIgnoreNewlineValidation() {
         return this.ignoreNewlineValidation == null ? Input.empty() : this.ignoreNewlineValidation;
     }
 
     @InputImport(name="keystoreId", required=true)
-    private final Input<String> keystoreId;
+      private final Input<String> keystoreId;
 
     public Input<String> getKeystoreId() {
         return this.keystoreId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -271,7 +271,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.organizationId = Input.of(Objects.requireNonNull(organizationId));
             return this;
         }
-
         public AliasArgs build() {
             return new AliasArgs(alias, contentType, data, environmentId, extensions, format, ignoreExpiryValidation, ignoreNewlineValidation, keystoreId, organizationId);
         }

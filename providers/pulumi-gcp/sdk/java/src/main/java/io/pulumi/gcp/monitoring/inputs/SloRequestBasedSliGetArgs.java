@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliDistributionCutGetArgs;
 import io.pulumi.gcp.monitoring.inputs.SloRequestBasedSliGoodTotalRatioGetArgs;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SloRequestBasedSliGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="distributionCut")
-    private final @Nullable Input<SloRequestBasedSliDistributionCutGetArgs> distributionCut;
+        private final @Nullable Input<SloRequestBasedSliDistributionCutGetArgs> distributionCut;
 
     public Input<SloRequestBasedSliDistributionCutGetArgs> getDistributionCut() {
         return this.distributionCut == null ? Input.empty() : this.distributionCut;
@@ -41,7 +41,7 @@ public final class SloRequestBasedSliGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="goodTotalRatio")
-    private final @Nullable Input<SloRequestBasedSliGoodTotalRatioGetArgs> goodTotalRatio;
+        private final @Nullable Input<SloRequestBasedSliGoodTotalRatioGetArgs> goodTotalRatio;
 
     public Input<SloRequestBasedSliGoodTotalRatioGetArgs> getGoodTotalRatio() {
         return this.goodTotalRatio == null ? Input.empty() : this.goodTotalRatio;
@@ -100,7 +100,6 @@ public final class SloRequestBasedSliGetArgs extends io.pulumi.resources.Resourc
             this.goodTotalRatio = Input.ofNullable(goodTotalRatio);
             return this;
         }
-
         public SloRequestBasedSliGetArgs build() {
             return new SloRequestBasedSliGetArgs(distributionCut, goodTotalRatio);
         }

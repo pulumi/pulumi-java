@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+        private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="attachmentId", required=true)
-    private final String attachmentId;
+        private final String attachmentId;
 
     public String getAttachmentId() {
         return this.attachmentId;
@@ -39,7 +39,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="issueId", required=true)
-    private final String issueId;
+        private final String issueId;
 
     public String getIssueId() {
         return this.issueId;
@@ -50,7 +50,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -140,7 +140,6 @@ public final class GetApiIssueAttachmentArgs extends io.pulumi.resources.InvokeA
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetApiIssueAttachmentArgs build() {
             return new GetApiIssueAttachmentArgs(apiId, attachmentId, issueId, resourceGroupName, serviceName);
         }

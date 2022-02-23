@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.PatientIdArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.SchematizedDataArgs;
 import java.lang.String;
@@ -23,21 +23,21 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
     }
 
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+      private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="hl7V2StoreId", required=true)
-    private final Input<String> hl7V2StoreId;
+      private final Input<String> hl7V2StoreId;
 
     public Input<String> getHl7V2StoreId() {
         return this.hl7V2StoreId;
@@ -48,14 +48,14 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,7 +66,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="messageType")
-    private final @Nullable Input<String> messageType;
+      private final @Nullable Input<String> messageType;
 
     public Input<String> getMessageType() {
         return this.messageType == null ? Input.empty() : this.messageType;
@@ -77,7 +77,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,14 +88,14 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patientIds")
-    private final @Nullable Input<List<PatientIdArgs>> patientIds;
+      private final @Nullable Input<List<PatientIdArgs>> patientIds;
 
     public Input<List<PatientIdArgs>> getPatientIds() {
         return this.patientIds == null ? Input.empty() : this.patientIds;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -106,7 +106,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schematizedData")
-    private final @Nullable Input<SchematizedDataArgs> schematizedData;
+      private final @Nullable Input<SchematizedDataArgs> schematizedData;
 
     public Input<SchematizedDataArgs> getSchematizedData() {
         return this.schematizedData == null ? Input.empty() : this.schematizedData;
@@ -117,7 +117,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendFacility")
-    private final @Nullable Input<String> sendFacility;
+      private final @Nullable Input<String> sendFacility;
 
     public Input<String> getSendFacility() {
         return this.sendFacility == null ? Input.empty() : this.sendFacility;
@@ -128,7 +128,7 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sendTime")
-    private final @Nullable Input<String> sendTime;
+      private final @Nullable Input<String> sendTime;
 
     public Input<String> getSendTime() {
         return this.sendTime == null ? Input.empty() : this.sendTime;
@@ -337,7 +337,6 @@ public final class MessageArgs extends io.pulumi.resources.ResourceArgs {
             this.sendTime = Input.ofNullable(sendTime);
             return this;
         }
-
         public MessageArgs build() {
             return new MessageArgs(data, datasetId, hl7V2StoreId, labels, location, messageType, name, patientIds, project, schematizedData, sendFacility, sendTime);
         }

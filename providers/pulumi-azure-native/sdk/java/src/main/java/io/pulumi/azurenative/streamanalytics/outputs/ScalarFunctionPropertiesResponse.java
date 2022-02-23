@@ -8,7 +8,7 @@ import io.pulumi.azurenative.streamanalytics.outputs.FunctionInputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.FunctionOutputResponse;
 import io.pulumi.azurenative.streamanalytics.outputs.JavaScriptFunctionBindingResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -147,7 +147,6 @@ public final class ScalarFunctionPropertiesResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ScalarFunctionPropertiesResponse build() {
             return new ScalarFunctionPropertiesResponse(binding, etag, inputs, output, type);
         }

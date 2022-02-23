@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+      private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -32,7 +32,7 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="nodeMetadata", required=true)
-    private final String nodeMetadata;
+      private final String nodeMetadata;
 
     public String getNodeMetadata() {
         return this.nodeMetadata;
@@ -81,7 +81,6 @@ public final class WorkloadMetadataConfigResponse extends io.pulumi.resources.In
             this.nodeMetadata = Objects.requireNonNull(nodeMetadata);
             return this;
         }
-
         public WorkloadMetadataConfigResponse build() {
             return new WorkloadMetadataConfigResponse(mode, nodeMetadata);
         }

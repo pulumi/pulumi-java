@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.greengrassv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -87,7 +87,6 @@ public final class GetComponentVersionResult {
             this.tags = tags;
             return this;
         }
-
         public GetComponentVersionResult build() {
             return new GetComponentVersionResult(arn, componentName, componentVersion, tags);
         }

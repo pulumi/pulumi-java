@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.serviceAccount.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="delegates")
-    private final @Nullable List<String> delegates;
+        private final @Nullable List<String> delegates;
 
     public List<String> getDelegates() {
         return this.delegates == null ? List.of() : this.delegates;
@@ -32,7 +32,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="includeEmail")
-    private final @Nullable Boolean includeEmail;
+        private final @Nullable Boolean includeEmail;
 
     public Optional<Boolean> getIncludeEmail() {
         return this.includeEmail == null ? Optional.empty() : Optional.ofNullable(this.includeEmail);
@@ -43,7 +43,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="targetAudience", required=true)
-    private final String targetAudience;
+        private final String targetAudience;
 
     public String getTargetAudience() {
         return this.targetAudience;
@@ -54,7 +54,7 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="targetServiceAccount")
-    private final @Nullable String targetServiceAccount;
+        private final @Nullable String targetServiceAccount;
 
     public Optional<String> getTargetServiceAccount() {
         return this.targetServiceAccount == null ? Optional.empty() : Optional.ofNullable(this.targetServiceAccount);
@@ -123,7 +123,6 @@ public final class GetAccountIdTokenArgs extends io.pulumi.resources.InvokeArgs 
             this.targetServiceAccount = targetServiceAccount;
             return this;
         }
-
         public GetAccountIdTokenArgs build() {
             return new GetAccountIdTokenArgs(delegates, includeEmail, targetAudience, targetServiceAccount);
         }

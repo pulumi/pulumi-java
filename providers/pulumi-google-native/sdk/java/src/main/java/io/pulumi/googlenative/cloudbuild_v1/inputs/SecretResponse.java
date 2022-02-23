@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final String kmsKeyName;
+      private final String kmsKeyName;
 
     public String getKmsKeyName() {
         return this.kmsKeyName;
@@ -33,7 +33,7 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="secretEnv", required=true)
-    private final Map<String,String> secretEnv;
+      private final Map<String,String> secretEnv;
 
     public Map<String,String> getSecretEnv() {
         return this.secretEnv;
@@ -82,7 +82,6 @@ public final class SecretResponse extends io.pulumi.resources.InvokeArgs {
             this.secretEnv = Objects.requireNonNull(secretEnv);
             return this;
         }
-
         public SecretResponse build() {
             return new SecretResponse(kmsKeyName, secretEnv);
         }

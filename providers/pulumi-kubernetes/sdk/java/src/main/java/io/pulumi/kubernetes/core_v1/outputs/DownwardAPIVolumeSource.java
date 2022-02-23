@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.DownwardAPIVolumeFile;
 import java.lang.Integer;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class DownwardAPIVolumeSource {
             this.items = items;
             return this;
         }
-
         public DownwardAPIVolumeSource build() {
             return new DownwardAPIVolumeSource(defaultMode, items);
         }

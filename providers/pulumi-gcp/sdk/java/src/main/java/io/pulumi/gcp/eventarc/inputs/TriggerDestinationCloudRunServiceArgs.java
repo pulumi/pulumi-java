@@ -4,7 +4,7 @@
 package io.pulumi.gcp.eventarc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -30,7 +30,7 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -41,7 +41,7 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -115,7 +115,6 @@ public final class TriggerDestinationCloudRunServiceArgs extends io.pulumi.resou
             this.service = Input.of(Objects.requireNonNull(service));
             return this;
         }
-
         public TriggerDestinationCloudRunServiceArgs build() {
             return new TriggerDestinationCloudRunServiceArgs(path, region, service);
         }

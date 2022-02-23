@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable Input<String> auth;
+        private final @Nullable Input<String> auth;
 
     public Input<String> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
@@ -32,7 +32,7 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Input<Boolean> disabled;
+        private final Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled;
@@ -91,7 +91,6 @@ public final class ClusterAddonsConfigIstioConfigArgs extends io.pulumi.resource
             this.disabled = Input.of(Objects.requireNonNull(disabled));
             return this;
         }
-
         public ClusterAddonsConfigIstioConfigArgs build() {
             return new ClusterAddonsConfigIstioConfigArgs(auth, disabled);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationSpekeKeyProviderArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class PackagingConfigurationDashEncryptionArgs extends io.pulumi.re
     public static final PackagingConfigurationDashEncryptionArgs Empty = new PackagingConfigurationDashEncryptionArgs();
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
+        private final Input<PackagingConfigurationSpekeKeyProviderArgs> spekeKeyProvider;
 
     public Input<PackagingConfigurationSpekeKeyProviderArgs> getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -61,7 +61,6 @@ public final class PackagingConfigurationDashEncryptionArgs extends io.pulumi.re
             this.spekeKeyProvider = Input.of(Objects.requireNonNull(spekeKeyProvider));
             return this;
         }
-
         public PackagingConfigurationDashEncryptionArgs build() {
             return new PackagingConfigurationDashEncryptionArgs(spekeKeyProvider);
         }

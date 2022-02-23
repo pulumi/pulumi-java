@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Either<String,EnableStatus>> enabled;
+        private final @Nullable Input<Either<String,EnableStatus>> enabled;
 
     public Input<Either<String,EnableStatus>> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -37,7 +37,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+        private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -48,7 +48,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expired")
-    private final @Nullable Input<Boolean> expired;
+        private final @Nullable Input<Boolean> expired;
 
     public Input<Boolean> getExpired() {
         return this.expired == null ? Input.empty() : this.expired;
@@ -59,7 +59,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="markdown")
-    private final @Nullable Input<String> markdown;
+        private final @Nullable Input<String> markdown;
 
     public Input<String> getMarkdown() {
         return this.markdown == null ? Input.empty() : this.markdown;
@@ -70,7 +70,7 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -174,7 +174,6 @@ public final class LabAnnouncementPropertiesArgs extends io.pulumi.resources.Res
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public LabAnnouncementPropertiesArgs build() {
             return new LabAnnouncementPropertiesArgs(enabled, expirationDate, expired, markdown, title);
         }

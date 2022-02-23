@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class GitHubActionCodeConfigurationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="runtimeStack")
-    private final @Nullable String runtimeStack;
+        private final @Nullable String runtimeStack;
 
     public Optional<String> getRuntimeStack() {
         return this.runtimeStack == null ? Optional.empty() : Optional.ofNullable(this.runtimeStack);
@@ -34,7 +34,7 @@ public final class GitHubActionCodeConfigurationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable String runtimeVersion;
+        private final @Nullable String runtimeVersion;
 
     public Optional<String> getRuntimeVersion() {
         return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
@@ -83,7 +83,6 @@ public final class GitHubActionCodeConfigurationResponse extends io.pulumi.resou
             this.runtimeVersion = runtimeVersion;
             return this;
         }
-
         public GitHubActionCodeConfigurationResponse build() {
             return new GitHubActionCodeConfigurationResponse(runtimeStack, runtimeVersion);
         }

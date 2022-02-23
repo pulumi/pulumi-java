@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -97,7 +97,6 @@ public final class SslCertificateManagedSslCertificateResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public SslCertificateManagedSslCertificateResponse build() {
             return new SslCertificateManagedSslCertificateResponse(domainStatus, domains, status);
         }

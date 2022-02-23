@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StorageEndpointPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable String authenticationType;
+        private final @Nullable String authenticationType;
 
     public Optional<String> getAuthenticationType() {
         return this.authenticationType == null ? Optional.empty() : Optional.ofNullable(this.authenticationType);
@@ -34,7 +34,7 @@ public final class StorageEndpointPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final String connectionString;
+        private final String connectionString;
 
     public String getConnectionString() {
         return this.connectionString;
@@ -45,7 +45,7 @@ public final class StorageEndpointPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -56,7 +56,7 @@ public final class StorageEndpointPropertiesResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sasTtlAsIso8601")
-    private final @Nullable String sasTtlAsIso8601;
+        private final @Nullable String sasTtlAsIso8601;
 
     public Optional<String> getSasTtlAsIso8601() {
         return this.sasTtlAsIso8601 == null ? Optional.empty() : Optional.ofNullable(this.sasTtlAsIso8601);
@@ -125,7 +125,6 @@ public final class StorageEndpointPropertiesResponse extends io.pulumi.resources
             this.sasTtlAsIso8601 = sasTtlAsIso8601;
             return this;
         }
-
         public StorageEndpointPropertiesResponse build() {
             return new StorageEndpointPropertiesResponse(authenticationType, connectionString, containerName, sasTtlAsIso8601);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codestarconnections.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectionArn", required=true)
-    private final String connectionArn;
+        private final String connectionArn;
 
     public String getConnectionArn() {
         return this.connectionArn;
@@ -55,7 +55,6 @@ public final class GetConnectionArgs extends io.pulumi.resources.InvokeArgs {
             this.connectionArn = Objects.requireNonNull(connectionArn);
             return this;
         }
-
         public GetConnectionArgs build() {
             return new GetConnectionArgs(connectionArn);
         }

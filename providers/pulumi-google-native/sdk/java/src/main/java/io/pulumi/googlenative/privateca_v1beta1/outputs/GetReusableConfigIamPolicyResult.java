@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetReusableConfigIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetReusableConfigIamPolicyResult build() {
             return new GetReusableConfigIamPolicyResult(auditConfigs, bindings, etag, version);
         }

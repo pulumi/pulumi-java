@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="bucketEndTimeUTC", required=true)
-    private final String bucketEndTimeUTC;
+        private final String bucketEndTimeUTC;
 
     public String getBucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
@@ -32,7 +32,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="bucketStartTimeUTC", required=true)
-    private final String bucketStartTimeUTC;
+        private final String bucketStartTimeUTC;
 
     public String getBucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
@@ -43,7 +43,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+        private final String content;
 
     public String getContent() {
         return this.content;
@@ -54,7 +54,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="firstActivityTimeUTC", required=true)
-    private final String firstActivityTimeUTC;
+        private final String firstActivityTimeUTC;
 
     public String getFirstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
@@ -66,7 +66,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+        private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -77,7 +77,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="lastActivityTimeUTC", required=true)
-    private final String lastActivityTimeUTC;
+        private final String lastActivityTimeUTC;
 
     public String getLastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
@@ -88,7 +88,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="queryId", required=true)
-    private final String queryId;
+        private final String queryId;
 
     public String getQueryId() {
         return this.queryId;
@@ -99,7 +99,7 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+        private final String title;
 
     public String getTitle() {
         return this.title;
@@ -208,7 +208,6 @@ public final class ActivityTimelineItemResponse extends io.pulumi.resources.Invo
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public ActivityTimelineItemResponse build() {
             return new ActivityTimelineItemResponse(bucketEndTimeUTC, bucketStartTimeUTC, content, firstActivityTimeUTC, kind, lastActivityTimeUTC, queryId, title);
         }

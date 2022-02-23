@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -438,7 +438,6 @@ public final class GetScheduledAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetScheduledAlertRuleResult build() {
             return new GetScheduledAlertRuleResult(alertRuleTemplateName, description, displayName, enabled, etag, id, kind, lastModifiedUtc, name, query, queryFrequency, queryPeriod, severity, suppressionDuration, suppressionEnabled, tactics, triggerOperator, triggerThreshold, type);
         }

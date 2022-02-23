@@ -9,7 +9,7 @@ import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsPackageAdTriggers
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsPackagePlaylistType;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointHlsEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -249,7 +249,6 @@ public final class OriginEndpointHlsPackage {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public OriginEndpointHlsPackage build() {
             return new OriginEndpointHlsPackage(adMarkers, adTriggers, adsOnDeliveryRestrictions, encryption, includeIframeOnlyStream, playlistType, playlistWindowSeconds, programDateTimeIntervalSeconds, segmentDurationSeconds, streamSelection, useAudioRenditionGroup);
         }

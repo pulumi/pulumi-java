@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessRe
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessResponse(metadata);
         }

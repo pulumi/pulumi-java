@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="appStartTimeout")
-    private final @Nullable Input<String> appStartTimeout;
+        private final @Nullable Input<String> appStartTimeout;
 
     public Input<String> getAppStartTimeout() {
         return this.appStartTimeout == null ? Input.empty() : this.appStartTimeout;
@@ -32,7 +32,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="checkInterval")
-    private final @Nullable Input<String> checkInterval;
+        private final @Nullable Input<String> checkInterval;
 
     public Input<String> getCheckInterval() {
         return this.checkInterval == null ? Input.empty() : this.checkInterval;
@@ -43,7 +43,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Double> failureThreshold;
+        private final @Nullable Input<Double> failureThreshold;
 
     public Input<Double> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -54,7 +54,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -66,7 +66,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -77,7 +77,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="successThreshold")
-    private final @Nullable Input<Double> successThreshold;
+        private final @Nullable Input<Double> successThreshold;
 
     public Input<Double> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -88,7 +88,7 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+        private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -222,7 +222,6 @@ public final class FlexibleAppVersionReadinessCheckGetArgs extends io.pulumi.res
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public FlexibleAppVersionReadinessCheckGetArgs build() {
             return new FlexibleAppVersionReadinessCheckGetArgs(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }

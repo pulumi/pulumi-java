@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.CopyOnExpiryOptionResponse;
 import io.pulumi.azurenative.dataprotection.inputs.CustomCopyOptionResponse;
 import io.pulumi.azurenative.dataprotection.inputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.inputs.ImmediateCopyOptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="copyAfter", required=true)
-    private final Object copyAfter;
+        private final Object copyAfter;
 
     public Object getCopyAfter() {
         return this.copyAfter;
@@ -36,7 +36,7 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataStore", required=true)
-    private final DataStoreInfoBaseResponse dataStore;
+        private final DataStoreInfoBaseResponse dataStore;
 
     public DataStoreInfoBaseResponse getDataStore() {
         return this.dataStore;
@@ -85,7 +85,6 @@ public final class TargetCopySettingResponse extends io.pulumi.resources.InvokeA
             this.dataStore = Objects.requireNonNull(dataStore);
             return this;
         }
-
         public TargetCopySettingResponse build() {
             return new TargetCopySettingResponse(copyAfter, dataStore);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.RevisionTemplateArgs;
 import io.pulumi.googlenative.run_v1.inputs.TrafficTargetArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<RevisionTemplateArgs> template;
+      private final @Nullable Input<RevisionTemplateArgs> template;
 
     public Input<RevisionTemplateArgs> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -36,7 +36,7 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-    private final @Nullable Input<List<TrafficTargetArgs>> traffic;
+      private final @Nullable Input<List<TrafficTargetArgs>> traffic;
 
     public Input<List<TrafficTargetArgs>> getTraffic() {
         return this.traffic == null ? Input.empty() : this.traffic;
@@ -95,7 +95,6 @@ public final class ServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.traffic = Input.ofNullable(traffic);
             return this;
         }
-
         public ServiceSpecArgs build() {
             return new ServiceSpecArgs(template, traffic);
         }

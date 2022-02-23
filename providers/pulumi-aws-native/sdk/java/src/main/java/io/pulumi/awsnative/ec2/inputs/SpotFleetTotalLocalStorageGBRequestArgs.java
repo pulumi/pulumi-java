@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class SpotFleetTotalLocalStorageGBRequestArgs extends io.pulumi.res
     public static final SpotFleetTotalLocalStorageGBRequestArgs Empty = new SpotFleetTotalLocalStorageGBRequestArgs();
 
     @InputImport(name="max")
-    private final @Nullable Input<Double> max;
+        private final @Nullable Input<Double> max;
 
     public Input<Double> getMax() {
         return this.max == null ? Input.empty() : this.max;
     }
 
     @InputImport(name="min")
-    private final @Nullable Input<Double> min;
+        private final @Nullable Input<Double> min;
 
     public Input<Double> getMin() {
         return this.min == null ? Input.empty() : this.min;
@@ -81,7 +81,6 @@ public final class SpotFleetTotalLocalStorageGBRequestArgs extends io.pulumi.res
             this.min = Input.ofNullable(min);
             return this;
         }
-
         public SpotFleetTotalLocalStorageGBRequestArgs build() {
             return new SpotFleetTotalLocalStorageGBRequestArgs(max, min);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.AdhocBasedTaggingCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -77,7 +77,6 @@ public final class AdhocBasedTriggerContextResponse {
             this.taggingCriteria = Objects.requireNonNull(taggingCriteria);
             return this;
         }
-
         public AdhocBasedTriggerContextResponse build() {
             return new AdhocBasedTriggerContextResponse(objectType, taggingCriteria);
         }

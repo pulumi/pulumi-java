@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxFlowEventHandlerTriggerFulfillment;
 import java.lang.String;
 import java.util.Objects;
@@ -148,7 +148,6 @@ public final class CxFlowEventHandler {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public CxFlowEventHandler build() {
             return new CxFlowEventHandler(event, name, targetFlow, targetPage, triggerFulfillment);
         }

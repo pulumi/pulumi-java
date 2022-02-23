@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz;
 
 import io.pulumi.azurenative.logz.inputs.MetricsTagRulesPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="metricsSourceName", required=true)
-    private final Input<String> metricsSourceName;
+        private final Input<String> metricsSourceName;
 
     public Input<String> getMetricsSourceName() {
         return this.metricsSourceName;
@@ -31,7 +31,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final Input<String> monitorName;
+        private final Input<String> monitorName;
 
     public Input<String> getMonitorName() {
         return this.monitorName;
@@ -42,7 +42,7 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<MetricsTagRulesPropertiesArgs> properties;
+        private final @Nullable Input<MetricsTagRulesPropertiesArgs> properties;
 
     public Input<MetricsTagRulesPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,14 +53,14 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="ruleSetName")
-    private final @Nullable Input<String> ruleSetName;
+        private final @Nullable Input<String> ruleSetName;
 
     public Input<String> getRuleSetName() {
         return this.ruleSetName == null ? Input.empty() : this.ruleSetName;
@@ -164,7 +164,6 @@ public final class MetricsSourceTagRuleArgs extends io.pulumi.resources.Resource
             this.ruleSetName = Input.ofNullable(ruleSetName);
             return this;
         }
-
         public MetricsSourceTagRuleArgs build() {
             return new MetricsSourceTagRuleArgs(metricsSourceName, monitorName, properties, resourceGroupName, ruleSetName);
         }

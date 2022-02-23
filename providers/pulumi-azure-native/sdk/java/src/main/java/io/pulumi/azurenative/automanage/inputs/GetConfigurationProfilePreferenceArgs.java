@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="configurationProfilePreferenceName", required=true)
-    private final String configurationProfilePreferenceName;
+        private final String configurationProfilePreferenceName;
 
     public String getConfigurationProfilePreferenceName() {
         return this.configurationProfilePreferenceName;
@@ -28,7 +28,7 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetConfigurationProfilePreferenceArgs extends io.pulumi.resou
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetConfigurationProfilePreferenceArgs build() {
             return new GetConfigurationProfilePreferenceArgs(configurationProfilePreferenceName, resourceGroupName);
         }

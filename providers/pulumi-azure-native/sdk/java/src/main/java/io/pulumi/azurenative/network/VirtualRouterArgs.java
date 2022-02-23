@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedGateway")
-    private final @Nullable Input<SubResourceArgs> hostedGateway;
+        private final @Nullable Input<SubResourceArgs> hostedGateway;
 
     public Input<SubResourceArgs> getHostedGateway() {
         return this.hostedGateway == null ? Input.empty() : this.hostedGateway;
@@ -34,7 +34,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostedSubnet")
-    private final @Nullable Input<SubResourceArgs> hostedSubnet;
+        private final @Nullable Input<SubResourceArgs> hostedSubnet;
 
     public Input<SubResourceArgs> getHostedSubnet() {
         return this.hostedSubnet == null ? Input.empty() : this.hostedSubnet;
@@ -45,7 +45,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -56,7 +56,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -89,7 +89,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualRouterAsn")
-    private final @Nullable Input<Double> virtualRouterAsn;
+        private final @Nullable Input<Double> virtualRouterAsn;
 
     public Input<Double> getVirtualRouterAsn() {
         return this.virtualRouterAsn == null ? Input.empty() : this.virtualRouterAsn;
@@ -100,7 +100,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualRouterIps")
-    private final @Nullable Input<List<String>> virtualRouterIps;
+        private final @Nullable Input<List<String>> virtualRouterIps;
 
     public Input<List<String>> getVirtualRouterIps() {
         return this.virtualRouterIps == null ? Input.empty() : this.virtualRouterIps;
@@ -111,7 +111,7 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualRouterName")
-    private final @Nullable Input<String> virtualRouterName;
+        private final @Nullable Input<String> virtualRouterName;
 
     public Input<String> getVirtualRouterName() {
         return this.virtualRouterName == null ? Input.empty() : this.virtualRouterName;
@@ -275,7 +275,6 @@ public final class VirtualRouterArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualRouterName = Input.ofNullable(virtualRouterName);
             return this;
         }
-
         public VirtualRouterArgs build() {
             return new VirtualRouterArgs(hostedGateway, hostedSubnet, id, location, resourceGroupName, tags, virtualRouterAsn, virtualRouterIps, virtualRouterName);
         }

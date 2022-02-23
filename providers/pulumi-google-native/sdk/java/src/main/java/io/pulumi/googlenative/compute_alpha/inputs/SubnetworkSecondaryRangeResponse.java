@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final String ipCidrRange;
+      private final String ipCidrRange;
 
     public String getIpCidrRange() {
         return this.ipCidrRange;
@@ -32,7 +32,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="rangeName", required=true)
-    private final String rangeName;
+      private final String rangeName;
 
     public String getRangeName() {
         return this.rangeName;
@@ -43,7 +43,7 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="reservedInternalRange", required=true)
-    private final String reservedInternalRange;
+      private final String reservedInternalRange;
 
     public String getReservedInternalRange() {
         return this.reservedInternalRange;
@@ -102,7 +102,6 @@ public final class SubnetworkSecondaryRangeResponse extends io.pulumi.resources.
             this.reservedInternalRange = Objects.requireNonNull(reservedInternalRange);
             return this;
         }
-
         public SubnetworkSecondaryRangeResponse build() {
             return new SubnetworkSecondaryRangeResponse(ipCidrRange, rangeName, reservedInternalRange);
         }

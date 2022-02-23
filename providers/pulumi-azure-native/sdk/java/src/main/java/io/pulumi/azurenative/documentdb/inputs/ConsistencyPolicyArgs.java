@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.enums.DefaultConsistencyLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="defaultConsistencyLevel", required=true)
-    private final Input<DefaultConsistencyLevel> defaultConsistencyLevel;
+        private final Input<DefaultConsistencyLevel> defaultConsistencyLevel;
 
     public Input<DefaultConsistencyLevel> getDefaultConsistencyLevel() {
         return this.defaultConsistencyLevel;
@@ -36,7 +36,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxIntervalInSeconds")
-    private final @Nullable Input<Integer> maxIntervalInSeconds;
+        private final @Nullable Input<Integer> maxIntervalInSeconds;
 
     public Input<Integer> getMaxIntervalInSeconds() {
         return this.maxIntervalInSeconds == null ? Input.empty() : this.maxIntervalInSeconds;
@@ -47,7 +47,7 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxStalenessPrefix")
-    private final @Nullable Input<Double> maxStalenessPrefix;
+        private final @Nullable Input<Double> maxStalenessPrefix;
 
     public Input<Double> getMaxStalenessPrefix() {
         return this.maxStalenessPrefix == null ? Input.empty() : this.maxStalenessPrefix;
@@ -121,7 +121,6 @@ public final class ConsistencyPolicyArgs extends io.pulumi.resources.ResourceArg
             this.maxStalenessPrefix = Input.ofNullable(maxStalenessPrefix);
             return this;
         }
-
         public ConsistencyPolicyArgs build() {
             return new ConsistencyPolicyArgs(defaultConsistencyLevel, maxIntervalInSeconds, maxStalenessPrefix);
         }

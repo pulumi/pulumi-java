@@ -5,8 +5,8 @@ package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerDeploymentRolloutArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerDeploymentRolloutState;
@@ -133,13 +133,6 @@ public class GameServerDeploymentRollout extends io.pulumi.resources.CustomResou
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GameServerDeploymentRollout(String name) {
-        super("gcp:gameservices/gameServerDeploymentRollout:GameServerDeploymentRollout", name, GameServerDeploymentRolloutArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

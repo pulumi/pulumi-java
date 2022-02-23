@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnLayoutResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.GridLayoutResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.MosaicLayoutResponse;
@@ -205,7 +205,6 @@ public final class GetDashboardResult {
             this.rowLayout = Objects.requireNonNull(rowLayout);
             return this;
         }
-
         public GetDashboardResult build() {
             return new GetDashboardResult(columnLayout, displayName, etag, gridLayout, labels, mosaicLayout, name, rowLayout);
         }

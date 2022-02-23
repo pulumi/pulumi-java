@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsKind;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigDatastoreOptionsPartitionId;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigDatastoreOptions {
             this.partitionId = Objects.requireNonNull(partitionId);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigDatastoreOptions build() {
             return new PreventionJobTriggerInspectJobStorageConfigDatastoreOptions(kind, partitionId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="colors")
-    private final @Nullable Input<List<String>> colors;
+        private final @Nullable Input<List<String>> colors;
 
     public Input<List<String>> getColors() {
         return this.colors == null ? Input.empty() : this.colors;
@@ -38,7 +38,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="emptyFillColor")
-    private final @Nullable Input<String> emptyFillColor;
+        private final @Nullable Input<String> emptyFillColor;
 
     public Input<String> getEmptyFillColor() {
         return this.emptyFillColor == null ? Input.empty() : this.emptyFillColor;
@@ -49,7 +49,7 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="minMaxGradient")
-    private final @Nullable Input<List<String>> minMaxGradient;
+        private final @Nullable Input<List<String>> minMaxGradient;
 
     public Input<List<String>> getMinMaxGradient() {
         return this.minMaxGradient == null ? Input.empty() : this.minMaxGradient;
@@ -123,7 +123,6 @@ public final class ThemeDataColorPaletteArgs extends io.pulumi.resources.Resourc
             this.minMaxGradient = Input.ofNullable(minMaxGradient);
             return this;
         }
-
         public ThemeDataColorPaletteArgs build() {
             return new ThemeDataColorPaletteArgs(colors, emptyFillColor, minMaxGradient);
         }

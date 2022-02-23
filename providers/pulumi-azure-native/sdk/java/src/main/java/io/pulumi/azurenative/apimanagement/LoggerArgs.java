@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement;
 import io.pulumi.azurenative.apimanagement.enums.LoggerType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<Map<String,String>> credentials;
+        private final @Nullable Input<Map<String,String>> credentials;
 
     public Input<Map<String,String>> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -35,7 +35,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isBuffered")
-    private final @Nullable Input<Boolean> isBuffered;
+        private final @Nullable Input<Boolean> isBuffered;
 
     public Input<Boolean> getIsBuffered() {
         return this.isBuffered == null ? Input.empty() : this.isBuffered;
@@ -57,7 +57,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggerId")
-    private final @Nullable Input<String> loggerId;
+        private final @Nullable Input<String> loggerId;
 
     public Input<String> getLoggerId() {
         return this.loggerId == null ? Input.empty() : this.loggerId;
@@ -68,7 +68,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loggerType", required=true)
-    private final Input<Either<String,LoggerType>> loggerType;
+        private final Input<Either<String,LoggerType>> loggerType;
 
     public Input<Either<String,LoggerType>> getLoggerType() {
         return this.loggerType;
@@ -79,7 +79,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -90,7 +90,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -101,7 +101,7 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -250,7 +250,6 @@ public final class LoggerArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public LoggerArgs build() {
             return new LoggerArgs(credentials, description, isBuffered, loggerId, loggerType, resourceGroupName, resourceId, serviceName);
         }

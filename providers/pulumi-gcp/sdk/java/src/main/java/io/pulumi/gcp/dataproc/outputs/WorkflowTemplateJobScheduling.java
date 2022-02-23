@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class WorkflowTemplateJobScheduling {
             this.maxFailuresTotal = maxFailuresTotal;
             return this;
         }
-
         public WorkflowTemplateJobScheduling build() {
             return new WorkflowTemplateJobScheduling(maxFailuresPerHour, maxFailuresTotal);
         }

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeCustomSetupSc
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeSsisCatalogInfoResponse;
 import io.pulumi.azurenative.datafactory.outputs.PackageStoreResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -213,7 +213,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
             this.packageStores = packageStores;
             return this;
         }
-
         public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, credential, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType, packageStores);
         }

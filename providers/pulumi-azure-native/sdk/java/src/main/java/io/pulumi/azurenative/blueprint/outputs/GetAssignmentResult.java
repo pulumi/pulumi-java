@@ -8,7 +8,7 @@ import io.pulumi.azurenative.blueprint.outputs.AssignmentStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterValueResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -334,7 +334,6 @@ public final class GetAssignmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssignmentResult build() {
             return new GetAssignmentResult(blueprintId, description, displayName, id, identity, location, locks, name, parameters, provisioningState, resourceGroups, scope, status, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeyName")
-    private final @Nullable Input<String> kmsKeyName;
+        private final @Nullable Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName == null ? Input.empty() : this.kmsKeyName;
@@ -63,7 +63,6 @@ public final class AiMetadataStoreEncryptionSpecGetArgs extends io.pulumi.resour
             this.kmsKeyName = Input.ofNullable(kmsKeyName);
             return this;
         }
-
         public AiMetadataStoreEncryptionSpecGetArgs build() {
             return new AiMetadataStoreEncryptionSpecGetArgs(kmsKeyName);
         }

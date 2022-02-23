@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -81,7 +81,6 @@ public final class GooglePrivacyDlpV2InfoTypeResponse extends io.pulumi.resource
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GooglePrivacyDlpV2InfoTypeResponse build() {
             return new GooglePrivacyDlpV2InfoTypeResponse(name, version);
         }

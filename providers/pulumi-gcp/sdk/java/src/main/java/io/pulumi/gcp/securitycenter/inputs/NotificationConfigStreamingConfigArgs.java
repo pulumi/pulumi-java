@@ -4,7 +4,7 @@
 package io.pulumi.gcp.securitycenter.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -36,7 +36,7 @@ public final class NotificationConfigStreamingConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+        private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -79,7 +79,6 @@ public final class NotificationConfigStreamingConfigArgs extends io.pulumi.resou
             this.filter = Input.of(Objects.requireNonNull(filter));
             return this;
         }
-
         public NotificationConfigStreamingConfigArgs build() {
             return new NotificationConfigStreamingConfigArgs(filter);
         }

@@ -30,7 +30,6 @@ public final class GetGetPrivateDnsZoneSuffixExecuteArgs extends io.pulumi.resou
         public Builder(GetGetPrivateDnsZoneSuffixExecuteArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetGetPrivateDnsZoneSuffixExecuteArgs build() {
             return new GetGetPrivateDnsZoneSuffixExecuteArgs();
         }

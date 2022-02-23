@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketAccelerateConfigurationAccelerationStatus;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class BucketAccelerateConfiguration extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accelerationStatus", required=true)
-    private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
+        private final BucketAccelerateConfigurationAccelerationStatus accelerationStatus;
 
     public BucketAccelerateConfigurationAccelerationStatus getAccelerationStatus() {
         return this.accelerationStatus;
@@ -55,7 +55,6 @@ public final class BucketAccelerateConfiguration extends io.pulumi.resources.Inv
             this.accelerationStatus = Objects.requireNonNull(accelerationStatus);
             return this;
         }
-
         public BucketAccelerateConfiguration build() {
             return new BucketAccelerateConfiguration(accelerationStatus);
         }

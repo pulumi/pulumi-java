@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.BackendServiceCdnPolicyBypassCacheOnRequestHeaderResponse;
 import io.pulumi.googlenative.compute_beta.outputs.BackendServiceCdnPolicyNegativeCachingPolicyResponse;
 import io.pulumi.googlenative.compute_beta.outputs.CacheKeyPolicyResponse;
@@ -290,7 +290,6 @@ public final class BackendServiceCdnPolicyResponse {
             this.signedUrlKeyNames = Objects.requireNonNull(signedUrlKeyNames);
             return this;
         }
-
         public BackendServiceCdnPolicyResponse build() {
             return new BackendServiceCdnPolicyResponse(bypassCacheOnRequestHeaders, cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicy, requestCoalescing, serveWhileStale, signedUrlCacheMaxAgeSec, signedUrlKeyNames);
         }

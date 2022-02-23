@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networksecurity_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networksecurity_v1.AuthorizationPolicyIamPolicyArgs;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleIamV1AuditConfigResponse;
@@ -81,13 +81,6 @@ public class AuthorizationPolicyIamPolicy extends io.pulumi.resources.CustomReso
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AuthorizationPolicyIamPolicy(String name) {
-        super("google-native:networksecurity/v1:AuthorizationPolicyIamPolicy", name, AuthorizationPolicyIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.BasicDependencyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<BasicDependencyResponse> dependsOn;
+        private final @Nullable List<BasicDependencyResponse> dependsOn;
 
     public List<BasicDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -36,7 +36,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable String resourceName;
+        private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
@@ -58,7 +58,7 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable String resourceType;
+        private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
@@ -127,7 +127,6 @@ public final class DependencyResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceType = resourceType;
             return this;
         }
-
         public DependencyResponse build() {
             return new DependencyResponse(dependsOn, id, resourceName, resourceType);
         }

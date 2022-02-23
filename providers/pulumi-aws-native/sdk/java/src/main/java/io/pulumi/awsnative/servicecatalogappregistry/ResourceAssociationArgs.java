@@ -5,7 +5,7 @@ package io.pulumi.awsnative.servicecatalogappregistry;
 
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="application", required=true)
-    private final Input<String> application;
+        private final Input<String> application;
 
     public Input<String> getApplication() {
         return this.application;
@@ -30,7 +30,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+        private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -41,7 +41,7 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<ResourceAssociationResourceType> resourceType;
+        private final Input<ResourceAssociationResourceType> resourceType;
 
     public Input<ResourceAssociationResourceType> getPropResourceType() {
         return this.resourceType;
@@ -115,7 +115,6 @@ public final class ResourceAssociationArgs extends io.pulumi.resources.ResourceA
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public ResourceAssociationArgs build() {
             return new ResourceAssociationArgs(application, resource, resourceType);
         }

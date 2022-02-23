@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -30,7 +30,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hybridRunbookWorkerGroupName", required=true)
-    private final Input<String> hybridRunbookWorkerGroupName;
+        private final Input<String> hybridRunbookWorkerGroupName;
 
     public Input<String> getHybridRunbookWorkerGroupName() {
         return this.hybridRunbookWorkerGroupName;
@@ -41,7 +41,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hybridRunbookWorkerId")
-    private final @Nullable Input<String> hybridRunbookWorkerId;
+        private final @Nullable Input<String> hybridRunbookWorkerId;
 
     public Input<String> getHybridRunbookWorkerId() {
         return this.hybridRunbookWorkerId == null ? Input.empty() : this.hybridRunbookWorkerId;
@@ -52,7 +52,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vmResourceId")
-    private final @Nullable Input<String> vmResourceId;
+        private final @Nullable Input<String> vmResourceId;
 
     public Input<String> getVmResourceId() {
         return this.vmResourceId == null ? Input.empty() : this.vmResourceId;
@@ -193,7 +193,6 @@ public final class HybridRunbookWorkerArgs extends io.pulumi.resources.ResourceA
             this.vmResourceId = Input.ofNullable(vmResourceId);
             return this;
         }
-
         public HybridRunbookWorkerArgs build() {
             return new HybridRunbookWorkerArgs(automationAccountName, hybridRunbookWorkerGroupName, hybridRunbookWorkerId, name, resourceGroupName, vmResourceId);
         }

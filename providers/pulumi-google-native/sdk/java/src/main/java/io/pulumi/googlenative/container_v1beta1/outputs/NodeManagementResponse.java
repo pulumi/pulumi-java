@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.AutoUpgradeOptionsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class NodeManagementResponse {
             this.upgradeOptions = Objects.requireNonNull(upgradeOptions);
             return this;
         }
-
         public NodeManagementResponse build() {
             return new NodeManagementResponse(autoRepair, autoUpgrade, upgradeOptions);
         }

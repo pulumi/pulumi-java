@@ -5,7 +5,7 @@ package io.pulumi.azurenative.mixedreality.inputs;
 
 import io.pulumi.azurenative.mixedreality.enums.ResourceIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceIdentityType> type;
+        private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -62,7 +62,6 @@ public final class ObjectAnchorsAccountIdentityArgs extends io.pulumi.resources.
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ObjectAnchorsAccountIdentityArgs build() {
             return new ObjectAnchorsAccountIdentityArgs(type);
         }

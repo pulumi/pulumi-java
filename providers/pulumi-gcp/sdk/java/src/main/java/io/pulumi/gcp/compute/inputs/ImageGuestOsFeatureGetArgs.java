@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class ImageGuestOsFeatureGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -62,7 +62,6 @@ public final class ImageGuestOsFeatureGetArgs extends io.pulumi.resources.Resour
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ImageGuestOsFeatureGetArgs build() {
             return new ImageGuestOsFeatureGetArgs(type);
         }

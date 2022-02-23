@@ -5,7 +5,7 @@ package io.pulumi.awsnative.redshift.outputs;
 
 import io.pulumi.awsnative.redshift.enums.ScheduledActionState;
 import io.pulumi.awsnative.redshift.outputs.ScheduledActionType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -227,7 +227,6 @@ public final class GetScheduledActionResult {
             this.targetAction = targetAction;
             return this;
         }
-
         public GetScheduledActionResult build() {
             return new GetScheduledActionResult(enable, endTime, iamRole, nextInvocations, schedule, scheduledActionDescription, startTime, state, targetAction);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dbformariadb.outputs;
 
 import io.pulumi.azurenative.dbformariadb.outputs.ServerPrivateEndpointConnectionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -75,7 +75,6 @@ public final class ServerPrivateEndpointConnectionResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public ServerPrivateEndpointConnectionResponse build() {
             return new ServerPrivateEndpointConnectionResponse(id, properties);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybriddata.outputs;
 
 import io.pulumi.azurenative.hybriddata.outputs.CustomerSecretResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -205,7 +205,6 @@ public final class GetDataStoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataStoreResult build() {
             return new GetDataStoreResult(customerSecrets, dataStoreTypeId, extendedProperties, id, name, repositoryId, state, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudsupport_v2beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsupport_v2beta.CaseArgs;
 import io.pulumi.googlenative.cloudsupport_v2beta.outputs.ActorResponse;
@@ -207,13 +207,6 @@ public class Case extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Case(String name) {
-        super("google-native:cloudsupport/v2beta:Case", name, CaseArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

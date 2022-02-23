@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.BigQueryDestinationResponse;
 import io.pulumi.googlenative.container_v1.outputs.ConsumptionMeteringConfigResponse;
 import java.lang.Boolean;
@@ -97,7 +97,6 @@ public final class ResourceUsageExportConfigResponse {
             this.enableNetworkEgressMetering = Objects.requireNonNull(enableNetworkEgressMetering);
             return this;
         }
-
         public ResourceUsageExportConfigResponse build() {
             return new ResourceUsageExportConfigResponse(bigqueryDestination, consumptionMeteringConfig, enableNetworkEgressMetering);
         }

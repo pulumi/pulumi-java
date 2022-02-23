@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.NotificationRateLimitArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AlertStrategyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoClose")
-    private final @Nullable Input<String> autoClose;
+      private final @Nullable Input<String> autoClose;
 
     public Input<String> getAutoClose() {
         return this.autoClose == null ? Input.empty() : this.autoClose;
@@ -35,7 +35,7 @@ public final class AlertStrategyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationRateLimit")
-    private final @Nullable Input<NotificationRateLimitArgs> notificationRateLimit;
+      private final @Nullable Input<NotificationRateLimitArgs> notificationRateLimit;
 
     public Input<NotificationRateLimitArgs> getNotificationRateLimit() {
         return this.notificationRateLimit == null ? Input.empty() : this.notificationRateLimit;
@@ -94,7 +94,6 @@ public final class AlertStrategyArgs extends io.pulumi.resources.ResourceArgs {
             this.notificationRateLimit = Input.ofNullable(notificationRateLimit);
             return this;
         }
-
         public AlertStrategyArgs build() {
             return new AlertStrategyArgs(autoClose, notificationRateLimit);
         }

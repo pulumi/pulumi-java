@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managedservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expandRegistrationDefinition")
-    private final @Nullable Boolean expandRegistrationDefinition;
+        private final @Nullable Boolean expandRegistrationDefinition;
 
     public Optional<Boolean> getExpandRegistrationDefinition() {
         return this.expandRegistrationDefinition == null ? Optional.empty() : Optional.ofNullable(this.expandRegistrationDefinition);
@@ -31,7 +31,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="registrationAssignmentId", required=true)
-    private final String registrationAssignmentId;
+        private final String registrationAssignmentId;
 
     public String getRegistrationAssignmentId() {
         return this.registrationAssignmentId;
@@ -42,7 +42,7 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -101,7 +101,6 @@ public final class GetRegistrationAssignmentArgs extends io.pulumi.resources.Inv
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetRegistrationAssignmentArgs build() {
             return new GetRegistrationAssignmentArgs(expandRegistrationDefinition, registrationAssignmentId, scope);
         }

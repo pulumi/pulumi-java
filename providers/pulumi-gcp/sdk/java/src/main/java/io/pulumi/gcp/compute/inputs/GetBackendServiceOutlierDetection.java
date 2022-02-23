@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetBackendServiceOutlierDetectionBaseEjectionTime;
 import io.pulumi.gcp.compute.inputs.GetBackendServiceOutlierDetectionInterval;
 import java.lang.Integer;
@@ -16,77 +16,77 @@ public final class GetBackendServiceOutlierDetection extends io.pulumi.resources
     public static final GetBackendServiceOutlierDetection Empty = new GetBackendServiceOutlierDetection();
 
     @InputImport(name="baseEjectionTimes", required=true)
-    private final List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
+        private final List<GetBackendServiceOutlierDetectionBaseEjectionTime> baseEjectionTimes;
 
     public List<GetBackendServiceOutlierDetectionBaseEjectionTime> getBaseEjectionTimes() {
         return this.baseEjectionTimes;
     }
 
     @InputImport(name="consecutiveErrors", required=true)
-    private final Integer consecutiveErrors;
+        private final Integer consecutiveErrors;
 
     public Integer getConsecutiveErrors() {
         return this.consecutiveErrors;
     }
 
     @InputImport(name="consecutiveGatewayFailure", required=true)
-    private final Integer consecutiveGatewayFailure;
+        private final Integer consecutiveGatewayFailure;
 
     public Integer getConsecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure;
     }
 
     @InputImport(name="enforcingConsecutiveErrors", required=true)
-    private final Integer enforcingConsecutiveErrors;
+        private final Integer enforcingConsecutiveErrors;
 
     public Integer getEnforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors;
     }
 
     @InputImport(name="enforcingConsecutiveGatewayFailure", required=true)
-    private final Integer enforcingConsecutiveGatewayFailure;
+        private final Integer enforcingConsecutiveGatewayFailure;
 
     public Integer getEnforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure;
     }
 
     @InputImport(name="enforcingSuccessRate", required=true)
-    private final Integer enforcingSuccessRate;
+        private final Integer enforcingSuccessRate;
 
     public Integer getEnforcingSuccessRate() {
         return this.enforcingSuccessRate;
     }
 
     @InputImport(name="intervals", required=true)
-    private final List<GetBackendServiceOutlierDetectionInterval> intervals;
+        private final List<GetBackendServiceOutlierDetectionInterval> intervals;
 
     public List<GetBackendServiceOutlierDetectionInterval> getIntervals() {
         return this.intervals;
     }
 
     @InputImport(name="maxEjectionPercent", required=true)
-    private final Integer maxEjectionPercent;
+        private final Integer maxEjectionPercent;
 
     public Integer getMaxEjectionPercent() {
         return this.maxEjectionPercent;
     }
 
     @InputImport(name="successRateMinimumHosts", required=true)
-    private final Integer successRateMinimumHosts;
+        private final Integer successRateMinimumHosts;
 
     public Integer getSuccessRateMinimumHosts() {
         return this.successRateMinimumHosts;
     }
 
     @InputImport(name="successRateRequestVolume", required=true)
-    private final Integer successRateRequestVolume;
+        private final Integer successRateRequestVolume;
 
     public Integer getSuccessRateRequestVolume() {
         return this.successRateRequestVolume;
     }
 
     @InputImport(name="successRateStdevFactor", required=true)
-    private final Integer successRateStdevFactor;
+        private final Integer successRateStdevFactor;
 
     public Integer getSuccessRateStdevFactor() {
         return this.successRateStdevFactor;
@@ -225,7 +225,6 @@ public final class GetBackendServiceOutlierDetection extends io.pulumi.resources
             this.successRateStdevFactor = Objects.requireNonNull(successRateStdevFactor);
             return this;
         }
-
         public GetBackendServiceOutlierDetection build() {
             return new GetBackendServiceOutlierDetection(baseEjectionTimes, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, intervals, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

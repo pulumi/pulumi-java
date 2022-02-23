@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionInputArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__PredictionOutputArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__TrainingInputArgs;
@@ -24,7 +24,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -35,7 +35,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jobId", required=true)
-    private final Input<String> jobId;
+      private final Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId;
@@ -46,7 +46,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -57,7 +57,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictionInput")
-    private final @Nullable Input<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
+      private final @Nullable Input<GoogleCloudMlV1__PredictionInputArgs> predictionInput;
 
     public Input<GoogleCloudMlV1__PredictionInputArgs> getPredictionInput() {
         return this.predictionInput == null ? Input.empty() : this.predictionInput;
@@ -68,14 +68,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="predictionOutput")
-    private final @Nullable Input<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
+      private final @Nullable Input<GoogleCloudMlV1__PredictionOutputArgs> predictionOutput;
 
     public Input<GoogleCloudMlV1__PredictionOutputArgs> getPredictionOutput() {
         return this.predictionOutput == null ? Input.empty() : this.predictionOutput;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -86,7 +86,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trainingInput")
-    private final @Nullable Input<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
+      private final @Nullable Input<GoogleCloudMlV1__TrainingInputArgs> trainingInput;
 
     public Input<GoogleCloudMlV1__TrainingInputArgs> getTrainingInput() {
         return this.trainingInput == null ? Input.empty() : this.trainingInput;
@@ -97,7 +97,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trainingOutput")
-    private final @Nullable Input<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
+      private final @Nullable Input<GoogleCloudMlV1__TrainingOutputArgs> trainingOutput;
 
     public Input<GoogleCloudMlV1__TrainingOutputArgs> getTrainingOutput() {
         return this.trainingOutput == null ? Input.empty() : this.trainingOutput;
@@ -246,7 +246,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.trainingOutput = Input.ofNullable(trainingOutput);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(etag, jobId, labels, predictionInput, predictionOutput, project, trainingInput, trainingOutput);
         }

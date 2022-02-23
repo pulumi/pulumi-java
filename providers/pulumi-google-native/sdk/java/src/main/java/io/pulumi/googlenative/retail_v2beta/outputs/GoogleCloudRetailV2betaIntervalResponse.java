@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class GoogleCloudRetailV2betaIntervalResponse {
             this.minimum = Objects.requireNonNull(minimum);
             return this;
         }
-
         public GoogleCloudRetailV2betaIntervalResponse build() {
             return new GoogleCloudRetailV2betaIntervalResponse(exclusiveMaximum, exclusiveMinimum, maximum, minimum);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="currentStateTime", required=true)
-    private final String currentStateTime;
+      private final String currentStateTime;
 
     public String getCurrentStateTime() {
         return this.currentStateTime;
@@ -32,7 +32,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="executionStageName", required=true)
-    private final String executionStageName;
+      private final String executionStageName;
 
     public String getExecutionStageName() {
         return this.executionStageName;
@@ -43,7 +43,7 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="executionStageState", required=true)
-    private final String executionStageState;
+      private final String executionStageState;
 
     public String getExecutionStageState() {
         return this.executionStageState;
@@ -102,7 +102,6 @@ public final class ExecutionStageStateResponse extends io.pulumi.resources.Invok
             this.executionStageState = Objects.requireNonNull(executionStageState);
             return this;
         }
-
         public ExecutionStageStateResponse build() {
             return new ExecutionStageStateResponse(currentStateTime, executionStageName, executionStageState);
         }

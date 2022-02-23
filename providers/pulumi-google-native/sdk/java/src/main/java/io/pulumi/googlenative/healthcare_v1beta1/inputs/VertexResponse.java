@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="x", required=true)
-    private final Double x;
+      private final Double x;
 
     public Double getX() {
         return this.x;
@@ -32,7 +32,7 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="y", required=true)
-    private final Double y;
+      private final Double y;
 
     public Double getY() {
         return this.y;
@@ -81,7 +81,6 @@ public final class VertexResponse extends io.pulumi.resources.InvokeArgs {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public VertexResponse build() {
             return new VertexResponse(x, y);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.kms.RegistryArgs;
 import io.pulumi.gcp.kms.inputs.RegistryState;
@@ -151,13 +151,6 @@ public class Registry extends io.pulumi.resources.CustomResource {
         return this.stateNotificationConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Registry(String name) {
-        super("gcp:kms/registry:Registry", name, RegistryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

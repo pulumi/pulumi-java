@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="rrdata", required=true)
-    private final String rrdata;
+      private final String rrdata;
 
     public String getRrdata() {
         return this.rrdata;
@@ -43,7 +43,7 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,6 @@ public final class ResourceRecordResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceRecordResponse build() {
             return new ResourceRecordResponse(name, rrdata, type);
         }

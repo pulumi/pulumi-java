@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="groupIndexes")
-    private final @Nullable Input<List<Integer>> groupIndexes;
+      private final @Nullable Input<List<Integer>> groupIndexes;
 
     public Input<List<Integer>> getGroupIndexes() {
         return this.groupIndexes == null ? Input.empty() : this.groupIndexes;
@@ -36,7 +36,7 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pattern")
-    private final @Nullable Input<String> pattern;
+      private final @Nullable Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern == null ? Input.empty() : this.pattern;
@@ -95,7 +95,6 @@ public final class GooglePrivacyDlpV2RegexArgs extends io.pulumi.resources.Resou
             this.pattern = Input.ofNullable(pattern);
             return this;
         }
-
         public GooglePrivacyDlpV2RegexArgs build() {
             return new GooglePrivacyDlpV2RegexArgs(groupIndexes, pattern);
         }

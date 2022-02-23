@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IpTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipTagType")
-    private final @Nullable String ipTagType;
+        private final @Nullable String ipTagType;
 
     public Optional<String> getIpTagType() {
         return this.ipTagType == null ? Optional.empty() : Optional.ofNullable(this.ipTagType);
@@ -34,7 +34,7 @@ public final class IpTagResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+        private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -83,7 +83,6 @@ public final class IpTagResponse extends io.pulumi.resources.InvokeArgs {
             this.tag = tag;
             return this;
         }
-
         public IpTagResponse build() {
             return new IpTagResponse(ipTagType, tag);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class SubscriptionReceiverValueResponse {
             this.subscriptionName = subscriptionName;
             return this;
         }
-
         public SubscriptionReceiverValueResponse build() {
             return new SubscriptionReceiverValueResponse(role, subscriptionId, subscriptionName);
         }

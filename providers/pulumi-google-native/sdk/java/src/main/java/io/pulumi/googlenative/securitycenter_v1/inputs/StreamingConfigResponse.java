@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.securitycenter_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StreamingConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="filter", required=true)
-    private final String filter;
+      private final String filter;
 
     public String getFilter() {
         return this.filter;
@@ -59,7 +59,6 @@ public final class StreamingConfigResponse extends io.pulumi.resources.InvokeArg
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public StreamingConfigResponse build() {
             return new StreamingConfigResponse(filter);
         }

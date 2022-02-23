@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.DSSEHintArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hint")
-    private final @Nullable Input<DSSEHintArgs> hint;
+      private final @Nullable Input<DSSEHintArgs> hint;
 
     public Input<DSSEHintArgs> getHint() {
         return this.hint == null ? Input.empty() : this.hint;
@@ -66,7 +66,6 @@ public final class DSSEAttestationNoteArgs extends io.pulumi.resources.ResourceA
             this.hint = Input.ofNullable(hint);
             return this;
         }
-
         public DSSEAttestationNoteArgs build() {
             return new DSSEAttestationNoteArgs(hint);
         }

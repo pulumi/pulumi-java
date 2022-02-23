@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisfirehose.outputs;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamInputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamOutputFormatConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamSchemaConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -89,7 +89,6 @@ public final class DeliveryStreamDataFormatConversionConfiguration {
             this.schemaConfiguration = schemaConfiguration;
             return this;
         }
-
         public DeliveryStreamDataFormatConversionConfiguration build() {
             return new DeliveryStreamDataFormatConversionConfiguration(enabled, inputFormatConfiguration, outputFormatConfiguration, schemaConfiguration);
         }

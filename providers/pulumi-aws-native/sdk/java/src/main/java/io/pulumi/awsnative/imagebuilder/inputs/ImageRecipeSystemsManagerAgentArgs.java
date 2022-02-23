@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="uninstallAfterBuild")
-    private final @Nullable Input<Boolean> uninstallAfterBuild;
+        private final @Nullable Input<Boolean> uninstallAfterBuild;
 
     public Input<Boolean> getUninstallAfterBuild() {
         return this.uninstallAfterBuild == null ? Input.empty() : this.uninstallAfterBuild;
@@ -66,7 +66,6 @@ public final class ImageRecipeSystemsManagerAgentArgs extends io.pulumi.resource
             this.uninstallAfterBuild = Input.ofNullable(uninstallAfterBuild);
             return this;
         }
-
         public ImageRecipeSystemsManagerAgentArgs build() {
             return new ImageRecipeSystemsManagerAgentArgs(uninstallAfterBuild);
         }

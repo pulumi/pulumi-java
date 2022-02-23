@@ -10,7 +10,7 @@ import io.pulumi.awsnative.quicksight.outputs.DataSourceResourcePermission;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceSslProperties;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceTag;
 import io.pulumi.awsnative.quicksight.outputs.DataSourceVpcConnectionProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -270,7 +270,6 @@ public final class GetDataSourceResult {
             this.vpcConnectionProperties = vpcConnectionProperties;
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(alternateDataSourceParameters, arn, createdTime, dataSourceParameters, errorInfo, lastUpdatedTime, name, permissions, sslProperties, status, tags, vpcConnectionProperties);
         }

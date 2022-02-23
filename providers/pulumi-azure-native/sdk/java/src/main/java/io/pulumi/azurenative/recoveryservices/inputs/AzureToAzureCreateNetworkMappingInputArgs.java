@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -35,7 +35,7 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="primaryNetworkId")
-    private final @Nullable Input<String> primaryNetworkId;
+        private final @Nullable Input<String> primaryNetworkId;
 
     public Input<String> getPrimaryNetworkId() {
         return this.primaryNetworkId == null ? Input.empty() : this.primaryNetworkId;
@@ -94,7 +94,6 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends io.pulumi.r
             this.primaryNetworkId = Input.ofNullable(primaryNetworkId);
             return this;
         }
-
         public AzureToAzureCreateNetworkMappingInputArgs build() {
             return new AzureToAzureCreateNetworkMappingInputArgs(instanceType, primaryNetworkId);
         }

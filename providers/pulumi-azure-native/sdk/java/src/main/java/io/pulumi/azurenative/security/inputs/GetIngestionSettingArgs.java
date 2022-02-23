@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIngestionSettingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="ingestionSettingName", required=true)
-    private final String ingestionSettingName;
+        private final String ingestionSettingName;
 
     public String getIngestionSettingName() {
         return this.ingestionSettingName;
@@ -55,7 +55,6 @@ public final class GetIngestionSettingArgs extends io.pulumi.resources.InvokeArg
             this.ingestionSettingName = Objects.requireNonNull(ingestionSettingName);
             return this;
         }
-
         public GetIngestionSettingArgs build() {
             return new GetIngestionSettingArgs(ingestionSettingName);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.timeseriesinsights.enums.IngressStartAtType;
 import io.pulumi.azurenative.timeseriesinsights.inputs.LocalTimestampArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consumerGroupName", required=true)
-    private final Input<String> consumerGroupName;
+        private final Input<String> consumerGroupName;
 
     public Input<String> getConsumerGroupName() {
         return this.consumerGroupName;
@@ -34,7 +34,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final Input<String> environmentName;
+        private final Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName;
@@ -45,7 +45,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventHubName", required=true)
-    private final Input<String> eventHubName;
+        private final Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName;
@@ -56,7 +56,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventSourceName")
-    private final @Nullable Input<String> eventSourceName;
+        private final @Nullable Input<String> eventSourceName;
 
     public Input<String> getEventSourceName() {
         return this.eventSourceName == null ? Input.empty() : this.eventSourceName;
@@ -67,7 +67,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="eventSourceResourceId", required=true)
-    private final Input<String> eventSourceResourceId;
+        private final Input<String> eventSourceResourceId;
 
     public Input<String> getEventSourceResourceId() {
         return this.eventSourceResourceId;
@@ -78,7 +78,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final Input<String> keyName;
+        private final Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName;
@@ -90,7 +90,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -101,7 +101,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="localTimestamp")
-    private final @Nullable Input<LocalTimestampArgs> localTimestamp;
+        private final @Nullable Input<LocalTimestampArgs> localTimestamp;
 
     public Input<LocalTimestampArgs> getLocalTimestamp() {
         return this.localTimestamp == null ? Input.empty() : this.localTimestamp;
@@ -112,7 +112,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -123,7 +123,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -134,7 +134,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="serviceBusNamespace", required=true)
-    private final Input<String> serviceBusNamespace;
+        private final Input<String> serviceBusNamespace;
 
     public Input<String> getServiceBusNamespace() {
         return this.serviceBusNamespace;
@@ -145,7 +145,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sharedAccessKey", required=true)
-    private final Input<String> sharedAccessKey;
+        private final Input<String> sharedAccessKey;
 
     public Input<String> getSharedAccessKey() {
         return this.sharedAccessKey;
@@ -156,7 +156,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -167,7 +167,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="time")
-    private final @Nullable Input<String> time;
+        private final @Nullable Input<String> time;
 
     public Input<String> getTime() {
         return this.time == null ? Input.empty() : this.time;
@@ -178,7 +178,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timestampPropertyName")
-    private final @Nullable Input<String> timestampPropertyName;
+        private final @Nullable Input<String> timestampPropertyName;
 
     public Input<String> getTimestampPropertyName() {
         return this.timestampPropertyName == null ? Input.empty() : this.timestampPropertyName;
@@ -189,7 +189,7 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,IngressStartAtType>> type;
+        private final @Nullable Input<Either<String,IngressStartAtType>> type;
 
     public Input<Either<String,IngressStartAtType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -458,7 +458,6 @@ public final class EventHubEventSourceArgs extends io.pulumi.resources.ResourceA
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public EventHubEventSourceArgs build() {
             return new EventHubEventSourceArgs(consumerGroupName, environmentName, eventHubName, eventSourceName, eventSourceResourceId, keyName, kind, localTimestamp, location, resourceGroupName, serviceBusNamespace, sharedAccessKey, tags, time, timestampPropertyName, type);
         }

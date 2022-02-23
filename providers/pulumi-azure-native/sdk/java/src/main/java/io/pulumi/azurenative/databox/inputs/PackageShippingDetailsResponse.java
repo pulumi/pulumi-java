@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final String carrierName;
+        private final String carrierName;
 
     public String getCarrierName() {
         return this.carrierName;
@@ -32,7 +32,7 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trackingId", required=true)
-    private final String trackingId;
+        private final String trackingId;
 
     public String getTrackingId() {
         return this.trackingId;
@@ -43,7 +43,7 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trackingUrl", required=true)
-    private final String trackingUrl;
+        private final String trackingUrl;
 
     public String getTrackingUrl() {
         return this.trackingUrl;
@@ -102,7 +102,6 @@ public final class PackageShippingDetailsResponse extends io.pulumi.resources.In
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public PackageShippingDetailsResponse build() {
             return new PackageShippingDetailsResponse(carrierName, trackingId, trackingUrl);
         }

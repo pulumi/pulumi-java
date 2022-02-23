@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="bitLockerKey")
-    private final @Nullable String bitLockerKey;
+        private final @Nullable String bitLockerKey;
 
     public Optional<String> getBitLockerKey() {
         return this.bitLockerKey == null ? Optional.empty() : Optional.ofNullable(this.bitLockerKey);
@@ -34,7 +34,7 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="driveId")
-    private final @Nullable String driveId;
+        private final @Nullable String driveId;
 
     public Optional<String> getDriveId() {
         return this.driveId == null ? Optional.empty() : Optional.ofNullable(this.driveId);
@@ -83,7 +83,6 @@ public final class DriveBitLockerKeyResponse extends io.pulumi.resources.InvokeA
             this.driveId = driveId;
             return this;
         }
-
         public DriveBitLockerKeyResponse build() {
             return new DriveBitLockerKeyResponse(bitLockerKey, driveId);
         }

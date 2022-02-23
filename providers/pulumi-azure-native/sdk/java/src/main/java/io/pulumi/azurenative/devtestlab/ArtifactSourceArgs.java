@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devtestlab.enums.EnableStatus;
 import io.pulumi.azurenative.devtestlab.enums.SourceControlType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="armTemplateFolderPath")
-    private final @Nullable Input<String> armTemplateFolderPath;
+        private final @Nullable Input<String> armTemplateFolderPath;
 
     public Input<String> getArmTemplateFolderPath() {
         return this.armTemplateFolderPath == null ? Input.empty() : this.armTemplateFolderPath;
@@ -34,7 +34,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="branchRef")
-    private final @Nullable Input<String> branchRef;
+        private final @Nullable Input<String> branchRef;
 
     public Input<String> getBranchRef() {
         return this.branchRef == null ? Input.empty() : this.branchRef;
@@ -45,7 +45,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -56,7 +56,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderPath")
-    private final @Nullable Input<String> folderPath;
+        private final @Nullable Input<String> folderPath;
 
     public Input<String> getFolderPath() {
         return this.folderPath == null ? Input.empty() : this.folderPath;
@@ -67,7 +67,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -78,7 +78,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -89,7 +89,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityToken")
-    private final @Nullable Input<String> securityToken;
+        private final @Nullable Input<String> securityToken;
 
     public Input<String> getSecurityToken() {
         return this.securityToken == null ? Input.empty() : this.securityToken;
@@ -122,7 +122,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceType")
-    private final @Nullable Input<Either<String,SourceControlType>> sourceType;
+        private final @Nullable Input<Either<String,SourceControlType>> sourceType;
 
     public Input<Either<String,SourceControlType>> getSourceType() {
         return this.sourceType == null ? Input.empty() : this.sourceType;
@@ -133,7 +133,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,EnableStatus>> status;
+        private final @Nullable Input<Either<String,EnableStatus>> status;
 
     public Input<Either<String,EnableStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -144,7 +144,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -155,7 +155,7 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -379,7 +379,6 @@ public final class ArtifactSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public ArtifactSourceArgs build() {
             return new ArtifactSourceArgs(armTemplateFolderPath, branchRef, displayName, folderPath, labName, location, name, resourceGroupName, securityToken, sourceType, status, tags, uri);
         }

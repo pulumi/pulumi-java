@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<String> env;
+      private final @Nullable Input<String> env;
 
     public Input<String> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -34,7 +34,7 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="versionName")
-    private final @Nullable Input<String> versionName;
+      private final @Nullable Input<String> versionName;
 
     public Input<String> getVersionName() {
         return this.versionName == null ? Input.empty() : this.versionName;
@@ -93,7 +93,6 @@ public final class SecretManagerSecretArgs extends io.pulumi.resources.ResourceA
             this.versionName = Input.ofNullable(versionName);
             return this;
         }
-
         public SecretManagerSecretArgs build() {
             return new SecretManagerSecretArgs(env, versionName);
         }

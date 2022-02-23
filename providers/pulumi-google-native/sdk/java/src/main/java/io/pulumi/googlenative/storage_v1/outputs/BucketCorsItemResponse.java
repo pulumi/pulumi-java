@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class BucketCorsItemResponse {
             this.responseHeader = Objects.requireNonNull(responseHeader);
             return this;
         }
-
         public BucketCorsItemResponse build() {
             return new BucketCorsItemResponse(maxAgeSeconds, method, origin, responseHeader);
         }

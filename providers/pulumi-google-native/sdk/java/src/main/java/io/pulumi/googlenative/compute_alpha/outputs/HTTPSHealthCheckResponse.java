@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -201,7 +201,6 @@ public final class HTTPSHealthCheckResponse {
             this.weightReportMode = Objects.requireNonNull(weightReportMode);
             return this;
         }
-
         public HTTPSHealthCheckResponse build() {
             return new HTTPSHealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response, weightReportMode);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder;
 import io.pulumi.azurenative.edgeorder.inputs.ContactDetailsArgs;
 import io.pulumi.azurenative.edgeorder.inputs.ShippingAddressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressName")
-    private final @Nullable Input<String> addressName;
+        private final @Nullable Input<String> addressName;
 
     public Input<String> getAddressName() {
         return this.addressName == null ? Input.empty() : this.addressName;
@@ -33,7 +33,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactDetails", required=true)
-    private final Input<ContactDetailsArgs> contactDetails;
+        private final Input<ContactDetailsArgs> contactDetails;
 
     public Input<ContactDetailsArgs> getContactDetails() {
         return this.contactDetails;
@@ -44,7 +44,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shippingAddress")
-    private final @Nullable Input<ShippingAddressArgs> shippingAddress;
+        private final @Nullable Input<ShippingAddressArgs> shippingAddress;
 
     public Input<ShippingAddressArgs> getShippingAddress() {
         return this.shippingAddress == null ? Input.empty() : this.shippingAddress;
@@ -77,7 +77,7 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -196,7 +196,6 @@ public final class AddressByNameArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AddressByNameArgs build() {
             return new AddressByNameArgs(addressName, contactDetails, location, resourceGroupName, shippingAddress, tags);
         }

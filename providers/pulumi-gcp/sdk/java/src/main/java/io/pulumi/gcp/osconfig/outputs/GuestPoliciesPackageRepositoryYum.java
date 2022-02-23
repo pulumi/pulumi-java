@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class GuestPoliciesPackageRepositoryYum {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryYum build() {
             return new GuestPoliciesPackageRepositoryYum(baseUrl, displayName, gpgKeys, id);
         }

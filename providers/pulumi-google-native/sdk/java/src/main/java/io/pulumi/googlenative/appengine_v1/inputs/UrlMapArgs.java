@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.enums.UrlMapAuthFailAction;
 import io.pulumi.googlenative.appengine_v1.enums.UrlMapLogin;
 import io.pulumi.googlenative.appengine_v1.enums.UrlMapRedirectHttpResponseCode;
@@ -30,7 +30,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiEndpoint")
-    private final @Nullable Input<ApiEndpointHandlerArgs> apiEndpoint;
+      private final @Nullable Input<ApiEndpointHandlerArgs> apiEndpoint;
 
     public Input<ApiEndpointHandlerArgs> getApiEndpoint() {
         return this.apiEndpoint == null ? Input.empty() : this.apiEndpoint;
@@ -41,7 +41,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authFailAction")
-    private final @Nullable Input<UrlMapAuthFailAction> authFailAction;
+      private final @Nullable Input<UrlMapAuthFailAction> authFailAction;
 
     public Input<UrlMapAuthFailAction> getAuthFailAction() {
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
@@ -52,7 +52,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<UrlMapLogin> login;
+      private final @Nullable Input<UrlMapLogin> login;
 
     public Input<UrlMapLogin> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -63,7 +63,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="redirectHttpResponseCode")
-    private final @Nullable Input<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
+      private final @Nullable Input<UrlMapRedirectHttpResponseCode> redirectHttpResponseCode;
 
     public Input<UrlMapRedirectHttpResponseCode> getRedirectHttpResponseCode() {
         return this.redirectHttpResponseCode == null ? Input.empty() : this.redirectHttpResponseCode;
@@ -74,7 +74,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<ScriptHandlerArgs> script;
+      private final @Nullable Input<ScriptHandlerArgs> script;
 
     public Input<ScriptHandlerArgs> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -85,7 +85,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityLevel")
-    private final @Nullable Input<UrlMapSecurityLevel> securityLevel;
+      private final @Nullable Input<UrlMapSecurityLevel> securityLevel;
 
     public Input<UrlMapSecurityLevel> getSecurityLevel() {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
@@ -96,7 +96,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="staticFiles")
-    private final @Nullable Input<StaticFilesHandlerArgs> staticFiles;
+      private final @Nullable Input<StaticFilesHandlerArgs> staticFiles;
 
     public Input<StaticFilesHandlerArgs> getStaticFiles() {
         return this.staticFiles == null ? Input.empty() : this.staticFiles;
@@ -107,7 +107,7 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlRegex")
-    private final @Nullable Input<String> urlRegex;
+      private final @Nullable Input<String> urlRegex;
 
     public Input<String> getUrlRegex() {
         return this.urlRegex == null ? Input.empty() : this.urlRegex;
@@ -256,7 +256,6 @@ public final class UrlMapArgs extends io.pulumi.resources.ResourceArgs {
             this.urlRegex = Input.ofNullable(urlRegex);
             return this;
         }
-
         public UrlMapArgs build() {
             return new UrlMapArgs(apiEndpoint, authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="serviceEndpointPolicyName", required=true)
-    private final String serviceEndpointPolicyName;
+        private final String serviceEndpointPolicyName;
 
     public String getServiceEndpointPolicyName() {
         return this.serviceEndpointPolicyName;
@@ -100,7 +100,6 @@ public final class GetServiceEndpointPolicyArgs extends io.pulumi.resources.Invo
             this.serviceEndpointPolicyName = Objects.requireNonNull(serviceEndpointPolicyName);
             return this;
         }
-
         public GetServiceEndpointPolicyArgs build() {
             return new GetServiceEndpointPolicyArgs(expand, resourceGroupName, serviceEndpointPolicyName);
         }

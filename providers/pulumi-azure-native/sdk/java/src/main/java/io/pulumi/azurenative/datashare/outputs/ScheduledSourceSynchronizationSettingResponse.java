@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class ScheduledSourceSynchronizationSettingResponse {
             this.synchronizationTime = synchronizationTime;
             return this;
         }
-
         public ScheduledSourceSynchronizationSettingResponse build() {
             return new ScheduledSourceSynchronizationSettingResponse(kind, recurrenceInterval, synchronizationTime);
         }

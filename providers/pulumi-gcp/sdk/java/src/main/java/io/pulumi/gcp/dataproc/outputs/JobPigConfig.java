@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.JobPigConfigLoggingConfig;
 import java.lang.Boolean;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class JobPigConfig {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public JobPigConfig build() {
             return new JobPigConfig(continueOnFailure, jarFileUris, loggingConfig, properties, queryFileUri, queryLists, scriptVariables);
         }

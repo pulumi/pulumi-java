@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class HybridRunbookWorkerLegacyResponse {
             this.registrationTime = registrationTime;
             return this;
         }
-
         public HybridRunbookWorkerLegacyResponse build() {
             return new HybridRunbookWorkerLegacyResponse(ip, lastSeenDateTime, name, registrationTime);
         }

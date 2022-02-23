@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -23,14 +23,14 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="enableHttpPortAccess", required=true)
-    private final Input<Boolean> enableHttpPortAccess;
+        private final Input<Boolean> enableHttpPortAccess;
 
     public Input<Boolean> getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
     }
 
     @InputImport(name="httpPorts")
-    private final @Nullable Input<Map<String,Object>> httpPorts;
+        private final @Nullable Input<Map<String,Object>> httpPorts;
 
     public Input<Map<String,Object>> getHttpPorts() {
         return this.httpPorts == null ? Input.empty() : this.httpPorts;
@@ -89,7 +89,6 @@ public final class ClusterClusterConfigEndpointConfigArgs extends io.pulumi.reso
             this.httpPorts = Input.ofNullable(httpPorts);
             return this;
         }
-
         public ClusterClusterConfigEndpointConfigArgs build() {
             return new ClusterClusterConfigEndpointConfigArgs(enableHttpPortAccess, httpPorts);
         }

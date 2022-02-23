@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ConfigFileResponse;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.ImportFileResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class TargetConfigurationResponse {
             this.imports = Objects.requireNonNull(imports);
             return this;
         }
-
         public TargetConfigurationResponse build() {
             return new TargetConfigurationResponse(config, imports);
         }

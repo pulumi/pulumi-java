@@ -4,7 +4,7 @@
 package io.pulumi.gcp.memcache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheNodeGetArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceMemcacheParametersGetArgs;
 import io.pulumi.gcp.memcache.inputs.InstanceNodeConfigGetArgs;
@@ -26,7 +26,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizedNetwork")
-    private final @Nullable Input<String> authorizedNetwork;
+        private final @Nullable Input<String> authorizedNetwork;
 
     public Input<String> getAuthorizedNetwork() {
         return this.authorizedNetwork == null ? Input.empty() : this.authorizedNetwork;
@@ -37,7 +37,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -48,7 +48,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discoveryEndpoint")
-    private final @Nullable Input<String> discoveryEndpoint;
+        private final @Nullable Input<String> discoveryEndpoint;
 
     public Input<String> getDiscoveryEndpoint() {
         return this.discoveryEndpoint == null ? Input.empty() : this.discoveryEndpoint;
@@ -59,7 +59,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -70,7 +70,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -81,7 +81,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheFullVersion")
-    private final @Nullable Input<String> memcacheFullVersion;
+        private final @Nullable Input<String> memcacheFullVersion;
 
     public Input<String> getMemcacheFullVersion() {
         return this.memcacheFullVersion == null ? Input.empty() : this.memcacheFullVersion;
@@ -92,7 +92,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheNodes")
-    private final @Nullable Input<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
+        private final @Nullable Input<List<InstanceMemcacheNodeGetArgs>> memcacheNodes;
 
     public Input<List<InstanceMemcacheNodeGetArgs>> getMemcacheNodes() {
         return this.memcacheNodes == null ? Input.empty() : this.memcacheNodes;
@@ -104,7 +104,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheParameters")
-    private final @Nullable Input<InstanceMemcacheParametersGetArgs> memcacheParameters;
+        private final @Nullable Input<InstanceMemcacheParametersGetArgs> memcacheParameters;
 
     public Input<InstanceMemcacheParametersGetArgs> getMemcacheParameters() {
         return this.memcacheParameters == null ? Input.empty() : this.memcacheParameters;
@@ -119,7 +119,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memcacheVersion")
-    private final @Nullable Input<String> memcacheVersion;
+        private final @Nullable Input<String> memcacheVersion;
 
     public Input<String> getMemcacheVersion() {
         return this.memcacheVersion == null ? Input.empty() : this.memcacheVersion;
@@ -130,7 +130,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -142,7 +142,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeConfig")
-    private final @Nullable Input<InstanceNodeConfigGetArgs> nodeConfig;
+        private final @Nullable Input<InstanceNodeConfigGetArgs> nodeConfig;
 
     public Input<InstanceNodeConfigGetArgs> getNodeConfig() {
         return this.nodeConfig == null ? Input.empty() : this.nodeConfig;
@@ -153,7 +153,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeCount")
-    private final @Nullable Input<Integer> nodeCount;
+        private final @Nullable Input<Integer> nodeCount;
 
     public Input<Integer> getNodeCount() {
         return this.nodeCount == null ? Input.empty() : this.nodeCount;
@@ -165,7 +165,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -176,7 +176,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -188,7 +188,7 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -442,7 +442,6 @@ public final class InstanceState extends io.pulumi.resources.ResourceArgs {
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public InstanceState build() {
             return new InstanceState(authorizedNetwork, createTime, discoveryEndpoint, displayName, labels, memcacheFullVersion, memcacheNodes, memcacheParameters, memcacheVersion, name, nodeConfig, nodeCount, project, region, zones);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudwatch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -183,7 +183,6 @@ public final class GetCompositeAlarmResult {
             this.oKActions = oKActions;
             return this;
         }
-
         public GetCompositeAlarmResult build() {
             return new GetCompositeAlarmResult(actionsEnabled, alarmActions, alarmDescription, alarmRule, arn, insufficientDataActions, oKActions);
         }

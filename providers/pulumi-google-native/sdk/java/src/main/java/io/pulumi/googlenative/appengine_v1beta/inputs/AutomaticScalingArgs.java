@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CpuUtilizationArgs;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CustomMetricArgs;
 import io.pulumi.googlenative.appengine_v1beta.inputs.DiskUtilizationArgs;
@@ -31,7 +31,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="coolDownPeriod")
-    private final @Nullable Input<String> coolDownPeriod;
+      private final @Nullable Input<String> coolDownPeriod;
 
     public Input<String> getCoolDownPeriod() {
         return this.coolDownPeriod == null ? Input.empty() : this.coolDownPeriod;
@@ -42,7 +42,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="cpuUtilization")
-    private final @Nullable Input<CpuUtilizationArgs> cpuUtilization;
+      private final @Nullable Input<CpuUtilizationArgs> cpuUtilization;
 
     public Input<CpuUtilizationArgs> getCpuUtilization() {
         return this.cpuUtilization == null ? Input.empty() : this.cpuUtilization;
@@ -53,7 +53,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="customMetrics")
-    private final @Nullable Input<List<CustomMetricArgs>> customMetrics;
+      private final @Nullable Input<List<CustomMetricArgs>> customMetrics;
 
     public Input<List<CustomMetricArgs>> getCustomMetrics() {
         return this.customMetrics == null ? Input.empty() : this.customMetrics;
@@ -64,7 +64,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="diskUtilization")
-    private final @Nullable Input<DiskUtilizationArgs> diskUtilization;
+      private final @Nullable Input<DiskUtilizationArgs> diskUtilization;
 
     public Input<DiskUtilizationArgs> getDiskUtilization() {
         return this.diskUtilization == null ? Input.empty() : this.diskUtilization;
@@ -75,7 +75,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxConcurrentRequests")
-    private final @Nullable Input<Integer> maxConcurrentRequests;
+      private final @Nullable Input<Integer> maxConcurrentRequests;
 
     public Input<Integer> getMaxConcurrentRequests() {
         return this.maxConcurrentRequests == null ? Input.empty() : this.maxConcurrentRequests;
@@ -86,7 +86,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxIdleInstances")
-    private final @Nullable Input<Integer> maxIdleInstances;
+      private final @Nullable Input<Integer> maxIdleInstances;
 
     public Input<Integer> getMaxIdleInstances() {
         return this.maxIdleInstances == null ? Input.empty() : this.maxIdleInstances;
@@ -97,7 +97,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxPendingLatency")
-    private final @Nullable Input<String> maxPendingLatency;
+      private final @Nullable Input<String> maxPendingLatency;
 
     public Input<String> getMaxPendingLatency() {
         return this.maxPendingLatency == null ? Input.empty() : this.maxPendingLatency;
@@ -108,7 +108,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxTotalInstances")
-    private final @Nullable Input<Integer> maxTotalInstances;
+      private final @Nullable Input<Integer> maxTotalInstances;
 
     public Input<Integer> getMaxTotalInstances() {
         return this.maxTotalInstances == null ? Input.empty() : this.maxTotalInstances;
@@ -119,7 +119,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minIdleInstances")
-    private final @Nullable Input<Integer> minIdleInstances;
+      private final @Nullable Input<Integer> minIdleInstances;
 
     public Input<Integer> getMinIdleInstances() {
         return this.minIdleInstances == null ? Input.empty() : this.minIdleInstances;
@@ -130,7 +130,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minPendingLatency")
-    private final @Nullable Input<String> minPendingLatency;
+      private final @Nullable Input<String> minPendingLatency;
 
     public Input<String> getMinPendingLatency() {
         return this.minPendingLatency == null ? Input.empty() : this.minPendingLatency;
@@ -141,7 +141,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="minTotalInstances")
-    private final @Nullable Input<Integer> minTotalInstances;
+      private final @Nullable Input<Integer> minTotalInstances;
 
     public Input<Integer> getMinTotalInstances() {
         return this.minTotalInstances == null ? Input.empty() : this.minTotalInstances;
@@ -152,7 +152,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="networkUtilization")
-    private final @Nullable Input<NetworkUtilizationArgs> networkUtilization;
+      private final @Nullable Input<NetworkUtilizationArgs> networkUtilization;
 
     public Input<NetworkUtilizationArgs> getNetworkUtilization() {
         return this.networkUtilization == null ? Input.empty() : this.networkUtilization;
@@ -163,7 +163,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="requestUtilization")
-    private final @Nullable Input<RequestUtilizationArgs> requestUtilization;
+      private final @Nullable Input<RequestUtilizationArgs> requestUtilization;
 
     public Input<RequestUtilizationArgs> getRequestUtilization() {
         return this.requestUtilization == null ? Input.empty() : this.requestUtilization;
@@ -174,7 +174,7 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="standardSchedulerSettings")
-    private final @Nullable Input<StandardSchedulerSettingsArgs> standardSchedulerSettings;
+      private final @Nullable Input<StandardSchedulerSettingsArgs> standardSchedulerSettings;
 
     public Input<StandardSchedulerSettingsArgs> getStandardSchedulerSettings() {
         return this.standardSchedulerSettings == null ? Input.empty() : this.standardSchedulerSettings;
@@ -413,7 +413,6 @@ public final class AutomaticScalingArgs extends io.pulumi.resources.ResourceArgs
             this.standardSchedulerSettings = Input.ofNullable(standardSchedulerSettings);
             return this;
         }
-
         public AutomaticScalingArgs build() {
             return new AutomaticScalingArgs(coolDownPeriod, cpuUtilization, customMetrics, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }

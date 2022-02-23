@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="eventHubEnabled")
-    private final @Nullable Input<Boolean> eventHubEnabled;
+        private final @Nullable Input<Boolean> eventHubEnabled;
 
     public Input<Boolean> getEventHubEnabled() {
         return this.eventHubEnabled == null ? Input.empty() : this.eventHubEnabled;
@@ -34,7 +34,7 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="storageEnabled")
-    private final @Nullable Input<Boolean> storageEnabled;
+        private final @Nullable Input<Boolean> storageEnabled;
 
     public Input<Boolean> getStorageEnabled() {
         return this.storageEnabled == null ? Input.empty() : this.storageEnabled;
@@ -93,7 +93,6 @@ public final class AKSServiceCreateRequestDataCollectionArgs extends io.pulumi.r
             this.storageEnabled = Input.ofNullable(storageEnabled);
             return this;
         }
-
         public AKSServiceCreateRequestDataCollectionArgs build() {
             return new AKSServiceCreateRequestDataCollectionArgs(eventHubEnabled, storageEnabled);
         }

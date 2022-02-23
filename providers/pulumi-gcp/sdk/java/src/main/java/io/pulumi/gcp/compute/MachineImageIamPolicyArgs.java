@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="machineImage", required=true)
-    private final Input<String> machineImage;
+        private final Input<String> machineImage;
 
     public Input<String> getMachineImage() {
         return this.machineImage;
@@ -31,7 +31,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -43,7 +43,7 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -117,7 +117,6 @@ public final class MachineImageIamPolicyArgs extends io.pulumi.resources.Resourc
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public MachineImageIamPolicyArgs build() {
             return new MachineImageIamPolicyArgs(machineImage, policyData, project);
         }

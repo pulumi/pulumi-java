@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ids_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEndpointArgs Empty = new GetEndpointArgs();
 
     @InputImport(name="endpointId", required=true)
-    private final String endpointId;
+      private final String endpointId;
 
     public String getEndpointId() {
         return this.endpointId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetEndpointArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetEndpointArgs build() {
             return new GetEndpointArgs(endpointId, location, project);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.servicecatalog.inputs;
 
 import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -18,49 +18,49 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
     public static final CloudFormationProvisionedProductProvisioningPreferencesArgs Empty = new CloudFormationProvisionedProductProvisioningPreferencesArgs();
 
     @InputImport(name="stackSetAccounts")
-    private final @Nullable Input<List<String>> stackSetAccounts;
+        private final @Nullable Input<List<String>> stackSetAccounts;
 
     public Input<List<String>> getStackSetAccounts() {
         return this.stackSetAccounts == null ? Input.empty() : this.stackSetAccounts;
     }
 
     @InputImport(name="stackSetFailureToleranceCount")
-    private final @Nullable Input<Integer> stackSetFailureToleranceCount;
+        private final @Nullable Input<Integer> stackSetFailureToleranceCount;
 
     public Input<Integer> getStackSetFailureToleranceCount() {
         return this.stackSetFailureToleranceCount == null ? Input.empty() : this.stackSetFailureToleranceCount;
     }
 
     @InputImport(name="stackSetFailureTolerancePercentage")
-    private final @Nullable Input<Integer> stackSetFailureTolerancePercentage;
+        private final @Nullable Input<Integer> stackSetFailureTolerancePercentage;
 
     public Input<Integer> getStackSetFailureTolerancePercentage() {
         return this.stackSetFailureTolerancePercentage == null ? Input.empty() : this.stackSetFailureTolerancePercentage;
     }
 
     @InputImport(name="stackSetMaxConcurrencyCount")
-    private final @Nullable Input<Integer> stackSetMaxConcurrencyCount;
+        private final @Nullable Input<Integer> stackSetMaxConcurrencyCount;
 
     public Input<Integer> getStackSetMaxConcurrencyCount() {
         return this.stackSetMaxConcurrencyCount == null ? Input.empty() : this.stackSetMaxConcurrencyCount;
     }
 
     @InputImport(name="stackSetMaxConcurrencyPercentage")
-    private final @Nullable Input<Integer> stackSetMaxConcurrencyPercentage;
+        private final @Nullable Input<Integer> stackSetMaxConcurrencyPercentage;
 
     public Input<Integer> getStackSetMaxConcurrencyPercentage() {
         return this.stackSetMaxConcurrencyPercentage == null ? Input.empty() : this.stackSetMaxConcurrencyPercentage;
     }
 
     @InputImport(name="stackSetOperationType")
-    private final @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
+        private final @Nullable Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> stackSetOperationType;
 
     public Input<CloudFormationProvisionedProductProvisioningPreferencesStackSetOperationType> getStackSetOperationType() {
         return this.stackSetOperationType == null ? Input.empty() : this.stackSetOperationType;
     }
 
     @InputImport(name="stackSetRegions")
-    private final @Nullable Input<List<String>> stackSetRegions;
+        private final @Nullable Input<List<String>> stackSetRegions;
 
     public Input<List<String>> getStackSetRegions() {
         return this.stackSetRegions == null ? Input.empty() : this.stackSetRegions;
@@ -194,7 +194,6 @@ public final class CloudFormationProvisionedProductProvisioningPreferencesArgs e
             this.stackSetRegions = Input.ofNullable(stackSetRegions);
             return this;
         }
-
         public CloudFormationProvisionedProductProvisioningPreferencesArgs build() {
             return new CloudFormationProvisionedProductProvisioningPreferencesArgs(stackSetAccounts, stackSetFailureToleranceCount, stackSetFailureTolerancePercentage, stackSetMaxConcurrencyCount, stackSetMaxConcurrencyPercentage, stackSetOperationType, stackSetRegions);
         }

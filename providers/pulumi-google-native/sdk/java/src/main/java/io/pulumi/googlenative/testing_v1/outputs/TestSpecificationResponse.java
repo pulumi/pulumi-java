@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidInstrumentationTestResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidRoboTestResponse;
 import io.pulumi.googlenative.testing_v1.outputs.AndroidTestLoopResponse;
@@ -250,7 +250,6 @@ public final class TestSpecificationResponse {
             this.testTimeout = Objects.requireNonNull(testTimeout);
             return this;
         }
-
         public TestSpecificationResponse build() {
             return new TestSpecificationResponse(androidInstrumentationTest, androidRoboTest, androidTestLoop, disablePerformanceMetrics, disableVideoRecording, iosTestLoop, iosTestSetup, iosXcTest, testSetup, testTimeout);
         }

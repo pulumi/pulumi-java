@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform;
 
 import io.pulumi.azurenative.appplatform.inputs.ApiPortalCustomDomainPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="apiPortalName", required=true)
-    private final Input<String> apiPortalName;
+        private final Input<String> apiPortalName;
 
     public Input<String> getApiPortalName() {
         return this.apiPortalName;
@@ -31,7 +31,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -42,7 +42,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties;
+        private final @Nullable Input<ApiPortalCustomDomainPropertiesArgs> properties;
 
     public Input<ApiPortalCustomDomainPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+        private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -168,7 +168,6 @@ public final class ApiPortalCustomDomainArgs extends io.pulumi.resources.Resourc
             this.serviceName = Input.of(Objects.requireNonNull(serviceName));
             return this;
         }
-
         public ApiPortalCustomDomainArgs build() {
             return new ApiPortalCustomDomainArgs(apiPortalName, domainName, properties, resourceGroupName, serviceName);
         }

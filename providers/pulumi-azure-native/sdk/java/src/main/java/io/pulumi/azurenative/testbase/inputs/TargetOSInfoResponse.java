@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TargetOSInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="osUpdateType", required=true)
-    private final String osUpdateType;
+        private final String osUpdateType;
 
     public String getOsUpdateType() {
         return this.osUpdateType;
@@ -33,7 +33,7 @@ public final class TargetOSInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetOSs", required=true)
-    private final List<String> targetOSs;
+        private final List<String> targetOSs;
 
     public List<String> getTargetOSs() {
         return this.targetOSs;
@@ -82,7 +82,6 @@ public final class TargetOSInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.targetOSs = Objects.requireNonNull(targetOSs);
             return this;
         }
-
         public TargetOSInfoResponse build() {
             return new TargetOSInfoResponse(osUpdateType, targetOSs);
         }

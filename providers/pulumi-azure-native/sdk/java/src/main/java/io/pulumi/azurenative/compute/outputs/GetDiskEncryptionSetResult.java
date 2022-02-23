@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.EncryptionSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.KeyForDiskEncryptionSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -291,7 +291,6 @@ public final class GetDiskEncryptionSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDiskEncryptionSetResult build() {
             return new GetDiskEncryptionSetResult(activeKey, encryptionType, id, identity, lastKeyRotationTimestamp, location, name, previousKeys, provisioningState, rotationToLatestKeyVersionEnabled, tags, type);
         }

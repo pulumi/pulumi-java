@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.outputs;
 import io.pulumi.azurenative.containerservice.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeInWeekResponse;
 import io.pulumi.azurenative.containerservice.outputs.TimeSpanResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -163,7 +163,6 @@ public final class GetMaintenanceConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMaintenanceConfigurationResult build() {
             return new GetMaintenanceConfigurationResult(id, name, notAllowedTime, systemData, timeInWeek, type);
         }

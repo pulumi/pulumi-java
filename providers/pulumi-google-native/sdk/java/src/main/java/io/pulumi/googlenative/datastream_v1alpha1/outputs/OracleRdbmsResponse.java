@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.OracleSchemaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class OracleRdbmsResponse {
             this.oracleSchemas = Objects.requireNonNull(oracleSchemas);
             return this;
         }
-
         public OracleRdbmsResponse build() {
             return new OracleRdbmsResponse(oracleSchemas);
         }

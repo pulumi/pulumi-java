@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionConfigurationResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.DiskEncryptionStatusResponse;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.OperationErrorResponse;
@@ -350,7 +350,6 @@ public final class GetBackupRunResult {
             this.windowStartTime = Objects.requireNonNull(windowStartTime);
             return this;
         }
-
         public GetBackupRunResult build() {
             return new GetBackupRunResult(backupKind, description, diskEncryptionConfiguration, diskEncryptionStatus, endTime, enqueuedTime, error, instance, kind, location, selfLink, startTime, status, type, windowStartTime);
         }

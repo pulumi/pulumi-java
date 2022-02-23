@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceSelectorResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fullResourceName", required=true)
-    private final String fullResourceName;
+      private final String fullResourceName;
 
     public String getFullResourceName() {
         return this.fullResourceName;
@@ -59,7 +59,6 @@ public final class ResourceSelectorResponse extends io.pulumi.resources.InvokeAr
             this.fullResourceName = Objects.requireNonNull(fullResourceName);
             return this;
         }
-
         public ResourceSelectorResponse build() {
             return new ResourceSelectorResponse(fullResourceName);
         }

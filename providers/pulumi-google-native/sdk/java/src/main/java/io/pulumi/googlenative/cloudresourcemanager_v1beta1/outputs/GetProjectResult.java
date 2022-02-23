@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs.ResourceIdResponse;
 import java.lang.String;
 import java.util.Map;
@@ -181,7 +181,6 @@ public final class GetProjectResult {
             this.projectNumber = Objects.requireNonNull(projectNumber);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(createTime, labels, lifecycleState, name, parent, projectId, projectNumber);
         }

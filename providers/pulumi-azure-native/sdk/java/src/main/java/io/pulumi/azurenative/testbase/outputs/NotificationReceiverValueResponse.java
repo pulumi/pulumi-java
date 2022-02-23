@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.outputs;
 import io.pulumi.azurenative.testbase.outputs.DistributionGroupListReceiverValueResponse;
 import io.pulumi.azurenative.testbase.outputs.SubscriptionReceiverValueResponse;
 import io.pulumi.azurenative.testbase.outputs.UserObjectReceiverValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -99,7 +99,6 @@ public final class NotificationReceiverValueResponse {
             this.userObjectReceiverValue = userObjectReceiverValue;
             return this;
         }
-
         public NotificationReceiverValueResponse build() {
             return new NotificationReceiverValueResponse(distributionGroupListReceiverValue, subscriptionReceiverValue, userObjectReceiverValue);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-    private final Input<Boolean> siteToSiteDataTransfer;
+        private final Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -31,7 +31,7 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="uris", required=true)
-    private final Input<List<String>> uris;
+        private final Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris;
@@ -90,7 +90,6 @@ public final class SpokeLinkedInterconnectAttachmentsGetArgs extends io.pulumi.r
             this.uris = Input.of(Objects.requireNonNull(uris));
             return this;
         }
-
         public SpokeLinkedInterconnectAttachmentsGetArgs build() {
             return new SpokeLinkedInterconnectAttachmentsGetArgs(siteToSiteDataTransfer, uris);
         }

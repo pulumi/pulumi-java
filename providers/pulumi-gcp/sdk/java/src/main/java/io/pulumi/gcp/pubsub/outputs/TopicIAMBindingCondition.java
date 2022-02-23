@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class TopicIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public TopicIAMBindingCondition build() {
             return new TopicIAMBindingCondition(description, expression, title);
         }

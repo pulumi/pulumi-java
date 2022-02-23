@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datashare.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consumerEmail")
-    private final @Nullable String consumerEmail;
+        private final @Nullable String consumerEmail;
 
     public Optional<String> getConsumerEmail() {
         return this.consumerEmail == null ? Optional.empty() : Optional.ofNullable(this.consumerEmail);
@@ -42,7 +42,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consumerName")
-    private final @Nullable String consumerName;
+        private final @Nullable String consumerName;
 
     public Optional<String> getConsumerName() {
         return this.consumerName == null ? Optional.empty() : Optional.ofNullable(this.consumerName);
@@ -53,7 +53,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consumerTenantName")
-    private final @Nullable String consumerTenantName;
+        private final @Nullable String consumerTenantName;
 
     public Optional<String> getConsumerTenantName() {
         return this.consumerTenantName == null ? Optional.empty() : Optional.ofNullable(this.consumerTenantName);
@@ -64,7 +64,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="durationMs")
-    private final @Nullable Integer durationMs;
+        private final @Nullable Integer durationMs;
 
     public Optional<Integer> getDurationMs() {
         return this.durationMs == null ? Optional.empty() : Optional.ofNullable(this.durationMs);
@@ -75,7 +75,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable String endTime;
+        private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -86,7 +86,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable String filter;
+        private final @Nullable String filter;
 
     public Optional<String> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -97,7 +97,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -108,7 +108,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="orderby")
-    private final @Nullable String orderby;
+        private final @Nullable String orderby;
 
     public Optional<String> getOrderby() {
         return this.orderby == null ? Optional.empty() : Optional.ofNullable(this.orderby);
@@ -119,7 +119,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -130,7 +130,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+        private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -141,7 +141,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="skipToken")
-    private final @Nullable String skipToken;
+        private final @Nullable String skipToken;
 
     public Optional<String> getSkipToken() {
         return this.skipToken == null ? Optional.empty() : Optional.ofNullable(this.skipToken);
@@ -152,7 +152,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable String startTime;
+        private final @Nullable String startTime;
 
     public Optional<String> getStartTime() {
         return this.startTime == null ? Optional.empty() : Optional.ofNullable(this.startTime);
@@ -163,7 +163,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -174,7 +174,7 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="synchronizationId")
-    private final @Nullable String synchronizationId;
+        private final @Nullable String synchronizationId;
 
     public Optional<String> getSynchronizationId() {
         return this.synchronizationId == null ? Optional.empty() : Optional.ofNullable(this.synchronizationId);
@@ -353,7 +353,6 @@ public final class ListShareSynchronizationDetailsArgs extends io.pulumi.resourc
             this.synchronizationId = synchronizationId;
             return this;
         }
-
         public ListShareSynchronizationDetailsArgs build() {
             return new ListShareSynchronizationDetailsArgs(accountName, consumerEmail, consumerName, consumerTenantName, durationMs, endTime, filter, message, orderby, resourceGroupName, shareName, skipToken, startTime, status, synchronizationId);
         }

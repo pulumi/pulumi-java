@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AnnotationSourceResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ImageAnnotationResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ResourceAnnotationResponse;
@@ -163,7 +163,6 @@ public final class GetAnnotationResult {
             this.textAnnotation = Objects.requireNonNull(textAnnotation);
             return this;
         }
-
         public GetAnnotationResult build() {
             return new GetAnnotationResult(annotationSource, customData, imageAnnotation, name, resourceAnnotation, textAnnotation);
         }

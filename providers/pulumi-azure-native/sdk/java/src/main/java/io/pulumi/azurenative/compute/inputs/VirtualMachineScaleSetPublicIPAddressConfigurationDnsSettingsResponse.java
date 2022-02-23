@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
      * 
      */
     @InputImport(name="domainNameLabel", required=true)
-    private final String domainNameLabel;
+        private final String domainNameLabel;
 
     public String getDomainNameLabel() {
         return this.domainNameLabel;
@@ -59,7 +59,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettings
             this.domainNameLabel = Objects.requireNonNull(domainNameLabel);
             return this;
         }
-
         public VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse(domainNameLabel);
         }

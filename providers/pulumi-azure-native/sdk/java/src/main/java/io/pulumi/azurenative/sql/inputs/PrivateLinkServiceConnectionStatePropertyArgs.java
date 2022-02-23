@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.inputs;
 import io.pulumi.azurenative.sql.enums.PrivateLinkServiceConnectionStateStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -31,7 +31,7 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
+        private final Input<Either<String,PrivateLinkServiceConnectionStateStatus>> status;
 
     public Input<Either<String,PrivateLinkServiceConnectionStateStatus>> getStatus() {
         return this.status;
@@ -90,7 +90,6 @@ public final class PrivateLinkServiceConnectionStatePropertyArgs extends io.pulu
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public PrivateLinkServiceConnectionStatePropertyArgs build() {
             return new PrivateLinkServiceConnectionStatePropertyArgs(description, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -130,7 +130,6 @@ public final class GameServerConfigScalingConfigSchedule {
             this.startTime = startTime;
             return this;
         }
-
         public GameServerConfigScalingConfigSchedule build() {
             return new GameServerConfigScalingConfigSchedule(cronJobDuration, cronSpec, endTime, startTime);
         }

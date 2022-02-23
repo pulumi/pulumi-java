@@ -4,7 +4,7 @@
 package io.pulumi.gcp.filestore.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.filestore.inputs.InstanceFileSharesNfsExportOptionGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="capacityGb", required=true)
-    private final Input<Integer> capacityGb;
+        private final Input<Integer> capacityGb;
 
     public Input<Integer> getCapacityGb() {
         return this.capacityGb;
@@ -34,7 +34,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="nfsExportOptions")
-    private final @Nullable Input<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
+        private final @Nullable Input<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
 
     public Input<List<InstanceFileSharesNfsExportOptionGetArgs>> getNfsExportOptions() {
         return this.nfsExportOptions == null ? Input.empty() : this.nfsExportOptions;
@@ -120,7 +120,6 @@ public final class InstanceFileSharesGetArgs extends io.pulumi.resources.Resourc
             this.nfsExportOptions = Input.ofNullable(nfsExportOptions);
             return this;
         }
-
         public InstanceFileSharesGetArgs build() {
             return new InstanceFileSharesGetArgs(capacityGb, name, nfsExportOptions);
         }

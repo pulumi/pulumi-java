@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,14 +23,14 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="networkInterface")
-    private final @Nullable Input<String> networkInterface;
+      private final @Nullable Input<String> networkInterface;
 
     public Input<String> getNetworkInterface() {
         return this.networkInterface == null ? Input.empty() : this.networkInterface;
@@ -41,7 +41,7 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualMachine")
-    private final @Nullable Input<String> virtualMachine;
+      private final @Nullable Input<String> virtualMachine;
 
     public Input<String> getVirtualMachine() {
         return this.virtualMachine == null ? Input.empty() : this.virtualMachine;
@@ -115,7 +115,6 @@ public final class RouterApplianceInstanceArgs extends io.pulumi.resources.Resou
             this.virtualMachine = Input.ofNullable(virtualMachine);
             return this;
         }
-
         public RouterApplianceInstanceArgs build() {
             return new RouterApplianceInstanceArgs(ipAddress, networkInterface, virtualMachine);
         }

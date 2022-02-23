@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OutputConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="destination", required=true)
-    private final String destination;
+      private final String destination;
 
     public String getDestination() {
         return this.destination;
@@ -59,7 +59,6 @@ public final class OutputConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.destination = Objects.requireNonNull(destination);
             return this;
         }
-
         public OutputConfigResponse build() {
             return new OutputConfigResponse(destination);
         }

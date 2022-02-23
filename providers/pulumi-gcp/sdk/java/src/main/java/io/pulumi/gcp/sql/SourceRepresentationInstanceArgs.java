@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="databaseVersion", required=true)
-    private final Input<String> databaseVersion;
+        private final Input<String> databaseVersion;
 
     public Input<String> getDatabaseVersion() {
         return this.databaseVersion;
@@ -32,7 +32,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+        private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -43,7 +43,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -67,7 +67,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -79,7 +79,7 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -198,7 +198,6 @@ public final class SourceRepresentationInstanceArgs extends io.pulumi.resources.
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public SourceRepresentationInstanceArgs build() {
             return new SourceRepresentationInstanceArgs(databaseVersion, host, name, port, project, region);
         }

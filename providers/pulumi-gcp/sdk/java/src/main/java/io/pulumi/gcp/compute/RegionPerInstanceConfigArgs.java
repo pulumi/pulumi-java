@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="minimalAction")
-    private final @Nullable Input<String> minimalAction;
+        private final @Nullable Input<String> minimalAction;
 
     public Input<String> getMinimalAction() {
         return this.minimalAction == null ? Input.empty() : this.minimalAction;
@@ -42,7 +42,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mostDisruptiveAllowedAction")
-    private final @Nullable Input<String> mostDisruptiveAllowedAction;
+        private final @Nullable Input<String> mostDisruptiveAllowedAction;
 
     public Input<String> getMostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction == null ? Input.empty() : this.mostDisruptiveAllowedAction;
@@ -53,7 +53,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -65,7 +65,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="preservedState")
-    private final @Nullable Input<RegionPerInstanceConfigPreservedStateArgs> preservedState;
+        private final @Nullable Input<RegionPerInstanceConfigPreservedStateArgs> preservedState;
 
     public Input<RegionPerInstanceConfigPreservedStateArgs> getPreservedState() {
         return this.preservedState == null ? Input.empty() : this.preservedState;
@@ -77,7 +77,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -88,7 +88,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -99,7 +99,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="regionInstanceGroupManager", required=true)
-    private final Input<String> regionInstanceGroupManager;
+        private final Input<String> regionInstanceGroupManager;
 
     public Input<String> getRegionInstanceGroupManager() {
         return this.regionInstanceGroupManager;
@@ -112,7 +112,7 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="removeInstanceStateOnDestroy")
-    private final @Nullable Input<Boolean> removeInstanceStateOnDestroy;
+        private final @Nullable Input<Boolean> removeInstanceStateOnDestroy;
 
     public Input<Boolean> getRemoveInstanceStateOnDestroy() {
         return this.removeInstanceStateOnDestroy == null ? Input.empty() : this.removeInstanceStateOnDestroy;
@@ -261,7 +261,6 @@ public final class RegionPerInstanceConfigArgs extends io.pulumi.resources.Resou
             this.removeInstanceStateOnDestroy = Input.ofNullable(removeInstanceStateOnDestroy);
             return this;
         }
-
         public RegionPerInstanceConfigArgs build() {
             return new RegionPerInstanceConfigArgs(minimalAction, mostDisruptiveAllowedAction, name, preservedState, project, region, regionInstanceGroupManager, removeInstanceStateOnDestroy);
         }

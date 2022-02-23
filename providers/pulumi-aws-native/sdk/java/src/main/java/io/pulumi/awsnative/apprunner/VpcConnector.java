@@ -8,8 +8,8 @@ import io.pulumi.awsnative.apprunner.VpcConnectorArgs;
 import io.pulumi.awsnative.apprunner.outputs.VpcConnectorTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -106,13 +106,6 @@ public class VpcConnector extends io.pulumi.resources.CustomResource {
         return this.vpcConnectorRevision;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public VpcConnector(String name) {
-        super("aws-native:apprunner:VpcConnector", name, VpcConnectorArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

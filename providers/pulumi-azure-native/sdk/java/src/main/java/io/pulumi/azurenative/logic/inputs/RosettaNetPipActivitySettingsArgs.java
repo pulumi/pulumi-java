@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.RosettaNetPipActivityType;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipAcknowledgmentOfReceiptSettingsArgs;
 import io.pulumi.azurenative.logic.inputs.RosettaNetPipActivityBehaviorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -24,7 +24,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="acknowledgmentOfReceiptSettings", required=true)
-    private final Input<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings;
+        private final Input<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings;
 
     public Input<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> getAcknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
@@ -35,7 +35,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="activityBehavior", required=true)
-    private final Input<RosettaNetPipActivityBehaviorArgs> activityBehavior;
+        private final Input<RosettaNetPipActivityBehaviorArgs> activityBehavior;
 
     public Input<RosettaNetPipActivityBehaviorArgs> getActivityBehavior() {
         return this.activityBehavior;
@@ -46,7 +46,7 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="activityType", required=true)
-    private final Input<RosettaNetPipActivityType> activityType;
+        private final Input<RosettaNetPipActivityType> activityType;
 
     public Input<RosettaNetPipActivityType> getActivityType() {
         return this.activityType;
@@ -120,7 +120,6 @@ public final class RosettaNetPipActivitySettingsArgs extends io.pulumi.resources
             this.activityType = Input.of(Objects.requireNonNull(activityType));
             return this;
         }
-
         public RosettaNetPipActivitySettingsArgs build() {
             return new RosettaNetPipActivitySettingsArgs(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
         }

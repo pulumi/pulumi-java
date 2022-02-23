@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudtrail.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="insightType")
-    private final @Nullable Input<String> insightType;
+        private final @Nullable Input<String> insightType;
 
     public Input<String> getInsightType() {
         return this.insightType == null ? Input.empty() : this.insightType;
@@ -66,7 +66,6 @@ public final class TrailInsightSelectorArgs extends io.pulumi.resources.Resource
             this.insightType = Input.ofNullable(insightType);
             return this;
         }
-
         public TrailInsightSelectorArgs build() {
             return new TrailInsightSelectorArgs(insightType);
         }

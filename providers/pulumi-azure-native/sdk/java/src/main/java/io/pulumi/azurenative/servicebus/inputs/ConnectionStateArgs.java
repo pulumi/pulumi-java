@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicebus.inputs;
 import io.pulumi.azurenative.servicebus.enums.PrivateLinkConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,PrivateLinkConnectionStatus>> status;
+        private final @Nullable Input<Either<String,PrivateLinkConnectionStatus>> status;
 
     public Input<Either<String,PrivateLinkConnectionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -95,7 +95,6 @@ public final class ConnectionStateArgs extends io.pulumi.resources.ResourceArgs 
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ConnectionStateArgs build() {
             return new ConnectionStateArgs(description, status);
         }

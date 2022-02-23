@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeAttachmentSpecArgs;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.inputs.VolumeAttachmentStatusArgs;
@@ -28,7 +28,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -39,7 +39,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -50,7 +50,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -61,7 +61,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<VolumeAttachmentSpecArgs> spec;
+        private final Input<VolumeAttachmentSpecArgs> spec;
 
     public Input<VolumeAttachmentSpecArgs> getSpec() {
         return this.spec;
@@ -72,7 +72,7 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<VolumeAttachmentStatusArgs> status;
+        private final @Nullable Input<VolumeAttachmentStatusArgs> status;
 
     public Input<VolumeAttachmentStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -176,7 +176,6 @@ public final class VolumeAttachmentArgs extends io.pulumi.resources.ResourceArgs
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public VolumeAttachmentArgs build() {
             return new VolumeAttachmentArgs(apiVersion, kind, metadata, spec, status);
         }

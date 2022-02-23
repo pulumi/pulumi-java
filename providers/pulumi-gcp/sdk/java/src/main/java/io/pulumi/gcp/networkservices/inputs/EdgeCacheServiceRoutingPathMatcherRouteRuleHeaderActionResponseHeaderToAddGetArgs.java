@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+        private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -32,7 +32,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * 
      */
     @InputImport(name="headerValue", required=true)
-    private final Input<String> headerValue;
+        private final Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue;
@@ -43,7 +43,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
      * 
      */
     @InputImport(name="replace")
-    private final @Nullable Input<Boolean> replace;
+        private final @Nullable Input<Boolean> replace;
 
     public Input<Boolean> getReplace() {
         return this.replace == null ? Input.empty() : this.replace;
@@ -117,7 +117,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionRespon
             this.replace = Input.ofNullable(replace);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderActionResponseHeaderToAddGetArgs(headerName, headerValue, replace);
         }

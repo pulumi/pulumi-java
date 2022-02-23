@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attribute", required=true)
-    private final String attribute;
+      private final String attribute;
 
     public String getAttribute() {
         return this.attribute;
@@ -32,7 +32,7 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class EventFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public EventFilterResponse build() {
             return new EventFilterResponse(attribute, value);
         }

@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.coordination.k8s.io_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.coordination.k8s.io_v1.LeaseListArgs;
 import io.pulumi.kubernetes.coordination.k8s.io_v1.outputs.Lease;
@@ -78,13 +78,6 @@ public class LeaseList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LeaseList(String name) {
-        super("kubernetes:coordination.k8s.io/v1:LeaseList", name, LeaseListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

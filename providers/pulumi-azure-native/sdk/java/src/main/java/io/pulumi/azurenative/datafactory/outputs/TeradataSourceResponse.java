@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.TeradataPartitionSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -248,7 +248,6 @@ public final class TeradataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TeradataSourceResponse build() {
             return new TeradataSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, partitionOption, partitionSettings, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

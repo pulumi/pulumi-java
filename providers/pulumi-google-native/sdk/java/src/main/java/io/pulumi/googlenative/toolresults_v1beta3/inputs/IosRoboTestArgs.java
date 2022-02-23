@@ -34,7 +34,6 @@ public final class IosRoboTestArgs extends io.pulumi.resources.ResourceArgs {
         public Builder(IosRoboTestArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public IosRoboTestArgs build() {
             return new IosRoboTestArgs();
         }

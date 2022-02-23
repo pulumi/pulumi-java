@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class PersistentDiskResponse {
             this.usedInGB = Objects.requireNonNull(usedInGB);
             return this;
         }
-
         public PersistentDiskResponse build() {
             return new PersistentDiskResponse(mountPath, sizeInGB, usedInGB);
         }

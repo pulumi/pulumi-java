@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.outputs;
 
 import io.pulumi.awsnative.lambda.enums.CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -52,7 +52,6 @@ public final class CodeSigningConfigCodeSigningPolicies {
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
-
         public CodeSigningConfigCodeSigningPolicies build() {
             return new CodeSigningConfigCodeSigningPolicies(untrustedArtifactOnDeployment);
         }

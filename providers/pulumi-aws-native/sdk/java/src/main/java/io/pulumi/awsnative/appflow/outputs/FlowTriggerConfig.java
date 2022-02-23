@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowTriggerType;
 import io.pulumi.awsnative.appflow.outputs.FlowScheduledTriggerProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class FlowTriggerConfig {
             this.triggerType = Objects.requireNonNull(triggerType);
             return this;
         }
-
         public FlowTriggerConfig build() {
             return new FlowTriggerConfig(triggerProperties, triggerType);
         }

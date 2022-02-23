@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.NormalizedCoordinateResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class ImageResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ImageResponse build() {
             return new ImageResponse(alpha, resolution, uri);
         }

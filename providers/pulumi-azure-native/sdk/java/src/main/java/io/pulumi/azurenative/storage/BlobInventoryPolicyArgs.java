@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicySchemaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="blobInventoryPolicyName")
-    private final @Nullable Input<String> blobInventoryPolicyName;
+        private final @Nullable Input<String> blobInventoryPolicyName;
 
     public Input<String> getBlobInventoryPolicyName() {
         return this.blobInventoryPolicyName == null ? Input.empty() : this.blobInventoryPolicyName;
@@ -42,7 +42,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policy", required=true)
-    private final Input<BlobInventoryPolicySchemaArgs> policy;
+        private final Input<BlobInventoryPolicySchemaArgs> policy;
 
     public Input<BlobInventoryPolicySchemaArgs> getPolicy() {
         return this.policy;
@@ -53,7 +53,7 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -142,7 +142,6 @@ public final class BlobInventoryPolicyArgs extends io.pulumi.resources.ResourceA
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public BlobInventoryPolicyArgs build() {
             return new BlobInventoryPolicyArgs(accountName, blobInventoryPolicyName, policy, resourceGroupName);
         }

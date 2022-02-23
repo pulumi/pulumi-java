@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomHTTPHeaderArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,14 +26,14 @@ public final class WebACLCustomResponseArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="customResponseBodyKey")
-    private final @Nullable Input<String> customResponseBodyKey;
+        private final @Nullable Input<String> customResponseBodyKey;
 
     public Input<String> getCustomResponseBodyKey() {
         return this.customResponseBodyKey == null ? Input.empty() : this.customResponseBodyKey;
     }
 
     @InputImport(name="responseCode", required=true)
-    private final Input<Integer> responseCode;
+        private final Input<Integer> responseCode;
 
     public Input<Integer> getResponseCode() {
         return this.responseCode;
@@ -44,7 +44,7 @@ public final class WebACLCustomResponseArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="responseHeaders")
-    private final @Nullable Input<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
+        private final @Nullable Input<List<WebACLCustomHTTPHeaderArgs>> responseHeaders;
 
     public Input<List<WebACLCustomHTTPHeaderArgs>> getResponseHeaders() {
         return this.responseHeaders == null ? Input.empty() : this.responseHeaders;
@@ -118,7 +118,6 @@ public final class WebACLCustomResponseArgs extends io.pulumi.resources.Resource
             this.responseHeaders = Input.ofNullable(responseHeaders);
             return this;
         }
-
         public WebACLCustomResponseArgs build() {
             return new WebACLCustomResponseArgs(customResponseBodyKey, responseCode, responseHeaders);
         }

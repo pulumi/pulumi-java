@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -265,7 +265,6 @@ public final class RedisCommonPropertiesResponseRedisConfiguration {
             this.rdbStorageConnectionString = rdbStorageConnectionString;
             return this;
         }
-
         public RedisCommonPropertiesResponseRedisConfiguration build() {
             return new RedisCommonPropertiesResponseRedisConfiguration(aofStorageConnectionString0, aofStorageConnectionString1, maxclients, maxfragmentationmemoryReserved, maxmemoryDelta, maxmemoryPolicy, maxmemoryReserved, rdbBackupEnabled, rdbBackupFrequency, rdbBackupMaxSnapshotCount, rdbStorageConnectionString);
         }

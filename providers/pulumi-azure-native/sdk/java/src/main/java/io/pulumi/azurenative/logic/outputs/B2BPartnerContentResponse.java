@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.BusinessIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class B2BPartnerContentResponse {
             this.businessIdentities = businessIdentities;
             return this;
         }
-
         public B2BPartnerContentResponse build() {
             return new B2BPartnerContentResponse(businessIdentities);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.enums.ControlSolutionTypesItem;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaRuleArgs;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaSearchRequestFacetSpecArgs;
@@ -19,14 +19,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
     public static final ControlArgs Empty = new ControlArgs();
 
     @InputImport(name="catalogId", required=true)
-    private final Input<String> catalogId;
+      private final Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId;
     }
 
     @InputImport(name="controlId", required=true)
-    private final Input<String> controlId;
+      private final Input<String> controlId;
 
     public Input<String> getControlId() {
         return this.controlId;
@@ -37,7 +37,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -48,14 +48,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="facetSpec")
-    private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
+      private final @Nullable Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> facetSpec;
 
     public Input<GoogleCloudRetailV2betaSearchRequestFacetSpecArgs> getFacetSpec() {
         return this.facetSpec == null ? Input.empty() : this.facetSpec;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -66,14 +66,14 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -84,7 +84,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rule")
-    private final @Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule;
+      private final @Nullable Input<GoogleCloudRetailV2betaRuleArgs> rule;
 
     public Input<GoogleCloudRetailV2betaRuleArgs> getRule() {
         return this.rule == null ? Input.empty() : this.rule;
@@ -95,7 +95,7 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="solutionTypes", required=true)
-    private final Input<List<ControlSolutionTypesItem>> solutionTypes;
+      private final Input<List<ControlSolutionTypesItem>> solutionTypes;
 
     public Input<List<ControlSolutionTypesItem>> getSolutionTypes() {
         return this.solutionTypes;
@@ -259,7 +259,6 @@ public final class ControlArgs extends io.pulumi.resources.ResourceArgs {
             this.solutionTypes = Input.of(Objects.requireNonNull(solutionTypes));
             return this;
         }
-
         public ControlArgs build() {
             return new ControlArgs(catalogId, controlId, displayName, facetSpec, location, name, project, rule, solutionTypes);
         }

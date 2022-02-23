@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskSetAwsVpcConfigurationAssignPublicIp;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="assignPublicIp")
-    private final @Nullable Input<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp;
+        private final @Nullable Input<TaskSetAwsVpcConfigurationAssignPublicIp> assignPublicIp;
 
     public Input<TaskSetAwsVpcConfigurationAssignPublicIp> getAssignPublicIp() {
         return this.assignPublicIp == null ? Input.empty() : this.assignPublicIp;
@@ -36,7 +36,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+        private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -47,7 +47,7 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+        private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;
@@ -121,7 +121,6 @@ public final class TaskSetAwsVpcConfigurationArgs extends io.pulumi.resources.Re
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }
-
         public TaskSetAwsVpcConfigurationArgs build() {
             return new TaskSetAwsVpcConfigurationArgs(assignPublicIp, securityGroups, subnets);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="imageTemplateName", required=true)
-    private final String imageTemplateName;
+        private final String imageTemplateName;
 
     public String getImageTemplateName() {
         return this.imageTemplateName;
@@ -28,7 +28,7 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetVirtualMachineImageTemplateArgs extends io.pulumi.resource
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetVirtualMachineImageTemplateArgs build() {
             return new GetVirtualMachineImageTemplateArgs(imageTemplateName, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -183,7 +183,6 @@ public final class LaunchConfigurationBlockDevice {
             this.volumeType = volumeType;
             return this;
         }
-
         public LaunchConfigurationBlockDevice build() {
             return new LaunchConfigurationBlockDevice(deleteOnTermination, encrypted, iops, snapshotId, throughput, volumeSize, volumeType);
         }

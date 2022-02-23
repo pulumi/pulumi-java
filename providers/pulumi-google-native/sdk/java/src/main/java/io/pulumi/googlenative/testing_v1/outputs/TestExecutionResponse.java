@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ShardResponse;
 import io.pulumi.googlenative.testing_v1.outputs.TestDetailsResponse;
@@ -226,7 +226,6 @@ public final class TestExecutionResponse {
             this.toolResultsStep = Objects.requireNonNull(toolResultsStep);
             return this;
         }
-
         public TestExecutionResponse build() {
             return new TestExecutionResponse(environment, matrixId, project, shard, state, testDetails, testSpecification, timestamp, toolResultsStep);
         }

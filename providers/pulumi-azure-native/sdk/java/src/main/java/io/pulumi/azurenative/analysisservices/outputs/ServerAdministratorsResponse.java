@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -54,7 +54,6 @@ public final class ServerAdministratorsResponse {
             this.members = members;
             return this;
         }
-
         public ServerAdministratorsResponse build() {
             return new ServerAdministratorsResponse(members);
         }

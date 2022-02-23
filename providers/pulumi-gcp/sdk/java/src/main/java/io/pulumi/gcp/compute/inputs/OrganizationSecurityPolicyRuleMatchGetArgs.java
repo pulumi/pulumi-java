@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.OrganizationSecurityPolicyRuleMatchConfigGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
+        private final Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> config;
 
     public Input<OrganizationSecurityPolicyRuleMatchConfigGetArgs> getConfig() {
         return this.config;
@@ -32,7 +32,7 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="versionedExpr")
-    private final @Nullable Input<String> versionedExpr;
+        private final @Nullable Input<String> versionedExpr;
 
     public Input<String> getVersionedExpr() {
         return this.versionedExpr == null ? Input.empty() : this.versionedExpr;
@@ -120,7 +120,6 @@ public final class OrganizationSecurityPolicyRuleMatchGetArgs extends io.pulumi.
             this.versionedExpr = Input.ofNullable(versionedExpr);
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatchGetArgs build() {
             return new OrganizationSecurityPolicyRuleMatchGetArgs(config, description, versionedExpr);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OfficeDataConnectorDataTypesResponseTeams extends io.pulumi.r
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -61,7 +61,6 @@ public final class OfficeDataConnectorDataTypesResponseTeams extends io.pulumi.r
             this.state = state;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponseTeams build() {
             return new OfficeDataConnectorDataTypesResponseTeams(state);
         }

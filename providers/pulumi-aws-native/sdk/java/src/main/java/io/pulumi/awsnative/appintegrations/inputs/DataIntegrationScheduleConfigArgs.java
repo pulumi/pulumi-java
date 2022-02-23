@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="firstExecutionFrom", required=true)
-    private final Input<String> firstExecutionFrom;
+        private final Input<String> firstExecutionFrom;
 
     public Input<String> getFirstExecutionFrom() {
         return this.firstExecutionFrom;
@@ -29,7 +29,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -40,7 +40,7 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-    private final Input<String> scheduleExpression;
+        private final Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression;
@@ -114,7 +114,6 @@ public final class DataIntegrationScheduleConfigArgs extends io.pulumi.resources
             this.scheduleExpression = Input.of(Objects.requireNonNull(scheduleExpression));
             return this;
         }
-
         public DataIntegrationScheduleConfigArgs build() {
             return new DataIntegrationScheduleConfigArgs(firstExecutionFrom, object, scheduleExpression);
         }

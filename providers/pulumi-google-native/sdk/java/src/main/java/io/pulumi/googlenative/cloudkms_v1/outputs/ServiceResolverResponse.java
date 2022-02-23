@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CertificateResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class ServiceResolverResponse {
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
-
         public ServiceResolverResponse build() {
             return new ServiceResolverResponse(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurestack.outputs.CompatibilityResponse;
 import io.pulumi.azurenative.azurestack.outputs.IconUrisResponse;
 import io.pulumi.azurenative.azurestack.outputs.ProductLinkResponse;
 import io.pulumi.azurenative.azurestack.outputs.ProductPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -502,7 +502,6 @@ public final class ProductResponse {
             this.vmExtensionType = vmExtensionType;
             return this;
         }
-
         public ProductResponse build() {
             return new ProductResponse(billingPartNumber, compatibility, description, displayName, etag, galleryItemIdentity, iconUris, id, legalTerms, links, name, offer, offerVersion, payloadLength, privacyPolicy, productKind, productProperties, publisherDisplayName, publisherIdentifier, sku, type, vmExtensionType);
         }

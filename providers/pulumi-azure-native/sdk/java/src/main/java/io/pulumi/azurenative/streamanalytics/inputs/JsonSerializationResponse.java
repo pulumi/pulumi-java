@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="encoding")
-    private final @Nullable String encoding;
+        private final @Nullable String encoding;
 
     public Optional<String> getEncoding() {
         return this.encoding == null ? Optional.empty() : Optional.ofNullable(this.encoding);
@@ -34,7 +34,7 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="format")
-    private final @Nullable String format;
+        private final @Nullable String format;
 
     public Optional<String> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -46,7 +46,7 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -105,7 +105,6 @@ public final class JsonSerializationResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonSerializationResponse build() {
             return new JsonSerializationResponse(encoding, format, type);
         }

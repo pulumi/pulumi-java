@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam.outputs;
 
 import io.pulumi.azurenative.aadiam.outputs.LogSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -225,7 +225,6 @@ public final class GetDiagnosticSettingResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetDiagnosticSettingResult build() {
             return new GetDiagnosticSettingResult(eventHubAuthorizationRuleId, eventHubName, id, logs, name, serviceBusRuleId, storageAccountId, type, workspaceId);
         }

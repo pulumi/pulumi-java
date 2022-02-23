@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+      private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -34,7 +34,7 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pubsubTopic")
-    private final @Nullable Input<String> pubsubTopic;
+      private final @Nullable Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
@@ -93,7 +93,6 @@ public final class Hl7V2NotificationConfigArgs extends io.pulumi.resources.Resou
             this.pubsubTopic = Input.ofNullable(pubsubTopic);
             return this;
         }
-
         public Hl7V2NotificationConfigArgs build() {
             return new Hl7V2NotificationConfigArgs(filter, pubsubTopic);
         }

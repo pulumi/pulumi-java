@@ -10,7 +10,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ComputeConfiguratio
 import io.pulumi.azurenative.machinelearningservices.outputs.DataPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.IdAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputPathAssetReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -331,7 +331,6 @@ public final class BatchDeploymentResponse {
             this.retrySettings = retrySettings;
             return this;
         }
-
         public BatchDeploymentResponse build() {
             return new BatchDeploymentResponse(codeConfiguration, compute, description, environmentId, environmentVariables, errorThreshold, loggingLevel, miniBatchSize, model, outputConfiguration, partitionKeys, properties, retrySettings);
         }

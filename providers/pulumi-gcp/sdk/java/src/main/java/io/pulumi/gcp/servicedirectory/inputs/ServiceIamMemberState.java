@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.servicedirectory.inputs.ServiceIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
     public static final ServiceIamMemberState Empty = new ServiceIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<ServiceIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<ServiceIamMemberConditionGetArgs> condition;
 
     public Input<ServiceIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -45,7 +45,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -58,7 +58,7 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -162,7 +162,6 @@ public final class ServiceIamMemberState extends io.pulumi.resources.ResourceArg
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public ServiceIamMemberState build() {
             return new ServiceIamMemberState(condition, etag, member, name, role);
         }

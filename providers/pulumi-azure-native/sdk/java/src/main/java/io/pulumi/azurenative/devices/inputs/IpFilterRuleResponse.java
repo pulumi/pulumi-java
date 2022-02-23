@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+        private final String action;
 
     public String getAction() {
         return this.action;
@@ -32,7 +32,7 @@ public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filterName", required=true)
-    private final String filterName;
+        private final String filterName;
 
     public String getFilterName() {
         return this.filterName;
@@ -43,7 +43,7 @@ public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipMask", required=true)
-    private final String ipMask;
+        private final String ipMask;
 
     public String getIpMask() {
         return this.ipMask;
@@ -102,7 +102,6 @@ public final class IpFilterRuleResponse extends io.pulumi.resources.InvokeArgs {
             this.ipMask = Objects.requireNonNull(ipMask);
             return this;
         }
-
         public IpFilterRuleResponse build() {
             return new IpFilterRuleResponse(action, filterName, ipMask);
         }

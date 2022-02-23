@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.JobPysparkConfigLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -197,7 +197,6 @@ public final class JobPysparkConfig {
             this.pythonFileUris = pythonFileUris;
             return this;
         }
-
         public JobPysparkConfig build() {
             return new JobPysparkConfig(archiveUris, args, fileUris, jarFileUris, loggingConfig, mainPythonFileUri, properties, pythonFileUris);
         }

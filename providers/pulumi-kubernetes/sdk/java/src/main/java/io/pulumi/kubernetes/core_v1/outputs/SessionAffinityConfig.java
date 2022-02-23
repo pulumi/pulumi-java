@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ClientIPConfig;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class SessionAffinityConfig {
             this.clientIP = clientIP;
             return this;
         }
-
         public SessionAffinityConfig build() {
             return new SessionAffinityConfig(clientIP);
         }

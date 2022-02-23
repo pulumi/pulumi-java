@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.PriorityLevelConfigurationSpecArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.inputs.PriorityLevelConfigurationStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -26,7 +26,7 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -48,7 +48,7 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -59,7 +59,7 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<PriorityLevelConfigurationSpecArgs> spec;
+        private final @Nullable Input<PriorityLevelConfigurationSpecArgs> spec;
 
     public Input<PriorityLevelConfigurationSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -70,7 +70,7 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<PriorityLevelConfigurationStatusArgs> status;
+        private final @Nullable Input<PriorityLevelConfigurationStatusArgs> status;
 
     public Input<PriorityLevelConfigurationStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -174,7 +174,6 @@ public final class PriorityLevelConfigurationArgs extends io.pulumi.resources.Re
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public PriorityLevelConfigurationArgs build() {
             return new PriorityLevelConfigurationArgs(apiVersion, kind, metadata, spec, status);
         }

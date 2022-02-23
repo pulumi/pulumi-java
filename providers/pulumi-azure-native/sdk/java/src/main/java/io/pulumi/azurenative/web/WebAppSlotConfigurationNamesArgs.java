@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="appSettingNames")
-    private final @Nullable Input<List<String>> appSettingNames;
+        private final @Nullable Input<List<String>> appSettingNames;
 
     public Input<List<String>> getAppSettingNames() {
         return this.appSettingNames == null ? Input.empty() : this.appSettingNames;
@@ -31,7 +31,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="azureStorageConfigNames")
-    private final @Nullable Input<List<String>> azureStorageConfigNames;
+        private final @Nullable Input<List<String>> azureStorageConfigNames;
 
     public Input<List<String>> getAzureStorageConfigNames() {
         return this.azureStorageConfigNames == null ? Input.empty() : this.azureStorageConfigNames;
@@ -42,7 +42,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="connectionStringNames")
-    private final @Nullable Input<List<String>> connectionStringNames;
+        private final @Nullable Input<List<String>> connectionStringNames;
 
     public Input<List<String>> getConnectionStringNames() {
         return this.connectionStringNames == null ? Input.empty() : this.connectionStringNames;
@@ -53,7 +53,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -64,7 +64,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -75,7 +75,7 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -194,7 +194,6 @@ public final class WebAppSlotConfigurationNamesArgs extends io.pulumi.resources.
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public WebAppSlotConfigurationNamesArgs build() {
             return new WebAppSlotConfigurationNamesArgs(appSettingNames, azureStorageConfigNames, connectionStringNames, kind, name, resourceGroupName);
         }

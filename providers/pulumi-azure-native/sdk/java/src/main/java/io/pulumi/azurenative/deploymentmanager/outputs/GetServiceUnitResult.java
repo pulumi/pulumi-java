@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.ServiceUnitArtifactsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -204,7 +204,6 @@ public final class GetServiceUnitResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceUnitResult build() {
             return new GetServiceUnitResult(artifacts, deploymentMode, id, location, name, tags, targetResourceGroup, type);
         }

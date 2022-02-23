@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.LinuxUpdateClasses;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="excludedPackageNameMasks")
-    private final @Nullable Input<List<String>> excludedPackageNameMasks;
+        private final @Nullable Input<List<String>> excludedPackageNameMasks;
 
     public Input<List<String>> getExcludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? Input.empty() : this.excludedPackageNameMasks;
@@ -37,7 +37,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="includedPackageClassifications")
-    private final @Nullable Input<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
+        private final @Nullable Input<Either<String,LinuxUpdateClasses>> includedPackageClassifications;
 
     public Input<Either<String,LinuxUpdateClasses>> getIncludedPackageClassifications() {
         return this.includedPackageClassifications == null ? Input.empty() : this.includedPackageClassifications;
@@ -48,7 +48,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="includedPackageNameMasks")
-    private final @Nullable Input<List<String>> includedPackageNameMasks;
+        private final @Nullable Input<List<String>> includedPackageNameMasks;
 
     public Input<List<String>> getIncludedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? Input.empty() : this.includedPackageNameMasks;
@@ -59,7 +59,7 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="rebootSetting")
-    private final @Nullable Input<String> rebootSetting;
+        private final @Nullable Input<String> rebootSetting;
 
     public Input<String> getRebootSetting() {
         return this.rebootSetting == null ? Input.empty() : this.rebootSetting;
@@ -148,7 +148,6 @@ public final class LinuxPropertiesArgs extends io.pulumi.resources.ResourceArgs 
             this.rebootSetting = Input.ofNullable(rebootSetting);
             return this;
         }
-
         public LinuxPropertiesArgs build() {
             return new LinuxPropertiesArgs(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
         }

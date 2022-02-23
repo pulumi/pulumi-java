@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SshPublicKeyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable List<SshPublicKeyResponse> publicKeys;
+        private final @Nullable List<SshPublicKeyResponse> publicKeys;
 
     public List<SshPublicKeyResponse> getPublicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
@@ -62,7 +62,6 @@ public final class SshConfigurationResponse extends io.pulumi.resources.InvokeAr
             this.publicKeys = publicKeys;
             return this;
         }
-
         public SshConfigurationResponse build() {
             return new SshConfigurationResponse(publicKeys);
         }

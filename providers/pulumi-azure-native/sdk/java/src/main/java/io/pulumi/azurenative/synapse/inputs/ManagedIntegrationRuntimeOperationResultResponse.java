@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * 
      */
     @InputImport(name="activityId", required=true)
-    private final String activityId;
+        private final String activityId;
 
     public String getActivityId() {
         return this.activityId;
@@ -33,7 +33,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final String errorCode;
+        private final String errorCode;
 
     public String getErrorCode() {
         return this.errorCode;
@@ -44,7 +44,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<String> parameters;
+        private final List<String> parameters;
 
     public List<String> getParameters() {
         return this.parameters;
@@ -55,7 +55,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * 
      */
     @InputImport(name="result", required=true)
-    private final String result;
+        private final String result;
 
     public String getResult() {
         return this.result;
@@ -66,7 +66,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+        private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -77,7 +77,7 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -166,7 +166,6 @@ public final class ManagedIntegrationRuntimeOperationResultResponse extends io.p
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeOperationResultResponse build() {
             return new ManagedIntegrationRuntimeOperationResultResponse(activityId, errorCode, parameters, result, startTime, type);
         }

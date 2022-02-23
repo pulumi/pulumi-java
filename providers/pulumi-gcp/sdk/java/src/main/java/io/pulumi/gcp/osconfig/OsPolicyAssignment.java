@@ -5,8 +5,8 @@ package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.OsPolicyAssignmentArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentState;
@@ -263,13 +263,6 @@ public class OsPolicyAssignment extends io.pulumi.resources.CustomResource {
         return this.uid;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public OsPolicyAssignment(String name) {
-        super("gcp:osconfig/osPolicyAssignment:OsPolicyAssignment", name, OsPolicyAssignmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

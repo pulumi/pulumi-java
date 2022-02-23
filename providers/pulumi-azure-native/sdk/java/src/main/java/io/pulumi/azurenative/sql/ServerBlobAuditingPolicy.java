@@ -8,8 +8,8 @@ import io.pulumi.azurenative.sql.ServerBlobAuditingPolicyArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -340,13 +340,6 @@ public class ServerBlobAuditingPolicy extends io.pulumi.resources.CustomResource
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ServerBlobAuditingPolicy(String name) {
-        super("azure-native:sql:ServerBlobAuditingPolicy", name, ServerBlobAuditingPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

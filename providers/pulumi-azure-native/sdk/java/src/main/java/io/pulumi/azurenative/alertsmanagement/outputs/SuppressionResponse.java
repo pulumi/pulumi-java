@@ -6,7 +6,7 @@ package io.pulumi.azurenative.alertsmanagement.outputs;
 import io.pulumi.azurenative.alertsmanagement.outputs.ConditionsResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.ScopeResponse;
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -249,7 +249,6 @@ public final class SuppressionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SuppressionResponse build() {
             return new SuppressionResponse(conditions, createdAt, createdBy, description, lastModifiedAt, lastModifiedBy, scope, status, suppressionConfig, type);
         }

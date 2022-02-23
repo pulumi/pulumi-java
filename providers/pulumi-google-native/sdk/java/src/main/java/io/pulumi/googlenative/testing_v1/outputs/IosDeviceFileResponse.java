@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class IosDeviceFileResponse {
             this.devicePath = Objects.requireNonNull(devicePath);
             return this;
         }
-
         public IosDeviceFileResponse build() {
             return new IosDeviceFileResponse(bundleId, content, devicePath);
         }

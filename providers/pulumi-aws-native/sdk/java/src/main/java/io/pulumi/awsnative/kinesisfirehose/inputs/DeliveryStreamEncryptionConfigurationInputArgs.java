@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamEncryptionConfigurationInputKeyType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
     public static final DeliveryStreamEncryptionConfigurationInputArgs Empty = new DeliveryStreamEncryptionConfigurationInputArgs();
 
     @InputImport(name="keyARN")
-    private final @Nullable Input<String> keyARN;
+        private final @Nullable Input<String> keyARN;
 
     public Input<String> getKeyARN() {
         return this.keyARN == null ? Input.empty() : this.keyARN;
     }
 
     @InputImport(name="keyType", required=true)
-    private final Input<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
+        private final Input<DeliveryStreamEncryptionConfigurationInputKeyType> keyType;
 
     public Input<DeliveryStreamEncryptionConfigurationInputKeyType> getKeyType() {
         return this.keyType;
@@ -82,7 +82,6 @@ public final class DeliveryStreamEncryptionConfigurationInputArgs extends io.pul
             this.keyType = Input.of(Objects.requireNonNull(keyType));
             return this;
         }
-
         public DeliveryStreamEncryptionConfigurationInputArgs build() {
             return new DeliveryStreamEncryptionConfigurationInputArgs(keyARN, keyType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class MetricValueStatus {
             this.value = value;
             return this;
         }
-
         public MetricValueStatus build() {
             return new MetricValueStatus(averageUtilization, averageValue, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class LiteSubscriptionDeliveryConfig {
             this.deliveryRequirement = Objects.requireNonNull(deliveryRequirement);
             return this;
         }
-
         public LiteSubscriptionDeliveryConfig build() {
             return new LiteSubscriptionDeliveryConfig(deliveryRequirement);
         }

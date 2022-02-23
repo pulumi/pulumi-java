@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mountPath")
-    private final @Nullable String mountPath;
+        private final @Nullable String mountPath;
 
     public Optional<String> getMountPath() {
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
@@ -35,7 +35,7 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="sizeInGB")
-    private final @Nullable Integer sizeInGB;
+        private final @Nullable Integer sizeInGB;
 
     public Optional<Integer> getSizeInGB() {
         return this.sizeInGB == null ? Optional.empty() : Optional.ofNullable(this.sizeInGB);
@@ -46,7 +46,7 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="usedInGB", required=true)
-    private final Integer usedInGB;
+        private final Integer usedInGB;
 
     public Integer getUsedInGB() {
         return this.usedInGB;
@@ -105,7 +105,6 @@ public final class PersistentDiskResponse extends io.pulumi.resources.InvokeArgs
             this.usedInGB = Objects.requireNonNull(usedInGB);
             return this;
         }
-
         public PersistentDiskResponse build() {
             return new PersistentDiskResponse(mountPath, sizeInGB, usedInGB);
         }

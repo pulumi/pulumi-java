@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ServiceProviderParameterResponseMetadata;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="default", required=true)
-    private final String $default;
+        private final String $default;
 
     public String get$default() {
         return this.$default;
@@ -33,7 +33,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="helpUrl", required=true)
-    private final String helpUrl;
+        private final String helpUrl;
 
     public String getHelpUrl() {
         return this.helpUrl;
@@ -66,7 +66,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final ServiceProviderParameterResponseMetadata metadata;
+        private final ServiceProviderParameterResponseMetadata metadata;
 
     public ServiceProviderParameterResponseMetadata getMetadata() {
         return this.metadata;
@@ -77,7 +77,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -88,7 +88,7 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -187,7 +187,6 @@ public final class ServiceProviderParameterResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ServiceProviderParameterResponse build() {
             return new ServiceProviderParameterResponse($default, description, displayName, helpUrl, metadata, name, type);
         }

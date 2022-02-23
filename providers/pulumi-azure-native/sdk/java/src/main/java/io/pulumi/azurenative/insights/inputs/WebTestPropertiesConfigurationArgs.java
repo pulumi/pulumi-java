@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="webTest")
-    private final @Nullable Input<String> webTest;
+        private final @Nullable Input<String> webTest;
 
     public Input<String> getWebTest() {
         return this.webTest == null ? Input.empty() : this.webTest;
@@ -66,7 +66,6 @@ public final class WebTestPropertiesConfigurationArgs extends io.pulumi.resource
             this.webTest = Input.ofNullable(webTest);
             return this;
         }
-
         public WebTestPropertiesConfigurationArgs build() {
             return new WebTestPropertiesConfigurationArgs(webTest);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nodeTypeName", required=true)
-    private final String nodeTypeName;
+        private final String nodeTypeName;
 
     public String getNodeTypeName() {
         return this.nodeTypeName;
@@ -39,7 +39,7 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetNodeTypeArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetNodeTypeArgs build() {
             return new GetNodeTypeArgs(clusterName, nodeTypeName, resourceGroupName);
         }

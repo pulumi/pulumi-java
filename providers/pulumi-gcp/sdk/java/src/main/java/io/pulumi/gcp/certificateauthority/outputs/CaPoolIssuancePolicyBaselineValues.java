@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CaPoolIssuancePolicyBaselineValuesKeyUsage;
@@ -153,7 +153,6 @@ public final class CaPoolIssuancePolicyBaselineValues {
             this.policyIds = policyIds;
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValues build() {
             return new CaPoolIssuancePolicyBaselineValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

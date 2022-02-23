@@ -7,7 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.enums.SuppressionType;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="recurrenceType", required=true)
-    private final Input<Either<String,SuppressionType>> recurrenceType;
+        private final Input<Either<String,SuppressionType>> recurrenceType;
 
     public Input<Either<String,SuppressionType>> getRecurrenceType() {
         return this.recurrenceType;
@@ -37,7 +37,7 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<SuppressionScheduleArgs> schedule;
+        private final @Nullable Input<SuppressionScheduleArgs> schedule;
 
     public Input<SuppressionScheduleArgs> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -96,7 +96,6 @@ public final class SuppressionConfigArgs extends io.pulumi.resources.ResourceArg
             this.schedule = Input.ofNullable(schedule);
             return this;
         }
-
         public SuppressionConfigArgs build() {
             return new SuppressionConfigArgs(recurrenceType, schedule);
         }

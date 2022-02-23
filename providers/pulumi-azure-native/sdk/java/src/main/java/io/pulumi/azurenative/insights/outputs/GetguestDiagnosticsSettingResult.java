@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DataSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -197,7 +197,6 @@ public final class GetguestDiagnosticsSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetguestDiagnosticsSettingResult build() {
             return new GetguestDiagnosticsSettingResult(dataSources, id, location, name, osType, proxySetting, tags, type);
         }

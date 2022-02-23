@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SourceControlAuthInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ListBuildTaskSourceRepositoryPropertiesResult {
             this.sourceControlType = Objects.requireNonNull(sourceControlType);
             return this;
         }
-
         public ListBuildTaskSourceRepositoryPropertiesResult build() {
             return new ListBuildTaskSourceRepositoryPropertiesResult(isCommitTriggerEnabled, repositoryUrl, sourceControlAuthProperties, sourceControlType);
         }

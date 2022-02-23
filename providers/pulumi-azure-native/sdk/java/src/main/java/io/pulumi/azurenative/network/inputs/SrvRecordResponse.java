@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -35,7 +35,7 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -46,7 +46,7 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable String target;
+        private final @Nullable String target;
 
     public Optional<String> getTarget() {
         return this.target == null ? Optional.empty() : Optional.ofNullable(this.target);
@@ -57,7 +57,7 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Integer weight;
+        private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
@@ -126,7 +126,6 @@ public final class SrvRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.weight = weight;
             return this;
         }
-
         public SrvRecordResponse build() {
             return new SrvRecordResponse(port, priority, target, weight);
         }

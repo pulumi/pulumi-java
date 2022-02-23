@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ApplicationNotificationEndpointResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ApplicationNotificationEndpointResponse build() {
             return new ApplicationNotificationEndpointResponse(uri);
         }

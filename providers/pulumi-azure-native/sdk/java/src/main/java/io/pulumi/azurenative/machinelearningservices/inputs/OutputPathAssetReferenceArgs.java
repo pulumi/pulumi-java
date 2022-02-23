@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="jobId")
-    private final @Nullable Input<String> jobId;
+        private final @Nullable Input<String> jobId;
 
     public Input<String> getJobId() {
         return this.jobId == null ? Input.empty() : this.jobId;
@@ -34,7 +34,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="referenceType", required=true)
-    private final Input<String> referenceType;
+        private final Input<String> referenceType;
 
     public Input<String> getReferenceType() {
         return this.referenceType;
@@ -120,7 +120,6 @@ public final class OutputPathAssetReferenceArgs extends io.pulumi.resources.Reso
             this.referenceType = Input.of(Objects.requireNonNull(referenceType));
             return this;
         }
-
         public OutputPathAssetReferenceArgs build() {
             return new OutputPathAssetReferenceArgs(jobId, path, referenceType);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.AccountCredentialDetailsResponse;
 import io.pulumi.azurenative.databox.outputs.ApplianceNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class DataBoxHeavySecretResponse {
             this.networkConfigurations = Objects.requireNonNull(networkConfigurations);
             return this;
         }
-
         public DataBoxHeavySecretResponse build() {
             return new DataBoxHeavySecretResponse(accountCredentialDetails, devicePassword, deviceSerialNumber, encodedValidationCertPubKey, networkConfigurations);
         }

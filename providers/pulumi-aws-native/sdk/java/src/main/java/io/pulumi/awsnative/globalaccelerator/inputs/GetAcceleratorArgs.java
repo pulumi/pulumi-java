@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.globalaccelerator.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAcceleratorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="acceleratorArn", required=true)
-    private final String acceleratorArn;
+        private final String acceleratorArn;
 
     public String getAcceleratorArn() {
         return this.acceleratorArn;
@@ -55,7 +55,6 @@ public final class GetAcceleratorArgs extends io.pulumi.resources.InvokeArgs {
             this.acceleratorArn = Objects.requireNonNull(acceleratorArn);
             return this;
         }
-
         public GetAcceleratorArgs build() {
             return new GetAcceleratorArgs(acceleratorArn);
         }

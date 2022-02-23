@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="drainTimeoutInSec", required=true)
-    private final Input<Integer> drainTimeoutInSec;
+        private final Input<Integer> drainTimeoutInSec;
 
     public Input<Integer> getDrainTimeoutInSec() {
         return this.drainTimeoutInSec;
@@ -34,7 +34,7 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -93,7 +93,6 @@ public final class ApplicationGatewayConnectionDrainingArgs extends io.pulumi.re
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ApplicationGatewayConnectionDrainingArgs build() {
             return new ApplicationGatewayConnectionDrainingArgs(drainTimeoutInSec, enabled);
         }

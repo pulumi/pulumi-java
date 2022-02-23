@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+      private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -34,7 +34,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<String> generation;
+      private final @Nullable Input<String> generation;
 
     public Input<String> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -45,7 +45,7 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="object")
-    private final @Nullable Input<String> object;
+      private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -119,7 +119,6 @@ public final class StorageSourceManifestArgs extends io.pulumi.resources.Resourc
             this.object = Input.ofNullable(object);
             return this;
         }
-
         public StorageSourceManifestArgs build() {
             return new StorageSourceManifestArgs(bucket, generation, object);
         }

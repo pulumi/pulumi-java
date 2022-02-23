@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="instanceProperties", required=true)
-    private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
+      private final AllocationSpecificSKUAllocationReservedInstancePropertiesResponse instanceProperties;
 
     public AllocationSpecificSKUAllocationReservedInstancePropertiesResponse getInstanceProperties() {
         return this.instanceProperties;
@@ -29,7 +29,7 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="totalCount", required=true)
-    private final String totalCount;
+      private final String totalCount;
 
     public String getTotalCount() {
         return this.totalCount;
@@ -78,7 +78,6 @@ public final class FutureReservationSpecificSKUPropertiesResponse extends io.pul
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public FutureReservationSpecificSKUPropertiesResponse build() {
             return new FutureReservationSpecificSKUPropertiesResponse(instanceProperties, totalCount);
         }

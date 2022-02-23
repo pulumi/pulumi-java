@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.DataIntegrityValidationResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.QueryAnalysisValidationResultResponse;
 import io.pulumi.azurenative.datamigration.inputs.SchemaComparisonValidationResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="dataIntegrityValidationResult", required=true)
-    private final DataIntegrityValidationResultResponse dataIntegrityValidationResult;
+        private final DataIntegrityValidationResultResponse dataIntegrityValidationResult;
 
     public DataIntegrityValidationResultResponse getDataIntegrityValidationResult() {
         return this.dataIntegrityValidationResult;
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+        private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="migrationId", required=true)
-    private final String migrationId;
+        private final String migrationId;
 
     public String getMigrationId() {
         return this.migrationId;
@@ -68,7 +68,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="queryAnalysisValidationResult", required=true)
-    private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
+        private final QueryAnalysisValidationResultResponse queryAnalysisValidationResult;
 
     public QueryAnalysisValidationResultResponse getQueryAnalysisValidationResult() {
         return this.queryAnalysisValidationResult;
@@ -80,7 +80,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -91,7 +91,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="schemaValidationResult", required=true)
-    private final SchemaComparisonValidationResultResponse schemaValidationResult;
+        private final SchemaComparisonValidationResultResponse schemaValidationResult;
 
     public SchemaComparisonValidationResultResponse getSchemaValidationResult() {
         return this.schemaValidationResult;
@@ -102,7 +102,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="sourceDatabaseName", required=true)
-    private final String sourceDatabaseName;
+        private final String sourceDatabaseName;
 
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -113,7 +113,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+        private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -124,7 +124,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -135,7 +135,7 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
      * 
      */
     @InputImport(name="targetDatabaseName", required=true)
-    private final String targetDatabaseName;
+        private final String targetDatabaseName;
 
     public String getTargetDatabaseName() {
         return this.targetDatabaseName;
@@ -274,7 +274,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultR
             this.targetDatabaseName = Objects.requireNonNull(targetDatabaseName);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelValidationResultResponse(dataIntegrityValidationResult, endedOn, id, migrationId, queryAnalysisValidationResult, resultType, schemaValidationResult, sourceDatabaseName, startedOn, status, targetDatabaseName);
         }

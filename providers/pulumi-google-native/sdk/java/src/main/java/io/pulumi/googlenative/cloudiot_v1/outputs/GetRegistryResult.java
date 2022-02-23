@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudiot_v1.outputs.EventNotificationConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.HttpConfigResponse;
 import io.pulumi.googlenative.cloudiot_v1.outputs.MqttConfigResponse;
@@ -185,7 +185,6 @@ public final class GetRegistryResult {
             this.stateNotificationConfig = Objects.requireNonNull(stateNotificationConfig);
             return this;
         }
-
         public GetRegistryResult build() {
             return new GetRegistryResult(credentials, eventNotificationConfigs, httpConfig, logLevel, mqttConfig, name, stateNotificationConfig);
         }

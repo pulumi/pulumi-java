@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="disableConnectionDrainOnFailover", required=true)
-    private final Boolean disableConnectionDrainOnFailover;
+      private final Boolean disableConnectionDrainOnFailover;
 
     public Boolean getDisableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover;
@@ -33,7 +33,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="dropTrafficIfUnhealthy", required=true)
-    private final Boolean dropTrafficIfUnhealthy;
+      private final Boolean dropTrafficIfUnhealthy;
 
     public Boolean getDropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy;
@@ -44,7 +44,7 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="failoverRatio", required=true)
-    private final Double failoverRatio;
+      private final Double failoverRatio;
 
     public Double getFailoverRatio() {
         return this.failoverRatio;
@@ -103,7 +103,6 @@ public final class BackendServiceFailoverPolicyResponse extends io.pulumi.resour
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
         }
-
         public BackendServiceFailoverPolicyResponse build() {
             return new BackendServiceFailoverPolicyResponse(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

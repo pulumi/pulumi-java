@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kubernetes.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="expirationTime", required=true)
-    private final Double expirationTime;
+        private final Double expirationTime;
 
     public Double getExpirationTime() {
         return this.expirationTime;
@@ -33,7 +33,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="hybridConnectionName", required=true)
-    private final String hybridConnectionName;
+        private final String hybridConnectionName;
 
     public String getHybridConnectionName() {
         return this.hybridConnectionName;
@@ -44,7 +44,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="relay", required=true)
-    private final String relay;
+        private final String relay;
 
     public String getRelay() {
         return this.relay;
@@ -55,7 +55,7 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="token", required=true)
-    private final String token;
+        private final String token;
 
     public String getToken() {
         return this.token;
@@ -124,7 +124,6 @@ public final class HybridConnectionConfigResponse extends io.pulumi.resources.In
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public HybridConnectionConfigResponse build() {
             return new HybridConnectionConfigResponse(expirationTime, hybridConnectionName, relay, token);
         }

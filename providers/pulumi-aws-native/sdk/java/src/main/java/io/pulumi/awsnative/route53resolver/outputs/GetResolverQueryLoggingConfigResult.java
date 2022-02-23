@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigShareStatus;
 import io.pulumi.awsnative.route53resolver.enums.ResolverQueryLoggingConfigStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetResolverQueryLoggingConfigResult {
             this.status = status;
             return this;
         }
-
         public GetResolverQueryLoggingConfigResult build() {
             return new GetResolverQueryLoggingConfigResult(arn, associationCount, creationTime, creatorRequestId, id, ownerId, shareStatus, status);
         }

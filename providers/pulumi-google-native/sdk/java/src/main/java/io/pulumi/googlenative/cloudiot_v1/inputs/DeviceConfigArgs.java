@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryData")
-    private final @Nullable Input<String> binaryData;
+      private final @Nullable Input<String> binaryData;
 
     public Input<String> getBinaryData() {
         return this.binaryData == null ? Input.empty() : this.binaryData;
@@ -66,7 +66,6 @@ public final class DeviceConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.binaryData = Input.ofNullable(binaryData);
             return this;
         }
-
         public DeviceConfigArgs build() {
             return new DeviceConfigArgs(binaryData);
         }

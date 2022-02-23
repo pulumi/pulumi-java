@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.AzureVmWorkloadProtectedIte
 import io.pulumi.azurenative.recoveryservices.inputs.KPIResourceHealthDetailsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -34,7 +34,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
+        private final @Nullable Input<Either<String,BackupManagementType>> backupManagementType;
 
     public Input<Either<String,BackupManagementType>> getBackupManagementType() {
         return this.backupManagementType == null ? Input.empty() : this.backupManagementType;
@@ -45,7 +45,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="backupSetName")
-    private final @Nullable Input<String> backupSetName;
+        private final @Nullable Input<String> backupSetName;
 
     public Input<String> getBackupSetName() {
         return this.backupSetName == null ? Input.empty() : this.backupSetName;
@@ -56,7 +56,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -67,7 +67,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<Either<String,CreateMode>> createMode;
+        private final @Nullable Input<Either<String,CreateMode>> createMode;
 
     public Input<Either<String,CreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -78,7 +78,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="deferredDeleteTimeInUTC")
-    private final @Nullable Input<String> deferredDeleteTimeInUTC;
+        private final @Nullable Input<String> deferredDeleteTimeInUTC;
 
     public Input<String> getDeferredDeleteTimeInUTC() {
         return this.deferredDeleteTimeInUTC == null ? Input.empty() : this.deferredDeleteTimeInUTC;
@@ -89,7 +89,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="deferredDeleteTimeRemaining")
-    private final @Nullable Input<String> deferredDeleteTimeRemaining;
+        private final @Nullable Input<String> deferredDeleteTimeRemaining;
 
     public Input<String> getDeferredDeleteTimeRemaining() {
         return this.deferredDeleteTimeRemaining == null ? Input.empty() : this.deferredDeleteTimeRemaining;
@@ -100,7 +100,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="extendedInfo")
-    private final @Nullable Input<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo;
+        private final @Nullable Input<AzureVmWorkloadProtectedItemExtendedInfoArgs> extendedInfo;
 
     public Input<AzureVmWorkloadProtectedItemExtendedInfoArgs> getExtendedInfo() {
         return this.extendedInfo == null ? Input.empty() : this.extendedInfo;
@@ -111,7 +111,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -122,7 +122,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="isDeferredDeleteScheduleUpcoming")
-    private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
+        private final @Nullable Input<Boolean> isDeferredDeleteScheduleUpcoming;
 
     public Input<Boolean> getIsDeferredDeleteScheduleUpcoming() {
         return this.isDeferredDeleteScheduleUpcoming == null ? Input.empty() : this.isDeferredDeleteScheduleUpcoming;
@@ -133,7 +133,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="isRehydrate")
-    private final @Nullable Input<Boolean> isRehydrate;
+        private final @Nullable Input<Boolean> isRehydrate;
 
     public Input<Boolean> getIsRehydrate() {
         return this.isRehydrate == null ? Input.empty() : this.isRehydrate;
@@ -144,7 +144,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="isScheduledForDeferredDelete")
-    private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
+        private final @Nullable Input<Boolean> isScheduledForDeferredDelete;
 
     public Input<Boolean> getIsScheduledForDeferredDelete() {
         return this.isScheduledForDeferredDelete == null ? Input.empty() : this.isScheduledForDeferredDelete;
@@ -155,7 +155,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="kpisHealths")
-    private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
+        private final @Nullable Input<Map<String,KPIResourceHealthDetailsArgs>> kpisHealths;
 
     public Input<Map<String,KPIResourceHealthDetailsArgs>> getKpisHealths() {
         return this.kpisHealths == null ? Input.empty() : this.kpisHealths;
@@ -166,7 +166,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable Input<Either<String,LastBackupStatus>> lastBackupStatus;
+        private final @Nullable Input<Either<String,LastBackupStatus>> lastBackupStatus;
 
     public Input<Either<String,LastBackupStatus>> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Input.empty() : this.lastBackupStatus;
@@ -177,7 +177,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="lastBackupTime")
-    private final @Nullable Input<String> lastBackupTime;
+        private final @Nullable Input<String> lastBackupTime;
 
     public Input<String> getLastBackupTime() {
         return this.lastBackupTime == null ? Input.empty() : this.lastBackupTime;
@@ -188,7 +188,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="lastRecoveryPoint")
-    private final @Nullable Input<String> lastRecoveryPoint;
+        private final @Nullable Input<String> lastRecoveryPoint;
 
     public Input<String> getLastRecoveryPoint() {
         return this.lastRecoveryPoint == null ? Input.empty() : this.lastRecoveryPoint;
@@ -199,7 +199,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="parentName")
-    private final @Nullable Input<String> parentName;
+        private final @Nullable Input<String> parentName;
 
     public Input<String> getParentName() {
         return this.parentName == null ? Input.empty() : this.parentName;
@@ -210,7 +210,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="parentType")
-    private final @Nullable Input<String> parentType;
+        private final @Nullable Input<String> parentType;
 
     public Input<String> getParentType() {
         return this.parentType == null ? Input.empty() : this.parentType;
@@ -221,7 +221,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+        private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -232,7 +232,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="protectedItemDataSourceId")
-    private final @Nullable Input<String> protectedItemDataSourceId;
+        private final @Nullable Input<String> protectedItemDataSourceId;
 
     public Input<String> getProtectedItemDataSourceId() {
         return this.protectedItemDataSourceId == null ? Input.empty() : this.protectedItemDataSourceId;
@@ -243,7 +243,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="protectedItemHealthStatus")
-    private final @Nullable Input<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus;
+        private final @Nullable Input<Either<String,ProtectedItemHealthStatus>> protectedItemHealthStatus;
 
     public Input<Either<String,ProtectedItemHealthStatus>> getProtectedItemHealthStatus() {
         return this.protectedItemHealthStatus == null ? Input.empty() : this.protectedItemHealthStatus;
@@ -255,7 +255,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="protectedItemType", required=true)
-    private final Input<String> protectedItemType;
+        private final Input<String> protectedItemType;
 
     public Input<String> getProtectedItemType() {
         return this.protectedItemType;
@@ -266,7 +266,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="protectionState")
-    private final @Nullable Input<Either<String,ProtectionState>> protectionState;
+        private final @Nullable Input<Either<String,ProtectionState>> protectionState;
 
     public Input<Either<String,ProtectionState>> getProtectionState() {
         return this.protectionState == null ? Input.empty() : this.protectionState;
@@ -277,7 +277,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="protectionStatus")
-    private final @Nullable Input<String> protectionStatus;
+        private final @Nullable Input<String> protectionStatus;
 
     public Input<String> getProtectionStatus() {
         return this.protectionStatus == null ? Input.empty() : this.protectionStatus;
@@ -288,7 +288,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+        private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
@@ -299,7 +299,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+        private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -310,7 +310,7 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
      * 
      */
     @InputImport(name="workloadType")
-    private final @Nullable Input<Either<String,DataSourceType>> workloadType;
+        private final @Nullable Input<Either<String,DataSourceType>> workloadType;
 
     public Input<Either<String,DataSourceType>> getWorkloadType() {
         return this.workloadType == null ? Input.empty() : this.workloadType;
@@ -729,7 +729,6 @@ public final class AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs extends io.pu
             this.workloadType = Input.ofNullable(workloadType);
             return this;
         }
-
         public AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs build() {
             return new AzureVmWorkloadSAPHanaDatabaseProtectedItemArgs(backupManagementType, backupSetName, containerName, createMode, deferredDeleteTimeInUTC, deferredDeleteTimeRemaining, extendedInfo, friendlyName, isDeferredDeleteScheduleUpcoming, isRehydrate, isScheduledForDeferredDelete, kpisHealths, lastBackupStatus, lastBackupTime, lastRecoveryPoint, parentName, parentType, policyId, protectedItemDataSourceId, protectedItemHealthStatus, protectedItemType, protectionState, protectionStatus, serverName, sourceResourceId, workloadType);
         }

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamCopyCommand;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamProcessingConfiguration;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamRedshiftRetryOptions;
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamS3DestinationConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class DeliveryStreamRedshiftDestinationConfiguration {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public DeliveryStreamRedshiftDestinationConfiguration build() {
             return new DeliveryStreamRedshiftDestinationConfiguration(cloudWatchLoggingOptions, clusterJDBCURL, copyCommand, password, processingConfiguration, retryOptions, roleARN, s3BackupConfiguration, s3BackupMode, s3Configuration, username);
         }

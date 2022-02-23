@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoindexer;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.videoindexer.inputs.GetAccountArgs;
 import io.pulumi.azurenative.videoindexer.outputs.GetAccountResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

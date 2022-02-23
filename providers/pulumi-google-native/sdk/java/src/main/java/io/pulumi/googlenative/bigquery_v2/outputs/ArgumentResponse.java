@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class ArgumentResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ArgumentResponse build() {
             return new ArgumentResponse(argumentKind, dataType, mode, name);
         }

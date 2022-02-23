@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimeterStatusEgressPolicyEgressToOperation;
 import java.lang.String;
 import java.util.List;
@@ -89,7 +89,6 @@ public final class ServicePerimeterStatusEgressPolicyEgressTo {
             this.resources = resources;
             return this;
         }
-
         public ServicePerimeterStatusEgressPolicyEgressTo build() {
             return new ServicePerimeterStatusEgressPolicyEgressTo(operations, resources);
         }

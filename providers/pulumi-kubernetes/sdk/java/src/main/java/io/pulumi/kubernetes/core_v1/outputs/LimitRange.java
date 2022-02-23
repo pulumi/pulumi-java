@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LimitRangeSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class LimitRange {
             this.spec = spec;
             return this;
         }
-
         public LimitRange build() {
             return new LimitRange(apiVersion, kind, metadata, spec);
         }

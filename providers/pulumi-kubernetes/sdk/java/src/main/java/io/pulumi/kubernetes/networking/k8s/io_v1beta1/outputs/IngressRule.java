@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs.HTTPIngressRuleValue;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class IngressRule {
             this.http = http;
             return this;
         }
-
         public IngressRule build() {
             return new IngressRule(host, http);
         }

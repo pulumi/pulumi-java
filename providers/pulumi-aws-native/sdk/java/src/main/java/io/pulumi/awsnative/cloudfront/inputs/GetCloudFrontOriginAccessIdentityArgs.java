@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetCloudFrontOriginAccessIdentityArgs extends io.pulumi.resou
     public static final GetCloudFrontOriginAccessIdentityArgs Empty = new GetCloudFrontOriginAccessIdentityArgs();
 
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -51,7 +51,6 @@ public final class GetCloudFrontOriginAccessIdentityArgs extends io.pulumi.resou
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public GetCloudFrontOriginAccessIdentityArgs build() {
             return new GetCloudFrontOriginAccessIdentityArgs(id);
         }

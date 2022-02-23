@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate.outputs;
 import io.pulumi.azurenative.deviceupdate.outputs.DiagnosticStoragePropertiesResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.IotHubSettingsResponse;
 import io.pulumi.azurenative.deviceupdate.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -271,7 +271,6 @@ public final class GetInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(accountName, diagnosticStorageProperties, enableDiagnostics, id, iotHubs, location, name, provisioningState, systemData, tags, type);
         }

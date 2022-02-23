@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="isAvailable")
-    private final @Nullable Boolean isAvailable;
+        private final @Nullable Boolean isAvailable;
 
     public Optional<Boolean> getIsAvailable() {
         return this.isAvailable == null ? Optional.empty() : Optional.ofNullable(this.isAvailable);
@@ -35,7 +35,7 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sizeCategory")
-    private final @Nullable String sizeCategory;
+        private final @Nullable String sizeCategory;
 
     public Optional<String> getSizeCategory() {
         return this.sizeCategory == null ? Optional.empty() : Optional.ofNullable(this.sizeCategory);
@@ -84,7 +84,6 @@ public final class SizeAvailabilityResponse extends io.pulumi.resources.InvokeAr
             this.sizeCategory = sizeCategory;
             return this;
         }
-
         public SizeAvailabilityResponse build() {
             return new SizeAvailabilityResponse(isAvailable, sizeCategory);
         }

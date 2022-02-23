@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.TarGZipReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.TarReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.ZipDeflateReadSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="compressionProperties")
-    private final @Nullable Object compressionProperties;
+        private final @Nullable Object compressionProperties;
 
     public Object getCompressionProperties() {
         return this.compressionProperties == null ? null : this.compressionProperties;
@@ -39,7 +39,7 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -88,7 +88,6 @@ public final class JsonReadSettingsResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonReadSettingsResponse build() {
             return new JsonReadSettingsResponse(compressionProperties, type);
         }

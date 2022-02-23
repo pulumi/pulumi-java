@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse;
@@ -29,7 +29,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="categoricalValueSpec", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse categoricalValueSpec;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_CategoricalValueSpecResponse getCategoricalValueSpec() {
         return this.categoricalValueSpec;
@@ -40,7 +40,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="childParameterSpecs", required=true)
-    private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs;
+      private final List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> childParameterSpecs;
 
     public List<GoogleCloudMlV1_StudyConfig_ParameterSpecResponse> getChildParameterSpecs() {
         return this.childParameterSpecs;
@@ -51,7 +51,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="discreteValueSpec", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse discreteValueSpec;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_DiscreteValueSpecResponse getDiscreteValueSpec() {
         return this.discreteValueSpec;
@@ -62,7 +62,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="doubleValueSpec", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse doubleValueSpec;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_DoubleValueSpecResponse getDoubleValueSpec() {
         return this.doubleValueSpec;
@@ -73,7 +73,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="integerValueSpec", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse integerValueSpec;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_IntegerValueSpecResponse getIntegerValueSpec() {
         return this.integerValueSpec;
@@ -84,28 +84,28 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="parameter", required=true)
-    private final String parameter;
+      private final String parameter;
 
     public String getParameter() {
         return this.parameter;
     }
 
     @InputImport(name="parentCategoricalValues", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse parentCategoricalValues;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentCategoricalValueSpecResponse getParentCategoricalValues() {
         return this.parentCategoricalValues;
     }
 
     @InputImport(name="parentDiscreteValues", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse parentDiscreteValues;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentDiscreteValueSpecResponse getParentDiscreteValues() {
         return this.parentDiscreteValues;
     }
 
     @InputImport(name="parentIntValues", required=true)
-    private final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues;
+      private final GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse parentIntValues;
 
     public GoogleCloudMlV1_StudyConfigParameterSpec_MatchingParentIntValueSpecResponse getParentIntValues() {
         return this.parentIntValues;
@@ -116,7 +116,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="scaleType", required=true)
-    private final String scaleType;
+      private final String scaleType;
 
     public String getScaleType() {
         return this.scaleType;
@@ -127,7 +127,7 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -266,7 +266,6 @@ public final class GoogleCloudMlV1_StudyConfig_ParameterSpecResponse extends io.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudMlV1_StudyConfig_ParameterSpecResponse build() {
             return new GoogleCloudMlV1_StudyConfig_ParameterSpecResponse(categoricalValueSpec, childParameterSpecs, discreteValueSpec, doubleValueSpec, integerValueSpec, parameter, parentCategoricalValues, parentDiscreteValues, parentIntValues, scaleType, type);
         }

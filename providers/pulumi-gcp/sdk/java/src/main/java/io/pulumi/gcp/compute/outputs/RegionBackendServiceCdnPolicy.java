@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceCdnPolicyCacheKeyPolicy;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceCdnPolicyNegativeCachingPolicy;
 import java.lang.Boolean;
@@ -256,7 +256,6 @@ public final class RegionBackendServiceCdnPolicy {
             this.signedUrlCacheMaxAgeSec = signedUrlCacheMaxAgeSec;
             return this;
         }
-
         public RegionBackendServiceCdnPolicy build() {
             return new RegionBackendServiceCdnPolicy(cacheKeyPolicy, cacheMode, clientTtl, defaultTtl, maxTtl, negativeCaching, negativeCachingPolicies, serveWhileStale, signedUrlCacheMaxAgeSec);
         }

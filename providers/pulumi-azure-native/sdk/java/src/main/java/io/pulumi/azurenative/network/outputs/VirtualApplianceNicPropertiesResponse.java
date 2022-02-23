@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class VirtualApplianceNicPropertiesResponse {
             this.publicIpAddress = Objects.requireNonNull(publicIpAddress);
             return this;
         }
-
         public VirtualApplianceNicPropertiesResponse build() {
             return new VirtualApplianceNicPropertiesResponse(name, privateIpAddress, publicIpAddress);
         }

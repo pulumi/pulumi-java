@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.X509CertificateDetailsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final String certificate;
+      private final String certificate;
 
     public String getCertificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="format", required=true)
-    private final String format;
+      private final String format;
 
     public String getFormat() {
         return this.format;
@@ -44,7 +44,7 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="x509Details", required=true)
-    private final X509CertificateDetailsResponse x509Details;
+      private final X509CertificateDetailsResponse x509Details;
 
     public X509CertificateDetailsResponse getX509Details() {
         return this.x509Details;
@@ -103,7 +103,6 @@ public final class PublicKeyCertificateResponse extends io.pulumi.resources.Invo
             this.x509Details = Objects.requireNonNull(x509Details);
             return this;
         }
-
         public PublicKeyCertificateResponse build() {
             return new PublicKeyCertificateResponse(certificate, format, x509Details);
         }

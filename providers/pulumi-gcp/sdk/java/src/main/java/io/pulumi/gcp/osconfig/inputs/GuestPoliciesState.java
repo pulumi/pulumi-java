@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesAssignmentGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGetArgs;
@@ -31,7 +31,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assignment")
-    private final @Nullable Input<GuestPoliciesAssignmentGetArgs> assignment;
+        private final @Nullable Input<GuestPoliciesAssignmentGetArgs> assignment;
 
     public Input<GuestPoliciesAssignmentGetArgs> getAssignment() {
         return this.assignment == null ? Input.empty() : this.assignment;
@@ -43,7 +43,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -54,7 +54,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -81,7 +81,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="guestPolicyId")
-    private final @Nullable Input<String> guestPolicyId;
+        private final @Nullable Input<String> guestPolicyId;
 
     public Input<String> getGuestPolicyId() {
         return this.guestPolicyId == null ? Input.empty() : this.guestPolicyId;
@@ -95,7 +95,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -109,7 +109,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packageRepositories")
-    private final @Nullable Input<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories;
+        private final @Nullable Input<List<GuestPoliciesPackageRepositoryGetArgs>> packageRepositories;
 
     public Input<List<GuestPoliciesPackageRepositoryGetArgs>> getPackageRepositories() {
         return this.packageRepositories == null ? Input.empty() : this.packageRepositories;
@@ -121,7 +121,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="packages")
-    private final @Nullable Input<List<GuestPoliciesPackageGetArgs>> packages;
+        private final @Nullable Input<List<GuestPoliciesPackageGetArgs>> packages;
 
     public Input<List<GuestPoliciesPackageGetArgs>> getPackages() {
         return this.packages == null ? Input.empty() : this.packages;
@@ -133,7 +133,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -145,7 +145,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recipes")
-    private final @Nullable Input<List<GuestPoliciesRecipeGetArgs>> recipes;
+        private final @Nullable Input<List<GuestPoliciesRecipeGetArgs>> recipes;
 
     public Input<List<GuestPoliciesRecipeGetArgs>> getRecipes() {
         return this.recipes == null ? Input.empty() : this.recipes;
@@ -157,7 +157,7 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -351,7 +351,6 @@ public final class GuestPoliciesState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public GuestPoliciesState build() {
             return new GuestPoliciesState(assignment, createTime, description, etag, guestPolicyId, name, packageRepositories, packages, project, recipes, updateTime);
         }

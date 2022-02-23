@@ -6,7 +6,7 @@ package io.pulumi.azurenative.documentdb;
 import io.pulumi.azurenative.documentdb.inputs.CreateUpdateOptionsArgs;
 import io.pulumi.azurenative.documentdb.inputs.TableResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -44,7 +44,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<CreateUpdateOptionsArgs> options;
+        private final @Nullable Input<CreateUpdateOptionsArgs> options;
 
     public Input<CreateUpdateOptionsArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -55,7 +55,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<TableResourceArgs> resource;
+        private final Input<TableResourceArgs> resource;
 
     public Input<TableResourceArgs> getResource() {
         return this.resource;
@@ -66,7 +66,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tableName")
-    private final @Nullable Input<String> tableName;
+        private final @Nullable Input<String> tableName;
 
     public Input<String> getTableName() {
         return this.tableName == null ? Input.empty() : this.tableName;
@@ -88,7 +88,7 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,6 @@ public final class TableResourceTableArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public TableResourceTableArgs build() {
             return new TableResourceTableArgs(accountName, location, options, resource, resourceGroupName, tableName, tags);
         }

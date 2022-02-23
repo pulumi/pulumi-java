@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -77,7 +77,6 @@ public final class FirewallPolicyRuleSecureTagResponse extends io.pulumi.resourc
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public FirewallPolicyRuleSecureTagResponse build() {
             return new FirewallPolicyRuleSecureTagResponse(name, state);
         }

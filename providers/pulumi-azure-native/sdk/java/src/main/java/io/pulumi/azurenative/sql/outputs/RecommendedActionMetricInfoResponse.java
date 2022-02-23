@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class RecommendedActionMetricInfoResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public RecommendedActionMetricInfoResponse build() {
             return new RecommendedActionMetricInfoResponse(metricName, startTime, timeGrain, unit, value);
         }

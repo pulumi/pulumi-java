@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class PrincipalResponse {
             this.type = type;
             return this;
         }
-
         public PrincipalResponse build() {
             return new PrincipalResponse(displayName, email, id, type);
         }

@@ -30,7 +30,6 @@ public final class ListEASubscriptionListMigrationDatePostArgs extends io.pulumi
         public Builder(ListEASubscriptionListMigrationDatePostArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ListEASubscriptionListMigrationDatePostArgs build() {
             return new ListEASubscriptionListMigrationDatePostArgs();
         }

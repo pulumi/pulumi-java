@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurestack.outputs;
 
 import io.pulumi.azurenative.azurestack.outputs.DataDiskImageResponse;
 import io.pulumi.azurenative.azurestack.outputs.OsDiskImageResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -267,7 +267,6 @@ public final class ListProductDetailsResult {
             this.vmScaleSetEnabled = Objects.requireNonNull(vmScaleSetEnabled);
             return this;
         }
-
         public ListProductDetailsResult build() {
             return new ListProductDetailsResult(computeRole, dataDiskImages, galleryPackageBlobSasUri, isSystemExtension, osDiskImage, productKind, supportMultipleExtensions, uri, version, vmOsType, vmScaleSetEnabled);
         }

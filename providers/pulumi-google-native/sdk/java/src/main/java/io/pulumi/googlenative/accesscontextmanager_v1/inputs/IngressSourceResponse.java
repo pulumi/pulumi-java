@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IngressSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="accessLevel", required=true)
-    private final String accessLevel;
+      private final String accessLevel;
 
     public String getAccessLevel() {
         return this.accessLevel;
@@ -32,7 +32,7 @@ public final class IngressSourceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resource", required=true)
-    private final String resource;
+      private final String resource;
 
     public String getResource() {
         return this.resource;
@@ -81,7 +81,6 @@ public final class IngressSourceResponse extends io.pulumi.resources.InvokeArgs 
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public IngressSourceResponse build() {
             return new IngressSourceResponse(accessLevel, resource);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class HostPortRange {
             this.min = Objects.requireNonNull(min);
             return this;
         }
-
         public HostPortRange build() {
             return new HostPortRange(max, min);
         }

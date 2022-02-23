@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DistributedNodesInfoResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.InquiryInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
      * 
      */
     @InputImport(name="hostServerName")
-    private final @Nullable String hostServerName;
+        private final @Nullable String hostServerName;
 
     public Optional<String> getHostServerName() {
         return this.hostServerName == null ? Optional.empty() : Optional.ofNullable(this.hostServerName);
@@ -37,7 +37,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
      * 
      */
     @InputImport(name="inquiryInfo")
-    private final @Nullable InquiryInfoResponse inquiryInfo;
+        private final @Nullable InquiryInfoResponse inquiryInfo;
 
     public Optional<InquiryInfoResponse> getInquiryInfo() {
         return this.inquiryInfo == null ? Optional.empty() : Optional.ofNullable(this.inquiryInfo);
@@ -48,7 +48,7 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
      * 
      */
     @InputImport(name="nodesList")
-    private final @Nullable List<DistributedNodesInfoResponse> nodesList;
+        private final @Nullable List<DistributedNodesInfoResponse> nodesList;
 
     public List<DistributedNodesInfoResponse> getNodesList() {
         return this.nodesList == null ? List.of() : this.nodesList;
@@ -107,7 +107,6 @@ public final class AzureWorkloadContainerExtendedInfoResponse extends io.pulumi.
             this.nodesList = nodesList;
             return this;
         }
-
         public AzureWorkloadContainerExtendedInfoResponse build() {
             return new AzureWorkloadContainerExtendedInfoResponse(hostServerName, inquiryInfo, nodesList);
         }

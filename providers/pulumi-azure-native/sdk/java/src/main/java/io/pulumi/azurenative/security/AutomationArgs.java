@@ -9,7 +9,7 @@ import io.pulumi.azurenative.security.inputs.AutomationActionWorkspaceArgs;
 import io.pulumi.azurenative.security.inputs.AutomationScopeArgs;
 import io.pulumi.azurenative.security.inputs.AutomationSourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<Object>> actions;
+        private final @Nullable Input<List<Object>> actions;
 
     public Input<List<Object>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -39,7 +39,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationName")
-    private final @Nullable Input<String> automationName;
+        private final @Nullable Input<String> automationName;
 
     public Input<String> getAutomationName() {
         return this.automationName == null ? Input.empty() : this.automationName;
@@ -50,7 +50,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+        private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -72,7 +72,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -83,7 +83,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -94,7 +94,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -105,7 +105,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable Input<List<AutomationScopeArgs>> scopes;
+        private final @Nullable Input<List<AutomationScopeArgs>> scopes;
 
     public Input<List<AutomationScopeArgs>> getScopes() {
         return this.scopes == null ? Input.empty() : this.scopes;
@@ -116,7 +116,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sources")
-    private final @Nullable Input<List<AutomationSourceArgs>> sources;
+        private final @Nullable Input<List<AutomationSourceArgs>> sources;
 
     public Input<List<AutomationSourceArgs>> getSources() {
         return this.sources == null ? Input.empty() : this.sources;
@@ -127,7 +127,7 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -306,7 +306,6 @@ public final class AutomationArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AutomationArgs build() {
             return new AutomationArgs(actions, automationName, description, isEnabled, kind, location, resourceGroupName, scopes, sources, tags);
         }

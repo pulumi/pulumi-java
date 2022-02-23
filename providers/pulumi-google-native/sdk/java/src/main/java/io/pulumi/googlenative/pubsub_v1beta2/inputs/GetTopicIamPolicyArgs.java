@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetTopicIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetTopicIamPolicyArgs Empty = new GetTopicIamPolicyArgs();
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="topicId", required=true)
-    private final String topicId;
+      private final String topicId;
 
     public String getTopicId() {
         return this.topicId;
@@ -88,7 +88,6 @@ public final class GetTopicIamPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.topicId = Objects.requireNonNull(topicId);
             return this;
         }
-
         public GetTopicIamPolicyArgs build() {
             return new GetTopicIamPolicyArgs(optionsRequestedPolicyVersion, project, topicId);
         }

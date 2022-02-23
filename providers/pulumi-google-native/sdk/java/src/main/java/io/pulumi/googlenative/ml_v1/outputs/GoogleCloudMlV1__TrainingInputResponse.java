@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__EncryptionConfigResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__HyperparameterSpecResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__ReplicaConfigResponse;
@@ -584,7 +584,6 @@ public final class GoogleCloudMlV1__TrainingInputResponse {
             this.workerType = Objects.requireNonNull(workerType);
             return this;
         }
-
         public GoogleCloudMlV1__TrainingInputResponse build() {
             return new GoogleCloudMlV1__TrainingInputResponse(args, enableWebAccess, encryptionConfig, evaluatorConfig, evaluatorCount, evaluatorType, hyperparameters, jobDir, masterConfig, masterType, network, packageUris, parameterServerConfig, parameterServerCount, parameterServerType, pythonModule, pythonVersion, region, runtimeVersion, scaleTier, scheduling, serviceAccount, useChiefInTfConfig, workerConfig, workerCount, workerType);
         }

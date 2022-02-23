@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -15,14 +15,14 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
     public static final RouterStatusBestRoute Empty = new RouterStatusBestRoute();
 
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
     }
 
     @InputImport(name="destRange", required=true)
-    private final String destRange;
+        private final String destRange;
 
     public String getDestRange() {
         return this.destRange;
@@ -33,7 +33,7 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,63 +45,63 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+        private final String network;
 
     public String getNetwork() {
         return this.network;
     }
 
     @InputImport(name="nextHopGateway", required=true)
-    private final String nextHopGateway;
+        private final String nextHopGateway;
 
     public String getNextHopGateway() {
         return this.nextHopGateway;
     }
 
     @InputImport(name="nextHopIlb", required=true)
-    private final String nextHopIlb;
+        private final String nextHopIlb;
 
     public String getNextHopIlb() {
         return this.nextHopIlb;
     }
 
     @InputImport(name="nextHopInstance", required=true)
-    private final String nextHopInstance;
+        private final String nextHopInstance;
 
     public String getNextHopInstance() {
         return this.nextHopInstance;
     }
 
     @InputImport(name="nextHopInstanceZone", required=true)
-    private final String nextHopInstanceZone;
+        private final String nextHopInstanceZone;
 
     public String getNextHopInstanceZone() {
         return this.nextHopInstanceZone;
     }
 
     @InputImport(name="nextHopIp", required=true)
-    private final String nextHopIp;
+        private final String nextHopIp;
 
     public String getNextHopIp() {
         return this.nextHopIp;
     }
 
     @InputImport(name="nextHopNetwork", required=true)
-    private final String nextHopNetwork;
+        private final String nextHopNetwork;
 
     public String getNextHopNetwork() {
         return this.nextHopNetwork;
     }
 
     @InputImport(name="nextHopVpnTunnel", required=true)
-    private final String nextHopVpnTunnel;
+        private final String nextHopVpnTunnel;
 
     public String getNextHopVpnTunnel() {
         return this.nextHopVpnTunnel;
     }
 
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+        private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -113,21 +113,21 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+        private final String project;
 
     public String getProject() {
         return this.project;
     }
 
     @InputImport(name="selfLink", required=true)
-    private final String selfLink;
+        private final String selfLink;
 
     public String getSelfLink() {
         return this.selfLink;
     }
 
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+        private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
@@ -306,7 +306,6 @@ public final class RouterStatusBestRoute extends io.pulumi.resources.InvokeArgs 
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public RouterStatusBestRoute build() {
             return new RouterStatusBestRoute(description, destRange, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInstanceZone, nextHopIp, nextHopNetwork, nextHopVpnTunnel, priority, project, selfLink, tags);
         }

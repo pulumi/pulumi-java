@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.enums.ProjectStatus;
 import io.pulumi.awsnative.sagemaker.outputs.ServiceCatalogProvisionedProductDetailsProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -125,7 +125,6 @@ public final class GetProjectResult {
             this.serviceCatalogProvisionedProductDetails = serviceCatalogProvisionedProductDetails;
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(creationTime, projectArn, projectId, projectStatus, serviceCatalogProvisionedProductDetails);
         }

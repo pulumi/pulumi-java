@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ses.outputs;
 
 import io.pulumi.awsnative.ses.outputs.Template;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class GetTemplateResult {
             this.template = template;
             return this;
         }
-
         public GetTemplateResult build() {
             return new GetTemplateResult(id, template);
         }

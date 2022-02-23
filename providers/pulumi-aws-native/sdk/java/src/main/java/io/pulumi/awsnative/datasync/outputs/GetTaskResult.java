@@ -8,7 +8,7 @@ import io.pulumi.awsnative.datasync.outputs.TaskFilterRule;
 import io.pulumi.awsnative.datasync.outputs.TaskOptions;
 import io.pulumi.awsnative.datasync.outputs.TaskSchedule;
 import io.pulumi.awsnative.datasync.outputs.TaskTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -265,7 +265,6 @@ public final class GetTaskResult {
             this.taskArn = taskArn;
             return this;
         }
-
         public GetTaskResult build() {
             return new GetTaskResult(cloudWatchLogGroupArn, destinationNetworkInterfaceArns, errorCode, errorDetail, excludes, includes, name, options, schedule, sourceNetworkInterfaceArns, status, tags, taskArn);
         }

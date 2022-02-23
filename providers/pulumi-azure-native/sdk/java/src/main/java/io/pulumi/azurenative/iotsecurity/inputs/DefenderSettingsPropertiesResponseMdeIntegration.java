@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.iotsecurity.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration extends io.p
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -59,7 +59,6 @@ public final class DefenderSettingsPropertiesResponseMdeIntegration extends io.p
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DefenderSettingsPropertiesResponseMdeIntegration build() {
             return new DefenderSettingsPropertiesResponseMdeIntegration(status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IngressClassParametersReference;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class IngressClassSpec {
             this.parameters = parameters;
             return this;
         }
-
         public IngressClassSpec build() {
             return new IngressClassSpec(controller, parameters);
         }

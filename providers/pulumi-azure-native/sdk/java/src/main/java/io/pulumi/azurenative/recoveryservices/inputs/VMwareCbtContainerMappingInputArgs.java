@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable Input<String> instanceType;
+        private final @Nullable Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType == null ? Input.empty() : this.instanceType;
@@ -35,7 +35,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="keyVaultId", required=true)
-    private final Input<String> keyVaultId;
+        private final Input<String> keyVaultId;
 
     public Input<String> getKeyVaultId() {
         return this.keyVaultId;
@@ -46,7 +46,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-    private final Input<String> keyVaultUri;
+        private final Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri;
@@ -57,7 +57,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceBusConnectionStringSecretName", required=true)
-    private final Input<String> serviceBusConnectionStringSecretName;
+        private final Input<String> serviceBusConnectionStringSecretName;
 
     public Input<String> getServiceBusConnectionStringSecretName() {
         return this.serviceBusConnectionStringSecretName;
@@ -68,7 +68,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-    private final Input<String> storageAccountId;
+        private final Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId;
@@ -79,7 +79,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storageAccountSasSecretName", required=true)
-    private final Input<String> storageAccountSasSecretName;
+        private final Input<String> storageAccountSasSecretName;
 
     public Input<String> getStorageAccountSasSecretName() {
         return this.storageAccountSasSecretName;
@@ -90,7 +90,7 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="targetLocation", required=true)
-    private final Input<String> targetLocation;
+        private final Input<String> targetLocation;
 
     public Input<String> getTargetLocation() {
         return this.targetLocation;
@@ -224,7 +224,6 @@ public final class VMwareCbtContainerMappingInputArgs extends io.pulumi.resource
             this.targetLocation = Input.of(Objects.requireNonNull(targetLocation));
             return this;
         }
-
         public VMwareCbtContainerMappingInputArgs build() {
             return new VMwareCbtContainerMappingInputArgs(instanceType, keyVaultId, keyVaultUri, serviceBusConnectionStringSecretName, storageAccountId, storageAccountSasSecretName, targetLocation);
         }

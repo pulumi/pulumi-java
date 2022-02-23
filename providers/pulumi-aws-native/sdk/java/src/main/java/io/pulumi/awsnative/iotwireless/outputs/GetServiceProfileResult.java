@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.ServiceProfileLoRaWANServiceProfile;
 import io.pulumi.awsnative.iotwireless.outputs.ServiceProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class GetServiceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetServiceProfileResult build() {
             return new GetServiceProfileResult(arn, id, loRaWAN, name, tags);
         }

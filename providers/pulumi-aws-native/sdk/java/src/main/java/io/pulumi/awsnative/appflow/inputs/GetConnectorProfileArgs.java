@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConnectorProfileArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="connectorProfileName", required=true)
-    private final String connectorProfileName;
+        private final String connectorProfileName;
 
     public String getConnectorProfileName() {
         return this.connectorProfileName;
@@ -55,7 +55,6 @@ public final class GetConnectorProfileArgs extends io.pulumi.resources.InvokeArg
             this.connectorProfileName = Objects.requireNonNull(connectorProfileName);
             return this;
         }
-
         public GetConnectorProfileArgs build() {
             return new GetConnectorProfileArgs(connectorProfileName);
         }

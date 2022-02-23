@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class VpnGatewayVpnGatewayInterfaceResponse {
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public VpnGatewayVpnGatewayInterfaceResponse build() {
             return new VpnGatewayVpnGatewayInterfaceResponse(interconnectAttachment, ipAddress);
         }

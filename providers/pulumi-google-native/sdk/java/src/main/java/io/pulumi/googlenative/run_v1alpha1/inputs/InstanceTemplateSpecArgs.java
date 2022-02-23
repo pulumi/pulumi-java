@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.InstanceSpecArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<InstanceSpecArgs> spec;
+      private final @Nullable Input<InstanceSpecArgs> spec;
 
     public Input<InstanceSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -66,7 +66,6 @@ public final class InstanceTemplateSpecArgs extends io.pulumi.resources.Resource
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public InstanceTemplateSpecArgs build() {
             return new InstanceTemplateSpecArgs(spec);
         }

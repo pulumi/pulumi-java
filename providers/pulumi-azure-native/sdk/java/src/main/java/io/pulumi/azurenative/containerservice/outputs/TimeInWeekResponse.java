@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class TimeInWeekResponse {
             this.hourSlots = hourSlots;
             return this;
         }
-
         public TimeInWeekResponse build() {
             return new TimeInWeekResponse(day, hourSlots);
         }

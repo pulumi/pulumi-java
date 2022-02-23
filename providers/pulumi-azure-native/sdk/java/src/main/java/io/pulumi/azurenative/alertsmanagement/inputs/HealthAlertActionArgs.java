@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="actionGroupId")
-    private final @Nullable Input<String> actionGroupId;
+        private final @Nullable Input<String> actionGroupId;
 
     public Input<String> getActionGroupId() {
         return this.actionGroupId == null ? Input.empty() : this.actionGroupId;
@@ -35,7 +35,7 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="webHookProperties")
-    private final @Nullable Input<Map<String,String>> webHookProperties;
+        private final @Nullable Input<Map<String,String>> webHookProperties;
 
     public Input<Map<String,String>> getWebHookProperties() {
         return this.webHookProperties == null ? Input.empty() : this.webHookProperties;
@@ -94,7 +94,6 @@ public final class HealthAlertActionArgs extends io.pulumi.resources.ResourceArg
             this.webHookProperties = Input.ofNullable(webHookProperties);
             return this;
         }
-
         public HealthAlertActionArgs build() {
             return new HealthAlertActionArgs(actionGroupId, webHookProperties);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ingestDelay", required=true)
-    private final String ingestDelay;
+      private final String ingestDelay;
 
     public String getIngestDelay() {
         return this.ingestDelay;
@@ -32,7 +32,7 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="samplePeriod", required=true)
-    private final String samplePeriod;
+      private final String samplePeriod;
 
     public String getSamplePeriod() {
         return this.samplePeriod;
@@ -81,7 +81,6 @@ public final class MetricDescriptorMetadataResponse extends io.pulumi.resources.
             this.samplePeriod = Objects.requireNonNull(samplePeriod);
             return this;
         }
-
         public MetricDescriptorMetadataResponse build() {
             return new MetricDescriptorMetadataResponse(ingestDelay, samplePeriod);
         }

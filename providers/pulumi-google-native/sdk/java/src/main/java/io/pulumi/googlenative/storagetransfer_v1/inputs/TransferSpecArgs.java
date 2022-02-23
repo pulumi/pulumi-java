@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsS3DataArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureBlobStorageDataArgs;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.GcsDataArgs;
@@ -31,7 +31,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="awsS3DataSource")
-    private final @Nullable Input<AwsS3DataArgs> awsS3DataSource;
+      private final @Nullable Input<AwsS3DataArgs> awsS3DataSource;
 
     public Input<AwsS3DataArgs> getAwsS3DataSource() {
         return this.awsS3DataSource == null ? Input.empty() : this.awsS3DataSource;
@@ -42,7 +42,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureBlobStorageDataSource")
-    private final @Nullable Input<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
+      private final @Nullable Input<AzureBlobStorageDataArgs> azureBlobStorageDataSource;
 
     public Input<AzureBlobStorageDataArgs> getAzureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource == null ? Input.empty() : this.azureBlobStorageDataSource;
@@ -53,7 +53,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsDataSink")
-    private final @Nullable Input<GcsDataArgs> gcsDataSink;
+      private final @Nullable Input<GcsDataArgs> gcsDataSink;
 
     public Input<GcsDataArgs> getGcsDataSink() {
         return this.gcsDataSink == null ? Input.empty() : this.gcsDataSink;
@@ -64,7 +64,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsDataSource")
-    private final @Nullable Input<GcsDataArgs> gcsDataSource;
+      private final @Nullable Input<GcsDataArgs> gcsDataSource;
 
     public Input<GcsDataArgs> getGcsDataSource() {
         return this.gcsDataSource == null ? Input.empty() : this.gcsDataSource;
@@ -75,7 +75,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsIntermediateDataLocation")
-    private final @Nullable Input<GcsDataArgs> gcsIntermediateDataLocation;
+      private final @Nullable Input<GcsDataArgs> gcsIntermediateDataLocation;
 
     public Input<GcsDataArgs> getGcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation == null ? Input.empty() : this.gcsIntermediateDataLocation;
@@ -86,7 +86,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpDataSource")
-    private final @Nullable Input<HttpDataArgs> httpDataSource;
+      private final @Nullable Input<HttpDataArgs> httpDataSource;
 
     public Input<HttpDataArgs> getHttpDataSource() {
         return this.httpDataSource == null ? Input.empty() : this.httpDataSource;
@@ -97,7 +97,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectConditions")
-    private final @Nullable Input<ObjectConditionsArgs> objectConditions;
+      private final @Nullable Input<ObjectConditionsArgs> objectConditions;
 
     public Input<ObjectConditionsArgs> getObjectConditions() {
         return this.objectConditions == null ? Input.empty() : this.objectConditions;
@@ -108,7 +108,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixDataSink")
-    private final @Nullable Input<PosixFilesystemArgs> posixDataSink;
+      private final @Nullable Input<PosixFilesystemArgs> posixDataSink;
 
     public Input<PosixFilesystemArgs> getPosixDataSink() {
         return this.posixDataSink == null ? Input.empty() : this.posixDataSink;
@@ -119,7 +119,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="posixDataSource")
-    private final @Nullable Input<PosixFilesystemArgs> posixDataSource;
+      private final @Nullable Input<PosixFilesystemArgs> posixDataSource;
 
     public Input<PosixFilesystemArgs> getPosixDataSource() {
         return this.posixDataSource == null ? Input.empty() : this.posixDataSource;
@@ -130,7 +130,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sinkAgentPoolName")
-    private final @Nullable Input<String> sinkAgentPoolName;
+      private final @Nullable Input<String> sinkAgentPoolName;
 
     public Input<String> getSinkAgentPoolName() {
         return this.sinkAgentPoolName == null ? Input.empty() : this.sinkAgentPoolName;
@@ -141,7 +141,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAgentPoolName")
-    private final @Nullable Input<String> sourceAgentPoolName;
+      private final @Nullable Input<String> sourceAgentPoolName;
 
     public Input<String> getSourceAgentPoolName() {
         return this.sourceAgentPoolName == null ? Input.empty() : this.sourceAgentPoolName;
@@ -152,7 +152,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferManifest")
-    private final @Nullable Input<TransferManifestArgs> transferManifest;
+      private final @Nullable Input<TransferManifestArgs> transferManifest;
 
     public Input<TransferManifestArgs> getTransferManifest() {
         return this.transferManifest == null ? Input.empty() : this.transferManifest;
@@ -163,7 +163,7 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transferOptions")
-    private final @Nullable Input<TransferOptionsArgs> transferOptions;
+      private final @Nullable Input<TransferOptionsArgs> transferOptions;
 
     public Input<TransferOptionsArgs> getTransferOptions() {
         return this.transferOptions == null ? Input.empty() : this.transferOptions;
@@ -387,7 +387,6 @@ public final class TransferSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.transferOptions = Input.ofNullable(transferOptions);
             return this;
         }
-
         public TransferSpecArgs build() {
             return new TransferSpecArgs(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
         }

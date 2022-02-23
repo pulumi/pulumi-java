@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ManagementPolicySchemaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -138,7 +138,6 @@ public final class GetManagementPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementPolicyResult build() {
             return new GetManagementPolicyResult(id, lastModifiedTime, name, policy, type);
         }

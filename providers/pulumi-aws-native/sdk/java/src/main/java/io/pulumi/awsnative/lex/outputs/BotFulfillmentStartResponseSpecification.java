@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotMessageGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -92,7 +92,6 @@ public final class BotFulfillmentStartResponseSpecification {
             this.messageGroups = Objects.requireNonNull(messageGroups);
             return this;
         }
-
         public BotFulfillmentStartResponseSpecification build() {
             return new BotFulfillmentStartResponseSpecification(allowInterrupt, delayInSeconds, messageGroups);
         }

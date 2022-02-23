@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetArn")
-    private final @Nullable Input<String> targetArn;
+        private final @Nullable Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn == null ? Input.empty() : this.targetArn;
@@ -66,7 +66,6 @@ public final class FunctionDeadLetterConfigArgs extends io.pulumi.resources.Reso
             this.targetArn = Input.ofNullable(targetArn);
             return this;
         }
-
         public FunctionDeadLetterConfigArgs build() {
             return new FunctionDeadLetterConfigArgs(targetArn);
         }

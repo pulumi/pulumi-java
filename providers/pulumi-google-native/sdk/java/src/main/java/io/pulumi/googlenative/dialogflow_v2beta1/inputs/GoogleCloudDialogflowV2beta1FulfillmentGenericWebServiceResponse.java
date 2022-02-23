@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @InputImport(name="isCloudFunction", required=true)
-    private final Boolean isCloudFunction;
+      private final Boolean isCloudFunction;
 
     public Boolean getIsCloudFunction() {
         return this.isCloudFunction;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @InputImport(name="requestHeaders", required=true)
-    private final Map<String,String> requestHeaders;
+      private final Map<String,String> requestHeaders;
 
     public Map<String,String> getRequestHeaders() {
         return this.requestHeaders;
@@ -56,7 +56,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -67,7 +67,7 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -146,7 +146,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(isCloudFunction, password, requestHeaders, uri, username);
         }

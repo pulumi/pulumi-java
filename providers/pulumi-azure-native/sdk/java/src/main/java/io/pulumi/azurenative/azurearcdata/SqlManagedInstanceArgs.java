@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.ExtendedLocationArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstancePropertiesArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.SqlManagedInstanceSkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -34,7 +34,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,7 +45,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<SqlManagedInstancePropertiesArgs> properties;
+        private final Input<SqlManagedInstancePropertiesArgs> properties;
 
     public Input<SqlManagedInstancePropertiesArgs> getProperties() {
         return this.properties;
@@ -56,7 +56,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SqlManagedInstanceSkuArgs> sku;
+        private final @Nullable Input<SqlManagedInstanceSkuArgs> sku;
 
     public Input<SqlManagedInstanceSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -78,7 +78,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sqlManagedInstanceName")
-    private final @Nullable Input<String> sqlManagedInstanceName;
+        private final @Nullable Input<String> sqlManagedInstanceName;
 
     public Input<String> getSqlManagedInstanceName() {
         return this.sqlManagedInstanceName == null ? Input.empty() : this.sqlManagedInstanceName;
@@ -89,7 +89,7 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -223,7 +223,6 @@ public final class SqlManagedInstanceArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SqlManagedInstanceArgs build() {
             return new SqlManagedInstanceArgs(extendedLocation, location, properties, resourceGroupName, sku, sqlManagedInstanceName, tags);
         }

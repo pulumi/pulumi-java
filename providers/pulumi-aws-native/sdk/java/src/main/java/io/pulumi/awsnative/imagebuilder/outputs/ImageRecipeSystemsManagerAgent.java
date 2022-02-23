@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class ImageRecipeSystemsManagerAgent {
             this.uninstallAfterBuild = uninstallAfterBuild;
             return this;
         }
-
         public ImageRecipeSystemsManagerAgent build() {
             return new ImageRecipeSystemsManagerAgent(uninstallAfterBuild);
         }

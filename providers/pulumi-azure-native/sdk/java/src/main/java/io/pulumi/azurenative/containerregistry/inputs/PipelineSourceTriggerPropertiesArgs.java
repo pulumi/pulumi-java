@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.TriggerStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,TriggerStatus>> status;
+        private final Input<Either<String,TriggerStatus>> status;
 
     public Input<Either<String,TriggerStatus>> getStatus() {
         return this.status;
@@ -63,7 +63,6 @@ public final class PipelineSourceTriggerPropertiesArgs extends io.pulumi.resourc
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public PipelineSourceTriggerPropertiesArgs build() {
             return new PipelineSourceTriggerPropertiesArgs(status);
         }

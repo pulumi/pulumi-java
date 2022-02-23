@@ -5,8 +5,8 @@ package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.spanner_v1.DatabaseArgs;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionConfigResponse;
@@ -164,13 +164,6 @@ public class Database extends io.pulumi.resources.CustomResource {
         return this.versionRetentionPeriod;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Database(String name) {
-        super("google-native:spanner/v1:Database", name, DatabaseArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

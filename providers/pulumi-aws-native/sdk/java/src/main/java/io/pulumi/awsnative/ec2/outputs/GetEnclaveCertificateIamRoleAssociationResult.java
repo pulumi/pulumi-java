@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class GetEnclaveCertificateIamRoleAssociationResult {
             this.encryptionKmsKeyId = encryptionKmsKeyId;
             return this;
         }
-
         public GetEnclaveCertificateIamRoleAssociationResult build() {
             return new GetEnclaveCertificateIamRoleAssociationResult(certificateS3BucketName, certificateS3ObjectKey, encryptionKmsKeyId);
         }

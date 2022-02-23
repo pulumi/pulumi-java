@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.LicenseResourceRequirementsResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -194,7 +194,6 @@ public final class GetLicenseResult {
             this.transferable = Objects.requireNonNull(transferable);
             return this;
         }
-
         public GetLicenseResult build() {
             return new GetLicenseResult(creationTimestamp, description, kind, licenseCode, name, resourceRequirements, selfLink, transferable);
         }

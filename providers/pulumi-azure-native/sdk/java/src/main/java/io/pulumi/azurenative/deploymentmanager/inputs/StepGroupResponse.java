@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.PrePostStepResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dependsOnStepGroups")
-    private final @Nullable List<String> dependsOnStepGroups;
+        private final @Nullable List<String> dependsOnStepGroups;
 
     public List<String> getDependsOnStepGroups() {
         return this.dependsOnStepGroups == null ? List.of() : this.dependsOnStepGroups;
@@ -36,7 +36,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deploymentTargetId", required=true)
-    private final String deploymentTargetId;
+        private final String deploymentTargetId;
 
     public String getDeploymentTargetId() {
         return this.deploymentTargetId;
@@ -47,7 +47,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postDeploymentSteps")
-    private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
+        private final @Nullable List<PrePostStepResponse> postDeploymentSteps;
 
     public List<PrePostStepResponse> getPostDeploymentSteps() {
         return this.postDeploymentSteps == null ? List.of() : this.postDeploymentSteps;
@@ -69,7 +69,7 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preDeploymentSteps")
-    private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
+        private final @Nullable List<PrePostStepResponse> preDeploymentSteps;
 
     public List<PrePostStepResponse> getPreDeploymentSteps() {
         return this.preDeploymentSteps == null ? List.of() : this.preDeploymentSteps;
@@ -148,7 +148,6 @@ public final class StepGroupResponse extends io.pulumi.resources.InvokeArgs {
             this.preDeploymentSteps = preDeploymentSteps;
             return this;
         }
-
         public StepGroupResponse build() {
             return new StepGroupResponse(dependsOnStepGroups, deploymentTargetId, name, postDeploymentSteps, preDeploymentSteps);
         }

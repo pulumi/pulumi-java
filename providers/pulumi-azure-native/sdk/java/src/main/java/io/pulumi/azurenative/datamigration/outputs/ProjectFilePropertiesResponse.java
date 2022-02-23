@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class ProjectFilePropertiesResponse {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public ProjectFilePropertiesResponse build() {
             return new ProjectFilePropertiesResponse(extension, filePath, lastModified, mediaType, size);
         }

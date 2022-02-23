@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="numRetries", required=true)
-    private final Integer numRetries;
+      private final Integer numRetries;
 
     public Integer getNumRetries() {
         return this.numRetries;
@@ -35,7 +35,7 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="perTryTimeout", required=true)
-    private final DurationResponse perTryTimeout;
+      private final DurationResponse perTryTimeout;
 
     public DurationResponse getPerTryTimeout() {
         return this.perTryTimeout;
@@ -46,7 +46,7 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="retryConditions", required=true)
-    private final List<String> retryConditions;
+      private final List<String> retryConditions;
 
     public List<String> getRetryConditions() {
         return this.retryConditions;
@@ -105,7 +105,6 @@ public final class HttpRetryPolicyResponse extends io.pulumi.resources.InvokeArg
             this.retryConditions = Objects.requireNonNull(retryConditions);
             return this;
         }
-
         public HttpRetryPolicyResponse build() {
             return new HttpRetryPolicyResponse(numRetries, perTryTimeout, retryConditions);
         }

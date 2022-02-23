@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -37,7 +37,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lun")
-    private final @Nullable Input<Integer> lun;
+        private final @Nullable Input<Integer> lun;
 
     public Input<Integer> getLun() {
         return this.lun == null ? Input.empty() : this.lun;
@@ -48,7 +48,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -59,7 +59,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetWWNs")
-    private final @Nullable Input<List<String>> targetWWNs;
+        private final @Nullable Input<List<String>> targetWWNs;
 
     public Input<List<String>> getTargetWWNs() {
         return this.targetWWNs == null ? Input.empty() : this.targetWWNs;
@@ -70,7 +70,7 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="wwids")
-    private final @Nullable Input<List<String>> wwids;
+        private final @Nullable Input<List<String>> wwids;
 
     public Input<List<String>> getWwids() {
         return this.wwids == null ? Input.empty() : this.wwids;
@@ -174,7 +174,6 @@ public final class FCVolumeSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.wwids = Input.ofNullable(wwids);
             return this;
         }
-
         public FCVolumeSourceArgs build() {
             return new FCVolumeSourceArgs(fsType, lun, readOnly, targetWWNs, wwids);
         }

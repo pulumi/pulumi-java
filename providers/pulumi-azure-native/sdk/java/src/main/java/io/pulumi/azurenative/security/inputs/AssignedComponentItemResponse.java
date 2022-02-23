@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AssignedComponentItemResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -61,7 +61,6 @@ public final class AssignedComponentItemResponse extends io.pulumi.resources.Inv
             this.key = key;
             return this;
         }
-
         public AssignedComponentItemResponse build() {
             return new AssignedComponentItemResponse(key);
         }

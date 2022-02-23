@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class SnowflakeExportCopyCommandArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="additionalCopyOptions")
-    private final @Nullable Input<Map<String,Object>> additionalCopyOptions;
+        private final @Nullable Input<Map<String,Object>> additionalCopyOptions;
 
     public Input<Map<String,Object>> getAdditionalCopyOptions() {
         return this.additionalCopyOptions == null ? Input.empty() : this.additionalCopyOptions;
@@ -36,7 +36,7 @@ public final class SnowflakeExportCopyCommandArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="additionalFormatOptions")
-    private final @Nullable Input<Map<String,Object>> additionalFormatOptions;
+        private final @Nullable Input<Map<String,Object>> additionalFormatOptions;
 
     public Input<Map<String,Object>> getAdditionalFormatOptions() {
         return this.additionalFormatOptions == null ? Input.empty() : this.additionalFormatOptions;
@@ -48,7 +48,7 @@ public final class SnowflakeExportCopyCommandArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -122,7 +122,6 @@ public final class SnowflakeExportCopyCommandArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SnowflakeExportCopyCommandArgs build() {
             return new SnowflakeExportCopyCommandArgs(additionalCopyOptions, additionalFormatOptions, type);
         }

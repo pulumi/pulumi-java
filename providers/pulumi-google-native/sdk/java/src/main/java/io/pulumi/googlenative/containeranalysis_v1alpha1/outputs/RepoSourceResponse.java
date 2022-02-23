@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class RepoSourceResponse {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
-
         public RepoSourceResponse build() {
             return new RepoSourceResponse(branchName, commitSha, project, repoName, tagName);
         }

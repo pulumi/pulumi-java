@@ -16,7 +16,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetIdentityArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetVMProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -35,7 +35,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="additionalCapabilities")
-    private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
+        private final @Nullable Input<AdditionalCapabilitiesArgs> additionalCapabilities;
 
     public Input<AdditionalCapabilitiesArgs> getAdditionalCapabilities() {
         return this.additionalCapabilities == null ? Input.empty() : this.additionalCapabilities;
@@ -46,7 +46,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="automaticRepairsPolicy")
-    private final @Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
+        private final @Nullable Input<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
 
     public Input<AutomaticRepairsPolicyArgs> getAutomaticRepairsPolicy() {
         return this.automaticRepairsPolicy == null ? Input.empty() : this.automaticRepairsPolicy;
@@ -57,7 +57,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="doNotRunExtensionsOnOverprovisionedVMs")
-    private final @Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
+        private final @Nullable Input<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
 
     public Input<Boolean> getDoNotRunExtensionsOnOverprovisionedVMs() {
         return this.doNotRunExtensionsOnOverprovisionedVMs == null ? Input.empty() : this.doNotRunExtensionsOnOverprovisionedVMs;
@@ -68,7 +68,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -79,7 +79,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="hostGroup")
-    private final @Nullable Input<SubResourceArgs> hostGroup;
+        private final @Nullable Input<SubResourceArgs> hostGroup;
 
     public Input<SubResourceArgs> getHostGroup() {
         return this.hostGroup == null ? Input.empty() : this.hostGroup;
@@ -90,7 +90,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<VirtualMachineScaleSetIdentityArgs> identity;
+        private final @Nullable Input<VirtualMachineScaleSetIdentityArgs> identity;
 
     public Input<VirtualMachineScaleSetIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -101,7 +101,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -112,7 +112,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="orchestrationMode")
-    private final @Nullable Input<Either<String,OrchestrationMode>> orchestrationMode;
+        private final @Nullable Input<Either<String,OrchestrationMode>> orchestrationMode;
 
     public Input<Either<String,OrchestrationMode>> getOrchestrationMode() {
         return this.orchestrationMode == null ? Input.empty() : this.orchestrationMode;
@@ -123,7 +123,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="overprovision")
-    private final @Nullable Input<Boolean> overprovision;
+        private final @Nullable Input<Boolean> overprovision;
 
     public Input<Boolean> getOverprovision() {
         return this.overprovision == null ? Input.empty() : this.overprovision;
@@ -134,7 +134,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="plan")
-    private final @Nullable Input<PlanArgs> plan;
+        private final @Nullable Input<PlanArgs> plan;
 
     public Input<PlanArgs> getPlan() {
         return this.plan == null ? Input.empty() : this.plan;
@@ -145,7 +145,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="platformFaultDomainCount")
-    private final @Nullable Input<Integer> platformFaultDomainCount;
+        private final @Nullable Input<Integer> platformFaultDomainCount;
 
     public Input<Integer> getPlatformFaultDomainCount() {
         return this.platformFaultDomainCount == null ? Input.empty() : this.platformFaultDomainCount;
@@ -156,7 +156,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="proximityPlacementGroup")
-    private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
+        private final @Nullable Input<SubResourceArgs> proximityPlacementGroup;
 
     public Input<SubResourceArgs> getProximityPlacementGroup() {
         return this.proximityPlacementGroup == null ? Input.empty() : this.proximityPlacementGroup;
@@ -167,7 +167,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -178,7 +178,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="scaleInPolicy")
-    private final @Nullable Input<ScaleInPolicyArgs> scaleInPolicy;
+        private final @Nullable Input<ScaleInPolicyArgs> scaleInPolicy;
 
     public Input<ScaleInPolicyArgs> getScaleInPolicy() {
         return this.scaleInPolicy == null ? Input.empty() : this.scaleInPolicy;
@@ -189,7 +189,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="singlePlacementGroup")
-    private final @Nullable Input<Boolean> singlePlacementGroup;
+        private final @Nullable Input<Boolean> singlePlacementGroup;
 
     public Input<Boolean> getSinglePlacementGroup() {
         return this.singlePlacementGroup == null ? Input.empty() : this.singlePlacementGroup;
@@ -200,7 +200,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -211,7 +211,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -222,7 +222,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="upgradePolicy")
-    private final @Nullable Input<UpgradePolicyArgs> upgradePolicy;
+        private final @Nullable Input<UpgradePolicyArgs> upgradePolicy;
 
     public Input<UpgradePolicyArgs> getUpgradePolicy() {
         return this.upgradePolicy == null ? Input.empty() : this.upgradePolicy;
@@ -233,7 +233,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="virtualMachineProfile")
-    private final @Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
+        private final @Nullable Input<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
 
     public Input<VirtualMachineScaleSetVMProfileArgs> getVirtualMachineProfile() {
         return this.virtualMachineProfile == null ? Input.empty() : this.virtualMachineProfile;
@@ -244,7 +244,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="vmScaleSetName")
-    private final @Nullable Input<String> vmScaleSetName;
+        private final @Nullable Input<String> vmScaleSetName;
 
     public Input<String> getVmScaleSetName() {
         return this.vmScaleSetName == null ? Input.empty() : this.vmScaleSetName;
@@ -255,7 +255,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="zoneBalance")
-    private final @Nullable Input<Boolean> zoneBalance;
+        private final @Nullable Input<Boolean> zoneBalance;
 
     public Input<Boolean> getZoneBalance() {
         return this.zoneBalance == null ? Input.empty() : this.zoneBalance;
@@ -266,7 +266,7 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -625,7 +625,6 @@ public final class VirtualMachineScaleSetArgs extends io.pulumi.resources.Resour
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public VirtualMachineScaleSetArgs build() {
             return new VirtualMachineScaleSetArgs(additionalCapabilities, automaticRepairsPolicy, doNotRunExtensionsOnOverprovisionedVMs, extendedLocation, hostGroup, identity, location, orchestrationMode, overprovision, plan, platformFaultDomainCount, proximityPlacementGroup, resourceGroupName, scaleInPolicy, singlePlacementGroup, sku, tags, upgradePolicy, virtualMachineProfile, vmScaleSetName, zoneBalance, zones);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class CertificateTemplateIdentityConstraintsCelExpression {
             this.title = title;
             return this;
         }
-
         public CertificateTemplateIdentityConstraintsCelExpression build() {
             return new CertificateTemplateIdentityConstraintsCelExpression(description, expression, location, title);
         }

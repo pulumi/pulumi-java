@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsub_v1.outputs.MessageStoragePolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.SchemaSettingsResponse;
 import java.lang.Boolean;
@@ -183,7 +183,6 @@ public final class GetTopicResult {
             this.schemaSettings = Objects.requireNonNull(schemaSettings);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(kmsKeyName, labels, messageRetentionDuration, messageStoragePolicy, name, satisfiesPzs, schemaSettings);
         }

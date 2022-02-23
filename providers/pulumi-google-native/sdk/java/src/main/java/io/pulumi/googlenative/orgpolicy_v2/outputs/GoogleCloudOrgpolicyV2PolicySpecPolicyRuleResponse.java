@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleStringValuesResponse;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleTypeExprResponse;
 import java.lang.Boolean;
@@ -139,7 +139,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse(allowAll, condition, denyAll, enforce, values);
         }

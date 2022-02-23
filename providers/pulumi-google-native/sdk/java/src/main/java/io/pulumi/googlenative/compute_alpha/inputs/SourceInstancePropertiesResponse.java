@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.MetadataResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.NetworkInterfaceResponse;
@@ -31,7 +31,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="canIpForward", required=true)
-    private final Boolean canIpForward;
+      private final Boolean canIpForward;
 
     public Boolean getCanIpForward() {
         return this.canIpForward;
@@ -42,7 +42,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deletionProtection", required=true)
-    private final Boolean deletionProtection;
+      private final Boolean deletionProtection;
 
     public Boolean getDeletionProtection() {
         return this.deletionProtection;
@@ -53,7 +53,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -64,7 +64,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disks", required=true)
-    private final List<SavedAttachedDiskResponse> disks;
+      private final List<SavedAttachedDiskResponse> disks;
 
     public List<SavedAttachedDiskResponse> getDisks() {
         return this.disks;
@@ -75,7 +75,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="guestAccelerators", required=true)
-    private final List<AcceleratorConfigResponse> guestAccelerators;
+      private final List<AcceleratorConfigResponse> guestAccelerators;
 
     public List<AcceleratorConfigResponse> getGuestAccelerators() {
         return this.guestAccelerators;
@@ -86,7 +86,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyRevocationActionType", required=true)
-    private final String keyRevocationActionType;
+      private final String keyRevocationActionType;
 
     public String getKeyRevocationActionType() {
         return this.keyRevocationActionType;
@@ -97,7 +97,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -108,7 +108,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -119,7 +119,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final MetadataResponse metadata;
+      private final MetadataResponse metadata;
 
     public MetadataResponse getMetadata() {
         return this.metadata;
@@ -130,7 +130,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minCpuPlatform", required=true)
-    private final String minCpuPlatform;
+      private final String minCpuPlatform;
 
     public String getMinCpuPlatform() {
         return this.minCpuPlatform;
@@ -141,7 +141,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="networkInterfaces", required=true)
-    private final List<NetworkInterfaceResponse> networkInterfaces;
+      private final List<NetworkInterfaceResponse> networkInterfaces;
 
     public List<NetworkInterfaceResponse> getNetworkInterfaces() {
         return this.networkInterfaces;
@@ -152,7 +152,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="postKeyRevocationActionType", required=true)
-    private final String postKeyRevocationActionType;
+      private final String postKeyRevocationActionType;
 
     public String getPostKeyRevocationActionType() {
         return this.postKeyRevocationActionType;
@@ -163,7 +163,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scheduling", required=true)
-    private final SchedulingResponse scheduling;
+      private final SchedulingResponse scheduling;
 
     public SchedulingResponse getScheduling() {
         return this.scheduling;
@@ -174,7 +174,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceAccounts", required=true)
-    private final List<ServiceAccountResponse> serviceAccounts;
+      private final List<ServiceAccountResponse> serviceAccounts;
 
     public List<ServiceAccountResponse> getServiceAccounts() {
         return this.serviceAccounts;
@@ -185,7 +185,7 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tags", required=true)
-    private final TagsResponse tags;
+      private final TagsResponse tags;
 
     public TagsResponse getTags() {
         return this.tags;
@@ -364,7 +364,6 @@ public final class SourceInstancePropertiesResponse extends io.pulumi.resources.
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public SourceInstancePropertiesResponse build() {
             return new SourceInstancePropertiesResponse(canIpForward, deletionProtection, description, disks, guestAccelerators, keyRevocationActionType, labels, machineType, metadata, minCpuPlatform, networkInterfaces, postKeyRevocationActionType, scheduling, serviceAccounts, tags);
         }

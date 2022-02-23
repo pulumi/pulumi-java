@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayApiConfigFileArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
      * 
      */
     @InputImport(name="fileDescriptorSet")
-    private final @Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet;
+      private final @Nullable Input<ApigatewayApiConfigFileArgs> fileDescriptorSet;
 
     public Input<ApigatewayApiConfigFileArgs> getFileDescriptorSet() {
         return this.fileDescriptorSet == null ? Input.empty() : this.fileDescriptorSet;
@@ -35,7 +35,7 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> source;
+      private final @Nullable Input<List<ApigatewayApiConfigFileArgs>> source;
 
     public Input<List<ApigatewayApiConfigFileArgs>> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -94,7 +94,6 @@ public final class ApigatewayApiConfigGrpcServiceDefinitionArgs extends io.pulum
             this.source = Input.ofNullable(source);
             return this;
         }
-
         public ApigatewayApiConfigGrpcServiceDefinitionArgs build() {
             return new ApigatewayApiConfigGrpcServiceDefinitionArgs(fileDescriptorSet, source);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.outputs.DataSourceConfluenceAttachmentToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,6 @@ public final class DataSourceConfluenceAttachmentConfiguration {
             this.crawlAttachments = crawlAttachments;
             return this;
         }
-
         public DataSourceConfluenceAttachmentConfiguration build() {
             return new DataSourceConfluenceAttachmentConfiguration(attachmentFieldMappings, crawlAttachments);
         }

@@ -42,7 +42,7 @@ import io.pulumi.azurenative.datafactory.inputs.WaitActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebActivityArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebHookActivityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -63,7 +63,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="activities")
-    private final @Nullable Input<List<Object>> activities;
+        private final @Nullable Input<List<Object>> activities;
 
     public Input<List<Object>> getActivities() {
         return this.activities == null ? Input.empty() : this.activities;
@@ -74,7 +74,7 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -133,7 +133,6 @@ public final class SwitchCaseArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public SwitchCaseArgs build() {
             return new SwitchCaseArgs(activities, value);
         }

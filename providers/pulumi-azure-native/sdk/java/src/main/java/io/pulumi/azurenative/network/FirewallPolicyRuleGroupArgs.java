@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.FirewallPolicyFilterRuleArgs;
 import io.pulumi.azurenative.network.inputs.FirewallPolicyNatRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="firewallPolicyName", required=true)
-    private final Input<String> firewallPolicyName;
+        private final Input<String> firewallPolicyName;
 
     public Input<String> getFirewallPolicyName() {
         return this.firewallPolicyName;
@@ -35,7 +35,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -68,7 +68,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -79,7 +79,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ruleGroupName")
-    private final @Nullable Input<String> ruleGroupName;
+        private final @Nullable Input<String> ruleGroupName;
 
     public Input<String> getRuleGroupName() {
         return this.ruleGroupName == null ? Input.empty() : this.ruleGroupName;
@@ -90,7 +90,7 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules;
+        private final @Nullable Input<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> rules;
 
     public Input<List<Either<FirewallPolicyFilterRuleArgs,FirewallPolicyNatRuleArgs>>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -224,7 +224,6 @@ public final class FirewallPolicyRuleGroupArgs extends io.pulumi.resources.Resou
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public FirewallPolicyRuleGroupArgs build() {
             return new FirewallPolicyRuleGroupArgs(firewallPolicyName, id, name, priority, resourceGroupName, ruleGroupName, rules);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.EncryptionServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -118,7 +118,6 @@ public final class EncryptionServicesResponse {
             this.table = table;
             return this;
         }
-
         public EncryptionServicesResponse build() {
             return new EncryptionServicesResponse(blob, file, queue, table);
         }

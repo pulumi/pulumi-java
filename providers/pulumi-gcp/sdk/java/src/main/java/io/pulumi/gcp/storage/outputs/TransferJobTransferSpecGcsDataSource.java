@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class TransferJobTransferSpecGcsDataSource {
             this.path = path;
             return this;
         }
-
         public TransferJobTransferSpecGcsDataSource build() {
             return new TransferJobTransferSpecGcsDataSource(bucketName, path);
         }

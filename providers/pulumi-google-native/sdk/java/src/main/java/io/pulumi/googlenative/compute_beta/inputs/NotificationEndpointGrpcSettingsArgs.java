@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.DurationArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="authority")
-    private final @Nullable Input<String> authority;
+      private final @Nullable Input<String> authority;
 
     public Input<String> getAuthority() {
         return this.authority == null ? Input.empty() : this.authority;
@@ -36,7 +36,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+      private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -47,7 +47,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="payloadName")
-    private final @Nullable Input<String> payloadName;
+      private final @Nullable Input<String> payloadName;
 
     public Input<String> getPayloadName() {
         return this.payloadName == null ? Input.empty() : this.payloadName;
@@ -58,7 +58,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="resendInterval")
-    private final @Nullable Input<DurationArgs> resendInterval;
+      private final @Nullable Input<DurationArgs> resendInterval;
 
     public Input<DurationArgs> getResendInterval() {
         return this.resendInterval == null ? Input.empty() : this.resendInterval;
@@ -69,7 +69,7 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="retryDurationSec")
-    private final @Nullable Input<Integer> retryDurationSec;
+      private final @Nullable Input<Integer> retryDurationSec;
 
     public Input<Integer> getRetryDurationSec() {
         return this.retryDurationSec == null ? Input.empty() : this.retryDurationSec;
@@ -173,7 +173,6 @@ public final class NotificationEndpointGrpcSettingsArgs extends io.pulumi.resour
             this.retryDurationSec = Input.ofNullable(retryDurationSec);
             return this;
         }
-
         public NotificationEndpointGrpcSettingsArgs build() {
             return new NotificationEndpointGrpcSettingsArgs(authority, endpoint, payloadName, resendInterval, retryDurationSec);
         }

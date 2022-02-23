@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ParameterValidationResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="fields", required=true)
-    private final List<String> fields;
+      private final List<String> fields;
 
     public List<String> getFields() {
         return this.fields;
@@ -45,7 +45,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="validation", required=true)
-    private final ParameterValidationResponse validation;
+      private final ParameterValidationResponse validation;
 
     public ParameterValidationResponse getValidation() {
         return this.validation;
@@ -125,7 +125,6 @@ public final class TemplateParameterResponse extends io.pulumi.resources.InvokeA
             this.validation = Objects.requireNonNull(validation);
             return this;
         }
-
         public TemplateParameterResponse build() {
             return new TemplateParameterResponse(description, fields, name, validation);
         }

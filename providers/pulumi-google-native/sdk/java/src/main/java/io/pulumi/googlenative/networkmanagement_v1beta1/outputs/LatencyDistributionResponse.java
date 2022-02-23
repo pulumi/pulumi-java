@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.LatencyPercentileResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class LatencyDistributionResponse {
             this.latencyPercentiles = Objects.requireNonNull(latencyPercentiles);
             return this;
         }
-
         public LatencyDistributionResponse build() {
             return new LatencyDistributionResponse(latencyPercentiles);
         }

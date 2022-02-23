@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleActionArgs;
 import io.pulumi.gcp.storage.inputs.BucketLifecycleRuleConditionArgs;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<BucketLifecycleRuleActionArgs> action;
+        private final Input<BucketLifecycleRuleActionArgs> action;
 
     public Input<BucketLifecycleRuleActionArgs> getAction() {
         return this.action;
@@ -30,7 +30,7 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="condition", required=true)
-    private final Input<BucketLifecycleRuleConditionArgs> condition;
+        private final Input<BucketLifecycleRuleConditionArgs> condition;
 
     public Input<BucketLifecycleRuleConditionArgs> getCondition() {
         return this.condition;
@@ -89,7 +89,6 @@ public final class BucketLifecycleRuleArgs extends io.pulumi.resources.ResourceA
             this.condition = Input.of(Objects.requireNonNull(condition));
             return this;
         }
-
         public BucketLifecycleRuleArgs build() {
             return new BucketLifecycleRuleArgs(action, condition);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -99,7 +99,6 @@ public final class StorageLensSelectionCriteria {
             this.minStorageBytesPercentage = minStorageBytesPercentage;
             return this;
         }
-
         public StorageLensSelectionCriteria build() {
             return new StorageLensSelectionCriteria(delimiter, maxDepth, minStorageBytesPercentage);
         }

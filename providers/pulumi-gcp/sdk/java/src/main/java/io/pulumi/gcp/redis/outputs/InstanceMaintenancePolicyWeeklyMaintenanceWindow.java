@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.redis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.redis.outputs.InstanceMaintenancePolicyWeeklyMaintenanceWindowStartTime;
 import java.lang.String;
 import java.util.Objects;
@@ -130,7 +130,6 @@ public final class InstanceMaintenancePolicyWeeklyMaintenanceWindow {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public InstanceMaintenancePolicyWeeklyMaintenanceWindow build() {
             return new InstanceMaintenancePolicyWeeklyMaintenanceWindow(day, duration, startTime);
         }

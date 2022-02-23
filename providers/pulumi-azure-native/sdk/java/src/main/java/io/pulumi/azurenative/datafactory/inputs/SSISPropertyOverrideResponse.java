@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isSensitive")
-    private final @Nullable Boolean isSensitive;
+        private final @Nullable Boolean isSensitive;
 
     public Optional<Boolean> getIsSensitive() {
         return this.isSensitive == null ? Optional.empty() : Optional.ofNullable(this.isSensitive);
@@ -35,7 +35,7 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value", required=true)
-    private final Object value;
+        private final Object value;
 
     public Object getValue() {
         return this.value;
@@ -84,7 +84,6 @@ public final class SSISPropertyOverrideResponse extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SSISPropertyOverrideResponse build() {
             return new SSISPropertyOverrideResponse(isSensitive, value);
         }

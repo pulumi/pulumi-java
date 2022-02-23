@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobInventoryPolicyRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -119,7 +119,6 @@ public final class BlobInventoryPolicySchemaResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobInventoryPolicySchemaResponse build() {
             return new BlobInventoryPolicySchemaResponse(destination, enabled, rules, type);
         }

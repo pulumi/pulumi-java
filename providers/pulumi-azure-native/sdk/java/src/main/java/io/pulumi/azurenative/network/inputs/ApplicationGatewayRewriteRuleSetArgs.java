@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ApplicationGatewayRewriteRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="rewriteRules")
-    private final @Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
+        private final @Nullable Input<List<ApplicationGatewayRewriteRuleArgs>> rewriteRules;
 
     public Input<List<ApplicationGatewayRewriteRuleArgs>> getRewriteRules() {
         return this.rewriteRules == null ? Input.empty() : this.rewriteRules;
@@ -121,7 +121,6 @@ public final class ApplicationGatewayRewriteRuleSetArgs extends io.pulumi.resour
             this.rewriteRules = Input.ofNullable(rewriteRules);
             return this;
         }
-
         public ApplicationGatewayRewriteRuleSetArgs build() {
             return new ApplicationGatewayRewriteRuleSetArgs(id, name, rewriteRules);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServicePropertiesForGraphArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -32,7 +32,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<WebServicePropertiesForGraphArgs> properties;
+        private final Input<WebServicePropertiesForGraphArgs> properties;
 
     public Input<WebServicePropertiesForGraphArgs> getProperties() {
         return this.properties;
@@ -43,7 +43,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webServiceName")
-    private final @Nullable Input<String> webServiceName;
+        private final @Nullable Input<String> webServiceName;
 
     public Input<String> getWebServiceName() {
         return this.webServiceName == null ? Input.empty() : this.webServiceName;
@@ -169,7 +169,6 @@ public final class WebServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.webServiceName = Input.ofNullable(webServiceName);
             return this;
         }
-
         public WebServiceArgs build() {
             return new WebServiceArgs(location, properties, resourceGroupName, tags, webServiceName);
         }

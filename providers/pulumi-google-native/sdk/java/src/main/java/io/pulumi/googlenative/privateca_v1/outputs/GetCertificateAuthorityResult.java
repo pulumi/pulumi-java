@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.AccessUrlsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateDescriptionResponse;
@@ -396,7 +396,6 @@ public final class GetCertificateAuthorityResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateAuthorityResult build() {
             return new GetCertificateAuthorityResult(accessUrls, caCertificateDescriptions, config, createTime, deleteTime, expireTime, gcsBucket, keySpec, labels, lifetime, name, pemCaCertificates, state, subordinateConfig, tier, type, updateTime);
         }

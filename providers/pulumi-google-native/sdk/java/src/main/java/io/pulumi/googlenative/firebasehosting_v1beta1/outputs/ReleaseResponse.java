@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.VersionResponse;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class ReleaseResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReleaseResponse build() {
             return new ReleaseResponse(message, name, releaseTime, releaseUser, type, version);
         }

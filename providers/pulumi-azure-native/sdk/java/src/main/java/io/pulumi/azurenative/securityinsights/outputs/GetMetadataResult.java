@@ -9,7 +9,7 @@ import io.pulumi.azurenative.securityinsights.outputs.MetadataDependenciesRespon
 import io.pulumi.azurenative.securityinsights.outputs.MetadataSourceResponse;
 import io.pulumi.azurenative.securityinsights.outputs.MetadataSupportResponse;
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -398,7 +398,6 @@ public final class GetMetadataResult {
             this.version = version;
             return this;
         }
-
         public GetMetadataResult build() {
             return new GetMetadataResult(author, categories, contentId, dependencies, etag, firstPublishDate, id, kind, lastPublishDate, name, parentId, providers, source, support, systemData, type, version);
         }

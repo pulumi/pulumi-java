@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -210,7 +210,6 @@ public final class ListConfigurationStoreKeyValueResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListConfigurationStoreKeyValueResult build() {
             return new ListConfigurationStoreKeyValueResult(contentType, eTag, key, label, lastModified, locked, tags, value);
         }

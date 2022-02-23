@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPPrefixSkuResponse;
 import io.pulumi.azurenative.network.outputs.ReferencedPublicIpAddressResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -442,7 +442,6 @@ public final class GetPublicIPPrefixResult {
             this.zones = zones;
             return this;
         }
-
         public GetPublicIPPrefixResult build() {
             return new GetPublicIPPrefixResult(customIPPrefix, etag, extendedLocation, id, ipPrefix, ipTags, loadBalancerFrontendIpConfiguration, location, name, natGateway, prefixLength, provisioningState, publicIPAddressVersion, publicIPAddresses, resourceGuid, sku, tags, type, zones);
         }

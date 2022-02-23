@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="commitTimeStamp")
-    private final @Nullable String commitTimeStamp;
+        private final @Nullable String commitTimeStamp;
 
     public Optional<String> getCommitTimeStamp() {
         return this.commitTimeStamp == null ? Optional.empty() : Optional.ofNullable(this.commitTimeStamp);
@@ -34,7 +34,7 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -83,7 +83,6 @@ public final class MigrateSyncCompleteCommandInputResponse extends io.pulumi.res
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public MigrateSyncCompleteCommandInputResponse build() {
             return new MigrateSyncCompleteCommandInputResponse(commitTimeStamp, databaseName);
         }

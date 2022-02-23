@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfigurationSource;
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeConfigurationValues;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
     public static final ServiceCodeConfiguration Empty = new ServiceCodeConfiguration();
 
     @InputImport(name="codeConfigurationValues")
-    private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
+        private final @Nullable ServiceCodeConfigurationValues codeConfigurationValues;
 
     public Optional<ServiceCodeConfigurationValues> getCodeConfigurationValues() {
         return this.codeConfigurationValues == null ? Optional.empty() : Optional.ofNullable(this.codeConfigurationValues);
@@ -31,7 +31,7 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="configurationSource", required=true)
-    private final ServiceCodeConfigurationConfigurationSource configurationSource;
+        private final ServiceCodeConfigurationConfigurationSource configurationSource;
 
     public ServiceCodeConfigurationConfigurationSource getConfigurationSource() {
         return this.configurationSource;
@@ -80,7 +80,6 @@ public final class ServiceCodeConfiguration extends io.pulumi.resources.InvokeAr
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
-
         public ServiceCodeConfiguration build() {
             return new ServiceCodeConfiguration(codeConfigurationValues, configurationSource);
         }

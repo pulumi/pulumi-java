@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class SecurityPolicyDdosProtectionConfigResponse {
             this.ddosProtection = Objects.requireNonNull(ddosProtection);
             return this;
         }
-
         public SecurityPolicyDdosProtectionConfigResponse build() {
             return new SecurityPolicyDdosProtectionConfigResponse(ddosProtection);
         }

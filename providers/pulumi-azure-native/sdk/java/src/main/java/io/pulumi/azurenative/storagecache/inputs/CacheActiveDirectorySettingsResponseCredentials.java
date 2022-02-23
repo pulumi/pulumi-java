@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -32,7 +32,7 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -81,7 +81,6 @@ public final class CacheActiveDirectorySettingsResponseCredentials extends io.pu
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CacheActiveDirectorySettingsResponseCredentials build() {
             return new CacheActiveDirectorySettingsResponseCredentials(password, username);
         }

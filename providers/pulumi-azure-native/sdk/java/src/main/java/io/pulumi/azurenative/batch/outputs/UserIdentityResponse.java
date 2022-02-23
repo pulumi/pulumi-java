@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.AutoUserSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class UserIdentityResponse {
             this.userName = userName;
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(autoUser, userName);
         }

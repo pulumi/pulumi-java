@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="backendAddressPool")
-    private final @Nullable Input<SubResourceArgs> backendAddressPool;
+        private final @Nullable Input<SubResourceArgs> backendAddressPool;
 
     public Input<SubResourceArgs> getBackendAddressPool() {
         return this.backendAddressPool == null ? Input.empty() : this.backendAddressPool;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="backendHttpSettings")
-    private final @Nullable Input<SubResourceArgs> backendHttpSettings;
+        private final @Nullable Input<SubResourceArgs> backendHttpSettings;
 
     public Input<SubResourceArgs> getBackendHttpSettings() {
         return this.backendHttpSettings == null ? Input.empty() : this.backendHttpSettings;
@@ -47,7 +47,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="firewallPolicy")
-    private final @Nullable Input<SubResourceArgs> firewallPolicy;
+        private final @Nullable Input<SubResourceArgs> firewallPolicy;
 
     public Input<SubResourceArgs> getFirewallPolicy() {
         return this.firewallPolicy == null ? Input.empty() : this.firewallPolicy;
@@ -58,7 +58,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -69,7 +69,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -80,7 +80,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="paths")
-    private final @Nullable Input<List<String>> paths;
+        private final @Nullable Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths == null ? Input.empty() : this.paths;
@@ -91,7 +91,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="redirectConfiguration")
-    private final @Nullable Input<SubResourceArgs> redirectConfiguration;
+        private final @Nullable Input<SubResourceArgs> redirectConfiguration;
 
     public Input<SubResourceArgs> getRedirectConfiguration() {
         return this.redirectConfiguration == null ? Input.empty() : this.redirectConfiguration;
@@ -102,7 +102,7 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="rewriteRuleSet")
-    private final @Nullable Input<SubResourceArgs> rewriteRuleSet;
+        private final @Nullable Input<SubResourceArgs> rewriteRuleSet;
 
     public Input<SubResourceArgs> getRewriteRuleSet() {
         return this.rewriteRuleSet == null ? Input.empty() : this.rewriteRuleSet;
@@ -251,7 +251,6 @@ public final class ApplicationGatewayPathRuleArgs extends io.pulumi.resources.Re
             this.rewriteRuleSet = Input.ofNullable(rewriteRuleSet);
             return this;
         }
-
         public ApplicationGatewayPathRuleArgs build() {
             return new ApplicationGatewayPathRuleArgs(backendAddressPool, backendHttpSettings, firewallPolicy, id, name, paths, redirectConfiguration, rewriteRuleSet);
         }

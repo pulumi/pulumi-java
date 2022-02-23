@@ -11,7 +11,7 @@ import io.pulumi.awsnative.iotanalytics.inputs.DatasetTagArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetTriggerArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetVersioningConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,56 +23,56 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
     public static final DatasetArgs Empty = new DatasetArgs();
 
     @InputImport(name="actions", required=true)
-    private final Input<List<DatasetActionArgs>> actions;
+        private final Input<List<DatasetActionArgs>> actions;
 
     public Input<List<DatasetActionArgs>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="contentDeliveryRules")
-    private final @Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
+        private final @Nullable Input<List<DatasetContentDeliveryRuleArgs>> contentDeliveryRules;
 
     public Input<List<DatasetContentDeliveryRuleArgs>> getContentDeliveryRules() {
         return this.contentDeliveryRules == null ? Input.empty() : this.contentDeliveryRules;
     }
 
     @InputImport(name="datasetName")
-    private final @Nullable Input<String> datasetName;
+        private final @Nullable Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName == null ? Input.empty() : this.datasetName;
     }
 
     @InputImport(name="lateDataRules")
-    private final @Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules;
+        private final @Nullable Input<List<DatasetLateDataRuleArgs>> lateDataRules;
 
     public Input<List<DatasetLateDataRuleArgs>> getLateDataRules() {
         return this.lateDataRules == null ? Input.empty() : this.lateDataRules;
     }
 
     @InputImport(name="retentionPeriod")
-    private final @Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod;
+        private final @Nullable Input<DatasetRetentionPeriodArgs> retentionPeriod;
 
     public Input<DatasetRetentionPeriodArgs> getRetentionPeriod() {
         return this.retentionPeriod == null ? Input.empty() : this.retentionPeriod;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<DatasetTagArgs>> tags;
+        private final @Nullable Input<List<DatasetTagArgs>> tags;
 
     public Input<List<DatasetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="triggers")
-    private final @Nullable Input<List<DatasetTriggerArgs>> triggers;
+        private final @Nullable Input<List<DatasetTriggerArgs>> triggers;
 
     public Input<List<DatasetTriggerArgs>> getTriggers() {
         return this.triggers == null ? Input.empty() : this.triggers;
     }
 
     @InputImport(name="versioningConfiguration")
-    private final @Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration;
+        private final @Nullable Input<DatasetVersioningConfigurationArgs> versioningConfiguration;
 
     public Input<DatasetVersioningConfigurationArgs> getVersioningConfiguration() {
         return this.versioningConfiguration == null ? Input.empty() : this.versioningConfiguration;
@@ -221,7 +221,6 @@ public final class DatasetArgs extends io.pulumi.resources.ResourceArgs {
             this.versioningConfiguration = Input.ofNullable(versioningConfiguration);
             return this;
         }
-
         public DatasetArgs build() {
             return new DatasetArgs(actions, contentDeliveryRules, datasetName, lateDataRules, retentionPeriod, tags, triggers, versioningConfiguration);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageLinkOutSuggestionResponse(destinationName, uri);
         }

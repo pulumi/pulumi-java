@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.DataFlowResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowSinkResponse;
 import io.pulumi.azurenative.datafactory.outputs.DataFlowSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.TransformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -231,7 +231,6 @@ public final class MappingDataFlowResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MappingDataFlowResponse build() {
             return new MappingDataFlowResponse(annotations, description, folder, script, scriptLines, sinks, sources, transformations, type);
         }

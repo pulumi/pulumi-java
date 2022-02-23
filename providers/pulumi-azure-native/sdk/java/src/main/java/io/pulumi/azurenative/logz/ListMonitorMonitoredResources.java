@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.logz.inputs.ListMonitorMonitoredResourcesArgs;
 import io.pulumi.azurenative.logz.outputs.ListMonitorMonitoredResourcesResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

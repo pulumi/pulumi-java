@@ -12,7 +12,7 @@ import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionNetworkConf
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionStoppingConditionArgs;
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,49 +24,49 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
     public static final ModelQualityJobDefinitionArgs Empty = new ModelQualityJobDefinitionArgs();
 
     @InputImport(name="jobDefinitionName")
-    private final @Nullable Input<String> jobDefinitionName;
+        private final @Nullable Input<String> jobDefinitionName;
 
     public Input<String> getJobDefinitionName() {
         return this.jobDefinitionName == null ? Input.empty() : this.jobDefinitionName;
     }
 
     @InputImport(name="jobResources", required=true)
-    private final Input<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources;
+        private final Input<ModelQualityJobDefinitionMonitoringResourcesArgs> jobResources;
 
     public Input<ModelQualityJobDefinitionMonitoringResourcesArgs> getJobResources() {
         return this.jobResources;
     }
 
     @InputImport(name="modelQualityAppSpecification", required=true)
-    private final Input<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification;
+        private final Input<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> modelQualityAppSpecification;
 
     public Input<ModelQualityJobDefinitionModelQualityAppSpecificationArgs> getModelQualityAppSpecification() {
         return this.modelQualityAppSpecification;
     }
 
     @InputImport(name="modelQualityBaselineConfig")
-    private final @Nullable Input<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig;
+        private final @Nullable Input<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> modelQualityBaselineConfig;
 
     public Input<ModelQualityJobDefinitionModelQualityBaselineConfigArgs> getModelQualityBaselineConfig() {
         return this.modelQualityBaselineConfig == null ? Input.empty() : this.modelQualityBaselineConfig;
     }
 
     @InputImport(name="modelQualityJobInput", required=true)
-    private final Input<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput;
+        private final Input<ModelQualityJobDefinitionModelQualityJobInputArgs> modelQualityJobInput;
 
     public Input<ModelQualityJobDefinitionModelQualityJobInputArgs> getModelQualityJobInput() {
         return this.modelQualityJobInput;
     }
 
     @InputImport(name="modelQualityJobOutputConfig", required=true)
-    private final Input<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig;
+        private final Input<ModelQualityJobDefinitionMonitoringOutputConfigArgs> modelQualityJobOutputConfig;
 
     public Input<ModelQualityJobDefinitionMonitoringOutputConfigArgs> getModelQualityJobOutputConfig() {
         return this.modelQualityJobOutputConfig;
     }
 
     @InputImport(name="networkConfig")
-    private final @Nullable Input<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig;
+        private final @Nullable Input<ModelQualityJobDefinitionNetworkConfigArgs> networkConfig;
 
     public Input<ModelQualityJobDefinitionNetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -77,14 +77,14 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="stoppingCondition")
-    private final @Nullable Input<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
+        private final @Nullable Input<ModelQualityJobDefinitionStoppingConditionArgs> stoppingCondition;
 
     public Input<ModelQualityJobDefinitionStoppingConditionArgs> getStoppingCondition() {
         return this.stoppingCondition == null ? Input.empty() : this.stoppingCondition;
@@ -95,7 +95,7 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ModelQualityJobDefinitionTagArgs>> tags;
+        private final @Nullable Input<List<ModelQualityJobDefinitionTagArgs>> tags;
 
     public Input<List<ModelQualityJobDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -274,7 +274,6 @@ public final class ModelQualityJobDefinitionArgs extends io.pulumi.resources.Res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ModelQualityJobDefinitionArgs build() {
             return new ModelQualityJobDefinitionArgs(jobDefinitionName, jobResources, modelQualityAppSpecification, modelQualityBaselineConfig, modelQualityJobInput, modelQualityJobOutputConfig, networkConfig, roleArn, stoppingCondition, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -164,7 +164,6 @@ public final class PatchDeploymentPatchConfigZypper {
             this.withUpdate = withUpdate;
             return this;
         }
-
         public PatchDeploymentPatchConfigZypper build() {
             return new PatchDeploymentPatchConfigZypper(categories, excludes, exclusivePatches, severities, withOptional, withUpdate);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetGeoSpatialCountryCode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,14 +25,14 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="columns", required=true)
-    private final Input<List<String>> columns;
+        private final Input<List<String>> columns;
 
     public Input<List<String>> getColumns() {
         return this.columns;
     }
 
     @InputImport(name="countryCode")
-    private final @Nullable Input<DataSetGeoSpatialCountryCode> countryCode;
+        private final @Nullable Input<DataSetGeoSpatialCountryCode> countryCode;
 
     public Input<DataSetGeoSpatialCountryCode> getCountryCode() {
         return this.countryCode == null ? Input.empty() : this.countryCode;
@@ -43,7 +43,7 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -117,7 +117,6 @@ public final class DataSetGeoSpatialColumnGroupArgs extends io.pulumi.resources.
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public DataSetGeoSpatialColumnGroupArgs build() {
             return new DataSetGeoSpatialColumnGroupArgs(columns, countryCode, name);
         }

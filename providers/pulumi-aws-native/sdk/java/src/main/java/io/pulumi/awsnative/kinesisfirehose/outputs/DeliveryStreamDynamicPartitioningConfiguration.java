@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.outputs;
 
 import io.pulumi.awsnative.kinesisfirehose.outputs.DeliveryStreamRetryOptions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class DeliveryStreamDynamicPartitioningConfiguration {
             this.retryOptions = retryOptions;
             return this;
         }
-
         public DeliveryStreamDynamicPartitioningConfiguration build() {
             return new DeliveryStreamDynamicPartitioningConfiguration(enabled, retryOptions);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.kubernetesconfiguration.outputs.GitRepositoryDefini
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.KustomizationDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ObjectStatusDefinitionResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -419,7 +419,6 @@ public final class GetFluxConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFluxConfigurationResult build() {
             return new GetFluxConfigurationResult(complianceState, configurationProtectedSettings, errorMessage, gitRepository, id, kustomizations, lastSourceSyncedAt, lastSourceSyncedCommitId, name, namespace, provisioningState, repositoryPublicKey, scope, sourceKind, statuses, suspend, systemData, type);
         }

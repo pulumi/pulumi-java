@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.secretmanager_v1beta1.outputs.ReplicationResponse;
 import java.lang.String;
 import java.util.Map;
@@ -118,7 +118,6 @@ public final class GetSecretResult {
             this.replication = Objects.requireNonNull(replication);
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(createTime, labels, name, replication);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EventSourceMappingOnFailure extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable String destination;
+        private final @Nullable String destination;
 
     public Optional<String> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
@@ -61,7 +61,6 @@ public final class EventSourceMappingOnFailure extends io.pulumi.resources.Invok
             this.destination = destination;
             return this;
         }
-
         public EventSourceMappingOnFailure build() {
             return new EventSourceMappingOnFailure(destination);
         }

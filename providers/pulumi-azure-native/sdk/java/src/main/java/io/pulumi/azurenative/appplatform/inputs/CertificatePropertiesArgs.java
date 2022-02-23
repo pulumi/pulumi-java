@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certVersion")
-    private final @Nullable Input<String> certVersion;
+        private final @Nullable Input<String> certVersion;
 
     public Input<String> getCertVersion() {
         return this.certVersion == null ? Input.empty() : this.certVersion;
@@ -34,7 +34,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyVaultCertName", required=true)
-    private final Input<String> keyVaultCertName;
+        private final Input<String> keyVaultCertName;
 
     public Input<String> getKeyVaultCertName() {
         return this.keyVaultCertName;
@@ -45,7 +45,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="vaultUri", required=true)
-    private final Input<String> vaultUri;
+        private final Input<String> vaultUri;
 
     public Input<String> getVaultUri() {
         return this.vaultUri;
@@ -119,7 +119,6 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
             this.vaultUri = Input.of(Objects.requireNonNull(vaultUri));
             return this;
         }
-
         public CertificatePropertiesArgs build() {
             return new CertificatePropertiesArgs(certVersion, keyVaultCertName, vaultUri);
         }

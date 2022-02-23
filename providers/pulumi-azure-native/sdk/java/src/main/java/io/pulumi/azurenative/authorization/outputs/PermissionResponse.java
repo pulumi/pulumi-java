@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -118,7 +118,6 @@ public final class PermissionResponse {
             this.notDataActions = notDataActions;
             return this;
         }
-
         public PermissionResponse build() {
             return new PermissionResponse(actions, dataActions, notActions, notDataActions);
         }

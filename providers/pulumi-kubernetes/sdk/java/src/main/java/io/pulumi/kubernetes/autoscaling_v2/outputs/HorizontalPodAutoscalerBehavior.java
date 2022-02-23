@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.HPAScalingRules;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +82,6 @@ public final class HorizontalPodAutoscalerBehavior {
             this.scaleUp = scaleUp;
             return this;
         }
-
         public HorizontalPodAutoscalerBehavior build() {
             return new HorizontalPodAutoscalerBehavior(scaleDown, scaleUp);
         }

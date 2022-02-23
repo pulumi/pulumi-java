@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class GetTargetGrpcProxyResult {
             this.validateForProxyless = Objects.requireNonNull(validateForProxyless);
             return this;
         }
-
         public GetTargetGrpcProxyResult build() {
             return new GetTargetGrpcProxyResult(creationTimestamp, description, fingerprint, kind, name, selfLink, selfLinkWithId, urlMap, validateForProxyless);
         }

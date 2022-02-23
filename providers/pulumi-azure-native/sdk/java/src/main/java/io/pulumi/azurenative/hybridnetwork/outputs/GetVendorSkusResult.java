@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.NetworkFunctionTemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -247,7 +247,6 @@ public final class GetVendorSkusResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVendorSkusResult build() {
             return new GetVendorSkusResult(deploymentMode, id, managedApplicationParameters, managedApplicationTemplate, name, networkFunctionTemplate, preview, provisioningState, skuType, type);
         }

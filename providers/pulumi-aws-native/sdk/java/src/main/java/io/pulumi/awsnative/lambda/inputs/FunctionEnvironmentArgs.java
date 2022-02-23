@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Object> variables;
+        private final @Nullable Input<Object> variables;
 
     public Input<Object> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;
@@ -66,7 +66,6 @@ public final class FunctionEnvironmentArgs extends io.pulumi.resources.ResourceA
             this.variables = Input.ofNullable(variables);
             return this;
         }
-
         public FunctionEnvironmentArgs build() {
             return new FunctionEnvironmentArgs(variables);
         }

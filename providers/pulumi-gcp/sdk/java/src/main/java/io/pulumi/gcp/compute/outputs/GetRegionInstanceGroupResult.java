@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetRegionInstanceGroupInstance;
 import java.lang.Integer;
 import java.lang.String;
@@ -158,7 +158,6 @@ public final class GetRegionInstanceGroupResult {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public GetRegionInstanceGroupResult build() {
             return new GetRegionInstanceGroupResult(id, instances, name, project, region, selfLink, size);
         }

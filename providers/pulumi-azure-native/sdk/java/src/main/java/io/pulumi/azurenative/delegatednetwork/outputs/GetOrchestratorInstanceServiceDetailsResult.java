@@ -5,7 +5,7 @@ package io.pulumi.azurenative.delegatednetwork.outputs;
 
 import io.pulumi.azurenative.delegatednetwork.outputs.ControllerDetailsResponse;
 import io.pulumi.azurenative.delegatednetwork.outputs.OrchestratorIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -352,7 +352,6 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrchestratorInstanceServiceDetailsResult build() {
             return new GetOrchestratorInstanceServiceDetailsResult(apiServerEndpoint, clusterRootCA, controllerDetails, id, identity, kind, location, name, orchestratorAppId, orchestratorTenantId, privateLinkResourceId, provisioningState, resourceGuid, tags, type);
         }

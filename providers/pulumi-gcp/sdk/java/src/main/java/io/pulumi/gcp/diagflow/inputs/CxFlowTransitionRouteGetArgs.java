@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxFlowTransitionRouteTriggerFulfillmentGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<String> condition;
+        private final @Nullable Input<String> condition;
 
     public Input<String> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,7 +33,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="intent")
-    private final @Nullable Input<String> intent;
+        private final @Nullable Input<String> intent;
 
     public Input<String> getIntent() {
         return this.intent == null ? Input.empty() : this.intent;
@@ -45,7 +45,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetFlow")
-    private final @Nullable Input<String> targetFlow;
+        private final @Nullable Input<String> targetFlow;
 
     public Input<String> getTargetFlow() {
         return this.targetFlow == null ? Input.empty() : this.targetFlow;
@@ -69,7 +69,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="targetPage")
-    private final @Nullable Input<String> targetPage;
+        private final @Nullable Input<String> targetPage;
 
     public Input<String> getTargetPage() {
         return this.targetPage == null ? Input.empty() : this.targetPage;
@@ -81,7 +81,7 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="triggerFulfillment")
-    private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment;
+        private final @Nullable Input<CxFlowTransitionRouteTriggerFulfillmentGetArgs> triggerFulfillment;
 
     public Input<CxFlowTransitionRouteTriggerFulfillmentGetArgs> getTriggerFulfillment() {
         return this.triggerFulfillment == null ? Input.empty() : this.triggerFulfillment;
@@ -200,7 +200,6 @@ public final class CxFlowTransitionRouteGetArgs extends io.pulumi.resources.Reso
             this.triggerFulfillment = Input.ofNullable(triggerFulfillment);
             return this;
         }
-
         public CxFlowTransitionRouteGetArgs build() {
             return new CxFlowTransitionRouteGetArgs(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

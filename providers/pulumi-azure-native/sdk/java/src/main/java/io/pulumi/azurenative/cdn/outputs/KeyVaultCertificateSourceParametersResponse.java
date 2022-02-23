@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -194,7 +194,6 @@ public final class KeyVaultCertificateSourceParametersResponse {
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultCertificateSourceParametersResponse build() {
             return new KeyVaultCertificateSourceParametersResponse(deleteRule, odataType, resourceGroupName, secretName, secretVersion, subscriptionId, updateRule, vaultName);
         }

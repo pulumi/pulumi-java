@@ -7,7 +7,7 @@ import io.pulumi.awsnative.kendra.enums.DataSourceSharePointConfigurationSharePo
 import io.pulumi.awsnative.kendra.inputs.DataSourceS3Path;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
 import io.pulumi.awsnative.kendra.inputs.DataSourceVpcConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,84 +25,84 @@ public final class DataSourceSharePointConfiguration extends io.pulumi.resources
     public static final DataSourceSharePointConfiguration Empty = new DataSourceSharePointConfiguration();
 
     @InputImport(name="crawlAttachments")
-    private final @Nullable Boolean crawlAttachments;
+        private final @Nullable Boolean crawlAttachments;
 
     public Optional<Boolean> getCrawlAttachments() {
         return this.crawlAttachments == null ? Optional.empty() : Optional.ofNullable(this.crawlAttachments);
     }
 
     @InputImport(name="disableLocalGroups")
-    private final @Nullable Boolean disableLocalGroups;
+        private final @Nullable Boolean disableLocalGroups;
 
     public Optional<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Optional.empty() : Optional.ofNullable(this.disableLocalGroups);
     }
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable String documentTitleFieldName;
+        private final @Nullable String documentTitleFieldName;
 
     public Optional<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Optional.empty() : Optional.ofNullable(this.documentTitleFieldName);
     }
 
     @InputImport(name="exclusionPatterns")
-    private final @Nullable List<String> exclusionPatterns;
+        private final @Nullable List<String> exclusionPatterns;
 
     public List<String> getExclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-    private final @Nullable List<String> inclusionPatterns;
+        private final @Nullable List<String> inclusionPatterns;
 
     public List<String> getInclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @InputImport(name="secretArn", required=true)
-    private final String secretArn;
+        private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="sharePointVersion", required=true)
-    private final DataSourceSharePointConfigurationSharePointVersion sharePointVersion;
+        private final DataSourceSharePointConfigurationSharePointVersion sharePointVersion;
 
     public DataSourceSharePointConfigurationSharePointVersion getSharePointVersion() {
         return this.sharePointVersion;
     }
 
     @InputImport(name="sslCertificateS3Path")
-    private final @Nullable DataSourceS3Path sslCertificateS3Path;
+        private final @Nullable DataSourceS3Path sslCertificateS3Path;
 
     public Optional<DataSourceS3Path> getSslCertificateS3Path() {
         return this.sslCertificateS3Path == null ? Optional.empty() : Optional.ofNullable(this.sslCertificateS3Path);
     }
 
     @InputImport(name="urls", required=true)
-    private final List<String> urls;
+        private final List<String> urls;
 
     public List<String> getUrls() {
         return this.urls;
     }
 
     @InputImport(name="useChangeLog")
-    private final @Nullable Boolean useChangeLog;
+        private final @Nullable Boolean useChangeLog;
 
     public Optional<Boolean> getUseChangeLog() {
         return this.useChangeLog == null ? Optional.empty() : Optional.ofNullable(this.useChangeLog);
     }
 
     @InputImport(name="vpcConfiguration")
-    private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
+        private final @Nullable DataSourceVpcConfiguration vpcConfiguration;
 
     public Optional<DataSourceVpcConfiguration> getVpcConfiguration() {
         return this.vpcConfiguration == null ? Optional.empty() : Optional.ofNullable(this.vpcConfiguration);
@@ -251,7 +251,6 @@ public final class DataSourceSharePointConfiguration extends io.pulumi.resources
             this.vpcConfiguration = vpcConfiguration;
             return this;
         }
-
         public DataSourceSharePointConfiguration build() {
             return new DataSourceSharePointConfiguration(crawlAttachments, disableLocalGroups, documentTitleFieldName, exclusionPatterns, fieldMappings, inclusionPatterns, secretArn, sharePointVersion, sslCertificateS3Path, urls, useChangeLog, vpcConfiguration);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.FlowS3OutputFormatConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,21 +16,21 @@ public final class FlowS3DestinationProperties extends io.pulumi.resources.Invok
     public static final FlowS3DestinationProperties Empty = new FlowS3DestinationProperties();
 
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+        private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="bucketPrefix")
-    private final @Nullable String bucketPrefix;
+        private final @Nullable String bucketPrefix;
 
     public Optional<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Optional.empty() : Optional.ofNullable(this.bucketPrefix);
     }
 
     @InputImport(name="s3OutputFormatConfig")
-    private final @Nullable FlowS3OutputFormatConfig s3OutputFormatConfig;
+        private final @Nullable FlowS3OutputFormatConfig s3OutputFormatConfig;
 
     public Optional<FlowS3OutputFormatConfig> getS3OutputFormatConfig() {
         return this.s3OutputFormatConfig == null ? Optional.empty() : Optional.ofNullable(this.s3OutputFormatConfig);
@@ -89,7 +89,6 @@ public final class FlowS3DestinationProperties extends io.pulumi.resources.Invok
             this.s3OutputFormatConfig = s3OutputFormatConfig;
             return this;
         }
-
         public FlowS3DestinationProperties build() {
             return new FlowS3DestinationProperties(bucketName, bucketPrefix, s3OutputFormatConfig);
         }

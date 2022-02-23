@@ -9,7 +9,7 @@ import io.pulumi.azurenative.azurearcdata.inputs.OnPremisePropertyArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadServicePrincipalArgs;
 import io.pulumi.azurenative.azurearcdata.inputs.UploadWatermarkArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="basicLoginInformation")
-    private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
+        private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
 
     public Input<BasicLoginInformationArgs> getBasicLoginInformation() {
         return this.basicLoginInformation == null ? Input.empty() : this.basicLoginInformation;
@@ -40,7 +40,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="k8sRaw")
-    private final @Nullable Input<Object> k8sRaw;
+        private final @Nullable Input<Object> k8sRaw;
 
     public Input<Object> getK8sRaw() {
         return this.k8sRaw == null ? Input.empty() : this.k8sRaw;
@@ -51,7 +51,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastUploadedDate")
-    private final @Nullable Input<String> lastUploadedDate;
+        private final @Nullable Input<String> lastUploadedDate;
 
     public Input<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Input.empty() : this.lastUploadedDate;
@@ -62,7 +62,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="logAnalyticsWorkspaceConfig")
-    private final @Nullable Input<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
+        private final @Nullable Input<LogAnalyticsWorkspaceConfigArgs> logAnalyticsWorkspaceConfig;
 
     public Input<LogAnalyticsWorkspaceConfigArgs> getLogAnalyticsWorkspaceConfig() {
         return this.logAnalyticsWorkspaceConfig == null ? Input.empty() : this.logAnalyticsWorkspaceConfig;
@@ -73,7 +73,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="onPremiseProperty")
-    private final @Nullable Input<OnPremisePropertyArgs> onPremiseProperty;
+        private final @Nullable Input<OnPremisePropertyArgs> onPremiseProperty;
 
     public Input<OnPremisePropertyArgs> getOnPremiseProperty() {
         return this.onPremiseProperty == null ? Input.empty() : this.onPremiseProperty;
@@ -84,7 +84,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uploadServicePrincipal")
-    private final @Nullable Input<UploadServicePrincipalArgs> uploadServicePrincipal;
+        private final @Nullable Input<UploadServicePrincipalArgs> uploadServicePrincipal;
 
     public Input<UploadServicePrincipalArgs> getUploadServicePrincipal() {
         return this.uploadServicePrincipal == null ? Input.empty() : this.uploadServicePrincipal;
@@ -95,7 +95,7 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="uploadWatermark")
-    private final @Nullable Input<UploadWatermarkArgs> uploadWatermark;
+        private final @Nullable Input<UploadWatermarkArgs> uploadWatermark;
 
     public Input<UploadWatermarkArgs> getUploadWatermark() {
         return this.uploadWatermark == null ? Input.empty() : this.uploadWatermark;
@@ -229,7 +229,6 @@ public final class DataControllerPropertiesArgs extends io.pulumi.resources.Reso
             this.uploadWatermark = Input.ofNullable(uploadWatermark);
             return this;
         }
-
         public DataControllerPropertiesArgs build() {
             return new DataControllerPropertiesArgs(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, uploadServicePrincipal, uploadWatermark);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.HttpRedirectActionResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.HttpRouteActionResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class PathRuleResponse {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }
-
         public PathRuleResponse build() {
             return new PathRuleResponse(paths, routeAction, service, urlRedirect);
         }

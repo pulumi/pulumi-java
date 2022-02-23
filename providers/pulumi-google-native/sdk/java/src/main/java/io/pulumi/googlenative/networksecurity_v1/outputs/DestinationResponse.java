@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.HttpHeaderMatchResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class DestinationResponse {
             this.ports = Objects.requireNonNull(ports);
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(hosts, httpHeaderMatch, methods, ports);
         }

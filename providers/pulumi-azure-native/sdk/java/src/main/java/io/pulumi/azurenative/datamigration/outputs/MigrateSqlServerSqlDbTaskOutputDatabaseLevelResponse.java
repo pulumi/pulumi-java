@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DataItemMigrationSummaryResultResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -375,7 +375,6 @@ public final class MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputDatabaseLevelResponse(databaseName, endedOn, errorCount, errorPrefix, exceptionsAndWarnings, id, message, numberOfObjects, numberOfObjectsCompleted, objectSummary, resultPrefix, resultType, stage, startedOn, state, statusMessage);
         }

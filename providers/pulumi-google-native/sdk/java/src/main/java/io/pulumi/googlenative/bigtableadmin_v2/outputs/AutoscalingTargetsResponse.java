@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AutoscalingTargetsResponse {
             this.cpuUtilizationPercent = Objects.requireNonNull(cpuUtilizationPercent);
             return this;
         }
-
         public AutoscalingTargetsResponse build() {
             return new AutoscalingTargetsResponse(cpuUtilizationPercent);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class BodyDiagnosticSettingsResponse {
             this.bytes = bytes;
             return this;
         }
-
         public BodyDiagnosticSettingsResponse build() {
             return new BodyDiagnosticSettingsResponse(bytes);
         }

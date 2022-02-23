@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.KeyVaultKeyReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CacheEncryptionSettingsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="keyEncryptionKey")
-    private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
+        private final @Nullable KeyVaultKeyReferenceResponse keyEncryptionKey;
 
     public Optional<KeyVaultKeyReferenceResponse> getKeyEncryptionKey() {
         return this.keyEncryptionKey == null ? Optional.empty() : Optional.ofNullable(this.keyEncryptionKey);
@@ -61,7 +61,6 @@ public final class CacheEncryptionSettingsResponse extends io.pulumi.resources.I
             this.keyEncryptionKey = keyEncryptionKey;
             return this;
         }
-
         public CacheEncryptionSettingsResponse build() {
             return new CacheEncryptionSettingsResponse(keyEncryptionKey);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gameservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigScheduleGetArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerConfigScalingConfigSelectorGetArgs;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GameServerConfigScalingConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="fleetAutoscalerSpec", required=true)
-    private final Input<String> fleetAutoscalerSpec;
+        private final Input<String> fleetAutoscalerSpec;
 
     public Input<String> getFleetAutoscalerSpec() {
         return this.fleetAutoscalerSpec;
@@ -35,7 +35,7 @@ public final class GameServerConfigScalingConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class GameServerConfigScalingConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="schedules")
-    private final @Nullable Input<List<GameServerConfigScalingConfigScheduleGetArgs>> schedules;
+        private final @Nullable Input<List<GameServerConfigScalingConfigScheduleGetArgs>> schedules;
 
     public Input<List<GameServerConfigScalingConfigScheduleGetArgs>> getSchedules() {
         return this.schedules == null ? Input.empty() : this.schedules;
@@ -61,7 +61,7 @@ public final class GameServerConfigScalingConfigGetArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="selectors")
-    private final @Nullable Input<List<GameServerConfigScalingConfigSelectorGetArgs>> selectors;
+        private final @Nullable Input<List<GameServerConfigScalingConfigSelectorGetArgs>> selectors;
 
     public Input<List<GameServerConfigScalingConfigSelectorGetArgs>> getSelectors() {
         return this.selectors == null ? Input.empty() : this.selectors;
@@ -150,7 +150,6 @@ public final class GameServerConfigScalingConfigGetArgs extends io.pulumi.resour
             this.selectors = Input.ofNullable(selectors);
             return this;
         }
-
         public GameServerConfigScalingConfigGetArgs build() {
             return new GameServerConfigScalingConfigGetArgs(fleetAutoscalerSpec, name, schedules, selectors);
         }

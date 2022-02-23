@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.Hl7V2NotificationConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.ParserConfigResponse;
 import java.lang.Boolean;
@@ -142,7 +142,6 @@ public final class GetHl7V2StoreResult {
             this.rejectDuplicateMessage = Objects.requireNonNull(rejectDuplicateMessage);
             return this;
         }
-
         public GetHl7V2StoreResult build() {
             return new GetHl7V2StoreResult(labels, name, notificationConfigs, parserConfig, rejectDuplicateMessage);
         }

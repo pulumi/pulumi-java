@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayConfigResponse;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class GetFolderReplayResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetFolderReplayResult build() {
             return new GetFolderReplayResult(config, name, resultsSummary, state);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="keyResultStatement")
-    private final @Nullable Input<String> keyResultStatement;
+        private final @Nullable Input<String> keyResultStatement;
 
     public Input<String> getKeyResultStatement() {
         return this.keyResultStatement == null ? Input.empty() : this.keyResultStatement;
@@ -32,7 +32,7 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="statementByteBudget")
-    private final @Nullable Input<String> statementByteBudget;
+        private final @Nullable Input<String> statementByteBudget;
 
     public Input<String> getStatementByteBudget() {
         return this.statementByteBudget == null ? Input.empty() : this.statementByteBudget;
@@ -43,7 +43,7 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="statementTimeoutMs")
-    private final @Nullable Input<String> statementTimeoutMs;
+        private final @Nullable Input<String> statementTimeoutMs;
 
     public Input<String> getStatementTimeoutMs() {
         return this.statementTimeoutMs == null ? Input.empty() : this.statementTimeoutMs;
@@ -117,7 +117,6 @@ public final class JobQueryScriptOptionsArgs extends io.pulumi.resources.Resourc
             this.statementTimeoutMs = Input.ofNullable(statementTimeoutMs);
             return this;
         }
-
         public JobQueryScriptOptionsArgs build() {
             return new JobQueryScriptOptionsArgs(keyResultStatement, statementByteBudget, statementTimeoutMs);
         }

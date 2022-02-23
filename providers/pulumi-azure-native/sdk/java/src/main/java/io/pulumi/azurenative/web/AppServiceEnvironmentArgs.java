@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.inputs.NameValuePairArgs;
 import io.pulumi.azurenative.web.inputs.VirtualNetworkProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="clusterSettings")
-    private final @Nullable Input<List<NameValuePairArgs>> clusterSettings;
+        private final @Nullable Input<List<NameValuePairArgs>> clusterSettings;
 
     public Input<List<NameValuePairArgs>> getClusterSettings() {
         return this.clusterSettings == null ? Input.empty() : this.clusterSettings;
@@ -37,7 +37,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dnsSuffix")
-    private final @Nullable Input<String> dnsSuffix;
+        private final @Nullable Input<String> dnsSuffix;
 
     public Input<String> getDnsSuffix() {
         return this.dnsSuffix == null ? Input.empty() : this.dnsSuffix;
@@ -48,7 +48,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="frontEndScaleFactor")
-    private final @Nullable Input<Integer> frontEndScaleFactor;
+        private final @Nullable Input<Integer> frontEndScaleFactor;
 
     public Input<Integer> getFrontEndScaleFactor() {
         return this.frontEndScaleFactor == null ? Input.empty() : this.frontEndScaleFactor;
@@ -59,7 +59,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="internalLoadBalancingMode")
-    private final @Nullable Input<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
+        private final @Nullable Input<Either<String,LoadBalancingMode>> internalLoadBalancingMode;
 
     public Input<Either<String,LoadBalancingMode>> getInternalLoadBalancingMode() {
         return this.internalLoadBalancingMode == null ? Input.empty() : this.internalLoadBalancingMode;
@@ -70,7 +70,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ipsslAddressCount")
-    private final @Nullable Input<Integer> ipsslAddressCount;
+        private final @Nullable Input<Integer> ipsslAddressCount;
 
     public Input<Integer> getIpsslAddressCount() {
         return this.ipsslAddressCount == null ? Input.empty() : this.ipsslAddressCount;
@@ -81,7 +81,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -92,7 +92,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -103,7 +103,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="multiSize")
-    private final @Nullable Input<String> multiSize;
+        private final @Nullable Input<String> multiSize;
 
     public Input<String> getMultiSize() {
         return this.multiSize == null ? Input.empty() : this.multiSize;
@@ -114,7 +114,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -125,7 +125,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -136,7 +136,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -147,7 +147,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userWhitelistedIpRanges")
-    private final @Nullable Input<List<String>> userWhitelistedIpRanges;
+        private final @Nullable Input<List<String>> userWhitelistedIpRanges;
 
     public Input<List<String>> getUserWhitelistedIpRanges() {
         return this.userWhitelistedIpRanges == null ? Input.empty() : this.userWhitelistedIpRanges;
@@ -158,7 +158,7 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="virtualNetwork", required=true)
-    private final Input<VirtualNetworkProfileArgs> virtualNetwork;
+        private final Input<VirtualNetworkProfileArgs> virtualNetwork;
 
     public Input<VirtualNetworkProfileArgs> getVirtualNetwork() {
         return this.virtualNetwork;
@@ -382,7 +382,6 @@ public final class AppServiceEnvironmentArgs extends io.pulumi.resources.Resourc
             this.virtualNetwork = Input.of(Objects.requireNonNull(virtualNetwork));
             return this;
         }
-
         public AppServiceEnvironmentArgs build() {
             return new AppServiceEnvironmentArgs(clusterSettings, dnsSuffix, frontEndScaleFactor, internalLoadBalancingMode, ipsslAddressCount, kind, location, multiSize, name, resourceGroupName, tags, userWhitelistedIpRanges, virtualNetwork);
         }

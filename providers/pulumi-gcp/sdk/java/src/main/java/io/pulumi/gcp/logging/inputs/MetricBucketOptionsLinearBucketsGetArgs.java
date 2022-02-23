@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="numFiniteBuckets")
-    private final @Nullable Input<Integer> numFiniteBuckets;
+        private final @Nullable Input<Integer> numFiniteBuckets;
 
     public Input<Integer> getNumFiniteBuckets() {
         return this.numFiniteBuckets == null ? Input.empty() : this.numFiniteBuckets;
@@ -31,7 +31,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="offset")
-    private final @Nullable Input<Double> offset;
+        private final @Nullable Input<Double> offset;
 
     public Input<Double> getOffset() {
         return this.offset == null ? Input.empty() : this.offset;
@@ -42,7 +42,7 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<Double> width;
+        private final @Nullable Input<Double> width;
 
     public Input<Double> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -116,7 +116,6 @@ public final class MetricBucketOptionsLinearBucketsGetArgs extends io.pulumi.res
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public MetricBucketOptionsLinearBucketsGetArgs build() {
             return new MetricBucketOptionsLinearBucketsGetArgs(numFiniteBuckets, offset, width);
         }

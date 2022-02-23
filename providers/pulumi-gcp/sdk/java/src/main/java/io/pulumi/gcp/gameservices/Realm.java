@@ -5,8 +5,8 @@ package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.RealmArgs;
 import io.pulumi.gcp.gameservices.inputs.RealmState;
@@ -165,13 +165,6 @@ public class Realm extends io.pulumi.resources.CustomResource {
         return this.timeZone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Realm(String name) {
-        super("gcp:gameservices/realm:Realm", name, RealmArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

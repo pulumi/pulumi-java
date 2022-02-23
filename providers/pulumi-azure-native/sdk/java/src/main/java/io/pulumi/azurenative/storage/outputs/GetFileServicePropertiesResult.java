@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.outputs.CorsRulesResponse;
 import io.pulumi.azurenative.storage.outputs.DeleteRetentionPolicyResponse;
 import io.pulumi.azurenative.storage.outputs.ProtocolSettingsResponse;
 import io.pulumi.azurenative.storage.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -185,7 +185,6 @@ public final class GetFileServicePropertiesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFileServicePropertiesResult build() {
             return new GetFileServicePropertiesResult(cors, id, name, protocolSettings, shareDeleteRetentionPolicy, sku, type);
         }

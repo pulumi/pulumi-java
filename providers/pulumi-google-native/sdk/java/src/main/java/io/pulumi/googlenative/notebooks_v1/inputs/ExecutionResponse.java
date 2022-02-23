@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="executionTemplate", required=true)
-    private final ExecutionTemplateResponse executionTemplate;
+      private final ExecutionTemplateResponse executionTemplate;
 
     public ExecutionTemplateResponse getExecutionTemplate() {
         return this.executionTemplate;
@@ -66,7 +66,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobUri", required=true)
-    private final String jobUri;
+      private final String jobUri;
 
     public String getJobUri() {
         return this.jobUri;
@@ -77,7 +77,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -88,7 +88,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputNotebookFile", required=true)
-    private final String outputNotebookFile;
+      private final String outputNotebookFile;
 
     public String getOutputNotebookFile() {
         return this.outputNotebookFile;
@@ -99,7 +99,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -110,7 +110,7 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -229,7 +229,6 @@ public final class ExecutionResponse extends io.pulumi.resources.InvokeArgs {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public ExecutionResponse build() {
             return new ExecutionResponse(createTime, description, displayName, executionTemplate, jobUri, name, outputNotebookFile, state, updateTime);
         }

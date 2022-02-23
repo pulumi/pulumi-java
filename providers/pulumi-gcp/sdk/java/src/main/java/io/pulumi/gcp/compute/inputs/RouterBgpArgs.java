@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RouterBgpAdvertisedIpRangeArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-    private final @Nullable Input<String> advertiseMode;
+        private final @Nullable Input<String> advertiseMode;
 
     public Input<String> getAdvertiseMode() {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
@@ -40,7 +40,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-    private final @Nullable Input<List<String>> advertisedGroups;
+        private final @Nullable Input<List<String>> advertisedGroups;
 
     public Input<List<String>> getAdvertisedGroups() {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
@@ -56,7 +56,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-    private final @Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
+        private final @Nullable Input<List<RouterBgpAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     public Input<List<RouterBgpAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
@@ -70,7 +70,7 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="asn", required=true)
-    private final Input<Integer> asn;
+        private final Input<Integer> asn;
 
     public Input<Integer> getAsn() {
         return this.asn;
@@ -159,7 +159,6 @@ public final class RouterBgpArgs extends io.pulumi.resources.ResourceArgs {
             this.asn = Input.of(Objects.requireNonNull(asn));
             return this;
         }
-
         public RouterBgpArgs build() {
             return new RouterBgpArgs(advertiseMode, advertisedGroups, advertisedIpRanges, asn);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSignalRSharedPrivateLinkResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSignalRSharedPrivateLinkResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -39,7 +39,7 @@ public final class GetSignalRSharedPrivateLinkResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="sharedPrivateLinkResourceName", required=true)
-    private final String sharedPrivateLinkResourceName;
+        private final String sharedPrivateLinkResourceName;
 
     public String getSharedPrivateLinkResourceName() {
         return this.sharedPrivateLinkResourceName;
@@ -98,7 +98,6 @@ public final class GetSignalRSharedPrivateLinkResourceArgs extends io.pulumi.res
             this.sharedPrivateLinkResourceName = Objects.requireNonNull(sharedPrivateLinkResourceName);
             return this;
         }
-
         public GetSignalRSharedPrivateLinkResourceArgs build() {
             return new GetSignalRSharedPrivateLinkResourceArgs(resourceGroupName, resourceName, sharedPrivateLinkResourceName);
         }

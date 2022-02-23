@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends io.pul
      * 
      */
     @InputImport(name="failoverPolicy", required=true)
-    private final String failoverPolicy;
+        private final String failoverPolicy;
 
     public String getFailoverPolicy() {
         return this.failoverPolicy;
@@ -35,7 +35,7 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends io.pul
      * 
      */
     @InputImport(name="failoverWithDataLossGracePeriodMinutes")
-    private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
+        private final @Nullable Integer failoverWithDataLossGracePeriodMinutes;
 
     public Optional<Integer> getFailoverWithDataLossGracePeriodMinutes() {
         return this.failoverWithDataLossGracePeriodMinutes == null ? Optional.empty() : Optional.ofNullable(this.failoverWithDataLossGracePeriodMinutes);
@@ -84,7 +84,6 @@ public final class InstanceFailoverGroupReadWriteEndpointResponse extends io.pul
             this.failoverWithDataLossGracePeriodMinutes = failoverWithDataLossGracePeriodMinutes;
             return this;
         }
-
         public InstanceFailoverGroupReadWriteEndpointResponse build() {
             return new InstanceFailoverGroupReadWriteEndpointResponse(failoverPolicy, failoverWithDataLossGracePeriodMinutes);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.enums.ConfigFrequencyUnits;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,14 +16,14 @@ public final class ConfigFrequency extends io.pulumi.resources.InvokeArgs {
     public static final ConfigFrequency Empty = new ConfigFrequency();
 
     @InputImport(name="units")
-    private final @Nullable ConfigFrequencyUnits units;
+        private final @Nullable ConfigFrequencyUnits units;
 
     public Optional<ConfigFrequencyUnits> getUnits() {
         return this.units == null ? Optional.empty() : Optional.ofNullable(this.units);
     }
 
     @InputImport(name="value")
-    private final @Nullable Double value;
+        private final @Nullable Double value;
 
     public Optional<Double> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -72,7 +72,6 @@ public final class ConfigFrequency extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public ConfigFrequency build() {
             return new ConfigFrequency(units, value);
         }

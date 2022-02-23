@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SsisEnvironmentReferenceResponse;
 import io.pulumi.azurenative.synapse.outputs.SsisParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -208,7 +208,6 @@ public final class SsisProjectResponse {
             this.version = version;
             return this;
         }
-
         public SsisProjectResponse build() {
             return new SsisProjectResponse(description, environmentRefs, folderId, id, name, parameters, type, version);
         }

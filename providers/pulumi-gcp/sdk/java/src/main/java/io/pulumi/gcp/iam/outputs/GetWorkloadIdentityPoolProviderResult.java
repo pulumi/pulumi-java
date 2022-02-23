@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderAw;
 import io.pulumi.gcp.iam.outputs.GetWorkloadIdentityPoolProviderOidc;
 import java.lang.Boolean;
@@ -216,7 +216,6 @@ public final class GetWorkloadIdentityPoolProviderResult {
             this.workloadIdentityPoolProviderId = Objects.requireNonNull(workloadIdentityPoolProviderId);
             return this;
         }
-
         public GetWorkloadIdentityPoolProviderResult build() {
             return new GetWorkloadIdentityPoolProviderResult(attributeCondition, attributeMapping, aws, description, disabled, displayName, id, name, oidcs, project, state, workloadIdentityPoolId, workloadIdentityPoolProviderId);
         }

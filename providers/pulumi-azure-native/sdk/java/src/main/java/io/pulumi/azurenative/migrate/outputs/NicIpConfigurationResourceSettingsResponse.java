@@ -7,7 +7,7 @@ import io.pulumi.azurenative.migrate.outputs.LoadBalancerBackendAddressPoolRefer
 import io.pulumi.azurenative.migrate.outputs.LoadBalancerNatRuleReferenceResponse;
 import io.pulumi.azurenative.migrate.outputs.PublicIpReferenceResponse;
 import io.pulumi.azurenative.migrate.outputs.SubnetReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -208,7 +208,6 @@ public final class NicIpConfigurationResourceSettingsResponse {
             this.subnet = subnet;
             return this;
         }
-
         public NicIpConfigurationResourceSettingsResponse build() {
             return new NicIpConfigurationResourceSettingsResponse(loadBalancerBackendAddressPools, loadBalancerNatRules, name, primary, privateIpAddress, privateIpAllocationMethod, publicIp, subnet);
         }

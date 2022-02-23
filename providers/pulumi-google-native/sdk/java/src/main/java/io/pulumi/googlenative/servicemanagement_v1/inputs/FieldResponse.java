@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.OptionResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cardinality", required=true)
-    private final String cardinality;
+      private final String cardinality;
 
     public String getCardinality() {
         return this.cardinality;
@@ -36,7 +36,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="defaultValue", required=true)
-    private final String defaultValue;
+      private final String defaultValue;
 
     public String getDefaultValue() {
         return this.defaultValue;
@@ -47,7 +47,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jsonName", required=true)
-    private final String jsonName;
+      private final String jsonName;
 
     public String getJsonName() {
         return this.jsonName;
@@ -58,7 +58,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -69,7 +69,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -80,7 +80,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="number", required=true)
-    private final Integer number;
+      private final Integer number;
 
     public Integer getNumber() {
         return this.number;
@@ -91,7 +91,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oneofIndex", required=true)
-    private final Integer oneofIndex;
+      private final Integer oneofIndex;
 
     public Integer getOneofIndex() {
         return this.oneofIndex;
@@ -102,7 +102,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="options", required=true)
-    private final List<OptionResponse> options;
+      private final List<OptionResponse> options;
 
     public List<OptionResponse> getOptions() {
         return this.options;
@@ -113,7 +113,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packed", required=true)
-    private final Boolean packed;
+      private final Boolean packed;
 
     public Boolean getPacked() {
         return this.packed;
@@ -124,7 +124,7 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="typeUrl", required=true)
-    private final String typeUrl;
+      private final String typeUrl;
 
     public String getTypeUrl() {
         return this.typeUrl;
@@ -253,7 +253,6 @@ public final class FieldResponse extends io.pulumi.resources.InvokeArgs {
             this.typeUrl = Objects.requireNonNull(typeUrl);
             return this;
         }
-
         public FieldResponse build() {
             return new FieldResponse(cardinality, defaultValue, jsonName, kind, name, number, oneofIndex, options, packed, typeUrl);
         }

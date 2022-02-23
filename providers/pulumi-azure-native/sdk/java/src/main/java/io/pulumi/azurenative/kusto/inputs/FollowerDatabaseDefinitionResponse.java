@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="attachedDatabaseConfigurationName", required=true)
-    private final String attachedDatabaseConfigurationName;
+        private final String attachedDatabaseConfigurationName;
 
     public String getAttachedDatabaseConfigurationName() {
         return this.attachedDatabaseConfigurationName;
@@ -32,7 +32,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterResourceId", required=true)
-    private final String clusterResourceId;
+        private final String clusterResourceId;
 
     public String getClusterResourceId() {
         return this.clusterResourceId;
@@ -43,7 +43,7 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -102,7 +102,6 @@ public final class FollowerDatabaseDefinitionResponse extends io.pulumi.resource
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public FollowerDatabaseDefinitionResponse build() {
             return new FollowerDatabaseDefinitionResponse(attachedDatabaseConfigurationName, clusterResourceId, databaseName);
         }

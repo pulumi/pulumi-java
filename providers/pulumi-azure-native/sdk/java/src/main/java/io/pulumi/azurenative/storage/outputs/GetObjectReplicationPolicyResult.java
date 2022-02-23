@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.ObjectReplicationPolicyRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class GetObjectReplicationPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetObjectReplicationPolicyResult build() {
             return new GetObjectReplicationPolicyResult(destinationAccount, enabledTime, id, name, policyId, rules, sourceAccount, type);
         }

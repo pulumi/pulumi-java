@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.EventHandlerTemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -56,7 +56,6 @@ public final class EventHandlerSettingsResponse {
             this.items = items;
             return this;
         }
-
         public EventHandlerSettingsResponse build() {
             return new EventHandlerSettingsResponse(items);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class IPConfigResponse {
             this.staticIPAddress = staticIPAddress;
             return this;
         }
-
         public IPConfigResponse build() {
             return new IPConfigResponse(lBBackendAddressPoolIds, publicIpAddressId, staticIPAddress);
         }

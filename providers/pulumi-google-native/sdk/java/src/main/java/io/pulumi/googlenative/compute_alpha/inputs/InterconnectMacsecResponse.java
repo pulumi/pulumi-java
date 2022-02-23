@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InterconnectMacsecPreSharedKeyResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class InterconnectMacsecResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="failOpen", required=true)
-    private final Boolean failOpen;
+      private final Boolean failOpen;
 
     public Boolean getFailOpen() {
         return this.failOpen;
@@ -34,7 +34,7 @@ public final class InterconnectMacsecResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preSharedKeys", required=true)
-    private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
+      private final List<InterconnectMacsecPreSharedKeyResponse> preSharedKeys;
 
     public List<InterconnectMacsecPreSharedKeyResponse> getPreSharedKeys() {
         return this.preSharedKeys;
@@ -83,7 +83,6 @@ public final class InterconnectMacsecResponse extends io.pulumi.resources.Invoke
             this.preSharedKeys = Objects.requireNonNull(preSharedKeys);
             return this;
         }
-
         public InterconnectMacsecResponse build() {
             return new InterconnectMacsecResponse(failOpen, preSharedKeys);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileGcsResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyResourceFileRemoteResponse;
 import java.lang.Boolean;
@@ -119,7 +119,6 @@ public final class OSPolicyResourceFileResponse {
             this.remote = Objects.requireNonNull(remote);
             return this;
         }
-
         public OSPolicyResourceFileResponse build() {
             return new OSPolicyResourceFileResponse(allowInsecure, gcs, localPath, remote);
         }

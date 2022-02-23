@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StreamingPolicyWidevineConfigurationResponse extends io.pulum
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-    private final @Nullable String customLicenseAcquisitionUrlTemplate;
+        private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
     public Optional<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
@@ -61,7 +61,6 @@ public final class StreamingPolicyWidevineConfigurationResponse extends io.pulum
             this.customLicenseAcquisitionUrlTemplate = customLicenseAcquisitionUrlTemplate;
             return this;
         }
-
         public StreamingPolicyWidevineConfigurationResponse build() {
             return new StreamingPolicyWidevineConfigurationResponse(customLicenseAcquisitionUrlTemplate);
         }

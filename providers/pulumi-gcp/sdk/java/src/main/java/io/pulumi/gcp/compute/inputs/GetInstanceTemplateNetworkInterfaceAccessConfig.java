@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
      * 
      */
     @InputImport(name="natIp", required=true)
-    private final String natIp;
+        private final String natIp;
 
     public String getNatIp() {
         return this.natIp;
@@ -31,14 +31,14 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
      * 
      */
     @InputImport(name="networkTier", required=true)
-    private final String networkTier;
+        private final String networkTier;
 
     public String getNetworkTier() {
         return this.networkTier;
     }
 
     @InputImport(name="publicPtrDomainName", required=true)
-    private final String publicPtrDomainName;
+        private final String publicPtrDomainName;
 
     public String getPublicPtrDomainName() {
         return this.publicPtrDomainName;
@@ -97,7 +97,6 @@ public final class GetInstanceTemplateNetworkInterfaceAccessConfig extends io.pu
             this.publicPtrDomainName = Objects.requireNonNull(publicPtrDomainName);
             return this;
         }
-
         public GetInstanceTemplateNetworkInterfaceAccessConfig build() {
             return new GetInstanceTemplateNetworkInterfaceAccessConfig(natIp, networkTier, publicPtrDomainName);
         }

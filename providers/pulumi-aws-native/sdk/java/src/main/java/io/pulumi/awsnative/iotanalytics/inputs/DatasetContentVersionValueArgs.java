@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class DatasetContentVersionValueArgs extends io.pulumi.resources.Re
     public static final DatasetContentVersionValueArgs Empty = new DatasetContentVersionValueArgs();
 
     @InputImport(name="datasetName", required=true)
-    private final Input<String> datasetName;
+        private final Input<String> datasetName;
 
     public Input<String> getDatasetName() {
         return this.datasetName;
@@ -57,7 +57,6 @@ public final class DatasetContentVersionValueArgs extends io.pulumi.resources.Re
             this.datasetName = Input.of(Objects.requireNonNull(datasetName));
             return this;
         }
-
         public DatasetContentVersionValueArgs build() {
             return new DatasetContentVersionValueArgs(datasetName);
         }

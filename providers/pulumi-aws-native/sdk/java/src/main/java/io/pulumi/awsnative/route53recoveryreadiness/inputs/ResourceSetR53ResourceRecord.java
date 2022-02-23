@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoveryreadiness.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable String domainName;
+        private final @Nullable String domainName;
 
     public Optional<String> getDomainName() {
         return this.domainName == null ? Optional.empty() : Optional.ofNullable(this.domainName);
@@ -34,7 +34,7 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="recordSetId")
-    private final @Nullable String recordSetId;
+        private final @Nullable String recordSetId;
 
     public Optional<String> getRecordSetId() {
         return this.recordSetId == null ? Optional.empty() : Optional.ofNullable(this.recordSetId);
@@ -83,7 +83,6 @@ public final class ResourceSetR53ResourceRecord extends io.pulumi.resources.Invo
             this.recordSetId = recordSetId;
             return this;
         }
-
         public ResourceSetR53ResourceRecord build() {
             return new ResourceSetR53ResourceRecord(domainName, recordSetId);
         }

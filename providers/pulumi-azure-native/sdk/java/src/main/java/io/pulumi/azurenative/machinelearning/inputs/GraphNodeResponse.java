@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="assetId")
-    private final @Nullable String assetId;
+        private final @Nullable String assetId;
 
     public Optional<String> getAssetId() {
         return this.assetId == null ? Optional.empty() : Optional.ofNullable(this.assetId);
@@ -36,7 +36,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputId")
-    private final @Nullable String inputId;
+        private final @Nullable String inputId;
 
     public Optional<String> getInputId() {
         return this.inputId == null ? Optional.empty() : Optional.ofNullable(this.inputId);
@@ -47,7 +47,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputId")
-    private final @Nullable String outputId;
+        private final @Nullable String outputId;
 
     public Optional<String> getOutputId() {
         return this.outputId == null ? Optional.empty() : Optional.ofNullable(this.outputId);
@@ -58,7 +58,7 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,WebServiceParameterResponse> parameters;
+        private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
     public Map<String,WebServiceParameterResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -127,7 +127,6 @@ public final class GraphNodeResponse extends io.pulumi.resources.InvokeArgs {
             this.parameters = parameters;
             return this;
         }
-
         public GraphNodeResponse build() {
             return new GraphNodeResponse(assetId, inputId, outputId, parameters);
         }

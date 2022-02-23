@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class GetLinkedServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkedServerResult build() {
             return new GetLinkedServerResult(id, linkedRedisCacheId, linkedRedisCacheLocation, name, provisioningState, serverRole, type);
         }

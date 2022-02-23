@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="componentSeparator", required=true)
-    private final Integer componentSeparator;
+        private final Integer componentSeparator;
 
     public Integer getComponentSeparator() {
         return this.componentSeparator;
@@ -35,7 +35,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dataElementSeparator", required=true)
-    private final Integer dataElementSeparator;
+        private final Integer dataElementSeparator;
 
     public Integer getDataElementSeparator() {
         return this.dataElementSeparator;
@@ -46,7 +46,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="decimalPointIndicator", required=true)
-    private final String decimalPointIndicator;
+        private final String decimalPointIndicator;
 
     public String getDecimalPointIndicator() {
         return this.decimalPointIndicator;
@@ -57,7 +57,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="messageAssociationAssignedCode")
-    private final @Nullable String messageAssociationAssignedCode;
+        private final @Nullable String messageAssociationAssignedCode;
 
     public Optional<String> getMessageAssociationAssignedCode() {
         return this.messageAssociationAssignedCode == null ? Optional.empty() : Optional.ofNullable(this.messageAssociationAssignedCode);
@@ -68,7 +68,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="messageId")
-    private final @Nullable String messageId;
+        private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
@@ -79,7 +79,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="messageRelease")
-    private final @Nullable String messageRelease;
+        private final @Nullable String messageRelease;
 
     public Optional<String> getMessageRelease() {
         return this.messageRelease == null ? Optional.empty() : Optional.ofNullable(this.messageRelease);
@@ -90,7 +90,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="messageVersion")
-    private final @Nullable String messageVersion;
+        private final @Nullable String messageVersion;
 
     public Optional<String> getMessageVersion() {
         return this.messageVersion == null ? Optional.empty() : Optional.ofNullable(this.messageVersion);
@@ -101,7 +101,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="releaseIndicator", required=true)
-    private final Integer releaseIndicator;
+        private final Integer releaseIndicator;
 
     public Integer getReleaseIndicator() {
         return this.releaseIndicator;
@@ -112,7 +112,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="repetitionSeparator", required=true)
-    private final Integer repetitionSeparator;
+        private final Integer repetitionSeparator;
 
     public Integer getRepetitionSeparator() {
         return this.repetitionSeparator;
@@ -123,7 +123,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="segmentTerminator", required=true)
-    private final Integer segmentTerminator;
+        private final Integer segmentTerminator;
 
     public Integer getSegmentTerminator() {
         return this.segmentTerminator;
@@ -134,7 +134,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="segmentTerminatorSuffix", required=true)
-    private final String segmentTerminatorSuffix;
+        private final String segmentTerminatorSuffix;
 
     public String getSegmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
@@ -145,7 +145,7 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="targetNamespace")
-    private final @Nullable String targetNamespace;
+        private final @Nullable String targetNamespace;
 
     public Optional<String> getTargetNamespace() {
         return this.targetNamespace == null ? Optional.empty() : Optional.ofNullable(this.targetNamespace);
@@ -294,7 +294,6 @@ public final class EdifactDelimiterOverrideResponse extends io.pulumi.resources.
             this.targetNamespace = targetNamespace;
             return this;
         }
-
         public EdifactDelimiterOverrideResponse build() {
             return new EdifactDelimiterOverrideResponse(componentSeparator, dataElementSeparator, decimalPointIndicator, messageAssociationAssignedCode, messageId, messageRelease, messageVersion, releaseIndicator, repetitionSeparator, segmentTerminator, segmentTerminatorSuffix, targetNamespace);
         }

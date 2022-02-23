@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SasTokenInformationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="accessToken", required=true)
-    private final String accessToken;
+        private final String accessToken;
 
     public String getAccessToken() {
         return this.accessToken;
@@ -59,7 +59,6 @@ public final class SasTokenInformationResponse extends io.pulumi.resources.Invok
             this.accessToken = Objects.requireNonNull(accessToken);
             return this;
         }
-
         public SasTokenInformationResponse build() {
             return new SasTokenInformationResponse(accessToken);
         }

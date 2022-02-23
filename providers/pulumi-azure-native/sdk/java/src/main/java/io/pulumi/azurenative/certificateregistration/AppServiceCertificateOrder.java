@@ -11,8 +11,8 @@ import io.pulumi.azurenative.certificateregistration.outputs.SystemDataResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -385,13 +385,6 @@ public class AppServiceCertificateOrder extends io.pulumi.resources.CustomResour
         return this.validityInYears;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AppServiceCertificateOrder(String name) {
-        super("azure-native:certificateregistration:AppServiceCertificateOrder", name, AppServiceCertificateOrderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.KeyToPathResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class SecretVolumeSourceResponse {
             this.secretName = Objects.requireNonNull(secretName);
             return this;
         }
-
         public SecretVolumeSourceResponse build() {
             return new SecretVolumeSourceResponse(defaultMode, items, optional, secretName);
         }

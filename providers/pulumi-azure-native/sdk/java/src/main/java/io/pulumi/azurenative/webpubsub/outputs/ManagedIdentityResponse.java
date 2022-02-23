@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.UserAssignedIdentityPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -124,7 +124,6 @@ public final class ManagedIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public ManagedIdentityResponse build() {
             return new ManagedIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

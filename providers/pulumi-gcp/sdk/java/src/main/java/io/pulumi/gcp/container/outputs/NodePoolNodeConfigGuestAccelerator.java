@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class NodePoolNodeConfigGuestAccelerator {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodePoolNodeConfigGuestAccelerator build() {
             return new NodePoolNodeConfigGuestAccelerator(count, gpuPartitionSize, type);
         }

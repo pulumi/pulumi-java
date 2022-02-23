@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ReportDeliveryChannelProperties {
             this.s3KeyPrefix = s3KeyPrefix;
             return this;
         }
-
         public ReportDeliveryChannelProperties build() {
             return new ReportDeliveryChannelProperties(formats, s3BucketName, s3KeyPrefix);
         }

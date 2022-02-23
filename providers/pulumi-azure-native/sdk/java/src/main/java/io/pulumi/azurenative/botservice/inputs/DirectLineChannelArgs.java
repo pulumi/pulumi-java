@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.DirectLineChannelPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="channelName", required=true)
-    private final Input<String> channelName;
+        private final Input<String> channelName;
 
     public Input<String> getChannelName() {
         return this.channelName;
@@ -36,7 +36,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -47,7 +47,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,7 +58,7 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<DirectLineChannelPropertiesArgs> properties;
+        private final @Nullable Input<DirectLineChannelPropertiesArgs> properties;
 
     public Input<DirectLineChannelPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -147,7 +147,6 @@ public final class DirectLineChannelArgs extends io.pulumi.resources.ResourceArg
             this.properties = Input.ofNullable(properties);
             return this;
         }
-
         public DirectLineChannelArgs build() {
             return new DirectLineChannelArgs(channelName, etag, location, properties);
         }

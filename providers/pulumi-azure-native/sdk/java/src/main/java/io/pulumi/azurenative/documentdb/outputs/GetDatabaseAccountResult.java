@@ -16,7 +16,7 @@ import io.pulumi.azurenative.documentdb.outputs.PeriodicModeBackupPolicyResponse
 import io.pulumi.azurenative.documentdb.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.documentdb.outputs.VirtualNetworkRuleResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -785,7 +785,6 @@ public final class GetDatabaseAccountResult {
             this.writeLocations = Objects.requireNonNull(writeLocations);
             return this;
         }
-
         public GetDatabaseAccountResult build() {
             return new GetDatabaseAccountResult(apiProperties, backupPolicy, capabilities, connectorOffer, consistencyPolicy, cors, databaseAccountOfferType, defaultIdentity, disableKeyBasedMetadataWriteAccess, documentEndpoint, enableAnalyticalStorage, enableAutomaticFailover, enableCassandraConnector, enableFreeTier, enableMultipleWriteLocations, failoverPolicies, id, identity, ipRules, isVirtualNetworkFilterEnabled, keyVaultKeyUri, kind, location, locations, name, networkAclBypass, networkAclBypassResourceIds, privateEndpointConnections, provisioningState, publicNetworkAccess, readLocations, tags, type, virtualNetworkRules, writeLocations);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputResponse {
             this.finishDigit = Objects.requireNonNull(finishDigit);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3DtmfInputResponse build() {
             return new GoogleCloudDialogflowCxV3DtmfInputResponse(digits, finishDigit);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class ApplicationUrlDispatchRule {
             this.service = service;
             return this;
         }
-
         public ApplicationUrlDispatchRule build() {
             return new ApplicationUrlDispatchRule(domain, path, service);
         }

@@ -9,8 +9,8 @@ import io.pulumi.awsnative.emr.enums.StudioAuthMode;
 import io.pulumi.awsnative.emr.outputs.StudioTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -246,13 +246,6 @@ public class Studio extends io.pulumi.resources.CustomResource {
         return this.workspaceSecurityGroupId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Studio(String name) {
-        super("aws-native:emr:Studio", name, StudioArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

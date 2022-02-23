@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetDataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetOSDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -100,7 +100,6 @@ public final class VirtualMachineScaleSetStorageProfileResponse {
             this.osDisk = osDisk;
             return this;
         }
-
         public VirtualMachineScaleSetStorageProfileResponse build() {
             return new VirtualMachineScaleSetStorageProfileResponse(dataDisks, imageReference, osDisk);
         }

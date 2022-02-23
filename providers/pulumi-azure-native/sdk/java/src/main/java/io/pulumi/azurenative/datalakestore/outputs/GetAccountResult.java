@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datalakestore.outputs.EncryptionIdentityResponse;
 import io.pulumi.azurenative.datalakestore.outputs.FirewallRuleResponse;
 import io.pulumi.azurenative.datalakestore.outputs.TrustedIdProviderResponse;
 import io.pulumi.azurenative.datalakestore.outputs.VirtualNetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -543,7 +543,6 @@ public final class GetAccountResult {
             this.virtualNetworkRules = Objects.requireNonNull(virtualNetworkRules);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(accountId, creationTime, currentTier, defaultGroup, encryptionConfig, encryptionProvisioningState, encryptionState, endpoint, firewallAllowAzureIps, firewallRules, firewallState, id, identity, lastModifiedTime, location, name, newTier, provisioningState, state, tags, trustedIdProviderState, trustedIdProviders, type, virtualNetworkRules);
         }

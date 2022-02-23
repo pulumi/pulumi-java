@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
             this.targetThroughputUtilization = targetThroughputUtilization;
             return this;
         }
-
         public StandardAppVersionAutomaticScalingStandardSchedulerSettings build() {
             return new StandardAppVersionAutomaticScalingStandardSchedulerSettings(maxInstances, minInstances, targetCpuUtilization, targetThroughputUtilization);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.migrate.outputs;
 import io.pulumi.azurenative.migrate.outputs.DatabaseProjectSummaryResponse;
 import io.pulumi.azurenative.migrate.outputs.ServersProjectSummaryResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -144,7 +144,6 @@ public final class MigrateProjectPropertiesResponse {
             this.summary = Objects.requireNonNull(summary);
             return this;
         }
-
         public MigrateProjectPropertiesResponse build() {
             return new MigrateProjectPropertiesResponse(lastSummaryRefreshedTime, provisioningState, refreshSummaryState, registeredTools, summary);
         }

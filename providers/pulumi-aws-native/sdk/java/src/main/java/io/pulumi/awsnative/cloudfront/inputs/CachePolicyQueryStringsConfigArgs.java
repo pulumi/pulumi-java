@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
     public static final CachePolicyQueryStringsConfigArgs Empty = new CachePolicyQueryStringsConfigArgs();
 
     @InputImport(name="queryStringBehavior", required=true)
-    private final Input<String> queryStringBehavior;
+        private final Input<String> queryStringBehavior;
 
     public Input<String> getQueryStringBehavior() {
         return this.queryStringBehavior;
     }
 
     @InputImport(name="queryStrings")
-    private final @Nullable Input<List<String>> queryStrings;
+        private final @Nullable Input<List<String>> queryStrings;
 
     public Input<List<String>> getQueryStrings() {
         return this.queryStrings == null ? Input.empty() : this.queryStrings;
@@ -82,7 +82,6 @@ public final class CachePolicyQueryStringsConfigArgs extends io.pulumi.resources
             this.queryStrings = Input.ofNullable(queryStrings);
             return this;
         }
-
         public CachePolicyQueryStringsConfigArgs build() {
             return new CachePolicyQueryStringsConfigArgs(queryStringBehavior, queryStrings);
         }

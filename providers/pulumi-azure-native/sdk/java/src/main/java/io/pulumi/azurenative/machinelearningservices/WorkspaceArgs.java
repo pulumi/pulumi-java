@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.ServiceManagedResour
 import io.pulumi.azurenative.machinelearningservices.inputs.SharedPrivateLinkResourceArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowPublicAccessWhenBehindVnet")
-    private final @Nullable Input<Boolean> allowPublicAccessWhenBehindVnet;
+        private final @Nullable Input<Boolean> allowPublicAccessWhenBehindVnet;
 
     public Input<Boolean> getAllowPublicAccessWhenBehindVnet() {
         return this.allowPublicAccessWhenBehindVnet == null ? Input.empty() : this.allowPublicAccessWhenBehindVnet;
@@ -38,7 +38,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationInsights")
-    private final @Nullable Input<String> applicationInsights;
+        private final @Nullable Input<String> applicationInsights;
 
     public Input<String> getApplicationInsights() {
         return this.applicationInsights == null ? Input.empty() : this.applicationInsights;
@@ -49,7 +49,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerRegistry")
-    private final @Nullable Input<String> containerRegistry;
+        private final @Nullable Input<String> containerRegistry;
 
     public Input<String> getContainerRegistry() {
         return this.containerRegistry == null ? Input.empty() : this.containerRegistry;
@@ -60,7 +60,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -71,7 +71,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="discoveryUrl")
-    private final @Nullable Input<String> discoveryUrl;
+        private final @Nullable Input<String> discoveryUrl;
 
     public Input<String> getDiscoveryUrl() {
         return this.discoveryUrl == null ? Input.empty() : this.discoveryUrl;
@@ -82,7 +82,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryption")
-    private final @Nullable Input<EncryptionPropertyArgs> encryption;
+        private final @Nullable Input<EncryptionPropertyArgs> encryption;
 
     public Input<EncryptionPropertyArgs> getEncryption() {
         return this.encryption == null ? Input.empty() : this.encryption;
@@ -93,7 +93,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -104,7 +104,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hbiWorkspace")
-    private final @Nullable Input<Boolean> hbiWorkspace;
+        private final @Nullable Input<Boolean> hbiWorkspace;
 
     public Input<Boolean> getHbiWorkspace() {
         return this.hbiWorkspace == null ? Input.empty() : this.hbiWorkspace;
@@ -115,7 +115,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<IdentityArgs> identity;
+        private final @Nullable Input<IdentityArgs> identity;
 
     public Input<IdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -126,7 +126,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageBuildCompute")
-    private final @Nullable Input<String> imageBuildCompute;
+        private final @Nullable Input<String> imageBuildCompute;
 
     public Input<String> getImageBuildCompute() {
         return this.imageBuildCompute == null ? Input.empty() : this.imageBuildCompute;
@@ -137,7 +137,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyVault")
-    private final @Nullable Input<String> keyVault;
+        private final @Nullable Input<String> keyVault;
 
     public Input<String> getKeyVault() {
         return this.keyVault == null ? Input.empty() : this.keyVault;
@@ -148,7 +148,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -159,7 +159,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryUserAssignedIdentity")
-    private final @Nullable Input<String> primaryUserAssignedIdentity;
+        private final @Nullable Input<String> primaryUserAssignedIdentity;
 
     public Input<String> getPrimaryUserAssignedIdentity() {
         return this.primaryUserAssignedIdentity == null ? Input.empty() : this.primaryUserAssignedIdentity;
@@ -170,7 +170,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -181,7 +181,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceManagedResourcesSettings")
-    private final @Nullable Input<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
+        private final @Nullable Input<ServiceManagedResourcesSettingsArgs> serviceManagedResourcesSettings;
 
     public Input<ServiceManagedResourcesSettingsArgs> getServiceManagedResourcesSettings() {
         return this.serviceManagedResourcesSettings == null ? Input.empty() : this.serviceManagedResourcesSettings;
@@ -192,7 +192,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedPrivateLinkResources")
-    private final @Nullable Input<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
+        private final @Nullable Input<List<SharedPrivateLinkResourceArgs>> sharedPrivateLinkResources;
 
     public Input<List<SharedPrivateLinkResourceArgs>> getSharedPrivateLinkResources() {
         return this.sharedPrivateLinkResources == null ? Input.empty() : this.sharedPrivateLinkResources;
@@ -203,7 +203,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -214,7 +214,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccount")
-    private final @Nullable Input<String> storageAccount;
+        private final @Nullable Input<String> storageAccount;
 
     public Input<String> getStorageAccount() {
         return this.storageAccount == null ? Input.empty() : this.storageAccount;
@@ -225,7 +225,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -236,7 +236,7 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName")
-    private final @Nullable Input<String> workspaceName;
+        private final @Nullable Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName == null ? Input.empty() : this.workspaceName;
@@ -565,7 +565,6 @@ public final class WorkspaceArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.ofNullable(workspaceName);
             return this;
         }
-
         public WorkspaceArgs build() {
             return new WorkspaceArgs(allowPublicAccessWhenBehindVnet, applicationInsights, containerRegistry, description, discoveryUrl, encryption, friendlyName, hbiWorkspace, identity, imageBuildCompute, keyVault, location, primaryUserAssignedIdentity, resourceGroupName, serviceManagedResourcesSettings, sharedPrivateLinkResources, sku, storageAccount, tags, workspaceName);
         }

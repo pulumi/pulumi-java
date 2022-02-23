@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.LinkedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.datafactory.outputs.SelfHostedIntegrationRuntimeNodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -438,7 +438,6 @@ public final class SelfHostedIntegrationRuntimeStatusResponse {
             this.versionStatus = Objects.requireNonNull(versionStatus);
             return this;
         }
-
         public SelfHostedIntegrationRuntimeStatusResponse build() {
             return new SelfHostedIntegrationRuntimeStatusResponse(autoUpdate, autoUpdateETA, capabilities, createTime, dataFactoryName, internalChannelEncryption, latestVersion, links, localTimeZoneOffset, nodes, pushedVersion, scheduledUpdateDate, serviceUrls, state, taskQueueId, type, updateDelayOffset, version, versionStatus);
         }

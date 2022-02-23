@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class HorizontalPodAutoscalerStatus {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public HorizontalPodAutoscalerStatus build() {
             return new HorizontalPodAutoscalerStatus(currentCPUUtilizationPercentage, currentReplicas, desiredReplicas, lastScaleTime, observedGeneration);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.NetworkManagerPropertiesResponseNetworkManagerScopes;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -290,7 +290,6 @@ public final class GetNetworkManagerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkManagerResult build() {
             return new GetNetworkManagerResult(description, displayName, etag, id, location, name, networkManagerScopeAccesses, networkManagerScopes, provisioningState, systemData, tags, type);
         }

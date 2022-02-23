@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="eventHubEndpointName", required=true)
-    private final String eventHubEndpointName;
+        private final String eventHubEndpointName;
 
     public String getEventHubEndpointName() {
         return this.eventHubEndpointName;
@@ -28,7 +28,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -119,7 +119,6 @@ public final class GetIotHubResourceEventHubConsumerGroupArgs extends io.pulumi.
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetIotHubResourceEventHubConsumerGroupArgs build() {
             return new GetIotHubResourceEventHubConsumerGroupArgs(eventHubEndpointName, name, resourceGroupName, resourceName);
         }

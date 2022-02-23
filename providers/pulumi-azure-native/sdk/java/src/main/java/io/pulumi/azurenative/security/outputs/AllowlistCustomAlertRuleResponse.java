@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -162,7 +162,6 @@ public final class AllowlistCustomAlertRuleResponse {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public AllowlistCustomAlertRuleResponse build() {
             return new AllowlistCustomAlertRuleResponse(allowlistValues, description, displayName, isEnabled, ruleType, valueType);
         }

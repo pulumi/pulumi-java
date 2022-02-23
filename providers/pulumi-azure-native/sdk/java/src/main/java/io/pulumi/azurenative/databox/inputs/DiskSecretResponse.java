@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bitLockerKey", required=true)
-    private final String bitLockerKey;
+        private final String bitLockerKey;
 
     public String getBitLockerKey() {
         return this.bitLockerKey;
@@ -32,7 +32,7 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSerialNumber", required=true)
-    private final String diskSerialNumber;
+        private final String diskSerialNumber;
 
     public String getDiskSerialNumber() {
         return this.diskSerialNumber;
@@ -81,7 +81,6 @@ public final class DiskSecretResponse extends io.pulumi.resources.InvokeArgs {
             this.diskSerialNumber = Objects.requireNonNull(diskSerialNumber);
             return this;
         }
-
         public DiskSecretResponse build() {
             return new DiskSecretResponse(bitLockerKey, diskSerialNumber);
         }

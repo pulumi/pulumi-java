@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="acceleratorCount", required=true)
-    private final Integer acceleratorCount;
+      private final Integer acceleratorCount;
 
     public Integer getAcceleratorCount() {
         return this.acceleratorCount;
@@ -33,7 +33,7 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="acceleratorTypeUri", required=true)
-    private final String acceleratorTypeUri;
+      private final String acceleratorTypeUri;
 
     public String getAcceleratorTypeUri() {
         return this.acceleratorTypeUri;
@@ -82,7 +82,6 @@ public final class AcceleratorConfigResponse extends io.pulumi.resources.InvokeA
             this.acceleratorTypeUri = Objects.requireNonNull(acceleratorTypeUri);
             return this;
         }
-
         public AcceleratorConfigResponse build() {
             return new AcceleratorConfigResponse(acceleratorCount, acceleratorTypeUri);
         }

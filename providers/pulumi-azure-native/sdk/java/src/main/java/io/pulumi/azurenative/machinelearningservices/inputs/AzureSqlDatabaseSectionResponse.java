@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="authorityUrl")
-    private final @Nullable String authorityUrl;
+        private final @Nullable String authorityUrl;
 
     public Optional<String> getAuthorityUrl() {
         return this.authorityUrl == null ? Optional.empty() : Optional.ofNullable(this.authorityUrl);
@@ -31,7 +31,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable String certificate;
+        private final @Nullable String certificate;
 
     public Optional<String> getCertificate() {
         return this.certificate == null ? Optional.empty() : Optional.ofNullable(this.certificate);
@@ -42,7 +42,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -53,7 +53,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable String clientSecret;
+        private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
@@ -64,7 +64,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="credentialType")
-    private final @Nullable String credentialType;
+        private final @Nullable String credentialType;
 
     public Optional<String> getCredentialType() {
         return this.credentialType == null ? Optional.empty() : Optional.ofNullable(this.credentialType);
@@ -75,7 +75,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable String databaseName;
+        private final @Nullable String databaseName;
 
     public Optional<String> getDatabaseName() {
         return this.databaseName == null ? Optional.empty() : Optional.ofNullable(this.databaseName);
@@ -86,7 +86,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable String endpoint;
+        private final @Nullable String endpoint;
 
     public Optional<String> getEndpoint() {
         return this.endpoint == null ? Optional.empty() : Optional.ofNullable(this.endpoint);
@@ -97,7 +97,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="isCertAuth")
-    private final @Nullable Boolean isCertAuth;
+        private final @Nullable Boolean isCertAuth;
 
     public Optional<Boolean> getIsCertAuth() {
         return this.isCertAuth == null ? Optional.empty() : Optional.ofNullable(this.isCertAuth);
@@ -108,7 +108,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="portNumber")
-    private final @Nullable String portNumber;
+        private final @Nullable String portNumber;
 
     public Optional<String> getPortNumber() {
         return this.portNumber == null ? Optional.empty() : Optional.ofNullable(this.portNumber);
@@ -119,7 +119,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+        private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -130,7 +130,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable String resourceUri;
+        private final @Nullable String resourceUri;
 
     public Optional<String> getResourceUri() {
         return this.resourceUri == null ? Optional.empty() : Optional.ofNullable(this.resourceUri);
@@ -141,7 +141,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable String serverName;
+        private final @Nullable String serverName;
 
     public Optional<String> getServerName() {
         return this.serverName == null ? Optional.empty() : Optional.ofNullable(this.serverName);
@@ -152,7 +152,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="serviceDataAccessAuthIdentity")
-    private final @Nullable String serviceDataAccessAuthIdentity;
+        private final @Nullable String serviceDataAccessAuthIdentity;
 
     public Optional<String> getServiceDataAccessAuthIdentity() {
         return this.serviceDataAccessAuthIdentity == null ? Optional.empty() : Optional.ofNullable(this.serviceDataAccessAuthIdentity);
@@ -163,7 +163,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -174,7 +174,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -185,7 +185,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable String thumbprint;
+        private final @Nullable String thumbprint;
 
     public Optional<String> getThumbprint() {
         return this.thumbprint == null ? Optional.empty() : Optional.ofNullable(this.thumbprint);
@@ -196,7 +196,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="userId")
-    private final @Nullable String userId;
+        private final @Nullable String userId;
 
     public Optional<String> getUserId() {
         return this.userId == null ? Optional.empty() : Optional.ofNullable(this.userId);
@@ -207,7 +207,7 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="userPassword")
-    private final @Nullable String userPassword;
+        private final @Nullable String userPassword;
 
     public Optional<String> getUserPassword() {
         return this.userPassword == null ? Optional.empty() : Optional.ofNullable(this.userPassword);
@@ -416,7 +416,6 @@ public final class AzureSqlDatabaseSectionResponse extends io.pulumi.resources.I
             this.userPassword = userPassword;
             return this;
         }
-
         public AzureSqlDatabaseSectionResponse build() {
             return new AzureSqlDatabaseSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, databaseName, endpoint, isCertAuth, portNumber, resourceGroup, resourceUri, serverName, serviceDataAccessAuthIdentity, subscriptionId, tenantId, thumbprint, userId, userPassword);
         }

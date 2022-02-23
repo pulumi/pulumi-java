@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.enums.GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition;
 import io.pulumi.googlenative.healthcare_v1.inputs.SchemaConfigArgs;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
      * 
      */
     @InputImport(name="datasetUri")
-    private final @Nullable Input<String> datasetUri;
+      private final @Nullable Input<String> datasetUri;
 
     public Input<String> getDatasetUri() {
         return this.datasetUri == null ? Input.empty() : this.datasetUri;
@@ -37,7 +37,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
      * 
      */
     @InputImport(name="force")
-    private final @Nullable Input<Boolean> force;
+      private final @Nullable Input<Boolean> force;
 
     public Input<Boolean> getForce() {
         return this.force == null ? Input.empty() : this.force;
@@ -48,7 +48,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
      * 
      */
     @InputImport(name="schemaConfig")
-    private final @Nullable Input<SchemaConfigArgs> schemaConfig;
+      private final @Nullable Input<SchemaConfigArgs> schemaConfig;
 
     public Input<SchemaConfigArgs> getSchemaConfig() {
         return this.schemaConfig == null ? Input.empty() : this.schemaConfig;
@@ -59,7 +59,7 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
      * 
      */
     @InputImport(name="writeDisposition")
-    private final @Nullable Input<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition;
+      private final @Nullable Input<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> writeDisposition;
 
     public Input<GoogleCloudHealthcareV1FhirBigQueryDestinationWriteDisposition> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
@@ -148,7 +148,6 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationArgs extends io
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1FhirBigQueryDestinationArgs build() {
             return new GoogleCloudHealthcareV1FhirBigQueryDestinationArgs(datasetUri, force, schemaConfig, writeDisposition);
         }

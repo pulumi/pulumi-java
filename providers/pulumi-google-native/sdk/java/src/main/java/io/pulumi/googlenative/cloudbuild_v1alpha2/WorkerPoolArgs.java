@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1alpha2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.inputs.NetworkConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1alpha2.inputs.WorkerConfigArgs;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
     public Input<NetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -39,7 +39,7 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
@@ -50,14 +50,14 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<WorkerConfigArgs> workerConfig;
+      private final @Nullable Input<WorkerConfigArgs> workerConfig;
 
     public Input<WorkerConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
     }
 
     @InputImport(name="workerPoolId", required=true)
-    private final Input<String> workerPoolId;
+      private final Input<String> workerPoolId;
 
     public Input<String> getWorkerPoolId() {
         return this.workerPoolId;
@@ -161,7 +161,6 @@ public final class WorkerPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.workerPoolId = Input.of(Objects.requireNonNull(workerPoolId));
             return this;
         }
-
         public WorkerPoolArgs build() {
             return new WorkerPoolArgs(networkConfig, project, region, workerConfig, workerPoolId);
         }

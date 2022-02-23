@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dns.inputs.PolicyAlternativeNameServerConfigTargetNameServerGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="targetNameServers", required=true)
-    private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
+        private final Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> targetNameServers;
 
     public Input<List<PolicyAlternativeNameServerConfigTargetNameServerGetArgs>> getTargetNameServers() {
         return this.targetNameServers;
@@ -65,7 +65,6 @@ public final class PolicyAlternativeNameServerConfigGetArgs extends io.pulumi.re
             this.targetNameServers = Input.of(Objects.requireNonNull(targetNameServers));
             return this;
         }
-
         public PolicyAlternativeNameServerConfigGetArgs build() {
             return new PolicyAlternativeNameServerConfigGetArgs(targetNameServers);
         }

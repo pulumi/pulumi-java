@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,7 +90,6 @@ public final class DetectorModelFirehose {
             this.separator = separator;
             return this;
         }
-
         public DetectorModelFirehose build() {
             return new DetectorModelFirehose(deliveryStreamName, payload, separator);
         }

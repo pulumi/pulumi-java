@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.VersionResponse;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class UpgradeNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public UpgradeNoteResponse build() {
             return new UpgradeNoteResponse(distributions, $package, version);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.AlertSeverity;
 import io.pulumi.azurenative.securityinsights.enums.MicrosoftSecurityProductName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="alertRuleTemplateName")
-    private final @Nullable Input<String> alertRuleTemplateName;
+        private final @Nullable Input<String> alertRuleTemplateName;
 
     public Input<String> getAlertRuleTemplateName() {
         return this.alertRuleTemplateName == null ? Input.empty() : this.alertRuleTemplateName;
@@ -35,7 +35,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -57,7 +57,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="displayNamesExcludeFilter")
-    private final @Nullable Input<List<String>> displayNamesExcludeFilter;
+        private final @Nullable Input<List<String>> displayNamesExcludeFilter;
 
     public Input<List<String>> getDisplayNamesExcludeFilter() {
         return this.displayNamesExcludeFilter == null ? Input.empty() : this.displayNamesExcludeFilter;
@@ -68,7 +68,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="displayNamesFilter")
-    private final @Nullable Input<List<String>> displayNamesFilter;
+        private final @Nullable Input<List<String>> displayNamesFilter;
 
     public Input<List<String>> getDisplayNamesFilter() {
         return this.displayNamesFilter == null ? Input.empty() : this.displayNamesFilter;
@@ -79,7 +79,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -91,7 +91,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -102,7 +102,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="productFilter", required=true)
-    private final Input<Either<String,MicrosoftSecurityProductName>> productFilter;
+        private final Input<Either<String,MicrosoftSecurityProductName>> productFilter;
 
     public Input<Either<String,MicrosoftSecurityProductName>> getProductFilter() {
         return this.productFilter;
@@ -113,7 +113,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -124,7 +124,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="ruleId")
-    private final @Nullable Input<String> ruleId;
+        private final @Nullable Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId == null ? Input.empty() : this.ruleId;
@@ -135,7 +135,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="severitiesFilter")
-    private final @Nullable Input<List<Either<String,AlertSeverity>>> severitiesFilter;
+        private final @Nullable Input<List<Either<String,AlertSeverity>>> severitiesFilter;
 
     public Input<List<Either<String,AlertSeverity>>> getSeveritiesFilter() {
         return this.severitiesFilter == null ? Input.empty() : this.severitiesFilter;
@@ -146,7 +146,7 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -355,7 +355,6 @@ public final class MicrosoftSecurityIncidentCreationAlertRuleArgs extends io.pul
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public MicrosoftSecurityIncidentCreationAlertRuleArgs build() {
             return new MicrosoftSecurityIncidentCreationAlertRuleArgs(alertRuleTemplateName, description, displayName, displayNamesExcludeFilter, displayNamesFilter, enabled, kind, productFilter, resourceGroupName, ruleId, severitiesFilter, workspaceName);
         }

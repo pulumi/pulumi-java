@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automanage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends io.p
      * 
      */
     @InputImport(name="updateStatus", required=true)
-    private final String updateStatus;
+        private final String updateStatus;
 
     public String getUpdateStatus() {
         return this.updateStatus;
@@ -59,7 +59,6 @@ public final class ConfigurationProfileAssignmentComplianceResponse extends io.p
             this.updateStatus = Objects.requireNonNull(updateStatus);
             return this;
         }
-
         public ConfigurationProfileAssignmentComplianceResponse build() {
             return new ConfigurationProfileAssignmentComplianceResponse(updateStatus);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTimeOffset")
-    private final @Nullable Input<String> endTimeOffset;
+      private final @Nullable Input<String> endTimeOffset;
 
     public Input<String> getEndTimeOffset() {
         return this.endTimeOffset == null ? Input.empty() : this.endTimeOffset;
@@ -35,7 +35,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable Input<List<String>> inputs;
+      private final @Nullable Input<List<String>> inputs;
 
     public Input<List<String>> getInputs() {
         return this.inputs == null ? Input.empty() : this.inputs;
@@ -46,7 +46,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -57,7 +57,7 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTimeOffset")
-    private final @Nullable Input<String> startTimeOffset;
+      private final @Nullable Input<String> startTimeOffset;
 
     public Input<String> getStartTimeOffset() {
         return this.startTimeOffset == null ? Input.empty() : this.startTimeOffset;
@@ -146,7 +146,6 @@ public final class EditAtomArgs extends io.pulumi.resources.ResourceArgs {
             this.startTimeOffset = Input.ofNullable(startTimeOffset);
             return this;
         }
-
         public EditAtomArgs build() {
             return new EditAtomArgs(endTimeOffset, inputs, key, startTimeOffset);
         }

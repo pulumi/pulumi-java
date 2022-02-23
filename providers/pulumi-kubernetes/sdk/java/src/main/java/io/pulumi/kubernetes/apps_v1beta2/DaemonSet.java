@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.apps_v1beta2;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.apps_v1beta2.DaemonSetArgs;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.DaemonSetSpec;
@@ -98,13 +98,6 @@ public class DaemonSet extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DaemonSet(String name) {
-        super("kubernetes:apps/v1beta2:DaemonSet", name, DaemonSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

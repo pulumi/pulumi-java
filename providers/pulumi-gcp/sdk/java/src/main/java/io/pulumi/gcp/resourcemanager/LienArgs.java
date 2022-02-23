@@ -4,7 +4,7 @@
 package io.pulumi.gcp.resourcemanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="origin", required=true)
-    private final Input<String> origin;
+        private final Input<String> origin;
 
     public Input<String> getOrigin() {
         return this.origin;
@@ -35,7 +35,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+        private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -47,7 +47,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="reason", required=true)
-    private final Input<String> reason;
+        private final Input<String> reason;
 
     public Input<String> getReason() {
         return this.reason;
@@ -62,7 +62,7 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restrictions", required=true)
-    private final Input<List<String>> restrictions;
+        private final Input<List<String>> restrictions;
 
     public Input<List<String>> getRestrictions() {
         return this.restrictions;
@@ -151,7 +151,6 @@ public final class LienArgs extends io.pulumi.resources.ResourceArgs {
             this.restrictions = Input.of(Objects.requireNonNull(restrictions));
             return this;
         }
-
         public LienArgs build() {
             return new LienArgs(origin, parent, reason, restrictions);
         }

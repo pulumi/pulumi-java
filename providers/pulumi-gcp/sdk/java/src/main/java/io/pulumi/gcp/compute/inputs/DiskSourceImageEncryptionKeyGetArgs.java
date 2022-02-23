@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DiskSourceImageEncryptionKeyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kmsKeySelfLink")
-    private final @Nullable Input<String> kmsKeySelfLink;
+        private final @Nullable Input<String> kmsKeySelfLink;
 
     public Input<String> getKmsKeySelfLink() {
         return this.kmsKeySelfLink == null ? Input.empty() : this.kmsKeySelfLink;
@@ -35,7 +35,7 @@ public final class DiskSourceImageEncryptionKeyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="kmsKeyServiceAccount")
-    private final @Nullable Input<String> kmsKeyServiceAccount;
+        private final @Nullable Input<String> kmsKeyServiceAccount;
 
     public Input<String> getKmsKeyServiceAccount() {
         return this.kmsKeyServiceAccount == null ? Input.empty() : this.kmsKeyServiceAccount;
@@ -47,7 +47,7 @@ public final class DiskSourceImageEncryptionKeyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="rawKey")
-    private final @Nullable Input<String> rawKey;
+        private final @Nullable Input<String> rawKey;
 
     public Input<String> getRawKey() {
         return this.rawKey == null ? Input.empty() : this.rawKey;
@@ -60,7 +60,7 @@ public final class DiskSourceImageEncryptionKeyGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sha256")
-    private final @Nullable Input<String> sha256;
+        private final @Nullable Input<String> sha256;
 
     public Input<String> getSha256() {
         return this.sha256 == null ? Input.empty() : this.sha256;
@@ -149,7 +149,6 @@ public final class DiskSourceImageEncryptionKeyGetArgs extends io.pulumi.resourc
             this.sha256 = Input.ofNullable(sha256);
             return this;
         }
-
         public DiskSourceImageEncryptionKeyGetArgs build() {
             return new DiskSourceImageEncryptionKeyGetArgs(kmsKeySelfLink, kmsKeyServiceAccount, rawKey, sha256);
         }

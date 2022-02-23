@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ContainerRecipeInstanceBlockDeviceMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ContainerRecipeInstanceConfiguration {
             this.image = image;
             return this;
         }
-
         public ContainerRecipeInstanceConfiguration build() {
             return new ContainerRecipeInstanceConfiguration(blockDeviceMappings, image);
         }

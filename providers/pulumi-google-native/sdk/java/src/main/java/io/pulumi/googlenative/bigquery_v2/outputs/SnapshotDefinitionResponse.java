@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class SnapshotDefinitionResponse {
             this.snapshotTime = Objects.requireNonNull(snapshotTime);
             return this;
         }
-
         public SnapshotDefinitionResponse build() {
             return new SnapshotDefinitionResponse(baseTableReference, snapshotTime);
         }

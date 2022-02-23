@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.ObjectIdArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="critical")
-    private final @Nullable Input<Boolean> critical;
+      private final @Nullable Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical == null ? Input.empty() : this.critical;
@@ -36,7 +36,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<ObjectIdArgs> objectId;
+      private final Input<ObjectIdArgs> objectId;
 
     public Input<ObjectIdArgs> getObjectId() {
         return this.objectId;
@@ -47,7 +47,7 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+      private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -121,7 +121,6 @@ public final class X509ExtensionArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public X509ExtensionArgs build() {
             return new X509ExtensionArgs(critical, objectId, value);
         }

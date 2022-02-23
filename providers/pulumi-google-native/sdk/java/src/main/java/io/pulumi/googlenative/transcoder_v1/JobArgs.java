@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<JobConfigArgs> config;
+      private final @Nullable Input<JobConfigArgs> config;
 
     public Input<JobConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -32,14 +32,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputUri")
-    private final @Nullable Input<String> inputUri;
+      private final @Nullable Input<String> inputUri;
 
     public Input<String> getInputUri() {
         return this.inputUri == null ? Input.empty() : this.inputUri;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -50,7 +50,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -61,14 +61,14 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputUri")
-    private final @Nullable Input<String> outputUri;
+      private final @Nullable Input<String> outputUri;
 
     public Input<String> getOutputUri() {
         return this.outputUri == null ? Input.empty() : this.outputUri;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -79,7 +79,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateId")
-    private final @Nullable Input<String> templateId;
+      private final @Nullable Input<String> templateId;
 
     public Input<String> getTemplateId() {
         return this.templateId == null ? Input.empty() : this.templateId;
@@ -90,7 +90,7 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttlAfterCompletionDays")
-    private final @Nullable Input<Integer> ttlAfterCompletionDays;
+      private final @Nullable Input<Integer> ttlAfterCompletionDays;
 
     public Input<Integer> getTtlAfterCompletionDays() {
         return this.ttlAfterCompletionDays == null ? Input.empty() : this.ttlAfterCompletionDays;
@@ -239,7 +239,6 @@ public final class JobArgs extends io.pulumi.resources.ResourceArgs {
             this.ttlAfterCompletionDays = Input.ofNullable(ttlAfterCompletionDays);
             return this;
         }
-
         public JobArgs build() {
             return new JobArgs(config, inputUri, location, name, outputUri, project, templateId, ttlAfterCompletionDays);
         }

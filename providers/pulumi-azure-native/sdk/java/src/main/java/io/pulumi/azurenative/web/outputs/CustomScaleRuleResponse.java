@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ScaleRuleAuthResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -102,7 +102,6 @@ public final class CustomScaleRuleResponse {
             this.type = type;
             return this;
         }
-
         public CustomScaleRuleResponse build() {
             return new CustomScaleRuleResponse(auth, metadata, type);
         }

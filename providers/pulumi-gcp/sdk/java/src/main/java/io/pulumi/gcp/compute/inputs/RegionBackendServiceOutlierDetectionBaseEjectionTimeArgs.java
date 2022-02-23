@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs exte
      * 
      */
     @InputImport(name="nanos")
-    private final @Nullable Input<Integer> nanos;
+        private final @Nullable Input<Integer> nanos;
 
     public Input<Integer> getNanos() {
         return this.nanos == null ? Input.empty() : this.nanos;
@@ -33,7 +33,7 @@ public final class RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs exte
      * 
      */
     @InputImport(name="seconds", required=true)
-    private final Input<Integer> seconds;
+        private final Input<Integer> seconds;
 
     public Input<Integer> getSeconds() {
         return this.seconds;
@@ -92,7 +92,6 @@ public final class RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs exte
             this.seconds = Input.of(Objects.requireNonNull(seconds));
             return this;
         }
-
         public RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs build() {
             return new RegionBackendServiceOutlierDetectionBaseEjectionTimeArgs(nanos, seconds);
         }

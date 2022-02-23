@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class EventHubPropertiesResponse {
             this.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
-
         public EventHubPropertiesResponse build() {
             return new EventHubPropertiesResponse(endpoint, partitionCount, partitionIds, path, retentionTimeInDays);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable String diskName;
+        private final @Nullable String diskName;
 
     public Optional<String> getDiskName() {
         return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
@@ -35,7 +35,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskSizeGiB")
-    private final @Nullable Integer diskSizeGiB;
+        private final @Nullable Integer diskSizeGiB;
 
     public Optional<Integer> getDiskSizeGiB() {
         return this.diskSizeGiB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGiB);
@@ -46,7 +46,7 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable String diskType;
+        private final @Nullable String diskType;
 
     public Optional<String> getDiskType() {
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
@@ -105,7 +105,6 @@ public final class AttachNewDataDiskOptionsResponse extends io.pulumi.resources.
             this.diskType = diskType;
             return this;
         }
-
         public AttachNewDataDiskOptionsResponse build() {
             return new AttachNewDataDiskOptionsResponse(diskName, diskSizeGiB, diskType);
         }

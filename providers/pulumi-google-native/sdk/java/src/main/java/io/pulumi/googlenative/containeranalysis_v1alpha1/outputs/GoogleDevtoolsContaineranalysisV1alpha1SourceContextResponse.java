@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1CloudRepoSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1GerritSourceContextResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.GoogleDevtoolsContaineranalysisV1alpha1GitSourceContextResponse;
@@ -120,7 +120,6 @@ public final class GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse 
             this.labels = Objects.requireNonNull(labels);
             return this;
         }
-
         public GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse build() {
             return new GoogleDevtoolsContaineranalysisV1alpha1SourceContextResponse(cloudRepo, gerrit, git, labels);
         }

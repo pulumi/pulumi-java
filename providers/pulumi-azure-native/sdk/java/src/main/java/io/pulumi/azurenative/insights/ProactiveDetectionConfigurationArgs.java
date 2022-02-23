@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights;
 
 import io.pulumi.azurenative.insights.inputs.ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="configurationId")
-    private final @Nullable Input<String> configurationId;
+        private final @Nullable Input<String> configurationId;
 
     public Input<String> getConfigurationId() {
         return this.configurationId == null ? Input.empty() : this.configurationId;
@@ -33,7 +33,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customEmails")
-    private final @Nullable Input<List<String>> customEmails;
+        private final @Nullable Input<List<String>> customEmails;
 
     public Input<List<String>> getCustomEmails() {
         return this.customEmails == null ? Input.empty() : this.customEmails;
@@ -44,7 +44,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -55,7 +55,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable Input<String> lastUpdatedTime;
+        private final @Nullable Input<String> lastUpdatedTime;
 
     public Input<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
@@ -66,7 +66,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -88,7 +88,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -99,7 +99,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ruleDefinitions")
-    private final @Nullable Input<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
+        private final @Nullable Input<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> ruleDefinitions;
 
     public Input<ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs> getRuleDefinitions() {
         return this.ruleDefinitions == null ? Input.empty() : this.ruleDefinitions;
@@ -110,7 +110,7 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="sendEmailsToSubscriptionOwners")
-    private final @Nullable Input<Boolean> sendEmailsToSubscriptionOwners;
+        private final @Nullable Input<Boolean> sendEmailsToSubscriptionOwners;
 
     public Input<Boolean> getSendEmailsToSubscriptionOwners() {
         return this.sendEmailsToSubscriptionOwners == null ? Input.empty() : this.sendEmailsToSubscriptionOwners;
@@ -274,7 +274,6 @@ public final class ProactiveDetectionConfigurationArgs extends io.pulumi.resourc
             this.sendEmailsToSubscriptionOwners = Input.ofNullable(sendEmailsToSubscriptionOwners);
             return this;
         }
-
         public ProactiveDetectionConfigurationArgs build() {
             return new ProactiveDetectionConfigurationArgs(configurationId, customEmails, enabled, lastUpdatedTime, name, resourceGroupName, resourceName, ruleDefinitions, sendEmailsToSubscriptionOwners);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="computeSubnetId")
-    private final @Nullable String computeSubnetId;
+        private final @Nullable String computeSubnetId;
 
     public Optional<String> getComputeSubnetId() {
         return this.computeSubnetId == null ? Optional.empty() : Optional.ofNullable(this.computeSubnetId);
@@ -61,7 +61,6 @@ public final class VirtualNetworkProfileResponse extends io.pulumi.resources.Inv
             this.computeSubnetId = computeSubnetId;
             return this;
         }
-
         public VirtualNetworkProfileResponse build() {
             return new VirtualNetworkProfileResponse(computeSubnetId);
         }

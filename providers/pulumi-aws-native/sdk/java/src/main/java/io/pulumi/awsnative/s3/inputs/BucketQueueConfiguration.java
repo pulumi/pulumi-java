@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class BucketQueueConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="event", required=true)
-    private final String event;
+        private final String event;
 
     public String getEvent() {
         return this.event;
@@ -35,7 +35,7 @@ public final class BucketQueueConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable BucketNotificationFilter filter;
+        private final @Nullable BucketNotificationFilter filter;
 
     public Optional<BucketNotificationFilter> getFilter() {
         return this.filter == null ? Optional.empty() : Optional.ofNullable(this.filter);
@@ -46,7 +46,7 @@ public final class BucketQueueConfiguration extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="queue", required=true)
-    private final String queue;
+        private final String queue;
 
     public String getQueue() {
         return this.queue;
@@ -105,7 +105,6 @@ public final class BucketQueueConfiguration extends io.pulumi.resources.InvokeAr
             this.queue = Objects.requireNonNull(queue);
             return this;
         }
-
         public BucketQueueConfiguration build() {
             return new BucketQueueConfiguration(event, filter, queue);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetBackendServiceCircuitBreakerConnectTimeout;
 import java.lang.Integer;
 import java.util.List;
@@ -112,7 +112,6 @@ public final class GetBackendServiceCircuitBreaker {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public GetBackendServiceCircuitBreaker build() {
             return new GetBackendServiceCircuitBreaker(connectTimeouts, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

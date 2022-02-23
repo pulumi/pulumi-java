@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.healthlake.outputs;
 
 import io.pulumi.awsnative.healthlake.enums.FHIRDatastoreKmsEncryptionConfigCmkType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class FHIRDatastoreKmsEncryptionConfig {
             this.kmsKeyId = kmsKeyId;
             return this;
         }
-
         public FHIRDatastoreKmsEncryptionConfig build() {
             return new FHIRDatastoreKmsEncryptionConfig(cmkType, kmsKeyId);
         }

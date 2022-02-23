@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricValueStatus;
@@ -97,7 +97,6 @@ public final class ObjectMetricStatus {
             this.metric = Objects.requireNonNull(metric);
             return this;
         }
-
         public ObjectMetricStatus build() {
             return new ObjectMetricStatus(current, describedObject, metric);
         }

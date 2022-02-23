@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudtrace_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -66,7 +66,6 @@ public final class OutputConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.destination = Input.ofNullable(destination);
             return this;
         }
-
         public OutputConfigArgs build() {
             return new OutputConfigArgs(destination);
         }

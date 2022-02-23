@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -225,7 +225,6 @@ public final class GetDeviceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(deviceType, id, location, name, networkFunctions, provisioningState, status, tags, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -266,7 +266,6 @@ public final class GetShareResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetShareResult build() {
             return new GetShareResult(createdAt, description, id, name, provisioningState, shareKind, systemData, terms, type, userEmail, userName);
         }

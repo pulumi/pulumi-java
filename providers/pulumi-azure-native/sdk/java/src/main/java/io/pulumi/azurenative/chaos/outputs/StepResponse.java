@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.chaos.outputs;
 
 import io.pulumi.azurenative.chaos.outputs.BranchResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class StepResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(branches, name);
         }

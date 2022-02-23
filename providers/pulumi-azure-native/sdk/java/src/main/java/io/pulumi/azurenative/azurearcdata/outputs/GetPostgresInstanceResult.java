@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.PostgresInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.PostgresInstanceSkuResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -228,7 +228,6 @@ public final class GetPostgresInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPostgresInstanceResult build() {
             return new GetPostgresInstanceResult(extendedLocation, id, location, name, properties, sku, systemData, tags, type);
         }

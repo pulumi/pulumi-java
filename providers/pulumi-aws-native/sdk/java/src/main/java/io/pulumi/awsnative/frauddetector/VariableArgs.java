@@ -8,7 +8,7 @@ import io.pulumi.awsnative.frauddetector.enums.VariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.inputs.VariableTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSource", required=true)
-    private final Input<VariableDataSource> dataSource;
+        private final Input<VariableDataSource> dataSource;
 
     public Input<VariableDataSource> getDataSource() {
         return this.dataSource;
@@ -35,7 +35,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final Input<VariableDataType> dataType;
+        private final Input<VariableDataType> dataType;
 
     public Input<VariableDataType> getDataType() {
         return this.dataType;
@@ -46,7 +46,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultValue", required=true)
-    private final Input<String> defaultValue;
+        private final Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue;
@@ -57,7 +57,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<VariableTagArgs>> tags;
+        private final @Nullable Input<List<VariableTagArgs>> tags;
 
     public Input<List<VariableTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -90,7 +90,7 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="variableType")
-    private final @Nullable Input<VariableType> variableType;
+        private final @Nullable Input<VariableType> variableType;
 
     public Input<VariableType> getVariableType() {
         return this.variableType == null ? Input.empty() : this.variableType;
@@ -224,7 +224,6 @@ public final class VariableArgs extends io.pulumi.resources.ResourceArgs {
             this.variableType = Input.ofNullable(variableType);
             return this;
         }
-
         public VariableArgs build() {
             return new VariableArgs(dataSource, dataType, defaultValue, description, name, tags, variableType);
         }

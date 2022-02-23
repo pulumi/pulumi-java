@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class FileSourceInfoResponse {
             this.shareId = Objects.requireNonNull(shareId);
             return this;
         }
-
         public FileSourceInfoResponse build() {
             return new FileSourceInfoResponse(shareId);
         }

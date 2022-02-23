@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LikelihoodAdjustmentResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ProximityResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RegexResponse;
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2HotwordRuleResponse {
             this.proximity = Objects.requireNonNull(proximity);
             return this;
         }
-
         public GooglePrivacyDlpV2HotwordRuleResponse build() {
             return new GooglePrivacyDlpV2HotwordRuleResponse(hotwordRegex, likelihoodAdjustment, proximity);
         }

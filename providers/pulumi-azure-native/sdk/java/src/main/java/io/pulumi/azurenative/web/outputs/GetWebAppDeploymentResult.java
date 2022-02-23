@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -309,7 +309,6 @@ public final class GetWebAppDeploymentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppDeploymentResult build() {
             return new GetWebAppDeploymentResult(active, author, authorEmail, deployer, details, endTime, id, kind, message, name, startTime, status, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class ForwardProxyResponse {
             this.customProtoHeaderName = customProtoHeaderName;
             return this;
         }
-
         public ForwardProxyResponse build() {
             return new ForwardProxyResponse(convention, customHostHeaderName, customProtoHeaderName);
         }

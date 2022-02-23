@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderExclusionArgs;
 import io.pulumi.gcp.logging.inputs.FolderExclusionState;
@@ -115,13 +115,6 @@ public class FolderExclusion extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FolderExclusion(String name) {
-        super("gcp:logging/folderExclusion:FolderExclusion", name, FolderExclusionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

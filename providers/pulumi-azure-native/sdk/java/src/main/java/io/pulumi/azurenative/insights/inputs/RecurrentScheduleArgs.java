@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="days", required=true)
-    private final Input<List<String>> days;
+        private final Input<List<String>> days;
 
     public Input<List<String>> getDays() {
         return this.days;
@@ -35,7 +35,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hours", required=true)
-    private final Input<List<Integer>> hours;
+        private final Input<List<Integer>> hours;
 
     public Input<List<Integer>> getHours() {
         return this.hours;
@@ -46,7 +46,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minutes", required=true)
-    private final Input<List<Integer>> minutes;
+        private final Input<List<Integer>> minutes;
 
     public Input<List<Integer>> getMinutes() {
         return this.minutes;
@@ -57,7 +57,7 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeZone", required=true)
-    private final Input<String> timeZone;
+        private final Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone;
@@ -146,7 +146,6 @@ public final class RecurrentScheduleArgs extends io.pulumi.resources.ResourceArg
             this.timeZone = Input.of(Objects.requireNonNull(timeZone));
             return this;
         }
-
         public RecurrentScheduleArgs build() {
             return new RecurrentScheduleArgs(days, hours, minutes, timeZone);
         }

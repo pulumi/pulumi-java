@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.PublicDelegatedPrefixPublicDelegatedSubPrefixResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -308,7 +308,6 @@ public final class GetGlobalPublicDelegatedPrefixResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetGlobalPublicDelegatedPrefixResult build() {
             return new GetGlobalPublicDelegatedPrefixResult(creationTimestamp, description, fingerprint, ipCidrRange, isLiveMigration, kind, name, parentPrefix, publicDelegatedSubPrefixs, region, selfLink, selfLinkWithId, status);
         }

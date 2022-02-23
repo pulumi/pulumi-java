@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.WebhookClientConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientConfig")
-    private final @Nullable Input<WebhookClientConfigArgs> clientConfig;
+        private final @Nullable Input<WebhookClientConfigArgs> clientConfig;
 
     public Input<WebhookClientConfigArgs> getClientConfig() {
         return this.clientConfig == null ? Input.empty() : this.clientConfig;
@@ -36,7 +36,7 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="conversionReviewVersions", required=true)
-    private final Input<List<String>> conversionReviewVersions;
+        private final Input<List<String>> conversionReviewVersions;
 
     public Input<List<String>> getConversionReviewVersions() {
         return this.conversionReviewVersions;
@@ -95,7 +95,6 @@ public final class WebhookConversionArgs extends io.pulumi.resources.ResourceArg
             this.conversionReviewVersions = Input.of(Objects.requireNonNull(conversionReviewVersions));
             return this;
         }
-
         public WebhookConversionArgs build() {
             return new WebhookConversionArgs(clientConfig, conversionReviewVersions);
         }

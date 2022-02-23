@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+      private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -35,7 +35,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dir")
-    private final @Nullable Input<String> dir;
+      private final @Nullable Input<String> dir;
 
     public Input<String> getDir() {
         return this.dir == null ? Input.empty() : this.dir;
@@ -46,7 +46,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="env")
-    private final @Nullable Input<List<String>> env;
+      private final @Nullable Input<List<String>> env;
 
     public Input<List<String>> getEnv() {
         return this.env == null ? Input.empty() : this.env;
@@ -57,7 +57,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -68,7 +68,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -79,7 +79,7 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="waitFor")
-    private final @Nullable Input<List<String>> waitFor;
+      private final @Nullable Input<List<String>> waitFor;
 
     public Input<List<String>> getWaitFor() {
         return this.waitFor == null ? Input.empty() : this.waitFor;
@@ -198,7 +198,6 @@ public final class CommandArgs extends io.pulumi.resources.ResourceArgs {
             this.waitFor = Input.ofNullable(waitFor);
             return this;
         }
-
         public CommandArgs build() {
             return new CommandArgs(args, dir, env, id, name, waitFor);
         }

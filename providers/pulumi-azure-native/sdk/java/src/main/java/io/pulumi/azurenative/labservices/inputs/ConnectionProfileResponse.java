@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clientRdpAccess")
-    private final @Nullable String clientRdpAccess;
+        private final @Nullable String clientRdpAccess;
 
     public Optional<String> getClientRdpAccess() {
         return this.clientRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.clientRdpAccess);
@@ -34,7 +34,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clientSshAccess")
-    private final @Nullable String clientSshAccess;
+        private final @Nullable String clientSshAccess;
 
     public Optional<String> getClientSshAccess() {
         return this.clientSshAccess == null ? Optional.empty() : Optional.ofNullable(this.clientSshAccess);
@@ -45,7 +45,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="webRdpAccess")
-    private final @Nullable String webRdpAccess;
+        private final @Nullable String webRdpAccess;
 
     public Optional<String> getWebRdpAccess() {
         return this.webRdpAccess == null ? Optional.empty() : Optional.ofNullable(this.webRdpAccess);
@@ -56,7 +56,7 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="webSshAccess")
-    private final @Nullable String webSshAccess;
+        private final @Nullable String webSshAccess;
 
     public Optional<String> getWebSshAccess() {
         return this.webSshAccess == null ? Optional.empty() : Optional.ofNullable(this.webSshAccess);
@@ -125,7 +125,6 @@ public final class ConnectionProfileResponse extends io.pulumi.resources.InvokeA
             this.webSshAccess = webSshAccess;
             return this;
         }
-
         public ConnectionProfileResponse build() {
             return new ConnectionProfileResponse(clientRdpAccess, clientSshAccess, webRdpAccess, webSshAccess);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="exactMatch")
-    private final @Nullable Input<String> exactMatch;
+        private final @Nullable Input<String> exactMatch;
 
     public Input<String> getExactMatch() {
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
@@ -34,7 +34,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final Input<String> headerName;
+        private final Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName;
@@ -47,7 +47,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="invertMatch")
-    private final @Nullable Input<Boolean> invertMatch;
+        private final @Nullable Input<Boolean> invertMatch;
 
     public Input<Boolean> getInvertMatch() {
         return this.invertMatch == null ? Input.empty() : this.invertMatch;
@@ -60,7 +60,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<String> prefixMatch;
+        private final @Nullable Input<String> prefixMatch;
 
     public Input<String> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -73,7 +73,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="presentMatch")
-    private final @Nullable Input<Boolean> presentMatch;
+        private final @Nullable Input<Boolean> presentMatch;
 
     public Input<Boolean> getPresentMatch() {
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
@@ -90,7 +90,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="rangeMatch")
-    private final @Nullable Input<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> rangeMatch;
+        private final @Nullable Input<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> rangeMatch;
 
     public Input<URLMapPathMatcherRouteRuleMatchRuleHeaderMatchRangeMatchArgs> getRangeMatch() {
         return this.rangeMatch == null ? Input.empty() : this.rangeMatch;
@@ -104,7 +104,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="regexMatch")
-    private final @Nullable Input<String> regexMatch;
+        private final @Nullable Input<String> regexMatch;
 
     public Input<String> getRegexMatch() {
         return this.regexMatch == null ? Input.empty() : this.regexMatch;
@@ -117,7 +117,7 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
      * 
      */
     @InputImport(name="suffixMatch")
-    private final @Nullable Input<String> suffixMatch;
+        private final @Nullable Input<String> suffixMatch;
 
     public Input<String> getSuffixMatch() {
         return this.suffixMatch == null ? Input.empty() : this.suffixMatch;
@@ -266,7 +266,6 @@ public final class URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs extends io
             this.suffixMatch = Input.ofNullable(suffixMatch);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs build() {
             return new URLMapPathMatcherRouteRuleMatchRuleHeaderMatchArgs(exactMatch, headerName, invertMatch, prefixMatch, presentMatch, rangeMatch, regexMatch, suffixMatch);
         }

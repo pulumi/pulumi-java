@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbilling_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GetBillingAccountResult {
             this.open = Objects.requireNonNull(open);
             return this;
         }
-
         public GetBillingAccountResult build() {
             return new GetBillingAccountResult(displayName, masterBillingAccount, name, open);
         }

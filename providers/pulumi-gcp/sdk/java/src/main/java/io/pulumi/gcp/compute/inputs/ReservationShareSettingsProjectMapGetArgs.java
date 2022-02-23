@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ReservationShareSettingsProjectMapGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -30,7 +30,7 @@ public final class ReservationShareSettingsProjectMapGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="projectId")
-    private final @Nullable Input<String> projectId;
+        private final @Nullable Input<String> projectId;
 
     public Input<String> getProjectId() {
         return this.projectId == null ? Input.empty() : this.projectId;
@@ -89,7 +89,6 @@ public final class ReservationShareSettingsProjectMapGetArgs extends io.pulumi.r
             this.projectId = Input.ofNullable(projectId);
             return this;
         }
-
         public ReservationShareSettingsProjectMapGetArgs build() {
             return new ReservationShareSettingsProjectMapGetArgs(id, projectId);
         }

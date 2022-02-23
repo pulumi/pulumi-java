@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectIamPolicyBindingsItemResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class GetObjectIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetObjectIamPolicyResult build() {
             return new GetObjectIamPolicyResult(bindings, etag, kind, resourceId, version);
         }

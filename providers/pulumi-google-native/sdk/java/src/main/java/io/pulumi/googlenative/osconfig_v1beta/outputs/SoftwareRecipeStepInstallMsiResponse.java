@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class SoftwareRecipeStepInstallMsiResponse {
             this.flags = Objects.requireNonNull(flags);
             return this;
         }
-
         public SoftwareRecipeStepInstallMsiResponse build() {
             return new SoftwareRecipeStepInstallMsiResponse(allowedExitCodes, artifactId, flags);
         }

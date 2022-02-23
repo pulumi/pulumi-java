@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -33,7 +33,7 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="generation")
-    private final @Nullable Input<Integer> generation;
+        private final @Nullable Input<Integer> generation;
 
     public Input<Integer> getGeneration() {
         return this.generation == null ? Input.empty() : this.generation;
@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="object")
-    private final @Nullable Input<String> object;
+        private final @Nullable Input<String> object;
 
     public Input<String> getObject() {
         return this.object == null ? Input.empty() : this.object;
@@ -119,7 +119,6 @@ public final class GuestPoliciesRecipeArtifactGcsGetArgs extends io.pulumi.resou
             this.object = Input.ofNullable(object);
             return this;
         }
-
         public GuestPoliciesRecipeArtifactGcsGetArgs build() {
             return new GuestPoliciesRecipeArtifactGcsGetArgs(bucket, generation, object);
         }

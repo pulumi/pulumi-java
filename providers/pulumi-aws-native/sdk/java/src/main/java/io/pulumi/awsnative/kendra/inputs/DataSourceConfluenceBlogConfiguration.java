@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceConfluenceBlogToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public final class DataSourceConfluenceBlogConfiguration extends io.pulumi.resou
     public static final DataSourceConfluenceBlogConfiguration Empty = new DataSourceConfluenceBlogConfiguration();
 
     @InputImport(name="blogFieldMappings")
-    private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
+        private final @Nullable List<DataSourceConfluenceBlogToIndexFieldMapping> blogFieldMappings;
 
     public List<DataSourceConfluenceBlogToIndexFieldMapping> getBlogFieldMappings() {
         return this.blogFieldMappings == null ? List.of() : this.blogFieldMappings;
@@ -54,7 +54,6 @@ public final class DataSourceConfluenceBlogConfiguration extends io.pulumi.resou
             this.blogFieldMappings = blogFieldMappings;
             return this;
         }
-
         public DataSourceConfluenceBlogConfiguration build() {
             return new DataSourceConfluenceBlogConfiguration(blogFieldMappings);
         }

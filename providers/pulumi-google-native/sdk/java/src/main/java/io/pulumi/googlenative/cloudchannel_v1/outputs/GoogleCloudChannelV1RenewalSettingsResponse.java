@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudchannel_v1.outputs.GoogleCloudChannelV1PeriodResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class GoogleCloudChannelV1RenewalSettingsResponse {
             this.resizeUnitCount = Objects.requireNonNull(resizeUnitCount);
             return this;
         }
-
         public GoogleCloudChannelV1RenewalSettingsResponse build() {
             return new GoogleCloudChannelV1RenewalSettingsResponse(enableRenewal, paymentCycle, paymentPlan, resizeUnitCount);
         }

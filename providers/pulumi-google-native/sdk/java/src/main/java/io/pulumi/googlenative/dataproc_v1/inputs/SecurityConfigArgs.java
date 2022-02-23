@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.IdentityConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.KerberosConfigArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identityConfig")
-    private final @Nullable Input<IdentityConfigArgs> identityConfig;
+      private final @Nullable Input<IdentityConfigArgs> identityConfig;
 
     public Input<IdentityConfigArgs> getIdentityConfig() {
         return this.identityConfig == null ? Input.empty() : this.identityConfig;
@@ -35,7 +35,7 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kerberosConfig")
-    private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
+      private final @Nullable Input<KerberosConfigArgs> kerberosConfig;
 
     public Input<KerberosConfigArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
@@ -94,7 +94,6 @@ public final class SecurityConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }
-
         public SecurityConfigArgs build() {
             return new SecurityConfigArgs(identityConfig, kerberosConfig);
         }

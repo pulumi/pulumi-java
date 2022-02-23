@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.DatasetFilesLimitArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetFilterExpressionArgs;
 import io.pulumi.awsnative.databrew.inputs.DatasetPathParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,21 +22,21 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
     public static final DatasetPathOptionsArgs Empty = new DatasetPathOptionsArgs();
 
     @InputImport(name="filesLimit")
-    private final @Nullable Input<DatasetFilesLimitArgs> filesLimit;
+        private final @Nullable Input<DatasetFilesLimitArgs> filesLimit;
 
     public Input<DatasetFilesLimitArgs> getFilesLimit() {
         return this.filesLimit == null ? Input.empty() : this.filesLimit;
     }
 
     @InputImport(name="lastModifiedDateCondition")
-    private final @Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition;
+        private final @Nullable Input<DatasetFilterExpressionArgs> lastModifiedDateCondition;
 
     public Input<DatasetFilterExpressionArgs> getLastModifiedDateCondition() {
         return this.lastModifiedDateCondition == null ? Input.empty() : this.lastModifiedDateCondition;
     }
 
     @InputImport(name="parameters")
-    private final @Nullable Input<List<DatasetPathParameterArgs>> parameters;
+        private final @Nullable Input<List<DatasetPathParameterArgs>> parameters;
 
     public Input<List<DatasetPathParameterArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -110,7 +110,6 @@ public final class DatasetPathOptionsArgs extends io.pulumi.resources.ResourceAr
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public DatasetPathOptionsArgs build() {
             return new DatasetPathOptionsArgs(filesLimit, lastModifiedDateCondition, parameters);
         }

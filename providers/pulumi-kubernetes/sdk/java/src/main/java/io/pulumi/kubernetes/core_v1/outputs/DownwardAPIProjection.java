@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.DownwardAPIVolumeFile;
 import java.util.List;
 import java.util.Objects;
@@ -54,7 +54,6 @@ public final class DownwardAPIProjection {
             this.items = items;
             return this;
         }
-
         public DownwardAPIProjection build() {
             return new DownwardAPIProjection(items);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.LoggingComponentConfigEnableComponentsItem;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="enableComponents")
-    private final @Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
+      private final @Nullable Input<List<LoggingComponentConfigEnableComponentsItem>> enableComponents;
 
     public Input<List<LoggingComponentConfigEnableComponentsItem>> getEnableComponents() {
         return this.enableComponents == null ? Input.empty() : this.enableComponents;
@@ -67,7 +67,6 @@ public final class LoggingComponentConfigArgs extends io.pulumi.resources.Resour
             this.enableComponents = Input.ofNullable(enableComponents);
             return this;
         }
-
         public LoggingComponentConfigArgs build() {
             return new LoggingComponentConfigArgs(enableComponents);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LogAnalyticsOutputResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="output", required=true)
-    private final String output;
+        private final String output;
 
     public String getOutput() {
         return this.output;
@@ -59,7 +59,6 @@ public final class LogAnalyticsOutputResponse extends io.pulumi.resources.Invoke
             this.output = Objects.requireNonNull(output);
             return this;
         }
-
         public LogAnalyticsOutputResponse build() {
             return new LogAnalyticsOutputResponse(output);
         }

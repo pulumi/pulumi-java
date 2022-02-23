@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.awsnative.s3outposts.inputs.AccessPointVpcConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -32,7 +32,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<Object> policy;
+        private final @Nullable Input<Object> policy;
 
     public Input<Object> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -54,7 +54,7 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConfiguration", required=true)
-    private final Input<AccessPointVpcConfigurationArgs> vpcConfiguration;
+        private final Input<AccessPointVpcConfigurationArgs> vpcConfiguration;
 
     public Input<AccessPointVpcConfigurationArgs> getVpcConfiguration() {
         return this.vpcConfiguration;
@@ -143,7 +143,6 @@ public final class AccessPointArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcConfiguration = Input.of(Objects.requireNonNull(vpcConfiguration));
             return this;
         }
-
         public AccessPointArgs build() {
             return new AccessPointArgs(bucket, name, policy, vpcConfiguration);
         }

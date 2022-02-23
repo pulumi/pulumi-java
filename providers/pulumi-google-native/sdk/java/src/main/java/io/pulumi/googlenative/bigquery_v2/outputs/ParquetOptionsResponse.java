@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ParquetOptionsResponse {
             this.enumAsString = Objects.requireNonNull(enumAsString);
             return this;
         }
-
         public ParquetOptionsResponse build() {
             return new ParquetOptionsResponse(enableListInference, enumAsString);
         }

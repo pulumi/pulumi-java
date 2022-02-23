@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskEncryptionInfo")
-    private final @Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo;
+        private final @Nullable Input<DiskEncryptionInfoArgs> diskEncryptionInfo;
 
     public Input<DiskEncryptionInfoArgs> getDiskEncryptionInfo() {
         return this.diskEncryptionInfo == null ? Input.empty() : this.diskEncryptionInfo;
@@ -35,7 +35,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="diskId")
-    private final @Nullable Input<String> diskId;
+        private final @Nullable Input<String> diskId;
 
     public Input<String> getDiskId() {
         return this.diskId == null ? Input.empty() : this.diskId;
@@ -46,7 +46,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="primaryStagingAzureStorageAccountId")
-    private final @Nullable Input<String> primaryStagingAzureStorageAccountId;
+        private final @Nullable Input<String> primaryStagingAzureStorageAccountId;
 
     public Input<String> getPrimaryStagingAzureStorageAccountId() {
         return this.primaryStagingAzureStorageAccountId == null ? Input.empty() : this.primaryStagingAzureStorageAccountId;
@@ -57,7 +57,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryDiskEncryptionSetId")
-    private final @Nullable Input<String> recoveryDiskEncryptionSetId;
+        private final @Nullable Input<String> recoveryDiskEncryptionSetId;
 
     public Input<String> getRecoveryDiskEncryptionSetId() {
         return this.recoveryDiskEncryptionSetId == null ? Input.empty() : this.recoveryDiskEncryptionSetId;
@@ -68,7 +68,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryReplicaDiskAccountType")
-    private final @Nullable Input<String> recoveryReplicaDiskAccountType;
+        private final @Nullable Input<String> recoveryReplicaDiskAccountType;
 
     public Input<String> getRecoveryReplicaDiskAccountType() {
         return this.recoveryReplicaDiskAccountType == null ? Input.empty() : this.recoveryReplicaDiskAccountType;
@@ -79,7 +79,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryResourceGroupId")
-    private final @Nullable Input<String> recoveryResourceGroupId;
+        private final @Nullable Input<String> recoveryResourceGroupId;
 
     public Input<String> getRecoveryResourceGroupId() {
         return this.recoveryResourceGroupId == null ? Input.empty() : this.recoveryResourceGroupId;
@@ -90,7 +90,7 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="recoveryTargetDiskAccountType")
-    private final @Nullable Input<String> recoveryTargetDiskAccountType;
+        private final @Nullable Input<String> recoveryTargetDiskAccountType;
 
     public Input<String> getRecoveryTargetDiskAccountType() {
         return this.recoveryTargetDiskAccountType == null ? Input.empty() : this.recoveryTargetDiskAccountType;
@@ -224,7 +224,6 @@ public final class A2AVmManagedDiskInputDetailsArgs extends io.pulumi.resources.
             this.recoveryTargetDiskAccountType = Input.ofNullable(recoveryTargetDiskAccountType);
             return this;
         }
-
         public A2AVmManagedDiskInputDetailsArgs build() {
             return new A2AVmManagedDiskInputDetailsArgs(diskEncryptionInfo, diskId, primaryStagingAzureStorageAccountId, recoveryDiskEncryptionSetId, recoveryReplicaDiskAccountType, recoveryResourceGroupId, recoveryTargetDiskAccountType);
         }

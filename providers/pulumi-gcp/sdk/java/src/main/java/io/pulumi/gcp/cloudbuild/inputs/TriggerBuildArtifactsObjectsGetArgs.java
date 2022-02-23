@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.TriggerBuildArtifactsObjectsTimingGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -34,7 +34,7 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="paths")
-    private final @Nullable Input<List<String>> paths;
+        private final @Nullable Input<List<String>> paths;
 
     public Input<List<String>> getPaths() {
         return this.paths == null ? Input.empty() : this.paths;
@@ -47,7 +47,7 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="timings")
-    private final @Nullable Input<List<TriggerBuildArtifactsObjectsTimingGetArgs>> timings;
+        private final @Nullable Input<List<TriggerBuildArtifactsObjectsTimingGetArgs>> timings;
 
     public Input<List<TriggerBuildArtifactsObjectsTimingGetArgs>> getTimings() {
         return this.timings == null ? Input.empty() : this.timings;
@@ -121,7 +121,6 @@ public final class TriggerBuildArtifactsObjectsGetArgs extends io.pulumi.resourc
             this.timings = Input.ofNullable(timings);
             return this;
         }
-
         public TriggerBuildArtifactsObjectsGetArgs build() {
             return new TriggerBuildArtifactsObjectsGetArgs(location, paths, timings);
         }

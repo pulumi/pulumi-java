@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.outputs;
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeAnalysisFindingsFound;
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeAnalysisStatus;
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAccessScopeAnalysisTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -156,7 +156,6 @@ public final class GetNetworkInsightsAccessScopeAnalysisResult {
             this.tags = tags;
             return this;
         }
-
         public GetNetworkInsightsAccessScopeAnalysisResult build() {
             return new GetNetworkInsightsAccessScopeAnalysisResult(analyzedEniCount, endDate, findingsFound, networkInsightsAccessScopeAnalysisArn, networkInsightsAccessScopeAnalysisId, startDate, status, statusMessage, tags);
         }

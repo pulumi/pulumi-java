@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class FirewallPolicyFilterRuleCollectionActionResponse extends io.p
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -61,7 +61,6 @@ public final class FirewallPolicyFilterRuleCollectionActionResponse extends io.p
             this.type = type;
             return this;
         }
-
         public FirewallPolicyFilterRuleCollectionActionResponse build() {
             return new FirewallPolicyFilterRuleCollectionActionResponse(type);
         }

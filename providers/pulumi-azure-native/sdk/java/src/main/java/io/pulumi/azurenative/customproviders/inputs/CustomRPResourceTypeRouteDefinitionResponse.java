@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customproviders.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CustomRPResourceTypeRouteDefinitionResponse extends io.pulumi
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final String endpoint;
+        private final String endpoint;
 
     public String getEndpoint() {
         return this.endpoint;
@@ -34,7 +34,7 @@ public final class CustomRPResourceTypeRouteDefinitionResponse extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class CustomRPResourceTypeRouteDefinitionResponse extends io.pulumi
      * 
      */
     @InputImport(name="routingType")
-    private final @Nullable String routingType;
+        private final @Nullable String routingType;
 
     public Optional<String> getRoutingType() {
         return this.routingType == null ? Optional.empty() : Optional.ofNullable(this.routingType);
@@ -104,7 +104,6 @@ public final class CustomRPResourceTypeRouteDefinitionResponse extends io.pulumi
             this.routingType = routingType;
             return this;
         }
-
         public CustomRPResourceTypeRouteDefinitionResponse build() {
             return new CustomRPResourceTypeRouteDefinitionResponse(endpoint, name, routingType);
         }

@@ -9,7 +9,7 @@ import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReadProvisionedThroughputS
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReplicaGlobalSecondaryIndexSpecification;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableReplicaSSESpecification;
 import io.pulumi.awsnative.dynamodb.inputs.GlobalTableTag;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,49 +22,49 @@ public final class GlobalTableReplicaSpecification extends io.pulumi.resources.I
     public static final GlobalTableReplicaSpecification Empty = new GlobalTableReplicaSpecification();
 
     @InputImport(name="contributorInsightsSpecification")
-    private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
+        private final @Nullable GlobalTableContributorInsightsSpecification contributorInsightsSpecification;
 
     public Optional<GlobalTableContributorInsightsSpecification> getContributorInsightsSpecification() {
         return this.contributorInsightsSpecification == null ? Optional.empty() : Optional.ofNullable(this.contributorInsightsSpecification);
     }
 
     @InputImport(name="globalSecondaryIndexes")
-    private final @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
+        private final @Nullable List<GlobalTableReplicaGlobalSecondaryIndexSpecification> globalSecondaryIndexes;
 
     public List<GlobalTableReplicaGlobalSecondaryIndexSpecification> getGlobalSecondaryIndexes() {
         return this.globalSecondaryIndexes == null ? List.of() : this.globalSecondaryIndexes;
     }
 
     @InputImport(name="pointInTimeRecoverySpecification")
-    private final @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification;
+        private final @Nullable GlobalTablePointInTimeRecoverySpecification pointInTimeRecoverySpecification;
 
     public Optional<GlobalTablePointInTimeRecoverySpecification> getPointInTimeRecoverySpecification() {
         return this.pointInTimeRecoverySpecification == null ? Optional.empty() : Optional.ofNullable(this.pointInTimeRecoverySpecification);
     }
 
     @InputImport(name="readProvisionedThroughputSettings")
-    private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
+        private final @Nullable GlobalTableReadProvisionedThroughputSettings readProvisionedThroughputSettings;
 
     public Optional<GlobalTableReadProvisionedThroughputSettings> getReadProvisionedThroughputSettings() {
         return this.readProvisionedThroughputSettings == null ? Optional.empty() : Optional.ofNullable(this.readProvisionedThroughputSettings);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+        private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="sSESpecification")
-    private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
+        private final @Nullable GlobalTableReplicaSSESpecification sSESpecification;
 
     public Optional<GlobalTableReplicaSSESpecification> getSSESpecification() {
         return this.sSESpecification == null ? Optional.empty() : Optional.ofNullable(this.sSESpecification);
     }
 
     @InputImport(name="tags")
-    private final @Nullable List<GlobalTableTag> tags;
+        private final @Nullable List<GlobalTableTag> tags;
 
     public List<GlobalTableTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
@@ -163,7 +163,6 @@ public final class GlobalTableReplicaSpecification extends io.pulumi.resources.I
             this.tags = tags;
             return this;
         }
-
         public GlobalTableReplicaSpecification build() {
             return new GlobalTableReplicaSpecification(contributorInsightsSpecification, globalSecondaryIndexes, pointInTimeRecoverySpecification, readProvisionedThroughputSettings, region, sSESpecification, tags);
         }

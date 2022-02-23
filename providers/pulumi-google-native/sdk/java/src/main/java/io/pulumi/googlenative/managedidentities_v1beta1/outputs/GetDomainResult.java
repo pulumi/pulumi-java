@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.managedidentities_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.managedidentities_v1beta1.outputs.TrustResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -309,7 +309,6 @@ public final class GetDomainResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetDomainResult build() {
             return new GetDomainResult(admin, auditLogsEnabled, authorizedNetworks, createTime, fqdn, labels, locations, name, reservedIpRange, state, statusMessage, trusts, updateTime);
         }

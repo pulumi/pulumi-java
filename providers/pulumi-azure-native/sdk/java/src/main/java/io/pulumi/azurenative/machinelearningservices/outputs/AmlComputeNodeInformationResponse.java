@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class AmlComputeNodeInformationResponse {
             this.runId = Objects.requireNonNull(runId);
             return this;
         }
-
         public AmlComputeNodeInformationResponse build() {
             return new AmlComputeNodeInformationResponse(nodeId, nodeState, port, privateIpAddress, publicIpAddress, runId);
         }

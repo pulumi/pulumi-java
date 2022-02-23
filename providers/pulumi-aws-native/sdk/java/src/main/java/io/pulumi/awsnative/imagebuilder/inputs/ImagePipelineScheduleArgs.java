@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ImagePipelineSchedulePipelineExecutionStartCondition;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="pipelineExecutionStartCondition")
-    private final @Nullable Input<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
+        private final @Nullable Input<ImagePipelineSchedulePipelineExecutionStartCondition> pipelineExecutionStartCondition;
 
     public Input<ImagePipelineSchedulePipelineExecutionStartCondition> getPipelineExecutionStartCondition() {
         return this.pipelineExecutionStartCondition == null ? Input.empty() : this.pipelineExecutionStartCondition;
@@ -35,7 +35,7 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scheduleExpression")
-    private final @Nullable Input<String> scheduleExpression;
+        private final @Nullable Input<String> scheduleExpression;
 
     public Input<String> getScheduleExpression() {
         return this.scheduleExpression == null ? Input.empty() : this.scheduleExpression;
@@ -94,7 +94,6 @@ public final class ImagePipelineScheduleArgs extends io.pulumi.resources.Resourc
             this.scheduleExpression = Input.ofNullable(scheduleExpression);
             return this;
         }
-
         public ImagePipelineScheduleArgs build() {
             return new ImagePipelineScheduleArgs(pipelineExecutionStartCondition, scheduleExpression);
         }

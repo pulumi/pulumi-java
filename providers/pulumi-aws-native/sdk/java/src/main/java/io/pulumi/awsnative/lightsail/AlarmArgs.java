@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmName")
-    private final @Nullable Input<String> alarmName;
+        private final @Nullable Input<String> alarmName;
 
     public Input<String> getAlarmName() {
         return this.alarmName == null ? Input.empty() : this.alarmName;
@@ -34,7 +34,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="comparisonOperator", required=true)
-    private final Input<String> comparisonOperator;
+        private final Input<String> comparisonOperator;
 
     public Input<String> getComparisonOperator() {
         return this.comparisonOperator;
@@ -45,7 +45,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactProtocols")
-    private final @Nullable Input<List<String>> contactProtocols;
+        private final @Nullable Input<List<String>> contactProtocols;
 
     public Input<List<String>> getContactProtocols() {
         return this.contactProtocols == null ? Input.empty() : this.contactProtocols;
@@ -56,7 +56,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datapointsToAlarm")
-    private final @Nullable Input<Integer> datapointsToAlarm;
+        private final @Nullable Input<Integer> datapointsToAlarm;
 
     public Input<Integer> getDatapointsToAlarm() {
         return this.datapointsToAlarm == null ? Input.empty() : this.datapointsToAlarm;
@@ -67,7 +67,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="evaluationPeriods", required=true)
-    private final Input<Integer> evaluationPeriods;
+        private final Input<Integer> evaluationPeriods;
 
     public Input<Integer> getEvaluationPeriods() {
         return this.evaluationPeriods;
@@ -78,7 +78,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+        private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -89,7 +89,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="monitoredResourceName", required=true)
-    private final Input<String> monitoredResourceName;
+        private final Input<String> monitoredResourceName;
 
     public Input<String> getMonitoredResourceName() {
         return this.monitoredResourceName;
@@ -100,7 +100,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationEnabled")
-    private final @Nullable Input<Boolean> notificationEnabled;
+        private final @Nullable Input<Boolean> notificationEnabled;
 
     public Input<Boolean> getNotificationEnabled() {
         return this.notificationEnabled == null ? Input.empty() : this.notificationEnabled;
@@ -111,7 +111,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationTriggers")
-    private final @Nullable Input<List<String>> notificationTriggers;
+        private final @Nullable Input<List<String>> notificationTriggers;
 
     public Input<List<String>> getNotificationTriggers() {
         return this.notificationTriggers == null ? Input.empty() : this.notificationTriggers;
@@ -122,7 +122,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Double> threshold;
+        private final Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold;
@@ -133,7 +133,7 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="treatMissingData")
-    private final @Nullable Input<String> treatMissingData;
+        private final @Nullable Input<String> treatMissingData;
 
     public Input<String> getTreatMissingData() {
         return this.treatMissingData == null ? Input.empty() : this.treatMissingData;
@@ -327,7 +327,6 @@ public final class AlarmArgs extends io.pulumi.resources.ResourceArgs {
             this.treatMissingData = Input.ofNullable(treatMissingData);
             return this;
         }
-
         public AlarmArgs build() {
             return new AlarmArgs(alarmName, comparisonOperator, contactProtocols, datapointsToAlarm, evaluationPeriods, metricName, monitoredResourceName, notificationEnabled, notificationTriggers, threshold, treatMissingData);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.efs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
     public static final MountTargetArgs Empty = new MountTargetArgs();
 
     @InputImport(name="fileSystemId", required=true)
-    private final Input<String> fileSystemId;
+        private final Input<String> fileSystemId;
 
     public Input<String> getFileSystemId() {
         return this.fileSystemId;
     }
 
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="securityGroups", required=true)
-    private final Input<List<String>> securityGroups;
+        private final Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups;
     }
 
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -126,7 +126,6 @@ public final class MountTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public MountTargetArgs build() {
             return new MountTargetArgs(fileSystemId, ipAddress, securityGroups, subnetId);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.LiveEventEndpointResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventInputAccessControlResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class LiveEventInputResponse {
             this.streamingProtocol = Objects.requireNonNull(streamingProtocol);
             return this;
         }
-
         public LiveEventInputResponse build() {
             return new LiveEventInputResponse(accessControl, accessToken, endpoints, keyFrameIntervalDuration, streamingProtocol);
         }

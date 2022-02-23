@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,7 +80,6 @@ public final class TriggerBuildAvailableSecretsSecretManager {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public TriggerBuildAvailableSecretsSecretManager build() {
             return new TriggerBuildAvailableSecretsSecretManager(env, versionName);
         }

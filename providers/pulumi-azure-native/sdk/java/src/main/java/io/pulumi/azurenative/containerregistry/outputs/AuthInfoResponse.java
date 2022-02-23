@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class AuthInfoResponse {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
-
         public AuthInfoResponse build() {
             return new AuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }

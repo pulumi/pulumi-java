@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.JobStatusResponse;
 import io.pulumi.azurenative.migrate.outputs.MoveResourceErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class MoveResourcePropertiesResponseMoveStatus {
             this.moveState = Objects.requireNonNull(moveState);
             return this;
         }
-
         public MoveResourcePropertiesResponseMoveStatus build() {
             return new MoveResourcePropertiesResponseMoveStatus(errors, jobStatus, moveState);
         }

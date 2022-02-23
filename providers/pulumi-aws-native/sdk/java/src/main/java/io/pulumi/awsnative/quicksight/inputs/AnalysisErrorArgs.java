@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.AnalysisErrorType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable Input<String> message;
+        private final @Nullable Input<String> message;
 
     public Input<String> getMessage() {
         return this.message == null ? Input.empty() : this.message;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<AnalysisErrorType> type;
+        private final @Nullable Input<AnalysisErrorType> type;
 
     public Input<AnalysisErrorType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -90,7 +90,6 @@ public final class AnalysisErrorArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public AnalysisErrorArgs build() {
             return new AnalysisErrorArgs(message, type);
         }

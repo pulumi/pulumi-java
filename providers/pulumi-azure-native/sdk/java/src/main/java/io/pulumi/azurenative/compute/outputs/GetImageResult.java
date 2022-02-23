@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.compute.outputs.ImageStorageProfileResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -248,7 +248,6 @@ public final class GetImageResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(extendedLocation, hyperVGeneration, id, location, name, provisioningState, sourceVirtualMachine, storageProfile, tags, type);
         }

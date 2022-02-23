@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class MembershipStateResponse {
             this.code = Objects.requireNonNull(code);
             return this;
         }
-
         public MembershipStateResponse build() {
             return new MembershipStateResponse(code);
         }

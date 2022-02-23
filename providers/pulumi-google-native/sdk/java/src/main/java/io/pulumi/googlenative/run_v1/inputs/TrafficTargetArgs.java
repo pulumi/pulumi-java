@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationName")
-    private final @Nullable Input<String> configurationName;
+      private final @Nullable Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName == null ? Input.empty() : this.configurationName;
@@ -36,7 +36,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latestRevision")
-    private final @Nullable Input<Boolean> latestRevision;
+      private final @Nullable Input<Boolean> latestRevision;
 
     public Input<Boolean> getLatestRevision() {
         return this.latestRevision == null ? Input.empty() : this.latestRevision;
@@ -47,7 +47,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+      private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -58,7 +58,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionName")
-    private final @Nullable Input<String> revisionName;
+      private final @Nullable Input<String> revisionName;
 
     public Input<String> getRevisionName() {
         return this.revisionName == null ? Input.empty() : this.revisionName;
@@ -69,7 +69,7 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -173,7 +173,6 @@ public final class TrafficTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public TrafficTargetArgs build() {
             return new TrafficTargetArgs(configurationName, latestRevision, percent, revisionName, tag);
         }

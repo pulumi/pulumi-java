@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.spanner_v1.outputs.EncryptionInfoResponse;
 import io.pulumi.googlenative.spanner_v1.outputs.RestoreInfoResponse;
@@ -246,7 +246,6 @@ public final class GetDatabaseResult {
             this.versionRetentionPeriod = Objects.requireNonNull(versionRetentionPeriod);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(createTime, databaseDialect, defaultLeader, earliestVersionTime, encryptionConfig, encryptionInfo, name, restoreInfo, state, versionRetentionPeriod);
         }

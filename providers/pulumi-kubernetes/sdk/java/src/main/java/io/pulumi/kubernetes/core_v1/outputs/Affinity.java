@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeAffinity;
 import io.pulumi.kubernetes.core_v1.outputs.PodAffinity;
 import io.pulumi.kubernetes.core_v1.outputs.PodAntiAffinity;
@@ -99,7 +99,6 @@ public final class Affinity {
             this.podAntiAffinity = podAntiAffinity;
             return this;
         }
-
         public Affinity build() {
             return new Affinity(nodeAffinity, podAffinity, podAntiAffinity);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.ApprovalResultResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class BuildApprovalResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public BuildApprovalResponse build() {
             return new BuildApprovalResponse(config, result, state);
         }

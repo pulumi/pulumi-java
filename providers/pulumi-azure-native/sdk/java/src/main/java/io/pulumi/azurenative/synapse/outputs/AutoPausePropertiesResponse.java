@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class AutoPausePropertiesResponse {
             this.enabled = enabled;
             return this;
         }
-
         public AutoPausePropertiesResponse build() {
             return new AutoPausePropertiesResponse(delayInMinutes, enabled);
         }

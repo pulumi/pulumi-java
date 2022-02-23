@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.enums.DefaultAction;
 import io.pulumi.azurenative.devices.inputs.NetworkRuleSetIpRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="applyToBuiltInEventHubEndpoint", required=true)
-    private final Input<Boolean> applyToBuiltInEventHubEndpoint;
+        private final Input<Boolean> applyToBuiltInEventHubEndpoint;
 
     public Input<Boolean> getApplyToBuiltInEventHubEndpoint() {
         return this.applyToBuiltInEventHubEndpoint;
@@ -39,7 +39,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="defaultAction")
-    private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
+        private final @Nullable Input<Either<String,DefaultAction>> defaultAction;
 
     public Input<Either<String,DefaultAction>> getDefaultAction() {
         return this.defaultAction == null ? Input.empty() : this.defaultAction;
@@ -50,7 +50,7 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipRules", required=true)
-    private final Input<List<NetworkRuleSetIpRuleArgs>> ipRules;
+        private final Input<List<NetworkRuleSetIpRuleArgs>> ipRules;
 
     public Input<List<NetworkRuleSetIpRuleArgs>> getIpRules() {
         return this.ipRules;
@@ -124,7 +124,6 @@ public final class NetworkRuleSetPropertiesArgs extends io.pulumi.resources.Reso
             this.ipRules = Input.of(Objects.requireNonNull(ipRules));
             return this;
         }
-
         public NetworkRuleSetPropertiesArgs build() {
             return new NetworkRuleSetPropertiesArgs(applyToBuiltInEventHubEndpoint, defaultAction, ipRules);
         }

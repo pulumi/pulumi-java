@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ssmcontacts.ContactChannelArgs;
 import io.pulumi.awsnative.ssmcontacts.enums.ContactChannelChannelType;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -105,13 +105,6 @@ public class ContactChannel extends io.pulumi.resources.CustomResource {
         return this.deferActivation;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ContactChannel(String name) {
-        super("aws-native:ssmcontacts:ContactChannel", name, ContactChannelArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

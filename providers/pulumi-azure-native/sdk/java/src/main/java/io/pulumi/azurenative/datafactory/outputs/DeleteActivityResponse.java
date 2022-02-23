@@ -22,7 +22,7 @@ import io.pulumi.azurenative.datafactory.outputs.LogStorageSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -331,7 +331,6 @@ public final class DeleteActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public DeleteActivityResponse build() {
             return new DeleteActivityResponse(dataset, dependsOn, description, enableLogging, linkedServiceName, logStorageSettings, maxConcurrentConnections, name, policy, recursive, storeSettings, type, userProperties);
         }

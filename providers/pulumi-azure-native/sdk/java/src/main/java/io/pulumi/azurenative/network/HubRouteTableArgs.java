@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network;
 
 import io.pulumi.azurenative.network.inputs.HubRouteArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -32,7 +32,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<String>> labels;
+        private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -43,7 +43,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -54,7 +54,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeTableName")
-    private final @Nullable Input<String> routeTableName;
+        private final @Nullable Input<String> routeTableName;
 
     public Input<String> getRouteTableName() {
         return this.routeTableName == null ? Input.empty() : this.routeTableName;
@@ -76,7 +76,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable Input<List<HubRouteArgs>> routes;
+        private final @Nullable Input<List<HubRouteArgs>> routes;
 
     public Input<List<HubRouteArgs>> getRoutes() {
         return this.routes == null ? Input.empty() : this.routes;
@@ -87,7 +87,7 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualHubName", required=true)
-    private final Input<String> virtualHubName;
+        private final Input<String> virtualHubName;
 
     public Input<String> getVirtualHubName() {
         return this.virtualHubName;
@@ -221,7 +221,6 @@ public final class HubRouteTableArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualHubName = Input.of(Objects.requireNonNull(virtualHubName));
             return this;
         }
-
         public HubRouteTableArgs build() {
             return new HubRouteTableArgs(id, labels, name, resourceGroupName, routeTableName, routes, virtualHubName);
         }

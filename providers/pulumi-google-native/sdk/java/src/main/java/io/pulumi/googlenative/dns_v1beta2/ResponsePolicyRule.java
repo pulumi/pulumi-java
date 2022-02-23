@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dns_v1beta2.ResponsePolicyRuleArgs;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ResponsePolicyRuleLocalDataResponse;
@@ -83,13 +83,6 @@ public class ResponsePolicyRule extends io.pulumi.resources.CustomResource {
         return this.ruleName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ResponsePolicyRule(String name) {
-        super("google-native:dns/v1beta2:ResponsePolicyRule", name, ResponsePolicyRuleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

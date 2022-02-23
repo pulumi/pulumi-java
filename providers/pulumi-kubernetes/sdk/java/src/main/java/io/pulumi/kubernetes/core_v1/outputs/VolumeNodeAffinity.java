@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSelector;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class VolumeNodeAffinity {
             this.required = required;
             return this;
         }
-
         public VolumeNodeAffinity build() {
             return new VolumeNodeAffinity(required);
         }

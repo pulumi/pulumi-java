@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -14,21 +14,21 @@ public final class GetInstanceSchedulingNodeAffinity extends io.pulumi.resources
     public static final GetInstanceSchedulingNodeAffinity Empty = new GetInstanceSchedulingNodeAffinity();
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="operator", required=true)
-    private final String operator;
+        private final String operator;
 
     public String getOperator() {
         return this.operator;
     }
 
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -87,7 +87,6 @@ public final class GetInstanceSchedulingNodeAffinity extends io.pulumi.resources
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetInstanceSchedulingNodeAffinity build() {
             return new GetInstanceSchedulingNodeAffinity(key, operator, values);
         }

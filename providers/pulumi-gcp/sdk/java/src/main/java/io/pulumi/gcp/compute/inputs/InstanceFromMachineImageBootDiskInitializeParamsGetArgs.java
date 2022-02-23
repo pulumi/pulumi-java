@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -18,28 +18,28 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
     public static final InstanceFromMachineImageBootDiskInitializeParamsGetArgs Empty = new InstanceFromMachineImageBootDiskInitializeParamsGetArgs();
 
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+        private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
     }
 
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,Object>> labels;
+        private final @Nullable Input<Map<String,Object>> labels;
 
     public Input<Map<String,Object>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+        private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -128,7 +128,6 @@ public final class InstanceFromMachineImageBootDiskInitializeParamsGetArgs exten
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public InstanceFromMachineImageBootDiskInitializeParamsGetArgs build() {
             return new InstanceFromMachineImageBootDiskInitializeParamsGetArgs(image, labels, size, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class BackendServiceFailoverPolicyResponse {
             this.failoverRatio = Objects.requireNonNull(failoverRatio);
             return this;
         }
-
         public BackendServiceFailoverPolicyResponse build() {
             return new BackendServiceFailoverPolicyResponse(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

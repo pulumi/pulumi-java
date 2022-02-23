@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.DiskResourcePolicyAttachmentArgs;
 import io.pulumi.gcp.compute.inputs.DiskResourcePolicyAttachmentState;
@@ -105,13 +105,6 @@ public class DiskResourcePolicyAttachment extends io.pulumi.resources.CustomReso
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DiskResourcePolicyAttachment(String name) {
-        super("gcp:compute/diskResourcePolicyAttachment:DiskResourcePolicyAttachment", name, DiskResourcePolicyAttachmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

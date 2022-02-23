@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1.outputs.TokenRequest;
 import java.lang.Boolean;
 import java.lang.String;
@@ -246,7 +246,6 @@ public final class CSIDriverSpec {
             this.volumeLifecycleModes = volumeLifecycleModes;
             return this;
         }
-
         public CSIDriverSpec build() {
             return new CSIDriverSpec(attachRequired, fsGroupPolicy, podInfoOnMount, requiresRepublish, storageCapacity, tokenRequests, volumeLifecycleModes);
         }

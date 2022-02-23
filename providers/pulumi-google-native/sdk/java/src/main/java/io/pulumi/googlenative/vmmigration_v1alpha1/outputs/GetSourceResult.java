@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmwareSourceDetailsResponse;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class GetSourceResult {
             this.vmware = Objects.requireNonNull(vmware);
             return this;
         }
-
         public GetSourceResult build() {
             return new GetSourceResult(createTime, description, error, labels, name, updateTime, vmware);
         }

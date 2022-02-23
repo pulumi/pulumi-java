@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2AuxiliaryTableResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TaggedFieldResponse;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GooglePrivacyDlpV2KMapEstimationConfigResponse {
             this.regionCode = Objects.requireNonNull(regionCode);
             return this;
         }
-
         public GooglePrivacyDlpV2KMapEstimationConfigResponse build() {
             return new GooglePrivacyDlpV2KMapEstimationConfigResponse(auxiliaryTables, quasiIds, regionCode);
         }

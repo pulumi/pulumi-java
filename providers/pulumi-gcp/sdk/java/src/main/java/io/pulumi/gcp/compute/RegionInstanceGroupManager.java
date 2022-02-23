@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionInstanceGroupManagerArgs;
 import io.pulumi.gcp.compute.inputs.RegionInstanceGroupManagerState;
@@ -367,13 +367,6 @@ public class RegionInstanceGroupManager extends io.pulumi.resources.CustomResour
         return this.waitForInstancesStatus;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionInstanceGroupManager(String name) {
-        super("gcp:compute/regionInstanceGroupManager:RegionInstanceGroupManager", name, RegionInstanceGroupManagerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

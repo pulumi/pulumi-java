@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MonitoringScheduleStoppingCondition extends io.pulumi.resourc
      * 
      */
     @InputImport(name="maxRuntimeInSeconds", required=true)
-    private final Integer maxRuntimeInSeconds;
+        private final Integer maxRuntimeInSeconds;
 
     public Integer getMaxRuntimeInSeconds() {
         return this.maxRuntimeInSeconds;
@@ -59,7 +59,6 @@ public final class MonitoringScheduleStoppingCondition extends io.pulumi.resourc
             this.maxRuntimeInSeconds = Objects.requireNonNull(maxRuntimeInSeconds);
             return this;
         }
-
         public MonitoringScheduleStoppingCondition build() {
             return new MonitoringScheduleStoppingCondition(maxRuntimeInSeconds);
         }

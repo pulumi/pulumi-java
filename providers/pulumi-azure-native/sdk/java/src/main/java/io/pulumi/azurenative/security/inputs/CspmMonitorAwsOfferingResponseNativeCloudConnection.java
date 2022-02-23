@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection extends i
      * 
      */
     @InputImport(name="cloudRoleArn")
-    private final @Nullable String cloudRoleArn;
+        private final @Nullable String cloudRoleArn;
 
     public Optional<String> getCloudRoleArn() {
         return this.cloudRoleArn == null ? Optional.empty() : Optional.ofNullable(this.cloudRoleArn);
@@ -61,7 +61,6 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection extends i
             this.cloudRoleArn = cloudRoleArn;
             return this;
         }
-
         public CspmMonitorAwsOfferingResponseNativeCloudConnection build() {
             return new CspmMonitorAwsOfferingResponseNativeCloudConnection(cloudRoleArn);
         }

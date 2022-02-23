@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.PublisherInfoResponse;
 import io.pulumi.azurenative.security.inputs.UserRecommendationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+        private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -38,7 +38,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="common")
-    private final @Nullable Boolean common;
+        private final @Nullable Boolean common;
 
     public Optional<Boolean> getCommon() {
         return this.common == null ? Optional.empty() : Optional.ofNullable(this.common);
@@ -49,7 +49,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="configurationStatus")
-    private final @Nullable String configurationStatus;
+        private final @Nullable String configurationStatus;
 
     public Optional<String> getConfigurationStatus() {
         return this.configurationStatus == null ? Optional.empty() : Optional.ofNullable(this.configurationStatus);
@@ -60,7 +60,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="fileType")
-    private final @Nullable String fileType;
+        private final @Nullable String fileType;
 
     public Optional<String> getFileType() {
         return this.fileType == null ? Optional.empty() : Optional.ofNullable(this.fileType);
@@ -71,7 +71,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -82,7 +82,7 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="publisherInfo")
-    private final @Nullable PublisherInfoResponse publisherInfo;
+        private final @Nullable PublisherInfoResponse publisherInfo;
 
     public Optional<PublisherInfoResponse> getPublisherInfo() {
         return this.publisherInfo == null ? Optional.empty() : Optional.ofNullable(this.publisherInfo);
@@ -93,21 +93,21 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
     }
 
     @InputImport(name="userSids")
-    private final @Nullable List<String> userSids;
+        private final @Nullable List<String> userSids;
 
     public List<String> getUserSids() {
         return this.userSids == null ? List.of() : this.userSids;
     }
 
     @InputImport(name="usernames")
-    private final @Nullable List<UserRecommendationResponse> usernames;
+        private final @Nullable List<UserRecommendationResponse> usernames;
 
     public List<UserRecommendationResponse> getUsernames() {
         return this.usernames == null ? List.of() : this.usernames;
@@ -226,7 +226,6 @@ public final class PathRecommendationResponse extends io.pulumi.resources.Invoke
             this.usernames = usernames;
             return this;
         }
-
         public PathRecommendationResponse build() {
             return new PathRecommendationResponse(action, common, configurationStatus, fileType, path, publisherInfo, type, userSids, usernames);
         }

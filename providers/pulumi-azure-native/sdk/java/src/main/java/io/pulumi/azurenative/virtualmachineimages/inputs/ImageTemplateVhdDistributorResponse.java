@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="artifactTags")
-    private final @Nullable Map<String,String> artifactTags;
+        private final @Nullable Map<String,String> artifactTags;
 
     public Map<String,String> getArtifactTags() {
         return this.artifactTags == null ? Map.of() : this.artifactTags;
@@ -35,7 +35,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="runOutputName", required=true)
-    private final String runOutputName;
+        private final String runOutputName;
 
     public String getRunOutputName() {
         return this.runOutputName;
@@ -47,7 +47,7 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -106,7 +106,6 @@ public final class ImageTemplateVhdDistributorResponse extends io.pulumi.resourc
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateVhdDistributorResponse build() {
             return new ImageTemplateVhdDistributorResponse(artifactTags, runOutputName, type);
         }

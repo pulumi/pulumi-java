@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Object linkedServiceName;
+        private final Object linkedServiceName;
 
     public Object getLinkedServiceName() {
         return this.linkedServiceName;
@@ -34,7 +34,7 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Object path;
+        private final @Nullable Object path;
 
     public Optional<Object> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -83,7 +83,6 @@ public final class RedirectIncompatibleRowSettingsResponse extends io.pulumi.res
             this.path = path;
             return this;
         }
-
         public RedirectIncompatibleRowSettingsResponse build() {
             return new RedirectIncompatibleRowSettingsResponse(linkedServiceName, path);
         }

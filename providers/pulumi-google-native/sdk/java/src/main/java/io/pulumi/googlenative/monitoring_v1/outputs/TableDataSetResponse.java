@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TableDisplayOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesQueryResponse;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class TableDataSetResponse {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public TableDataSetResponse build() {
             return new TableDataSetResponse(minAlignmentPeriod, tableDisplayOptions, tableTemplate, timeSeriesQuery);
         }

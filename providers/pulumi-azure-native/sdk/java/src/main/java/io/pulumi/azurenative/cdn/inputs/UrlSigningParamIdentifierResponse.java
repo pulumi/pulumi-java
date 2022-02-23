@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="paramIndicator", required=true)
-    private final String paramIndicator;
+        private final String paramIndicator;
 
     public String getParamIndicator() {
         return this.paramIndicator;
@@ -32,7 +32,7 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="paramName", required=true)
-    private final String paramName;
+        private final String paramName;
 
     public String getParamName() {
         return this.paramName;
@@ -81,7 +81,6 @@ public final class UrlSigningParamIdentifierResponse extends io.pulumi.resources
             this.paramName = Objects.requireNonNull(paramName);
             return this;
         }
-
         public UrlSigningParamIdentifierResponse build() {
             return new UrlSigningParamIdentifierResponse(paramIndicator, paramName);
         }

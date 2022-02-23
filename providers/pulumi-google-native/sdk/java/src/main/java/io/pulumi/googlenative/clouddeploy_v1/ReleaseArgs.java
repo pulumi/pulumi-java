@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.BuildArtifactArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+      private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -33,14 +33,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="buildArtifacts")
-    private final @Nullable Input<List<BuildArtifactArgs>> buildArtifacts;
+      private final @Nullable Input<List<BuildArtifactArgs>> buildArtifacts;
 
     public Input<List<BuildArtifactArgs>> getBuildArtifacts() {
         return this.buildArtifacts == null ? Input.empty() : this.buildArtifacts;
     }
 
     @InputImport(name="deliveryPipelineId", required=true)
-    private final Input<String> deliveryPipelineId;
+      private final Input<String> deliveryPipelineId;
 
     public Input<String> getDeliveryPipelineId() {
         return this.deliveryPipelineId;
@@ -51,7 +51,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -62,7 +62,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -73,14 +73,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -91,28 +91,28 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="releaseId", required=true)
-    private final Input<String> releaseId;
+      private final Input<String> releaseId;
 
     public Input<String> getReleaseId() {
         return this.releaseId;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -123,7 +123,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skaffoldConfigPath")
-    private final @Nullable Input<String> skaffoldConfigPath;
+      private final @Nullable Input<String> skaffoldConfigPath;
 
     public Input<String> getSkaffoldConfigPath() {
         return this.skaffoldConfigPath == null ? Input.empty() : this.skaffoldConfigPath;
@@ -134,7 +134,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skaffoldConfigUri")
-    private final @Nullable Input<String> skaffoldConfigUri;
+      private final @Nullable Input<String> skaffoldConfigUri;
 
     public Input<String> getSkaffoldConfigUri() {
         return this.skaffoldConfigUri == null ? Input.empty() : this.skaffoldConfigUri;
@@ -145,14 +145,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skaffoldVersion")
-    private final @Nullable Input<String> skaffoldVersion;
+      private final @Nullable Input<String> skaffoldVersion;
 
     public Input<String> getSkaffoldVersion() {
         return this.skaffoldVersion == null ? Input.empty() : this.skaffoldVersion;
     }
 
     @InputImport(name="validateOnly")
-    private final @Nullable Input<String> validateOnly;
+      private final @Nullable Input<String> validateOnly;
 
     public Input<String> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -406,7 +406,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public ReleaseArgs build() {
             return new ReleaseArgs(annotations, buildArtifacts, deliveryPipelineId, description, etag, labels, location, name, project, releaseId, requestId, skaffoldConfigPath, skaffoldConfigUri, skaffoldVersion, validateOnly);
         }

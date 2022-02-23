@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="podAddressCidrBlocks", required=true)
-    private final Input<List<String>> podAddressCidrBlocks;
+        private final Input<List<String>> podAddressCidrBlocks;
 
     public Input<List<String>> getPodAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
@@ -30,7 +30,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceAddressCidrBlocks", required=true)
-    private final Input<List<String>> serviceAddressCidrBlocks;
+        private final Input<List<String>> serviceAddressCidrBlocks;
 
     public Input<List<String>> getServiceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
@@ -41,7 +41,7 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -115,7 +115,6 @@ public final class AwsClusterNetworkingGetArgs extends io.pulumi.resources.Resou
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public AwsClusterNetworkingGetArgs build() {
             return new AwsClusterNetworkingGetArgs(podAddressCidrBlocks, serviceAddressCidrBlocks, vpcId);
         }

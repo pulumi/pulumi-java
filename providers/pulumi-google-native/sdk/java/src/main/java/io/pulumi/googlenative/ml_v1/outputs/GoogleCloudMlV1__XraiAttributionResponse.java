@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1__XraiAttributionResponse {
             this.numIntegralSteps = Objects.requireNonNull(numIntegralSteps);
             return this;
         }
-
         public GoogleCloudMlV1__XraiAttributionResponse build() {
             return new GoogleCloudMlV1__XraiAttributionResponse(numIntegralSteps);
         }

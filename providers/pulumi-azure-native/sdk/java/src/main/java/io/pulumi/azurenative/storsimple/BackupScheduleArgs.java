@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storsimple.enums.Kind;
 import io.pulumi.azurenative.storsimple.enums.ScheduleStatus;
 import io.pulumi.azurenative.storsimple.inputs.ScheduleRecurrenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPolicyName", required=true)
-    private final Input<String> backupPolicyName;
+        private final Input<String> backupPolicyName;
 
     public Input<String> getBackupPolicyName() {
         return this.backupPolicyName;
@@ -35,7 +35,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupScheduleName")
-    private final @Nullable Input<String> backupScheduleName;
+        private final @Nullable Input<String> backupScheduleName;
 
     public Input<String> getBackupScheduleName() {
         return this.backupScheduleName == null ? Input.empty() : this.backupScheduleName;
@@ -46,7 +46,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupType", required=true)
-    private final Input<BackupType> backupType;
+        private final Input<BackupType> backupType;
 
     public Input<BackupType> getBackupType() {
         return this.backupType;
@@ -57,7 +57,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -68,7 +68,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Kind> kind;
+        private final @Nullable Input<Kind> kind;
 
     public Input<Kind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -79,7 +79,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managerName", required=true)
-    private final Input<String> managerName;
+        private final Input<String> managerName;
 
     public Input<String> getManagerName() {
         return this.managerName;
@@ -90,7 +90,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionCount", required=true)
-    private final Input<Double> retentionCount;
+        private final Input<Double> retentionCount;
 
     public Input<Double> getRetentionCount() {
         return this.retentionCount;
@@ -112,7 +112,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleRecurrence", required=true)
-    private final Input<ScheduleRecurrenceArgs> scheduleRecurrence;
+        private final Input<ScheduleRecurrenceArgs> scheduleRecurrence;
 
     public Input<ScheduleRecurrenceArgs> getScheduleRecurrence() {
         return this.scheduleRecurrence;
@@ -123,7 +123,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleStatus", required=true)
-    private final Input<ScheduleStatus> scheduleStatus;
+        private final Input<ScheduleStatus> scheduleStatus;
 
     public Input<ScheduleStatus> getScheduleStatus() {
         return this.scheduleStatus;
@@ -134,7 +134,7 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -328,7 +328,6 @@ public final class BackupScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public BackupScheduleArgs build() {
             return new BackupScheduleArgs(backupPolicyName, backupScheduleName, backupType, deviceName, kind, managerName, resourceGroupName, retentionCount, scheduleRecurrence, scheduleStatus, startTime);
         }

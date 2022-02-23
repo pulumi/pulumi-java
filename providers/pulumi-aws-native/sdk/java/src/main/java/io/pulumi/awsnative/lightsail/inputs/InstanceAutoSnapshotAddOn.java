@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InstanceAutoSnapshotAddOn extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="snapshotTimeOfDay")
-    private final @Nullable String snapshotTimeOfDay;
+        private final @Nullable String snapshotTimeOfDay;
 
     public Optional<String> getSnapshotTimeOfDay() {
         return this.snapshotTimeOfDay == null ? Optional.empty() : Optional.ofNullable(this.snapshotTimeOfDay);
@@ -61,7 +61,6 @@ public final class InstanceAutoSnapshotAddOn extends io.pulumi.resources.InvokeA
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-
         public InstanceAutoSnapshotAddOn build() {
             return new InstanceAutoSnapshotAddOn(snapshotTimeOfDay);
         }

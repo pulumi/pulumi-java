@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecTableSpecArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecViewSpecArgs;
 import java.lang.String;
@@ -18,21 +18,21 @@ public final class EntryBigqueryTableSpecArgs extends io.pulumi.resources.Resour
     public static final EntryBigqueryTableSpecArgs Empty = new EntryBigqueryTableSpecArgs();
 
     @InputImport(name="tableSourceType")
-    private final @Nullable Input<String> tableSourceType;
+        private final @Nullable Input<String> tableSourceType;
 
     public Input<String> getTableSourceType() {
         return this.tableSourceType == null ? Input.empty() : this.tableSourceType;
     }
 
     @InputImport(name="tableSpecs")
-    private final @Nullable Input<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
+        private final @Nullable Input<List<EntryBigqueryTableSpecTableSpecArgs>> tableSpecs;
 
     public Input<List<EntryBigqueryTableSpecTableSpecArgs>> getTableSpecs() {
         return this.tableSpecs == null ? Input.empty() : this.tableSpecs;
     }
 
     @InputImport(name="viewSpecs")
-    private final @Nullable Input<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
+        private final @Nullable Input<List<EntryBigqueryTableSpecViewSpecArgs>> viewSpecs;
 
     public Input<List<EntryBigqueryTableSpecViewSpecArgs>> getViewSpecs() {
         return this.viewSpecs == null ? Input.empty() : this.viewSpecs;
@@ -106,7 +106,6 @@ public final class EntryBigqueryTableSpecArgs extends io.pulumi.resources.Resour
             this.viewSpecs = Input.ofNullable(viewSpecs);
             return this;
         }
-
         public EntryBigqueryTableSpecArgs build() {
             return new EntryBigqueryTableSpecArgs(tableSourceType, tableSpecs, viewSpecs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class TruncationSelectionPolicyResponse {
             this.truncationPercentage = truncationPercentage;
             return this;
         }
-
         public TruncationSelectionPolicyResponse build() {
             return new TruncationSelectionPolicyResponse(delayEvaluation, evaluationInterval, policyType, truncationPercentage);
         }

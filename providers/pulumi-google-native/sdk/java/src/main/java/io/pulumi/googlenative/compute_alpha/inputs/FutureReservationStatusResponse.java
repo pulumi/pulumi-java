@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="autoCreatedReservations", required=true)
-    private final List<String> autoCreatedReservations;
+      private final List<String> autoCreatedReservations;
 
     public List<String> getAutoCreatedReservations() {
         return this.autoCreatedReservations;
@@ -33,7 +33,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="fulfilledCount", required=true)
-    private final String fulfilledCount;
+      private final String fulfilledCount;
 
     public String getFulfilledCount() {
         return this.fulfilledCount;
@@ -44,7 +44,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="lockTime", required=true)
-    private final String lockTime;
+      private final String lockTime;
 
     public String getLockTime() {
         return this.lockTime;
@@ -55,7 +55,7 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="procurementStatus", required=true)
-    private final String procurementStatus;
+      private final String procurementStatus;
 
     public String getProcurementStatus() {
         return this.procurementStatus;
@@ -124,7 +124,6 @@ public final class FutureReservationStatusResponse extends io.pulumi.resources.I
             this.procurementStatus = Objects.requireNonNull(procurementStatus);
             return this;
         }
-
         public FutureReservationStatusResponse build() {
             return new FutureReservationStatusResponse(autoCreatedReservations, fulfilledCount, lockTime, procurementStatus);
         }

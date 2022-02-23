@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.FingerprintResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.LayerResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class ImageOccurrenceResponse {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }
-
         public ImageOccurrenceResponse build() {
             return new ImageOccurrenceResponse(baseResourceUrl, distance, fingerprint, layerInfo);
         }

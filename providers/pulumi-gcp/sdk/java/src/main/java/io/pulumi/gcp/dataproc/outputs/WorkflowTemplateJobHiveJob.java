@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobHiveJobQueryList;
 import java.lang.Boolean;
 import java.lang.String;
@@ -164,7 +164,6 @@ public final class WorkflowTemplateJobHiveJob {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public WorkflowTemplateJobHiveJob build() {
             return new WorkflowTemplateJobHiveJob(continueOnFailure, jarFileUris, properties, queryFileUri, queryList, scriptVariables);
         }

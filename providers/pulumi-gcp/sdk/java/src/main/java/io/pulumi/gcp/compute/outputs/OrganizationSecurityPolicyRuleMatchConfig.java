@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.OrganizationSecurityPolicyRuleMatchConfigLayer4Config;
 import java.lang.String;
 import java.util.List;
@@ -104,7 +104,6 @@ public final class OrganizationSecurityPolicyRuleMatchConfig {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-
         public OrganizationSecurityPolicyRuleMatchConfig build() {
             return new OrganizationSecurityPolicyRuleMatchConfig(destIpRanges, layer4Configs, srcIpRanges);
         }

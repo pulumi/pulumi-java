@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.PermissionsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class AccessPolicyEntryResponse {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AccessPolicyEntryResponse build() {
             return new AccessPolicyEntryResponse(applicationId, objectId, permissions, tenantId);
         }

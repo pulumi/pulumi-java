@@ -4,7 +4,7 @@
 package io.pulumi.gcp.notebooks.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imageFamily")
-    private final @Nullable Input<String> imageFamily;
+        private final @Nullable Input<String> imageFamily;
 
     public Input<String> getImageFamily() {
         return this.imageFamily == null ? Input.empty() : this.imageFamily;
@@ -30,7 +30,7 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+        private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
@@ -42,7 +42,7 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -116,7 +116,6 @@ public final class InstanceVmImageGetArgs extends io.pulumi.resources.ResourceAr
             this.project = Input.of(Objects.requireNonNull(project));
             return this;
         }
-
         public InstanceVmImageGetArgs build() {
             return new InstanceVmImageGetArgs(imageFamily, imageName, project);
         }

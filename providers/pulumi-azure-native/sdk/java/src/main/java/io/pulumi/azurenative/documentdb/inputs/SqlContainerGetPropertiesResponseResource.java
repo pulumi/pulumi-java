@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.inputs.ConflictResolutionPolicyResponse;
 import io.pulumi.azurenative.documentdb.inputs.ContainerPartitionKeyResponse;
 import io.pulumi.azurenative.documentdb.inputs.IndexingPolicyResponse;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-    private final @Nullable Double analyticalStorageTtl;
+        private final @Nullable Double analyticalStorageTtl;
 
     public Optional<Double> getAnalyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Optional.empty() : Optional.ofNullable(this.analyticalStorageTtl);
@@ -36,7 +36,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="conflictResolutionPolicy")
-    private final @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
+        private final @Nullable ConflictResolutionPolicyResponse conflictResolutionPolicy;
 
     public Optional<ConflictResolutionPolicyResponse> getConflictResolutionPolicy() {
         return this.conflictResolutionPolicy == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPolicy);
@@ -47,7 +47,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Integer defaultTtl;
+        private final @Nullable Integer defaultTtl;
 
     public Optional<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Optional.empty() : Optional.ofNullable(this.defaultTtl);
@@ -58,7 +58,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -69,7 +69,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -80,7 +80,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="indexingPolicy")
-    private final @Nullable IndexingPolicyResponse indexingPolicy;
+        private final @Nullable IndexingPolicyResponse indexingPolicy;
 
     public Optional<IndexingPolicyResponse> getIndexingPolicy() {
         return this.indexingPolicy == null ? Optional.empty() : Optional.ofNullable(this.indexingPolicy);
@@ -91,7 +91,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable ContainerPartitionKeyResponse partitionKey;
+        private final @Nullable ContainerPartitionKeyResponse partitionKey;
 
     public Optional<ContainerPartitionKeyResponse> getPartitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
@@ -102,7 +102,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="rid", required=true)
-    private final String rid;
+        private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -113,7 +113,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="ts", required=true)
-    private final Double ts;
+        private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -124,7 +124,7 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
      * 
      */
     @InputImport(name="uniqueKeyPolicy")
-    private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
+        private final @Nullable UniqueKeyPolicyResponse uniqueKeyPolicy;
 
     public Optional<UniqueKeyPolicyResponse> getUniqueKeyPolicy() {
         return this.uniqueKeyPolicy == null ? Optional.empty() : Optional.ofNullable(this.uniqueKeyPolicy);
@@ -253,7 +253,6 @@ public final class SqlContainerGetPropertiesResponseResource extends io.pulumi.r
             this.uniqueKeyPolicy = uniqueKeyPolicy;
             return this;
         }
-
         public SqlContainerGetPropertiesResponseResource build() {
             return new SqlContainerGetPropertiesResponseResource(analyticalStorageTtl, conflictResolutionPolicy, defaultTtl, etag, id, indexingPolicy, partitionKey, rid, ts, uniqueKeyPolicy);
         }

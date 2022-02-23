@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.BackendRulePathTranslation;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -26,7 +26,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+      private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -37,7 +37,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deadline")
-    private final @Nullable Input<Double> deadline;
+      private final @Nullable Input<Double> deadline;
 
     public Input<Double> getDeadline() {
         return this.deadline == null ? Input.empty() : this.deadline;
@@ -48,7 +48,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableAuth")
-    private final @Nullable Input<Boolean> disableAuth;
+      private final @Nullable Input<Boolean> disableAuth;
 
     public Input<Boolean> getDisableAuth() {
         return this.disableAuth == null ? Input.empty() : this.disableAuth;
@@ -59,7 +59,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwtAudience")
-    private final @Nullable Input<String> jwtAudience;
+      private final @Nullable Input<String> jwtAudience;
 
     public Input<String> getJwtAudience() {
         return this.jwtAudience == null ? Input.empty() : this.jwtAudience;
@@ -70,14 +70,14 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationDeadline")
-    private final @Nullable Input<Double> operationDeadline;
+      private final @Nullable Input<Double> operationDeadline;
 
     public Input<Double> getOperationDeadline() {
         return this.operationDeadline == null ? Input.empty() : this.operationDeadline;
     }
 
     @InputImport(name="pathTranslation")
-    private final @Nullable Input<BackendRulePathTranslation> pathTranslation;
+      private final @Nullable Input<BackendRulePathTranslation> pathTranslation;
 
     public Input<BackendRulePathTranslation> getPathTranslation() {
         return this.pathTranslation == null ? Input.empty() : this.pathTranslation;
@@ -88,7 +88,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -99,7 +99,7 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -248,7 +248,6 @@ public final class BackendRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public BackendRuleArgs build() {
             return new BackendRuleArgs(address, deadline, disableAuth, jwtAudience, operationDeadline, pathTranslation, protocol, selector);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse {
             this.patternsToMatch = patternsToMatch;
             return this;
         }
-
         public SecurityPolicyWebApplicationFirewallAssociationResponse build() {
             return new SecurityPolicyWebApplicationFirewallAssociationResponse(domains, patternsToMatch);
         }

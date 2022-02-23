@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudDialogflowV2NotificationConfigResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GoogleCloudDialogflowV2NotificationConfigResponse build() {
             return new GoogleCloudDialogflowV2NotificationConfigResponse(messageFormat, topic);
         }

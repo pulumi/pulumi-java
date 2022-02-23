@@ -6,7 +6,7 @@ package io.pulumi.azurenative.testbase.inputs;
 import io.pulumi.azurenative.testbase.enums.Tier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+        private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
@@ -37,7 +37,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -48,7 +48,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -59,7 +59,7 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tier", required=true)
-    private final Input<Either<String,Tier>> tier;
+        private final Input<Either<String,Tier>> tier;
 
     public Input<Either<String,Tier>> getTier() {
         return this.tier;
@@ -148,7 +148,6 @@ public final class TestBaseAccountSKUArgs extends io.pulumi.resources.ResourceAr
             this.tier = Input.of(Objects.requireNonNull(tier));
             return this;
         }
-
         public TestBaseAccountSKUArgs build() {
             return new TestBaseAccountSKUArgs(locations, name, resourceType, tier);
         }

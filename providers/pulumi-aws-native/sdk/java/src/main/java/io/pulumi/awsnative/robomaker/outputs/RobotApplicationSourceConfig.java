@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.robomaker.outputs;
 
 import io.pulumi.awsnative.robomaker.enums.RobotApplicationSourceConfigArchitecture;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -96,7 +96,6 @@ public final class RobotApplicationSourceConfig {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public RobotApplicationSourceConfig build() {
             return new RobotApplicationSourceConfig(architecture, s3Bucket, s3Key);
         }

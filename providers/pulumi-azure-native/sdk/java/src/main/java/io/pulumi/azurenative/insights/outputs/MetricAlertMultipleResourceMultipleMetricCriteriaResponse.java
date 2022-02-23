@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.DynamicMetricCriteriaResponse;
 import io.pulumi.azurenative.insights.outputs.MetricCriteriaResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MetricAlertMultipleResourceMultipleMetricCriteriaResponse build() {
             return new MetricAlertMultipleResourceMultipleMetricCriteriaResponse(allOf, odataType);
         }

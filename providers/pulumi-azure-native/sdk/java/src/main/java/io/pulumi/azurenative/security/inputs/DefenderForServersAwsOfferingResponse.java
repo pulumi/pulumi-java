@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseArcAutoProvisioning;
 import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingResponseDefenderForServers;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="arcAutoProvisioning")
-    private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
+        private final @Nullable DefenderForServersAwsOfferingResponseArcAutoProvisioning arcAutoProvisioning;
 
     public Optional<DefenderForServersAwsOfferingResponseArcAutoProvisioning> getArcAutoProvisioning() {
         return this.arcAutoProvisioning == null ? Optional.empty() : Optional.ofNullable(this.arcAutoProvisioning);
@@ -36,7 +36,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="defenderForServers")
-    private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
+        private final @Nullable DefenderForServersAwsOfferingResponseDefenderForServers defenderForServers;
 
     public Optional<DefenderForServersAwsOfferingResponseDefenderForServers> getDefenderForServers() {
         return this.defenderForServers == null ? Optional.empty() : Optional.ofNullable(this.defenderForServers);
@@ -47,7 +47,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -59,7 +59,7 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="offeringType", required=true)
-    private final String offeringType;
+        private final String offeringType;
 
     public String getOfferingType() {
         return this.offeringType;
@@ -128,7 +128,6 @@ public final class DefenderForServersAwsOfferingResponse extends io.pulumi.resou
             this.offeringType = Objects.requireNonNull(offeringType);
             return this;
         }
-
         public DefenderForServersAwsOfferingResponse build() {
             return new DefenderForServersAwsOfferingResponse(arcAutoProvisioning, defenderForServers, description, offeringType);
         }

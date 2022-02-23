@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -265,7 +265,6 @@ public final class GetTargetHttpProxyResult {
             this.urlMap = Objects.requireNonNull(urlMap);
             return this;
         }
-
         public GetTargetHttpProxyResult build() {
             return new GetTargetHttpProxyResult(creationTimestamp, description, fingerprint, httpFilters, kind, name, proxyBind, region, selfLink, selfLinkWithId, urlMap);
         }

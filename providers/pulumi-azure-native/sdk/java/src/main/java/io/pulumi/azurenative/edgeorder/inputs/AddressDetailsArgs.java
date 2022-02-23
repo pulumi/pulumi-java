@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.AddressPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -22,7 +22,7 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forwardAddress", required=true)
-    private final Input<AddressPropertiesArgs> forwardAddress;
+        private final Input<AddressPropertiesArgs> forwardAddress;
 
     public Input<AddressPropertiesArgs> getForwardAddress() {
         return this.forwardAddress;
@@ -65,7 +65,6 @@ public final class AddressDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.forwardAddress = Input.of(Objects.requireNonNull(forwardAddress));
             return this;
         }
-
         public AddressDetailsArgs build() {
             return new AddressDetailsArgs(forwardAddress);
         }

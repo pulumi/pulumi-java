@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ses.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="htmlPart")
-    private final @Nullable Input<String> htmlPart;
+        private final @Nullable Input<String> htmlPart;
 
     public Input<String> getHtmlPart() {
         return this.htmlPart == null ? Input.empty() : this.htmlPart;
@@ -34,7 +34,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subjectPart", required=true)
-    private final Input<String> subjectPart;
+        private final Input<String> subjectPart;
 
     public Input<String> getSubjectPart() {
         return this.subjectPart;
@@ -45,7 +45,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateName")
-    private final @Nullable Input<String> templateName;
+        private final @Nullable Input<String> templateName;
 
     public Input<String> getTemplateName() {
         return this.templateName == null ? Input.empty() : this.templateName;
@@ -56,7 +56,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="textPart")
-    private final @Nullable Input<String> textPart;
+        private final @Nullable Input<String> textPart;
 
     public Input<String> getTextPart() {
         return this.textPart == null ? Input.empty() : this.textPart;
@@ -145,7 +145,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.textPart = Input.ofNullable(textPart);
             return this;
         }
-
         public TemplateArgs build() {
             return new TemplateArgs(htmlPart, subjectPart, templateName, textPart);
         }

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkBgpCommunitiesResponse;
 import io.pulumi.azurenative.network.outputs.VirtualNetworkPeeringResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -422,7 +422,6 @@ public final class GetVirtualNetworkResult {
             this.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, etag, extendedLocation, id, ipAllocations, location, name, provisioningState, resourceGuid, subnets, tags, type, virtualNetworkPeerings);
         }

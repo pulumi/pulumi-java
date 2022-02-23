@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CloneJobResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDefaultsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.CutoverJobResponse;
@@ -398,7 +398,6 @@ public final class GetMigratingVmResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMigratingVmResult build() {
             return new GetMigratingVmResult(computeEngineTargetDefaults, createTime, currentSyncInfo, description, displayName, error, group, labels, lastSync, name, policy, recentCloneJobs, recentCutoverJobs, sourceVmId, state, stateTime, updateTime);
         }

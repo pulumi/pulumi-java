@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -45,7 +45,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iotThingName")
-    private final @Nullable Input<String> iotThingName;
+        private final @Nullable Input<String> iotThingName;
 
     public Input<String> getIotThingName() {
         return this.iotThingName == null ? Input.empty() : this.iotThingName;
@@ -119,7 +119,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.iotThingName = Input.ofNullable(iotThingName);
             return this;
         }
-
         public DeviceArgs build() {
             return new DeviceArgs(description, deviceName, iotThingName);
         }

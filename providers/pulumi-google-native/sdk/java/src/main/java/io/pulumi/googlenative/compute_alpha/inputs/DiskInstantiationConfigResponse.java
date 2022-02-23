@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="autoDelete", required=true)
-    private final Boolean autoDelete;
+      private final Boolean autoDelete;
 
     public Boolean getAutoDelete() {
         return this.autoDelete;
@@ -33,7 +33,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="customImage", required=true)
-    private final String customImage;
+      private final String customImage;
 
     public String getCustomImage() {
         return this.customImage;
@@ -44,7 +44,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+      private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -55,7 +55,7 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instantiateFrom", required=true)
-    private final String instantiateFrom;
+      private final String instantiateFrom;
 
     public String getInstantiateFrom() {
         return this.instantiateFrom;
@@ -124,7 +124,6 @@ public final class DiskInstantiationConfigResponse extends io.pulumi.resources.I
             this.instantiateFrom = Objects.requireNonNull(instantiateFrom);
             return this;
         }
-
         public DiskInstantiationConfigResponse build() {
             return new DiskInstantiationConfigResponse(autoDelete, customImage, deviceName, instantiateFrom);
         }

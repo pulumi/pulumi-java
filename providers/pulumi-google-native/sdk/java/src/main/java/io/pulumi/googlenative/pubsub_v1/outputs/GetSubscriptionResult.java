@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsub_v1.outputs.DeadLetterPolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.ExpirationPolicyResponse;
 import io.pulumi.googlenative.pubsub_v1.outputs.PushConfigResponse;
@@ -354,7 +354,6 @@ public final class GetSubscriptionResult {
             this.topicMessageRetentionDuration = Objects.requireNonNull(topicMessageRetentionDuration);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(ackDeadlineSeconds, deadLetterPolicy, detached, enableMessageOrdering, expirationPolicy, filter, labels, messageRetentionDuration, name, pushConfig, retainAckedMessages, retryPolicy, state, topic, topicMessageRetentionDuration);
         }

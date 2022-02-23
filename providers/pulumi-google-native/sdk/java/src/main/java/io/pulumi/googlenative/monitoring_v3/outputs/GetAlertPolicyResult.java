@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AlertStrategyResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.ConditionResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.DocumentationResponse;
@@ -292,7 +292,6 @@ public final class GetAlertPolicyResult {
             this.validity = Objects.requireNonNull(validity);
             return this;
         }
-
         public GetAlertPolicyResult build() {
             return new GetAlertPolicyResult(alertStrategy, combiner, conditions, creationRecord, displayName, documentation, enabled, mutationRecord, name, notificationChannels, userLabels, validity);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class GitHubClientSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="byoaSecretAkvUrl")
-    private final @Nullable String byoaSecretAkvUrl;
+        private final @Nullable String byoaSecretAkvUrl;
 
     public Optional<String> getByoaSecretAkvUrl() {
         return this.byoaSecretAkvUrl == null ? Optional.empty() : Optional.ofNullable(this.byoaSecretAkvUrl);
@@ -34,7 +34,7 @@ public final class GitHubClientSecret extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="byoaSecretName")
-    private final @Nullable String byoaSecretName;
+        private final @Nullable String byoaSecretName;
 
     public Optional<String> getByoaSecretName() {
         return this.byoaSecretName == null ? Optional.empty() : Optional.ofNullable(this.byoaSecretName);
@@ -83,7 +83,6 @@ public final class GitHubClientSecret extends io.pulumi.resources.InvokeArgs {
             this.byoaSecretName = byoaSecretName;
             return this;
         }
-
         public GitHubClientSecret build() {
             return new GitHubClientSecret(byoaSecretAkvUrl, byoaSecretName);
         }

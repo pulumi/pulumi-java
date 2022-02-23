@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class PlanDataResponse {
             this.usageType = usageType;
             return this;
         }
-
         public PlanDataResponse build() {
             return new PlanDataResponse(billingCycle, effectiveDate, planDetails, usageType);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.outputs.AutomationActionLogicAppResponse;
 import io.pulumi.azurenative.security.outputs.AutomationActionWorkspaceResponse;
 import io.pulumi.azurenative.security.outputs.AutomationScopeResponse;
 import io.pulumi.azurenative.security.outputs.AutomationSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -295,7 +295,6 @@ public final class GetAutomationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationResult build() {
             return new GetAutomationResult(actions, description, etag, id, isEnabled, kind, location, name, scopes, sources, tags, type);
         }

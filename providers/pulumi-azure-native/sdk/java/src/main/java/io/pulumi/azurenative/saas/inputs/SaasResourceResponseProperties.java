@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.saas.inputs;
 
 import io.pulumi.azurenative.saas.inputs.SaasPropertiesResponseTerm;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="autoRenew")
-    private final @Nullable Boolean autoRenew;
+        private final @Nullable Boolean autoRenew;
 
     public Optional<Boolean> getAutoRenew() {
         return this.autoRenew == null ? Optional.empty() : Optional.ofNullable(this.autoRenew);
@@ -38,7 +38,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="created", required=true)
-    private final String created;
+        private final String created;
 
     public String getCreated() {
         return this.created;
@@ -49,7 +49,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="isFreeTrial")
-    private final @Nullable Boolean isFreeTrial;
+        private final @Nullable Boolean isFreeTrial;
 
     public Optional<Boolean> getIsFreeTrial() {
         return this.isFreeTrial == null ? Optional.empty() : Optional.ofNullable(this.isFreeTrial);
@@ -60,7 +60,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="lastModified")
-    private final @Nullable String lastModified;
+        private final @Nullable String lastModified;
 
     public Optional<String> getLastModified() {
         return this.lastModified == null ? Optional.empty() : Optional.ofNullable(this.lastModified);
@@ -71,7 +71,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="offerId")
-    private final @Nullable String offerId;
+        private final @Nullable String offerId;
 
     public Optional<String> getOfferId() {
         return this.offerId == null ? Optional.empty() : Optional.ofNullable(this.offerId);
@@ -82,7 +82,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="paymentChannelMetadata")
-    private final @Nullable Map<String,String> paymentChannelMetadata;
+        private final @Nullable Map<String,String> paymentChannelMetadata;
 
     public Map<String,String> getPaymentChannelMetadata() {
         return this.paymentChannelMetadata == null ? Map.of() : this.paymentChannelMetadata;
@@ -93,7 +93,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="paymentChannelType")
-    private final @Nullable String paymentChannelType;
+        private final @Nullable String paymentChannelType;
 
     public Optional<String> getPaymentChannelType() {
         return this.paymentChannelType == null ? Optional.empty() : Optional.ofNullable(this.paymentChannelType);
@@ -104,7 +104,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publisherId")
-    private final @Nullable String publisherId;
+        private final @Nullable String publisherId;
 
     public Optional<String> getPublisherId() {
         return this.publisherId == null ? Optional.empty() : Optional.ofNullable(this.publisherId);
@@ -115,7 +115,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="publisherTestEnvironment")
-    private final @Nullable String publisherTestEnvironment;
+        private final @Nullable String publisherTestEnvironment;
 
     public Optional<String> getPublisherTestEnvironment() {
         return this.publisherTestEnvironment == null ? Optional.empty() : Optional.ofNullable(this.publisherTestEnvironment);
@@ -126,7 +126,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="quantity")
-    private final @Nullable Double quantity;
+        private final @Nullable Double quantity;
 
     public Optional<Double> getQuantity() {
         return this.quantity == null ? Optional.empty() : Optional.ofNullable(this.quantity);
@@ -137,7 +137,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="saasResourceName")
-    private final @Nullable String saasResourceName;
+        private final @Nullable String saasResourceName;
 
     public Optional<String> getSaasResourceName() {
         return this.saasResourceName == null ? Optional.empty() : Optional.ofNullable(this.saasResourceName);
@@ -148,7 +148,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="saasSessionId")
-    private final @Nullable String saasSessionId;
+        private final @Nullable String saasSessionId;
 
     public Optional<String> getSaasSessionId() {
         return this.saasSessionId == null ? Optional.empty() : Optional.ofNullable(this.saasSessionId);
@@ -159,7 +159,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="saasSubscriptionId")
-    private final @Nullable String saasSubscriptionId;
+        private final @Nullable String saasSubscriptionId;
 
     public Optional<String> getSaasSubscriptionId() {
         return this.saasSubscriptionId == null ? Optional.empty() : Optional.ofNullable(this.saasSubscriptionId);
@@ -170,7 +170,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="skuId")
-    private final @Nullable String skuId;
+        private final @Nullable String skuId;
 
     public Optional<String> getSkuId() {
         return this.skuId == null ? Optional.empty() : Optional.ofNullable(this.skuId);
@@ -181,7 +181,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -192,7 +192,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="term")
-    private final @Nullable SaasPropertiesResponseTerm term;
+        private final @Nullable SaasPropertiesResponseTerm term;
 
     public Optional<SaasPropertiesResponseTerm> getTerm() {
         return this.term == null ? Optional.empty() : Optional.ofNullable(this.term);
@@ -203,7 +203,7 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="termId")
-    private final @Nullable String termId;
+        private final @Nullable String termId;
 
     public Optional<String> getTermId() {
         return this.termId == null ? Optional.empty() : Optional.ofNullable(this.termId);
@@ -402,7 +402,6 @@ public final class SaasResourceResponseProperties extends io.pulumi.resources.In
             this.termId = termId;
             return this;
         }
-
         public SaasResourceResponseProperties build() {
             return new SaasResourceResponseProperties(autoRenew, created, isFreeTrial, lastModified, offerId, paymentChannelMetadata, paymentChannelType, publisherId, publisherTestEnvironment, quantity, saasResourceName, saasSessionId, saasSubscriptionId, skuId, status, term, termId);
         }

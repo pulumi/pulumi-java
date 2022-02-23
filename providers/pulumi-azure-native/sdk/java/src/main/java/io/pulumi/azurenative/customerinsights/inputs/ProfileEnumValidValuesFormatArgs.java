@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="localizedValueNames")
-    private final @Nullable Input<Map<String,String>> localizedValueNames;
+        private final @Nullable Input<Map<String,String>> localizedValueNames;
 
     public Input<Map<String,String>> getLocalizedValueNames() {
         return this.localizedValueNames == null ? Input.empty() : this.localizedValueNames;
@@ -36,7 +36,7 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<Integer> value;
+        private final @Nullable Input<Integer> value;
 
     public Input<Integer> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -95,7 +95,6 @@ public final class ProfileEnumValidValuesFormatArgs extends io.pulumi.resources.
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ProfileEnumValidValuesFormatArgs build() {
             return new ProfileEnumValidValuesFormatArgs(localizedValueNames, value);
         }

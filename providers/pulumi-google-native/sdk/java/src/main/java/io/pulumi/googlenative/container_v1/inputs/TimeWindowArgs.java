@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.inputs.MaintenanceExclusionOptionsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -35,7 +35,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maintenanceExclusionOptions")
-    private final @Nullable Input<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
+      private final @Nullable Input<MaintenanceExclusionOptionsArgs> maintenanceExclusionOptions;
 
     public Input<MaintenanceExclusionOptionsArgs> getMaintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions == null ? Input.empty() : this.maintenanceExclusionOptions;
@@ -46,7 +46,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -120,7 +120,6 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public TimeWindowArgs build() {
             return new TimeWindowArgs(endTime, maintenanceExclusionOptions, startTime);
         }

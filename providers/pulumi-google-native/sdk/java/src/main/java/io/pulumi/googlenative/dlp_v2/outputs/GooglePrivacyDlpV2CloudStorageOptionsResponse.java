@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FileSetResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -153,7 +153,6 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse {
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
             return new GooglePrivacyDlpV2CloudStorageOptionsResponse(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

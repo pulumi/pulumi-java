@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
     public static final DomainEndpointOptionsArgs Empty = new DomainEndpointOptionsArgs();
 
     @InputImport(name="customEndpoint")
-    private final @Nullable Input<String> customEndpoint;
+        private final @Nullable Input<String> customEndpoint;
 
     public Input<String> getCustomEndpoint() {
         return this.customEndpoint == null ? Input.empty() : this.customEndpoint;
     }
 
     @InputImport(name="customEndpointCertificateArn")
-    private final @Nullable Input<String> customEndpointCertificateArn;
+        private final @Nullable Input<String> customEndpointCertificateArn;
 
     public Input<String> getCustomEndpointCertificateArn() {
         return this.customEndpointCertificateArn == null ? Input.empty() : this.customEndpointCertificateArn;
     }
 
     @InputImport(name="customEndpointEnabled")
-    private final @Nullable Input<Boolean> customEndpointEnabled;
+        private final @Nullable Input<Boolean> customEndpointEnabled;
 
     public Input<Boolean> getCustomEndpointEnabled() {
         return this.customEndpointEnabled == null ? Input.empty() : this.customEndpointEnabled;
     }
 
     @InputImport(name="enforceHTTPS")
-    private final @Nullable Input<Boolean> enforceHTTPS;
+        private final @Nullable Input<Boolean> enforceHTTPS;
 
     public Input<Boolean> getEnforceHTTPS() {
         return this.enforceHTTPS == null ? Input.empty() : this.enforceHTTPS;
     }
 
     @InputImport(name="tLSSecurityPolicy")
-    private final @Nullable Input<String> tLSSecurityPolicy;
+        private final @Nullable Input<String> tLSSecurityPolicy;
 
     public Input<String> getTLSSecurityPolicy() {
         return this.tLSSecurityPolicy == null ? Input.empty() : this.tLSSecurityPolicy;
@@ -148,7 +148,6 @@ public final class DomainEndpointOptionsArgs extends io.pulumi.resources.Resourc
             this.tLSSecurityPolicy = Input.ofNullable(tLSSecurityPolicy);
             return this;
         }
-
         public DomainEndpointOptionsArgs build() {
             return new DomainEndpointOptionsArgs(customEndpoint, customEndpointCertificateArn, customEndpointEnabled, enforceHTTPS, tLSSecurityPolicy);
         }

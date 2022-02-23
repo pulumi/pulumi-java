@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
@@ -35,7 +35,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="backendHostHeader")
-    private final @Nullable String backendHostHeader;
+        private final @Nullable String backendHostHeader;
 
     public Optional<String> getBackendHostHeader() {
         return this.backendHostHeader == null ? Optional.empty() : Optional.ofNullable(this.backendHostHeader);
@@ -46,7 +46,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable String enabledState;
+        private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -57,7 +57,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpPort")
-    private final @Nullable Integer httpPort;
+        private final @Nullable Integer httpPort;
 
     public Optional<Integer> getHttpPort() {
         return this.httpPort == null ? Optional.empty() : Optional.ofNullable(this.httpPort);
@@ -68,7 +68,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpsPort")
-    private final @Nullable Integer httpsPort;
+        private final @Nullable Integer httpsPort;
 
     public Optional<Integer> getHttpsPort() {
         return this.httpsPort == null ? Optional.empty() : Optional.ofNullable(this.httpsPort);
@@ -79,7 +79,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -90,7 +90,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateEndpointStatus", required=true)
-    private final String privateEndpointStatus;
+        private final String privateEndpointStatus;
 
     public String getPrivateEndpointStatus() {
         return this.privateEndpointStatus;
@@ -101,7 +101,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateLinkAlias")
-    private final @Nullable String privateLinkAlias;
+        private final @Nullable String privateLinkAlias;
 
     public Optional<String> getPrivateLinkAlias() {
         return this.privateLinkAlias == null ? Optional.empty() : Optional.ofNullable(this.privateLinkAlias);
@@ -112,7 +112,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateLinkApprovalMessage")
-    private final @Nullable String privateLinkApprovalMessage;
+        private final @Nullable String privateLinkApprovalMessage;
 
     public Optional<String> getPrivateLinkApprovalMessage() {
         return this.privateLinkApprovalMessage == null ? Optional.empty() : Optional.ofNullable(this.privateLinkApprovalMessage);
@@ -123,7 +123,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateLinkLocation")
-    private final @Nullable String privateLinkLocation;
+        private final @Nullable String privateLinkLocation;
 
     public Optional<String> getPrivateLinkLocation() {
         return this.privateLinkLocation == null ? Optional.empty() : Optional.ofNullable(this.privateLinkLocation);
@@ -134,7 +134,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateLinkResourceId")
-    private final @Nullable String privateLinkResourceId;
+        private final @Nullable String privateLinkResourceId;
 
     public Optional<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId == null ? Optional.empty() : Optional.ofNullable(this.privateLinkResourceId);
@@ -145,7 +145,7 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Integer weight;
+        private final @Nullable Integer weight;
 
     public Optional<Integer> getWeight() {
         return this.weight == null ? Optional.empty() : Optional.ofNullable(this.weight);
@@ -294,7 +294,6 @@ public final class BackendResponse extends io.pulumi.resources.InvokeArgs {
             this.weight = weight;
             return this;
         }
-
         public BackendResponse build() {
             return new BackendResponse(address, backendHostHeader, enabledState, httpPort, httpsPort, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, weight);
         }

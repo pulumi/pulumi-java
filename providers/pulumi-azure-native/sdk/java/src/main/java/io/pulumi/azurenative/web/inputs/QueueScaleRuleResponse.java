@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable List<ScaleRuleAuthResponse> auth;
+        private final @Nullable List<ScaleRuleAuthResponse> auth;
 
     public List<ScaleRuleAuthResponse> getAuth() {
         return this.auth == null ? List.of() : this.auth;
@@ -37,7 +37,7 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queueLength")
-    private final @Nullable Integer queueLength;
+        private final @Nullable Integer queueLength;
 
     public Optional<Integer> getQueueLength() {
         return this.queueLength == null ? Optional.empty() : Optional.ofNullable(this.queueLength);
@@ -48,7 +48,7 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queueName")
-    private final @Nullable String queueName;
+        private final @Nullable String queueName;
 
     public Optional<String> getQueueName() {
         return this.queueName == null ? Optional.empty() : Optional.ofNullable(this.queueName);
@@ -107,7 +107,6 @@ public final class QueueScaleRuleResponse extends io.pulumi.resources.InvokeArgs
             this.queueName = queueName;
             return this;
         }
-
         public QueueScaleRuleResponse build() {
             return new QueueScaleRuleResponse(auth, queueLength, queueName);
         }

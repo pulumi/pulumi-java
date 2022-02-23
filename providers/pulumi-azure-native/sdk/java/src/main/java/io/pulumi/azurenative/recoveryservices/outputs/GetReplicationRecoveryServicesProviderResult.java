@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryServicesProviderPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,7 +140,6 @@ public final class GetReplicationRecoveryServicesProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReplicationRecoveryServicesProviderResult build() {
             return new GetReplicationRecoveryServicesProviderResult(id, location, name, properties, type);
         }

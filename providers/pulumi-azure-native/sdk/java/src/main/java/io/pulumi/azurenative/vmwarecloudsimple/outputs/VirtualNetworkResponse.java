@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class VirtualNetworkResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkResponse build() {
             return new VirtualNetworkResponse(assignable, id, location, name, privateCloudId, type);
         }

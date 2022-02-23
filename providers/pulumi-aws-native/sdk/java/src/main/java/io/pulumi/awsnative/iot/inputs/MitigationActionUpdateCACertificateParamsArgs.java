@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionUpdateCACertificateParamsAction;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
     public static final MitigationActionUpdateCACertificateParamsArgs Empty = new MitigationActionUpdateCACertificateParamsArgs();
 
     @InputImport(name="action", required=true)
-    private final Input<MitigationActionUpdateCACertificateParamsAction> action;
+        private final Input<MitigationActionUpdateCACertificateParamsAction> action;
 
     public Input<MitigationActionUpdateCACertificateParamsAction> getAction() {
         return this.action;
@@ -61,7 +61,6 @@ public final class MitigationActionUpdateCACertificateParamsArgs extends io.pulu
             this.action = Input.of(Objects.requireNonNull(action));
             return this;
         }
-
         public MitigationActionUpdateCACertificateParamsArgs build() {
             return new MitigationActionUpdateCACertificateParamsArgs(action);
         }

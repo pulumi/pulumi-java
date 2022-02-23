@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.JobConfigArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<JobConfigArgs> config;
+      private final @Nullable Input<JobConfigArgs> config;
 
     public Input<JobConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
     }
 
     @InputImport(name="jobTemplateId", required=true)
-    private final Input<String> jobTemplateId;
+      private final Input<String> jobTemplateId;
 
     public Input<String> getJobTemplateId() {
         return this.jobTemplateId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -45,14 +45,14 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -156,7 +156,6 @@ public final class JobTemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public JobTemplateArgs build() {
             return new JobTemplateArgs(config, jobTemplateId, location, name, project);
         }

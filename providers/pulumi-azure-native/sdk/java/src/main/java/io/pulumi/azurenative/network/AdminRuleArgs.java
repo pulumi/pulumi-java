@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network;
 import io.pulumi.azurenative.network.enums.AdminRuleKind;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationName", required=true)
-    private final Input<String> configurationName;
+        private final Input<String> configurationName;
 
     public Input<String> getConfigurationName() {
         return this.configurationName;
@@ -32,7 +32,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,AdminRuleKind>> kind;
+        private final Input<Either<String,AdminRuleKind>> kind;
 
     public Input<Either<String,AdminRuleKind>> getKind() {
         return this.kind;
@@ -43,7 +43,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkManagerName", required=true)
-    private final Input<String> networkManagerName;
+        private final Input<String> networkManagerName;
 
     public Input<String> getNetworkManagerName() {
         return this.networkManagerName;
@@ -54,7 +54,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleCollectionName", required=true)
-    private final Input<String> ruleCollectionName;
+        private final Input<String> ruleCollectionName;
 
     public Input<String> getRuleCollectionName() {
         return this.ruleCollectionName;
@@ -76,7 +76,7 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+        private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -195,7 +195,6 @@ public final class AdminRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
-
         public AdminRuleArgs build() {
             return new AdminRuleArgs(configurationName, kind, networkManagerName, resourceGroupName, ruleCollectionName, ruleName);
         }

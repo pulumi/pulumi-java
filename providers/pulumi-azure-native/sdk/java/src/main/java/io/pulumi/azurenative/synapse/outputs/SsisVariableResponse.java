@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -183,7 +183,6 @@ public final class SsisVariableResponse {
             this.value = value;
             return this;
         }
-
         public SsisVariableResponse build() {
             return new SsisVariableResponse(dataType, description, id, name, sensitive, sensitiveValue, value);
         }

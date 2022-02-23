@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetadataCategoriesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="domains")
-    private final @Nullable List<String> domains;
+        private final @Nullable List<String> domains;
 
     public List<String> getDomains() {
         return this.domains == null ? List.of() : this.domains;
@@ -35,7 +35,7 @@ public final class MetadataCategoriesResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="verticals")
-    private final @Nullable List<String> verticals;
+        private final @Nullable List<String> verticals;
 
     public List<String> getVerticals() {
         return this.verticals == null ? List.of() : this.verticals;
@@ -84,7 +84,6 @@ public final class MetadataCategoriesResponse extends io.pulumi.resources.Invoke
             this.verticals = verticals;
             return this;
         }
-
         public MetadataCategoriesResponse build() {
             return new MetadataCategoriesResponse(domains, verticals);
         }

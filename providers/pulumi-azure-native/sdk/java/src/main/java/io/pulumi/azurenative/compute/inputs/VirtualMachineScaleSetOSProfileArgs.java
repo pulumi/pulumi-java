@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.LinuxConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable Input<String> adminPassword;
+        private final @Nullable Input<String> adminPassword;
 
     public Input<String> getAdminPassword() {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
@@ -38,7 +38,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="adminUsername")
-    private final @Nullable Input<String> adminUsername;
+        private final @Nullable Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername == null ? Input.empty() : this.adminUsername;
@@ -49,7 +49,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="computerNamePrefix")
-    private final @Nullable Input<String> computerNamePrefix;
+        private final @Nullable Input<String> computerNamePrefix;
 
     public Input<String> getComputerNamePrefix() {
         return this.computerNamePrefix == null ? Input.empty() : this.computerNamePrefix;
@@ -60,7 +60,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable Input<String> customData;
+        private final @Nullable Input<String> customData;
 
     public Input<String> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
@@ -71,7 +71,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="linuxConfiguration")
-    private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+        private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
 
     public Input<LinuxConfigurationArgs> getLinuxConfiguration() {
         return this.linuxConfiguration == null ? Input.empty() : this.linuxConfiguration;
@@ -82,7 +82,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<VaultSecretGroupArgs>> secrets;
+        private final @Nullable Input<List<VaultSecretGroupArgs>> secrets;
 
     public Input<List<VaultSecretGroupArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -93,7 +93,7 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="windowsConfiguration")
-    private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+        private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
 
     public Input<WindowsConfigurationArgs> getWindowsConfiguration() {
         return this.windowsConfiguration == null ? Input.empty() : this.windowsConfiguration;
@@ -227,7 +227,6 @@ public final class VirtualMachineScaleSetOSProfileArgs extends io.pulumi.resourc
             this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
             return this;
         }
-
         public VirtualMachineScaleSetOSProfileArgs build() {
             return new VirtualMachineScaleSetOSProfileArgs(adminPassword, adminUsername, computerNamePrefix, customData, linuxConfiguration, secrets, windowsConfiguration);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1OperationArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QuotaArgs;
@@ -27,7 +27,7 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="apiSource", required=true)
-    private final Input<String> apiSource;
+      private final Input<String> apiSource;
 
     public Input<String> getApiSource() {
         return this.apiSource;
@@ -38,7 +38,7 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
+      private final @Nullable Input<List<GoogleCloudApigeeV1AttributeArgs>> attributes;
 
     public Input<List<GoogleCloudApigeeV1AttributeArgs>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -49,7 +49,7 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="operations")
-    private final @Nullable Input<List<GoogleCloudApigeeV1OperationArgs>> operations;
+      private final @Nullable Input<List<GoogleCloudApigeeV1OperationArgs>> operations;
 
     public Input<List<GoogleCloudApigeeV1OperationArgs>> getOperations() {
         return this.operations == null ? Input.empty() : this.operations;
@@ -60,7 +60,7 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="quota")
-    private final @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
+      private final @Nullable Input<GoogleCloudApigeeV1QuotaArgs> quota;
 
     public Input<GoogleCloudApigeeV1QuotaArgs> getQuota() {
         return this.quota == null ? Input.empty() : this.quota;
@@ -149,7 +149,6 @@ public final class GoogleCloudApigeeV1OperationConfigArgs extends io.pulumi.reso
             this.quota = Input.ofNullable(quota);
             return this;
         }
-
         public GoogleCloudApigeeV1OperationConfigArgs build() {
             return new GoogleCloudApigeeV1OperationConfigArgs(apiSource, attributes, operations, quota);
         }

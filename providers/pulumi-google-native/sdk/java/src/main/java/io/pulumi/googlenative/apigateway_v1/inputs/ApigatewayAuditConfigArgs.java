@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1.inputs.ApigatewayAuditLogConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="auditLogConfigs")
-    private final @Nullable Input<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
+      private final @Nullable Input<List<ApigatewayAuditLogConfigArgs>> auditLogConfigs;
 
     public Input<List<ApigatewayAuditLogConfigArgs>> getAuditLogConfigs() {
         return this.auditLogConfigs == null ? Input.empty() : this.auditLogConfigs;
@@ -36,7 +36,7 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -95,7 +95,6 @@ public final class ApigatewayAuditConfigArgs extends io.pulumi.resources.Resourc
             this.service = Input.ofNullable(service);
             return this;
         }
-
         public ApigatewayAuditConfigArgs build() {
             return new ApigatewayAuditConfigArgs(auditLogConfigs, service);
         }

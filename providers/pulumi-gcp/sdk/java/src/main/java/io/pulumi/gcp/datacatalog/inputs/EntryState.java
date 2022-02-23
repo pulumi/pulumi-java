@@ -4,7 +4,7 @@
 package io.pulumi.gcp.datacatalog.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryDateShardedSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryBigqueryTableSpecGetArgs;
 import io.pulumi.gcp.datacatalog.inputs.EntryGcsFilesetSpecGetArgs;
@@ -24,7 +24,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryDateShardedSpecs")
-    private final @Nullable Input<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs;
+        private final @Nullable Input<List<EntryBigqueryDateShardedSpecGetArgs>> bigqueryDateShardedSpecs;
 
     public Input<List<EntryBigqueryDateShardedSpecGetArgs>> getBigqueryDateShardedSpecs() {
         return this.bigqueryDateShardedSpecs == null ? Input.empty() : this.bigqueryDateShardedSpecs;
@@ -35,7 +35,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bigqueryTableSpecs")
-    private final @Nullable Input<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs;
+        private final @Nullable Input<List<EntryBigqueryTableSpecGetArgs>> bigqueryTableSpecs;
 
     public Input<List<EntryBigqueryTableSpecGetArgs>> getBigqueryTableSpecs() {
         return this.bigqueryTableSpecs == null ? Input.empty() : this.bigqueryTableSpecs;
@@ -46,7 +46,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -58,7 +58,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -69,7 +69,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryGroup")
-    private final @Nullable Input<String> entryGroup;
+        private final @Nullable Input<String> entryGroup;
 
     public Input<String> getEntryGroup() {
         return this.entryGroup == null ? Input.empty() : this.entryGroup;
@@ -80,7 +80,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entryId")
-    private final @Nullable Input<String> entryId;
+        private final @Nullable Input<String> entryId;
 
     public Input<String> getEntryId() {
         return this.entryId == null ? Input.empty() : this.entryId;
@@ -92,7 +92,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsFilesetSpec")
-    private final @Nullable Input<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec;
+        private final @Nullable Input<EntryGcsFilesetSpecGetArgs> gcsFilesetSpec;
 
     public Input<EntryGcsFilesetSpecGetArgs> getGcsFilesetSpec() {
         return this.gcsFilesetSpec == null ? Input.empty() : this.gcsFilesetSpec;
@@ -103,7 +103,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integratedSystem")
-    private final @Nullable Input<String> integratedSystem;
+        private final @Nullable Input<String> integratedSystem;
 
     public Input<String> getIntegratedSystem() {
         return this.integratedSystem == null ? Input.empty() : this.integratedSystem;
@@ -119,7 +119,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkedResource")
-    private final @Nullable Input<String> linkedResource;
+        private final @Nullable Input<String> linkedResource;
 
     public Input<String> getLinkedResource() {
         return this.linkedResource == null ? Input.empty() : this.linkedResource;
@@ -132,7 +132,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -146,7 +146,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<String> schema;
+        private final @Nullable Input<String> schema;
 
     public Input<String> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -159,7 +159,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -172,7 +172,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSpecifiedSystem")
-    private final @Nullable Input<String> userSpecifiedSystem;
+        private final @Nullable Input<String> userSpecifiedSystem;
 
     public Input<String> getUserSpecifiedSystem() {
         return this.userSpecifiedSystem == null ? Input.empty() : this.userSpecifiedSystem;
@@ -187,7 +187,7 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userSpecifiedType")
-    private final @Nullable Input<String> userSpecifiedType;
+        private final @Nullable Input<String> userSpecifiedType;
 
     public Input<String> getUserSpecifiedType() {
         return this.userSpecifiedType == null ? Input.empty() : this.userSpecifiedType;
@@ -426,7 +426,6 @@ public final class EntryState extends io.pulumi.resources.ResourceArgs {
             this.userSpecifiedType = Input.ofNullable(userSpecifiedType);
             return this;
         }
-
         public EntryState build() {
             return new EntryState(bigqueryDateShardedSpecs, bigqueryTableSpecs, description, displayName, entryGroup, entryId, gcsFilesetSpec, integratedSystem, linkedResource, name, schema, type, userSpecifiedSystem, userSpecifiedType);
         }

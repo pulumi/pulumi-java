@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final String accountId;
+        private final String accountId;
 
     public String getAccountId() {
         return this.accountId;
@@ -33,7 +33,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * 
      */
     @InputImport(name="authenticationProvisioningState", required=true)
-    private final String authenticationProvisioningState;
+        private final String authenticationProvisioningState;
 
     public String getAuthenticationProvisioningState() {
         return this.authenticationProvisioningState;
@@ -45,7 +45,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+        private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -56,7 +56,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * 
      */
     @InputImport(name="awsAssumeRoleArn", required=true)
-    private final String awsAssumeRoleArn;
+        private final String awsAssumeRoleArn;
 
     public String getAwsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
@@ -67,7 +67,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * 
      */
     @InputImport(name="awsExternalId", required=true)
-    private final String awsExternalId;
+        private final String awsExternalId;
 
     public String getAwsExternalId() {
         return this.awsExternalId;
@@ -78,7 +78,7 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
      * 
      */
     @InputImport(name="grantedPermissions", required=true)
-    private final List<String> grantedPermissions;
+        private final List<String> grantedPermissions;
 
     public List<String> getGrantedPermissions() {
         return this.grantedPermissions;
@@ -167,7 +167,6 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesResponse extends i
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
-
         public AwAssumeRoleAuthenticationDetailsPropertiesResponse build() {
             return new AwAssumeRoleAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAssumeRoleArn, awsExternalId, grantedPermissions);
         }

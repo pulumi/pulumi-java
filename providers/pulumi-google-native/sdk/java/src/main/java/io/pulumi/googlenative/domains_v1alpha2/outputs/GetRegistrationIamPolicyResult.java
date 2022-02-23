@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetRegistrationIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRegistrationIamPolicyResult build() {
             return new GetRegistrationIamPolicyResult(auditConfigs, bindings, etag, version);
         }

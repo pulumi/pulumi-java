@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionInstanceGroupManagerVersionTargetSize;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class RegionInstanceGroupManagerVersion {
             this.targetSize = targetSize;
             return this;
         }
-
         public RegionInstanceGroupManagerVersion build() {
             return new RegionInstanceGroupManagerVersion(instanceTemplate, name, targetSize);
         }

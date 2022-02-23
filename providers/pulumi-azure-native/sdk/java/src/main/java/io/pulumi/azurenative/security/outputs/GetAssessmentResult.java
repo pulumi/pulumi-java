@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.outputs.OnPremiseResourceDetailsResponse;
 import io.pulumi.azurenative.security.outputs.OnPremiseSqlResourceDetailsResponse;
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentPartnerDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -253,7 +253,6 @@ public final class GetAssessmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssessmentResult build() {
             return new GetAssessmentResult(additionalData, displayName, id, links, metadata, name, partnersData, resourceDetails, status, type);
         }

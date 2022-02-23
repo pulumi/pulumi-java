@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.ContainerNetworkInterfaceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -248,7 +248,6 @@ public final class GetNetworkProfileResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkProfileResult build() {
             return new GetNetworkProfileResult(containerNetworkInterfaceConfigurations, containerNetworkInterfaces, etag, id, location, name, provisioningState, resourceGuid, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageFormParameter;
 import java.util.List;
 import java.util.Objects;
@@ -56,7 +56,6 @@ public final class CxPageForm {
             this.parameters = parameters;
             return this;
         }
-
         public CxPageForm build() {
             return new CxPageForm(parameters);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GetQueueIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetQueueIamPolicyResult build() {
             return new GetQueueIamPolicyResult(bindings, etag, version);
         }

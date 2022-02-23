@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetLateDataRuleConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class DatasetLateDataRule {
             this.ruleName = ruleName;
             return this;
         }
-
         public DatasetLateDataRule build() {
             return new DatasetLateDataRule(ruleConfiguration, ruleName);
         }

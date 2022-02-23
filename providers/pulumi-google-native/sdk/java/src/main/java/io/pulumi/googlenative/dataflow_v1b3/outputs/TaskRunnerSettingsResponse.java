@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.WorkerSettingsResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -434,7 +434,6 @@ public final class TaskRunnerSettingsResponse {
             this.workflowFileName = Objects.requireNonNull(workflowFileName);
             return this;
         }
-
         public TaskRunnerSettingsResponse build() {
             return new TaskRunnerSettingsResponse(alsologtostderr, baseTaskDir, baseUrl, commandlinesFileName, continueOnException, dataflowApiVersion, harnessCommand, languageHint, logDir, logToSerialconsole, logUploadLocation, oauthScopes, parallelWorkerSettings, streamingWorkerMainClass, taskGroup, taskUser, tempStoragePrefix, vmId, workflowFileName);
         }

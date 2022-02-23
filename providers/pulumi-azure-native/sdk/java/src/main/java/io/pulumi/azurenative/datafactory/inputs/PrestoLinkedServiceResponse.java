@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="allowHostNameCNMismatch")
-    private final @Nullable Object allowHostNameCNMismatch;
+        private final @Nullable Object allowHostNameCNMismatch;
 
     public Optional<Object> getAllowHostNameCNMismatch() {
         return this.allowHostNameCNMismatch == null ? Optional.empty() : Optional.ofNullable(this.allowHostNameCNMismatch);
@@ -42,7 +42,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="allowSelfSignedServerCert")
-    private final @Nullable Object allowSelfSignedServerCert;
+        private final @Nullable Object allowSelfSignedServerCert;
 
     public Optional<Object> getAllowSelfSignedServerCert() {
         return this.allowSelfSignedServerCert == null ? Optional.empty() : Optional.ofNullable(this.allowSelfSignedServerCert);
@@ -53,7 +53,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -64,7 +64,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="authenticationType", required=true)
-    private final String authenticationType;
+        private final String authenticationType;
 
     public String getAuthenticationType() {
         return this.authenticationType;
@@ -75,7 +75,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="catalog", required=true)
-    private final Object catalog;
+        private final Object catalog;
 
     public Object getCatalog() {
         return this.catalog;
@@ -86,7 +86,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -97,7 +97,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -108,7 +108,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="enableSsl")
-    private final @Nullable Object enableSsl;
+        private final @Nullable Object enableSsl;
 
     public Optional<Object> getEnableSsl() {
         return this.enableSsl == null ? Optional.empty() : Optional.ofNullable(this.enableSsl);
@@ -119,7 +119,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -130,7 +130,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="host", required=true)
-    private final Object host;
+        private final Object host;
 
     public Object getHost() {
         return this.host;
@@ -141,7 +141,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -152,7 +152,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -163,7 +163,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Object port;
+        private final @Nullable Object port;
 
     public Optional<Object> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -174,7 +174,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="serverVersion", required=true)
-    private final Object serverVersion;
+        private final Object serverVersion;
 
     public Object getServerVersion() {
         return this.serverVersion;
@@ -185,7 +185,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="timeZoneID")
-    private final @Nullable Object timeZoneID;
+        private final @Nullable Object timeZoneID;
 
     public Optional<Object> getTimeZoneID() {
         return this.timeZoneID == null ? Optional.empty() : Optional.ofNullable(this.timeZoneID);
@@ -196,7 +196,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="trustedCertPath")
-    private final @Nullable Object trustedCertPath;
+        private final @Nullable Object trustedCertPath;
 
     public Optional<Object> getTrustedCertPath() {
         return this.trustedCertPath == null ? Optional.empty() : Optional.ofNullable(this.trustedCertPath);
@@ -208,7 +208,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -219,7 +219,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="useSystemTrustStore")
-    private final @Nullable Object useSystemTrustStore;
+        private final @Nullable Object useSystemTrustStore;
 
     public Optional<Object> getUseSystemTrustStore() {
         return this.useSystemTrustStore == null ? Optional.empty() : Optional.ofNullable(this.useSystemTrustStore);
@@ -230,7 +230,7 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Object username;
+        private final @Nullable Object username;
 
     public Optional<Object> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -449,7 +449,6 @@ public final class PrestoLinkedServiceResponse extends io.pulumi.resources.Invok
             this.username = username;
             return this;
         }
-
         public PrestoLinkedServiceResponse build() {
             return new PrestoLinkedServiceResponse(allowHostNameCNMismatch, allowSelfSignedServerCert, annotations, authenticationType, catalog, connectVia, description, enableSsl, encryptedCredential, host, parameters, password, port, serverVersion, timeZoneID, trustedCertPath, type, useSystemTrustStore, username);
         }

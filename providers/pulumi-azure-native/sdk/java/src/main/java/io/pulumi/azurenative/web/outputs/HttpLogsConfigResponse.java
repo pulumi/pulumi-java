@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.AzureBlobStorageHttpLogsConfigResponse;
 import io.pulumi.azurenative.web.outputs.FileSystemHttpLogsConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class HttpLogsConfigResponse {
             this.fileSystem = fileSystem;
             return this;
         }
-
         public HttpLogsConfigResponse build() {
             return new HttpLogsConfigResponse(azureBlobStorage, fileSystem);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="deviceSecurityGroupName", required=true)
-    private final String deviceSecurityGroupName;
+        private final String deviceSecurityGroupName;
 
     public String getDeviceSecurityGroupName() {
         return this.deviceSecurityGroupName;
@@ -28,7 +28,7 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -77,7 +77,6 @@ public final class GetDeviceSecurityGroupArgs extends io.pulumi.resources.Invoke
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public GetDeviceSecurityGroupArgs build() {
             return new GetDeviceSecurityGroupArgs(deviceSecurityGroupName, resourceId);
         }

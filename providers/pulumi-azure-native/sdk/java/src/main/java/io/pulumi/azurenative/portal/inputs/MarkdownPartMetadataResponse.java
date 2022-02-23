@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.azurenative.portal.inputs.MarkdownPartMetadataResponseSettings;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable List<Object> inputs;
+        private final @Nullable List<Object> inputs;
 
     public List<Object> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
@@ -37,7 +37,7 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable MarkdownPartMetadataResponseSettings settings;
+        private final @Nullable MarkdownPartMetadataResponseSettings settings;
 
     public Optional<MarkdownPartMetadataResponseSettings> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
@@ -49,7 +49,7 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -108,7 +108,6 @@ public final class MarkdownPartMetadataResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MarkdownPartMetadataResponse build() {
             return new MarkdownPartMetadataResponse(inputs, settings, type);
         }

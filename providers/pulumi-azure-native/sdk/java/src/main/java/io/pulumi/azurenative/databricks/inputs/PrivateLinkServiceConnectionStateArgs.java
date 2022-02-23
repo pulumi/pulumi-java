@@ -6,7 +6,7 @@ package io.pulumi.azurenative.databricks.inputs;
 import io.pulumi.azurenative.databricks.enums.PrivateLinkServiceConnectionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="actionRequired")
-    private final @Nullable Input<String> actionRequired;
+        private final @Nullable Input<String> actionRequired;
 
     public Input<String> getActionRequired() {
         return this.actionRequired == null ? Input.empty() : this.actionRequired;
@@ -36,7 +36,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,PrivateLinkServiceConnectionStatus>> status;
+        private final Input<Either<String,PrivateLinkServiceConnectionStatus>> status;
 
     public Input<Either<String,PrivateLinkServiceConnectionStatus>> getStatus() {
         return this.status;
@@ -121,7 +121,6 @@ public final class PrivateLinkServiceConnectionStateArgs extends io.pulumi.resou
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public PrivateLinkServiceConnectionStateArgs build() {
             return new PrivateLinkServiceConnectionStateArgs(actionRequired, description, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="emailAddress", required=true)
-    private final String emailAddress;
+        private final String emailAddress;
 
     public String getEmailAddress() {
         return this.emailAddress;
@@ -35,7 +35,7 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Boolean isEnabled;
+        private final Boolean isEnabled;
 
     public Boolean getIsEnabled() {
         return this.isEnabled;
@@ -46,7 +46,7 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -105,7 +105,6 @@ public final class EmailChannelPropertiesResponse extends io.pulumi.resources.In
             this.password = password;
             return this;
         }
-
         public EmailChannelPropertiesResponse build() {
             return new EmailChannelPropertiesResponse(emailAddress, isEnabled, password);
         }

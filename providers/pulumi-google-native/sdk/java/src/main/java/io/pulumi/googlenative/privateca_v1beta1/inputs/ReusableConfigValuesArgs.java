@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.CaOptionsArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.KeyUsageArgs;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.ObjectIdArgs;
@@ -28,7 +28,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<X509ExtensionArgs>> additionalExtensions;
+      private final @Nullable Input<List<X509ExtensionArgs>> additionalExtensions;
 
     public Input<List<X509ExtensionArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -39,7 +39,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="aiaOcspServers")
-    private final @Nullable Input<List<String>> aiaOcspServers;
+      private final @Nullable Input<List<String>> aiaOcspServers;
 
     public Input<List<String>> getAiaOcspServers() {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
@@ -50,7 +50,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="caOptions")
-    private final @Nullable Input<CaOptionsArgs> caOptions;
+      private final @Nullable Input<CaOptionsArgs> caOptions;
 
     public Input<CaOptionsArgs> getCaOptions() {
         return this.caOptions == null ? Input.empty() : this.caOptions;
@@ -61,7 +61,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyUsage")
-    private final @Nullable Input<KeyUsageArgs> keyUsage;
+      private final @Nullable Input<KeyUsageArgs> keyUsage;
 
     public Input<KeyUsageArgs> getKeyUsage() {
         return this.keyUsage == null ? Input.empty() : this.keyUsage;
@@ -72,7 +72,7 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyIds")
-    private final @Nullable Input<List<ObjectIdArgs>> policyIds;
+      private final @Nullable Input<List<ObjectIdArgs>> policyIds;
 
     public Input<List<ObjectIdArgs>> getPolicyIds() {
         return this.policyIds == null ? Input.empty() : this.policyIds;
@@ -176,7 +176,6 @@ public final class ReusableConfigValuesArgs extends io.pulumi.resources.Resource
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }
-
         public ReusableConfigValuesArgs build() {
             return new ReusableConfigValuesArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

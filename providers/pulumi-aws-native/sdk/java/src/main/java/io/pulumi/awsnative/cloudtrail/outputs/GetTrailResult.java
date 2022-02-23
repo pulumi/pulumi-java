@@ -6,7 +6,7 @@ package io.pulumi.awsnative.cloudtrail.outputs;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailEventSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailInsightSelector;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -351,7 +351,6 @@ public final class GetTrailResult {
             this.tags = tags;
             return this;
         }
-
         public GetTrailResult build() {
             return new GetTrailResult(arn, cloudWatchLogsLogGroupArn, cloudWatchLogsRoleArn, enableLogFileValidation, eventSelectors, includeGlobalServiceEvents, insightSelectors, isLogging, isMultiRegionTrail, isOrganizationTrail, kMSKeyId, s3BucketName, s3KeyPrefix, snsTopicArn, snsTopicName, tags);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -99,7 +99,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyProperties {
             this.matchScope = Objects.requireNonNull(matchScope);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyProperties build() {
             return new LoggingConfigurationFieldToMatchJsonBodyProperties(invalidFallbackBehavior, matchPattern, matchScope);
         }

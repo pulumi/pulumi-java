@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetDatabaseInstanceSettingBackupConfigurationBackupRetentionSetting;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -127,7 +127,6 @@ public final class GetDatabaseInstanceSettingBackupConfiguration {
             this.transactionLogRetentionDays = Objects.requireNonNull(transactionLogRetentionDays);
             return this;
         }
-
         public GetDatabaseInstanceSettingBackupConfiguration build() {
             return new GetDatabaseInstanceSettingBackupConfiguration(backupRetentionSettings, binaryLogEnabled, enabled, location, pointInTimeRecoveryEnabled, startTime, transactionLogRetentionDays);
         }

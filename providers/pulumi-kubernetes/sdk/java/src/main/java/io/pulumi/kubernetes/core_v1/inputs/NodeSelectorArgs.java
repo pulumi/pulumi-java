@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.NodeSelectorTermArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nodeSelectorTerms", required=true)
-    private final Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
+        private final Input<List<NodeSelectorTermArgs>> nodeSelectorTerms;
 
     public Input<List<NodeSelectorTermArgs>> getNodeSelectorTerms() {
         return this.nodeSelectorTerms;
@@ -66,7 +66,6 @@ public final class NodeSelectorArgs extends io.pulumi.resources.ResourceArgs {
             this.nodeSelectorTerms = Input.of(Objects.requireNonNull(nodeSelectorTerms));
             return this;
         }
-
         public NodeSelectorArgs build() {
             return new NodeSelectorArgs(nodeSelectorTerms);
         }

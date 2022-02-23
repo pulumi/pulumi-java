@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryAction;
 import io.pulumi.googlenative.notebooks_v1.enums.UpgradeHistoryEntryState;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<UpgradeHistoryEntryAction> action;
+      private final @Nullable Input<UpgradeHistoryEntryAction> action;
 
     public Input<UpgradeHistoryEntryAction> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -36,7 +36,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="containerImage")
-    private final @Nullable Input<String> containerImage;
+      private final @Nullable Input<String> containerImage;
 
     public Input<String> getContainerImage() {
         return this.containerImage == null ? Input.empty() : this.containerImage;
@@ -47,7 +47,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -58,7 +58,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="framework")
-    private final @Nullable Input<String> framework;
+      private final @Nullable Input<String> framework;
 
     public Input<String> getFramework() {
         return this.framework == null ? Input.empty() : this.framework;
@@ -69,7 +69,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="snapshot")
-    private final @Nullable Input<String> snapshot;
+      private final @Nullable Input<String> snapshot;
 
     public Input<String> getSnapshot() {
         return this.snapshot == null ? Input.empty() : this.snapshot;
@@ -80,7 +80,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<UpgradeHistoryEntryState> state;
+      private final @Nullable Input<UpgradeHistoryEntryState> state;
 
     public Input<UpgradeHistoryEntryState> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -91,7 +91,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetImage")
-    private final @Nullable Input<String> targetImage;
+      private final @Nullable Input<String> targetImage;
 
     public Input<String> getTargetImage() {
         return this.targetImage == null ? Input.empty() : this.targetImage;
@@ -102,7 +102,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetVersion")
-    private final @Nullable Input<String> targetVersion;
+      private final @Nullable Input<String> targetVersion;
 
     public Input<String> getTargetVersion() {
         return this.targetVersion == null ? Input.empty() : this.targetVersion;
@@ -113,7 +113,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -124,7 +124,7 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vmImage")
-    private final @Nullable Input<String> vmImage;
+      private final @Nullable Input<String> vmImage;
 
     public Input<String> getVmImage() {
         return this.vmImage == null ? Input.empty() : this.vmImage;
@@ -303,7 +303,6 @@ public final class UpgradeHistoryEntryArgs extends io.pulumi.resources.ResourceA
             this.vmImage = Input.ofNullable(vmImage);
             return this;
         }
-
         public UpgradeHistoryEntryArgs build() {
             return new UpgradeHistoryEntryArgs(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }

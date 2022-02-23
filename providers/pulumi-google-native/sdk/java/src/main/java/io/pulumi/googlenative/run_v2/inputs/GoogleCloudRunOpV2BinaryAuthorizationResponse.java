@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends io.pulu
      * 
      */
     @InputImport(name="breakglassJustification", required=true)
-    private final String breakglassJustification;
+      private final String breakglassJustification;
 
     public String getBreakglassJustification() {
         return this.breakglassJustification;
@@ -33,7 +33,7 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends io.pulu
      * 
      */
     @InputImport(name="useDefault", required=true)
-    private final Boolean useDefault;
+      private final Boolean useDefault;
 
     public Boolean getUseDefault() {
         return this.useDefault;
@@ -82,7 +82,6 @@ public final class GoogleCloudRunOpV2BinaryAuthorizationResponse extends io.pulu
             this.useDefault = Objects.requireNonNull(useDefault);
             return this;
         }
-
         public GoogleCloudRunOpV2BinaryAuthorizationResponse build() {
             return new GoogleCloudRunOpV2BinaryAuthorizationResponse(breakglassJustification, useDefault);
         }

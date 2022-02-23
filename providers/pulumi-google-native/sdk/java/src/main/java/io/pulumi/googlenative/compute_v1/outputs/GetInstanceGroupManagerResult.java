@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DistributionPolicyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerActionsSummaryResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerAutoHealingPolicyResponse;
@@ -483,7 +483,6 @@ public final class GetInstanceGroupManagerResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceGroupManagerResult build() {
             return new GetInstanceGroupManagerResult(autoHealingPolicies, baseInstanceName, creationTimestamp, currentActions, description, distributionPolicy, fingerprint, instanceGroup, instanceTemplate, kind, name, namedPorts, region, selfLink, statefulPolicy, status, targetPools, targetSize, updatePolicy, versions, zone);
         }

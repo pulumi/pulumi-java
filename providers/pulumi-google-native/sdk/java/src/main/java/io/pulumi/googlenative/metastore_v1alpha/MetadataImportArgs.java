@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.DatabaseDumpArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseDump")
-    private final @Nullable Input<DatabaseDumpArgs> databaseDump;
+      private final @Nullable Input<DatabaseDumpArgs> databaseDump;
 
     public Input<DatabaseDumpArgs> getDatabaseDump() {
         return this.databaseDump == null ? Input.empty() : this.databaseDump;
@@ -31,21 +31,21 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="metadataImportId", required=true)
-    private final Input<String> metadataImportId;
+      private final Input<String> metadataImportId;
 
     public Input<String> getMetadataImportId() {
         return this.metadataImportId;
@@ -56,28 +56,28 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="serviceId", required=true)
-    private final Input<String> serviceId;
+      private final Input<String> serviceId;
 
     public Input<String> getServiceId() {
         return this.serviceId;
@@ -226,7 +226,6 @@ public final class MetadataImportArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceId = Input.of(Objects.requireNonNull(serviceId));
             return this;
         }
-
         public MetadataImportArgs build() {
             return new MetadataImportArgs(databaseDump, description, location, metadataImportId, name, project, requestId, serviceId);
         }

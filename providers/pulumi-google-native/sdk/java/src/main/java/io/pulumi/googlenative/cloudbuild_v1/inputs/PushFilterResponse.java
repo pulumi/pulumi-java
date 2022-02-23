@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branch", required=true)
-    private final String branch;
+      private final String branch;
 
     public String getBranch() {
         return this.branch;
@@ -33,7 +33,7 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="invertRegex", required=true)
-    private final Boolean invertRegex;
+      private final Boolean invertRegex;
 
     public Boolean getInvertRegex() {
         return this.invertRegex;
@@ -44,7 +44,7 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -103,7 +103,6 @@ public final class PushFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public PushFilterResponse build() {
             return new PushFilterResponse(branch, invertRegex, tag);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class GetWebAppDomainOwnershipIdentifierSlotResult {
             this.value = value;
             return this;
         }
-
         public GetWebAppDomainOwnershipIdentifierSlotResult build() {
             return new GetWebAppDomainOwnershipIdentifierSlotResult(id, kind, name, type, value);
         }

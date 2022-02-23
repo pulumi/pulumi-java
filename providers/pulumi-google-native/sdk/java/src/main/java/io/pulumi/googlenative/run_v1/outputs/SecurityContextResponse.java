@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class SecurityContextResponse {
             this.runAsUser = Objects.requireNonNull(runAsUser);
             return this;
         }
-
         public SecurityContextResponse build() {
             return new SecurityContextResponse(runAsUser);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53resolver;
 
 import io.pulumi.awsnative.route53resolver.inputs.FirewallDomainListTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="domainFileUrl")
-    private final @Nullable Input<String> domainFileUrl;
+        private final @Nullable Input<String> domainFileUrl;
 
     public Input<String> getDomainFileUrl() {
         return this.domainFileUrl == null ? Input.empty() : this.domainFileUrl;
     }
 
     @InputImport(name="domains")
-    private final @Nullable Input<List<String>> domains;
+        private final @Nullable Input<List<String>> domains;
 
     public Input<List<String>> getDomains() {
         return this.domains == null ? Input.empty() : this.domains;
@@ -39,7 +39,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -50,7 +50,7 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FirewallDomainListTagArgs>> tags;
+        private final @Nullable Input<List<FirewallDomainListTagArgs>> tags;
 
     public Input<List<FirewallDomainListTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -139,7 +139,6 @@ public final class FirewallDomainListArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FirewallDomainListArgs build() {
             return new FirewallDomainListArgs(domainFileUrl, domains, name, tags);
         }

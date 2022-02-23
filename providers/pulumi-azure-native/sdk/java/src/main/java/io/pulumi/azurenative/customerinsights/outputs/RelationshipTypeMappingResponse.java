@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.RelationshipTypeFieldMappingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class RelationshipTypeMappingResponse {
             this.fieldMappings = Objects.requireNonNull(fieldMappings);
             return this;
         }
-
         public RelationshipTypeMappingResponse build() {
             return new RelationshipTypeMappingResponse(fieldMappings);
         }

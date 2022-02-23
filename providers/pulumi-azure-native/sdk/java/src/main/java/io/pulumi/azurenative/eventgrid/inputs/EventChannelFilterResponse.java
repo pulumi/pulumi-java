@@ -22,7 +22,7 @@ import io.pulumi.azurenative.eventgrid.inputs.StringNotBeginsWithAdvancedFilterR
 import io.pulumi.azurenative.eventgrid.inputs.StringNotContainsAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.inputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.util.List;
@@ -44,7 +44,7 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="advancedFilters")
-    private final @Nullable List<Object> advancedFilters;
+        private final @Nullable List<Object> advancedFilters;
 
     public List<Object> getAdvancedFilters() {
         return this.advancedFilters == null ? List.of() : this.advancedFilters;
@@ -55,7 +55,7 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableAdvancedFilteringOnArrays")
-    private final @Nullable Boolean enableAdvancedFilteringOnArrays;
+        private final @Nullable Boolean enableAdvancedFilteringOnArrays;
 
     public Optional<Boolean> getEnableAdvancedFilteringOnArrays() {
         return this.enableAdvancedFilteringOnArrays == null ? Optional.empty() : Optional.ofNullable(this.enableAdvancedFilteringOnArrays);
@@ -104,7 +104,6 @@ public final class EventChannelFilterResponse extends io.pulumi.resources.Invoke
             this.enableAdvancedFilteringOnArrays = enableAdvancedFilteringOnArrays;
             return this;
         }
-
         public EventChannelFilterResponse build() {
             return new EventChannelFilterResponse(advancedFilters, enableAdvancedFilteringOnArrays);
         }

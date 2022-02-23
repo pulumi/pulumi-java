@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.BackendServiceIAPOAuth2ClientInfoResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class BackendServiceIAPResponse {
             this.oauth2ClientSecretSha256 = Objects.requireNonNull(oauth2ClientSecretSha256);
             return this;
         }
-
         public BackendServiceIAPResponse build() {
             return new BackendServiceIAPResponse(enabled, oauth2ClientId, oauth2ClientInfo, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="additionalRecipients")
-    private final @Nullable List<String> additionalRecipients;
+        private final @Nullable List<String> additionalRecipients;
 
     public List<String> getAdditionalRecipients() {
         return this.additionalRecipients == null ? List.of() : this.additionalRecipients;
@@ -35,7 +35,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="notifyDcAdmins")
-    private final @Nullable String notifyDcAdmins;
+        private final @Nullable String notifyDcAdmins;
 
     public Optional<String> getNotifyDcAdmins() {
         return this.notifyDcAdmins == null ? Optional.empty() : Optional.ofNullable(this.notifyDcAdmins);
@@ -46,7 +46,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="notifyGlobalAdmins")
-    private final @Nullable String notifyGlobalAdmins;
+        private final @Nullable String notifyGlobalAdmins;
 
     public Optional<String> getNotifyGlobalAdmins() {
         return this.notifyGlobalAdmins == null ? Optional.empty() : Optional.ofNullable(this.notifyGlobalAdmins);
@@ -105,7 +105,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
             this.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(additionalRecipients, notifyDcAdmins, notifyGlobalAdmins);
         }

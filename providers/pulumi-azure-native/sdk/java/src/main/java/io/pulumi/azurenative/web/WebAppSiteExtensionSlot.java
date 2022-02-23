@@ -8,8 +8,8 @@ import io.pulumi.azurenative.web.WebAppSiteExtensionSlotArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -345,13 +345,6 @@ public class WebAppSiteExtensionSlot extends io.pulumi.resources.CustomResource 
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WebAppSiteExtensionSlot(String name) {
-        super("azure-native:web:WebAppSiteExtensionSlot", name, WebAppSiteExtensionSlotArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

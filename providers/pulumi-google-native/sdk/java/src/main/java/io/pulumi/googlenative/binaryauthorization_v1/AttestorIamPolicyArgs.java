@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.binaryauthorization_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.binaryauthorization_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,7 +18,7 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
     public static final AttestorIamPolicyArgs Empty = new AttestorIamPolicyArgs();
 
     @InputImport(name="attestorId", required=true)
-    private final Input<String> attestorId;
+      private final Input<String> attestorId;
 
     public Input<String> getAttestorId() {
         return this.attestorId;
@@ -29,7 +29,7 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -40,14 +40,14 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -58,7 +58,7 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -162,7 +162,6 @@ public final class AttestorIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public AttestorIamPolicyArgs build() {
             return new AttestorIamPolicyArgs(attestorId, bindings, etag, project, version);
         }

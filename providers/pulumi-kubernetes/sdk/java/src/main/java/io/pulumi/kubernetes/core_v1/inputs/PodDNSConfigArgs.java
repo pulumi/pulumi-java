@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodDNSConfigOptionArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nameservers")
-    private final @Nullable Input<List<String>> nameservers;
+        private final @Nullable Input<List<String>> nameservers;
 
     public Input<List<String>> getNameservers() {
         return this.nameservers == null ? Input.empty() : this.nameservers;
@@ -36,7 +36,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<List<PodDNSConfigOptionArgs>> options;
+        private final @Nullable Input<List<PodDNSConfigOptionArgs>> options;
 
     public Input<List<PodDNSConfigOptionArgs>> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -47,7 +47,7 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="searches")
-    private final @Nullable Input<List<String>> searches;
+        private final @Nullable Input<List<String>> searches;
 
     public Input<List<String>> getSearches() {
         return this.searches == null ? Input.empty() : this.searches;
@@ -121,7 +121,6 @@ public final class PodDNSConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.searches = Input.ofNullable(searches);
             return this;
         }
-
         public PodDNSConfigArgs build() {
             return new PodDNSConfigArgs(nameservers, options, searches);
         }

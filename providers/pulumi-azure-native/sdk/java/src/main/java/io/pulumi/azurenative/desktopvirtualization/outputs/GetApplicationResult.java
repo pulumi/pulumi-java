@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -393,7 +393,6 @@ public final class GetApplicationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconContent, iconHash, iconIndex, iconPath, id, msixPackageApplicationId, msixPackageFamilyName, name, objectId, showInPortal, type);
         }

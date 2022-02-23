@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
      * 
      */
     @InputImport(name="onHealthCheck", required=true)
-    private final String onHealthCheck;
+      private final String onHealthCheck;
 
     public String getOnHealthCheck() {
         return this.onHealthCheck;
@@ -55,7 +55,6 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersRespo
             this.onHealthCheck = Objects.requireNonNull(onHealthCheck);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse(onHealthCheck);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.codestarconnections.outputs;
 
 import io.pulumi.awsnative.codestarconnections.outputs.ConnectionTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class GetConnectionResult {
             this.tags = tags;
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(connectionArn, connectionStatus, ownerAccountId, tags);
         }

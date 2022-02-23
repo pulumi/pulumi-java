@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlFieldResponse;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class StandardSqlStructTypeResponse {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public StandardSqlStructTypeResponse build() {
             return new StandardSqlStructTypeResponse(fields);
         }

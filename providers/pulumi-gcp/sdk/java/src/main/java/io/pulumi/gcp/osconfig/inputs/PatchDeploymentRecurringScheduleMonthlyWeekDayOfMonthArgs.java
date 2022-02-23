@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
      * 
      */
     @InputImport(name="dayOfWeek", required=true)
-    private final Input<String> dayOfWeek;
+        private final Input<String> dayOfWeek;
 
     public Input<String> getDayOfWeek() {
         return this.dayOfWeek;
@@ -31,7 +31,7 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
      * 
      */
     @InputImport(name="weekOrdinal", required=true)
-    private final Input<Integer> weekOrdinal;
+        private final Input<Integer> weekOrdinal;
 
     public Input<Integer> getWeekOrdinal() {
         return this.weekOrdinal;
@@ -90,7 +90,6 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs ext
             this.weekOrdinal = Input.of(Objects.requireNonNull(weekOrdinal));
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs build() {
             return new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonthArgs(dayOfWeek, weekOrdinal);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class RetryPolicyResponse {
             this.maxDeliveryAttempts = maxDeliveryAttempts;
             return this;
         }
-
         public RetryPolicyResponse build() {
             return new RetryPolicyResponse(eventTimeToLiveInMinutes, maxDeliveryAttempts);
         }

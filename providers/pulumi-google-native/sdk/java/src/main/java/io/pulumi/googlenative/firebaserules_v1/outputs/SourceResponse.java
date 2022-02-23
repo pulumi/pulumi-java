@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaserules_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebaserules_v1.outputs.FileResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class SourceResponse {
             this.files = Objects.requireNonNull(files);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(files);
         }

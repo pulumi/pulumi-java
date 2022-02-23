@@ -9,8 +9,8 @@ import io.pulumi.azurenative.sqlvirtualmachine.outputs.WsfcDomainProfileResponse
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -188,13 +188,6 @@ public class SqlVirtualMachineGroup extends io.pulumi.resources.CustomResource {
         return this.wsfcDomainProfile;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SqlVirtualMachineGroup(String name) {
-        super("azure-native:sqlvirtualmachine:SqlVirtualMachineGroup", name, SqlVirtualMachineGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

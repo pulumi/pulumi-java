@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -112,7 +112,6 @@ public final class ModelEnvironmentDefinitionResponseResponsePython {
             this.userManagedDependencies = userManagedDependencies;
             return this;
         }
-
         public ModelEnvironmentDefinitionResponseResponsePython build() {
             return new ModelEnvironmentDefinitionResponseResponsePython(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }

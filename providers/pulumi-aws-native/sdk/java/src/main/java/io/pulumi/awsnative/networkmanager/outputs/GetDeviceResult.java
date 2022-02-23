@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.DeviceLocation;
 import io.pulumi.awsnative.networkmanager.outputs.DeviceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -247,7 +247,6 @@ public final class GetDeviceResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetDeviceResult build() {
             return new GetDeviceResult(description, deviceArn, deviceId, location, model, serialNumber, siteId, tags, type, vendor);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerregistry.outputs.LoginServerPropertiesResp
 import io.pulumi.azurenative.containerregistry.outputs.ParentPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.StatusDetailPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -356,7 +356,6 @@ public final class GetConnectedRegistryResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetConnectedRegistryResult build() {
             return new GetConnectedRegistryResult(activation, clientTokenIds, connectionState, id, lastActivityTime, logging, loginServer, mode, name, parent, provisioningState, statusDetails, systemData, type, version);
         }

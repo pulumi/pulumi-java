@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.EdgeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.GkeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.outputs.KubernetesMetadataResponse;
@@ -163,7 +163,6 @@ public final class MembershipEndpointResponse {
             this.onPremCluster = Objects.requireNonNull(onPremCluster);
             return this;
         }
-
         public MembershipEndpointResponse build() {
             return new MembershipEndpointResponse(edgeCluster, gkeCluster, kubernetesMetadata, kubernetesResource, multiCloudCluster, onPremCluster);
         }

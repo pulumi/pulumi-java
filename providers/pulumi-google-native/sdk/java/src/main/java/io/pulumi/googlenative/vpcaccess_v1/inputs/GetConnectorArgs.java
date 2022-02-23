@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vpcaccess_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetConnectorArgs Empty = new GetConnectorArgs();
 
     @InputImport(name="connectorId", required=true)
-    private final String connectorId;
+      private final String connectorId;
 
     public String getConnectorId() {
         return this.connectorId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetConnectorArgs build() {
             return new GetConnectorArgs(connectorId, location, project);
         }

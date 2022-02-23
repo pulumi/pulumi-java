@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi
      * 
      */
     @InputImport(name="resourceUsageId")
-    private final @Nullable String resourceUsageId;
+        private final @Nullable String resourceUsageId;
 
     public Optional<String> getResourceUsageId() {
         return this.resourceUsageId == null ? Optional.empty() : Optional.ofNullable(this.resourceUsageId);
@@ -61,7 +61,6 @@ public final class ApplicationBillingDetailsDefinitionResponse extends io.pulumi
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public ApplicationBillingDetailsDefinitionResponse build() {
             return new ApplicationBillingDetailsDefinitionResponse(resourceUsageId);
         }

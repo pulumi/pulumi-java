@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasAudioLogSetting;
 import io.pulumi.awsnative.lex.outputs.BotAliasTextLogSetting;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class BotAliasConversationLogSettings {
             this.textLogSettings = textLogSettings;
             return this;
         }
-
         public BotAliasConversationLogSettings build() {
             return new BotAliasConversationLogSettings(audioLogSettings, textLogSettings);
         }

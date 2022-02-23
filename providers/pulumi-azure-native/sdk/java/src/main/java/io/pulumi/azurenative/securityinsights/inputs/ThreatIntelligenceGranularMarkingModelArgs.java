@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * 
      */
     @InputImport(name="language")
-    private final @Nullable Input<String> language;
+        private final @Nullable Input<String> language;
 
     public Input<String> getLanguage() {
         return this.language == null ? Input.empty() : this.language;
@@ -36,7 +36,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * 
      */
     @InputImport(name="markingRef")
-    private final @Nullable Input<Integer> markingRef;
+        private final @Nullable Input<Integer> markingRef;
 
     public Input<Integer> getMarkingRef() {
         return this.markingRef == null ? Input.empty() : this.markingRef;
@@ -47,7 +47,7 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
      * 
      */
     @InputImport(name="selectors")
-    private final @Nullable Input<List<String>> selectors;
+        private final @Nullable Input<List<String>> selectors;
 
     public Input<List<String>> getSelectors() {
         return this.selectors == null ? Input.empty() : this.selectors;
@@ -121,7 +121,6 @@ public final class ThreatIntelligenceGranularMarkingModelArgs extends io.pulumi.
             this.selectors = Input.ofNullable(selectors);
             return this;
         }
-
         public ThreatIntelligenceGranularMarkingModelArgs build() {
             return new ThreatIntelligenceGranularMarkingModelArgs(language, markingRef, selectors);
         }

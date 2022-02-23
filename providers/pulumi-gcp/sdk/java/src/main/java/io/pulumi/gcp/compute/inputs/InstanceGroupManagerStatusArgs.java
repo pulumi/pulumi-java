@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusStatefulArgs;
 import io.pulumi.gcp.compute.inputs.InstanceGroupManagerStatusVersionTargetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isStable")
-    private final @Nullable Input<Boolean> isStable;
+        private final @Nullable Input<Boolean> isStable;
 
     public Input<Boolean> getIsStable() {
         return this.isStable == null ? Input.empty() : this.isStable;
@@ -33,7 +33,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="statefuls")
-    private final @Nullable Input<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
+        private final @Nullable Input<List<InstanceGroupManagerStatusStatefulArgs>> statefuls;
 
     public Input<List<InstanceGroupManagerStatusStatefulArgs>> getStatefuls() {
         return this.statefuls == null ? Input.empty() : this.statefuls;
@@ -44,7 +44,7 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="versionTargets")
-    private final @Nullable Input<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
+        private final @Nullable Input<List<InstanceGroupManagerStatusVersionTargetArgs>> versionTargets;
 
     public Input<List<InstanceGroupManagerStatusVersionTargetArgs>> getVersionTargets() {
         return this.versionTargets == null ? Input.empty() : this.versionTargets;
@@ -118,7 +118,6 @@ public final class InstanceGroupManagerStatusArgs extends io.pulumi.resources.Re
             this.versionTargets = Input.ofNullable(versionTargets);
             return this;
         }
-
         public InstanceGroupManagerStatusArgs build() {
             return new InstanceGroupManagerStatusArgs(isStable, statefuls, versionTargets);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2alphaRuleBoostActionResponse {
             this.productsFilter = Objects.requireNonNull(productsFilter);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRuleBoostActionResponse build() {
             return new GoogleCloudRetailV2alphaRuleBoostActionResponse(boost, productsFilter);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.FirewallPolicyRuleOrder;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class FirewallPolicyStatefulEngineOptions {
             this.ruleOrder = ruleOrder;
             return this;
         }
-
         public FirewallPolicyStatefulEngineOptions build() {
             return new FirewallPolicyStatefulEngineOptions(ruleOrder);
         }

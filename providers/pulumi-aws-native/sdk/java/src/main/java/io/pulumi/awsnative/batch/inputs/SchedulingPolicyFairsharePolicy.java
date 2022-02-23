@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.batch.inputs;
 
 import io.pulumi.awsnative.batch.inputs.SchedulingPolicyShareAttributes;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -21,14 +21,14 @@ public final class SchedulingPolicyFairsharePolicy extends io.pulumi.resources.I
     public static final SchedulingPolicyFairsharePolicy Empty = new SchedulingPolicyFairsharePolicy();
 
     @InputImport(name="computeReservation")
-    private final @Nullable Double computeReservation;
+        private final @Nullable Double computeReservation;
 
     public Optional<Double> getComputeReservation() {
         return this.computeReservation == null ? Optional.empty() : Optional.ofNullable(this.computeReservation);
     }
 
     @InputImport(name="shareDecaySeconds")
-    private final @Nullable Double shareDecaySeconds;
+        private final @Nullable Double shareDecaySeconds;
 
     public Optional<Double> getShareDecaySeconds() {
         return this.shareDecaySeconds == null ? Optional.empty() : Optional.ofNullable(this.shareDecaySeconds);
@@ -39,7 +39,7 @@ public final class SchedulingPolicyFairsharePolicy extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="shareDistribution")
-    private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
+        private final @Nullable List<SchedulingPolicyShareAttributes> shareDistribution;
 
     public List<SchedulingPolicyShareAttributes> getShareDistribution() {
         return this.shareDistribution == null ? List.of() : this.shareDistribution;
@@ -98,7 +98,6 @@ public final class SchedulingPolicyFairsharePolicy extends io.pulumi.resources.I
             this.shareDistribution = shareDistribution;
             return this;
         }
-
         public SchedulingPolicyFairsharePolicy build() {
             return new SchedulingPolicyFairsharePolicy(computeReservation, shareDecaySeconds, shareDistribution);
         }

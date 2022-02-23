@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CloudRunRewriteResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -32,7 +32,7 @@ public final class CloudRunRewriteResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serviceId", required=true)
-    private final String serviceId;
+      private final String serviceId;
 
     public String getServiceId() {
         return this.serviceId;
@@ -81,7 +81,6 @@ public final class CloudRunRewriteResponse extends io.pulumi.resources.InvokeArg
             this.serviceId = Objects.requireNonNull(serviceId);
             return this;
         }
-
         public CloudRunRewriteResponse build() {
             return new CloudRunRewriteResponse(region, serviceId);
         }

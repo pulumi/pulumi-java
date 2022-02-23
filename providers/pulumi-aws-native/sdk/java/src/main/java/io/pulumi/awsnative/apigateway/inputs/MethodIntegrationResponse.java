@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="contentHandling")
-    private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
+        private final @Nullable MethodIntegrationResponseContentHandling contentHandling;
 
     public Optional<MethodIntegrationResponseContentHandling> getContentHandling() {
         return this.contentHandling == null ? Optional.empty() : Optional.ofNullable(this.contentHandling);
@@ -32,7 +32,7 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="responseParameters")
-    private final @Nullable Object responseParameters;
+        private final @Nullable Object responseParameters;
 
     public Optional<Object> getResponseParameters() {
         return this.responseParameters == null ? Optional.empty() : Optional.ofNullable(this.responseParameters);
@@ -43,7 +43,7 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="responseTemplates")
-    private final @Nullable Object responseTemplates;
+        private final @Nullable Object responseTemplates;
 
     public Optional<Object> getResponseTemplates() {
         return this.responseTemplates == null ? Optional.empty() : Optional.ofNullable(this.responseTemplates);
@@ -54,7 +54,7 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="selectionPattern")
-    private final @Nullable String selectionPattern;
+        private final @Nullable String selectionPattern;
 
     public Optional<String> getSelectionPattern() {
         return this.selectionPattern == null ? Optional.empty() : Optional.ofNullable(this.selectionPattern);
@@ -65,7 +65,7 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="statusCode", required=true)
-    private final String statusCode;
+        private final String statusCode;
 
     public String getStatusCode() {
         return this.statusCode;
@@ -144,7 +144,6 @@ public final class MethodIntegrationResponse extends io.pulumi.resources.InvokeA
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public MethodIntegrationResponse build() {
             return new MethodIntegrationResponse(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.enums.SecurityRuleProtocol;
 import io.pulumi.azurenative.network.inputs.ApplicationSecurityGroupArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="access", required=true)
-    private final Input<Either<String,SecurityRuleAccess>> access;
+        private final Input<Either<String,SecurityRuleAccess>> access;
 
     public Input<Either<String,SecurityRuleAccess>> getAccess() {
         return this.access;
@@ -41,7 +41,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -52,7 +52,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddressPrefix")
-    private final @Nullable Input<String> destinationAddressPrefix;
+        private final @Nullable Input<String> destinationAddressPrefix;
 
     public Input<String> getDestinationAddressPrefix() {
         return this.destinationAddressPrefix == null ? Input.empty() : this.destinationAddressPrefix;
@@ -63,7 +63,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationAddressPrefixes")
-    private final @Nullable Input<List<String>> destinationAddressPrefixes;
+        private final @Nullable Input<List<String>> destinationAddressPrefixes;
 
     public Input<List<String>> getDestinationAddressPrefixes() {
         return this.destinationAddressPrefixes == null ? Input.empty() : this.destinationAddressPrefixes;
@@ -74,7 +74,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationApplicationSecurityGroups")
-    private final @Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
+        private final @Nullable Input<List<ApplicationSecurityGroupArgs>> destinationApplicationSecurityGroups;
 
     public Input<List<ApplicationSecurityGroupArgs>> getDestinationApplicationSecurityGroups() {
         return this.destinationApplicationSecurityGroups == null ? Input.empty() : this.destinationApplicationSecurityGroups;
@@ -85,7 +85,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPortRange")
-    private final @Nullable Input<String> destinationPortRange;
+        private final @Nullable Input<String> destinationPortRange;
 
     public Input<String> getDestinationPortRange() {
         return this.destinationPortRange == null ? Input.empty() : this.destinationPortRange;
@@ -96,7 +96,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationPortRanges")
-    private final @Nullable Input<List<String>> destinationPortRanges;
+        private final @Nullable Input<List<String>> destinationPortRanges;
 
     public Input<List<String>> getDestinationPortRanges() {
         return this.destinationPortRanges == null ? Input.empty() : this.destinationPortRanges;
@@ -107,7 +107,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-    private final Input<Either<String,SecurityRuleDirection>> direction;
+        private final Input<Either<String,SecurityRuleDirection>> direction;
 
     public Input<Either<String,SecurityRuleDirection>> getDirection() {
         return this.direction;
@@ -118,7 +118,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -129,7 +129,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -140,7 +140,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -151,7 +151,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,SecurityRuleProtocol>> protocol;
+        private final Input<Either<String,SecurityRuleProtocol>> protocol;
 
     public Input<Either<String,SecurityRuleProtocol>> getProtocol() {
         return this.protocol;
@@ -162,7 +162,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAddressPrefix")
-    private final @Nullable Input<String> sourceAddressPrefix;
+        private final @Nullable Input<String> sourceAddressPrefix;
 
     public Input<String> getSourceAddressPrefix() {
         return this.sourceAddressPrefix == null ? Input.empty() : this.sourceAddressPrefix;
@@ -173,7 +173,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceAddressPrefixes")
-    private final @Nullable Input<List<String>> sourceAddressPrefixes;
+        private final @Nullable Input<List<String>> sourceAddressPrefixes;
 
     public Input<List<String>> getSourceAddressPrefixes() {
         return this.sourceAddressPrefixes == null ? Input.empty() : this.sourceAddressPrefixes;
@@ -184,7 +184,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceApplicationSecurityGroups")
-    private final @Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
+        private final @Nullable Input<List<ApplicationSecurityGroupArgs>> sourceApplicationSecurityGroups;
 
     public Input<List<ApplicationSecurityGroupArgs>> getSourceApplicationSecurityGroups() {
         return this.sourceApplicationSecurityGroups == null ? Input.empty() : this.sourceApplicationSecurityGroups;
@@ -195,7 +195,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePortRange")
-    private final @Nullable Input<String> sourcePortRange;
+        private final @Nullable Input<String> sourcePortRange;
 
     public Input<String> getSourcePortRange() {
         return this.sourcePortRange == null ? Input.empty() : this.sourcePortRange;
@@ -206,7 +206,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourcePortRanges")
-    private final @Nullable Input<List<String>> sourcePortRanges;
+        private final @Nullable Input<List<String>> sourcePortRanges;
 
     public Input<List<String>> getSourcePortRanges() {
         return this.sourcePortRanges == null ? Input.empty() : this.sourcePortRanges;
@@ -217,7 +217,7 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -516,7 +516,6 @@ public final class SecurityRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SecurityRuleArgs build() {
             return new SecurityRuleArgs(access, description, destinationAddressPrefix, destinationAddressPrefixes, destinationApplicationSecurityGroups, destinationPortRange, destinationPortRanges, direction, id, name, priority, protocol, sourceAddressPrefix, sourceAddressPrefixes, sourceApplicationSecurityGroups, sourcePortRange, sourcePortRanges, type);
         }

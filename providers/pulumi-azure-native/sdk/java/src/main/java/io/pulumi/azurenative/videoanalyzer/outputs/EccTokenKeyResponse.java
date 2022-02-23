@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -139,7 +139,6 @@ public final class EccTokenKeyResponse {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public EccTokenKeyResponse build() {
             return new EccTokenKeyResponse(alg, kid, type, x, y);
         }

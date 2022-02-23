@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="cpu", required=true)
-    private final Double cpu;
+      private final Double cpu;
 
     public Double getCpu() {
         return this.cpu;
@@ -33,7 +33,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="maxCount", required=true)
-    private final Integer maxCount;
+      private final Integer maxCount;
 
     public Integer getMaxCount() {
         return this.maxCount;
@@ -44,7 +44,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="memoryGb", required=true)
-    private final Double memoryGb;
+      private final Double memoryGb;
 
     public Double getMemoryGb() {
         return this.memoryGb;
@@ -55,7 +55,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="minCount", required=true)
-    private final Integer minCount;
+      private final Integer minCount;
 
     public Integer getMinCount() {
         return this.minCount;
@@ -66,7 +66,7 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="storageGb", required=true)
-    private final Double storageGb;
+      private final Double storageGb;
 
     public Double getStorageGb() {
         return this.storageGb;
@@ -145,7 +145,6 @@ public final class WorkerResourceResponse extends io.pulumi.resources.InvokeArgs
             this.storageGb = Objects.requireNonNull(storageGb);
             return this;
         }
-
         public WorkerResourceResponse build() {
             return new WorkerResourceResponse(cpu, maxCount, memoryGb, minCount, storageGb);
         }

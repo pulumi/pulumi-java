@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusAllInstancesConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerStatusVersionTargetResponse;
@@ -141,7 +141,6 @@ public final class InstanceGroupManagerStatusResponse {
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }
-
         public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(allInstancesConfig, autoscaler, isStable, stateful, versionTarget);
         }

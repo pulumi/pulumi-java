@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.ComputeDataDiskResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ComputeVmInstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -184,7 +184,6 @@ public final class ComputeVmPropertiesResponse {
             this.vmSize = vmSize;
             return this;
         }
-
         public ComputeVmPropertiesResponse build() {
             return new ComputeVmPropertiesResponse(dataDiskIds, dataDisks, networkInterfaceId, osDiskId, osType, statuses, vmSize);
         }

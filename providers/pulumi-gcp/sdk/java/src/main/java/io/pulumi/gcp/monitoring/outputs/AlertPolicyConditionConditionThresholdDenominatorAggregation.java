@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -261,7 +261,6 @@ public final class AlertPolicyConditionConditionThresholdDenominatorAggregation 
             this.perSeriesAligner = perSeriesAligner;
             return this;
         }
-
         public AlertPolicyConditionConditionThresholdDenominatorAggregation build() {
             return new AlertPolicyConditionConditionThresholdDenominatorAggregation(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

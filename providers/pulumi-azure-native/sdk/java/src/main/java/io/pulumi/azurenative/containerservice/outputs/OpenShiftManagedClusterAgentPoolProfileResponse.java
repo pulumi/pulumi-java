@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class OpenShiftManagedClusterAgentPoolProfileResponse {
             this.vmSize = Objects.requireNonNull(vmSize);
             return this;
         }
-
         public OpenShiftManagedClusterAgentPoolProfileResponse build() {
             return new OpenShiftManagedClusterAgentPoolProfileResponse(count, name, osType, role, subnetCidr, vmSize);
         }

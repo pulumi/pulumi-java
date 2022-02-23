@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyFairPlayConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyPlayReadyConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.StreamingPolicyWidevineConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -99,7 +99,6 @@ public final class CbcsDrmConfigurationResponse {
             this.widevine = widevine;
             return this;
         }
-
         public CbcsDrmConfigurationResponse build() {
             return new CbcsDrmConfigurationResponse(fairPlay, playReady, widevine);
         }

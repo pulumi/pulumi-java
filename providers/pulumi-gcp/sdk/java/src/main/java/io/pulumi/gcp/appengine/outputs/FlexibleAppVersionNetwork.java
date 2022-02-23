@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -149,7 +149,6 @@ public final class FlexibleAppVersionNetwork {
             this.subnetwork = subnetwork;
             return this;
         }
-
         public FlexibleAppVersionNetwork build() {
             return new FlexibleAppVersionNetwork(forwardedPorts, instanceTag, name, sessionAffinity, subnetwork);
         }

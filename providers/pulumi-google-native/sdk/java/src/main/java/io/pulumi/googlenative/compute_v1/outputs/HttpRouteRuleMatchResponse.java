@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderMatchResponse;
 import io.pulumi.googlenative.compute_v1.outputs.HttpQueryParameterMatchResponse;
 import io.pulumi.googlenative.compute_v1.outputs.MetadataFilterResponse;
@@ -184,7 +184,6 @@ public final class HttpRouteRuleMatchResponse {
             this.regexMatch = Objects.requireNonNull(regexMatch);
             return this;
         }
-
         public HttpRouteRuleMatchResponse build() {
             return new HttpRouteRuleMatchResponse(fullPathMatch, headerMatches, ignoreCase, metadataFilters, prefixMatch, queryParameterMatches, regexMatch);
         }

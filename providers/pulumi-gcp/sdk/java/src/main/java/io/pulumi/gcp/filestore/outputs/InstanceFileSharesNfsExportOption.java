@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -165,7 +165,6 @@ public final class InstanceFileSharesNfsExportOption {
             this.squashMode = squashMode;
             return this;
         }
-
         public InstanceFileSharesNfsExportOption build() {
             return new InstanceFileSharesNfsExportOption(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }

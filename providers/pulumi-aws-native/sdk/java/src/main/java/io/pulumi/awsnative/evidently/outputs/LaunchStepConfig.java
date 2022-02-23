@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.outputs;
 
 import io.pulumi.awsnative.evidently.outputs.LaunchGroupToWeight;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +60,6 @@ public final class LaunchStepConfig {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public LaunchStepConfig build() {
             return new LaunchStepConfig(groupWeights, startTime);
         }

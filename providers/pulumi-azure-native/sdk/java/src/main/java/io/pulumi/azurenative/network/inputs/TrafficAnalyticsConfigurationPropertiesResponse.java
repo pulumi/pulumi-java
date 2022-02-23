@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -36,7 +36,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="trafficAnalyticsInterval")
-    private final @Nullable Integer trafficAnalyticsInterval;
+        private final @Nullable Integer trafficAnalyticsInterval;
 
     public Optional<Integer> getTrafficAnalyticsInterval() {
         return this.trafficAnalyticsInterval == null ? Optional.empty() : Optional.ofNullable(this.trafficAnalyticsInterval);
@@ -47,7 +47,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable String workspaceId;
+        private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
@@ -58,7 +58,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="workspaceRegion")
-    private final @Nullable String workspaceRegion;
+        private final @Nullable String workspaceRegion;
 
     public Optional<String> getWorkspaceRegion() {
         return this.workspaceRegion == null ? Optional.empty() : Optional.ofNullable(this.workspaceRegion);
@@ -69,7 +69,7 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
      * 
      */
     @InputImport(name="workspaceResourceId")
-    private final @Nullable String workspaceResourceId;
+        private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
@@ -148,7 +148,6 @@ public final class TrafficAnalyticsConfigurationPropertiesResponse extends io.pu
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public TrafficAnalyticsConfigurationPropertiesResponse build() {
             return new TrafficAnalyticsConfigurationPropertiesResponse(enabled, trafficAnalyticsInterval, workspaceId, workspaceRegion, workspaceResourceId);
         }

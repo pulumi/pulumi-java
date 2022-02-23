@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.enums.VideoScaleMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<String> height;
+        private final @Nullable Input<String> height;
 
     public Input<String> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -36,7 +36,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,VideoScaleMode>> mode;
+        private final @Nullable Input<Either<String,VideoScaleMode>> mode;
 
     public Input<Either<String,VideoScaleMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -47,7 +47,7 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<String> width;
+        private final @Nullable Input<String> width;
 
     public Input<String> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -121,7 +121,6 @@ public final class VideoScaleArgs extends io.pulumi.resources.ResourceArgs {
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public VideoScaleArgs build() {
             return new VideoScaleArgs(height, mode, width);
         }

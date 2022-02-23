@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
     public static final TimeoutConfigPropertiesArgs Empty = new TimeoutConfigPropertiesArgs();
 
     @InputImport(name="inProgressTimeoutInMinutes", required=true)
-    private final Input<Integer> inProgressTimeoutInMinutes;
+        private final Input<Integer> inProgressTimeoutInMinutes;
 
     public Input<Integer> getInProgressTimeoutInMinutes() {
         return this.inProgressTimeoutInMinutes;
@@ -61,7 +61,6 @@ public final class TimeoutConfigPropertiesArgs extends io.pulumi.resources.Resou
             this.inProgressTimeoutInMinutes = Input.of(Objects.requireNonNull(inProgressTimeoutInMinutes));
             return this;
         }
-
         public TimeoutConfigPropertiesArgs build() {
             return new TimeoutConfigPropertiesArgs(inProgressTimeoutInMinutes);
         }

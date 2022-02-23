@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class HealthAlertResponse {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public HealthAlertResponse build() {
             return new HealthAlertResponse(id, issue, lastDetected, name, raised, resolutionUri, severity);
         }

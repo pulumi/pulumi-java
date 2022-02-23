@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -267,7 +267,6 @@ public final class GetManagedNetworkGroupResult {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public GetManagedNetworkGroupResult build() {
             return new GetManagedNetworkGroupResult(etag, id, kind, location, managementGroups, name, provisioningState, subnets, subscriptions, type, virtualNetworks);
         }

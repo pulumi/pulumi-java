@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class GetProactiveDetectionConfigurationResult {
             this.sendEmailsToSubscriptionOwners = sendEmailsToSubscriptionOwners;
             return this;
         }
-
         public GetProactiveDetectionConfigurationResult build() {
             return new GetProactiveDetectionConfigurationResult(customEmails, enabled, lastUpdatedTime, name, ruleDefinitions, sendEmailsToSubscriptionOwners);
         }

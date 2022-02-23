@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.inputs.BackupRetentionSettingsArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="backupRetentionSettings")
-    private final @Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings;
+      private final @Nullable Input<BackupRetentionSettingsArgs> backupRetentionSettings;
 
     public Input<BackupRetentionSettingsArgs> getBackupRetentionSettings() {
         return this.backupRetentionSettings == null ? Input.empty() : this.backupRetentionSettings;
@@ -37,7 +37,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="binaryLogEnabled")
-    private final @Nullable Input<Boolean> binaryLogEnabled;
+      private final @Nullable Input<Boolean> binaryLogEnabled;
 
     public Input<Boolean> getBinaryLogEnabled() {
         return this.binaryLogEnabled == null ? Input.empty() : this.binaryLogEnabled;
@@ -48,7 +48,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+      private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -59,7 +59,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -70,7 +70,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -81,7 +81,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pointInTimeRecoveryEnabled")
-    private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
+      private final @Nullable Input<Boolean> pointInTimeRecoveryEnabled;
 
     public Input<Boolean> getPointInTimeRecoveryEnabled() {
         return this.pointInTimeRecoveryEnabled == null ? Input.empty() : this.pointInTimeRecoveryEnabled;
@@ -92,7 +92,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="replicationLogArchivingEnabled")
-    private final @Nullable Input<Boolean> replicationLogArchivingEnabled;
+      private final @Nullable Input<Boolean> replicationLogArchivingEnabled;
 
     public Input<Boolean> getReplicationLogArchivingEnabled() {
         return this.replicationLogArchivingEnabled == null ? Input.empty() : this.replicationLogArchivingEnabled;
@@ -103,7 +103,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -114,7 +114,7 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="transactionLogRetentionDays")
-    private final @Nullable Input<Integer> transactionLogRetentionDays;
+      private final @Nullable Input<Integer> transactionLogRetentionDays;
 
     public Input<Integer> getTransactionLogRetentionDays() {
         return this.transactionLogRetentionDays == null ? Input.empty() : this.transactionLogRetentionDays;
@@ -278,7 +278,6 @@ public final class BackupConfigurationArgs extends io.pulumi.resources.ResourceA
             this.transactionLogRetentionDays = Input.ofNullable(transactionLogRetentionDays);
             return this;
         }
-
         public BackupConfigurationArgs build() {
             return new BackupConfigurationArgs(backupRetentionSettings, binaryLogEnabled, enabled, kind, location, pointInTimeRecoveryEnabled, replicationLogArchivingEnabled, startTime, transactionLogRetentionDays);
         }

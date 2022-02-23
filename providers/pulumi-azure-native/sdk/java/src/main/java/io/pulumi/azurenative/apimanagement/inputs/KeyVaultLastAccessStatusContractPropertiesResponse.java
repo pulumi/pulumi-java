@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -34,7 +34,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -45,7 +45,7 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
      * 
      */
     @InputImport(name="timeStampUtc")
-    private final @Nullable String timeStampUtc;
+        private final @Nullable String timeStampUtc;
 
     public Optional<String> getTimeStampUtc() {
         return this.timeStampUtc == null ? Optional.empty() : Optional.ofNullable(this.timeStampUtc);
@@ -104,7 +104,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse extends io
             this.timeStampUtc = timeStampUtc;
             return this;
         }
-
         public KeyVaultLastAccessStatusContractPropertiesResponse build() {
             return new KeyVaultLastAccessStatusContractPropertiesResponse(code, message, timeStampUtc);
         }

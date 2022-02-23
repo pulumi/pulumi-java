@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GetGameServerDeploymentRolloutGameServerConfigOverrideRealmsSelector;
 import java.lang.String;
 import java.util.List;
@@ -60,7 +60,6 @@ public final class GetGameServerDeploymentRolloutGameServerConfigOverride {
             this.realmsSelectors = Objects.requireNonNull(realmsSelectors);
             return this;
         }
-
         public GetGameServerDeploymentRolloutGameServerConfigOverride build() {
             return new GetGameServerDeploymentRolloutGameServerConfigOverride(configVersion, realmsSelectors);
         }

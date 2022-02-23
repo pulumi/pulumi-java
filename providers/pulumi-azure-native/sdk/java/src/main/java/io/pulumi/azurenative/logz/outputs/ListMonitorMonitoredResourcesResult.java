@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logz.outputs;
 
 import io.pulumi.azurenative.logz.outputs.MonitoredResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ListMonitorMonitoredResourcesResult {
             this.value = value;
             return this;
         }
-
         public ListMonitorMonitoredResourcesResult build() {
             return new ListMonitorMonitoredResourcesResult(nextLink, value);
         }

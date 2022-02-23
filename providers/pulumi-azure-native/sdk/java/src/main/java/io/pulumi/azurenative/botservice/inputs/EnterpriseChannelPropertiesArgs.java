@@ -7,7 +7,7 @@ import io.pulumi.azurenative.botservice.enums.EnterpriseChannelState;
 import io.pulumi.azurenative.botservice.inputs.EnterpriseChannelNodeArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nodes", required=true)
-    private final Input<List<EnterpriseChannelNodeArgs>> nodes;
+        private final Input<List<EnterpriseChannelNodeArgs>> nodes;
 
     public Input<List<EnterpriseChannelNodeArgs>> getNodes() {
         return this.nodes;
@@ -38,7 +38,7 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,EnterpriseChannelState>> state;
+        private final @Nullable Input<Either<String,EnterpriseChannelState>> state;
 
     public Input<Either<String,EnterpriseChannelState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -97,7 +97,6 @@ public final class EnterpriseChannelPropertiesArgs extends io.pulumi.resources.R
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public EnterpriseChannelPropertiesArgs build() {
             return new EnterpriseChannelPropertiesArgs(nodes, state);
         }

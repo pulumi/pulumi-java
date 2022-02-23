@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -104,7 +104,6 @@ public final class GuestPoliciesRecipeArtifactGcs {
             this.object = object;
             return this;
         }
-
         public GuestPoliciesRecipeArtifactGcs build() {
             return new GuestPoliciesRecipeArtifactGcs(bucket, generation, object);
         }

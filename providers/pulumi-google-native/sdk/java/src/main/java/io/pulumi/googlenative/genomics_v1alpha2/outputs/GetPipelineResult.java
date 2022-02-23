@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.DockerExecutorResponse;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.PipelineParameterResponse;
 import io.pulumi.googlenative.genomics_v1alpha2.outputs.PipelineResourcesResponse;
@@ -204,7 +204,6 @@ public final class GetPipelineResult {
             this.resources = Objects.requireNonNull(resources);
             return this;
         }
-
         public GetPipelineResult build() {
             return new GetPipelineResult(description, docker, inputParameters, name, outputParameters, pipelineId, project, resources);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="configMembership", required=true)
-    private final String configMembership;
+      private final String configMembership;
 
     public String getConfigMembership() {
         return this.configMembership;
@@ -59,7 +59,6 @@ public final class MultiClusterIngressFeatureSpecResponse extends io.pulumi.reso
             this.configMembership = Objects.requireNonNull(configMembership);
             return this;
         }
-
         public MultiClusterIngressFeatureSpecResponse build() {
             return new MultiClusterIngressFeatureSpecResponse(configMembership);
         }

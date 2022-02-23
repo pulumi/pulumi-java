@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedExitCodes", required=true)
-    private final List<Integer> allowedExitCodes;
+      private final List<Integer> allowedExitCodes;
 
     public List<Integer> getAllowedExitCodes() {
         return this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="args", required=true)
-    private final List<String> args;
+      private final List<String> args;
 
     public List<String> getArgs() {
         return this.args;
@@ -45,7 +45,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final String artifactId;
+      private final String artifactId;
 
     public String getArtifactId() {
         return this.artifactId;
@@ -56,7 +56,7 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final String localPath;
+      private final String localPath;
 
     public String getLocalPath() {
         return this.localPath;
@@ -125,7 +125,6 @@ public final class SoftwareRecipeStepExecFileResponse extends io.pulumi.resource
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public SoftwareRecipeStepExecFileResponse build() {
             return new SoftwareRecipeStepExecFileResponse(allowedExitCodes, args, artifactId, localPath);
         }

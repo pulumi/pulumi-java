@@ -5,7 +5,7 @@ package io.pulumi.awsnative.accessanalyzer.outputs;
 
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerArchiveRule;
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -92,7 +92,6 @@ public final class GetAnalyzerResult {
             this.tags = tags;
             return this;
         }
-
         public GetAnalyzerResult build() {
             return new GetAnalyzerResult(archiveRules, arn, tags);
         }

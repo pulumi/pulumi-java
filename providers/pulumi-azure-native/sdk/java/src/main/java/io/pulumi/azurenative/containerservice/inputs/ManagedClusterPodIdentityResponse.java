@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.ManagedClusterPodIdentityResponseProvisioningInfo;
 import io.pulumi.azurenative.containerservice.inputs.UserAssignedIdentityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="bindingSelector")
-    private final @Nullable String bindingSelector;
+        private final @Nullable String bindingSelector;
 
     public Optional<String> getBindingSelector() {
         return this.bindingSelector == null ? Optional.empty() : Optional.ofNullable(this.bindingSelector);
@@ -32,7 +32,7 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="identity", required=true)
-    private final UserAssignedIdentityResponse identity;
+        private final UserAssignedIdentityResponse identity;
 
     public UserAssignedIdentityResponse getIdentity() {
         return this.identity;
@@ -43,7 +43,7 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -54,14 +54,14 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+        private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
     }
 
     @InputImport(name="provisioningInfo", required=true)
-    private final ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
+        private final ManagedClusterPodIdentityResponseProvisioningInfo provisioningInfo;
 
     public ManagedClusterPodIdentityResponseProvisioningInfo getProvisioningInfo() {
         return this.provisioningInfo;
@@ -72,7 +72,7 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -161,7 +161,6 @@ public final class ManagedClusterPodIdentityResponse extends io.pulumi.resources
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagedClusterPodIdentityResponse build() {
             return new ManagedClusterPodIdentityResponse(bindingSelector, identity, name, namespace, provisioningInfo, provisioningState);
         }

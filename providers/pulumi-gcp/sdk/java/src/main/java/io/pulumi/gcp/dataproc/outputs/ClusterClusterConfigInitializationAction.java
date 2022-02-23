@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -83,7 +83,6 @@ public final class ClusterClusterConfigInitializationAction {
             this.timeoutSec = timeoutSec;
             return this;
         }
-
         public ClusterClusterConfigInitializationAction build() {
             return new ClusterClusterConfigInitializationAction(script, timeoutSec);
         }

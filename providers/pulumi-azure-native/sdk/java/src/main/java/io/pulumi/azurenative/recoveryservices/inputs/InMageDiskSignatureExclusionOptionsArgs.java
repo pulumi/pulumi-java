@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="diskSignature")
-    private final @Nullable Input<String> diskSignature;
+        private final @Nullable Input<String> diskSignature;
 
     public Input<String> getDiskSignature() {
         return this.diskSignature == null ? Input.empty() : this.diskSignature;
@@ -66,7 +66,6 @@ public final class InMageDiskSignatureExclusionOptionsArgs extends io.pulumi.res
             this.diskSignature = Input.ofNullable(diskSignature);
             return this;
         }
-
         public InMageDiskSignatureExclusionOptionsArgs build() {
             return new InMageDiskSignatureExclusionOptionsArgs(diskSignature);
         }

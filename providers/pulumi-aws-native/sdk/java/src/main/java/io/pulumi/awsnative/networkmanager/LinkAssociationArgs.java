@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkmanager;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="deviceId", required=true)
-    private final Input<String> deviceId;
+        private final Input<String> deviceId;
 
     public Input<String> getDeviceId() {
         return this.deviceId;
@@ -29,7 +29,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final Input<String> globalNetworkId;
+        private final Input<String> globalNetworkId;
 
     public Input<String> getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -40,7 +40,7 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="linkId", required=true)
-    private final Input<String> linkId;
+        private final Input<String> linkId;
 
     public Input<String> getLinkId() {
         return this.linkId;
@@ -114,7 +114,6 @@ public final class LinkAssociationArgs extends io.pulumi.resources.ResourceArgs 
             this.linkId = Input.of(Objects.requireNonNull(linkId));
             return this;
         }
-
         public LinkAssociationArgs build() {
             return new LinkAssociationArgs(deviceId, globalNetworkId, linkId);
         }

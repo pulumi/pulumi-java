@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.ManagedPrometheusConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.MonitoringComponentConfigResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class MonitoringConfigResponse {
             this.managedPrometheusConfig = Objects.requireNonNull(managedPrometheusConfig);
             return this;
         }
-
         public MonitoringConfigResponse build() {
             return new MonitoringConfigResponse(componentConfig, managedPrometheusConfig);
         }

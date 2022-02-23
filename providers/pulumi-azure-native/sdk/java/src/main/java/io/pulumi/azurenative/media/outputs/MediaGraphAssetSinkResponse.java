@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class MediaGraphAssetSinkResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public MediaGraphAssetSinkResponse build() {
             return new MediaGraphAssetSinkResponse(assetName, inputs, name, odataType);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplateJobSchedulingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxFailuresPerHour")
-    private final @Nullable Input<Integer> maxFailuresPerHour;
+        private final @Nullable Input<Integer> maxFailuresPerHour;
 
     public Input<Integer> getMaxFailuresPerHour() {
         return this.maxFailuresPerHour == null ? Input.empty() : this.maxFailuresPerHour;
@@ -30,7 +30,7 @@ public final class WorkflowTemplateJobSchedulingArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxFailuresTotal")
-    private final @Nullable Input<Integer> maxFailuresTotal;
+        private final @Nullable Input<Integer> maxFailuresTotal;
 
     public Input<Integer> getMaxFailuresTotal() {
         return this.maxFailuresTotal == null ? Input.empty() : this.maxFailuresTotal;
@@ -89,7 +89,6 @@ public final class WorkflowTemplateJobSchedulingArgs extends io.pulumi.resources
             this.maxFailuresTotal = Input.ofNullable(maxFailuresTotal);
             return this;
         }
-
         public WorkflowTemplateJobSchedulingArgs build() {
             return new WorkflowTemplateJobSchedulingArgs(maxFailuresPerHour, maxFailuresTotal);
         }

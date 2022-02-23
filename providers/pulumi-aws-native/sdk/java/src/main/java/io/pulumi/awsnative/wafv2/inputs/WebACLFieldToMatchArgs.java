@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleHeaderProperties
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatchSingleQueryArgumentPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.WebACLJsonBodyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="allQueryArguments")
-    private final @Nullable Input<Object> allQueryArguments;
+        private final @Nullable Input<Object> allQueryArguments;
 
     public Input<Object> getAllQueryArguments() {
         return this.allQueryArguments == null ? Input.empty() : this.allQueryArguments;
@@ -37,14 +37,14 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<Object> body;
+        private final @Nullable Input<Object> body;
 
     public Input<Object> getBody() {
         return this.body == null ? Input.empty() : this.body;
     }
 
     @InputImport(name="jsonBody")
-    private final @Nullable Input<WebACLJsonBodyArgs> jsonBody;
+        private final @Nullable Input<WebACLJsonBodyArgs> jsonBody;
 
     public Input<WebACLJsonBodyArgs> getJsonBody() {
         return this.jsonBody == null ? Input.empty() : this.jsonBody;
@@ -55,7 +55,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<Object> method;
+        private final @Nullable Input<Object> method;
 
     public Input<Object> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -66,14 +66,14 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<Object> queryString;
+        private final @Nullable Input<Object> queryString;
 
     public Input<Object> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
     }
 
     @InputImport(name="singleHeader")
-    private final @Nullable Input<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
+        private final @Nullable Input<WebACLFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
     public Input<WebACLFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -84,7 +84,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="singleQueryArgument")
-    private final @Nullable Input<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
+        private final @Nullable Input<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> singleQueryArgument;
 
     public Input<WebACLFieldToMatchSingleQueryArgumentPropertiesArgs> getSingleQueryArgument() {
         return this.singleQueryArgument == null ? Input.empty() : this.singleQueryArgument;
@@ -95,7 +95,7 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<Object> uriPath;
+        private final @Nullable Input<Object> uriPath;
 
     public Input<Object> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;
@@ -244,7 +244,6 @@ public final class WebACLFieldToMatchArgs extends io.pulumi.resources.ResourceAr
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }
-
         public WebACLFieldToMatchArgs build() {
             return new WebACLFieldToMatchArgs(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logz.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="emailAddress")
-    private final @Nullable String emailAddress;
+        private final @Nullable String emailAddress;
 
     public Optional<String> getEmailAddress() {
         return this.emailAddress == null ? Optional.empty() : Optional.ofNullable(this.emailAddress);
@@ -30,7 +30,7 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="monitorName", required=true)
-    private final String monitorName;
+        private final String monitorName;
 
     public String getMonitorName() {
         return this.monitorName;
@@ -41,7 +41,7 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class ListMonitorUserRolesArgs extends io.pulumi.resources.InvokeAr
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListMonitorUserRolesArgs build() {
             return new ListMonitorUserRolesArgs(emailAddress, monitorName, resourceGroupName);
         }

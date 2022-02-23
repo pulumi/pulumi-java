@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateCommonName", required=true)
-    private final String certificateCommonName;
+        private final String certificateCommonName;
 
     public String getCertificateCommonName() {
         return this.certificateCommonName;
@@ -33,7 +33,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="certificateIssuerThumbprint", required=true)
-    private final String certificateIssuerThumbprint;
+        private final String certificateIssuerThumbprint;
 
     public String getCertificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
@@ -44,7 +44,7 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isAdmin", required=true)
-    private final Boolean isAdmin;
+        private final Boolean isAdmin;
 
     public Boolean getIsAdmin() {
         return this.isAdmin;
@@ -103,7 +103,6 @@ public final class ClientCertificateCommonNameResponse extends io.pulumi.resourc
             this.isAdmin = Objects.requireNonNull(isAdmin);
             return this;
         }
-
         public ClientCertificateCommonNameResponse build() {
             return new ClientCertificateCommonNameResponse(certificateCommonName, certificateIssuerThumbprint, isAdmin);
         }

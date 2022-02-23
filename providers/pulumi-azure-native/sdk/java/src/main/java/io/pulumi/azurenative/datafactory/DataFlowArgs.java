@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.FlowletArgs;
 import io.pulumi.azurenative.datafactory.inputs.MappingDataFlowArgs;
 import io.pulumi.azurenative.datafactory.inputs.WranglingDataFlowArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataFlowName")
-    private final @Nullable Input<String> dataFlowName;
+        private final @Nullable Input<String> dataFlowName;
 
     public Input<String> getDataFlowName() {
         return this.dataFlowName == null ? Input.empty() : this.dataFlowName;
@@ -34,7 +34,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final Input<String> factoryName;
+        private final Input<String> factoryName;
 
     public Input<String> getFactoryName() {
         return this.factoryName;
@@ -45,7 +45,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<Object> properties;
+        private final Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties;
@@ -56,7 +56,7 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -145,7 +145,6 @@ public final class DataFlowArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DataFlowArgs build() {
             return new DataFlowArgs(dataFlowName, factoryName, properties, resourceGroupName);
         }

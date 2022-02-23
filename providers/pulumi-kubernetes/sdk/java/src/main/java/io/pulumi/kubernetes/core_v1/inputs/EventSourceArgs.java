@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="component")
-    private final @Nullable Input<String> component;
+        private final @Nullable Input<String> component;
 
     public Input<String> getComponent() {
         return this.component == null ? Input.empty() : this.component;
@@ -34,7 +34,7 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -93,7 +93,6 @@ public final class EventSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.host = Input.ofNullable(host);
             return this;
         }
-
         public EventSourceArgs build() {
             return new EventSourceArgs(component, host);
         }

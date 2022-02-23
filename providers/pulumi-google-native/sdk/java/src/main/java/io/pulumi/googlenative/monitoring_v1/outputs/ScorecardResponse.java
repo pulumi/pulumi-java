@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.GaugeViewResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.SparkChartViewResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.ThresholdResponse;
@@ -120,7 +120,6 @@ public final class ScorecardResponse {
             this.timeSeriesQuery = Objects.requireNonNull(timeSeriesQuery);
             return this;
         }
-
         public ScorecardResponse build() {
             return new ScorecardResponse(gaugeView, sparkChartView, thresholds, timeSeriesQuery);
         }

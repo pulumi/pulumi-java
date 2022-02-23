@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class ImmediateCopyOptionResponse {
             this.objectType = Objects.requireNonNull(objectType);
             return this;
         }
-
         public ImmediateCopyOptionResponse build() {
             return new ImmediateCopyOptionResponse(objectType);
         }

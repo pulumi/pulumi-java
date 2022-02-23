@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends io.pulumi.resou
      * 
      */
     @InputImport(name="exemptedMembers")
-    private final @Nullable List<String> exemptedMembers;
+        private final @Nullable List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
         return this.exemptedMembers == null ? List.of() : this.exemptedMembers;
@@ -31,7 +31,7 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends io.pulumi.resou
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+        private final String logType;
 
     public String getLogType() {
         return this.logType;
@@ -80,7 +80,6 @@ public final class GetIAMPolicyAuditConfigAuditLogConfig extends io.pulumi.resou
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public GetIAMPolicyAuditConfigAuditLogConfig build() {
             return new GetIAMPolicyAuditConfigAuditLogConfig(exemptedMembers, logType);
         }

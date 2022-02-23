@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minFailingPeriodsToAlert", required=true)
-    private final Input<Double> minFailingPeriodsToAlert;
+        private final Input<Double> minFailingPeriodsToAlert;
 
     public Input<Double> getMinFailingPeriodsToAlert() {
         return this.minFailingPeriodsToAlert;
@@ -33,7 +33,7 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="numberOfEvaluationPeriods", required=true)
-    private final Input<Double> numberOfEvaluationPeriods;
+        private final Input<Double> numberOfEvaluationPeriods;
 
     public Input<Double> getNumberOfEvaluationPeriods() {
         return this.numberOfEvaluationPeriods;
@@ -92,7 +92,6 @@ public final class DynamicThresholdFailingPeriodsArgs extends io.pulumi.resource
             this.numberOfEvaluationPeriods = Input.of(Objects.requireNonNull(numberOfEvaluationPeriods));
             return this;
         }
-
         public DynamicThresholdFailingPeriodsArgs build() {
             return new DynamicThresholdFailingPeriodsArgs(minFailingPeriodsToAlert, numberOfEvaluationPeriods);
         }

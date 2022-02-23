@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningcompute.outputs;
 
 import io.pulumi.azurenative.machinelearningcompute.outputs.KubernetesClusterPropertiesResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.SystemServiceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -185,7 +185,6 @@ public final class AcsClusterPropertiesResponse {
             this.systemServices = systemServices;
             return this;
         }
-
         public AcsClusterPropertiesResponse build() {
             return new AcsClusterPropertiesResponse(agentCount, agentVmSize, clusterFqdn, masterCount, orchestratorProperties, orchestratorType, systemServices);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class WorkspaceCappingResponse {
             this.quotaNextResetTime = Objects.requireNonNull(quotaNextResetTime);
             return this;
         }
-
         public WorkspaceCappingResponse build() {
             return new WorkspaceCappingResponse(dailyQuotaGb, dataIngestionStatus, quotaNextResetTime);
         }

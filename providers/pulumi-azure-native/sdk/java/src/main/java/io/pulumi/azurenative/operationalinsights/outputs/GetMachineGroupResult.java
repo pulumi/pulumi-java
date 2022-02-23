@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.MachineReferenceWithHintsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -228,7 +228,6 @@ public final class GetMachineGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMachineGroupResult build() {
             return new GetMachineGroupResult(count, displayName, etag, groupType, id, kind, machines, name, type);
         }

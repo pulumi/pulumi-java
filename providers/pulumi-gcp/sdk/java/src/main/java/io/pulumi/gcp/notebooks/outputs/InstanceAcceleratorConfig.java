@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class InstanceAcceleratorConfig {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceAcceleratorConfig build() {
             return new InstanceAcceleratorConfig(coreCount, type);
         }

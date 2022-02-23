@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managednetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="managedNetworkName", required=true)
-    private final String managedNetworkName;
+        private final String managedNetworkName;
 
     public String getManagedNetworkName() {
         return this.managedNetworkName;
@@ -28,7 +28,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="managedNetworkPeeringPolicyName", required=true)
-    private final String managedNetworkPeeringPolicyName;
+        private final String managedNetworkPeeringPolicyName;
 
     public String getManagedNetworkPeeringPolicyName() {
         return this.managedNetworkPeeringPolicyName;
@@ -39,7 +39,7 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetManagedNetworkPeeringPolicyArgs extends io.pulumi.resource
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagedNetworkPeeringPolicyArgs build() {
             return new GetManagedNetworkPeeringPolicyArgs(managedNetworkName, managedNetworkPeeringPolicyName, resourceGroupName);
         }

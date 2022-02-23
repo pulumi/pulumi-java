@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      * 
      */
     @InputImport(name="channelTag", required=true)
-    private final Integer channelTag;
+      private final Integer channelTag;
 
     public Integer getChannelTag() {
         return this.channelTag;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
      * 
      */
     @InputImport(name="sentimentData", required=true)
-    private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
+      private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentimentData;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentimentData() {
         return this.sentimentData;
@@ -82,7 +82,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationLevelSentimentR
             this.sentimentData = Objects.requireNonNull(sentimentData);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationLevelSentimentResponse(channelTag, sentimentData);
         }

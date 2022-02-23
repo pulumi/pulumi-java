@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class HttpRouteMatchHeaderResponse {
             this.value = value;
             return this;
         }
-
         public HttpRouteMatchHeaderResponse build() {
             return new HttpRouteMatchHeaderResponse(name, type, value);
         }

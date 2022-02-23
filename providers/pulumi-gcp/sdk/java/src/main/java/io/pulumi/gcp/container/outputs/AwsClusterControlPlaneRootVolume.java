@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class AwsClusterControlPlaneRootVolume {
             this.volumeType = volumeType;
             return this;
         }
-
         public AwsClusterControlPlaneRootVolume build() {
             return new AwsClusterControlPlaneRootVolume(iops, kmsKeyArn, sizeGib, volumeType);
         }

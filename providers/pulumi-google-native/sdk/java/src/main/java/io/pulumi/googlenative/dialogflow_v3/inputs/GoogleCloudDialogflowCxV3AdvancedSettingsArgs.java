@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="loggingSettings")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> loggingSettings;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> loggingSettings;
 
     public Input<GoogleCloudDialogflowCxV3AdvancedSettingsLoggingSettingsArgs> getLoggingSettings() {
         return this.loggingSettings == null ? Input.empty() : this.loggingSettings;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3AdvancedSettingsArgs extends io.pulu
             this.loggingSettings = Input.ofNullable(loggingSettings);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3AdvancedSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3AdvancedSettingsArgs(loggingSettings);
         }

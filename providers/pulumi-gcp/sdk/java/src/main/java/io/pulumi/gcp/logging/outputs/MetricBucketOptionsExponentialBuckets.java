@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class MetricBucketOptionsExponentialBuckets {
             this.scale = scale;
             return this;
         }
-
         public MetricBucketOptionsExponentialBuckets build() {
             return new MetricBucketOptionsExponentialBuckets(growthFactor, numFiniteBuckets, scale);
         }

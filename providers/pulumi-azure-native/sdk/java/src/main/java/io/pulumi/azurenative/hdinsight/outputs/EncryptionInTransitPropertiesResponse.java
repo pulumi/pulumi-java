@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class EncryptionInTransitPropertiesResponse {
             this.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }
-
         public EncryptionInTransitPropertiesResponse build() {
             return new EncryptionInTransitPropertiesResponse(isEncryptionInTransitEnabled);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetReplayArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetReplayArgs Empty = new GetReplayArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="replayId", required=true)
-    private final String replayId;
+      private final String replayId;
 
     public String getReplayId() {
         return this.replayId;
@@ -88,7 +88,6 @@ public final class GetReplayArgs extends io.pulumi.resources.InvokeArgs {
             this.replayId = Objects.requireNonNull(replayId);
             return this;
         }
-
         public GetReplayArgs build() {
             return new GetReplayArgs(location, project, replayId);
         }

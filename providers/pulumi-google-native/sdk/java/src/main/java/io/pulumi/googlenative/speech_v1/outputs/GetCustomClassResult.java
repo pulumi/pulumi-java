@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.speech_v1.outputs.ClassItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GetCustomClassResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetCustomClassResult build() {
             return new GetCustomClassResult(customClassId, items, name);
         }

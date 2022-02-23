@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetVirtualRouterPeeringResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetVirtualRouterPeeringResult build() {
             return new GetVirtualRouterPeeringResult(etag, id, name, peerAsn, peerIp, provisioningState, type);
         }

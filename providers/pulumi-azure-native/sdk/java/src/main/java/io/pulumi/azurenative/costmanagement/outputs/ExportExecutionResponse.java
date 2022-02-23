@@ -5,7 +5,7 @@ package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.CommonExportPropertiesResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ErrorDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -309,7 +309,6 @@ public final class ExportExecutionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ExportExecutionResponse build() {
             return new ExportExecutionResponse(eTag, error, executionType, fileName, id, name, processingEndTime, processingStartTime, runSettings, status, submittedBy, submittedTime, type);
         }

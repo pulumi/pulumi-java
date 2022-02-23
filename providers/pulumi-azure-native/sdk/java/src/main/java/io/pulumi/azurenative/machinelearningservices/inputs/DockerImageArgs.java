@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerImageUri", required=true)
-    private final Input<String> dockerImageUri;
+        private final Input<String> dockerImageUri;
 
     public Input<String> getDockerImageUri() {
         return this.dockerImageUri;
@@ -37,7 +37,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-    private final Input<String> dockerSpecificationType;
+        private final Input<String> dockerSpecificationType;
 
     public Input<String> getDockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -48,7 +48,7 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<DockerImagePlatformArgs> platform;
+        private final @Nullable Input<DockerImagePlatformArgs> platform;
 
     public Input<DockerImagePlatformArgs> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -122,7 +122,6 @@ public final class DockerImageArgs extends io.pulumi.resources.ResourceArgs {
             this.platform = Input.ofNullable(platform);
             return this;
         }
-
         public DockerImageArgs build() {
             return new DockerImageArgs(dockerImageUri, dockerSpecificationType, platform);
         }

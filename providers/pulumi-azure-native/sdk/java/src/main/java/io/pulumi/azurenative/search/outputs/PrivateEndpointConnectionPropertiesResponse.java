@@ -5,7 +5,7 @@ package io.pulumi.azurenative.search.outputs;
 
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponsePrivateEndpoint;
 import io.pulumi.azurenative.search.outputs.PrivateEndpointConnectionPropertiesResponsePrivateLinkServiceConnectionState;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class PrivateEndpointConnectionPropertiesResponse {
             this.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState);
         }

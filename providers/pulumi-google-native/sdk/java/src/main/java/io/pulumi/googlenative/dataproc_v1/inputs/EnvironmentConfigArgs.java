@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1.inputs.ExecutionConfigArgs;
 import io.pulumi.googlenative.dataproc_v1.inputs.PeripheralsConfigArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="executionConfig")
-    private final @Nullable Input<ExecutionConfigArgs> executionConfig;
+      private final @Nullable Input<ExecutionConfigArgs> executionConfig;
 
     public Input<ExecutionConfigArgs> getExecutionConfig() {
         return this.executionConfig == null ? Input.empty() : this.executionConfig;
@@ -35,7 +35,7 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="peripheralsConfig")
-    private final @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
+      private final @Nullable Input<PeripheralsConfigArgs> peripheralsConfig;
 
     public Input<PeripheralsConfigArgs> getPeripheralsConfig() {
         return this.peripheralsConfig == null ? Input.empty() : this.peripheralsConfig;
@@ -94,7 +94,6 @@ public final class EnvironmentConfigArgs extends io.pulumi.resources.ResourceArg
             this.peripheralsConfig = Input.ofNullable(peripheralsConfig);
             return this;
         }
-
         public EnvironmentConfigArgs build() {
             return new EnvironmentConfigArgs(executionConfig, peripheralsConfig);
         }

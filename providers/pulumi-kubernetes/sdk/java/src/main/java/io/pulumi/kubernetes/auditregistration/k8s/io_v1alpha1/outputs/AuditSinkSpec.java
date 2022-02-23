@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.Policy;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.outputs.Webhook;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class AuditSinkSpec {
             this.webhook = Objects.requireNonNull(webhook);
             return this;
         }
-
         public AuditSinkSpec build() {
             return new AuditSinkSpec(policy, webhook);
         }

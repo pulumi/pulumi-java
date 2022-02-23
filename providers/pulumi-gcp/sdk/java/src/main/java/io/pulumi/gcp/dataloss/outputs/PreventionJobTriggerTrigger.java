@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerTriggerSchedule;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +56,6 @@ public final class PreventionJobTriggerTrigger {
             this.schedule = schedule;
             return this;
         }
-
         public PreventionJobTriggerTrigger build() {
             return new PreventionJobTriggerTrigger(schedule);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyCpuUtilization;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyLoadBalancingUtilization;
 import io.pulumi.gcp.compute.outputs.RegionAutoscalerAutoscalingPolicyMetric;
@@ -304,7 +304,6 @@ public final class RegionAutoscalerAutoscalingPolicy {
             this.scalingSchedules = scalingSchedules;
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicy build() {
             return new RegionAutoscalerAutoscalingPolicy(cooldownPeriod, cpuUtilization, loadBalancingUtilization, maxReplicas, metrics, minReplicas, mode, scaleDownControl, scaleInControl, scalingSchedules);
         }

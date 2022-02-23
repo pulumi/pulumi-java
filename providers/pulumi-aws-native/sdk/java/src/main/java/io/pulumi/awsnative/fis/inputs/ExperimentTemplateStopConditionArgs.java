@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.fis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ExperimentTemplateStopConditionArgs extends io.pulumi.resourc
     public static final ExperimentTemplateStopConditionArgs Empty = new ExperimentTemplateStopConditionArgs();
 
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+        private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class ExperimentTemplateStopConditionArgs extends io.pulumi.resourc
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ExperimentTemplateStopConditionArgs build() {
             return new ExperimentTemplateStopConditionArgs(source, value);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.DataQualityJobDefinitionS3OutputS3UploadMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final Input<String> localPath;
+        private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -35,7 +35,7 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="s3UploadMode")
-    private final @Nullable Input<DataQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
+        private final @Nullable Input<DataQualityJobDefinitionS3OutputS3UploadMode> s3UploadMode;
 
     public Input<DataQualityJobDefinitionS3OutputS3UploadMode> getS3UploadMode() {
         return this.s3UploadMode == null ? Input.empty() : this.s3UploadMode;
@@ -46,7 +46,7 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="s3Uri", required=true)
-    private final Input<String> s3Uri;
+        private final Input<String> s3Uri;
 
     public Input<String> getS3Uri() {
         return this.s3Uri;
@@ -120,7 +120,6 @@ public final class DataQualityJobDefinitionS3OutputArgs extends io.pulumi.resour
             this.s3Uri = Input.of(Objects.requireNonNull(s3Uri));
             return this;
         }
-
         public DataQualityJobDefinitionS3OutputArgs build() {
             return new DataQualityJobDefinitionS3OutputArgs(localPath, s3UploadMode, s3Uri);
         }

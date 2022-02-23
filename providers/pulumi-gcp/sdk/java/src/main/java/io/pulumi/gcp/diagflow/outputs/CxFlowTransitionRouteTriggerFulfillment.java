@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxFlowTransitionRouteTriggerFulfillmentMessage;
 import java.lang.Boolean;
 import java.lang.String;
@@ -123,7 +123,6 @@ public final class CxFlowTransitionRouteTriggerFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxFlowTransitionRouteTriggerFulfillment build() {
             return new CxFlowTransitionRouteTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }

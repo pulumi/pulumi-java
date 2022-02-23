@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="incompatibleAppVersion", required=true)
-    private final Boolean incompatibleAppVersion;
+      private final Boolean incompatibleAppVersion;
 
     public Boolean getIncompatibleAppVersion() {
         return this.incompatibleAppVersion;
@@ -32,7 +32,7 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="incompatibleArchitecture", required=true)
-    private final Boolean incompatibleArchitecture;
+      private final Boolean incompatibleArchitecture;
 
     public Boolean getIncompatibleArchitecture() {
         return this.incompatibleArchitecture;
@@ -43,7 +43,7 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="incompatibleDevice", required=true)
-    private final Boolean incompatibleDevice;
+      private final Boolean incompatibleDevice;
 
     public Boolean getIncompatibleDevice() {
         return this.incompatibleDevice;
@@ -102,7 +102,6 @@ public final class SkippedDetailResponse extends io.pulumi.resources.InvokeArgs 
             this.incompatibleDevice = Objects.requireNonNull(incompatibleDevice);
             return this;
         }
-
         public SkippedDetailResponse build() {
             return new SkippedDetailResponse(incompatibleAppVersion, incompatibleArchitecture, incompatibleDevice);
         }

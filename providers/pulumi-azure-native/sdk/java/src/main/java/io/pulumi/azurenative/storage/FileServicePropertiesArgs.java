@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.inputs.CorsRulesArgs;
 import io.pulumi.azurenative.storage.inputs.DeleteRetentionPolicyArgs;
 import io.pulumi.azurenative.storage.inputs.ProtocolSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -33,7 +33,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="cors")
-    private final @Nullable Input<CorsRulesArgs> cors;
+        private final @Nullable Input<CorsRulesArgs> cors;
 
     public Input<CorsRulesArgs> getCors() {
         return this.cors == null ? Input.empty() : this.cors;
@@ -44,7 +44,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="fileServicesName")
-    private final @Nullable Input<String> fileServicesName;
+        private final @Nullable Input<String> fileServicesName;
 
     public Input<String> getFileServicesName() {
         return this.fileServicesName == null ? Input.empty() : this.fileServicesName;
@@ -55,7 +55,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="protocolSettings")
-    private final @Nullable Input<ProtocolSettingsArgs> protocolSettings;
+        private final @Nullable Input<ProtocolSettingsArgs> protocolSettings;
 
     public Input<ProtocolSettingsArgs> getProtocolSettings() {
         return this.protocolSettings == null ? Input.empty() : this.protocolSettings;
@@ -66,7 +66,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,7 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="shareDeleteRetentionPolicy")
-    private final @Nullable Input<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
+        private final @Nullable Input<DeleteRetentionPolicyArgs> shareDeleteRetentionPolicy;
 
     public Input<DeleteRetentionPolicyArgs> getShareDeleteRetentionPolicy() {
         return this.shareDeleteRetentionPolicy == null ? Input.empty() : this.shareDeleteRetentionPolicy;
@@ -196,7 +196,6 @@ public final class FileServicePropertiesArgs extends io.pulumi.resources.Resourc
             this.shareDeleteRetentionPolicy = Input.ofNullable(shareDeleteRetentionPolicy);
             return this;
         }
-
         public FileServicePropertiesArgs build() {
             return new FileServicePropertiesArgs(accountName, cors, fileServicesName, protocolSettings, resourceGroupName, shareDeleteRetentionPolicy);
         }

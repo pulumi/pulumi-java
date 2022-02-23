@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudtasks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -176,7 +176,6 @@ public final class QueueRetryConfig {
             this.minBackoff = minBackoff;
             return this;
         }
-
         public QueueRetryConfig build() {
             return new QueueRetryConfig(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff);
         }

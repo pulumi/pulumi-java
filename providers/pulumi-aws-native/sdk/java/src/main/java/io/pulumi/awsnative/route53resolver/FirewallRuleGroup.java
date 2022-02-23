@@ -11,8 +11,8 @@ import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupFirewallRule
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -193,13 +193,6 @@ public class FirewallRuleGroup extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FirewallRuleGroup(String name) {
-        super("aws-native:route53resolver:FirewallRuleGroup", name, FirewallRuleGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

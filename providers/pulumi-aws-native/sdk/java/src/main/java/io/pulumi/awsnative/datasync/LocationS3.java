@@ -10,8 +10,8 @@ import io.pulumi.awsnative.datasync.outputs.LocationS3S3Config;
 import io.pulumi.awsnative.datasync.outputs.LocationS3Tag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -115,13 +115,6 @@ public class LocationS3 extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LocationS3(String name) {
-        super("aws-native:datasync:LocationS3", name, LocationS3Args.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

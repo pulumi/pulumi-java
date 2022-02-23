@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -213,7 +213,6 @@ public final class GetNetworkEdgeSecurityServiceResult {
             this.selfLinkWithId = Objects.requireNonNull(selfLinkWithId);
             return this;
         }
-
         public GetNetworkEdgeSecurityServiceResult build() {
             return new GetNetworkEdgeSecurityServiceResult(creationTimestamp, description, fingerprint, kind, name, region, securityPolicy, selfLink, selfLinkWithId);
         }

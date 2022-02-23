@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.NotificationRateLimitResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="autoClose", required=true)
-    private final String autoClose;
+      private final String autoClose;
 
     public String getAutoClose() {
         return this.autoClose;
@@ -33,7 +33,7 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="notificationRateLimit", required=true)
-    private final NotificationRateLimitResponse notificationRateLimit;
+      private final NotificationRateLimitResponse notificationRateLimit;
 
     public NotificationRateLimitResponse getNotificationRateLimit() {
         return this.notificationRateLimit;
@@ -82,7 +82,6 @@ public final class AlertStrategyResponse extends io.pulumi.resources.InvokeArgs 
             this.notificationRateLimit = Objects.requireNonNull(notificationRateLimit);
             return this;
         }
-
         public AlertStrategyResponse build() {
             return new AlertStrategyResponse(autoClose, notificationRateLimit);
         }

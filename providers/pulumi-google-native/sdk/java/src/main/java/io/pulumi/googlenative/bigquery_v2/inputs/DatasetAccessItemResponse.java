@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.DatasetAccessEntryResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableReferenceResponse;
@@ -20,7 +20,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final DatasetAccessEntryResponse dataset;
+      private final DatasetAccessEntryResponse dataset;
 
     public DatasetAccessEntryResponse getDataset() {
         return this.dataset;
@@ -31,7 +31,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+      private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -42,7 +42,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="groupByEmail", required=true)
-    private final String groupByEmail;
+      private final String groupByEmail;
 
     public String getGroupByEmail() {
         return this.groupByEmail;
@@ -53,7 +53,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="iamMember", required=true)
-    private final String iamMember;
+      private final String iamMember;
 
     public String getIamMember() {
         return this.iamMember;
@@ -64,7 +64,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -75,7 +75,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="routine", required=true)
-    private final RoutineReferenceResponse routine;
+      private final RoutineReferenceResponse routine;
 
     public RoutineReferenceResponse getRoutine() {
         return this.routine;
@@ -86,7 +86,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="specialGroup", required=true)
-    private final String specialGroup;
+      private final String specialGroup;
 
     public String getSpecialGroup() {
         return this.specialGroup;
@@ -97,7 +97,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="userByEmail", required=true)
-    private final String userByEmail;
+      private final String userByEmail;
 
     public String getUserByEmail() {
         return this.userByEmail;
@@ -108,7 +108,7 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="view", required=true)
-    private final TableReferenceResponse view;
+      private final TableReferenceResponse view;
 
     public TableReferenceResponse getView() {
         return this.view;
@@ -227,7 +227,6 @@ public final class DatasetAccessItemResponse extends io.pulumi.resources.InvokeA
             this.view = Objects.requireNonNull(view);
             return this;
         }
-
         public DatasetAccessItemResponse build() {
             return new DatasetAccessItemResponse(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
         }

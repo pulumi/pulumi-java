@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class GalleryImageReferenceResponse {
             this.version = version;
             return this;
         }
-
         public GalleryImageReferenceResponse build() {
             return new GalleryImageReferenceResponse(offer, osType, publisher, sku, version);
         }

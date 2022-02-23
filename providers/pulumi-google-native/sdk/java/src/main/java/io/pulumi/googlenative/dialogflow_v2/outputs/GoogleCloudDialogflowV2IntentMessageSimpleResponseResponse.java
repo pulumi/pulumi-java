@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse {
             this.textToSpeech = Objects.requireNonNull(textToSpeech);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageSimpleResponseResponse(displayText, ssml, textToSpeech);
         }

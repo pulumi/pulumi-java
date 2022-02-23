@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AllocationSpecificSKUReservationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ShareSettingsResponse;
 import java.lang.Boolean;
@@ -308,7 +308,6 @@ public final class ReservationResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ReservationResponse build() {
             return new ReservationResponse(commitment, creationTimestamp, description, kind, name, satisfiesPzs, selfLink, selfLinkWithId, shareSettings, specificReservation, specificReservationRequired, status, zone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.FieldResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SourceContextResponse;
@@ -162,7 +162,6 @@ public final class TypeResponse {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public TypeResponse build() {
             return new TypeResponse(fields, name, oneofs, options, sourceContext, syntax);
         }

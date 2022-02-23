@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class SentimentAnalysisSettingsProperties {
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
-
         public SentimentAnalysisSettingsProperties build() {
             return new SentimentAnalysisSettingsProperties(detectSentiment);
         }

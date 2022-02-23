@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1alpha.inputs.ConsumerArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumers")
-    private final @Nullable Input<List<ConsumerArgs>> consumers;
+      private final @Nullable Input<List<ConsumerArgs>> consumers;
 
     public Input<List<ConsumerArgs>> getConsumers() {
         return this.consumers == null ? Input.empty() : this.consumers;
@@ -67,7 +67,6 @@ public final class NetworkConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.consumers = Input.ofNullable(consumers);
             return this;
         }
-
         public NetworkConfigArgs build() {
             return new NetworkConfigArgs(consumers);
         }

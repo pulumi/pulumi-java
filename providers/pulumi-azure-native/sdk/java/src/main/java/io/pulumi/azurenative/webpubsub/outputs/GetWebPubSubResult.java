@@ -12,7 +12,7 @@ import io.pulumi.azurenative.webpubsub.outputs.SystemDataResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubFeatureResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubNetworkACLsResponse;
 import io.pulumi.azurenative.webpubsub.outputs.WebPubSubTlsSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -501,7 +501,6 @@ public final class GetWebPubSubResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetWebPubSubResult build() {
             return new GetWebPubSubResult(eventHandler, externalIP, features, hostName, id, identity, location, name, networkACLs, privateEndpointConnections, provisioningState, publicNetworkAccess, publicPort, serverPort, sharedPrivateLinkResources, sku, systemData, tags, tls, type, version);
         }

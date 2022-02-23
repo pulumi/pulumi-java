@@ -5,8 +5,8 @@ package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.OrganizationPolicyArgs;
 import io.pulumi.gcp.folder.inputs.OrganizationPolicyState;
@@ -160,13 +160,6 @@ public class OrganizationPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public OrganizationPolicy(String name) {
-        super("gcp:folder/organizationPolicy:OrganizationPolicy", name, OrganizationPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

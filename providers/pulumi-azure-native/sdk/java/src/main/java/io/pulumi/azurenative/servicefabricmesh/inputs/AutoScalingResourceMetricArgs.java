@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 import io.pulumi.azurenative.servicefabricmesh.enums.AutoScalingResourceMetricName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -36,7 +36,7 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,AutoScalingResourceMetricName>> name;
+        private final Input<Either<String,AutoScalingResourceMetricName>> name;
 
     public Input<Either<String,AutoScalingResourceMetricName>> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class AutoScalingResourceMetricArgs extends io.pulumi.resources.Res
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public AutoScalingResourceMetricArgs build() {
             return new AutoScalingResourceMetricArgs(kind, name);
         }

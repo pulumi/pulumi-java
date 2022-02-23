@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class RoutineReferenceResponse {
             this.routineId = Objects.requireNonNull(routineId);
             return this;
         }
-
         public RoutineReferenceResponse build() {
             return new RoutineReferenceResponse(datasetId, project, routineId);
         }

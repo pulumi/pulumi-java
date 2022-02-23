@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth {
             this.weekOrdinal = Objects.requireNonNull(weekOrdinal);
             return this;
         }
-
         public PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth build() {
             return new PatchDeploymentRecurringScheduleMonthlyWeekDayOfMonth(dayOfWeek, weekOrdinal);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.composer_v1.outputs.IPAllocationPolicyResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class NodeConfigResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public NodeConfigResponse build() {
             return new NodeConfigResponse(diskSizeGb, ipAllocationPolicy, location, machineType, network, oauthScopes, serviceAccount, subnetwork, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ExperimentResultMetricResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      * 
      */
     @InputImport(name="metrics", required=true)
-    private final List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
+      private final List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> metrics;
 
     public List<GoogleCloudDialogflowCxV3ExperimentResultMetricResponse> getMetrics() {
         return this.metrics;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      * 
      */
     @InputImport(name="sessionCount", required=true)
-    private final Integer sessionCount;
+      private final Integer sessionCount;
 
     public Integer getSessionCount() {
         return this.sessionCount;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -105,7 +105,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsRespon
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultVersionMetricsResponse(metrics, sessionCount, version);
         }

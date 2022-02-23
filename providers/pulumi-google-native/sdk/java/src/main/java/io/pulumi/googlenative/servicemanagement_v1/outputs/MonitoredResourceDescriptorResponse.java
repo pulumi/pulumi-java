@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.LabelDescriptorResponse;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +160,6 @@ public final class MonitoredResourceDescriptorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public MonitoredResourceDescriptorResponse build() {
             return new MonitoredResourceDescriptorResponse(description, displayName, labels, launchStage, name, type);
         }

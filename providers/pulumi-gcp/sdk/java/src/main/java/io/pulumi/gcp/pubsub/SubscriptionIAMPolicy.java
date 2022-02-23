@@ -5,8 +5,8 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMPolicyArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMPolicyState;
@@ -114,13 +114,6 @@ public class SubscriptionIAMPolicy extends io.pulumi.resources.CustomResource {
         return this.subscription;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SubscriptionIAMPolicy(String name) {
-        super("gcp:pubsub/subscriptionIAMPolicy:SubscriptionIAMPolicy", name, SubscriptionIAMPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

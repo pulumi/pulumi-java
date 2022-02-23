@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iap.inputs.AppEngineVersionIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+        private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -32,14 +32,14 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<AppEngineVersionIamMemberConditionArgs> condition;
+        private final @Nullable Input<AppEngineVersionIamMemberConditionArgs> condition;
 
     public Input<AppEngineVersionIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -51,7 +51,7 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -75,7 +75,7 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="service", required=true)
-    private final Input<String> service;
+        private final Input<String> service;
 
     public Input<String> getService() {
         return this.service;
@@ -86,7 +86,7 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final Input<String> versionId;
+        private final Input<String> versionId;
 
     public Input<String> getVersionId() {
         return this.versionId;
@@ -220,7 +220,6 @@ public final class AppEngineVersionIamMemberArgs extends io.pulumi.resources.Res
             this.versionId = Input.of(Objects.requireNonNull(versionId));
             return this;
         }
-
         public AppEngineVersionIamMemberArgs build() {
             return new AppEngineVersionIamMemberArgs(appId, condition, member, project, role, service, versionId);
         }

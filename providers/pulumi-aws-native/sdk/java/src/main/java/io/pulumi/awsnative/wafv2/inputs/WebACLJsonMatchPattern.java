@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,14 +25,14 @@ public final class WebACLJsonMatchPattern extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="all")
-    private final @Nullable Object all;
+        private final @Nullable Object all;
 
     public Optional<Object> getAll() {
         return this.all == null ? Optional.empty() : Optional.ofNullable(this.all);
     }
 
     @InputImport(name="includedPaths")
-    private final @Nullable List<String> includedPaths;
+        private final @Nullable List<String> includedPaths;
 
     public List<String> getIncludedPaths() {
         return this.includedPaths == null ? List.of() : this.includedPaths;
@@ -81,7 +81,6 @@ public final class WebACLJsonMatchPattern extends io.pulumi.resources.InvokeArgs
             this.includedPaths = includedPaths;
             return this;
         }
-
         public WebACLJsonMatchPattern build() {
             return new WebACLJsonMatchPattern(all, includedPaths);
         }

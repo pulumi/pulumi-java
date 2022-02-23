@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class InstanceVmImage {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public InstanceVmImage build() {
             return new InstanceVmImage(imageFamily, imageName, project);
         }

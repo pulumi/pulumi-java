@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -416,7 +416,6 @@ public final class GetFileShareResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetFileShareResult build() {
             return new GetFileShareResult(accessTier, accessTierChangeTime, accessTierStatus, deleted, deletedTime, enabledProtocols, etag, id, lastModifiedTime, metadata, name, remainingRetentionDays, rootSquash, shareQuota, shareUsageBytes, snapshotTime, type, version);
         }

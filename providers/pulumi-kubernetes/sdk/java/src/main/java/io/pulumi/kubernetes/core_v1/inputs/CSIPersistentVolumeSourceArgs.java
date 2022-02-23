@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="controllerExpandSecretRef")
-    private final @Nullable Input<SecretReferenceArgs> controllerExpandSecretRef;
+        private final @Nullable Input<SecretReferenceArgs> controllerExpandSecretRef;
 
     public Input<SecretReferenceArgs> getControllerExpandSecretRef() {
         return this.controllerExpandSecretRef == null ? Input.empty() : this.controllerExpandSecretRef;
@@ -37,7 +37,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="controllerPublishSecretRef")
-    private final @Nullable Input<SecretReferenceArgs> controllerPublishSecretRef;
+        private final @Nullable Input<SecretReferenceArgs> controllerPublishSecretRef;
 
     public Input<SecretReferenceArgs> getControllerPublishSecretRef() {
         return this.controllerPublishSecretRef == null ? Input.empty() : this.controllerPublishSecretRef;
@@ -48,7 +48,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="driver", required=true)
-    private final Input<String> driver;
+        private final Input<String> driver;
 
     public Input<String> getDriver() {
         return this.driver;
@@ -59,7 +59,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -70,7 +70,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="nodePublishSecretRef")
-    private final @Nullable Input<SecretReferenceArgs> nodePublishSecretRef;
+        private final @Nullable Input<SecretReferenceArgs> nodePublishSecretRef;
 
     public Input<SecretReferenceArgs> getNodePublishSecretRef() {
         return this.nodePublishSecretRef == null ? Input.empty() : this.nodePublishSecretRef;
@@ -81,7 +81,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="nodeStageSecretRef")
-    private final @Nullable Input<SecretReferenceArgs> nodeStageSecretRef;
+        private final @Nullable Input<SecretReferenceArgs> nodeStageSecretRef;
 
     public Input<SecretReferenceArgs> getNodeStageSecretRef() {
         return this.nodeStageSecretRef == null ? Input.empty() : this.nodeStageSecretRef;
@@ -92,7 +92,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -103,7 +103,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeAttributes")
-    private final @Nullable Input<Map<String,String>> volumeAttributes;
+        private final @Nullable Input<Map<String,String>> volumeAttributes;
 
     public Input<Map<String,String>> getVolumeAttributes() {
         return this.volumeAttributes == null ? Input.empty() : this.volumeAttributes;
@@ -114,7 +114,7 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeHandle", required=true)
-    private final Input<String> volumeHandle;
+        private final Input<String> volumeHandle;
 
     public Input<String> getVolumeHandle() {
         return this.volumeHandle;
@@ -278,7 +278,6 @@ public final class CSIPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             this.volumeHandle = Input.of(Objects.requireNonNull(volumeHandle));
             return this;
         }
-
         public CSIPersistentVolumeSourceArgs build() {
             return new CSIPersistentVolumeSourceArgs(controllerExpandSecretRef, controllerPublishSecretRef, driver, fsType, nodePublishSecretRef, nodeStageSecretRef, readOnly, volumeAttributes, volumeHandle);
         }

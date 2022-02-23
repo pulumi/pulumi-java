@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -204,7 +204,6 @@ public final class GetIntegrationAccountSessionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountSessionResult build() {
             return new GetIntegrationAccountSessionResult(changedTime, content, createdTime, id, location, name, tags, type);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.WebAnonymousAuthenticationArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebBasicAuthenticationArgs;
 import io.pulumi.azurenative.datafactory.inputs.WebClientCertificateAuthenticationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -42,7 +42,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -53,7 +53,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -76,7 +76,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -87,7 +87,7 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="typeProperties", required=true)
-    private final Input<Object> typeProperties;
+        private final Input<Object> typeProperties;
 
     public Input<Object> getTypeProperties() {
         return this.typeProperties;
@@ -206,7 +206,6 @@ public final class WebLinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             this.typeProperties = Input.of(Objects.requireNonNull(typeProperties));
             return this;
         }
-
         public WebLinkedServiceArgs build() {
             return new WebLinkedServiceArgs(annotations, connectVia, description, parameters, type, typeProperties);
         }

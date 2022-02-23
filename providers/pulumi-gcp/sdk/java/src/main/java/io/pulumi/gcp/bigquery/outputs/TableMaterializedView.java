@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -103,7 +103,6 @@ public final class TableMaterializedView {
             this.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
-
         public TableMaterializedView build() {
             return new TableMaterializedView(enableRefresh, query, refreshIntervalMs);
         }

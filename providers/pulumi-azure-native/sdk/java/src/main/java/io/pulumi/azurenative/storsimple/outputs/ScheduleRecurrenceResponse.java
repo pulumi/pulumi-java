@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -98,7 +98,6 @@ public final class ScheduleRecurrenceResponse {
             this.weeklyDaysList = weeklyDaysList;
             return this;
         }
-
         public ScheduleRecurrenceResponse build() {
             return new ScheduleRecurrenceResponse(recurrenceType, recurrenceValue, weeklyDaysList);
         }

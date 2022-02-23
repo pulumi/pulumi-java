@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.RecurrenceResponse;
 import io.pulumi.azurenative.insights.inputs.ScaleCapacityResponse;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleResponse;
 import io.pulumi.azurenative.insights.inputs.TimeWindowResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final ScaleCapacityResponse capacity;
+        private final ScaleCapacityResponse capacity;
 
     public ScaleCapacityResponse getCapacity() {
         return this.capacity;
@@ -39,7 +39,7 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fixedDate")
-    private final @Nullable TimeWindowResponse fixedDate;
+        private final @Nullable TimeWindowResponse fixedDate;
 
     public Optional<TimeWindowResponse> getFixedDate() {
         return this.fixedDate == null ? Optional.empty() : Optional.ofNullable(this.fixedDate);
@@ -50,7 +50,7 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -61,7 +61,7 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable RecurrenceResponse recurrence;
+        private final @Nullable RecurrenceResponse recurrence;
 
     public Optional<RecurrenceResponse> getRecurrence() {
         return this.recurrence == null ? Optional.empty() : Optional.ofNullable(this.recurrence);
@@ -72,7 +72,7 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<ScaleRuleResponse> rules;
+        private final List<ScaleRuleResponse> rules;
 
     public List<ScaleRuleResponse> getRules() {
         return this.rules;
@@ -151,7 +151,6 @@ public final class AutoscaleProfileResponse extends io.pulumi.resources.InvokeAr
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public AutoscaleProfileResponse build() {
             return new AutoscaleProfileResponse(capacity, fixedDate, name, recurrence, rules);
         }

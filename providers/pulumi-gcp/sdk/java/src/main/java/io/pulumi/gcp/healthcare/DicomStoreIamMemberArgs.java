@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.DicomStoreIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
     public static final DicomStoreIamMemberArgs Empty = new DicomStoreIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<DicomStoreIamMemberConditionArgs> condition;
+        private final @Nullable Input<DicomStoreIamMemberConditionArgs> condition;
 
     public Input<DicomStoreIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -30,14 +30,14 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dicomStoreId", required=true)
-    private final Input<String> dicomStoreId;
+        private final Input<String> dicomStoreId;
 
     public Input<String> getDicomStoreId() {
         return this.dicomStoreId;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -50,7 +50,7 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -139,7 +139,6 @@ public final class DicomStoreIamMemberArgs extends io.pulumi.resources.ResourceA
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public DicomStoreIamMemberArgs build() {
             return new DicomStoreIamMemberArgs(condition, dicomStoreId, member, role);
         }

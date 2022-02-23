@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -33,7 +33,7 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
      * 
      */
     @InputImport(name="rawBody", required=true)
-    private final String rawBody;
+        private final String rawBody;
 
     public String getRawBody() {
         return this.rawBody;
@@ -82,7 +82,6 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends io.pu
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }
-
         public ContentKeyPolicyX509CertificateTokenKeyResponse build() {
             return new ContentKeyPolicyX509CertificateTokenKeyResponse(odataType, rawBody);
         }

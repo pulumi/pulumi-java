@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.firebase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -172,7 +172,6 @@ public final class GetWebAppConfigResult {
             this.webAppId = Objects.requireNonNull(webAppId);
             return this;
         }
-
         public GetWebAppConfigResult build() {
             return new GetWebAppConfigResult(apiKey, authDomain, databaseUrl, id, locationId, measurementId, messagingSenderId, project, storageBucket, webAppId);
         }

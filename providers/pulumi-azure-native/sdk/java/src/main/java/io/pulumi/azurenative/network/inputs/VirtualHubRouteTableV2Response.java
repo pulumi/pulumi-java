@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VirtualHubRouteV2Response;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="attachedConnections")
-    private final @Nullable List<String> attachedConnections;
+        private final @Nullable List<String> attachedConnections;
 
     public List<String> getAttachedConnections() {
         return this.attachedConnections == null ? List.of() : this.attachedConnections;
@@ -36,7 +36,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -47,7 +47,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -58,7 +58,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -80,7 +80,7 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable List<VirtualHubRouteV2Response> routes;
+        private final @Nullable List<VirtualHubRouteV2Response> routes;
 
     public List<VirtualHubRouteV2Response> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
@@ -169,7 +169,6 @@ public final class VirtualHubRouteTableV2Response extends io.pulumi.resources.In
             this.routes = routes;
             return this;
         }
-
         public VirtualHubRouteTableV2Response build() {
             return new VirtualHubRouteTableV2Response(attachedConnections, etag, id, name, provisioningState, routes);
         }

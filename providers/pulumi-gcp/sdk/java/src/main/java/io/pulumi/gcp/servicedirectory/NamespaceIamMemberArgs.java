@@ -4,7 +4,7 @@
 package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
     public static final NamespaceIamMemberArgs Empty = new NamespaceIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<NamespaceIamMemberConditionArgs> condition;
+        private final @Nullable Input<NamespaceIamMemberConditionArgs> condition;
 
     public Input<NamespaceIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -34,7 +34,7 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -136,7 +136,6 @@ public final class NamespaceIamMemberArgs extends io.pulumi.resources.ResourceAr
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public NamespaceIamMemberArgs build() {
             return new NamespaceIamMemberArgs(condition, member, name, role);
         }

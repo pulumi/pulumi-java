@@ -6,7 +6,7 @@ package io.pulumi.azurenative.servicefabric.outputs;
 import io.pulumi.azurenative.servicefabric.outputs.EndpointRangeDescriptionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VMSSExtensionResponse;
 import io.pulumi.azurenative.servicefabric.outputs.VaultSecretGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -440,7 +440,6 @@ public final class GetNodeTypeResult {
             this.vmSize = vmSize;
             return this;
         }
-
         public GetNodeTypeResult build() {
             return new GetNodeTypeResult(applicationPorts, capacities, dataDiskSizeGB, ephemeralPorts, id, isPrimary, name, placementProperties, provisioningState, tags, type, vmExtensions, vmImageOffer, vmImagePublisher, vmImageSku, vmImageVersion, vmInstanceCount, vmSecrets, vmSize);
         }

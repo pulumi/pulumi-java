@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationAlarmSeverity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class ApplicationAlarm {
             this.severity = severity;
             return this;
         }
-
         public ApplicationAlarm build() {
             return new ApplicationAlarm(alarmName, severity);
         }

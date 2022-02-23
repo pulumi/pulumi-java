@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServicePlacementStrategyType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ServicePlacementStrategyArgs extends io.pulumi.resources.Reso
     public static final ServicePlacementStrategyArgs Empty = new ServicePlacementStrategyArgs();
 
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+        private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<ServicePlacementStrategyType> type;
+        private final Input<ServicePlacementStrategyType> type;
 
     public Input<ServicePlacementStrategyType> getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class ServicePlacementStrategyArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ServicePlacementStrategyArgs build() {
             return new ServicePlacementStrategyArgs(field, type);
         }

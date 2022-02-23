@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.OrcFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParquetFormatResponse;
 import io.pulumi.azurenative.datafactory.outputs.TextFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -346,7 +346,6 @@ public final class HttpDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HttpDatasetResponse build() {
             return new HttpDatasetResponse(additionalHeaders, annotations, compression, description, folder, format, linkedServiceName, parameters, relativeUrl, requestBody, requestMethod, schema, structure, type);
         }

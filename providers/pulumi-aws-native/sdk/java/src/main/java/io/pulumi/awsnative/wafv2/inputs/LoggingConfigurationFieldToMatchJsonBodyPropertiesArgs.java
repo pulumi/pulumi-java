@@ -7,7 +7,7 @@ import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyP
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * 
      */
     @InputImport(name="invalidFallbackBehavior")
-    private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
+        private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> invalidFallbackBehavior;
 
     public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesInvalidFallbackBehavior> getInvalidFallbackBehavior() {
         return this.invalidFallbackBehavior == null ? Input.empty() : this.invalidFallbackBehavior;
@@ -36,7 +36,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * 
      */
     @InputImport(name="matchPattern", required=true)
-    private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
+        private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> matchPattern;
 
     public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchPatternPropertiesArgs> getMatchPattern() {
         return this.matchPattern;
@@ -47,7 +47,7 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
      * 
      */
     @InputImport(name="matchScope", required=true)
-    private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
+        private final Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> matchScope;
 
     public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesMatchScope> getMatchScope() {
         return this.matchScope;
@@ -121,7 +121,6 @@ public final class LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs extend
             this.matchScope = Input.of(Objects.requireNonNull(matchScope));
             return this;
         }
-
         public LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs build() {
             return new LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs(invalidFallbackBehavior, matchPattern, matchScope);
         }

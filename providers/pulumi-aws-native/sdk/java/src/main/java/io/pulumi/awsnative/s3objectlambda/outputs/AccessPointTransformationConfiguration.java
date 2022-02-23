@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3objectlambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -60,7 +60,6 @@ public final class AccessPointTransformationConfiguration {
             this.contentTransformation = Objects.requireNonNull(contentTransformation);
             return this;
         }
-
         public AccessPointTransformationConfiguration build() {
             return new AccessPointTransformationConfiguration(actions, contentTransformation);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class RolloutPolicyResponse {
             this.locationRolloutPolicies = Objects.requireNonNull(locationRolloutPolicies);
             return this;
         }
-
         public RolloutPolicyResponse build() {
             return new RolloutPolicyResponse(defaultRolloutTime, locationRolloutPolicies);
         }

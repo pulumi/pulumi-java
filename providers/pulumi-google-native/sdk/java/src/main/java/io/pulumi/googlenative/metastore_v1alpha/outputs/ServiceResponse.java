@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.HiveMetastoreConfigResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.MaintenanceWindowResponse;
@@ -460,7 +460,6 @@ public final class ServiceResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public ServiceResponse build() {
             return new ServiceResponse(artifactGcsUri, createTime, databaseType, encryptionConfig, endpointUri, hiveMetastoreConfig, labels, maintenanceWindow, metadataIntegration, metadataManagementActivity, name, network, networkConfig, port, releaseChannel, state, stateMessage, tier, uid, updateTime);
         }

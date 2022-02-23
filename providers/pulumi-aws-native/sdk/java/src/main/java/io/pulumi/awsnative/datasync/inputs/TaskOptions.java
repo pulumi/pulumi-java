@@ -16,7 +16,7 @@ import io.pulumi.awsnative.datasync.enums.TaskOptionsTaskQueueing;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsTransferMode;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsUid;
 import io.pulumi.awsnative.datasync.enums.TaskOptionsVerifyMode;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -36,7 +36,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="atime")
-    private final @Nullable TaskOptionsAtime atime;
+        private final @Nullable TaskOptionsAtime atime;
 
     public Optional<TaskOptionsAtime> getAtime() {
         return this.atime == null ? Optional.empty() : Optional.ofNullable(this.atime);
@@ -47,7 +47,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bytesPerSecond")
-    private final @Nullable Integer bytesPerSecond;
+        private final @Nullable Integer bytesPerSecond;
 
     public Optional<Integer> getBytesPerSecond() {
         return this.bytesPerSecond == null ? Optional.empty() : Optional.ofNullable(this.bytesPerSecond);
@@ -58,7 +58,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gid")
-    private final @Nullable TaskOptionsGid gid;
+        private final @Nullable TaskOptionsGid gid;
 
     public Optional<TaskOptionsGid> getGid() {
         return this.gid == null ? Optional.empty() : Optional.ofNullable(this.gid);
@@ -69,7 +69,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="logLevel")
-    private final @Nullable TaskOptionsLogLevel logLevel;
+        private final @Nullable TaskOptionsLogLevel logLevel;
 
     public Optional<TaskOptionsLogLevel> getLogLevel() {
         return this.logLevel == null ? Optional.empty() : Optional.ofNullable(this.logLevel);
@@ -80,7 +80,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mtime")
-    private final @Nullable TaskOptionsMtime mtime;
+        private final @Nullable TaskOptionsMtime mtime;
 
     public Optional<TaskOptionsMtime> getMtime() {
         return this.mtime == null ? Optional.empty() : Optional.ofNullable(this.mtime);
@@ -91,7 +91,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="overwriteMode")
-    private final @Nullable TaskOptionsOverwriteMode overwriteMode;
+        private final @Nullable TaskOptionsOverwriteMode overwriteMode;
 
     public Optional<TaskOptionsOverwriteMode> getOverwriteMode() {
         return this.overwriteMode == null ? Optional.empty() : Optional.ofNullable(this.overwriteMode);
@@ -102,7 +102,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="posixPermissions")
-    private final @Nullable TaskOptionsPosixPermissions posixPermissions;
+        private final @Nullable TaskOptionsPosixPermissions posixPermissions;
 
     public Optional<TaskOptionsPosixPermissions> getPosixPermissions() {
         return this.posixPermissions == null ? Optional.empty() : Optional.ofNullable(this.posixPermissions);
@@ -113,7 +113,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preserveDeletedFiles")
-    private final @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles;
+        private final @Nullable TaskOptionsPreserveDeletedFiles preserveDeletedFiles;
 
     public Optional<TaskOptionsPreserveDeletedFiles> getPreserveDeletedFiles() {
         return this.preserveDeletedFiles == null ? Optional.empty() : Optional.ofNullable(this.preserveDeletedFiles);
@@ -124,7 +124,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="preserveDevices")
-    private final @Nullable TaskOptionsPreserveDevices preserveDevices;
+        private final @Nullable TaskOptionsPreserveDevices preserveDevices;
 
     public Optional<TaskOptionsPreserveDevices> getPreserveDevices() {
         return this.preserveDevices == null ? Optional.empty() : Optional.ofNullable(this.preserveDevices);
@@ -135,7 +135,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityDescriptorCopyFlags")
-    private final @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags;
+        private final @Nullable TaskOptionsSecurityDescriptorCopyFlags securityDescriptorCopyFlags;
 
     public Optional<TaskOptionsSecurityDescriptorCopyFlags> getSecurityDescriptorCopyFlags() {
         return this.securityDescriptorCopyFlags == null ? Optional.empty() : Optional.ofNullable(this.securityDescriptorCopyFlags);
@@ -146,7 +146,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="taskQueueing")
-    private final @Nullable TaskOptionsTaskQueueing taskQueueing;
+        private final @Nullable TaskOptionsTaskQueueing taskQueueing;
 
     public Optional<TaskOptionsTaskQueueing> getTaskQueueing() {
         return this.taskQueueing == null ? Optional.empty() : Optional.ofNullable(this.taskQueueing);
@@ -157,7 +157,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transferMode")
-    private final @Nullable TaskOptionsTransferMode transferMode;
+        private final @Nullable TaskOptionsTransferMode transferMode;
 
     public Optional<TaskOptionsTransferMode> getTransferMode() {
         return this.transferMode == null ? Optional.empty() : Optional.ofNullable(this.transferMode);
@@ -168,7 +168,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable TaskOptionsUid uid;
+        private final @Nullable TaskOptionsUid uid;
 
     public Optional<TaskOptionsUid> getUid() {
         return this.uid == null ? Optional.empty() : Optional.ofNullable(this.uid);
@@ -179,7 +179,7 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="verifyMode")
-    private final @Nullable TaskOptionsVerifyMode verifyMode;
+        private final @Nullable TaskOptionsVerifyMode verifyMode;
 
     public Optional<TaskOptionsVerifyMode> getVerifyMode() {
         return this.verifyMode == null ? Optional.empty() : Optional.ofNullable(this.verifyMode);
@@ -348,7 +348,6 @@ public final class TaskOptions extends io.pulumi.resources.InvokeArgs {
             this.verifyMode = verifyMode;
             return this;
         }
-
         public TaskOptions build() {
             return new TaskOptions(atime, bytesPerSecond, gid, logLevel, mtime, overwriteMode, posixPermissions, preserveDeletedFiles, preserveDevices, securityDescriptorCopyFlags, taskQueueing, transferMode, uid, verifyMode);
         }

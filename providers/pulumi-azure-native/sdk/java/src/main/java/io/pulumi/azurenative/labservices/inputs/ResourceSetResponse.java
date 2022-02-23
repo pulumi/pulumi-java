@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceSettingId")
-    private final @Nullable String resourceSettingId;
+        private final @Nullable String resourceSettingId;
 
     public Optional<String> getResourceSettingId() {
         return this.resourceSettingId == null ? Optional.empty() : Optional.ofNullable(this.resourceSettingId);
@@ -34,7 +34,7 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vmResourceId")
-    private final @Nullable String vmResourceId;
+        private final @Nullable String vmResourceId;
 
     public Optional<String> getVmResourceId() {
         return this.vmResourceId == null ? Optional.empty() : Optional.ofNullable(this.vmResourceId);
@@ -83,7 +83,6 @@ public final class ResourceSetResponse extends io.pulumi.resources.InvokeArgs {
             this.vmResourceId = vmResourceId;
             return this;
         }
-
         public ResourceSetResponse build() {
             return new ResourceSetResponse(resourceSettingId, vmResourceId);
         }

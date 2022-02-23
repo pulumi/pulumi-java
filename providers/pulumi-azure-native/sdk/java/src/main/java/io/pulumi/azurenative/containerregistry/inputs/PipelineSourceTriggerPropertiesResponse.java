@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PipelineSourceTriggerPropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -55,7 +55,6 @@ public final class PipelineSourceTriggerPropertiesResponse extends io.pulumi.res
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public PipelineSourceTriggerPropertiesResponse build() {
             return new PipelineSourceTriggerPropertiesResponse(status);
         }

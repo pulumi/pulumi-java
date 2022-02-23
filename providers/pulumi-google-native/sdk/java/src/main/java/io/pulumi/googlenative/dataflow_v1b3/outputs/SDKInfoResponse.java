@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class SDKInfoResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SDKInfoResponse build() {
             return new SDKInfoResponse(language, version);
         }

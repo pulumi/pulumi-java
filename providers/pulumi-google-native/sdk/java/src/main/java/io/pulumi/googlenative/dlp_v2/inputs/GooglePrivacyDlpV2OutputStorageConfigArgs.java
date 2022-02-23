@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.enums.GooglePrivacyDlpV2OutputStorageConfigOutputSchema;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="outputSchema")
-    private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema;
+      private final @Nullable Input<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> outputSchema;
 
     public Input<GooglePrivacyDlpV2OutputStorageConfigOutputSchema> getOutputSchema() {
         return this.outputSchema == null ? Input.empty() : this.outputSchema;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table;
+      private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> table;
 
     public Input<GooglePrivacyDlpV2BigQueryTableArgs> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2OutputStorageConfigArgs extends io.pulumi.r
             this.table = Input.ofNullable(table);
             return this;
         }
-
         public GooglePrivacyDlpV2OutputStorageConfigArgs build() {
             return new GooglePrivacyDlpV2OutputStorageConfigArgs(outputSchema, table);
         }

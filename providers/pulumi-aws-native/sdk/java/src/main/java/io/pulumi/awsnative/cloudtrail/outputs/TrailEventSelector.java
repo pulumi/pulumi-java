@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudtrail.outputs;
 
 import io.pulumi.awsnative.cloudtrail.enums.TrailEventSelectorReadWriteType;
 import io.pulumi.awsnative.cloudtrail.outputs.TrailDataResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -114,7 +114,6 @@ public final class TrailEventSelector {
             this.readWriteType = readWriteType;
             return this;
         }
-
         public TrailEventSelector build() {
             return new TrailEventSelector(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
         }

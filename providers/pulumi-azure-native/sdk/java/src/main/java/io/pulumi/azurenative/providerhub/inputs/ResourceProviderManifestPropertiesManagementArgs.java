@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ServiceTreeInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,56 +18,56 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
     public static final ResourceProviderManifestPropertiesManagementArgs Empty = new ResourceProviderManifestPropertiesManagementArgs();
 
     @InputImport(name="incidentContactEmail")
-    private final @Nullable Input<String> incidentContactEmail;
+        private final @Nullable Input<String> incidentContactEmail;
 
     public Input<String> getIncidentContactEmail() {
         return this.incidentContactEmail == null ? Input.empty() : this.incidentContactEmail;
     }
 
     @InputImport(name="incidentRoutingService")
-    private final @Nullable Input<String> incidentRoutingService;
+        private final @Nullable Input<String> incidentRoutingService;
 
     public Input<String> getIncidentRoutingService() {
         return this.incidentRoutingService == null ? Input.empty() : this.incidentRoutingService;
     }
 
     @InputImport(name="incidentRoutingTeam")
-    private final @Nullable Input<String> incidentRoutingTeam;
+        private final @Nullable Input<String> incidentRoutingTeam;
 
     public Input<String> getIncidentRoutingTeam() {
         return this.incidentRoutingTeam == null ? Input.empty() : this.incidentRoutingTeam;
     }
 
     @InputImport(name="manifestOwners")
-    private final @Nullable Input<List<String>> manifestOwners;
+        private final @Nullable Input<List<String>> manifestOwners;
 
     public Input<List<String>> getManifestOwners() {
         return this.manifestOwners == null ? Input.empty() : this.manifestOwners;
     }
 
     @InputImport(name="resourceAccessPolicy")
-    private final @Nullable Input<String> resourceAccessPolicy;
+        private final @Nullable Input<String> resourceAccessPolicy;
 
     public Input<String> getResourceAccessPolicy() {
         return this.resourceAccessPolicy == null ? Input.empty() : this.resourceAccessPolicy;
     }
 
     @InputImport(name="resourceAccessRoles")
-    private final @Nullable Input<List<Object>> resourceAccessRoles;
+        private final @Nullable Input<List<Object>> resourceAccessRoles;
 
     public Input<List<Object>> getResourceAccessRoles() {
         return this.resourceAccessRoles == null ? Input.empty() : this.resourceAccessRoles;
     }
 
     @InputImport(name="schemaOwners")
-    private final @Nullable Input<List<String>> schemaOwners;
+        private final @Nullable Input<List<String>> schemaOwners;
 
     public Input<List<String>> getSchemaOwners() {
         return this.schemaOwners == null ? Input.empty() : this.schemaOwners;
     }
 
     @InputImport(name="serviceTreeInfos")
-    private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
+        private final @Nullable Input<List<ServiceTreeInfoArgs>> serviceTreeInfos;
 
     public Input<List<ServiceTreeInfoArgs>> getServiceTreeInfos() {
         return this.serviceTreeInfos == null ? Input.empty() : this.serviceTreeInfos;
@@ -216,7 +216,6 @@ public final class ResourceProviderManifestPropertiesManagementArgs extends io.p
             this.serviceTreeInfos = Input.ofNullable(serviceTreeInfos);
             return this;
         }
-
         public ResourceProviderManifestPropertiesManagementArgs build() {
             return new ResourceProviderManifestPropertiesManagementArgs(incidentContactEmail, incidentRoutingService, incidentRoutingTeam, manifestOwners, resourceAccessPolicy, resourceAccessRoles, schemaOwners, serviceTreeInfos);
         }

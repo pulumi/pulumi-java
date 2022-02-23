@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.DnsResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class GetDnsResourceReferenceByTarResourcesResult {
             this.dnsResourceReferences = dnsResourceReferences;
             return this;
         }
-
         public GetDnsResourceReferenceByTarResourcesResult build() {
             return new GetDnsResourceReferenceByTarResourcesResult(dnsResourceReferences);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.customerinsights;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.customerinsights.inputs.GetPredictionArgs;
 import io.pulumi.azurenative.customerinsights.outputs.GetPredictionResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

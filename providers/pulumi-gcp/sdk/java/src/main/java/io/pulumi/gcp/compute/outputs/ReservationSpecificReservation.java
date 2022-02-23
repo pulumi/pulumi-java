@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.ReservationSpecificReservationInstanceProperties;
 import java.lang.Integer;
 import java.util.Objects;
@@ -102,7 +102,6 @@ public final class ReservationSpecificReservation {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public ReservationSpecificReservation build() {
             return new ReservationSpecificReservation(count, inUseCount, instanceProperties);
         }

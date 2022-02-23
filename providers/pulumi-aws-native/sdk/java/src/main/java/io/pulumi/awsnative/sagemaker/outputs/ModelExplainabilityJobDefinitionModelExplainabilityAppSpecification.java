@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ModelExplainabilityJobDefinitionModelExplainabilityAppSpecifi
             this.imageUri = Objects.requireNonNull(imageUri);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification build() {
             return new ModelExplainabilityJobDefinitionModelExplainabilityAppSpecification(configUri, environment, imageUri);
         }

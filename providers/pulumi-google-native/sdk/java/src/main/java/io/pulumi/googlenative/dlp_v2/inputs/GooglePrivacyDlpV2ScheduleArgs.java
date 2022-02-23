@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="recurrencePeriodDuration")
-    private final @Nullable Input<String> recurrencePeriodDuration;
+      private final @Nullable Input<String> recurrencePeriodDuration;
 
     public Input<String> getRecurrencePeriodDuration() {
         return this.recurrencePeriodDuration == null ? Input.empty() : this.recurrencePeriodDuration;
@@ -66,7 +66,6 @@ public final class GooglePrivacyDlpV2ScheduleArgs extends io.pulumi.resources.Re
             this.recurrencePeriodDuration = Input.ofNullable(recurrencePeriodDuration);
             return this;
         }
-
         public GooglePrivacyDlpV2ScheduleArgs build() {
             return new GooglePrivacyDlpV2ScheduleArgs(recurrencePeriodDuration);
         }

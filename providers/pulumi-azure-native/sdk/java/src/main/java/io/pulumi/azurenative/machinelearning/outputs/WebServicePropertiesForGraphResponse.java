@@ -15,7 +15,7 @@ import io.pulumi.azurenative.machinelearning.outputs.ServiceInputOutputSpecifica
 import io.pulumi.azurenative.machinelearning.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.machinelearning.outputs.WebServiceKeysResponse;
 import io.pulumi.azurenative.machinelearning.outputs.WebServiceParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -533,7 +533,6 @@ public final class WebServicePropertiesForGraphResponse {
             this.title = title;
             return this;
         }
-
         public WebServicePropertiesForGraphResponse build() {
             return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
         }

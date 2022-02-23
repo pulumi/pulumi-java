@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AzureCredentialsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sasToken", required=true)
-    private final String sasToken;
+      private final String sasToken;
 
     public String getSasToken() {
         return this.sasToken;
@@ -59,7 +59,6 @@ public final class AzureCredentialsResponse extends io.pulumi.resources.InvokeAr
             this.sasToken = Objects.requireNonNull(sasToken);
             return this;
         }
-
         public AzureCredentialsResponse build() {
             return new AzureCredentialsResponse(sasToken);
         }

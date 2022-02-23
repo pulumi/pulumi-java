@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -38,7 +38,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="retentionInDays")
-    private final @Nullable Input<Integer> retentionInDays;
+        private final @Nullable Input<Integer> retentionInDays;
 
     public Input<Integer> getRetentionInDays() {
         return this.retentionInDays == null ? Input.empty() : this.retentionInDays;
@@ -49,7 +49,7 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sasUrl")
-    private final @Nullable Input<String> sasUrl;
+        private final @Nullable Input<String> sasUrl;
 
     public Input<String> getSasUrl() {
         return this.sasUrl == null ? Input.empty() : this.sasUrl;
@@ -123,7 +123,6 @@ public final class AzureBlobStorageHttpLogsConfigArgs extends io.pulumi.resource
             this.sasUrl = Input.ofNullable(sasUrl);
             return this;
         }
-
         public AzureBlobStorageHttpLogsConfigArgs build() {
             return new AzureBlobStorageHttpLogsConfigArgs(enabled, retentionInDays, sasUrl);
         }

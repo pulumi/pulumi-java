@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.RouteAsPathResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.RouteWarningsItemResponse;
 import java.lang.Boolean;
@@ -541,7 +541,6 @@ public final class GetRouteResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(allowConflictingSubnetworks, asPaths, creationTimestamp, description, destRange, ilbRouteBehaviorOnUnhealthy, kind, name, network, nextHopGateway, nextHopIlb, nextHopInstance, nextHopInterconnectAttachment, nextHopIp, nextHopNetwork, nextHopPeering, nextHopVpnTunnel, priority, routeStatus, routeType, selfLink, selfLinkWithId, tags, warnings);
         }

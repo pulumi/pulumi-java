@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
      * 
      */
     @InputImport(name="imageDisplayOptions")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> imageDisplayOptions;
 
     public Input<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardImageDisplayOptions> getImageDisplayOptions() {
         return this.imageDisplayOptions == null ? Input.empty() : this.imageDisplayOptions;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
      * 
      */
     @InputImport(name="items", required=true)
-    private final Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
+      private final Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> items;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardBrowseCarouselCardItemArgs>> getItems() {
         return this.items;
@@ -95,7 +95,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs ex
             this.items = Input.of(Objects.requireNonNull(items));
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBrowseCarouselCardArgs(imageDisplayOptions, items);
         }

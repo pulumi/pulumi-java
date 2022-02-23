@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.KeySource;
 import io.pulumi.azurenative.batch.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable Input<KeySource> keySource;
+        private final @Nullable Input<KeySource> keySource;
 
     public Input<KeySource> getKeySource() {
         return this.keySource == null ? Input.empty() : this.keySource;
@@ -35,7 +35,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -94,7 +94,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
-
         public EncryptionPropertiesArgs build() {
             return new EncryptionPropertiesArgs(keySource, keyVaultProperties);
         }

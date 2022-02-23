@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -102,7 +102,6 @@ public final class IndividualOutcomeResponse {
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public IndividualOutcomeResponse build() {
             return new IndividualOutcomeResponse(multistepNumber, outcomeSummary, runDuration, stepId);
         }

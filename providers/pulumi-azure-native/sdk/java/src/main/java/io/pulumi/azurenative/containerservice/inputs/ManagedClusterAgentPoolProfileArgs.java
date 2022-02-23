@@ -17,7 +17,7 @@ import io.pulumi.azurenative.containerservice.inputs.KubeletConfigArgs;
 import io.pulumi.azurenative.containerservice.inputs.LinuxOSConfigArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -41,7 +41,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="availabilityZones")
-    private final @Nullable Input<List<String>> availabilityZones;
+        private final @Nullable Input<List<String>> availabilityZones;
 
     public Input<List<String>> getAvailabilityZones() {
         return this.availabilityZones == null ? Input.empty() : this.availabilityZones;
@@ -52,7 +52,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -63,7 +63,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableAutoScaling")
-    private final @Nullable Input<Boolean> enableAutoScaling;
+        private final @Nullable Input<Boolean> enableAutoScaling;
 
     public Input<Boolean> getEnableAutoScaling() {
         return this.enableAutoScaling == null ? Input.empty() : this.enableAutoScaling;
@@ -74,7 +74,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableEncryptionAtHost")
-    private final @Nullable Input<Boolean> enableEncryptionAtHost;
+        private final @Nullable Input<Boolean> enableEncryptionAtHost;
 
     public Input<Boolean> getEnableEncryptionAtHost() {
         return this.enableEncryptionAtHost == null ? Input.empty() : this.enableEncryptionAtHost;
@@ -85,7 +85,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableFIPS")
-    private final @Nullable Input<Boolean> enableFIPS;
+        private final @Nullable Input<Boolean> enableFIPS;
 
     public Input<Boolean> getEnableFIPS() {
         return this.enableFIPS == null ? Input.empty() : this.enableFIPS;
@@ -96,7 +96,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableNodePublicIP")
-    private final @Nullable Input<Boolean> enableNodePublicIP;
+        private final @Nullable Input<Boolean> enableNodePublicIP;
 
     public Input<Boolean> getEnableNodePublicIP() {
         return this.enableNodePublicIP == null ? Input.empty() : this.enableNodePublicIP;
@@ -107,7 +107,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="gpuInstanceProfile")
-    private final @Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
+        private final @Nullable Input<Either<String,GPUInstanceProfile>> gpuInstanceProfile;
 
     public Input<Either<String,GPUInstanceProfile>> getGpuInstanceProfile() {
         return this.gpuInstanceProfile == null ? Input.empty() : this.gpuInstanceProfile;
@@ -118,7 +118,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kubeletConfig")
-    private final @Nullable Input<KubeletConfigArgs> kubeletConfig;
+        private final @Nullable Input<KubeletConfigArgs> kubeletConfig;
 
     public Input<KubeletConfigArgs> getKubeletConfig() {
         return this.kubeletConfig == null ? Input.empty() : this.kubeletConfig;
@@ -129,7 +129,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="kubeletDiskType")
-    private final @Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType;
+        private final @Nullable Input<Either<String,KubeletDiskType>> kubeletDiskType;
 
     public Input<Either<String,KubeletDiskType>> getKubeletDiskType() {
         return this.kubeletDiskType == null ? Input.empty() : this.kubeletDiskType;
@@ -140,7 +140,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="linuxOSConfig")
-    private final @Nullable Input<LinuxOSConfigArgs> linuxOSConfig;
+        private final @Nullable Input<LinuxOSConfigArgs> linuxOSConfig;
 
     public Input<LinuxOSConfigArgs> getLinuxOSConfig() {
         return this.linuxOSConfig == null ? Input.empty() : this.linuxOSConfig;
@@ -151,7 +151,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxCount")
-    private final @Nullable Input<Integer> maxCount;
+        private final @Nullable Input<Integer> maxCount;
 
     public Input<Integer> getMaxCount() {
         return this.maxCount == null ? Input.empty() : this.maxCount;
@@ -162,7 +162,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxPods")
-    private final @Nullable Input<Integer> maxPods;
+        private final @Nullable Input<Integer> maxPods;
 
     public Input<Integer> getMaxPods() {
         return this.maxPods == null ? Input.empty() : this.maxPods;
@@ -173,7 +173,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minCount")
-    private final @Nullable Input<Integer> minCount;
+        private final @Nullable Input<Integer> minCount;
 
     public Input<Integer> getMinCount() {
         return this.minCount == null ? Input.empty() : this.minCount;
@@ -184,7 +184,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,AgentPoolMode>> mode;
+        private final @Nullable Input<Either<String,AgentPoolMode>> mode;
 
     public Input<Either<String,AgentPoolMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -195,7 +195,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -206,7 +206,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodeLabels")
-    private final @Nullable Input<Map<String,String>> nodeLabels;
+        private final @Nullable Input<Map<String,String>> nodeLabels;
 
     public Input<Map<String,String>> getNodeLabels() {
         return this.nodeLabels == null ? Input.empty() : this.nodeLabels;
@@ -217,7 +217,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodePublicIPPrefixID")
-    private final @Nullable Input<String> nodePublicIPPrefixID;
+        private final @Nullable Input<String> nodePublicIPPrefixID;
 
     public Input<String> getNodePublicIPPrefixID() {
         return this.nodePublicIPPrefixID == null ? Input.empty() : this.nodePublicIPPrefixID;
@@ -228,7 +228,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="nodeTaints")
-    private final @Nullable Input<List<String>> nodeTaints;
+        private final @Nullable Input<List<String>> nodeTaints;
 
     public Input<List<String>> getNodeTaints() {
         return this.nodeTaints == null ? Input.empty() : this.nodeTaints;
@@ -239,7 +239,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="orchestratorVersion")
-    private final @Nullable Input<String> orchestratorVersion;
+        private final @Nullable Input<String> orchestratorVersion;
 
     public Input<String> getOrchestratorVersion() {
         return this.orchestratorVersion == null ? Input.empty() : this.orchestratorVersion;
@@ -250,7 +250,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osDiskSizeGB")
-    private final @Nullable Input<Integer> osDiskSizeGB;
+        private final @Nullable Input<Integer> osDiskSizeGB;
 
     public Input<Integer> getOsDiskSizeGB() {
         return this.osDiskSizeGB == null ? Input.empty() : this.osDiskSizeGB;
@@ -261,7 +261,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osDiskType")
-    private final @Nullable Input<Either<String,OSDiskType>> osDiskType;
+        private final @Nullable Input<Either<String,OSDiskType>> osDiskType;
 
     public Input<Either<String,OSDiskType>> getOsDiskType() {
         return this.osDiskType == null ? Input.empty() : this.osDiskType;
@@ -272,7 +272,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osSKU")
-    private final @Nullable Input<Either<String,OSSKU>> osSKU;
+        private final @Nullable Input<Either<String,OSSKU>> osSKU;
 
     public Input<Either<String,OSSKU>> getOsSKU() {
         return this.osSKU == null ? Input.empty() : this.osSKU;
@@ -283,7 +283,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable Input<Either<String,OSType>> osType;
+        private final @Nullable Input<Either<String,OSType>> osType;
 
     public Input<Either<String,OSType>> getOsType() {
         return this.osType == null ? Input.empty() : this.osType;
@@ -294,7 +294,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="podSubnetID")
-    private final @Nullable Input<String> podSubnetID;
+        private final @Nullable Input<String> podSubnetID;
 
     public Input<String> getPodSubnetID() {
         return this.podSubnetID == null ? Input.empty() : this.podSubnetID;
@@ -305,7 +305,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="proximityPlacementGroupID")
-    private final @Nullable Input<String> proximityPlacementGroupID;
+        private final @Nullable Input<String> proximityPlacementGroupID;
 
     public Input<String> getProximityPlacementGroupID() {
         return this.proximityPlacementGroupID == null ? Input.empty() : this.proximityPlacementGroupID;
@@ -316,7 +316,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleSetEvictionPolicy")
-    private final @Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
+        private final @Nullable Input<Either<String,ScaleSetEvictionPolicy>> scaleSetEvictionPolicy;
 
     public Input<Either<String,ScaleSetEvictionPolicy>> getScaleSetEvictionPolicy() {
         return this.scaleSetEvictionPolicy == null ? Input.empty() : this.scaleSetEvictionPolicy;
@@ -327,7 +327,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scaleSetPriority")
-    private final @Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority;
+        private final @Nullable Input<Either<String,ScaleSetPriority>> scaleSetPriority;
 
     public Input<Either<String,ScaleSetPriority>> getScaleSetPriority() {
         return this.scaleSetPriority == null ? Input.empty() : this.scaleSetPriority;
@@ -338,7 +338,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="spotMaxPrice")
-    private final @Nullable Input<Double> spotMaxPrice;
+        private final @Nullable Input<Double> spotMaxPrice;
 
     public Input<Double> getSpotMaxPrice() {
         return this.spotMaxPrice == null ? Input.empty() : this.spotMaxPrice;
@@ -349,7 +349,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -360,7 +360,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,AgentPoolType>> type;
+        private final @Nullable Input<Either<String,AgentPoolType>> type;
 
     public Input<Either<String,AgentPoolType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -371,7 +371,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="upgradeSettings")
-    private final @Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings;
+        private final @Nullable Input<AgentPoolUpgradeSettingsArgs> upgradeSettings;
 
     public Input<AgentPoolUpgradeSettingsArgs> getUpgradeSettings() {
         return this.upgradeSettings == null ? Input.empty() : this.upgradeSettings;
@@ -382,7 +382,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable Input<String> vmSize;
+        private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;
@@ -393,7 +393,7 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="vnetSubnetID")
-    private final @Nullable Input<String> vnetSubnetID;
+        private final @Nullable Input<String> vnetSubnetID;
 
     public Input<String> getVnetSubnetID() {
         return this.vnetSubnetID == null ? Input.empty() : this.vnetSubnetID;
@@ -917,7 +917,6 @@ public final class ManagedClusterAgentPoolProfileArgs extends io.pulumi.resource
             this.vnetSubnetID = Input.ofNullable(vnetSubnetID);
             return this;
         }
-
         public ManagedClusterAgentPoolProfileArgs build() {
             return new ManagedClusterAgentPoolProfileArgs(availabilityZones, count, enableAutoScaling, enableEncryptionAtHost, enableFIPS, enableNodePublicIP, gpuInstanceProfile, kubeletConfig, kubeletDiskType, linuxOSConfig, maxCount, maxPods, minCount, mode, name, nodeLabels, nodePublicIPPrefixID, nodeTaints, orchestratorVersion, osDiskSizeGB, osDiskType, osSKU, osType, podSubnetID, proximityPlacementGroupID, scaleSetEvictionPolicy, scaleSetPriority, spotMaxPrice, tags, type, upgradeSettings, vmSize, vnetSubnetID);
         }

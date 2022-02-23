@@ -7,7 +7,7 @@ import io.pulumi.azurenative.alertsmanagement.inputs.ActionGroupArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.DiagnosticsArgs;
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="actionRuleName")
-    private final @Nullable Input<String> actionRuleName;
+        private final @Nullable Input<String> actionRuleName;
 
     public Input<String> getActionRuleName() {
         return this.actionRuleName == null ? Input.empty() : this.actionRuleName;
@@ -35,7 +35,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Object> properties;
+        private final @Nullable Input<Object> properties;
 
     public Input<Object> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -57,7 +57,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,6 @@ public final class ActionRuleByNameArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ActionRuleByNameArgs build() {
             return new ActionRuleByNameArgs(actionRuleName, location, properties, resourceGroupName, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -115,7 +115,6 @@ public final class NetworkInsightsAnalysisAnalysisAclRule {
             this.ruleNumber = ruleNumber;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisAclRule build() {
             return new NetworkInsightsAnalysisAnalysisAclRule(cidr, egress, portRange, protocol, ruleAction, ruleNumber);
         }

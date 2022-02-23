@@ -5,8 +5,8 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.TopicIAMBindingArgs;
 import io.pulumi.gcp.pubsub.inputs.TopicIAMBindingState;
@@ -134,13 +134,6 @@ public class TopicIAMBinding extends io.pulumi.resources.CustomResource {
         return this.topic;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TopicIAMBinding(String name) {
-        super("gcp:pubsub/topicIAMBinding:TopicIAMBinding", name, TopicIAMBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

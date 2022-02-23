@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleIamV1AuditConfigArgs;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleIamV1BindingArgs;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<GoogleIamV1AuditConfigArgs>> auditConfigs;
 
     public Input<List<GoogleIamV1AuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -34,14 +34,14 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<GoogleIamV1BindingArgs>> bindings;
+      private final @Nullable Input<List<GoogleIamV1BindingArgs>> bindings;
 
     public Input<List<GoogleIamV1BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final Input<String> environmentId;
+      private final Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId;
@@ -52,14 +52,14 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -70,7 +70,7 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -81,7 +81,7 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -215,7 +215,6 @@ public final class OrganizationEnvironmentIamPolicyArgs extends io.pulumi.resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public OrganizationEnvironmentIamPolicyArgs build() {
             return new OrganizationEnvironmentIamPolicyArgs(auditConfigs, bindings, environmentId, etag, organizationId, updateMask, version);
         }

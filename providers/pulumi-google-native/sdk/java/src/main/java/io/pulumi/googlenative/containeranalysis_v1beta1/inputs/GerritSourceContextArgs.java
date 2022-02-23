@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.AliasContextArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="aliasContext")
-    private final @Nullable Input<AliasContextArgs> aliasContext;
+      private final @Nullable Input<AliasContextArgs> aliasContext;
 
     public Input<AliasContextArgs> getAliasContext() {
         return this.aliasContext == null ? Input.empty() : this.aliasContext;
@@ -35,7 +35,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="gerritProject")
-    private final @Nullable Input<String> gerritProject;
+      private final @Nullable Input<String> gerritProject;
 
     public Input<String> getGerritProject() {
         return this.gerritProject == null ? Input.empty() : this.gerritProject;
@@ -46,7 +46,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hostUri")
-    private final @Nullable Input<String> hostUri;
+      private final @Nullable Input<String> hostUri;
 
     public Input<String> getHostUri() {
         return this.hostUri == null ? Input.empty() : this.hostUri;
@@ -57,7 +57,7 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="revisionId")
-    private final @Nullable Input<String> revisionId;
+      private final @Nullable Input<String> revisionId;
 
     public Input<String> getRevisionId() {
         return this.revisionId == null ? Input.empty() : this.revisionId;
@@ -146,7 +146,6 @@ public final class GerritSourceContextArgs extends io.pulumi.resources.ResourceA
             this.revisionId = Input.ofNullable(revisionId);
             return this;
         }
-
         public GerritSourceContextArgs build() {
             return new GerritSourceContextArgs(aliasContext, gerritProject, hostUri, revisionId);
         }

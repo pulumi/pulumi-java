@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1.enums.BackupRunBackupKind;
 import io.pulumi.googlenative.sqladmin_v1.enums.BackupRunStatus;
 import io.pulumi.googlenative.sqladmin_v1.enums.BackupRunType;
@@ -25,7 +25,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupKind")
-    private final @Nullable Input<BackupRunBackupKind> backupKind;
+      private final @Nullable Input<BackupRunBackupKind> backupKind;
 
     public Input<BackupRunBackupKind> getBackupKind() {
         return this.backupKind == null ? Input.empty() : this.backupKind;
@@ -36,7 +36,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-    private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+      private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
     public Input<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
@@ -58,7 +58,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionStatus")
-    private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
+      private final @Nullable Input<DiskEncryptionStatusArgs> diskEncryptionStatus;
 
     public Input<DiskEncryptionStatusArgs> getDiskEncryptionStatus() {
         return this.diskEncryptionStatus == null ? Input.empty() : this.diskEncryptionStatus;
@@ -69,7 +69,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+      private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -80,7 +80,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enqueuedTime")
-    private final @Nullable Input<String> enqueuedTime;
+      private final @Nullable Input<String> enqueuedTime;
 
     public Input<String> getEnqueuedTime() {
         return this.enqueuedTime == null ? Input.empty() : this.enqueuedTime;
@@ -91,7 +91,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="error")
-    private final @Nullable Input<OperationErrorArgs> error;
+      private final @Nullable Input<OperationErrorArgs> error;
 
     public Input<OperationErrorArgs> getError() {
         return this.error == null ? Input.empty() : this.error;
@@ -102,7 +102,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -113,7 +113,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -124,7 +124,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -135,14 +135,14 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -153,7 +153,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -164,7 +164,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+      private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -175,7 +175,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<BackupRunStatus> status;
+      private final @Nullable Input<BackupRunStatus> status;
 
     public Input<BackupRunStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -186,7 +186,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<BackupRunType> type;
+      private final @Nullable Input<BackupRunType> type;
 
     public Input<BackupRunType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -197,7 +197,7 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowStartTime")
-    private final @Nullable Input<String> windowStartTime;
+      private final @Nullable Input<String> windowStartTime;
 
     public Input<String> getWindowStartTime() {
         return this.windowStartTime == null ? Input.empty() : this.windowStartTime;
@@ -481,7 +481,6 @@ public final class BackupRunArgs extends io.pulumi.resources.ResourceArgs {
             this.windowStartTime = Input.ofNullable(windowStartTime);
             return this;
         }
-
         public BackupRunArgs build() {
             return new BackupRunArgs(backupKind, description, diskEncryptionConfiguration, diskEncryptionStatus, endTime, enqueuedTime, error, id, instance, kind, location, project, selfLink, startTime, status, type, windowStartTime);
         }

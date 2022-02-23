@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotwireless.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="dlClass", required=true)
-    private final String dlClass;
+        private final String dlClass;
 
     public String getDlClass() {
         return this.dlClass;
@@ -31,7 +31,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="numberOfDevicesInGroup")
-    private final @Nullable Integer numberOfDevicesInGroup;
+        private final @Nullable Integer numberOfDevicesInGroup;
 
     public Optional<Integer> getNumberOfDevicesInGroup() {
         return this.numberOfDevicesInGroup == null ? Optional.empty() : Optional.ofNullable(this.numberOfDevicesInGroup);
@@ -42,7 +42,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="numberOfDevicesRequested")
-    private final @Nullable Integer numberOfDevicesRequested;
+        private final @Nullable Integer numberOfDevicesRequested;
 
     public Optional<Integer> getNumberOfDevicesRequested() {
         return this.numberOfDevicesRequested == null ? Optional.empty() : Optional.ofNullable(this.numberOfDevicesRequested);
@@ -53,7 +53,7 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rfRegion", required=true)
-    private final String rfRegion;
+        private final String rfRegion;
 
     public String getRfRegion() {
         return this.rfRegion;
@@ -122,7 +122,6 @@ public final class MulticastGroupLoRaWAN extends io.pulumi.resources.InvokeArgs 
             this.rfRegion = Objects.requireNonNull(rfRegion);
             return this;
         }
-
         public MulticastGroupLoRaWAN build() {
             return new MulticastGroupLoRaWAN(dlClass, numberOfDevicesInGroup, numberOfDevicesRequested, rfRegion);
         }

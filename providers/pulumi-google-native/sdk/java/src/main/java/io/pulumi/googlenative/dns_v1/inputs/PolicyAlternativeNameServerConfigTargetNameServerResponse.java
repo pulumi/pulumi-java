@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @InputImport(name="forwardingPath", required=true)
-    private final String forwardingPath;
+      private final String forwardingPath;
 
     public String getForwardingPath() {
         return this.forwardingPath;
@@ -28,14 +28,14 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
      * 
      */
     @InputImport(name="ipv4Address", required=true)
-    private final String ipv4Address;
+      private final String ipv4Address;
 
     public String getIpv4Address() {
         return this.ipv4Address;
     }
 
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -94,7 +94,6 @@ public final class PolicyAlternativeNameServerConfigTargetNameServerResponse ext
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigTargetNameServerResponse build() {
             return new PolicyAlternativeNameServerConfigTargetNameServerResponse(forwardingPath, ipv4Address, kind);
         }

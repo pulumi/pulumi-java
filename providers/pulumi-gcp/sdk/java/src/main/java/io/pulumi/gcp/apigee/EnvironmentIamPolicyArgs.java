@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,14 +18,14 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="envId", required=true)
-    private final Input<String> envId;
+        private final Input<String> envId;
 
     public Input<String> getEnvId() {
         return this.envId;
     }
 
     @InputImport(name="orgId", required=true)
-    private final Input<String> orgId;
+        private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -37,7 +37,7 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -111,7 +111,6 @@ public final class EnvironmentIamPolicyArgs extends io.pulumi.resources.Resource
             this.policyData = Input.of(Objects.requireNonNull(policyData));
             return this;
         }
-
         public EnvironmentIamPolicyArgs build() {
             return new EnvironmentIamPolicyArgs(envId, orgId, policyData);
         }

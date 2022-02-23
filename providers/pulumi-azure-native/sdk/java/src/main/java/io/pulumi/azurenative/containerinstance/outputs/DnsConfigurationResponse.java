@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class DnsConfigurationResponse {
             this.searchDomains = searchDomains;
             return this;
         }
-
         public DnsConfigurationResponse build() {
             return new DnsConfigurationResponse(nameServers, options, searchDomains);
         }

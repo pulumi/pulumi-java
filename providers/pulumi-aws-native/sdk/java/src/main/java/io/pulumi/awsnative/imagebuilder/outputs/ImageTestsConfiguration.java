@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class ImageTestsConfiguration {
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
-
         public ImageTestsConfiguration build() {
             return new ImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }

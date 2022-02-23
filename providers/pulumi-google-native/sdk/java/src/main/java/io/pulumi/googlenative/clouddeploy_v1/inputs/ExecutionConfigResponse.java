@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.DefaultPoolResponse;
 import io.pulumi.googlenative.clouddeploy_v1.inputs.PrivatePoolResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="artifactStorage", required=true)
-    private final String artifactStorage;
+      private final String artifactStorage;
 
     public String getArtifactStorage() {
         return this.artifactStorage;
@@ -35,7 +35,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="defaultPool", required=true)
-    private final DefaultPoolResponse defaultPool;
+      private final DefaultPoolResponse defaultPool;
 
     public DefaultPoolResponse getDefaultPool() {
         return this.defaultPool;
@@ -46,7 +46,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privatePool", required=true)
-    private final PrivatePoolResponse privatePool;
+      private final PrivatePoolResponse privatePool;
 
     public PrivatePoolResponse getPrivatePool() {
         return this.privatePool;
@@ -57,7 +57,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -68,7 +68,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="usages", required=true)
-    private final List<String> usages;
+      private final List<String> usages;
 
     public List<String> getUsages() {
         return this.usages;
@@ -79,7 +79,7 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="workerPool", required=true)
-    private final String workerPool;
+      private final String workerPool;
 
     public String getWorkerPool() {
         return this.workerPool;
@@ -168,7 +168,6 @@ public final class ExecutionConfigResponse extends io.pulumi.resources.InvokeArg
             this.workerPool = Objects.requireNonNull(workerPool);
             return this;
         }
-
         public ExecutionConfigResponse build() {
             return new ExecutionConfigResponse(artifactStorage, defaultPool, privatePool, serviceAccount, usages, workerPool);
         }

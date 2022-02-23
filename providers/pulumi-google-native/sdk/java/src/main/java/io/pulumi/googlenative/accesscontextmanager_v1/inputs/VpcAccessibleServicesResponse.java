@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="allowedServices", required=true)
-    private final List<String> allowedServices;
+      private final List<String> allowedServices;
 
     public List<String> getAllowedServices() {
         return this.allowedServices;
@@ -34,7 +34,7 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="enableRestriction", required=true)
-    private final Boolean enableRestriction;
+      private final Boolean enableRestriction;
 
     public Boolean getEnableRestriction() {
         return this.enableRestriction;
@@ -83,7 +83,6 @@ public final class VpcAccessibleServicesResponse extends io.pulumi.resources.Inv
             this.enableRestriction = Objects.requireNonNull(enableRestriction);
             return this;
         }
-
         public VpcAccessibleServicesResponse build() {
             return new VpcAccessibleServicesResponse(allowedServices, enableRestriction);
         }

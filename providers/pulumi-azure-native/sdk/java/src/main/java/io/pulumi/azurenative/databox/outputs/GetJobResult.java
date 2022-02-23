@@ -11,7 +11,7 @@ import io.pulumi.azurenative.databox.outputs.JobDeliveryInfoResponse;
 import io.pulumi.azurenative.databox.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.databox.outputs.SkuResponse;
 import io.pulumi.azurenative.databox.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -486,7 +486,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(cancellationReason, deliveryInfo, deliveryType, details, error, id, identity, isCancellable, isCancellableWithoutFee, isDeletable, isPrepareToShipEnabled, isShippingAddressEditable, location, name, sku, startTime, status, systemData, tags, transferType, type);
         }

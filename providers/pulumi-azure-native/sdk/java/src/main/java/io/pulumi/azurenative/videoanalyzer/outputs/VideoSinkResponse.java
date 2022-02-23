@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.NodeInputResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoCreationPropertiesResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.VideoPublishingOptionsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -166,7 +166,6 @@ public final class VideoSinkResponse {
             this.videoPublishingOptions = videoPublishingOptions;
             return this;
         }
-
         public VideoSinkResponse build() {
             return new VideoSinkResponse(inputs, name, type, videoCreationProperties, videoName, videoPublishingOptions);
         }

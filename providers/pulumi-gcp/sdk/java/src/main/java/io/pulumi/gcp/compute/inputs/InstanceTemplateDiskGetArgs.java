@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceTemplateDiskDiskEncryptionKeyGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -24,7 +24,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="autoDelete")
-    private final @Nullable Input<Boolean> autoDelete;
+        private final @Nullable Input<Boolean> autoDelete;
 
     public Input<Boolean> getAutoDelete() {
         return this.autoDelete == null ? Input.empty() : this.autoDelete;
@@ -35,7 +35,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="boot")
-    private final @Nullable Input<Boolean> boot;
+        private final @Nullable Input<Boolean> boot;
 
     public Input<Boolean> getBoot() {
         return this.boot == null ? Input.empty() : this.boot;
@@ -48,7 +48,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="deviceName")
-    private final @Nullable Input<String> deviceName;
+        private final @Nullable Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName == null ? Input.empty() : this.deviceName;
@@ -59,7 +59,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskEncryptionKey")
-    private final @Nullable Input<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
+        private final @Nullable Input<InstanceTemplateDiskDiskEncryptionKeyGetArgs> diskEncryptionKey;
 
     public Input<InstanceTemplateDiskDiskEncryptionKeyGetArgs> getDiskEncryptionKey() {
         return this.diskEncryptionKey == null ? Input.empty() : this.diskEncryptionKey;
@@ -71,7 +71,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable Input<String> diskName;
+        private final @Nullable Input<String> diskName;
 
     public Input<String> getDiskName() {
         return this.diskName == null ? Input.empty() : this.diskName;
@@ -84,7 +84,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+        private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -96,7 +96,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+        private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -110,7 +110,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="interface")
-    private final @Nullable Input<String> $interface;
+        private final @Nullable Input<String> $interface;
 
     public Input<String> get$interface() {
         return this.$interface == null ? Input.empty() : this.$interface;
@@ -122,7 +122,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -135,7 +135,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+        private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -146,7 +146,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourcePolicies")
-    private final @Nullable Input<String> resourcePolicies;
+        private final @Nullable Input<String> resourcePolicies;
 
     public Input<String> getResourcePolicies() {
         return this.resourcePolicies == null ? Input.empty() : this.resourcePolicies;
@@ -159,7 +159,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="source")
-    private final @Nullable Input<String> source;
+        private final @Nullable Input<String> source;
 
     public Input<String> getSource() {
         return this.source == null ? Input.empty() : this.source;
@@ -176,7 +176,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceImage")
-    private final @Nullable Input<String> sourceImage;
+        private final @Nullable Input<String> sourceImage;
 
     public Input<String> getSourceImage() {
         return this.sourceImage == null ? Input.empty() : this.sourceImage;
@@ -187,7 +187,7 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -426,7 +426,6 @@ public final class InstanceTemplateDiskGetArgs extends io.pulumi.resources.Resou
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public InstanceTemplateDiskGetArgs build() {
             return new InstanceTemplateDiskGetArgs(autoDelete, boot, deviceName, diskEncryptionKey, diskName, diskSizeGb, diskType, $interface, labels, mode, resourcePolicies, source, sourceImage, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -186,7 +186,6 @@ public final class ImageTemplateSharedImageDistributorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ImageTemplateSharedImageDistributorResponse build() {
             return new ImageTemplateSharedImageDistributorResponse(artifactTags, excludeFromLatest, galleryImageId, replicationRegions, runOutputName, storageAccountType, type);
         }

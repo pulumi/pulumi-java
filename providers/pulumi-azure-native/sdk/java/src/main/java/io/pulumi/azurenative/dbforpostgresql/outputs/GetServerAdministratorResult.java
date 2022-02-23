@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class GetServerAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAdministratorResult build() {
             return new GetServerAdministratorResult(administratorType, id, login, name, sid, tenantId, type);
         }

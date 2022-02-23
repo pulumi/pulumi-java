@@ -6,7 +6,7 @@ package io.pulumi.azurenative.solutions.inputs;
 import io.pulumi.azurenative.solutions.enums.ApplicationManagementMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,ApplicationManagementMode>> mode;
+        private final @Nullable Input<Either<String,ApplicationManagementMode>> mode;
 
     public Input<Either<String,ApplicationManagementMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -68,7 +68,6 @@ public final class ApplicationManagementPolicyArgs extends io.pulumi.resources.R
             this.mode = Input.ofNullable(mode);
             return this;
         }
-
         public ApplicationManagementPolicyArgs build() {
             return new ApplicationManagementPolicyArgs(mode);
         }

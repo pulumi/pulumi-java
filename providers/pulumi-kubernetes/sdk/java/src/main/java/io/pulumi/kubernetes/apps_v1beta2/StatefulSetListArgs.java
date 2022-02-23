@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1beta2.inputs.StatefulSetArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ListMetaArgs;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class StatefulSetListArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
     @InputImport(name="items", required=true)
-    private final Input<List<StatefulSetArgs>> items;
+        private final Input<List<StatefulSetArgs>> items;
 
     public Input<List<StatefulSetArgs>> getItems() {
         return this.items;
@@ -40,14 +40,14 @@ public final class StatefulSetListArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<ListMetaArgs> metadata;
+        private final @Nullable Input<ListMetaArgs> metadata;
 
     public Input<ListMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -136,7 +136,6 @@ public final class StatefulSetListArgs extends io.pulumi.resources.ResourceArgs 
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public StatefulSetListArgs build() {
             return new StatefulSetListArgs(apiVersion, items, kind, metadata);
         }

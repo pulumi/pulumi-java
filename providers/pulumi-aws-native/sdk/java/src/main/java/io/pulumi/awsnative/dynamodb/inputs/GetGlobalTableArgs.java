@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.dynamodb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetGlobalTableArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetGlobalTableArgs Empty = new GetGlobalTableArgs();
 
     @InputImport(name="tableName", required=true)
-    private final String tableName;
+        private final String tableName;
 
     public String getTableName() {
         return this.tableName;
@@ -51,7 +51,6 @@ public final class GetGlobalTableArgs extends io.pulumi.resources.InvokeArgs {
             this.tableName = Objects.requireNonNull(tableName);
             return this;
         }
-
         public GetGlobalTableArgs build() {
             return new GetGlobalTableArgs(tableName);
         }

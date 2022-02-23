@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.AppleRegistrationArgs;
 import io.pulumi.azurenative.web.inputs.LoginScopesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<LoginScopesArgs> login;
+        private final @Nullable Input<LoginScopesArgs> login;
 
     public Input<LoginScopesArgs> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -47,7 +47,7 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registration")
-    private final @Nullable Input<AppleRegistrationArgs> registration;
+        private final @Nullable Input<AppleRegistrationArgs> registration;
 
     public Input<AppleRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;
@@ -121,7 +121,6 @@ public final class AppleArgs extends io.pulumi.resources.ResourceArgs {
             this.registration = Input.ofNullable(registration);
             return this;
         }
-
         public AppleArgs build() {
             return new AppleArgs(enabled, login, registration);
         }

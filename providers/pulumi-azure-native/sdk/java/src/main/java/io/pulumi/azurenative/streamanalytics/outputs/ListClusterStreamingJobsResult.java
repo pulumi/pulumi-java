@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.ClusterJobResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class ListClusterStreamingJobsResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListClusterStreamingJobsResult build() {
             return new ListClusterStreamingJobsResult(nextLink, value);
         }

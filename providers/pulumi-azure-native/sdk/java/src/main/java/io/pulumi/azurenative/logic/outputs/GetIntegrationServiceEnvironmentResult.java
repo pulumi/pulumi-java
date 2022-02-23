@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.outputs;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentPropertiesResponse;
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentSkuResponse;
 import io.pulumi.azurenative.logic.outputs.ManagedServiceIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -206,7 +206,6 @@ public final class GetIntegrationServiceEnvironmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationServiceEnvironmentResult build() {
             return new GetIntegrationServiceEnvironmentResult(id, identity, location, name, properties, sku, tags, type);
         }

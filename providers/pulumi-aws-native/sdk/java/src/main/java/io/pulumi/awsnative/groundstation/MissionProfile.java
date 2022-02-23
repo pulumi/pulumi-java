@@ -9,8 +9,8 @@ import io.pulumi.awsnative.groundstation.outputs.MissionProfileDataflowEdge;
 import io.pulumi.awsnative.groundstation.outputs.MissionProfileTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -111,13 +111,6 @@ public class MissionProfile extends io.pulumi.resources.CustomResource {
         return this.trackingConfigArn;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MissionProfile(String name) {
-        super("aws-native:groundstation:MissionProfile", name, MissionProfileArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

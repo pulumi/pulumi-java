@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+        private final String email;
 
     public String getEmail() {
         return this.email;
@@ -34,7 +34,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+        private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -104,7 +104,6 @@ public final class UserInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.objectId = objectId;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(email, name, objectId);
         }

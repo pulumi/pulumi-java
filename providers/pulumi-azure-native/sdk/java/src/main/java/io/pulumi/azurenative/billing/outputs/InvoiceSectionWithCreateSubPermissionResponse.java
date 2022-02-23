@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.billing.outputs;
 
 import io.pulumi.azurenative.billing.outputs.AzurePlanResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -245,7 +245,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse {
             this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
             return this;
         }
-
         public InvoiceSectionWithCreateSubPermissionResponse build() {
             return new InvoiceSectionWithCreateSubPermissionResponse(billingProfileDisplayName, billingProfileId, billingProfileSpendingLimit, billingProfileStatus, billingProfileStatusReasonCode, billingProfileSystemId, enabledAzurePlans, invoiceSectionDisplayName, invoiceSectionId, invoiceSectionSystemId);
         }

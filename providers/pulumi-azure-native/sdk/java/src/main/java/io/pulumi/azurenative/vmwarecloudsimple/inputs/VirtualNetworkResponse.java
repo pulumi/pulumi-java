@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="assignable", required=true)
-    private final Boolean assignable;
+        private final Boolean assignable;
 
     public Boolean getAssignable() {
         return this.assignable;
@@ -33,7 +33,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -44,7 +44,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -55,7 +55,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -66,7 +66,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="privateCloudId", required=true)
-    private final String privateCloudId;
+        private final String privateCloudId;
 
     public String getPrivateCloudId() {
         return this.privateCloudId;
@@ -77,7 +77,7 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -166,7 +166,6 @@ public final class VirtualNetworkResponse extends io.pulumi.resources.InvokeArgs
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VirtualNetworkResponse build() {
             return new VirtualNetworkResponse(assignable, id, location, name, privateCloudId, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.GoogleCloudNetworksecurityV1beta1CertificateProviderResponse;
 import io.pulumi.googlenative.networksecurity_v1beta1.outputs.MTLSPolicyResponse;
 import java.lang.Boolean;
@@ -204,7 +204,6 @@ public final class GetServerTlsPolicyResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetServerTlsPolicyResult build() {
             return new GetServerTlsPolicyResult(allowOpen, createTime, description, labels, mtlsPolicy, name, serverCertificate, updateTime);
         }

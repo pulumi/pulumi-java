@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AbsoluteClipTimeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -34,7 +34,7 @@ public final class AbsoluteClipTimeArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="time", required=true)
-    private final Input<String> time;
+        private final Input<String> time;
 
     public Input<String> getTime() {
         return this.time;
@@ -93,7 +93,6 @@ public final class AbsoluteClipTimeArgs extends io.pulumi.resources.ResourceArgs
             this.time = Input.of(Objects.requireNonNull(time));
             return this;
         }
-
         public AbsoluteClipTimeArgs build() {
             return new AbsoluteClipTimeArgs(odataType, time);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.VmUtilizationInfoResponse;
 import java.lang.Integer;
@@ -267,7 +267,6 @@ public final class GetUtilizationReportResult {
             this.vmsCount = Objects.requireNonNull(vmsCount);
             return this;
         }
-
         public GetUtilizationReportResult build() {
             return new GetUtilizationReportResult(createTime, displayName, error, frameEndTime, name, state, stateTime, timeFrame, vmCount, vms, vmsCount);
         }

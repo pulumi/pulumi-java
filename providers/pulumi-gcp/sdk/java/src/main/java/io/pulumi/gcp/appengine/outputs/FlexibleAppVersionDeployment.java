@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentCloudBuildOptions;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentContainer;
 import io.pulumi.gcp.appengine.outputs.FlexibleAppVersionDeploymentFile;
@@ -132,7 +132,6 @@ public final class FlexibleAppVersionDeployment {
             this.zip = zip;
             return this;
         }
-
         public FlexibleAppVersionDeployment build() {
             return new FlexibleAppVersionDeployment(cloudBuildOptions, container, files, zip);
         }

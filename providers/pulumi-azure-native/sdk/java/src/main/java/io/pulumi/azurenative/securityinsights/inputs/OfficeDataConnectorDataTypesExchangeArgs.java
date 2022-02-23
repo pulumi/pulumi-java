@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 import io.pulumi.azurenative.securityinsights.enums.DataTypeState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,DataTypeState>> state;
+        private final @Nullable Input<Either<String,DataTypeState>> state;
 
     public Input<Either<String,DataTypeState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -68,7 +68,6 @@ public final class OfficeDataConnectorDataTypesExchangeArgs extends io.pulumi.re
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public OfficeDataConnectorDataTypesExchangeArgs build() {
             return new OfficeDataConnectorDataTypesExchangeArgs(state);
         }

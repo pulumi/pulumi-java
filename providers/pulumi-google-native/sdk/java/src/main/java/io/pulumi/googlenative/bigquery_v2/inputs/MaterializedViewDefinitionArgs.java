@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enableRefresh")
-    private final @Nullable Input<Boolean> enableRefresh;
+      private final @Nullable Input<Boolean> enableRefresh;
 
     public Input<Boolean> getEnableRefresh() {
         return this.enableRefresh == null ? Input.empty() : this.enableRefresh;
@@ -31,7 +31,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<String> query;
+      private final @Nullable Input<String> query;
 
     public Input<String> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -42,7 +42,7 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="refreshIntervalMs")
-    private final @Nullable Input<String> refreshIntervalMs;
+      private final @Nullable Input<String> refreshIntervalMs;
 
     public Input<String> getRefreshIntervalMs() {
         return this.refreshIntervalMs == null ? Input.empty() : this.refreshIntervalMs;
@@ -116,7 +116,6 @@ public final class MaterializedViewDefinitionArgs extends io.pulumi.resources.Re
             this.refreshIntervalMs = Input.ofNullable(refreshIntervalMs);
             return this;
         }
-
         public MaterializedViewDefinitionArgs build() {
             return new MaterializedViewDefinitionArgs(enableRefresh, query, refreshIntervalMs);
         }

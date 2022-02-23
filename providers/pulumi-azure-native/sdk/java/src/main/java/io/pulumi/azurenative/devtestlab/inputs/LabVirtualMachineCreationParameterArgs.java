@@ -10,7 +10,7 @@ import io.pulumi.azurenative.devtestlab.inputs.GalleryImageReferenceArgs;
 import io.pulumi.azurenative.devtestlab.inputs.NetworkInterfacePropertiesArgs;
 import io.pulumi.azurenative.devtestlab.inputs.ScheduleCreationParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowClaim")
-    private final @Nullable Input<Boolean> allowClaim;
+        private final @Nullable Input<Boolean> allowClaim;
 
     public Input<Boolean> getAllowClaim() {
         return this.allowClaim == null ? Input.empty() : this.allowClaim;
@@ -43,7 +43,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="artifacts")
-    private final @Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts;
+        private final @Nullable Input<List<ArtifactInstallPropertiesArgs>> artifacts;
 
     public Input<List<ArtifactInstallPropertiesArgs>> getArtifacts() {
         return this.artifacts == null ? Input.empty() : this.artifacts;
@@ -54,7 +54,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="bulkCreationParameters")
-    private final @Nullable Input<BulkCreationParametersArgs> bulkCreationParameters;
+        private final @Nullable Input<BulkCreationParametersArgs> bulkCreationParameters;
 
     public Input<BulkCreationParametersArgs> getBulkCreationParameters() {
         return this.bulkCreationParameters == null ? Input.empty() : this.bulkCreationParameters;
@@ -65,7 +65,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+        private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -76,7 +76,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="customImageId")
-    private final @Nullable Input<String> customImageId;
+        private final @Nullable Input<String> customImageId;
 
     public Input<String> getCustomImageId() {
         return this.customImageId == null ? Input.empty() : this.customImageId;
@@ -87,7 +87,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataDiskParameters")
-    private final @Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters;
+        private final @Nullable Input<List<DataDiskPropertiesArgs>> dataDiskParameters;
 
     public Input<List<DataDiskPropertiesArgs>> getDataDiskParameters() {
         return this.dataDiskParameters == null ? Input.empty() : this.dataDiskParameters;
@@ -98,7 +98,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="disallowPublicIpAddress")
-    private final @Nullable Input<Boolean> disallowPublicIpAddress;
+        private final @Nullable Input<Boolean> disallowPublicIpAddress;
 
     public Input<Boolean> getDisallowPublicIpAddress() {
         return this.disallowPublicIpAddress == null ? Input.empty() : this.disallowPublicIpAddress;
@@ -109,7 +109,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+        private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -120,7 +120,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+        private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -131,7 +131,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="galleryImageReference")
-    private final @Nullable Input<GalleryImageReferenceArgs> galleryImageReference;
+        private final @Nullable Input<GalleryImageReferenceArgs> galleryImageReference;
 
     public Input<GalleryImageReferenceArgs> getGalleryImageReference() {
         return this.galleryImageReference == null ? Input.empty() : this.galleryImageReference;
@@ -142,7 +142,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="isAuthenticationWithSshKey")
-    private final @Nullable Input<Boolean> isAuthenticationWithSshKey;
+        private final @Nullable Input<Boolean> isAuthenticationWithSshKey;
 
     public Input<Boolean> getIsAuthenticationWithSshKey() {
         return this.isAuthenticationWithSshKey == null ? Input.empty() : this.isAuthenticationWithSshKey;
@@ -153,7 +153,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="labSubnetName")
-    private final @Nullable Input<String> labSubnetName;
+        private final @Nullable Input<String> labSubnetName;
 
     public Input<String> getLabSubnetName() {
         return this.labSubnetName == null ? Input.empty() : this.labSubnetName;
@@ -164,7 +164,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="labVirtualNetworkId")
-    private final @Nullable Input<String> labVirtualNetworkId;
+        private final @Nullable Input<String> labVirtualNetworkId;
 
     public Input<String> getLabVirtualNetworkId() {
         return this.labVirtualNetworkId == null ? Input.empty() : this.labVirtualNetworkId;
@@ -175,7 +175,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -186,7 +186,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -197,7 +197,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="networkInterface")
-    private final @Nullable Input<NetworkInterfacePropertiesArgs> networkInterface;
+        private final @Nullable Input<NetworkInterfacePropertiesArgs> networkInterface;
 
     public Input<NetworkInterfacePropertiesArgs> getNetworkInterface() {
         return this.networkInterface == null ? Input.empty() : this.networkInterface;
@@ -208,7 +208,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+        private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -219,7 +219,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ownerObjectId")
-    private final @Nullable Input<String> ownerObjectId;
+        private final @Nullable Input<String> ownerObjectId;
 
     public Input<String> getOwnerObjectId() {
         return this.ownerObjectId == null ? Input.empty() : this.ownerObjectId;
@@ -230,7 +230,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="ownerUserPrincipalName")
-    private final @Nullable Input<String> ownerUserPrincipalName;
+        private final @Nullable Input<String> ownerUserPrincipalName;
 
     public Input<String> getOwnerUserPrincipalName() {
         return this.ownerUserPrincipalName == null ? Input.empty() : this.ownerUserPrincipalName;
@@ -241,7 +241,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -252,7 +252,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="planId")
-    private final @Nullable Input<String> planId;
+        private final @Nullable Input<String> planId;
 
     public Input<String> getPlanId() {
         return this.planId == null ? Input.empty() : this.planId;
@@ -263,7 +263,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="scheduleParameters")
-    private final @Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters;
+        private final @Nullable Input<List<ScheduleCreationParameterArgs>> scheduleParameters;
 
     public Input<List<ScheduleCreationParameterArgs>> getScheduleParameters() {
         return this.scheduleParameters == null ? Input.empty() : this.scheduleParameters;
@@ -274,7 +274,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+        private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -285,7 +285,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sshKey")
-    private final @Nullable Input<String> sshKey;
+        private final @Nullable Input<String> sshKey;
 
     public Input<String> getSshKey() {
         return this.sshKey == null ? Input.empty() : this.sshKey;
@@ -296,7 +296,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<String> storageType;
+        private final @Nullable Input<String> storageType;
 
     public Input<String> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -307,7 +307,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -318,7 +318,7 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+        private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -752,7 +752,6 @@ public final class LabVirtualMachineCreationParameterArgs extends io.pulumi.reso
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public LabVirtualMachineCreationParameterArgs build() {
             return new LabVirtualMachineCreationParameterArgs(allowClaim, artifacts, bulkCreationParameters, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, galleryImageReference, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, location, name, networkInterface, notes, ownerObjectId, ownerUserPrincipalName, password, planId, scheduleParameters, size, sshKey, storageType, tags, userName);
         }

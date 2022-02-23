@@ -13,8 +13,8 @@ import io.pulumi.awsnative.iot.outputs.PresignedUrlConfigProperties;
 import io.pulumi.awsnative.iot.outputs.TimeoutConfigProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -170,13 +170,6 @@ public class JobTemplate extends io.pulumi.resources.CustomResource {
         return this.timeoutConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public JobTemplate(String name) {
-        super("aws-native:iot:JobTemplate", name, JobTemplateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

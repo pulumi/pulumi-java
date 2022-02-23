@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class CertificateFingerprintResponse {
             this.sha256Hash = Objects.requireNonNull(sha256Hash);
             return this;
         }
-
         public CertificateFingerprintResponse build() {
             return new CertificateFingerprintResponse(sha256Hash);
         }

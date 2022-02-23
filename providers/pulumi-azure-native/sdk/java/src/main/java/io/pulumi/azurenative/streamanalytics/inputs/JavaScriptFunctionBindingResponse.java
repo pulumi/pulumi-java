@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class JavaScriptFunctionBindingResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="script")
-    private final @Nullable String script;
+        private final @Nullable String script;
 
     public Optional<String> getScript() {
         return this.script == null ? Optional.empty() : Optional.ofNullable(this.script);
@@ -35,7 +35,7 @@ public final class JavaScriptFunctionBindingResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -84,7 +84,6 @@ public final class JavaScriptFunctionBindingResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JavaScriptFunctionBindingResponse build() {
             return new JavaScriptFunctionBindingResponse(script, type);
         }

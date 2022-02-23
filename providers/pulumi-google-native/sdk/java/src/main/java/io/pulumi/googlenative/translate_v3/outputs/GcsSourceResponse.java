@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.translate_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GcsSourceResponse {
             this.inputUri = Objects.requireNonNull(inputUri);
             return this;
         }
-
         public GcsSourceResponse build() {
             return new GcsSourceResponse(inputUri);
         }

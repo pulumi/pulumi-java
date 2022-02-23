@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexKeysResponse;
 import io.pulumi.azurenative.documentdb.inputs.MongoIndexOptionsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable MongoIndexKeysResponse key;
+        private final @Nullable MongoIndexKeysResponse key;
 
     public Optional<MongoIndexKeysResponse> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -35,7 +35,7 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="options")
-    private final @Nullable MongoIndexOptionsResponse options;
+        private final @Nullable MongoIndexOptionsResponse options;
 
     public Optional<MongoIndexOptionsResponse> getOptions() {
         return this.options == null ? Optional.empty() : Optional.ofNullable(this.options);
@@ -84,7 +84,6 @@ public final class MongoIndexResponse extends io.pulumi.resources.InvokeArgs {
             this.options = options;
             return this;
         }
-
         public MongoIndexResponse build() {
             return new MongoIndexResponse(key, options);
         }

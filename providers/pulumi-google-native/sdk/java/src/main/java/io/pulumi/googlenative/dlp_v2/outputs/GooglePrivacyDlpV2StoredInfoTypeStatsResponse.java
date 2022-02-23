@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2LargeCustomDictionaryStatsResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeStatsResponse {
             this.largeCustomDictionary = Objects.requireNonNull(largeCustomDictionary);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeStatsResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeStatsResponse(largeCustomDictionary);
         }

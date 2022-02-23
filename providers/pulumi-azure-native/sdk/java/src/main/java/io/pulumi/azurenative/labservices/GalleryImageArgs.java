@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryImageName")
-    private final @Nullable Input<String> galleryImageName;
+        private final @Nullable Input<String> galleryImageName;
 
     public Input<String> getGalleryImageName() {
         return this.galleryImageName == null ? Input.empty() : this.galleryImageName;
@@ -32,7 +32,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled")
-    private final @Nullable Input<Boolean> isEnabled;
+        private final @Nullable Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled == null ? Input.empty() : this.isEnabled;
@@ -43,7 +43,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isOverride")
-    private final @Nullable Input<Boolean> isOverride;
+        private final @Nullable Input<Boolean> isOverride;
 
     public Input<Boolean> getIsOverride() {
         return this.isOverride == null ? Input.empty() : this.isOverride;
@@ -54,7 +54,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isPlanAuthorized")
-    private final @Nullable Input<Boolean> isPlanAuthorized;
+        private final @Nullable Input<Boolean> isPlanAuthorized;
 
     public Input<Boolean> getIsPlanAuthorized() {
         return this.isPlanAuthorized == null ? Input.empty() : this.isPlanAuthorized;
@@ -65,7 +65,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labAccountName", required=true)
-    private final Input<String> labAccountName;
+        private final Input<String> labAccountName;
 
     public Input<String> getLabAccountName() {
         return this.labAccountName;
@@ -76,7 +76,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -87,7 +87,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+        private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -98,7 +98,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -109,7 +109,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,7 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueIdentifier")
-    private final @Nullable Input<String> uniqueIdentifier;
+        private final @Nullable Input<String> uniqueIdentifier;
 
     public Input<String> getUniqueIdentifier() {
         return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
@@ -299,7 +299,6 @@ public final class GalleryImageArgs extends io.pulumi.resources.ResourceArgs {
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }
-
         public GalleryImageArgs build() {
             return new GalleryImageArgs(galleryImageName, isEnabled, isOverride, isPlanAuthorized, labAccountName, location, provisioningState, resourceGroupName, tags, uniqueIdentifier);
         }

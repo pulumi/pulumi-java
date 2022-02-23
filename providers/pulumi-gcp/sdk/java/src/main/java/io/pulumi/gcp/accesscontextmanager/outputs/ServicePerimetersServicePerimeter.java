@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterSpec;
 import io.pulumi.gcp.accesscontextmanager.outputs.ServicePerimetersServicePerimeterStatus;
 import java.lang.Boolean;
@@ -296,7 +296,6 @@ public final class ServicePerimetersServicePerimeter {
             this.useExplicitDryRunSpec = useExplicitDryRunSpec;
             return this;
         }
-
         public ServicePerimetersServicePerimeter build() {
             return new ServicePerimetersServicePerimeter(createTime, description, name, perimeterType, spec, status, title, updateTime, useExplicitDryRunSpec);
         }

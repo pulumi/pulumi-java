@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="phrase")
-    private final @Nullable String phrase;
+        private final @Nullable String phrase;
 
     public Optional<String> getPhrase() {
         return this.phrase == null ? Optional.empty() : Optional.ofNullable(this.phrase);
@@ -34,7 +34,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -45,7 +45,7 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="variable")
-    private final @Nullable String variable;
+        private final @Nullable String variable;
 
     public Optional<String> getVariable() {
         return this.variable == null ? Optional.empty() : Optional.ofNullable(this.variable);
@@ -104,7 +104,6 @@ public final class AliasPatternResponse extends io.pulumi.resources.InvokeArgs {
             this.variable = variable;
             return this;
         }
-
         public AliasPatternResponse build() {
             return new AliasPatternResponse(phrase, type, variable);
         }

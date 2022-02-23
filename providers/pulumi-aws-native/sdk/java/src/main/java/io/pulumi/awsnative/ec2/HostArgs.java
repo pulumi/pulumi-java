@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoPlacement")
-    private final @Nullable Input<String> autoPlacement;
+        private final @Nullable Input<String> autoPlacement;
 
     public Input<String> getAutoPlacement() {
         return this.autoPlacement == null ? Input.empty() : this.autoPlacement;
@@ -30,7 +30,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availabilityZone", required=true)
-    private final Input<String> availabilityZone;
+        private final Input<String> availabilityZone;
 
     public Input<String> getAvailabilityZone() {
         return this.availabilityZone;
@@ -41,7 +41,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostRecovery")
-    private final @Nullable Input<String> hostRecovery;
+        private final @Nullable Input<String> hostRecovery;
 
     public Input<String> getHostRecovery() {
         return this.hostRecovery == null ? Input.empty() : this.hostRecovery;
@@ -52,7 +52,7 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+        private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
@@ -141,7 +141,6 @@ public final class HostArgs extends io.pulumi.resources.ResourceArgs {
             this.instanceType = Input.of(Objects.requireNonNull(instanceType));
             return this;
         }
-
         public HostArgs build() {
             return new HostArgs(autoPlacement, availabilityZone, hostRecovery, instanceType);
         }

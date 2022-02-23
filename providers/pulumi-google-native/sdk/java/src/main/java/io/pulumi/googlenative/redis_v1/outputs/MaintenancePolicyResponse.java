@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.redis_v1.outputs.WeeklyMaintenanceWindowResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class MaintenancePolicyResponse {
             this.weeklyMaintenanceWindow = Objects.requireNonNull(weeklyMaintenanceWindow);
             return this;
         }
-
         public MaintenancePolicyResponse build() {
             return new MaintenancePolicyResponse(createTime, description, updateTime, weeklyMaintenanceWindow);
         }

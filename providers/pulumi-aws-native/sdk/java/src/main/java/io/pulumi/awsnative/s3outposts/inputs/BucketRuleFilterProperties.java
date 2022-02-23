@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts.inputs;
 
 import io.pulumi.awsnative.s3outposts.inputs.BucketFilterAndOperator;
 import io.pulumi.awsnative.s3outposts.inputs.BucketFilterTag;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class BucketRuleFilterProperties extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="andOperator")
-    private final @Nullable BucketFilterAndOperator andOperator;
+        private final @Nullable BucketFilterAndOperator andOperator;
 
     public Optional<BucketFilterAndOperator> getAndOperator() {
         return this.andOperator == null ? Optional.empty() : Optional.ofNullable(this.andOperator);
@@ -36,7 +36,7 @@ public final class BucketRuleFilterProperties extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+        private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
@@ -47,7 +47,7 @@ public final class BucketRuleFilterProperties extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable BucketFilterTag tag;
+        private final @Nullable BucketFilterTag tag;
 
     public Optional<BucketFilterTag> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -106,7 +106,6 @@ public final class BucketRuleFilterProperties extends io.pulumi.resources.Invoke
             this.tag = tag;
             return this;
         }
-
         public BucketRuleFilterProperties build() {
             return new BucketRuleFilterProperties(andOperator, prefix, tag);
         }

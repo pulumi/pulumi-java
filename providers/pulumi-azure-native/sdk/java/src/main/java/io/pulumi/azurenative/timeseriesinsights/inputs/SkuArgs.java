@@ -6,7 +6,7 @@ package io.pulumi.azurenative.timeseriesinsights.inputs;
 import io.pulumi.azurenative.timeseriesinsights.enums.SkuName;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final Input<Integer> capacity;
+        private final Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity;
@@ -36,7 +36,7 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,SkuName>> name;
+        private final Input<Either<String,SkuName>> name;
 
     public Input<Either<String,SkuName>> getName() {
         return this.name;
@@ -95,7 +95,6 @@ public final class SkuArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public SkuArgs build() {
             return new SkuArgs(capacity, name);
         }

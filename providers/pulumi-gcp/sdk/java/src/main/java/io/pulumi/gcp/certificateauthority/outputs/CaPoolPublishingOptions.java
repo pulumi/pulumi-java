@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -84,7 +84,6 @@ public final class CaPoolPublishingOptions {
             this.publishCrl = Objects.requireNonNull(publishCrl);
             return this;
         }
-
         public CaPoolPublishingOptions build() {
             return new CaPoolPublishingOptions(publishCaCert, publishCrl);
         }

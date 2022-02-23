@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-    private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
+        private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
     public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
@@ -38,7 +38,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-    private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
+        private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
     public List<SubResourceResponse> getApplicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
@@ -49,7 +49,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-    private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
+        private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
     public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
@@ -60,7 +60,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -71,7 +71,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Boolean primary;
+        private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
@@ -82,7 +82,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-    private final @Nullable String privateIPAddressVersion;
+        private final @Nullable String privateIPAddressVersion;
 
     public Optional<String> getPrivateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
@@ -93,7 +93,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-    private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
+        private final @Nullable VirtualMachinePublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
     public Optional<VirtualMachinePublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
@@ -104,7 +104,7 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable SubResourceResponse subnet;
+        private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -213,7 +213,6 @@ public final class VirtualMachineNetworkInterfaceIPConfigurationResponse extends
             this.subnet = subnet;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceIPConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, loadBalancerBackendAddressPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }

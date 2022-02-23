@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CpuUtilizationResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.CustomMetricResponse;
 import io.pulumi.googlenative.appengine_v1beta.outputs.DiskUtilizationResponse;
@@ -334,7 +334,6 @@ public final class AutomaticScalingResponse {
             this.standardSchedulerSettings = Objects.requireNonNull(standardSchedulerSettings);
             return this;
         }
-
         public AutomaticScalingResponse build() {
             return new AutomaticScalingResponse(coolDownPeriod, cpuUtilization, customMetrics, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization, standardSchedulerSettings);
         }

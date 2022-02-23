@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.NonResourcePolicyRule;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.ResourcePolicyRule;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta2.outputs.Subject;
@@ -99,7 +99,6 @@ public final class PolicyRulesWithSubjects {
             this.subjects = Objects.requireNonNull(subjects);
             return this;
         }
-
         public PolicyRulesWithSubjects build() {
             return new PolicyRulesWithSubjects(nonResourceRules, resourceRules, subjects);
         }

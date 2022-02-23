@@ -11,8 +11,8 @@ import io.pulumi.azurenative.servicefabric.outputs.VaultSecretGroupResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -290,13 +290,6 @@ public class NodeType extends io.pulumi.resources.CustomResource {
         return this.vmSize;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NodeType(String name) {
-        super("azure-native:servicefabric:NodeType", name, NodeTypeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

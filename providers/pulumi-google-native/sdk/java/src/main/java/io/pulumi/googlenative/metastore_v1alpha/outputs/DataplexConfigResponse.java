@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class DataplexConfigResponse {
             this.lakeResources = Objects.requireNonNull(lakeResources);
             return this;
         }
-
         public DataplexConfigResponse build() {
             return new DataplexConfigResponse(lakeResources);
         }

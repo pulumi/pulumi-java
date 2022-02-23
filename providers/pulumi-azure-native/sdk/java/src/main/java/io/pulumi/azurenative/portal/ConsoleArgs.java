@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal;
 
 import io.pulumi.azurenative.portal.inputs.ConsoleCreatePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consoleName")
-    private final @Nullable Input<String> consoleName;
+        private final @Nullable Input<String> consoleName;
 
     public Input<String> getConsoleName() {
         return this.consoleName == null ? Input.empty() : this.consoleName;
@@ -31,7 +31,7 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<ConsoleCreatePropertiesArgs> properties;
+        private final Input<ConsoleCreatePropertiesArgs> properties;
 
     public Input<ConsoleCreatePropertiesArgs> getProperties() {
         return this.properties;
@@ -90,7 +90,6 @@ public final class ConsoleArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public ConsoleArgs build() {
             return new ConsoleArgs(consoleName, properties);
         }

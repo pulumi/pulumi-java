@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesAssignmentGroupLabel;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesAssignmentOsType;
 import java.lang.String;
@@ -165,7 +165,6 @@ public final class GuestPoliciesAssignment {
             this.zones = zones;
             return this;
         }
-
         public GuestPoliciesAssignment build() {
             return new GuestPoliciesAssignment(groupLabels, instanceNamePrefixes, instances, osTypes, zones);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate;
 
 import io.pulumi.azurenative.migrate.inputs.CollectorPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class HyperVCollectorArgs extends io.pulumi.resources.ResourceArgs 
     public static final HyperVCollectorArgs Empty = new HyperVCollectorArgs();
 
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+        private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -27,7 +27,7 @@ public final class HyperVCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hyperVCollectorName")
-    private final @Nullable Input<String> hyperVCollectorName;
+        private final @Nullable Input<String> hyperVCollectorName;
 
     public Input<String> getHyperVCollectorName() {
         return this.hyperVCollectorName == null ? Input.empty() : this.hyperVCollectorName;
@@ -38,14 +38,14 @@ public final class HyperVCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+        private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<CollectorPropertiesArgs> properties;
+        private final @Nullable Input<CollectorPropertiesArgs> properties;
 
     public Input<CollectorPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -56,7 +56,7 @@ public final class HyperVCollectorArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -160,7 +160,6 @@ public final class HyperVCollectorArgs extends io.pulumi.resources.ResourceArgs 
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public HyperVCollectorArgs build() {
             return new HyperVCollectorArgs(eTag, hyperVCollectorName, projectName, properties, resourceGroupName);
         }

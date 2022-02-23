@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class TopicSchemaSettings {
             this.schema = Objects.requireNonNull(schema);
             return this;
         }
-
         public TopicSchemaSettings build() {
             return new TopicSchemaSettings(encoding, schema);
         }

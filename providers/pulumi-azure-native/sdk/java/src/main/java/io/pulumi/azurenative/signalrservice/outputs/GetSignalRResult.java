@@ -9,7 +9,7 @@ import io.pulumi.azurenative.signalrservice.outputs.ServerlessUpstreamSettingsRe
 import io.pulumi.azurenative.signalrservice.outputs.SignalRCorsSettingsResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRFeatureResponse;
 import io.pulumi.azurenative.signalrservice.outputs.SignalRNetworkACLsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -454,7 +454,6 @@ public final class GetSignalRResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetSignalRResult build() {
             return new GetSignalRResult(cors, externalIP, features, hostName, hostNamePrefix, id, kind, location, name, networkACLs, privateEndpointConnections, provisioningState, publicPort, serverPort, sku, tags, type, upstream, version);
         }

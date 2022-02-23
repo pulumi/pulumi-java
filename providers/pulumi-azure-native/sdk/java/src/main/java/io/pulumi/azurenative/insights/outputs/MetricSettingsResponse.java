@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.RetentionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class MetricSettingsResponse {
             this.timeGrain = timeGrain;
             return this;
         }
-
         public MetricSettingsResponse build() {
             return new MetricSettingsResponse(category, enabled, retentionPolicy, timeGrain);
         }

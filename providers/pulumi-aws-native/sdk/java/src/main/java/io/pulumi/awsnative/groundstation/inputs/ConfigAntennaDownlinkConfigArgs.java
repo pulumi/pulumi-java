@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.ConfigSpectrumConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
     public static final ConfigAntennaDownlinkConfigArgs Empty = new ConfigAntennaDownlinkConfigArgs();
 
     @InputImport(name="spectrumConfig")
-    private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
+        private final @Nullable Input<ConfigSpectrumConfigArgs> spectrumConfig;
 
     public Input<ConfigSpectrumConfigArgs> getSpectrumConfig() {
         return this.spectrumConfig == null ? Input.empty() : this.spectrumConfig;
@@ -58,7 +58,6 @@ public final class ConfigAntennaDownlinkConfigArgs extends io.pulumi.resources.R
             this.spectrumConfig = Input.ofNullable(spectrumConfig);
             return this;
         }
-
         public ConfigAntennaDownlinkConfigArgs build() {
             return new ConfigAntennaDownlinkConfigArgs(spectrumConfig);
         }

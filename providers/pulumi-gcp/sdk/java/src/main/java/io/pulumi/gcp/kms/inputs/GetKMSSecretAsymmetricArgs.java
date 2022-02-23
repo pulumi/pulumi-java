@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ciphertext", required=true)
-    private final String ciphertext;
+        private final String ciphertext;
 
     public String getCiphertext() {
         return this.ciphertext;
@@ -30,7 +30,7 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="crc32")
-    private final @Nullable String crc32;
+        private final @Nullable String crc32;
 
     public Optional<String> getCrc32() {
         return this.crc32 == null ? Optional.empty() : Optional.ofNullable(this.crc32);
@@ -43,7 +43,7 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="cryptoKeyVersion", required=true)
-    private final String cryptoKeyVersion;
+        private final String cryptoKeyVersion;
 
     public String getCryptoKeyVersion() {
         return this.cryptoKeyVersion;
@@ -102,7 +102,6 @@ public final class GetKMSSecretAsymmetricArgs extends io.pulumi.resources.Invoke
             this.cryptoKeyVersion = Objects.requireNonNull(cryptoKeyVersion);
             return this;
         }
-
         public GetKMSSecretAsymmetricArgs build() {
             return new GetKMSSecretAsymmetricArgs(ciphertext, crc32, cryptoKeyVersion);
         }

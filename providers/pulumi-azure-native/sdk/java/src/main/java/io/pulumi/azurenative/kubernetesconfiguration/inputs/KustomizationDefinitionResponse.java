@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kubernetesconfiguration.inputs;
 
 import io.pulumi.azurenative.kubernetesconfiguration.inputs.DependsOnDefinitionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<DependsOnDefinitionResponse> dependsOn;
+        private final @Nullable List<DependsOnDefinitionResponse> dependsOn;
 
     public List<DependsOnDefinitionResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -38,7 +38,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="force")
-    private final @Nullable Boolean force;
+        private final @Nullable Boolean force;
 
     public Optional<Boolean> getForce() {
         return this.force == null ? Optional.empty() : Optional.ofNullable(this.force);
@@ -49,7 +49,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -60,7 +60,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="prune")
-    private final @Nullable Boolean prune;
+        private final @Nullable Boolean prune;
 
     public Optional<Boolean> getPrune() {
         return this.prune == null ? Optional.empty() : Optional.ofNullable(this.prune);
@@ -71,7 +71,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="retryIntervalInSeconds")
-    private final @Nullable Double retryIntervalInSeconds;
+        private final @Nullable Double retryIntervalInSeconds;
 
     public Optional<Double> getRetryIntervalInSeconds() {
         return this.retryIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.retryIntervalInSeconds);
@@ -82,7 +82,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="syncIntervalInSeconds")
-    private final @Nullable Double syncIntervalInSeconds;
+        private final @Nullable Double syncIntervalInSeconds;
 
     public Optional<Double> getSyncIntervalInSeconds() {
         return this.syncIntervalInSeconds == null ? Optional.empty() : Optional.ofNullable(this.syncIntervalInSeconds);
@@ -93,7 +93,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeoutInSeconds")
-    private final @Nullable Double timeoutInSeconds;
+        private final @Nullable Double timeoutInSeconds;
 
     public Optional<Double> getTimeoutInSeconds() {
         return this.timeoutInSeconds == null ? Optional.empty() : Optional.ofNullable(this.timeoutInSeconds);
@@ -104,7 +104,7 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable String validation;
+        private final @Nullable String validation;
 
     public Optional<String> getValidation() {
         return this.validation == null ? Optional.empty() : Optional.ofNullable(this.validation);
@@ -213,7 +213,6 @@ public final class KustomizationDefinitionResponse extends io.pulumi.resources.I
             this.validation = validation;
             return this;
         }
-
         public KustomizationDefinitionResponse build() {
             return new KustomizationDefinitionResponse(dependsOn, force, path, prune, retryIntervalInSeconds, syncIntervalInSeconds, timeoutInSeconds, validation);
         }

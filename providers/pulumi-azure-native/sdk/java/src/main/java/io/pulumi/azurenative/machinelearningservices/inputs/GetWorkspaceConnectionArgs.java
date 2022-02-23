@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="connectionName", required=true)
-    private final String connectionName;
+        private final String connectionName;
 
     public String getConnectionName() {
         return this.connectionName;
@@ -28,7 +28,7 @@ public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetWorkspaceConnectionArgs extends io.pulumi.resources.Invoke
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetWorkspaceConnectionArgs build() {
             return new GetWorkspaceConnectionArgs(connectionName, resourceGroupName, workspaceName);
         }

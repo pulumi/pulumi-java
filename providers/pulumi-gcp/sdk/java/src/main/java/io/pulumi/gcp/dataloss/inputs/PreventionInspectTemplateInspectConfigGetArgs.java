@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigInfoTypeGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsGetArgs;
@@ -26,7 +26,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="contentOptions")
-    private final @Nullable Input<List<String>> contentOptions;
+        private final @Nullable Input<List<String>> contentOptions;
 
     public Input<List<String>> getContentOptions() {
         return this.contentOptions == null ? Input.empty() : this.contentOptions;
@@ -38,7 +38,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="customInfoTypes")
-    private final @Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
+        private final @Nullable Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> customInfoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigCustomInfoTypeGetArgs>> getCustomInfoTypes() {
         return this.customInfoTypes == null ? Input.empty() : this.customInfoTypes;
@@ -50,7 +50,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="excludeInfoTypes")
-    private final @Nullable Input<Boolean> excludeInfoTypes;
+        private final @Nullable Input<Boolean> excludeInfoTypes;
 
     public Input<Boolean> getExcludeInfoTypes() {
         return this.excludeInfoTypes == null ? Input.empty() : this.excludeInfoTypes;
@@ -61,7 +61,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="includeQuote")
-    private final @Nullable Input<Boolean> includeQuote;
+        private final @Nullable Input<Boolean> includeQuote;
 
     public Input<Boolean> getIncludeQuote() {
         return this.includeQuote == null ? Input.empty() : this.includeQuote;
@@ -73,7 +73,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="infoTypes")
-    private final @Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
+        private final @Nullable Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> infoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigInfoTypeGetArgs>> getInfoTypes() {
         return this.infoTypes == null ? Input.empty() : this.infoTypes;
@@ -85,7 +85,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="limits")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> limits;
 
     public Input<PreventionInspectTemplateInspectConfigLimitsGetArgs> getLimits() {
         return this.limits == null ? Input.empty() : this.limits;
@@ -98,7 +98,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="minLikelihood")
-    private final @Nullable Input<String> minLikelihood;
+        private final @Nullable Input<String> minLikelihood;
 
     public Input<String> getMinLikelihood() {
         return this.minLikelihood == null ? Input.empty() : this.minLikelihood;
@@ -111,7 +111,7 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
      * 
      */
     @InputImport(name="ruleSets")
-    private final @Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
+        private final @Nullable Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> ruleSets;
 
     public Input<List<PreventionInspectTemplateInspectConfigRuleSetGetArgs>> getRuleSets() {
         return this.ruleSets == null ? Input.empty() : this.ruleSets;
@@ -260,7 +260,6 @@ public final class PreventionInspectTemplateInspectConfigGetArgs extends io.pulu
             this.ruleSets = Input.ofNullable(ruleSets);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigGetArgs build() {
             return new PreventionInspectTemplateInspectConfigGetArgs(contentOptions, customInfoTypes, excludeInfoTypes, includeQuote, infoTypes, limits, minLikelihood, ruleSets);
         }

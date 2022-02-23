@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sql.outputs.GetCaCertsCert;
 import java.lang.String;
 import java.util.List;
@@ -123,7 +123,6 @@ public final class GetCaCertsResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetCaCertsResult build() {
             return new GetCaCertsResult(activeVersion, certs, id, instance, project);
         }

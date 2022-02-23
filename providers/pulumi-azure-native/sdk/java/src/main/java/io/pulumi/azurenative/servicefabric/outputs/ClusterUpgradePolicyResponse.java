@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.outputs;
 
 import io.pulumi.azurenative.servicefabric.outputs.ClusterHealthPolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ClusterUpgradeDeltaHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class ClusterUpgradePolicyResponse {
             this.upgradeTimeout = Objects.requireNonNull(upgradeTimeout);
             return this;
         }
-
         public ClusterUpgradePolicyResponse build() {
             return new ClusterUpgradePolicyResponse(deltaHealthPolicy, forceRestart, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, healthPolicy, upgradeDomainTimeout, upgradeReplicaSetCheckTimeout, upgradeTimeout);
         }

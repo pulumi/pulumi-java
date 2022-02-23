@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="digest")
-    private final @Nullable String digest;
+        private final @Nullable String digest;
 
     public Optional<String> getDigest() {
         return this.digest == null ? Optional.empty() : Optional.ofNullable(this.digest);
@@ -35,7 +35,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="length")
-    private final @Nullable Double length;
+        private final @Nullable Double length;
 
     public Optional<Double> getLength() {
         return this.length == null ? Optional.empty() : Optional.ofNullable(this.length);
@@ -46,7 +46,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mediaType")
-    private final @Nullable String mediaType;
+        private final @Nullable String mediaType;
 
     public Optional<String> getMediaType() {
         return this.mediaType == null ? Optional.empty() : Optional.ofNullable(this.mediaType);
@@ -57,7 +57,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -68,7 +68,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable String repository;
+        private final @Nullable String repository;
 
     public Optional<String> getRepository() {
         return this.repository == null ? Optional.empty() : Optional.ofNullable(this.repository);
@@ -79,7 +79,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Double size;
+        private final @Nullable Double size;
 
     public Optional<Double> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -90,7 +90,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable String tag;
+        private final @Nullable String tag;
 
     public Optional<String> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -101,7 +101,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -112,7 +112,7 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -231,7 +231,6 @@ public final class TargetResponse extends io.pulumi.resources.InvokeArgs {
             this.version = version;
             return this;
         }
-
         public TargetResponse build() {
             return new TargetResponse(digest, length, mediaType, name, repository, size, tag, url, version);
         }

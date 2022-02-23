@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -61,7 +61,6 @@ public final class EgressOnlyInternetGatewayArgs extends io.pulumi.resources.Res
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public EgressOnlyInternetGatewayArgs build() {
             return new EgressOnlyInternetGatewayArgs(vpcId);
         }

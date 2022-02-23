@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datastore_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastore_v1.IndexArgs;
 import io.pulumi.googlenative.datastore_v1.outputs.GoogleDatastoreAdminV1IndexedPropertyResponse;
@@ -106,13 +106,6 @@ public class Index extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Index(String name) {
-        super("google-native:datastore/v1:Index", name, IndexArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

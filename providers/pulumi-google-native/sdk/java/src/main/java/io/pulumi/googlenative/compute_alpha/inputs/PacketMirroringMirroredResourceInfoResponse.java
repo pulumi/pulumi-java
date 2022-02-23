@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.PacketMirroringMirroredResourceInfoInstanceInfoResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.PacketMirroringMirroredResourceInfoSubnetInfoResponse;
 import java.lang.String;
@@ -20,7 +20,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
+      private final List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> instances;
 
     public List<PacketMirroringMirroredResourceInfoInstanceInfoResponse> getInstances() {
         return this.instances;
@@ -31,7 +31,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="subnetworks", required=true)
-    private final List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
+      private final List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> subnetworks;
 
     public List<PacketMirroringMirroredResourceInfoSubnetInfoResponse> getSubnetworks() {
         return this.subnetworks;
@@ -42,7 +42,7 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
      * 
      */
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+      private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
@@ -101,7 +101,6 @@ public final class PacketMirroringMirroredResourceInfoResponse extends io.pulumi
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public PacketMirroringMirroredResourceInfoResponse build() {
             return new PacketMirroringMirroredResourceInfoResponse(instances, subnetworks, tags);
         }

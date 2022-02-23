@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.SqlAclEntryResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class SqlIpConfigResponse {
             this.requireSsl = Objects.requireNonNull(requireSsl);
             return this;
         }
-
         public SqlIpConfigResponse build() {
             return new SqlIpConfigResponse(authorizedNetworks, enableIpv4, privateNetwork, requireSsl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ArtifactRuleResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.SigningKeyResponse;
 import java.lang.String;
@@ -153,7 +153,6 @@ public final class InTotoResponse {
             this.threshold = Objects.requireNonNull(threshold);
             return this;
         }
-
         public InTotoResponse build() {
             return new InTotoResponse(expectedCommand, expectedMaterials, expectedProducts, signingKeys, stepName, threshold);
         }

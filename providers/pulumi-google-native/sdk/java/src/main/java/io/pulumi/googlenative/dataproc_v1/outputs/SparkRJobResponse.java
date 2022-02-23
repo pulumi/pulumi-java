@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.LoggingConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -161,7 +161,6 @@ public final class SparkRJobResponse {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public SparkRJobResponse build() {
             return new SparkRJobResponse(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }

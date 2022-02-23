@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logz.inputs;
 
 import io.pulumi.azurenative.logz.inputs.MetricRulesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
     public static final MetricsTagRulesPropertiesArgs Empty = new MetricsTagRulesPropertiesArgs();
 
     @InputImport(name="metricRules")
-    private final @Nullable Input<List<MetricRulesArgs>> metricRules;
+        private final @Nullable Input<List<MetricRulesArgs>> metricRules;
 
     public Input<List<MetricRulesArgs>> getMetricRules() {
         return this.metricRules == null ? Input.empty() : this.metricRules;
@@ -32,7 +32,7 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sendMetrics")
-    private final @Nullable Input<Boolean> sendMetrics;
+        private final @Nullable Input<Boolean> sendMetrics;
 
     public Input<Boolean> getSendMetrics() {
         return this.sendMetrics == null ? Input.empty() : this.sendMetrics;
@@ -91,7 +91,6 @@ public final class MetricsTagRulesPropertiesArgs extends io.pulumi.resources.Res
             this.sendMetrics = Input.ofNullable(sendMetrics);
             return this;
         }
-
         public MetricsTagRulesPropertiesArgs build() {
             return new MetricsTagRulesPropertiesArgs(metricRules, sendMetrics);
         }

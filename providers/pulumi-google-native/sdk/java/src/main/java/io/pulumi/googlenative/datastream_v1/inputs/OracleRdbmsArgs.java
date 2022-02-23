@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datastream_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleSchemaArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oracleSchemas")
-    private final @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
+      private final @Nullable Input<List<OracleSchemaArgs>> oracleSchemas;
 
     public Input<List<OracleSchemaArgs>> getOracleSchemas() {
         return this.oracleSchemas == null ? Input.empty() : this.oracleSchemas;
@@ -67,7 +67,6 @@ public final class OracleRdbmsArgs extends io.pulumi.resources.ResourceArgs {
             this.oracleSchemas = Input.ofNullable(oracleSchemas);
             return this;
         }
-
         public OracleRdbmsArgs build() {
             return new OracleRdbmsArgs(oracleSchemas);
         }

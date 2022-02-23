@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.MachineImageIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<MachineImageIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<MachineImageIamMemberConditionGetArgs> condition;
 
     public Input<MachineImageIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,7 +32,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -43,14 +43,14 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="machineImage")
-    private final @Nullable Input<String> machineImage;
+        private final @Nullable Input<String> machineImage;
 
     public Input<String> getMachineImage() {
         return this.machineImage == null ? Input.empty() : this.machineImage;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -62,7 +62,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -75,7 +75,7 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -194,7 +194,6 @@ public final class MachineImageIamMemberState extends io.pulumi.resources.Resour
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public MachineImageIamMemberState build() {
             return new MachineImageIamMemberState(condition, etag, machineImage, member, project, role);
         }

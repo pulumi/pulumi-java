@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class RuleGroupLabelSummary {
             this.name = name;
             return this;
         }
-
         public RuleGroupLabelSummary build() {
             return new RuleGroupLabelSummary(name);
         }

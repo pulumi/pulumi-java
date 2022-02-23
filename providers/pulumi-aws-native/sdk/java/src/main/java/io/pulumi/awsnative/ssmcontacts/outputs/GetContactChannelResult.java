@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ssmcontacts.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class GetContactChannelResult {
             this.deferActivation = deferActivation;
             return this;
         }
-
         public GetContactChannelResult build() {
             return new GetContactChannelResult(arn, channelAddress, channelName, deferActivation);
         }

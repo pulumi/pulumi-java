@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceColumnDefinition;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceSubresources;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.outputs.CustomResourceValidation;
@@ -207,7 +207,6 @@ public final class CustomResourceDefinitionVersion {
             this.subresources = subresources;
             return this;
         }
-
         public CustomResourceDefinitionVersion build() {
             return new CustomResourceDefinitionVersion(additionalPrinterColumns, deprecated, deprecationWarning, name, schema, served, storage, subresources);
         }

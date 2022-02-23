@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunRequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineRunResponseResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -205,7 +205,6 @@ public final class GetPipelineRunResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineRunResult build() {
             return new GetPipelineRunResult(forceUpdateTag, id, name, provisioningState, request, response, systemData, type);
         }

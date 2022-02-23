@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ServerCertificateCommonNameResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="commonNames")
-    private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
+        private final @Nullable List<ServerCertificateCommonNameResponse> commonNames;
 
     public List<ServerCertificateCommonNameResponse> getCommonNames() {
         return this.commonNames == null ? List.of() : this.commonNames;
@@ -36,7 +36,7 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="x509StoreName")
-    private final @Nullable String x509StoreName;
+        private final @Nullable String x509StoreName;
 
     public Optional<String> getX509StoreName() {
         return this.x509StoreName == null ? Optional.empty() : Optional.ofNullable(this.x509StoreName);
@@ -85,7 +85,6 @@ public final class ServerCertificateCommonNamesResponse extends io.pulumi.resour
             this.x509StoreName = x509StoreName;
             return this;
         }
-
         public ServerCertificateCommonNamesResponse build() {
             return new ServerCertificateCommonNamesResponse(commonNames, x509StoreName);
         }

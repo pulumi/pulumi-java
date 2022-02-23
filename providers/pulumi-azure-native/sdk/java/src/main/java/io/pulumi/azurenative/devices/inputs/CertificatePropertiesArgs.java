@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificate")
-    private final @Nullable Input<String> certificate;
+        private final @Nullable Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate == null ? Input.empty() : this.certificate;
@@ -66,7 +66,6 @@ public final class CertificatePropertiesArgs extends io.pulumi.resources.Resourc
             this.certificate = Input.ofNullable(certificate);
             return this;
         }
-
         public CertificatePropertiesArgs build() {
             return new CertificatePropertiesArgs(certificate);
         }

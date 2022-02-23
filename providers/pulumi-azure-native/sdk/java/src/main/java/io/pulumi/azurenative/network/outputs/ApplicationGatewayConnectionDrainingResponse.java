@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ApplicationGatewayConnectionDrainingResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public ApplicationGatewayConnectionDrainingResponse build() {
             return new ApplicationGatewayConnectionDrainingResponse(drainTimeoutInSec, enabled);
         }

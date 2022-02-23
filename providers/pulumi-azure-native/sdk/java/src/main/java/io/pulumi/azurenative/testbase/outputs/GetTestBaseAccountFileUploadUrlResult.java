@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GetTestBaseAccountFileUploadUrlResult {
             this.uploadUrl = Objects.requireNonNull(uploadUrl);
             return this;
         }
-
         public GetTestBaseAccountFileUploadUrlResult build() {
             return new GetTestBaseAccountFileUploadUrlResult(blobPath, uploadUrl);
         }

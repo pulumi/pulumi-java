@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
     public static final GetRegionSslCertificateArgs Empty = new GetRegionSslCertificateArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="sslCertificate", required=true)
-    private final String sslCertificate;
+      private final String sslCertificate;
 
     public String getSslCertificate() {
         return this.sslCertificate;
@@ -88,7 +88,6 @@ public final class GetRegionSslCertificateArgs extends io.pulumi.resources.Invok
             this.sslCertificate = Objects.requireNonNull(sslCertificate);
             return this;
         }
-
         public GetRegionSslCertificateArgs build() {
             return new GetRegionSslCertificateArgs(project, region, sslCertificate);
         }

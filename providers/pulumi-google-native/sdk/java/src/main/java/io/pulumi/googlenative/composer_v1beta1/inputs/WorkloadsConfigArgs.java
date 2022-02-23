@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.inputs.SchedulerResourceArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WebServerResourceArgs;
 import io.pulumi.googlenative.composer_v1beta1.inputs.WorkerResourceArgs;
@@ -25,7 +25,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scheduler")
-    private final @Nullable Input<SchedulerResourceArgs> scheduler;
+      private final @Nullable Input<SchedulerResourceArgs> scheduler;
 
     public Input<SchedulerResourceArgs> getScheduler() {
         return this.scheduler == null ? Input.empty() : this.scheduler;
@@ -36,7 +36,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="webServer")
-    private final @Nullable Input<WebServerResourceArgs> webServer;
+      private final @Nullable Input<WebServerResourceArgs> webServer;
 
     public Input<WebServerResourceArgs> getWebServer() {
         return this.webServer == null ? Input.empty() : this.webServer;
@@ -47,7 +47,7 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="worker")
-    private final @Nullable Input<WorkerResourceArgs> worker;
+      private final @Nullable Input<WorkerResourceArgs> worker;
 
     public Input<WorkerResourceArgs> getWorker() {
         return this.worker == null ? Input.empty() : this.worker;
@@ -121,7 +121,6 @@ public final class WorkloadsConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.worker = Input.ofNullable(worker);
             return this;
         }
-
         public WorkloadsConfigArgs build() {
             return new WorkloadsConfigArgs(scheduler, webServer, worker);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PersistentDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mountPath")
-    private final @Nullable Input<String> mountPath;
+        private final @Nullable Input<String> mountPath;
 
     public Input<String> getMountPath() {
         return this.mountPath == null ? Input.empty() : this.mountPath;
@@ -35,7 +35,7 @@ public final class PersistentDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizeInGB")
-    private final @Nullable Input<Integer> sizeInGB;
+        private final @Nullable Input<Integer> sizeInGB;
 
     public Input<Integer> getSizeInGB() {
         return this.sizeInGB == null ? Input.empty() : this.sizeInGB;
@@ -94,7 +94,6 @@ public final class PersistentDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.sizeInGB = Input.ofNullable(sizeInGB);
             return this;
         }
-
         public PersistentDiskArgs build() {
             return new PersistentDiskArgs(mountPath, sizeInGB);
         }

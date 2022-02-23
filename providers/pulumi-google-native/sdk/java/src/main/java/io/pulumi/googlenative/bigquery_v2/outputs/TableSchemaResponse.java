@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableFieldSchemaResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class TableSchemaResponse {
             this.fields = Objects.requireNonNull(fields);
             return this;
         }
-
         public TableSchemaResponse build() {
             return new TableSchemaResponse(fields);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.imagebuilder.outputs;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionAmiDistributionConfigurationProperties;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationDistributionContainerDistributionConfigurationProperties;
 import io.pulumi.awsnative.imagebuilder.outputs.DistributionConfigurationLaunchTemplateConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -143,7 +143,6 @@ public final class DistributionConfigurationDistribution {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public DistributionConfigurationDistribution build() {
             return new DistributionConfigurationDistribution(amiDistributionConfiguration, containerDistributionConfiguration, launchTemplateConfigurations, licenseConfigurationArns, region);
         }

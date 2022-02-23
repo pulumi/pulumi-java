@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InspectConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="inspectConfig", required=true)
-    private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
+      private final GooglePrivacyDlpV2InspectConfigResponse inspectConfig;
 
     public GooglePrivacyDlpV2InspectConfigResponse getInspectConfig() {
         return this.inspectConfig;
@@ -66,7 +66,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -166,7 +166,6 @@ public final class GooglePrivacyDlpV2InspectTemplateResponse extends io.pulumi.r
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectTemplateResponse build() {
             return new GooglePrivacyDlpV2InspectTemplateResponse(createTime, description, displayName, inspectConfig, name, updateTime);
         }

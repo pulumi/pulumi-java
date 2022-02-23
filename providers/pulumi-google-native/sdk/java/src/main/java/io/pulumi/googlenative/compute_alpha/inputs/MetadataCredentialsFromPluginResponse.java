@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="structConfig", required=true)
-    private final String structConfig;
+      private final String structConfig;
 
     public String getStructConfig() {
         return this.structConfig;
@@ -81,7 +81,6 @@ public final class MetadataCredentialsFromPluginResponse extends io.pulumi.resou
             this.structConfig = Objects.requireNonNull(structConfig);
             return this;
         }
-
         public MetadataCredentialsFromPluginResponse build() {
             return new MetadataCredentialsFromPluginResponse(name, structConfig);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs exte
      * 
      */
     @InputImport(name="fixedDelay")
-    private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
+        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> fixedDelay;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayFixedDelayGetArgs> getFixedDelay() {
         return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
@@ -33,7 +33,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs exte
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+        private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -92,7 +92,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs exte
             this.percentage = Input.ofNullable(percentage);
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs(fixedDelay, percentage);
         }

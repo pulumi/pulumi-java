@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.enums.TrackPropertyCompareOperation;
 import io.pulumi.azurenative.media.enums.TrackPropertyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operation", required=true)
-    private final Input<Either<String,TrackPropertyCompareOperation>> operation;
+        private final Input<Either<String,TrackPropertyCompareOperation>> operation;
 
     public Input<Either<String,TrackPropertyCompareOperation>> getOperation() {
         return this.operation;
@@ -37,7 +37,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="property", required=true)
-    private final Input<Either<String,TrackPropertyType>> property;
+        private final Input<Either<String,TrackPropertyType>> property;
 
     public Input<Either<String,TrackPropertyType>> getProperty() {
         return this.property;
@@ -48,7 +48,7 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -122,7 +122,6 @@ public final class TrackPropertyConditionArgs extends io.pulumi.resources.Resour
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TrackPropertyConditionArgs build() {
             return new TrackPropertyConditionArgs(operation, property, value);
         }

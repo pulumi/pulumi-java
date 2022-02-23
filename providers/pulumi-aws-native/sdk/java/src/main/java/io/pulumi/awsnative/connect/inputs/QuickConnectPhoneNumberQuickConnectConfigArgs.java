@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class QuickConnectPhoneNumberQuickConnectConfigArgs extends io.pulu
     public static final QuickConnectPhoneNumberQuickConnectConfigArgs Empty = new QuickConnectPhoneNumberQuickConnectConfigArgs();
 
     @InputImport(name="phoneNumber", required=true)
-    private final Input<String> phoneNumber;
+        private final Input<String> phoneNumber;
 
     public Input<String> getPhoneNumber() {
         return this.phoneNumber;
@@ -61,7 +61,6 @@ public final class QuickConnectPhoneNumberQuickConnectConfigArgs extends io.pulu
             this.phoneNumber = Input.of(Objects.requireNonNull(phoneNumber));
             return this;
         }
-
         public QuickConnectPhoneNumberQuickConnectConfigArgs build() {
             return new QuickConnectPhoneNumberQuickConnectConfigArgs(phoneNumber);
         }

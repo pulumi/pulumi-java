@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class AndroidMatrixResponse {
             this.orientations = Objects.requireNonNull(orientations);
             return this;
         }
-
         public AndroidMatrixResponse build() {
             return new AndroidMatrixResponse(androidModelIds, androidVersionIds, locales, orientations);
         }

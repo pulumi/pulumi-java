@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.HDInsightResponseProperties;
 import io.pulumi.azurenative.machinelearningservices.outputs.MachineLearningServiceErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -200,7 +200,6 @@ public final class HDInsightResponse {
             this.resourceId = resourceId;
             return this;
         }
-
         public HDInsightResponse build() {
             return new HDInsightResponse(computeLocation, computeType, description, isAttachedCompute, properties, provisioningErrors, provisioningState, resourceId);
         }

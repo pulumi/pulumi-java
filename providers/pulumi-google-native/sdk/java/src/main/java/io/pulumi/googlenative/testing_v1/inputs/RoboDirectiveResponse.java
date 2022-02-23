@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final String actionType;
+      private final String actionType;
 
     public String getActionType() {
         return this.actionType;
@@ -32,7 +32,7 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="inputText", required=true)
-    private final String inputText;
+      private final String inputText;
 
     public String getInputText() {
         return this.inputText;
@@ -43,7 +43,7 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+      private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -102,7 +102,6 @@ public final class RoboDirectiveResponse extends io.pulumi.resources.InvokeArgs 
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public RoboDirectiveResponse build() {
             return new RoboDirectiveResponse(actionType, inputText, resourceName);
         }

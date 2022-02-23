@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuCapabilityArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuZoneDetailArgs Empty = new SkuZoneDetailArgs();
 
     @InputImport(name="capabilities")
-    private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
+        private final @Nullable Input<List<SkuCapabilityArgs>> capabilities;
 
     public Input<List<SkuCapabilityArgs>> getCapabilities() {
         return this.capabilities == null ? Input.empty() : this.capabilities;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<List<String>> name;
+        private final @Nullable Input<List<String>> name;
 
     public Input<List<String>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -83,7 +83,6 @@ public final class SkuZoneDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public SkuZoneDetailArgs build() {
             return new SkuZoneDetailArgs(capabilities, name);
         }

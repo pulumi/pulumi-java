@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigPublicKey;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigSubjectConfig;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509Config;
@@ -103,7 +103,6 @@ public final class CertificateConfig {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public CertificateConfig build() {
             return new CertificateConfig(publicKey, subjectConfig, x509Config);
         }

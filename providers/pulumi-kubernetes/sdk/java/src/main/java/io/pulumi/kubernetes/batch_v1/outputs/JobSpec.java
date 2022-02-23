@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Boolean;
@@ -264,7 +264,6 @@ public final class JobSpec {
             this.ttlSecondsAfterFinished = ttlSecondsAfterFinished;
             return this;
         }
-
         public JobSpec build() {
             return new JobSpec(activeDeadlineSeconds, backoffLimit, completionMode, completions, manualSelector, parallelism, selector, suspend, template, ttlSecondsAfterFinished);
         }

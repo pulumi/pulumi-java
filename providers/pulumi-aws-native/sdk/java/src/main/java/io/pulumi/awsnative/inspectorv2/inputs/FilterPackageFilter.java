@@ -5,7 +5,7 @@ package io.pulumi.awsnative.inspectorv2.inputs;
 
 import io.pulumi.awsnative.inspectorv2.inputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.inputs.FilterStringFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,42 +16,42 @@ public final class FilterPackageFilter extends io.pulumi.resources.InvokeArgs {
     public static final FilterPackageFilter Empty = new FilterPackageFilter();
 
     @InputImport(name="architecture")
-    private final @Nullable FilterStringFilter architecture;
+        private final @Nullable FilterStringFilter architecture;
 
     public Optional<FilterStringFilter> getArchitecture() {
         return this.architecture == null ? Optional.empty() : Optional.ofNullable(this.architecture);
     }
 
     @InputImport(name="epoch")
-    private final @Nullable FilterNumberFilter epoch;
+        private final @Nullable FilterNumberFilter epoch;
 
     public Optional<FilterNumberFilter> getEpoch() {
         return this.epoch == null ? Optional.empty() : Optional.ofNullable(this.epoch);
     }
 
     @InputImport(name="name")
-    private final @Nullable FilterStringFilter name;
+        private final @Nullable FilterStringFilter name;
 
     public Optional<FilterStringFilter> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
     }
 
     @InputImport(name="release")
-    private final @Nullable FilterStringFilter release;
+        private final @Nullable FilterStringFilter release;
 
     public Optional<FilterStringFilter> getRelease() {
         return this.release == null ? Optional.empty() : Optional.ofNullable(this.release);
     }
 
     @InputImport(name="sourceLayerHash")
-    private final @Nullable FilterStringFilter sourceLayerHash;
+        private final @Nullable FilterStringFilter sourceLayerHash;
 
     public Optional<FilterStringFilter> getSourceLayerHash() {
         return this.sourceLayerHash == null ? Optional.empty() : Optional.ofNullable(this.sourceLayerHash);
     }
 
     @InputImport(name="version")
-    private final @Nullable FilterStringFilter version;
+        private final @Nullable FilterStringFilter version;
 
     public Optional<FilterStringFilter> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -140,7 +140,6 @@ public final class FilterPackageFilter extends io.pulumi.resources.InvokeArgs {
             this.version = version;
             return this;
         }
-
         public FilterPackageFilter build() {
             return new FilterPackageFilter(architecture, epoch, name, release, sourceLayerHash, version);
         }

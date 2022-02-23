@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -32,7 +32,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="urlMask", required=true)
-    private final String urlMask;
+      private final String urlMask;
 
     public String getUrlMask() {
         return this.urlMask;
@@ -43,7 +43,7 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -102,7 +102,6 @@ public final class NetworkEndpointGroupAppEngineResponse extends io.pulumi.resou
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public NetworkEndpointGroupAppEngineResponse build() {
             return new NetworkEndpointGroupAppEngineResponse(service, urlMask, version);
         }

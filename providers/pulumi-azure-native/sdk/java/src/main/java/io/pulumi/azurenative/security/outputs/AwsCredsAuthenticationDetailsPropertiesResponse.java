@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class AwsCredsAuthenticationDetailsPropertiesResponse {
             this.grantedPermissions = Objects.requireNonNull(grantedPermissions);
             return this;
         }
-
         public AwsCredsAuthenticationDetailsPropertiesResponse build() {
             return new AwsCredsAuthenticationDetailsPropertiesResponse(accountId, authenticationProvisioningState, authenticationType, awsAccessKeyId, awsSecretAccessKey, grantedPermissions);
         }

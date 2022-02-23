@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.FeatureSettingsResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.IdentityAwareProxyResponse;
 import io.pulumi.googlenative.appengine_v1.outputs.UrlDispatchRuleResponse;
@@ -322,7 +322,6 @@ public final class GetAppResult {
             this.servingStatus = Objects.requireNonNull(servingStatus);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(authDomain, codeBucket, databaseType, defaultBucket, defaultCookieExpiration, defaultHostname, dispatchRules, featureSettings, gcrDomain, iap, location, name, serviceAccount, servingStatus);
         }

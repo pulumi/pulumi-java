@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="allowedExitCodes")
-    private final @Nullable Input<List<Integer>> allowedExitCodes;
+        private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -32,7 +32,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="args")
-    private final @Nullable Input<List<String>> args;
+        private final @Nullable Input<List<String>> args;
 
     public Input<List<String>> getArgs() {
         return this.args == null ? Input.empty() : this.args;
@@ -43,7 +43,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="artifactId")
-    private final @Nullable Input<String> artifactId;
+        private final @Nullable Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId == null ? Input.empty() : this.artifactId;
@@ -54,7 +54,7 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends io.pulum
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+        private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -143,7 +143,6 @@ public final class GuestPoliciesRecipeUpdateStepFileExecGetArgs extends io.pulum
             this.localPath = Input.ofNullable(localPath);
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepFileExecGetArgs build() {
             return new GuestPoliciesRecipeUpdateStepFileExecGetArgs(allowedExitCodes, args, artifactId, localPath);
         }

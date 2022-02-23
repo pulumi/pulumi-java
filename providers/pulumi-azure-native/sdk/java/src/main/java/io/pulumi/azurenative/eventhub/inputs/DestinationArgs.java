@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveNameFormat")
-    private final @Nullable Input<String> archiveNameFormat;
+        private final @Nullable Input<String> archiveNameFormat;
 
     public Input<String> getArchiveNameFormat() {
         return this.archiveNameFormat == null ? Input.empty() : this.archiveNameFormat;
@@ -34,7 +34,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blobContainer")
-    private final @Nullable Input<String> blobContainer;
+        private final @Nullable Input<String> blobContainer;
 
     public Input<String> getBlobContainer() {
         return this.blobContainer == null ? Input.empty() : this.blobContainer;
@@ -45,7 +45,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountResourceId")
-    private final @Nullable Input<String> storageAccountResourceId;
+        private final @Nullable Input<String> storageAccountResourceId;
 
     public Input<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId == null ? Input.empty() : this.storageAccountResourceId;
@@ -145,7 +145,6 @@ public final class DestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.storageAccountResourceId = Input.ofNullable(storageAccountResourceId);
             return this;
         }
-
         public DestinationArgs build() {
             return new DestinationArgs(archiveNameFormat, blobContainer, name, storageAccountResourceId);
         }

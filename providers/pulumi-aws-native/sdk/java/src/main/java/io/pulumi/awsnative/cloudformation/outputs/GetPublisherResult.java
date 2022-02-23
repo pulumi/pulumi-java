@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.PublisherIdentityProvider;
 import io.pulumi.awsnative.cloudformation.enums.PublisherStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class GetPublisherResult {
             this.publisherStatus = publisherStatus;
             return this;
         }
-
         public GetPublisherResult build() {
             return new GetPublisherResult(identityProvider, publisherId, publisherProfile, publisherStatus);
         }

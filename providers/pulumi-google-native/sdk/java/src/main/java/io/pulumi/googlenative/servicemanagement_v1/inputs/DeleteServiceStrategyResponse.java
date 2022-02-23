@@ -34,7 +34,6 @@ public final class DeleteServiceStrategyResponse extends io.pulumi.resources.Inv
         public Builder(DeleteServiceStrategyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DeleteServiceStrategyResponse build() {
             return new DeleteServiceStrategyResponse();
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.customerprofiles.outputs;
 import io.pulumi.awsnative.customerprofiles.enums.IntegrationConnectorType;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationIncrementalPullConfig;
 import io.pulumi.awsnative.customerprofiles.outputs.IntegrationSourceConnectorProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -89,7 +89,6 @@ public final class IntegrationSourceFlowConfig {
             this.sourceConnectorProperties = Objects.requireNonNull(sourceConnectorProperties);
             return this;
         }
-
         public IntegrationSourceFlowConfig build() {
             return new IntegrationSourceFlowConfig(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }

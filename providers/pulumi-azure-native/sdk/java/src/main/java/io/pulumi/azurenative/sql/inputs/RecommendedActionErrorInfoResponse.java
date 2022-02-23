@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="errorCode", required=true)
-    private final String errorCode;
+        private final String errorCode;
 
     public String getErrorCode() {
         return this.errorCode;
@@ -32,7 +32,7 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="isRetryable", required=true)
-    private final String isRetryable;
+        private final String isRetryable;
 
     public String getIsRetryable() {
         return this.isRetryable;
@@ -81,7 +81,6 @@ public final class RecommendedActionErrorInfoResponse extends io.pulumi.resource
             this.isRetryable = Objects.requireNonNull(isRetryable);
             return this;
         }
-
         public RecommendedActionErrorInfoResponse build() {
             return new RecommendedActionErrorInfoResponse(errorCode, isRetryable);
         }

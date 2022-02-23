@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
     public static final ServiceEndpointArgs Empty = new ServiceEndpointArgs();
 
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -81,7 +81,6 @@ public final class ServiceEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ServiceEndpointArgs build() {
             return new ServiceEndpointArgs(address, name);
         }

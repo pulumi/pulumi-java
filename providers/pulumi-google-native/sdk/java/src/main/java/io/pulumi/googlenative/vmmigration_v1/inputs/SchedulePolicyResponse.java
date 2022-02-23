@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="idleDuration", required=true)
-    private final String idleDuration;
+      private final String idleDuration;
 
     public String getIdleDuration() {
         return this.idleDuration;
@@ -33,7 +33,7 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="skipOsAdaptation", required=true)
-    private final Boolean skipOsAdaptation;
+      private final Boolean skipOsAdaptation;
 
     public Boolean getSkipOsAdaptation() {
         return this.skipOsAdaptation;
@@ -82,7 +82,6 @@ public final class SchedulePolicyResponse extends io.pulumi.resources.InvokeArgs
             this.skipOsAdaptation = Objects.requireNonNull(skipOsAdaptation);
             return this;
         }
-
         public SchedulePolicyResponse build() {
             return new SchedulePolicyResponse(idleDuration, skipOsAdaptation);
         }

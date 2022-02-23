@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -36,7 +36,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="correlationId")
-    private final @Nullable Input<String> correlationId;
+        private final @Nullable Input<String> correlationId;
 
     public Input<String> getCorrelationId() {
         return this.correlationId == null ? Input.empty() : this.correlationId;
@@ -47,7 +47,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="label")
-    private final @Nullable Input<String> label;
+        private final @Nullable Input<String> label;
 
     public Input<String> getLabel() {
         return this.label == null ? Input.empty() : this.label;
@@ -58,7 +58,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="messageId")
-    private final @Nullable Input<String> messageId;
+        private final @Nullable Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId == null ? Input.empty() : this.messageId;
@@ -69,7 +69,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -80,7 +80,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replyTo")
-    private final @Nullable Input<String> replyTo;
+        private final @Nullable Input<String> replyTo;
 
     public Input<String> getReplyTo() {
         return this.replyTo == null ? Input.empty() : this.replyTo;
@@ -91,7 +91,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="replyToSessionId")
-    private final @Nullable Input<String> replyToSessionId;
+        private final @Nullable Input<String> replyToSessionId;
 
     public Input<String> getReplyToSessionId() {
         return this.replyToSessionId == null ? Input.empty() : this.replyToSessionId;
@@ -102,7 +102,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="requiresPreprocessing")
-    private final @Nullable Input<Boolean> requiresPreprocessing;
+        private final @Nullable Input<Boolean> requiresPreprocessing;
 
     public Input<Boolean> getRequiresPreprocessing() {
         return this.requiresPreprocessing == null ? Input.empty() : this.requiresPreprocessing;
@@ -113,7 +113,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sessionId")
-    private final @Nullable Input<String> sessionId;
+        private final @Nullable Input<String> sessionId;
 
     public Input<String> getSessionId() {
         return this.sessionId == null ? Input.empty() : this.sessionId;
@@ -124,7 +124,7 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="to")
-    private final @Nullable Input<String> to;
+        private final @Nullable Input<String> to;
 
     public Input<String> getTo() {
         return this.to == null ? Input.empty() : this.to;
@@ -303,7 +303,6 @@ public final class CorrelationFilterArgs extends io.pulumi.resources.ResourceArg
             this.to = Input.ofNullable(to);
             return this;
         }
-
         public CorrelationFilterArgs build() {
             return new CorrelationFilterArgs(contentType, correlationId, label, messageId, properties, replyTo, replyToSessionId, requiresPreprocessing, sessionId, to);
         }

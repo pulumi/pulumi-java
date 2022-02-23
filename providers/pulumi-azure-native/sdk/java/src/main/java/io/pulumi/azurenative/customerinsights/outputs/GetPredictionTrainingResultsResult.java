@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.CanonicalProfileDefinitionResponse;
 import io.pulumi.azurenative.customerinsights.outputs.PredictionDistributionDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -141,7 +141,6 @@ public final class GetPredictionTrainingResultsResult {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public GetPredictionTrainingResultsResult build() {
             return new GetPredictionTrainingResultsResult(canonicalProfiles, predictionDistribution, primaryProfileInstanceCount, scoreName, tenantId);
         }

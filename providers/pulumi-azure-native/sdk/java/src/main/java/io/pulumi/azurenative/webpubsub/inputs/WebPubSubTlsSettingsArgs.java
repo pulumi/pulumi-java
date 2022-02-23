@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clientCertEnabled")
-    private final @Nullable Input<Boolean> clientCertEnabled;
+        private final @Nullable Input<Boolean> clientCertEnabled;
 
     public Input<Boolean> getClientCertEnabled() {
         return this.clientCertEnabled == null ? Input.empty() : this.clientCertEnabled;
@@ -66,7 +66,6 @@ public final class WebPubSubTlsSettingsArgs extends io.pulumi.resources.Resource
             this.clientCertEnabled = Input.ofNullable(clientCertEnabled);
             return this;
         }
-
         public WebPubSubTlsSettingsArgs build() {
             return new WebPubSubTlsSettingsArgs(clientCertEnabled);
         }

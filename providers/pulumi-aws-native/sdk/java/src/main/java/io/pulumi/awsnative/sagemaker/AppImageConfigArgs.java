@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigKernelGatewayImageConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppImageConfigTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appImageConfigName")
-    private final @Nullable Input<String> appImageConfigName;
+        private final @Nullable Input<String> appImageConfigName;
 
     public Input<String> getAppImageConfigName() {
         return this.appImageConfigName == null ? Input.empty() : this.appImageConfigName;
@@ -33,7 +33,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kernelGatewayImageConfig")
-    private final @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
+        private final @Nullable Input<AppImageConfigKernelGatewayImageConfigArgs> kernelGatewayImageConfig;
 
     public Input<AppImageConfigKernelGatewayImageConfigArgs> getKernelGatewayImageConfig() {
         return this.kernelGatewayImageConfig == null ? Input.empty() : this.kernelGatewayImageConfig;
@@ -44,7 +44,7 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AppImageConfigTagArgs>> tags;
+        private final @Nullable Input<List<AppImageConfigTagArgs>> tags;
 
     public Input<List<AppImageConfigTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class AppImageConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AppImageConfigArgs build() {
             return new AppImageConfigArgs(appImageConfigName, kernelGatewayImageConfig, tags);
         }

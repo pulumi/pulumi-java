@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.FeaturesPolicy;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,7 +16,7 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io
     public static final ResourceTypeRegistrationPropertiesFeaturesRuleArgs Empty = new ResourceTypeRegistrationPropertiesFeaturesRuleArgs();
 
     @InputImport(name="requiredFeaturesPolicy", required=true)
-    private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
+        private final Input<Either<String,FeaturesPolicy>> requiredFeaturesPolicy;
 
     public Input<Either<String,FeaturesPolicy>> getRequiredFeaturesPolicy() {
         return this.requiredFeaturesPolicy;
@@ -59,7 +59,6 @@ public final class ResourceTypeRegistrationPropertiesFeaturesRuleArgs extends io
             this.requiredFeaturesPolicy = Input.of(Objects.requireNonNull(requiredFeaturesPolicy));
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesFeaturesRuleArgs build() {
             return new ResourceTypeRegistrationPropertiesFeaturesRuleArgs(requiredFeaturesPolicy);
         }

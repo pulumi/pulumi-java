@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetectionBaseEjectionTime;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceOutlierDetectionInterval;
 import java.lang.Integer;
@@ -323,7 +323,6 @@ public final class RegionBackendServiceOutlierDetection {
             this.successRateStdevFactor = successRateStdevFactor;
             return this;
         }
-
         public RegionBackendServiceOutlierDetection build() {
             return new RegionBackendServiceOutlierDetection(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

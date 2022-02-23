@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.composer_v1beta1.inputs.IPAllocationPolicyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -38,7 +38,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIpMasqAgent")
-    private final @Nullable Input<Boolean> enableIpMasqAgent;
+      private final @Nullable Input<Boolean> enableIpMasqAgent;
 
     public Input<Boolean> getEnableIpMasqAgent() {
         return this.enableIpMasqAgent == null ? Input.empty() : this.enableIpMasqAgent;
@@ -49,7 +49,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocationPolicy")
-    private final @Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy;
+      private final @Nullable Input<IPAllocationPolicyArgs> ipAllocationPolicy;
 
     public Input<IPAllocationPolicyArgs> getIpAllocationPolicy() {
         return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
@@ -60,7 +60,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -71,7 +71,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -82,7 +82,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxPodsPerNode")
-    private final @Nullable Input<Integer> maxPodsPerNode;
+      private final @Nullable Input<Integer> maxPodsPerNode;
 
     public Input<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
@@ -93,7 +93,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -104,7 +104,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauthScopes")
-    private final @Nullable Input<List<String>> oauthScopes;
+      private final @Nullable Input<List<String>> oauthScopes;
 
     public Input<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
@@ -115,7 +115,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -126,7 +126,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -137,7 +137,7 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -331,7 +331,6 @@ public final class NodeConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NodeConfigArgs build() {
             return new NodeConfigArgs(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, location, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags);
         }

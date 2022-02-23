@@ -6,7 +6,7 @@ package io.pulumi.azurenative.quantum.inputs;
 import io.pulumi.azurenative.quantum.enums.ResourceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ResourceIdentityType>> type;
+        private final @Nullable Input<Either<String,ResourceIdentityType>> type;
 
     public Input<Either<String,ResourceIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -68,7 +68,6 @@ public final class QuantumWorkspaceIdentityArgs extends io.pulumi.resources.Reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public QuantumWorkspaceIdentityArgs build() {
             return new QuantumWorkspaceIdentityArgs(type);
         }

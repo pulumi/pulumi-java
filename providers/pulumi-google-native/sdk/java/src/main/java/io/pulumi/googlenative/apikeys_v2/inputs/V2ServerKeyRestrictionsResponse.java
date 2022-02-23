@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="allowedIps", required=true)
-    private final List<String> allowedIps;
+      private final List<String> allowedIps;
 
     public List<String> getAllowedIps() {
         return this.allowedIps;
@@ -60,7 +60,6 @@ public final class V2ServerKeyRestrictionsResponse extends io.pulumi.resources.I
             this.allowedIps = Objects.requireNonNull(allowedIps);
             return this;
         }
-
         public V2ServerKeyRestrictionsResponse build() {
             return new V2ServerKeyRestrictionsResponse(allowedIps);
         }

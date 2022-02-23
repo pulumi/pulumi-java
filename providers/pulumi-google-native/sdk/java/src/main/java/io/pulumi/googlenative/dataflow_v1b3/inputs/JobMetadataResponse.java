@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigQueryIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.BigTableIODetailsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DatastoreIODetailsResponse;
@@ -28,7 +28,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bigTableDetails", required=true)
-    private final List<BigTableIODetailsResponse> bigTableDetails;
+      private final List<BigTableIODetailsResponse> bigTableDetails;
 
     public List<BigTableIODetailsResponse> getBigTableDetails() {
         return this.bigTableDetails;
@@ -39,7 +39,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bigqueryDetails", required=true)
-    private final List<BigQueryIODetailsResponse> bigqueryDetails;
+      private final List<BigQueryIODetailsResponse> bigqueryDetails;
 
     public List<BigQueryIODetailsResponse> getBigqueryDetails() {
         return this.bigqueryDetails;
@@ -50,7 +50,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datastoreDetails", required=true)
-    private final List<DatastoreIODetailsResponse> datastoreDetails;
+      private final List<DatastoreIODetailsResponse> datastoreDetails;
 
     public List<DatastoreIODetailsResponse> getDatastoreDetails() {
         return this.datastoreDetails;
@@ -61,7 +61,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileDetails", required=true)
-    private final List<FileIODetailsResponse> fileDetails;
+      private final List<FileIODetailsResponse> fileDetails;
 
     public List<FileIODetailsResponse> getFileDetails() {
         return this.fileDetails;
@@ -72,7 +72,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pubsubDetails", required=true)
-    private final List<PubSubIODetailsResponse> pubsubDetails;
+      private final List<PubSubIODetailsResponse> pubsubDetails;
 
     public List<PubSubIODetailsResponse> getPubsubDetails() {
         return this.pubsubDetails;
@@ -83,7 +83,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sdkVersion", required=true)
-    private final SdkVersionResponse sdkVersion;
+      private final SdkVersionResponse sdkVersion;
 
     public SdkVersionResponse getSdkVersion() {
         return this.sdkVersion;
@@ -94,7 +94,7 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="spannerDetails", required=true)
-    private final List<SpannerIODetailsResponse> spannerDetails;
+      private final List<SpannerIODetailsResponse> spannerDetails;
 
     public List<SpannerIODetailsResponse> getSpannerDetails() {
         return this.spannerDetails;
@@ -193,7 +193,6 @@ public final class JobMetadataResponse extends io.pulumi.resources.InvokeArgs {
             this.spannerDetails = Objects.requireNonNull(spannerDetails);
             return this;
         }
-
         public JobMetadataResponse build() {
             return new JobMetadataResponse(bigTableDetails, bigqueryDetails, datastoreDetails, fileDetails, pubsubDetails, sdkVersion, spannerDetails);
         }

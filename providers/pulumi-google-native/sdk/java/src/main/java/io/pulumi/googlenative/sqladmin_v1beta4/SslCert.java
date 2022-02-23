@@ -5,8 +5,8 @@ package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.sqladmin_v1beta4.SslCertArgs;
 import java.lang.String;
@@ -146,13 +146,6 @@ public class SslCert extends io.pulumi.resources.CustomResource {
         return this.sha1Fingerprint;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SslCert(String name) {
-        super("google-native:sqladmin/v1beta4:SslCert", name, SslCertArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

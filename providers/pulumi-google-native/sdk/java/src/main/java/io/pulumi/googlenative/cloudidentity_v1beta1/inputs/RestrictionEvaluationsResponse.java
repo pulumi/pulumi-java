@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.MembershipRoleRestrictionEvaluationResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="memberRestrictionEvaluation", required=true)
-    private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
+      private final MembershipRoleRestrictionEvaluationResponse memberRestrictionEvaluation;
 
     public MembershipRoleRestrictionEvaluationResponse getMemberRestrictionEvaluation() {
         return this.memberRestrictionEvaluation;
@@ -59,7 +59,6 @@ public final class RestrictionEvaluationsResponse extends io.pulumi.resources.In
             this.memberRestrictionEvaluation = Objects.requireNonNull(memberRestrictionEvaluation);
             return this;
         }
-
         public RestrictionEvaluationsResponse build() {
             return new RestrictionEvaluationsResponse(memberRestrictionEvaluation);
         }

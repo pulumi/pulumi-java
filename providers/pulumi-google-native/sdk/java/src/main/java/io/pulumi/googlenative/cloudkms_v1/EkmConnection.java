@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.EkmConnectionArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ServiceResolverResponse;
@@ -80,13 +80,6 @@ public class EkmConnection extends io.pulumi.resources.CustomResource {
         return this.serviceResolvers;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EkmConnection(String name) {
-        super("google-native:cloudkms/v1:EkmConnection", name, EkmConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

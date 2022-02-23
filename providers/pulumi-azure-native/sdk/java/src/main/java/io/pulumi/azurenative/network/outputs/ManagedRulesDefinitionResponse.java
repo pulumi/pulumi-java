@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ManagedRuleSetResponse;
 import io.pulumi.azurenative.network.outputs.OwaspCrsExclusionEntryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class ManagedRulesDefinitionResponse {
             this.managedRuleSets = Objects.requireNonNull(managedRuleSets);
             return this;
         }
-
         public ManagedRulesDefinitionResponse build() {
             return new ManagedRulesDefinitionResponse(exclusions, managedRuleSets);
         }

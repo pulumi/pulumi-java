@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends io.pulumi
      * 
      */
     @InputImport(name="certificateArn", required=true)
-    private final String certificateArn;
+        private final String certificateArn;
 
     public String getCertificateArn() {
         return this.certificateArn;
@@ -28,7 +28,7 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends io.pulumi
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -77,7 +77,6 @@ public final class GetEnclaveCertificateIamRoleAssociationArgs extends io.pulumi
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public GetEnclaveCertificateIamRoleAssociationArgs build() {
             return new GetEnclaveCertificateIamRoleAssociationArgs(certificateArn, roleArn);
         }

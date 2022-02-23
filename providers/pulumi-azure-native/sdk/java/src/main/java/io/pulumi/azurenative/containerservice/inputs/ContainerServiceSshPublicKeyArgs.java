@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="keyData", required=true)
-    private final Input<String> keyData;
+        private final Input<String> keyData;
 
     public Input<String> getKeyData() {
         return this.keyData;
@@ -65,7 +65,6 @@ public final class ContainerServiceSshPublicKeyArgs extends io.pulumi.resources.
             this.keyData = Input.of(Objects.requireNonNull(keyData));
             return this;
         }
-
         public ContainerServiceSshPublicKeyArgs build() {
             return new ContainerServiceSshPublicKeyArgs(keyData);
         }

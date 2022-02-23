@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainer;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecVolume;
 import java.lang.Integer;
@@ -17,42 +17,42 @@ public final class GetServiceTemplateSpec extends io.pulumi.resources.InvokeArgs
     public static final GetServiceTemplateSpec Empty = new GetServiceTemplateSpec();
 
     @InputImport(name="containerConcurrency", required=true)
-    private final Integer containerConcurrency;
+        private final Integer containerConcurrency;
 
     public Integer getContainerConcurrency() {
         return this.containerConcurrency;
     }
 
     @InputImport(name="containers", required=true)
-    private final List<GetServiceTemplateSpecContainer> containers;
+        private final List<GetServiceTemplateSpecContainer> containers;
 
     public List<GetServiceTemplateSpecContainer> getContainers() {
         return this.containers;
     }
 
     @InputImport(name="serviceAccountName", required=true)
-    private final String serviceAccountName;
+        private final String serviceAccountName;
 
     public String getServiceAccountName() {
         return this.serviceAccountName;
     }
 
     @InputImport(name="servingState", required=true)
-    private final String servingState;
+        private final String servingState;
 
     public String getServingState() {
         return this.servingState;
     }
 
     @InputImport(name="timeoutSeconds", required=true)
-    private final Integer timeoutSeconds;
+        private final Integer timeoutSeconds;
 
     public Integer getTimeoutSeconds() {
         return this.timeoutSeconds;
     }
 
     @InputImport(name="volumes", required=true)
-    private final List<GetServiceTemplateSpecVolume> volumes;
+        private final List<GetServiceTemplateSpecVolume> volumes;
 
     public List<GetServiceTemplateSpecVolume> getVolumes() {
         return this.volumes;
@@ -141,7 +141,6 @@ public final class GetServiceTemplateSpec extends io.pulumi.resources.InvokeArgs
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public GetServiceTemplateSpec build() {
             return new GetServiceTemplateSpec(containerConcurrency, containers, serviceAccountName, servingState, timeoutSeconds, volumes);
         }

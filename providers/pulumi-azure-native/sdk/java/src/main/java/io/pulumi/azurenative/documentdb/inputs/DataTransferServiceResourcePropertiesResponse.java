@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.DataTransferRegionalServiceResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final String creationTime;
+        private final String creationTime;
 
     public String getCreationTime() {
         return this.creationTime;
@@ -37,7 +37,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="instanceCount")
-    private final @Nullable Integer instanceCount;
+        private final @Nullable Integer instanceCount;
 
     public Optional<Integer> getInstanceCount() {
         return this.instanceCount == null ? Optional.empty() : Optional.ofNullable(this.instanceCount);
@@ -48,7 +48,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="instanceSize")
-    private final @Nullable String instanceSize;
+        private final @Nullable String instanceSize;
 
     public Optional<String> getInstanceSize() {
         return this.instanceSize == null ? Optional.empty() : Optional.ofNullable(this.instanceSize);
@@ -59,7 +59,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="locations", required=true)
-    private final List<DataTransferRegionalServiceResourceResponse> locations;
+        private final List<DataTransferRegionalServiceResourceResponse> locations;
 
     public List<DataTransferRegionalServiceResourceResponse> getLocations() {
         return this.locations;
@@ -71,7 +71,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="serviceType", required=true)
-    private final String serviceType;
+        private final String serviceType;
 
     public String getServiceType() {
         return this.serviceType;
@@ -82,7 +82,7 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -171,7 +171,6 @@ public final class DataTransferServiceResourcePropertiesResponse extends io.pulu
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataTransferServiceResourcePropertiesResponse build() {
             return new DataTransferServiceResourcePropertiesResponse(creationTime, instanceCount, instanceSize, locations, serviceType, status);
         }

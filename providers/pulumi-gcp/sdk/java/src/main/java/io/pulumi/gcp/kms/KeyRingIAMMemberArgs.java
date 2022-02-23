@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.kms.inputs.KeyRingIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<KeyRingIAMMemberConditionArgs> condition;
+        private final @Nullable Input<KeyRingIAMMemberConditionArgs> condition;
 
     public Input<KeyRingIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -35,14 +35,14 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+        private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -55,7 +55,7 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -144,7 +144,6 @@ public final class KeyRingIAMMemberArgs extends io.pulumi.resources.ResourceArgs
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public KeyRingIAMMemberArgs build() {
             return new KeyRingIAMMemberArgs(condition, keyRingId, member, role);
         }

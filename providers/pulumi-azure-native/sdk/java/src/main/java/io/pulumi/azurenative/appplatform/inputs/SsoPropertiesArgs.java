@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable Input<String> clientId;
+        private final @Nullable Input<String> clientId;
 
     public Input<String> getClientId() {
         return this.clientId == null ? Input.empty() : this.clientId;
@@ -35,7 +35,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable Input<String> clientSecret;
+        private final @Nullable Input<String> clientSecret;
 
     public Input<String> getClientSecret() {
         return this.clientSecret == null ? Input.empty() : this.clientSecret;
@@ -46,7 +46,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuerUri")
-    private final @Nullable Input<String> issuerUri;
+        private final @Nullable Input<String> issuerUri;
 
     public Input<String> getIssuerUri() {
         return this.issuerUri == null ? Input.empty() : this.issuerUri;
@@ -57,7 +57,7 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<List<String>> scope;
+        private final @Nullable Input<List<String>> scope;
 
     public Input<List<String>> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -146,7 +146,6 @@ public final class SsoPropertiesArgs extends io.pulumi.resources.ResourceArgs {
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public SsoPropertiesArgs build() {
             return new SsoPropertiesArgs(clientId, clientSecret, issuerUri, scope);
         }

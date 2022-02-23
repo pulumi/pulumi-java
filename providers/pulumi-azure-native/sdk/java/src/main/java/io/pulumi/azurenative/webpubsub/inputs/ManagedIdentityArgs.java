@@ -6,7 +6,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 import io.pulumi.azurenative.webpubsub.enums.ManagedIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ManagedIdentityType>> type;
+        private final @Nullable Input<Either<String,ManagedIdentityType>> type;
 
     public Input<Either<String,ManagedIdentityType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -38,7 +38,7 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -97,7 +97,6 @@ public final class ManagedIdentityArgs extends io.pulumi.resources.ResourceArgs 
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public ManagedIdentityArgs build() {
             return new ManagedIdentityArgs(type, userAssignedIdentities);
         }

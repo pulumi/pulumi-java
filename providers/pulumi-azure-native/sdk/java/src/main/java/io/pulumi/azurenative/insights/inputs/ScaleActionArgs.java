@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.inputs;
 import io.pulumi.azurenative.insights.enums.ScaleDirection;
 import io.pulumi.azurenative.insights.enums.ScaleType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cooldown", required=true)
-    private final Input<String> cooldown;
+        private final Input<String> cooldown;
 
     public Input<String> getCooldown() {
         return this.cooldown;
@@ -36,7 +36,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-    private final Input<ScaleDirection> direction;
+        private final Input<ScaleDirection> direction;
 
     public Input<ScaleDirection> getDirection() {
         return this.direction;
@@ -47,7 +47,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ScaleType> type;
+        private final Input<ScaleType> type;
 
     public Input<ScaleType> getType() {
         return this.type;
@@ -58,7 +58,7 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -147,7 +147,6 @@ public final class ScaleActionArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public ScaleActionArgs build() {
             return new ScaleActionArgs(cooldown, direction, type, value);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.memcache_v1.outputs.MemcacheParametersResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class NodeResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public NodeResponse build() {
             return new NodeResponse(host, nodeId, parameters, port, state, zone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -99,7 +99,6 @@ public final class ManagedClusterAPIServerAccessProfileResponse {
             this.privateDNSZone = privateDNSZone;
             return this;
         }
-
         public ManagedClusterAPIServerAccessProfileResponse build() {
             return new ManagedClusterAPIServerAccessProfileResponse(authorizedIPRanges, enablePrivateCluster, privateDNSZone);
         }

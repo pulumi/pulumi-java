@@ -7,7 +7,7 @@ import io.pulumi.awsnative.databrew.inputs.RecipeParameterMapArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeParametersArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,14 +22,14 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operation", required=true)
-    private final Input<String> operation;
+        private final Input<String> operation;
 
     public Input<String> getOperation() {
         return this.operation;
     }
 
     @InputImport(name="parameters")
-    private final @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
+        private final @Nullable Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> parameters;
 
     public Input<Either<RecipeParametersArgs,RecipeParameterMapArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -88,7 +88,6 @@ public final class RecipeActionArgs extends io.pulumi.resources.ResourceArgs {
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public RecipeActionArgs build() {
             return new RecipeActionArgs(operation, parameters);
         }

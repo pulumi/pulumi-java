@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.VpnConnectionResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayIpConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.VpnGatewayNatRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -337,7 +337,6 @@ public final class GetVpnGatewayResult {
             this.vpnGatewayScaleUnit = vpnGatewayScaleUnit;
             return this;
         }
-
         public GetVpnGatewayResult build() {
             return new GetVpnGatewayResult(bgpSettings, connections, etag, id, ipConfigurations, isRoutingPreferenceInternet, location, name, natRules, provisioningState, tags, type, virtualHub, vpnGatewayScaleUnit);
         }

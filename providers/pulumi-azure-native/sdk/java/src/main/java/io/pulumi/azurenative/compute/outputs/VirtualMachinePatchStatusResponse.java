@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.AvailablePatchSummaryResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.LastPatchInstallationSummaryResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -100,7 +100,6 @@ public final class VirtualMachinePatchStatusResponse {
             this.lastPatchInstallationSummary = lastPatchInstallationSummary;
             return this;
         }
-
         public VirtualMachinePatchStatusResponse build() {
             return new VirtualMachinePatchStatusResponse(availablePatchSummary, configurationStatuses, lastPatchInstallationSummary);
         }

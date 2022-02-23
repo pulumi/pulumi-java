@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.LinuxConfigurationArgs;
 import io.pulumi.azurenative.compute.inputs.VaultSecretGroupArgs;
 import io.pulumi.azurenative.compute.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable Input<String> adminPassword;
+        private final @Nullable Input<String> adminPassword;
 
     public Input<String> getAdminPassword() {
         return this.adminPassword == null ? Input.empty() : this.adminPassword;
@@ -39,7 +39,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="adminUsername")
-    private final @Nullable Input<String> adminUsername;
+        private final @Nullable Input<String> adminUsername;
 
     public Input<String> getAdminUsername() {
         return this.adminUsername == null ? Input.empty() : this.adminUsername;
@@ -50,7 +50,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowExtensionOperations")
-    private final @Nullable Input<Boolean> allowExtensionOperations;
+        private final @Nullable Input<Boolean> allowExtensionOperations;
 
     public Input<Boolean> getAllowExtensionOperations() {
         return this.allowExtensionOperations == null ? Input.empty() : this.allowExtensionOperations;
@@ -61,7 +61,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable Input<String> computerName;
+        private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -72,7 +72,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customData")
-    private final @Nullable Input<String> customData;
+        private final @Nullable Input<String> customData;
 
     public Input<String> getCustomData() {
         return this.customData == null ? Input.empty() : this.customData;
@@ -83,7 +83,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linuxConfiguration")
-    private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
+        private final @Nullable Input<LinuxConfigurationArgs> linuxConfiguration;
 
     public Input<LinuxConfigurationArgs> getLinuxConfiguration() {
         return this.linuxConfiguration == null ? Input.empty() : this.linuxConfiguration;
@@ -94,7 +94,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireGuestProvisionSignal")
-    private final @Nullable Input<Boolean> requireGuestProvisionSignal;
+        private final @Nullable Input<Boolean> requireGuestProvisionSignal;
 
     public Input<Boolean> getRequireGuestProvisionSignal() {
         return this.requireGuestProvisionSignal == null ? Input.empty() : this.requireGuestProvisionSignal;
@@ -105,7 +105,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<VaultSecretGroupArgs>> secrets;
+        private final @Nullable Input<List<VaultSecretGroupArgs>> secrets;
 
     public Input<List<VaultSecretGroupArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -116,7 +116,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsConfiguration")
-    private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+        private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
 
     public Input<WindowsConfigurationArgs> getWindowsConfiguration() {
         return this.windowsConfiguration == null ? Input.empty() : this.windowsConfiguration;
@@ -280,7 +280,6 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
             return this;
         }
-
         public OSProfileArgs build() {
             return new OSProfileArgs(adminPassword, adminUsername, allowExtensionOperations, computerName, customData, linuxConfiguration, requireGuestProvisionSignal, secrets, windowsConfiguration);
         }

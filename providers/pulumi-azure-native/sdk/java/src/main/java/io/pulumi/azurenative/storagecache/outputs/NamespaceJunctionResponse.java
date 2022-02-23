@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class NamespaceJunctionResponse {
             this.targetPath = targetPath;
             return this;
         }
-
         public NamespaceJunctionResponse build() {
             return new NamespaceJunctionResponse(namespacePath, nfsAccessPolicy, nfsExport, targetPath);
         }

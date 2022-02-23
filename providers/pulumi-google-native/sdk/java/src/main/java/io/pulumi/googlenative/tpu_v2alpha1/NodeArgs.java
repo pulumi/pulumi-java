@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.tpu_v2alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.tpu_v2alpha1.enums.NodeHealth;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.AttachedDiskArgs;
 import io.pulumi.googlenative.tpu_v2alpha1.inputs.NetworkConfigArgs;
@@ -26,7 +26,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType", required=true)
-    private final Input<String> acceleratorType;
+      private final Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType;
@@ -37,7 +37,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+      private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -48,7 +48,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable Input<List<AttachedDiskArgs>> dataDisks;
+      private final @Nullable Input<List<AttachedDiskArgs>> dataDisks;
 
     public Input<List<AttachedDiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -59,7 +59,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="health")
-    private final @Nullable Input<NodeHealth> health;
+      private final @Nullable Input<NodeHealth> health;
 
     public Input<NodeHealth> getHealth() {
         return this.health == null ? Input.empty() : this.health;
@@ -81,14 +81,14 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -99,7 +99,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -110,21 +110,21 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
     public Input<NetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
     }
 
     @InputImport(name="nodeId")
-    private final @Nullable Input<String> nodeId;
+      private final @Nullable Input<String> nodeId;
 
     public Input<String> getNodeId() {
         return this.nodeId == null ? Input.empty() : this.nodeId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -135,7 +135,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="runtimeVersion", required=true)
-    private final Input<String> runtimeVersion;
+      private final Input<String> runtimeVersion;
 
     public Input<String> getRuntimeVersion() {
         return this.runtimeVersion;
@@ -146,7 +146,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingConfig")
-    private final @Nullable Input<SchedulingConfigArgs> schedulingConfig;
+      private final @Nullable Input<SchedulingConfigArgs> schedulingConfig;
 
     public Input<SchedulingConfigArgs> getSchedulingConfig() {
         return this.schedulingConfig == null ? Input.empty() : this.schedulingConfig;
@@ -157,7 +157,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<ServiceAccountArgs> serviceAccount;
+      private final @Nullable Input<ServiceAccountArgs> serviceAccount;
 
     public Input<ServiceAccountArgs> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -168,7 +168,7 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -422,7 +422,6 @@ public final class NodeArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public NodeArgs build() {
             return new NodeArgs(acceleratorType, cidrBlock, dataDisks, description, health, labels, location, metadata, networkConfig, nodeId, project, runtimeVersion, schedulingConfig, serviceAccount, tags);
         }

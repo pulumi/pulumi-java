@@ -7,8 +7,8 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.netapp.VolumeArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import javax.annotation.Nullable;
 
@@ -35,13 +35,6 @@ public class Volume extends io.pulumi.resources.CustomResource {
         return this.usageThreshold;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Volume(String name) {
-        super("azure-native:netapp:Volume", name, VolumeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

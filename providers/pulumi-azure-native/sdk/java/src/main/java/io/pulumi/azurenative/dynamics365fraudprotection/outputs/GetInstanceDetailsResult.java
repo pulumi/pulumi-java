@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dynamics365fraudprotection.outputs;
 
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.DFPInstanceAdministratorsResponse;
 import io.pulumi.azurenative.dynamics365fraudprotection.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetInstanceDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetInstanceDetailsResult build() {
             return new GetInstanceDetailsResult(administration, id, location, name, provisioningState, systemData, tags, type);
         }

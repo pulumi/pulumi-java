@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse extends io.pulu
      * 
      */
     @InputImport(name="failoverPolicy")
-    private final @Nullable String failoverPolicy;
+        private final @Nullable String failoverPolicy;
 
     public Optional<String> getFailoverPolicy() {
         return this.failoverPolicy == null ? Optional.empty() : Optional.ofNullable(this.failoverPolicy);
@@ -61,7 +61,6 @@ public final class InstanceFailoverGroupReadOnlyEndpointResponse extends io.pulu
             this.failoverPolicy = failoverPolicy;
             return this;
         }
-
         public InstanceFailoverGroupReadOnlyEndpointResponse build() {
             return new InstanceFailoverGroupReadOnlyEndpointResponse(failoverPolicy);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.events.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -88,7 +88,6 @@ public final class GetArchiveResult {
             this.retentionDays = retentionDays;
             return this;
         }
-
         public GetArchiveResult build() {
             return new GetArchiveResult(arn, description, eventPattern, retentionDays);
         }

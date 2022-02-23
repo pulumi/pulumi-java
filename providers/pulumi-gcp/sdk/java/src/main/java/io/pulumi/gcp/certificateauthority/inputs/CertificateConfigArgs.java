@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigArgs;
@@ -21,7 +21,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final Input<CertificateConfigPublicKeyArgs> publicKey;
+        private final Input<CertificateConfigPublicKeyArgs> publicKey;
 
     public Input<CertificateConfigPublicKeyArgs> getPublicKey() {
         return this.publicKey;
@@ -33,7 +33,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-    private final Input<CertificateConfigSubjectConfigArgs> subjectConfig;
+        private final Input<CertificateConfigSubjectConfigArgs> subjectConfig;
 
     public Input<CertificateConfigSubjectConfigArgs> getSubjectConfig() {
         return this.subjectConfig;
@@ -45,7 +45,7 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="x509Config", required=true)
-    private final Input<CertificateConfigX509ConfigArgs> x509Config;
+        private final Input<CertificateConfigX509ConfigArgs> x509Config;
 
     public Input<CertificateConfigX509ConfigArgs> getX509Config() {
         return this.x509Config;
@@ -119,7 +119,6 @@ public final class CertificateConfigArgs extends io.pulumi.resources.ResourceArg
             this.x509Config = Input.of(Objects.requireNonNull(x509Config));
             return this;
         }
-
         public CertificateConfigArgs build() {
             return new CertificateConfigArgs(publicKey, subjectConfig, x509Config);
         }

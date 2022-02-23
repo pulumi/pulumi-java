@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.TargetEligibilityResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="availableLocalStorageInBytes")
-    private final @Nullable Double availableLocalStorageInBytes;
+        private final @Nullable Double availableLocalStorageInBytes;
 
     public Optional<Double> getAvailableLocalStorageInBytes() {
         return this.availableLocalStorageInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableLocalStorageInBytes);
@@ -37,7 +37,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="availableTieredStorageInBytes")
-    private final @Nullable Double availableTieredStorageInBytes;
+        private final @Nullable Double availableTieredStorageInBytes;
 
     public Optional<Double> getAvailableTieredStorageInBytes() {
         return this.availableTieredStorageInBytes == null ? Optional.empty() : Optional.ofNullable(this.availableTieredStorageInBytes);
@@ -48,7 +48,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dataContainersCount")
-    private final @Nullable Integer dataContainersCount;
+        private final @Nullable Integer dataContainersCount;
 
     public Optional<Integer> getDataContainersCount() {
         return this.dataContainersCount == null ? Optional.empty() : Optional.ofNullable(this.dataContainersCount);
@@ -59,7 +59,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deviceId")
-    private final @Nullable String deviceId;
+        private final @Nullable String deviceId;
 
     public Optional<String> getDeviceId() {
         return this.deviceId == null ? Optional.empty() : Optional.ofNullable(this.deviceId);
@@ -70,7 +70,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deviceLocation")
-    private final @Nullable String deviceLocation;
+        private final @Nullable String deviceLocation;
 
     public Optional<String> getDeviceLocation() {
         return this.deviceLocation == null ? Optional.empty() : Optional.ofNullable(this.deviceLocation);
@@ -81,7 +81,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deviceSoftwareVersion")
-    private final @Nullable String deviceSoftwareVersion;
+        private final @Nullable String deviceSoftwareVersion;
 
     public Optional<String> getDeviceSoftwareVersion() {
         return this.deviceSoftwareVersion == null ? Optional.empty() : Optional.ofNullable(this.deviceSoftwareVersion);
@@ -92,7 +92,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="deviceStatus")
-    private final @Nullable String deviceStatus;
+        private final @Nullable String deviceStatus;
 
     public Optional<String> getDeviceStatus() {
         return this.deviceStatus == null ? Optional.empty() : Optional.ofNullable(this.deviceStatus);
@@ -103,7 +103,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="eligibilityResult")
-    private final @Nullable TargetEligibilityResultResponse eligibilityResult;
+        private final @Nullable TargetEligibilityResultResponse eligibilityResult;
 
     public Optional<TargetEligibilityResultResponse> getEligibilityResult() {
         return this.eligibilityResult == null ? Optional.empty() : Optional.ofNullable(this.eligibilityResult);
@@ -114,7 +114,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="friendlyDeviceSoftwareVersion")
-    private final @Nullable String friendlyDeviceSoftwareVersion;
+        private final @Nullable String friendlyDeviceSoftwareVersion;
 
     public Optional<String> getFriendlyDeviceSoftwareVersion() {
         return this.friendlyDeviceSoftwareVersion == null ? Optional.empty() : Optional.ofNullable(this.friendlyDeviceSoftwareVersion);
@@ -125,7 +125,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="modelDescription")
-    private final @Nullable String modelDescription;
+        private final @Nullable String modelDescription;
 
     public Optional<String> getModelDescription() {
         return this.modelDescription == null ? Optional.empty() : Optional.ofNullable(this.modelDescription);
@@ -136,7 +136,7 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="volumesCount")
-    private final @Nullable Integer volumesCount;
+        private final @Nullable Integer volumesCount;
 
     public Optional<Integer> getVolumesCount() {
         return this.volumesCount == null ? Optional.empty() : Optional.ofNullable(this.volumesCount);
@@ -275,7 +275,6 @@ public final class FailoverTargetResponse extends io.pulumi.resources.InvokeArgs
             this.volumesCount = volumesCount;
             return this;
         }
-
         public FailoverTargetResponse build() {
             return new FailoverTargetResponse(availableLocalStorageInBytes, availableTieredStorageInBytes, dataContainersCount, deviceId, deviceLocation, deviceSoftwareVersion, deviceStatus, eligibilityResult, friendlyDeviceSoftwareVersion, modelDescription, volumesCount);
         }

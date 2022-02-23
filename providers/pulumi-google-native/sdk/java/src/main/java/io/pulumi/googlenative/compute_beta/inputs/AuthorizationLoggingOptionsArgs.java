@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.AuthorizationLoggingOptionsPermissionType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="permissionType")
-    private final @Nullable Input<AuthorizationLoggingOptionsPermissionType> permissionType;
+      private final @Nullable Input<AuthorizationLoggingOptionsPermissionType> permissionType;
 
     public Input<AuthorizationLoggingOptionsPermissionType> getPermissionType() {
         return this.permissionType == null ? Input.empty() : this.permissionType;
@@ -66,7 +66,6 @@ public final class AuthorizationLoggingOptionsArgs extends io.pulumi.resources.R
             this.permissionType = Input.ofNullable(permissionType);
             return this;
         }
-
         public AuthorizationLoggingOptionsArgs build() {
             return new AuthorizationLoggingOptionsArgs(permissionType);
         }

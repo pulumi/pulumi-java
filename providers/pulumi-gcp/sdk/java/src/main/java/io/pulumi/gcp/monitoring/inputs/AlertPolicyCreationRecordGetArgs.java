@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class AlertPolicyCreationRecordGetArgs extends io.pulumi.resources.
     public static final AlertPolicyCreationRecordGetArgs Empty = new AlertPolicyCreationRecordGetArgs();
 
     @InputImport(name="mutateTime")
-    private final @Nullable Input<String> mutateTime;
+        private final @Nullable Input<String> mutateTime;
 
     public Input<String> getMutateTime() {
         return this.mutateTime == null ? Input.empty() : this.mutateTime;
     }
 
     @InputImport(name="mutatedBy")
-    private final @Nullable Input<String> mutatedBy;
+        private final @Nullable Input<String> mutatedBy;
 
     public Input<String> getMutatedBy() {
         return this.mutatedBy == null ? Input.empty() : this.mutatedBy;
@@ -81,7 +81,6 @@ public final class AlertPolicyCreationRecordGetArgs extends io.pulumi.resources.
             this.mutatedBy = Input.ofNullable(mutatedBy);
             return this;
         }
-
         public AlertPolicyCreationRecordGetArgs build() {
             return new AlertPolicyCreationRecordGetArgs(mutateTime, mutatedBy);
         }

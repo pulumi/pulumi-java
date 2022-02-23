@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2;
 
 import io.pulumi.awsnative.ec2.inputs.LocalGatewayRouteTableVPCAssociationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="localGatewayRouteTableId", required=true)
-    private final Input<String> localGatewayRouteTableId;
+        private final Input<String> localGatewayRouteTableId;
 
     public Input<String> getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
@@ -32,7 +32,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
+        private final @Nullable Input<List<LocalGatewayRouteTableVPCAssociationTagArgs>> tags;
 
     public Input<List<LocalGatewayRouteTableVPCAssociationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -43,7 +43,7 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="vpcId", required=true)
-    private final Input<String> vpcId;
+        private final Input<String> vpcId;
 
     public Input<String> getVpcId() {
         return this.vpcId;
@@ -117,7 +117,6 @@ public final class LocalGatewayRouteTableVPCAssociationArgs extends io.pulumi.re
             this.vpcId = Input.of(Objects.requireNonNull(vpcId));
             return this;
         }
-
         public LocalGatewayRouteTableVPCAssociationArgs build() {
             return new LocalGatewayRouteTableVPCAssociationArgs(localGatewayRouteTableId, tags, vpcId);
         }

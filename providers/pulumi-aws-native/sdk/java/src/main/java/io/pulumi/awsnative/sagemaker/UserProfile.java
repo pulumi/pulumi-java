@@ -9,8 +9,8 @@ import io.pulumi.awsnative.sagemaker.outputs.UserProfileTag;
 import io.pulumi.awsnative.sagemaker.outputs.UserProfileUserSettings;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -120,13 +120,6 @@ public class UserProfile extends io.pulumi.resources.CustomResource {
         return this.userSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public UserProfile(String name) {
-        super("aws-native:sagemaker:UserProfile", name, UserProfileArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

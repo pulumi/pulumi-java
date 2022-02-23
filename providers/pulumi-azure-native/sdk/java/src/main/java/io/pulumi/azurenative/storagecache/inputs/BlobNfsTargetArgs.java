@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+        private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -34,7 +34,7 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="usageModel")
-    private final @Nullable Input<String> usageModel;
+        private final @Nullable Input<String> usageModel;
 
     public Input<String> getUsageModel() {
         return this.usageModel == null ? Input.empty() : this.usageModel;
@@ -93,7 +93,6 @@ public final class BlobNfsTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.usageModel = Input.ofNullable(usageModel);
             return this;
         }
-
         public BlobNfsTargetArgs build() {
             return new BlobNfsTargetArgs(target, usageModel);
         }

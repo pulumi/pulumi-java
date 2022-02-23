@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -224,7 +224,6 @@ public final class TargetResponse {
             this.version = version;
             return this;
         }
-
         public TargetResponse build() {
             return new TargetResponse(digest, length, mediaType, name, repository, size, tag, url, version);
         }

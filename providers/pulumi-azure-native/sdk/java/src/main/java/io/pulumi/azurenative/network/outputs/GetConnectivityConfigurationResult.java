@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.ConnectivityGroupItemResponse;
 import io.pulumi.azurenative.network.outputs.HubResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -311,7 +311,6 @@ public final class GetConnectivityConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectivityConfigurationResult build() {
             return new GetConnectivityConfigurationResult(appliesToGroups, connectivityTopology, deleteExistingPeering, description, displayName, etag, hubs, id, isGlobal, name, provisioningState, systemData, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TableFieldSchemaPolicyTagsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="names")
-    private final @Nullable Input<List<String>> names;
+      private final @Nullable Input<List<String>> names;
 
     public Input<List<String>> getNames() {
         return this.names == null ? Input.empty() : this.names;
@@ -63,7 +63,6 @@ public final class TableFieldSchemaPolicyTagsArgs extends io.pulumi.resources.Re
             this.names = Input.ofNullable(names);
             return this;
         }
-
         public TableFieldSchemaPolicyTagsArgs build() {
             return new TableFieldSchemaPolicyTagsArgs(names);
         }

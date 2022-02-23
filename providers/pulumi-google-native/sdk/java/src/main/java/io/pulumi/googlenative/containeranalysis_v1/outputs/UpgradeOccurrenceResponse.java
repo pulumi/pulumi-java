@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.VersionResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.WindowsUpdateResponse;
@@ -119,7 +119,6 @@ public final class UpgradeOccurrenceResponse {
             this.windowsUpdate = Objects.requireNonNull(windowsUpdate);
             return this;
         }
-
         public UpgradeOccurrenceResponse build() {
             return new UpgradeOccurrenceResponse(distribution, $package, parsedVersion, windowsUpdate);
         }

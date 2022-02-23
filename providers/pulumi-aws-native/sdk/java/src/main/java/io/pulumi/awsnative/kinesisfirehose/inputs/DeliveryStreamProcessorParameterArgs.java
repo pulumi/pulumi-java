@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class DeliveryStreamProcessorParameterArgs extends io.pulumi.resour
     public static final DeliveryStreamProcessorParameterArgs Empty = new DeliveryStreamProcessorParameterArgs();
 
     @InputImport(name="parameterName", required=true)
-    private final Input<String> parameterName;
+        private final Input<String> parameterName;
 
     public Input<String> getParameterName() {
         return this.parameterName;
     }
 
     @InputImport(name="parameterValue", required=true)
-    private final Input<String> parameterValue;
+        private final Input<String> parameterValue;
 
     public Input<String> getParameterValue() {
         return this.parameterValue;
@@ -80,7 +80,6 @@ public final class DeliveryStreamProcessorParameterArgs extends io.pulumi.resour
             this.parameterValue = Input.of(Objects.requireNonNull(parameterValue));
             return this;
         }
-
         public DeliveryStreamProcessorParameterArgs build() {
             return new DeliveryStreamProcessorParameterArgs(parameterName, parameterValue);
         }

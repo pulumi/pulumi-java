@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SecretObjectResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -108,7 +108,6 @@ public final class CustomRegistryCredentialsResponse {
             this.userName = userName;
             return this;
         }
-
         public CustomRegistryCredentialsResponse build() {
             return new CustomRegistryCredentialsResponse(identity, password, userName);
         }

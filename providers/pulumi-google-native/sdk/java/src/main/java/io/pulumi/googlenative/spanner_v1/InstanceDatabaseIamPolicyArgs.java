@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.spanner_v1.inputs.BindingArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,14 +22,14 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<BindingArgs>> bindings;
+      private final @Nullable Input<List<BindingArgs>> bindings;
 
     public Input<List<BindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
     }
 
     @InputImport(name="databaseId", required=true)
-    private final Input<String> databaseId;
+      private final Input<String> databaseId;
 
     public Input<String> getDatabaseId() {
         return this.databaseId;
@@ -40,21 +40,21 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -65,7 +65,7 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -184,7 +184,6 @@ public final class InstanceDatabaseIamPolicyArgs extends io.pulumi.resources.Res
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public InstanceDatabaseIamPolicyArgs build() {
             return new InstanceDatabaseIamPolicyArgs(bindings, databaseId, etag, instanceId, project, version);
         }

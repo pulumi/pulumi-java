@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class DomainSubDomainSetting extends io.pulumi.resources.InvokeArgs
     public static final DomainSubDomainSetting Empty = new DomainSubDomainSetting();
 
     @InputImport(name="branchName", required=true)
-    private final String branchName;
+        private final String branchName;
 
     public String getBranchName() {
         return this.branchName;
     }
 
     @InputImport(name="prefix", required=true)
-    private final String prefix;
+        private final String prefix;
 
     public String getPrefix() {
         return this.prefix;
@@ -69,7 +69,6 @@ public final class DomainSubDomainSetting extends io.pulumi.resources.InvokeArgs
             this.prefix = Objects.requireNonNull(prefix);
             return this;
         }
-
         public DomainSubDomainSetting build() {
             return new DomainSubDomainSetting(branchName, prefix);
         }

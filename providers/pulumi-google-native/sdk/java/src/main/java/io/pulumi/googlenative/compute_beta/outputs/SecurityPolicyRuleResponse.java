@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRuleHttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyRuleRateLimitOptionsResponse;
@@ -354,7 +354,6 @@ public final class SecurityPolicyRuleResponse {
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
         public SecurityPolicyRuleResponse build() {
             return new SecurityPolicyRuleResponse(action, description, direction, enableLogging, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions, ruleNumber, ruleTupleCount, targetResources, targetServiceAccounts);
         }

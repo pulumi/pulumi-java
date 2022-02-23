@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.containeranalysis.outputs.NoteAttestationAuthorityHint;
 import java.util.Objects;
 
@@ -68,7 +68,6 @@ public final class NoteAttestationAuthority {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public NoteAttestationAuthority build() {
             return new NoteAttestationAuthority(hint);
         }

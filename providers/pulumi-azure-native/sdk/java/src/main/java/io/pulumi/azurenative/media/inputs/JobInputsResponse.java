@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.JobInputAssetResponse;
 import io.pulumi.azurenative.media.inputs.JobInputClipResponse;
 import io.pulumi.azurenative.media.inputs.JobInputHttpResponse;
 import io.pulumi.azurenative.media.inputs.JobInputSequenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputs")
-    private final @Nullable List<Object> inputs;
+        private final @Nullable List<Object> inputs;
 
     public List<Object> getInputs() {
         return this.inputs == null ? List.of() : this.inputs;
@@ -41,7 +41,7 @@ public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -90,7 +90,6 @@ public final class JobInputsResponse extends io.pulumi.resources.InvokeArgs {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public JobInputsResponse build() {
             return new JobInputsResponse(inputs, odataType);
         }

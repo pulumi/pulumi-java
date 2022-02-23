@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.DatasetAccessViewArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasetId", required=true)
-    private final Input<String> datasetId;
+        private final Input<String> datasetId;
 
     public Input<String> getDatasetId() {
         return this.datasetId;
@@ -32,7 +32,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domain")
-    private final @Nullable Input<String> domain;
+        private final @Nullable Input<String> domain;
 
     public Input<String> getDomain() {
         return this.domain == null ? Input.empty() : this.domain;
@@ -43,7 +43,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByEmail")
-    private final @Nullable Input<String> groupByEmail;
+        private final @Nullable Input<String> groupByEmail;
 
     public Input<String> getGroupByEmail() {
         return this.groupByEmail == null ? Input.empty() : this.groupByEmail;
@@ -55,7 +55,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iamMember")
-    private final @Nullable Input<String> iamMember;
+        private final @Nullable Input<String> iamMember;
 
     public Input<String> getIamMember() {
         return this.iamMember == null ? Input.empty() : this.iamMember;
@@ -67,7 +67,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -83,7 +83,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -94,7 +94,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="specialGroup")
-    private final @Nullable Input<String> specialGroup;
+        private final @Nullable Input<String> specialGroup;
 
     public Input<String> getSpecialGroup() {
         return this.specialGroup == null ? Input.empty() : this.specialGroup;
@@ -106,7 +106,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userByEmail")
-    private final @Nullable Input<String> userByEmail;
+        private final @Nullable Input<String> userByEmail;
 
     public Input<String> getUserByEmail() {
         return this.userByEmail == null ? Input.empty() : this.userByEmail;
@@ -122,7 +122,7 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="view")
-    private final @Nullable Input<DatasetAccessViewArgs> view;
+        private final @Nullable Input<DatasetAccessViewArgs> view;
 
     public Input<DatasetAccessViewArgs> getView() {
         return this.view == null ? Input.empty() : this.view;
@@ -286,7 +286,6 @@ public final class DatasetAccessArgs extends io.pulumi.resources.ResourceArgs {
             this.view = Input.ofNullable(view);
             return this;
         }
-
         public DatasetAccessArgs build() {
             return new DatasetAccessArgs(datasetId, domain, groupByEmail, iamMember, project, role, specialGroup, userByEmail, view);
         }

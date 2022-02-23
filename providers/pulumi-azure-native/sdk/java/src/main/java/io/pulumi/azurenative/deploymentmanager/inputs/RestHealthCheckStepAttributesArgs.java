@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.inputs;
 
 import io.pulumi.azurenative.deploymentmanager.inputs.RestHealthCheckArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="healthChecks", required=true)
-    private final Input<List<RestHealthCheckArgs>> healthChecks;
+        private final Input<List<RestHealthCheckArgs>> healthChecks;
 
     public Input<List<RestHealthCheckArgs>> getHealthChecks() {
         return this.healthChecks;
@@ -36,7 +36,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="healthyStateDuration", required=true)
-    private final Input<String> healthyStateDuration;
+        private final Input<String> healthyStateDuration;
 
     public Input<String> getHealthyStateDuration() {
         return this.healthyStateDuration;
@@ -47,7 +47,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxElasticDuration")
-    private final @Nullable Input<String> maxElasticDuration;
+        private final @Nullable Input<String> maxElasticDuration;
 
     public Input<String> getMaxElasticDuration() {
         return this.maxElasticDuration == null ? Input.empty() : this.maxElasticDuration;
@@ -59,7 +59,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -70,7 +70,7 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="waitDuration")
-    private final @Nullable Input<String> waitDuration;
+        private final @Nullable Input<String> waitDuration;
 
     public Input<String> getWaitDuration() {
         return this.waitDuration == null ? Input.empty() : this.waitDuration;
@@ -174,7 +174,6 @@ public final class RestHealthCheckStepAttributesArgs extends io.pulumi.resources
             this.waitDuration = Input.ofNullable(waitDuration);
             return this;
         }
-
         public RestHealthCheckStepAttributesArgs build() {
             return new RestHealthCheckStepAttributesArgs(healthChecks, healthyStateDuration, maxElasticDuration, type, waitDuration);
         }

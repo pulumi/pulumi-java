@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class AzureDataExplorerSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AzureDataExplorerSourceResponse build() {
             return new AzureDataExplorerSourceResponse(additionalColumns, disableMetricsCollection, maxConcurrentConnections, noTruncation, query, queryTimeout, sourceRetryCount, sourceRetryWait, type);
         }

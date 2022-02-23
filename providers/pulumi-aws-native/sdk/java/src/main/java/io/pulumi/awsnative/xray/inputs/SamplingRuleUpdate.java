@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -22,7 +22,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Object attributes;
+        private final @Nullable Object attributes;
 
     public Optional<Object> getAttributes() {
         return this.attributes == null ? Optional.empty() : Optional.ofNullable(this.attributes);
@@ -33,7 +33,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fixedRate")
-    private final @Nullable Double fixedRate;
+        private final @Nullable Double fixedRate;
 
     public Optional<Double> getFixedRate() {
         return this.fixedRate == null ? Optional.empty() : Optional.ofNullable(this.fixedRate);
@@ -44,7 +44,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hTTPMethod")
-    private final @Nullable String hTTPMethod;
+        private final @Nullable String hTTPMethod;
 
     public Optional<String> getHTTPMethod() {
         return this.hTTPMethod == null ? Optional.empty() : Optional.ofNullable(this.hTTPMethod);
@@ -55,7 +55,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable String host;
+        private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
@@ -66,7 +66,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -77,7 +77,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="reservoirSize")
-    private final @Nullable Integer reservoirSize;
+        private final @Nullable Integer reservoirSize;
 
     public Optional<Integer> getReservoirSize() {
         return this.reservoirSize == null ? Optional.empty() : Optional.ofNullable(this.reservoirSize);
@@ -88,21 +88,21 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceARN")
-    private final @Nullable String resourceARN;
+        private final @Nullable String resourceARN;
 
     public Optional<String> getResourceARN() {
         return this.resourceARN == null ? Optional.empty() : Optional.ofNullable(this.resourceARN);
     }
 
     @InputImport(name="ruleARN")
-    private final @Nullable String ruleARN;
+        private final @Nullable String ruleARN;
 
     public Optional<String> getRuleARN() {
         return this.ruleARN == null ? Optional.empty() : Optional.ofNullable(this.ruleARN);
     }
 
     @InputImport(name="ruleName")
-    private final @Nullable String ruleName;
+        private final @Nullable String ruleName;
 
     public Optional<String> getRuleName() {
         return this.ruleName == null ? Optional.empty() : Optional.ofNullable(this.ruleName);
@@ -113,7 +113,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable String serviceName;
+        private final @Nullable String serviceName;
 
     public Optional<String> getServiceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
@@ -124,7 +124,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceType")
-    private final @Nullable String serviceType;
+        private final @Nullable String serviceType;
 
     public Optional<String> getServiceType() {
         return this.serviceType == null ? Optional.empty() : Optional.ofNullable(this.serviceType);
@@ -135,7 +135,7 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uRLPath")
-    private final @Nullable String uRLPath;
+        private final @Nullable String uRLPath;
 
     public Optional<String> getURLPath() {
         return this.uRLPath == null ? Optional.empty() : Optional.ofNullable(this.uRLPath);
@@ -284,7 +284,6 @@ public final class SamplingRuleUpdate extends io.pulumi.resources.InvokeArgs {
             this.uRLPath = uRLPath;
             return this;
         }
-
         public SamplingRuleUpdate build() {
             return new SamplingRuleUpdate(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath);
         }

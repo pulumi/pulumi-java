@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.artifactregistry_v1beta2.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GetRepositoryIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRepositoryIamPolicyResult build() {
             return new GetRepositoryIamPolicyResult(bindings, etag, version);
         }

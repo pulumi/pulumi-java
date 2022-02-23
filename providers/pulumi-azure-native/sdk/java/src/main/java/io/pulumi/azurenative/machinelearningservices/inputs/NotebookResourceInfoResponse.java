@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.NotebookPreparationErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
     public static final NotebookResourceInfoResponse Empty = new NotebookResourceInfoResponse();
 
     @InputImport(name="fqdn")
-    private final @Nullable String fqdn;
+        private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -27,7 +27,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="notebookPreparationError")
-    private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
+        private final @Nullable NotebookPreparationErrorResponse notebookPreparationError;
 
     public Optional<NotebookPreparationErrorResponse> getNotebookPreparationError() {
         return this.notebookPreparationError == null ? Optional.empty() : Optional.ofNullable(this.notebookPreparationError);
@@ -38,7 +38,7 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -97,7 +97,6 @@ public final class NotebookResourceInfoResponse extends io.pulumi.resources.Invo
             this.resourceId = resourceId;
             return this;
         }
-
         public NotebookResourceInfoResponse build() {
             return new NotebookResourceInfoResponse(fqdn, notebookPreparationError, resourceId);
         }

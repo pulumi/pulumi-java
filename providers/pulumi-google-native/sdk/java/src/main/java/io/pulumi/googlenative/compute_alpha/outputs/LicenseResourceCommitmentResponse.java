@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class LicenseResourceCommitmentResponse {
             this.license = Objects.requireNonNull(license);
             return this;
         }
-
         public LicenseResourceCommitmentResponse build() {
             return new LicenseResourceCommitmentResponse(amount, coresPerLicense, license);
         }

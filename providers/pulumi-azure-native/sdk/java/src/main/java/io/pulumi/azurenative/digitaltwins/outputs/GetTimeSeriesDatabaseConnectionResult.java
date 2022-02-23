@@ -5,7 +5,7 @@ package io.pulumi.azurenative.digitaltwins.outputs;
 
 import io.pulumi.azurenative.digitaltwins.outputs.AzureDataExplorerConnectionPropertiesResponse;
 import io.pulumi.azurenative.digitaltwins.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -139,7 +139,6 @@ public final class GetTimeSeriesDatabaseConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTimeSeriesDatabaseConnectionResult build() {
             return new GetTimeSeriesDatabaseConnectionResult(id, name, properties, systemData, type);
         }

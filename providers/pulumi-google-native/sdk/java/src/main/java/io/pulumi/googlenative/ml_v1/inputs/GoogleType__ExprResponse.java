@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleType__ExprResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -32,7 +32,7 @@ public final class GoogleType__ExprResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expression", required=true)
-    private final String expression;
+      private final String expression;
 
     public String getExpression() {
         return this.expression;
@@ -43,7 +43,7 @@ public final class GoogleType__ExprResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -54,7 +54,7 @@ public final class GoogleType__ExprResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -123,7 +123,6 @@ public final class GoogleType__ExprResponse extends io.pulumi.resources.InvokeAr
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleType__ExprResponse build() {
             return new GoogleType__ExprResponse(description, expression, location, title);
         }

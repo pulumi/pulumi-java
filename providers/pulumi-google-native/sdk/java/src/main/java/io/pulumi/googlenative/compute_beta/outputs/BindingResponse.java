@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.ExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class BindingResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public BindingResponse build() {
             return new BindingResponse(bindingId, condition, members, role);
         }

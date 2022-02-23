@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.outputs.AwAssumeRoleAuthenticationDetailsP
 import io.pulumi.azurenative.security.outputs.AwsCredsAuthenticationDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.GcpCredentialsDetailsPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.HybridComputeSettingsPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -144,7 +144,6 @@ public final class GetConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectorResult build() {
             return new GetConnectorResult(authenticationDetails, hybridComputeSettings, id, name, type);
         }

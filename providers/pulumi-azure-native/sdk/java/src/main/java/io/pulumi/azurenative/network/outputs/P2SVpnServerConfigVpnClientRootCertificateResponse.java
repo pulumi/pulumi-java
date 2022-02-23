@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class P2SVpnServerConfigVpnClientRootCertificateResponse {
             this.publicCertData = Objects.requireNonNull(publicCertData);
             return this;
         }
-
         public P2SVpnServerConfigVpnClientRootCertificateResponse build() {
             return new P2SVpnServerConfigVpnClientRootCertificateResponse(etag, id, name, provisioningState, publicCertData);
         }

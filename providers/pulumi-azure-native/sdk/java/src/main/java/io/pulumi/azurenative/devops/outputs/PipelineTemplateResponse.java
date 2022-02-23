@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devops.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class PipelineTemplateResponse {
             this.parameters = parameters;
             return this;
         }
-
         public PipelineTemplateResponse build() {
             return new PipelineTemplateResponse(id, parameters);
         }

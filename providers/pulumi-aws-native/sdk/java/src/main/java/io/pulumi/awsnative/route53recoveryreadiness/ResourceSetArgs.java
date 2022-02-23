@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetResourceArgs;
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.ResourceSetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetName")
-    private final @Nullable Input<String> resourceSetName;
+        private final @Nullable Input<String> resourceSetName;
 
     public Input<String> getResourceSetName() {
         return this.resourceSetName == null ? Input.empty() : this.resourceSetName;
@@ -35,7 +35,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSetType", required=true)
-    private final Input<String> resourceSetType;
+        private final Input<String> resourceSetType;
 
     public Input<String> getResourceSetType() {
         return this.resourceSetType;
@@ -46,7 +46,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<List<ResourceSetResourceArgs>> resources;
+        private final Input<List<ResourceSetResourceArgs>> resources;
 
     public Input<List<ResourceSetResourceArgs>> getResources() {
         return this.resources;
@@ -57,7 +57,7 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ResourceSetTagArgs>> tags;
+        private final @Nullable Input<List<ResourceSetTagArgs>> tags;
 
     public Input<List<ResourceSetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -146,7 +146,6 @@ public final class ResourceSetArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ResourceSetArgs build() {
             return new ResourceSetArgs(resourceSetName, resourceSetType, resources, tags);
         }

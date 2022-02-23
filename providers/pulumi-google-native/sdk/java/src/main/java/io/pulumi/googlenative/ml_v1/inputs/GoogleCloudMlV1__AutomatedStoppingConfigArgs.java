@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
     public static final GoogleCloudMlV1__AutomatedStoppingConfigArgs Empty = new GoogleCloudMlV1__AutomatedStoppingConfigArgs();
 
     @InputImport(name="decayCurveStoppingConfig")
-    private final @Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig;
+      private final @Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> decayCurveStoppingConfig;
 
     public Input<GoogleCloudMlV1_AutomatedStoppingConfig_DecayCurveAutomatedStoppingConfigArgs> getDecayCurveStoppingConfig() {
         return this.decayCurveStoppingConfig == null ? Input.empty() : this.decayCurveStoppingConfig;
     }
 
     @InputImport(name="medianAutomatedStoppingConfig")
-    private final @Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig;
+      private final @Nullable Input<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> medianAutomatedStoppingConfig;
 
     public Input<GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigArgs> getMedianAutomatedStoppingConfig() {
         return this.medianAutomatedStoppingConfig == null ? Input.empty() : this.medianAutomatedStoppingConfig;
@@ -86,7 +86,6 @@ public final class GoogleCloudMlV1__AutomatedStoppingConfigArgs extends io.pulum
             this.medianAutomatedStoppingConfig = Input.ofNullable(medianAutomatedStoppingConfig);
             return this;
         }
-
         public GoogleCloudMlV1__AutomatedStoppingConfigArgs build() {
             return new GoogleCloudMlV1__AutomatedStoppingConfigArgs(decayCurveStoppingConfig, medianAutomatedStoppingConfig);
         }

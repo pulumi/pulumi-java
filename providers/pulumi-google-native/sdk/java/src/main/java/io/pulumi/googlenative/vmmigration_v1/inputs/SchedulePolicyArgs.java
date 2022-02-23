@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleDuration")
-    private final @Nullable Input<String> idleDuration;
+      private final @Nullable Input<String> idleDuration;
 
     public Input<String> getIdleDuration() {
         return this.idleDuration == null ? Input.empty() : this.idleDuration;
@@ -35,7 +35,7 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="skipOsAdaptation")
-    private final @Nullable Input<Boolean> skipOsAdaptation;
+      private final @Nullable Input<Boolean> skipOsAdaptation;
 
     public Input<Boolean> getSkipOsAdaptation() {
         return this.skipOsAdaptation == null ? Input.empty() : this.skipOsAdaptation;
@@ -94,7 +94,6 @@ public final class SchedulePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.skipOsAdaptation = Input.ofNullable(skipOsAdaptation);
             return this;
         }
-
         public SchedulePolicyArgs build() {
             return new SchedulePolicyArgs(idleDuration, skipOsAdaptation);
         }

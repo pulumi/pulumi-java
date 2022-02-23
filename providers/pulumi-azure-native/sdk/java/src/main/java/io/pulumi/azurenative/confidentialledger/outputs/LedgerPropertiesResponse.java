@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.outputs;
 
 import io.pulumi.azurenative.confidentialledger.outputs.AADBasedSecurityPrincipalResponse;
 import io.pulumi.azurenative.confidentialledger.outputs.CertBasedSecurityPrincipalResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class LedgerPropertiesResponse {
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LedgerPropertiesResponse build() {
             return new LedgerPropertiesResponse(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, identityServiceUri, ledgerInternalNamespace, ledgerName, ledgerStorageAccount, ledgerType, ledgerUri, provisioningState);
         }

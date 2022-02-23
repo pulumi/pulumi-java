@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
     public static final PackagingConfigurationSpekeKeyProvider Empty = new PackagingConfigurationSpekeKeyProvider();
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -29,7 +29,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
      * 
      */
     @InputImport(name="systemIds", required=true)
-    private final List<String> systemIds;
+        private final List<String> systemIds;
 
     public List<String> getSystemIds() {
         return this.systemIds;
@@ -40,7 +40,7 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -99,7 +99,6 @@ public final class PackagingConfigurationSpekeKeyProvider extends io.pulumi.reso
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public PackagingConfigurationSpekeKeyProvider build() {
             return new PackagingConfigurationSpekeKeyProvider(roleArn, systemIds, url);
         }

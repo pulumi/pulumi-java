@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceExecResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResourceResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourcePackageResourceResponse;
@@ -24,7 +24,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="exec", required=true)
-    private final OSPolicyResourceExecResourceResponse exec;
+      private final OSPolicyResourceExecResourceResponse exec;
 
     public OSPolicyResourceExecResourceResponse getExec() {
         return this.exec;
@@ -35,7 +35,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="file", required=true)
-    private final OSPolicyResourceFileResourceResponse file;
+      private final OSPolicyResourceFileResourceResponse file;
 
     public OSPolicyResourceFileResourceResponse getFile() {
         return this.file;
@@ -46,7 +46,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pkg", required=true)
-    private final OSPolicyResourcePackageResourceResponse pkg;
+      private final OSPolicyResourcePackageResourceResponse pkg;
 
     public OSPolicyResourcePackageResourceResponse getPkg() {
         return this.pkg;
@@ -57,7 +57,7 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="repository", required=true)
-    private final OSPolicyResourceRepositoryResourceResponse repository;
+      private final OSPolicyResourceRepositoryResourceResponse repository;
 
     public OSPolicyResourceRepositoryResourceResponse getRepository() {
         return this.repository;
@@ -126,7 +126,6 @@ public final class OSPolicyResourceResponse extends io.pulumi.resources.InvokeAr
             this.repository = Objects.requireNonNull(repository);
             return this;
         }
-
         public OSPolicyResourceResponse build() {
             return new OSPolicyResourceResponse(exec, file, pkg, repository);
         }

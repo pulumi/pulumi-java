@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.ProviderRegistrationResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -109,7 +109,6 @@ public final class GetProviderRegistrationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProviderRegistrationResult build() {
             return new GetProviderRegistrationResult(id, name, properties, type);
         }

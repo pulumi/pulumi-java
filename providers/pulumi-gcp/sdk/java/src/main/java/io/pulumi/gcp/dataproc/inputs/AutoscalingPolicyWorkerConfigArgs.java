@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="maxInstances", required=true)
-    private final Input<Integer> maxInstances;
+        private final Input<Integer> maxInstances;
 
     public Input<Integer> getMaxInstances() {
         return this.maxInstances;
@@ -32,7 +32,7 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="minInstances")
-    private final @Nullable Input<Integer> minInstances;
+        private final @Nullable Input<Integer> minInstances;
 
     public Input<Integer> getMinInstances() {
         return this.minInstances == null ? Input.empty() : this.minInstances;
@@ -54,7 +54,7 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -128,7 +128,6 @@ public final class AutoscalingPolicyWorkerConfigArgs extends io.pulumi.resources
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public AutoscalingPolicyWorkerConfigArgs build() {
             return new AutoscalingPolicyWorkerConfigArgs(maxInstances, minInstances, weight);
         }

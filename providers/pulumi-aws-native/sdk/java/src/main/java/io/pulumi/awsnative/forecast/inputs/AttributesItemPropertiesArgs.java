@@ -5,7 +5,7 @@ package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.awsnative.forecast.enums.DatasetAttributesItemPropertiesAttributeType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="attributeName")
-    private final @Nullable Input<String> attributeName;
+        private final @Nullable Input<String> attributeName;
 
     public Input<String> getAttributeName() {
         return this.attributeName == null ? Input.empty() : this.attributeName;
@@ -31,7 +31,7 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="attributeType")
-    private final @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
+        private final @Nullable Input<DatasetAttributesItemPropertiesAttributeType> attributeType;
 
     public Input<DatasetAttributesItemPropertiesAttributeType> getAttributeType() {
         return this.attributeType == null ? Input.empty() : this.attributeType;
@@ -90,7 +90,6 @@ public final class AttributesItemPropertiesArgs extends io.pulumi.resources.Reso
             this.attributeType = Input.ofNullable(attributeType);
             return this;
         }
-
         public AttributesItemPropertiesArgs build() {
             return new AttributesItemPropertiesArgs(attributeName, attributeType);
         }

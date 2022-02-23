@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="destinationType")
-    private final @Nullable String destinationType;
+        private final @Nullable String destinationType;
 
     public Optional<String> getDestinationType() {
         return this.destinationType == null ? Optional.empty() : Optional.ofNullable(this.destinationType);
@@ -35,7 +35,7 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="destinations")
-    private final @Nullable List<String> destinations;
+        private final @Nullable List<String> destinations;
 
     public List<String> getDestinations() {
         return this.destinations == null ? List.of() : this.destinations;
@@ -46,7 +46,7 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="nextHopType")
-    private final @Nullable String nextHopType;
+        private final @Nullable String nextHopType;
 
     public Optional<String> getNextHopType() {
         return this.nextHopType == null ? Optional.empty() : Optional.ofNullable(this.nextHopType);
@@ -57,7 +57,7 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="nextHops")
-    private final @Nullable List<String> nextHops;
+        private final @Nullable List<String> nextHops;
 
     public List<String> getNextHops() {
         return this.nextHops == null ? List.of() : this.nextHops;
@@ -126,7 +126,6 @@ public final class VirtualHubRouteV2Response extends io.pulumi.resources.InvokeA
             this.nextHops = nextHops;
             return this;
         }
-
         public VirtualHubRouteV2Response build() {
             return new VirtualHubRouteV2Response(destinationType, destinations, nextHopType, nextHops);
         }

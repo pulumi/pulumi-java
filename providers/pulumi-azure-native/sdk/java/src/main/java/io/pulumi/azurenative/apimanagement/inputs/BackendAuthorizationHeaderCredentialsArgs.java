@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="parameter", required=true)
-    private final Input<String> parameter;
+        private final Input<String> parameter;
 
     public Input<String> getParameter() {
         return this.parameter;
@@ -33,7 +33,7 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="scheme", required=true)
-    private final Input<String> scheme;
+        private final Input<String> scheme;
 
     public Input<String> getScheme() {
         return this.scheme;
@@ -92,7 +92,6 @@ public final class BackendAuthorizationHeaderCredentialsArgs extends io.pulumi.r
             this.scheme = Input.of(Objects.requireNonNull(scheme));
             return this;
         }
-
         public BackendAuthorizationHeaderCredentialsArgs build() {
             return new BackendAuthorizationHeaderCredentialsArgs(parameter, scheme);
         }

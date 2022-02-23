@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class DenyMaintenancePeriodResponse {
             this.time = Objects.requireNonNull(time);
             return this;
         }
-
         public DenyMaintenancePeriodResponse build() {
             return new DenyMaintenancePeriodResponse(endDate, startDate, time);
         }

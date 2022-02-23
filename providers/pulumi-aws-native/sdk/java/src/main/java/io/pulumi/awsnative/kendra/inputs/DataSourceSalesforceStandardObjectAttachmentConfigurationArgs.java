@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
     public static final DataSourceSalesforceStandardObjectAttachmentConfigurationArgs Empty = new DataSourceSalesforceStandardObjectAttachmentConfigurationArgs();
 
     @InputImport(name="documentTitleFieldName")
-    private final @Nullable Input<String> documentTitleFieldName;
+        private final @Nullable Input<String> documentTitleFieldName;
 
     public Input<String> getDocumentTitleFieldName() {
         return this.documentTitleFieldName == null ? Input.empty() : this.documentTitleFieldName;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
@@ -83,7 +83,6 @@ public final class DataSourceSalesforceStandardObjectAttachmentConfigurationArgs
             this.fieldMappings = Input.ofNullable(fieldMappings);
             return this;
         }
-
         public DataSourceSalesforceStandardObjectAttachmentConfigurationArgs build() {
             return new DataSourceSalesforceStandardObjectAttachmentConfigurationArgs(documentTitleFieldName, fieldMappings);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class DatabaseInstanceIpAddressArgs extends io.pulumi.resources.Res
     public static final DatabaseInstanceIpAddressArgs Empty = new DatabaseInstanceIpAddressArgs();
 
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
     }
 
     @InputImport(name="timeToRetire")
-    private final @Nullable Input<String> timeToRetire;
+        private final @Nullable Input<String> timeToRetire;
 
     public Input<String> getTimeToRetire() {
         return this.timeToRetire == null ? Input.empty() : this.timeToRetire;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -103,7 +103,6 @@ public final class DatabaseInstanceIpAddressArgs extends io.pulumi.resources.Res
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public DatabaseInstanceIpAddressArgs build() {
             return new DatabaseInstanceIpAddressArgs(ipAddress, timeToRetire, type);
         }

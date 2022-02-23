@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.ContentSourceType;
 import io.pulumi.azurenative.automation.inputs.ContentHashArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hash")
-    private final @Nullable Input<ContentHashArgs> hash;
+        private final @Nullable Input<ContentHashArgs> hash;
 
     public Input<ContentHashArgs> getHash() {
         return this.hash == null ? Input.empty() : this.hash;
@@ -37,7 +37,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ContentSourceType>> type;
+        private final @Nullable Input<Either<String,ContentSourceType>> type;
 
     public Input<Either<String,ContentSourceType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -48,7 +48,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -59,7 +59,7 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -148,7 +148,6 @@ public final class ContentSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ContentSourceArgs build() {
             return new ContentSourceArgs(hash, type, value, version);
         }

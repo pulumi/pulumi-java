@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
      * 
      */
     @InputImport(name="audioUri", required=true)
-    private final String audioUri;
+      private final String audioUri;
 
     public String getAudioUri() {
         return this.audioUri;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
      * 
      */
     @InputImport(name="transcriptUri", required=true)
-    private final String transcriptUri;
+      private final String transcriptUri;
 
     public String getTranscriptUri() {
         return this.transcriptUri;
@@ -81,7 +81,6 @@ public final class GoogleCloudContactcenterinsightsV1GcsSourceResponse extends i
             this.transcriptUri = Objects.requireNonNull(transcriptUri);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1GcsSourceResponse build() {
             return new GoogleCloudContactcenterinsightsV1GcsSourceResponse(audioUri, transcriptUri);
         }

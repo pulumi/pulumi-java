@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.redis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class TlsCertificateResponse {
             this.sha1Fingerprint = Objects.requireNonNull(sha1Fingerprint);
             return this;
         }
-
         public TlsCertificateResponse build() {
             return new TlsCertificateResponse(cert, createTime, expireTime, serialNumber, sha1Fingerprint);
         }

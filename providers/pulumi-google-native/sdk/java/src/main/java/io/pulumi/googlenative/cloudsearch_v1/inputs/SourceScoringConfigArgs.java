@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.enums.SourceScoringConfigSourceImportance;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sourceImportance")
-    private final @Nullable Input<SourceScoringConfigSourceImportance> sourceImportance;
+      private final @Nullable Input<SourceScoringConfigSourceImportance> sourceImportance;
 
     public Input<SourceScoringConfigSourceImportance> getSourceImportance() {
         return this.sourceImportance == null ? Input.empty() : this.sourceImportance;
@@ -66,7 +66,6 @@ public final class SourceScoringConfigArgs extends io.pulumi.resources.ResourceA
             this.sourceImportance = Input.ofNullable(sourceImportance);
             return this;
         }
-
         public SourceScoringConfigArgs build() {
             return new SourceScoringConfigArgs(sourceImportance);
         }

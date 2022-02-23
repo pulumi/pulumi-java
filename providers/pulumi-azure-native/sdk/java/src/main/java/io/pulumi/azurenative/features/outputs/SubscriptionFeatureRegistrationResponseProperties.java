@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.outputs;
 
 import io.pulumi.azurenative.features.outputs.AuthorizationProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -331,7 +331,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties {
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public SubscriptionFeatureRegistrationResponseProperties build() {
             return new SubscriptionFeatureRegistrationResponseProperties(approvalType, authorizationProfile, description, displayName, documentationLink, featureName, metadata, providerNamespace, registrationDate, releaseDate, shouldFeatureDisplayInPortal, state, subscriptionId, tenantId);
         }

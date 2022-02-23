@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatchSingleHeaderProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupFieldToMatchSingleQueryArgumentProperties;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupJsonBody;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -189,7 +189,6 @@ public final class RuleGroupFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public RuleGroupFieldToMatch build() {
             return new RuleGroupFieldToMatch(allQueryArguments, body, jsonBody, method, queryString, singleHeader, singleQueryArgument, uriPath);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="canonicalService", required=true)
-    private final String canonicalService;
+        private final String canonicalService;
 
     public String getCanonicalService() {
         return this.canonicalService;
@@ -32,7 +32,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="canonicalServiceNamespace", required=true)
-    private final String canonicalServiceNamespace;
+        private final String canonicalServiceNamespace;
 
     public String getCanonicalServiceNamespace() {
         return this.canonicalServiceNamespace;
@@ -44,7 +44,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="meshUid", required=true)
-    private final String meshUid;
+        private final String meshUid;
 
     public String getMeshUid() {
         return this.meshUid;
@@ -56,7 +56,7 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -125,7 +125,6 @@ public final class GetIstioCanonicalServiceArgs extends io.pulumi.resources.Invo
             this.project = project;
             return this;
         }
-
         public GetIstioCanonicalServiceArgs build() {
             return new GetIstioCanonicalServiceArgs(canonicalService, canonicalServiceNamespace, meshUid, project);
         }

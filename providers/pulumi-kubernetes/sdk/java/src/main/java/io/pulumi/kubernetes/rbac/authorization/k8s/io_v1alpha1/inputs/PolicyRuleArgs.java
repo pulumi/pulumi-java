@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiGroups")
-    private final @Nullable Input<List<String>> apiGroups;
+        private final @Nullable Input<List<String>> apiGroups;
 
     public Input<List<String>> getApiGroups() {
         return this.apiGroups == null ? Input.empty() : this.apiGroups;
@@ -35,7 +35,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nonResourceURLs")
-    private final @Nullable Input<List<String>> nonResourceURLs;
+        private final @Nullable Input<List<String>> nonResourceURLs;
 
     public Input<List<String>> getNonResourceURLs() {
         return this.nonResourceURLs == null ? Input.empty() : this.nonResourceURLs;
@@ -46,7 +46,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceNames")
-    private final @Nullable Input<List<String>> resourceNames;
+        private final @Nullable Input<List<String>> resourceNames;
 
     public Input<List<String>> getResourceNames() {
         return this.resourceNames == null ? Input.empty() : this.resourceNames;
@@ -57,7 +57,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<List<String>> resources;
+        private final @Nullable Input<List<String>> resources;
 
     public Input<List<String>> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -68,7 +68,7 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="verbs", required=true)
-    private final Input<List<String>> verbs;
+        private final Input<List<String>> verbs;
 
     public Input<List<String>> getVerbs() {
         return this.verbs;
@@ -172,7 +172,6 @@ public final class PolicyRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.verbs = Input.of(Objects.requireNonNull(verbs));
             return this;
         }
-
         public PolicyRuleArgs build() {
             return new PolicyRuleArgs(apiGroups, nonResourceURLs, resourceNames, resources, verbs);
         }

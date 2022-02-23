@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class ApigatewayBindingResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public ApigatewayBindingResponse build() {
             return new ApigatewayBindingResponse(condition, members, role);
         }

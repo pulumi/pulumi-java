@@ -5,8 +5,8 @@ package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.AuthorityArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityState;
@@ -337,13 +337,6 @@ public class Authority extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Authority(String name) {
-        super("gcp:certificateauthority/authority:Authority", name, AuthorityArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

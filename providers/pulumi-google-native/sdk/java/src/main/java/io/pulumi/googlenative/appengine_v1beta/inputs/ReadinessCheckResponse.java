@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="appStartTimeout", required=true)
-    private final String appStartTimeout;
+      private final String appStartTimeout;
 
     public String getAppStartTimeout() {
         return this.appStartTimeout;
@@ -33,7 +33,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="checkInterval", required=true)
-    private final String checkInterval;
+      private final String checkInterval;
 
     public String getCheckInterval() {
         return this.checkInterval;
@@ -44,7 +44,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="failureThreshold", required=true)
-    private final Integer failureThreshold;
+      private final Integer failureThreshold;
 
     public Integer getFailureThreshold() {
         return this.failureThreshold;
@@ -55,7 +55,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+      private final String host;
 
     public String getHost() {
         return this.host;
@@ -66,7 +66,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -77,7 +77,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="successThreshold", required=true)
-    private final Integer successThreshold;
+      private final Integer successThreshold;
 
     public Integer getSuccessThreshold() {
         return this.successThreshold;
@@ -88,7 +88,7 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final String timeout;
+      private final String timeout;
 
     public String getTimeout() {
         return this.timeout;
@@ -187,7 +187,6 @@ public final class ReadinessCheckResponse extends io.pulumi.resources.InvokeArgs
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public ReadinessCheckResponse build() {
             return new ReadinessCheckResponse(appStartTimeout, checkInterval, failureThreshold, host, path, successThreshold, timeout);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.AlertPolicyAlertStrategyNotificationRateLimit;
 import java.lang.String;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class AlertPolicyAlertStrategy {
             this.notificationRateLimit = notificationRateLimit;
             return this;
         }
-
         public AlertPolicyAlertStrategy build() {
             return new AlertPolicyAlertStrategy(autoClose, notificationRateLimit);
         }

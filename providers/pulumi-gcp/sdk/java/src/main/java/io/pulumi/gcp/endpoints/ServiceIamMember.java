@@ -5,8 +5,8 @@ package io.pulumi.gcp.endpoints;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.endpoints.ServiceIamMemberArgs;
 import io.pulumi.gcp.endpoints.inputs.ServiceIamMemberState;
@@ -109,13 +109,6 @@ public class ServiceIamMember extends io.pulumi.resources.CustomResource {
         return this.serviceName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ServiceIamMember(String name) {
-        super("gcp:endpoints/serviceIamMember:ServiceIamMember", name, ServiceIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

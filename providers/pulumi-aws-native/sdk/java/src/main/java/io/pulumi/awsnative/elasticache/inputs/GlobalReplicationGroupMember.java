@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticache.inputs;
 
 import io.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GlobalReplicationGroupMember extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="replicationGroupId")
-    private final @Nullable String replicationGroupId;
+        private final @Nullable String replicationGroupId;
 
     public Optional<String> getReplicationGroupId() {
         return this.replicationGroupId == null ? Optional.empty() : Optional.ofNullable(this.replicationGroupId);
@@ -31,7 +31,7 @@ public final class GlobalReplicationGroupMember extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="replicationGroupRegion")
-    private final @Nullable String replicationGroupRegion;
+        private final @Nullable String replicationGroupRegion;
 
     public Optional<String> getReplicationGroupRegion() {
         return this.replicationGroupRegion == null ? Optional.empty() : Optional.ofNullable(this.replicationGroupRegion);
@@ -42,7 +42,7 @@ public final class GlobalReplicationGroupMember extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="role")
-    private final @Nullable GlobalReplicationGroupMemberRole role;
+        private final @Nullable GlobalReplicationGroupMemberRole role;
 
     public Optional<GlobalReplicationGroupMemberRole> getRole() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
@@ -101,7 +101,6 @@ public final class GlobalReplicationGroupMember extends io.pulumi.resources.Invo
             this.role = role;
             return this;
         }
-
         public GlobalReplicationGroupMember build() {
             return new GlobalReplicationGroupMember(replicationGroupId, replicationGroupRegion, role);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.spanner.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class DatabaseEncryptionConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -62,7 +62,6 @@ public final class DatabaseEncryptionConfigArgs extends io.pulumi.resources.Reso
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public DatabaseEncryptionConfigArgs build() {
             return new DatabaseEncryptionConfigArgs(kmsKeyName);
         }

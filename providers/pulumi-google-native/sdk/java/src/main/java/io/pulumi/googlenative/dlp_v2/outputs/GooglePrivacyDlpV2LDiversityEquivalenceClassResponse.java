@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueFrequencyResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2LDiversityEquivalenceClassResponse {
             this.topSensitiveValues = Objects.requireNonNull(topSensitiveValues);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityEquivalenceClassResponse build() {
             return new GooglePrivacyDlpV2LDiversityEquivalenceClassResponse(equivalenceClassSize, numDistinctSensitiveValues, quasiIdsValues, topSensitiveValues);
         }

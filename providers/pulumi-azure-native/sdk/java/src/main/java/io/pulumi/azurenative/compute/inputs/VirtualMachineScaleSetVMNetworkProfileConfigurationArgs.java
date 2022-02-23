@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetNetworkConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
      * 
      */
     @InputImport(name="networkInterfaceConfigurations")
-    private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
+        private final @Nullable Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> networkInterfaceConfigurations;
 
     public Input<List<VirtualMachineScaleSetNetworkConfigurationArgs>> getNetworkInterfaceConfigurations() {
         return this.networkInterfaceConfigurations == null ? Input.empty() : this.networkInterfaceConfigurations;
@@ -67,7 +67,6 @@ public final class VirtualMachineScaleSetVMNetworkProfileConfigurationArgs exten
             this.networkInterfaceConfigurations = Input.ofNullable(networkInterfaceConfigurations);
             return this;
         }
-
         public VirtualMachineScaleSetVMNetworkProfileConfigurationArgs build() {
             return new VirtualMachineScaleSetVMNetworkProfileConfigurationArgs(networkInterfaceConfigurations);
         }

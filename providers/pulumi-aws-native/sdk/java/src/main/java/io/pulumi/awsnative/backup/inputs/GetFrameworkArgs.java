@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.backup.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetFrameworkArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frameworkArn", required=true)
-    private final String frameworkArn;
+        private final String frameworkArn;
 
     public String getFrameworkArn() {
         return this.frameworkArn;
@@ -55,7 +55,6 @@ public final class GetFrameworkArgs extends io.pulumi.resources.InvokeArgs {
             this.frameworkArn = Objects.requireNonNull(frameworkArn);
             return this;
         }
-
         public GetFrameworkArgs build() {
             return new GetFrameworkArgs(frameworkArn);
         }

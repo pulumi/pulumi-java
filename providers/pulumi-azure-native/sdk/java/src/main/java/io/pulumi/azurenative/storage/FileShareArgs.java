@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storage.enums.RootSquashType;
 import io.pulumi.azurenative.storage.enums.ShareAccessTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessTier")
-    private final @Nullable Input<Either<String,ShareAccessTier>> accessTier;
+        private final @Nullable Input<Either<String,ShareAccessTier>> accessTier;
 
     public Input<Either<String,ShareAccessTier>> getAccessTier() {
         return this.accessTier == null ? Input.empty() : this.accessTier;
@@ -36,7 +36,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -47,7 +47,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable Input<Either<String,EnabledProtocols>> enabledProtocols;
+        private final @Nullable Input<Either<String,EnabledProtocols>> enabledProtocols;
 
     public Input<Either<String,EnabledProtocols>> getEnabledProtocols() {
         return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
@@ -58,7 +58,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable Input<String> expand;
+        private final @Nullable Input<String> expand;
 
     public Input<String> getExpand() {
         return this.expand == null ? Input.empty() : this.expand;
@@ -69,7 +69,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -80,7 +80,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -91,7 +91,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rootSquash")
-    private final @Nullable Input<Either<String,RootSquashType>> rootSquash;
+        private final @Nullable Input<Either<String,RootSquashType>> rootSquash;
 
     public Input<Either<String,RootSquashType>> getRootSquash() {
         return this.rootSquash == null ? Input.empty() : this.rootSquash;
@@ -102,7 +102,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName")
-    private final @Nullable Input<String> shareName;
+        private final @Nullable Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName == null ? Input.empty() : this.shareName;
@@ -113,7 +113,7 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareQuota")
-    private final @Nullable Input<Integer> shareQuota;
+        private final @Nullable Input<Integer> shareQuota;
 
     public Input<Integer> getShareQuota() {
         return this.shareQuota == null ? Input.empty() : this.shareQuota;
@@ -277,7 +277,6 @@ public final class FileShareArgs extends io.pulumi.resources.ResourceArgs {
             this.shareQuota = Input.ofNullable(shareQuota);
             return this;
         }
-
         public FileShareArgs build() {
             return new FileShareArgs(accessTier, accountName, enabledProtocols, expand, metadata, resourceGroupName, rootSquash, shareName, shareQuota);
         }

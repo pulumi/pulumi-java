@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.LatestOperationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -309,7 +309,6 @@ public final class GetUserResult {
             this.uniqueIdentifier = uniqueIdentifier;
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(email, familyName, givenName, id, latestOperationResult, location, name, provisioningState, tags, tenantId, totalUsage, type, uniqueIdentifier);
         }

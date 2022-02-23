@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagecache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="currentFirmwareVersion", required=true)
-    private final String currentFirmwareVersion;
+        private final String currentFirmwareVersion;
 
     public String getCurrentFirmwareVersion() {
         return this.currentFirmwareVersion;
@@ -32,7 +32,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="firmwareUpdateDeadline", required=true)
-    private final String firmwareUpdateDeadline;
+        private final String firmwareUpdateDeadline;
 
     public String getFirmwareUpdateDeadline() {
         return this.firmwareUpdateDeadline;
@@ -43,7 +43,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="firmwareUpdateStatus", required=true)
-    private final String firmwareUpdateStatus;
+        private final String firmwareUpdateStatus;
 
     public String getFirmwareUpdateStatus() {
         return this.firmwareUpdateStatus;
@@ -54,7 +54,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="lastFirmwareUpdate", required=true)
-    private final String lastFirmwareUpdate;
+        private final String lastFirmwareUpdate;
 
     public String getLastFirmwareUpdate() {
         return this.lastFirmwareUpdate;
@@ -65,7 +65,7 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pendingFirmwareVersion", required=true)
-    private final String pendingFirmwareVersion;
+        private final String pendingFirmwareVersion;
 
     public String getPendingFirmwareVersion() {
         return this.pendingFirmwareVersion;
@@ -144,7 +144,6 @@ public final class CacheUpgradeStatusResponse extends io.pulumi.resources.Invoke
             this.pendingFirmwareVersion = Objects.requireNonNull(pendingFirmwareVersion);
             return this;
         }
-
         public CacheUpgradeStatusResponse build() {
             return new CacheUpgradeStatusResponse(currentFirmwareVersion, firmwareUpdateDeadline, firmwareUpdateStatus, lastFirmwareUpdate, pendingFirmwareVersion);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.FuotaTaskLoRaWAN;
 import io.pulumi.awsnative.iotwireless.outputs.FuotaTaskTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -310,7 +310,6 @@ public final class GetFuotaTaskResult {
             this.tags = tags;
             return this;
         }
-
         public GetFuotaTaskResult build() {
             return new GetFuotaTaskResult(arn, associateMulticastGroup, associateWirelessDevice, description, disassociateMulticastGroup, disassociateWirelessDevice, firmwareUpdateImage, firmwareUpdateRole, fuotaTaskStatus, id, loRaWAN, name, tags);
         }

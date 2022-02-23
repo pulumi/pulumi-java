@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="filePattern")
-    private final @Nullable Object filePattern;
+        private final @Nullable Object filePattern;
 
     public Optional<Object> getFilePattern() {
         return this.filePattern == null ? Optional.empty() : Optional.ofNullable(this.filePattern);
@@ -36,7 +36,7 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -85,7 +85,6 @@ public final class JsonWriteSettingsResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonWriteSettingsResponse build() {
             return new JsonWriteSettingsResponse(filePattern, type);
         }

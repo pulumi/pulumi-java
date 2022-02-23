@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="updateAutoLearnPolicy")
-    private final @Nullable Input<Boolean> updateAutoLearnPolicy;
+      private final @Nullable Input<Boolean> updateAutoLearnPolicy;
 
     public Input<Boolean> getUpdateAutoLearnPolicy() {
         return this.updateAutoLearnPolicy == null ? Input.empty() : this.updateAutoLearnPolicy;
@@ -66,7 +66,6 @@ public final class ShieldedInstanceIntegrityPolicyArgs extends io.pulumi.resourc
             this.updateAutoLearnPolicy = Input.ofNullable(updateAutoLearnPolicy);
             return this;
         }
-
         public ShieldedInstanceIntegrityPolicyArgs build() {
             return new ShieldedInstanceIntegrityPolicyArgs(updateAutoLearnPolicy);
         }

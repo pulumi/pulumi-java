@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class CompletenessResponse {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
         public CompletenessResponse build() {
             return new CompletenessResponse(arguments, environment, materials);
         }

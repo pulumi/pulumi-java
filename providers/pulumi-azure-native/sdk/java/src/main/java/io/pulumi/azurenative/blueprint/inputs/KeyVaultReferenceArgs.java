@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -65,7 +65,6 @@ public final class KeyVaultReferenceArgs extends io.pulumi.resources.ResourceArg
             this.id = Input.of(Objects.requireNonNull(id));
             return this;
         }
-
         public KeyVaultReferenceArgs build() {
             return new KeyVaultReferenceArgs(id);
         }

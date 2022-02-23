@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="peerAsnName", required=true)
-    private final String peerAsnName;
+        private final String peerAsnName;
 
     public String getPeerAsnName() {
         return this.peerAsnName;
@@ -55,7 +55,6 @@ public final class GetPeerAsnArgs extends io.pulumi.resources.InvokeArgs {
             this.peerAsnName = Objects.requireNonNull(peerAsnName);
             return this;
         }
-
         public GetPeerAsnArgs build() {
             return new GetPeerAsnArgs(peerAsnName);
         }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.PtrRecordResponse;
 import io.pulumi.azurenative.network.outputs.SoaRecordResponse;
 import io.pulumi.azurenative.network.outputs.SrvRecordResponse;
 import io.pulumi.azurenative.network.outputs.TxtRecordResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -382,7 +382,6 @@ public final class GetPrivateRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateRecordSetResult build() {
             return new GetPrivateRecordSetResult(aRecords, aaaaRecords, cnameRecord, etag, fqdn, id, isAutoRegistered, metadata, mxRecords, name, ptrRecords, soaRecord, srvRecords, ttl, txtRecords, type);
         }

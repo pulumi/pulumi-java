@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="count", required=true)
-    private final Integer count;
+        private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+        private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -82,7 +82,6 @@ public final class TimelineAggregationResponse extends io.pulumi.resources.Invok
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public TimelineAggregationResponse build() {
             return new TimelineAggregationResponse(count, kind);
         }

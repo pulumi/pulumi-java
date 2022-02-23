@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.UserDefinedFunctionResourceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class ViewDefinitionResponse {
             this.userDefinedFunctionResources = Objects.requireNonNull(userDefinedFunctionResources);
             return this;
         }
-
         public ViewDefinitionResponse build() {
             return new ViewDefinitionResponse(query, useExplicitColumnNames, useLegacySql, userDefinedFunctionResources);
         }

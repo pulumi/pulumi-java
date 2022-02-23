@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionFormatVersion;
 import io.pulumi.awsnative.quicksight.enums.DataSetRowLevelPermissionPolicy;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,14 +25,14 @@ public final class DataSetRowLevelPermissionDataSet extends io.pulumi.resources.
      * 
      */
     @InputImport(name="arn", required=true)
-    private final String arn;
+        private final String arn;
 
     public String getArn() {
         return this.arn;
     }
 
     @InputImport(name="formatVersion")
-    private final @Nullable DataSetRowLevelPermissionFormatVersion formatVersion;
+        private final @Nullable DataSetRowLevelPermissionFormatVersion formatVersion;
 
     public Optional<DataSetRowLevelPermissionFormatVersion> getFormatVersion() {
         return this.formatVersion == null ? Optional.empty() : Optional.ofNullable(this.formatVersion);
@@ -43,14 +43,14 @@ public final class DataSetRowLevelPermissionDataSet extends io.pulumi.resources.
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable String namespace;
+        private final @Nullable String namespace;
 
     public Optional<String> getNamespace() {
         return this.namespace == null ? Optional.empty() : Optional.ofNullable(this.namespace);
     }
 
     @InputImport(name="permissionPolicy", required=true)
-    private final DataSetRowLevelPermissionPolicy permissionPolicy;
+        private final DataSetRowLevelPermissionPolicy permissionPolicy;
 
     public DataSetRowLevelPermissionPolicy getPermissionPolicy() {
         return this.permissionPolicy;
@@ -119,7 +119,6 @@ public final class DataSetRowLevelPermissionDataSet extends io.pulumi.resources.
             this.permissionPolicy = Objects.requireNonNull(permissionPolicy);
             return this;
         }
-
         public DataSetRowLevelPermissionDataSet build() {
             return new DataSetRowLevelPermissionDataSet(arn, formatVersion, namespace, permissionPolicy);
         }

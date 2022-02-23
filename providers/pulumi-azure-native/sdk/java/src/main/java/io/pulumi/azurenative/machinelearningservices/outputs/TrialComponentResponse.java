@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.MpiResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.OutputDataBindingResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.TensorFlowResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -211,7 +211,6 @@ public final class TrialComponentResponse {
             this.timeout = timeout;
             return this;
         }
-
         public TrialComponentResponse build() {
             return new TrialComponentResponse(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
         }

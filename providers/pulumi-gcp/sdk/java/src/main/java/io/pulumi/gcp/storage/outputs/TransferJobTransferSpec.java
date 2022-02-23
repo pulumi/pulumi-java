@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAwsS3DataSource;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAzureBlobStorageDataSource;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecGcsDataSink;
@@ -187,7 +187,6 @@ public final class TransferJobTransferSpec {
             this.transferOptions = transferOptions;
             return this;
         }
-
         public TransferJobTransferSpec build() {
             return new TransferJobTransferSpec(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, httpDataSource, objectConditions, transferOptions);
         }

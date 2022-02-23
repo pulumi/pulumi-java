@@ -8,7 +8,7 @@ import io.pulumi.awsnative.apigateway.inputs.DeploymentCanarySettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentMethodSettingArgs;
 import io.pulumi.awsnative.apigateway.inputs.DeploymentTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -28,7 +28,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="accessLogSetting")
-    private final @Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting;
+        private final @Nullable Input<DeploymentAccessLogSettingArgs> accessLogSetting;
 
     public Input<DeploymentAccessLogSettingArgs> getAccessLogSetting() {
         return this.accessLogSetting == null ? Input.empty() : this.accessLogSetting;
@@ -39,7 +39,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheClusterEnabled")
-    private final @Nullable Input<Boolean> cacheClusterEnabled;
+        private final @Nullable Input<Boolean> cacheClusterEnabled;
 
     public Input<Boolean> getCacheClusterEnabled() {
         return this.cacheClusterEnabled == null ? Input.empty() : this.cacheClusterEnabled;
@@ -50,7 +50,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheClusterSize")
-    private final @Nullable Input<String> cacheClusterSize;
+        private final @Nullable Input<String> cacheClusterSize;
 
     public Input<String> getCacheClusterSize() {
         return this.cacheClusterSize == null ? Input.empty() : this.cacheClusterSize;
@@ -61,7 +61,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheDataEncrypted")
-    private final @Nullable Input<Boolean> cacheDataEncrypted;
+        private final @Nullable Input<Boolean> cacheDataEncrypted;
 
     public Input<Boolean> getCacheDataEncrypted() {
         return this.cacheDataEncrypted == null ? Input.empty() : this.cacheDataEncrypted;
@@ -72,7 +72,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cacheTtlInSeconds")
-    private final @Nullable Input<Integer> cacheTtlInSeconds;
+        private final @Nullable Input<Integer> cacheTtlInSeconds;
 
     public Input<Integer> getCacheTtlInSeconds() {
         return this.cacheTtlInSeconds == null ? Input.empty() : this.cacheTtlInSeconds;
@@ -83,7 +83,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cachingEnabled")
-    private final @Nullable Input<Boolean> cachingEnabled;
+        private final @Nullable Input<Boolean> cachingEnabled;
 
     public Input<Boolean> getCachingEnabled() {
         return this.cachingEnabled == null ? Input.empty() : this.cachingEnabled;
@@ -94,7 +94,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="canarySetting")
-    private final @Nullable Input<DeploymentCanarySettingArgs> canarySetting;
+        private final @Nullable Input<DeploymentCanarySettingArgs> canarySetting;
 
     public Input<DeploymentCanarySettingArgs> getCanarySetting() {
         return this.canarySetting == null ? Input.empty() : this.canarySetting;
@@ -105,7 +105,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="clientCertificateId")
-    private final @Nullable Input<String> clientCertificateId;
+        private final @Nullable Input<String> clientCertificateId;
 
     public Input<String> getClientCertificateId() {
         return this.clientCertificateId == null ? Input.empty() : this.clientCertificateId;
@@ -116,7 +116,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataTraceEnabled")
-    private final @Nullable Input<Boolean> dataTraceEnabled;
+        private final @Nullable Input<Boolean> dataTraceEnabled;
 
     public Input<Boolean> getDataTraceEnabled() {
         return this.dataTraceEnabled == null ? Input.empty() : this.dataTraceEnabled;
@@ -127,7 +127,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -138,7 +138,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="documentationVersion")
-    private final @Nullable Input<String> documentationVersion;
+        private final @Nullable Input<String> documentationVersion;
 
     public Input<String> getDocumentationVersion() {
         return this.documentationVersion == null ? Input.empty() : this.documentationVersion;
@@ -149,7 +149,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="loggingLevel")
-    private final @Nullable Input<String> loggingLevel;
+        private final @Nullable Input<String> loggingLevel;
 
     public Input<String> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -160,7 +160,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="methodSettings")
-    private final @Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings;
+        private final @Nullable Input<List<DeploymentMethodSettingArgs>> methodSettings;
 
     public Input<List<DeploymentMethodSettingArgs>> getMethodSettings() {
         return this.methodSettings == null ? Input.empty() : this.methodSettings;
@@ -171,7 +171,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="metricsEnabled")
-    private final @Nullable Input<Boolean> metricsEnabled;
+        private final @Nullable Input<Boolean> metricsEnabled;
 
     public Input<Boolean> getMetricsEnabled() {
         return this.metricsEnabled == null ? Input.empty() : this.metricsEnabled;
@@ -182,7 +182,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DeploymentTagArgs>> tags;
+        private final @Nullable Input<List<DeploymentTagArgs>> tags;
 
     public Input<List<DeploymentTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -193,7 +193,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throttlingBurstLimit")
-    private final @Nullable Input<Integer> throttlingBurstLimit;
+        private final @Nullable Input<Integer> throttlingBurstLimit;
 
     public Input<Integer> getThrottlingBurstLimit() {
         return this.throttlingBurstLimit == null ? Input.empty() : this.throttlingBurstLimit;
@@ -204,7 +204,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="throttlingRateLimit")
-    private final @Nullable Input<Double> throttlingRateLimit;
+        private final @Nullable Input<Double> throttlingRateLimit;
 
     public Input<Double> getThrottlingRateLimit() {
         return this.throttlingRateLimit == null ? Input.empty() : this.throttlingRateLimit;
@@ -215,7 +215,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="tracingEnabled")
-    private final @Nullable Input<Boolean> tracingEnabled;
+        private final @Nullable Input<Boolean> tracingEnabled;
 
     public Input<Boolean> getTracingEnabled() {
         return this.tracingEnabled == null ? Input.empty() : this.tracingEnabled;
@@ -226,7 +226,7 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="variables")
-    private final @Nullable Input<Object> variables;
+        private final @Nullable Input<Object> variables;
 
     public Input<Object> getVariables() {
         return this.variables == null ? Input.empty() : this.variables;
@@ -540,7 +540,6 @@ public final class DeploymentStageDescriptionArgs extends io.pulumi.resources.Re
             this.variables = Input.ofNullable(variables);
             return this;
         }
-
         public DeploymentStageDescriptionArgs build() {
             return new DeploymentStageDescriptionArgs(accessLogSetting, cacheClusterEnabled, cacheClusterSize, cacheDataEncrypted, cacheTtlInSeconds, cachingEnabled, canarySetting, clientCertificateId, dataTraceEnabled, description, documentationVersion, loggingLevel, methodSettings, metricsEnabled, tags, throttlingBurstLimit, throttlingRateLimit, tracingEnabled, variables);
         }

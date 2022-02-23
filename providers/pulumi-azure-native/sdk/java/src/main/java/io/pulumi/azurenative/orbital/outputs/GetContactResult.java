@@ -5,7 +5,7 @@ package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.orbital.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -455,7 +455,6 @@ public final class GetContactResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContactResult build() {
             return new GetContactResult(contactProfile, endAzimuthDegrees, endElevationDegrees, errorMessage, etag, groundStationName, id, maximumElevationDegrees, name, reservationEndTime, reservationStartTime, rxEndTime, rxStartTime, startAzimuthDegrees, startElevationDegrees, status, systemData, txEndTime, txStartTime, type);
         }

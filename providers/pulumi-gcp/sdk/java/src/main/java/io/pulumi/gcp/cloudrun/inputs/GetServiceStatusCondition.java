@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,28 +13,28 @@ public final class GetServiceStatusCondition extends io.pulumi.resources.InvokeA
     public static final GetServiceStatusCondition Empty = new GetServiceStatusCondition();
 
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
     }
 
     @InputImport(name="reason", required=true)
-    private final String reason;
+        private final String reason;
 
     public String getReason() {
         return this.reason;
     }
 
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
     }
 
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class GetServiceStatusCondition extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceStatusCondition build() {
             return new GetServiceStatusCondition(message, reason, status, type);
         }

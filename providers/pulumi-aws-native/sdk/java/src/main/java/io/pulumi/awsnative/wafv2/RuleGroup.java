@@ -13,8 +13,8 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupTag;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -123,13 +123,6 @@ public class RuleGroup extends io.pulumi.resources.CustomResource {
         return this.visibilityConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RuleGroup(String name) {
-        super("aws-native:wafv2:RuleGroup", name, RuleGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

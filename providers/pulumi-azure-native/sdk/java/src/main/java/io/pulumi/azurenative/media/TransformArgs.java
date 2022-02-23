@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media;
 
 import io.pulumi.azurenative.media.inputs.TransformOutputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputs", required=true)
-    private final Input<List<TransformOutputArgs>> outputs;
+        private final Input<List<TransformOutputArgs>> outputs;
 
     public Input<List<TransformOutputArgs>> getOutputs() {
         return this.outputs;
@@ -54,7 +54,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transformName")
-    private final @Nullable Input<String> transformName;
+        private final @Nullable Input<String> transformName;
 
     public Input<String> getTransformName() {
         return this.transformName == null ? Input.empty() : this.transformName;
@@ -169,7 +169,6 @@ public final class TransformArgs extends io.pulumi.resources.ResourceArgs {
             this.transformName = Input.ofNullable(transformName);
             return this;
         }
-
         public TransformArgs build() {
             return new TransformArgs(accountName, description, outputs, resourceGroupName, transformName);
         }

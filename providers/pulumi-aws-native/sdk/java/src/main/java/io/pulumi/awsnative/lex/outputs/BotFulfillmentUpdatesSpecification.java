@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentStartResponseSpecification;
 import io.pulumi.awsnative.lex.outputs.BotFulfillmentUpdateResponseSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -105,7 +105,6 @@ public final class BotFulfillmentUpdatesSpecification {
             this.updateResponse = updateResponse;
             return this;
         }
-
         public BotFulfillmentUpdatesSpecification build() {
             return new BotFulfillmentUpdatesSpecification(active, startResponse, timeoutInSeconds, updateResponse);
         }

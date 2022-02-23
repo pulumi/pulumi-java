@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetDataControllerArgs Empty = new GetDataControllerArgs();
 
     @InputImport(name="dataControllerName", required=true)
-    private final String dataControllerName;
+        private final String dataControllerName;
 
     public String getDataControllerName() {
         return this.dataControllerName;
@@ -24,7 +24,7 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -73,7 +73,6 @@ public final class GetDataControllerArgs extends io.pulumi.resources.InvokeArgs 
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDataControllerArgs build() {
             return new GetDataControllerArgs(dataControllerName, resourceGroupName);
         }

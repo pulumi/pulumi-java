@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationAuthorityResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BasisResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BuildTypeResponse;
@@ -510,7 +510,6 @@ public final class GetNoteResult {
             this.vulnerabilityType = Objects.requireNonNull(vulnerabilityType);
             return this;
         }
-
         public GetNoteResult build() {
             return new GetNoteResult(attestationAuthority, baseImage, buildType, compliance, createTime, deployable, discovery, dsseAttestation, expirationTime, kind, longDescription, name, $package, relatedUrl, sbom, shortDescription, spdxFile, spdxPackage, spdxRelationship, updateTime, upgrade, vulnerabilityType);
         }

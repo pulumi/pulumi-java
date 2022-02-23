@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="desiredState", required=true)
-    private final String desiredState;
+      private final String desiredState;
 
     public String getDesiredState() {
         return this.desiredState;
@@ -32,7 +32,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="manager", required=true)
-    private final String manager;
+      private final String manager;
 
     public String getManager() {
         return this.manager;
@@ -43,7 +43,7 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -102,7 +102,6 @@ public final class PackageResponse extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageResponse build() {
             return new PackageResponse(desiredState, manager, name);
         }

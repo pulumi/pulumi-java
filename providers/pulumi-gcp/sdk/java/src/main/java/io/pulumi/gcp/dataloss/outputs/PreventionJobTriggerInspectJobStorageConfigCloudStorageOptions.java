@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionJobTriggerInspectJobStorageConfigCloudStorageOptionsFileSet;
 import java.lang.Integer;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigCloudStorageOption
             this.sampleMethod = sampleMethod;
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions build() {
             return new PreventionJobTriggerInspectJobStorageConfigCloudStorageOptions(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

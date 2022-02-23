@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.VirtualMachineScaleSetScaleInRules;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
+        private final @Nullable Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> rules;
 
     public Input<List<Either<String,VirtualMachineScaleSetScaleInRules>>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -69,7 +69,6 @@ public final class ScaleInPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public ScaleInPolicyArgs build() {
             return new ScaleInPolicyArgs(rules);
         }

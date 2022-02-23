@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -30,7 +30,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent", required=true)
-    private final Input<String> parent;
+        private final Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent;
@@ -42,7 +42,7 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName", required=true)
-    private final Input<String> shortName;
+        private final Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName;
@@ -116,7 +116,6 @@ public final class TagValueArgs extends io.pulumi.resources.ResourceArgs {
             this.shortName = Input.of(Objects.requireNonNull(shortName));
             return this;
         }
-
         public TagValueArgs build() {
             return new TagValueArgs(description, parent, shortName);
         }

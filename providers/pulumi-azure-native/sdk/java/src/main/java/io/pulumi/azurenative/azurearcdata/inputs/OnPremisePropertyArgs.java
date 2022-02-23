@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -34,7 +34,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicSigningKey", required=true)
-    private final Input<String> publicSigningKey;
+        private final Input<String> publicSigningKey;
 
     public Input<String> getPublicSigningKey() {
         return this.publicSigningKey;
@@ -45,7 +45,7 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="signingCertificateThumbprint")
-    private final @Nullable Input<String> signingCertificateThumbprint;
+        private final @Nullable Input<String> signingCertificateThumbprint;
 
     public Input<String> getSigningCertificateThumbprint() {
         return this.signingCertificateThumbprint == null ? Input.empty() : this.signingCertificateThumbprint;
@@ -119,7 +119,6 @@ public final class OnPremisePropertyArgs extends io.pulumi.resources.ResourceArg
             this.signingCertificateThumbprint = Input.ofNullable(signingCertificateThumbprint);
             return this;
         }
-
         public OnPremisePropertyArgs build() {
             return new OnPremisePropertyArgs(id, publicSigningKey, signingCertificateThumbprint);
         }

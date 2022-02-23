@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1alpha1.UtilizationReportArgs;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
@@ -178,13 +178,6 @@ public class UtilizationReport extends io.pulumi.resources.CustomResource {
         return this.vmsCount;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public UtilizationReport(String name) {
-        super("google-native:vmmigration/v1alpha1:UtilizationReport", name, UtilizationReportArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

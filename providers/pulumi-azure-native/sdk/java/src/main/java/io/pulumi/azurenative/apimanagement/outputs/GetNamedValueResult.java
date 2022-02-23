@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.KeyVaultContractPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -205,7 +205,6 @@ public final class GetNamedValueResult {
             this.value = value;
             return this;
         }
-
         public GetNamedValueResult build() {
             return new GetNamedValueResult(displayName, id, keyVault, name, secret, tags, type, value);
         }

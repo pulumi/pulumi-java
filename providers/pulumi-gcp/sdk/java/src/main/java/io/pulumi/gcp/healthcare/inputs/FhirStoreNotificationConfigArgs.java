@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class FhirStoreNotificationConfigArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final Input<String> pubsubTopic;
+        private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;
@@ -66,7 +66,6 @@ public final class FhirStoreNotificationConfigArgs extends io.pulumi.resources.R
             this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
-
         public FhirStoreNotificationConfigArgs build() {
             return new FhirStoreNotificationConfigArgs(pubsubTopic);
         }

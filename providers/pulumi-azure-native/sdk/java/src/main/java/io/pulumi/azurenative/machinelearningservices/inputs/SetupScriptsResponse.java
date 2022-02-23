@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ScriptsToExecuteResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SetupScriptsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scripts")
-    private final @Nullable ScriptsToExecuteResponse scripts;
+        private final @Nullable ScriptsToExecuteResponse scripts;
 
     public Optional<ScriptsToExecuteResponse> getScripts() {
         return this.scripts == null ? Optional.empty() : Optional.ofNullable(this.scripts);
@@ -61,7 +61,6 @@ public final class SetupScriptsResponse extends io.pulumi.resources.InvokeArgs {
             this.scripts = scripts;
             return this;
         }
-
         public SetupScriptsResponse build() {
             return new SetupScriptsResponse(scripts);
         }

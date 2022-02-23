@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfMetricType;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesPerfUnit;
 import io.pulumi.googlenative.toolresults_v1beta3.enums.BasicPerfSampleSeriesSampleSeriesLabel;
@@ -21,21 +21,21 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
     public static final BasicPerfSampleSeriesArgs Empty = new BasicPerfSampleSeriesArgs();
 
     @InputImport(name="perfMetricType")
-    private final @Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
+      private final @Nullable Input<BasicPerfSampleSeriesPerfMetricType> perfMetricType;
 
     public Input<BasicPerfSampleSeriesPerfMetricType> getPerfMetricType() {
         return this.perfMetricType == null ? Input.empty() : this.perfMetricType;
     }
 
     @InputImport(name="perfUnit")
-    private final @Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit;
+      private final @Nullable Input<BasicPerfSampleSeriesPerfUnit> perfUnit;
 
     public Input<BasicPerfSampleSeriesPerfUnit> getPerfUnit() {
         return this.perfUnit == null ? Input.empty() : this.perfUnit;
     }
 
     @InputImport(name="sampleSeriesLabel")
-    private final @Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
+      private final @Nullable Input<BasicPerfSampleSeriesSampleSeriesLabel> sampleSeriesLabel;
 
     public Input<BasicPerfSampleSeriesSampleSeriesLabel> getSampleSeriesLabel() {
         return this.sampleSeriesLabel == null ? Input.empty() : this.sampleSeriesLabel;
@@ -109,7 +109,6 @@ public final class BasicPerfSampleSeriesArgs extends io.pulumi.resources.Resourc
             this.sampleSeriesLabel = Input.ofNullable(sampleSeriesLabel);
             return this;
         }
-
         public BasicPerfSampleSeriesArgs build() {
             return new BasicPerfSampleSeriesArgs(perfMetricType, perfUnit, sampleSeriesLabel);
         }

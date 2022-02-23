@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig 
             this.idleStartTime = idleStartTime;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigLifecycleConfig(autoDeleteTime, autoDeleteTtl, idleDeleteTtl, idleStartTime);
         }

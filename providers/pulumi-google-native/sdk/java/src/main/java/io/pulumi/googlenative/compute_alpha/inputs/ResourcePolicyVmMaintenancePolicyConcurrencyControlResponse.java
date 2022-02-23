@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse e
     public static final ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse Empty = new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse();
 
     @InputImport(name="concurrencyLimit", required=true)
-    private final Integer concurrencyLimit;
+      private final Integer concurrencyLimit;
 
     public Integer getConcurrencyLimit() {
         return this.concurrencyLimit;
@@ -55,7 +55,6 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse e
             this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse build() {
             return new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(concurrencyLimit);
         }

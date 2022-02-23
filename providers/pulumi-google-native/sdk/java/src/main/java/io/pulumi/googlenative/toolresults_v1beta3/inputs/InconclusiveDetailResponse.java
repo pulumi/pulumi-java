@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="abortedByUser", required=true)
-    private final Boolean abortedByUser;
+      private final Boolean abortedByUser;
 
     public Boolean getAbortedByUser() {
         return this.abortedByUser;
@@ -32,7 +32,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="hasErrorLogs", required=true)
-    private final Boolean hasErrorLogs;
+      private final Boolean hasErrorLogs;
 
     public Boolean getHasErrorLogs() {
         return this.hasErrorLogs;
@@ -43,7 +43,7 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="infrastructureFailure", required=true)
-    private final Boolean infrastructureFailure;
+      private final Boolean infrastructureFailure;
 
     public Boolean getInfrastructureFailure() {
         return this.infrastructureFailure;
@@ -102,7 +102,6 @@ public final class InconclusiveDetailResponse extends io.pulumi.resources.Invoke
             this.infrastructureFailure = Objects.requireNonNull(infrastructureFailure);
             return this;
         }
-
         public InconclusiveDetailResponse build() {
             return new InconclusiveDetailResponse(abortedByUser, hasErrorLogs, infrastructureFailure);
         }

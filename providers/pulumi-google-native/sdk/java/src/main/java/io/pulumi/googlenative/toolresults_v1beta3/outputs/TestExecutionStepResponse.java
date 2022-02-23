@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestIssueResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestSuiteOverviewResponse;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.TestTimingResponse;
@@ -120,7 +120,6 @@ public final class TestExecutionStepResponse {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }
-
         public TestExecutionStepResponse build() {
             return new TestExecutionStepResponse(testIssues, testSuiteOverviews, testTiming, toolExecution);
         }

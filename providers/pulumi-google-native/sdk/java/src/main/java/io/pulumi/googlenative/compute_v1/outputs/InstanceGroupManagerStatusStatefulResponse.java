@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.InstanceGroupManagerStatusStatefulPerInstanceConfigsResponse;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class InstanceGroupManagerStatusStatefulResponse {
             this.perInstanceConfigs = Objects.requireNonNull(perInstanceConfigs);
             return this;
         }
-
         public InstanceGroupManagerStatusStatefulResponse build() {
             return new InstanceGroupManagerStatusStatefulResponse(hasStatefulConfig, perInstanceConfigs);
         }

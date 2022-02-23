@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
      * 
      */
     @InputImport(name="kerberosConfig")
-    private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
+        private final @Nullable Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> kerberosConfig;
 
     public Input<WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfigGetArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
@@ -62,7 +62,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGe
             this.kerberosConfig = Input.ofNullable(kerberosConfig);
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigGetArgs(kerberosConfig);
         }

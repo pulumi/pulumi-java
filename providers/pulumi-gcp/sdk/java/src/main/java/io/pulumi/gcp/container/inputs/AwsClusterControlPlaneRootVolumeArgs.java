@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="iops")
-    private final @Nullable Input<Integer> iops;
+        private final @Nullable Input<Integer> iops;
 
     public Input<Integer> getIops() {
         return this.iops == null ? Input.empty() : this.iops;
@@ -31,7 +31,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="kmsKeyArn")
-    private final @Nullable Input<String> kmsKeyArn;
+        private final @Nullable Input<String> kmsKeyArn;
 
     public Input<String> getKmsKeyArn() {
         return this.kmsKeyArn == null ? Input.empty() : this.kmsKeyArn;
@@ -42,7 +42,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sizeGib")
-    private final @Nullable Input<Integer> sizeGib;
+        private final @Nullable Input<Integer> sizeGib;
 
     public Input<Integer> getSizeGib() {
         return this.sizeGib == null ? Input.empty() : this.sizeGib;
@@ -53,7 +53,7 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="volumeType")
-    private final @Nullable Input<String> volumeType;
+        private final @Nullable Input<String> volumeType;
 
     public Input<String> getVolumeType() {
         return this.volumeType == null ? Input.empty() : this.volumeType;
@@ -142,7 +142,6 @@ public final class AwsClusterControlPlaneRootVolumeArgs extends io.pulumi.resour
             this.volumeType = Input.ofNullable(volumeType);
             return this;
         }
-
         public AwsClusterControlPlaneRootVolumeArgs build() {
             return new AwsClusterControlPlaneRootVolumeArgs(iops, kmsKeyArn, sizeGib, volumeType);
         }

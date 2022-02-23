@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="countOfDowngrades", required=true)
-    private final Double countOfDowngrades;
+        private final Double countOfDowngrades;
 
     public Double getCountOfDowngrades() {
         return this.countOfDowngrades;
@@ -33,7 +33,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="countOfUpgradesAfterDowngrades", required=true)
-    private final Double countOfUpgradesAfterDowngrades;
+        private final Double countOfUpgradesAfterDowngrades;
 
     public Double getCountOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
@@ -44,7 +44,7 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
      * 
      */
     @InputImport(name="lastChangeDate", required=true)
-    private final String lastChangeDate;
+        private final String lastChangeDate;
 
     public String getLastChangeDate() {
         return this.lastChangeDate;
@@ -103,7 +103,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse extends io.pulu
             this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
             return this;
         }
-
         public CognitiveServicesAccountSkuChangeInfoResponse build() {
             return new CognitiveServicesAccountSkuChangeInfoResponse(countOfDowngrades, countOfUpgradesAfterDowngrades, lastChangeDate);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.TimelineAggregationResponse;
 import io.pulumi.azurenative.securityinsights.inputs.TimelineErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="aggregations", required=true)
-    private final List<TimelineAggregationResponse> aggregations;
+        private final List<TimelineAggregationResponse> aggregations;
 
     public List<TimelineAggregationResponse> getAggregations() {
         return this.aggregations;
@@ -37,7 +37,7 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable List<TimelineErrorResponse> errors;
+        private final @Nullable List<TimelineErrorResponse> errors;
 
     public List<TimelineErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
@@ -48,7 +48,7 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="totalCount", required=true)
-    private final Integer totalCount;
+        private final Integer totalCount;
 
     public Integer getTotalCount() {
         return this.totalCount;
@@ -107,7 +107,6 @@ public final class TimelineResultsMetadataResponse extends io.pulumi.resources.I
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public TimelineResultsMetadataResponse build() {
             return new TimelineResultsMetadataResponse(aggregations, errors, totalCount);
         }

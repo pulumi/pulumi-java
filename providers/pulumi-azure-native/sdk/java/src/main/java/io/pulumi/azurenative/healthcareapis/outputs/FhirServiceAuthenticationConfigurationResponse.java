@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class FhirServiceAuthenticationConfigurationResponse {
             this.smartProxyEnabled = smartProxyEnabled;
             return this;
         }
-
         public FhirServiceAuthenticationConfigurationResponse build() {
             return new FhirServiceAuthenticationConfigurationResponse(audience, authority, smartProxyEnabled);
         }

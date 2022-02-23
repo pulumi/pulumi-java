@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessAr
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessAr
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageConversationSuccessArgs(metadata);
         }

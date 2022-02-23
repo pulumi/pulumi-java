@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.RecurrenceScheduleOccurrenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="hours")
-    private final @Nullable List<Integer> hours;
+        private final @Nullable List<Integer> hours;
 
     public List<Integer> getHours() {
         return this.hours == null ? List.of() : this.hours;
@@ -37,7 +37,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="minutes")
-    private final @Nullable List<Integer> minutes;
+        private final @Nullable List<Integer> minutes;
 
     public List<Integer> getMinutes() {
         return this.minutes == null ? List.of() : this.minutes;
@@ -48,7 +48,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="monthDays")
-    private final @Nullable List<Integer> monthDays;
+        private final @Nullable List<Integer> monthDays;
 
     public List<Integer> getMonthDays() {
         return this.monthDays == null ? List.of() : this.monthDays;
@@ -59,7 +59,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="monthlyOccurrences")
-    private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
+        private final @Nullable List<RecurrenceScheduleOccurrenceResponse> monthlyOccurrences;
 
     public List<RecurrenceScheduleOccurrenceResponse> getMonthlyOccurrences() {
         return this.monthlyOccurrences == null ? List.of() : this.monthlyOccurrences;
@@ -70,7 +70,7 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="weekDays")
-    private final @Nullable List<String> weekDays;
+        private final @Nullable List<String> weekDays;
 
     public List<String> getWeekDays() {
         return this.weekDays == null ? List.of() : this.weekDays;
@@ -149,7 +149,6 @@ public final class RecurrenceScheduleResponse extends io.pulumi.resources.Invoke
             this.weekDays = weekDays;
             return this;
         }
-
         public RecurrenceScheduleResponse build() {
             return new RecurrenceScheduleResponse(hours, minutes, monthDays, monthlyOccurrences, weekDays);
         }

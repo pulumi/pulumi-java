@@ -5,7 +5,7 @@ package io.pulumi.azurenative.subscription;
 
 import io.pulumi.azurenative.subscription.inputs.PutAliasRequestPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aliasName")
-    private final @Nullable Input<String> aliasName;
+        private final @Nullable Input<String> aliasName;
 
     public Input<String> getAliasName() {
         return this.aliasName == null ? Input.empty() : this.aliasName;
@@ -31,7 +31,7 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<PutAliasRequestPropertiesArgs> properties;
+        private final Input<PutAliasRequestPropertiesArgs> properties;
 
     public Input<PutAliasRequestPropertiesArgs> getProperties() {
         return this.properties;
@@ -90,7 +90,6 @@ public final class AliasArgs extends io.pulumi.resources.ResourceArgs {
             this.properties = Input.of(Objects.requireNonNull(properties));
             return this;
         }
-
         public AliasArgs build() {
             return new AliasArgs(aliasName, properties);
         }

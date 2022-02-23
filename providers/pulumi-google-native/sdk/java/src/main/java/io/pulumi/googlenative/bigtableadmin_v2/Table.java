@@ -5,8 +5,8 @@ package io.pulumi.googlenative.bigtableadmin_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.bigtableadmin_v2.TableArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.RestoreInfoResponse;
@@ -91,13 +91,6 @@ public class Table extends io.pulumi.resources.CustomResource {
         return this.restoreInfo;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Table(String name) {
-        super("google-native:bigtableadmin/v2:Table", name, TableArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

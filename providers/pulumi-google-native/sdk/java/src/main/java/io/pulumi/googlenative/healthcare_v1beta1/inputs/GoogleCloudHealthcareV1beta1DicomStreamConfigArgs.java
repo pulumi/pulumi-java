@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
      * 
      */
     @InputImport(name="bigqueryDestination")
-    private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
+      private final @Nullable Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> bigqueryDestination;
 
     public Input<GoogleCloudHealthcareV1beta1DicomBigQueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination == null ? Input.empty() : this.bigqueryDestination;
@@ -66,7 +66,6 @@ public final class GoogleCloudHealthcareV1beta1DicomStreamConfigArgs extends io.
             this.bigqueryDestination = Input.ofNullable(bigqueryDestination);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1DicomStreamConfigArgs build() {
             return new GoogleCloudHealthcareV1beta1DicomStreamConfigArgs(bigqueryDestination);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resourceconnector.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class HybridConnectionConfigResponse {
             this.token = Objects.requireNonNull(token);
             return this;
         }
-
         public HybridConnectionConfigResponse build() {
             return new HybridConnectionConfigResponse(expirationTime, hybridConnectionName, relay, token);
         }

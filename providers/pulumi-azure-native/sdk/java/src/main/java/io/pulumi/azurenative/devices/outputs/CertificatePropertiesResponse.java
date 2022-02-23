@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class CertificatePropertiesResponse {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public CertificatePropertiesResponse build() {
             return new CertificatePropertiesResponse(certificate, created, expiry, isVerified, subject, thumbprint, updated);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.LabelClassResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -100,7 +100,6 @@ public final class LabelCategoryResponse {
             this.displayName = displayName;
             return this;
         }
-
         public LabelCategoryResponse build() {
             return new LabelCategoryResponse(allowMultiSelect, classes, displayName);
         }

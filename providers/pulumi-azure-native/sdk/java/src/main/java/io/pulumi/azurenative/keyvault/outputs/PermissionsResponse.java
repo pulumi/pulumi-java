@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -118,7 +118,6 @@ public final class PermissionsResponse {
             this.storage = storage;
             return this;
         }
-
         public PermissionsResponse build() {
             return new PermissionsResponse(certificates, keys, secrets, storage);
         }

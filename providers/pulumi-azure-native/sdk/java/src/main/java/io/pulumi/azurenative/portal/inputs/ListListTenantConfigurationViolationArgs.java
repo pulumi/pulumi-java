@@ -30,7 +30,6 @@ public final class ListListTenantConfigurationViolationArgs extends io.pulumi.re
         public Builder(ListListTenantConfigurationViolationArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public ListListTenantConfigurationViolationArgs build() {
             return new ListListTenantConfigurationViolationArgs();
         }

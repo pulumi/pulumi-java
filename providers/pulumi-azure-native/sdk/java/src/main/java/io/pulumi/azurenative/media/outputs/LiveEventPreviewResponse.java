@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.LiveEventEndpointResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventPreviewAccessControlResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class LiveEventPreviewResponse {
             this.streamingPolicyName = streamingPolicyName;
             return this;
         }
-
         public LiveEventPreviewResponse build() {
             return new LiveEventPreviewResponse(accessControl, alternativeMediaId, endpoints, previewLocator, streamingPolicyName);
         }

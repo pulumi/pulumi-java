@@ -5,7 +5,7 @@ package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeSystemsManagerAgentArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="systemsManagerAgent")
-    private final @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
+        private final @Nullable Input<ImageRecipeSystemsManagerAgentArgs> systemsManagerAgent;
 
     public Input<ImageRecipeSystemsManagerAgentArgs> getSystemsManagerAgent() {
         return this.systemsManagerAgent == null ? Input.empty() : this.systemsManagerAgent;
@@ -35,7 +35,7 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="userDataOverride")
-    private final @Nullable Input<String> userDataOverride;
+        private final @Nullable Input<String> userDataOverride;
 
     public Input<String> getUserDataOverride() {
         return this.userDataOverride == null ? Input.empty() : this.userDataOverride;
@@ -94,7 +94,6 @@ public final class ImageRecipeAdditionalInstanceConfigurationArgs extends io.pul
             this.userDataOverride = Input.ofNullable(userDataOverride);
             return this;
         }
-
         public ImageRecipeAdditionalInstanceConfigurationArgs build() {
             return new ImageRecipeAdditionalInstanceConfigurationArgs(systemsManagerAgent, userDataOverride);
         }

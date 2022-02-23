@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class PatchRolloutResponse {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public PatchRolloutResponse build() {
             return new PatchRolloutResponse(disruptionBudget, mode);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.codestarnotifications.outputs;
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleDetailType;
 import io.pulumi.awsnative.codestarnotifications.enums.NotificationRuleStatus;
 import io.pulumi.awsnative.codestarnotifications.outputs.NotificationRuleTarget;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -155,7 +155,6 @@ public final class GetNotificationRuleResult {
             this.targets = targets;
             return this;
         }
-
         public GetNotificationRuleResult build() {
             return new GetNotificationRuleResult(arn, createdBy, detailType, eventTypeId, eventTypeIds, name, status, targetAddress, targets);
         }

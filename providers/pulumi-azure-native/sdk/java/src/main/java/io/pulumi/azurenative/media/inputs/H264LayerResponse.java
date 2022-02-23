@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="adaptiveBFrame")
-    private final @Nullable Boolean adaptiveBFrame;
+        private final @Nullable Boolean adaptiveBFrame;
 
     public Optional<Boolean> getAdaptiveBFrame() {
         return this.adaptiveBFrame == null ? Optional.empty() : Optional.ofNullable(this.adaptiveBFrame);
@@ -36,7 +36,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bFrames")
-    private final @Nullable Integer bFrames;
+        private final @Nullable Integer bFrames;
 
     public Optional<Integer> getBFrames() {
         return this.bFrames == null ? Optional.empty() : Optional.ofNullable(this.bFrames);
@@ -47,7 +47,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bitrate", required=true)
-    private final Integer bitrate;
+        private final Integer bitrate;
 
     public Integer getBitrate() {
         return this.bitrate;
@@ -58,7 +58,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bufferWindow")
-    private final @Nullable String bufferWindow;
+        private final @Nullable String bufferWindow;
 
     public Optional<String> getBufferWindow() {
         return this.bufferWindow == null ? Optional.empty() : Optional.ofNullable(this.bufferWindow);
@@ -69,7 +69,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="entropyMode")
-    private final @Nullable String entropyMode;
+        private final @Nullable String entropyMode;
 
     public Optional<String> getEntropyMode() {
         return this.entropyMode == null ? Optional.empty() : Optional.ofNullable(this.entropyMode);
@@ -80,7 +80,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frameRate")
-    private final @Nullable String frameRate;
+        private final @Nullable String frameRate;
 
     public Optional<String> getFrameRate() {
         return this.frameRate == null ? Optional.empty() : Optional.ofNullable(this.frameRate);
@@ -91,7 +91,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable String height;
+        private final @Nullable String height;
 
     public Optional<String> getHeight() {
         return this.height == null ? Optional.empty() : Optional.ofNullable(this.height);
@@ -102,7 +102,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label")
-    private final @Nullable String label;
+        private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -113,7 +113,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="level")
-    private final @Nullable String level;
+        private final @Nullable String level;
 
     public Optional<String> getLevel() {
         return this.level == null ? Optional.empty() : Optional.ofNullable(this.level);
@@ -124,7 +124,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxBitrate")
-    private final @Nullable Integer maxBitrate;
+        private final @Nullable Integer maxBitrate;
 
     public Optional<Integer> getMaxBitrate() {
         return this.maxBitrate == null ? Optional.empty() : Optional.ofNullable(this.maxBitrate);
@@ -136,7 +136,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -147,7 +147,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable String profile;
+        private final @Nullable String profile;
 
     public Optional<String> getProfile() {
         return this.profile == null ? Optional.empty() : Optional.ofNullable(this.profile);
@@ -158,7 +158,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="referenceFrames")
-    private final @Nullable Integer referenceFrames;
+        private final @Nullable Integer referenceFrames;
 
     public Optional<Integer> getReferenceFrames() {
         return this.referenceFrames == null ? Optional.empty() : Optional.ofNullable(this.referenceFrames);
@@ -169,7 +169,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="slices")
-    private final @Nullable Integer slices;
+        private final @Nullable Integer slices;
 
     public Optional<Integer> getSlices() {
         return this.slices == null ? Optional.empty() : Optional.ofNullable(this.slices);
@@ -180,7 +180,7 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable String width;
+        private final @Nullable String width;
 
     public Optional<String> getWidth() {
         return this.width == null ? Optional.empty() : Optional.ofNullable(this.width);
@@ -359,7 +359,6 @@ public final class H264LayerResponse extends io.pulumi.resources.InvokeArgs {
             this.width = width;
             return this;
         }
-
         public H264LayerResponse build() {
             return new H264LayerResponse(adaptiveBFrame, bFrames, bitrate, bufferWindow, entropyMode, frameRate, height, label, level, maxBitrate, odataType, profile, referenceFrames, slices, width);
         }

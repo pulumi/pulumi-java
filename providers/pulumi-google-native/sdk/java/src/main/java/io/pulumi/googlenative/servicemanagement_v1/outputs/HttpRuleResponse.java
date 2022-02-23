@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.CustomHttpPatternResponse;
 import java.lang.String;
 import java.util.List;
@@ -244,7 +244,6 @@ public final class HttpRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public HttpRuleResponse build() {
             return new HttpRuleResponse(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
         }

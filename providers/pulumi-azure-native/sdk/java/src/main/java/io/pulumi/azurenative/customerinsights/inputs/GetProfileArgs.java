@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final String hubName;
+        private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -30,7 +30,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="localeCode")
-    private final @Nullable String localeCode;
+        private final @Nullable String localeCode;
 
     public Optional<String> getLocaleCode() {
         return this.localeCode == null ? Optional.empty() : Optional.ofNullable(this.localeCode);
@@ -41,7 +41,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final String profileName;
+        private final String profileName;
 
     public String getProfileName() {
         return this.profileName;
@@ -52,7 +52,7 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -121,7 +121,6 @@ public final class GetProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetProfileArgs build() {
             return new GetProfileArgs(hubName, localeCode, profileName, resourceGroupName);
         }

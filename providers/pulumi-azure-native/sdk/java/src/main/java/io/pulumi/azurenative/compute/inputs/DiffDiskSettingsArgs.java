@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiffDiskOptions;
 import io.pulumi.azurenative.compute.enums.DiffDiskPlacement;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="option")
-    private final @Nullable Input<Either<String,DiffDiskOptions>> option;
+        private final @Nullable Input<Either<String,DiffDiskOptions>> option;
 
     public Input<Either<String,DiffDiskOptions>> getOption() {
         return this.option == null ? Input.empty() : this.option;
@@ -37,7 +37,7 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="placement")
-    private final @Nullable Input<Either<String,DiffDiskPlacement>> placement;
+        private final @Nullable Input<Either<String,DiffDiskPlacement>> placement;
 
     public Input<Either<String,DiffDiskPlacement>> getPlacement() {
         return this.placement == null ? Input.empty() : this.placement;
@@ -96,7 +96,6 @@ public final class DiffDiskSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.placement = Input.ofNullable(placement);
             return this;
         }
-
         public DiffDiskSettingsArgs build() {
             return new DiffDiskSettingsArgs(option, placement);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AppEngineResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.CloudEndpointsResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.ClusterIstioResponse;
@@ -250,7 +250,6 @@ public final class GetServiceResult {
             this.userLabels = Objects.requireNonNull(userLabels);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(appEngine, cloudEndpoints, clusterIstio, custom, displayName, istioCanonicalService, meshIstio, name, telemetry, userLabels);
         }

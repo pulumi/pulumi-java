@@ -11,7 +11,7 @@ import io.pulumi.azurenative.importexport.outputs.PackageInformationResponse;
 import io.pulumi.azurenative.importexport.outputs.ReturnAddressResponse;
 import io.pulumi.azurenative.importexport.outputs.ReturnShippingResponse;
 import io.pulumi.azurenative.importexport.outputs.ShippingInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -423,7 +423,6 @@ public final class JobDetailsResponse {
             this.storageAccountId = storageAccountId;
             return this;
         }
-
         public JobDetailsResponse build() {
             return new JobDetailsResponse(backupDriveManifest, cancelRequested, deliveryPackage, diagnosticsPath, driveList, encryptionKey, export, incompleteBlobListUri, jobType, logLevel, percentComplete, provisioningState, returnAddress, returnPackage, returnShipping, shippingInformation, state, storageAccountId);
         }

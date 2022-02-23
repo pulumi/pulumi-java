@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.redis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.redis_v1beta1.inputs.WeeklyMaintenanceWindowArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -36,7 +36,7 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="weeklyMaintenanceWindow")
-    private final @Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
+      private final @Nullable Input<List<WeeklyMaintenanceWindowArgs>> weeklyMaintenanceWindow;
 
     public Input<List<WeeklyMaintenanceWindowArgs>> getWeeklyMaintenanceWindow() {
         return this.weeklyMaintenanceWindow == null ? Input.empty() : this.weeklyMaintenanceWindow;
@@ -95,7 +95,6 @@ public final class MaintenancePolicyArgs extends io.pulumi.resources.ResourceArg
             this.weeklyMaintenanceWindow = Input.ofNullable(weeklyMaintenanceWindow);
             return this;
         }
-
         public MaintenancePolicyArgs build() {
             return new MaintenancePolicyArgs(description, weeklyMaintenanceWindow);
         }

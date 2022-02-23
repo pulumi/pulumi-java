@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dns.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ManagedZonePrivateVisibilityConfigNetworkGetArgs extends io.p
      * 
      */
     @InputImport(name="networkUrl", required=true)
-    private final Input<String> networkUrl;
+        private final Input<String> networkUrl;
 
     public Input<String> getNetworkUrl() {
         return this.networkUrl;
@@ -63,7 +63,6 @@ public final class ManagedZonePrivateVisibilityConfigNetworkGetArgs extends io.p
             this.networkUrl = Input.of(Objects.requireNonNull(networkUrl));
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfigNetworkGetArgs build() {
             return new ManagedZonePrivateVisibilityConfigNetworkGetArgs(networkUrl);
         }

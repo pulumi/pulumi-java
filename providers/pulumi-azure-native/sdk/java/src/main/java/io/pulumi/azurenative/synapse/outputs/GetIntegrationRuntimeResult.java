@@ -6,7 +6,7 @@ package io.pulumi.azurenative.synapse.outputs;
 import io.pulumi.azurenative.synapse.outputs.ManagedIntegrationRuntimeResponse;
 import io.pulumi.azurenative.synapse.outputs.SelfHostedIntegrationRuntimeResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -140,7 +140,6 @@ public final class GetIntegrationRuntimeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationRuntimeResult build() {
             return new GetIntegrationRuntimeResult(etag, id, name, properties, type);
         }

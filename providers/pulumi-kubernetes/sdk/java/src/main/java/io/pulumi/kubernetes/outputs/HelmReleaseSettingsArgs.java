@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.outputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -139,7 +139,6 @@ public final class HelmReleaseSettingsArgs {
             this.repositoryConfigPath = repositoryConfigPath;
             return this;
         }
-
         public HelmReleaseSettingsArgs build() {
             return new HelmReleaseSettingsArgs(driver, pluginsPath, registryConfigPath, repositoryCache, repositoryConfigPath);
         }

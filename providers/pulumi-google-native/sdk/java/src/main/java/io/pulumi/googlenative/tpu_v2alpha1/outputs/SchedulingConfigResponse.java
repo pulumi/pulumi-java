@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class SchedulingConfigResponse {
             this.reserved = Objects.requireNonNull(reserved);
             return this;
         }
-
         public SchedulingConfigResponse build() {
             return new SchedulingConfigResponse(preemptible, reserved);
         }

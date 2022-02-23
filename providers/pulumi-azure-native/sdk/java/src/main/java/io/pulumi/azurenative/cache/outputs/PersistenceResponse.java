@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class PersistenceResponse {
             this.rdbFrequency = rdbFrequency;
             return this;
         }
-
         public PersistenceResponse build() {
             return new PersistenceResponse(aofEnabled, aofFrequency, rdbEnabled, rdbFrequency);
         }

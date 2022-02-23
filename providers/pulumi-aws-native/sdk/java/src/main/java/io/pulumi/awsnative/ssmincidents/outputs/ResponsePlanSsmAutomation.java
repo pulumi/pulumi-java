@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.enums.ResponsePlanSsmAutomationTargetAccount;
 import io.pulumi.awsnative.ssmincidents.outputs.ResponsePlanSsmParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class ResponsePlanSsmAutomation {
             this.targetAccount = targetAccount;
             return this;
         }
-
         public ResponsePlanSsmAutomation build() {
             return new ResponsePlanSsmAutomation(documentName, documentVersion, parameters, roleArn, targetAccount);
         }

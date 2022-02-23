@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="messageId", required=true)
-    private final Input<String> messageId;
+        private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;
@@ -65,7 +65,6 @@ public final class X12MessageIdentifierArgs extends io.pulumi.resources.Resource
             this.messageId = Input.of(Objects.requireNonNull(messageId));
             return this;
         }
-
         public X12MessageIdentifierArgs build() {
             return new X12MessageIdentifierArgs(messageId);
         }

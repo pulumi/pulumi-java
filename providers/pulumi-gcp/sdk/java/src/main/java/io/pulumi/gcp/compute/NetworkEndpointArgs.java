@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -35,7 +35,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final Input<String> ipAddress;
+        private final Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress;
@@ -46,7 +46,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="networkEndpointGroup", required=true)
-    private final Input<String> networkEndpointGroup;
+        private final Input<String> networkEndpointGroup;
 
     public Input<String> getNetworkEndpointGroup() {
         return this.networkEndpointGroup;
@@ -57,7 +57,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -69,7 +69,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -80,7 +80,7 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -199,7 +199,6 @@ public final class NetworkEndpointArgs extends io.pulumi.resources.ResourceArgs 
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public NetworkEndpointArgs build() {
             return new NetworkEndpointArgs(instance, ipAddress, networkEndpointGroup, port, project, zone);
         }

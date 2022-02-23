@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kekCertExpiryDate")
-    private final @Nullable String kekCertExpiryDate;
+        private final @Nullable String kekCertExpiryDate;
 
     public Optional<String> getKekCertExpiryDate() {
         return this.kekCertExpiryDate == null ? Optional.empty() : Optional.ofNullable(this.kekCertExpiryDate);
@@ -34,7 +34,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kekCertThumbprint")
-    private final @Nullable String kekCertThumbprint;
+        private final @Nullable String kekCertThumbprint;
 
     public Optional<String> getKekCertThumbprint() {
         return this.kekCertThumbprint == null ? Optional.empty() : Optional.ofNullable(this.kekCertThumbprint);
@@ -45,7 +45,7 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="kekState")
-    private final @Nullable String kekState;
+        private final @Nullable String kekState;
 
     public Optional<String> getKekState() {
         return this.kekState == null ? Optional.empty() : Optional.ofNullable(this.kekState);
@@ -104,7 +104,6 @@ public final class EncryptionDetailsResponse extends io.pulumi.resources.InvokeA
             this.kekState = kekState;
             return this;
         }
-
         public EncryptionDetailsResponse build() {
             return new EncryptionDetailsResponse(kekCertExpiryDate, kekCertThumbprint, kekState);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.AutomationRulePropertyValuesConditionResponseConditionProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -77,7 +77,6 @@ public final class AutomationRulePropertyValuesConditionResponse {
             this.conditionType = Objects.requireNonNull(conditionType);
             return this;
         }
-
         public AutomationRulePropertyValuesConditionResponse build() {
             return new AutomationRulePropertyValuesConditionResponse(conditionProperties, conditionType);
         }

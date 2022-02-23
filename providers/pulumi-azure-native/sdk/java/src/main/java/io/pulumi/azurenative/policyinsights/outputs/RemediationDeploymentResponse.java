@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.ErrorDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -180,7 +180,6 @@ public final class RemediationDeploymentResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public RemediationDeploymentResponse build() {
             return new RemediationDeploymentResponse(createdOn, deploymentId, error, lastUpdatedOn, remediatedResourceId, resourceLocation, status);
         }

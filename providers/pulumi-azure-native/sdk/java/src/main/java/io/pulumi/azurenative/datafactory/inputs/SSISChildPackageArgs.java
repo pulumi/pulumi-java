@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageContent", required=true)
-    private final Input<Object> packageContent;
+        private final Input<Object> packageContent;
 
     public Input<Object> getPackageContent() {
         return this.packageContent;
@@ -35,7 +35,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageLastModifiedDate")
-    private final @Nullable Input<String> packageLastModifiedDate;
+        private final @Nullable Input<String> packageLastModifiedDate;
 
     public Input<String> getPackageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Input.empty() : this.packageLastModifiedDate;
@@ -46,7 +46,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable Input<String> packageName;
+        private final @Nullable Input<String> packageName;
 
     public Input<String> getPackageName() {
         return this.packageName == null ? Input.empty() : this.packageName;
@@ -57,7 +57,7 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packagePath", required=true)
-    private final Input<Object> packagePath;
+        private final Input<Object> packagePath;
 
     public Input<Object> getPackagePath() {
         return this.packagePath;
@@ -146,7 +146,6 @@ public final class SSISChildPackageArgs extends io.pulumi.resources.ResourceArgs
             this.packagePath = Input.of(Objects.requireNonNull(packagePath));
             return this;
         }
-
         public SSISChildPackageArgs build() {
             return new SSISChildPackageArgs(packageContent, packageLastModifiedDate, packageName, packagePath);
         }

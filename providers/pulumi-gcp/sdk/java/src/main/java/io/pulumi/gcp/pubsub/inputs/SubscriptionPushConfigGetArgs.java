@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionPushConfigOidcTokenGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -38,7 +38,7 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+        private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -51,7 +51,7 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="oidcToken")
-    private final @Nullable Input<SubscriptionPushConfigOidcTokenGetArgs> oidcToken;
+        private final @Nullable Input<SubscriptionPushConfigOidcTokenGetArgs> oidcToken;
 
     public Input<SubscriptionPushConfigOidcTokenGetArgs> getOidcToken() {
         return this.oidcToken == null ? Input.empty() : this.oidcToken;
@@ -64,7 +64,7 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="pushEndpoint", required=true)
-    private final Input<String> pushEndpoint;
+        private final Input<String> pushEndpoint;
 
     public Input<String> getPushEndpoint() {
         return this.pushEndpoint;
@@ -138,7 +138,6 @@ public final class SubscriptionPushConfigGetArgs extends io.pulumi.resources.Res
             this.pushEndpoint = Input.of(Objects.requireNonNull(pushEndpoint));
             return this;
         }
-
         public SubscriptionPushConfigGetArgs build() {
             return new SubscriptionPushConfigGetArgs(attributes, oidcToken, pushEndpoint);
         }

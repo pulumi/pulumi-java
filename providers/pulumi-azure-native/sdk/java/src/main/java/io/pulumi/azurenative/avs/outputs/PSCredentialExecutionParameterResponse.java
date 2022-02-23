@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class PSCredentialExecutionParameterResponse {
             this.username = username;
             return this;
         }
-
         public PSCredentialExecutionParameterResponse build() {
             return new PSCredentialExecutionParameterResponse(name, password, type, username);
         }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.evidently.inputs.FeatureEntityOverrideArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureTagArgs;
 import io.pulumi.awsnative.evidently.inputs.FeatureVariationObjectArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,42 +20,42 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     public static final FeatureArgs Empty = new FeatureArgs();
 
     @InputImport(name="defaultVariation")
-    private final @Nullable Input<String> defaultVariation;
+        private final @Nullable Input<String> defaultVariation;
 
     public Input<String> getDefaultVariation() {
         return this.defaultVariation == null ? Input.empty() : this.defaultVariation;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="entityOverrides")
-    private final @Nullable Input<List<FeatureEntityOverrideArgs>> entityOverrides;
+        private final @Nullable Input<List<FeatureEntityOverrideArgs>> entityOverrides;
 
     public Input<List<FeatureEntityOverrideArgs>> getEntityOverrides() {
         return this.entityOverrides == null ? Input.empty() : this.entityOverrides;
     }
 
     @InputImport(name="evaluationStrategy")
-    private final @Nullable Input<FeatureEvaluationStrategy> evaluationStrategy;
+        private final @Nullable Input<FeatureEvaluationStrategy> evaluationStrategy;
 
     public Input<FeatureEvaluationStrategy> getEvaluationStrategy() {
         return this.evaluationStrategy == null ? Input.empty() : this.evaluationStrategy;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+        private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -66,14 +66,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FeatureTagArgs>> tags;
+        private final @Nullable Input<List<FeatureTagArgs>> tags;
 
     public Input<List<FeatureTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="variations", required=true)
-    private final Input<List<FeatureVariationObjectArgs>> variations;
+        private final Input<List<FeatureVariationObjectArgs>> variations;
 
     public Input<List<FeatureVariationObjectArgs>> getVariations() {
         return this.variations;
@@ -222,7 +222,6 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.variations = Input.of(Objects.requireNonNull(variations));
             return this;
         }
-
         public FeatureArgs build() {
             return new FeatureArgs(defaultVariation, description, entityOverrides, evaluationStrategy, name, project, tags, variations);
         }

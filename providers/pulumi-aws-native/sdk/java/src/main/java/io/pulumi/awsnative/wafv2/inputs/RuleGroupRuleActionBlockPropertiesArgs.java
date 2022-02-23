@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomResponseArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
     public static final RuleGroupRuleActionBlockPropertiesArgs Empty = new RuleGroupRuleActionBlockPropertiesArgs();
 
     @InputImport(name="customResponse")
-    private final @Nullable Input<RuleGroupCustomResponseArgs> customResponse;
+        private final @Nullable Input<RuleGroupCustomResponseArgs> customResponse;
 
     public Input<RuleGroupCustomResponseArgs> getCustomResponse() {
         return this.customResponse == null ? Input.empty() : this.customResponse;
@@ -62,7 +62,6 @@ public final class RuleGroupRuleActionBlockPropertiesArgs extends io.pulumi.reso
             this.customResponse = Input.ofNullable(customResponse);
             return this;
         }
-
         public RuleGroupRuleActionBlockPropertiesArgs build() {
             return new RuleGroupRuleActionBlockPropertiesArgs(customResponse);
         }

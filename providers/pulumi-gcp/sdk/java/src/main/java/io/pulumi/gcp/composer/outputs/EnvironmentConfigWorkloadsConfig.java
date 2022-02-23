@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWorkloadsConfigScheduler;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWorkloadsConfigWebServer;
 import io.pulumi.gcp.composer.outputs.EnvironmentConfigWorkloadsConfigWorker;
@@ -75,7 +75,6 @@ public final class EnvironmentConfigWorkloadsConfig {
             this.worker = worker;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfig build() {
             return new EnvironmentConfigWorkloadsConfig(scheduler, webServer, worker);
         }

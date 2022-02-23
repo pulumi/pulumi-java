@@ -4,7 +4,7 @@
 package io.pulumi.gcp.accesscontextmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
      * 
      */
     @InputImport(name="ingressFrom")
-    private final @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
+        private final @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> ingressFrom;
 
     public Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressFromGetArgs> getIngressFrom() {
         return this.ingressFrom == null ? Input.empty() : this.ingressFrom;
@@ -35,7 +35,7 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
      * 
      */
     @InputImport(name="ingressTo")
-    private final @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
+        private final @Nullable Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> ingressTo;
 
     public Input<ServicePerimetersServicePerimeterSpecIngressPolicyIngressToGetArgs> getIngressTo() {
         return this.ingressTo == null ? Input.empty() : this.ingressTo;
@@ -94,7 +94,6 @@ public final class ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs ext
             this.ingressTo = Input.ofNullable(ingressTo);
             return this;
         }
-
         public ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs build() {
             return new ServicePerimetersServicePerimeterSpecIngressPolicyGetArgs(ingressFrom, ingressTo);
         }

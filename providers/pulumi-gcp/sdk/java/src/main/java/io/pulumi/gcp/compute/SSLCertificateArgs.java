@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificate", required=true)
-    private final Input<String> certificate;
+        private final Input<String> certificate;
 
     public Input<String> getCertificate() {
         return this.certificate;
@@ -33,7 +33,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namePrefix")
-    private final @Nullable Input<String> namePrefix;
+        private final @Nullable Input<String> namePrefix;
 
     public Input<String> getNamePrefix() {
         return this.namePrefix == null ? Input.empty() : this.namePrefix;
@@ -74,7 +74,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="privateKey", required=true)
-    private final Input<String> privateKey;
+        private final Input<String> privateKey;
 
     public Input<String> getPrivateKey() {
         return this.privateKey;
@@ -86,7 +86,7 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -205,7 +205,6 @@ public final class SSLCertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public SSLCertificateArgs build() {
             return new SSLCertificateArgs(certificate, description, name, namePrefix, privateKey, project);
         }

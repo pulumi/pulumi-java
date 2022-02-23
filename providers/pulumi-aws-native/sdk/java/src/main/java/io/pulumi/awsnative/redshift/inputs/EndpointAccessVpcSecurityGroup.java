@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -34,7 +34,7 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="vpcSecurityGroupId")
-    private final @Nullable String vpcSecurityGroupId;
+        private final @Nullable String vpcSecurityGroupId;
 
     public Optional<String> getVpcSecurityGroupId() {
         return this.vpcSecurityGroupId == null ? Optional.empty() : Optional.ofNullable(this.vpcSecurityGroupId);
@@ -83,7 +83,6 @@ public final class EndpointAccessVpcSecurityGroup extends io.pulumi.resources.In
             this.vpcSecurityGroupId = vpcSecurityGroupId;
             return this;
         }
-
         public EndpointAccessVpcSecurityGroup build() {
             return new EndpointAccessVpcSecurityGroup(status, vpcSecurityGroupId);
         }

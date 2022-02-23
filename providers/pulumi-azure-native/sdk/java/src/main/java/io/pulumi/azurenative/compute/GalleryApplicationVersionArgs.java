@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.inputs.GalleryApplicationVersionPublishingProfileArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="galleryApplicationName", required=true)
-    private final Input<String> galleryApplicationName;
+        private final Input<String> galleryApplicationName;
 
     public Input<String> getGalleryApplicationName() {
         return this.galleryApplicationName;
@@ -32,7 +32,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="galleryApplicationVersionName")
-    private final @Nullable Input<String> galleryApplicationVersionName;
+        private final @Nullable Input<String> galleryApplicationVersionName;
 
     public Input<String> getGalleryApplicationVersionName() {
         return this.galleryApplicationVersionName == null ? Input.empty() : this.galleryApplicationVersionName;
@@ -43,7 +43,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="galleryName", required=true)
-    private final Input<String> galleryName;
+        private final Input<String> galleryName;
 
     public Input<String> getGalleryName() {
         return this.galleryName;
@@ -54,7 +54,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -65,7 +65,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="publishingProfile", required=true)
-    private final Input<GalleryApplicationVersionPublishingProfileArgs> publishingProfile;
+        private final Input<GalleryApplicationVersionPublishingProfileArgs> publishingProfile;
 
     public Input<GalleryApplicationVersionPublishingProfileArgs> getPublishingProfile() {
         return this.publishingProfile;
@@ -76,7 +76,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -87,7 +87,7 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -221,7 +221,6 @@ public final class GalleryApplicationVersionArgs extends io.pulumi.resources.Res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GalleryApplicationVersionArgs build() {
             return new GalleryApplicationVersionArgs(galleryApplicationName, galleryApplicationVersionName, galleryName, location, publishingProfile, resourceGroupName, tags);
         }

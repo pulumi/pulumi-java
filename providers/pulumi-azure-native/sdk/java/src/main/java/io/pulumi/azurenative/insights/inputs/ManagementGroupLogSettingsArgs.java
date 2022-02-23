@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="category", required=true)
-    private final Input<String> category;
+        private final Input<String> category;
 
     public Input<String> getCategory() {
         return this.category;
@@ -34,7 +34,7 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -93,7 +93,6 @@ public final class ManagementGroupLogSettingsArgs extends io.pulumi.resources.Re
             this.enabled = Input.of(Objects.requireNonNull(enabled));
             return this;
         }
-
         public ManagementGroupLogSettingsArgs build() {
             return new ManagementGroupLogSettingsArgs(category, enabled);
         }

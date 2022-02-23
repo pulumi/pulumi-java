@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1TableSpecArgs;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1ViewSpecArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
      * 
      */
     @InputImport(name="tableSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1TableSpecArgs> tableSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1TableSpecArgs> tableSpec;
 
     public Input<GoogleCloudDatacatalogV1TableSpecArgs> getTableSpec() {
         return this.tableSpec == null ? Input.empty() : this.tableSpec;
@@ -35,7 +35,7 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
      * 
      */
     @InputImport(name="viewSpec")
-    private final @Nullable Input<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec;
+      private final @Nullable Input<GoogleCloudDatacatalogV1ViewSpecArgs> viewSpec;
 
     public Input<GoogleCloudDatacatalogV1ViewSpecArgs> getViewSpec() {
         return this.viewSpec == null ? Input.empty() : this.viewSpec;
@@ -94,7 +94,6 @@ public final class GoogleCloudDatacatalogV1BigQueryTableSpecArgs extends io.pulu
             this.viewSpec = Input.ofNullable(viewSpec);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryTableSpecArgs build() {
             return new GoogleCloudDatacatalogV1BigQueryTableSpecArgs(tableSpec, viewSpec);
         }

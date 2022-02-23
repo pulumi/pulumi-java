@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,21 +20,21 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
     public static final ModelDefinitionModelOptionsArgs Empty = new ModelDefinitionModelOptionsArgs();
 
     @InputImport(name="labels")
-    private final @Nullable Input<List<String>> labels;
+      private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="lossType")
-    private final @Nullable Input<String> lossType;
+      private final @Nullable Input<String> lossType;
 
     public Input<String> getLossType() {
         return this.lossType == null ? Input.empty() : this.lossType;
     }
 
     @InputImport(name="modelType")
-    private final @Nullable Input<String> modelType;
+      private final @Nullable Input<String> modelType;
 
     public Input<String> getModelType() {
         return this.modelType == null ? Input.empty() : this.modelType;
@@ -108,7 +108,6 @@ public final class ModelDefinitionModelOptionsArgs extends io.pulumi.resources.R
             this.modelType = Input.ofNullable(modelType);
             return this;
         }
-
         public ModelDefinitionModelOptionsArgs build() {
             return new ModelDefinitionModelOptionsArgs(labels, lossType, modelType);
         }

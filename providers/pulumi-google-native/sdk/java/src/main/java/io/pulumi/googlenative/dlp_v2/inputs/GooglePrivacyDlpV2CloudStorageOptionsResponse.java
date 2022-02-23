@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FileSetResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * 
      */
     @InputImport(name="bytesLimitPerFile", required=true)
-    private final String bytesLimitPerFile;
+      private final String bytesLimitPerFile;
 
     public String getBytesLimitPerFile() {
         return this.bytesLimitPerFile;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * 
      */
     @InputImport(name="bytesLimitPerFilePercent", required=true)
-    private final Integer bytesLimitPerFilePercent;
+      private final Integer bytesLimitPerFilePercent;
 
     public Integer getBytesLimitPerFilePercent() {
         return this.bytesLimitPerFilePercent;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * 
      */
     @InputImport(name="fileSet", required=true)
-    private final GooglePrivacyDlpV2FileSetResponse fileSet;
+      private final GooglePrivacyDlpV2FileSetResponse fileSet;
 
     public GooglePrivacyDlpV2FileSetResponse getFileSet() {
         return this.fileSet;
@@ -57,7 +57,7 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * 
      */
     @InputImport(name="fileTypes", required=true)
-    private final List<String> fileTypes;
+      private final List<String> fileTypes;
 
     public List<String> getFileTypes() {
         return this.fileTypes;
@@ -68,14 +68,14 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
      * 
      */
     @InputImport(name="filesLimitPercent", required=true)
-    private final Integer filesLimitPercent;
+      private final Integer filesLimitPercent;
 
     public Integer getFilesLimitPercent() {
         return this.filesLimitPercent;
     }
 
     @InputImport(name="sampleMethod", required=true)
-    private final String sampleMethod;
+      private final String sampleMethod;
 
     public String getSampleMethod() {
         return this.sampleMethod;
@@ -164,7 +164,6 @@ public final class GooglePrivacyDlpV2CloudStorageOptionsResponse extends io.pulu
             this.sampleMethod = Objects.requireNonNull(sampleMethod);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageOptionsResponse build() {
             return new GooglePrivacyDlpV2CloudStorageOptionsResponse(bytesLimitPerFile, bytesLimitPerFilePercent, fileSet, fileTypes, filesLimitPercent, sampleMethod);
         }

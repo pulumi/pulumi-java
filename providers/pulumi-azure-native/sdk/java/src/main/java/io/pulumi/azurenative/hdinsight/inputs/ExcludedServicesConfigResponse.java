@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="excludedServicesConfigId")
-    private final @Nullable String excludedServicesConfigId;
+        private final @Nullable String excludedServicesConfigId;
 
     public Optional<String> getExcludedServicesConfigId() {
         return this.excludedServicesConfigId == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesConfigId);
@@ -34,7 +34,7 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="excludedServicesList")
-    private final @Nullable String excludedServicesList;
+        private final @Nullable String excludedServicesList;
 
     public Optional<String> getExcludedServicesList() {
         return this.excludedServicesList == null ? Optional.empty() : Optional.ofNullable(this.excludedServicesList);
@@ -83,7 +83,6 @@ public final class ExcludedServicesConfigResponse extends io.pulumi.resources.In
             this.excludedServicesList = excludedServicesList;
             return this;
         }
-
         public ExcludedServicesConfigResponse build() {
             return new ExcludedServicesConfigResponse(excludedServicesConfigId, excludedServicesList);
         }

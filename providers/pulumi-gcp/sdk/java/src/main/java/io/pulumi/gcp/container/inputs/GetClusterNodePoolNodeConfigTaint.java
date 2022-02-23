@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,21 +13,21 @@ public final class GetClusterNodePoolNodeConfigTaint extends io.pulumi.resources
     public static final GetClusterNodePoolNodeConfigTaint Empty = new GetClusterNodePoolNodeConfigTaint();
 
     @InputImport(name="effect", required=true)
-    private final String effect;
+        private final String effect;
 
     public String getEffect() {
         return this.effect;
     }
 
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -86,7 +86,6 @@ public final class GetClusterNodePoolNodeConfigTaint extends io.pulumi.resources
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetClusterNodePoolNodeConfigTaint build() {
             return new GetClusterNodePoolNodeConfigTaint(effect, key, value);
         }

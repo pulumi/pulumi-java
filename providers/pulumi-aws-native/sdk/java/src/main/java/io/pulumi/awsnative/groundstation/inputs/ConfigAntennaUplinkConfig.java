@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.ConfigEirp;
 import io.pulumi.awsnative.groundstation.inputs.ConfigUplinkSpectrumConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,21 +17,21 @@ public final class ConfigAntennaUplinkConfig extends io.pulumi.resources.InvokeA
     public static final ConfigAntennaUplinkConfig Empty = new ConfigAntennaUplinkConfig();
 
     @InputImport(name="spectrumConfig")
-    private final @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
+        private final @Nullable ConfigUplinkSpectrumConfig spectrumConfig;
 
     public Optional<ConfigUplinkSpectrumConfig> getSpectrumConfig() {
         return this.spectrumConfig == null ? Optional.empty() : Optional.ofNullable(this.spectrumConfig);
     }
 
     @InputImport(name="targetEirp")
-    private final @Nullable ConfigEirp targetEirp;
+        private final @Nullable ConfigEirp targetEirp;
 
     public Optional<ConfigEirp> getTargetEirp() {
         return this.targetEirp == null ? Optional.empty() : Optional.ofNullable(this.targetEirp);
     }
 
     @InputImport(name="transmitDisabled")
-    private final @Nullable Boolean transmitDisabled;
+        private final @Nullable Boolean transmitDisabled;
 
     public Optional<Boolean> getTransmitDisabled() {
         return this.transmitDisabled == null ? Optional.empty() : Optional.ofNullable(this.transmitDisabled);
@@ -90,7 +90,6 @@ public final class ConfigAntennaUplinkConfig extends io.pulumi.resources.InvokeA
             this.transmitDisabled = transmitDisabled;
             return this;
         }
-
         public ConfigAntennaUplinkConfig build() {
             return new ConfigAntennaUplinkConfig(spectrumConfig, targetEirp, transmitDisabled);
         }

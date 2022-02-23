@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -35,7 +35,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -46,7 +46,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -57,7 +57,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable String privateIPAddress;
+        private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -68,7 +68,7 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -147,7 +147,6 @@ public final class ConnectivityEndpointResponse extends io.pulumi.resources.Invo
             this.protocol = protocol;
             return this;
         }
-
         public ConnectivityEndpointResponse build() {
             return new ConnectivityEndpointResponse(location, name, port, privateIPAddress, protocol);
         }

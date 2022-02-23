@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ResourceInputArgs;
 import io.pulumi.example.Utilities;
 import java.lang.String;
@@ -21,13 +21,6 @@ public class ResourceInput extends io.pulumi.resources.CustomResource {
         return this.bar;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ResourceInput(String name) {
-        super("example::ResourceInput", name, ResourceInputArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

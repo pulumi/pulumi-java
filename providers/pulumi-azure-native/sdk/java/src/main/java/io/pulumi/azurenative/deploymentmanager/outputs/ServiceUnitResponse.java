@@ -5,7 +5,7 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 
 import io.pulumi.azurenative.deploymentmanager.outputs.RolloutStepResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ServiceUnitArtifactsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class ServiceUnitResponse {
             this.targetResourceGroup = Objects.requireNonNull(targetResourceGroup);
             return this;
         }
-
         public ServiceUnitResponse build() {
             return new ServiceUnitResponse(artifacts, deploymentMode, name, steps, targetResourceGroup);
         }

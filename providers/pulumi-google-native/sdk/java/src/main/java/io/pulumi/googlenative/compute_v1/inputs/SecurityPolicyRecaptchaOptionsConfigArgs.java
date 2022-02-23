@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="redirectSiteKey")
-    private final @Nullable Input<String> redirectSiteKey;
+      private final @Nullable Input<String> redirectSiteKey;
 
     public Input<String> getRedirectSiteKey() {
         return this.redirectSiteKey == null ? Input.empty() : this.redirectSiteKey;
@@ -62,7 +62,6 @@ public final class SecurityPolicyRecaptchaOptionsConfigArgs extends io.pulumi.re
             this.redirectSiteKey = Input.ofNullable(redirectSiteKey);
             return this;
         }
-
         public SecurityPolicyRecaptchaOptionsConfigArgs build() {
             return new SecurityPolicyRecaptchaOptionsConfigArgs(redirectSiteKey);
         }

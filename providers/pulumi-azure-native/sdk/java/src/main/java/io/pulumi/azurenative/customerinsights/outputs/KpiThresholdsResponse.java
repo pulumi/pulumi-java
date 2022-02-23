@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class KpiThresholdsResponse {
             this.upperLimit = Objects.requireNonNull(upperLimit);
             return this;
         }
-
         public KpiThresholdsResponse build() {
             return new KpiThresholdsResponse(increasingKpi, lowerLimit, upperLimit);
         }

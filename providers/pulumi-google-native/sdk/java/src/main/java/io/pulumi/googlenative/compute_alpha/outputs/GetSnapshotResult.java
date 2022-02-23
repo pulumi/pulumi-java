@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -688,7 +688,6 @@ public final class GetSnapshotResult {
             this.userLicenses = Objects.requireNonNull(userLicenses);
             return this;
         }
-
         public GetSnapshotResult build() {
             return new GetSnapshotResult(architecture, autoCreated, chainName, creationTimestamp, description, diskSizeGb, downloadBytes, guestFlush, guestOsFeatures, kind, labelFingerprint, labels, licenseCodes, licenses, locationHint, name, satisfiesPzs, selfLink, selfLinkWithId, snapshotEncryptionKey, snapshotType, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, sourceInstantSnapshot, sourceInstantSnapshotId, status, storageBytes, storageBytesStatus, storageLocations, userLicenses);
         }

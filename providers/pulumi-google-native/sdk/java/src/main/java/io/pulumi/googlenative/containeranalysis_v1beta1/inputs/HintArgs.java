@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class HintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="humanReadableName", required=true)
-    private final Input<String> humanReadableName;
+      private final Input<String> humanReadableName;
 
     public Input<String> getHumanReadableName() {
         return this.humanReadableName;
@@ -65,7 +65,6 @@ public final class HintArgs extends io.pulumi.resources.ResourceArgs {
             this.humanReadableName = Input.of(Objects.requireNonNull(humanReadableName));
             return this;
         }
-
         public HintArgs build() {
             return new HintArgs(humanReadableName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="bytes")
-    private final @Nullable Input<Integer> bytes;
+        private final @Nullable Input<Integer> bytes;
 
     public Input<Integer> getBytes() {
         return this.bytes == null ? Input.empty() : this.bytes;
@@ -66,7 +66,6 @@ public final class BodyDiagnosticSettingsArgs extends io.pulumi.resources.Resour
             this.bytes = Input.ofNullable(bytes);
             return this;
         }
-
         public BodyDiagnosticSettingsArgs build() {
             return new BodyDiagnosticSettingsArgs(bytes);
         }

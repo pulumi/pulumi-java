@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.CassandraSchemaArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="analyticalStorageTtl")
-    private final @Nullable Input<Integer> analyticalStorageTtl;
+        private final @Nullable Input<Integer> analyticalStorageTtl;
 
     public Input<Integer> getAnalyticalStorageTtl() {
         return this.analyticalStorageTtl == null ? Input.empty() : this.analyticalStorageTtl;
@@ -36,7 +36,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<Integer> defaultTtl;
+        private final @Nullable Input<Integer> defaultTtl;
 
     public Input<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -47,7 +47,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -58,7 +58,7 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Input<CassandraSchemaArgs> schema;
+        private final @Nullable Input<CassandraSchemaArgs> schema;
 
     public Input<CassandraSchemaArgs> getSchema() {
         return this.schema == null ? Input.empty() : this.schema;
@@ -147,7 +147,6 @@ public final class CassandraTableResourceArgs extends io.pulumi.resources.Resour
             this.schema = Input.ofNullable(schema);
             return this;
         }
-
         public CassandraTableResourceArgs build() {
             return new CassandraTableResourceArgs(analyticalStorageTtl, defaultTtl, id, schema);
         }

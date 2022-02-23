@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ManagedRuleEnabledState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="ruleId", required=true)
-    private final Input<String> ruleId;
+        private final Input<String> ruleId;
 
     public Input<String> getRuleId() {
         return this.ruleId;
@@ -36,7 +36,7 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,ManagedRuleEnabledState>> state;
+        private final @Nullable Input<Either<String,ManagedRuleEnabledState>> state;
 
     public Input<Either<String,ManagedRuleEnabledState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -95,7 +95,6 @@ public final class ManagedRuleOverrideArgs extends io.pulumi.resources.ResourceA
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public ManagedRuleOverrideArgs build() {
             return new ManagedRuleOverrideArgs(ruleId, state);
         }

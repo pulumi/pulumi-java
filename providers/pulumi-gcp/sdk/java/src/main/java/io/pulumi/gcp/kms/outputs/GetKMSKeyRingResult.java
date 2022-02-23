@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -94,7 +94,6 @@ public final class GetKMSKeyRingResult {
             this.project = project;
             return this;
         }
-
         public GetKMSKeyRingResult build() {
             return new GetKMSKeyRingResult(id, location, name, project);
         }

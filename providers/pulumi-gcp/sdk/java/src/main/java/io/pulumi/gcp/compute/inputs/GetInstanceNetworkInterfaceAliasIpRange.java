@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
      * 
      */
     @InputImport(name="ipCidrRange", required=true)
-    private final String ipCidrRange;
+        private final String ipCidrRange;
 
     public String getIpCidrRange() {
         return this.ipCidrRange;
@@ -30,7 +30,7 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetworkRangeName", required=true)
-    private final String subnetworkRangeName;
+        private final String subnetworkRangeName;
 
     public String getSubnetworkRangeName() {
         return this.subnetworkRangeName;
@@ -79,7 +79,6 @@ public final class GetInstanceNetworkInterfaceAliasIpRange extends io.pulumi.res
             this.subnetworkRangeName = Objects.requireNonNull(subnetworkRangeName);
             return this;
         }
-
         public GetInstanceNetworkInterfaceAliasIpRange build() {
             return new GetInstanceNetworkInterfaceAliasIpRange(ipCidrRange, subnetworkRangeName);
         }

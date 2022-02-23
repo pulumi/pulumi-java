@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datacatalog_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datacatalog_v1beta1.EntryGroupIamPolicyArgs;
 import io.pulumi.googlenative.datacatalog_v1beta1.outputs.BindingResponse;
@@ -66,13 +66,6 @@ public class EntryGroupIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EntryGroupIamPolicy(String name) {
-        super("google-native:datacatalog/v1beta1:EntryGroupIamPolicy", name, EntryGroupIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.consumption.outputs.BudgetTimePeriodResponse;
 import io.pulumi.azurenative.consumption.outputs.CurrentSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.ForecastSpendResponse;
 import io.pulumi.azurenative.consumption.outputs.NotificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -293,7 +293,6 @@ public final class GetBudgetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBudgetResult build() {
             return new GetBudgetResult(amount, category, currentSpend, eTag, filter, forecastSpend, id, name, notifications, timeGrain, timePeriod, type);
         }

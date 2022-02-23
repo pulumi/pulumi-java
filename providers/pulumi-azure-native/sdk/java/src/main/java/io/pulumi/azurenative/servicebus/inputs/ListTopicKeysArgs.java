@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+        private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final String topicName;
+        private final String topicName;
 
     public String getTopicName() {
         return this.topicName;
@@ -119,7 +119,6 @@ public final class ListTopicKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public ListTopicKeysArgs build() {
             return new ListTopicKeysArgs(authorizationRuleName, namespaceName, resourceGroupName, topicName);
         }

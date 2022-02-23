@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="connectionLimit", required=true)
-    private final Input<Integer> connectionLimit;
+        private final Input<Integer> connectionLimit;
 
     public Input<Integer> getConnectionLimit() {
         return this.connectionLimit;
@@ -31,7 +31,7 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="projectIdOrNum", required=true)
-    private final Input<String> projectIdOrNum;
+        private final Input<String> projectIdOrNum;
 
     public Input<String> getProjectIdOrNum() {
         return this.projectIdOrNum;
@@ -90,7 +90,6 @@ public final class ServiceAttachmentConsumerAcceptListGetArgs extends io.pulumi.
             this.projectIdOrNum = Input.of(Objects.requireNonNull(projectIdOrNum));
             return this;
         }
-
         public ServiceAttachmentConsumerAcceptListGetArgs build() {
             return new ServiceAttachmentConsumerAcceptListGetArgs(connectionLimit, projectIdOrNum);
         }

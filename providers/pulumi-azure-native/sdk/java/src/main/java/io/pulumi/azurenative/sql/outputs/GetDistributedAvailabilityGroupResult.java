@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -307,7 +307,6 @@ public final class GetDistributedAvailabilityGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDistributedAvailabilityGroupResult build() {
             return new GetDistributedAvailabilityGroupResult(distributedAvailabilityGroupId, id, lastHardenedLsn, linkState, name, primaryAvailabilityGroupName, replicationMode, secondaryAvailabilityGroupName, sourceEndpoint, sourceReplicaId, targetDatabase, targetReplicaId, type);
         }

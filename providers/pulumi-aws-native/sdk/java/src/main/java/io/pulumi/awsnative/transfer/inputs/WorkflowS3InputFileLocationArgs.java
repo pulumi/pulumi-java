@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.transfer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -34,7 +34,7 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+        private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -93,7 +93,6 @@ public final class WorkflowS3InputFileLocationArgs extends io.pulumi.resources.R
             this.key = Input.ofNullable(key);
             return this;
         }
-
         public WorkflowS3InputFileLocationArgs build() {
             return new WorkflowS3InputFileLocationArgs(bucket, key);
         }

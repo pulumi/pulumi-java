@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.PipelineConditionResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.SerialPipelineResponse;
 import java.lang.String;
@@ -245,7 +245,6 @@ public final class DeliveryPipelineResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public DeliveryPipelineResponse build() {
             return new DeliveryPipelineResponse(annotations, condition, createTime, description, etag, labels, name, serialPipeline, uid, updateTime);
         }

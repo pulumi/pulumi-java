@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.IotHubPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.IotHubSkuInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetIotHubResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIotHubResourceResult build() {
             return new GetIotHubResourceResult(etag, id, location, name, properties, sku, tags, type);
         }

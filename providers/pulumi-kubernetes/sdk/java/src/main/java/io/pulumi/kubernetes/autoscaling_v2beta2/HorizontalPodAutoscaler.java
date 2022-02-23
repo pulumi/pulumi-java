@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.autoscaling_v2beta2;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.autoscaling_v2beta2.HorizontalPodAutoscalerArgs;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscalerSpec;
@@ -94,13 +94,6 @@ public class HorizontalPodAutoscaler extends io.pulumi.resources.CustomResource 
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public HorizontalPodAutoscaler(String name) {
-        super("kubernetes:autoscaling/v2beta2:HorizontalPodAutoscaler", name, HorizontalPodAutoscalerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

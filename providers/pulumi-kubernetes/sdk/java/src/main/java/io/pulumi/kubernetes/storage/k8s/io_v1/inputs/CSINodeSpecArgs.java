@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.storage.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.storage.k8s.io_v1.inputs.CSINodeDriverArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drivers", required=true)
-    private final Input<List<CSINodeDriverArgs>> drivers;
+        private final Input<List<CSINodeDriverArgs>> drivers;
 
     public Input<List<CSINodeDriverArgs>> getDrivers() {
         return this.drivers;
@@ -66,7 +66,6 @@ public final class CSINodeSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.drivers = Input.of(Objects.requireNonNull(drivers));
             return this;
         }
-
         public CSINodeSpecArgs build() {
             return new CSINodeSpecArgs(drivers);
         }

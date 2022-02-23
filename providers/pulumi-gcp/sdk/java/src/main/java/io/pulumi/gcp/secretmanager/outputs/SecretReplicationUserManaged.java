@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.secretmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.secretmanager.outputs.SecretReplicationUserManagedReplica;
 import java.util.List;
 import java.util.Objects;
@@ -55,7 +55,6 @@ public final class SecretReplicationUserManaged {
             this.replicas = Objects.requireNonNull(replicas);
             return this;
         }
-
         public SecretReplicationUserManaged build() {
             return new SecretReplicationUserManaged(replicas);
         }

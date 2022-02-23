@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.DiskArgs;
 import java.lang.Boolean;
 import java.lang.Double;
@@ -28,7 +28,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorCount")
-    private final @Nullable Input<String> acceleratorCount;
+      private final @Nullable Input<String> acceleratorCount;
 
     public Input<String> getAcceleratorCount() {
         return this.acceleratorCount == null ? Input.empty() : this.acceleratorCount;
@@ -39,7 +39,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+      private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -50,7 +50,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bootDiskSizeGb")
-    private final @Nullable Input<Integer> bootDiskSizeGb;
+      private final @Nullable Input<Integer> bootDiskSizeGb;
 
     public Input<Integer> getBootDiskSizeGb() {
         return this.bootDiskSizeGb == null ? Input.empty() : this.bootDiskSizeGb;
@@ -61,7 +61,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<List<DiskArgs>> disks;
+      private final @Nullable Input<List<DiskArgs>> disks;
 
     public Input<List<DiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -72,7 +72,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minimumCpuCores")
-    private final @Nullable Input<Integer> minimumCpuCores;
+      private final @Nullable Input<Integer> minimumCpuCores;
 
     public Input<Integer> getMinimumCpuCores() {
         return this.minimumCpuCores == null ? Input.empty() : this.minimumCpuCores;
@@ -83,7 +83,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="minimumRamGb")
-    private final @Nullable Input<Double> minimumRamGb;
+      private final @Nullable Input<Double> minimumRamGb;
 
     public Input<Double> getMinimumRamGb() {
         return this.minimumRamGb == null ? Input.empty() : this.minimumRamGb;
@@ -94,7 +94,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="noAddress")
-    private final @Nullable Input<Boolean> noAddress;
+      private final @Nullable Input<Boolean> noAddress;
 
     public Input<Boolean> getNoAddress() {
         return this.noAddress == null ? Input.empty() : this.noAddress;
@@ -105,7 +105,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="preemptible")
-    private final @Nullable Input<Boolean> preemptible;
+      private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;
@@ -116,7 +116,7 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+      private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -280,7 +280,6 @@ public final class PipelineResourcesArgs extends io.pulumi.resources.ResourceArg
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public PipelineResourcesArgs build() {
             return new PipelineResourcesArgs(acceleratorCount, acceleratorType, bootDiskSizeGb, disks, minimumCpuCores, minimumRamGb, noAddress, preemptible, zones);
         }

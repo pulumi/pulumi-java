@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.VMResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -117,7 +117,6 @@ public final class BastionShareableLinkResponse {
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public BastionShareableLinkResponse build() {
             return new BastionShareableLinkResponse(bsl, createdAt, message, vm);
         }

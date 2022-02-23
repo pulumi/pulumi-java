@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.RoboDirectiveResponse;
@@ -205,7 +205,6 @@ public final class AndroidRoboTestResponse {
             this.startingIntents = Objects.requireNonNull(startingIntents);
             return this;
         }
-
         public AndroidRoboTestResponse build() {
             return new AndroidRoboTestResponse(appApk, appBundle, appInitialActivity, appPackageId, roboDirectives, roboMode, roboScript, startingIntents);
         }

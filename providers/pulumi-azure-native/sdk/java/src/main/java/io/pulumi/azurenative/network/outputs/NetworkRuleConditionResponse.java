@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class NetworkRuleConditionResponse {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public NetworkRuleConditionResponse build() {
             return new NetworkRuleConditionResponse(description, destinationAddresses, destinationIpGroups, destinationPorts, ipProtocols, name, ruleConditionType, sourceAddresses, sourceIpGroups);
         }

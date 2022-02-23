@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.FingerprintResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class BasisResponse {
             this.resourceUrl = Objects.requireNonNull(resourceUrl);
             return this;
         }
-
         public BasisResponse build() {
             return new BasisResponse(fingerprint, resourceUrl);
         }

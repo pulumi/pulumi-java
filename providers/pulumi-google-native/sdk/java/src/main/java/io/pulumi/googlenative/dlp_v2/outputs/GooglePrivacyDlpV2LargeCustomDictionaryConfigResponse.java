@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryFieldResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStorageFileSetResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStoragePathResponse;
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse build() {
             return new GooglePrivacyDlpV2LargeCustomDictionaryConfigResponse(bigQueryField, cloudStorageFileSet, outputPath);
         }

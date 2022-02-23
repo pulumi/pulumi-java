@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class CertificateAuthorityEdiPartyName {
             this.partyName = Objects.requireNonNull(partyName);
             return this;
         }
-
         public CertificateAuthorityEdiPartyName build() {
             return new CertificateAuthorityEdiPartyName(nameAssigner, partyName);
         }

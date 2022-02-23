@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -120,7 +120,6 @@ public final class JobEndpointResponse {
             this.properties = properties;
             return this;
         }
-
         public JobEndpointResponse build() {
             return new JobEndpointResponse(endpoint, jobEndpointType, port, properties);
         }

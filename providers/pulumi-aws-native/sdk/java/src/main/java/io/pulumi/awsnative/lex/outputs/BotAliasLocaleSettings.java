@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasCodeHookSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +69,6 @@ public final class BotAliasLocaleSettings {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BotAliasLocaleSettings build() {
             return new BotAliasLocaleSettings(codeHookSpecification, enabled);
         }

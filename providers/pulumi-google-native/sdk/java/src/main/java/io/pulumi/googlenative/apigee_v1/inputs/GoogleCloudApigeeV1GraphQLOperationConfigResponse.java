@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1GraphQLOperationResponse;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1QuotaResponse;
@@ -25,7 +25,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
      * 
      */
     @InputImport(name="apiSource", required=true)
-    private final String apiSource;
+      private final String apiSource;
 
     public String getApiSource() {
         return this.apiSource;
@@ -36,7 +36,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
      * 
      */
     @InputImport(name="attributes", required=true)
-    private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
+      private final List<GoogleCloudApigeeV1AttributeResponse> attributes;
 
     public List<GoogleCloudApigeeV1AttributeResponse> getAttributes() {
         return this.attributes;
@@ -47,7 +47,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
      * 
      */
     @InputImport(name="operations", required=true)
-    private final List<GoogleCloudApigeeV1GraphQLOperationResponse> operations;
+      private final List<GoogleCloudApigeeV1GraphQLOperationResponse> operations;
 
     public List<GoogleCloudApigeeV1GraphQLOperationResponse> getOperations() {
         return this.operations;
@@ -58,7 +58,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
      * 
      */
     @InputImport(name="quota", required=true)
-    private final GoogleCloudApigeeV1QuotaResponse quota;
+      private final GoogleCloudApigeeV1QuotaResponse quota;
 
     public GoogleCloudApigeeV1QuotaResponse getQuota() {
         return this.quota;
@@ -127,7 +127,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse extends io.
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationConfigResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationConfigResponse(apiSource, attributes, operations, quota);
         }

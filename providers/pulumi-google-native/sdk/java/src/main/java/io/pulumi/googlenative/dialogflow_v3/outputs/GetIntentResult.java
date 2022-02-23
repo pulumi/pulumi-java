@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3IntentParameterResponse;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3IntentTrainingPhraseResponse;
 import java.lang.Boolean;
@@ -206,7 +206,6 @@ public final class GetIntentResult {
             this.trainingPhrases = Objects.requireNonNull(trainingPhrases);
             return this;
         }
-
         public GetIntentResult build() {
             return new GetIntentResult(description, displayName, isFallback, labels, name, parameters, priority, trainingPhrases);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.gkehub_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.gkehub_v1.FeatureArgs;
 import io.pulumi.googlenative.gkehub_v1.outputs.CommonFeatureSpecResponse;
@@ -164,13 +164,6 @@ public class Feature extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Feature(String name) {
-        super("google-native:gkehub/v1:Feature", name, FeatureArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

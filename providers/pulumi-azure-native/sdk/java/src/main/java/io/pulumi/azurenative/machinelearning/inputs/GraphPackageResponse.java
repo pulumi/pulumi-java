@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 import io.pulumi.azurenative.machinelearning.inputs.GraphEdgeResponse;
 import io.pulumi.azurenative.machinelearning.inputs.GraphNodeResponse;
 import io.pulumi.azurenative.machinelearning.inputs.GraphParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="edges")
-    private final @Nullable List<GraphEdgeResponse> edges;
+        private final @Nullable List<GraphEdgeResponse> edges;
 
     public List<GraphEdgeResponse> getEdges() {
         return this.edges == null ? List.of() : this.edges;
@@ -39,7 +39,7 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="graphParameters")
-    private final @Nullable Map<String,GraphParameterResponse> graphParameters;
+        private final @Nullable Map<String,GraphParameterResponse> graphParameters;
 
     public Map<String,GraphParameterResponse> getGraphParameters() {
         return this.graphParameters == null ? Map.of() : this.graphParameters;
@@ -50,7 +50,7 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nodes")
-    private final @Nullable Map<String,GraphNodeResponse> nodes;
+        private final @Nullable Map<String,GraphNodeResponse> nodes;
 
     public Map<String,GraphNodeResponse> getNodes() {
         return this.nodes == null ? Map.of() : this.nodes;
@@ -109,7 +109,6 @@ public final class GraphPackageResponse extends io.pulumi.resources.InvokeArgs {
             this.nodes = nodes;
             return this;
         }
-
         public GraphPackageResponse build() {
             return new GraphPackageResponse(edges, graphParameters, nodes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class AdditionalWorkspacesPropertiesResponse {
             this.workspace = workspace;
             return this;
         }
-
         public AdditionalWorkspacesPropertiesResponse build() {
             return new AdditionalWorkspacesPropertiesResponse(dataTypes, type, workspace);
         }

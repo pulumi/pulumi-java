@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class GetApiIssueAttachmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetApiIssueAttachmentResult build() {
             return new GetApiIssueAttachmentResult(content, contentFormat, id, name, title, type);
         }

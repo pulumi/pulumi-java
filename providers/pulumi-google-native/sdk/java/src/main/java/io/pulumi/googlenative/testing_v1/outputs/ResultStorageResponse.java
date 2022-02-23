@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.GoogleCloudStorageResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ToolResultsExecutionResponse;
 import io.pulumi.googlenative.testing_v1.outputs.ToolResultsHistoryResponse;
@@ -119,7 +119,6 @@ public final class ResultStorageResponse {
             this.toolResultsHistory = Objects.requireNonNull(toolResultsHistory);
             return this;
         }
-
         public ResultStorageResponse build() {
             return new ResultStorageResponse(googleCloudStorage, resultsUrl, toolResultsExecution, toolResultsHistory);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.ValidatingWebhook;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class ValidatingWebhookConfiguration {
             this.webhooks = webhooks;
             return this;
         }
-
         public ValidatingWebhookConfiguration build() {
             return new ValidatingWebhookConfiguration(apiVersion, kind, metadata, webhooks);
         }

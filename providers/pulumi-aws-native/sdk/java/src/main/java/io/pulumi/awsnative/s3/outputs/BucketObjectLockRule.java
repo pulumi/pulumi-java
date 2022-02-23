@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketDefaultRetention;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class BucketObjectLockRule {
             this.defaultRetention = defaultRetention;
             return this;
         }
-
         public BucketObjectLockRule build() {
             return new BucketObjectLockRule(defaultRetention);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="collection")
-    private final @Nullable Input<String> collection;
+        private final @Nullable Input<String> collection;
 
     public Input<String> getCollection() {
         return this.collection == null ? Input.empty() : this.collection;
@@ -34,7 +34,7 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="db")
-    private final @Nullable Input<String> db;
+        private final @Nullable Input<String> db;
 
     public Input<String> getDb() {
         return this.db == null ? Input.empty() : this.db;
@@ -93,7 +93,6 @@ public final class PrivilegeResourceArgs extends io.pulumi.resources.ResourceArg
             this.db = Input.ofNullable(db);
             return this;
         }
-
         public PrivilegeResourceArgs build() {
             return new PrivilegeResourceArgs(collection, db);
         }

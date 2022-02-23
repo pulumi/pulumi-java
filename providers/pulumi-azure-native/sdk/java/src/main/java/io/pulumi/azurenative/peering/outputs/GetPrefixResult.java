@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.peering.outputs;
 
 import io.pulumi.azurenative.peering.outputs.PeeringServicePrefixEventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetPrefixResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrefixResult build() {
             return new GetPrefixResult(errorMessage, events, id, learnedType, name, peeringServicePrefixKey, prefix, prefixValidationState, provisioningState, type);
         }

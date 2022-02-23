@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.composer.inputs.EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -19,77 +19,77 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
     public static final EnvironmentConfigNodeConfigGetArgs Empty = new EnvironmentConfigNodeConfigGetArgs();
 
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+        private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
     }
 
     @InputImport(name="enableIpMasqAgent")
-    private final @Nullable Input<Boolean> enableIpMasqAgent;
+        private final @Nullable Input<Boolean> enableIpMasqAgent;
 
     public Input<Boolean> getEnableIpMasqAgent() {
         return this.enableIpMasqAgent == null ? Input.empty() : this.enableIpMasqAgent;
     }
 
     @InputImport(name="ipAllocationPolicy")
-    private final @Nullable Input<EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs> ipAllocationPolicy;
+        private final @Nullable Input<EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs> ipAllocationPolicy;
 
     public Input<EnvironmentConfigNodeConfigIpAllocationPolicyGetArgs> getIpAllocationPolicy() {
         return this.ipAllocationPolicy == null ? Input.empty() : this.ipAllocationPolicy;
     }
 
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+        private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
     }
 
     @InputImport(name="maxPodsPerNode")
-    private final @Nullable Input<Integer> maxPodsPerNode;
+        private final @Nullable Input<Integer> maxPodsPerNode;
 
     public Input<Integer> getMaxPodsPerNode() {
         return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
     }
 
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="oauthScopes")
-    private final @Nullable Input<List<String>> oauthScopes;
+        private final @Nullable Input<List<String>> oauthScopes;
 
     public Input<List<String>> getOauthScopes() {
         return this.oauthScopes == null ? Input.empty() : this.oauthScopes;
     }
 
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+        private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+        private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -283,7 +283,6 @@ public final class EnvironmentConfigNodeConfigGetArgs extends io.pulumi.resource
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public EnvironmentConfigNodeConfigGetArgs build() {
             return new EnvironmentConfigNodeConfigGetArgs(diskSizeGb, enableIpMasqAgent, ipAllocationPolicy, machineType, maxPodsPerNode, network, oauthScopes, serviceAccount, subnetwork, tags, zone);
         }

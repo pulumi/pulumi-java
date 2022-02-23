@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ClusteringResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.EncryptionConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.ExternalDataConfigurationResponse;
@@ -655,7 +655,6 @@ public final class GetTableResult {
             this.view = Objects.requireNonNull(view);
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(clustering, creationTime, defaultCollation, description, encryptionConfiguration, etag, expirationTime, externalDataConfiguration, friendlyName, kind, labels, lastModifiedTime, location, materializedView, model, numBytes, numLongTermBytes, numPhysicalBytes, numRows, rangePartitioning, requirePartitionFilter, schema, selfLink, snapshotDefinition, streamingBuffer, tableReference, timePartitioning, type, view);
         }

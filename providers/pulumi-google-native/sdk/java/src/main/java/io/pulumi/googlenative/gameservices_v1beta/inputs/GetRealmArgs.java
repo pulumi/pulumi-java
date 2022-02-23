@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRealmArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRealmArgs Empty = new GetRealmArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="realmId", required=true)
-    private final String realmId;
+      private final String realmId;
 
     public String getRealmId() {
         return this.realmId;
@@ -88,7 +88,6 @@ public final class GetRealmArgs extends io.pulumi.resources.InvokeArgs {
             this.realmId = Objects.requireNonNull(realmId);
             return this;
         }
-
         public GetRealmArgs build() {
             return new GetRealmArgs(location, project, realmId);
         }

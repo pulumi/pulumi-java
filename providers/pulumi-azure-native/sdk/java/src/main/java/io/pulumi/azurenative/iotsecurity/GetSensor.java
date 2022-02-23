@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotsecurity;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotsecurity.inputs.GetSensorArgs;
 import io.pulumi.azurenative.iotsecurity.outputs.GetSensorResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

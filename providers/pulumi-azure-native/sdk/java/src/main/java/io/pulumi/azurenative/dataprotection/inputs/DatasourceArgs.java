@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="datasourceType")
-    private final @Nullable Input<String> datasourceType;
+        private final @Nullable Input<String> datasourceType;
 
     public Input<String> getDatasourceType() {
         return this.datasourceType == null ? Input.empty() : this.datasourceType;
@@ -34,7 +34,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectType")
-    private final @Nullable Input<String> objectType;
+        private final @Nullable Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType == null ? Input.empty() : this.objectType;
@@ -45,7 +45,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceID", required=true)
-    private final Input<String> resourceID;
+        private final Input<String> resourceID;
 
     public Input<String> getResourceID() {
         return this.resourceID;
@@ -56,7 +56,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceLocation")
-    private final @Nullable Input<String> resourceLocation;
+        private final @Nullable Input<String> resourceLocation;
 
     public Input<String> getResourceLocation() {
         return this.resourceLocation == null ? Input.empty() : this.resourceLocation;
@@ -67,7 +67,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -78,7 +78,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -89,7 +89,7 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<String> resourceUri;
+        private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -223,7 +223,6 @@ public final class DatasourceArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public DatasourceArgs build() {
             return new DatasourceArgs(datasourceType, objectType, resourceID, resourceLocation, resourceName, resourceType, resourceUri);
         }

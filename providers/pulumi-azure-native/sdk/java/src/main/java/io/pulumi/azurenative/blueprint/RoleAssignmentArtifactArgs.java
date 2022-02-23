@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blueprint;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="artifactName")
-    private final @Nullable Input<String> artifactName;
+        private final @Nullable Input<String> artifactName;
 
     public Input<String> getArtifactName() {
         return this.artifactName == null ? Input.empty() : this.artifactName;
@@ -32,7 +32,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="blueprintName", required=true)
-    private final Input<String> blueprintName;
+        private final Input<String> blueprintName;
 
     public Input<String> getBlueprintName() {
         return this.blueprintName;
@@ -43,7 +43,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<String>> dependsOn;
+        private final @Nullable Input<List<String>> dependsOn;
 
     public Input<List<String>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -54,7 +54,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -65,7 +65,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -77,7 +77,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -88,7 +88,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="principalIds", required=true)
-    private final Input<Object> principalIds;
+        private final Input<Object> principalIds;
 
     public Input<Object> getPrincipalIds() {
         return this.principalIds;
@@ -99,7 +99,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable Input<String> resourceGroup;
+        private final @Nullable Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup == null ? Input.empty() : this.resourceGroup;
@@ -110,7 +110,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceScope", required=true)
-    private final Input<String> resourceScope;
+        private final Input<String> resourceScope;
 
     public Input<String> getResourceScope() {
         return this.resourceScope;
@@ -121,7 +121,7 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final Input<String> roleDefinitionId;
+        private final Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -300,7 +300,6 @@ public final class RoleAssignmentArtifactArgs extends io.pulumi.resources.Resour
             this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
-
         public RoleAssignmentArtifactArgs build() {
             return new RoleAssignmentArtifactArgs(artifactName, blueprintName, dependsOn, description, displayName, kind, principalIds, resourceGroup, resourceScope, roleDefinitionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -84,7 +84,6 @@ public final class RegistryEventNotificationConfigItem {
             this.subfolderMatches = subfolderMatches;
             return this;
         }
-
         public RegistryEventNotificationConfigItem build() {
             return new RegistryEventNotificationConfigItem(pubsubTopicName, subfolderMatches);
         }

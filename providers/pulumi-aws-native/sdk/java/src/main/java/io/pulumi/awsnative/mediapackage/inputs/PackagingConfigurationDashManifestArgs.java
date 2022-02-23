@@ -7,7 +7,7 @@ import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifest
 import io.pulumi.awsnative.mediapackage.enums.PackagingConfigurationDashManifestProfile;
 import io.pulumi.awsnative.mediapackage.inputs.PackagingConfigurationStreamSelectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,14 +27,14 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="manifestLayout")
-    private final @Nullable Input<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
+        private final @Nullable Input<PackagingConfigurationDashManifestManifestLayout> manifestLayout;
 
     public Input<PackagingConfigurationDashManifestManifestLayout> getManifestLayout() {
         return this.manifestLayout == null ? Input.empty() : this.manifestLayout;
     }
 
     @InputImport(name="manifestName")
-    private final @Nullable Input<String> manifestName;
+        private final @Nullable Input<String> manifestName;
 
     public Input<String> getManifestName() {
         return this.manifestName == null ? Input.empty() : this.manifestName;
@@ -45,7 +45,7 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="minBufferTimeSeconds")
-    private final @Nullable Input<Integer> minBufferTimeSeconds;
+        private final @Nullable Input<Integer> minBufferTimeSeconds;
 
     public Input<Integer> getMinBufferTimeSeconds() {
         return this.minBufferTimeSeconds == null ? Input.empty() : this.minBufferTimeSeconds;
@@ -56,14 +56,14 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="profile")
-    private final @Nullable Input<PackagingConfigurationDashManifestProfile> profile;
+        private final @Nullable Input<PackagingConfigurationDashManifestProfile> profile;
 
     public Input<PackagingConfigurationDashManifestProfile> getProfile() {
         return this.profile == null ? Input.empty() : this.profile;
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
+        private final @Nullable Input<PackagingConfigurationStreamSelectionArgs> streamSelection;
 
     public Input<PackagingConfigurationStreamSelectionArgs> getStreamSelection() {
         return this.streamSelection == null ? Input.empty() : this.streamSelection;
@@ -167,7 +167,6 @@ public final class PackagingConfigurationDashManifestArgs extends io.pulumi.reso
             this.streamSelection = Input.ofNullable(streamSelection);
             return this;
         }
-
         public PackagingConfigurationDashManifestArgs build() {
             return new PackagingConfigurationDashManifestArgs(manifestLayout, manifestName, minBufferTimeSeconds, profile, streamSelection);
         }

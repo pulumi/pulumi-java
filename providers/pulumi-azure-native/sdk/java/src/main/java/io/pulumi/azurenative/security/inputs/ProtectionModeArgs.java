@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exe")
-    private final @Nullable Input<String> exe;
+        private final @Nullable Input<String> exe;
 
     public Input<String> getExe() {
         return this.exe == null ? Input.empty() : this.exe;
@@ -34,7 +34,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executable")
-    private final @Nullable Input<String> executable;
+        private final @Nullable Input<String> executable;
 
     public Input<String> getExecutable() {
         return this.executable == null ? Input.empty() : this.executable;
@@ -45,7 +45,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msi")
-    private final @Nullable Input<String> msi;
+        private final @Nullable Input<String> msi;
 
     public Input<String> getMsi() {
         return this.msi == null ? Input.empty() : this.msi;
@@ -56,7 +56,7 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+        private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -145,7 +145,6 @@ public final class ProtectionModeArgs extends io.pulumi.resources.ResourceArgs {
             this.script = Input.ofNullable(script);
             return this;
         }
-
         public ProtectionModeArgs build() {
             return new ProtectionModeArgs(exe, executable, msi, script);
         }

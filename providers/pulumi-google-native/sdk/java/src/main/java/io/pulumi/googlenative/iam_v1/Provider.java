@@ -5,8 +5,8 @@ package io.pulumi.googlenative.iam_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.iam_v1.ProviderArgs;
 import io.pulumi.googlenative.iam_v1.outputs.AwsResponse;
@@ -150,13 +150,6 @@ public class Provider extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Provider(String name) {
-        super("google-native:iam/v1:Provider", name, ProviderArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

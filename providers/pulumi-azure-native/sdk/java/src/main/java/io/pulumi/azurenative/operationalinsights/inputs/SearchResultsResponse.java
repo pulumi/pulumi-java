@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -35,7 +35,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="endSearchTime")
-    private final @Nullable String endSearchTime;
+        private final @Nullable String endSearchTime;
 
     public Optional<String> getEndSearchTime() {
         return this.endSearchTime == null ? Optional.empty() : Optional.ofNullable(this.endSearchTime);
@@ -46,7 +46,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Integer limit;
+        private final @Nullable Integer limit;
 
     public Optional<Integer> getLimit() {
         return this.limit == null ? Optional.empty() : Optional.ofNullable(this.limit);
@@ -57,7 +57,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="query")
-    private final @Nullable String query;
+        private final @Nullable String query;
 
     public Optional<String> getQuery() {
         return this.query == null ? Optional.empty() : Optional.ofNullable(this.query);
@@ -68,7 +68,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="sourceTable", required=true)
-    private final String sourceTable;
+        private final String sourceTable;
 
     public String getSourceTable() {
         return this.sourceTable;
@@ -79,7 +79,7 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="startSearchTime")
-    private final @Nullable String startSearchTime;
+        private final @Nullable String startSearchTime;
 
     public Optional<String> getStartSearchTime() {
         return this.startSearchTime == null ? Optional.empty() : Optional.ofNullable(this.startSearchTime);
@@ -168,7 +168,6 @@ public final class SearchResultsResponse extends io.pulumi.resources.InvokeArgs 
             this.startSearchTime = startSearchTime;
             return this;
         }
-
         public SearchResultsResponse build() {
             return new SearchResultsResponse(description, endSearchTime, limit, query, sourceTable, startSearchTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<Object> content;
+        private final @Nullable Input<Object> content;
 
     public Input<Object> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -32,7 +32,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="integrationAccountName", required=true)
-    private final Input<String> integrationAccountName;
+        private final Input<String> integrationAccountName;
 
     public Input<String> getIntegrationAccountName() {
         return this.integrationAccountName;
@@ -43,7 +43,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -54,7 +54,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sessionName")
-    private final @Nullable Input<String> sessionName;
+        private final @Nullable Input<String> sessionName;
 
     public Input<String> getSessionName() {
         return this.sessionName == null ? Input.empty() : this.sessionName;
@@ -76,7 +76,7 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -195,7 +195,6 @@ public final class IntegrationAccountSessionArgs extends io.pulumi.resources.Res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public IntegrationAccountSessionArgs build() {
             return new IntegrationAccountSessionArgs(content, integrationAccountName, location, resourceGroupName, sessionName, tags);
         }

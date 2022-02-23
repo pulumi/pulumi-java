@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1beta1.outputs.ServiceReference;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -184,7 +184,6 @@ public final class APIServiceSpec {
             this.versionPriority = Objects.requireNonNull(versionPriority);
             return this;
         }
-
         public APIServiceSpec build() {
             return new APIServiceSpec(caBundle, group, groupPriorityMinimum, insecureSkipTLSVerify, service, version, versionPriority);
         }

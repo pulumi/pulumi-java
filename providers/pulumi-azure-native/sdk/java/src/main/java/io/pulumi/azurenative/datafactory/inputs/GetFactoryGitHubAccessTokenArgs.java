@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.GitHubClientSecret;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final String factoryName;
+        private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -31,7 +31,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="gitHubAccessCode", required=true)
-    private final String gitHubAccessCode;
+        private final String gitHubAccessCode;
 
     public String getGitHubAccessCode() {
         return this.gitHubAccessCode;
@@ -42,7 +42,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="gitHubAccessTokenBaseUrl", required=true)
-    private final String gitHubAccessTokenBaseUrl;
+        private final String gitHubAccessTokenBaseUrl;
 
     public String getGitHubAccessTokenBaseUrl() {
         return this.gitHubAccessTokenBaseUrl;
@@ -53,7 +53,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="gitHubClientId")
-    private final @Nullable String gitHubClientId;
+        private final @Nullable String gitHubClientId;
 
     public Optional<String> getGitHubClientId() {
         return this.gitHubClientId == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientId);
@@ -64,7 +64,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="gitHubClientSecret")
-    private final @Nullable GitHubClientSecret gitHubClientSecret;
+        private final @Nullable GitHubClientSecret gitHubClientSecret;
 
     public Optional<GitHubClientSecret> getGitHubClientSecret() {
         return this.gitHubClientSecret == null ? Optional.empty() : Optional.ofNullable(this.gitHubClientSecret);
@@ -75,7 +75,7 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -164,7 +164,6 @@ public final class GetFactoryGitHubAccessTokenArgs extends io.pulumi.resources.I
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetFactoryGitHubAccessTokenArgs build() {
             return new GetFactoryGitHubAccessTokenArgs(factoryName, gitHubAccessCode, gitHubAccessTokenBaseUrl, gitHubClientId, gitHubClientSecret, resourceGroupName);
         }

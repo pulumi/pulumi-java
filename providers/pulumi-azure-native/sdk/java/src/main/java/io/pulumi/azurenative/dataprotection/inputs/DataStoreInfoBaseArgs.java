@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 import io.pulumi.azurenative.dataprotection.enums.DataStoreTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="dataStoreType", required=true)
-    private final Input<Either<String,DataStoreTypes>> dataStoreType;
+        private final Input<Either<String,DataStoreTypes>> dataStoreType;
 
     public Input<Either<String,DataStoreTypes>> getDataStoreType() {
         return this.dataStoreType;
@@ -35,7 +35,7 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -94,7 +94,6 @@ public final class DataStoreInfoBaseArgs extends io.pulumi.resources.ResourceArg
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public DataStoreInfoBaseArgs build() {
             return new DataStoreInfoBaseArgs(dataStoreType, objectType);
         }

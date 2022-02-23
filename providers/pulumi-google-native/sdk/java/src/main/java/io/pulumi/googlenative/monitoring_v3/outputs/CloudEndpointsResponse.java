@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class CloudEndpointsResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public CloudEndpointsResponse build() {
             return new CloudEndpointsResponse(service);
         }

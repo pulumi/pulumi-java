@@ -5,8 +5,8 @@ package io.pulumi.gcp.gameservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.gameservices.GameServerClusterArgs;
 import io.pulumi.gcp.gameservices.inputs.GameServerClusterState;
@@ -170,13 +170,6 @@ public class GameServerCluster extends io.pulumi.resources.CustomResource {
         return this.realmId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GameServerCluster(String name) {
-        super("gcp:gameservices/gameServerCluster:GameServerCluster", name, GameServerClusterArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

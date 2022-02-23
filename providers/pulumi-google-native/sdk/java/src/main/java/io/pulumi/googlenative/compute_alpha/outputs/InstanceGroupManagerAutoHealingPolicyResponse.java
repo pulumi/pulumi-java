@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FixedOrPercentResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersResponse;
 import java.lang.Integer;
@@ -132,7 +132,6 @@ public final class InstanceGroupManagerAutoHealingPolicyResponse {
             this.updateInstances = Objects.requireNonNull(updateInstances);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyResponse build() {
             return new InstanceGroupManagerAutoHealingPolicyResponse(autoHealingTriggers, healthCheck, initialDelaySec, maxUnavailable, updateInstances);
         }

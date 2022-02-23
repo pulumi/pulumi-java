@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class ResourceSetDescriptionResponse {
             this.exceptions = exceptions;
             return this;
         }
-
         public ResourceSetDescriptionResponse build() {
             return new ResourceSetDescriptionResponse(elements, exceptions);
         }

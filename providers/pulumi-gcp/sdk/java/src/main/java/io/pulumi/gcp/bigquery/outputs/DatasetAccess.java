@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.DatasetAccessView;
 import java.lang.String;
 import java.util.Objects;
@@ -183,7 +183,6 @@ public final class DatasetAccess {
             this.view = view;
             return this;
         }
-
         public DatasetAccess build() {
             return new DatasetAccess(domain, groupByEmail, role, specialGroup, userByEmail, view);
         }

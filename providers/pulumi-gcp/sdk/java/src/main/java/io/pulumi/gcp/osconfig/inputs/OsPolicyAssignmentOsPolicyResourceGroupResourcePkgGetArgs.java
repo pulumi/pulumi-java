@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs;
@@ -26,7 +26,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> apt;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgAptGetArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -37,7 +37,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="deb")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> deb;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDebGetArgs> getDeb() {
         return this.deb == null ? Input.empty() : this.deb;
@@ -48,7 +48,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="desiredState", required=true)
-    private final Input<String> desiredState;
+        private final Input<String> desiredState;
 
     public Input<String> getDesiredState() {
         return this.desiredState;
@@ -59,7 +59,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="googet")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> googet;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGoogetGetArgs> getGooget() {
         return this.googet == null ? Input.empty() : this.googet;
@@ -70,7 +70,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="msi")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> msi;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiGetArgs> getMsi() {
         return this.msi == null ? Input.empty() : this.msi;
@@ -81,7 +81,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="rpm")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> rpm;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmGetArgs> getRpm() {
         return this.rpm == null ? Input.empty() : this.rpm;
@@ -92,7 +92,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> yum;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYumGetArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -103,7 +103,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> zypper;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypperGetArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -252,7 +252,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs ext
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs(apt, deb, desiredState, googet, msi, rpm, yum, zypper);
         }

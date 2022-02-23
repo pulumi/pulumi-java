@@ -11,8 +11,8 @@ import io.pulumi.azurenative.m365securityandcompliance.outputs.SystemDataRespons
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -162,13 +162,6 @@ public class PrivateLinkServicesForO365ManagementActivityAPI extends io.pulumi.r
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PrivateLinkServicesForO365ManagementActivityAPI(String name) {
-        super("azure-native:m365securityandcompliance:privateLinkServicesForO365ManagementActivityAPI", name, PrivateLinkServicesForO365ManagementActivityAPIArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

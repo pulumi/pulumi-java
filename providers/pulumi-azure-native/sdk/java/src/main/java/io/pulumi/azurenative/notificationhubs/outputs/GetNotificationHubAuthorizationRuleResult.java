@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notificationhubs.outputs;
 
 import io.pulumi.azurenative.notificationhubs.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -353,7 +353,6 @@ public final class GetNotificationHubAuthorizationRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNotificationHubAuthorizationRuleResult build() {
             return new GetNotificationHubAuthorizationRuleResult(claimType, claimValue, createdTime, id, keyName, location, modifiedTime, name, primaryKey, revision, rights, secondaryKey, sku, tags, type);
         }

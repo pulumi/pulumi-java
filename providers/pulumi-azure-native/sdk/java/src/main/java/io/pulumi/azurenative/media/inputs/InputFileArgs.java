@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.inputs.SelectVideoTrackByAttributeArgs;
 import io.pulumi.azurenative.media.inputs.SelectVideoTrackByIdArgs;
 import io.pulumi.azurenative.media.inputs.VideoTrackDescriptorArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filename")
-    private final @Nullable Input<String> filename;
+        private final @Nullable Input<String> filename;
 
     public Input<String> getFilename() {
         return this.filename == null ? Input.empty() : this.filename;
@@ -42,7 +42,7 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="includedTracks")
-    private final @Nullable Input<List<Object>> includedTracks;
+        private final @Nullable Input<List<Object>> includedTracks;
 
     public Input<List<Object>> getIncludedTracks() {
         return this.includedTracks == null ? Input.empty() : this.includedTracks;
@@ -54,7 +54,7 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -128,7 +128,6 @@ public final class InputFileArgs extends io.pulumi.resources.ResourceArgs {
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public InputFileArgs build() {
             return new InputFileArgs(filename, includedTracks, odataType);
         }

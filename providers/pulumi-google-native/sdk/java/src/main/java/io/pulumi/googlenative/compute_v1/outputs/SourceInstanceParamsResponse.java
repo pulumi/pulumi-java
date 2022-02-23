@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.DiskInstantiationConfigResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class SourceInstanceParamsResponse {
             this.diskConfigs = Objects.requireNonNull(diskConfigs);
             return this;
         }
-
         public SourceInstanceParamsResponse build() {
             return new SourceInstanceParamsResponse(diskConfigs);
         }

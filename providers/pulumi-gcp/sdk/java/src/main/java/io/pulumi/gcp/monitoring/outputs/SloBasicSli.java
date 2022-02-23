@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloBasicSliAvailability;
 import io.pulumi.gcp.monitoring.outputs.SloBasicSliLatency;
 import java.lang.String;
@@ -176,7 +176,6 @@ public final class SloBasicSli {
             this.versions = versions;
             return this;
         }
-
         public SloBasicSli build() {
             return new SloBasicSli(availability, latency, locations, methods, versions);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -84,7 +84,6 @@ public final class SloWindowsBasedSliMetricSumInRangeRange {
             this.min = min;
             return this;
         }
-
         public SloWindowsBasedSliMetricSumInRangeRange build() {
             return new SloWindowsBasedSliMetricSumInRangeRange(max, min);
         }

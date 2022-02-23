@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.eks.outputs;
 
 import io.pulumi.awsnative.eks.outputs.FargateProfileLabel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class FargateProfileSelector {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public FargateProfileSelector build() {
             return new FargateProfileSelector(labels, namespace);
         }

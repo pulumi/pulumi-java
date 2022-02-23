@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="progressPercent", required=true)
-    private final Integer progressPercent;
+      private final Integer progressPercent;
 
     public Integer getProgressPercent() {
         return this.progressPercent;
@@ -33,7 +33,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -82,7 +82,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(progressPercent, startTime);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeErrorResponse;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeNodeResponse;
 import io.pulumi.azurenative.datafactory.outputs.ManagedIntegrationRuntimeOperationResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class ManagedIntegrationRuntimeStatusResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedIntegrationRuntimeStatusResponse build() {
             return new ManagedIntegrationRuntimeStatusResponse(createTime, dataFactoryName, lastOperation, nodes, otherErrors, state, type);
         }

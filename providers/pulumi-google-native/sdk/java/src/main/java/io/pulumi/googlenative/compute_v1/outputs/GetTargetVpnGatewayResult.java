@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -243,7 +243,6 @@ public final class GetTargetVpnGatewayResult {
             this.tunnels = Objects.requireNonNull(tunnels);
             return this;
         }
-
         public GetTargetVpnGatewayResult build() {
             return new GetTargetVpnGatewayResult(creationTimestamp, description, forwardingRules, kind, name, network, region, selfLink, status, tunnels);
         }

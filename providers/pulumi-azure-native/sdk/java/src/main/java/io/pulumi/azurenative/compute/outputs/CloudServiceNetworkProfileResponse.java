@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.LoadBalancerConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class CloudServiceNetworkProfileResponse {
             this.swappableCloudService = swappableCloudService;
             return this;
         }
-
         public CloudServiceNetworkProfileResponse build() {
             return new CloudServiceNetworkProfileResponse(loadBalancerConfigurations, swappableCloudService);
         }

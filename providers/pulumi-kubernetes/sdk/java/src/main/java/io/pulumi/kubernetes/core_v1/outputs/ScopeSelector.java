@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ScopedResourceSelectorRequirement;
 import java.util.List;
 import java.util.Objects;
@@ -54,7 +54,6 @@ public final class ScopeSelector {
             this.matchExpressions = matchExpressions;
             return this;
         }
-
         public ScopeSelector build() {
             return new ScopeSelector(matchExpressions);
         }

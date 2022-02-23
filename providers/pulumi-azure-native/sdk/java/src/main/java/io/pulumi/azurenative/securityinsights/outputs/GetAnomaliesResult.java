@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class GetAnomaliesResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAnomaliesResult build() {
             return new GetAnomaliesResult(etag, id, isEnabled, kind, name, systemData, type);
         }

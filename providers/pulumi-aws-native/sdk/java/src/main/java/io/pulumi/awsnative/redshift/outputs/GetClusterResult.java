@@ -6,7 +6,7 @@ package io.pulumi.awsnative.redshift.outputs;
 import io.pulumi.awsnative.redshift.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.redshift.outputs.ClusterLoggingProperties;
 import io.pulumi.awsnative.redshift.outputs.ClusterTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -926,7 +926,6 @@ public final class GetClusterResult {
             this.vpcSecurityGroupIds = vpcSecurityGroupIds;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(allowVersionUpgrade, aquaConfigurationStatus, automatedSnapshotRetentionPeriod, availabilityZone, availabilityZoneRelocation, availabilityZoneRelocationStatus, classic, clusterParameterGroupName, clusterSecurityGroups, clusterType, clusterVersion, deferMaintenance, deferMaintenanceDuration, deferMaintenanceEndTime, deferMaintenanceIdentifier, deferMaintenanceStartTime, destinationRegion, elasticIp, encrypted, endpoint, enhancedVpcRouting, hsmClientCertificateIdentifier, hsmConfigurationIdentifier, iamRoles, id, kmsKeyId, loggingProperties, maintenanceTrackName, manualSnapshotRetentionPeriod, nodeType, numberOfNodes, port, preferredMaintenanceWindow, publiclyAccessible, resourceAction, revisionTarget, rotateEncryptionKey, snapshotCopyGrantName, snapshotCopyManual, snapshotCopyRetentionPeriod, tags, vpcSecurityGroupIds);
         }

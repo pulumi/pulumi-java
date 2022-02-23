@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restorePointCollectionName", required=true)
-    private final String restorePointCollectionName;
+        private final String restorePointCollectionName;
 
     public String getRestorePointCollectionName() {
         return this.restorePointCollectionName;
@@ -39,7 +39,7 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restorePointName", required=true)
-    private final String restorePointName;
+        private final String restorePointName;
 
     public String getRestorePointName() {
         return this.restorePointName;
@@ -98,7 +98,6 @@ public final class GetRestorePointArgs extends io.pulumi.resources.InvokeArgs {
             this.restorePointName = Objects.requireNonNull(restorePointName);
             return this;
         }
-
         public GetRestorePointArgs build() {
             return new GetRestorePointArgs(resourceGroupName, restorePointCollectionName, restorePointName);
         }

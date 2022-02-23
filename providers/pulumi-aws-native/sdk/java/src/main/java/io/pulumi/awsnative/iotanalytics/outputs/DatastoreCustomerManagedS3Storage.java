@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class DatastoreCustomerManagedS3Storage {
             this.keyPrefix = keyPrefix;
             return this;
         }
-
         public DatastoreCustomerManagedS3Storage build() {
             return new DatastoreCustomerManagedS3Storage(bucket, keyPrefix);
         }

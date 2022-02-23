@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class TransitGatewayConnectTag extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="key")
-    private final @Nullable String key;
+        private final @Nullable String key;
 
     public Optional<String> getKey() {
         return this.key == null ? Optional.empty() : Optional.ofNullable(this.key);
@@ -30,7 +30,7 @@ public final class TransitGatewayConnectTag extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -79,7 +79,6 @@ public final class TransitGatewayConnectTag extends io.pulumi.resources.InvokeAr
             this.value = value;
             return this;
         }
-
         public TransitGatewayConnectTag build() {
             return new TransitGatewayConnectTag(key, value);
         }

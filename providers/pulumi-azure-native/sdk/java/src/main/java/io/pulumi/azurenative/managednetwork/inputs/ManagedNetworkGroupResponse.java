@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -47,7 +47,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable String kind;
+        private final @Nullable String kind;
 
     public Optional<String> getKind() {
         return this.kind == null ? Optional.empty() : Optional.ofNullable(this.kind);
@@ -58,7 +58,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -69,7 +69,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="managementGroups")
-    private final @Nullable List<ResourceIdResponse> managementGroups;
+        private final @Nullable List<ResourceIdResponse> managementGroups;
 
     public List<ResourceIdResponse> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
@@ -80,7 +80,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -91,7 +91,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -102,7 +102,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable List<ResourceIdResponse> subnets;
+        private final @Nullable List<ResourceIdResponse> subnets;
 
     public List<ResourceIdResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
@@ -113,7 +113,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable List<ResourceIdResponse> subscriptions;
+        private final @Nullable List<ResourceIdResponse> subscriptions;
 
     public List<ResourceIdResponse> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
@@ -124,7 +124,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -135,7 +135,7 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="virtualNetworks")
-    private final @Nullable List<ResourceIdResponse> virtualNetworks;
+        private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
     public List<ResourceIdResponse> getVirtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
@@ -274,7 +274,6 @@ public final class ManagedNetworkGroupResponse extends io.pulumi.resources.Invok
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public ManagedNetworkGroupResponse build() {
             return new ManagedNetworkGroupResponse(etag, id, kind, location, managementGroups, name, provisioningState, subnets, subscriptions, type, virtualNetworks);
         }

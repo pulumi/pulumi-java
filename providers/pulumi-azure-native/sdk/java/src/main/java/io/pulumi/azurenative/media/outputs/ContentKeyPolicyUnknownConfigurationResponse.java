@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class ContentKeyPolicyUnknownConfigurationResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyUnknownConfigurationResponse build() {
             return new ContentKeyPolicyUnknownConfigurationResponse(odataType);
         }

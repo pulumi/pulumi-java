@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelVariableValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -29,7 +29,7 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="value", required=true)
-    private final AssetModelVariableValue value;
+        private final AssetModelVariableValue value;
 
     public AssetModelVariableValue getValue() {
         return this.value;
@@ -78,7 +78,6 @@ public final class AssetModelExpressionVariable extends io.pulumi.resources.Invo
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AssetModelExpressionVariable build() {
             return new AssetModelExpressionVariable(name, value);
         }

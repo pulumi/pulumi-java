@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.TopicRulePutItemInput;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class TopicRuleDynamoDBv2Action {
             this.roleArn = roleArn;
             return this;
         }
-
         public TopicRuleDynamoDBv2Action build() {
             return new TopicRuleDynamoDBv2Action(putItem, roleArn);
         }

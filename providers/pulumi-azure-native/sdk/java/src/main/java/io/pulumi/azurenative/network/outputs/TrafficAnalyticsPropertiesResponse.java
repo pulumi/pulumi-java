@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.TrafficAnalyticsConfigurationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class TrafficAnalyticsPropertiesResponse {
             this.networkWatcherFlowAnalyticsConfiguration = networkWatcherFlowAnalyticsConfiguration;
             return this;
         }
-
         public TrafficAnalyticsPropertiesResponse build() {
             return new TrafficAnalyticsPropertiesResponse(networkWatcherFlowAnalyticsConfiguration);
         }

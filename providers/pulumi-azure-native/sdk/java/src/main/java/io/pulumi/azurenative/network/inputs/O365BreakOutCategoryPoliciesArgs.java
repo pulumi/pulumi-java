@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<Boolean> allow;
+        private final @Nullable Input<Boolean> allow;
 
     public Input<Boolean> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -34,7 +34,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Input<Boolean> $default;
+        private final @Nullable Input<Boolean> $default;
 
     public Input<Boolean> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
@@ -45,7 +45,7 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="optimize")
-    private final @Nullable Input<Boolean> optimize;
+        private final @Nullable Input<Boolean> optimize;
 
     public Input<Boolean> getOptimize() {
         return this.optimize == null ? Input.empty() : this.optimize;
@@ -119,7 +119,6 @@ public final class O365BreakOutCategoryPoliciesArgs extends io.pulumi.resources.
             this.optimize = Input.ofNullable(optimize);
             return this;
         }
-
         public O365BreakOutCategoryPoliciesArgs build() {
             return new O365BreakOutCategoryPoliciesArgs(allow, $default, optimize);
         }

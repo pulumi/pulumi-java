@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerRuleQueryStringKeyValue;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public final class ListenerRuleQueryStringConfig extends io.pulumi.resources.Inv
     public static final ListenerRuleQueryStringConfig Empty = new ListenerRuleQueryStringConfig();
 
     @InputImport(name="values")
-    private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
+        private final @Nullable List<ListenerRuleQueryStringKeyValue> values;
 
     public List<ListenerRuleQueryStringKeyValue> getValues() {
         return this.values == null ? List.of() : this.values;
@@ -54,7 +54,6 @@ public final class ListenerRuleQueryStringConfig extends io.pulumi.resources.Inv
             this.values = values;
             return this;
         }
-
         public ListenerRuleQueryStringConfig build() {
             return new ListenerRuleQueryStringConfig(values);
         }

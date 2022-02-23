@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.LoadBalancerSkuResponse;
 import io.pulumi.azurenative.network.outputs.LoadBalancingRuleResponse;
 import io.pulumi.azurenative.network.outputs.OutboundRuleResponse;
 import io.pulumi.azurenative.network.outputs.ProbeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -402,7 +402,6 @@ public final class GetLoadBalancerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLoadBalancerResult build() {
             return new GetLoadBalancerResult(backendAddressPools, etag, extendedLocation, frontendIPConfigurations, id, inboundNatPools, inboundNatRules, loadBalancingRules, location, name, outboundRules, probes, provisioningState, resourceGuid, sku, tags, type);
         }

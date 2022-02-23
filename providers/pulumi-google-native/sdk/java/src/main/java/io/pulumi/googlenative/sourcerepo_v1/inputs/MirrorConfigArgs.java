@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sourcerepo_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deployKeyId")
-    private final @Nullable Input<String> deployKeyId;
+      private final @Nullable Input<String> deployKeyId;
 
     public Input<String> getDeployKeyId() {
         return this.deployKeyId == null ? Input.empty() : this.deployKeyId;
@@ -34,7 +34,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+      private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -45,7 +45,7 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhookId")
-    private final @Nullable Input<String> webhookId;
+      private final @Nullable Input<String> webhookId;
 
     public Input<String> getWebhookId() {
         return this.webhookId == null ? Input.empty() : this.webhookId;
@@ -119,7 +119,6 @@ public final class MirrorConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.webhookId = Input.ofNullable(webhookId);
             return this;
         }
-
         public MirrorConfigArgs build() {
             return new MirrorConfigArgs(deployKeyId, url, webhookId);
         }

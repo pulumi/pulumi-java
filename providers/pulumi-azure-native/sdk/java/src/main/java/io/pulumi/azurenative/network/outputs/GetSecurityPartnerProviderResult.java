@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetSecurityPartnerProviderResult {
             this.virtualHub = virtualHub;
             return this;
         }
-
         public GetSecurityPartnerProviderResult build() {
             return new GetSecurityPartnerProviderResult(connectionStatus, etag, id, location, name, provisioningState, securityProviderName, tags, type, virtualHub);
         }

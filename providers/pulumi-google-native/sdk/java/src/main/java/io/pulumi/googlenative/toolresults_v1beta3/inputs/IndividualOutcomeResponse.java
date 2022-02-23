@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.toolresults_v1beta3.inputs.DurationResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,14 +23,14 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="multistepNumber", required=true)
-    private final Integer multistepNumber;
+      private final Integer multistepNumber;
 
     public Integer getMultistepNumber() {
         return this.multistepNumber;
     }
 
     @InputImport(name="outcomeSummary", required=true)
-    private final String outcomeSummary;
+      private final String outcomeSummary;
 
     public String getOutcomeSummary() {
         return this.outcomeSummary;
@@ -41,14 +41,14 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="runDuration", required=true)
-    private final DurationResponse runDuration;
+      private final DurationResponse runDuration;
 
     public DurationResponse getRunDuration() {
         return this.runDuration;
     }
 
     @InputImport(name="stepId", required=true)
-    private final String stepId;
+      private final String stepId;
 
     public String getStepId() {
         return this.stepId;
@@ -117,7 +117,6 @@ public final class IndividualOutcomeResponse extends io.pulumi.resources.InvokeA
             this.stepId = Objects.requireNonNull(stepId);
             return this;
         }
-
         public IndividualOutcomeResponse build() {
             return new IndividualOutcomeResponse(multistepNumber, outcomeSummary, runDuration, stepId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -207,7 +207,6 @@ public final class ImageTemplatePowerShellCustomizerResponse {
             this.validExitCodes = validExitCodes;
             return this;
         }
-
         public ImageTemplatePowerShellCustomizerResponse build() {
             return new ImageTemplatePowerShellCustomizerResponse(inline, name, runAsSystem, runElevated, scriptUri, sha256Checksum, type, validExitCodes);
         }

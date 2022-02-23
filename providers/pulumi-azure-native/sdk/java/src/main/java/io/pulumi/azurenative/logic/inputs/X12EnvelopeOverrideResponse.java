@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="dateFormat", required=true)
-    private final String dateFormat;
+        private final String dateFormat;
 
     public String getDateFormat() {
         return this.dateFormat;
@@ -34,7 +34,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="functionalIdentifierCode")
-    private final @Nullable String functionalIdentifierCode;
+        private final @Nullable String functionalIdentifierCode;
 
     public Optional<String> getFunctionalIdentifierCode() {
         return this.functionalIdentifierCode == null ? Optional.empty() : Optional.ofNullable(this.functionalIdentifierCode);
@@ -45,7 +45,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="headerVersion", required=true)
-    private final String headerVersion;
+        private final String headerVersion;
 
     public String getHeaderVersion() {
         return this.headerVersion;
@@ -56,7 +56,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="messageId", required=true)
-    private final String messageId;
+        private final String messageId;
 
     public String getMessageId() {
         return this.messageId;
@@ -67,7 +67,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="protocolVersion", required=true)
-    private final String protocolVersion;
+        private final String protocolVersion;
 
     public String getProtocolVersion() {
         return this.protocolVersion;
@@ -78,7 +78,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="receiverApplicationId", required=true)
-    private final String receiverApplicationId;
+        private final String receiverApplicationId;
 
     public String getReceiverApplicationId() {
         return this.receiverApplicationId;
@@ -89,7 +89,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="responsibleAgencyCode", required=true)
-    private final String responsibleAgencyCode;
+        private final String responsibleAgencyCode;
 
     public String getResponsibleAgencyCode() {
         return this.responsibleAgencyCode;
@@ -100,7 +100,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="senderApplicationId", required=true)
-    private final String senderApplicationId;
+        private final String senderApplicationId;
 
     public String getSenderApplicationId() {
         return this.senderApplicationId;
@@ -111,7 +111,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="targetNamespace", required=true)
-    private final String targetNamespace;
+        private final String targetNamespace;
 
     public String getTargetNamespace() {
         return this.targetNamespace;
@@ -122,7 +122,7 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="timeFormat", required=true)
-    private final String timeFormat;
+        private final String timeFormat;
 
     public String getTimeFormat() {
         return this.timeFormat;
@@ -251,7 +251,6 @@ public final class X12EnvelopeOverrideResponse extends io.pulumi.resources.Invok
             this.timeFormat = Objects.requireNonNull(timeFormat);
             return this;
         }
-
         public X12EnvelopeOverrideResponse build() {
             return new X12EnvelopeOverrideResponse(dateFormat, functionalIdentifierCode, headerVersion, messageId, protocolVersion, receiverApplicationId, responsibleAgencyCode, senderApplicationId, targetNamespace, timeFormat);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.enums.AssetContainerPermission;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final String assetName;
+        private final String assetName;
 
     public String getAssetName() {
         return this.assetName;
@@ -43,7 +43,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="expiryTime")
-    private final @Nullable String expiryTime;
+        private final @Nullable String expiryTime;
 
     public Optional<String> getExpiryTime() {
         return this.expiryTime == null ? Optional.empty() : Optional.ofNullable(this.expiryTime);
@@ -54,7 +54,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable Either<String,AssetContainerPermission> permissions;
+        private final @Nullable Either<String,AssetContainerPermission> permissions;
 
     public Either<String,AssetContainerPermission> getPermissions() {
         return this.permissions == null ? null : this.permissions;
@@ -65,7 +65,7 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,6 @@ public final class ListAssetContainerSasArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public ListAssetContainerSasArgs build() {
             return new ListAssetContainerSasArgs(accountName, assetName, expiryTime, permissions, resourceGroupName);
         }

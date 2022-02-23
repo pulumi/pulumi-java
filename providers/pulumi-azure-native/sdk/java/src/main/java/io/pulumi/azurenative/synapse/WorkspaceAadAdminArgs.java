@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="administratorType")
-    private final @Nullable Input<String> administratorType;
+        private final @Nullable Input<String> administratorType;
 
     public Input<String> getAdministratorType() {
         return this.administratorType == null ? Input.empty() : this.administratorType;
@@ -30,7 +30,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<String> login;
+        private final @Nullable Input<String> login;
 
     public Input<String> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -41,7 +41,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sid")
-    private final @Nullable Input<String> sid;
+        private final @Nullable Input<String> sid;
 
     public Input<String> getSid() {
         return this.sid == null ? Input.empty() : this.sid;
@@ -63,7 +63,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -74,7 +74,7 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -193,7 +193,6 @@ public final class WorkspaceAadAdminArgs extends io.pulumi.resources.ResourceArg
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public WorkspaceAadAdminArgs build() {
             return new WorkspaceAadAdminArgs(administratorType, login, resourceGroupName, sid, tenantId, workspaceName);
         }

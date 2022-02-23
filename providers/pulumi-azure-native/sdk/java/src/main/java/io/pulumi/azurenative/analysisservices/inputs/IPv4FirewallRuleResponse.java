@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.analysisservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="firewallRuleName")
-    private final @Nullable String firewallRuleName;
+        private final @Nullable String firewallRuleName;
 
     public Optional<String> getFirewallRuleName() {
         return this.firewallRuleName == null ? Optional.empty() : Optional.ofNullable(this.firewallRuleName);
@@ -34,7 +34,7 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rangeEnd")
-    private final @Nullable String rangeEnd;
+        private final @Nullable String rangeEnd;
 
     public Optional<String> getRangeEnd() {
         return this.rangeEnd == null ? Optional.empty() : Optional.ofNullable(this.rangeEnd);
@@ -45,7 +45,7 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rangeStart")
-    private final @Nullable String rangeStart;
+        private final @Nullable String rangeStart;
 
     public Optional<String> getRangeStart() {
         return this.rangeStart == null ? Optional.empty() : Optional.ofNullable(this.rangeStart);
@@ -104,7 +104,6 @@ public final class IPv4FirewallRuleResponse extends io.pulumi.resources.InvokeAr
             this.rangeStart = rangeStart;
             return this;
         }
-
         public IPv4FirewallRuleResponse build() {
             return new IPv4FirewallRuleResponse(firewallRuleName, rangeEnd, rangeStart);
         }

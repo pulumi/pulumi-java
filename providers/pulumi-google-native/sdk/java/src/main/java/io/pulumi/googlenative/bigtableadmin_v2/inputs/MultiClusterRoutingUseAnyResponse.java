@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MultiClusterRoutingUseAnyResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterIds", required=true)
-    private final List<String> clusterIds;
+      private final List<String> clusterIds;
 
     public List<String> getClusterIds() {
         return this.clusterIds;
@@ -60,7 +60,6 @@ public final class MultiClusterRoutingUseAnyResponse extends io.pulumi.resources
             this.clusterIds = Objects.requireNonNull(clusterIds);
             return this;
         }
-
         public MultiClusterRoutingUseAnyResponse build() {
             return new MultiClusterRoutingUseAnyResponse(clusterIds);
         }

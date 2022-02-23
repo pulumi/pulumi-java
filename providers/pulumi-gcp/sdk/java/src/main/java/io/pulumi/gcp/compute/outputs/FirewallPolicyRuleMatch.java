@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.FirewallPolicyRuleMatchLayer4Config;
 import java.lang.String;
 import java.util.List;
@@ -98,7 +98,6 @@ public final class FirewallPolicyRuleMatch {
             this.srcIpRanges = srcIpRanges;
             return this;
         }
-
         public FirewallPolicyRuleMatch build() {
             return new FirewallPolicyRuleMatch(destIpRanges, layer4Configs, srcIpRanges);
         }

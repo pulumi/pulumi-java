@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.orbital.outputs;
 
 import io.pulumi.azurenative.orbital.outputs.ContactProfileLinkChannelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -142,7 +142,6 @@ public final class ContactProfileLinkResponse {
             this.polarization = Objects.requireNonNull(polarization);
             return this;
         }
-
         public ContactProfileLinkResponse build() {
             return new ContactProfileLinkResponse(channels, direction, eirpdBW, gainOverTemperature, polarization);
         }

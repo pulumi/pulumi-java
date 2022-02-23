@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SparkStandaloneAutoscalingConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="gracefulDecommissionTimeout", required=true)
-    private final String gracefulDecommissionTimeout;
+      private final String gracefulDecommissionTimeout;
 
     public String getGracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
@@ -33,7 +33,7 @@ public final class SparkStandaloneAutoscalingConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="scaleDownFactor", required=true)
-    private final Double scaleDownFactor;
+      private final Double scaleDownFactor;
 
     public Double getScaleDownFactor() {
         return this.scaleDownFactor;
@@ -44,7 +44,7 @@ public final class SparkStandaloneAutoscalingConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="scaleDownMinWorkerFraction", required=true)
-    private final Double scaleDownMinWorkerFraction;
+      private final Double scaleDownMinWorkerFraction;
 
     public Double getScaleDownMinWorkerFraction() {
         return this.scaleDownMinWorkerFraction;
@@ -55,7 +55,7 @@ public final class SparkStandaloneAutoscalingConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="scaleUpFactor", required=true)
-    private final Double scaleUpFactor;
+      private final Double scaleUpFactor;
 
     public Double getScaleUpFactor() {
         return this.scaleUpFactor;
@@ -66,7 +66,7 @@ public final class SparkStandaloneAutoscalingConfigResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="scaleUpMinWorkerFraction", required=true)
-    private final Double scaleUpMinWorkerFraction;
+      private final Double scaleUpMinWorkerFraction;
 
     public Double getScaleUpMinWorkerFraction() {
         return this.scaleUpMinWorkerFraction;
@@ -145,7 +145,6 @@ public final class SparkStandaloneAutoscalingConfigResponse extends io.pulumi.re
             this.scaleUpMinWorkerFraction = Objects.requireNonNull(scaleUpMinWorkerFraction);
             return this;
         }
-
         public SparkStandaloneAutoscalingConfigResponse build() {
             return new SparkStandaloneAutoscalingConfigResponse(gracefulDecommissionTimeout, scaleDownFactor, scaleDownMinWorkerFraction, scaleUpFactor, scaleUpMinWorkerFraction);
         }

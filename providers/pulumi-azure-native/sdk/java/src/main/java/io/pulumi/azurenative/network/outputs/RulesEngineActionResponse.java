@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ForwardingConfigurationResponse;
 import io.pulumi.azurenative.network.outputs.HeaderActionResponse;
 import io.pulumi.azurenative.network.outputs.RedirectConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -101,7 +101,6 @@ public final class RulesEngineActionResponse {
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
-
         public RulesEngineActionResponse build() {
             return new RulesEngineActionResponse(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
         }

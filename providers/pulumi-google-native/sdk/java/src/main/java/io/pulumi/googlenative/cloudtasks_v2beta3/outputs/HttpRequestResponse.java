@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.OidcTokenResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class HttpRequestResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public HttpRequestResponse build() {
             return new HttpRequestResponse(body, headers, httpMethod, oauthToken, oidcToken, url);
         }

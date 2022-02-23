@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class GoogleCloudChannelV1EduDataResponse {
             this.website = Objects.requireNonNull(website);
             return this;
         }
-
         public GoogleCloudChannelV1EduDataResponse build() {
             return new GoogleCloudChannelV1EduDataResponse(instituteSize, instituteType, website);
         }

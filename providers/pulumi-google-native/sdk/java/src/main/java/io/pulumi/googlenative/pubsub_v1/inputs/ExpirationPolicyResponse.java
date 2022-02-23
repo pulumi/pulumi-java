@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExpirationPolicyResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ttl", required=true)
-    private final String ttl;
+      private final String ttl;
 
     public String getTtl() {
         return this.ttl;
@@ -59,7 +59,6 @@ public final class ExpirationPolicyResponse extends io.pulumi.resources.InvokeAr
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public ExpirationPolicyResponse build() {
             return new ExpirationPolicyResponse(ttl);
         }

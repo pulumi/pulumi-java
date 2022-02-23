@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class JobStagesResponse {
             this.stageTime = Objects.requireNonNull(stageTime);
             return this;
         }
-
         public JobStagesResponse build() {
             return new JobStagesResponse(displayName, jobStageDetails, stageName, stageStatus, stageTime);
         }

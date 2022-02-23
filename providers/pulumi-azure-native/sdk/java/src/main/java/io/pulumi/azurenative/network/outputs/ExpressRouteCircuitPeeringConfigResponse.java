@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -162,7 +162,6 @@ public final class ExpressRouteCircuitPeeringConfigResponse {
             this.routingRegistryName = routingRegistryName;
             return this;
         }
-
         public ExpressRouteCircuitPeeringConfigResponse build() {
             return new ExpressRouteCircuitPeeringConfigResponse(advertisedCommunities, advertisedPublicPrefixes, advertisedPublicPrefixesState, customerASN, legacyMode, routingRegistryName);
         }

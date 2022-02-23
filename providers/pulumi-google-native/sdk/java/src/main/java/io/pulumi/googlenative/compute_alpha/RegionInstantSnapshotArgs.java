@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="guestFlush")
-    private final @Nullable Input<Boolean> guestFlush;
+      private final @Nullable Input<Boolean> guestFlush;
 
     public Input<Boolean> getGuestFlush() {
         return this.guestFlush == null ? Input.empty() : this.guestFlush;
@@ -43,7 +43,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,28 +54,28 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -86,7 +86,7 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceDisk")
-    private final @Nullable Input<String> sourceDisk;
+      private final @Nullable Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk == null ? Input.empty() : this.sourceDisk;
@@ -235,7 +235,6 @@ public final class RegionInstantSnapshotArgs extends io.pulumi.resources.Resourc
             this.sourceDisk = Input.ofNullable(sourceDisk);
             return this;
         }
-
         public RegionInstantSnapshotArgs build() {
             return new RegionInstantSnapshotArgs(description, guestFlush, labels, name, project, region, requestId, sourceDisk);
         }

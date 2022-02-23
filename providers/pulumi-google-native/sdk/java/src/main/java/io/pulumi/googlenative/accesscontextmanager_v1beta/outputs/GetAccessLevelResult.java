@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.BasicLevelResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.CustomLevelResponse;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class GetAccessLevelResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetAccessLevelResult build() {
             return new GetAccessLevelResult(basic, custom, description, name, title);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="evaluationInterval")
-    private final @Nullable String evaluationInterval;
+        private final @Nullable String evaluationInterval;
 
     public Optional<String> getEvaluationInterval() {
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
     }
 
     @InputImport(name="formula", required=true)
-    private final String formula;
+        private final String formula;
 
     public String getFormula() {
         return this.formula;
@@ -75,7 +75,6 @@ public final class AutoScaleSettingsResponse extends io.pulumi.resources.InvokeA
             this.formula = Objects.requireNonNull(formula);
             return this;
         }
-
         public AutoScaleSettingsResponse build() {
             return new AutoScaleSettingsResponse(evaluationInterval, formula);
         }

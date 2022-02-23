@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -34,7 +34,7 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable String clientSecret;
+        private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
@@ -83,7 +83,6 @@ public final class ServicePrincipalProfileResponse extends io.pulumi.resources.I
             this.clientSecret = clientSecret;
             return this;
         }
-
         public ServicePrincipalProfileResponse build() {
             return new ServicePrincipalProfileResponse(clientId, clientSecret);
         }

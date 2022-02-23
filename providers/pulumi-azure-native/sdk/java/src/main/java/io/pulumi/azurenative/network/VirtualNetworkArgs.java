@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkBgpCommunitiesArgs;
 import io.pulumi.azurenative.network.inputs.VirtualNetworkPeeringArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressSpace")
-    private final @Nullable Input<AddressSpaceArgs> addressSpace;
+        private final @Nullable Input<AddressSpaceArgs> addressSpace;
 
     public Input<AddressSpaceArgs> getAddressSpace() {
         return this.addressSpace == null ? Input.empty() : this.addressSpace;
@@ -40,7 +40,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bgpCommunities")
-    private final @Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
+        private final @Nullable Input<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
     public Input<VirtualNetworkBgpCommunitiesArgs> getBgpCommunities() {
         return this.bgpCommunities == null ? Input.empty() : this.bgpCommunities;
@@ -51,7 +51,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ddosProtectionPlan")
-    private final @Nullable Input<SubResourceArgs> ddosProtectionPlan;
+        private final @Nullable Input<SubResourceArgs> ddosProtectionPlan;
 
     public Input<SubResourceArgs> getDdosProtectionPlan() {
         return this.ddosProtectionPlan == null ? Input.empty() : this.ddosProtectionPlan;
@@ -62,7 +62,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dhcpOptions")
-    private final @Nullable Input<DhcpOptionsArgs> dhcpOptions;
+        private final @Nullable Input<DhcpOptionsArgs> dhcpOptions;
 
     public Input<DhcpOptionsArgs> getDhcpOptions() {
         return this.dhcpOptions == null ? Input.empty() : this.dhcpOptions;
@@ -73,7 +73,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableDdosProtection")
-    private final @Nullable Input<Boolean> enableDdosProtection;
+        private final @Nullable Input<Boolean> enableDdosProtection;
 
     public Input<Boolean> getEnableDdosProtection() {
         return this.enableDdosProtection == null ? Input.empty() : this.enableDdosProtection;
@@ -84,7 +84,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableVmProtection")
-    private final @Nullable Input<Boolean> enableVmProtection;
+        private final @Nullable Input<Boolean> enableVmProtection;
 
     public Input<Boolean> getEnableVmProtection() {
         return this.enableVmProtection == null ? Input.empty() : this.enableVmProtection;
@@ -95,7 +95,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extendedLocation")
-    private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
+        private final @Nullable Input<ExtendedLocationArgs> extendedLocation;
 
     public Input<ExtendedLocationArgs> getExtendedLocation() {
         return this.extendedLocation == null ? Input.empty() : this.extendedLocation;
@@ -106,7 +106,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -117,7 +117,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAllocations")
-    private final @Nullable Input<List<SubResourceArgs>> ipAllocations;
+        private final @Nullable Input<List<SubResourceArgs>> ipAllocations;
 
     public Input<List<SubResourceArgs>> getIpAllocations() {
         return this.ipAllocations == null ? Input.empty() : this.ipAllocations;
@@ -128,7 +128,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -139,7 +139,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -150,7 +150,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable Input<List<SubnetArgs>> subnets;
+        private final @Nullable Input<List<SubnetArgs>> subnets;
 
     public Input<List<SubnetArgs>> getSubnets() {
         return this.subnets == null ? Input.empty() : this.subnets;
@@ -161,7 +161,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -172,7 +172,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkName")
-    private final @Nullable Input<String> virtualNetworkName;
+        private final @Nullable Input<String> virtualNetworkName;
 
     public Input<String> getVirtualNetworkName() {
         return this.virtualNetworkName == null ? Input.empty() : this.virtualNetworkName;
@@ -183,7 +183,7 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualNetworkPeerings")
-    private final @Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
+        private final @Nullable Input<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
     public Input<List<VirtualNetworkPeeringArgs>> getVirtualNetworkPeerings() {
         return this.virtualNetworkPeerings == null ? Input.empty() : this.virtualNetworkPeerings;
@@ -437,7 +437,6 @@ public final class VirtualNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualNetworkPeerings = Input.ofNullable(virtualNetworkPeerings);
             return this;
         }
-
         public VirtualNetworkArgs build() {
             return new VirtualNetworkArgs(addressSpace, bgpCommunities, ddosProtectionPlan, dhcpOptions, enableDdosProtection, enableVmProtection, extendedLocation, id, ipAllocations, location, resourceGroupName, subnets, tags, virtualNetworkName, virtualNetworkPeerings);
         }

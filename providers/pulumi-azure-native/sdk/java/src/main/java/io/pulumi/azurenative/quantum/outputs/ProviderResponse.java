@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.quantum.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class ProviderResponse {
             this.resourceUsageId = resourceUsageId;
             return this;
         }
-
         public ProviderResponse build() {
             return new ProviderResponse(applicationName, instanceUri, providerId, providerSku, provisioningState, resourceUsageId);
         }

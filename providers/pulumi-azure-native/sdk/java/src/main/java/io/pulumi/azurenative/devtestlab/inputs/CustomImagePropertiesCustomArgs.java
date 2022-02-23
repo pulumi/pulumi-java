@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.CustomImageOsType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="imageName")
-    private final @Nullable Input<String> imageName;
+        private final @Nullable Input<String> imageName;
 
     public Input<String> getImageName() {
         return this.imageName == null ? Input.empty() : this.imageName;
@@ -37,7 +37,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="osType", required=true)
-    private final Input<Either<String,CustomImageOsType>> osType;
+        private final Input<Either<String,CustomImageOsType>> osType;
 
     public Input<Either<String,CustomImageOsType>> getOsType() {
         return this.osType;
@@ -48,7 +48,7 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sysPrep")
-    private final @Nullable Input<Boolean> sysPrep;
+        private final @Nullable Input<Boolean> sysPrep;
 
     public Input<Boolean> getSysPrep() {
         return this.sysPrep == null ? Input.empty() : this.sysPrep;
@@ -122,7 +122,6 @@ public final class CustomImagePropertiesCustomArgs extends io.pulumi.resources.R
             this.sysPrep = Input.ofNullable(sysPrep);
             return this;
         }
-
         public CustomImagePropertiesCustomArgs build() {
             return new CustomImagePropertiesCustomArgs(imageName, osType, sysPrep);
         }

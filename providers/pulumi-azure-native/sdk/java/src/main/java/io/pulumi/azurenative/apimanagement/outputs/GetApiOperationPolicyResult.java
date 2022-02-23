@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class GetApiOperationPolicyResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GetApiOperationPolicyResult build() {
             return new GetApiOperationPolicyResult(format, id, name, type, value);
         }

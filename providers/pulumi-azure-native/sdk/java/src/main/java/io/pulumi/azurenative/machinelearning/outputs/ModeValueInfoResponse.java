@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.outputs;
 
 import io.pulumi.azurenative.machinelearning.outputs.ModuleAssetParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class ModeValueInfoResponse {
             this.parameters = parameters;
             return this;
         }
-
         public ModeValueInfoResponse build() {
             return new ModeValueInfoResponse(interfaceString, parameters);
         }

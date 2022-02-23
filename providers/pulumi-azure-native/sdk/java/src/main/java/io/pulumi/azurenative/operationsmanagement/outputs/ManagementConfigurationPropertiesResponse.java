@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationsmanagement.outputs;
 
 import io.pulumi.azurenative.operationsmanagement.outputs.ArmTemplateParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -142,7 +142,6 @@ public final class ManagementConfigurationPropertiesResponse {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public ManagementConfigurationPropertiesResponse build() {
             return new ManagementConfigurationPropertiesResponse(applicationId, parameters, parentResourceType, provisioningState, template);
         }

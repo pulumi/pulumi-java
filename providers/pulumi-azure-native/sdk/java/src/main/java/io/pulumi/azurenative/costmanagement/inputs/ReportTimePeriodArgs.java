@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ReportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="from", required=true)
-    private final Input<String> from;
+        private final Input<String> from;
 
     public Input<String> getFrom() {
         return this.from;
@@ -33,7 +33,7 @@ public final class ReportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="to", required=true)
-    private final Input<String> to;
+        private final Input<String> to;
 
     public Input<String> getTo() {
         return this.to;
@@ -92,7 +92,6 @@ public final class ReportTimePeriodArgs extends io.pulumi.resources.ResourceArgs
             this.to = Input.of(Objects.requireNonNull(to));
             return this;
         }
-
         public ReportTimePeriodArgs build() {
             return new ReportTimePeriodArgs(from, to);
         }

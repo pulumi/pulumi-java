@@ -12,7 +12,7 @@ import io.pulumi.azurenative.sql.inputs.ResourceIdentityArgs;
 import io.pulumi.azurenative.sql.inputs.SkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administratorLogin")
-    private final @Nullable Input<String> administratorLogin;
+        private final @Nullable Input<String> administratorLogin;
 
     public Input<String> getAdministratorLogin() {
         return this.administratorLogin == null ? Input.empty() : this.administratorLogin;
@@ -41,7 +41,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administratorLoginPassword")
-    private final @Nullable Input<String> administratorLoginPassword;
+        private final @Nullable Input<String> administratorLoginPassword;
 
     public Input<String> getAdministratorLoginPassword() {
         return this.administratorLoginPassword == null ? Input.empty() : this.administratorLoginPassword;
@@ -52,7 +52,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="administrators")
-    private final @Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators;
+        private final @Nullable Input<ManagedInstanceExternalAdministratorArgs> administrators;
 
     public Input<ManagedInstanceExternalAdministratorArgs> getAdministrators() {
         return this.administrators == null ? Input.empty() : this.administrators;
@@ -63,7 +63,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+        private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -74,7 +74,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsZonePartner")
-    private final @Nullable Input<String> dnsZonePartner;
+        private final @Nullable Input<String> dnsZonePartner;
 
     public Input<String> getDnsZonePartner() {
         return this.dnsZonePartner == null ? Input.empty() : this.dnsZonePartner;
@@ -85,7 +85,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ResourceIdentityArgs> identity;
+        private final @Nullable Input<ResourceIdentityArgs> identity;
 
     public Input<ResourceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -96,7 +96,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instancePoolId")
-    private final @Nullable Input<String> instancePoolId;
+        private final @Nullable Input<String> instancePoolId;
 
     public Input<String> getInstancePoolId() {
         return this.instancePoolId == null ? Input.empty() : this.instancePoolId;
@@ -107,7 +107,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keyId")
-    private final @Nullable Input<String> keyId;
+        private final @Nullable Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId == null ? Input.empty() : this.keyId;
@@ -118,7 +118,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType;
+        private final @Nullable Input<Either<String,ManagedInstanceLicenseType>> licenseType;
 
     public Input<Either<String,ManagedInstanceLicenseType>> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -129,7 +129,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -140,7 +140,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="maintenanceConfigurationId")
-    private final @Nullable Input<String> maintenanceConfigurationId;
+        private final @Nullable Input<String> maintenanceConfigurationId;
 
     public Input<String> getMaintenanceConfigurationId() {
         return this.maintenanceConfigurationId == null ? Input.empty() : this.maintenanceConfigurationId;
@@ -155,7 +155,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedInstanceCreateMode")
-    private final @Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
+        private final @Nullable Input<Either<String,ManagedServerCreateMode>> managedInstanceCreateMode;
 
     public Input<Either<String,ManagedServerCreateMode>> getManagedInstanceCreateMode() {
         return this.managedInstanceCreateMode == null ? Input.empty() : this.managedInstanceCreateMode;
@@ -166,7 +166,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedInstanceName")
-    private final @Nullable Input<String> managedInstanceName;
+        private final @Nullable Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName == null ? Input.empty() : this.managedInstanceName;
@@ -177,7 +177,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minimalTlsVersion")
-    private final @Nullable Input<String> minimalTlsVersion;
+        private final @Nullable Input<String> minimalTlsVersion;
 
     public Input<String> getMinimalTlsVersion() {
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
@@ -188,7 +188,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="primaryUserAssignedIdentityId")
-    private final @Nullable Input<String> primaryUserAssignedIdentityId;
+        private final @Nullable Input<String> primaryUserAssignedIdentityId;
 
     public Input<String> getPrimaryUserAssignedIdentityId() {
         return this.primaryUserAssignedIdentityId == null ? Input.empty() : this.primaryUserAssignedIdentityId;
@@ -199,7 +199,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyOverride")
-    private final @Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
+        private final @Nullable Input<Either<String,ManagedInstanceProxyOverride>> proxyOverride;
 
     public Input<Either<String,ManagedInstanceProxyOverride>> getProxyOverride() {
         return this.proxyOverride == null ? Input.empty() : this.proxyOverride;
@@ -210,7 +210,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="publicDataEndpointEnabled")
-    private final @Nullable Input<Boolean> publicDataEndpointEnabled;
+        private final @Nullable Input<Boolean> publicDataEndpointEnabled;
 
     public Input<Boolean> getPublicDataEndpointEnabled() {
         return this.publicDataEndpointEnabled == null ? Input.empty() : this.publicDataEndpointEnabled;
@@ -221,7 +221,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -232,7 +232,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restorePointInTime")
-    private final @Nullable Input<String> restorePointInTime;
+        private final @Nullable Input<String> restorePointInTime;
 
     public Input<String> getRestorePointInTime() {
         return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
@@ -243,7 +243,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -254,7 +254,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceManagedInstanceId")
-    private final @Nullable Input<String> sourceManagedInstanceId;
+        private final @Nullable Input<String> sourceManagedInstanceId;
 
     public Input<String> getSourceManagedInstanceId() {
         return this.sourceManagedInstanceId == null ? Input.empty() : this.sourceManagedInstanceId;
@@ -265,7 +265,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageAccountType")
-    private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
+        private final @Nullable Input<Either<String,StorageAccountType>> storageAccountType;
 
     public Input<Either<String,StorageAccountType>> getStorageAccountType() {
         return this.storageAccountType == null ? Input.empty() : this.storageAccountType;
@@ -276,7 +276,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageSizeInGB")
-    private final @Nullable Input<Integer> storageSizeInGB;
+        private final @Nullable Input<Integer> storageSizeInGB;
 
     public Input<Integer> getStorageSizeInGB() {
         return this.storageSizeInGB == null ? Input.empty() : this.storageSizeInGB;
@@ -287,7 +287,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -298,7 +298,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -314,7 +314,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timezoneId")
-    private final @Nullable Input<String> timezoneId;
+        private final @Nullable Input<String> timezoneId;
 
     public Input<String> getTimezoneId() {
         return this.timezoneId == null ? Input.empty() : this.timezoneId;
@@ -325,7 +325,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="vCores")
-    private final @Nullable Input<Integer> vCores;
+        private final @Nullable Input<Integer> vCores;
 
     public Input<Integer> getVCores() {
         return this.vCores == null ? Input.empty() : this.vCores;
@@ -336,7 +336,7 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zoneRedundant")
-    private final @Nullable Input<Boolean> zoneRedundant;
+        private final @Nullable Input<Boolean> zoneRedundant;
 
     public Input<Boolean> getZoneRedundant() {
         return this.zoneRedundant == null ? Input.empty() : this.zoneRedundant;
@@ -785,7 +785,6 @@ public final class ManagedInstanceArgs extends io.pulumi.resources.ResourceArgs 
             this.zoneRedundant = Input.ofNullable(zoneRedundant);
             return this;
         }
-
         public ManagedInstanceArgs build() {
             return new ManagedInstanceArgs(administratorLogin, administratorLoginPassword, administrators, collation, dnsZonePartner, identity, instancePoolId, keyId, licenseType, location, maintenanceConfigurationId, managedInstanceCreateMode, managedInstanceName, minimalTlsVersion, primaryUserAssignedIdentityId, proxyOverride, publicDataEndpointEnabled, resourceGroupName, restorePointInTime, sku, sourceManagedInstanceId, storageAccountType, storageSizeInGB, subnetId, tags, timezoneId, vCores, zoneRedundant);
         }

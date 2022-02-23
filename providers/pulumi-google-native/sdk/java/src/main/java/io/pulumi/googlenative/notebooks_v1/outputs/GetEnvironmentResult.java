@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.VmImageResponse;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class GetEnvironmentResult {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(containerImage, createTime, description, displayName, name, postStartupScript, vmImage);
         }

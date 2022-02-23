@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class GetDatabaseInstanceSettingMaintenanceWindow {
             this.updateTrack = Objects.requireNonNull(updateTrack);
             return this;
         }
-
         public GetDatabaseInstanceSettingMaintenanceWindow build() {
             return new GetDatabaseInstanceSettingMaintenanceWindow(day, hour, updateTrack);
         }

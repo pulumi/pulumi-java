@@ -5,8 +5,8 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.LiteReservationArgs;
 import io.pulumi.gcp.pubsub.inputs.LiteReservationState;
@@ -111,13 +111,6 @@ public class LiteReservation extends io.pulumi.resources.CustomResource {
         return this.throughputCapacity;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LiteReservation(String name) {
-        super("gcp:pubsub/liteReservation:LiteReservation", name, LiteReservationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

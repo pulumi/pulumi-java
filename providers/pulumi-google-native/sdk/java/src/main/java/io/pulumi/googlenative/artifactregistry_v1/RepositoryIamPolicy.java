@@ -5,8 +5,8 @@ package io.pulumi.googlenative.artifactregistry_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.artifactregistry_v1.RepositoryIamPolicyArgs;
 import io.pulumi.googlenative.artifactregistry_v1.outputs.BindingResponse;
@@ -66,13 +66,6 @@ public class RepositoryIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RepositoryIamPolicy(String name) {
-        super("google-native:artifactregistry/v1:RepositoryIamPolicy", name, RepositoryIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="alarmMetricName", required=true)
-    private final Input<String> alarmMetricName;
+        private final Input<String> alarmMetricName;
 
     public Input<String> getAlarmMetricName() {
         return this.alarmMetricName;
@@ -65,7 +65,6 @@ public final class ApplicationAlarmMetricArgs extends io.pulumi.resources.Resour
             this.alarmMetricName = Input.of(Objects.requireNonNull(alarmMetricName));
             return this;
         }
-
         public ApplicationAlarmMetricArgs build() {
             return new ApplicationAlarmMetricArgs(alarmMetricName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.outputs;
 
 import io.pulumi.azurenative.managednetwork.outputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -118,7 +118,6 @@ public final class ScopeResponse {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(managementGroups, subnets, subscriptions, virtualNetworks);
         }

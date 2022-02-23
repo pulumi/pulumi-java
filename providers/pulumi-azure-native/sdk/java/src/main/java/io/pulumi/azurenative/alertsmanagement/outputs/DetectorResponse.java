@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class DetectorResponse {
             this.supportedResourceTypes = supportedResourceTypes;
             return this;
         }
-
         public DetectorResponse build() {
             return new DetectorResponse(description, id, imagePaths, name, parameters, supportedResourceTypes);
         }

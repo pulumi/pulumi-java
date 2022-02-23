@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -34,7 +34,7 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="mimeType")
-    private final @Nullable Input<String> mimeType;
+        private final @Nullable Input<String> mimeType;
 
     public Input<String> getMimeType() {
         return this.mimeType == null ? Input.empty() : this.mimeType;
@@ -93,7 +93,6 @@ public final class AlertPolicyDocumentationGetArgs extends io.pulumi.resources.R
             this.mimeType = Input.ofNullable(mimeType);
             return this;
         }
-
         public AlertPolicyDocumentationGetArgs build() {
             return new AlertPolicyDocumentationGetArgs(content, mimeType);
         }

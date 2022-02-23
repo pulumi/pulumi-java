@@ -5,8 +5,8 @@ package io.pulumi.googlenative.baremetalsolution_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.baremetalsolution_v2.SnapshotSchedulePolicyArgs;
 import io.pulumi.googlenative.baremetalsolution_v2.outputs.ScheduleResponse;
@@ -79,13 +79,6 @@ public class SnapshotSchedulePolicy extends io.pulumi.resources.CustomResource {
         return this.schedules;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SnapshotSchedulePolicy(String name) {
-        super("google-native:baremetalsolution/v2:SnapshotSchedulePolicy", name, SnapshotSchedulePolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

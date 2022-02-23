@@ -5,7 +5,7 @@ package io.pulumi.azurenative.management.outputs;
 
 import io.pulumi.azurenative.management.outputs.ManagementGroupChildInfoResponse;
 import io.pulumi.azurenative.management.outputs.ManagementGroupDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -184,7 +184,6 @@ public final class GetManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetManagementGroupResult build() {
             return new GetManagementGroupResult(children, details, displayName, id, name, tenantId, type);
         }

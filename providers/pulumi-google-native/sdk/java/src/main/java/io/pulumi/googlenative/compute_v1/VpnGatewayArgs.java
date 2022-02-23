@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.VpnGatewayStackType;
 import io.pulumi.googlenative.compute_v1.inputs.VpnGatewayVpnGatewayInterfaceArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -45,7 +45,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,28 +56,28 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -88,7 +88,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stackType")
-    private final @Nullable Input<VpnGatewayStackType> stackType;
+      private final @Nullable Input<VpnGatewayStackType> stackType;
 
     public Input<VpnGatewayStackType> getStackType() {
         return this.stackType == null ? Input.empty() : this.stackType;
@@ -99,7 +99,7 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnInterfaces")
-    private final @Nullable Input<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces;
+      private final @Nullable Input<List<VpnGatewayVpnGatewayInterfaceArgs>> vpnInterfaces;
 
     public Input<List<VpnGatewayVpnGatewayInterfaceArgs>> getVpnInterfaces() {
         return this.vpnInterfaces == null ? Input.empty() : this.vpnInterfaces;
@@ -263,7 +263,6 @@ public final class VpnGatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.vpnInterfaces = Input.ofNullable(vpnInterfaces);
             return this;
         }
-
         public VpnGatewayArgs build() {
             return new VpnGatewayArgs(description, labels, name, network, project, region, requestId, stackType, vpnInterfaces);
         }

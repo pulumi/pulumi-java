@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.HttpFilterConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_beta.outputs.HttpRedirectActionResponse;
@@ -228,7 +228,6 @@ public final class HttpRouteRuleResponse {
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }
-
         public HttpRouteRuleResponse build() {
             return new HttpRouteRuleResponse(description, headerAction, httpFilterConfigs, httpFilterMetadata, matchRules, priority, routeAction, service, urlRedirect);
         }

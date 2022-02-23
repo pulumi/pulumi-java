@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.EtwEventConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +60,6 @@ public final class EtwProviderConfigurationResponse {
             this.id = Objects.requireNonNull(id);
             return this;
         }
-
         public EtwProviderConfigurationResponse build() {
             return new EtwProviderConfigurationResponse(events, id);
         }

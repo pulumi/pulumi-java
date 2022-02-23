@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResourceRecordSetResponse;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class ResponsePolicyRuleLocalDataResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="localDatas", required=true)
-    private final List<ResourceRecordSetResponse> localDatas;
+      private final List<ResourceRecordSetResponse> localDatas;
 
     public List<ResourceRecordSetResponse> getLocalDatas() {
         return this.localDatas;
@@ -56,7 +56,6 @@ public final class ResponsePolicyRuleLocalDataResponse extends io.pulumi.resourc
             this.localDatas = Objects.requireNonNull(localDatas);
             return this;
         }
-
         public ResponsePolicyRuleLocalDataResponse build() {
             return new ResponsePolicyRuleLocalDataResponse(localDatas);
         }

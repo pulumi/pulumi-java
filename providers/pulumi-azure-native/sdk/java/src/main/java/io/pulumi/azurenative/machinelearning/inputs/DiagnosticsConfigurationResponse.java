@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="expiry")
-    private final @Nullable String expiry;
+        private final @Nullable String expiry;
 
     public Optional<String> getExpiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
@@ -34,7 +34,7 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="level", required=true)
-    private final String level;
+        private final String level;
 
     public String getLevel() {
         return this.level;
@@ -83,7 +83,6 @@ public final class DiagnosticsConfigurationResponse extends io.pulumi.resources.
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticsConfigurationResponse build() {
             return new DiagnosticsConfigurationResponse(expiry, level);
         }

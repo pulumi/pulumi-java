@@ -8,8 +8,8 @@ import io.pulumi.azurenative.appconfiguration.KeyValueArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -182,13 +182,6 @@ public class KeyValue extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public KeyValue(String name) {
-        super("azure-native:appconfiguration:KeyValue", name, KeyValueArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

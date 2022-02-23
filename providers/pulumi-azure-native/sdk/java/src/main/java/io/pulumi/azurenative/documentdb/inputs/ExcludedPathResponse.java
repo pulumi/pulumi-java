@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ExcludedPathResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable String path;
+        private final @Nullable String path;
 
     public Optional<String> getPath() {
         return this.path == null ? Optional.empty() : Optional.ofNullable(this.path);
@@ -57,7 +57,6 @@ public final class ExcludedPathResponse extends io.pulumi.resources.InvokeArgs {
             this.path = path;
             return this;
         }
-
         public ExcludedPathResponse build() {
             return new ExcludedPathResponse(path);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obb", required=true)
-    private final Input<FileReferenceArgs> obb;
+      private final Input<FileReferenceArgs> obb;
 
     public Input<FileReferenceArgs> getObb() {
         return this.obb;
@@ -34,7 +34,7 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="obbFileName", required=true)
-    private final Input<String> obbFileName;
+      private final Input<String> obbFileName;
 
     public Input<String> getObbFileName() {
         return this.obbFileName;
@@ -93,7 +93,6 @@ public final class ObbFileArgs extends io.pulumi.resources.ResourceArgs {
             this.obbFileName = Input.of(Objects.requireNonNull(obbFileName));
             return this;
         }
-
         public ObbFileArgs build() {
             return new ObbFileArgs(obb, obbFileName);
         }

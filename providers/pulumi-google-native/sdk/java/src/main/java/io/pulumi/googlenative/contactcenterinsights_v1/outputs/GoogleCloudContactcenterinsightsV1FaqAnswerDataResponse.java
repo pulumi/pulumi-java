@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -160,7 +160,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(answer, confidenceScore, metadata, queryRecord, question, source);
         }

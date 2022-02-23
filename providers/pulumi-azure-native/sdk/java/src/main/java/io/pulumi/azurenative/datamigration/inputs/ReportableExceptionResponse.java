@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="actionableMessage")
-    private final @Nullable String actionableMessage;
+        private final @Nullable String actionableMessage;
 
     public Optional<String> getActionableMessage() {
         return this.actionableMessage == null ? Optional.empty() : Optional.ofNullable(this.actionableMessage);
@@ -35,7 +35,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="filePath", required=true)
-    private final String filePath;
+        private final String filePath;
 
     public String getFilePath() {
         return this.filePath;
@@ -46,7 +46,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="hResult", required=true)
-    private final Integer hResult;
+        private final Integer hResult;
 
     public Integer getHResult() {
         return this.hResult;
@@ -57,7 +57,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="lineNumber", required=true)
-    private final String lineNumber;
+        private final String lineNumber;
 
     public String getLineNumber() {
         return this.lineNumber;
@@ -68,7 +68,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -79,7 +79,7 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="stackTrace", required=true)
-    private final String stackTrace;
+        private final String stackTrace;
 
     public String getStackTrace() {
         return this.stackTrace;
@@ -168,7 +168,6 @@ public final class ReportableExceptionResponse extends io.pulumi.resources.Invok
             this.stackTrace = Objects.requireNonNull(stackTrace);
             return this;
         }
-
         public ReportableExceptionResponse build() {
             return new ReportableExceptionResponse(actionableMessage, filePath, hResult, lineNumber, message, stackTrace);
         }

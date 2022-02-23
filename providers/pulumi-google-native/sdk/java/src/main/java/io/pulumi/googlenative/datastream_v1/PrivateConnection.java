@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datastream_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1.PrivateConnectionArgs;
 import io.pulumi.googlenative.datastream_v1.outputs.ErrorResponse;
@@ -135,13 +135,6 @@ public class PrivateConnection extends io.pulumi.resources.CustomResource {
         return this.vpcPeeringConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PrivateConnection(String name) {
-        super("google-native:datastream/v1:PrivateConnection", name, PrivateConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

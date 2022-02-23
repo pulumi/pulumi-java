@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ConditionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2ExpressionsResponse {
             this.logicalOperator = Objects.requireNonNull(logicalOperator);
             return this;
         }
-
         public GooglePrivacyDlpV2ExpressionsResponse build() {
             return new GooglePrivacyDlpV2ExpressionsResponse(conditions, logicalOperator);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class HubBillingInfoFormatResponse {
             this.skuName = skuName;
             return this;
         }
-
         public HubBillingInfoFormatResponse build() {
             return new HubBillingInfoFormatResponse(maxUnits, minUnits, skuName);
         }

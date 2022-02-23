@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.InTotoProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SlsaProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.SubjectResponse;
@@ -117,7 +117,6 @@ public final class InTotoStatementResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InTotoStatementResponse build() {
             return new InTotoStatementResponse(predicateType, provenance, slsaProvenance, subject, type);
         }

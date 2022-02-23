@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelLabelStatsRespons
             this.unclassifiedConversationsCount = Objects.requireNonNull(unclassifiedConversationsCount);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelLabelStatsResponse(analyzedConversationsCount, issueStats, unclassifiedConversationsCount);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1alpha.DomainMappingArgs;
 import io.pulumi.googlenative.appengine_v1alpha.outputs.ResourceRecordResponse;
@@ -65,13 +65,6 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
         return this.sslSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DomainMapping(String name) {
-        super("google-native:appengine/v1alpha:DomainMapping", name, DomainMappingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationNFSMountOptionsVersion;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<LocationNFSMountOptionsVersion> version;
+        private final @Nullable Input<LocationNFSMountOptionsVersion> version;
 
     public Input<LocationNFSMountOptionsVersion> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -66,7 +66,6 @@ public final class LocationNFSMountOptionsArgs extends io.pulumi.resources.Resou
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public LocationNFSMountOptionsArgs build() {
             return new LocationNFSMountOptionsArgs(version);
         }

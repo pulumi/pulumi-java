@@ -8,8 +8,8 @@ import io.pulumi.azurenative.intune.AndroidMAMPolicyByNameArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -207,13 +207,6 @@ public class AndroidMAMPolicyByName extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AndroidMAMPolicyByName(String name) {
-        super("azure-native:intune:AndroidMAMPolicyByName", name, AndroidMAMPolicyByNameArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

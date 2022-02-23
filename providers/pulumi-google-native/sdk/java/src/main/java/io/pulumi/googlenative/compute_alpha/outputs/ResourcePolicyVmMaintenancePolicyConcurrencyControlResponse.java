@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse {
             this.concurrencyLimit = Objects.requireNonNull(concurrencyLimit);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse build() {
             return new ResourcePolicyVmMaintenancePolicyConcurrencyControlResponse(concurrencyLimit);
         }

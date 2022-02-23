@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecurityAssessmentPartnerDataResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="partnerName", required=true)
-    private final String partnerName;
+        private final String partnerName;
 
     public String getPartnerName() {
         return this.partnerName;
@@ -32,7 +32,7 @@ public final class SecurityAssessmentPartnerDataResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+        private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -81,7 +81,6 @@ public final class SecurityAssessmentPartnerDataResponse extends io.pulumi.resou
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public SecurityAssessmentPartnerDataResponse build() {
             return new SecurityAssessmentPartnerDataResponse(partnerName, secret);
         }

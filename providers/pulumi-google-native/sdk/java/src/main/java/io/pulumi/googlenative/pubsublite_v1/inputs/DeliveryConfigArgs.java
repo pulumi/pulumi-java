@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsublite_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.pubsublite_v1.enums.DeliveryConfigDeliveryRequirement;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deliveryRequirement")
-    private final @Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement;
+      private final @Nullable Input<DeliveryConfigDeliveryRequirement> deliveryRequirement;
 
     public Input<DeliveryConfigDeliveryRequirement> getDeliveryRequirement() {
         return this.deliveryRequirement == null ? Input.empty() : this.deliveryRequirement;
@@ -66,7 +66,6 @@ public final class DeliveryConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.deliveryRequirement = Input.ofNullable(deliveryRequirement);
             return this;
         }
-
         public DeliveryConfigArgs build() {
             return new DeliveryConfigArgs(deliveryRequirement);
         }

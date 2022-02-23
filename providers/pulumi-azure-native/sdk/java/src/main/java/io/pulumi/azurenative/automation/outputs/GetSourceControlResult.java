@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -287,7 +287,6 @@ public final class GetSourceControlResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSourceControlResult build() {
             return new GetSourceControlResult(autoSync, branch, creationTime, description, folderPath, id, lastModifiedTime, name, publishRunbook, repoUrl, sourceType, type);
         }

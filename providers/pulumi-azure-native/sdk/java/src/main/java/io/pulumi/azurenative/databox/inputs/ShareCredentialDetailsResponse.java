@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -33,7 +33,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final String shareName;
+        private final String shareName;
 
     public String getShareName() {
         return this.shareName;
@@ -44,7 +44,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="shareType", required=true)
-    private final String shareType;
+        private final String shareType;
 
     public String getShareType() {
         return this.shareType;
@@ -55,7 +55,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="supportedAccessProtocols", required=true)
-    private final List<String> supportedAccessProtocols;
+        private final List<String> supportedAccessProtocols;
 
     public List<String> getSupportedAccessProtocols() {
         return this.supportedAccessProtocols;
@@ -66,7 +66,7 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -145,7 +145,6 @@ public final class ShareCredentialDetailsResponse extends io.pulumi.resources.In
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ShareCredentialDetailsResponse build() {
             return new ShareCredentialDetailsResponse(password, shareName, shareType, supportedAccessProtocols, userName);
         }

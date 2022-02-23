@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -30,7 +30,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainServiceName", required=true)
-    private final Input<String> domainServiceName;
+        private final Input<String> domainServiceName;
 
     public Input<String> getDomainServiceName() {
         return this.domainServiceName;
@@ -41,7 +41,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ouContainerName")
-    private final @Nullable Input<String> ouContainerName;
+        private final @Nullable Input<String> ouContainerName;
 
     public Input<String> getOuContainerName() {
         return this.ouContainerName == null ? Input.empty() : this.ouContainerName;
@@ -52,7 +52,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -63,7 +63,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -74,7 +74,7 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spn")
-    private final @Nullable Input<String> spn;
+        private final @Nullable Input<String> spn;
 
     public Input<String> getSpn() {
         return this.spn == null ? Input.empty() : this.spn;
@@ -193,7 +193,6 @@ public final class OuContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.spn = Input.ofNullable(spn);
             return this;
         }
-
         public OuContainerArgs build() {
             return new OuContainerArgs(accountName, domainServiceName, ouContainerName, password, resourceGroupName, spn);
         }

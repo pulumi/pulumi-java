@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.enums.StudioComponentType;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentConfiguration;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentInitializationScript;
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentScriptParameterKeyValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -183,7 +183,6 @@ public final class GetStudioComponentResult {
             this.type = type;
             return this;
         }
-
         public GetStudioComponentResult build() {
             return new GetStudioComponentResult(configuration, description, ec2SecurityGroupIds, initializationScripts, name, scriptParameters, studioComponentId, type);
         }

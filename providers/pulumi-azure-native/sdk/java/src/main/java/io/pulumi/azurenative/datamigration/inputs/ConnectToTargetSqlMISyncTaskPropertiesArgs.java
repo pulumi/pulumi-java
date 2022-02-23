@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.ConnectToTargetSqlMISyncTaskInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<ConnectToTargetSqlMISyncTaskInputArgs> input;
+        private final @Nullable Input<ConnectToTargetSqlMISyncTaskInputArgs> input;
 
     public Input<ConnectToTargetSqlMISyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+        private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -95,7 +95,6 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesArgs extends io.pulumi.
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskPropertiesArgs build() {
             return new ConnectToTargetSqlMISyncTaskPropertiesArgs(input, taskType);
         }

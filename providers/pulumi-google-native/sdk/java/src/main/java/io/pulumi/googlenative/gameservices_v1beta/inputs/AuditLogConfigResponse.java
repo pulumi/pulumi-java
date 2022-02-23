@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,14 +23,14 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="exemptedMembers", required=true)
-    private final List<String> exemptedMembers;
+      private final List<String> exemptedMembers;
 
     public List<String> getExemptedMembers() {
         return this.exemptedMembers;
     }
 
     @InputImport(name="ignoreChildExemptions", required=true)
-    private final Boolean ignoreChildExemptions;
+      private final Boolean ignoreChildExemptions;
 
     public Boolean getIgnoreChildExemptions() {
         return this.ignoreChildExemptions;
@@ -41,7 +41,7 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="logType", required=true)
-    private final String logType;
+      private final String logType;
 
     public String getLogType() {
         return this.logType;
@@ -100,7 +100,6 @@ public final class AuditLogConfigResponse extends io.pulumi.resources.InvokeArgs
             this.logType = Objects.requireNonNull(logType);
             return this;
         }
-
         public AuditLogConfigResponse build() {
             return new AuditLogConfigResponse(exemptedMembers, ignoreChildExemptions, logType);
         }

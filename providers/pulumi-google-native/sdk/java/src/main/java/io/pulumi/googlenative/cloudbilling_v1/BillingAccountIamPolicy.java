@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudbilling_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbilling_v1.BillingAccountIamPolicyArgs;
 import io.pulumi.googlenative.cloudbilling_v1.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class BillingAccountIamPolicy extends io.pulumi.resources.CustomResource 
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BillingAccountIamPolicy(String name) {
-        super("google-native:cloudbilling/v1:BillingAccountIamPolicy", name, BillingAccountIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

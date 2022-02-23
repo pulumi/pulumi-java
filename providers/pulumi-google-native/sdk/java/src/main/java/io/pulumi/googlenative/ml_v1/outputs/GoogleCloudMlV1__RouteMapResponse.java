@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleCloudMlV1__RouteMapResponse {
             this.predict = Objects.requireNonNull(predict);
             return this;
         }
-
         public GoogleCloudMlV1__RouteMapResponse build() {
             return new GoogleCloudMlV1__RouteMapResponse(health, predict);
         }

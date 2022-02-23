@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apigateway.outputs;
 
 import io.pulumi.awsnative.apigateway.outputs.ApiKeyStageKey;
 import io.pulumi.awsnative.apigateway.outputs.ApiKeyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -164,7 +164,6 @@ public final class GetApiKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetApiKeyResult build() {
             return new GetApiKeyResult(aPIKeyId, customerId, description, enabled, stageKeys, tags);
         }

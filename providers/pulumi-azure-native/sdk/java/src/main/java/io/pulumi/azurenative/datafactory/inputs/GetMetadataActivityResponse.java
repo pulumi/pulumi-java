@@ -25,7 +25,7 @@ import io.pulumi.azurenative.datafactory.inputs.OracleCloudStorageReadSettingsRe
 import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
 import io.pulumi.azurenative.datafactory.inputs.XmlReadSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +47,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final DatasetReferenceResponse dataset;
+        private final DatasetReferenceResponse dataset;
 
     public DatasetReferenceResponse getDataset() {
         return this.dataset;
@@ -58,7 +58,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -69,7 +69,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -80,7 +80,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="fieldList")
-    private final @Nullable List<Object> fieldList;
+        private final @Nullable List<Object> fieldList;
 
     public List<Object> getFieldList() {
         return this.fieldList == null ? List.of() : this.fieldList;
@@ -91,7 +91,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="formatSettings")
-    private final @Nullable Object formatSettings;
+        private final @Nullable Object formatSettings;
 
     public Object getFormatSettings() {
         return this.formatSettings == null ? null : this.formatSettings;
@@ -102,7 +102,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -113,7 +113,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -124,7 +124,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+        private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -135,7 +135,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="storeSettings")
-    private final @Nullable Object storeSettings;
+        private final @Nullable Object storeSettings;
 
     public Object getStoreSettings() {
         return this.storeSettings == null ? null : this.storeSettings;
@@ -147,7 +147,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -158,7 +158,7 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -297,7 +297,6 @@ public final class GetMetadataActivityResponse extends io.pulumi.resources.Invok
             this.userProperties = userProperties;
             return this;
         }
-
         public GetMetadataActivityResponse build() {
             return new GetMetadataActivityResponse(dataset, dependsOn, description, fieldList, formatSettings, linkedServiceName, name, policy, storeSettings, type, userProperties);
         }

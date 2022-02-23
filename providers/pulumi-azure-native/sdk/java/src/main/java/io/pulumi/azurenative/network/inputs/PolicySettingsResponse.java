@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="fileUploadLimitInMb")
-    private final @Nullable Integer fileUploadLimitInMb;
+        private final @Nullable Integer fileUploadLimitInMb;
 
     public Optional<Integer> getFileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Optional.empty() : Optional.ofNullable(this.fileUploadLimitInMb);
@@ -36,7 +36,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="maxRequestBodySizeInKb")
-    private final @Nullable Integer maxRequestBodySizeInKb;
+        private final @Nullable Integer maxRequestBodySizeInKb;
 
     public Optional<Integer> getMaxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Optional.empty() : Optional.ofNullable(this.maxRequestBodySizeInKb);
@@ -47,7 +47,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -58,7 +58,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="requestBodyCheck")
-    private final @Nullable Boolean requestBodyCheck;
+        private final @Nullable Boolean requestBodyCheck;
 
     public Optional<Boolean> getRequestBodyCheck() {
         return this.requestBodyCheck == null ? Optional.empty() : Optional.ofNullable(this.requestBodyCheck);
@@ -69,7 +69,7 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -148,7 +148,6 @@ public final class PolicySettingsResponse extends io.pulumi.resources.InvokeArgs
             this.state = state;
             return this;
         }
-
         public PolicySettingsResponse build() {
             return new PolicySettingsResponse(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
         }

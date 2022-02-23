@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionConstraintsResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class ModelQualityJobDefinitionModelQualityBaselineConfig {
             this.constraintsResource = constraintsResource;
             return this;
         }
-
         public ModelQualityJobDefinitionModelQualityBaselineConfig build() {
             return new ModelQualityJobDefinitionModelQualityBaselineConfig(baseliningJobName, constraintsResource);
         }

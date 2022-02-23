@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleHeaderAction;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleRouteAction;
@@ -204,7 +204,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRule {
             this.urlRedirect = urlRedirect;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRule build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRule(description, headerAction, matchRules, origin, priority, routeAction, urlRedirect);
         }

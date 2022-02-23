@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationAssignmentPropertiesResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class RegistrationAssignmentPropertiesResponseRegistrationDefinitio
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RegistrationAssignmentPropertiesResponseRegistrationDefinition build() {
             return new RegistrationAssignmentPropertiesResponseRegistrationDefinition(id, name, plan, properties, type);
         }

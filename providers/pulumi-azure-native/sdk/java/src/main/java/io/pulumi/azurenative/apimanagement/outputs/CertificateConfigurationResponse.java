@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.CertificateInformationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class CertificateConfigurationResponse {
             this.storeName = Objects.requireNonNull(storeName);
             return this;
         }
-
         public CertificateConfigurationResponse build() {
             return new CertificateConfigurationResponse(certificate, certificatePassword, encodedCertificate, storeName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.InquiryValidationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class WorkloadInquiryDetailsResponse {
             this.type = type;
             return this;
         }
-
         public WorkloadInquiryDetailsResponse build() {
             return new WorkloadInquiryDetailsResponse(inquiryValidation, itemCount, type);
         }

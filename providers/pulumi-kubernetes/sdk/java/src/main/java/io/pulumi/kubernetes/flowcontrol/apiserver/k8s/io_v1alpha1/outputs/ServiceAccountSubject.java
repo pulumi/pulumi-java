@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ServiceAccountSubject {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public ServiceAccountSubject build() {
             return new ServiceAccountSubject(name, namespace);
         }

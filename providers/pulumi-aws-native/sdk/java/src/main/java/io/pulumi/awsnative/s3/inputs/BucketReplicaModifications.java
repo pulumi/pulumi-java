@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketReplicaModificationsStatus;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -17,7 +17,7 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="status", required=true)
-    private final BucketReplicaModificationsStatus status;
+        private final BucketReplicaModificationsStatus status;
 
     public BucketReplicaModificationsStatus getStatus() {
         return this.status;
@@ -55,7 +55,6 @@ public final class BucketReplicaModifications extends io.pulumi.resources.Invoke
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BucketReplicaModifications build() {
             return new BucketReplicaModifications(status);
         }

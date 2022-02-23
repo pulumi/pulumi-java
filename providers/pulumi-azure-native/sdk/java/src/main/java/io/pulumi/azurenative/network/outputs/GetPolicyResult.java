@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.ManagedRuleSetListResponse;
 import io.pulumi.azurenative.network.outputs.RoutingRuleLinkResponse;
 import io.pulumi.azurenative.network.outputs.SecurityPolicyLinkResponse;
 import io.pulumi.azurenative.network.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -350,7 +350,6 @@ public final class GetPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(customRules, etag, frontendEndpointLinks, id, location, managedRules, name, policySettings, provisioningState, resourceState, routingRuleLinks, securityPolicyLinks, sku, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.ClusterConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.ClusterMetricsResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.ClusterStatusResponse;
@@ -205,7 +205,6 @@ public final class GetClusterResult {
             this.statusHistory = Objects.requireNonNull(statusHistory);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterName, clusterUuid, config, labels, metrics, project, status, statusHistory);
         }

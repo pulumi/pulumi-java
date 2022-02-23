@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.DimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable Input<List<DimensionArgs>> dimensions;
+        private final @Nullable Input<List<DimensionArgs>> dimensions;
 
     public Input<List<DimensionArgs>> getDimensions() {
         return this.dimensions == null ? Input.empty() : this.dimensions;
@@ -36,7 +36,7 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+        private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -95,7 +95,6 @@ public final class CriteriaArgs extends io.pulumi.resources.ResourceArgs {
             this.metricName = Input.of(Objects.requireNonNull(metricName));
             return this;
         }
-
         public CriteriaArgs build() {
             return new CriteriaArgs(dimensions, metricName);
         }

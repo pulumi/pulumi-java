@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="schedulePolicyType", required=true)
-    private final String schedulePolicyType;
+        private final String schedulePolicyType;
 
     public String getSchedulePolicyType() {
         return this.schedulePolicyType;
@@ -37,7 +37,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scheduleRunDays")
-    private final @Nullable List<String> scheduleRunDays;
+        private final @Nullable List<String> scheduleRunDays;
 
     public List<String> getScheduleRunDays() {
         return this.scheduleRunDays == null ? List.of() : this.scheduleRunDays;
@@ -48,7 +48,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scheduleRunFrequency")
-    private final @Nullable String scheduleRunFrequency;
+        private final @Nullable String scheduleRunFrequency;
 
     public Optional<String> getScheduleRunFrequency() {
         return this.scheduleRunFrequency == null ? Optional.empty() : Optional.ofNullable(this.scheduleRunFrequency);
@@ -59,7 +59,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scheduleRunTimes")
-    private final @Nullable List<String> scheduleRunTimes;
+        private final @Nullable List<String> scheduleRunTimes;
 
     public List<String> getScheduleRunTimes() {
         return this.scheduleRunTimes == null ? List.of() : this.scheduleRunTimes;
@@ -70,7 +70,7 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scheduleWeeklyFrequency")
-    private final @Nullable Integer scheduleWeeklyFrequency;
+        private final @Nullable Integer scheduleWeeklyFrequency;
 
     public Optional<Integer> getScheduleWeeklyFrequency() {
         return this.scheduleWeeklyFrequency == null ? Optional.empty() : Optional.ofNullable(this.scheduleWeeklyFrequency);
@@ -149,7 +149,6 @@ public final class SimpleSchedulePolicyResponse extends io.pulumi.resources.Invo
             this.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }
-
         public SimpleSchedulePolicyResponse build() {
             return new SimpleSchedulePolicyResponse(schedulePolicyType, scheduleRunDays, scheduleRunFrequency, scheduleRunTimes, scheduleWeeklyFrequency);
         }

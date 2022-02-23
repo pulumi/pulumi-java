@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lowerBound")
-    private final @Nullable Input<Double> lowerBound;
+      private final @Nullable Input<Double> lowerBound;
 
     public Input<Double> getLowerBound() {
         return this.lowerBound == null ? Input.empty() : this.lowerBound;
@@ -34,7 +34,7 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="upperBound")
-    private final @Nullable Input<Double> upperBound;
+      private final @Nullable Input<Double> upperBound;
 
     public Input<Double> getUpperBound() {
         return this.upperBound == null ? Input.empty() : this.upperBound;
@@ -93,7 +93,6 @@ public final class GaugeViewArgs extends io.pulumi.resources.ResourceArgs {
             this.upperBound = Input.ofNullable(upperBound);
             return this;
         }
-
         public GaugeViewArgs build() {
             return new GaugeViewArgs(lowerBound, upperBound);
         }

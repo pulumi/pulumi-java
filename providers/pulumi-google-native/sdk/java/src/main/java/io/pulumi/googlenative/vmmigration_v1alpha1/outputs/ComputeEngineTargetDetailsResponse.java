@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.AppliedLicenseResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeSchedulingResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.NetworkInterfaceResponse;
@@ -395,7 +395,6 @@ public final class ComputeEngineTargetDetailsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public ComputeEngineTargetDetailsResponse build() {
             return new ComputeEngineTargetDetailsResponse(additionalLicenses, appliedLicense, bootOption, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, project, secureBoot, serviceAccount, vmName, zone);
         }

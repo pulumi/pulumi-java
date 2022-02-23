@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1GraphQLOperationResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1QuotaResponse;
@@ -120,7 +120,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationConfigResponse {
             this.quota = Objects.requireNonNull(quota);
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationConfigResponse build() {
             return new GoogleCloudApigeeV1GraphQLOperationConfigResponse(apiSource, attributes, operations, quota);
         }

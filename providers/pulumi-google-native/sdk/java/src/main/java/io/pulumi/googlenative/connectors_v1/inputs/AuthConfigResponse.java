@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsResponse;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2JwtBearerResponse;
@@ -26,7 +26,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalVariables", required=true)
-    private final List<ConfigVariableResponse> additionalVariables;
+      private final List<ConfigVariableResponse> additionalVariables;
 
     public List<ConfigVariableResponse> getAdditionalVariables() {
         return this.additionalVariables;
@@ -37,7 +37,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="authType", required=true)
-    private final String authType;
+      private final String authType;
 
     public String getAuthType() {
         return this.authType;
@@ -48,7 +48,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oauth2ClientCredentials", required=true)
-    private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
+      private final Oauth2ClientCredentialsResponse oauth2ClientCredentials;
 
     public Oauth2ClientCredentialsResponse getOauth2ClientCredentials() {
         return this.oauth2ClientCredentials;
@@ -59,7 +59,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oauth2JwtBearer", required=true)
-    private final Oauth2JwtBearerResponse oauth2JwtBearer;
+      private final Oauth2JwtBearerResponse oauth2JwtBearer;
 
     public Oauth2JwtBearerResponse getOauth2JwtBearer() {
         return this.oauth2JwtBearer;
@@ -70,7 +70,7 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userPassword", required=true)
-    private final UserPasswordResponse userPassword;
+      private final UserPasswordResponse userPassword;
 
     public UserPasswordResponse getUserPassword() {
         return this.userPassword;
@@ -149,7 +149,6 @@ public final class AuthConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.userPassword = Objects.requireNonNull(userPassword);
             return this;
         }
-
         public AuthConfigResponse build() {
             return new AuthConfigResponse(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }

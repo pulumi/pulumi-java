@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketCorsRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -15,7 +15,7 @@ public final class BucketCorsConfigurationArgs extends io.pulumi.resources.Resou
     public static final BucketCorsConfigurationArgs Empty = new BucketCorsConfigurationArgs();
 
     @InputImport(name="corsRules", required=true)
-    private final Input<List<BucketCorsRuleArgs>> corsRules;
+        private final Input<List<BucketCorsRuleArgs>> corsRules;
 
     public Input<List<BucketCorsRuleArgs>> getCorsRules() {
         return this.corsRules;
@@ -58,7 +58,6 @@ public final class BucketCorsConfigurationArgs extends io.pulumi.resources.Resou
             this.corsRules = Input.of(Objects.requireNonNull(corsRules));
             return this;
         }
-
         public BucketCorsConfigurationArgs build() {
             return new BucketCorsConfigurationArgs(corsRules);
         }

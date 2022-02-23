@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="instanceRedistributionType", required=true)
-    private final String instanceRedistributionType;
+      private final String instanceRedistributionType;
 
     public String getInstanceRedistributionType() {
         return this.instanceRedistributionType;
@@ -29,7 +29,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="maxSurge", required=true)
-    private final FixedOrPercentResponse maxSurge;
+      private final FixedOrPercentResponse maxSurge;
 
     public FixedOrPercentResponse getMaxSurge() {
         return this.maxSurge;
@@ -40,7 +40,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="maxUnavailable", required=true)
-    private final FixedOrPercentResponse maxUnavailable;
+      private final FixedOrPercentResponse maxUnavailable;
 
     public FixedOrPercentResponse getMaxUnavailable() {
         return this.maxUnavailable;
@@ -51,7 +51,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="minimalAction", required=true)
-    private final String minimalAction;
+      private final String minimalAction;
 
     public String getMinimalAction() {
         return this.minimalAction;
@@ -62,7 +62,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="mostDisruptiveAllowedAction", required=true)
-    private final String mostDisruptiveAllowedAction;
+      private final String mostDisruptiveAllowedAction;
 
     public String getMostDisruptiveAllowedAction() {
         return this.mostDisruptiveAllowedAction;
@@ -73,7 +73,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="replacementMethod", required=true)
-    private final String replacementMethod;
+      private final String replacementMethod;
 
     public String getReplacementMethod() {
         return this.replacementMethod;
@@ -84,7 +84,7 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -183,7 +183,6 @@ public final class InstanceGroupManagerUpdatePolicyResponse extends io.pulumi.re
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceGroupManagerUpdatePolicyResponse build() {
             return new InstanceGroupManagerUpdatePolicyResponse(instanceRedistributionType, maxSurge, maxUnavailable, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
         }

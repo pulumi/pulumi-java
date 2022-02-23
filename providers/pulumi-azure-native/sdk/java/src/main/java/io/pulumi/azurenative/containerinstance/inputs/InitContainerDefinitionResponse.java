@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableResponse;
 import io.pulumi.azurenative.containerinstance.inputs.InitContainerPropertiesDefinitionResponseInstanceView;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="command")
-    private final @Nullable List<String> command;
+        private final @Nullable List<String> command;
 
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
@@ -38,7 +38,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
+        private final @Nullable List<EnvironmentVariableResponse> environmentVariables;
 
     public List<EnvironmentVariableResponse> getEnvironmentVariables() {
         return this.environmentVariables == null ? List.of() : this.environmentVariables;
@@ -49,7 +49,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="image")
-    private final @Nullable String image;
+        private final @Nullable String image;
 
     public Optional<String> getImage() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
@@ -60,7 +60,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instanceView", required=true)
-    private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
+        private final InitContainerPropertiesDefinitionResponseInstanceView instanceView;
 
     public InitContainerPropertiesDefinitionResponseInstanceView getInstanceView() {
         return this.instanceView;
@@ -71,7 +71,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -82,7 +82,7 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable List<VolumeMountResponse> volumeMounts;
+        private final @Nullable List<VolumeMountResponse> volumeMounts;
 
     public List<VolumeMountResponse> getVolumeMounts() {
         return this.volumeMounts == null ? List.of() : this.volumeMounts;
@@ -171,7 +171,6 @@ public final class InitContainerDefinitionResponse extends io.pulumi.resources.I
             this.volumeMounts = volumeMounts;
             return this;
         }
-
         public InitContainerDefinitionResponse build() {
             return new InitContainerDefinitionResponse(command, environmentVariables, image, instanceView, name, volumeMounts);
         }

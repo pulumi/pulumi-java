@@ -12,8 +12,8 @@ import io.pulumi.awsnative.ssm.outputs.DocumentRequires;
 import io.pulumi.awsnative.ssm.outputs.DocumentTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -154,13 +154,6 @@ public class Document extends io.pulumi.resources.CustomResource {
         return this.versionName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Document(String name) {
-        super("aws-native:ssm:Document", name, DocumentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

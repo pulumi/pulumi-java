@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.auditmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class AssessmentAWSService extends io.pulumi.resources.InvokeArgs {
     public static final AssessmentAWSService Empty = new AssessmentAWSService();
 
     @InputImport(name="serviceName")
-    private final @Nullable String serviceName;
+        private final @Nullable String serviceName;
 
     public Optional<String> getServiceName() {
         return this.serviceName == null ? Optional.empty() : Optional.ofNullable(this.serviceName);
@@ -57,7 +57,6 @@ public final class AssessmentAWSService extends io.pulumi.resources.InvokeArgs {
             this.serviceName = serviceName;
             return this;
         }
-
         public AssessmentAWSService build() {
             return new AssessmentAWSService(serviceName);
         }

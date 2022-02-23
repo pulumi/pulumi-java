@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.ForwardingConfigurationResponse;
 import io.pulumi.azurenative.network.inputs.HeaderActionResponse;
 import io.pulumi.azurenative.network.inputs.RedirectConfigurationResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class RulesEngineActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="requestHeaderActions")
-    private final @Nullable List<HeaderActionResponse> requestHeaderActions;
+        private final @Nullable List<HeaderActionResponse> requestHeaderActions;
 
     public List<HeaderActionResponse> getRequestHeaderActions() {
         return this.requestHeaderActions == null ? List.of() : this.requestHeaderActions;
@@ -38,7 +38,7 @@ public final class RulesEngineActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="responseHeaderActions")
-    private final @Nullable List<HeaderActionResponse> responseHeaderActions;
+        private final @Nullable List<HeaderActionResponse> responseHeaderActions;
 
     public List<HeaderActionResponse> getResponseHeaderActions() {
         return this.responseHeaderActions == null ? List.of() : this.responseHeaderActions;
@@ -49,7 +49,7 @@ public final class RulesEngineActionResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="routeConfigurationOverride")
-    private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
+        private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
 
     public Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> getRouteConfigurationOverride() {
         return this.routeConfigurationOverride == null ? null : this.routeConfigurationOverride;
@@ -108,7 +108,6 @@ public final class RulesEngineActionResponse extends io.pulumi.resources.InvokeA
             this.routeConfigurationOverride = routeConfigurationOverride;
             return this;
         }
-
         public RulesEngineActionResponse build() {
             return new RulesEngineActionResponse(requestHeaderActions, responseHeaderActions, routeConfigurationOverride);
         }

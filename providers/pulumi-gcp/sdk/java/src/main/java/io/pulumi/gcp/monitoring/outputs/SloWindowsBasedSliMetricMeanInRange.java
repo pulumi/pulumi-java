@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.SloWindowsBasedSliMetricMeanInRangeRange;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class SloWindowsBasedSliMetricMeanInRange {
             this.timeSeries = Objects.requireNonNull(timeSeries);
             return this;
         }
-
         public SloWindowsBasedSliMetricMeanInRange build() {
             return new SloWindowsBasedSliMetricMeanInRange(range, timeSeries);
         }

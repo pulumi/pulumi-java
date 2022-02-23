@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="createEmptyXmlTagsForTrailingSeparators", required=true)
-    private final Boolean createEmptyXmlTagsForTrailingSeparators;
+        private final Boolean createEmptyXmlTagsForTrailingSeparators;
 
     public Boolean getCreateEmptyXmlTagsForTrailingSeparators() {
         return this.createEmptyXmlTagsForTrailingSeparators;
@@ -32,7 +32,7 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="maskSecurityInfo", required=true)
-    private final Boolean maskSecurityInfo;
+        private final Boolean maskSecurityInfo;
 
     public Boolean getMaskSecurityInfo() {
         return this.maskSecurityInfo;
@@ -43,7 +43,7 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="preserveInterchange", required=true)
-    private final Boolean preserveInterchange;
+        private final Boolean preserveInterchange;
 
     public Boolean getPreserveInterchange() {
         return this.preserveInterchange;
@@ -54,7 +54,7 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="suspendInterchangeOnError", required=true)
-    private final Boolean suspendInterchangeOnError;
+        private final Boolean suspendInterchangeOnError;
 
     public Boolean getSuspendInterchangeOnError() {
         return this.suspendInterchangeOnError;
@@ -65,7 +65,7 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="useDotAsDecimalSeparator", required=true)
-    private final Boolean useDotAsDecimalSeparator;
+        private final Boolean useDotAsDecimalSeparator;
 
     public Boolean getUseDotAsDecimalSeparator() {
         return this.useDotAsDecimalSeparator;
@@ -144,7 +144,6 @@ public final class EdifactProcessingSettingsResponse extends io.pulumi.resources
             this.useDotAsDecimalSeparator = Objects.requireNonNull(useDotAsDecimalSeparator);
             return this;
         }
-
         public EdifactProcessingSettingsResponse build() {
             return new EdifactProcessingSettingsResponse(createEmptyXmlTagsForTrailingSeparators, maskSecurityInfo, preserveInterchange, suspendInterchangeOnError, useDotAsDecimalSeparator);
         }

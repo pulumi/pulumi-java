@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallPolicyAssociationResponse;
 import io.pulumi.googlenative.compute_beta.outputs.FirewallPolicyRuleResponse;
 import java.lang.Integer;
@@ -288,7 +288,6 @@ public final class GetFirewallPolicyResult {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(associations, creationTimestamp, description, fingerprint, kind, name, parent, ruleTupleCount, rules, selfLink, selfLinkWithId, shortName);
         }

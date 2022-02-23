@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.SystemParameterRuleResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class SystemParametersResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public SystemParametersResponse build() {
             return new SystemParametersResponse(rules);
         }

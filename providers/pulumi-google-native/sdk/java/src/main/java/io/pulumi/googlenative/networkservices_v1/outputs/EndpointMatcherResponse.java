@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkservices_v1.outputs.EndpointMatcherMetadataLabelMatcherResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class EndpointMatcherResponse {
             this.metadataLabelMatcher = Objects.requireNonNull(metadataLabelMatcher);
             return this;
         }
-
         public EndpointMatcherResponse build() {
             return new EndpointMatcherResponse(metadataLabelMatcher);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.outputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class ProviderIgnoreTagsArgs {
             this.keys = keys;
             return this;
         }
-
         public ProviderIgnoreTagsArgs build() {
             return new ProviderIgnoreTagsArgs(keyPrefixes, keys);
         }

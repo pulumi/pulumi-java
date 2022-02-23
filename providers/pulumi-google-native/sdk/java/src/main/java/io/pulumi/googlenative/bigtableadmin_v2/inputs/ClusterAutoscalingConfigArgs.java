@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigtableadmin_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingLimitsArgs;
 import io.pulumi.googlenative.bigtableadmin_v2.inputs.AutoscalingTargetsArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoscalingLimits", required=true)
-    private final Input<AutoscalingLimitsArgs> autoscalingLimits;
+      private final Input<AutoscalingLimitsArgs> autoscalingLimits;
 
     public Input<AutoscalingLimitsArgs> getAutoscalingLimits() {
         return this.autoscalingLimits;
@@ -34,7 +34,7 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="autoscalingTargets", required=true)
-    private final Input<AutoscalingTargetsArgs> autoscalingTargets;
+      private final Input<AutoscalingTargetsArgs> autoscalingTargets;
 
     public Input<AutoscalingTargetsArgs> getAutoscalingTargets() {
         return this.autoscalingTargets;
@@ -93,7 +93,6 @@ public final class ClusterAutoscalingConfigArgs extends io.pulumi.resources.Reso
             this.autoscalingTargets = Input.of(Objects.requireNonNull(autoscalingTargets));
             return this;
         }
-
         public ClusterAutoscalingConfigArgs build() {
             return new ClusterAutoscalingConfigArgs(autoscalingLimits, autoscalingTargets);
         }

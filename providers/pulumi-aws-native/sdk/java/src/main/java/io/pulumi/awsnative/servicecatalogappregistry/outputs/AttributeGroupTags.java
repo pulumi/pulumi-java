@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class AttributeGroupTags {
         public Builder(AttributeGroupTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AttributeGroupTags build() {
             return new AttributeGroupTags();
         }

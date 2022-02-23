@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateId")
-    private final @Nullable Input<String> certificateId;
+      private final @Nullable Input<String> certificateId;
 
     public Input<String> getCertificateId() {
         return this.certificateId == null ? Input.empty() : this.certificateId;
@@ -66,7 +66,6 @@ public final class SslSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.certificateId = Input.ofNullable(certificateId);
             return this;
         }
-
         public SslSettingsArgs build() {
             return new SslSettingsArgs(certificateId);
         }

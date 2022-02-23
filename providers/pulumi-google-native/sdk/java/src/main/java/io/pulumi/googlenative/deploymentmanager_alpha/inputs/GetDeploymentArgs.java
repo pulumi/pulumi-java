@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDeploymentArgs Empty = new GetDeploymentArgs();
 
     @InputImport(name="deployment", required=true)
-    private final String deployment;
+      private final String deployment;
 
     public String getDeployment() {
         return this.deployment;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetDeploymentArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetDeploymentArgs build() {
             return new GetDeploymentArgs(deployment, project);
         }

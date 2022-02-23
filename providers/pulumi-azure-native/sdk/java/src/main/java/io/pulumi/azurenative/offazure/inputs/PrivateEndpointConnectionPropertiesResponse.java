@@ -5,7 +5,7 @@ package io.pulumi.azurenative.offazure.inputs;
 
 import io.pulumi.azurenative.offazure.inputs.PrivateLinkServiceConnectionStateResponse;
 import io.pulumi.azurenative.offazure.inputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,21 +17,21 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
     public static final PrivateEndpointConnectionPropertiesResponse Empty = new PrivateEndpointConnectionPropertiesResponse();
 
     @InputImport(name="privateEndpoint", required=true)
-    private final ResourceIdResponse privateEndpoint;
+        private final ResourceIdResponse privateEndpoint;
 
     public ResourceIdResponse getPrivateEndpoint() {
         return this.privateEndpoint;
     }
 
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+        private final @Nullable PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public Optional<PrivateLinkServiceConnectionStateResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
 
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -90,7 +90,6 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

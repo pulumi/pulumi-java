@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -209,7 +209,6 @@ public final class CosmosDbMongoDbApiLinkedServiceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CosmosDbMongoDbApiLinkedServiceResponse build() {
             return new CosmosDbMongoDbApiLinkedServiceResponse(annotations, connectVia, connectionString, database, description, isServerVersionAbove32, parameters, type);
         }

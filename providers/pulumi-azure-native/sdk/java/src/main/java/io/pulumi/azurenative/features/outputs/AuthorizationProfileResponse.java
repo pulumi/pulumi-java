@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.features.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class AuthorizationProfileResponse {
             this.requesterObjectId = Objects.requireNonNull(requesterObjectId);
             return this;
         }
-
         public AuthorizationProfileResponse build() {
             return new AuthorizationProfileResponse(approvedTime, approver, requestedTime, requester, requesterObjectId);
         }

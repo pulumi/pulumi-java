@@ -5,8 +5,8 @@ package io.pulumi.random;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomPetArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomPetState;
@@ -83,13 +83,6 @@ public class RandomPet extends io.pulumi.resources.CustomResource {
         return this.separator;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RandomPet(String name) {
-        super("random:index/randomPet:RandomPet", name, RandomPetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

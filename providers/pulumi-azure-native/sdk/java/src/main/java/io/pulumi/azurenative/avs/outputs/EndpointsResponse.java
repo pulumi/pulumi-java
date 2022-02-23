@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class EndpointsResponse {
             this.vcsa = Objects.requireNonNull(vcsa);
             return this;
         }
-
         public EndpointsResponse build() {
             return new EndpointsResponse(hcxCloudManager, nsxtManager, vcsa);
         }

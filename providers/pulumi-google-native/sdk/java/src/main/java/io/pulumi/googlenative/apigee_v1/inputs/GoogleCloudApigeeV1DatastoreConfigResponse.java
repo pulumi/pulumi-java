@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+      private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="datasetName", required=true)
-    private final String datasetName;
+      private final String datasetName;
 
     public String getDatasetName() {
         return this.datasetName;
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -54,7 +54,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -65,7 +65,7 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="tablePrefix", required=true)
-    private final String tablePrefix;
+      private final String tablePrefix;
 
     public String getTablePrefix() {
         return this.tablePrefix;
@@ -144,7 +144,6 @@ public final class GoogleCloudApigeeV1DatastoreConfigResponse extends io.pulumi.
             this.tablePrefix = Objects.requireNonNull(tablePrefix);
             return this;
         }
-
         public GoogleCloudApigeeV1DatastoreConfigResponse build() {
             return new GoogleCloudApigeeV1DatastoreConfigResponse(bucketName, datasetName, path, project, tablePrefix);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.enums.InstanceOperationType;
 import io.pulumi.azurenative.customerinsights.inputs.ParticipantPropertyReferenceArgs;
 import io.pulumi.azurenative.customerinsights.inputs.TypePropertiesMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<Map<String,String>> description;
+        private final @Nullable Input<Map<String,String>> description;
 
     public Input<Map<String,String>> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<Map<String,String>> displayName;
+        private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -48,7 +48,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+        private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -59,7 +59,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="linkName")
-    private final @Nullable Input<String> linkName;
+        private final @Nullable Input<String> linkName;
 
     public Input<String> getLinkName() {
         return this.linkName == null ? Input.empty() : this.linkName;
@@ -70,7 +70,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mappings")
-    private final @Nullable Input<List<TypePropertiesMappingArgs>> mappings;
+        private final @Nullable Input<List<TypePropertiesMappingArgs>> mappings;
 
     public Input<List<TypePropertiesMappingArgs>> getMappings() {
         return this.mappings == null ? Input.empty() : this.mappings;
@@ -81,7 +81,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationType")
-    private final @Nullable Input<InstanceOperationType> operationType;
+        private final @Nullable Input<InstanceOperationType> operationType;
 
     public Input<InstanceOperationType> getOperationType() {
         return this.operationType == null ? Input.empty() : this.operationType;
@@ -92,7 +92,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="participantPropertyReferences", required=true)
-    private final Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
+        private final Input<List<ParticipantPropertyReferenceArgs>> participantPropertyReferences;
 
     public Input<List<ParticipantPropertyReferenceArgs>> getParticipantPropertyReferences() {
         return this.participantPropertyReferences;
@@ -103,7 +103,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="referenceOnly")
-    private final @Nullable Input<Boolean> referenceOnly;
+        private final @Nullable Input<Boolean> referenceOnly;
 
     public Input<Boolean> getReferenceOnly() {
         return this.referenceOnly == null ? Input.empty() : this.referenceOnly;
@@ -114,7 +114,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -125,7 +125,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceEntityType", required=true)
-    private final Input<EntityType> sourceEntityType;
+        private final Input<EntityType> sourceEntityType;
 
     public Input<EntityType> getSourceEntityType() {
         return this.sourceEntityType;
@@ -136,7 +136,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceEntityTypeName", required=true)
-    private final Input<String> sourceEntityTypeName;
+        private final Input<String> sourceEntityTypeName;
 
     public Input<String> getSourceEntityTypeName() {
         return this.sourceEntityTypeName;
@@ -147,7 +147,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetEntityType", required=true)
-    private final Input<EntityType> targetEntityType;
+        private final Input<EntityType> targetEntityType;
 
     public Input<EntityType> getTargetEntityType() {
         return this.targetEntityType;
@@ -158,7 +158,7 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetEntityTypeName", required=true)
-    private final Input<String> targetEntityTypeName;
+        private final Input<String> targetEntityTypeName;
 
     public Input<String> getTargetEntityTypeName() {
         return this.targetEntityTypeName;
@@ -382,7 +382,6 @@ public final class LinkArgs extends io.pulumi.resources.ResourceArgs {
             this.targetEntityTypeName = Input.of(Objects.requireNonNull(targetEntityTypeName));
             return this;
         }
-
         public LinkArgs build() {
             return new LinkArgs(description, displayName, hubName, linkName, mappings, operationType, participantPropertyReferences, referenceOnly, resourceGroupName, sourceEntityType, sourceEntityTypeName, targetEntityType, targetEntityTypeName);
         }

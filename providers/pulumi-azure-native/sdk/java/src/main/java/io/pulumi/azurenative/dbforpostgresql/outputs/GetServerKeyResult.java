@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -181,7 +181,6 @@ public final class GetServerKeyResult {
             this.uri = uri;
             return this;
         }
-
         public GetServerKeyResult build() {
             return new GetServerKeyResult(creationDate, id, kind, name, serverKeyType, type, uri);
         }

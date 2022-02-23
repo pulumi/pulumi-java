@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="authFailAction", required=true)
-    private final String authFailAction;
+      private final String authFailAction;
 
     public String getAuthFailAction() {
         return this.authFailAction;
@@ -32,7 +32,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="login", required=true)
-    private final String login;
+      private final String login;
 
     public String getLogin() {
         return this.login;
@@ -43,7 +43,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="script", required=true)
-    private final String script;
+      private final String script;
 
     public String getScript() {
         return this.script;
@@ -54,7 +54,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="securityLevel", required=true)
-    private final String securityLevel;
+      private final String securityLevel;
 
     public String getSecurityLevel() {
         return this.securityLevel;
@@ -65,7 +65,7 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -144,7 +144,6 @@ public final class ApiConfigHandlerResponse extends io.pulumi.resources.InvokeAr
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApiConfigHandlerResponse build() {
             return new ApiConfigHandlerResponse(authFailAction, login, script, securityLevel, url);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.AutoscalingSettingsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DiskResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.PackageResponse;
@@ -481,7 +481,6 @@ public final class WorkerPoolResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public WorkerPoolResponse build() {
             return new WorkerPoolResponse(autoscalingSettings, dataDisks, defaultPackageSet, diskSizeGb, diskSourceImage, diskType, ipConfiguration, kind, machineType, metadata, network, numThreadsPerWorker, numWorkers, onHostMaintenance, packages, poolArgs, sdkHarnessContainerImages, subnetwork, taskrunnerSettings, teardownPolicy, zone);
         }

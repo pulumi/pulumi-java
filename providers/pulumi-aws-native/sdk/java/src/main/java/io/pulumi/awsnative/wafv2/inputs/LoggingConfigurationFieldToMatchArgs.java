@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="jsonBody")
-    private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
+        private final @Nullable Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> jsonBody;
 
     public Input<LoggingConfigurationFieldToMatchJsonBodyPropertiesArgs> getJsonBody() {
         return this.jsonBody == null ? Input.empty() : this.jsonBody;
@@ -36,7 +36,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<Object> method;
+        private final @Nullable Input<Object> method;
 
     public Input<Object> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -47,7 +47,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="queryString")
-    private final @Nullable Input<Object> queryString;
+        private final @Nullable Input<Object> queryString;
 
     public Input<Object> getQueryString() {
         return this.queryString == null ? Input.empty() : this.queryString;
@@ -58,7 +58,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="singleHeader")
-    private final @Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
+        private final @Nullable Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> singleHeader;
 
     public Input<LoggingConfigurationFieldToMatchSingleHeaderPropertiesArgs> getSingleHeader() {
         return this.singleHeader == null ? Input.empty() : this.singleHeader;
@@ -69,7 +69,7 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="uriPath")
-    private final @Nullable Input<Object> uriPath;
+        private final @Nullable Input<Object> uriPath;
 
     public Input<Object> getUriPath() {
         return this.uriPath == null ? Input.empty() : this.uriPath;
@@ -173,7 +173,6 @@ public final class LoggingConfigurationFieldToMatchArgs extends io.pulumi.resour
             this.uriPath = Input.ofNullable(uriPath);
             return this;
         }
-
         public LoggingConfigurationFieldToMatchArgs build() {
             return new LoggingConfigurationFieldToMatchArgs(jsonBody, method, queryString, singleHeader, uriPath);
         }

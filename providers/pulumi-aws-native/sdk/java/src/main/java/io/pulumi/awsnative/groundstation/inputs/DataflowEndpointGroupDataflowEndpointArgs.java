@@ -5,7 +5,7 @@ package io.pulumi.awsnative.groundstation.inputs;
 
 import io.pulumi.awsnative.groundstation.inputs.DataflowEndpointGroupSocketAddressArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
     public static final DataflowEndpointGroupDataflowEndpointArgs Empty = new DataflowEndpointGroupDataflowEndpointArgs();
 
     @InputImport(name="address")
-    private final @Nullable Input<DataflowEndpointGroupSocketAddressArgs> address;
+        private final @Nullable Input<DataflowEndpointGroupSocketAddressArgs> address;
 
     public Input<DataflowEndpointGroupSocketAddressArgs> getAddress() {
         return this.address == null ? Input.empty() : this.address;
     }
 
     @InputImport(name="mtu")
-    private final @Nullable Input<Integer> mtu;
+        private final @Nullable Input<Integer> mtu;
 
     public Input<Integer> getMtu() {
         return this.mtu == null ? Input.empty() : this.mtu;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,7 +105,6 @@ public final class DataflowEndpointGroupDataflowEndpointArgs extends io.pulumi.r
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public DataflowEndpointGroupDataflowEndpointArgs build() {
             return new DataflowEndpointGroupDataflowEndpointArgs(address, mtu, name);
         }

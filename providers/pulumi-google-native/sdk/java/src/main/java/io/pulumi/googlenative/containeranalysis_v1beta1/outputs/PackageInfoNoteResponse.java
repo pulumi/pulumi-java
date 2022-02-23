@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.ExternalRefResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.LicenseResponse;
 import java.lang.Boolean;
@@ -393,7 +393,6 @@ public final class PackageInfoNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public PackageInfoNoteResponse build() {
             return new PackageInfoNoteResponse(analyzed, attribution, checksum, copyright, detailedDescription, downloadLocation, externalRefs, filesLicenseInfo, homePage, licenseDeclared, originator, packageType, summaryDescription, supplier, title, verificationCode, version);
         }

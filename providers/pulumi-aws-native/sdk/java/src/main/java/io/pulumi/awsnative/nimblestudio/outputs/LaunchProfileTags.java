@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.nimblestudio.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class LaunchProfileTags {
         public Builder(LaunchProfileTags defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public LaunchProfileTags build() {
             return new LaunchProfileTags();
         }

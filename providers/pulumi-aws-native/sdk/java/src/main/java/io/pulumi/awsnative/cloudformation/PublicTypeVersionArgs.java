@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.PublicTypeVersionType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+        private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -31,7 +31,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logDeliveryBucket")
-    private final @Nullable Input<String> logDeliveryBucket;
+        private final @Nullable Input<String> logDeliveryBucket;
 
     public Input<String> getLogDeliveryBucket() {
         return this.logDeliveryBucket == null ? Input.empty() : this.logDeliveryBucket;
@@ -42,7 +42,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="publicVersionNumber")
-    private final @Nullable Input<String> publicVersionNumber;
+        private final @Nullable Input<String> publicVersionNumber;
 
     public Input<String> getPublicVersionNumber() {
         return this.publicVersionNumber == null ? Input.empty() : this.publicVersionNumber;
@@ -53,7 +53,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<PublicTypeVersionType> type;
+        private final @Nullable Input<PublicTypeVersionType> type;
 
     public Input<PublicTypeVersionType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,7 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -170,7 +170,6 @@ public final class PublicTypeVersionArgs extends io.pulumi.resources.ResourceArg
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
-
         public PublicTypeVersionArgs build() {
             return new PublicTypeVersionArgs(arn, logDeliveryBucket, publicVersionNumber, type, typeName);
         }

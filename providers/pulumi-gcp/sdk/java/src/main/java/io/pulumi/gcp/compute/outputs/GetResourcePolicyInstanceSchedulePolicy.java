@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicyVmStartSchedule;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicyVmStopSchedule;
 import java.lang.String;
@@ -100,7 +100,6 @@ public final class GetResourcePolicyInstanceSchedulePolicy {
             this.vmStopSchedules = Objects.requireNonNull(vmStopSchedules);
             return this;
         }
-
         public GetResourcePolicyInstanceSchedulePolicy build() {
             return new GetResourcePolicyInstanceSchedulePolicy(expirationTime, startTime, timeZone, vmStartSchedules, vmStopSchedules);
         }

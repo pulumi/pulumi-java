@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -32,7 +32,7 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final String roleDefinitionId;
+        private final String roleDefinitionId;
 
     public String getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -81,7 +81,6 @@ public final class ApplicationAuthorizationResponse extends io.pulumi.resources.
             this.roleDefinitionId = Objects.requireNonNull(roleDefinitionId);
             return this;
         }
-
         public ApplicationAuthorizationResponse build() {
             return new ApplicationAuthorizationResponse(principalId, roleDefinitionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PullMessageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="payload", required=true)
-    private final String payload;
+      private final String payload;
 
     public String getPayload() {
         return this.payload;
@@ -32,7 +32,7 @@ public final class PullMessageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag", required=true)
-    private final String tag;
+      private final String tag;
 
     public String getTag() {
         return this.tag;
@@ -81,7 +81,6 @@ public final class PullMessageResponse extends io.pulumi.resources.InvokeArgs {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public PullMessageResponse build() {
             return new PullMessageResponse(payload, tag);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -273,7 +273,6 @@ public final class SamplingRuleUpdate {
             this.uRLPath = uRLPath;
             return this;
         }
-
         public SamplingRuleUpdate build() {
             return new SamplingRuleUpdate(attributes, fixedRate, hTTPMethod, host, priority, reservoirSize, resourceARN, ruleARN, ruleName, serviceName, serviceType, uRLPath);
         }

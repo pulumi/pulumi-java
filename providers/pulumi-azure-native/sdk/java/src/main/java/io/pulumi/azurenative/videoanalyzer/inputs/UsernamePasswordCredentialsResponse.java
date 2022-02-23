@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -33,7 +33,7 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -44,7 +44,7 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -103,7 +103,6 @@ public final class UsernamePasswordCredentialsResponse extends io.pulumi.resourc
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public UsernamePasswordCredentialsResponse build() {
             return new UsernamePasswordCredentialsResponse(password, type, username);
         }

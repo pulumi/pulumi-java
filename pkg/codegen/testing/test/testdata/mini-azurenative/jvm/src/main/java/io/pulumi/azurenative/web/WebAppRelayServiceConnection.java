@@ -7,8 +7,8 @@ import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.web.WebAppRelayServiceConnectionArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -35,13 +35,6 @@ public class WebAppRelayServiceConnection extends io.pulumi.resources.CustomReso
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WebAppRelayServiceConnection(String name) {
-        super("azure-native:web:WebAppRelayServiceConnection", name, WebAppRelayServiceConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

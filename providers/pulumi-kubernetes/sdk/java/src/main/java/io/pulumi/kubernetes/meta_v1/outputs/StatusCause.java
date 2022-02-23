@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -105,7 +105,6 @@ public final class StatusCause {
             this.reason = reason;
             return this;
         }
-
         public StatusCause build() {
             return new StatusCause(field, message, reason);
         }

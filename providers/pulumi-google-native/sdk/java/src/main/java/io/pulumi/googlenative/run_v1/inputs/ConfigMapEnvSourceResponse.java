@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.LocalObjectReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="localObjectReference", required=true)
-    private final LocalObjectReferenceResponse localObjectReference;
+      private final LocalObjectReferenceResponse localObjectReference;
 
     public LocalObjectReferenceResponse getLocalObjectReference() {
         return this.localObjectReference;
@@ -34,7 +34,7 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+      private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -104,7 +104,6 @@ public final class ConfigMapEnvSourceResponse extends io.pulumi.resources.Invoke
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public ConfigMapEnvSourceResponse build() {
             return new ConfigMapEnvSourceResponse(localObjectReference, name, optional);
         }

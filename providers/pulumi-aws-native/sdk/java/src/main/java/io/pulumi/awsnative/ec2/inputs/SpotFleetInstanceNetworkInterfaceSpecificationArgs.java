@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetInstanceIpv6AddressArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetPrivateIpAddressSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,77 +20,77 @@ public final class SpotFleetInstanceNetworkInterfaceSpecificationArgs extends io
     public static final SpotFleetInstanceNetworkInterfaceSpecificationArgs Empty = new SpotFleetInstanceNetworkInterfaceSpecificationArgs();
 
     @InputImport(name="associatePublicIpAddress")
-    private final @Nullable Input<Boolean> associatePublicIpAddress;
+        private final @Nullable Input<Boolean> associatePublicIpAddress;
 
     public Input<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
     }
 
     @InputImport(name="deleteOnTermination")
-    private final @Nullable Input<Boolean> deleteOnTermination;
+        private final @Nullable Input<Boolean> deleteOnTermination;
 
     public Input<Boolean> getDeleteOnTermination() {
         return this.deleteOnTermination == null ? Input.empty() : this.deleteOnTermination;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="deviceIndex")
-    private final @Nullable Input<Integer> deviceIndex;
+        private final @Nullable Input<Integer> deviceIndex;
 
     public Input<Integer> getDeviceIndex() {
         return this.deviceIndex == null ? Input.empty() : this.deviceIndex;
     }
 
     @InputImport(name="groups")
-    private final @Nullable Input<List<String>> groups;
+        private final @Nullable Input<List<String>> groups;
 
     public Input<List<String>> getGroups() {
         return this.groups == null ? Input.empty() : this.groups;
     }
 
     @InputImport(name="ipv6AddressCount")
-    private final @Nullable Input<Integer> ipv6AddressCount;
+        private final @Nullable Input<Integer> ipv6AddressCount;
 
     public Input<Integer> getIpv6AddressCount() {
         return this.ipv6AddressCount == null ? Input.empty() : this.ipv6AddressCount;
     }
 
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses;
+        private final @Nullable Input<List<SpotFleetInstanceIpv6AddressArgs>> ipv6Addresses;
 
     public Input<List<SpotFleetInstanceIpv6AddressArgs>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
     }
 
     @InputImport(name="networkInterfaceId")
-    private final @Nullable Input<String> networkInterfaceId;
+        private final @Nullable Input<String> networkInterfaceId;
 
     public Input<String> getNetworkInterfaceId() {
         return this.networkInterfaceId == null ? Input.empty() : this.networkInterfaceId;
     }
 
     @InputImport(name="privateIpAddresses")
-    private final @Nullable Input<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses;
+        private final @Nullable Input<List<SpotFleetPrivateIpAddressSpecificationArgs>> privateIpAddresses;
 
     public Input<List<SpotFleetPrivateIpAddressSpecificationArgs>> getPrivateIpAddresses() {
         return this.privateIpAddresses == null ? Input.empty() : this.privateIpAddresses;
     }
 
     @InputImport(name="secondaryPrivateIpAddressCount")
-    private final @Nullable Input<Integer> secondaryPrivateIpAddressCount;
+        private final @Nullable Input<Integer> secondaryPrivateIpAddressCount;
 
     public Input<Integer> getSecondaryPrivateIpAddressCount() {
         return this.secondaryPrivateIpAddressCount == null ? Input.empty() : this.secondaryPrivateIpAddressCount;
     }
 
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -284,7 +284,6 @@ public final class SpotFleetInstanceNetworkInterfaceSpecificationArgs extends io
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
-
         public SpotFleetInstanceNetworkInterfaceSpecificationArgs build() {
             return new SpotFleetInstanceNetworkInterfaceSpecificationArgs(associatePublicIpAddress, deleteOnTermination, description, deviceIndex, groups, ipv6AddressCount, ipv6Addresses, networkInterfaceId, privateIpAddresses, secondaryPrivateIpAddressCount, subnetId);
         }

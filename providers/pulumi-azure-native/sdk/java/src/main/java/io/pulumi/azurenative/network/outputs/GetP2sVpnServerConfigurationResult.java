@@ -9,7 +9,7 @@ import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigRadiusServerRootC
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRevokedCertificateResponse;
 import io.pulumi.azurenative.network.outputs.P2SVpnServerConfigVpnClientRootCertificateResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -314,7 +314,6 @@ public final class GetP2sVpnServerConfigurationResult {
             this.vpnProtocols = vpnProtocols;
             return this;
         }
-
         public GetP2sVpnServerConfigurationResult build() {
             return new GetP2sVpnServerConfigurationResult(etag, id, name, p2SVpnGateways, p2SVpnServerConfigRadiusClientRootCertificates, p2SVpnServerConfigRadiusServerRootCertificates, p2SVpnServerConfigVpnClientRevokedCertificates, p2SVpnServerConfigVpnClientRootCertificates, provisioningState, radiusServerAddress, radiusServerSecret, vpnClientIpsecPolicies, vpnProtocols);
         }

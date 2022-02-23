@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+        private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -32,7 +32,7 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -81,7 +81,6 @@ public final class UserIdentityResponse extends io.pulumi.resources.InvokeArgs {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public UserIdentityResponse build() {
             return new UserIdentityResponse(clientId, principalId);
         }

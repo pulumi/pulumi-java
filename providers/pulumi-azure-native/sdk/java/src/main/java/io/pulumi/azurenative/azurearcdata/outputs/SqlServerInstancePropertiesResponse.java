@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -341,7 +341,6 @@ public final class SqlServerInstancePropertiesResponse {
             this.version = version;
             return this;
         }
-
         public SqlServerInstancePropertiesResponse build() {
             return new SqlServerInstancePropertiesResponse(collation, containerResourceId, createTime, currentVersion, edition, instanceName, licenseType, patchLevel, productId, provisioningState, status, tcpDynamicPorts, tcpStaticPorts, vCore, version);
         }

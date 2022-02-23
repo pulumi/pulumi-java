@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.DeploymentStrategy;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.RollbackConfig;
@@ -228,7 +228,6 @@ public final class DeploymentSpec {
             this.template = Objects.requireNonNull(template);
             return this;
         }
-
         public DeploymentSpec build() {
             return new DeploymentSpec(minReadySeconds, paused, progressDeadlineSeconds, replicas, revisionHistoryLimit, rollbackTo, selector, strategy, template);
         }

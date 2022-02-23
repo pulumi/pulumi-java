@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="configName")
-    private final @Nullable Input<String> configName;
+        private final @Nullable Input<String> configName;
 
     public Input<String> getConfigName() {
         return this.configName == null ? Input.empty() : this.configName;
@@ -30,7 +30,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -41,7 +41,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="postMigrationName", required=true)
-    private final Input<String> postMigrationName;
+        private final Input<String> postMigrationName;
 
     public Input<String> getPostMigrationName() {
         return this.postMigrationName;
@@ -52,7 +52,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetNamespace", required=true)
-    private final Input<String> targetNamespace;
+        private final Input<String> targetNamespace;
 
     public Input<String> getTargetNamespace() {
         return this.targetNamespace;
@@ -167,7 +167,6 @@ public final class MigrationConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.targetNamespace = Input.of(Objects.requireNonNull(targetNamespace));
             return this;
         }
-
         public MigrationConfigArgs build() {
             return new MigrationConfigArgs(configName, namespaceName, postMigrationName, resourceGroupName, targetNamespace);
         }

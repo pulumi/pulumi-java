@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="creationTime")
-    private final @Nullable String creationTime;
+        private final @Nullable String creationTime;
 
     public Optional<String> getCreationTime() {
         return this.creationTime == null ? Optional.empty() : Optional.ofNullable(this.creationTime);
@@ -34,7 +34,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="expiry")
-    private final @Nullable String expiry;
+        private final @Nullable String expiry;
 
     public Optional<String> getExpiry() {
         return this.expiry == null ? Optional.empty() : Optional.ofNullable(this.expiry);
@@ -45,7 +45,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -125,7 +125,6 @@ public final class TokenPasswordResponse extends io.pulumi.resources.InvokeArgs 
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public TokenPasswordResponse build() {
             return new TokenPasswordResponse(creationTime, expiry, name, value);
         }

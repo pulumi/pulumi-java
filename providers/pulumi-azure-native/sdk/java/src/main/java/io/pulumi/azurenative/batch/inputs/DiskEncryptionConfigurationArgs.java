@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.DiskEncryptionTarget;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targets")
-    private final @Nullable Input<List<DiskEncryptionTarget>> targets;
+        private final @Nullable Input<List<DiskEncryptionTarget>> targets;
 
     public Input<List<DiskEncryptionTarget>> getTargets() {
         return this.targets == null ? Input.empty() : this.targets;
@@ -67,7 +67,6 @@ public final class DiskEncryptionConfigurationArgs extends io.pulumi.resources.R
             this.targets = Input.ofNullable(targets);
             return this;
         }
-
         public DiskEncryptionConfigurationArgs build() {
             return new DiskEncryptionConfigurationArgs(targets);
         }

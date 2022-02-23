@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.DatabaseBackupSettingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -396,7 +396,6 @@ public final class ListWebAppBackupStatusSecretsResult {
             this.websiteSizeInBytes = Objects.requireNonNull(websiteSizeInBytes);
             return this;
         }
-
         public ListWebAppBackupStatusSecretsResult build() {
             return new ListWebAppBackupStatusSecretsResult(backupId, blobName, correlationId, created, databases, finishedTimeStamp, id, kind, lastRestoreTimeStamp, log, name, scheduled, sizeInBytes, status, storageAccountUrl, type, websiteSizeInBytes);
         }

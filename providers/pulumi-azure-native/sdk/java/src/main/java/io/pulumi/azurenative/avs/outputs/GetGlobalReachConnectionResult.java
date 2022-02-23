@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class GetGlobalReachConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGlobalReachConnectionResult build() {
             return new GetGlobalReachConnectionResult(addressPrefix, authorizationKey, circuitConnectionStatus, id, name, peerExpressRouteCircuit, provisioningState, type);
         }

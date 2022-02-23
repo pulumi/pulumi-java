@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2FieldTransformationResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordSuppressionResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2RecordTransformationsResponse {
             this.recordSuppressions = Objects.requireNonNull(recordSuppressions);
             return this;
         }
-
         public GooglePrivacyDlpV2RecordTransformationsResponse build() {
             return new GooglePrivacyDlpV2RecordTransformationsResponse(fieldTransformations, recordSuppressions);
         }

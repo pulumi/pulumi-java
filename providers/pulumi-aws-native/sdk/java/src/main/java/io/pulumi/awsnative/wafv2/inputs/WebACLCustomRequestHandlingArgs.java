@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLCustomHTTPHeaderArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class WebACLCustomRequestHandlingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="insertHeaders", required=true)
-    private final Input<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
+        private final Input<List<WebACLCustomHTTPHeaderArgs>> insertHeaders;
 
     public Input<List<WebACLCustomHTTPHeaderArgs>> getInsertHeaders() {
         return this.insertHeaders;
@@ -66,7 +66,6 @@ public final class WebACLCustomRequestHandlingArgs extends io.pulumi.resources.R
             this.insertHeaders = Input.of(Objects.requireNonNull(insertHeaders));
             return this;
         }
-
         public WebACLCustomRequestHandlingArgs build() {
             return new WebACLCustomRequestHandlingArgs(insertHeaders);
         }

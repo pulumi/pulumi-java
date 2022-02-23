@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipAcknowledgmentOfReceiptSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipActivityBehaviorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -97,7 +97,6 @@ public final class RosettaNetPipActivitySettingsResponse {
             this.activityType = Objects.requireNonNull(activityType);
             return this;
         }
-
         public RosettaNetPipActivitySettingsResponse build() {
             return new RosettaNetPipActivitySettingsResponse(acknowledgmentOfReceiptSettings, activityBehavior, activityType);
         }

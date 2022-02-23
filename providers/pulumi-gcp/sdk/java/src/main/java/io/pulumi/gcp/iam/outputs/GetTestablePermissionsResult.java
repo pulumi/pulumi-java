@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.iam.outputs.GetTestablePermissionsPermission;
 import java.lang.String;
 import java.util.List;
@@ -125,7 +125,6 @@ public final class GetTestablePermissionsResult {
             this.stages = stages;
             return this;
         }
-
         public GetTestablePermissionsResult build() {
             return new GetTestablePermissionsResult(customSupportLevel, fullResourceName, id, permissions, stages);
         }

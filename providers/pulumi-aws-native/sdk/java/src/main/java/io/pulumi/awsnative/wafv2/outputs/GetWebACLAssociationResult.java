@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetWebACLAssociationResult {
         public Builder(GetWebACLAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetWebACLAssociationResult build() {
             return new GetWebACLAssociationResult();
         }

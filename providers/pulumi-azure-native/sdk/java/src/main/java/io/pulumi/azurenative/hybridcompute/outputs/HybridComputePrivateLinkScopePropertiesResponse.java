@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class HybridComputePrivateLinkScopePropertiesResponse {
             this.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
-
         public HybridComputePrivateLinkScopePropertiesResponse build() {
             return new HybridComputePrivateLinkScopePropertiesResponse(privateLinkScopeId, provisioningState, publicNetworkAccess);
         }

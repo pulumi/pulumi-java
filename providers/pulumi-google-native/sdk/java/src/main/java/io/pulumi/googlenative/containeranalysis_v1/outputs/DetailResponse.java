@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -328,7 +328,6 @@ public final class DetailResponse {
             this.vendor = Objects.requireNonNull(vendor);
             return this;
         }
-
         public DetailResponse build() {
             return new DetailResponse(affectedCpeUri, affectedPackage, affectedVersionEnd, affectedVersionStart, description, fixedCpeUri, fixedPackage, fixedVersion, isObsolete, packageType, severityName, source, sourceUpdateTime, vendor);
         }

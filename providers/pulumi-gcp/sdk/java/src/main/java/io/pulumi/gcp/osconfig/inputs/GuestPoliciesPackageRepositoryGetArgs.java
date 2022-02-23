@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryAptGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryGooGetArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesPackageRepositoryYumGetArgs;
@@ -23,7 +23,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="apt")
-    private final @Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt;
+        private final @Nullable Input<GuestPoliciesPackageRepositoryAptGetArgs> apt;
 
     public Input<GuestPoliciesPackageRepositoryAptGetArgs> getApt() {
         return this.apt == null ? Input.empty() : this.apt;
@@ -35,7 +35,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="goo")
-    private final @Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo;
+        private final @Nullable Input<GuestPoliciesPackageRepositoryGooGetArgs> goo;
 
     public Input<GuestPoliciesPackageRepositoryGooGetArgs> getGoo() {
         return this.goo == null ? Input.empty() : this.goo;
@@ -47,7 +47,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="yum")
-    private final @Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum;
+        private final @Nullable Input<GuestPoliciesPackageRepositoryYumGetArgs> yum;
 
     public Input<GuestPoliciesPackageRepositoryYumGetArgs> getYum() {
         return this.yum == null ? Input.empty() : this.yum;
@@ -59,7 +59,7 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="zypper")
-    private final @Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
+        private final @Nullable Input<GuestPoliciesPackageRepositoryZypperGetArgs> zypper;
 
     public Input<GuestPoliciesPackageRepositoryZypperGetArgs> getZypper() {
         return this.zypper == null ? Input.empty() : this.zypper;
@@ -148,7 +148,6 @@ public final class GuestPoliciesPackageRepositoryGetArgs extends io.pulumi.resou
             this.zypper = Input.ofNullable(zypper);
             return this;
         }
-
         public GuestPoliciesPackageRepositoryGetArgs build() {
             return new GuestPoliciesPackageRepositoryGetArgs(apt, goo, yum, zypper);
         }

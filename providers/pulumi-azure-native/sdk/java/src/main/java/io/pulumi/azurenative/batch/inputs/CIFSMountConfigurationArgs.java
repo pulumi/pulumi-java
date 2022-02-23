@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable Input<String> mountOptions;
+        private final @Nullable Input<String> mountOptions;
 
     public Input<String> getMountOptions() {
         return this.mountOptions == null ? Input.empty() : this.mountOptions;
     }
 
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+        private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -37,21 +37,21 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final Input<String> relativeMountPath;
+        private final Input<String> relativeMountPath;
 
     public Input<String> getRelativeMountPath() {
         return this.relativeMountPath;
     }
 
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+        private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
     }
 
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -155,7 +155,6 @@ public final class CIFSMountConfigurationArgs extends io.pulumi.resources.Resour
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public CIFSMountConfigurationArgs build() {
             return new CIFSMountConfigurationArgs(mountOptions, password, relativeMountPath, source, username);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.enums.FeatureEvaluationStrategy;
 import io.pulumi.awsnative.evidently.outputs.FeatureEntityOverride;
 import io.pulumi.awsnative.evidently.outputs.FeatureTag;
 import io.pulumi.awsnative.evidently.outputs.FeatureVariationObject;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetFeatureResult {
             this.variations = variations;
             return this;
         }
-
         public GetFeatureResult build() {
             return new GetFeatureResult(arn, defaultVariation, description, entityOverrides, evaluationStrategy, tags, variations);
         }

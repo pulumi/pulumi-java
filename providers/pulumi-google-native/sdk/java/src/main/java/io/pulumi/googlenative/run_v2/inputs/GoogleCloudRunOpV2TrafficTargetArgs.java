@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.enums.GoogleCloudRunOpV2TrafficTargetType;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="percent")
-    private final @Nullable Input<Integer> percent;
+      private final @Nullable Input<Integer> percent;
 
     public Input<Integer> getPercent() {
         return this.percent == null ? Input.empty() : this.percent;
@@ -36,7 +36,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<String> revision;
+      private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -47,7 +47,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+      private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -58,7 +58,7 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type;
+      private final @Nullable Input<GoogleCloudRunOpV2TrafficTargetType> type;
 
     public Input<GoogleCloudRunOpV2TrafficTargetType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -147,7 +147,6 @@ public final class GoogleCloudRunOpV2TrafficTargetArgs extends io.pulumi.resourc
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudRunOpV2TrafficTargetArgs build() {
             return new GoogleCloudRunOpV2TrafficTargetArgs(percent, revision, tag, type);
         }

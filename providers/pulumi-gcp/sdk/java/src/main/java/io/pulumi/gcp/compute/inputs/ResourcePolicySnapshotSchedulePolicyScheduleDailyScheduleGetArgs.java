@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
      * 
      */
     @InputImport(name="daysInCycle", required=true)
-    private final Input<Integer> daysInCycle;
+        private final Input<Integer> daysInCycle;
 
     public Input<Integer> getDaysInCycle() {
         return this.daysInCycle;
@@ -30,7 +30,7 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final Input<String> startTime;
+        private final Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime;
@@ -89,7 +89,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetA
             this.startTime = Input.of(Objects.requireNonNull(startTime));
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleDailyScheduleGetArgs(daysInCycle, startTime);
         }

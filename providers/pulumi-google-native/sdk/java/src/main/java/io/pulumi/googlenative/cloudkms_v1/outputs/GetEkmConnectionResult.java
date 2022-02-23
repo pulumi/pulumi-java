@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudkms_v1.outputs.ServiceResolverResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class GetEkmConnectionResult {
             this.serviceResolvers = Objects.requireNonNull(serviceResolvers);
             return this;
         }
-
         public GetEkmConnectionResult build() {
             return new GetEkmConnectionResult(createTime, etag, name, serviceResolvers);
         }

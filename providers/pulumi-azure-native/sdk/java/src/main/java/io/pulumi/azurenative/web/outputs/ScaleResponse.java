@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ScaleRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class ScaleResponse {
             this.rules = rules;
             return this;
         }
-
         public ScaleResponse build() {
             return new ScaleResponse(maxReplicas, minReplicas, rules);
         }

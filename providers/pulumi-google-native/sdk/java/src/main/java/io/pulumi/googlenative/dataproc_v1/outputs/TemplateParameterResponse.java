@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.ParameterValidationResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class TemplateParameterResponse {
             this.validation = Objects.requireNonNull(validation);
             return this;
         }
-
         public TemplateParameterResponse build() {
             return new TemplateParameterResponse(description, fields, name, validation);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.awsnative.opensearchservice.inputs.DomainMasterUserOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class DomainAdvancedSecurityOptionsInputArgs extends io.pulumi.reso
     public static final DomainAdvancedSecurityOptionsInputArgs Empty = new DomainAdvancedSecurityOptionsInputArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="internalUserDatabaseEnabled")
-    private final @Nullable Input<Boolean> internalUserDatabaseEnabled;
+        private final @Nullable Input<Boolean> internalUserDatabaseEnabled;
 
     public Input<Boolean> getInternalUserDatabaseEnabled() {
         return this.internalUserDatabaseEnabled == null ? Input.empty() : this.internalUserDatabaseEnabled;
     }
 
     @InputImport(name="masterUserOptions")
-    private final @Nullable Input<DomainMasterUserOptionsArgs> masterUserOptions;
+        private final @Nullable Input<DomainMasterUserOptionsArgs> masterUserOptions;
 
     public Input<DomainMasterUserOptionsArgs> getMasterUserOptions() {
         return this.masterUserOptions == null ? Input.empty() : this.masterUserOptions;
@@ -104,7 +104,6 @@ public final class DomainAdvancedSecurityOptionsInputArgs extends io.pulumi.reso
             this.masterUserOptions = Input.ofNullable(masterUserOptions);
             return this;
         }
-
         public DomainAdvancedSecurityOptionsInputArgs build() {
             return new DomainAdvancedSecurityOptionsInputArgs(enabled, internalUserDatabaseEnabled, masterUserOptions);
         }

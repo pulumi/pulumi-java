@@ -7,7 +7,7 @@ import io.pulumi.awsnative.servicecatalog.enums.CloudFormationProvisionedProduct
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningParameter;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductProvisioningPreferences;
 import io.pulumi.awsnative.servicecatalog.outputs.CloudFormationProvisionedProductTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -230,7 +230,6 @@ public final class GetCloudFormationProvisionedProductResult {
             this.tags = tags;
             return this;
         }
-
         public GetCloudFormationProvisionedProductResult build() {
             return new GetCloudFormationProvisionedProductResult(acceptLanguage, cloudformationStackArn, outputs, pathId, pathName, productId, productName, provisionedProductId, provisioningArtifactId, provisioningArtifactName, provisioningParameters, provisioningPreferences, recordId, tags);
         }

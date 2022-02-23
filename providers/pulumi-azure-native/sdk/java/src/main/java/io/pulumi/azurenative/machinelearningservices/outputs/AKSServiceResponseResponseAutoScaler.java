@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class AKSServiceResponseResponseAutoScaler {
             this.targetUtilization = targetUtilization;
             return this;
         }
-
         public AKSServiceResponseResponseAutoScaler build() {
             return new AKSServiceResponseResponseAutoScaler(autoscaleEnabled, maxReplicas, minReplicas, refreshPeriodInSeconds, targetUtilization);
         }

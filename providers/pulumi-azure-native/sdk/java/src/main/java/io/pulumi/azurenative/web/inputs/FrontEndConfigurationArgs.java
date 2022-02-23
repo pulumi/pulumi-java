@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.FrontEndServiceType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
     public static final FrontEndConfigurationArgs Empty = new FrontEndConfigurationArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<FrontEndServiceType> kind;
+        private final @Nullable Input<FrontEndServiceType> kind;
 
     public Input<FrontEndServiceType> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -58,7 +58,6 @@ public final class FrontEndConfigurationArgs extends io.pulumi.resources.Resourc
             this.kind = Input.ofNullable(kind);
             return this;
         }
-
         public FrontEndConfigurationArgs build() {
             return new FrontEndConfigurationArgs(kind);
         }

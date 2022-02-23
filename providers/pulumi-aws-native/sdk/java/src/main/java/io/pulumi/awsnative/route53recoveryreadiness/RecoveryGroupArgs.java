@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness;
 
 import io.pulumi.awsnative.route53recoveryreadiness.inputs.RecoveryGroupTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cells")
-    private final @Nullable Input<List<String>> cells;
+        private final @Nullable Input<List<String>> cells;
 
     public Input<List<String>> getCells() {
         return this.cells == null ? Input.empty() : this.cells;
@@ -32,7 +32,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recoveryGroupName")
-    private final @Nullable Input<String> recoveryGroupName;
+        private final @Nullable Input<String> recoveryGroupName;
 
     public Input<String> getRecoveryGroupName() {
         return this.recoveryGroupName == null ? Input.empty() : this.recoveryGroupName;
@@ -43,7 +43,7 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<RecoveryGroupTagArgs>> tags;
+        private final @Nullable Input<List<RecoveryGroupTagArgs>> tags;
 
     public Input<List<RecoveryGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -117,7 +117,6 @@ public final class RecoveryGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RecoveryGroupArgs build() {
             return new RecoveryGroupArgs(cells, recoveryGroupName, tags);
         }

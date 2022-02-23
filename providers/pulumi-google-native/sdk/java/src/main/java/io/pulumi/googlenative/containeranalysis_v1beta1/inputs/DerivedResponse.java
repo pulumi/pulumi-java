@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintResponse;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.LayerResponse;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="baseResourceUrl", required=true)
-    private final String baseResourceUrl;
+      private final String baseResourceUrl;
 
     public String getBaseResourceUrl() {
         return this.baseResourceUrl;
@@ -36,7 +36,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distance", required=true)
-    private final Integer distance;
+      private final Integer distance;
 
     public Integer getDistance() {
         return this.distance;
@@ -47,7 +47,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final FingerprintResponse fingerprint;
+      private final FingerprintResponse fingerprint;
 
     public FingerprintResponse getFingerprint() {
         return this.fingerprint;
@@ -58,7 +58,7 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="layerInfo", required=true)
-    private final List<LayerResponse> layerInfo;
+      private final List<LayerResponse> layerInfo;
 
     public List<LayerResponse> getLayerInfo() {
         return this.layerInfo;
@@ -127,7 +127,6 @@ public final class DerivedResponse extends io.pulumi.resources.InvokeArgs {
             this.layerInfo = Objects.requireNonNull(layerInfo);
             return this;
         }
-
         public DerivedResponse build() {
             return new DerivedResponse(baseResourceUrl, distance, fingerprint, layerInfo);
         }

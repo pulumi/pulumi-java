@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.transcoder_v1.outputs.JobConfigResponse;
 import io.pulumi.googlenative.transcoder_v1.outputs.StatusResponse;
 import java.lang.Integer;
@@ -266,7 +266,6 @@ public final class GetJobResult {
             this.ttlAfterCompletionDays = Objects.requireNonNull(ttlAfterCompletionDays);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(config, createTime, endTime, error, inputUri, name, outputUri, startTime, state, templateId, ttlAfterCompletionDays);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.avs.outputs;
 
 import io.pulumi.azurenative.avs.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -203,7 +203,6 @@ public final class GetClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(clusterId, clusterSize, hosts, id, name, provisioningState, sku, type);
         }

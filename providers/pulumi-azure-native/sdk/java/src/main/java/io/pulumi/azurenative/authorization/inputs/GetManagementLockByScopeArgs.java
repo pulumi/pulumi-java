@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="lockName", required=true)
-    private final String lockName;
+        private final String lockName;
 
     public String getLockName() {
         return this.lockName;
@@ -28,7 +28,7 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetManagementLockByScopeArgs extends io.pulumi.resources.Invo
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetManagementLockByScopeArgs build() {
             return new GetManagementLockByScopeArgs(lockName, scope);
         }

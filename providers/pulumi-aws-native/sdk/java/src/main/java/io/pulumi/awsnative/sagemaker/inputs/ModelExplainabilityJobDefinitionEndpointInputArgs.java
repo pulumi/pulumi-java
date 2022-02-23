@@ -6,7 +6,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType;
 import io.pulumi.awsnative.sagemaker.enums.ModelExplainabilityJobDefinitionEndpointInputS3InputMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
     public static final ModelExplainabilityJobDefinitionEndpointInputArgs Empty = new ModelExplainabilityJobDefinitionEndpointInputArgs();
 
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+        private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -32,7 +32,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * 
      */
     @InputImport(name="featuresAttribute")
-    private final @Nullable Input<String> featuresAttribute;
+        private final @Nullable Input<String> featuresAttribute;
 
     public Input<String> getFeaturesAttribute() {
         return this.featuresAttribute == null ? Input.empty() : this.featuresAttribute;
@@ -43,7 +43,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * 
      */
     @InputImport(name="inferenceAttribute")
-    private final @Nullable Input<String> inferenceAttribute;
+        private final @Nullable Input<String> inferenceAttribute;
 
     public Input<String> getInferenceAttribute() {
         return this.inferenceAttribute == null ? Input.empty() : this.inferenceAttribute;
@@ -54,7 +54,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final Input<String> localPath;
+        private final Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath;
@@ -65,7 +65,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * 
      */
     @InputImport(name="probabilityAttribute")
-    private final @Nullable Input<String> probabilityAttribute;
+        private final @Nullable Input<String> probabilityAttribute;
 
     public Input<String> getProbabilityAttribute() {
         return this.probabilityAttribute == null ? Input.empty() : this.probabilityAttribute;
@@ -76,7 +76,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * 
      */
     @InputImport(name="s3DataDistributionType")
-    private final @Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
+        private final @Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> s3DataDistributionType;
 
     public Input<ModelExplainabilityJobDefinitionEndpointInputS3DataDistributionType> getS3DataDistributionType() {
         return this.s3DataDistributionType == null ? Input.empty() : this.s3DataDistributionType;
@@ -87,7 +87,7 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
      * 
      */
     @InputImport(name="s3InputMode")
-    private final @Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode;
+        private final @Nullable Input<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> s3InputMode;
 
     public Input<ModelExplainabilityJobDefinitionEndpointInputS3InputMode> getS3InputMode() {
         return this.s3InputMode == null ? Input.empty() : this.s3InputMode;
@@ -221,7 +221,6 @@ public final class ModelExplainabilityJobDefinitionEndpointInputArgs extends io.
             this.s3InputMode = Input.ofNullable(s3InputMode);
             return this;
         }
-
         public ModelExplainabilityJobDefinitionEndpointInputArgs build() {
             return new ModelExplainabilityJobDefinitionEndpointInputArgs(endpointName, featuresAttribute, inferenceAttribute, localPath, probabilityAttribute, s3DataDistributionType, s3InputMode);
         }

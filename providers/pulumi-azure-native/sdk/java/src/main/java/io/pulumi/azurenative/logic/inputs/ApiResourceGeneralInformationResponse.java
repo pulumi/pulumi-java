@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -45,7 +45,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="iconUrl")
-    private final @Nullable String iconUrl;
+        private final @Nullable String iconUrl;
 
     public Optional<String> getIconUrl() {
         return this.iconUrl == null ? Optional.empty() : Optional.ofNullable(this.iconUrl);
@@ -56,7 +56,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="releaseTag")
-    private final @Nullable String releaseTag;
+        private final @Nullable String releaseTag;
 
     public Optional<String> getReleaseTag() {
         return this.releaseTag == null ? Optional.empty() : Optional.ofNullable(this.releaseTag);
@@ -67,7 +67,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="termsOfUseUrl")
-    private final @Nullable String termsOfUseUrl;
+        private final @Nullable String termsOfUseUrl;
 
     public Optional<String> getTermsOfUseUrl() {
         return this.termsOfUseUrl == null ? Optional.empty() : Optional.ofNullable(this.termsOfUseUrl);
@@ -78,7 +78,7 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+        private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -167,7 +167,6 @@ public final class ApiResourceGeneralInformationResponse extends io.pulumi.resou
             this.tier = tier;
             return this;
         }
-
         public ApiResourceGeneralInformationResponse build() {
             return new ApiResourceGeneralInformationResponse(description, displayName, iconUrl, releaseTag, termsOfUseUrl, tier);
         }

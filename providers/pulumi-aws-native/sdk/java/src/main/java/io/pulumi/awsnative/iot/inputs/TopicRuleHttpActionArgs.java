@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot.inputs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpActionHeaderArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleHttpAuthorizationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
     public static final TopicRuleHttpActionArgs Empty = new TopicRuleHttpActionArgs();
 
     @InputImport(name="auth")
-    private final @Nullable Input<TopicRuleHttpAuthorizationArgs> auth;
+        private final @Nullable Input<TopicRuleHttpAuthorizationArgs> auth;
 
     public Input<TopicRuleHttpAuthorizationArgs> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
     }
 
     @InputImport(name="confirmationUrl")
-    private final @Nullable Input<String> confirmationUrl;
+        private final @Nullable Input<String> confirmationUrl;
 
     public Input<String> getConfirmationUrl() {
         return this.confirmationUrl == null ? Input.empty() : this.confirmationUrl;
     }
 
     @InputImport(name="headers")
-    private final @Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers;
+        private final @Nullable Input<List<TopicRuleHttpActionHeaderArgs>> headers;
 
     public Input<List<TopicRuleHttpActionHeaderArgs>> getHeaders() {
         return this.headers == null ? Input.empty() : this.headers;
     }
 
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -128,7 +128,6 @@ public final class TopicRuleHttpActionArgs extends io.pulumi.resources.ResourceA
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public TopicRuleHttpActionArgs build() {
             return new TopicRuleHttpActionArgs(auth, confirmationUrl, headers, url);
         }

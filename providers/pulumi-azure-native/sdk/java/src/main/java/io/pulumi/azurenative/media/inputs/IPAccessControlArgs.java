@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.IPRangeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Input<List<IPRangeArgs>> allow;
+        private final @Nullable Input<List<IPRangeArgs>> allow;
 
     public Input<List<IPRangeArgs>> getAllow() {
         return this.allow == null ? Input.empty() : this.allow;
@@ -67,7 +67,6 @@ public final class IPAccessControlArgs extends io.pulumi.resources.ResourceArgs 
             this.allow = Input.ofNullable(allow);
             return this;
         }
-
         public IPAccessControlArgs build() {
             return new IPAccessControlArgs(allow);
         }

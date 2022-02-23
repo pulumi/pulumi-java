@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.deploymentmanager_alpha.outputs.PollingOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class AsyncOptionsResponse {
             this.pollingOptions = Objects.requireNonNull(pollingOptions);
             return this;
         }
-
         public AsyncOptionsResponse build() {
             return new AsyncOptionsResponse(methodMatch, pollingOptions);
         }

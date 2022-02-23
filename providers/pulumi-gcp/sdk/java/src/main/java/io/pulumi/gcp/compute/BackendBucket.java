@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.BackendBucketArgs;
 import io.pulumi.gcp.compute.inputs.BackendBucketState;
@@ -197,13 +197,6 @@ public class BackendBucket extends io.pulumi.resources.CustomResource {
         return this.selfLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BackendBucket(String name) {
-        super("gcp:compute/backendBucket:BackendBucket", name, BackendBucketArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

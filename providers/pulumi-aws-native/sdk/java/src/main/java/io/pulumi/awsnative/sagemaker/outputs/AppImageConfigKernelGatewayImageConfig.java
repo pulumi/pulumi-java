@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigFileSystemConfig;
 import io.pulumi.awsnative.sagemaker.outputs.AppImageConfigKernelSpec;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class AppImageConfigKernelGatewayImageConfig {
             this.kernelSpecs = Objects.requireNonNull(kernelSpecs);
             return this;
         }
-
         public AppImageConfigKernelGatewayImageConfig build() {
             return new AppImageConfigKernelGatewayImageConfig(fileSystemConfig, kernelSpecs);
         }

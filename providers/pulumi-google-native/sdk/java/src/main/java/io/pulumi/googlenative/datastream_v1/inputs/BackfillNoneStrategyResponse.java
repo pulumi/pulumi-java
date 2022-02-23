@@ -34,7 +34,6 @@ public final class BackfillNoneStrategyResponse extends io.pulumi.resources.Invo
         public Builder(BackfillNoneStrategyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public BackfillNoneStrategyResponse build() {
             return new BackfillNoneStrategyResponse();
         }

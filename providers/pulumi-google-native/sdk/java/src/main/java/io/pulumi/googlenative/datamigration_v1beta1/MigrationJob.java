@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datamigration_v1beta1.MigrationJobArgs;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.DatabaseTypeResponse;
@@ -291,13 +291,6 @@ public class MigrationJob extends io.pulumi.resources.CustomResource {
         return this.vpcPeeringConnectivity;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MigrationJob(String name) {
-        super("google-native:datamigration/v1beta1:MigrationJob", name, MigrationJobArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

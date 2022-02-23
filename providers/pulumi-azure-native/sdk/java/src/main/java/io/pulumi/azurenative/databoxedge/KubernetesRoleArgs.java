@@ -9,7 +9,7 @@ import io.pulumi.azurenative.databoxedge.inputs.KubernetesClusterInfoArgs;
 import io.pulumi.azurenative.databoxedge.inputs.KubernetesRoleResourcesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -35,7 +35,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostPlatform", required=true)
-    private final Input<Either<String,PlatformType>> hostPlatform;
+        private final Input<Either<String,PlatformType>> hostPlatform;
 
     public Input<Either<String,PlatformType>> getHostPlatform() {
         return this.hostPlatform;
@@ -47,7 +47,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -58,7 +58,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesClusterInfo", required=true)
-    private final Input<KubernetesClusterInfoArgs> kubernetesClusterInfo;
+        private final Input<KubernetesClusterInfoArgs> kubernetesClusterInfo;
 
     public Input<KubernetesClusterInfoArgs> getKubernetesClusterInfo() {
         return this.kubernetesClusterInfo;
@@ -69,7 +69,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kubernetesRoleResources", required=true)
-    private final Input<KubernetesRoleResourcesArgs> kubernetesRoleResources;
+        private final Input<KubernetesRoleResourcesArgs> kubernetesRoleResources;
 
     public Input<KubernetesRoleResourcesArgs> getKubernetesRoleResources() {
         return this.kubernetesRoleResources;
@@ -80,7 +80,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -91,7 +91,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleStatus", required=true)
-    private final Input<Either<String,RoleStatus>> roleStatus;
+        private final Input<Either<String,RoleStatus>> roleStatus;
 
     public Input<Either<String,RoleStatus>> getRoleStatus() {
         return this.roleStatus;
@@ -251,7 +251,6 @@ public final class KubernetesRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.roleStatus = Input.of(Objects.requireNonNull(roleStatus));
             return this;
         }
-
         public KubernetesRoleArgs build() {
             return new KubernetesRoleArgs(deviceName, hostPlatform, kind, kubernetesClusterInfo, kubernetesRoleResources, name, resourceGroupName, roleStatus);
         }

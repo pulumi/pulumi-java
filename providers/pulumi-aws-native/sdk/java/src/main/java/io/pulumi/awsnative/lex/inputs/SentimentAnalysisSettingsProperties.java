@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lex.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SentimentAnalysisSettingsProperties extends io.pulumi.resourc
      * 
      */
     @InputImport(name="detectSentiment", required=true)
-    private final Boolean detectSentiment;
+        private final Boolean detectSentiment;
 
     public Boolean getDetectSentiment() {
         return this.detectSentiment;
@@ -59,7 +59,6 @@ public final class SentimentAnalysisSettingsProperties extends io.pulumi.resourc
             this.detectSentiment = Objects.requireNonNull(detectSentiment);
             return this;
         }
-
         public SentimentAnalysisSettingsProperties build() {
             return new SentimentAnalysisSettingsProperties(detectSentiment);
         }

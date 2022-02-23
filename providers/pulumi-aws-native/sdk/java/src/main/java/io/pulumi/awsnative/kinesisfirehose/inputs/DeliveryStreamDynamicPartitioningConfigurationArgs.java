@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamRetryOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
     public static final DeliveryStreamDynamicPartitioningConfigurationArgs Empty = new DeliveryStreamDynamicPartitioningConfigurationArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="retryOptions")
-    private final @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions;
+        private final @Nullable Input<DeliveryStreamRetryOptionsArgs> retryOptions;
 
     public Input<DeliveryStreamRetryOptionsArgs> getRetryOptions() {
         return this.retryOptions == null ? Input.empty() : this.retryOptions;
@@ -82,7 +82,6 @@ public final class DeliveryStreamDynamicPartitioningConfigurationArgs extends io
             this.retryOptions = Input.ofNullable(retryOptions);
             return this;
         }
-
         public DeliveryStreamDynamicPartitioningConfigurationArgs build() {
             return new DeliveryStreamDynamicPartitioningConfigurationArgs(enabled, retryOptions);
         }

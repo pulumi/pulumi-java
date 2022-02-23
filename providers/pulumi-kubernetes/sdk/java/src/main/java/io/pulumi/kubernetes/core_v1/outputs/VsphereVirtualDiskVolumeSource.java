@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class VsphereVirtualDiskVolumeSource {
             this.volumePath = Objects.requireNonNull(volumePath);
             return this;
         }
-
         public VsphereVirtualDiskVolumeSource build() {
             return new VsphereVirtualDiskVolumeSource(fsType, storagePolicyID, storagePolicyName, volumePath);
         }

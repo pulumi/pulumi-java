@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.ResourceTypeExtensionOptionsResourceCreationBeginArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
     public static final ResourceTypeRegistrationPropertiesExtensionOptionsArgs Empty = new ResourceTypeRegistrationPropertiesExtensionOptionsArgs();
 
     @InputImport(name="resourceCreationBegin")
-    private final @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
+        private final @Nullable Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> resourceCreationBegin;
 
     public Input<ResourceTypeExtensionOptionsResourceCreationBeginArgs> getResourceCreationBegin() {
         return this.resourceCreationBegin == null ? Input.empty() : this.resourceCreationBegin;
@@ -58,7 +58,6 @@ public final class ResourceTypeRegistrationPropertiesExtensionOptionsArgs extend
             this.resourceCreationBegin = Input.ofNullable(resourceCreationBegin);
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesExtensionOptionsArgs build() {
             return new ResourceTypeRegistrationPropertiesExtensionOptionsArgs(resourceCreationBegin);
         }

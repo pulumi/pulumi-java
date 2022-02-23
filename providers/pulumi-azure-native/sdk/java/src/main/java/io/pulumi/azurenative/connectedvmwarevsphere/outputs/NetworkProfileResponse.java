@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
 import io.pulumi.azurenative.connectedvmwarevsphere.outputs.NetworkInterfaceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class NetworkProfileResponse {
             this.networkInterfaces = networkInterfaces;
             return this;
         }
-
         public NetworkProfileResponse build() {
             return new NetworkProfileResponse(networkInterfaces);
         }

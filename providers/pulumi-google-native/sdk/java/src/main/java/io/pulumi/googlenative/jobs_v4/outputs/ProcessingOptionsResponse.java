@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ProcessingOptionsResponse {
             this.htmlSanitization = Objects.requireNonNull(htmlSanitization);
             return this;
         }
-
         public ProcessingOptionsResponse build() {
             return new ProcessingOptionsResponse(disableStreetAddressResolution, htmlSanitization);
         }

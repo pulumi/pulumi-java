@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.EtwProviderConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.EventLogConfigurationArgs;
 import io.pulumi.azurenative.insights.inputs.PerformanceCounterConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="eventLogs")
-    private final @Nullable Input<List<EventLogConfigurationArgs>> eventLogs;
+        private final @Nullable Input<List<EventLogConfigurationArgs>> eventLogs;
 
     public Input<List<EventLogConfigurationArgs>> getEventLogs() {
         return this.eventLogs == null ? Input.empty() : this.eventLogs;
@@ -33,7 +33,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="perfCounters")
-    private final @Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters;
+        private final @Nullable Input<List<PerformanceCounterConfigurationArgs>> perfCounters;
 
     public Input<List<PerformanceCounterConfigurationArgs>> getPerfCounters() {
         return this.perfCounters == null ? Input.empty() : this.perfCounters;
@@ -44,7 +44,7 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="providers")
-    private final @Nullable Input<List<EtwProviderConfigurationArgs>> providers;
+        private final @Nullable Input<List<EtwProviderConfigurationArgs>> providers;
 
     public Input<List<EtwProviderConfigurationArgs>> getProviders() {
         return this.providers == null ? Input.empty() : this.providers;
@@ -118,7 +118,6 @@ public final class DataSourceConfigurationArgs extends io.pulumi.resources.Resou
             this.providers = Input.ofNullable(providers);
             return this;
         }
-
         public DataSourceConfigurationArgs build() {
             return new DataSourceConfigurationArgs(eventLogs, perfCounters, providers);
         }

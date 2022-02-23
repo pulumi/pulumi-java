@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,21 +21,21 @@ public final class ApiConfigIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="api")
-    private final @Nullable Input<String> api;
+        private final @Nullable Input<String> api;
 
     public Input<String> getApi() {
         return this.api == null ? Input.empty() : this.api;
     }
 
     @InputImport(name="apiConfig")
-    private final @Nullable Input<String> apiConfig;
+        private final @Nullable Input<String> apiConfig;
 
     public Input<String> getApiConfig() {
         return this.apiConfig == null ? Input.empty() : this.apiConfig;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<ApiConfigIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<ApiConfigIamMemberConditionGetArgs> condition;
 
     public Input<ApiConfigIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -46,14 +46,14 @@ public final class ApiConfigIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -65,7 +65,7 @@ public final class ApiConfigIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -78,7 +78,7 @@ public final class ApiConfigIamMemberState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -212,7 +212,6 @@ public final class ApiConfigIamMemberState extends io.pulumi.resources.ResourceA
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public ApiConfigIamMemberState build() {
             return new ApiConfigIamMemberState(api, apiConfig, condition, etag, member, project, role);
         }

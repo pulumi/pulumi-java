@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -289,7 +289,6 @@ public final class GetWebAppHybridConnectionSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWebAppHybridConnectionSlotResult build() {
             return new GetWebAppHybridConnectionSlotResult(hostname, id, kind, name, port, relayArmUri, relayName, sendKeyName, sendKeyValue, serviceBusNamespace, serviceBusSuffix, type);
         }

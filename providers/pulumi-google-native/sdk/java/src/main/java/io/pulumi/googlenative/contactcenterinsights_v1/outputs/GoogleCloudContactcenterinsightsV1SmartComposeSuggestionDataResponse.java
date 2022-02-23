@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -118,7 +118,6 @@ public final class GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataR
             this.suggestion = Objects.requireNonNull(suggestion);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1SmartComposeSuggestionDataResponse(confidenceScore, metadata, queryRecord, suggestion);
         }

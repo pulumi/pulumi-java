@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall;
 
 import io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final FirewallPolicyArgs Empty = new FirewallPolicyArgs();
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="firewallPolicy", required=true)
-    private final Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy;
+        private final Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> firewallPolicy;
 
     public Input<io.pulumi.awsnative.networkfirewall.inputs.FirewallPolicyArgs> getFirewallPolicy() {
         return this.firewallPolicy;
     }
 
     @InputImport(name="firewallPolicyName")
-    private final @Nullable Input<String> firewallPolicyName;
+        private final @Nullable Input<String> firewallPolicyName;
 
     public Input<String> getFirewallPolicyName() {
         return this.firewallPolicyName == null ? Input.empty() : this.firewallPolicyName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<FirewallPolicyTagArgs>> tags;
+        private final @Nullable Input<List<FirewallPolicyTagArgs>> tags;
 
     public Input<List<FirewallPolicyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -127,7 +127,6 @@ public final class FirewallPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FirewallPolicyArgs build() {
             return new FirewallPolicyArgs(description, firewallPolicy, firewallPolicyName, tags);
         }

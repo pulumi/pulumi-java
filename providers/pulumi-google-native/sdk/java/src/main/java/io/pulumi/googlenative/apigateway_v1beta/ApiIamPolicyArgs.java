@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigateway_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayAuditConfigArgs;
 import io.pulumi.googlenative.apigateway_v1beta.inputs.ApigatewayBindingArgs;
 import java.lang.Integer;
@@ -19,7 +19,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApiIamPolicyArgs Empty = new ApiIamPolicyArgs();
 
     @InputImport(name="apiId", required=true)
-    private final Input<String> apiId;
+      private final Input<String> apiId;
 
     public Input<String> getApiId() {
         return this.apiId;
@@ -30,7 +30,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auditConfigs")
-    private final @Nullable Input<List<ApigatewayAuditConfigArgs>> auditConfigs;
+      private final @Nullable Input<List<ApigatewayAuditConfigArgs>> auditConfigs;
 
     public Input<List<ApigatewayAuditConfigArgs>> getAuditConfigs() {
         return this.auditConfigs == null ? Input.empty() : this.auditConfigs;
@@ -41,7 +41,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bindings")
-    private final @Nullable Input<List<ApigatewayBindingArgs>> bindings;
+      private final @Nullable Input<List<ApigatewayBindingArgs>> bindings;
 
     public Input<List<ApigatewayBindingArgs>> getBindings() {
         return this.bindings == null ? Input.empty() : this.bindings;
@@ -52,21 +52,21 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+      private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -77,7 +77,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateMask")
-    private final @Nullable Input<String> updateMask;
+      private final @Nullable Input<String> updateMask;
 
     public Input<String> getUpdateMask() {
         return this.updateMask == null ? Input.empty() : this.updateMask;
@@ -88,7 +88,7 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Integer> version;
+      private final @Nullable Input<Integer> version;
 
     public Input<Integer> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -237,7 +237,6 @@ public final class ApiIamPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ApiIamPolicyArgs build() {
             return new ApiIamPolicyArgs(apiId, auditConfigs, bindings, etag, location, project, updateMask, version);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.EncoderCustomPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.EncoderSystemPresetResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.NodeInputResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -123,7 +123,6 @@ public final class EncoderProcessorResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncoderProcessorResponse build() {
             return new EncoderProcessorResponse(inputs, name, preset, type);
         }

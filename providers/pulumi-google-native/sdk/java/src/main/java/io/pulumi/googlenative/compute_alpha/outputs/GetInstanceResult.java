@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AdvancedMachineFeaturesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.AttachedDiskResponse;
@@ -1115,7 +1115,6 @@ public final class GetInstanceResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(advancedMachineFeatures, canIpForward, confidentialInstanceConfig, cpuPlatform, creationTimestamp, deletionProtection, description, disks, displayDevice, eraseWindowsVssSignature, fingerprint, guestAccelerators, hostname, instanceEncryptionKey, keyRevocationActionType, kind, labelFingerprint, labels, lastStartTimestamp, lastStopTimestamp, lastSuspendedTimestamp, machineType, metadata, minCpuPlatform, name, networkInterfaces, networkPerformanceConfig, params, postKeyRevocationActionType, preservedStateSizeGb, privateIpv6GoogleAccess, reservationAffinity, resourcePolicies, resourceStatus, satisfiesPzs, scheduling, secureTags, selfLink, selfLinkWithId, serviceAccounts, shieldedInstanceConfig, shieldedInstanceIntegrityPolicy, shieldedVmConfig, shieldedVmIntegrityPolicy, sourceMachineImage, sourceMachineImageEncryptionKey, startRestricted, status, statusMessage, tags, upcomingMaintenance, zone);
         }

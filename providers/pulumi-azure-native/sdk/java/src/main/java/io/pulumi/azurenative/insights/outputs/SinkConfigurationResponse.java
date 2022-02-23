@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class SinkConfigurationResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public SinkConfigurationResponse build() {
             return new SinkConfigurationResponse(kind);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+        private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -30,7 +30,7 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+        private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -89,7 +89,6 @@ public final class ManagementGroupSubscriptionArgs extends io.pulumi.resources.R
             this.subscriptionId = Input.ofNullable(subscriptionId);
             return this;
         }
-
         public ManagementGroupSubscriptionArgs build() {
             return new ManagementGroupSubscriptionArgs(groupId, subscriptionId);
         }

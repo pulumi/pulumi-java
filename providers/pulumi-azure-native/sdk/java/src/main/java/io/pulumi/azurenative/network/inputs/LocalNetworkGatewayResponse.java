@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.AddressSpaceResponse;
 import io.pulumi.azurenative.network.inputs.BgpSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="bgpSettings")
-    private final @Nullable BgpSettingsResponse bgpSettings;
+        private final @Nullable BgpSettingsResponse bgpSettings;
 
     public Optional<BgpSettingsResponse> getBgpSettings() {
         return this.bgpSettings == null ? Optional.empty() : Optional.ofNullable(this.bgpSettings);
@@ -37,7 +37,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -48,7 +48,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable String fqdn;
+        private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -59,7 +59,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="gatewayIpAddress")
-    private final @Nullable String gatewayIpAddress;
+        private final @Nullable String gatewayIpAddress;
 
     public Optional<String> getGatewayIpAddress() {
         return this.gatewayIpAddress == null ? Optional.empty() : Optional.ofNullable(this.gatewayIpAddress);
@@ -70,7 +70,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -81,7 +81,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="localNetworkAddressSpace")
-    private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
+        private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
 
     public Optional<AddressSpaceResponse> getLocalNetworkAddressSpace() {
         return this.localNetworkAddressSpace == null ? Optional.empty() : Optional.ofNullable(this.localNetworkAddressSpace);
@@ -92,7 +92,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -103,7 +103,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -114,7 +114,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -125,7 +125,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGuid", required=true)
-    private final String resourceGuid;
+        private final String resourceGuid;
 
     public String getResourceGuid() {
         return this.resourceGuid;
@@ -136,7 +136,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -147,7 +147,7 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -296,7 +296,6 @@ public final class LocalNetworkGatewayResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LocalNetworkGatewayResponse build() {
             return new LocalNetworkGatewayResponse(bgpSettings, etag, fqdn, gatewayIpAddress, id, localNetworkAddressSpace, location, name, provisioningState, resourceGuid, tags, type);
         }

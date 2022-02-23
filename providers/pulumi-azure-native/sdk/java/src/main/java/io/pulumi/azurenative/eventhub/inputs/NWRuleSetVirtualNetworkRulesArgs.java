@@ -5,7 +5,7 @@ package io.pulumi.azurenative.eventhub.inputs;
 
 import io.pulumi.azurenative.eventhub.inputs.SubnetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="ignoreMissingVnetServiceEndpoint")
-    private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
+        private final @Nullable Input<Boolean> ignoreMissingVnetServiceEndpoint;
 
     public Input<Boolean> getIgnoreMissingVnetServiceEndpoint() {
         return this.ignoreMissingVnetServiceEndpoint == null ? Input.empty() : this.ignoreMissingVnetServiceEndpoint;
@@ -35,7 +35,7 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+        private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -94,7 +94,6 @@ public final class NWRuleSetVirtualNetworkRulesArgs extends io.pulumi.resources.
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public NWRuleSetVirtualNetworkRulesArgs build() {
             return new NWRuleSetVirtualNetworkRulesArgs(ignoreMissingVnetServiceEndpoint, subnet);
         }

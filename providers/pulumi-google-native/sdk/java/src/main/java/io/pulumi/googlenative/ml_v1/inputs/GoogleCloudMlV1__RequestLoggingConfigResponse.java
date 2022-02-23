@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="bigqueryTableName", required=true)
-    private final String bigqueryTableName;
+      private final String bigqueryTableName;
 
     public String getBigqueryTableName() {
         return this.bigqueryTableName;
@@ -33,7 +33,7 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends io.pulu
      * 
      */
     @InputImport(name="samplingPercentage", required=true)
-    private final Double samplingPercentage;
+      private final Double samplingPercentage;
 
     public Double getSamplingPercentage() {
         return this.samplingPercentage;
@@ -82,7 +82,6 @@ public final class GoogleCloudMlV1__RequestLoggingConfigResponse extends io.pulu
             this.samplingPercentage = Objects.requireNonNull(samplingPercentage);
             return this;
         }
-
         public GoogleCloudMlV1__RequestLoggingConfigResponse build() {
             return new GoogleCloudMlV1__RequestLoggingConfigResponse(bigqueryTableName, samplingPercentage);
         }

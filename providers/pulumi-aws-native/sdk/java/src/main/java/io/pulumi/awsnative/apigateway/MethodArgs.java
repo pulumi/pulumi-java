@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.enums.MethodAuthorizationType;
 import io.pulumi.awsnative.apigateway.inputs.MethodIntegrationArgs;
 import io.pulumi.awsnative.apigateway.inputs.MethodResponseArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiKeyRequired")
-    private final @Nullable Input<Boolean> apiKeyRequired;
+        private final @Nullable Input<Boolean> apiKeyRequired;
 
     public Input<Boolean> getApiKeyRequired() {
         return this.apiKeyRequired == null ? Input.empty() : this.apiKeyRequired;
@@ -36,7 +36,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationScopes")
-    private final @Nullable Input<List<String>> authorizationScopes;
+        private final @Nullable Input<List<String>> authorizationScopes;
 
     public Input<List<String>> getAuthorizationScopes() {
         return this.authorizationScopes == null ? Input.empty() : this.authorizationScopes;
@@ -47,7 +47,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationType")
-    private final @Nullable Input<MethodAuthorizationType> authorizationType;
+        private final @Nullable Input<MethodAuthorizationType> authorizationType;
 
     public Input<MethodAuthorizationType> getAuthorizationType() {
         return this.authorizationType == null ? Input.empty() : this.authorizationType;
@@ -58,7 +58,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizerId")
-    private final @Nullable Input<String> authorizerId;
+        private final @Nullable Input<String> authorizerId;
 
     public Input<String> getAuthorizerId() {
         return this.authorizerId == null ? Input.empty() : this.authorizerId;
@@ -69,7 +69,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final Input<String> httpMethod;
+        private final Input<String> httpMethod;
 
     public Input<String> getHttpMethod() {
         return this.httpMethod;
@@ -80,7 +80,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="integration")
-    private final @Nullable Input<MethodIntegrationArgs> integration;
+        private final @Nullable Input<MethodIntegrationArgs> integration;
 
     public Input<MethodIntegrationArgs> getIntegration() {
         return this.integration == null ? Input.empty() : this.integration;
@@ -91,7 +91,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodResponses")
-    private final @Nullable Input<List<MethodResponseArgs>> methodResponses;
+        private final @Nullable Input<List<MethodResponseArgs>> methodResponses;
 
     public Input<List<MethodResponseArgs>> getMethodResponses() {
         return this.methodResponses == null ? Input.empty() : this.methodResponses;
@@ -102,7 +102,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationName")
-    private final @Nullable Input<String> operationName;
+        private final @Nullable Input<String> operationName;
 
     public Input<String> getOperationName() {
         return this.operationName == null ? Input.empty() : this.operationName;
@@ -113,7 +113,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestModels")
-    private final @Nullable Input<Object> requestModels;
+        private final @Nullable Input<Object> requestModels;
 
     public Input<Object> getRequestModels() {
         return this.requestModels == null ? Input.empty() : this.requestModels;
@@ -124,7 +124,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestParameters")
-    private final @Nullable Input<Object> requestParameters;
+        private final @Nullable Input<Object> requestParameters;
 
     public Input<Object> getRequestParameters() {
         return this.requestParameters == null ? Input.empty() : this.requestParameters;
@@ -135,7 +135,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestValidatorId")
-    private final @Nullable Input<String> requestValidatorId;
+        private final @Nullable Input<String> requestValidatorId;
 
     public Input<String> getRequestValidatorId() {
         return this.requestValidatorId == null ? Input.empty() : this.requestValidatorId;
@@ -146,7 +146,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -157,7 +157,7 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId", required=true)
-    private final Input<String> restApiId;
+        private final Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId;
@@ -381,7 +381,6 @@ public final class MethodArgs extends io.pulumi.resources.ResourceArgs {
             this.restApiId = Input.of(Objects.requireNonNull(restApiId));
             return this;
         }
-
         public MethodArgs build() {
             return new MethodArgs(apiKeyRequired, authorizationScopes, authorizationType, authorizerId, httpMethod, integration, methodResponses, operationName, requestModels, requestParameters, requestValidatorId, resourceId, restApiId);
         }

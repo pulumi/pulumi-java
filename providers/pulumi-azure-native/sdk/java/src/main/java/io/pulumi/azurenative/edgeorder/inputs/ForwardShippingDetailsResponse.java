@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="carrierDisplayName", required=true)
-    private final String carrierDisplayName;
+        private final String carrierDisplayName;
 
     public String getCarrierDisplayName() {
         return this.carrierDisplayName;
@@ -32,7 +32,7 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final String carrierName;
+        private final String carrierName;
 
     public String getCarrierName() {
         return this.carrierName;
@@ -43,7 +43,7 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trackingId", required=true)
-    private final String trackingId;
+        private final String trackingId;
 
     public String getTrackingId() {
         return this.trackingId;
@@ -54,7 +54,7 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="trackingUrl", required=true)
-    private final String trackingUrl;
+        private final String trackingUrl;
 
     public String getTrackingUrl() {
         return this.trackingUrl;
@@ -123,7 +123,6 @@ public final class ForwardShippingDetailsResponse extends io.pulumi.resources.In
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public ForwardShippingDetailsResponse build() {
             return new ForwardShippingDetailsResponse(carrierDisplayName, carrierName, trackingId, trackingUrl);
         }

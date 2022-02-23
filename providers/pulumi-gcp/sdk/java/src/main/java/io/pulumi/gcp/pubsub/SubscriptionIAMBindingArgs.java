@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,14 +17,14 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
     public static final SubscriptionIAMBindingArgs Empty = new SubscriptionIAMBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<SubscriptionIAMBindingConditionArgs> condition;
+        private final @Nullable Input<SubscriptionIAMBindingConditionArgs> condition;
 
     public Input<SubscriptionIAMBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -36,7 +36,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -49,7 +49,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -60,7 +60,7 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="subscription", required=true)
-    private final Input<String> subscription;
+        private final Input<String> subscription;
 
     public Input<String> getSubscription() {
         return this.subscription;
@@ -164,7 +164,6 @@ public final class SubscriptionIAMBindingArgs extends io.pulumi.resources.Resour
             this.subscription = Input.of(Objects.requireNonNull(subscription));
             return this;
         }
-
         public SubscriptionIAMBindingArgs build() {
             return new SubscriptionIAMBindingArgs(condition, members, project, role, subscription);
         }

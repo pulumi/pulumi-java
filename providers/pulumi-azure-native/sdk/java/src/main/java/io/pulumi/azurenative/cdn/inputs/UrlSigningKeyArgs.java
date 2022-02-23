@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.KeyVaultSigningKeyParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final Input<String> keyId;
+        private final Input<String> keyId;
 
     public Input<String> getKeyId() {
         return this.keyId;
@@ -34,7 +34,7 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySourceParameters", required=true)
-    private final Input<KeyVaultSigningKeyParametersArgs> keySourceParameters;
+        private final Input<KeyVaultSigningKeyParametersArgs> keySourceParameters;
 
     public Input<KeyVaultSigningKeyParametersArgs> getKeySourceParameters() {
         return this.keySourceParameters;
@@ -93,7 +93,6 @@ public final class UrlSigningKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.keySourceParameters = Input.of(Objects.requireNonNull(keySourceParameters));
             return this;
         }
-
         public UrlSigningKeyArgs build() {
             return new UrlSigningKeyArgs(keyId, keySourceParameters);
         }

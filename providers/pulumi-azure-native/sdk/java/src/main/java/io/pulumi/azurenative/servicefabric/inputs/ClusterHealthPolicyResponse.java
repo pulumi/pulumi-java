@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationHealthPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="applicationHealthPolicies")
-    private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
+        private final @Nullable Map<String,ApplicationHealthPolicyResponse> applicationHealthPolicies;
 
     public Map<String,ApplicationHealthPolicyResponse> getApplicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Map.of() : this.applicationHealthPolicies;
@@ -42,7 +42,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxPercentUnhealthyApplications")
-    private final @Nullable Integer maxPercentUnhealthyApplications;
+        private final @Nullable Integer maxPercentUnhealthyApplications;
 
     public Optional<Integer> getMaxPercentUnhealthyApplications() {
         return this.maxPercentUnhealthyApplications == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyApplications);
@@ -60,7 +60,7 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="maxPercentUnhealthyNodes")
-    private final @Nullable Integer maxPercentUnhealthyNodes;
+        private final @Nullable Integer maxPercentUnhealthyNodes;
 
     public Optional<Integer> getMaxPercentUnhealthyNodes() {
         return this.maxPercentUnhealthyNodes == null ? Optional.empty() : Optional.ofNullable(this.maxPercentUnhealthyNodes);
@@ -119,7 +119,6 @@ public final class ClusterHealthPolicyResponse extends io.pulumi.resources.Invok
             this.maxPercentUnhealthyNodes = maxPercentUnhealthyNodes;
             return this;
         }
-
         public ClusterHealthPolicyResponse build() {
             return new ClusterHealthPolicyResponse(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
         }

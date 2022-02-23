@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -46,7 +46,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="helpUrl")
-    private final @Nullable Input<String> helpUrl;
+        private final @Nullable Input<String> helpUrl;
 
     public Input<String> getHelpUrl() {
         return this.helpUrl == null ? Input.empty() : this.helpUrl;
@@ -57,7 +57,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="isEnabledByDefault")
-    private final @Nullable Input<Boolean> isEnabledByDefault;
+        private final @Nullable Input<Boolean> isEnabledByDefault;
 
     public Input<Boolean> getIsEnabledByDefault() {
         return this.isEnabledByDefault == null ? Input.empty() : this.isEnabledByDefault;
@@ -68,7 +68,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="isHidden")
-    private final @Nullable Input<Boolean> isHidden;
+        private final @Nullable Input<Boolean> isHidden;
 
     public Input<Boolean> getIsHidden() {
         return this.isHidden == null ? Input.empty() : this.isHidden;
@@ -79,7 +79,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="isInPreview")
-    private final @Nullable Input<Boolean> isInPreview;
+        private final @Nullable Input<Boolean> isInPreview;
 
     public Input<Boolean> getIsInPreview() {
         return this.isInPreview == null ? Input.empty() : this.isInPreview;
@@ -90,7 +90,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
      * 
      */
     @InputImport(name="supportsEmailNotifications")
-    private final @Nullable Input<Boolean> supportsEmailNotifications;
+        private final @Nullable Input<Boolean> supportsEmailNotifications;
 
     public Input<Boolean> getSupportsEmailNotifications() {
         return this.supportsEmailNotifications == null ? Input.empty() : this.supportsEmailNotifications;
@@ -250,7 +250,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRu
             this.supportsEmailNotifications = Input.ofNullable(supportsEmailNotifications);
             return this;
         }
-
         public ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs build() {
             return new ApplicationInsightsComponentProactiveDetectionConfigurationRuleDefinitionsArgs(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);
         }

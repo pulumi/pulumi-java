@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigNodeGroupAffinity;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplatePlacementManagedClusterConfigGceClusterConfigReservationAffinity;
 import java.lang.Boolean;
@@ -270,7 +270,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig
             this.zone = zone;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigGceClusterConfig(internalIpOnly, metadata, network, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, subnetwork, tags, zone);
         }

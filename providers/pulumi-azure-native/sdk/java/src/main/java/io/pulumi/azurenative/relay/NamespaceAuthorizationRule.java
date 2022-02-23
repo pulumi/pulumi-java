@@ -8,8 +8,8 @@ import io.pulumi.azurenative.relay.NamespaceAuthorizationRuleArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -74,13 +74,6 @@ public class NamespaceAuthorizationRule extends io.pulumi.resources.CustomResour
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NamespaceAuthorizationRule(String name) {
-        super("azure-native:relay:NamespaceAuthorizationRule", name, NamespaceAuthorizationRuleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

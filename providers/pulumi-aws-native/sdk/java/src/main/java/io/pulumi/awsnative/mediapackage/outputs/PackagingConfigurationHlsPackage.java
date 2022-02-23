@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.outputs;
 
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsEncryption;
 import io.pulumi.awsnative.mediapackage.outputs.PackagingConfigurationHlsManifest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -106,7 +106,6 @@ public final class PackagingConfigurationHlsPackage {
             this.useAudioRenditionGroup = useAudioRenditionGroup;
             return this;
         }
-
         public PackagingConfigurationHlsPackage build() {
             return new PackagingConfigurationHlsPackage(encryption, hlsManifests, segmentDurationSeconds, useAudioRenditionGroup);
         }

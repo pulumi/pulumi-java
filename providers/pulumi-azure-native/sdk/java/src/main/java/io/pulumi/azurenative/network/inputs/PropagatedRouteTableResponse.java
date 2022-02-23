@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PropagatedRouteTableResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="ids")
-    private final @Nullable List<SubResourceResponse> ids;
+        private final @Nullable List<SubResourceResponse> ids;
 
     public List<SubResourceResponse> getIds() {
         return this.ids == null ? List.of() : this.ids;
@@ -36,7 +36,7 @@ public final class PropagatedRouteTableResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable List<String> labels;
+        private final @Nullable List<String> labels;
 
     public List<String> getLabels() {
         return this.labels == null ? List.of() : this.labels;
@@ -85,7 +85,6 @@ public final class PropagatedRouteTableResponse extends io.pulumi.resources.Invo
             this.labels = labels;
             return this;
         }
-
         public PropagatedRouteTableResponse build() {
             return new PropagatedRouteTableResponse(ids, labels);
         }

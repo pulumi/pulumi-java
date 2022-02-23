@@ -21,7 +21,7 @@ import io.pulumi.azurenative.containerservice.outputs.ManagedClusterServicePrinc
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterWindowsProfileResponse;
 import io.pulumi.azurenative.containerservice.outputs.PowerStateResponse;
 import io.pulumi.azurenative.containerservice.outputs.PrivateLinkResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -812,7 +812,6 @@ public final class GetManagedClusterResult {
             this.windowsProfile = windowsProfile;
             return this;
         }
-
         public GetManagedClusterResult build() {
             return new GetManagedClusterResult(aadProfile, addonProfiles, agentPoolProfiles, apiServerAccessProfile, autoScalerProfile, autoUpgradeProfile, azurePortalFQDN, disableLocalAccounts, diskEncryptionSetID, dnsPrefix, enablePodSecurityPolicy, enableRBAC, extendedLocation, fqdn, fqdnSubdomain, httpProxyConfig, id, identity, identityProfile, kubernetesVersion, linuxProfile, location, maxAgentPools, name, networkProfile, nodeResourceGroup, podIdentityProfile, powerState, privateFQDN, privateLinkResources, provisioningState, servicePrincipalProfile, sku, tags, type, windowsProfile);
         }

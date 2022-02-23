@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ssmcontacts.outputs;
 
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactChannelTargetInfo;
 import io.pulumi.awsnative.ssmcontacts.outputs.ContactTargetInfo;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class ContactTargets {
             this.contactTargetInfo = contactTargetInfo;
             return this;
         }
-
         public ContactTargets build() {
             return new ContactTargets(channelTargetInfo, contactTargetInfo);
         }

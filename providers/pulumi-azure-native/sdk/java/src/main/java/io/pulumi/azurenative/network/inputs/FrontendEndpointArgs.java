@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.SessionAffinityEnabledState;
 import io.pulumi.azurenative.network.inputs.FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable Input<String> hostName;
+        private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -38,7 +38,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -49,7 +49,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -60,7 +60,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionAffinityEnabledState")
-    private final @Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
+        private final @Nullable Input<Either<String,SessionAffinityEnabledState>> sessionAffinityEnabledState;
 
     public Input<Either<String,SessionAffinityEnabledState>> getSessionAffinityEnabledState() {
         return this.sessionAffinityEnabledState == null ? Input.empty() : this.sessionAffinityEnabledState;
@@ -71,7 +71,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="sessionAffinityTtlSeconds")
-    private final @Nullable Input<Integer> sessionAffinityTtlSeconds;
+        private final @Nullable Input<Integer> sessionAffinityTtlSeconds;
 
     public Input<Integer> getSessionAffinityTtlSeconds() {
         return this.sessionAffinityTtlSeconds == null ? Input.empty() : this.sessionAffinityTtlSeconds;
@@ -82,7 +82,7 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="webApplicationFirewallPolicyLink")
-    private final @Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
+        private final @Nullable Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> webApplicationFirewallPolicyLink;
 
     public Input<FrontendEndpointUpdateParametersWebApplicationFirewallPolicyLinkArgs> getWebApplicationFirewallPolicyLink() {
         return this.webApplicationFirewallPolicyLink == null ? Input.empty() : this.webApplicationFirewallPolicyLink;
@@ -201,7 +201,6 @@ public final class FrontendEndpointArgs extends io.pulumi.resources.ResourceArgs
             this.webApplicationFirewallPolicyLink = Input.ofNullable(webApplicationFirewallPolicyLink);
             return this;
         }
-
         public FrontendEndpointArgs build() {
             return new FrontendEndpointArgs(hostName, id, name, sessionAffinityEnabledState, sessionAffinityTtlSeconds, webApplicationFirewallPolicyLink);
         }

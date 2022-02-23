@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHier
             this.categories = Objects.requireNonNull(categories);
             return this;
         }
-
         public GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse build() {
             return new GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse(categories);
         }

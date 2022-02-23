@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="operationInProgress")
-    private final @Nullable String operationInProgress;
+        private final @Nullable String operationInProgress;
 
     public Optional<String> getOperationInProgress() {
         return this.operationInProgress == null ? Optional.empty() : Optional.ofNullable(this.operationInProgress);
@@ -34,7 +34,7 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="operationInProgressLockTimeoutInUTC")
-    private final @Nullable String operationInProgressLockTimeoutInUTC;
+        private final @Nullable String operationInProgressLockTimeoutInUTC;
 
     public Optional<String> getOperationInProgressLockTimeoutInUTC() {
         return this.operationInProgressLockTimeoutInUTC == null ? Optional.empty() : Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
@@ -83,7 +83,6 @@ public final class ResourceMoveDetailsResponse extends io.pulumi.resources.Invok
             this.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
             return this;
         }
-
         public ResourceMoveDetailsResponse build() {
             return new ResourceMoveDetailsResponse(operationInProgress, operationInProgressLockTimeoutInUTC);
         }

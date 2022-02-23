@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.outputs;
 
 import io.pulumi.awsnative.ssmincidents.outputs.ReplicationSetRegionConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class ReplicationSetReplicationRegion {
             this.regionName = regionName;
             return this;
         }
-
         public ReplicationSetReplicationRegion build() {
             return new ReplicationSetReplicationRegion(regionConfiguration, regionName);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudfunctions_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudfunctions_v1.FunctionArgs;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.EventTriggerResponse;
@@ -475,13 +475,6 @@ public class Function extends io.pulumi.resources.CustomResource {
         return this.vpcConnectorEgressSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Function(String name) {
-        super("google-native:cloudfunctions/v1:Function", name, FunctionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

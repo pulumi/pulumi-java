@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.inputs.LiveEventInputTrackSelectionArgs;
 import io.pulumi.azurenative.media.inputs.LiveEventOutputTranscriptionTrackArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="inputTrackSelection")
-    private final @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
+        private final @Nullable Input<List<LiveEventInputTrackSelectionArgs>> inputTrackSelection;
 
     public Input<List<LiveEventInputTrackSelectionArgs>> getInputTrackSelection() {
         return this.inputTrackSelection == null ? Input.empty() : this.inputTrackSelection;
@@ -37,7 +37,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="language")
-    private final @Nullable Input<String> language;
+        private final @Nullable Input<String> language;
 
     public Input<String> getLanguage() {
         return this.language == null ? Input.empty() : this.language;
@@ -48,7 +48,7 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="outputTranscriptionTrack")
-    private final @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
+        private final @Nullable Input<LiveEventOutputTranscriptionTrackArgs> outputTranscriptionTrack;
 
     public Input<LiveEventOutputTranscriptionTrackArgs> getOutputTranscriptionTrack() {
         return this.outputTranscriptionTrack == null ? Input.empty() : this.outputTranscriptionTrack;
@@ -122,7 +122,6 @@ public final class LiveEventTranscriptionArgs extends io.pulumi.resources.Resour
             this.outputTranscriptionTrack = Input.ofNullable(outputTranscriptionTrack);
             return this;
         }
-
         public LiveEventTranscriptionArgs build() {
             return new LiveEventTranscriptionArgs(inputTrackSelection, language, outputTranscriptionTrack);
         }

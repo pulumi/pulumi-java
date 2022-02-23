@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.inputs.FlowLogFormatParametersArgs;
 import io.pulumi.azurenative.network.inputs.RetentionPolicyParametersArgs;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -35,7 +35,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowAnalyticsConfiguration")
-    private final @Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
+        private final @Nullable Input<TrafficAnalyticsPropertiesArgs> flowAnalyticsConfiguration;
 
     public Input<TrafficAnalyticsPropertiesArgs> getFlowAnalyticsConfiguration() {
         return this.flowAnalyticsConfiguration == null ? Input.empty() : this.flowAnalyticsConfiguration;
@@ -46,7 +46,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowLogName")
-    private final @Nullable Input<String> flowLogName;
+        private final @Nullable Input<String> flowLogName;
 
     public Input<String> getFlowLogName() {
         return this.flowLogName == null ? Input.empty() : this.flowLogName;
@@ -57,7 +57,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<FlowLogFormatParametersArgs> format;
+        private final @Nullable Input<FlowLogFormatParametersArgs> format;
 
     public Input<FlowLogFormatParametersArgs> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -68,7 +68,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -79,7 +79,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -90,7 +90,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkWatcherName", required=true)
-    private final Input<String> networkWatcherName;
+        private final Input<String> networkWatcherName;
 
     public Input<String> getNetworkWatcherName() {
         return this.networkWatcherName;
@@ -101,7 +101,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -112,7 +112,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<RetentionPolicyParametersArgs> retentionPolicy;
+        private final @Nullable Input<RetentionPolicyParametersArgs> retentionPolicy;
 
     public Input<RetentionPolicyParametersArgs> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -123,7 +123,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageId", required=true)
-    private final Input<String> storageId;
+        private final Input<String> storageId;
 
     public Input<String> getStorageId() {
         return this.storageId;
@@ -134,7 +134,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -145,7 +145,7 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetResourceId", required=true)
-    private final Input<String> targetResourceId;
+        private final Input<String> targetResourceId;
 
     public Input<String> getTargetResourceId() {
         return this.targetResourceId;
@@ -354,7 +354,6 @@ public final class FlowLogArgs extends io.pulumi.resources.ResourceArgs {
             this.targetResourceId = Input.of(Objects.requireNonNull(targetResourceId));
             return this;
         }
-
         public FlowLogArgs build() {
             return new FlowLogArgs(enabled, flowAnalyticsConfiguration, flowLogName, format, id, location, networkWatcherName, resourceGroupName, retentionPolicy, storageId, tags, targetResourceId);
         }

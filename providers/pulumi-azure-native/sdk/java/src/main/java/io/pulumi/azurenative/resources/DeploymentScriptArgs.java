@@ -7,7 +7,7 @@ import io.pulumi.azurenative.resources.enums.ScriptType;
 import io.pulumi.azurenative.resources.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -34,7 +34,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<Either<String,ScriptType>> kind;
+        private final Input<Either<String,ScriptType>> kind;
 
     public Input<Either<String,ScriptType>> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,7 +56,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scriptName")
-    private final @Nullable Input<String> scriptName;
+        private final @Nullable Input<String> scriptName;
 
     public Input<String> getScriptName() {
         return this.scriptName == null ? Input.empty() : this.scriptName;
@@ -78,7 +78,7 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -197,7 +197,6 @@ public final class DeploymentScriptArgs extends io.pulumi.resources.ResourceArgs
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DeploymentScriptArgs build() {
             return new DeploymentScriptArgs(identity, kind, location, resourceGroupName, scriptName, tags);
         }

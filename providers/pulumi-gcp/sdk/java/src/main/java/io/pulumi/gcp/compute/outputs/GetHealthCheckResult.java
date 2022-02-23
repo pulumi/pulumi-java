@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetHealthCheckGrpcHealthCheck;
 import io.pulumi.gcp.compute.outputs.GetHealthCheckHttp2HealthCheck;
 import io.pulumi.gcp.compute.outputs.GetHealthCheckHttpHealthCheck;
@@ -285,7 +285,6 @@ public final class GetHealthCheckResult {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public GetHealthCheckResult build() {
             return new GetHealthCheckResult(checkIntervalSec, creationTimestamp, description, grpcHealthChecks, healthyThreshold, http2HealthChecks, httpHealthChecks, httpsHealthChecks, id, logConfigs, name, project, selfLink, sslHealthChecks, tcpHealthChecks, timeoutSec, type, unhealthyThreshold);
         }

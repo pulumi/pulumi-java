@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentAggregationArgs;
 import io.pulumi.gcp.monitoring.inputs.AlertPolicyConditionConditionAbsentTriggerArgs;
 import java.lang.String;
@@ -35,7 +35,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="aggregations")
-    private final @Nullable Input<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations;
+        private final @Nullable Input<List<AlertPolicyConditionConditionAbsentAggregationArgs>> aggregations;
 
     public Input<List<AlertPolicyConditionConditionAbsentAggregationArgs>> getAggregations() {
         return this.aggregations == null ? Input.empty() : this.aggregations;
@@ -60,7 +60,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="duration", required=true)
-    private final Input<String> duration;
+        private final Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration;
@@ -71,7 +71,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -90,7 +90,7 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<AlertPolicyConditionConditionAbsentTriggerArgs> trigger;
+        private final @Nullable Input<AlertPolicyConditionConditionAbsentTriggerArgs> trigger;
 
     public Input<AlertPolicyConditionConditionAbsentTriggerArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -179,7 +179,6 @@ public final class AlertPolicyConditionConditionAbsentArgs extends io.pulumi.res
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public AlertPolicyConditionConditionAbsentArgs build() {
             return new AlertPolicyConditionConditionAbsentArgs(aggregations, duration, filter, trigger);
         }

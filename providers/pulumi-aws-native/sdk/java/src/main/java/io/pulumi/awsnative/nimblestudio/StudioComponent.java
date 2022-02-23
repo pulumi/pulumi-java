@@ -13,8 +13,8 @@ import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentScriptParameterKe
 import io.pulumi.awsnative.nimblestudio.outputs.StudioComponentTags;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -140,13 +140,6 @@ public class StudioComponent extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public StudioComponent(String name) {
-        super("aws-native:nimblestudio:StudioComponent", name, StudioComponentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

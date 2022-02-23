@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.ExecutionTemplateArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="executionId", required=true)
-    private final Input<String> executionId;
+      private final Input<String> executionId;
 
     public Input<String> getExecutionId() {
         return this.executionId;
@@ -38,14 +38,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="executionTemplate")
-    private final @Nullable Input<ExecutionTemplateArgs> executionTemplate;
+      private final @Nullable Input<ExecutionTemplateArgs> executionTemplate;
 
     public Input<ExecutionTemplateArgs> getExecutionTemplate() {
         return this.executionTemplate == null ? Input.empty() : this.executionTemplate;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -56,14 +56,14 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputNotebookFile")
-    private final @Nullable Input<String> outputNotebookFile;
+      private final @Nullable Input<String> outputNotebookFile;
 
     public Input<String> getOutputNotebookFile() {
         return this.outputNotebookFile == null ? Input.empty() : this.outputNotebookFile;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -182,7 +182,6 @@ public final class ExecutionArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ExecutionArgs build() {
             return new ExecutionArgs(description, executionId, executionTemplate, location, outputNotebookFile, project);
         }

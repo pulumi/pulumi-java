@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.ParticipantPropertyReferenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.TypePropertiesMappingResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -375,7 +375,6 @@ public final class GetLinkResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLinkResult build() {
             return new GetLinkResult(description, displayName, id, linkName, mappings, name, operationType, participantPropertyReferences, provisioningState, referenceOnly, sourceEntityType, sourceEntityTypeName, targetEntityType, targetEntityTypeName, tenantId, type);
         }

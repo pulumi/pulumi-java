@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class ListGlobalUserLabsArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -55,7 +55,6 @@ public final class ListGlobalUserLabsArgs extends io.pulumi.resources.InvokeArgs
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public ListGlobalUserLabsArgs build() {
             return new ListGlobalUserLabsArgs(userName);
         }

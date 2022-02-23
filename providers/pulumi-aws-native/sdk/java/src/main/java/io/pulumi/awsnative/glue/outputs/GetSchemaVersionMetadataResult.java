@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetSchemaVersionMetadataResult {
         public Builder(GetSchemaVersionMetadataResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetSchemaVersionMetadataResult build() {
             return new GetSchemaVersionMetadataResult();
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class Template {
             this.textPart = textPart;
             return this;
         }
-
         public Template build() {
             return new Template(htmlPart, subjectPart, templateName, textPart);
         }

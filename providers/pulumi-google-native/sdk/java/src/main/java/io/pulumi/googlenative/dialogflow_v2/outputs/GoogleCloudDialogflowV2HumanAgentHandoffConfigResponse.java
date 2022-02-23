@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigLivePersonConfigResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2HumanAgentHandoffConfigSalesforceLiveAgentConfigResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse {
             this.salesforceLiveAgentConfig = Objects.requireNonNull(salesforceLiveAgentConfig);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentHandoffConfigResponse(livePersonConfig, salesforceLiveAgentConfig);
         }

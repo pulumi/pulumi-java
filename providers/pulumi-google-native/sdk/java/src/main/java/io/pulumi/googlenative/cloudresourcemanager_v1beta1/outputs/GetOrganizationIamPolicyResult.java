@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.cloudresourcemanager_v1beta1.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetOrganizationIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetOrganizationIamPolicyResult build() {
             return new GetOrganizationIamPolicyResult(auditConfigs, bindings, etag, version);
         }

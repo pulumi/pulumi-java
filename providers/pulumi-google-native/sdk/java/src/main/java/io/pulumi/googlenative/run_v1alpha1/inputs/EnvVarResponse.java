@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.EnvVarSourceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -44,7 +44,7 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="valueFrom", required=true)
-    private final EnvVarSourceResponse valueFrom;
+      private final EnvVarSourceResponse valueFrom;
 
     public EnvVarSourceResponse getValueFrom() {
         return this.valueFrom;
@@ -103,7 +103,6 @@ public final class EnvVarResponse extends io.pulumi.resources.InvokeArgs {
             this.valueFrom = Objects.requireNonNull(valueFrom);
             return this;
         }
-
         public EnvVarResponse build() {
             return new EnvVarResponse(name, value, valueFrom);
         }

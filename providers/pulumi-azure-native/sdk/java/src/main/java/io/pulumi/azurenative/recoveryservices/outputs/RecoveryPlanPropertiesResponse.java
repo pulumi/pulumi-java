@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 import io.pulumi.azurenative.recoveryservices.outputs.CurrentScenarioDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanA2ADetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RecoveryPlanGroupResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -374,7 +374,6 @@ public final class RecoveryPlanPropertiesResponse {
             this.replicationProviders = replicationProviders;
             return this;
         }
-
         public RecoveryPlanPropertiesResponse build() {
             return new RecoveryPlanPropertiesResponse(allowedOperations, currentScenario, currentScenarioStatus, currentScenarioStatusDescription, failoverDeploymentModel, friendlyName, groups, lastPlannedFailoverTime, lastTestFailoverTime, lastUnplannedFailoverTime, primaryFabricFriendlyName, primaryFabricId, providerSpecificDetails, recoveryFabricFriendlyName, recoveryFabricId, replicationProviders);
         }

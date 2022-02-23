@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.SubscriptionLogSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetSubscriptionDiagnosticSettingResult {
             this.workspaceId = workspaceId;
             return this;
         }
-
         public GetSubscriptionDiagnosticSettingResult build() {
             return new GetSubscriptionDiagnosticSettingResult(eventHubAuthorizationRuleId, eventHubName, id, location, logs, name, serviceBusRuleId, storageAccountId, type, workspaceId);
         }

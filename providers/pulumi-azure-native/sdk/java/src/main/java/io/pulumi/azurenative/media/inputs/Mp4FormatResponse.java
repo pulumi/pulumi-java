@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.OutputFileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class Mp4FormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filenamePattern", required=true)
-    private final String filenamePattern;
+        private final String filenamePattern;
 
     public String getFilenamePattern() {
         return this.filenamePattern;
@@ -37,7 +37,7 @@ public final class Mp4FormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -48,7 +48,7 @@ public final class Mp4FormatResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputFiles")
-    private final @Nullable List<OutputFileResponse> outputFiles;
+        private final @Nullable List<OutputFileResponse> outputFiles;
 
     public List<OutputFileResponse> getOutputFiles() {
         return this.outputFiles == null ? List.of() : this.outputFiles;
@@ -107,7 +107,6 @@ public final class Mp4FormatResponse extends io.pulumi.resources.InvokeArgs {
             this.outputFiles = outputFiles;
             return this;
         }
-
         public Mp4FormatResponse build() {
             return new Mp4FormatResponse(filenamePattern, odataType, outputFiles);
         }

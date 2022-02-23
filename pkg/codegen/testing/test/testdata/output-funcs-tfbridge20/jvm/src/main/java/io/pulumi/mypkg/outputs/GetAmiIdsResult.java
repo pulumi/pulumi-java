@@ -3,7 +3,7 @@
 
 package io.pulumi.mypkg.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.mypkg.outputs.GetAmiIdsFilter;
 import java.lang.Boolean;
 import java.lang.String;
@@ -136,7 +136,6 @@ public final class GetAmiIdsResult {
             this.sortAscending = sortAscending;
             return this;
         }
-
         public GetAmiIdsResult build() {
             return new GetAmiIdsResult(executableUsers, filters, id, ids, nameRegex, owners, sortAscending);
         }

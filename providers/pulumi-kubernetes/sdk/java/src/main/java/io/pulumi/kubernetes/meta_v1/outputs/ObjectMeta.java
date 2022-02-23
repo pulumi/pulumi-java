@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ManagedFieldsEntry;
 import io.pulumi.kubernetes.meta_v1.outputs.OwnerReference;
 import java.lang.Integer;
@@ -407,7 +407,6 @@ public final class ObjectMeta {
             this.uid = uid;
             return this;
         }
-
         public ObjectMeta build() {
             return new ObjectMeta(annotations, clusterName, creationTimestamp, deletionGracePeriodSeconds, deletionTimestamp, finalizers, generateName, generation, labels, managedFields, name, namespace, ownerReferences, resourceVersion, selfLink, uid);
         }

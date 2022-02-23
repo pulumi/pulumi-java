@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverId", required=true)
-    private final Input<String> serverId;
+        private final Input<String> serverId;
 
     public Input<String> getServerId() {
         return this.serverId;
@@ -65,7 +65,6 @@ public final class ServerInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.serverId = Input.of(Objects.requireNonNull(serverId));
             return this;
         }
-
         public ServerInfoArgs build() {
             return new ServerInfoArgs(serverId);
         }

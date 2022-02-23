@@ -10,7 +10,7 @@ import io.pulumi.azurenative.media.inputs.ContentKeyPolicyTokenClaimArgs;
 import io.pulumi.azurenative.media.inputs.ContentKeyPolicyX509CertificateTokenKeyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="alternateVerificationKeys")
-    private final @Nullable Input<List<Object>> alternateVerificationKeys;
+        private final @Nullable Input<List<Object>> alternateVerificationKeys;
 
     public Input<List<Object>> getAlternateVerificationKeys() {
         return this.alternateVerificationKeys == null ? Input.empty() : this.alternateVerificationKeys;
@@ -42,7 +42,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="audience", required=true)
-    private final Input<String> audience;
+        private final Input<String> audience;
 
     public Input<String> getAudience() {
         return this.audience;
@@ -53,7 +53,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+        private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;
@@ -65,7 +65,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -76,7 +76,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="openIdConnectDiscoveryDocument")
-    private final @Nullable Input<String> openIdConnectDiscoveryDocument;
+        private final @Nullable Input<String> openIdConnectDiscoveryDocument;
 
     public Input<String> getOpenIdConnectDiscoveryDocument() {
         return this.openIdConnectDiscoveryDocument == null ? Input.empty() : this.openIdConnectDiscoveryDocument;
@@ -87,7 +87,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="primaryVerificationKey", required=true)
-    private final Input<Object> primaryVerificationKey;
+        private final Input<Object> primaryVerificationKey;
 
     public Input<Object> getPrimaryVerificationKey() {
         return this.primaryVerificationKey;
@@ -98,7 +98,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="requiredClaims")
-    private final @Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
+        private final @Nullable Input<List<ContentKeyPolicyTokenClaimArgs>> requiredClaims;
 
     public Input<List<ContentKeyPolicyTokenClaimArgs>> getRequiredClaims() {
         return this.requiredClaims == null ? Input.empty() : this.requiredClaims;
@@ -109,7 +109,7 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="restrictionTokenType", required=true)
-    private final Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
+        private final Input<Either<String,ContentKeyPolicyRestrictionTokenType>> restrictionTokenType;
 
     public Input<Either<String,ContentKeyPolicyRestrictionTokenType>> getRestrictionTokenType() {
         return this.restrictionTokenType;
@@ -258,7 +258,6 @@ public final class ContentKeyPolicyTokenRestrictionArgs extends io.pulumi.resour
             this.restrictionTokenType = Input.of(Objects.requireNonNull(restrictionTokenType));
             return this;
         }
-
         public ContentKeyPolicyTokenRestrictionArgs build() {
             return new ContentKeyPolicyTokenRestrictionArgs(alternateVerificationKeys, audience, issuer, odataType, openIdConnectDiscoveryDocument, primaryVerificationKey, requiredClaims, restrictionTokenType);
         }

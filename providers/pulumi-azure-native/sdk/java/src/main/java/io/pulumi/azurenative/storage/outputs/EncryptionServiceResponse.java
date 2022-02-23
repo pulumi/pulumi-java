@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class EncryptionServiceResponse {
             this.lastEnabledTime = Objects.requireNonNull(lastEnabledTime);
             return this;
         }
-
         public EncryptionServiceResponse build() {
             return new EncryptionServiceResponse(enabled, keyType, lastEnabledTime);
         }

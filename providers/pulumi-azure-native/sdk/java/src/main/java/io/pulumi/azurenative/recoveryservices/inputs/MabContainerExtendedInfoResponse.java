@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="backupItemType")
-    private final @Nullable String backupItemType;
+        private final @Nullable String backupItemType;
 
     public Optional<String> getBackupItemType() {
         return this.backupItemType == null ? Optional.empty() : Optional.ofNullable(this.backupItemType);
@@ -35,7 +35,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="backupItems")
-    private final @Nullable List<String> backupItems;
+        private final @Nullable List<String> backupItems;
 
     public List<String> getBackupItems() {
         return this.backupItems == null ? List.of() : this.backupItems;
@@ -46,7 +46,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastBackupStatus")
-    private final @Nullable String lastBackupStatus;
+        private final @Nullable String lastBackupStatus;
 
     public Optional<String> getLastBackupStatus() {
         return this.lastBackupStatus == null ? Optional.empty() : Optional.ofNullable(this.lastBackupStatus);
@@ -57,7 +57,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastRefreshedAt")
-    private final @Nullable String lastRefreshedAt;
+        private final @Nullable String lastRefreshedAt;
 
     public Optional<String> getLastRefreshedAt() {
         return this.lastRefreshedAt == null ? Optional.empty() : Optional.ofNullable(this.lastRefreshedAt);
@@ -68,7 +68,7 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable String policyName;
+        private final @Nullable String policyName;
 
     public Optional<String> getPolicyName() {
         return this.policyName == null ? Optional.empty() : Optional.ofNullable(this.policyName);
@@ -147,7 +147,6 @@ public final class MabContainerExtendedInfoResponse extends io.pulumi.resources.
             this.policyName = policyName;
             return this;
         }
-
         public MabContainerExtendedInfoResponse build() {
             return new MabContainerExtendedInfoResponse(backupItemType, backupItems, lastBackupStatus, lastRefreshedAt, policyName);
         }

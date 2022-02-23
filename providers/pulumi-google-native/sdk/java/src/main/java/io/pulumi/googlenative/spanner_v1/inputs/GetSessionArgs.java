@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetSessionArgs Empty = new GetSessionArgs();
 
     @InputImport(name="databaseId", required=true)
-    private final String databaseId;
+      private final String databaseId;
 
     public String getDatabaseId() {
         return this.databaseId;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final String instanceId;
+      private final String instanceId;
 
     public String getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sessionId", required=true)
-    private final String sessionId;
+      private final String sessionId;
 
     public String getSessionId() {
         return this.sessionId;
@@ -105,7 +105,6 @@ public final class GetSessionArgs extends io.pulumi.resources.InvokeArgs {
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public GetSessionArgs build() {
             return new GetSessionArgs(databaseId, instanceId, project, sessionId);
         }

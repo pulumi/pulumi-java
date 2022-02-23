@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class GuestPoliciesRecipeInstallStepScriptRunGetArgs extends io.pul
      * 
      */
     @InputImport(name="allowedExitCodes")
-    private final @Nullable Input<List<Integer>> allowedExitCodes;
+        private final @Nullable Input<List<Integer>> allowedExitCodes;
 
     public Input<List<Integer>> getAllowedExitCodes() {
         return this.allowedExitCodes == null ? Input.empty() : this.allowedExitCodes;
@@ -34,7 +34,7 @@ public final class GuestPoliciesRecipeInstallStepScriptRunGetArgs extends io.pul
      * 
      */
     @InputImport(name="interpreter")
-    private final @Nullable Input<String> interpreter;
+        private final @Nullable Input<String> interpreter;
 
     public Input<String> getInterpreter() {
         return this.interpreter == null ? Input.empty() : this.interpreter;
@@ -45,7 +45,7 @@ public final class GuestPoliciesRecipeInstallStepScriptRunGetArgs extends io.pul
      * 
      */
     @InputImport(name="script", required=true)
-    private final Input<String> script;
+        private final Input<String> script;
 
     public Input<String> getScript() {
         return this.script;
@@ -119,7 +119,6 @@ public final class GuestPoliciesRecipeInstallStepScriptRunGetArgs extends io.pul
             this.script = Input.of(Objects.requireNonNull(script));
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepScriptRunGetArgs build() {
             return new GuestPoliciesRecipeInstallStepScriptRunGetArgs(allowedExitCodes, interpreter, script);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.customproviders.inputs.CustomRPActionRouteDefinitio
 import io.pulumi.azurenative.customproviders.inputs.CustomRPResourceTypeRouteDefinitionArgs;
 import io.pulumi.azurenative.customproviders.inputs.CustomRPValidationsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions;
+        private final @Nullable Input<List<CustomRPActionRouteDefinitionArgs>> actions;
 
     public Input<List<CustomRPActionRouteDefinitionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -35,7 +35,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -57,7 +57,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceProviderName")
-    private final @Nullable Input<String> resourceProviderName;
+        private final @Nullable Input<String> resourceProviderName;
 
     public Input<String> getResourceProviderName() {
         return this.resourceProviderName == null ? Input.empty() : this.resourceProviderName;
@@ -68,7 +68,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceTypes")
-    private final @Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
+        private final @Nullable Input<List<CustomRPResourceTypeRouteDefinitionArgs>> resourceTypes;
 
     public Input<List<CustomRPResourceTypeRouteDefinitionArgs>> getResourceTypes() {
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
@@ -79,7 +79,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -90,7 +90,7 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="validations")
-    private final @Nullable Input<List<CustomRPValidationsArgs>> validations;
+        private final @Nullable Input<List<CustomRPValidationsArgs>> validations;
 
     public Input<List<CustomRPValidationsArgs>> getValidations() {
         return this.validations == null ? Input.empty() : this.validations;
@@ -224,7 +224,6 @@ public final class CustomResourceProviderArgs extends io.pulumi.resources.Resour
             this.validations = Input.ofNullable(validations);
             return this;
         }
-
         public CustomResourceProviderArgs build() {
             return new CustomResourceProviderArgs(actions, location, resourceGroupName, resourceProviderName, resourceTypes, tags, validations);
         }

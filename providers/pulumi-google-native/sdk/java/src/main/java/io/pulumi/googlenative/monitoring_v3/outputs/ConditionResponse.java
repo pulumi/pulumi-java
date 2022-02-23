@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.LogMatchResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricAbsenceResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricThresholdResponse;
@@ -162,7 +162,6 @@ public final class ConditionResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(conditionAbsent, conditionMatchedLog, conditionMonitoringQueryLanguage, conditionThreshold, displayName, name);
         }

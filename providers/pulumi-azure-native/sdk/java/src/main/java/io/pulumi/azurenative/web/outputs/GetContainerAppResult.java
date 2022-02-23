@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConfigurationResponse;
 import io.pulumi.azurenative.web.outputs.TemplateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -289,7 +289,6 @@ public final class GetContainerAppResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContainerAppResult build() {
             return new GetContainerAppResult(configuration, id, kind, kubeEnvironmentId, latestRevisionFqdn, latestRevisionName, location, name, provisioningState, tags, template, type);
         }

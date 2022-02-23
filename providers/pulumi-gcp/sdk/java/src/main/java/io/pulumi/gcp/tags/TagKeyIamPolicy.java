@@ -5,8 +5,8 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagKeyIamPolicyArgs;
 import io.pulumi.gcp.tags.inputs.TagKeyIamPolicyState;
@@ -102,13 +102,6 @@ public class TagKeyIamPolicy extends io.pulumi.resources.CustomResource {
         return this.tagKey;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TagKeyIamPolicy(String name) {
-        super("gcp:tags/tagKeyIamPolicy:TagKeyIamPolicy", name, TagKeyIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

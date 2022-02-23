@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.QueryContentArgs;
 import java.lang.String;
 import java.util.Map;
@@ -21,7 +21,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<QueryContentArgs> content;
+      private final @Nullable Input<QueryContentArgs> content;
 
     public Input<QueryContentArgs> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -32,7 +32,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -54,28 +54,28 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="savedQueryId", required=true)
-    private final Input<String> savedQueryId;
+      private final Input<String> savedQueryId;
 
     public Input<String> getSavedQueryId() {
         return this.savedQueryId;
     }
 
     @InputImport(name="v1Id", required=true)
-    private final Input<String> v1Id;
+      private final Input<String> v1Id;
 
     public Input<String> getV1Id() {
         return this.v1Id;
     }
 
     @InputImport(name="v1Id1", required=true)
-    private final Input<String> v1Id1;
+      private final Input<String> v1Id1;
 
     public Input<String> getV1Id1() {
         return this.v1Id1;
@@ -209,7 +209,6 @@ public final class SavedQueryArgs extends io.pulumi.resources.ResourceArgs {
             this.v1Id1 = Input.of(Objects.requireNonNull(v1Id1));
             return this;
         }
-
         public SavedQueryArgs build() {
             return new SavedQueryArgs(content, description, labels, name, savedQueryId, v1Id, v1Id1);
         }

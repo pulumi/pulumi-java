@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.StorageAccountInternetEndpointsResponse;
 import io.pulumi.azurenative.storage.inputs.StorageAccountMicrosoftEndpointsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="blob", required=true)
-    private final String blob;
+        private final String blob;
 
     public String getBlob() {
         return this.blob;
@@ -36,7 +36,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dfs", required=true)
-    private final String dfs;
+        private final String dfs;
 
     public String getDfs() {
         return this.dfs;
@@ -47,7 +47,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="file", required=true)
-    private final String file;
+        private final String file;
 
     public String getFile() {
         return this.file;
@@ -58,7 +58,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="internetEndpoints")
-    private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
+        private final @Nullable StorageAccountInternetEndpointsResponse internetEndpoints;
 
     public Optional<StorageAccountInternetEndpointsResponse> getInternetEndpoints() {
         return this.internetEndpoints == null ? Optional.empty() : Optional.ofNullable(this.internetEndpoints);
@@ -69,7 +69,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="microsoftEndpoints")
-    private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
+        private final @Nullable StorageAccountMicrosoftEndpointsResponse microsoftEndpoints;
 
     public Optional<StorageAccountMicrosoftEndpointsResponse> getMicrosoftEndpoints() {
         return this.microsoftEndpoints == null ? Optional.empty() : Optional.ofNullable(this.microsoftEndpoints);
@@ -80,7 +80,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="queue", required=true)
-    private final String queue;
+        private final String queue;
 
     public String getQueue() {
         return this.queue;
@@ -91,7 +91,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="table", required=true)
-    private final String table;
+        private final String table;
 
     public String getTable() {
         return this.table;
@@ -102,7 +102,7 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="web", required=true)
-    private final String web;
+        private final String web;
 
     public String getWeb() {
         return this.web;
@@ -211,7 +211,6 @@ public final class EndpointsResponse extends io.pulumi.resources.InvokeArgs {
             this.web = Objects.requireNonNull(web);
             return this;
         }
-
         public EndpointsResponse build() {
             return new EndpointsResponse(blob, dfs, file, internetEndpoints, microsoftEndpoints, queue, table, web);
         }

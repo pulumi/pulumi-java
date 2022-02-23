@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.identityplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -56,7 +56,6 @@ public final class TenantInboundSamlConfigIdpConfigIdpCertificate {
             this.x509Certificate = x509Certificate;
             return this;
         }
-
         public TenantInboundSamlConfigIdpConfigIdpCertificate build() {
             return new TenantInboundSamlConfigIdpConfigIdpCertificate(x509Certificate);
         }

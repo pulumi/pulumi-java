@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.TypedLocalObjectReference;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.IngressServiceBackend;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class IngressBackend {
             this.service = service;
             return this;
         }
-
         public IngressBackend build() {
             return new IngressBackend(resource, service);
         }

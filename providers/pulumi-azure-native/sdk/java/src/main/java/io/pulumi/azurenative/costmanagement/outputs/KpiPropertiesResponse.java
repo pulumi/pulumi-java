@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class KpiPropertiesResponse {
             this.type = type;
             return this;
         }
-
         public KpiPropertiesResponse build() {
             return new KpiPropertiesResponse(enabled, id, type);
         }

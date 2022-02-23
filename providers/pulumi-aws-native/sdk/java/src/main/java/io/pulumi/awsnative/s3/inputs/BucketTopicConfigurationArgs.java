@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketNotificationFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="event", required=true)
-    private final Input<String> event;
+        private final Input<String> event;
 
     public Input<String> getEvent() {
         return this.event;
@@ -35,7 +35,7 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BucketNotificationFilterArgs> filter;
+        private final @Nullable Input<BucketNotificationFilterArgs> filter;
 
     public Input<BucketNotificationFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -46,7 +46,7 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="topic", required=true)
-    private final Input<String> topic;
+        private final Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic;
@@ -120,7 +120,6 @@ public final class BucketTopicConfigurationArgs extends io.pulumi.resources.Reso
             this.topic = Input.of(Objects.requireNonNull(topic));
             return this;
         }
-
         public BucketTopicConfigurationArgs build() {
             return new BucketTopicConfigurationArgs(event, filter, topic);
         }

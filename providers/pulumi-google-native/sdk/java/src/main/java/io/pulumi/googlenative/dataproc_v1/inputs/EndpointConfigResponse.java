@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="enableHttpPortAccess", required=true)
-    private final Boolean enableHttpPortAccess;
+      private final Boolean enableHttpPortAccess;
 
     public Boolean getEnableHttpPortAccess() {
         return this.enableHttpPortAccess;
@@ -34,7 +34,7 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="httpPorts", required=true)
-    private final Map<String,String> httpPorts;
+      private final Map<String,String> httpPorts;
 
     public Map<String,String> getHttpPorts() {
         return this.httpPorts;
@@ -83,7 +83,6 @@ public final class EndpointConfigResponse extends io.pulumi.resources.InvokeArgs
             this.httpPorts = Objects.requireNonNull(httpPorts);
             return this;
         }
-
         public EndpointConfigResponse build() {
             return new EndpointConfigResponse(enableHttpPortAccess, httpPorts);
         }

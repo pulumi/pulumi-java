@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="caPool")
-    private final @Nullable Input<String> caPool;
+        private final @Nullable Input<String> caPool;
 
     public Input<String> getCaPool() {
         return this.caPool == null ? Input.empty() : this.caPool;
@@ -30,7 +30,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -43,7 +43,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -67,7 +67,7 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -171,7 +171,6 @@ public final class CaPoolIamPolicyState extends io.pulumi.resources.ResourceArgs
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public CaPoolIamPolicyState build() {
             return new CaPoolIamPolicyState(caPool, etag, location, policyData, project);
         }

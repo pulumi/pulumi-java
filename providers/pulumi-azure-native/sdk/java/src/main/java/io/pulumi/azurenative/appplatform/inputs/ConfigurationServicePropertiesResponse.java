@@ -6,7 +6,7 @@ package io.pulumi.azurenative.appplatform.inputs;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceInstanceResponse;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="instances", required=true)
-    private final List<ConfigurationServiceInstanceResponse> instances;
+        private final List<ConfigurationServiceInstanceResponse> instances;
 
     public List<ConfigurationServiceInstanceResponse> getInstances() {
         return this.instances;
@@ -38,7 +38,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -49,7 +49,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="resourceRequests", required=true)
-    private final ConfigurationServiceResourceRequestsResponse resourceRequests;
+        private final ConfigurationServiceResourceRequestsResponse resourceRequests;
 
     public ConfigurationServiceResourceRequestsResponse getResourceRequests() {
         return this.resourceRequests;
@@ -60,7 +60,7 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="settings")
-    private final @Nullable ConfigurationServiceSettingsResponse settings;
+        private final @Nullable ConfigurationServiceSettingsResponse settings;
 
     public Optional<ConfigurationServiceSettingsResponse> getSettings() {
         return this.settings == null ? Optional.empty() : Optional.ofNullable(this.settings);
@@ -129,7 +129,6 @@ public final class ConfigurationServicePropertiesResponse extends io.pulumi.reso
             this.settings = settings;
             return this;
         }
-
         public ConfigurationServicePropertiesResponse build() {
             return new ConfigurationServicePropertiesResponse(instances, provisioningState, resourceRequests, settings);
         }

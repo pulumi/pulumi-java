@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ForwardingRuleIpProtocol;
 import io.pulumi.googlenative.compute_v1.enums.ForwardingRuleIpVersion;
 import io.pulumi.googlenative.compute_v1.enums.ForwardingRuleLoadBalancingScheme;
@@ -29,7 +29,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allPorts")
-    private final @Nullable Input<Boolean> allPorts;
+      private final @Nullable Input<Boolean> allPorts;
 
     public Input<Boolean> getAllPorts() {
         return this.allPorts == null ? Input.empty() : this.allPorts;
@@ -40,7 +40,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowGlobalAccess")
-    private final @Nullable Input<Boolean> allowGlobalAccess;
+      private final @Nullable Input<Boolean> allowGlobalAccess;
 
     public Input<Boolean> getAllowGlobalAccess() {
         return this.allowGlobalAccess == null ? Input.empty() : this.allowGlobalAccess;
@@ -51,7 +51,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+      private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -62,7 +62,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -73,7 +73,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -84,7 +84,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipProtocol")
-    private final @Nullable Input<ForwardingRuleIpProtocol> ipProtocol;
+      private final @Nullable Input<ForwardingRuleIpProtocol> ipProtocol;
 
     public Input<ForwardingRuleIpProtocol> getIpProtocol() {
         return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
@@ -95,7 +95,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipVersion")
-    private final @Nullable Input<ForwardingRuleIpVersion> ipVersion;
+      private final @Nullable Input<ForwardingRuleIpVersion> ipVersion;
 
     public Input<ForwardingRuleIpVersion> getIpVersion() {
         return this.ipVersion == null ? Input.empty() : this.ipVersion;
@@ -106,7 +106,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isMirroringCollector")
-    private final @Nullable Input<Boolean> isMirroringCollector;
+      private final @Nullable Input<Boolean> isMirroringCollector;
 
     public Input<Boolean> getIsMirroringCollector() {
         return this.isMirroringCollector == null ? Input.empty() : this.isMirroringCollector;
@@ -117,7 +117,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -128,7 +128,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancingScheme")
-    private final @Nullable Input<ForwardingRuleLoadBalancingScheme> loadBalancingScheme;
+      private final @Nullable Input<ForwardingRuleLoadBalancingScheme> loadBalancingScheme;
 
     public Input<ForwardingRuleLoadBalancingScheme> getLoadBalancingScheme() {
         return this.loadBalancingScheme == null ? Input.empty() : this.loadBalancingScheme;
@@ -139,7 +139,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadataFilters")
-    private final @Nullable Input<List<MetadataFilterArgs>> metadataFilters;
+      private final @Nullable Input<List<MetadataFilterArgs>> metadataFilters;
 
     public Input<List<MetadataFilterArgs>> getMetadataFilters() {
         return this.metadataFilters == null ? Input.empty() : this.metadataFilters;
@@ -150,7 +150,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -161,7 +161,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+      private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -172,7 +172,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkTier")
-    private final @Nullable Input<ForwardingRuleNetworkTier> networkTier;
+      private final @Nullable Input<ForwardingRuleNetworkTier> networkTier;
 
     public Input<ForwardingRuleNetworkTier> getNetworkTier() {
         return this.networkTier == null ? Input.empty() : this.networkTier;
@@ -183,7 +183,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portRange")
-    private final @Nullable Input<String> portRange;
+      private final @Nullable Input<String> portRange;
 
     public Input<String> getPortRange() {
         return this.portRange == null ? Input.empty() : this.portRange;
@@ -194,35 +194,35 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<String>> ports;
+      private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="pscConnectionStatus")
-    private final @Nullable Input<ForwardingRulePscConnectionStatus> pscConnectionStatus;
+      private final @Nullable Input<ForwardingRulePscConnectionStatus> pscConnectionStatus;
 
     public Input<ForwardingRulePscConnectionStatus> getPscConnectionStatus() {
         return this.pscConnectionStatus == null ? Input.empty() : this.pscConnectionStatus;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -233,7 +233,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceDirectoryRegistrations")
-    private final @Nullable Input<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations;
+      private final @Nullable Input<List<ForwardingRuleServiceDirectoryRegistrationArgs>> serviceDirectoryRegistrations;
 
     public Input<List<ForwardingRuleServiceDirectoryRegistrationArgs>> getServiceDirectoryRegistrations() {
         return this.serviceDirectoryRegistrations == null ? Input.empty() : this.serviceDirectoryRegistrations;
@@ -244,7 +244,7 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceLabel")
-    private final @Nullable Input<String> serviceLabel;
+      private final @Nullable Input<String> serviceLabel;
 
     public Input<String> getServiceLabel() {
         return this.serviceLabel == null ? Input.empty() : this.serviceLabel;
@@ -255,14 +255,14 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+      private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
     }
 
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -651,7 +651,6 @@ public final class ForwardingRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.target = Input.ofNullable(target);
             return this;
         }
-
         public ForwardingRuleArgs build() {
             return new ForwardingRuleArgs(allPorts, allowGlobalAccess, backendService, description, ipAddress, ipProtocol, ipVersion, isMirroringCollector, labels, loadBalancingScheme, metadataFilters, name, network, networkTier, portRange, ports, project, pscConnectionStatus, region, requestId, serviceDirectoryRegistrations, serviceLabel, subnetwork, target);
         }

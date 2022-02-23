@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs;
@@ -23,7 +23,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="exec")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> exec;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceExecGetArgs> getExec() {
         return this.exec == null ? Input.empty() : this.exec;
@@ -34,7 +34,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="file")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> file;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceFileGetArgs> getFile() {
         return this.file == null ? Input.empty() : this.file;
@@ -45,7 +45,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -56,7 +56,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="pkg")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> pkg;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGetArgs> getPkg() {
         return this.pkg == null ? Input.empty() : this.pkg;
@@ -67,7 +67,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
      * 
      */
     @InputImport(name="repository")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> repository;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourceRepositoryGetArgs> getRepository() {
         return this.repository == null ? Input.empty() : this.repository;
@@ -171,7 +171,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs extend
             this.repository = Input.ofNullable(repository);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceGetArgs(exec, file, id, pkg, repository);
         }

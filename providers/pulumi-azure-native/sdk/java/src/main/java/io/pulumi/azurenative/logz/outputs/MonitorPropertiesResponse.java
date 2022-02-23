@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz.outputs;
 import io.pulumi.azurenative.logz.outputs.LogzOrganizationPropertiesResponse;
 import io.pulumi.azurenative.logz.outputs.PlanDataResponse;
 import io.pulumi.azurenative.logz.outputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -174,7 +174,6 @@ public final class MonitorPropertiesResponse {
             this.userInfo = userInfo;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(liftrResourceCategory, liftrResourcePreference, logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, provisioningState, userInfo);
         }

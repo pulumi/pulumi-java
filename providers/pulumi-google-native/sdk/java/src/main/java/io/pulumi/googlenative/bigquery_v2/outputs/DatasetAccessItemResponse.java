@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetAccessEntryResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.TableReferenceResponse;
@@ -224,7 +224,6 @@ public final class DatasetAccessItemResponse {
             this.view = Objects.requireNonNull(view);
             return this;
         }
-
         public DatasetAccessItemResponse build() {
             return new DatasetAccessItemResponse(dataset, domain, groupByEmail, iamMember, role, routine, specialGroup, userByEmail, view);
         }

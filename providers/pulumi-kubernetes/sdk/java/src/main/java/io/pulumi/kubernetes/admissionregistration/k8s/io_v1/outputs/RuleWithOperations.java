@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -152,7 +152,6 @@ public final class RuleWithOperations {
             this.scope = scope;
             return this;
         }
-
         public RuleWithOperations build() {
             return new RuleWithOperations(apiGroups, apiVersions, operations, resources, scope);
         }

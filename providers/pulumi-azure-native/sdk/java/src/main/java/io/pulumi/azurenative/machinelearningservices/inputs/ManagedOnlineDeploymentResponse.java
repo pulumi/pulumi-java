@@ -12,7 +12,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.OnlineRequestSetting
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetReferenceResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.ProbeSettingsResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -31,7 +31,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="appInsightsEnabled")
-    private final @Nullable Boolean appInsightsEnabled;
+        private final @Nullable Boolean appInsightsEnabled;
 
     public Optional<Boolean> getAppInsightsEnabled() {
         return this.appInsightsEnabled == null ? Optional.empty() : Optional.ofNullable(this.appInsightsEnabled);
@@ -42,7 +42,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="codeConfiguration")
-    private final @Nullable CodeConfigurationResponse codeConfiguration;
+        private final @Nullable CodeConfigurationResponse codeConfiguration;
 
     public Optional<CodeConfigurationResponse> getCodeConfiguration() {
         return this.codeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.codeConfiguration);
@@ -53,7 +53,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -65,7 +65,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="endpointComputeType", required=true)
-    private final String endpointComputeType;
+        private final String endpointComputeType;
 
     public String getEndpointComputeType() {
         return this.endpointComputeType;
@@ -76,7 +76,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable String environmentId;
+        private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
@@ -87,7 +87,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Map<String,String> environmentVariables;
+        private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
@@ -98,7 +98,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="instanceType")
-    private final @Nullable String instanceType;
+        private final @Nullable String instanceType;
 
     public Optional<String> getInstanceType() {
         return this.instanceType == null ? Optional.empty() : Optional.ofNullable(this.instanceType);
@@ -109,7 +109,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="livenessProbe")
-    private final @Nullable ProbeSettingsResponse livenessProbe;
+        private final @Nullable ProbeSettingsResponse livenessProbe;
 
     public Optional<ProbeSettingsResponse> getLivenessProbe() {
         return this.livenessProbe == null ? Optional.empty() : Optional.ofNullable(this.livenessProbe);
@@ -120,7 +120,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Object model;
+        private final @Nullable Object model;
 
     public Object getModel() {
         return this.model == null ? null : this.model;
@@ -131,7 +131,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -142,7 +142,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -153,7 +153,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="readinessProbe")
-    private final @Nullable ProbeSettingsResponse readinessProbe;
+        private final @Nullable ProbeSettingsResponse readinessProbe;
 
     public Optional<ProbeSettingsResponse> getReadinessProbe() {
         return this.readinessProbe == null ? Optional.empty() : Optional.ofNullable(this.readinessProbe);
@@ -164,7 +164,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="requestSettings")
-    private final @Nullable OnlineRequestSettingsResponse requestSettings;
+        private final @Nullable OnlineRequestSettingsResponse requestSettings;
 
     public Optional<OnlineRequestSettingsResponse> getRequestSettings() {
         return this.requestSettings == null ? Optional.empty() : Optional.ofNullable(this.requestSettings);
@@ -175,7 +175,7 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="scaleSettings")
-    private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
+        private final @Nullable Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> scaleSettings;
 
     public Either<AutoScaleSettingsResponse,ManualScaleSettingsResponse> getScaleSettings() {
         return this.scaleSettings == null ? null : this.scaleSettings;
@@ -344,7 +344,6 @@ public final class ManagedOnlineDeploymentResponse extends io.pulumi.resources.I
             this.scaleSettings = scaleSettings;
             return this;
         }
-
         public ManagedOnlineDeploymentResponse build() {
             return new ManagedOnlineDeploymentResponse(appInsightsEnabled, codeConfiguration, description, endpointComputeType, environmentId, environmentVariables, instanceType, livenessProbe, model, properties, provisioningState, readinessProbe, requestSettings, scaleSettings);
         }

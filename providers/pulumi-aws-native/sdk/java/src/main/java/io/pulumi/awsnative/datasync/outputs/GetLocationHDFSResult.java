@@ -7,7 +7,7 @@ import io.pulumi.awsnative.datasync.enums.LocationHDFSAuthenticationType;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSNameNode;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSQopConfiguration;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -284,7 +284,6 @@ public final class GetLocationHDFSResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationHDFSResult build() {
             return new GetLocationHDFSResult(agentArns, authenticationType, blockSize, kerberosPrincipal, kmsKeyProviderUri, locationArn, locationUri, nameNodes, qopConfiguration, replicationFactor, simpleUser, tags);
         }

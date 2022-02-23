@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.outputs;
 import io.pulumi.azurenative.avs.outputs.PSCredentialExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptSecureStringExecutionParameterResponse;
 import io.pulumi.azurenative.avs.outputs.ScriptStringExecutionParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -418,7 +418,6 @@ public final class GetScriptExecutionResult {
             this.warnings = Objects.requireNonNull(warnings);
             return this;
         }
-
         public GetScriptExecutionResult build() {
             return new GetScriptExecutionResult(errors, failureReason, finishedAt, hiddenParameters, id, information, name, namedOutputs, output, parameters, provisioningState, retention, scriptCmdletId, startedAt, submittedAt, timeout, type, warnings);
         }

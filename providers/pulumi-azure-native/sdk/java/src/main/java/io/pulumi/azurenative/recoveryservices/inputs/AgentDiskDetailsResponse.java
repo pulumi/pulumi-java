@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="capacityInBytes", required=true)
-    private final Double capacityInBytes;
+        private final Double capacityInBytes;
 
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
@@ -34,7 +34,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="diskId", required=true)
-    private final String diskId;
+        private final String diskId;
 
     public String getDiskId() {
         return this.diskId;
@@ -45,7 +45,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final String diskName;
+        private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -56,7 +56,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="isOSDisk", required=true)
-    private final String isOSDisk;
+        private final String isOSDisk;
 
     public String getIsOSDisk() {
         return this.isOSDisk;
@@ -67,7 +67,7 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="lunId", required=true)
-    private final Integer lunId;
+        private final Integer lunId;
 
     public Integer getLunId() {
         return this.lunId;
@@ -146,7 +146,6 @@ public final class AgentDiskDetailsResponse extends io.pulumi.resources.InvokeAr
             this.lunId = Objects.requireNonNull(lunId);
             return this;
         }
-
         public AgentDiskDetailsResponse build() {
             return new AgentDiskDetailsResponse(capacityInBytes, diskId, diskName, isOSDisk, lunId);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabricmesh.inputs.AutoScalingPolicyResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerCodePackagePropertiesResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.DiagnosticsRefResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.NetworkRefResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoScalingPolicies")
-    private final @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
+        private final @Nullable List<AutoScalingPolicyResponse> autoScalingPolicies;
 
     public List<AutoScalingPolicyResponse> getAutoScalingPolicies() {
         return this.autoScalingPolicies == null ? List.of() : this.autoScalingPolicies;
@@ -40,7 +40,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="codePackages", required=true)
-    private final List<ContainerCodePackagePropertiesResponse> codePackages;
+        private final List<ContainerCodePackagePropertiesResponse> codePackages;
 
     public List<ContainerCodePackagePropertiesResponse> getCodePackages() {
         return this.codePackages;
@@ -51,7 +51,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -62,7 +62,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diagnostics")
-    private final @Nullable DiagnosticsRefResponse diagnostics;
+        private final @Nullable DiagnosticsRefResponse diagnostics;
 
     public Optional<DiagnosticsRefResponse> getDiagnostics() {
         return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
@@ -73,7 +73,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="healthState", required=true)
-    private final String healthState;
+        private final String healthState;
 
     public String getHealthState() {
         return this.healthState;
@@ -84,7 +84,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -95,7 +95,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -106,7 +106,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkRefs")
-    private final @Nullable List<NetworkRefResponse> networkRefs;
+        private final @Nullable List<NetworkRefResponse> networkRefs;
 
     public List<NetworkRefResponse> getNetworkRefs() {
         return this.networkRefs == null ? List.of() : this.networkRefs;
@@ -117,7 +117,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="osType", required=true)
-    private final String osType;
+        private final String osType;
 
     public String getOsType() {
         return this.osType;
@@ -128,7 +128,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -139,7 +139,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="replicaCount")
-    private final @Nullable Integer replicaCount;
+        private final @Nullable Integer replicaCount;
 
     public Optional<Integer> getReplicaCount() {
         return this.replicaCount == null ? Optional.empty() : Optional.ofNullable(this.replicaCount);
@@ -150,7 +150,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -161,7 +161,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="statusDetails", required=true)
-    private final String statusDetails;
+        private final String statusDetails;
 
     public String getStatusDetails() {
         return this.statusDetails;
@@ -172,7 +172,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -183,7 +183,7 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="unhealthyEvaluation", required=true)
-    private final String unhealthyEvaluation;
+        private final String unhealthyEvaluation;
 
     public String getUnhealthyEvaluation() {
         return this.unhealthyEvaluation;
@@ -362,7 +362,6 @@ public final class ServiceResourceDescriptionResponse extends io.pulumi.resource
             this.unhealthyEvaluation = Objects.requireNonNull(unhealthyEvaluation);
             return this;
         }
-
         public ServiceResourceDescriptionResponse build() {
             return new ServiceResourceDescriptionResponse(autoScalingPolicies, codePackages, description, diagnostics, healthState, id, name, networkRefs, osType, provisioningState, replicaCount, status, statusDetails, type, unhealthyEvaluation);
         }

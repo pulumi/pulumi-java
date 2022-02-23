@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.SkuScaleType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,28 +18,28 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
     public static final SkuSettingCapacityArgs Empty = new SkuSettingCapacityArgs();
 
     @InputImport(name="default")
-    private final @Nullable Input<Integer> $default;
+        private final @Nullable Input<Integer> $default;
 
     public Input<Integer> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
     }
 
     @InputImport(name="maximum")
-    private final @Nullable Input<Integer> maximum;
+        private final @Nullable Input<Integer> maximum;
 
     public Input<Integer> getMaximum() {
         return this.maximum == null ? Input.empty() : this.maximum;
     }
 
     @InputImport(name="minimum", required=true)
-    private final Input<Integer> minimum;
+        private final Input<Integer> minimum;
 
     public Input<Integer> getMinimum() {
         return this.minimum;
     }
 
     @InputImport(name="scaleType")
-    private final @Nullable Input<Either<String,SkuScaleType>> scaleType;
+        private final @Nullable Input<Either<String,SkuScaleType>> scaleType;
 
     public Input<Either<String,SkuScaleType>> getScaleType() {
         return this.scaleType == null ? Input.empty() : this.scaleType;
@@ -128,7 +128,6 @@ public final class SkuSettingCapacityArgs extends io.pulumi.resources.ResourceAr
             this.scaleType = Input.ofNullable(scaleType);
             return this;
         }
-
         public SkuSettingCapacityArgs build() {
             return new SkuSettingCapacityArgs($default, maximum, minimum, scaleType);
         }

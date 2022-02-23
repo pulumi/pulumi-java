@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class SizeInfoResponse {
             this.price = price;
             return this;
         }
-
         public SizeInfoResponse build() {
             return new SizeInfoResponse(computeSize, memory, numberOfCores, price);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class NumberLessThanOrEqualsAdvancedFilterResponse {
             this.value = value;
             return this;
         }
-
         public NumberLessThanOrEqualsAdvancedFilterResponse build() {
             return new NumberLessThanOrEqualsAdvancedFilterResponse(key, operatorType, value);
         }

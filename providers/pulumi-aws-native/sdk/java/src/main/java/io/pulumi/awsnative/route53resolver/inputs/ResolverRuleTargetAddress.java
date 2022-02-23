@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ip", required=true)
-    private final String ip;
+        private final String ip;
 
     public String getIp() {
         return this.ip;
@@ -30,7 +30,7 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="port")
-    private final @Nullable String port;
+        private final @Nullable String port;
 
     public Optional<String> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -79,7 +79,6 @@ public final class ResolverRuleTargetAddress extends io.pulumi.resources.InvokeA
             this.port = port;
             return this;
         }
-
         public ResolverRuleTargetAddress build() {
             return new ResolverRuleTargetAddress(ip, port);
         }

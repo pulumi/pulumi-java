@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datadog.inputs.DatadogOrganizationPropertiesArgs;
 import io.pulumi.azurenative.datadog.inputs.UserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datadogOrganizationProperties")
-    private final @Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
+        private final @Nullable Input<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
 
     public Input<DatadogOrganizationPropertiesArgs> getDatadogOrganizationProperties() {
         return this.datadogOrganizationProperties == null ? Input.empty() : this.datadogOrganizationProperties;
@@ -38,7 +38,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="monitoringStatus")
-    private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
+        private final @Nullable Input<Either<String,MonitoringStatus>> monitoringStatus;
 
     public Input<Either<String,MonitoringStatus>> getMonitoringStatus() {
         return this.monitoringStatus == null ? Input.empty() : this.monitoringStatus;
@@ -49,7 +49,7 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="userInfo")
-    private final @Nullable Input<UserInfoArgs> userInfo;
+        private final @Nullable Input<UserInfoArgs> userInfo;
 
     public Input<UserInfoArgs> getUserInfo() {
         return this.userInfo == null ? Input.empty() : this.userInfo;
@@ -123,7 +123,6 @@ public final class MonitorPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.userInfo = Input.ofNullable(userInfo);
             return this;
         }
-
         public MonitorPropertiesArgs build() {
             return new MonitorPropertiesArgs(datadogOrganizationProperties, monitoringStatus, userInfo);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class HttpLoadBalancingResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public HttpLoadBalancingResponse build() {
             return new HttpLoadBalancingResponse(disabled);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.orgpolicy_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.orgpolicy_v2.inputs.GoogleCloudOrgpolicyV2PolicySpecArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -38,7 +38,7 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
+      private final @Nullable Input<GoogleCloudOrgpolicyV2PolicySpecArgs> spec;
 
     public Input<GoogleCloudOrgpolicyV2PolicySpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -112,7 +112,6 @@ public final class OrganizationPolicyArgs extends io.pulumi.resources.ResourceAr
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public OrganizationPolicyArgs build() {
             return new OrganizationPolicyArgs(name, organizationId, spec);
         }

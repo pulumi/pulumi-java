@@ -5,7 +5,7 @@ package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.awsnative.devopsguru.inputs.NotificationChannelSnsChannelConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
     public static final NotificationChannelConfigArgs Empty = new NotificationChannelConfigArgs();
 
     @InputImport(name="sns")
-    private final @Nullable Input<NotificationChannelSnsChannelConfigArgs> sns;
+        private final @Nullable Input<NotificationChannelSnsChannelConfigArgs> sns;
 
     public Input<NotificationChannelSnsChannelConfigArgs> getSns() {
         return this.sns == null ? Input.empty() : this.sns;
@@ -62,7 +62,6 @@ public final class NotificationChannelConfigArgs extends io.pulumi.resources.Res
             this.sns = Input.ofNullable(sns);
             return this;
         }
-
         public NotificationChannelConfigArgs build() {
             return new NotificationChannelConfigArgs(sns);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2alpha.inputs.GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
      * 
      */
     @InputImport(name="enableDynamicPosition")
-    private final @Nullable Input<Boolean> enableDynamicPosition;
+      private final @Nullable Input<Boolean> enableDynamicPosition;
 
     public Input<Boolean> getEnableDynamicPosition() {
         return this.enableDynamicPosition == null ? Input.empty() : this.enableDynamicPosition;
@@ -38,7 +38,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
      * 
      */
     @InputImport(name="excludedFilterKeys")
-    private final @Nullable Input<List<String>> excludedFilterKeys;
+      private final @Nullable Input<List<String>> excludedFilterKeys;
 
     public Input<List<String>> getExcludedFilterKeys() {
         return this.excludedFilterKeys == null ? Input.empty() : this.excludedFilterKeys;
@@ -49,7 +49,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
      * 
      */
     @InputImport(name="facetKey", required=true)
-    private final Input<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey;
+      private final Input<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> facetKey;
 
     public Input<GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyArgs> getFacetKey() {
         return this.facetKey;
@@ -60,7 +60,7 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
      * 
      */
     @InputImport(name="limit")
-    private final @Nullable Input<Integer> limit;
+      private final @Nullable Input<Integer> limit;
 
     public Input<Integer> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
@@ -149,7 +149,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs extends io
             this.limit = Input.ofNullable(limit);
             return this;
         }
-
         public GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecArgs(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
         }

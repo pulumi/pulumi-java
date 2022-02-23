@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudasset;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudasset.FolderFeedArgs;
 import io.pulumi.gcp.cloudasset.inputs.FolderFeedState;
@@ -215,13 +215,6 @@ public class FolderFeed extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FolderFeed(String name) {
-        super("gcp:cloudasset/folderFeed:FolderFeed", name, FolderFeedArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

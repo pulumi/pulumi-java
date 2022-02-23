@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.ReferenceVmResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class ResourceSettingsResponse {
             this.size = size;
             return this;
         }
-
         public ResourceSettingsResponse build() {
             return new ResourceSettingsResponse(cores, galleryImageResourceId, id, imageName, referenceVm, size);
         }

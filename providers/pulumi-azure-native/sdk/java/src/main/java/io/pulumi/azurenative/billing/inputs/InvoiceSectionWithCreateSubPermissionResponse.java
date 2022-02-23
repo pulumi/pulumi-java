@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.billing.inputs;
 
 import io.pulumi.azurenative.billing.inputs.AzurePlanResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="billingProfileDisplayName", required=true)
-    private final String billingProfileDisplayName;
+        private final String billingProfileDisplayName;
 
     public String getBillingProfileDisplayName() {
         return this.billingProfileDisplayName;
@@ -36,7 +36,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="billingProfileId", required=true)
-    private final String billingProfileId;
+        private final String billingProfileId;
 
     public String getBillingProfileId() {
         return this.billingProfileId;
@@ -47,7 +47,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="billingProfileSpendingLimit", required=true)
-    private final String billingProfileSpendingLimit;
+        private final String billingProfileSpendingLimit;
 
     public String getBillingProfileSpendingLimit() {
         return this.billingProfileSpendingLimit;
@@ -58,7 +58,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="billingProfileStatus", required=true)
-    private final String billingProfileStatus;
+        private final String billingProfileStatus;
 
     public String getBillingProfileStatus() {
         return this.billingProfileStatus;
@@ -69,7 +69,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="billingProfileStatusReasonCode", required=true)
-    private final String billingProfileStatusReasonCode;
+        private final String billingProfileStatusReasonCode;
 
     public String getBillingProfileStatusReasonCode() {
         return this.billingProfileStatusReasonCode;
@@ -80,7 +80,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="billingProfileSystemId", required=true)
-    private final String billingProfileSystemId;
+        private final String billingProfileSystemId;
 
     public String getBillingProfileSystemId() {
         return this.billingProfileSystemId;
@@ -91,7 +91,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="enabledAzurePlans")
-    private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
+        private final @Nullable List<AzurePlanResponse> enabledAzurePlans;
 
     public List<AzurePlanResponse> getEnabledAzurePlans() {
         return this.enabledAzurePlans == null ? List.of() : this.enabledAzurePlans;
@@ -102,7 +102,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="invoiceSectionDisplayName", required=true)
-    private final String invoiceSectionDisplayName;
+        private final String invoiceSectionDisplayName;
 
     public String getInvoiceSectionDisplayName() {
         return this.invoiceSectionDisplayName;
@@ -113,7 +113,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="invoiceSectionId", required=true)
-    private final String invoiceSectionId;
+        private final String invoiceSectionId;
 
     public String getInvoiceSectionId() {
         return this.invoiceSectionId;
@@ -124,7 +124,7 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
      * 
      */
     @InputImport(name="invoiceSectionSystemId", required=true)
-    private final String invoiceSectionSystemId;
+        private final String invoiceSectionSystemId;
 
     public String getInvoiceSectionSystemId() {
         return this.invoiceSectionSystemId;
@@ -253,7 +253,6 @@ public final class InvoiceSectionWithCreateSubPermissionResponse extends io.pulu
             this.invoiceSectionSystemId = Objects.requireNonNull(invoiceSectionSystemId);
             return this;
         }
-
         public InvoiceSectionWithCreateSubPermissionResponse build() {
             return new InvoiceSectionWithCreateSubPermissionResponse(billingProfileDisplayName, billingProfileId, billingProfileSpendingLimit, billingProfileStatus, billingProfileStatusReasonCode, billingProfileSystemId, enabledAzurePlans, invoiceSectionDisplayName, invoiceSectionId, invoiceSectionSystemId);
         }

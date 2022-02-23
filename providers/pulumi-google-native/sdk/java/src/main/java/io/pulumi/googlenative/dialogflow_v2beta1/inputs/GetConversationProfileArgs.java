@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetConversationProfileArgs extends io.pulumi.resources.Invoke
     public static final GetConversationProfileArgs Empty = new GetConversationProfileArgs();
 
     @InputImport(name="conversationProfileId", required=true)
-    private final String conversationProfileId;
+      private final String conversationProfileId;
 
     public String getConversationProfileId() {
         return this.conversationProfileId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetConversationProfileArgs extends io.pulumi.resources.Invoke
             this.project = project;
             return this;
         }
-
         public GetConversationProfileArgs build() {
             return new GetConversationProfileArgs(conversationProfileId, location, project);
         }

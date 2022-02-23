@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -151,7 +151,6 @@ public final class BqmlTrainingRunTrainingOptionsResponse {
             this.warmStart = Objects.requireNonNull(warmStart);
             return this;
         }
-
         public BqmlTrainingRunTrainingOptionsResponse build() {
             return new BqmlTrainingRunTrainingOptionsResponse(earlyStop, l1Reg, l2Reg, learnRate, learnRateStrategy, lineSearchInitLearnRate, maxIteration, minRelProgress, warmStart);
         }

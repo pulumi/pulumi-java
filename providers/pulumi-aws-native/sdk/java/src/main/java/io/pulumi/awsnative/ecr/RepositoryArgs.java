@@ -9,7 +9,7 @@ import io.pulumi.awsnative.ecr.inputs.RepositoryImageScanningConfigurationArgs;
 import io.pulumi.awsnative.ecr.inputs.RepositoryLifecyclePolicyArgs;
 import io.pulumi.awsnative.ecr.inputs.RepositoryTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,14 +22,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
     public static final RepositoryArgs Empty = new RepositoryArgs();
 
     @InputImport(name="encryptionConfiguration")
-    private final @Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
+        private final @Nullable Input<RepositoryEncryptionConfigurationArgs> encryptionConfiguration;
 
     public Input<RepositoryEncryptionConfigurationArgs> getEncryptionConfiguration() {
         return this.encryptionConfiguration == null ? Input.empty() : this.encryptionConfiguration;
     }
 
     @InputImport(name="imageScanningConfiguration")
-    private final @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
+        private final @Nullable Input<RepositoryImageScanningConfigurationArgs> imageScanningConfiguration;
 
     public Input<RepositoryImageScanningConfigurationArgs> getImageScanningConfiguration() {
         return this.imageScanningConfiguration == null ? Input.empty() : this.imageScanningConfiguration;
@@ -40,14 +40,14 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageTagMutability")
-    private final @Nullable Input<RepositoryImageTagMutability> imageTagMutability;
+        private final @Nullable Input<RepositoryImageTagMutability> imageTagMutability;
 
     public Input<RepositoryImageTagMutability> getImageTagMutability() {
         return this.imageTagMutability == null ? Input.empty() : this.imageTagMutability;
     }
 
     @InputImport(name="lifecyclePolicy")
-    private final @Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
+        private final @Nullable Input<RepositoryLifecyclePolicyArgs> lifecyclePolicy;
 
     public Input<RepositoryLifecyclePolicyArgs> getLifecyclePolicy() {
         return this.lifecyclePolicy == null ? Input.empty() : this.lifecyclePolicy;
@@ -58,7 +58,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable Input<String> repositoryName;
+        private final @Nullable Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName == null ? Input.empty() : this.repositoryName;
@@ -69,7 +69,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repositoryPolicyText")
-    private final @Nullable Input<Object> repositoryPolicyText;
+        private final @Nullable Input<Object> repositoryPolicyText;
 
     public Input<Object> getRepositoryPolicyText() {
         return this.repositoryPolicyText == null ? Input.empty() : this.repositoryPolicyText;
@@ -80,7 +80,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<RepositoryTagArgs>> tags;
+        private final @Nullable Input<List<RepositoryTagArgs>> tags;
 
     public Input<List<RepositoryTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -214,7 +214,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public RepositoryArgs build() {
             return new RepositoryArgs(encryptionConfiguration, imageScanningConfiguration, imageTagMutability, lifecyclePolicy, repositoryName, repositoryPolicyText, tags);
         }

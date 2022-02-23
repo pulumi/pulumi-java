@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="connectorName", required=true)
-    private final String connectorName;
+        private final String connectorName;
 
     public String getConnectorName() {
         return this.connectorName;
@@ -28,7 +28,7 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final String hubName;
+        private final String hubName;
 
     public String getHubName() {
         return this.hubName;
@@ -39,7 +39,7 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="mappingName", required=true)
-    private final String mappingName;
+        private final String mappingName;
 
     public String getMappingName() {
         return this.mappingName;
@@ -50,7 +50,7 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetConnectorMappingArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetConnectorMappingArgs build() {
             return new GetConnectorMappingArgs(connectorName, hubName, mappingName, resourceGroupName);
         }

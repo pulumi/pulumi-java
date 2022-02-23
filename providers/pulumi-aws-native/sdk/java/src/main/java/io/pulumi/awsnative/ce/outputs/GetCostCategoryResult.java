@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ce.outputs;
 
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -145,7 +145,6 @@ public final class GetCostCategoryResult {
             this.splitChargeRules = splitChargeRules;
             return this;
         }
-
         public GetCostCategoryResult build() {
             return new GetCostCategoryResult(arn, defaultValue, effectiveStart, ruleVersion, rules, splitChargeRules);
         }

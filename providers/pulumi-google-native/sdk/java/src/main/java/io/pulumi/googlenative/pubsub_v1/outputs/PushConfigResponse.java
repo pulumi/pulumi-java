@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsub_v1.outputs.OidcTokenResponse;
 import java.lang.String;
 import java.util.Map;
@@ -97,7 +97,6 @@ public final class PushConfigResponse {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public PushConfigResponse build() {
             return new PushConfigResponse(attributes, oidcToken, pushEndpoint);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -286,7 +286,6 @@ public final class GetBackupResult {
             this.storageBytes = Objects.requireNonNull(storageBytes);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(capacityGb, createTime, description, downloadBytes, labels, name, satisfiesPzs, sourceFileShare, sourceInstance, sourceInstanceTier, state, storageBytes);
         }

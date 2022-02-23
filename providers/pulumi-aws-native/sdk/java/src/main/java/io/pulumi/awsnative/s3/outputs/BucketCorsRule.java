@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class BucketCorsRule {
             this.maxAge = maxAge;
             return this;
         }
-
         public BucketCorsRule build() {
             return new BucketCorsRule(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);
         }

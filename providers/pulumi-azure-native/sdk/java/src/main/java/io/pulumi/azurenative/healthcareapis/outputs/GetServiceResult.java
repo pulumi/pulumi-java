@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthcareapis.outputs;
 import io.pulumi.azurenative.healthcareapis.outputs.ServicesPropertiesResponse;
 import io.pulumi.azurenative.healthcareapis.outputs.ServicesResourceResponseIdentity;
 import io.pulumi.azurenative.healthcareapis.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -248,7 +248,6 @@ public final class GetServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(etag, id, identity, kind, location, name, properties, systemData, tags, type);
         }

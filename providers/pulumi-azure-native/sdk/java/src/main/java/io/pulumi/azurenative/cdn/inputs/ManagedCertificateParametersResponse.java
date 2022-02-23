@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ManagedCertificateParametersResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -60,7 +60,6 @@ public final class ManagedCertificateParametersResponse extends io.pulumi.resour
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManagedCertificateParametersResponse build() {
             return new ManagedCertificateParametersResponse(type);
         }

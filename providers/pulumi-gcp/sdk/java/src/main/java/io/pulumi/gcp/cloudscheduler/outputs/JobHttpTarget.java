@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobHttpTargetOauthToken;
 import io.pulumi.gcp.cloudscheduler.outputs.JobHttpTargetOidcToken;
 import java.lang.String;
@@ -179,7 +179,6 @@ public final class JobHttpTarget {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public JobHttpTarget build() {
             return new JobHttpTarget(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }

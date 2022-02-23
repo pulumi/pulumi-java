@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.NetworkProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ClusterResourcePropertiesResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ClusterResourcePropertiesResponse build() {
             return new ClusterResourcePropertiesResponse(networkProfile, provisioningState, serviceId, version);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.notebooks.outputs;
 
 import io.pulumi.azurenative.notebooks.outputs.NotebookResourceSystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -245,7 +245,6 @@ public final class GetNotebookProxyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNotebookProxyResult build() {
             return new GetNotebookProxyResult(hostname, id, name, publicDns, publicNetworkAccess, region, resourceId, secondaryAppId, systemData, type);
         }

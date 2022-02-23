@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ResourceRequirementsArgs;
 import io.pulumi.kubernetes.core_v1.inputs.TypedLocalObjectReferenceArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -27,7 +27,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accessModes")
-    private final @Nullable Input<List<String>> accessModes;
+        private final @Nullable Input<List<String>> accessModes;
 
     public Input<List<String>> getAccessModes() {
         return this.accessModes == null ? Input.empty() : this.accessModes;
@@ -38,7 +38,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<TypedLocalObjectReferenceArgs> dataSource;
+        private final @Nullable Input<TypedLocalObjectReferenceArgs> dataSource;
 
     public Input<TypedLocalObjectReferenceArgs> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -54,7 +54,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dataSourceRef")
-    private final @Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef;
+        private final @Nullable Input<TypedLocalObjectReferenceArgs> dataSourceRef;
 
     public Input<TypedLocalObjectReferenceArgs> getDataSourceRef() {
         return this.dataSourceRef == null ? Input.empty() : this.dataSourceRef;
@@ -65,7 +65,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resources")
-    private final @Nullable Input<ResourceRequirementsArgs> resources;
+        private final @Nullable Input<ResourceRequirementsArgs> resources;
 
     public Input<ResourceRequirementsArgs> getResources() {
         return this.resources == null ? Input.empty() : this.resources;
@@ -76,7 +76,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+        private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -87,7 +87,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="storageClassName")
-    private final @Nullable Input<String> storageClassName;
+        private final @Nullable Input<String> storageClassName;
 
     public Input<String> getStorageClassName() {
         return this.storageClassName == null ? Input.empty() : this.storageClassName;
@@ -98,7 +98,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeMode")
-    private final @Nullable Input<String> volumeMode;
+        private final @Nullable Input<String> volumeMode;
 
     public Input<String> getVolumeMode() {
         return this.volumeMode == null ? Input.empty() : this.volumeMode;
@@ -109,7 +109,7 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable Input<String> volumeName;
+        private final @Nullable Input<String> volumeName;
 
     public Input<String> getVolumeName() {
         return this.volumeName == null ? Input.empty() : this.volumeName;
@@ -258,7 +258,6 @@ public final class PersistentVolumeClaimSpecArgs extends io.pulumi.resources.Res
             this.volumeName = Input.ofNullable(volumeName);
             return this;
         }
-
         public PersistentVolumeClaimSpecArgs build() {
             return new PersistentVolumeClaimSpecArgs(accessModes, dataSource, dataSourceRef, resources, selector, storageClassName, volumeMode, volumeName);
         }

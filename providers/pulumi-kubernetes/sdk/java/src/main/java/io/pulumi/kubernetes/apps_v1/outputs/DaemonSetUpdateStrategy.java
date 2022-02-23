@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1.outputs.RollingUpdateDaemonSet;
 import java.lang.String;
 import java.util.Objects;
@@ -85,7 +85,6 @@ public final class DaemonSetUpdateStrategy {
             this.type = type;
             return this;
         }
-
         public DaemonSetUpdateStrategy build() {
             return new DaemonSetUpdateStrategy(rollingUpdate, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicedirectory_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicedirectory_v1beta1.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GetNamespaceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetNamespaceIamPolicyResult build() {
             return new GetNamespaceIamPolicyResult(bindings, etag, version);
         }

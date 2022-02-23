@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudwatch;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="actionsEnabled")
-    private final @Nullable Input<Boolean> actionsEnabled;
+        private final @Nullable Input<Boolean> actionsEnabled;
 
     public Input<Boolean> getActionsEnabled() {
         return this.actionsEnabled == null ? Input.empty() : this.actionsEnabled;
@@ -32,7 +32,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmActions")
-    private final @Nullable Input<List<String>> alarmActions;
+        private final @Nullable Input<List<String>> alarmActions;
 
     public Input<List<String>> getAlarmActions() {
         return this.alarmActions == null ? Input.empty() : this.alarmActions;
@@ -43,7 +43,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmDescription")
-    private final @Nullable Input<String> alarmDescription;
+        private final @Nullable Input<String> alarmDescription;
 
     public Input<String> getAlarmDescription() {
         return this.alarmDescription == null ? Input.empty() : this.alarmDescription;
@@ -54,7 +54,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmName", required=true)
-    private final Input<String> alarmName;
+        private final Input<String> alarmName;
 
     public Input<String> getAlarmName() {
         return this.alarmName;
@@ -65,7 +65,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarmRule", required=true)
-    private final Input<String> alarmRule;
+        private final Input<String> alarmRule;
 
     public Input<String> getAlarmRule() {
         return this.alarmRule;
@@ -76,7 +76,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insufficientDataActions")
-    private final @Nullable Input<List<String>> insufficientDataActions;
+        private final @Nullable Input<List<String>> insufficientDataActions;
 
     public Input<List<String>> getInsufficientDataActions() {
         return this.insufficientDataActions == null ? Input.empty() : this.insufficientDataActions;
@@ -87,7 +87,7 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oKActions")
-    private final @Nullable Input<List<String>> oKActions;
+        private final @Nullable Input<List<String>> oKActions;
 
     public Input<List<String>> getOKActions() {
         return this.oKActions == null ? Input.empty() : this.oKActions;
@@ -221,7 +221,6 @@ public final class CompositeAlarmArgs extends io.pulumi.resources.ResourceArgs {
             this.oKActions = Input.ofNullable(oKActions);
             return this;
         }
-
         public CompositeAlarmArgs build() {
             return new CompositeAlarmArgs(actionsEnabled, alarmActions, alarmDescription, alarmName, alarmRule, insufficientDataActions, oKActions);
         }

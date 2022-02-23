@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketS3KeyFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class BucketNotificationFilter {
             this.s3Key = Objects.requireNonNull(s3Key);
             return this;
         }
-
         public BucketNotificationFilter build() {
             return new BucketNotificationFilter(s3Key);
         }

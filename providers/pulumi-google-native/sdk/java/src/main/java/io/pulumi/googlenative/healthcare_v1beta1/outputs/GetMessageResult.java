@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ParsedDataResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.PatientIdResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.SchematizedDataResponse;
@@ -247,7 +247,6 @@ public final class GetMessageResult {
             this.sendTime = Objects.requireNonNull(sendTime);
             return this;
         }
-
         public GetMessageResult build() {
             return new GetMessageResult(createTime, data, labels, messageType, name, parsedData, patientIds, schematizedData, sendFacility, sendTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmUtilizationMetricsArgs;
 import io.pulumi.googlenative.vmmigration_v1.inputs.VmwareVmDetailsArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="utilization")
-    private final @Nullable Input<VmUtilizationMetricsArgs> utilization;
+      private final @Nullable Input<VmUtilizationMetricsArgs> utilization;
 
     public Input<VmUtilizationMetricsArgs> getUtilization() {
         return this.utilization == null ? Input.empty() : this.utilization;
@@ -36,7 +36,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable Input<String> vmId;
+      private final @Nullable Input<String> vmId;
 
     public Input<String> getVmId() {
         return this.vmId == null ? Input.empty() : this.vmId;
@@ -47,7 +47,7 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="vmwareVmDetails")
-    private final @Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails;
+      private final @Nullable Input<VmwareVmDetailsArgs> vmwareVmDetails;
 
     public Input<VmwareVmDetailsArgs> getVmwareVmDetails() {
         return this.vmwareVmDetails == null ? Input.empty() : this.vmwareVmDetails;
@@ -121,7 +121,6 @@ public final class VmUtilizationInfoArgs extends io.pulumi.resources.ResourceArg
             this.vmwareVmDetails = Input.ofNullable(vmwareVmDetails);
             return this;
         }
-
         public VmUtilizationInfoArgs build() {
             return new VmUtilizationInfoArgs(utilization, vmId, vmwareVmDetails);
         }

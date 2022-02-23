@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.SiteConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class GetWebAppSlotResult {
             this.siteConfig = siteConfig;
             return this;
         }
-
         public GetWebAppSlotResult build() {
             return new GetWebAppSlotResult(siteConfig);
         }

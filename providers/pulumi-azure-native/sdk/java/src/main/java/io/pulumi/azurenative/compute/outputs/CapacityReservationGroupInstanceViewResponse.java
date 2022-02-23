@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.CapacityReservationInstanceViewWithNameResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class CapacityReservationGroupInstanceViewResponse {
             this.capacityReservations = Objects.requireNonNull(capacityReservations);
             return this;
         }
-
         public CapacityReservationGroupInstanceViewResponse build() {
             return new CapacityReservationGroupInstanceViewResponse(capacityReservations);
         }

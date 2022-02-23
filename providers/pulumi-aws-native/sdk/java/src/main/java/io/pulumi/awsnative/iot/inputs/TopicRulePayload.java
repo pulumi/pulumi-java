@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRuleAction;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class TopicRulePayload extends io.pulumi.resources.InvokeArgs {
     public static final TopicRulePayload Empty = new TopicRulePayload();
 
     @InputImport(name="actions", required=true)
-    private final List<TopicRuleAction> actions;
+        private final List<TopicRuleAction> actions;
 
     public List<TopicRuleAction> getActions() {
         return this.actions;
     }
 
     @InputImport(name="awsIotSqlVersion")
-    private final @Nullable String awsIotSqlVersion;
+        private final @Nullable String awsIotSqlVersion;
 
     public Optional<String> getAwsIotSqlVersion() {
         return this.awsIotSqlVersion == null ? Optional.empty() : Optional.ofNullable(this.awsIotSqlVersion);
     }
 
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @InputImport(name="errorAction")
-    private final @Nullable TopicRuleAction errorAction;
+        private final @Nullable TopicRuleAction errorAction;
 
     public Optional<TopicRuleAction> getErrorAction() {
         return this.errorAction == null ? Optional.empty() : Optional.ofNullable(this.errorAction);
     }
 
     @InputImport(name="ruleDisabled")
-    private final @Nullable Boolean ruleDisabled;
+        private final @Nullable Boolean ruleDisabled;
 
     public Optional<Boolean> getRuleDisabled() {
         return this.ruleDisabled == null ? Optional.empty() : Optional.ofNullable(this.ruleDisabled);
     }
 
     @InputImport(name="sql", required=true)
-    private final String sql;
+        private final String sql;
 
     public String getSql() {
         return this.sql;
@@ -142,7 +142,6 @@ public final class TopicRulePayload extends io.pulumi.resources.InvokeArgs {
             this.sql = Objects.requireNonNull(sql);
             return this;
         }
-
         public TopicRulePayload build() {
             return new TopicRulePayload(actions, awsIotSqlVersion, description, errorAction, ruleDisabled, sql);
         }

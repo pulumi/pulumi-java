@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
      * 
      */
     @InputImport(name="useElapsedTime", required=true)
-    private final Boolean useElapsedTime;
+      private final Boolean useElapsedTime;
 
     public Boolean getUseElapsedTime() {
         return this.useElapsedTime;
@@ -59,7 +59,6 @@ public final class GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppi
             this.useElapsedTime = Objects.requireNonNull(useElapsedTime);
             return this;
         }
-
         public GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse build() {
             return new GoogleCloudMlV1_AutomatedStoppingConfig_MedianAutomatedStoppingConfigResponse(useElapsedTime);
         }

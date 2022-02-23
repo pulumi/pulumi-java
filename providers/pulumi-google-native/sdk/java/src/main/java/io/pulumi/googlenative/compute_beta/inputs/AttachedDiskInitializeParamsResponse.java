@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_beta.inputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -26,7 +26,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -37,7 +37,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final String diskName;
+      private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -48,7 +48,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -59,7 +59,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="diskType", required=true)
-    private final String diskType;
+      private final String diskType;
 
     public String getDiskType() {
         return this.diskType;
@@ -70,7 +70,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="guestOsFeatures", required=true)
-    private final List<GuestOsFeatureResponse> guestOsFeatures;
+      private final List<GuestOsFeatureResponse> guestOsFeatures;
 
     public List<GuestOsFeatureResponse> getGuestOsFeatures() {
         return this.guestOsFeatures;
@@ -81,7 +81,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -92,7 +92,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="licenses", required=true)
-    private final List<String> licenses;
+      private final List<String> licenses;
 
     public List<String> getLicenses() {
         return this.licenses;
@@ -103,7 +103,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="multiWriter", required=true)
-    private final Boolean multiWriter;
+      private final Boolean multiWriter;
 
     public Boolean getMultiWriter() {
         return this.multiWriter;
@@ -114,7 +114,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="onUpdateAction", required=true)
-    private final String onUpdateAction;
+      private final String onUpdateAction;
 
     public String getOnUpdateAction() {
         return this.onUpdateAction;
@@ -125,7 +125,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisionedIops", required=true)
-    private final String provisionedIops;
+      private final String provisionedIops;
 
     public String getProvisionedIops() {
         return this.provisionedIops;
@@ -136,7 +136,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="resourcePolicies", required=true)
-    private final List<String> resourcePolicies;
+      private final List<String> resourcePolicies;
 
     public List<String> getResourcePolicies() {
         return this.resourcePolicies;
@@ -147,7 +147,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceImage", required=true)
-    private final String sourceImage;
+      private final String sourceImage;
 
     public String getSourceImage() {
         return this.sourceImage;
@@ -158,7 +158,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceImageEncryptionKey", required=true)
-    private final CustomerEncryptionKeyResponse sourceImageEncryptionKey;
+      private final CustomerEncryptionKeyResponse sourceImageEncryptionKey;
 
     public CustomerEncryptionKeyResponse getSourceImageEncryptionKey() {
         return this.sourceImageEncryptionKey;
@@ -169,7 +169,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceSnapshot", required=true)
-    private final String sourceSnapshot;
+      private final String sourceSnapshot;
 
     public String getSourceSnapshot() {
         return this.sourceSnapshot;
@@ -180,7 +180,7 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="sourceSnapshotEncryptionKey", required=true)
-    private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
+      private final CustomerEncryptionKeyResponse sourceSnapshotEncryptionKey;
 
     public CustomerEncryptionKeyResponse getSourceSnapshotEncryptionKey() {
         return this.sourceSnapshotEncryptionKey;
@@ -359,7 +359,6 @@ public final class AttachedDiskInitializeParamsResponse extends io.pulumi.resour
             this.sourceSnapshotEncryptionKey = Objects.requireNonNull(sourceSnapshotEncryptionKey);
             return this;
         }
-
         public AttachedDiskInitializeParamsResponse build() {
             return new AttachedDiskInitializeParamsResponse(description, diskName, diskSizeGb, diskType, guestOsFeatures, labels, licenses, multiWriter, onUpdateAction, provisionedIops, resourcePolicies, sourceImage, sourceImageEncryptionKey, sourceSnapshot, sourceSnapshotEncryptionKey);
         }

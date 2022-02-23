@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridnetwork.outputs;
 
 import io.pulumi.azurenative.hybridnetwork.outputs.LinuxConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class OsProfileResponse {
             this.linuxConfiguration = linuxConfiguration;
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, customData, customDataRequired, linuxConfiguration);
         }

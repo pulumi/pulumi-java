@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -60,7 +60,6 @@ public final class OriginRequestPolicyQueryStringsConfig {
             this.queryStrings = queryStrings;
             return this;
         }
-
         public OriginRequestPolicyQueryStringsConfig build() {
             return new OriginRequestPolicyQueryStringsConfig(queryStringBehavior, queryStrings);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.MediaGraphUsernamePasswordCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -100,7 +100,6 @@ public final class MediaGraphClearEndpointResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public MediaGraphClearEndpointResponse build() {
             return new MediaGraphClearEndpointResponse(credentials, odataType, url);
         }

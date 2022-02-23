@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class BackupFileInfoResponse {
             this.status = status;
             return this;
         }
-
         public BackupFileInfoResponse build() {
             return new BackupFileInfoResponse(familySequenceNumber, fileLocation, status);
         }

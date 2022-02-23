@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.LBBackendAddressPoolResourceSettingsResponse;
 import io.pulumi.azurenative.migrate.outputs.LBFrontendIPConfigurationResourceSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -167,7 +167,6 @@ public final class LoadBalancerResourceSettingsResponse {
             this.zones = zones;
             return this;
         }
-
         public LoadBalancerResourceSettingsResponse build() {
             return new LoadBalancerResourceSettingsResponse(backendAddressPools, frontendIPConfigurations, resourceType, sku, targetResourceName, zones);
         }

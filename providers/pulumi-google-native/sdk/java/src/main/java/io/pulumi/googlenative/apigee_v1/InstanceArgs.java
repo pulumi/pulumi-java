@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.enums.InstancePeeringCidrRange;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskEncryptionKeyName")
-    private final @Nullable Input<String> diskEncryptionKeyName;
+      private final @Nullable Input<String> diskEncryptionKeyName;
 
     public Input<String> getDiskEncryptionKeyName() {
         return this.diskEncryptionKeyName == null ? Input.empty() : this.diskEncryptionKeyName;
@@ -42,7 +42,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -53,7 +53,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRange")
-    private final @Nullable Input<String> ipRange;
+      private final @Nullable Input<String> ipRange;
 
     public Input<String> getIpRange() {
         return this.ipRange == null ? Input.empty() : this.ipRange;
@@ -64,7 +64,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -75,14 +75,14 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+      private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
@@ -93,7 +93,7 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peeringCidrRange")
-    private final @Nullable Input<InstancePeeringCidrRange> peeringCidrRange;
+      private final @Nullable Input<InstancePeeringCidrRange> peeringCidrRange;
 
     public Input<InstancePeeringCidrRange> getPeeringCidrRange() {
         return this.peeringCidrRange == null ? Input.empty() : this.peeringCidrRange;
@@ -242,7 +242,6 @@ public final class InstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.peeringCidrRange = Input.ofNullable(peeringCidrRange);
             return this;
         }
-
         public InstanceArgs build() {
             return new InstanceArgs(description, diskEncryptionKeyName, displayName, ipRange, location, name, organizationId, peeringCidrRange);
         }

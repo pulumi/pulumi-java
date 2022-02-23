@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise;
 import io.pulumi.awsnative.iotsitewise.inputs.AlarmsPropertiesArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.PortalTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alarms")
-    private final @Nullable Input<AlarmsPropertiesArgs> alarms;
+        private final @Nullable Input<AlarmsPropertiesArgs> alarms;
 
     public Input<AlarmsPropertiesArgs> getAlarms() {
         return this.alarms == null ? Input.empty() : this.alarms;
@@ -33,7 +33,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationSenderEmail")
-    private final @Nullable Input<String> notificationSenderEmail;
+        private final @Nullable Input<String> notificationSenderEmail;
 
     public Input<String> getNotificationSenderEmail() {
         return this.notificationSenderEmail == null ? Input.empty() : this.notificationSenderEmail;
@@ -44,7 +44,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalAuthMode")
-    private final @Nullable Input<String> portalAuthMode;
+        private final @Nullable Input<String> portalAuthMode;
 
     public Input<String> getPortalAuthMode() {
         return this.portalAuthMode == null ? Input.empty() : this.portalAuthMode;
@@ -55,7 +55,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalContactEmail", required=true)
-    private final Input<String> portalContactEmail;
+        private final Input<String> portalContactEmail;
 
     public Input<String> getPortalContactEmail() {
         return this.portalContactEmail;
@@ -66,7 +66,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalDescription")
-    private final @Nullable Input<String> portalDescription;
+        private final @Nullable Input<String> portalDescription;
 
     public Input<String> getPortalDescription() {
         return this.portalDescription == null ? Input.empty() : this.portalDescription;
@@ -77,7 +77,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="portalName")
-    private final @Nullable Input<String> portalName;
+        private final @Nullable Input<String> portalName;
 
     public Input<String> getPortalName() {
         return this.portalName == null ? Input.empty() : this.portalName;
@@ -88,7 +88,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -99,7 +99,7 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<PortalTagArgs>> tags;
+        private final @Nullable Input<List<PortalTagArgs>> tags;
 
     public Input<List<PortalTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -248,7 +248,6 @@ public final class PortalArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PortalArgs build() {
             return new PortalArgs(alarms, notificationSenderEmail, portalAuthMode, portalContactEmail, portalDescription, portalName, roleArn, tags);
         }

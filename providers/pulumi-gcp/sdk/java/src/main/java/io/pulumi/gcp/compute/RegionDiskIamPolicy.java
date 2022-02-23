@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionDiskIamPolicyArgs;
 import io.pulumi.gcp.compute.inputs.RegionDiskIamPolicyState;
@@ -124,13 +124,6 @@ public class RegionDiskIamPolicy extends io.pulumi.resources.CustomResource {
         return this.region;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionDiskIamPolicy(String name) {
-        super("gcp:compute/regionDiskIamPolicy:RegionDiskIamPolicy", name, RegionDiskIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

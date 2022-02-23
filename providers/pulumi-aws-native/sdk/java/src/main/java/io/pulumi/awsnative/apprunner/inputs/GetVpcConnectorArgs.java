@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVpcConnectorArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="vpcConnectorArn", required=true)
-    private final String vpcConnectorArn;
+        private final String vpcConnectorArn;
 
     public String getVpcConnectorArn() {
         return this.vpcConnectorArn;
@@ -55,7 +55,6 @@ public final class GetVpcConnectorArgs extends io.pulumi.resources.InvokeArgs {
             this.vpcConnectorArn = Objects.requireNonNull(vpcConnectorArn);
             return this;
         }
-
         public GetVpcConnectorArgs build() {
             return new GetVpcConnectorArgs(vpcConnectorArn);
         }

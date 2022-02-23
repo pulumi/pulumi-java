@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1.inputs.X509ExtensionArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="customSans")
-    private final @Nullable Input<List<X509ExtensionArgs>> customSans;
+      private final @Nullable Input<List<X509ExtensionArgs>> customSans;
 
     public Input<List<X509ExtensionArgs>> getCustomSans() {
         return this.customSans == null ? Input.empty() : this.customSans;
@@ -36,7 +36,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="dnsNames")
-    private final @Nullable Input<List<String>> dnsNames;
+      private final @Nullable Input<List<String>> dnsNames;
 
     public Input<List<String>> getDnsNames() {
         return this.dnsNames == null ? Input.empty() : this.dnsNames;
@@ -47,7 +47,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="emailAddresses")
-    private final @Nullable Input<List<String>> emailAddresses;
+      private final @Nullable Input<List<String>> emailAddresses;
 
     public Input<List<String>> getEmailAddresses() {
         return this.emailAddresses == null ? Input.empty() : this.emailAddresses;
@@ -58,7 +58,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ipAddresses")
-    private final @Nullable Input<List<String>> ipAddresses;
+      private final @Nullable Input<List<String>> ipAddresses;
 
     public Input<List<String>> getIpAddresses() {
         return this.ipAddresses == null ? Input.empty() : this.ipAddresses;
@@ -69,7 +69,7 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uris")
-    private final @Nullable Input<List<String>> uris;
+      private final @Nullable Input<List<String>> uris;
 
     public Input<List<String>> getUris() {
         return this.uris == null ? Input.empty() : this.uris;
@@ -173,7 +173,6 @@ public final class SubjectAltNamesArgs extends io.pulumi.resources.ResourceArgs 
             this.uris = Input.ofNullable(uris);
             return this;
         }
-
         public SubjectAltNamesArgs build() {
             return new SubjectAltNamesArgs(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1.outputs.RRSetRoutingPolicyGeoPolicyResponse;
 import io.pulumi.googlenative.dns_v1.outputs.RRSetRoutingPolicyWrrPolicyResponse;
 import java.lang.String;
@@ -73,7 +73,6 @@ public final class RRSetRoutingPolicyResponse {
             this.wrr = Objects.requireNonNull(wrr);
             return this;
         }
-
         public RRSetRoutingPolicyResponse build() {
             return new RRSetRoutingPolicyResponse(geo, kind, wrr);
         }

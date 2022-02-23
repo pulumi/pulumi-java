@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IntegrationServiceEnvironmentAccessEndpointResponse;
 import io.pulumi.azurenative.logic.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class NetworkConfigurationResponse {
             this.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;
         }
-
         public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(accessEndpoint, subnets, virtualNetworkAddressSpace);
         }

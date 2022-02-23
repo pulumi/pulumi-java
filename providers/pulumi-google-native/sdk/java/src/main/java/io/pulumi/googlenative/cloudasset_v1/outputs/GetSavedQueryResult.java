@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudasset_v1.outputs.QueryContentResponse;
 import java.lang.String;
 import java.util.Map;
@@ -202,7 +202,6 @@ public final class GetSavedQueryResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetSavedQueryResult build() {
             return new GetSavedQueryResult(content, createTime, creator, description, labels, lastUpdateTime, lastUpdater, name);
         }

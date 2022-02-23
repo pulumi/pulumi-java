@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagepool;
 
 import io.pulumi.azurenative.storagepool.inputs.TargetPortalGroupCreateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskPoolName", required=true)
-    private final Input<String> diskPoolName;
+        private final Input<String> diskPoolName;
 
     public Input<String> getDiskPoolName() {
         return this.diskPoolName;
@@ -32,7 +32,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iscsiTargetName")
-    private final @Nullable Input<String> iscsiTargetName;
+        private final @Nullable Input<String> iscsiTargetName;
 
     public Input<String> getIscsiTargetName() {
         return this.iscsiTargetName == null ? Input.empty() : this.iscsiTargetName;
@@ -43,7 +43,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetIqn")
-    private final @Nullable Input<String> targetIqn;
+        private final @Nullable Input<String> targetIqn;
 
     public Input<String> getTargetIqn() {
         return this.targetIqn == null ? Input.empty() : this.targetIqn;
@@ -65,7 +65,7 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tpgs", required=true)
-    private final Input<List<TargetPortalGroupCreateArgs>> tpgs;
+        private final Input<List<TargetPortalGroupCreateArgs>> tpgs;
 
     public Input<List<TargetPortalGroupCreateArgs>> getTpgs() {
         return this.tpgs;
@@ -169,7 +169,6 @@ public final class IscsiTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.tpgs = Input.of(Objects.requireNonNull(tpgs));
             return this;
         }
-
         public IscsiTargetArgs build() {
             return new IscsiTargetArgs(diskPoolName, iscsiTargetName, resourceGroupName, targetIqn, tpgs);
         }

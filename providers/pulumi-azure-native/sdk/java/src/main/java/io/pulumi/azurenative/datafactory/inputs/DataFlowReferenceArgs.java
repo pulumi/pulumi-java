@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datasetParameters")
-    private final @Nullable Input<Object> datasetParameters;
+        private final @Nullable Input<Object> datasetParameters;
 
     public Input<Object> getDatasetParameters() {
         return this.datasetParameters == null ? Input.empty() : this.datasetParameters;
@@ -36,7 +36,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,Object>> parameters;
+        private final @Nullable Input<Map<String,Object>> parameters;
 
     public Input<Map<String,Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -47,7 +47,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="referenceName", required=true)
-    private final Input<String> referenceName;
+        private final Input<String> referenceName;
 
     public Input<String> getReferenceName() {
         return this.referenceName;
@@ -58,7 +58,7 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class DataFlowReferenceArgs extends io.pulumi.resources.ResourceArg
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public DataFlowReferenceArgs build() {
             return new DataFlowReferenceArgs(datasetParameters, parameters, referenceName, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class EnvironmentConfigWorkloadsConfigWebServer {
             this.storageGb = storageGb;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigWebServer build() {
             return new EnvironmentConfigWorkloadsConfigWebServer(cpu, memoryGb, storageGb);
         }

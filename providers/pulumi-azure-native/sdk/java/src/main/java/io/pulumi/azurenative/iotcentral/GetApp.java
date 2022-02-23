@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotcentral;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.iotcentral.inputs.GetAppArgs;
 import io.pulumi.azurenative.iotcentral.outputs.GetAppResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

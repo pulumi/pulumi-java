@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.KerberosConfigResponse;
 import java.lang.String;
 import java.util.Map;
@@ -139,7 +139,6 @@ public final class HiveMetastoreConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public HiveMetastoreConfigResponse build() {
             return new HiveMetastoreConfigResponse(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
         }

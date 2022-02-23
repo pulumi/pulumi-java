@@ -5,8 +5,8 @@ package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretVersionArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretVersionState;
@@ -120,13 +120,6 @@ public class SecretVersion extends io.pulumi.resources.CustomResource {
         return this.secretData;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SecretVersion(String name) {
-        super("gcp:secretmanager/secretVersion:SecretVersion", name, SecretVersionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

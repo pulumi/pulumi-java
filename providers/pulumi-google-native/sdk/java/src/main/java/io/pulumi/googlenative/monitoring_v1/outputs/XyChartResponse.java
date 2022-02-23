@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AxisResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.ChartOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.DataSetResponse;
@@ -184,7 +184,6 @@ public final class XyChartResponse {
             this.yAxis = Objects.requireNonNull(yAxis);
             return this;
         }
-
         public XyChartResponse build() {
             return new XyChartResponse(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
         }

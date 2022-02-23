@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+        private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -30,7 +30,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Bucket")
-    private final @Nullable Input<String> s3Bucket;
+        private final @Nullable Input<String> s3Bucket;
 
     public Input<String> getS3Bucket() {
         return this.s3Bucket == null ? Input.empty() : this.s3Bucket;
@@ -41,7 +41,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3Key")
-    private final @Nullable Input<String> s3Key;
+        private final @Nullable Input<String> s3Key;
 
     public Input<String> getS3Key() {
         return this.s3Key == null ? Input.empty() : this.s3Key;
@@ -52,7 +52,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="s3ObjectVersion")
-    private final @Nullable Input<String> s3ObjectVersion;
+        private final @Nullable Input<String> s3ObjectVersion;
 
     public Input<String> getS3ObjectVersion() {
         return this.s3ObjectVersion == null ? Input.empty() : this.s3ObjectVersion;
@@ -63,7 +63,7 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zipFile")
-    private final @Nullable Input<String> zipFile;
+        private final @Nullable Input<String> zipFile;
 
     public Input<String> getZipFile() {
         return this.zipFile == null ? Input.empty() : this.zipFile;
@@ -167,7 +167,6 @@ public final class FunctionCodeArgs extends io.pulumi.resources.ResourceArgs {
             this.zipFile = Input.ofNullable(zipFile);
             return this;
         }
-
         public FunctionCodeArgs build() {
             return new FunctionCodeArgs(imageUri, s3Bucket, s3Key, s3ObjectVersion, zipFile);
         }

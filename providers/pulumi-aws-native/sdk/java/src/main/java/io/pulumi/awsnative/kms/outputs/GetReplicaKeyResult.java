@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kms.outputs;
 
 import io.pulumi.awsnative.kms.outputs.ReplicaKeyTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -148,7 +148,6 @@ public final class GetReplicaKeyResult {
             this.tags = tags;
             return this;
         }
-
         public GetReplicaKeyResult build() {
             return new GetReplicaKeyResult(arn, description, enabled, keyId, keyPolicy, tags);
         }

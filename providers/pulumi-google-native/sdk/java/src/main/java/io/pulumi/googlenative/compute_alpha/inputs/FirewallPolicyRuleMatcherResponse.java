@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleMatcherLayer4ConfigResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.FirewallPolicyRuleSecureTagResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="destAddressGroups", required=true)
-    private final List<String> destAddressGroups;
+      private final List<String> destAddressGroups;
 
     public List<String> getDestAddressGroups() {
         return this.destAddressGroups;
@@ -35,7 +35,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="destFqdns", required=true)
-    private final List<String> destFqdns;
+      private final List<String> destFqdns;
 
     public List<String> getDestFqdns() {
         return this.destFqdns;
@@ -46,7 +46,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="destIpRanges", required=true)
-    private final List<String> destIpRanges;
+      private final List<String> destIpRanges;
 
     public List<String> getDestIpRanges() {
         return this.destIpRanges;
@@ -57,7 +57,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="destRegionCodes", required=true)
-    private final List<String> destRegionCodes;
+      private final List<String> destRegionCodes;
 
     public List<String> getDestRegionCodes() {
         return this.destRegionCodes;
@@ -68,7 +68,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="layer4Configs", required=true)
-    private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
+      private final List<FirewallPolicyRuleMatcherLayer4ConfigResponse> layer4Configs;
 
     public List<FirewallPolicyRuleMatcherLayer4ConfigResponse> getLayer4Configs() {
         return this.layer4Configs;
@@ -79,7 +79,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcAddressGroups", required=true)
-    private final List<String> srcAddressGroups;
+      private final List<String> srcAddressGroups;
 
     public List<String> getSrcAddressGroups() {
         return this.srcAddressGroups;
@@ -90,7 +90,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcFqdns", required=true)
-    private final List<String> srcFqdns;
+      private final List<String> srcFqdns;
 
     public List<String> getSrcFqdns() {
         return this.srcFqdns;
@@ -101,7 +101,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcIpRanges", required=true)
-    private final List<String> srcIpRanges;
+      private final List<String> srcIpRanges;
 
     public List<String> getSrcIpRanges() {
         return this.srcIpRanges;
@@ -112,7 +112,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcRegionCodes", required=true)
-    private final List<String> srcRegionCodes;
+      private final List<String> srcRegionCodes;
 
     public List<String> getSrcRegionCodes() {
         return this.srcRegionCodes;
@@ -123,7 +123,7 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="srcSecureTags", required=true)
-    private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
+      private final List<FirewallPolicyRuleSecureTagResponse> srcSecureTags;
 
     public List<FirewallPolicyRuleSecureTagResponse> getSrcSecureTags() {
         return this.srcSecureTags;
@@ -252,7 +252,6 @@ public final class FirewallPolicyRuleMatcherResponse extends io.pulumi.resources
             this.srcSecureTags = Objects.requireNonNull(srcSecureTags);
             return this;
         }
-
         public FirewallPolicyRuleMatcherResponse build() {
             return new FirewallPolicyRuleMatcherResponse(destAddressGroups, destFqdns, destIpRanges, destRegionCodes, layer4Configs, srcAddressGroups, srcFqdns, srcIpRanges, srcRegionCodes, srcSecureTags);
         }

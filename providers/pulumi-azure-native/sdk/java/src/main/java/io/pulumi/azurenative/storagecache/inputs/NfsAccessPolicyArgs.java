@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 
 import io.pulumi.azurenative.storagecache.inputs.NfsAccessRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="accessRules", required=true)
-    private final Input<List<NfsAccessRuleArgs>> accessRules;
+        private final Input<List<NfsAccessRuleArgs>> accessRules;
 
     public Input<List<NfsAccessRuleArgs>> getAccessRules() {
         return this.accessRules;
@@ -35,7 +35,7 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -94,7 +94,6 @@ public final class NfsAccessPolicyArgs extends io.pulumi.resources.ResourceArgs 
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public NfsAccessPolicyArgs build() {
             return new NfsAccessPolicyArgs(accessRules, name);
         }

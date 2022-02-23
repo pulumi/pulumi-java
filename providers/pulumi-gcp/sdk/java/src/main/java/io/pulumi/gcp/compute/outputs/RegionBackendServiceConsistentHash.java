@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.RegionBackendServiceConsistentHashHttpCookie;
 import java.lang.Integer;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class RegionBackendServiceConsistentHash {
             this.minimumRingSize = minimumRingSize;
             return this;
         }
-
         public RegionBackendServiceConsistentHash build() {
             return new RegionBackendServiceConsistentHash(httpCookie, httpHeaderName, minimumRingSize);
         }

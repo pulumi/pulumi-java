@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cooldown", required=true)
-    private final String cooldown;
+        private final String cooldown;
 
     public String getCooldown() {
         return this.cooldown;
@@ -34,7 +34,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+        private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -45,7 +45,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -56,7 +56,7 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -125,7 +125,6 @@ public final class ScaleActionResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public ScaleActionResponse build() {
             return new ScaleActionResponse(cooldown, direction, type, value);
         }

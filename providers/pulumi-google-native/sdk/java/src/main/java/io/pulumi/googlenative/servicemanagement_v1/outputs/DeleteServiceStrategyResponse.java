@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class DeleteServiceStrategyResponse {
         public Builder(DeleteServiceStrategyResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DeleteServiceStrategyResponse build() {
             return new DeleteServiceStrategyResponse();
         }

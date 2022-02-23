@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ApplicationGatewayUrlConfigurationResponse {
             this.reroute = reroute;
             return this;
         }
-
         public ApplicationGatewayUrlConfigurationResponse build() {
             return new ApplicationGatewayUrlConfigurationResponse(modifiedPath, modifiedQueryString, reroute);
         }

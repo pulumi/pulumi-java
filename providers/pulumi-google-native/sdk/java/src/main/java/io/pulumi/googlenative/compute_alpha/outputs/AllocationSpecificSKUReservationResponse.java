@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.AllocationSpecificSKUAllocationReservedInstancePropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class AllocationSpecificSKUReservationResponse {
             this.instanceProperties = Objects.requireNonNull(instanceProperties);
             return this;
         }
-
         public AllocationSpecificSKUReservationResponse build() {
             return new AllocationSpecificSKUReservationResponse(assuredCount, count, inUseCount, instanceProperties);
         }

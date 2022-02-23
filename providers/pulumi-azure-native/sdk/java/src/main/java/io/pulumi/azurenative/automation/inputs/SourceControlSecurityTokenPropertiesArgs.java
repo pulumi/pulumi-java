@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.TokenType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+        private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -32,7 +32,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable Input<String> refreshToken;
+        private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
@@ -43,7 +43,7 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="tokenType")
-    private final @Nullable Input<Either<String,TokenType>> tokenType;
+        private final @Nullable Input<Either<String,TokenType>> tokenType;
 
     public Input<Either<String,TokenType>> getTokenType() {
         return this.tokenType == null ? Input.empty() : this.tokenType;
@@ -117,7 +117,6 @@ public final class SourceControlSecurityTokenPropertiesArgs extends io.pulumi.re
             this.tokenType = Input.ofNullable(tokenType);
             return this;
         }
-
         public SourceControlSecurityTokenPropertiesArgs build() {
             return new SourceControlSecurityTokenPropertiesArgs(accessToken, refreshToken, tokenType);
         }

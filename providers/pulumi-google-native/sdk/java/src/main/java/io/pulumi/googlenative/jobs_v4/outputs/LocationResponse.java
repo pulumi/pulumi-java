@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v4.outputs.LatLngResponse;
 import io.pulumi.googlenative.jobs_v4.outputs.PostalAddressResponse;
 import java.lang.Double;
@@ -119,7 +119,6 @@ public final class LocationResponse {
             this.radiusMiles = Objects.requireNonNull(radiusMiles);
             return this;
         }
-
         public LocationResponse build() {
             return new LocationResponse(latLng, locationType, postalAddress, radiusMiles);
         }

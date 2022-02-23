@@ -8,7 +8,7 @@ import io.pulumi.awsnative.wafv2.outputs.RuleGroupLabel;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupRuleAction;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupStatement;
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupVisibilityConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -140,7 +140,6 @@ public final class RuleGroupRule {
             this.visibilityConfig = Objects.requireNonNull(visibilityConfig);
             return this;
         }
-
         public RuleGroupRule build() {
             return new RuleGroupRule(action, captchaConfig, name, priority, ruleLabels, statement, visibilityConfig);
         }

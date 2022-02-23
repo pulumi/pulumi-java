@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class ListNamespaceKeysResult {
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public ListNamespaceKeysResult build() {
             return new ListNamespaceKeysResult(keyName, primaryConnectionString, primaryKey, secondaryConnectionString, secondaryKey);
         }

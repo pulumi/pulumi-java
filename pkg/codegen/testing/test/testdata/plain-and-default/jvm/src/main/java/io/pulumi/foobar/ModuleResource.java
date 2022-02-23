@@ -4,20 +4,13 @@
 package io.pulumi.foobar;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.ModuleResourceArgs;
 import io.pulumi.foobar.Utilities;
 import javax.annotation.Nullable;
 
 @ResourceType(type="foobar::ModuleResource")
 public class ModuleResource extends io.pulumi.resources.CustomResource {
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ModuleResource(String name) {
-        super("foobar::ModuleResource", name, ModuleResourceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

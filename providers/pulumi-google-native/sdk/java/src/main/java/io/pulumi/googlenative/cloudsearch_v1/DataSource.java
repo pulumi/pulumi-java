@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudsearch_v1.DataSourceArgs;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.GSuitePrincipalResponse;
@@ -148,13 +148,6 @@ public class DataSource extends io.pulumi.resources.CustomResource {
         return this.shortName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DataSource(String name) {
-        super("google-native:cloudsearch/v1:DataSource", name, DataSourceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

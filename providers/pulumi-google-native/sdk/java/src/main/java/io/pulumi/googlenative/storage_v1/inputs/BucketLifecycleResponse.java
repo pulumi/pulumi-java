@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rule", required=true)
-    private final List<BucketLifecycleRuleItemResponse> rule;
+      private final List<BucketLifecycleRuleItemResponse> rule;
 
     public List<BucketLifecycleRuleItemResponse> getRule() {
         return this.rule;
@@ -60,7 +60,6 @@ public final class BucketLifecycleResponse extends io.pulumi.resources.InvokeArg
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public BucketLifecycleResponse build() {
             return new BucketLifecycleResponse(rule);
         }

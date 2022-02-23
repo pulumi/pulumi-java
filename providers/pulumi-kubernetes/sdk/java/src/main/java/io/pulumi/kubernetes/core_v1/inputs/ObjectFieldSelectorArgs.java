@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldPath", required=true)
-    private final Input<String> fieldPath;
+        private final Input<String> fieldPath;
 
     public Input<String> getFieldPath() {
         return this.fieldPath;
@@ -93,7 +93,6 @@ public final class ObjectFieldSelectorArgs extends io.pulumi.resources.ResourceA
             this.fieldPath = Input.of(Objects.requireNonNull(fieldPath));
             return this;
         }
-
         public ObjectFieldSelectorArgs build() {
             return new ObjectFieldSelectorArgs(apiVersion, fieldPath);
         }

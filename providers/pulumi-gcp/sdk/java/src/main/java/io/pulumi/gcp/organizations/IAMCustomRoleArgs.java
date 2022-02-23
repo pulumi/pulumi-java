@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-    private final Input<String> orgId;
+        private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -42,7 +42,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final Input<List<String>> permissions;
+        private final Input<List<String>> permissions;
 
     public Input<List<String>> getPermissions() {
         return this.permissions;
@@ -53,7 +53,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleId", required=true)
-    private final Input<String> roleId;
+        private final Input<String> roleId;
 
     public Input<String> getRoleId() {
         return this.roleId;
@@ -66,7 +66,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stage")
-    private final @Nullable Input<String> stage;
+        private final @Nullable Input<String> stage;
 
     public Input<String> getStage() {
         return this.stage == null ? Input.empty() : this.stage;
@@ -77,7 +77,7 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -196,7 +196,6 @@ public final class IAMCustomRoleArgs extends io.pulumi.resources.ResourceArgs {
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public IAMCustomRoleArgs build() {
             return new IAMCustomRoleArgs(description, orgId, permissions, roleId, stage, title);
         }

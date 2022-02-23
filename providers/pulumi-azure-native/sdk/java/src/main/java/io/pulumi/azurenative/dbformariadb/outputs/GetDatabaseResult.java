@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbformariadb.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class GetDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatabaseResult build() {
             return new GetDatabaseResult(charset, collation, id, name, type);
         }

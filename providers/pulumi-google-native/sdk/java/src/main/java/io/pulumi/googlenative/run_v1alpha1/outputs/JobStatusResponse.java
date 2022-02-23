@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceStatusResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.JobConditionResponse;
 import java.lang.Integer;
@@ -225,7 +225,6 @@ public final class JobStatusResponse {
             this.succeeded = Objects.requireNonNull(succeeded);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(active, completionTime, conditions, failed, imageDigest, instances, observedGeneration, startTime, succeeded);
         }

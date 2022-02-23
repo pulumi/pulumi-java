@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.CloudAuditOptionsResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.CounterOptionsResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.DataAccessOptionsResponse;
@@ -97,7 +97,6 @@ public final class LogConfigResponse {
             this.dataAccess = Objects.requireNonNull(dataAccess);
             return this;
         }
-
         public LogConfigResponse build() {
             return new LogConfigResponse(cloudAudit, counter, dataAccess);
         }

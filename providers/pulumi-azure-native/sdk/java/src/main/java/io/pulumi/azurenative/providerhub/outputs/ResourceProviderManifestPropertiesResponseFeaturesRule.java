@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class ResourceProviderManifestPropertiesResponseFeaturesRule {
             this.requiredFeaturesPolicy = Objects.requireNonNull(requiredFeaturesPolicy);
             return this;
         }
-
         public ResourceProviderManifestPropertiesResponseFeaturesRule build() {
             return new ResourceProviderManifestPropertiesResponseFeaturesRule(requiredFeaturesPolicy);
         }

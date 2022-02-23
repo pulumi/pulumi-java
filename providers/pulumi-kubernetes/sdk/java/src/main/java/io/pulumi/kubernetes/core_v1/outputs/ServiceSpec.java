@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ServicePort;
 import io.pulumi.kubernetes.core_v1.outputs.SessionAffinityConfig;
 import java.lang.Boolean;
@@ -517,7 +517,6 @@ public final class ServiceSpec {
             this.type = type;
             return this;
         }
-
         public ServiceSpec build() {
             return new ServiceSpec(allocateLoadBalancerNodePorts, clusterIP, clusterIPs, externalIPs, externalName, externalTrafficPolicy, healthCheckNodePort, internalTrafficPolicy, ipFamilies, ipFamily, ipFamilyPolicy, loadBalancerClass, loadBalancerIP, loadBalancerSourceRanges, ports, publishNotReadyAddresses, selector, sessionAffinity, sessionAffinityConfig, topologyKeys, type);
         }

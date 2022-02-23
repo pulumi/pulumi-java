@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class ApplicationInfoResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public ApplicationInfoResponse build() {
             return new ApplicationInfoResponse(emails, instruction, uris);
         }

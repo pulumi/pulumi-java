@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.ConfigMapEnvSourceResponse;
 import io.pulumi.googlenative.run_v1alpha1.outputs.SecretEnvSourceResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class EnvFromSourceResponse {
             this.secretRef = Objects.requireNonNull(secretRef);
             return this;
         }
-
         public EnvFromSourceResponse build() {
             return new EnvFromSourceResponse(configMapRef, prefix, secretRef);
         }

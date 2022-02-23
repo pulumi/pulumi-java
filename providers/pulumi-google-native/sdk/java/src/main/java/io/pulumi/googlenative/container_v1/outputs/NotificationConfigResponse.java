@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.PubSubResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class NotificationConfigResponse {
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }
-
         public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsub);
         }

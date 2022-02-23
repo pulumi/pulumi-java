@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class StorageAccountInformationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StorageAccountInformationResponse build() {
             return new StorageAccountInformationResponse(id, name, suffix, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="period")
-    private final @Nullable Input<String> period;
+      private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
@@ -66,7 +66,6 @@ public final class NotificationRateLimitArgs extends io.pulumi.resources.Resourc
             this.period = Input.ofNullable(period);
             return this;
         }
-
         public NotificationRateLimitArgs build() {
             return new NotificationRateLimitArgs(period);
         }

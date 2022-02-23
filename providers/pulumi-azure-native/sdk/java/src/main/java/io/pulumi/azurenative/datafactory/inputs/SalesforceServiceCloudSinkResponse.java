@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -35,7 +35,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="externalIdFieldName")
-    private final @Nullable Object externalIdFieldName;
+        private final @Nullable Object externalIdFieldName;
 
     public Optional<Object> getExternalIdFieldName() {
         return this.externalIdFieldName == null ? Optional.empty() : Optional.ofNullable(this.externalIdFieldName);
@@ -46,7 +46,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="ignoreNullValues")
-    private final @Nullable Object ignoreNullValues;
+        private final @Nullable Object ignoreNullValues;
 
     public Optional<Object> getIgnoreNullValues() {
         return this.ignoreNullValues == null ? Optional.empty() : Optional.ofNullable(this.ignoreNullValues);
@@ -57,7 +57,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -68,7 +68,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sinkRetryCount")
-    private final @Nullable Object sinkRetryCount;
+        private final @Nullable Object sinkRetryCount;
 
     public Optional<Object> getSinkRetryCount() {
         return this.sinkRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryCount);
@@ -79,7 +79,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sinkRetryWait")
-    private final @Nullable Object sinkRetryWait;
+        private final @Nullable Object sinkRetryWait;
 
     public Optional<Object> getSinkRetryWait() {
         return this.sinkRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sinkRetryWait);
@@ -91,7 +91,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -102,7 +102,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="writeBatchSize")
-    private final @Nullable Object writeBatchSize;
+        private final @Nullable Object writeBatchSize;
 
     public Optional<Object> getWriteBatchSize() {
         return this.writeBatchSize == null ? Optional.empty() : Optional.ofNullable(this.writeBatchSize);
@@ -113,7 +113,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="writeBatchTimeout")
-    private final @Nullable Object writeBatchTimeout;
+        private final @Nullable Object writeBatchTimeout;
 
     public Optional<Object> getWriteBatchTimeout() {
         return this.writeBatchTimeout == null ? Optional.empty() : Optional.ofNullable(this.writeBatchTimeout);
@@ -124,7 +124,7 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="writeBehavior")
-    private final @Nullable String writeBehavior;
+        private final @Nullable String writeBehavior;
 
     public Optional<String> getWriteBehavior() {
         return this.writeBehavior == null ? Optional.empty() : Optional.ofNullable(this.writeBehavior);
@@ -253,7 +253,6 @@ public final class SalesforceServiceCloudSinkResponse extends io.pulumi.resource
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public SalesforceServiceCloudSinkResponse build() {
             return new SalesforceServiceCloudSinkResponse(disableMetricsCollection, externalIdFieldName, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

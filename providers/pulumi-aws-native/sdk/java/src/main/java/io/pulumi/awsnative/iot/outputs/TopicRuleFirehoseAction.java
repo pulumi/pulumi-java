@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -87,7 +87,6 @@ public final class TopicRuleFirehoseAction {
             this.separator = separator;
             return this;
         }
-
         public TopicRuleFirehoseAction build() {
             return new TopicRuleFirehoseAction(batchMode, deliveryStreamName, roleArn, separator);
         }

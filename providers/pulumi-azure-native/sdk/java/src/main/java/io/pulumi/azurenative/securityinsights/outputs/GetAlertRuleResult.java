@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class GetAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertRuleResult build() {
             return new GetAlertRuleResult(etag, id, kind, name, type);
         }

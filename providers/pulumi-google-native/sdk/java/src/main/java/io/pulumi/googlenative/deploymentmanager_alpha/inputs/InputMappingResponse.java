@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fieldName", required=true)
-    private final String fieldName;
+      private final String fieldName;
 
     public String getFieldName() {
         return this.fieldName;
@@ -32,7 +32,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -43,7 +43,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="methodMatch", required=true)
-    private final String methodMatch;
+      private final String methodMatch;
 
     public String getMethodMatch() {
         return this.methodMatch;
@@ -54,7 +54,7 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -123,7 +123,6 @@ public final class InputMappingResponse extends io.pulumi.resources.InvokeArgs {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public InputMappingResponse build() {
             return new InputMappingResponse(fieldName, location, methodMatch, value);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowS3InputFormatConfigS3InputFileType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class FlowS3InputFormatConfig {
             this.s3InputFileType = s3InputFileType;
             return this;
         }
-
         public FlowS3InputFormatConfig build() {
             return new FlowS3InputFormatConfig(s3InputFileType);
         }

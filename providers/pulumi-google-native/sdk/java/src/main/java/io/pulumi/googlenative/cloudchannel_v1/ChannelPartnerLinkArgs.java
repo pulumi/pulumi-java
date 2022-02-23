@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudchannel_v1.enums.ChannelPartnerLinkLinkState;
 import java.lang.String;
 import java.util.Objects;
@@ -15,7 +15,7 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
     public static final ChannelPartnerLinkArgs Empty = new ChannelPartnerLinkArgs();
 
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+      private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
@@ -26,7 +26,7 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="linkState", required=true)
-    private final Input<ChannelPartnerLinkLinkState> linkState;
+      private final Input<ChannelPartnerLinkLinkState> linkState;
 
     public Input<ChannelPartnerLinkLinkState> getLinkState() {
         return this.linkState;
@@ -37,7 +37,7 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resellerCloudIdentityId", required=true)
-    private final Input<String> resellerCloudIdentityId;
+      private final Input<String> resellerCloudIdentityId;
 
     public Input<String> getResellerCloudIdentityId() {
         return this.resellerCloudIdentityId;
@@ -111,7 +111,6 @@ public final class ChannelPartnerLinkArgs extends io.pulumi.resources.ResourceAr
             this.resellerCloudIdentityId = Input.of(Objects.requireNonNull(resellerCloudIdentityId));
             return this;
         }
-
         public ChannelPartnerLinkArgs build() {
             return new ChannelPartnerLinkArgs(accountId, linkState, resellerCloudIdentityId);
         }

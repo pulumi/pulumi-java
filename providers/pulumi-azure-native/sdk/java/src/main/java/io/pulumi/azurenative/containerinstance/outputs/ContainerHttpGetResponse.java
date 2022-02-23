@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.outputs;
 
 import io.pulumi.azurenative.containerinstance.outputs.HttpHeadersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ContainerHttpGetResponse {
             this.scheme = scheme;
             return this;
         }
-
         public ContainerHttpGetResponse build() {
             return new ContainerHttpGetResponse(httpHeaders, path, port, scheme);
         }

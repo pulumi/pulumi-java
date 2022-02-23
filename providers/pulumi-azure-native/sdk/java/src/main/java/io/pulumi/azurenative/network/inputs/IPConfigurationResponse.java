@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.PublicIPAddressResponse;
 import io.pulumi.azurenative.network.inputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -36,7 +36,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -47,7 +47,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -58,7 +58,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable String privateIPAddress;
+        private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -69,7 +69,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable String privateIPAllocationMethod;
+        private final @Nullable String privateIPAllocationMethod;
 
     public Optional<String> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Optional.empty() : Optional.ofNullable(this.privateIPAllocationMethod);
@@ -80,7 +80,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -91,7 +91,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="publicIPAddress")
-    private final @Nullable PublicIPAddressResponse publicIPAddress;
+        private final @Nullable PublicIPAddressResponse publicIPAddress;
 
     public Optional<PublicIPAddressResponse> getPublicIPAddress() {
         return this.publicIPAddress == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddress);
@@ -102,7 +102,7 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable SubnetResponse subnet;
+        private final @Nullable SubnetResponse subnet;
 
     public Optional<SubnetResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -211,7 +211,6 @@ public final class IPConfigurationResponse extends io.pulumi.resources.InvokeArg
             this.subnet = subnet;
             return this;
         }
-
         public IPConfigurationResponse build() {
             return new IPConfigurationResponse(etag, id, name, privateIPAddress, privateIPAllocationMethod, provisioningState, publicIPAddress, subnet);
         }

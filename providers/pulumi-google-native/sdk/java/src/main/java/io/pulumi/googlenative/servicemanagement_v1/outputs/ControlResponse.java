@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ControlResponse {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public ControlResponse build() {
             return new ControlResponse(environment);
         }

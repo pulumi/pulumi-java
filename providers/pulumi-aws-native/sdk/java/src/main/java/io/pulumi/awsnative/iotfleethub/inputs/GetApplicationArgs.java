@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotfleethub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="applicationId", required=true)
-    private final String applicationId;
+        private final String applicationId;
 
     public String getApplicationId() {
         return this.applicationId;
@@ -55,7 +55,6 @@ public final class GetApplicationArgs extends io.pulumi.resources.InvokeArgs {
             this.applicationId = Objects.requireNonNull(applicationId);
             return this;
         }
-
         public GetApplicationArgs build() {
             return new GetApplicationArgs(applicationId);
         }

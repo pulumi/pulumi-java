@@ -11,7 +11,7 @@ import io.pulumi.azurenative.datafactory.outputs.MultiplePipelineTriggerResponse
 import io.pulumi.azurenative.datafactory.outputs.RerunTumblingWindowTriggerResponse;
 import io.pulumi.azurenative.datafactory.outputs.ScheduleTriggerResponse;
 import io.pulumi.azurenative.datafactory.outputs.TumblingWindowTriggerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -146,7 +146,6 @@ public final class GetTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(etag, id, name, properties, type);
         }

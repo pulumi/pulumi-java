@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigCloudrunConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigConfigConnectorConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfigDnsCacheConfig;
@@ -172,7 +172,6 @@ public final class GetClusterAddonsConfig {
             this.networkPolicyConfigs = Objects.requireNonNull(networkPolicyConfigs);
             return this;
         }
-
         public GetClusterAddonsConfig build() {
             return new GetClusterAddonsConfig(cloudrunConfigs, configConnectorConfigs, dnsCacheConfigs, gcePersistentDiskCsiDriverConfigs, gcpFilestoreCsiDriverConfigs, horizontalPodAutoscalings, httpLoadBalancings, istioConfigs, kalmConfigs, networkPolicyConfigs);
         }

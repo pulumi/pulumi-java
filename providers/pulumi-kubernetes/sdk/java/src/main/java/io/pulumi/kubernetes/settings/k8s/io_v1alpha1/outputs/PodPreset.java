@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.settings.k8s.io_v1alpha1.outputs.PodPresetSpec;
 import java.lang.String;
@@ -104,7 +104,6 @@ public final class PodPreset {
             this.spec = spec;
             return this;
         }
-
         public PodPreset build() {
             return new PodPreset(apiVersion, kind, metadata, spec);
         }

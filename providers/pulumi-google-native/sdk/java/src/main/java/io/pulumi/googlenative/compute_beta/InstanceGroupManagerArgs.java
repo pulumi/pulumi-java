@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.InstanceGroupManagerFailoverAction;
 import io.pulumi.googlenative.compute_beta.inputs.DistributionPolicyArgs;
 import io.pulumi.googlenative.compute_beta.inputs.InstanceGroupManagerAutoHealingPolicyArgs;
@@ -28,7 +28,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="autoHealingPolicies")
-    private final @Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
+      private final @Nullable Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> autoHealingPolicies;
 
     public Input<List<InstanceGroupManagerAutoHealingPolicyArgs>> getAutoHealingPolicies() {
         return this.autoHealingPolicies == null ? Input.empty() : this.autoHealingPolicies;
@@ -39,7 +39,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="baseInstanceName")
-    private final @Nullable Input<String> baseInstanceName;
+      private final @Nullable Input<String> baseInstanceName;
 
     public Input<String> getBaseInstanceName() {
         return this.baseInstanceName == null ? Input.empty() : this.baseInstanceName;
@@ -50,7 +50,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="distributionPolicy")
-    private final @Nullable Input<DistributionPolicyArgs> distributionPolicy;
+      private final @Nullable Input<DistributionPolicyArgs> distributionPolicy;
 
     public Input<DistributionPolicyArgs> getDistributionPolicy() {
         return this.distributionPolicy == null ? Input.empty() : this.distributionPolicy;
@@ -72,7 +72,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="failoverAction")
-    private final @Nullable Input<InstanceGroupManagerFailoverAction> failoverAction;
+      private final @Nullable Input<InstanceGroupManagerFailoverAction> failoverAction;
 
     public Input<InstanceGroupManagerFailoverAction> getFailoverAction() {
         return this.failoverAction == null ? Input.empty() : this.failoverAction;
@@ -83,7 +83,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="instanceTemplate")
-    private final @Nullable Input<String> instanceTemplate;
+      private final @Nullable Input<String> instanceTemplate;
 
     public Input<String> getInstanceTemplate() {
         return this.instanceTemplate == null ? Input.empty() : this.instanceTemplate;
@@ -94,7 +94,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -105,21 +105,21 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="namedPorts")
-    private final @Nullable Input<List<NamedPortArgs>> namedPorts;
+      private final @Nullable Input<List<NamedPortArgs>> namedPorts;
 
     public Input<List<NamedPortArgs>> getNamedPorts() {
         return this.namedPorts == null ? Input.empty() : this.namedPorts;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -130,7 +130,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -141,7 +141,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="statefulPolicy")
-    private final @Nullable Input<StatefulPolicyArgs> statefulPolicy;
+      private final @Nullable Input<StatefulPolicyArgs> statefulPolicy;
 
     public Input<StatefulPolicyArgs> getStatefulPolicy() {
         return this.statefulPolicy == null ? Input.empty() : this.statefulPolicy;
@@ -152,7 +152,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetPools")
-    private final @Nullable Input<List<String>> targetPools;
+      private final @Nullable Input<List<String>> targetPools;
 
     public Input<List<String>> getTargetPools() {
         return this.targetPools == null ? Input.empty() : this.targetPools;
@@ -163,7 +163,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetSize")
-    private final @Nullable Input<Integer> targetSize;
+      private final @Nullable Input<Integer> targetSize;
 
     public Input<Integer> getTargetSize() {
         return this.targetSize == null ? Input.empty() : this.targetSize;
@@ -174,7 +174,7 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="updatePolicy")
-    private final @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
+      private final @Nullable Input<InstanceGroupManagerUpdatePolicyArgs> updatePolicy;
 
     public Input<InstanceGroupManagerUpdatePolicyArgs> getUpdatePolicy() {
         return this.updatePolicy == null ? Input.empty() : this.updatePolicy;
@@ -185,14 +185,14 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="versions")
-    private final @Nullable Input<List<InstanceGroupManagerVersionArgs>> versions;
+      private final @Nullable Input<List<InstanceGroupManagerVersionArgs>> versions;
 
     public Input<List<InstanceGroupManagerVersionArgs>> getVersions() {
         return this.versions == null ? Input.empty() : this.versions;
     }
 
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -476,7 +476,6 @@ public final class InstanceGroupManagerArgs extends io.pulumi.resources.Resource
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceGroupManagerArgs build() {
             return new InstanceGroupManagerArgs(autoHealingPolicies, baseInstanceName, description, distributionPolicy, failoverAction, instanceTemplate, name, namedPorts, project, requestId, serviceAccount, statefulPolicy, targetPools, targetSize, updatePolicy, versions, zone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ServiceMeshTypeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+      private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class ServiceMeshTypeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -81,7 +81,6 @@ public final class ServiceMeshTypeResponse extends io.pulumi.resources.InvokeArg
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public ServiceMeshTypeResponse build() {
             return new ServiceMeshTypeResponse(code, displayName);
         }

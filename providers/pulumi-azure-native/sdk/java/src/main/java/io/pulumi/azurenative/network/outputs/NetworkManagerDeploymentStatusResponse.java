@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class NetworkManagerDeploymentStatusResponse {
             this.region = region;
             return this;
         }
-
         public NetworkManagerDeploymentStatusResponse build() {
             return new NetworkManagerDeploymentStatusResponse(commitTime, configurationIds, deploymentStatus, deploymentType, errorMessage, region);
         }

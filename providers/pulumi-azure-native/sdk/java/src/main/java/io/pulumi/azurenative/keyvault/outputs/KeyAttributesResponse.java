@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -162,7 +162,6 @@ public final class KeyAttributesResponse {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public KeyAttributesResponse build() {
             return new KeyAttributesResponse(created, enabled, expires, notBefore, recoveryLevel, updated);
         }

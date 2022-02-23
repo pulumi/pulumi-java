@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class PreventionJobTriggerInspectJobStorageConfigTimespanConfigTime
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField build() {
             return new PreventionJobTriggerInspectJobStorageConfigTimespanConfigTimestampField(name);
         }

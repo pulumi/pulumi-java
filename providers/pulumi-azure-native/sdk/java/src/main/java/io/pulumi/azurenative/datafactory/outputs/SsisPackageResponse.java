@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.SsisParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -207,7 +207,6 @@ public final class SsisPackageResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SsisPackageResponse build() {
             return new SsisPackageResponse(description, folderId, id, name, parameters, projectId, projectVersion, type);
         }

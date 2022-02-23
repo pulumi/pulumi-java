@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class AddRemoveReplicaScalingMechanismResponse {
             this.scaleIncrement = Objects.requireNonNull(scaleIncrement);
             return this;
         }
-
         public AddRemoveReplicaScalingMechanismResponse build() {
             return new AddRemoveReplicaScalingMechanismResponse(kind, maxCount, minCount, scaleIncrement);
         }

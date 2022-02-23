@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigRootVolumeArgs;
 import io.pulumi.gcp.container.inputs.AzureNodePoolConfigSshConfigArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="rootVolume")
-    private final @Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume;
+        private final @Nullable Input<AzureNodePoolConfigRootVolumeArgs> rootVolume;
 
     public Input<AzureNodePoolConfigRootVolumeArgs> getRootVolume() {
         return this.rootVolume == null ? Input.empty() : this.rootVolume;
@@ -33,7 +33,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sshConfig", required=true)
-    private final Input<AzureNodePoolConfigSshConfigArgs> sshConfig;
+        private final Input<AzureNodePoolConfigSshConfigArgs> sshConfig;
 
     public Input<AzureNodePoolConfigSshConfigArgs> getSshConfig() {
         return this.sshConfig;
@@ -44,7 +44,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -55,7 +55,7 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vmSize")
-    private final @Nullable Input<String> vmSize;
+        private final @Nullable Input<String> vmSize;
 
     public Input<String> getVmSize() {
         return this.vmSize == null ? Input.empty() : this.vmSize;
@@ -144,7 +144,6 @@ public final class AzureNodePoolConfigArgs extends io.pulumi.resources.ResourceA
             this.vmSize = Input.ofNullable(vmSize);
             return this;
         }
-
         public AzureNodePoolConfigArgs build() {
             return new AzureNodePoolConfigArgs(rootVolume, sshConfig, tags, vmSize);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioStreamArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.TextStreamArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.VideoStreamArgs;
@@ -26,7 +26,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="audioStream")
-    private final @Nullable Input<AudioStreamArgs> audioStream;
+      private final @Nullable Input<AudioStreamArgs> audioStream;
 
     public Input<AudioStreamArgs> getAudioStream() {
         return this.audioStream == null ? Input.empty() : this.audioStream;
@@ -37,7 +37,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -48,7 +48,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="textStream")
-    private final @Nullable Input<TextStreamArgs> textStream;
+      private final @Nullable Input<TextStreamArgs> textStream;
 
     public Input<TextStreamArgs> getTextStream() {
         return this.textStream == null ? Input.empty() : this.textStream;
@@ -59,7 +59,7 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="videoStream")
-    private final @Nullable Input<VideoStreamArgs> videoStream;
+      private final @Nullable Input<VideoStreamArgs> videoStream;
 
     public Input<VideoStreamArgs> getVideoStream() {
         return this.videoStream == null ? Input.empty() : this.videoStream;
@@ -148,7 +148,6 @@ public final class ElementaryStreamArgs extends io.pulumi.resources.ResourceArgs
             this.videoStream = Input.ofNullable(videoStream);
             return this;
         }
-
         public ElementaryStreamArgs build() {
             return new ElementaryStreamArgs(audioStream, key, textStream, videoStream);
         }

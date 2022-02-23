@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<String> accountName;
+        private final @Nullable Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -34,7 +34,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="dateFormat")
-    private final @Nullable Input<String> dateFormat;
+        private final @Nullable Input<String> dateFormat;
 
     public Input<String> getDateFormat() {
         return this.dateFormat == null ? Input.empty() : this.dateFormat;
@@ -45,7 +45,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="filePathPrefix")
-    private final @Nullable Input<String> filePathPrefix;
+        private final @Nullable Input<String> filePathPrefix;
 
     public Input<String> getFilePathPrefix() {
         return this.filePathPrefix == null ? Input.empty() : this.filePathPrefix;
@@ -56,7 +56,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable Input<String> refreshToken;
+        private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
@@ -67,7 +67,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -78,7 +78,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="timeFormat")
-    private final @Nullable Input<String> timeFormat;
+        private final @Nullable Input<String> timeFormat;
 
     public Input<String> getTimeFormat() {
         return this.timeFormat == null ? Input.empty() : this.timeFormat;
@@ -89,7 +89,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tokenUserDisplayName")
-    private final @Nullable Input<String> tokenUserDisplayName;
+        private final @Nullable Input<String> tokenUserDisplayName;
 
     public Input<String> getTokenUserDisplayName() {
         return this.tokenUserDisplayName == null ? Input.empty() : this.tokenUserDisplayName;
@@ -100,7 +100,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="tokenUserPrincipalName")
-    private final @Nullable Input<String> tokenUserPrincipalName;
+        private final @Nullable Input<String> tokenUserPrincipalName;
 
     public Input<String> getTokenUserPrincipalName() {
         return this.tokenUserPrincipalName == null ? Input.empty() : this.tokenUserPrincipalName;
@@ -112,7 +112,7 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -276,7 +276,6 @@ public final class AzureDataLakeStoreOutputDataSourceArgs extends io.pulumi.reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureDataLakeStoreOutputDataSourceArgs build() {
             return new AzureDataLakeStoreOutputDataSourceArgs(accountName, dateFormat, filePathPrefix, refreshToken, tenantId, timeFormat, tokenUserDisplayName, tokenUserPrincipalName, type);
         }

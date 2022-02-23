@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SecureStringResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class CmdkeySetupResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public CmdkeySetupResponse build() {
             return new CmdkeySetupResponse(password, targetName, type, userName);
         }

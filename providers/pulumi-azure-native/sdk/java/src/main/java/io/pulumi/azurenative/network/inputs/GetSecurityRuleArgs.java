@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="networkSecurityGroupName", required=true)
-    private final String networkSecurityGroupName;
+        private final String networkSecurityGroupName;
 
     public String getNetworkSecurityGroupName() {
         return this.networkSecurityGroupName;
@@ -28,7 +28,7 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="securityRuleName", required=true)
-    private final String securityRuleName;
+        private final String securityRuleName;
 
     public String getSecurityRuleName() {
         return this.securityRuleName;
@@ -98,7 +98,6 @@ public final class GetSecurityRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.securityRuleName = Objects.requireNonNull(securityRuleName);
             return this;
         }
-
         public GetSecurityRuleArgs build() {
             return new GetSecurityRuleArgs(networkSecurityGroupName, resourceGroupName, securityRuleName);
         }

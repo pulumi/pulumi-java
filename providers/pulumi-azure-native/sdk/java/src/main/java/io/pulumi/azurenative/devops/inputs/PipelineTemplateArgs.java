@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devops.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -35,7 +35,7 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+        private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -94,7 +94,6 @@ public final class PipelineTemplateArgs extends io.pulumi.resources.ResourceArgs
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public PipelineTemplateArgs build() {
             return new PipelineTemplateArgs(id, parameters);
         }

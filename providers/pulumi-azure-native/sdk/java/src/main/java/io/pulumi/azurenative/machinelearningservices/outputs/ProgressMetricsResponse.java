@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class ProgressMetricsResponse {
             this.totalDatapointCount = Objects.requireNonNull(totalDatapointCount);
             return this;
         }
-
         public ProgressMetricsResponse build() {
             return new ProgressMetricsResponse(completedDatapointCount, incrementalDatasetLastRefreshTime, skippedDatapointCount, totalDatapointCount);
         }

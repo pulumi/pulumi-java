@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql.outputs;
 import io.pulumi.azurenative.sql.outputs.FailoverGroupReadOnlyEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.FailoverGroupReadWriteEndpointResponse;
 import io.pulumi.azurenative.sql.outputs.PartnerInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -270,7 +270,6 @@ public final class GetFailoverGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFailoverGroupResult build() {
             return new GetFailoverGroupResult(databases, id, location, name, partnerServers, readOnlyEndpoint, readWriteEndpoint, replicationRole, replicationState, tags, type);
         }

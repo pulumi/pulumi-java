@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="additionalColumns")
-    private final @Nullable Input<Object> additionalColumns;
+        private final @Nullable Input<Object> additionalColumns;
 
     public Input<Object> getAdditionalColumns() {
         return this.additionalColumns == null ? Input.empty() : this.additionalColumns;
@@ -35,7 +35,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="detectDatetime")
-    private final @Nullable Input<Object> detectDatetime;
+        private final @Nullable Input<Object> detectDatetime;
 
     public Input<Object> getDetectDatetime() {
         return this.detectDatetime == null ? Input.empty() : this.detectDatetime;
@@ -46,7 +46,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Input<Object> disableMetricsCollection;
+        private final @Nullable Input<Object> disableMetricsCollection;
 
     public Input<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Input.empty() : this.disableMetricsCollection;
@@ -57,7 +57,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Input<Object> maxConcurrentConnections;
+        private final @Nullable Input<Object> maxConcurrentConnections;
 
     public Input<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Input.empty() : this.maxConcurrentConnections;
@@ -68,7 +68,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="pageSize")
-    private final @Nullable Input<Object> pageSize;
+        private final @Nullable Input<Object> pageSize;
 
     public Input<Object> getPageSize() {
         return this.pageSize == null ? Input.empty() : this.pageSize;
@@ -79,7 +79,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="preferredRegions")
-    private final @Nullable Input<Object> preferredRegions;
+        private final @Nullable Input<Object> preferredRegions;
 
     public Input<Object> getPreferredRegions() {
         return this.preferredRegions == null ? Input.empty() : this.preferredRegions;
@@ -90,7 +90,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="query")
-    private final @Nullable Input<Object> query;
+        private final @Nullable Input<Object> query;
 
     public Input<Object> getQuery() {
         return this.query == null ? Input.empty() : this.query;
@@ -101,7 +101,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Input<Object> sourceRetryCount;
+        private final @Nullable Input<Object> sourceRetryCount;
 
     public Input<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Input.empty() : this.sourceRetryCount;
@@ -112,7 +112,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Input<Object> sourceRetryWait;
+        private final @Nullable Input<Object> sourceRetryWait;
 
     public Input<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Input.empty() : this.sourceRetryWait;
@@ -124,7 +124,7 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -303,7 +303,6 @@ public final class CosmosDbSqlApiSourceArgs extends io.pulumi.resources.Resource
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public CosmosDbSqlApiSourceArgs build() {
             return new CosmosDbSqlApiSourceArgs(additionalColumns, detectDatetime, disableMetricsCollection, maxConcurrentConnections, pageSize, preferredRegions, query, sourceRetryCount, sourceRetryWait, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleHttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleMatcherResponse;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleRateLimitOptionsResponse;
@@ -28,7 +28,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="action", required=true)
-    private final String action;
+      private final String action;
 
     public String getAction() {
         return this.action;
@@ -39,7 +39,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -50,7 +50,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="direction", required=true)
-    private final String direction;
+      private final String direction;
 
     public String getDirection() {
         return this.direction;
@@ -61,7 +61,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="enableLogging", required=true)
-    private final Boolean enableLogging;
+      private final Boolean enableLogging;
 
     public Boolean getEnableLogging() {
         return this.enableLogging;
@@ -72,7 +72,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="headerAction", required=true)
-    private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
+      private final SecurityPolicyRuleHttpHeaderActionResponse headerAction;
 
     public SecurityPolicyRuleHttpHeaderActionResponse getHeaderAction() {
         return this.headerAction;
@@ -83,7 +83,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -94,7 +94,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="match", required=true)
-    private final SecurityPolicyRuleMatcherResponse match;
+      private final SecurityPolicyRuleMatcherResponse match;
 
     public SecurityPolicyRuleMatcherResponse getMatch() {
         return this.match;
@@ -105,7 +105,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="preview", required=true)
-    private final Boolean preview;
+      private final Boolean preview;
 
     public Boolean getPreview() {
         return this.preview;
@@ -116,7 +116,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -127,7 +127,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="rateLimitOptions", required=true)
-    private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
+      private final SecurityPolicyRuleRateLimitOptionsResponse rateLimitOptions;
 
     public SecurityPolicyRuleRateLimitOptionsResponse getRateLimitOptions() {
         return this.rateLimitOptions;
@@ -138,7 +138,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="redirectOptions", required=true)
-    private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
+      private final SecurityPolicyRuleRedirectOptionsResponse redirectOptions;
 
     public SecurityPolicyRuleRedirectOptionsResponse getRedirectOptions() {
         return this.redirectOptions;
@@ -149,7 +149,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ruleNumber", required=true)
-    private final String ruleNumber;
+      private final String ruleNumber;
 
     public String getRuleNumber() {
         return this.ruleNumber;
@@ -160,7 +160,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ruleTupleCount", required=true)
-    private final Integer ruleTupleCount;
+      private final Integer ruleTupleCount;
 
     public Integer getRuleTupleCount() {
         return this.ruleTupleCount;
@@ -171,7 +171,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetResources", required=true)
-    private final List<String> targetResources;
+      private final List<String> targetResources;
 
     public List<String> getTargetResources() {
         return this.targetResources;
@@ -182,7 +182,7 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="targetServiceAccounts", required=true)
-    private final List<String> targetServiceAccounts;
+      private final List<String> targetServiceAccounts;
 
     public List<String> getTargetServiceAccounts() {
         return this.targetServiceAccounts;
@@ -361,7 +361,6 @@ public final class SecurityPolicyRuleResponse extends io.pulumi.resources.Invoke
             this.targetServiceAccounts = Objects.requireNonNull(targetServiceAccounts);
             return this;
         }
-
         public SecurityPolicyRuleResponse build() {
             return new SecurityPolicyRuleResponse(action, description, direction, enableLogging, headerAction, kind, match, preview, priority, rateLimitOptions, redirectOptions, ruleNumber, ruleTupleCount, targetResources, targetServiceAccounts);
         }

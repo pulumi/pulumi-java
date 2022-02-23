@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.outputs.CookieExpirationResponse;
 import io.pulumi.azurenative.web.outputs.LoginRoutesResponse;
 import io.pulumi.azurenative.web.outputs.NonceResponse;
 import io.pulumi.azurenative.web.outputs.TokenStoreResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -170,7 +170,6 @@ public final class LoginResponse {
             this.tokenStore = tokenStore;
             return this;
         }
-
         public LoginResponse build() {
             return new LoginResponse(allowedExternalRedirectUrls, cookieExpiration, nonce, preserveUrlFragmentsForLogins, routes, tokenStore);
         }

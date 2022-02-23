@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userServiceAccountMapping", required=true)
-    private final Input<Map<String,String>> userServiceAccountMapping;
+      private final Input<Map<String,String>> userServiceAccountMapping;
 
     public Input<Map<String,String>> getUserServiceAccountMapping() {
         return this.userServiceAccountMapping;
@@ -66,7 +66,6 @@ public final class IdentityConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.userServiceAccountMapping = Input.of(Objects.requireNonNull(userServiceAccountMapping));
             return this;
         }
-
         public IdentityConfigArgs build() {
             return new IdentityConfigArgs(userServiceAccountMapping);
         }

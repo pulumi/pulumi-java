@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class AzureInternalMonitoringPipelineSinkDescriptionResponse {
             this.namespace = namespace;
             return this;
         }
-
         public AzureInternalMonitoringPipelineSinkDescriptionResponse build() {
             return new AzureInternalMonitoringPipelineSinkDescriptionResponse(accountName, autoKeyConfigUrl, description, fluentdConfigUrl, kind, maConfigUrl, name, namespace);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ResourceRule {
             this.verbs = Objects.requireNonNull(verbs);
             return this;
         }
-
         public ResourceRule build() {
             return new ResourceRule(apiGroups, resourceNames, resources, verbs);
         }

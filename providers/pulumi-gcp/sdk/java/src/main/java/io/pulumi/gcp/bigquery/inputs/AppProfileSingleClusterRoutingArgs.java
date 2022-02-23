@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowTransactionalWrites")
-    private final @Nullable Input<Boolean> allowTransactionalWrites;
+        private final @Nullable Input<Boolean> allowTransactionalWrites;
 
     public Input<Boolean> getAllowTransactionalWrites() {
         return this.allowTransactionalWrites == null ? Input.empty() : this.allowTransactionalWrites;
@@ -32,7 +32,7 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Input<String> clusterId;
+        private final Input<String> clusterId;
 
     public Input<String> getClusterId() {
         return this.clusterId;
@@ -91,7 +91,6 @@ public final class AppProfileSingleClusterRoutingArgs extends io.pulumi.resource
             this.clusterId = Input.of(Objects.requireNonNull(clusterId));
             return this;
         }
-
         public AppProfileSingleClusterRoutingArgs build() {
             return new AppProfileSingleClusterRoutingArgs(allowTransactionalWrites, clusterId);
         }

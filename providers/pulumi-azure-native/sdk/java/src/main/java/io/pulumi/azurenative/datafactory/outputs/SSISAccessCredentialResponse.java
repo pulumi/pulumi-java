@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -98,7 +98,6 @@ public final class SSISAccessCredentialResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public SSISAccessCredentialResponse build() {
             return new SSISAccessCredentialResponse(domain, password, userName);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.jobs_v4;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.jobs_v4.CompanyArgs;
 import io.pulumi.googlenative.jobs_v4.outputs.CompanyDerivedInfoResponse;
@@ -204,13 +204,6 @@ public class Company extends io.pulumi.resources.CustomResource {
         return this.websiteUri;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Company(String name) {
-        super("google-native:jobs/v4:Company", name, CompanyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

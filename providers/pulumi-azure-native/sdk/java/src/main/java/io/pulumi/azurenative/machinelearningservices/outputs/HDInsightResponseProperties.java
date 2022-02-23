@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.VirtualMachineSshCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class HDInsightResponseProperties {
             this.sshPort = sshPort;
             return this;
         }
-
         public HDInsightResponseProperties build() {
             return new HDInsightResponseProperties(address, administratorAccount, sshPort);
         }

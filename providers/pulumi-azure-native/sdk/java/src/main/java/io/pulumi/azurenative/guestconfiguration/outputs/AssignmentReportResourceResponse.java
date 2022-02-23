@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentReportResourceComplianceReasonResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -120,7 +120,6 @@ public final class AssignmentReportResourceResponse {
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public AssignmentReportResourceResponse build() {
             return new AssignmentReportResourceResponse(complianceStatus, properties, reasons, resourceId);
         }

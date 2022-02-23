@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backupPool")
-    private final @Nullable Input<String> backupPool;
+        private final @Nullable Input<String> backupPool;
 
     public Input<String> getBackupPool() {
         return this.backupPool == null ? Input.empty() : this.backupPool;
@@ -33,7 +33,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverRatio")
-    private final @Nullable Input<Double> failoverRatio;
+        private final @Nullable Input<Double> failoverRatio;
 
     public Input<Double> getFailoverRatio() {
         return this.failoverRatio == null ? Input.empty() : this.failoverRatio;
@@ -57,7 +57,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthChecks")
-    private final @Nullable Input<String> healthChecks;
+        private final @Nullable Input<String> healthChecks;
 
     public Input<String> getHealthChecks() {
         return this.healthChecks == null ? Input.empty() : this.healthChecks;
@@ -72,7 +72,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<String>> instances;
+        private final @Nullable Input<List<String>> instances;
 
     public Input<List<String>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -84,7 +84,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -96,7 +96,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -108,7 +108,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -119,7 +119,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -132,7 +132,7 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionAffinity")
-    private final @Nullable Input<String> sessionAffinity;
+        private final @Nullable Input<String> sessionAffinity;
 
     public Input<String> getSessionAffinity() {
         return this.sessionAffinity == null ? Input.empty() : this.sessionAffinity;
@@ -311,7 +311,6 @@ public final class TargetPoolState extends io.pulumi.resources.ResourceArgs {
             this.sessionAffinity = Input.ofNullable(sessionAffinity);
             return this;
         }
-
         public TargetPoolState build() {
             return new TargetPoolState(backupPool, description, failoverRatio, healthChecks, instances, name, project, region, selfLink, sessionAffinity);
         }

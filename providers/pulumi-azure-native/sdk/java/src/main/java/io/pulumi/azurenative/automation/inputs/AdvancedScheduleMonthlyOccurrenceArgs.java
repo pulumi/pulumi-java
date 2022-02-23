@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.inputs;
 import io.pulumi.azurenative.automation.enums.ScheduleDay;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="day")
-    private final @Nullable Input<Either<String,ScheduleDay>> day;
+        private final @Nullable Input<Either<String,ScheduleDay>> day;
 
     public Input<Either<String,ScheduleDay>> getDay() {
         return this.day == null ? Input.empty() : this.day;
@@ -37,7 +37,7 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="occurrence")
-    private final @Nullable Input<Integer> occurrence;
+        private final @Nullable Input<Integer> occurrence;
 
     public Input<Integer> getOccurrence() {
         return this.occurrence == null ? Input.empty() : this.occurrence;
@@ -96,7 +96,6 @@ public final class AdvancedScheduleMonthlyOccurrenceArgs extends io.pulumi.resou
             this.occurrence = Input.ofNullable(occurrence);
             return this;
         }
-
         public AdvancedScheduleMonthlyOccurrenceArgs build() {
             return new AdvancedScheduleMonthlyOccurrenceArgs(day, occurrence);
         }

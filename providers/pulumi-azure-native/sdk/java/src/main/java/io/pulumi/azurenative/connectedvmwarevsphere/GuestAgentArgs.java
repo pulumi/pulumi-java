@@ -8,7 +8,7 @@ import io.pulumi.azurenative.connectedvmwarevsphere.inputs.GuestCredentialArgs;
 import io.pulumi.azurenative.connectedvmwarevsphere.inputs.HttpProxyConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<GuestCredentialArgs> credentials;
+        private final @Nullable Input<GuestCredentialArgs> credentials;
 
     public Input<GuestCredentialArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -34,7 +34,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpProxyConfig")
-    private final @Nullable Input<HttpProxyConfigurationArgs> httpProxyConfig;
+        private final @Nullable Input<HttpProxyConfigurationArgs> httpProxyConfig;
 
     public Input<HttpProxyConfigurationArgs> getHttpProxyConfig() {
         return this.httpProxyConfig == null ? Input.empty() : this.httpProxyConfig;
@@ -45,7 +45,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -56,7 +56,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningAction")
-    private final @Nullable Input<Either<String,ProvisioningAction>> provisioningAction;
+        private final @Nullable Input<Either<String,ProvisioningAction>> provisioningAction;
 
     public Input<Either<String,ProvisioningAction>> getProvisioningAction() {
         return this.provisioningAction == null ? Input.empty() : this.provisioningAction;
@@ -67,7 +67,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -78,7 +78,7 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="virtualMachineName", required=true)
-    private final Input<String> virtualMachineName;
+        private final Input<String> virtualMachineName;
 
     public Input<String> getVirtualMachineName() {
         return this.virtualMachineName;
@@ -197,7 +197,6 @@ public final class GuestAgentArgs extends io.pulumi.resources.ResourceArgs {
             this.virtualMachineName = Input.of(Objects.requireNonNull(virtualMachineName));
             return this;
         }
-
         public GuestAgentArgs build() {
             return new GuestAgentArgs(credentials, httpProxyConfig, name, provisioningAction, resourceGroupName, virtualMachineName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.datasync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class LocationHDFSNameNode {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public LocationHDFSNameNode build() {
             return new LocationHDFSNameNode(hostname, port);
         }

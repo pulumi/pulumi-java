@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final Input<String> algorithm;
+        private final Input<String> algorithm;
 
     public Input<String> getAlgorithm() {
         return this.algorithm;
@@ -31,7 +31,7 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionLevel")
-    private final @Nullable Input<String> protectionLevel;
+        private final @Nullable Input<String> protectionLevel;
 
     public Input<String> getProtectionLevel() {
         return this.protectionLevel == null ? Input.empty() : this.protectionLevel;
@@ -90,7 +90,6 @@ public final class CryptoKeyVersionTemplateArgs extends io.pulumi.resources.Reso
             this.protectionLevel = Input.ofNullable(protectionLevel);
             return this;
         }
-
         public CryptoKeyVersionTemplateArgs build() {
             return new CryptoKeyVersionTemplateArgs(algorithm, protectionLevel);
         }

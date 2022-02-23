@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class ContainerEventResponse {
             this.type = type;
             return this;
         }
-
         public ContainerEventResponse build() {
             return new ContainerEventResponse(count, firstTimestamp, lastTimestamp, message, name, type);
         }

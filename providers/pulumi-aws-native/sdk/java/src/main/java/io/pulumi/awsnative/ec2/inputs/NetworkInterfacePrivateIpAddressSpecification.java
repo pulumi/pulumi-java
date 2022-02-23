@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends io.pulu
     public static final NetworkInterfacePrivateIpAddressSpecification Empty = new NetworkInterfacePrivateIpAddressSpecification();
 
     @InputImport(name="primary", required=true)
-    private final Boolean primary;
+        private final Boolean primary;
 
     public Boolean getPrimary() {
         return this.primary;
     }
 
     @InputImport(name="privateIpAddress", required=true)
-    private final String privateIpAddress;
+        private final String privateIpAddress;
 
     public String getPrivateIpAddress() {
         return this.privateIpAddress;
@@ -70,7 +70,6 @@ public final class NetworkInterfacePrivateIpAddressSpecification extends io.pulu
             this.privateIpAddress = Objects.requireNonNull(privateIpAddress);
             return this;
         }
-
         public NetworkInterfacePrivateIpAddressSpecification build() {
             return new NetworkInterfacePrivateIpAddressSpecification(primary, privateIpAddress);
         }

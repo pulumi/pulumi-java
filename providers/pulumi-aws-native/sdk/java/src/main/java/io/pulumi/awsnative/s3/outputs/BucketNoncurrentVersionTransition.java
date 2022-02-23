@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.enums.BucketNoncurrentVersionTransitionStorageClass;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class BucketNoncurrentVersionTransition {
             this.transitionInDays = Objects.requireNonNull(transitionInDays);
             return this;
         }
-
         public BucketNoncurrentVersionTransition build() {
             return new BucketNoncurrentVersionTransition(newerNoncurrentVersions, storageClass, transitionInDays);
         }

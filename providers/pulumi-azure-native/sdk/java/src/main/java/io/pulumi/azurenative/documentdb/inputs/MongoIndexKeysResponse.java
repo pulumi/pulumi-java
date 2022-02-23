@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable List<String> keys;
+        private final @Nullable List<String> keys;
 
     public List<String> getKeys() {
         return this.keys == null ? List.of() : this.keys;
@@ -62,7 +62,6 @@ public final class MongoIndexKeysResponse extends io.pulumi.resources.InvokeArgs
             this.keys = keys;
             return this;
         }
-
         public MongoIndexKeysResponse build() {
             return new MongoIndexKeysResponse(keys);
         }

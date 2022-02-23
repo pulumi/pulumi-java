@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.inputs.DefenderForServersAwsOfferingArgs;
 import io.pulumi.azurenative.security.inputs.SecurityConnectorPropertiesOrganizationalDataArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cloudName")
-    private final @Nullable Input<Either<String,CloudName>> cloudName;
+        private final @Nullable Input<Either<String,CloudName>> cloudName;
 
     public Input<Either<String,CloudName>> getCloudName() {
         return this.cloudName == null ? Input.empty() : this.cloudName;
@@ -39,7 +39,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="hierarchyIdentifier")
-    private final @Nullable Input<String> hierarchyIdentifier;
+        private final @Nullable Input<String> hierarchyIdentifier;
 
     public Input<String> getHierarchyIdentifier() {
         return this.hierarchyIdentifier == null ? Input.empty() : this.hierarchyIdentifier;
@@ -50,7 +50,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -61,7 +61,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -72,7 +72,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="offerings")
-    private final @Nullable Input<List<Object>> offerings;
+        private final @Nullable Input<List<Object>> offerings;
 
     public Input<List<Object>> getOfferings() {
         return this.offerings == null ? Input.empty() : this.offerings;
@@ -83,7 +83,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="organizationalData")
-    private final @Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
+        private final @Nullable Input<SecurityConnectorPropertiesOrganizationalDataArgs> organizationalData;
 
     public Input<SecurityConnectorPropertiesOrganizationalDataArgs> getOrganizationalData() {
         return this.organizationalData == null ? Input.empty() : this.organizationalData;
@@ -94,7 +94,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -105,7 +105,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="securityConnectorName")
-    private final @Nullable Input<String> securityConnectorName;
+        private final @Nullable Input<String> securityConnectorName;
 
     public Input<String> getSecurityConnectorName() {
         return this.securityConnectorName == null ? Input.empty() : this.securityConnectorName;
@@ -116,7 +116,7 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -280,7 +280,6 @@ public final class SecurityConnectorArgs extends io.pulumi.resources.ResourceArg
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SecurityConnectorArgs build() {
             return new SecurityConnectorArgs(cloudName, hierarchyIdentifier, kind, location, offerings, organizationalData, resourceGroupName, securityConnectorName, tags);
         }

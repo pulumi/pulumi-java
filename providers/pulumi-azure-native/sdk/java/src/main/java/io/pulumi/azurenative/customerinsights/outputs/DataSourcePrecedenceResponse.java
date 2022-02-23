@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class DataSourcePrecedenceResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public DataSourcePrecedenceResponse build() {
             return new DataSourcePrecedenceResponse(dataSourceReferenceId, dataSourceType, id, name, precedence, status);
         }

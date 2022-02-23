@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillAllStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillNoneStrategyResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.DestinationConfigResponse;
@@ -291,7 +291,6 @@ public final class GetStreamResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetStreamResult build() {
             return new GetStreamResult(backfillAll, backfillNone, createTime, customerManagedEncryptionKey, destinationConfig, displayName, errors, labels, name, sourceConfig, state, updateTime);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.batch.outputs;
 
 import io.pulumi.awsnative.batch.outputs.SchedulingPolicyFairsharePolicy;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class GetSchedulingPolicyResult {
             this.fairsharePolicy = fairsharePolicy;
             return this;
         }
-
         public GetSchedulingPolicyResult build() {
             return new GetSchedulingPolicyResult(arn, fairsharePolicy);
         }

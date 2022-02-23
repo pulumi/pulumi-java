@@ -9,8 +9,8 @@ import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateProvisioningHook;
 import io.pulumi.awsnative.iot.outputs.ProvisioningTemplateTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -71,13 +71,6 @@ public class ProvisioningTemplate extends io.pulumi.resources.CustomResource {
         return this.templateName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ProvisioningTemplate(String name) {
-        super("aws-native:iot:ProvisioningTemplate", name, ProvisioningTemplateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

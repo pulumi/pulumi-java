@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -113,7 +113,6 @@ public final class NetworkInsightsAnalysisAnalysisSecurityGroupRule {
             this.securityGroupId = securityGroupId;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisSecurityGroupRule build() {
             return new NetworkInsightsAnalysisAnalysisSecurityGroupRule(cidr, direction, portRange, prefixListId, protocol, securityGroupId);
         }

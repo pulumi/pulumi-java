@@ -25,7 +25,7 @@ import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageReadSettingsR
 import io.pulumi.azurenative.datafactory.outputs.SftpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlReadSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -291,7 +291,6 @@ public final class GetMetadataActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public GetMetadataActivityResponse build() {
             return new GetMetadataActivityResponse(dataset, dependsOn, description, fieldList, formatSettings, linkedServiceName, name, policy, storeSettings, type, userProperties);
         }

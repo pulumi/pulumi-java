@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="disks", required=true)
-    private final Map<String,String> disks;
+      private final Map<String,String> disks;
 
     public Map<String,String> getDisks() {
         return this.disks;
@@ -33,7 +33,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="externalIPs", required=true)
-    private final Map<String,String> externalIPs;
+      private final Map<String,String> externalIPs;
 
     public Map<String,String> getExternalIPs() {
         return this.externalIPs;
@@ -44,7 +44,7 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="internalIPs", required=true)
-    private final Map<String,String> internalIPs;
+      private final Map<String,String> internalIPs;
 
     public Map<String,String> getInternalIPs() {
         return this.internalIPs;
@@ -103,7 +103,6 @@ public final class StatefulPolicyPreservedStateResponse extends io.pulumi.resour
             this.internalIPs = Objects.requireNonNull(internalIPs);
             return this;
         }
-
         public StatefulPolicyPreservedStateResponse build() {
             return new StatefulPolicyPreservedStateResponse(disks, externalIPs, internalIPs);
         }

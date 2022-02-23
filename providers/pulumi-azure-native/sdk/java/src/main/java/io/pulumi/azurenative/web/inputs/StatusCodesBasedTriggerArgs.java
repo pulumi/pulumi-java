@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<Integer> count;
+        private final @Nullable Input<Integer> count;
 
     public Input<Integer> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -35,7 +35,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -46,7 +46,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Integer> status;
+        private final @Nullable Input<Integer> status;
 
     public Input<Integer> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -57,7 +57,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="subStatus")
-    private final @Nullable Input<Integer> subStatus;
+        private final @Nullable Input<Integer> subStatus;
 
     public Input<Integer> getSubStatus() {
         return this.subStatus == null ? Input.empty() : this.subStatus;
@@ -68,7 +68,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeInterval")
-    private final @Nullable Input<String> timeInterval;
+        private final @Nullable Input<String> timeInterval;
 
     public Input<String> getTimeInterval() {
         return this.timeInterval == null ? Input.empty() : this.timeInterval;
@@ -79,7 +79,7 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="win32Status")
-    private final @Nullable Input<Integer> win32Status;
+        private final @Nullable Input<Integer> win32Status;
 
     public Input<Integer> getWin32Status() {
         return this.win32Status == null ? Input.empty() : this.win32Status;
@@ -198,7 +198,6 @@ public final class StatusCodesBasedTriggerArgs extends io.pulumi.resources.Resou
             this.win32Status = Input.ofNullable(win32Status);
             return this;
         }
-
         public StatusCodesBasedTriggerArgs build() {
             return new StatusCodesBasedTriggerArgs(count, path, status, subStatus, timeInterval, win32Status);
         }

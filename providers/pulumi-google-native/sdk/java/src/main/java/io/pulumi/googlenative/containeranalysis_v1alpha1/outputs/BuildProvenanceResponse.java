@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.ArtifactResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.CommandResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SourceResponse;
@@ -289,7 +289,6 @@ public final class BuildProvenanceResponse {
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
-
         public BuildProvenanceResponse build() {
             return new BuildProvenanceResponse(buildOptions, builderVersion, builtArtifacts, commands, createTime, creator, finishTime, logsBucket, project, sourceProvenance, startTime, triggerId);
         }

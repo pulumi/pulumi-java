@@ -13,7 +13,7 @@ import io.pulumi.azurenative.devices.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.devices.outputs.RoutingPropertiesResponse;
 import io.pulumi.azurenative.devices.outputs.SharedAccessSignatureAuthorizationRuleResponse;
 import io.pulumi.azurenative.devices.outputs.StorageEndpointPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -425,7 +425,6 @@ public final class IotHubPropertiesResponse {
             this.storageEndpoints = storageEndpoints;
             return this;
         }
-
         public IotHubPropertiesResponse build() {
             return new IotHubPropertiesResponse(authorizationPolicies, cloudToDevice, comments, enableFileUploadNotifications, eventHubEndpoints, features, hostName, ipFilterRules, locations, messagingEndpoints, minTlsVersion, networkRuleSets, privateEndpointConnections, provisioningState, publicNetworkAccess, routing, state, storageEndpoints);
         }

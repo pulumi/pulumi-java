@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -43,7 +43,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="firstName", required=true)
-    private final String firstName;
+      private final String firstName;
 
     public String getFirstName() {
         return this.firstName;
@@ -54,7 +54,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="lastName", required=true)
-    private final String lastName;
+      private final String lastName;
 
     public String getLastName() {
         return this.lastName;
@@ -65,7 +65,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="phone", required=true)
-    private final String phone;
+      private final String phone;
 
     public String getPhone() {
         return this.phone;
@@ -76,7 +76,7 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -165,7 +165,6 @@ public final class GoogleCloudChannelV1ContactInfoResponse extends io.pulumi.res
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudChannelV1ContactInfoResponse build() {
             return new GoogleCloudChannelV1ContactInfoResponse(displayName, email, firstName, lastName, phone, title);
         }

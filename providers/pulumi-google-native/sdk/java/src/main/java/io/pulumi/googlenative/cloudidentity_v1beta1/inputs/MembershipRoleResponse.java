@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.ExpiryDetailResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.inputs.RestrictionEvaluationsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="expiryDetail", required=true)
-    private final ExpiryDetailResponse expiryDetail;
+      private final ExpiryDetailResponse expiryDetail;
 
     public ExpiryDetailResponse getExpiryDetail() {
         return this.expiryDetail;
@@ -34,7 +34,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="restrictionEvaluations", required=true)
-    private final RestrictionEvaluationsResponse restrictionEvaluations;
+      private final RestrictionEvaluationsResponse restrictionEvaluations;
 
     public RestrictionEvaluationsResponse getRestrictionEvaluations() {
         return this.restrictionEvaluations;
@@ -104,7 +104,6 @@ public final class MembershipRoleResponse extends io.pulumi.resources.InvokeArgs
             this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
             return this;
         }
-
         public MembershipRoleResponse build() {
             return new MembershipRoleResponse(expiryDetail, name, restrictionEvaluations);
         }

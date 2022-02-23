@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.OsConstraintResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class DevicePolicyResponse {
             this.requireScreenlock = Objects.requireNonNull(requireScreenlock);
             return this;
         }
-
         public DevicePolicyResponse build() {
             return new DevicePolicyResponse(allowedDeviceManagementLevels, allowedEncryptionStatuses, osConstraints, requireAdminApproval, requireCorpOwned, requireScreenlock);
         }

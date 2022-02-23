@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CallCredentialsResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.ChannelCredentialsResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class GrpcServiceConfigResponse {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GrpcServiceConfigResponse build() {
             return new GrpcServiceConfigResponse(callCredentials, channelCredentials, targetUri);
         }

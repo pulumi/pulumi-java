@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.AttachedDiskResponse;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.NetworkConfigResponse;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.NetworkEndpointResponse;
@@ -439,7 +439,6 @@ public final class GetNodeResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public GetNodeResult build() {
             return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, dataDisks, description, health, healthDescription, labels, metadata, name, networkConfig, networkEndpoints, runtimeVersion, schedulingConfig, serviceAccount, state, symptoms, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -287,7 +287,6 @@ public final class GetAssetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAssetResult build() {
             return new GetAssetResult(alternateId, assetId, container, created, description, id, lastModified, name, storageAccountName, storageEncryptionFormat, systemData, type);
         }

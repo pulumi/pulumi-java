@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="inlineCode")
-    private final @Nullable Input<String> inlineCode;
+      private final @Nullable Input<String> inlineCode;
 
     public Input<String> getInlineCode() {
         return this.inlineCode == null ? Input.empty() : this.inlineCode;
@@ -34,7 +34,7 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<String> resourceUri;
+      private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -93,7 +93,6 @@ public final class UserDefinedFunctionResourceArgs extends io.pulumi.resources.R
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public UserDefinedFunctionResourceArgs build() {
             return new UserDefinedFunctionResourceArgs(inlineCode, resourceUri);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.hdinsight.inputs;
 
 import io.pulumi.azurenative.hdinsight.inputs.RoleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roles")
-    private final @Nullable Input<List<RoleArgs>> roles;
+        private final @Nullable Input<List<RoleArgs>> roles;
 
     public Input<List<RoleArgs>> getRoles() {
         return this.roles == null ? Input.empty() : this.roles;
@@ -67,7 +67,6 @@ public final class ComputeProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.roles = Input.ofNullable(roles);
             return this;
         }
-
         public ComputeProfileArgs build() {
             return new ComputeProfileArgs(roles);
         }

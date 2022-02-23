@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule;
 import io.pulumi.gcp.compute.inputs.GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule;
@@ -16,21 +16,21 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule extends io.pu
     public static final GetResourcePolicySnapshotSchedulePolicySchedule Empty = new GetResourcePolicySnapshotSchedulePolicySchedule();
 
     @InputImport(name="dailySchedules", required=true)
-    private final List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
+        private final List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> dailySchedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleDailySchedule> getDailySchedules() {
         return this.dailySchedules;
     }
 
     @InputImport(name="hourlySchedules", required=true)
-    private final List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
+        private final List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> hourlySchedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleHourlySchedule> getHourlySchedules() {
         return this.hourlySchedules;
     }
 
     @InputImport(name="weeklySchedules", required=true)
-    private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
+        private final List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> weeklySchedules;
 
     public List<GetResourcePolicySnapshotSchedulePolicyScheduleWeeklySchedule> getWeeklySchedules() {
         return this.weeklySchedules;
@@ -89,7 +89,6 @@ public final class GetResourcePolicySnapshotSchedulePolicySchedule extends io.pu
             this.weeklySchedules = Objects.requireNonNull(weeklySchedules);
             return this;
         }
-
         public GetResourcePolicySnapshotSchedulePolicySchedule build() {
             return new GetResourcePolicySnapshotSchedulePolicySchedule(dailySchedules, hourlySchedules, weeklySchedules);
         }

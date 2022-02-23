@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="allowNoResourceGroupMatch")
-    private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
+        private final @Nullable Input<Boolean> allowNoResourceGroupMatch;
 
     public Input<Boolean> getAllowNoResourceGroupMatch() {
         return this.allowNoResourceGroupMatch == null ? Input.empty() : this.allowNoResourceGroupMatch;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="mode", required=true)
-    private final Input<String> mode;
+        private final Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode;
@@ -66,7 +66,7 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroups", required=true)
-    private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups;
+        private final Input<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> resourceGroups;
 
     public Input<List<OsPolicyAssignmentOsPolicyResourceGroupArgs>> getResourceGroups() {
         return this.resourceGroups;
@@ -170,7 +170,6 @@ public final class OsPolicyAssignmentOsPolicyArgs extends io.pulumi.resources.Re
             this.resourceGroups = Input.of(Objects.requireNonNull(resourceGroups));
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyArgs build() {
             return new OsPolicyAssignmentOsPolicyArgs(allowNoResourceGroupMatch, description, id, mode, resourceGroups);
         }

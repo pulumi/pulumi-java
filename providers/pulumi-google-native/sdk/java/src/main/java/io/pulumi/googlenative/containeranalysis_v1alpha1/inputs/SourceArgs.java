@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.RepoSourceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.StorageSourceArgs;
@@ -28,7 +28,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalContexts")
-    private final @Nullable Input<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
+      private final @Nullable Input<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> additionalContexts;
 
     public Input<List<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs>> getAdditionalContexts() {
         return this.additionalContexts == null ? Input.empty() : this.additionalContexts;
@@ -39,7 +39,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="artifactStorageSource")
-    private final @Nullable Input<StorageSourceArgs> artifactStorageSource;
+      private final @Nullable Input<StorageSourceArgs> artifactStorageSource;
 
     public Input<StorageSourceArgs> getArtifactStorageSource() {
         return this.artifactStorageSource == null ? Input.empty() : this.artifactStorageSource;
@@ -50,7 +50,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="context")
-    private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
+      private final @Nullable Input<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> context;
 
     public Input<GoogleDevtoolsContaineranalysisV1alpha1SourceContextArgs> getContext() {
         return this.context == null ? Input.empty() : this.context;
@@ -61,7 +61,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileHashes")
-    private final @Nullable Input<Map<String,String>> fileHashes;
+      private final @Nullable Input<Map<String,String>> fileHashes;
 
     public Input<Map<String,String>> getFileHashes() {
         return this.fileHashes == null ? Input.empty() : this.fileHashes;
@@ -72,7 +72,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repoSource")
-    private final @Nullable Input<RepoSourceArgs> repoSource;
+      private final @Nullable Input<RepoSourceArgs> repoSource;
 
     public Input<RepoSourceArgs> getRepoSource() {
         return this.repoSource == null ? Input.empty() : this.repoSource;
@@ -83,7 +83,7 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSource")
-    private final @Nullable Input<StorageSourceArgs> storageSource;
+      private final @Nullable Input<StorageSourceArgs> storageSource;
 
     public Input<StorageSourceArgs> getStorageSource() {
         return this.storageSource == null ? Input.empty() : this.storageSource;
@@ -202,7 +202,6 @@ public final class SourceArgs extends io.pulumi.resources.ResourceArgs {
             this.storageSource = Input.ofNullable(storageSource);
             return this;
         }
-
         public SourceArgs build() {
             return new SourceArgs(additionalContexts, artifactStorageSource, context, fileHashes, repoSource, storageSource);
         }

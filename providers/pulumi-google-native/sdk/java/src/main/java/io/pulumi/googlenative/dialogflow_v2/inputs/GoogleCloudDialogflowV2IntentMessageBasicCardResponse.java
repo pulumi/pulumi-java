@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @InputImport(name="buttons", required=true)
-    private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
+      private final List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> buttons;
 
     public List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonResponse> getButtons() {
         return this.buttons;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @InputImport(name="formattedText", required=true)
-    private final String formattedText;
+      private final String formattedText;
 
     public String getFormattedText() {
         return this.formattedText;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2IntentMessageImageResponse getImage() {
         return this.image;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @InputImport(name="subtitle", required=true)
-    private final String subtitle;
+      private final String subtitle;
 
     public String getSubtitle() {
         return this.subtitle;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
      * 
      */
     @InputImport(name="title", required=true)
-    private final String title;
+      private final String title;
 
     public String getTitle() {
         return this.title;
@@ -147,7 +147,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardResponse extends
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardResponse build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardResponse(buttons, formattedText, image, subtitle, title);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.offazure;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="peConnectionName")
-    private final @Nullable Input<String> peConnectionName;
+        private final @Nullable Input<String> peConnectionName;
 
     public Input<String> getPeConnectionName() {
         return this.peConnectionName == null ? Input.empty() : this.peConnectionName;
@@ -30,7 +30,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="siteName", required=true)
-    private final Input<String> siteName;
+        private final Input<String> siteName;
 
     public Input<String> getSiteName() {
         return this.siteName;
@@ -115,7 +115,6 @@ public final class PrivateEndpointConnectionArgs extends io.pulumi.resources.Res
             this.siteName = Input.of(Objects.requireNonNull(siteName));
             return this;
         }
-
         public PrivateEndpointConnectionArgs build() {
             return new PrivateEndpointConnectionArgs(peConnectionName, resourceGroupName, siteName);
         }

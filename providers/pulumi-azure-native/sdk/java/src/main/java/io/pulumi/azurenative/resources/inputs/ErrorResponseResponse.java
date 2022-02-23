@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.azurenative.resources.inputs.ErrorAdditionalInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="additionalInfo", required=true)
-    private final List<ErrorAdditionalInfoResponse> additionalInfo;
+        private final List<ErrorAdditionalInfoResponse> additionalInfo;
 
     public List<ErrorAdditionalInfoResponse> getAdditionalInfo() {
         return this.additionalInfo;
@@ -34,7 +34,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
@@ -45,7 +45,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="details", required=true)
-    private final List<ErrorResponseResponse> details;
+        private final List<ErrorResponseResponse> details;
 
     public List<ErrorResponseResponse> getDetails() {
         return this.details;
@@ -56,7 +56,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -67,7 +67,7 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="target", required=true)
-    private final String target;
+        private final String target;
 
     public String getTarget() {
         return this.target;
@@ -146,7 +146,6 @@ public final class ErrorResponseResponse extends io.pulumi.resources.InvokeArgs 
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public ErrorResponseResponse build() {
             return new ErrorResponseResponse(additionalInfo, code, details, message, target);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 
 import io.pulumi.azurenative.edgeorder.inputs.FilterableProperty;
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformation;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filterableProperty")
-    private final @Nullable List<FilterableProperty> filterableProperty;
+        private final @Nullable List<FilterableProperty> filterableProperty;
 
     public List<FilterableProperty> getFilterableProperty() {
         return this.filterableProperty == null ? List.of() : this.filterableProperty;
@@ -36,7 +36,7 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hierarchyInformation", required=true)
-    private final HierarchyInformation hierarchyInformation;
+        private final HierarchyInformation hierarchyInformation;
 
     public HierarchyInformation getHierarchyInformation() {
         return this.hierarchyInformation;
@@ -85,7 +85,6 @@ public final class ConfigurationFilters extends io.pulumi.resources.InvokeArgs {
             this.hierarchyInformation = Objects.requireNonNull(hierarchyInformation);
             return this;
         }
-
         public ConfigurationFilters build() {
             return new ConfigurationFilters(filterableProperty, hierarchyInformation);
         }

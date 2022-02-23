@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSetParametersResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class ImageDataDiskResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public ImageDataDiskResponse build() {
             return new ImageDataDiskResponse(blobUri, caching, diskEncryptionSet, diskSizeGB, lun, managedDisk, snapshot, storageAccountType);
         }

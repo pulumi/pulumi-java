@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.RuleManagementEventDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.RuleMetricDataSourceResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -124,7 +124,6 @@ public final class LocationThresholdRuleConditionResponse {
             this.windowSize = windowSize;
             return this;
         }
-
         public LocationThresholdRuleConditionResponse build() {
             return new LocationThresholdRuleConditionResponse(dataSource, failedLocationCount, odataType, windowSize);
         }

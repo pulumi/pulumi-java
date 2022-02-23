@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleP
             this.windowBefore = windowBefore;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleProximity(windowAfter, windowBefore);
         }

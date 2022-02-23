@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.SamplingType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+        private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -37,7 +37,7 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="samplingType")
-    private final @Nullable Input<Either<String,SamplingType>> samplingType;
+        private final @Nullable Input<Either<String,SamplingType>> samplingType;
 
     public Input<Either<String,SamplingType>> getSamplingType() {
         return this.samplingType == null ? Input.empty() : this.samplingType;
@@ -96,7 +96,6 @@ public final class SamplingSettingsArgs extends io.pulumi.resources.ResourceArgs
             this.samplingType = Input.ofNullable(samplingType);
             return this;
         }
-
         public SamplingSettingsArgs build() {
             return new SamplingSettingsArgs(percentage, samplingType);
         }

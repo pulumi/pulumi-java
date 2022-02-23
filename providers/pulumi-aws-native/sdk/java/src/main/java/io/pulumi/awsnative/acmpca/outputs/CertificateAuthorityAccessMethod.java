@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class CertificateAuthorityAccessMethod {
             this.customObjectIdentifier = customObjectIdentifier;
             return this;
         }
-
         public CertificateAuthorityAccessMethod build() {
             return new CertificateAuthorityAccessMethod(accessMethodType, customObjectIdentifier);
         }

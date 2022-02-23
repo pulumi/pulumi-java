@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.DatabaseFileInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -184,7 +184,6 @@ public final class ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse {
             this.sizeMB = Objects.requireNonNull(sizeMB);
             return this;
         }
-
         public ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse build() {
             return new ConnectToSourceSqlServerTaskOutputDatabaseLevelResponse(compatibilityLevel, databaseFiles, databaseState, id, name, resultType, sizeMB);
         }

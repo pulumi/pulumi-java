@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -72,7 +72,6 @@ public final class DataSourceWebCrawlerBasicAuthentication {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceWebCrawlerBasicAuthentication build() {
             return new DataSourceWebCrawlerBasicAuthentication(credentials, host, port);
         }

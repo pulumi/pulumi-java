@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -100,7 +100,6 @@ public final class GetKMSSecretCiphertextResult {
             this.plaintext = Objects.requireNonNull(plaintext);
             return this;
         }
-
         public GetKMSSecretCiphertextResult build() {
             return new GetKMSSecretCiphertextResult(ciphertext, cryptoKey, id, plaintext);
         }

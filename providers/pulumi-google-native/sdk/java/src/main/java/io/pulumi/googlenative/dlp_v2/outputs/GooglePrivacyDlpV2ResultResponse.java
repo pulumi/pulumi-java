@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2HybridInspectStatisticsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeStatsResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2ResultResponse {
             this.totalEstimatedBytes = Objects.requireNonNull(totalEstimatedBytes);
             return this;
         }
-
         public GooglePrivacyDlpV2ResultResponse build() {
             return new GooglePrivacyDlpV2ResultResponse(hybridStats, infoTypeStats, processedBytes, totalEstimatedBytes);
         }

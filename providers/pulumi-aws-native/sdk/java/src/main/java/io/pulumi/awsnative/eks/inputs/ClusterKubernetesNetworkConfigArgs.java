@@ -5,7 +5,7 @@ package io.pulumi.awsnative.eks.inputs;
 
 import io.pulumi.awsnative.eks.enums.ClusterKubernetesNetworkConfigIpFamily;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipFamily")
-    private final @Nullable Input<ClusterKubernetesNetworkConfigIpFamily> ipFamily;
+        private final @Nullable Input<ClusterKubernetesNetworkConfigIpFamily> ipFamily;
 
     public Input<ClusterKubernetesNetworkConfigIpFamily> getIpFamily() {
         return this.ipFamily == null ? Input.empty() : this.ipFamily;
@@ -35,7 +35,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceIpv4Cidr")
-    private final @Nullable Input<String> serviceIpv4Cidr;
+        private final @Nullable Input<String> serviceIpv4Cidr;
 
     public Input<String> getServiceIpv4Cidr() {
         return this.serviceIpv4Cidr == null ? Input.empty() : this.serviceIpv4Cidr;
@@ -46,7 +46,7 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serviceIpv6Cidr")
-    private final @Nullable Input<String> serviceIpv6Cidr;
+        private final @Nullable Input<String> serviceIpv6Cidr;
 
     public Input<String> getServiceIpv6Cidr() {
         return this.serviceIpv6Cidr == null ? Input.empty() : this.serviceIpv6Cidr;
@@ -120,7 +120,6 @@ public final class ClusterKubernetesNetworkConfigArgs extends io.pulumi.resource
             this.serviceIpv6Cidr = Input.ofNullable(serviceIpv6Cidr);
             return this;
         }
-
         public ClusterKubernetesNetworkConfigArgs build() {
             return new ClusterKubernetesNetworkConfigArgs(ipFamily, serviceIpv4Cidr, serviceIpv6Cidr);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+        private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -66,7 +66,6 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceResourceId = Input.ofNullable(sourceResourceId);
             return this;
         }
-
         public CreationDataArgs build() {
             return new CreationDataArgs(sourceResourceId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.glue.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSchemaVersionArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionId", required=true)
-    private final String versionId;
+        private final String versionId;
 
     public String getVersionId() {
         return this.versionId;
@@ -55,7 +55,6 @@ public final class GetSchemaVersionArgs extends io.pulumi.resources.InvokeArgs {
             this.versionId = Objects.requireNonNull(versionId);
             return this;
         }
-
         public GetSchemaVersionArgs build() {
             return new GetSchemaVersionArgs(versionId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.inputs.ServiceAuthenticationConfiguration;
 import io.pulumi.awsnative.apprunner.inputs.ServiceCodeRepository;
 import io.pulumi.awsnative.apprunner.inputs.ServiceImageRepository;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -22,7 +22,7 @@ public final class ServiceSourceConfiguration extends io.pulumi.resources.Invoke
     public static final ServiceSourceConfiguration Empty = new ServiceSourceConfiguration();
 
     @InputImport(name="authenticationConfiguration")
-    private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
+        private final @Nullable ServiceAuthenticationConfiguration authenticationConfiguration;
 
     public Optional<ServiceAuthenticationConfiguration> getAuthenticationConfiguration() {
         return this.authenticationConfiguration == null ? Optional.empty() : Optional.ofNullable(this.authenticationConfiguration);
@@ -33,21 +33,21 @@ public final class ServiceSourceConfiguration extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="autoDeploymentsEnabled")
-    private final @Nullable Boolean autoDeploymentsEnabled;
+        private final @Nullable Boolean autoDeploymentsEnabled;
 
     public Optional<Boolean> getAutoDeploymentsEnabled() {
         return this.autoDeploymentsEnabled == null ? Optional.empty() : Optional.ofNullable(this.autoDeploymentsEnabled);
     }
 
     @InputImport(name="codeRepository")
-    private final @Nullable ServiceCodeRepository codeRepository;
+        private final @Nullable ServiceCodeRepository codeRepository;
 
     public Optional<ServiceCodeRepository> getCodeRepository() {
         return this.codeRepository == null ? Optional.empty() : Optional.ofNullable(this.codeRepository);
     }
 
     @InputImport(name="imageRepository")
-    private final @Nullable ServiceImageRepository imageRepository;
+        private final @Nullable ServiceImageRepository imageRepository;
 
     public Optional<ServiceImageRepository> getImageRepository() {
         return this.imageRepository == null ? Optional.empty() : Optional.ofNullable(this.imageRepository);
@@ -116,7 +116,6 @@ public final class ServiceSourceConfiguration extends io.pulumi.resources.Invoke
             this.imageRepository = imageRepository;
             return this;
         }
-
         public ServiceSourceConfiguration build() {
             return new ServiceSourceConfiguration(authenticationConfiguration, autoDeploymentsEnabled, codeRepository, imageRepository);
         }

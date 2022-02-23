@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.AxisResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.ChartOptionsResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.DataSetResponse;
@@ -26,7 +26,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="chartOptions", required=true)
-    private final ChartOptionsResponse chartOptions;
+      private final ChartOptionsResponse chartOptions;
 
     public ChartOptionsResponse getChartOptions() {
         return this.chartOptions;
@@ -37,7 +37,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataSets", required=true)
-    private final List<DataSetResponse> dataSets;
+      private final List<DataSetResponse> dataSets;
 
     public List<DataSetResponse> getDataSets() {
         return this.dataSets;
@@ -48,7 +48,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="thresholds", required=true)
-    private final List<ThresholdResponse> thresholds;
+      private final List<ThresholdResponse> thresholds;
 
     public List<ThresholdResponse> getThresholds() {
         return this.thresholds;
@@ -59,7 +59,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timeshiftDuration", required=true)
-    private final String timeshiftDuration;
+      private final String timeshiftDuration;
 
     public String getTimeshiftDuration() {
         return this.timeshiftDuration;
@@ -70,7 +70,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xAxis", required=true)
-    private final AxisResponse xAxis;
+      private final AxisResponse xAxis;
 
     public AxisResponse getXAxis() {
         return this.xAxis;
@@ -81,7 +81,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="y2Axis", required=true)
-    private final AxisResponse y2Axis;
+      private final AxisResponse y2Axis;
 
     public AxisResponse getY2Axis() {
         return this.y2Axis;
@@ -92,7 +92,7 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="yAxis", required=true)
-    private final AxisResponse yAxis;
+      private final AxisResponse yAxis;
 
     public AxisResponse getYAxis() {
         return this.yAxis;
@@ -191,7 +191,6 @@ public final class XyChartResponse extends io.pulumi.resources.InvokeArgs {
             this.yAxis = Objects.requireNonNull(yAxis);
             return this;
         }
-
         public XyChartResponse build() {
             return new XyChartResponse(chartOptions, dataSets, thresholds, timeshiftDuration, xAxis, y2Axis, yAxis);
         }

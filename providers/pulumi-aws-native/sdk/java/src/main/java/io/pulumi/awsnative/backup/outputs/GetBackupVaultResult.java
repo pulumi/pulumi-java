@@ -5,7 +5,7 @@ package io.pulumi.awsnative.backup.outputs;
 
 import io.pulumi.awsnative.backup.outputs.BackupVaultLockConfigurationType;
 import io.pulumi.awsnative.backup.outputs.BackupVaultNotificationObjectType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -102,7 +102,6 @@ public final class GetBackupVaultResult {
             this.notifications = notifications;
             return this;
         }
-
         public GetBackupVaultResult build() {
             return new GetBackupVaultResult(accessPolicy, backupVaultArn, backupVaultTags, lockConfiguration, notifications);
         }

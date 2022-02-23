@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.xray.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class GroupInsightsConfiguration {
             this.notificationsEnabled = notificationsEnabled;
             return this;
         }
-
         public GroupInsightsConfiguration build() {
             return new GroupInsightsConfiguration(insightsEnabled, notificationsEnabled);
         }

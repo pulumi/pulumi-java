@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateExtensionConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateIdentityConstraintsResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
@@ -204,7 +204,6 @@ public final class GetCertificateTemplateResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetCertificateTemplateResult build() {
             return new GetCertificateTemplateResult(createTime, description, identityConstraints, labels, name, passthroughExtensions, predefinedValues, updateTime);
         }

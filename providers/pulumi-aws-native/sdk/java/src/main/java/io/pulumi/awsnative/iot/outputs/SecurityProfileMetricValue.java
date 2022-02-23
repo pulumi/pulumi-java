@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -163,7 +163,6 @@ public final class SecurityProfileMetricValue {
             this.strings = strings;
             return this;
         }
-
         public SecurityProfileMetricValue build() {
             return new SecurityProfileMetricValue(cidrs, count, number, numbers, ports, strings);
         }

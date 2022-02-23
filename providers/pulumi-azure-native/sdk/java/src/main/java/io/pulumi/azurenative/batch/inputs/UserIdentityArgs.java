@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.inputs.AutoUserSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="autoUser")
-    private final @Nullable Input<AutoUserSpecificationArgs> autoUser;
+        private final @Nullable Input<AutoUserSpecificationArgs> autoUser;
 
     public Input<AutoUserSpecificationArgs> getAutoUser() {
         return this.autoUser == null ? Input.empty() : this.autoUser;
@@ -35,7 +35,7 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable Input<String> userName;
+        private final @Nullable Input<String> userName;
 
     public Input<String> getUserName() {
         return this.userName == null ? Input.empty() : this.userName;
@@ -94,7 +94,6 @@ public final class UserIdentityArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.ofNullable(userName);
             return this;
         }
-
         public UserIdentityArgs build() {
             return new UserIdentityArgs(autoUser, userName);
         }

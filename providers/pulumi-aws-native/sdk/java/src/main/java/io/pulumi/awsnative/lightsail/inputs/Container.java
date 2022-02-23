@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 
 import io.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariable;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPortInfo;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable List<String> command;
+        private final @Nullable List<String> command;
 
     public List<String> getCommand() {
         return this.command == null ? List.of() : this.command;
@@ -37,7 +37,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable String containerName;
+        private final @Nullable String containerName;
 
     public Optional<String> getContainerName() {
         return this.containerName == null ? Optional.empty() : Optional.ofNullable(this.containerName);
@@ -48,7 +48,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable List<ContainerEnvironmentVariable> environment;
+        private final @Nullable List<ContainerEnvironmentVariable> environment;
 
     public List<ContainerEnvironmentVariable> getEnvironment() {
         return this.environment == null ? List.of() : this.environment;
@@ -59,7 +59,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable String image;
+        private final @Nullable String image;
 
     public Optional<String> getImage() {
         return this.image == null ? Optional.empty() : Optional.ofNullable(this.image);
@@ -70,7 +70,7 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable List<ContainerPortInfo> ports;
+        private final @Nullable List<ContainerPortInfo> ports;
 
     public List<ContainerPortInfo> getPorts() {
         return this.ports == null ? List.of() : this.ports;
@@ -149,7 +149,6 @@ public final class Container extends io.pulumi.resources.InvokeArgs {
             this.ports = ports;
             return this;
         }
-
         public Container build() {
             return new Container(command, containerName, environment, image, ports);
         }

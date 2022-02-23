@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class MethodSelectorResponse {
             this.permission = Objects.requireNonNull(permission);
             return this;
         }
-
         public MethodSelectorResponse build() {
             return new MethodSelectorResponse(method, permission);
         }

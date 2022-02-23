@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,7 +14,7 @@ public final class MembershipAuthorityArgs extends io.pulumi.resources.ResourceA
     public static final MembershipAuthorityArgs Empty = new MembershipAuthorityArgs();
 
     @InputImport(name="issuer", required=true)
-    private final Input<String> issuer;
+        private final Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer;
@@ -57,7 +57,6 @@ public final class MembershipAuthorityArgs extends io.pulumi.resources.ResourceA
             this.issuer = Input.of(Objects.requireNonNull(issuer));
             return this;
         }
-
         public MembershipAuthorityArgs build() {
             return new MembershipAuthorityArgs(issuer);
         }

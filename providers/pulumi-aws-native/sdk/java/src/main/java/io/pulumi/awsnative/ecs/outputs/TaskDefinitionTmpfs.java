@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ecs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -75,7 +75,6 @@ public final class TaskDefinitionTmpfs {
             this.size = Objects.requireNonNull(size);
             return this;
         }
-
         public TaskDefinitionTmpfs build() {
             return new TaskDefinitionTmpfs(containerPath, mountOptions, size);
         }

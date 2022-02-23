@@ -9,7 +9,7 @@ import io.pulumi.awsnative.inspectorv2.outputs.FilterNumberFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterPackageFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterPortRangeFilter;
 import io.pulumi.awsnative.inspectorv2.outputs.FilterStringFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -442,7 +442,6 @@ public final class FilterCriteria {
             this.vulnerablePackages = vulnerablePackages;
             return this;
         }
-
         public FilterCriteria build() {
             return new FilterCriteria(awsAccountId, componentId, componentType, ec2InstanceImageId, ec2InstanceSubnetId, ec2InstanceVpcId, ecrImageArchitecture, ecrImageHash, ecrImagePushedAt, ecrImageRegistry, ecrImageRepositoryName, ecrImageTags, findingArn, findingStatus, findingType, firstObservedAt, inspectorScore, lastObservedAt, networkProtocol, portRange, relatedVulnerabilities, resourceId, resourceTags, resourceType, severity, title, updatedAt, vendorSeverity, vulnerabilityId, vulnerabilitySource, vulnerablePackages);
         }

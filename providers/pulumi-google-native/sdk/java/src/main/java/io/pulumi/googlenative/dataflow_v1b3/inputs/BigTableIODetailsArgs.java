@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceId")
-    private final @Nullable Input<String> instanceId;
+      private final @Nullable Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId == null ? Input.empty() : this.instanceId;
@@ -34,7 +34,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -45,7 +45,7 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tableId")
-    private final @Nullable Input<String> tableId;
+      private final @Nullable Input<String> tableId;
 
     public Input<String> getTableId() {
         return this.tableId == null ? Input.empty() : this.tableId;
@@ -119,7 +119,6 @@ public final class BigTableIODetailsArgs extends io.pulumi.resources.ResourceArg
             this.tableId = Input.ofNullable(tableId);
             return this;
         }
-
         public BigTableIODetailsArgs build() {
             return new BigTableIODetailsArgs(instanceId, project, tableId);
         }

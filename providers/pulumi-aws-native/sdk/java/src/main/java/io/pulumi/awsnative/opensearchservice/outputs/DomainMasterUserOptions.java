@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.opensearchservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class DomainMasterUserOptions {
             this.masterUserPassword = masterUserPassword;
             return this;
         }
-
         public DomainMasterUserOptions build() {
             return new DomainMasterUserOptions(masterUserARN, masterUserName, masterUserPassword);
         }

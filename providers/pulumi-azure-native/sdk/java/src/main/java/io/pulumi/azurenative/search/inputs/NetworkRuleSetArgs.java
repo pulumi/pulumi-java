@@ -5,7 +5,7 @@ package io.pulumi.azurenative.search.inputs;
 
 import io.pulumi.azurenative.search.inputs.IpRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipRules")
-    private final @Nullable Input<List<IpRuleArgs>> ipRules;
+        private final @Nullable Input<List<IpRuleArgs>> ipRules;
 
     public Input<List<IpRuleArgs>> getIpRules() {
         return this.ipRules == null ? Input.empty() : this.ipRules;
@@ -67,7 +67,6 @@ public final class NetworkRuleSetArgs extends io.pulumi.resources.ResourceArgs {
             this.ipRules = Input.ofNullable(ipRules);
             return this;
         }
-
         public NetworkRuleSetArgs build() {
             return new NetworkRuleSetArgs(ipRules);
         }

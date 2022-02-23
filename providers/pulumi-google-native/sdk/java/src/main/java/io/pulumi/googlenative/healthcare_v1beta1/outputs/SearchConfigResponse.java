@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.SearchParameterResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class SearchConfigResponse {
             this.searchParameters = Objects.requireNonNull(searchParameters);
             return this;
         }
-
         public SearchConfigResponse build() {
             return new SearchConfigResponse(searchParameters);
         }

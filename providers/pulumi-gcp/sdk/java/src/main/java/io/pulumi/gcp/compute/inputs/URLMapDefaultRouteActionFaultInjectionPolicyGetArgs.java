@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs;
 import io.pulumi.gcp.compute.inputs.URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
      * 
      */
     @InputImport(name="abort")
-    private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
+        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> abort;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyAbortGetArgs> getAbort() {
         return this.abort == null ? Input.empty() : this.abort;
@@ -33,7 +33,7 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
      * 
      */
     @InputImport(name="delay")
-    private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
+        private final @Nullable Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> delay;
 
     public Input<URLMapDefaultRouteActionFaultInjectionPolicyDelayGetArgs> getDelay() {
         return this.delay == null ? Input.empty() : this.delay;
@@ -92,7 +92,6 @@ public final class URLMapDefaultRouteActionFaultInjectionPolicyGetArgs extends i
             this.delay = Input.ofNullable(delay);
             return this;
         }
-
         public URLMapDefaultRouteActionFaultInjectionPolicyGetArgs build() {
             return new URLMapDefaultRouteActionFaultInjectionPolicyGetArgs(abort, delay);
         }

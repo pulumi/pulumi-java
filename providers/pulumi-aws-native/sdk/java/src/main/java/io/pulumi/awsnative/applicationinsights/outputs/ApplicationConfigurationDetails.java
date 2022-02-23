@@ -10,7 +10,7 @@ import io.pulumi.awsnative.applicationinsights.outputs.ApplicationHANAPrometheus
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationJMXPrometheusExporter;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLog;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationWindowsEvent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -188,7 +188,6 @@ public final class ApplicationConfigurationDetails {
             this.windowsEvents = windowsEvents;
             return this;
         }
-
         public ApplicationConfigurationDetails build() {
             return new ApplicationConfigurationDetails(alarmMetrics, alarms, hAClusterPrometheusExporter, hANAPrometheusExporter, jMXPrometheusExporter, logs, windowsEvents);
         }

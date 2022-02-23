@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetClusterWorkloadIdentityConfig extends io.pulumi.resources.
     public static final GetClusterWorkloadIdentityConfig Empty = new GetClusterWorkloadIdentityConfig();
 
     @InputImport(name="workloadPool", required=true)
-    private final String workloadPool;
+        private final String workloadPool;
 
     public String getWorkloadPool() {
         return this.workloadPool;
@@ -51,7 +51,6 @@ public final class GetClusterWorkloadIdentityConfig extends io.pulumi.resources.
             this.workloadPool = Objects.requireNonNull(workloadPool);
             return this;
         }
-
         public GetClusterWorkloadIdentityConfig build() {
             return new GetClusterWorkloadIdentityConfig(workloadPool);
         }

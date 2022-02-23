@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TableOptionsResponse;
 import java.lang.String;
 import java.util.List;
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2HybridOptionsResponse {
             this.tableOptions = Objects.requireNonNull(tableOptions);
             return this;
         }
-
         public GooglePrivacyDlpV2HybridOptionsResponse build() {
             return new GooglePrivacyDlpV2HybridOptionsResponse(description, labels, requiredFindingLabelKeys, tableOptions);
         }

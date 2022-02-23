@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="commitTime")
-    private final @Nullable String commitTime;
+        private final @Nullable String commitTime;
 
     public Optional<String> getCommitTime() {
         return this.commitTime == null ? Optional.empty() : Optional.ofNullable(this.commitTime);
@@ -35,7 +35,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="configurationIds")
-    private final @Nullable List<String> configurationIds;
+        private final @Nullable List<String> configurationIds;
 
     public List<String> getConfigurationIds() {
         return this.configurationIds == null ? List.of() : this.configurationIds;
@@ -46,7 +46,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="deploymentStatus")
-    private final @Nullable String deploymentStatus;
+        private final @Nullable String deploymentStatus;
 
     public Optional<String> getDeploymentStatus() {
         return this.deploymentStatus == null ? Optional.empty() : Optional.ofNullable(this.deploymentStatus);
@@ -57,7 +57,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="deploymentType")
-    private final @Nullable String deploymentType;
+        private final @Nullable String deploymentType;
 
     public Optional<String> getDeploymentType() {
         return this.deploymentType == null ? Optional.empty() : Optional.ofNullable(this.deploymentType);
@@ -68,7 +68,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="errorMessage")
-    private final @Nullable String errorMessage;
+        private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
@@ -79,7 +79,7 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="region")
-    private final @Nullable String region;
+        private final @Nullable String region;
 
     public Optional<String> getRegion() {
         return this.region == null ? Optional.empty() : Optional.ofNullable(this.region);
@@ -168,7 +168,6 @@ public final class NetworkManagerDeploymentStatusResponse extends io.pulumi.reso
             this.region = region;
             return this;
         }
-
         public NetworkManagerDeploymentStatusResponse build() {
             return new NetworkManagerDeploymentStatusResponse(commitTime, configurationIds, deploymentStatus, deploymentType, errorMessage, region);
         }

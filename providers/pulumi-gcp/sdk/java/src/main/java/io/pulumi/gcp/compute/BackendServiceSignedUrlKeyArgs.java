@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BackendServiceSignedUrlKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="backendService", required=true)
-    private final Input<String> backendService;
+        private final Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService;
@@ -32,7 +32,7 @@ public final class BackendServiceSignedUrlKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="keyValue", required=true)
-    private final Input<String> keyValue;
+        private final Input<String> keyValue;
 
     public Input<String> getKeyValue() {
         return this.keyValue;
@@ -43,7 +43,7 @@ public final class BackendServiceSignedUrlKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class BackendServiceSignedUrlKeyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -144,7 +144,6 @@ public final class BackendServiceSignedUrlKeyArgs extends io.pulumi.resources.Re
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public BackendServiceSignedUrlKeyArgs build() {
             return new BackendServiceSignedUrlKeyArgs(backendService, keyValue, name, project);
         }

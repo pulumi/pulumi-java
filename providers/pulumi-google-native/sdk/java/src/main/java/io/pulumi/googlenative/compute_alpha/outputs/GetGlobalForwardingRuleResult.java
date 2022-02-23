@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ForwardingRuleServiceDirectoryRegistrationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.MetadataFilterResponse;
 import java.lang.Boolean;
@@ -693,7 +693,6 @@ public final class GetGlobalForwardingRuleResult {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public GetGlobalForwardingRuleResult build() {
             return new GetGlobalForwardingRuleResult(allPorts, allowGlobalAccess, allowPscGlobalAccess, backendService, creationTimestamp, description, fingerprint, ipAddress, ipProtocol, ipVersion, isMirroringCollector, kind, labelFingerprint, labels, loadBalancingScheme, metadataFilters, name, network, networkTier, portRange, ports, pscConnectionId, pscConnectionStatus, region, selfLink, selfLinkWithId, serviceDirectoryRegistrations, serviceLabel, serviceName, sourceIpRanges, subnetwork, target);
         }

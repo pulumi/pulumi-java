@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class WinRMListenerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="certificateUrl")
-    private final @Nullable String certificateUrl;
+        private final @Nullable String certificateUrl;
 
     public Optional<String> getCertificateUrl() {
         return this.certificateUrl == null ? Optional.empty() : Optional.ofNullable(this.certificateUrl);
@@ -34,7 +34,7 @@ public final class WinRMListenerResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable String protocol;
+        private final @Nullable String protocol;
 
     public Optional<String> getProtocol() {
         return this.protocol == null ? Optional.empty() : Optional.ofNullable(this.protocol);
@@ -83,7 +83,6 @@ public final class WinRMListenerResponse extends io.pulumi.resources.InvokeArgs 
             this.protocol = protocol;
             return this;
         }
-
         public WinRMListenerResponse build() {
             return new WinRMListenerResponse(certificateUrl, protocol);
         }

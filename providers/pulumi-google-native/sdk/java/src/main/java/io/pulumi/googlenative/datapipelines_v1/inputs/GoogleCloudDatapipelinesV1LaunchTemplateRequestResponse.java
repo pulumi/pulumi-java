@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @InputImport(name="gcsPath", required=true)
-    private final String gcsPath;
+      private final String gcsPath;
 
     public String getGcsPath() {
         return this.gcsPath;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @InputImport(name="launchParameters", required=true)
-    private final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
+      private final GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse launchParameters;
 
     public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse getLaunchParameters() {
         return this.launchParameters;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
@@ -56,7 +56,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -67,7 +67,7 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
      * 
      */
     @InputImport(name="validateOnly", required=true)
-    private final Boolean validateOnly;
+      private final Boolean validateOnly;
 
     public Boolean getValidateOnly() {
         return this.validateOnly;
@@ -146,7 +146,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse exten
             this.validateOnly = Objects.requireNonNull(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateRequestResponse(gcsPath, launchParameters, location, project, validateOnly);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkmanager;
 import io.pulumi.awsnative.networkmanager.inputs.DeviceLocationArgs;
 import io.pulumi.awsnative.networkmanager.inputs.DeviceTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="globalNetworkId", required=true)
-    private final Input<String> globalNetworkId;
+        private final Input<String> globalNetworkId;
 
     public Input<String> getGlobalNetworkId() {
         return this.globalNetworkId;
@@ -44,7 +44,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<DeviceLocationArgs> location;
+        private final @Nullable Input<DeviceLocationArgs> location;
 
     public Input<DeviceLocationArgs> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -55,7 +55,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<String> model;
+        private final @Nullable Input<String> model;
 
     public Input<String> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -66,7 +66,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serialNumber")
-    private final @Nullable Input<String> serialNumber;
+        private final @Nullable Input<String> serialNumber;
 
     public Input<String> getSerialNumber() {
         return this.serialNumber == null ? Input.empty() : this.serialNumber;
@@ -77,7 +77,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteId")
-    private final @Nullable Input<String> siteId;
+        private final @Nullable Input<String> siteId;
 
     public Input<String> getSiteId() {
         return this.siteId == null ? Input.empty() : this.siteId;
@@ -88,7 +88,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DeviceTagArgs>> tags;
+        private final @Nullable Input<List<DeviceTagArgs>> tags;
 
     public Input<List<DeviceTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -99,7 +99,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -110,7 +110,7 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vendor")
-    private final @Nullable Input<String> vendor;
+        private final @Nullable Input<String> vendor;
 
     public Input<String> getVendor() {
         return this.vendor == null ? Input.empty() : this.vendor;
@@ -274,7 +274,6 @@ public final class DeviceArgs extends io.pulumi.resources.ResourceArgs {
             this.vendor = Input.ofNullable(vendor);
             return this;
         }
-
         public DeviceArgs build() {
             return new DeviceArgs(description, globalNetworkId, location, model, serialNumber, siteId, tags, type, vendor);
         }

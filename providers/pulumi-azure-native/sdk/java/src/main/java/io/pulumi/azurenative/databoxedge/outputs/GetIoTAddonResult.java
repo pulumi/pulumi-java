@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -267,7 +267,6 @@ public final class GetIoTAddonResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetIoTAddonResult build() {
             return new GetIoTAddonResult(hostPlatform, hostPlatformType, id, ioTDeviceDetails, ioTEdgeDeviceDetails, kind, name, provisioningState, systemData, type, version);
         }

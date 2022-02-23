@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.MatchConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class WebApplicationFirewallCustomRuleResponse {
             this.ruleType = Objects.requireNonNull(ruleType);
             return this;
         }
-
         public WebApplicationFirewallCustomRuleResponse build() {
             return new WebApplicationFirewallCustomRuleResponse(action, etag, matchConditions, name, priority, ruleType);
         }

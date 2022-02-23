@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.TriggerResponse;
 import java.lang.Double;
@@ -204,7 +204,6 @@ public final class MetricThresholdResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MetricThresholdResponse build() {
             return new MetricThresholdResponse(aggregations, comparison, denominatorAggregations, denominatorFilter, duration, filter, thresholdValue, trigger);
         }

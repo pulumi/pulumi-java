@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.azurenative.dataprotection.inputs.RetentionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="tagInfo")
-    private final @Nullable Input<RetentionTagArgs> tagInfo;
+        private final @Nullable Input<RetentionTagArgs> tagInfo;
 
     public Input<RetentionTagArgs> getTagInfo() {
         return this.tagInfo == null ? Input.empty() : this.tagInfo;
@@ -66,7 +66,6 @@ public final class AdhocBasedTaggingCriteriaArgs extends io.pulumi.resources.Res
             this.tagInfo = Input.ofNullable(tagInfo);
             return this;
         }
-
         public AdhocBasedTaggingCriteriaArgs build() {
             return new AdhocBasedTaggingCriteriaArgs(tagInfo);
         }

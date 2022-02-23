@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForInboundDecodedMessages", required=true)
-    private final Input<Boolean> enableNRRForInboundDecodedMessages;
+        private final Input<Boolean> enableNRRForInboundDecodedMessages;
 
     public Input<Boolean> getEnableNRRForInboundDecodedMessages() {
         return this.enableNRRForInboundDecodedMessages;
@@ -35,7 +35,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForInboundEncodedMessages", required=true)
-    private final Input<Boolean> enableNRRForInboundEncodedMessages;
+        private final Input<Boolean> enableNRRForInboundEncodedMessages;
 
     public Input<Boolean> getEnableNRRForInboundEncodedMessages() {
         return this.enableNRRForInboundEncodedMessages;
@@ -46,7 +46,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForInboundMDN", required=true)
-    private final Input<Boolean> enableNRRForInboundMDN;
+        private final Input<Boolean> enableNRRForInboundMDN;
 
     public Input<Boolean> getEnableNRRForInboundMDN() {
         return this.enableNRRForInboundMDN;
@@ -57,7 +57,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForOutboundDecodedMessages", required=true)
-    private final Input<Boolean> enableNRRForOutboundDecodedMessages;
+        private final Input<Boolean> enableNRRForOutboundDecodedMessages;
 
     public Input<Boolean> getEnableNRRForOutboundDecodedMessages() {
         return this.enableNRRForOutboundDecodedMessages;
@@ -68,7 +68,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForOutboundEncodedMessages", required=true)
-    private final Input<Boolean> enableNRRForOutboundEncodedMessages;
+        private final Input<Boolean> enableNRRForOutboundEncodedMessages;
 
     public Input<Boolean> getEnableNRRForOutboundEncodedMessages() {
         return this.enableNRRForOutboundEncodedMessages;
@@ -79,7 +79,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enableNRRForOutboundMDN", required=true)
-    private final Input<Boolean> enableNRRForOutboundMDN;
+        private final Input<Boolean> enableNRRForOutboundMDN;
 
     public Input<Boolean> getEnableNRRForOutboundMDN() {
         return this.enableNRRForOutboundMDN;
@@ -90,7 +90,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="encryptionCertificateName")
-    private final @Nullable Input<String> encryptionCertificateName;
+        private final @Nullable Input<String> encryptionCertificateName;
 
     public Input<String> getEncryptionCertificateName() {
         return this.encryptionCertificateName == null ? Input.empty() : this.encryptionCertificateName;
@@ -101,7 +101,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="overrideGroupSigningCertificate", required=true)
-    private final Input<Boolean> overrideGroupSigningCertificate;
+        private final Input<Boolean> overrideGroupSigningCertificate;
 
     public Input<Boolean> getOverrideGroupSigningCertificate() {
         return this.overrideGroupSigningCertificate;
@@ -112,7 +112,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="sha2AlgorithmFormat")
-    private final @Nullable Input<String> sha2AlgorithmFormat;
+        private final @Nullable Input<String> sha2AlgorithmFormat;
 
     public Input<String> getSha2AlgorithmFormat() {
         return this.sha2AlgorithmFormat == null ? Input.empty() : this.sha2AlgorithmFormat;
@@ -123,7 +123,7 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="signingCertificateName")
-    private final @Nullable Input<String> signingCertificateName;
+        private final @Nullable Input<String> signingCertificateName;
 
     public Input<String> getSigningCertificateName() {
         return this.signingCertificateName == null ? Input.empty() : this.signingCertificateName;
@@ -302,7 +302,6 @@ public final class AS2SecuritySettingsArgs extends io.pulumi.resources.ResourceA
             this.signingCertificateName = Input.ofNullable(signingCertificateName);
             return this;
         }
-
         public AS2SecuritySettingsArgs build() {
             return new AS2SecuritySettingsArgs(enableNRRForInboundDecodedMessages, enableNRRForInboundEncodedMessages, enableNRRForInboundMDN, enableNRRForOutboundDecodedMessages, enableNRRForOutboundEncodedMessages, enableNRRForOutboundMDN, encryptionCertificateName, overrideGroupSigningCertificate, sha2AlgorithmFormat, signingCertificateName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SqlOutOfDiskReportResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sqlMinRecommendedIncreaseSizeGb", required=true)
-    private final Integer sqlMinRecommendedIncreaseSizeGb;
+      private final Integer sqlMinRecommendedIncreaseSizeGb;
 
     public Integer getSqlMinRecommendedIncreaseSizeGb() {
         return this.sqlMinRecommendedIncreaseSizeGb;
@@ -33,7 +33,7 @@ public final class SqlOutOfDiskReportResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="sqlOutOfDiskState", required=true)
-    private final String sqlOutOfDiskState;
+      private final String sqlOutOfDiskState;
 
     public String getSqlOutOfDiskState() {
         return this.sqlOutOfDiskState;
@@ -82,7 +82,6 @@ public final class SqlOutOfDiskReportResponse extends io.pulumi.resources.Invoke
             this.sqlOutOfDiskState = Objects.requireNonNull(sqlOutOfDiskState);
             return this;
         }
-
         public SqlOutOfDiskReportResponse build() {
             return new SqlOutOfDiskReportResponse(sqlMinRecommendedIncreaseSizeGb, sqlOutOfDiskState);
         }

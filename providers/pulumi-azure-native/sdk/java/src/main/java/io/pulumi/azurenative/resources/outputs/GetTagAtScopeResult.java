@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.TagsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -117,7 +117,6 @@ public final class GetTagAtScopeResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTagAtScopeResult build() {
             return new GetTagAtScopeResult(id, name, properties, type);
         }

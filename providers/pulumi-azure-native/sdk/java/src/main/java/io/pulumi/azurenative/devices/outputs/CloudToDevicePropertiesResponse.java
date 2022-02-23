@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.outputs;
 
 import io.pulumi.azurenative.devices.outputs.FeedbackPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class CloudToDevicePropertiesResponse {
             this.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
-
         public CloudToDevicePropertiesResponse build() {
             return new CloudToDevicePropertiesResponse(defaultTtlAsIso8601, feedback, maxDeliveryCount);
         }

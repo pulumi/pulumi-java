@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -349,7 +349,6 @@ public final class GetRoleAssignmentResult {
             this.updatedOn = Objects.requireNonNull(updatedOn);
             return this;
         }
-
         public GetRoleAssignmentResult build() {
             return new GetRoleAssignmentResult(condition, conditionVersion, createdBy, createdOn, delegatedManagedIdentityResourceId, description, id, name, principalId, principalType, roleDefinitionId, scope, type, updatedBy, updatedOn);
         }

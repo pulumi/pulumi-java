@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentMessageImageArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * 
      */
     @InputImport(name="buttons")
-    private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
+      private final @Nullable Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> buttons;
 
     public Input<List<GoogleCloudDialogflowV2IntentMessageBasicCardButtonArgs>> getButtons() {
         return this.buttons == null ? Input.empty() : this.buttons;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * 
      */
     @InputImport(name="formattedText")
-    private final @Nullable Input<String> formattedText;
+      private final @Nullable Input<String> formattedText;
 
     public Input<String> getFormattedText() {
         return this.formattedText == null ? Input.empty() : this.formattedText;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
+      private final @Nullable Input<GoogleCloudDialogflowV2IntentMessageImageArgs> image;
 
     public Input<GoogleCloudDialogflowV2IntentMessageImageArgs> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+      private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+      private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -174,7 +174,6 @@ public final class GoogleCloudDialogflowV2IntentMessageBasicCardArgs extends io.
             this.title = Input.ofNullable(title);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentMessageBasicCardArgs build() {
             return new GoogleCloudDialogflowV2IntentMessageBasicCardArgs(buttons, formattedText, image, subtitle, title);
         }

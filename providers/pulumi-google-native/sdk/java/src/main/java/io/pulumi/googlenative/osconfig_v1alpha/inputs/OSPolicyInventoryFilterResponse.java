@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="osShortName", required=true)
-    private final String osShortName;
+      private final String osShortName;
 
     public String getOsShortName() {
         return this.osShortName;
@@ -32,7 +32,7 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="osVersion", required=true)
-    private final String osVersion;
+      private final String osVersion;
 
     public String getOsVersion() {
         return this.osVersion;
@@ -81,7 +81,6 @@ public final class OSPolicyInventoryFilterResponse extends io.pulumi.resources.I
             this.osVersion = Objects.requireNonNull(osVersion);
             return this;
         }
-
         public OSPolicyInventoryFilterResponse build() {
             return new OSPolicyInventoryFilterResponse(osShortName, osVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class ThresholdResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ThresholdResponse build() {
             return new ThresholdResponse(color, direction, label, targetAxis, value);
         }

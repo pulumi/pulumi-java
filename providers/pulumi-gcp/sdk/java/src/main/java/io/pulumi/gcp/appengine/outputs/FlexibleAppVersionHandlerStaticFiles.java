@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -197,7 +197,6 @@ public final class FlexibleAppVersionHandlerStaticFiles {
             this.uploadPathRegex = uploadPathRegex;
             return this;
         }
-
         public FlexibleAppVersionHandlerStaticFiles build() {
             return new FlexibleAppVersionHandlerStaticFiles(applicationReadable, expiration, httpHeaders, mimeType, path, requireMatchingFile, uploadPathRegex);
         }

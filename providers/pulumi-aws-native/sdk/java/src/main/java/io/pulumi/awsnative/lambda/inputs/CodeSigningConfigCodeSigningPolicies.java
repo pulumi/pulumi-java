@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.enums.CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class CodeSigningConfigCodeSigningPolicies extends io.pulumi.resour
      * 
      */
     @InputImport(name="untrustedArtifactOnDeployment", required=true)
-    private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
+        private final CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment untrustedArtifactOnDeployment;
 
     public CodeSigningConfigCodeSigningPoliciesUntrustedArtifactOnDeployment getUntrustedArtifactOnDeployment() {
         return this.untrustedArtifactOnDeployment;
@@ -59,7 +59,6 @@ public final class CodeSigningConfigCodeSigningPolicies extends io.pulumi.resour
             this.untrustedArtifactOnDeployment = Objects.requireNonNull(untrustedArtifactOnDeployment);
             return this;
         }
-
         public CodeSigningConfigCodeSigningPolicies build() {
             return new CodeSigningConfigCodeSigningPolicies(untrustedArtifactOnDeployment);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -163,7 +163,6 @@ public final class ServersSolutionSummaryResponse {
             this.testMigratedCount = testMigratedCount;
             return this;
         }
-
         public ServersSolutionSummaryResponse build() {
             return new ServersSolutionSummaryResponse(assessedCount, discoveredCount, instanceType, migratedCount, replicatingCount, testMigratedCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.LabelDescriptorResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricDescriptorMetadataResponse;
 import java.lang.String;
@@ -266,7 +266,6 @@ public final class GetMetricDescriptorResult {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public GetMetricDescriptorResult build() {
             return new GetMetricDescriptorResult(description, displayName, labels, launchStage, metadata, metricKind, monitoredResourceTypes, name, type, unit, valueType);
         }

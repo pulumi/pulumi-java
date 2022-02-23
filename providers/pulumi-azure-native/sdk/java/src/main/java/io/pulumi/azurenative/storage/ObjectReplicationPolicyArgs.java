@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage;
 
 import io.pulumi.azurenative.storage.inputs.ObjectReplicationPolicyRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationAccount", required=true)
-    private final Input<String> destinationAccount;
+        private final Input<String> destinationAccount;
 
     public Input<String> getDestinationAccount() {
         return this.destinationAccount;
@@ -43,7 +43,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="objectReplicationPolicyId")
-    private final @Nullable Input<String> objectReplicationPolicyId;
+        private final @Nullable Input<String> objectReplicationPolicyId;
 
     public Input<String> getObjectReplicationPolicyId() {
         return this.objectReplicationPolicyId == null ? Input.empty() : this.objectReplicationPolicyId;
@@ -54,7 +54,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -65,7 +65,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules;
+        private final @Nullable Input<List<ObjectReplicationPolicyRuleArgs>> rules;
 
     public Input<List<ObjectReplicationPolicyRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -76,7 +76,7 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="sourceAccount", required=true)
-    private final Input<String> sourceAccount;
+        private final Input<String> sourceAccount;
 
     public Input<String> getSourceAccount() {
         return this.sourceAccount;
@@ -195,7 +195,6 @@ public final class ObjectReplicationPolicyArgs extends io.pulumi.resources.Resou
             this.sourceAccount = Input.of(Objects.requireNonNull(sourceAccount));
             return this;
         }
-
         public ObjectReplicationPolicyArgs build() {
             return new ObjectReplicationPolicyArgs(accountName, destinationAccount, objectReplicationPolicyId, resourceGroupName, rules, sourceAccount);
         }

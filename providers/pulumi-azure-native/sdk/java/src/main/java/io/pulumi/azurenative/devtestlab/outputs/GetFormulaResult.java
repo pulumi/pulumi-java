@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.FormulaPropertiesFromVmResponse;
 import io.pulumi.azurenative.devtestlab.outputs.LabVirtualMachineCreationParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -310,7 +310,6 @@ public final class GetFormulaResult {
             this.vm = vm;
             return this;
         }
-
         public GetFormulaResult build() {
             return new GetFormulaResult(author, creationDate, description, formulaContent, id, location, name, osType, provisioningState, tags, type, uniqueIdentifier, vm);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.notebooks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.notebooks.outputs.RuntimeVirtualMachineVirtualMachineConfig;
 import java.lang.String;
 import java.util.Objects;
@@ -104,7 +104,6 @@ public final class RuntimeVirtualMachine {
             this.virtualMachineConfig = virtualMachineConfig;
             return this;
         }
-
         public RuntimeVirtualMachine build() {
             return new RuntimeVirtualMachine(instanceId, instanceName, virtualMachineConfig);
         }

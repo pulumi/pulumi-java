@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions.inputs;
 
 import io.pulumi.awsnative.stepfunctions.inputs.StateMachineCloudWatchLogsLogGroup;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class StateMachineLogDestination extends io.pulumi.resources.Invoke
     public static final StateMachineLogDestination Empty = new StateMachineLogDestination();
 
     @InputImport(name="cloudWatchLogsLogGroup")
-    private final @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
+        private final @Nullable StateMachineCloudWatchLogsLogGroup cloudWatchLogsLogGroup;
 
     public Optional<StateMachineCloudWatchLogsLogGroup> getCloudWatchLogsLogGroup() {
         return this.cloudWatchLogsLogGroup == null ? Optional.empty() : Optional.ofNullable(this.cloudWatchLogsLogGroup);
@@ -53,7 +53,6 @@ public final class StateMachineLogDestination extends io.pulumi.resources.Invoke
             this.cloudWatchLogsLogGroup = cloudWatchLogsLogGroup;
             return this;
         }
-
         public StateMachineLogDestination build() {
             return new StateMachineLogDestination(cloudWatchLogsLogGroup);
         }

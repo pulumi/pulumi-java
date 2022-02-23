@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityandcompliance;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.securityandcompliance.inputs.GetPrivateEndpointConnectionsAdtAPIArgs;
 import io.pulumi.azurenative.securityandcompliance.outputs.GetPrivateEndpointConnectionsAdtAPIResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

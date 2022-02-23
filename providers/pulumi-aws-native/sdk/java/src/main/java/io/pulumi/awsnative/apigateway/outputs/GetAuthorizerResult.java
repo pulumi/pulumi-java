@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -238,7 +238,6 @@ public final class GetAuthorizerResult {
             this.type = type;
             return this;
         }
-
         public GetAuthorizerResult build() {
             return new GetAuthorizerResult(authType, authorizerCredentials, authorizerId, authorizerResultTtlInSeconds, authorizerUri, identitySource, identityValidationExpression, name, providerARNs, type);
         }

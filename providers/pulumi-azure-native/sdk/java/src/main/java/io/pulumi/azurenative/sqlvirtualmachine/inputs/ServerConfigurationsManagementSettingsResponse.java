@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sqlvirtualmachine.inputs.AdditionalFeaturesServerCo
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlConnectivityUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlStorageUpdateSettingsResponse;
 import io.pulumi.azurenative.sqlvirtualmachine.inputs.SqlWorkloadTypeUpdateSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="additionalFeaturesServerConfigurations")
-    private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
+        private final @Nullable AdditionalFeaturesServerConfigurationsResponse additionalFeaturesServerConfigurations;
 
     public Optional<AdditionalFeaturesServerConfigurationsResponse> getAdditionalFeaturesServerConfigurations() {
         return this.additionalFeaturesServerConfigurations == null ? Optional.empty() : Optional.ofNullable(this.additionalFeaturesServerConfigurations);
@@ -37,7 +37,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="sqlConnectivityUpdateSettings")
-    private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
+        private final @Nullable SqlConnectivityUpdateSettingsResponse sqlConnectivityUpdateSettings;
 
     public Optional<SqlConnectivityUpdateSettingsResponse> getSqlConnectivityUpdateSettings() {
         return this.sqlConnectivityUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlConnectivityUpdateSettings);
@@ -48,7 +48,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="sqlStorageUpdateSettings")
-    private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
+        private final @Nullable SqlStorageUpdateSettingsResponse sqlStorageUpdateSettings;
 
     public Optional<SqlStorageUpdateSettingsResponse> getSqlStorageUpdateSettings() {
         return this.sqlStorageUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlStorageUpdateSettings);
@@ -59,7 +59,7 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
      * 
      */
     @InputImport(name="sqlWorkloadTypeUpdateSettings")
-    private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
+        private final @Nullable SqlWorkloadTypeUpdateSettingsResponse sqlWorkloadTypeUpdateSettings;
 
     public Optional<SqlWorkloadTypeUpdateSettingsResponse> getSqlWorkloadTypeUpdateSettings() {
         return this.sqlWorkloadTypeUpdateSettings == null ? Optional.empty() : Optional.ofNullable(this.sqlWorkloadTypeUpdateSettings);
@@ -128,7 +128,6 @@ public final class ServerConfigurationsManagementSettingsResponse extends io.pul
             this.sqlWorkloadTypeUpdateSettings = sqlWorkloadTypeUpdateSettings;
             return this;
         }
-
         public ServerConfigurationsManagementSettingsResponse build() {
             return new ServerConfigurationsManagementSettingsResponse(additionalFeaturesServerConfigurations, sqlConnectivityUpdateSettings, sqlStorageUpdateSettings, sqlWorkloadTypeUpdateSettings);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="ultraSSDEnabled")
-    private final @Nullable Input<Boolean> ultraSSDEnabled;
+        private final @Nullable Input<Boolean> ultraSSDEnabled;
 
     public Input<Boolean> getUltraSSDEnabled() {
         return this.ultraSSDEnabled == null ? Input.empty() : this.ultraSSDEnabled;
@@ -66,7 +66,6 @@ public final class AdditionalCapabilitiesArgs extends io.pulumi.resources.Resour
             this.ultraSSDEnabled = Input.ofNullable(ultraSSDEnabled);
             return this;
         }
-
         public AdditionalCapabilitiesArgs build() {
             return new AdditionalCapabilitiesArgs(ultraSSDEnabled);
         }

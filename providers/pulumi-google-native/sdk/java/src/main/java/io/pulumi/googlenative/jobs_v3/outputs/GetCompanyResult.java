@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.CompanyDerivedInfoResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -308,7 +308,6 @@ public final class GetCompanyResult {
             this.websiteUri = Objects.requireNonNull(websiteUri);
             return this;
         }
-
         public GetCompanyResult build() {
             return new GetCompanyResult(careerSiteUri, derivedInfo, displayName, eeoText, externalId, headquartersAddress, hiringAgency, imageUri, keywordSearchableJobCustomAttributes, name, size, suspended, websiteUri);
         }

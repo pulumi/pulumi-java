@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disableMetricsCollection")
-    private final @Nullable Object disableMetricsCollection;
+        private final @Nullable Object disableMetricsCollection;
 
     public Optional<Object> getDisableMetricsCollection() {
         return this.disableMetricsCollection == null ? Optional.empty() : Optional.ofNullable(this.disableMetricsCollection);
@@ -35,7 +35,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrentConnections")
-    private final @Nullable Object maxConcurrentConnections;
+        private final @Nullable Object maxConcurrentConnections;
 
     public Optional<Object> getMaxConcurrentConnections() {
         return this.maxConcurrentConnections == null ? Optional.empty() : Optional.ofNullable(this.maxConcurrentConnections);
@@ -46,7 +46,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="recursive")
-    private final @Nullable Object recursive;
+        private final @Nullable Object recursive;
 
     public Optional<Object> getRecursive() {
         return this.recursive == null ? Optional.empty() : Optional.ofNullable(this.recursive);
@@ -57,7 +57,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="skipHeaderLineCount")
-    private final @Nullable Object skipHeaderLineCount;
+        private final @Nullable Object skipHeaderLineCount;
 
     public Optional<Object> getSkipHeaderLineCount() {
         return this.skipHeaderLineCount == null ? Optional.empty() : Optional.ofNullable(this.skipHeaderLineCount);
@@ -68,7 +68,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryCount")
-    private final @Nullable Object sourceRetryCount;
+        private final @Nullable Object sourceRetryCount;
 
     public Optional<Object> getSourceRetryCount() {
         return this.sourceRetryCount == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryCount);
@@ -79,7 +79,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceRetryWait")
-    private final @Nullable Object sourceRetryWait;
+        private final @Nullable Object sourceRetryWait;
 
     public Optional<Object> getSourceRetryWait() {
         return this.sourceRetryWait == null ? Optional.empty() : Optional.ofNullable(this.sourceRetryWait);
@@ -90,7 +90,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="treatEmptyAsNull")
-    private final @Nullable Object treatEmptyAsNull;
+        private final @Nullable Object treatEmptyAsNull;
 
     public Optional<Object> getTreatEmptyAsNull() {
         return this.treatEmptyAsNull == null ? Optional.empty() : Optional.ofNullable(this.treatEmptyAsNull);
@@ -102,7 +102,7 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -211,7 +211,6 @@ public final class BlobSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobSourceResponse build() {
             return new BlobSourceResponse(disableMetricsCollection, maxConcurrentConnections, recursive, skipHeaderLineCount, sourceRetryCount, sourceRetryWait, treatEmptyAsNull, type);
         }

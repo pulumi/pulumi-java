@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.LongTermRetentionPolicyArgs
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="backupManagementType", required=true)
-    private final Input<String> backupManagementType;
+        private final Input<String> backupManagementType;
 
     public Input<String> getBackupManagementType() {
         return this.backupManagementType;
@@ -39,7 +39,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectedItemsCount")
-    private final @Nullable Input<Integer> protectedItemsCount;
+        private final @Nullable Input<Integer> protectedItemsCount;
 
     public Input<Integer> getProtectedItemsCount() {
         return this.protectedItemsCount == null ? Input.empty() : this.protectedItemsCount;
@@ -50,7 +50,7 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+        private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -124,7 +124,6 @@ public final class AzureSqlProtectionPolicyArgs extends io.pulumi.resources.Reso
             this.retentionPolicy = Input.ofNullable(retentionPolicy);
             return this;
         }
-
         public AzureSqlProtectionPolicyArgs build() {
             return new AzureSqlProtectionPolicyArgs(backupManagementType, protectedItemsCount, retentionPolicy);
         }

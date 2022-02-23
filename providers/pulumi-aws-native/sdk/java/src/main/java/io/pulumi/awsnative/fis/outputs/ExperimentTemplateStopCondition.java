@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.fis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class ExperimentTemplateStopCondition {
             this.value = value;
             return this;
         }
-
         public ExperimentTemplateStopCondition build() {
             return new ExperimentTemplateStopCondition(source, value);
         }

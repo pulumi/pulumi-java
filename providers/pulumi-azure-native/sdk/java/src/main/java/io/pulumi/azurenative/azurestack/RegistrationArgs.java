@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azurestack;
 import io.pulumi.azurenative.azurestack.enums.Location;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<Either<String,Location>> location;
+        private final @Nullable Input<Either<String,Location>> location;
 
     public Input<Either<String,Location>> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -32,7 +32,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationName")
-    private final @Nullable Input<String> registrationName;
+        private final @Nullable Input<String> registrationName;
 
     public Input<String> getRegistrationName() {
         return this.registrationName == null ? Input.empty() : this.registrationName;
@@ -43,7 +43,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="registrationToken", required=true)
-    private final Input<String> registrationToken;
+        private final Input<String> registrationToken;
 
     public Input<String> getRegistrationToken() {
         return this.registrationToken;
@@ -54,7 +54,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final Input<String> resourceGroup;
+        private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -143,7 +143,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroup = Input.of(Objects.requireNonNull(resourceGroup));
             return this;
         }
-
         public RegistrationArgs build() {
             return new RegistrationArgs(location, registrationName, registrationToken, resourceGroup);
         }

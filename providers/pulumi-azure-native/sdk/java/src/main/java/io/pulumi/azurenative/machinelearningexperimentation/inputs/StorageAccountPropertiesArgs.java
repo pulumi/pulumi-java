@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningexperimentation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accessKey", required=true)
-    private final Input<String> accessKey;
+        private final Input<String> accessKey;
 
     public Input<String> getAccessKey() {
         return this.accessKey;
@@ -33,7 +33,7 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="storageAccountId", required=true)
-    private final Input<String> storageAccountId;
+        private final Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId;
@@ -92,7 +92,6 @@ public final class StorageAccountPropertiesArgs extends io.pulumi.resources.Reso
             this.storageAccountId = Input.of(Objects.requireNonNull(storageAccountId));
             return this;
         }
-
         public StorageAccountPropertiesArgs build() {
             return new StorageAccountPropertiesArgs(accessKey, storageAccountId);
         }

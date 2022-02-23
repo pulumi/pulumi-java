@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookThrottleConfigArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clientConfig", required=true)
-    private final Input<WebhookClientConfigArgs> clientConfig;
+        private final Input<WebhookClientConfigArgs> clientConfig;
 
     public Input<WebhookClientConfigArgs> getClientConfig() {
         return this.clientConfig;
@@ -35,7 +35,7 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="throttle")
-    private final @Nullable Input<WebhookThrottleConfigArgs> throttle;
+        private final @Nullable Input<WebhookThrottleConfigArgs> throttle;
 
     public Input<WebhookThrottleConfigArgs> getThrottle() {
         return this.throttle == null ? Input.empty() : this.throttle;
@@ -94,7 +94,6 @@ public final class WebhookArgs extends io.pulumi.resources.ResourceArgs {
             this.throttle = Input.ofNullable(throttle);
             return this;
         }
-
         public WebhookArgs build() {
             return new WebhookArgs(clientConfig, throttle);
         }

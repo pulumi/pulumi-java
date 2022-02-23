@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.PipelineSourceTriggerPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class PipelineTriggerPropertiesResponse {
             this.sourceTrigger = sourceTrigger;
             return this;
         }
-
         public PipelineTriggerPropertiesResponse build() {
             return new PipelineTriggerPropertiesResponse(sourceTrigger);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.route53resolver.outputs;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationMutationProtection;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupAssociationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -291,7 +291,6 @@ public final class GetFirewallRuleGroupAssociationResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallRuleGroupAssociationResult build() {
             return new GetFirewallRuleGroupAssociationResult(arn, creationTime, creatorRequestId, id, managedOwnerName, modificationTime, mutationProtection, name, priority, status, statusMessage, tags);
         }

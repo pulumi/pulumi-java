@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="primaryAuthKeyHash", required=true)
-    private final Input<String> primaryAuthKeyHash;
+        private final Input<String> primaryAuthKeyHash;
 
     public Input<String> getPrimaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
@@ -33,7 +33,7 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="secondaryAuthKeyHash", required=true)
-    private final Input<String> secondaryAuthKeyHash;
+        private final Input<String> secondaryAuthKeyHash;
 
     public Input<String> getSecondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
@@ -92,7 +92,6 @@ public final class ServiceAuthConfigurationArgs extends io.pulumi.resources.Reso
             this.secondaryAuthKeyHash = Input.of(Objects.requireNonNull(secondaryAuthKeyHash));
             return this;
         }
-
         public ServiceAuthConfigurationArgs build() {
             return new ServiceAuthConfigurationArgs(primaryAuthKeyHash, secondaryAuthKeyHash);
         }

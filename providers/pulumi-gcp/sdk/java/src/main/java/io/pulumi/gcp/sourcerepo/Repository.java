@@ -5,8 +5,8 @@ package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.sourcerepo.RepositoryArgs;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryState;
@@ -121,13 +121,6 @@ public class Repository extends io.pulumi.resources.CustomResource {
         return this.url;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Repository(String name) {
-        super("gcp:sourcerepo/repository:Repository", name, RepositoryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class KeyToPathResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public KeyToPathResponse build() {
             return new KeyToPathResponse(key, mode, path);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.storage.k8s.io_v1beta1.outputs.CSINodeSpec;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class CSINode {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public CSINode build() {
             return new CSINode(apiVersion, kind, metadata, spec);
         }

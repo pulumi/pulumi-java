@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointCmafEncryption;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointHlsManifest;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointStreamSelection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
     public static final OriginEndpointCmafPackage Empty = new OriginEndpointCmafPackage();
 
     @InputImport(name="encryption")
-    private final @Nullable OriginEndpointCmafEncryption encryption;
+        private final @Nullable OriginEndpointCmafEncryption encryption;
 
     public Optional<OriginEndpointCmafEncryption> getEncryption() {
         return this.encryption == null ? Optional.empty() : Optional.ofNullable(this.encryption);
@@ -35,7 +35,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="hlsManifests")
-    private final @Nullable List<OriginEndpointHlsManifest> hlsManifests;
+        private final @Nullable List<OriginEndpointHlsManifest> hlsManifests;
 
     public List<OriginEndpointHlsManifest> getHlsManifests() {
         return this.hlsManifests == null ? List.of() : this.hlsManifests;
@@ -46,7 +46,7 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="segmentDurationSeconds")
-    private final @Nullable Integer segmentDurationSeconds;
+        private final @Nullable Integer segmentDurationSeconds;
 
     public Optional<Integer> getSegmentDurationSeconds() {
         return this.segmentDurationSeconds == null ? Optional.empty() : Optional.ofNullable(this.segmentDurationSeconds);
@@ -57,14 +57,14 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="segmentPrefix")
-    private final @Nullable String segmentPrefix;
+        private final @Nullable String segmentPrefix;
 
     public Optional<String> getSegmentPrefix() {
         return this.segmentPrefix == null ? Optional.empty() : Optional.ofNullable(this.segmentPrefix);
     }
 
     @InputImport(name="streamSelection")
-    private final @Nullable OriginEndpointStreamSelection streamSelection;
+        private final @Nullable OriginEndpointStreamSelection streamSelection;
 
     public Optional<OriginEndpointStreamSelection> getStreamSelection() {
         return this.streamSelection == null ? Optional.empty() : Optional.ofNullable(this.streamSelection);
@@ -143,7 +143,6 @@ public final class OriginEndpointCmafPackage extends io.pulumi.resources.InvokeA
             this.streamSelection = streamSelection;
             return this;
         }
-
         public OriginEndpointCmafPackage build() {
             return new OriginEndpointCmafPackage(encryption, hlsManifests, segmentDurationSeconds, segmentPrefix, streamSelection);
         }

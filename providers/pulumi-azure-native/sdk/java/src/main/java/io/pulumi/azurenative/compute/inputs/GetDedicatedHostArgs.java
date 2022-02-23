@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostGroupName", required=true)
-    private final String hostGroupName;
+        private final String hostGroupName;
 
     public String getHostGroupName() {
         return this.hostGroupName;
@@ -41,7 +41,7 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final String hostName;
+        private final String hostName;
 
     public String getHostName() {
         return this.hostName;
@@ -52,7 +52,7 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -121,7 +121,6 @@ public final class GetDedicatedHostArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetDedicatedHostArgs build() {
             return new GetDedicatedHostArgs(expand, hostGroupName, hostName, resourceGroupName);
         }

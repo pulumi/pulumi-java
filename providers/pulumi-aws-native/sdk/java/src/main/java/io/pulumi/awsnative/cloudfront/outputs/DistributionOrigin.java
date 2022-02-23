@@ -7,7 +7,7 @@ import io.pulumi.awsnative.cloudfront.outputs.DistributionCustomOriginConfig;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginCustomHeader;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionOriginShield;
 import io.pulumi.awsnative.cloudfront.outputs.DistributionS3OriginConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -157,7 +157,6 @@ public final class DistributionOrigin {
             this.s3OriginConfig = s3OriginConfig;
             return this;
         }
-
         public DistributionOrigin build() {
             return new DistributionOrigin(connectionAttempts, connectionTimeout, customOriginConfig, domainName, id, originCustomHeaders, originPath, originShield, s3OriginConfig);
         }

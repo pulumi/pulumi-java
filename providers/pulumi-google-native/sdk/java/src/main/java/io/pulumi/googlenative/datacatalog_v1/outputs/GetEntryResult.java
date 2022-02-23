@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryDateShardedSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BigQueryTableSpecResponse;
 import io.pulumi.googlenative.datacatalog_v1.outputs.GoogleCloudDatacatalogV1BusinessContextResponse;
@@ -507,7 +507,6 @@ public final class GetEntryResult {
             this.userSpecifiedType = Objects.requireNonNull(userSpecifiedType);
             return this;
         }
-
         public GetEntryResult build() {
             return new GetEntryResult(bigqueryDateShardedSpec, bigqueryTableSpec, businessContext, dataSource, dataSourceConnectionSpec, databaseTableSpec, description, displayName, fullyQualifiedName, gcsFilesetSpec, integratedSystem, labels, linkedResource, name, personalDetails, routineSpec, schema, sourceSystemTimestamps, type, usageSignal, userSpecifiedSystem, userSpecifiedType);
         }

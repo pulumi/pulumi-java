@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.SeedNodeResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * 
      */
     @InputImport(name="base64EncodedCassandraYamlFragment")
-    private final @Nullable String base64EncodedCassandraYamlFragment;
+        private final @Nullable String base64EncodedCassandraYamlFragment;
 
     public Optional<String> getBase64EncodedCassandraYamlFragment() {
         return this.base64EncodedCassandraYamlFragment == null ? Optional.empty() : Optional.ofNullable(this.base64EncodedCassandraYamlFragment);
@@ -37,7 +37,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * 
      */
     @InputImport(name="dataCenterLocation")
-    private final @Nullable String dataCenterLocation;
+        private final @Nullable String dataCenterLocation;
 
     public Optional<String> getDataCenterLocation() {
         return this.dataCenterLocation == null ? Optional.empty() : Optional.ofNullable(this.dataCenterLocation);
@@ -48,7 +48,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * 
      */
     @InputImport(name="delegatedSubnetId")
-    private final @Nullable String delegatedSubnetId;
+        private final @Nullable String delegatedSubnetId;
 
     public Optional<String> getDelegatedSubnetId() {
         return this.delegatedSubnetId == null ? Optional.empty() : Optional.ofNullable(this.delegatedSubnetId);
@@ -59,7 +59,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * 
      */
     @InputImport(name="nodeCount")
-    private final @Nullable Integer nodeCount;
+        private final @Nullable Integer nodeCount;
 
     public Optional<Integer> getNodeCount() {
         return this.nodeCount == null ? Optional.empty() : Optional.ofNullable(this.nodeCount);
@@ -70,7 +70,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -81,7 +81,7 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
      * 
      */
     @InputImport(name="seedNodes", required=true)
-    private final List<SeedNodeResponse> seedNodes;
+        private final List<SeedNodeResponse> seedNodes;
 
     public List<SeedNodeResponse> getSeedNodes() {
         return this.seedNodes;
@@ -170,7 +170,6 @@ public final class DataCenterResourceResponseProperties extends io.pulumi.resour
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-
         public DataCenterResourceResponseProperties build() {
             return new DataCenterResourceResponseProperties(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState, seedNodes);
         }

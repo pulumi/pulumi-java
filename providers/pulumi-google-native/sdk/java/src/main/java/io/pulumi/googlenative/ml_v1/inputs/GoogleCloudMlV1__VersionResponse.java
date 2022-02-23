@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AcceleratorConfigResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AutoScalingResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__ContainerSpecResponse;
@@ -31,7 +31,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="acceleratorConfig", required=true)
-    private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
+      private final GoogleCloudMlV1__AcceleratorConfigResponse acceleratorConfig;
 
     public GoogleCloudMlV1__AcceleratorConfigResponse getAcceleratorConfig() {
         return this.acceleratorConfig;
@@ -42,7 +42,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="autoScaling", required=true)
-    private final GoogleCloudMlV1__AutoScalingResponse autoScaling;
+      private final GoogleCloudMlV1__AutoScalingResponse autoScaling;
 
     public GoogleCloudMlV1__AutoScalingResponse getAutoScaling() {
         return this.autoScaling;
@@ -53,7 +53,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="container", required=true)
-    private final GoogleCloudMlV1__ContainerSpecResponse container;
+      private final GoogleCloudMlV1__ContainerSpecResponse container;
 
     public GoogleCloudMlV1__ContainerSpecResponse getContainer() {
         return this.container;
@@ -64,7 +64,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -75,7 +75,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="deploymentUri", required=true)
-    private final String deploymentUri;
+      private final String deploymentUri;
 
     public String getDeploymentUri() {
         return this.deploymentUri;
@@ -86,7 +86,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -97,7 +97,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="errorMessage", required=true)
-    private final String errorMessage;
+      private final String errorMessage;
 
     public String getErrorMessage() {
         return this.errorMessage;
@@ -108,7 +108,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+      private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -119,7 +119,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="explanationConfig", required=true)
-    private final GoogleCloudMlV1__ExplanationConfigResponse explanationConfig;
+      private final GoogleCloudMlV1__ExplanationConfigResponse explanationConfig;
 
     public GoogleCloudMlV1__ExplanationConfigResponse getExplanationConfig() {
         return this.explanationConfig;
@@ -130,7 +130,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="framework", required=true)
-    private final String framework;
+      private final String framework;
 
     public String getFramework() {
         return this.framework;
@@ -141,7 +141,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="isDefault", required=true)
-    private final Boolean isDefault;
+      private final Boolean isDefault;
 
     public Boolean getIsDefault() {
         return this.isDefault;
@@ -152,7 +152,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -163,7 +163,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastMigrationModelId", required=true)
-    private final String lastMigrationModelId;
+      private final String lastMigrationModelId;
 
     public String getLastMigrationModelId() {
         return this.lastMigrationModelId;
@@ -174,7 +174,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastMigrationTime", required=true)
-    private final String lastMigrationTime;
+      private final String lastMigrationTime;
 
     public String getLastMigrationTime() {
         return this.lastMigrationTime;
@@ -185,7 +185,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="lastUseTime", required=true)
-    private final String lastUseTime;
+      private final String lastUseTime;
 
     public String getLastUseTime() {
         return this.lastUseTime;
@@ -196,7 +196,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -207,7 +207,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="manualScaling", required=true)
-    private final GoogleCloudMlV1__ManualScalingResponse manualScaling;
+      private final GoogleCloudMlV1__ManualScalingResponse manualScaling;
 
     public GoogleCloudMlV1__ManualScalingResponse getManualScaling() {
         return this.manualScaling;
@@ -218,7 +218,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -229,7 +229,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="packageUris", required=true)
-    private final List<String> packageUris;
+      private final List<String> packageUris;
 
     public List<String> getPackageUris() {
         return this.packageUris;
@@ -240,7 +240,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="predictionClass", required=true)
-    private final String predictionClass;
+      private final String predictionClass;
 
     public String getPredictionClass() {
         return this.predictionClass;
@@ -251,7 +251,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pythonVersion", required=true)
-    private final String pythonVersion;
+      private final String pythonVersion;
 
     public String getPythonVersion() {
         return this.pythonVersion;
@@ -262,7 +262,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="requestLoggingConfig", required=true)
-    private final GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig;
+      private final GoogleCloudMlV1__RequestLoggingConfigResponse requestLoggingConfig;
 
     public GoogleCloudMlV1__RequestLoggingConfigResponse getRequestLoggingConfig() {
         return this.requestLoggingConfig;
@@ -273,7 +273,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="routes", required=true)
-    private final GoogleCloudMlV1__RouteMapResponse routes;
+      private final GoogleCloudMlV1__RouteMapResponse routes;
 
     public GoogleCloudMlV1__RouteMapResponse getRoutes() {
         return this.routes;
@@ -284,7 +284,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="runtimeVersion", required=true)
-    private final String runtimeVersion;
+      private final String runtimeVersion;
 
     public String getRuntimeVersion() {
         return this.runtimeVersion;
@@ -295,7 +295,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serviceAccount", required=true)
-    private final String serviceAccount;
+      private final String serviceAccount;
 
     public String getServiceAccount() {
         return this.serviceAccount;
@@ -306,7 +306,7 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -595,7 +595,6 @@ public final class GoogleCloudMlV1__VersionResponse extends io.pulumi.resources.
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GoogleCloudMlV1__VersionResponse build() {
             return new GoogleCloudMlV1__VersionResponse(acceleratorConfig, autoScaling, container, createTime, deploymentUri, description, errorMessage, etag, explanationConfig, framework, isDefault, labels, lastMigrationModelId, lastMigrationTime, lastUseTime, machineType, manualScaling, name, packageUris, predictionClass, pythonVersion, requestLoggingConfig, routes, runtimeVersion, serviceAccount, state);
         }

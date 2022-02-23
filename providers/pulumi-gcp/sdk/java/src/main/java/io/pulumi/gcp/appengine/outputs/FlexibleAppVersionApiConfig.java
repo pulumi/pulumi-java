@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -149,7 +149,6 @@ public final class FlexibleAppVersionApiConfig {
             this.url = url;
             return this;
         }
-
         public FlexibleAppVersionApiConfig build() {
             return new FlexibleAppVersionApiConfig(authFailAction, login, script, securityLevel, url);
         }

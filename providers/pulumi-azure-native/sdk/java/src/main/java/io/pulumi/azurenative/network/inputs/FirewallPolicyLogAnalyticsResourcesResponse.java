@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FirewallPolicyLogAnalyticsWorkspaceResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
      * 
      */
     @InputImport(name="defaultWorkspaceId")
-    private final @Nullable SubResourceResponse defaultWorkspaceId;
+        private final @Nullable SubResourceResponse defaultWorkspaceId;
 
     public Optional<SubResourceResponse> getDefaultWorkspaceId() {
         return this.defaultWorkspaceId == null ? Optional.empty() : Optional.ofNullable(this.defaultWorkspaceId);
@@ -36,7 +36,7 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
      * 
      */
     @InputImport(name="workspaces")
-    private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
+        private final @Nullable List<FirewallPolicyLogAnalyticsWorkspaceResponse> workspaces;
 
     public List<FirewallPolicyLogAnalyticsWorkspaceResponse> getWorkspaces() {
         return this.workspaces == null ? List.of() : this.workspaces;
@@ -85,7 +85,6 @@ public final class FirewallPolicyLogAnalyticsResourcesResponse extends io.pulumi
             this.workspaces = workspaces;
             return this;
         }
-
         public FirewallPolicyLogAnalyticsResourcesResponse build() {
             return new FirewallPolicyLogAnalyticsResourcesResponse(defaultWorkspaceId, workspaces);
         }

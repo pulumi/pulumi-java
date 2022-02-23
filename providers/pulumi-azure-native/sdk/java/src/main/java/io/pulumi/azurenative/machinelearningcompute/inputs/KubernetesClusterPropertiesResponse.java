@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningcompute.inputs;
 
 import io.pulumi.azurenative.machinelearningcompute.inputs.ServicePrincipalPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class KubernetesClusterPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipal")
-    private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
+        private final @Nullable ServicePrincipalPropertiesResponse servicePrincipal;
 
     public Optional<ServicePrincipalPropertiesResponse> getServicePrincipal() {
         return this.servicePrincipal == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipal);
@@ -61,7 +61,6 @@ public final class KubernetesClusterPropertiesResponse extends io.pulumi.resourc
             this.servicePrincipal = servicePrincipal;
             return this;
         }
-
         public KubernetesClusterPropertiesResponse build() {
             return new KubernetesClusterPropertiesResponse(servicePrincipal);
         }

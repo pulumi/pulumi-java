@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class ACIServiceResponseResponseEncryptionProperties {
             this.vaultBaseUrl = Objects.requireNonNull(vaultBaseUrl);
             return this;
         }
-
         public ACIServiceResponseResponseEncryptionProperties build() {
             return new ACIServiceResponseResponseEncryptionProperties(keyName, keyVersion, vaultBaseUrl);
         }

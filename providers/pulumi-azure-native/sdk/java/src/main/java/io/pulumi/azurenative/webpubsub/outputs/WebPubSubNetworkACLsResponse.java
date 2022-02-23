@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.outputs;
 
 import io.pulumi.azurenative.webpubsub.outputs.NetworkACLResponse;
 import io.pulumi.azurenative.webpubsub.outputs.PrivateEndpointACLResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class WebPubSubNetworkACLsResponse {
             this.publicNetwork = publicNetwork;
             return this;
         }
-
         public WebPubSubNetworkACLsResponse build() {
             return new WebPubSubNetworkACLsResponse(defaultAction, privateEndpoints, publicNetwork);
         }

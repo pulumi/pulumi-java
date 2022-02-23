@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.TableIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
     public static final TableIamMemberState Empty = new TableIamMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TableIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<TableIamMemberConditionGetArgs> condition;
 
     public Input<TableIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,7 +27,7 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -38,14 +38,14 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instance")
-    private final @Nullable Input<String> instance;
+        private final @Nullable Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance == null ? Input.empty() : this.instance;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -57,7 +57,7 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -70,7 +70,7 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -81,7 +81,7 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="table")
-    private final @Nullable Input<String> table;
+        private final @Nullable Input<String> table;
 
     public Input<String> getTable() {
         return this.table == null ? Input.empty() : this.table;
@@ -215,7 +215,6 @@ public final class TableIamMemberState extends io.pulumi.resources.ResourceArgs 
             this.table = Input.ofNullable(table);
             return this;
         }
-
         public TableIamMemberState build() {
             return new TableIamMemberState(condition, etag, instance, member, project, role, table);
         }

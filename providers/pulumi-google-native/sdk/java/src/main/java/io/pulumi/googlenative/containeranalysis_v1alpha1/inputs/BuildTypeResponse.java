@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildSignatureResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="builderVersion", required=true)
-    private final String builderVersion;
+      private final String builderVersion;
 
     public String getBuilderVersion() {
         return this.builderVersion;
@@ -33,7 +33,7 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="signature", required=true)
-    private final BuildSignatureResponse signature;
+      private final BuildSignatureResponse signature;
 
     public BuildSignatureResponse getSignature() {
         return this.signature;
@@ -82,7 +82,6 @@ public final class BuildTypeResponse extends io.pulumi.resources.InvokeArgs {
             this.signature = Objects.requireNonNull(signature);
             return this;
         }
-
         public BuildTypeResponse build() {
             return new BuildTypeResponse(builderVersion, signature);
         }

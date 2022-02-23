@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupForwardedIPConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,6 @@ public final class RuleGroupGeoMatchStatement {
             this.forwardedIPConfig = forwardedIPConfig;
             return this;
         }
-
         public RuleGroupGeoMatchStatement build() {
             return new RuleGroupGeoMatchStatement(countryCodes, forwardedIPConfig);
         }

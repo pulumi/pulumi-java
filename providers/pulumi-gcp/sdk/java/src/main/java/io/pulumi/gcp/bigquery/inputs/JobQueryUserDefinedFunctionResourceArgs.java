@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="inlineCode")
-    private final @Nullable Input<String> inlineCode;
+        private final @Nullable Input<String> inlineCode;
 
     public Input<String> getInlineCode() {
         return this.inlineCode == null ? Input.empty() : this.inlineCode;
@@ -31,7 +31,7 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceUri")
-    private final @Nullable Input<String> resourceUri;
+        private final @Nullable Input<String> resourceUri;
 
     public Input<String> getResourceUri() {
         return this.resourceUri == null ? Input.empty() : this.resourceUri;
@@ -90,7 +90,6 @@ public final class JobQueryUserDefinedFunctionResourceArgs extends io.pulumi.res
             this.resourceUri = Input.ofNullable(resourceUri);
             return this;
         }
-
         public JobQueryUserDefinedFunctionResourceArgs build() {
             return new JobQueryUserDefinedFunctionResourceArgs(inlineCode, resourceUri);
         }

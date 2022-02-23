@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueFrequencyResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse {
             this.valueFrequencyUpperBound = Objects.requireNonNull(valueFrequencyUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2CategoricalStatsHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, valueFrequencyLowerBound, valueFrequencyUpperBound);
         }

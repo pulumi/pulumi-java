@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastore_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class GoogleDatastoreAdminV1IndexedPropertyResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GoogleDatastoreAdminV1IndexedPropertyResponse build() {
             return new GoogleDatastoreAdminV1IndexedPropertyResponse(direction, name);
         }

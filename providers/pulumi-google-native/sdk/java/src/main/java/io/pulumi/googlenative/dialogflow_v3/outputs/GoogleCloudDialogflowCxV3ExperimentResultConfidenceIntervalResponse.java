@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalRe
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse build() {
             return new GoogleCloudDialogflowCxV3ExperimentResultConfidenceIntervalResponse(confidenceLevel, lowerBound, ratio, upperBound);
         }

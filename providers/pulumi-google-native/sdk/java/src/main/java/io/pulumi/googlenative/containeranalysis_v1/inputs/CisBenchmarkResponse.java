@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
     public static final CisBenchmarkResponse Empty = new CisBenchmarkResponse();
 
     @InputImport(name="profileLevel", required=true)
-    private final Integer profileLevel;
+      private final Integer profileLevel;
 
     public Integer getProfileLevel() {
         return this.profileLevel;
     }
 
     @InputImport(name="severity", required=true)
-    private final String severity;
+      private final String severity;
 
     public String getSeverity() {
         return this.severity;
@@ -74,7 +74,6 @@ public final class CisBenchmarkResponse extends io.pulumi.resources.InvokeArgs {
             this.severity = Objects.requireNonNull(severity);
             return this;
         }
-
         public CisBenchmarkResponse build() {
             return new CisBenchmarkResponse(profileLevel, severity);
         }

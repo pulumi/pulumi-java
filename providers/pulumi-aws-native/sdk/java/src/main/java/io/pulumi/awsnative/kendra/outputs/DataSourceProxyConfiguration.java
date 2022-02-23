@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -74,7 +74,6 @@ public final class DataSourceProxyConfiguration {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public DataSourceProxyConfiguration build() {
             return new DataSourceProxyConfiguration(credentials, host, port);
         }

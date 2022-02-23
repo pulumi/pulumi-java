@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expiresIn")
-    private final @Nullable Integer expiresIn;
+        private final @Nullable Integer expiresIn;
 
     public Optional<Integer> getExpiresIn() {
         return this.expiresIn == null ? Optional.empty() : Optional.ofNullable(this.expiresIn);
@@ -35,7 +35,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable String refreshToken;
+        private final @Nullable String refreshToken;
 
     public Optional<String> getRefreshToken() {
         return this.refreshToken == null ? Optional.empty() : Optional.ofNullable(this.refreshToken);
@@ -46,7 +46,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable String scope;
+        private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
@@ -57,7 +57,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="token", required=true)
-    private final String token;
+        private final String token;
 
     public String getToken() {
         return this.token;
@@ -68,7 +68,7 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tokenType", required=true)
-    private final String tokenType;
+        private final String tokenType;
 
     public String getTokenType() {
         return this.tokenType;
@@ -147,7 +147,6 @@ public final class AuthInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.tokenType = Objects.requireNonNull(tokenType);
             return this;
         }
-
         public AuthInfoResponse build() {
             return new AuthInfoResponse(expiresIn, refreshToken, scope, token, tokenType);
         }

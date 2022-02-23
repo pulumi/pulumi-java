@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.GroupMembersItemResponse;
 import io.pulumi.azurenative.network.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -268,7 +268,6 @@ public final class GetNetworkGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetNetworkGroupResult build() {
             return new GetNetworkGroupResult(conditionalMembership, description, displayName, etag, groupMembers, id, memberType, name, provisioningState, systemData, type);
         }

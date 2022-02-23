@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.consumption.inputs;
 
 import io.pulumi.azurenative.consumption.inputs.BudgetComparisonExpressionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="dimensions")
-    private final @Nullable BudgetComparisonExpressionResponse dimensions;
+        private final @Nullable BudgetComparisonExpressionResponse dimensions;
 
     public Optional<BudgetComparisonExpressionResponse> getDimensions() {
         return this.dimensions == null ? Optional.empty() : Optional.ofNullable(this.dimensions);
@@ -34,7 +34,7 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable BudgetComparisonExpressionResponse tags;
+        private final @Nullable BudgetComparisonExpressionResponse tags;
 
     public Optional<BudgetComparisonExpressionResponse> getTags() {
         return this.tags == null ? Optional.empty() : Optional.ofNullable(this.tags);
@@ -83,7 +83,6 @@ public final class BudgetFilterPropertiesResponse extends io.pulumi.resources.In
             this.tags = tags;
             return this;
         }
-
         public BudgetFilterPropertiesResponse build() {
             return new BudgetFilterPropertiesResponse(dimensions, tags);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices;
 
 import io.pulumi.azurenative.labservices.inputs.ResourceSetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentName")
-    private final @Nullable Input<String> environmentName;
+        private final @Nullable Input<String> environmentName;
 
     public Input<String> getEnvironmentName() {
         return this.environmentName == null ? Input.empty() : this.environmentName;
@@ -32,7 +32,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentSettingName", required=true)
-    private final Input<String> environmentSettingName;
+        private final Input<String> environmentSettingName;
 
     public Input<String> getEnvironmentSettingName() {
         return this.environmentSettingName;
@@ -43,7 +43,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labAccountName", required=true)
-    private final Input<String> labAccountName;
+        private final Input<String> labAccountName;
 
     public Input<String> getLabAccountName() {
         return this.labAccountName;
@@ -54,7 +54,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labName", required=true)
-    private final Input<String> labName;
+        private final Input<String> labName;
 
     public Input<String> getLabName() {
         return this.labName;
@@ -65,7 +65,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -76,7 +76,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+        private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -87,7 +87,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSets")
-    private final @Nullable Input<ResourceSetArgs> resourceSets;
+        private final @Nullable Input<ResourceSetArgs> resourceSets;
 
     public Input<ResourceSetArgs> getResourceSets() {
         return this.resourceSets == null ? Input.empty() : this.resourceSets;
@@ -109,7 +109,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uniqueIdentifier")
-    private final @Nullable Input<String> uniqueIdentifier;
+        private final @Nullable Input<String> uniqueIdentifier;
 
     public Input<String> getUniqueIdentifier() {
         return this.uniqueIdentifier == null ? Input.empty() : this.uniqueIdentifier;
@@ -299,7 +299,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.uniqueIdentifier = Input.ofNullable(uniqueIdentifier);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(environmentName, environmentSettingName, labAccountName, labName, location, provisioningState, resourceGroupName, resourceSets, tags, uniqueIdentifier);
         }

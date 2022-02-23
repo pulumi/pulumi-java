@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.CriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class LogToMetricActionResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public LogToMetricActionResponse build() {
             return new LogToMetricActionResponse(criteria, odataType);
         }

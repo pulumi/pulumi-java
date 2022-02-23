@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.HttpHeaderActionResponse;
 import io.pulumi.googlenative.compute_v1.inputs.HttpRedirectActionResponse;
 import io.pulumi.googlenative.compute_v1.inputs.HttpRouteActionResponse;
@@ -27,7 +27,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -38,7 +38,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="headerAction", required=true)
-    private final HttpHeaderActionResponse headerAction;
+      private final HttpHeaderActionResponse headerAction;
 
     public HttpHeaderActionResponse getHeaderAction() {
         return this.headerAction;
@@ -49,7 +49,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="matchRules", required=true)
-    private final List<HttpRouteRuleMatchResponse> matchRules;
+      private final List<HttpRouteRuleMatchResponse> matchRules;
 
     public List<HttpRouteRuleMatchResponse> getMatchRules() {
         return this.matchRules;
@@ -60,7 +60,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Integer priority;
+      private final Integer priority;
 
     public Integer getPriority() {
         return this.priority;
@@ -71,7 +71,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routeAction", required=true)
-    private final HttpRouteActionResponse routeAction;
+      private final HttpRouteActionResponse routeAction;
 
     public HttpRouteActionResponse getRouteAction() {
         return this.routeAction;
@@ -82,7 +82,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="service", required=true)
-    private final String service;
+      private final String service;
 
     public String getService() {
         return this.service;
@@ -93,7 +93,7 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="urlRedirect", required=true)
-    private final HttpRedirectActionResponse urlRedirect;
+      private final HttpRedirectActionResponse urlRedirect;
 
     public HttpRedirectActionResponse getUrlRedirect() {
         return this.urlRedirect;
@@ -192,7 +192,6 @@ public final class HttpRouteRuleResponse extends io.pulumi.resources.InvokeArgs 
             this.urlRedirect = Objects.requireNonNull(urlRedirect);
             return this;
         }
-
         public HttpRouteRuleResponse build() {
             return new HttpRouteRuleResponse(description, headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }

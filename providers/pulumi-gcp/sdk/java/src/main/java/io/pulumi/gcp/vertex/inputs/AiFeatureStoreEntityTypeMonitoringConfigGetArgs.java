@@ -4,7 +4,7 @@
 package io.pulumi.gcp.vertex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.vertex.inputs.AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
      * 
      */
     @InputImport(name="snapshotAnalysis")
-    private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
+        private final @Nullable Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> snapshotAnalysis;
 
     public Input<AiFeatureStoreEntityTypeMonitoringConfigSnapshotAnalysisGetArgs> getSnapshotAnalysis() {
         return this.snapshotAnalysis == null ? Input.empty() : this.snapshotAnalysis;
@@ -63,7 +63,6 @@ public final class AiFeatureStoreEntityTypeMonitoringConfigGetArgs extends io.pu
             this.snapshotAnalysis = Input.ofNullable(snapshotAnalysis);
             return this;
         }
-
         public AiFeatureStoreEntityTypeMonitoringConfigGetArgs build() {
             return new AiFeatureStoreEntityTypeMonitoringConfigGetArgs(snapshotAnalysis);
         }

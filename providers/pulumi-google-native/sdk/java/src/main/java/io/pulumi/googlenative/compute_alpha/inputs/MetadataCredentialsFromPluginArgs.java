@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="structConfig")
-    private final @Nullable Input<String> structConfig;
+      private final @Nullable Input<String> structConfig;
 
     public Input<String> getStructConfig() {
         return this.structConfig == null ? Input.empty() : this.structConfig;
@@ -93,7 +93,6 @@ public final class MetadataCredentialsFromPluginArgs extends io.pulumi.resources
             this.structConfig = Input.ofNullable(structConfig);
             return this;
         }
-
         public MetadataCredentialsFromPluginArgs build() {
             return new MetadataCredentialsFromPluginArgs(name, structConfig);
         }

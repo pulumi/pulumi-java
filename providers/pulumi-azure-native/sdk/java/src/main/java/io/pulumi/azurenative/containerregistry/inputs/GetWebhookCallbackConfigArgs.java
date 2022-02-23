@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="registryName", required=true)
-    private final String registryName;
+        private final String registryName;
 
     public String getRegistryName() {
         return this.registryName;
@@ -28,7 +28,7 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="webhookName", required=true)
-    private final String webhookName;
+        private final String webhookName;
 
     public String getWebhookName() {
         return this.webhookName;
@@ -98,7 +98,6 @@ public final class GetWebhookCallbackConfigArgs extends io.pulumi.resources.Invo
             this.webhookName = Objects.requireNonNull(webhookName);
             return this;
         }
-
         public GetWebhookCallbackConfigArgs build() {
             return new GetWebhookCallbackConfigArgs(registryName, resourceGroupName, webhookName);
         }

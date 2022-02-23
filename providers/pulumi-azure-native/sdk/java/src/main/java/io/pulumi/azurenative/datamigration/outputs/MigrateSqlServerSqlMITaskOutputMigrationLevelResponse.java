@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.outputs;
 import io.pulumi.azurenative.datamigration.outputs.OrphanedUserInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
 import io.pulumi.azurenative.datamigration.outputs.StartMigrationScenarioServerRoleResultResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -396,7 +396,6 @@ public final class MigrateSqlServerSqlMITaskOutputMigrationLevelResponse {
             this.targetServerVersion = Objects.requireNonNull(targetServerVersion);
             return this;
         }
-
         public MigrateSqlServerSqlMITaskOutputMigrationLevelResponse build() {
             return new MigrateSqlServerSqlMITaskOutputMigrationLevelResponse(agentJobs, databases, endedOn, exceptionsAndWarnings, id, logins, message, orphanedUsersInfo, resultType, serverRoleResults, sourceServerBrandVersion, sourceServerVersion, startedOn, state, status, targetServerBrandVersion, targetServerVersion);
         }

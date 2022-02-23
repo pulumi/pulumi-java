@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.outputs.StreamingImageEncryptionConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -167,7 +167,6 @@ public final class GetStreamingImageResult {
             this.streamingImageId = streamingImageId;
             return this;
         }
-
         public GetStreamingImageResult build() {
             return new GetStreamingImageResult(description, encryptionConfiguration, eulaIds, name, owner, platform, streamingImageId);
         }

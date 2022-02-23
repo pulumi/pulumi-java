@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.SchemaPackageResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class ParserConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ParserConfigResponse build() {
             return new ParserConfigResponse(allowNullHeader, schema, segmentTerminator, version);
         }

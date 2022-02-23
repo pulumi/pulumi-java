@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
      * 
      */
     @InputImport(name="end", required=true)
-    private final String end;
+      private final String end;
 
     public String getEnd() {
         return this.end;
@@ -33,7 +33,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
      * 
      */
     @InputImport(name="sharePercentage", required=true)
-    private final Double sharePercentage;
+      private final Double sharePercentage;
 
     public Double getSharePercentage() {
         return this.sharePercentage;
@@ -44,7 +44,7 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
      * 
      */
     @InputImport(name="start", required=true)
-    private final String start;
+      private final String start;
 
     public String getStart() {
         return this.start;
@@ -103,7 +103,6 @@ public final class GoogleCloudApigeeV1RevenueShareRangeResponse extends io.pulum
             this.start = Objects.requireNonNull(start);
             return this;
         }
-
         public GoogleCloudApigeeV1RevenueShareRangeResponse build() {
             return new GoogleCloudApigeeV1RevenueShareRangeResponse(end, sharePercentage, start);
         }

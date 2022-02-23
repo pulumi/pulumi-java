@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class GetApiSchemaResult {
             this.value = value;
             return this;
         }
-
         public GetApiSchemaResult build() {
             return new GetApiSchemaResult(contentType, definitions, id, name, type, value);
         }

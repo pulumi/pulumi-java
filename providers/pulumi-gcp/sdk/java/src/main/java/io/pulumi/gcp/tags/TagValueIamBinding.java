@@ -5,8 +5,8 @@ package io.pulumi.gcp.tags;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.tags.TagValueIamBindingArgs;
 import io.pulumi.gcp.tags.inputs.TagValueIamBindingState;
@@ -118,13 +118,6 @@ public class TagValueIamBinding extends io.pulumi.resources.CustomResource {
         return this.tagValue;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TagValueIamBinding(String name) {
-        super("gcp:tags/tagValueIamBinding:TagValueIamBinding", name, TagValueIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

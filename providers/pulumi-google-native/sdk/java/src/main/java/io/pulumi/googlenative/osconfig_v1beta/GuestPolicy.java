@@ -5,8 +5,8 @@ package io.pulumi.googlenative.osconfig_v1beta;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.osconfig_v1beta.GuestPolicyArgs;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.AssignmentResponse;
@@ -150,13 +150,6 @@ public class GuestPolicy extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GuestPolicy(String name) {
-        super("google-native:osconfig/v1beta:GuestPolicy", name, GuestPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -9,8 +9,8 @@ import io.pulumi.awsnative.mediaconnect.outputs.FlowFailoverConfig;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -105,13 +105,6 @@ public class Flow extends io.pulumi.resources.CustomResource {
         return this.sourceFailoverConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Flow(String name) {
-        super("aws-native:mediaconnect:Flow", name, FlowArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

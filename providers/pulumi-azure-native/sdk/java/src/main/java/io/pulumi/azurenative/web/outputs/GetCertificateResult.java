@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.HostingEnvironmentProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -584,7 +584,6 @@ public final class GetCertificateResult {
             this.valid = Objects.requireNonNull(valid);
             return this;
         }
-
         public GetCertificateResult build() {
             return new GetCertificateResult(canonicalName, cerBlob, domainValidationMethod, expirationDate, friendlyName, hostNames, hostingEnvironmentProfile, id, issueDate, issuer, keyVaultId, keyVaultSecretName, keyVaultSecretStatus, kind, location, name, pfxBlob, publicKeyHash, selfLink, serverFarmId, siteName, subjectName, tags, thumbprint, type, valid);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.AutoscaleSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class SqlContainerGetPropertiesResponseOptions {
             this.throughput = throughput;
             return this;
         }
-
         public SqlContainerGetPropertiesResponseOptions build() {
             return new SqlContainerGetPropertiesResponseOptions(autoscaleSettings, throughput);
         }

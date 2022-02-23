@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
 import io.pulumi.azurenative.timeseriesinsights.outputs.LocalTimestampResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -374,7 +374,6 @@ public final class GetEventHubEventSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventHubEventSourceResult build() {
             return new GetEventHubEventSourceResult(consumerGroupName, creationTime, eventHubName, eventSourceResourceId, id, keyName, kind, localTimestamp, location, name, provisioningState, serviceBusNamespace, tags, time, timestampPropertyName, type);
         }

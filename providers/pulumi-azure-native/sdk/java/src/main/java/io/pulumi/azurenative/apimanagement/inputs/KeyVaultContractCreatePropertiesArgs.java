@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="identityClientId")
-    private final @Nullable Input<String> identityClientId;
+        private final @Nullable Input<String> identityClientId;
 
     public Input<String> getIdentityClientId() {
         return this.identityClientId == null ? Input.empty() : this.identityClientId;
@@ -34,7 +34,7 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="secretIdentifier")
-    private final @Nullable Input<String> secretIdentifier;
+        private final @Nullable Input<String> secretIdentifier;
 
     public Input<String> getSecretIdentifier() {
         return this.secretIdentifier == null ? Input.empty() : this.secretIdentifier;
@@ -93,7 +93,6 @@ public final class KeyVaultContractCreatePropertiesArgs extends io.pulumi.resour
             this.secretIdentifier = Input.ofNullable(secretIdentifier);
             return this;
         }
-
         public KeyVaultContractCreatePropertiesArgs build() {
             return new KeyVaultContractCreatePropertiesArgs(identityClientId, secretIdentifier);
         }

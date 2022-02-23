@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -223,7 +223,6 @@ public final class GetApiIssueResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetApiIssueResult build() {
             return new GetApiIssueResult(apiId, createdDate, description, id, name, state, title, type, userId);
         }

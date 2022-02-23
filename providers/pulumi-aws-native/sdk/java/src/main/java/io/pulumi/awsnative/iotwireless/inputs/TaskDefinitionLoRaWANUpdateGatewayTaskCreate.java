@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotwireless.inputs;
 
 import io.pulumi.awsnative.iotwireless.inputs.TaskDefinitionLoRaWANGatewayVersion;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate extends io.pulum
     public static final TaskDefinitionLoRaWANUpdateGatewayTaskCreate Empty = new TaskDefinitionLoRaWANUpdateGatewayTaskCreate();
 
     @InputImport(name="currentVersion")
-    private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
+        private final @Nullable TaskDefinitionLoRaWANGatewayVersion currentVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> getCurrentVersion() {
         return this.currentVersion == null ? Optional.empty() : Optional.ofNullable(this.currentVersion);
     }
 
     @InputImport(name="sigKeyCrc")
-    private final @Nullable Integer sigKeyCrc;
+        private final @Nullable Integer sigKeyCrc;
 
     public Optional<Integer> getSigKeyCrc() {
         return this.sigKeyCrc == null ? Optional.empty() : Optional.ofNullable(this.sigKeyCrc);
     }
 
     @InputImport(name="updateSignature")
-    private final @Nullable String updateSignature;
+        private final @Nullable String updateSignature;
 
     public Optional<String> getUpdateSignature() {
         return this.updateSignature == null ? Optional.empty() : Optional.ofNullable(this.updateSignature);
     }
 
     @InputImport(name="updateVersion")
-    private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
+        private final @Nullable TaskDefinitionLoRaWANGatewayVersion updateVersion;
 
     public Optional<TaskDefinitionLoRaWANGatewayVersion> getUpdateVersion() {
         return this.updateVersion == null ? Optional.empty() : Optional.ofNullable(this.updateVersion);
@@ -107,7 +107,6 @@ public final class TaskDefinitionLoRaWANUpdateGatewayTaskCreate extends io.pulum
             this.updateVersion = updateVersion;
             return this;
         }
-
         public TaskDefinitionLoRaWANUpdateGatewayTaskCreate build() {
             return new TaskDefinitionLoRaWANUpdateGatewayTaskCreate(currentVersion, sigKeyCrc, updateSignature, updateVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -14,14 +14,14 @@ public final class GetBucketRetentionPolicy extends io.pulumi.resources.InvokeAr
     public static final GetBucketRetentionPolicy Empty = new GetBucketRetentionPolicy();
 
     @InputImport(name="isLocked", required=true)
-    private final Boolean isLocked;
+        private final Boolean isLocked;
 
     public Boolean getIsLocked() {
         return this.isLocked;
     }
 
     @InputImport(name="retentionPeriod", required=true)
-    private final Integer retentionPeriod;
+        private final Integer retentionPeriod;
 
     public Integer getRetentionPeriod() {
         return this.retentionPeriod;
@@ -70,7 +70,6 @@ public final class GetBucketRetentionPolicy extends io.pulumi.resources.InvokeAr
             this.retentionPeriod = Objects.requireNonNull(retentionPeriod);
             return this;
         }
-
         public GetBucketRetentionPolicy build() {
             return new GetBucketRetentionPolicy(isLocked, retentionPeriod);
         }

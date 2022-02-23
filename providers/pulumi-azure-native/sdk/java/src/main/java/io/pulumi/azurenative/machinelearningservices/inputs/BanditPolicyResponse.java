@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="delayEvaluation")
-    private final @Nullable Integer delayEvaluation;
+        private final @Nullable Integer delayEvaluation;
 
     public Optional<Integer> getDelayEvaluation() {
         return this.delayEvaluation == null ? Optional.empty() : Optional.ofNullable(this.delayEvaluation);
@@ -36,7 +36,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="evaluationInterval")
-    private final @Nullable Integer evaluationInterval;
+        private final @Nullable Integer evaluationInterval;
 
     public Optional<Integer> getEvaluationInterval() {
         return this.evaluationInterval == null ? Optional.empty() : Optional.ofNullable(this.evaluationInterval);
@@ -47,7 +47,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="policyType", required=true)
-    private final String policyType;
+        private final String policyType;
 
     public String getPolicyType() {
         return this.policyType;
@@ -58,7 +58,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="slackAmount")
-    private final @Nullable Double slackAmount;
+        private final @Nullable Double slackAmount;
 
     public Optional<Double> getSlackAmount() {
         return this.slackAmount == null ? Optional.empty() : Optional.ofNullable(this.slackAmount);
@@ -69,7 +69,7 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="slackFactor")
-    private final @Nullable Double slackFactor;
+        private final @Nullable Double slackFactor;
 
     public Optional<Double> getSlackFactor() {
         return this.slackFactor == null ? Optional.empty() : Optional.ofNullable(this.slackFactor);
@@ -148,7 +148,6 @@ public final class BanditPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.slackFactor = slackFactor;
             return this;
         }
-
         public BanditPolicyResponse build() {
             return new BanditPolicyResponse(delayEvaluation, evaluationInterval, policyType, slackAmount, slackFactor);
         }

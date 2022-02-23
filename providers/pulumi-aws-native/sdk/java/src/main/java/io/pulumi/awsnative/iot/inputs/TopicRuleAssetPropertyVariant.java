@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class TopicRuleAssetPropertyVariant extends io.pulumi.resources.Inv
     public static final TopicRuleAssetPropertyVariant Empty = new TopicRuleAssetPropertyVariant();
 
     @InputImport(name="booleanValue")
-    private final @Nullable String booleanValue;
+        private final @Nullable String booleanValue;
 
     public Optional<String> getBooleanValue() {
         return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable String doubleValue;
+        private final @Nullable String doubleValue;
 
     public Optional<String> getDoubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
     @InputImport(name="integerValue")
-    private final @Nullable String integerValue;
+        private final @Nullable String integerValue;
 
     public Optional<String> getIntegerValue() {
         return this.integerValue == null ? Optional.empty() : Optional.ofNullable(this.integerValue);
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable String stringValue;
+        private final @Nullable String stringValue;
 
     public Optional<String> getStringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
@@ -105,7 +105,6 @@ public final class TopicRuleAssetPropertyVariant extends io.pulumi.resources.Inv
             this.stringValue = stringValue;
             return this;
         }
-
         public TopicRuleAssetPropertyVariant build() {
             return new TopicRuleAssetPropertyVariant(booleanValue, doubleValue, integerValue, stringValue);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class ApiConfigGatewayConfigBackendConfig {
             this.googleServiceAccount = Objects.requireNonNull(googleServiceAccount);
             return this;
         }
-
         public ApiConfigGatewayConfigBackendConfig build() {
             return new ApiConfigGatewayConfigBackendConfig(googleServiceAccount);
         }

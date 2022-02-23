@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskTypes")
-    private final @Nullable Input<List<String>> diskTypes;
+        private final @Nullable Input<List<String>> diskTypes;
 
     public Input<List<String>> getDiskTypes() {
         return this.diskTypes == null ? Input.empty() : this.diskTypes;
@@ -67,7 +67,6 @@ public final class DisallowedArgs extends io.pulumi.resources.ResourceArgs {
             this.diskTypes = Input.ofNullable(diskTypes);
             return this;
         }
-
         public DisallowedArgs build() {
             return new DisallowedArgs(diskTypes);
         }

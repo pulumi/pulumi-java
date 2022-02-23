@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+        private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -30,7 +30,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+        private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -42,7 +42,7 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -116,7 +116,6 @@ public final class GuestPoliciesRecipeInstallStepArchiveExtractionArgs extends i
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepArchiveExtractionArgs build() {
             return new GuestPoliciesRecipeInstallStepArchiveExtractionArgs(artifactId, destination, type);
         }

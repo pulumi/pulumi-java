@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountKey")
-    private final @Nullable Input<String> accountKey;
+        private final @Nullable Input<String> accountKey;
 
     public Input<String> getAccountKey() {
         return this.accountKey == null ? Input.empty() : this.accountKey;
@@ -34,7 +34,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -45,7 +45,7 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final Input<String> shareName;
+        private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;
@@ -119,7 +119,6 @@ public final class VolumeProviderParametersAzureFileArgs extends io.pulumi.resou
             this.shareName = Input.of(Objects.requireNonNull(shareName));
             return this;
         }
-
         public VolumeProviderParametersAzureFileArgs build() {
             return new VolumeProviderParametersAzureFileArgs(accountKey, accountName, shareName);
         }

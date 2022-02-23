@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.PolicyTagArgs;
 import io.pulumi.gcp.datacatalog.inputs.PolicyTagState;
@@ -137,13 +137,6 @@ public class PolicyTag extends io.pulumi.resources.CustomResource {
         return this.taxonomy;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PolicyTag(String name) {
-        super("gcp:datacatalog/policyTag:PolicyTag", name, PolicyTagArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

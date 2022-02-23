@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class AptRepositoryResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public AptRepositoryResponse build() {
             return new AptRepositoryResponse(archiveType, components, distribution, gpgKey, uri);
         }

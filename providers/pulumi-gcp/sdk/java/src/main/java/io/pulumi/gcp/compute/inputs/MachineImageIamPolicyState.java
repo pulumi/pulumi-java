@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class MachineImageIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -30,7 +30,7 @@ public final class MachineImageIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="machineImage")
-    private final @Nullable Input<String> machineImage;
+        private final @Nullable Input<String> machineImage;
 
     public Input<String> getMachineImage() {
         return this.machineImage == null ? Input.empty() : this.machineImage;
@@ -42,7 +42,7 @@ public final class MachineImageIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="policyData")
-    private final @Nullable Input<String> policyData;
+        private final @Nullable Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData == null ? Input.empty() : this.policyData;
@@ -54,7 +54,7 @@ public final class MachineImageIamPolicyState extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -143,7 +143,6 @@ public final class MachineImageIamPolicyState extends io.pulumi.resources.Resour
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public MachineImageIamPolicyState build() {
             return new MachineImageIamPolicyState(etag, machineImage, policyData, project);
         }

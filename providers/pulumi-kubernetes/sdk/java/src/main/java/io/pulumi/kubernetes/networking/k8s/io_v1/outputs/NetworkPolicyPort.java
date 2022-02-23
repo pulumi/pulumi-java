@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class NetworkPolicyPort {
             this.protocol = protocol;
             return this;
         }
-
         public NetworkPolicyPort build() {
             return new NetworkPolicyPort(endPort, port, protocol);
         }

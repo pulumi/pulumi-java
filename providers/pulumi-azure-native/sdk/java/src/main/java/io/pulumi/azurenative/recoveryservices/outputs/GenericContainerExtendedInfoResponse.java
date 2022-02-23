@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ContainerIdentityInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class GenericContainerExtendedInfoResponse {
             this.serviceEndpoints = serviceEndpoints;
             return this;
         }
-
         public GenericContainerExtendedInfoResponse build() {
             return new GenericContainerExtendedInfoResponse(containerIdentityInfo, rawCertData, serviceEndpoints);
         }

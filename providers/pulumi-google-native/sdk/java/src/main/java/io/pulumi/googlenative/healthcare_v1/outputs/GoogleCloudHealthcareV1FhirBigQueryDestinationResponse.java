@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.SchemaConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class GoogleCloudHealthcareV1FhirBigQueryDestinationResponse {
             this.writeDisposition = Objects.requireNonNull(writeDisposition);
             return this;
         }
-
         public GoogleCloudHealthcareV1FhirBigQueryDestinationResponse build() {
             return new GoogleCloudHealthcareV1FhirBigQueryDestinationResponse(datasetUri, force, schemaConfig, writeDisposition);
         }

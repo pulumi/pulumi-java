@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.RouterBgpPeerResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterBgpResponse;
 import io.pulumi.googlenative.compute_v1.outputs.RouterInterfaceResponse;
@@ -290,7 +290,6 @@ public final class GetRouterResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetRouterResult build() {
             return new GetRouterResult(bgp, bgpPeers, creationTimestamp, description, encryptedInterconnectRouter, interfaces, kind, name, nats, network, region, selfLink);
         }

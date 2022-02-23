@@ -9,8 +9,8 @@ import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionPropertiesRes
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -204,13 +204,6 @@ public class MachineExtension extends io.pulumi.resources.CustomResource {
         return this.typeHandlerVersion;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MachineExtension(String name) {
-        super("azure-native:hybridcompute:MachineExtension", name, MachineExtensionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

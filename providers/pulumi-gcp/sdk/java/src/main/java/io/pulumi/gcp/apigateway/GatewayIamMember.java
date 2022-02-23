@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.GatewayIamMemberArgs;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamMemberState;
@@ -145,13 +145,6 @@ public class GatewayIamMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GatewayIamMember(String name) {
-        super("gcp:apigateway/gatewayIamMember:GatewayIamMember", name, GatewayIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

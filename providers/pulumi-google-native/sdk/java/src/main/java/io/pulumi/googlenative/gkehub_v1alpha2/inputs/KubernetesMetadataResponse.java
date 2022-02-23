@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kubernetesApiServerVersion", required=true)
-    private final String kubernetesApiServerVersion;
+      private final String kubernetesApiServerVersion;
 
     public String getKubernetesApiServerVersion() {
         return this.kubernetesApiServerVersion;
@@ -33,7 +33,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="memoryMb", required=true)
-    private final Integer memoryMb;
+      private final Integer memoryMb;
 
     public Integer getMemoryMb() {
         return this.memoryMb;
@@ -44,7 +44,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeCount", required=true)
-    private final Integer nodeCount;
+      private final Integer nodeCount;
 
     public Integer getNodeCount() {
         return this.nodeCount;
@@ -55,7 +55,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="nodeProviderId", required=true)
-    private final String nodeProviderId;
+      private final String nodeProviderId;
 
     public String getNodeProviderId() {
         return this.nodeProviderId;
@@ -66,7 +66,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="updateTime", required=true)
-    private final String updateTime;
+      private final String updateTime;
 
     public String getUpdateTime() {
         return this.updateTime;
@@ -77,7 +77,7 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="vcpuCount", required=true)
-    private final Integer vcpuCount;
+      private final Integer vcpuCount;
 
     public Integer getVcpuCount() {
         return this.vcpuCount;
@@ -166,7 +166,6 @@ public final class KubernetesMetadataResponse extends io.pulumi.resources.Invoke
             this.vcpuCount = Objects.requireNonNull(vcpuCount);
             return this;
         }
-
         public KubernetesMetadataResponse build() {
             return new KubernetesMetadataResponse(kubernetesApiServerVersion, memoryMb, nodeCount, nodeProviderId, updateTime, vcpuCount);
         }

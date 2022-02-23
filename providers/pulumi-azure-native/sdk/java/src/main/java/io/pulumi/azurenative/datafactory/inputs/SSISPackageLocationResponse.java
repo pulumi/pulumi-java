@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.SSISAccessCredentialResponse;
 import io.pulumi.azurenative.datafactory.inputs.SSISChildPackageResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="accessCredential")
-    private final @Nullable SSISAccessCredentialResponse accessCredential;
+        private final @Nullable SSISAccessCredentialResponse accessCredential;
 
     public Optional<SSISAccessCredentialResponse> getAccessCredential() {
         return this.accessCredential == null ? Optional.empty() : Optional.ofNullable(this.accessCredential);
@@ -41,7 +41,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="childPackages")
-    private final @Nullable List<SSISChildPackageResponse> childPackages;
+        private final @Nullable List<SSISChildPackageResponse> childPackages;
 
     public List<SSISChildPackageResponse> getChildPackages() {
         return this.childPackages == null ? List.of() : this.childPackages;
@@ -52,7 +52,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="configurationAccessCredential")
-    private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
+        private final @Nullable SSISAccessCredentialResponse configurationAccessCredential;
 
     public Optional<SSISAccessCredentialResponse> getConfigurationAccessCredential() {
         return this.configurationAccessCredential == null ? Optional.empty() : Optional.ofNullable(this.configurationAccessCredential);
@@ -63,7 +63,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="configurationPath")
-    private final @Nullable Object configurationPath;
+        private final @Nullable Object configurationPath;
 
     public Optional<Object> getConfigurationPath() {
         return this.configurationPath == null ? Optional.empty() : Optional.ofNullable(this.configurationPath);
@@ -74,7 +74,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="packageContent")
-    private final @Nullable Object packageContent;
+        private final @Nullable Object packageContent;
 
     public Optional<Object> getPackageContent() {
         return this.packageContent == null ? Optional.empty() : Optional.ofNullable(this.packageContent);
@@ -85,7 +85,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="packageLastModifiedDate")
-    private final @Nullable String packageLastModifiedDate;
+        private final @Nullable String packageLastModifiedDate;
 
     public Optional<String> getPackageLastModifiedDate() {
         return this.packageLastModifiedDate == null ? Optional.empty() : Optional.ofNullable(this.packageLastModifiedDate);
@@ -96,7 +96,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="packageName")
-    private final @Nullable String packageName;
+        private final @Nullable String packageName;
 
     public Optional<String> getPackageName() {
         return this.packageName == null ? Optional.empty() : Optional.ofNullable(this.packageName);
@@ -107,7 +107,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="packagePassword")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> packagePassword;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPackagePassword() {
         return this.packagePassword == null ? null : this.packagePassword;
@@ -118,7 +118,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="packagePath")
-    private final @Nullable Object packagePath;
+        private final @Nullable Object packagePath;
 
     public Optional<Object> getPackagePath() {
         return this.packagePath == null ? Optional.empty() : Optional.ofNullable(this.packagePath);
@@ -129,7 +129,7 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -258,7 +258,6 @@ public final class SSISPackageLocationResponse extends io.pulumi.resources.Invok
             this.type = type;
             return this;
         }
-
         public SSISPackageLocationResponse build() {
             return new SSISPackageLocationResponse(accessCredential, childPackages, configurationAccessCredential, configurationPath, packageContent, packageLastModifiedDate, packageName, packagePassword, packagePath, type);
         }

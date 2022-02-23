@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse {
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicyResponse build() {
             return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, locality, scope, style, vmCount);
         }

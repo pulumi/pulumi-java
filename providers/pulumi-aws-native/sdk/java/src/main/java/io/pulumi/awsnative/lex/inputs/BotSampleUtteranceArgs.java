@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
     public static final BotSampleUtteranceArgs Empty = new BotSampleUtteranceArgs();
 
     @InputImport(name="utterance", required=true)
-    private final Input<String> utterance;
+        private final Input<String> utterance;
 
     public Input<String> getUtterance() {
         return this.utterance;
@@ -61,7 +61,6 @@ public final class BotSampleUtteranceArgs extends io.pulumi.resources.ResourceAr
             this.utterance = Input.of(Objects.requireNonNull(utterance));
             return this;
         }
-
         public BotSampleUtteranceArgs build() {
             return new BotSampleUtteranceArgs(utterance);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyAssociationResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyRuleResponse;
 import java.lang.Integer;
@@ -330,7 +330,6 @@ public final class GetNetworkFirewallPolicyResult {
             this.vpcNetworkScope = Objects.requireNonNull(vpcNetworkScope);
             return this;
         }
-
         public GetNetworkFirewallPolicyResult build() {
             return new GetNetworkFirewallPolicyResult(associations, creationTimestamp, description, fingerprint, kind, name, parent, region, ruleTupleCount, rules, selfLink, selfLinkWithId, shortName, vpcNetworkScope);
         }

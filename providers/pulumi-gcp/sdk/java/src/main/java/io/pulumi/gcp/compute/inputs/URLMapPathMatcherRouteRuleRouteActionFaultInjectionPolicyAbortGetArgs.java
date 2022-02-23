@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
      * 
      */
     @InputImport(name="httpStatus")
-    private final @Nullable Input<Integer> httpStatus;
+        private final @Nullable Input<Integer> httpStatus;
 
     public Input<Integer> getHttpStatus() {
         return this.httpStatus == null ? Input.empty() : this.httpStatus;
@@ -33,7 +33,7 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+        private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -92,7 +92,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbor
             this.percentage = Input.ofNullable(percentage);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs build() {
             return new URLMapPathMatcherRouteRuleRouteActionFaultInjectionPolicyAbortGetArgs(httpStatus, percentage);
         }

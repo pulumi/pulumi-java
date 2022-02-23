@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectFieldSelector;
 import io.pulumi.kubernetes.core_v1.outputs.ResourceFieldSelector;
 import java.lang.Integer;
@@ -121,7 +121,6 @@ public final class DownwardAPIVolumeFile {
             this.resourceFieldRef = resourceFieldRef;
             return this;
         }
-
         public DownwardAPIVolumeFile build() {
             return new DownwardAPIVolumeFile(fieldRef, mode, path, resourceFieldRef);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.JobTemplateRetryCriteria;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public final class JobExecutionsRetryConfigProperties extends io.pulumi.resource
     public static final JobExecutionsRetryConfigProperties Empty = new JobExecutionsRetryConfigProperties();
 
     @InputImport(name="retryCriteriaList")
-    private final @Nullable List<JobTemplateRetryCriteria> retryCriteriaList;
+        private final @Nullable List<JobTemplateRetryCriteria> retryCriteriaList;
 
     public List<JobTemplateRetryCriteria> getRetryCriteriaList() {
         return this.retryCriteriaList == null ? List.of() : this.retryCriteriaList;
@@ -54,7 +54,6 @@ public final class JobExecutionsRetryConfigProperties extends io.pulumi.resource
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }
-
         public JobExecutionsRetryConfigProperties build() {
             return new JobExecutionsRetryConfigProperties(retryCriteriaList);
         }

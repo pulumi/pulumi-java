@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityAccessUrlGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityKeySpecGetArgs;
@@ -25,7 +25,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessUrls")
-    private final @Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls;
+        private final @Nullable Input<List<AuthorityAccessUrlGetArgs>> accessUrls;
 
     public Input<List<AuthorityAccessUrlGetArgs>> getAccessUrls() {
         return this.accessUrls == null ? Input.empty() : this.accessUrls;
@@ -36,7 +36,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthorityId")
-    private final @Nullable Input<String> certificateAuthorityId;
+        private final @Nullable Input<String> certificateAuthorityId;
 
     public Input<String> getCertificateAuthorityId() {
         return this.certificateAuthorityId == null ? Input.empty() : this.certificateAuthorityId;
@@ -48,7 +48,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<AuthorityConfigGetArgs> config;
+        private final @Nullable Input<AuthorityConfigGetArgs> config;
 
     public Input<AuthorityConfigGetArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -60,7 +60,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -75,7 +75,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcsBucket")
-    private final @Nullable Input<String> gcsBucket;
+        private final @Nullable Input<String> gcsBucket;
 
     public Input<String> getGcsBucket() {
         return this.gcsBucket == null ? Input.empty() : this.gcsBucket;
@@ -87,7 +87,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreActiveCertificatesOnDeletion")
-    private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
+        private final @Nullable Input<Boolean> ignoreActiveCertificatesOnDeletion;
 
     public Input<Boolean> getIgnoreActiveCertificatesOnDeletion() {
         return this.ignoreActiveCertificatesOnDeletion == null ? Input.empty() : this.ignoreActiveCertificatesOnDeletion;
@@ -101,7 +101,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keySpec")
-    private final @Nullable Input<AuthorityKeySpecGetArgs> keySpec;
+        private final @Nullable Input<AuthorityKeySpecGetArgs> keySpec;
 
     public Input<AuthorityKeySpecGetArgs> getKeySpec() {
         return this.keySpec == null ? Input.empty() : this.keySpec;
@@ -114,7 +114,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -127,7 +127,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime")
-    private final @Nullable Input<String> lifetime;
+        private final @Nullable Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime == null ? Input.empty() : this.lifetime;
@@ -139,7 +139,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -150,7 +150,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -163,7 +163,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCaCertificates")
-    private final @Nullable Input<List<String>> pemCaCertificates;
+        private final @Nullable Input<List<String>> pemCaCertificates;
 
     public Input<List<String>> getPemCaCertificates() {
         return this.pemCaCertificates == null ? Input.empty() : this.pemCaCertificates;
@@ -174,7 +174,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool")
-    private final @Nullable Input<String> pool;
+        private final @Nullable Input<String> pool;
 
     public Input<String> getPool() {
         return this.pool == null ? Input.empty() : this.pool;
@@ -186,7 +186,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -197,7 +197,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -213,7 +213,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -225,7 +225,7 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -509,7 +509,6 @@ public final class AuthorityState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public AuthorityState build() {
             return new AuthorityState(accessUrls, certificateAuthorityId, config, createTime, gcsBucket, ignoreActiveCertificatesOnDeletion, keySpec, labels, lifetime, location, name, pemCaCertificates, pool, project, state, type, updateTime);
         }

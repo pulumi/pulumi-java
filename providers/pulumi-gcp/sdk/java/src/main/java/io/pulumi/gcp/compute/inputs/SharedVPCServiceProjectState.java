@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="hostProject")
-    private final @Nullable Input<String> hostProject;
+        private final @Nullable Input<String> hostProject;
 
     public Input<String> getHostProject() {
         return this.hostProject == null ? Input.empty() : this.hostProject;
@@ -30,7 +30,7 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="serviceProject")
-    private final @Nullable Input<String> serviceProject;
+        private final @Nullable Input<String> serviceProject;
 
     public Input<String> getServiceProject() {
         return this.serviceProject == null ? Input.empty() : this.serviceProject;
@@ -89,7 +89,6 @@ public final class SharedVPCServiceProjectState extends io.pulumi.resources.Reso
             this.serviceProject = Input.ofNullable(serviceProject);
             return this;
         }
-
         public SharedVPCServiceProjectState build() {
             return new SharedVPCServiceProjectState(hostProject, serviceProject);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.stepfunctions.outputs;
 
 import io.pulumi.awsnative.stepfunctions.outputs.ActivityTagsEntry;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -62,7 +62,6 @@ public final class GetActivityResult {
             this.tags = tags;
             return this;
         }
-
         public GetActivityResult build() {
             return new GetActivityResult(arn, tags);
         }

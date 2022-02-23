@@ -7,7 +7,7 @@ import io.pulumi.azurenative.avs.inputs.PSCredentialExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptSecureStringExecutionParameterArgs;
 import io.pulumi.azurenative.avs.inputs.ScriptStringExecutionParameterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="failureReason")
-    private final @Nullable Input<String> failureReason;
+        private final @Nullable Input<String> failureReason;
 
     public Input<String> getFailureReason() {
         return this.failureReason == null ? Input.empty() : this.failureReason;
@@ -36,7 +36,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="hiddenParameters")
-    private final @Nullable Input<List<Object>> hiddenParameters;
+        private final @Nullable Input<List<Object>> hiddenParameters;
 
     public Input<List<Object>> getHiddenParameters() {
         return this.hiddenParameters == null ? Input.empty() : this.hiddenParameters;
@@ -47,7 +47,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namedOutputs")
-    private final @Nullable Input<Map<String,Object>> namedOutputs;
+        private final @Nullable Input<Map<String,Object>> namedOutputs;
 
     public Input<Map<String,Object>> getNamedOutputs() {
         return this.namedOutputs == null ? Input.empty() : this.namedOutputs;
@@ -58,7 +58,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="output")
-    private final @Nullable Input<List<String>> output;
+        private final @Nullable Input<List<String>> output;
 
     public Input<List<String>> getOutput() {
         return this.output == null ? Input.empty() : this.output;
@@ -69,7 +69,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<List<Object>> parameters;
+        private final @Nullable Input<List<Object>> parameters;
 
     public Input<List<Object>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -80,7 +80,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="privateCloudName", required=true)
-    private final Input<String> privateCloudName;
+        private final Input<String> privateCloudName;
 
     public Input<String> getPrivateCloudName() {
         return this.privateCloudName;
@@ -91,7 +91,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -102,7 +102,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retention")
-    private final @Nullable Input<String> retention;
+        private final @Nullable Input<String> retention;
 
     public Input<String> getRetention() {
         return this.retention == null ? Input.empty() : this.retention;
@@ -113,7 +113,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptCmdletId")
-    private final @Nullable Input<String> scriptCmdletId;
+        private final @Nullable Input<String> scriptCmdletId;
 
     public Input<String> getScriptCmdletId() {
         return this.scriptCmdletId == null ? Input.empty() : this.scriptCmdletId;
@@ -124,7 +124,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="scriptExecutionName")
-    private final @Nullable Input<String> scriptExecutionName;
+        private final @Nullable Input<String> scriptExecutionName;
 
     public Input<String> getScriptExecutionName() {
         return this.scriptExecutionName == null ? Input.empty() : this.scriptExecutionName;
@@ -135,7 +135,7 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="timeout", required=true)
-    private final Input<String> timeout;
+        private final Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout;
@@ -329,7 +329,6 @@ public final class ScriptExecutionArgs extends io.pulumi.resources.ResourceArgs 
             this.timeout = Input.of(Objects.requireNonNull(timeout));
             return this;
         }
-
         public ScriptExecutionArgs build() {
             return new ScriptExecutionArgs(failureReason, hiddenParameters, namedOutputs, output, parameters, privateCloudName, resourceGroupName, retention, scriptCmdletId, scriptExecutionName, timeout);
         }

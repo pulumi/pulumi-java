@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="backupManagementType")
-    private final @Nullable String backupManagementType;
+        private final @Nullable String backupManagementType;
 
     public Optional<String> getBackupManagementType() {
         return this.backupManagementType == null ? Optional.empty() : Optional.ofNullable(this.backupManagementType);
@@ -38,7 +38,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="containerType", required=true)
-    private final String containerType;
+        private final String containerType;
 
     public String getContainerType() {
         return this.containerType;
@@ -49,7 +49,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable String friendlyName;
+        private final @Nullable String friendlyName;
 
     public Optional<String> getFriendlyName() {
         return this.friendlyName == null ? Optional.empty() : Optional.ofNullable(this.friendlyName);
@@ -60,7 +60,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="healthStatus")
-    private final @Nullable String healthStatus;
+        private final @Nullable String healthStatus;
 
     public Optional<String> getHealthStatus() {
         return this.healthStatus == null ? Optional.empty() : Optional.ofNullable(this.healthStatus);
@@ -71,7 +71,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="registrationStatus")
-    private final @Nullable String registrationStatus;
+        private final @Nullable String registrationStatus;
 
     public Optional<String> getRegistrationStatus() {
         return this.registrationStatus == null ? Optional.empty() : Optional.ofNullable(this.registrationStatus);
@@ -82,7 +82,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroup")
-    private final @Nullable String resourceGroup;
+        private final @Nullable String resourceGroup;
 
     public Optional<String> getResourceGroup() {
         return this.resourceGroup == null ? Optional.empty() : Optional.ofNullable(this.resourceGroup);
@@ -93,7 +93,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="virtualMachineId")
-    private final @Nullable String virtualMachineId;
+        private final @Nullable String virtualMachineId;
 
     public Optional<String> getVirtualMachineId() {
         return this.virtualMachineId == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineId);
@@ -104,7 +104,7 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="virtualMachineVersion")
-    private final @Nullable String virtualMachineVersion;
+        private final @Nullable String virtualMachineVersion;
 
     public Optional<String> getVirtualMachineVersion() {
         return this.virtualMachineVersion == null ? Optional.empty() : Optional.ofNullable(this.virtualMachineVersion);
@@ -213,7 +213,6 @@ public final class IaaSVMContainerResponse extends io.pulumi.resources.InvokeArg
             this.virtualMachineVersion = virtualMachineVersion;
             return this;
         }
-
         public IaaSVMContainerResponse build() {
             return new IaaSVMContainerResponse(backupManagementType, containerType, friendlyName, healthStatus, registrationStatus, resourceGroup, virtualMachineId, virtualMachineVersion);
         }

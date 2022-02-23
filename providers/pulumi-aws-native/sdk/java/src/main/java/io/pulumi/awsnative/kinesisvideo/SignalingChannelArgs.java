@@ -6,7 +6,7 @@ package io.pulumi.awsnative.kinesisvideo;
 import io.pulumi.awsnative.kinesisvideo.enums.SignalingChannelType;
 import io.pulumi.awsnative.kinesisvideo.inputs.SignalingChannelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="messageTtlSeconds")
-    private final @Nullable Input<Integer> messageTtlSeconds;
+        private final @Nullable Input<Integer> messageTtlSeconds;
 
     public Input<Integer> getMessageTtlSeconds() {
         return this.messageTtlSeconds == null ? Input.empty() : this.messageTtlSeconds;
@@ -34,7 +34,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<SignalingChannelTagArgs>> tags;
+        private final @Nullable Input<List<SignalingChannelTagArgs>> tags;
 
     public Input<List<SignalingChannelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -56,7 +56,7 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<SignalingChannelType> type;
+        private final @Nullable Input<SignalingChannelType> type;
 
     public Input<SignalingChannelType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -145,7 +145,6 @@ public final class SignalingChannelArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SignalingChannelArgs build() {
             return new SignalingChannelArgs(messageTtlSeconds, name, tags, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
      * 
      */
     @InputImport(name="enableInsightsExport")
-    private final @Nullable Input<Boolean> enableInsightsExport;
+      private final @Nullable Input<Boolean> enableInsightsExport;
 
     public Input<Boolean> getEnableInsightsExport() {
         return this.enableInsightsExport == null ? Input.empty() : this.enableInsightsExport;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettin
             this.enableInsightsExport = Input.ofNullable(enableInsightsExport);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs build() {
             return new GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsArgs(enableInsightsExport);
         }

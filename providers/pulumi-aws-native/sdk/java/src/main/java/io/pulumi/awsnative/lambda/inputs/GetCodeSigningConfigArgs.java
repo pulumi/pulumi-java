@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetCodeSigningConfigArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="codeSigningConfigArn", required=true)
-    private final String codeSigningConfigArn;
+        private final String codeSigningConfigArn;
 
     public String getCodeSigningConfigArn() {
         return this.codeSigningConfigArn;
@@ -55,7 +55,6 @@ public final class GetCodeSigningConfigArgs extends io.pulumi.resources.InvokeAr
             this.codeSigningConfigArn = Objects.requireNonNull(codeSigningConfigArn);
             return this;
         }
-
         public GetCodeSigningConfigArgs build() {
             return new GetCodeSigningConfigArgs(codeSigningConfigArn);
         }

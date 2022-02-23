@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyOptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class GetContentKeyPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetContentKeyPolicyResult build() {
             return new GetContentKeyPolicyResult(created, description, id, lastModified, name, options, policyId, systemData, type);
         }

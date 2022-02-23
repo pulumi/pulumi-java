@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="awsAccessKey")
-    private final @Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> awsAccessKey;
+        private final @Nullable Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> awsAccessKey;
 
     public Input<TransferJobTransferSpecAwsS3DataSourceAwsAccessKeyArgs> getAwsAccessKey() {
         return this.awsAccessKey == null ? Input.empty() : this.awsAccessKey;
@@ -31,7 +31,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -42,7 +42,7 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+        private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -116,7 +116,6 @@ public final class TransferJobTransferSpecAwsS3DataSourceArgs extends io.pulumi.
             this.roleArn = Input.ofNullable(roleArn);
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSourceArgs build() {
             return new TransferJobTransferSpecAwsS3DataSourceArgs(awsAccessKey, bucketName, roleArn);
         }

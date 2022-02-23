@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta1.outputs.StatefulSetUpdateStrategy;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaim;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
@@ -208,7 +208,6 @@ public final class StatefulSetSpec {
             this.volumeClaimTemplates = volumeClaimTemplates;
             return this;
         }
-
         public StatefulSetSpec build() {
             return new StatefulSetSpec(podManagementPolicy, replicas, revisionHistoryLimit, selector, serviceName, template, updateStrategy, volumeClaimTemplates);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class ListenerRuleTargetGroupTupleArgs extends io.pulumi.resources.
     public static final ListenerRuleTargetGroupTupleArgs Empty = new ListenerRuleTargetGroupTupleArgs();
 
     @InputImport(name="targetGroupArn")
-    private final @Nullable Input<String> targetGroupArn;
+        private final @Nullable Input<String> targetGroupArn;
 
     public Input<String> getTargetGroupArn() {
         return this.targetGroupArn == null ? Input.empty() : this.targetGroupArn;
     }
 
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -82,7 +82,6 @@ public final class ListenerRuleTargetGroupTupleArgs extends io.pulumi.resources.
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public ListenerRuleTargetGroupTupleArgs build() {
             return new ListenerRuleTargetGroupTupleArgs(targetGroupArn, weight);
         }

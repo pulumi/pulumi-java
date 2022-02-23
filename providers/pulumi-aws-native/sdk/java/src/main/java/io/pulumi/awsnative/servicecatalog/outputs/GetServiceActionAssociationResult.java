@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.servicecatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetServiceActionAssociationResult {
         public Builder(GetServiceActionAssociationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetServiceActionAssociationResult build() {
             return new GetServiceActionAssociationResult();
         }

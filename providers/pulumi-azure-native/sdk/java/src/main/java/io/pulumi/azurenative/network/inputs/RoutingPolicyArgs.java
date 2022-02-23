@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinations", required=true)
-    private final Input<List<String>> destinations;
+        private final Input<List<String>> destinations;
 
     public Input<List<String>> getDestinations() {
         return this.destinations;
@@ -34,7 +34,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextHop", required=true)
-    private final Input<String> nextHop;
+        private final Input<String> nextHop;
 
     public Input<String> getNextHop() {
         return this.nextHop;
@@ -119,7 +119,6 @@ public final class RoutingPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.nextHop = Input.of(Objects.requireNonNull(nextHop));
             return this;
         }
-
         public RoutingPolicyArgs build() {
             return new RoutingPolicyArgs(destinations, name, nextHop);
         }

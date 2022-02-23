@@ -5,8 +5,8 @@ package io.pulumi.gcp.folder;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.folder.IAMPolicyArgs;
 import io.pulumi.gcp.folder.inputs.IAMPolicyState;
@@ -34,13 +34,6 @@ public class IAMPolicy extends io.pulumi.resources.CustomResource {
         return this.policyData;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IAMPolicy(String name) {
-        super("gcp:folder/iAMPolicy:IAMPolicy", name, IAMPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

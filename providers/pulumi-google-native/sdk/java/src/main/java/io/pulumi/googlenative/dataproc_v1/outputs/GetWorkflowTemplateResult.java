@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.OrderedJobResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.TemplateParameterResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.WorkflowTemplatePlacementResponse;
@@ -227,7 +227,6 @@ public final class GetWorkflowTemplateResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetWorkflowTemplateResult build() {
             return new GetWorkflowTemplateResult(createTime, dagTimeout, jobs, labels, name, parameters, placement, updateTime, version);
         }

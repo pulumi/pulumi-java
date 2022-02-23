@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.RouteResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -270,7 +270,6 @@ public final class GetRouteTableResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRouteTableResult build() {
             return new GetRouteTableResult(disableBgpRoutePropagation, etag, id, location, name, provisioningState, resourceGuid, routes, subnets, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTransparentDataEncryptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class GetTransparentDataEncryptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetTransparentDataEncryptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -50,7 +50,7 @@ public final class GetTransparentDataEncryptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="transparentDataEncryptionName", required=true)
-    private final String transparentDataEncryptionName;
+        private final String transparentDataEncryptionName;
 
     public String getTransparentDataEncryptionName() {
         return this.transparentDataEncryptionName;
@@ -119,7 +119,6 @@ public final class GetTransparentDataEncryptionArgs extends io.pulumi.resources.
             this.transparentDataEncryptionName = Objects.requireNonNull(transparentDataEncryptionName);
             return this;
         }
-
         public GetTransparentDataEncryptionArgs build() {
             return new GetTransparentDataEncryptionArgs(databaseName, resourceGroupName, serverName, transparentDataEncryptionName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.ManagedRuleExclusionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="action")
-    private final @Nullable String action;
+        private final @Nullable String action;
 
     public Optional<String> getAction() {
         return this.action == null ? Optional.empty() : Optional.ofNullable(this.action);
@@ -36,7 +36,7 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable String enabledState;
+        private final @Nullable String enabledState;
 
     public Optional<String> getEnabledState() {
         return this.enabledState == null ? Optional.empty() : Optional.ofNullable(this.enabledState);
@@ -47,7 +47,7 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
+        private final @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
     public List<ManagedRuleExclusionResponse> getExclusions() {
         return this.exclusions == null ? List.of() : this.exclusions;
@@ -58,7 +58,7 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ruleId", required=true)
-    private final String ruleId;
+        private final String ruleId;
 
     public String getRuleId() {
         return this.ruleId;
@@ -127,7 +127,6 @@ public final class FrontDoorManagedRuleOverrideResponse extends io.pulumi.resour
             this.ruleId = Objects.requireNonNull(ruleId);
             return this;
         }
-
         public FrontDoorManagedRuleOverrideResponse build() {
             return new FrontDoorManagedRuleOverrideResponse(action, enabledState, exclusions, ruleId);
         }

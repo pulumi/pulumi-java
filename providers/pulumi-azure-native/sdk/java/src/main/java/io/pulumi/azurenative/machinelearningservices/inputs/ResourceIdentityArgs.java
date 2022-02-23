@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.ResourceIdentityAssig
 import io.pulumi.azurenative.machinelearningservices.inputs.UserAssignedIdentityMetaArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,ResourceIdentityAssignment>> type;
+        private final @Nullable Input<Either<String,ResourceIdentityAssignment>> type;
 
     public Input<Either<String,ResourceIdentityAssignment>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -38,7 +38,7 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,UserAssignedIdentityMetaArgs>> userAssignedIdentities;
 
     public Input<Map<String,UserAssignedIdentityMetaArgs>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -97,7 +97,6 @@ public final class ResourceIdentityArgs extends io.pulumi.resources.ResourceArgs
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public ResourceIdentityArgs build() {
             return new ResourceIdentityArgs(type, userAssignedIdentities);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="concurrentExecutions", required=true)
-    private final Integer concurrentExecutions;
+        private final Integer concurrentExecutions;
 
     public Integer getConcurrentExecutions() {
         return this.concurrentExecutions;
@@ -39,7 +39,7 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="launchPath", required=true)
-    private final String launchPath;
+        private final String launchPath;
 
     public String getLaunchPath() {
         return this.launchPath;
@@ -50,7 +50,7 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable String parameters;
+        private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
@@ -109,7 +109,6 @@ public final class FleetServerProcess extends io.pulumi.resources.InvokeArgs {
             this.parameters = parameters;
             return this;
         }
-
         public FleetServerProcess build() {
             return new FleetServerProcess(concurrentExecutions, launchPath, parameters);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.IdentityPropertiesRespons
 import io.pulumi.azurenative.containerregistry.outputs.ImportPipelineSourcePropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.PipelineTriggerPropertiesResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -249,7 +249,6 @@ public final class GetImportPipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetImportPipelineResult build() {
             return new GetImportPipelineResult(id, identity, location, name, options, provisioningState, source, systemData, trigger, type);
         }

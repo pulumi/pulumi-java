@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class AzureFileVolumeResponse {
             this.storageAccountName = Objects.requireNonNull(storageAccountName);
             return this;
         }
-
         public AzureFileVolumeResponse build() {
             return new AzureFileVolumeResponse(readOnly, shareName, storageAccountKey, storageAccountName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class GitFileSourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GitFileSourceResponse build() {
             return new GitFileSourceResponse(path, repoType, revision, uri);
         }

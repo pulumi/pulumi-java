@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.azurenative.containerinstance.inputs.GpuResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="cpu", required=true)
-    private final Double cpu;
+        private final Double cpu;
 
     public Double getCpu() {
         return this.cpu;
@@ -35,7 +35,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="gpu")
-    private final @Nullable GpuResourceResponse gpu;
+        private final @Nullable GpuResourceResponse gpu;
 
     public Optional<GpuResourceResponse> getGpu() {
         return this.gpu == null ? Optional.empty() : Optional.ofNullable(this.gpu);
@@ -46,7 +46,7 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="memoryInGB", required=true)
-    private final Double memoryInGB;
+        private final Double memoryInGB;
 
     public Double getMemoryInGB() {
         return this.memoryInGB;
@@ -105,7 +105,6 @@ public final class ResourceRequestsResponse extends io.pulumi.resources.InvokeAr
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public ResourceRequestsResponse build() {
             return new ResourceRequestsResponse(cpu, gpu, memoryInGB);
         }

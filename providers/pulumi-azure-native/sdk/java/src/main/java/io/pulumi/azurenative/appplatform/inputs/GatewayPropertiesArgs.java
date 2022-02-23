@@ -8,7 +8,7 @@ import io.pulumi.azurenative.appplatform.inputs.GatewayCorsPropertiesArgs;
 import io.pulumi.azurenative.appplatform.inputs.GatewayResourceRequestsArgs;
 import io.pulumi.azurenative.appplatform.inputs.SsoPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="apiMetadataProperties")
-    private final @Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
+        private final @Nullable Input<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
 
     public Input<GatewayApiMetadataPropertiesArgs> getApiMetadataProperties() {
         return this.apiMetadataProperties == null ? Input.empty() : this.apiMetadataProperties;
@@ -38,7 +38,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="corsProperties")
-    private final @Nullable Input<GatewayCorsPropertiesArgs> corsProperties;
+        private final @Nullable Input<GatewayCorsPropertiesArgs> corsProperties;
 
     public Input<GatewayCorsPropertiesArgs> getCorsProperties() {
         return this.corsProperties == null ? Input.empty() : this.corsProperties;
@@ -49,7 +49,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="httpsOnly")
-    private final @Nullable Input<Boolean> httpsOnly;
+        private final @Nullable Input<Boolean> httpsOnly;
 
     public Input<Boolean> getHttpsOnly() {
         return this.httpsOnly == null ? Input.empty() : this.httpsOnly;
@@ -60,7 +60,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="public")
-    private final @Nullable Input<Boolean> $public;
+        private final @Nullable Input<Boolean> $public;
 
     public Input<Boolean> get$public() {
         return this.$public == null ? Input.empty() : this.$public;
@@ -71,7 +71,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="resourceRequests")
-    private final @Nullable Input<GatewayResourceRequestsArgs> resourceRequests;
+        private final @Nullable Input<GatewayResourceRequestsArgs> resourceRequests;
 
     public Input<GatewayResourceRequestsArgs> getResourceRequests() {
         return this.resourceRequests == null ? Input.empty() : this.resourceRequests;
@@ -82,7 +82,7 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ssoProperties")
-    private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
+        private final @Nullable Input<SsoPropertiesArgs> ssoProperties;
 
     public Input<SsoPropertiesArgs> getSsoProperties() {
         return this.ssoProperties == null ? Input.empty() : this.ssoProperties;
@@ -201,7 +201,6 @@ public final class GatewayPropertiesArgs extends io.pulumi.resources.ResourceArg
             this.ssoProperties = Input.ofNullable(ssoProperties);
             return this;
         }
-
         public GatewayPropertiesArgs build() {
             return new GatewayPropertiesArgs(apiMetadataProperties, corsProperties, httpsOnly, $public, resourceRequests, ssoProperties);
         }

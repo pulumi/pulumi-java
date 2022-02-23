@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ConnectorProfileDatadogConnectorProfileCredentials {
             this.applicationKey = Objects.requireNonNull(applicationKey);
             return this;
         }
-
         public ConnectorProfileDatadogConnectorProfileCredentials build() {
             return new ConnectorProfileDatadogConnectorProfileCredentials(apiKey, applicationKey);
         }

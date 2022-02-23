@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.LogAnalyticsConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class AppLogsConfigurationResponse {
             this.logAnalyticsConfiguration = logAnalyticsConfiguration;
             return this;
         }
-
         public AppLogsConfigurationResponse build() {
             return new AppLogsConfigurationResponse(destination, logAnalyticsConfiguration);
         }

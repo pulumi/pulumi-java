@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class ApiConfigHandlerResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ApiConfigHandlerResponse build() {
             return new ApiConfigHandlerResponse(authFailAction, login, script, securityLevel, url);
         }

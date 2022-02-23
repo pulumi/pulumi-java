@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
 import io.pulumi.azurenative.sqlvirtualmachine.outputs.LoadBalancerConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -206,7 +206,6 @@ public final class GetAvailabilityGroupListenerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAvailabilityGroupListenerResult build() {
             return new GetAvailabilityGroupListenerResult(availabilityGroupName, createDefaultAvailabilityGroupIfNotExist, id, loadBalancerConfigurations, name, port, provisioningState, type);
         }

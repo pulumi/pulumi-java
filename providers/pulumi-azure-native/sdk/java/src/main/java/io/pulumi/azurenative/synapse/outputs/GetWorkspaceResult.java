@@ -11,7 +11,7 @@ import io.pulumi.azurenative.synapse.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.synapse.outputs.PurviewConfigurationResponse;
 import io.pulumi.azurenative.synapse.outputs.VirtualNetworkProfileResponse;
 import io.pulumi.azurenative.synapse.outputs.WorkspaceRepositoryConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -528,7 +528,6 @@ public final class GetWorkspaceResult {
             this.workspaceUID = Objects.requireNonNull(workspaceUID);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(adlaResourceId, connectivityEndpoints, defaultDataLakeStorage, encryption, extraProperties, id, identity, location, managedResourceGroupName, managedVirtualNetwork, managedVirtualNetworkSettings, name, privateEndpointConnections, provisioningState, publicNetworkAccess, purviewConfiguration, sqlAdministratorLogin, sqlAdministratorLoginPassword, tags, type, virtualNetworkProfile, workspaceRepositoryConfiguration, workspaceUID);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class HTTP2HealthCheckResponse {
             this.response = Objects.requireNonNull(response);
             return this;
         }
-
         public HTTP2HealthCheckResponse build() {
             return new HTTP2HealthCheckResponse(host, port, portName, portSpecification, proxyHeader, requestPath, response);
         }

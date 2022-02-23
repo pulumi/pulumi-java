@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.ExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -135,7 +135,6 @@ public final class ObjectIamPolicyBindingsItemResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public ObjectIamPolicyBindingsItemResponse build() {
             return new ObjectIamPolicyBindingsItemResponse(condition, members, role);
         }

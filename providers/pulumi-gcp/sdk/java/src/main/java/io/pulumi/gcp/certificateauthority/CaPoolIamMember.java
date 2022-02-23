@@ -5,8 +5,8 @@ package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolIamMemberArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIamMemberState;
@@ -151,13 +151,6 @@ public class CaPoolIamMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CaPoolIamMember(String name) {
-        super("gcp:certificateauthority/caPoolIamMember:CaPoolIamMember", name, CaPoolIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

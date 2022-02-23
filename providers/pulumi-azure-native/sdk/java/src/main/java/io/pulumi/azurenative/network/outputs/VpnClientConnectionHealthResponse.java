@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class VpnClientConnectionHealthResponse {
             this.vpnClientConnectionsCount = vpnClientConnectionsCount;
             return this;
         }
-
         public VpnClientConnectionHealthResponse build() {
             return new VpnClientConnectionHealthResponse(allocatedIpAddresses, totalEgressBytesTransferred, totalIngressBytesTransferred, vpnClientConnectionsCount);
         }

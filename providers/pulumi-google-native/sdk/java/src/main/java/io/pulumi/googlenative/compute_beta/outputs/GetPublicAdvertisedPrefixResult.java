@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.PublicAdvertisedPrefixPublicDelegatedPrefixResponse;
 import java.lang.String;
 import java.util.List;
@@ -265,7 +265,6 @@ public final class GetPublicAdvertisedPrefixResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetPublicAdvertisedPrefixResult build() {
             return new GetPublicAdvertisedPrefixResult(creationTimestamp, description, dnsVerificationIp, fingerprint, ipCidrRange, kind, name, publicDelegatedPrefixs, selfLink, sharedSecret, status);
         }

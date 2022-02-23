@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiConfigArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigState;
@@ -198,13 +198,6 @@ public class ApiConfig extends io.pulumi.resources.CustomResource {
         return this.serviceConfigId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ApiConfig(String name) {
-        super("gcp:apigateway/apiConfig:ApiConfig", name, ApiConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

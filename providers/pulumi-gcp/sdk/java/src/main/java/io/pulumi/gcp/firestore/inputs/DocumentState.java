@@ -4,7 +4,7 @@
 package io.pulumi.gcp.firestore.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collection")
-    private final @Nullable Input<String> collection;
+        private final @Nullable Input<String> collection;
 
     public Input<String> getCollection() {
         return this.collection == null ? Input.empty() : this.collection;
@@ -30,7 +30,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -41,7 +41,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<String> database;
+        private final @Nullable Input<String> database;
 
     public Input<String> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -52,7 +52,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="documentId")
-    private final @Nullable Input<String> documentId;
+        private final @Nullable Input<String> documentId;
 
     public Input<String> getDocumentId() {
         return this.documentId == null ? Input.empty() : this.documentId;
@@ -63,7 +63,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<String> fields;
+        private final @Nullable Input<String> fields;
 
     public Input<String> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -75,7 +75,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -86,7 +86,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -98,7 +98,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -109,7 +109,7 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -273,7 +273,6 @@ public final class DocumentState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public DocumentState build() {
             return new DocumentState(collection, createTime, database, documentId, fields, name, path, project, updateTime);
         }

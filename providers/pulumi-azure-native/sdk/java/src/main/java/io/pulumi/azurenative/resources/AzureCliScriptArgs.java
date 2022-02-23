@@ -10,7 +10,7 @@ import io.pulumi.azurenative.resources.inputs.ManagedServiceIdentityArgs;
 import io.pulumi.azurenative.resources.inputs.StorageAccountConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<String> arguments;
+        private final @Nullable Input<String> arguments;
 
     public Input<String> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -38,7 +38,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azCliVersion", required=true)
-    private final Input<String> azCliVersion;
+        private final Input<String> azCliVersion;
 
     public Input<String> getAzCliVersion() {
         return this.azCliVersion;
@@ -49,7 +49,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cleanupPreference")
-    private final @Nullable Input<Either<String,CleanupOptions>> cleanupPreference;
+        private final @Nullable Input<Either<String,CleanupOptions>> cleanupPreference;
 
     public Input<Either<String,CleanupOptions>> getCleanupPreference() {
         return this.cleanupPreference == null ? Input.empty() : this.cleanupPreference;
@@ -60,7 +60,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerSettings")
-    private final @Nullable Input<ContainerConfigurationArgs> containerSettings;
+        private final @Nullable Input<ContainerConfigurationArgs> containerSettings;
 
     public Input<ContainerConfigurationArgs> getContainerSettings() {
         return this.containerSettings == null ? Input.empty() : this.containerSettings;
@@ -71,7 +71,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+        private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -82,7 +82,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="forceUpdateTag")
-    private final @Nullable Input<String> forceUpdateTag;
+        private final @Nullable Input<String> forceUpdateTag;
 
     public Input<String> getForceUpdateTag() {
         return this.forceUpdateTag == null ? Input.empty() : this.forceUpdateTag;
@@ -93,7 +93,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<ManagedServiceIdentityArgs> identity;
+        private final @Nullable Input<ManagedServiceIdentityArgs> identity;
 
     public Input<ManagedServiceIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -105,7 +105,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -116,7 +116,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -127,7 +127,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryScriptUri")
-    private final @Nullable Input<String> primaryScriptUri;
+        private final @Nullable Input<String> primaryScriptUri;
 
     public Input<String> getPrimaryScriptUri() {
         return this.primaryScriptUri == null ? Input.empty() : this.primaryScriptUri;
@@ -138,7 +138,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -149,7 +149,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retentionInterval", required=true)
-    private final Input<String> retentionInterval;
+        private final Input<String> retentionInterval;
 
     public Input<String> getRetentionInterval() {
         return this.retentionInterval;
@@ -160,7 +160,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptContent")
-    private final @Nullable Input<String> scriptContent;
+        private final @Nullable Input<String> scriptContent;
 
     public Input<String> getScriptContent() {
         return this.scriptContent == null ? Input.empty() : this.scriptContent;
@@ -171,7 +171,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scriptName")
-    private final @Nullable Input<String> scriptName;
+        private final @Nullable Input<String> scriptName;
 
     public Input<String> getScriptName() {
         return this.scriptName == null ? Input.empty() : this.scriptName;
@@ -182,7 +182,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountSettings")
-    private final @Nullable Input<StorageAccountConfigurationArgs> storageAccountSettings;
+        private final @Nullable Input<StorageAccountConfigurationArgs> storageAccountSettings;
 
     public Input<StorageAccountConfigurationArgs> getStorageAccountSettings() {
         return this.storageAccountSettings == null ? Input.empty() : this.storageAccountSettings;
@@ -193,7 +193,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="supportingScriptUris")
-    private final @Nullable Input<List<String>> supportingScriptUris;
+        private final @Nullable Input<List<String>> supportingScriptUris;
 
     public Input<List<String>> getSupportingScriptUris() {
         return this.supportingScriptUris == null ? Input.empty() : this.supportingScriptUris;
@@ -204,7 +204,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -215,7 +215,7 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+        private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -514,7 +514,6 @@ public final class AzureCliScriptArgs extends io.pulumi.resources.ResourceArgs {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public AzureCliScriptArgs build() {
             return new AzureCliScriptArgs(arguments, azCliVersion, cleanupPreference, containerSettings, environmentVariables, forceUpdateTag, identity, kind, location, primaryScriptUri, resourceGroupName, retentionInterval, scriptContent, scriptName, storageAccountSettings, supportingScriptUris, tags, timeout);
         }

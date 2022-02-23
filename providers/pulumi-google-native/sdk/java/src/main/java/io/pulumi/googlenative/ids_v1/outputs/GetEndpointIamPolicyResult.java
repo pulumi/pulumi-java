@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ids_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ids_v1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.ids_v1.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetEndpointIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetEndpointIamPolicyResult build() {
             return new GetEndpointIamPolicyResult(auditConfigs, bindings, etag, version);
         }

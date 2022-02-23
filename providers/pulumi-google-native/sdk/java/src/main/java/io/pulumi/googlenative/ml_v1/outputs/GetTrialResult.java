@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1_Trial_ParameterResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__MeasurementResponse;
 import java.lang.Boolean;
@@ -246,7 +246,6 @@ public final class GetTrialResult {
             this.trialInfeasible = Objects.requireNonNull(trialInfeasible);
             return this;
         }
-
         public GetTrialResult build() {
             return new GetTrialResult(clientId, endTime, finalMeasurement, infeasibleReason, measurements, name, parameters, startTime, state, trialInfeasible);
         }

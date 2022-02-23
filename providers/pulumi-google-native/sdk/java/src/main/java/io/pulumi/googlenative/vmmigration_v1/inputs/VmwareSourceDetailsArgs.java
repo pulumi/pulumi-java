@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -34,7 +34,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+      private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -45,7 +45,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -56,7 +56,7 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="vcenterIp")
-    private final @Nullable Input<String> vcenterIp;
+      private final @Nullable Input<String> vcenterIp;
 
     public Input<String> getVcenterIp() {
         return this.vcenterIp == null ? Input.empty() : this.vcenterIp;
@@ -145,7 +145,6 @@ public final class VmwareSourceDetailsArgs extends io.pulumi.resources.ResourceA
             this.vcenterIp = Input.ofNullable(vcenterIp);
             return this;
         }
-
         public VmwareSourceDetailsArgs build() {
             return new VmwareSourceDetailsArgs(password, thumbprint, username, vcenterIp);
         }

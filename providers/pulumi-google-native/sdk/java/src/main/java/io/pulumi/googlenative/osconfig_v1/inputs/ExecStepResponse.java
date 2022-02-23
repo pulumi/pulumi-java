@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.ExecStepConfigResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linuxExecStepConfig", required=true)
-    private final ExecStepConfigResponse linuxExecStepConfig;
+      private final ExecStepConfigResponse linuxExecStepConfig;
 
     public ExecStepConfigResponse getLinuxExecStepConfig() {
         return this.linuxExecStepConfig;
@@ -32,7 +32,7 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="windowsExecStepConfig", required=true)
-    private final ExecStepConfigResponse windowsExecStepConfig;
+      private final ExecStepConfigResponse windowsExecStepConfig;
 
     public ExecStepConfigResponse getWindowsExecStepConfig() {
         return this.windowsExecStepConfig;
@@ -81,7 +81,6 @@ public final class ExecStepResponse extends io.pulumi.resources.InvokeArgs {
             this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
             return this;
         }
-
         public ExecStepResponse build() {
             return new ExecStepResponse(linuxExecStepConfig, windowsExecStepConfig);
         }

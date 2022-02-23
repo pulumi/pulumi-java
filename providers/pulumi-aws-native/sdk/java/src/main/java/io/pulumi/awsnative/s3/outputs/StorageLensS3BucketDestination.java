@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.outputs;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationFormat;
 import io.pulumi.awsnative.s3.enums.StorageLensS3BucketDestinationOutputSchemaVersion;
 import io.pulumi.awsnative.s3.outputs.StorageLensEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -155,7 +155,6 @@ public final class StorageLensS3BucketDestination {
             this.prefix = prefix;
             return this;
         }
-
         public StorageLensS3BucketDestination build() {
             return new StorageLensS3BucketDestination(accountId, arn, encryption, format, outputSchemaVersion, prefix);
         }

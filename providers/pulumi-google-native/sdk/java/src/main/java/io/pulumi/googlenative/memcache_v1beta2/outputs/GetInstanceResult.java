@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.memcache_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.memcache_v1beta2.outputs.InstanceMessageResponse;
 import io.pulumi.googlenative.memcache_v1beta2.outputs.MemcacheParametersResponse;
 import io.pulumi.googlenative.memcache_v1beta2.outputs.NodeConfigResponse;
@@ -397,7 +397,6 @@ public final class GetInstanceResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(authorizedNetwork, createTime, discoveryEndpoint, displayName, instanceMessages, labels, memcacheFullVersion, memcacheNodes, memcacheVersion, name, nodeConfig, nodeCount, parameters, state, updateAvailable, updateTime, zones);
         }

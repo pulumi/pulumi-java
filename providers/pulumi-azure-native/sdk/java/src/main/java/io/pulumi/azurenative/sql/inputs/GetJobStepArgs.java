@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobAgentName", required=true)
-    private final String jobAgentName;
+        private final String jobAgentName;
 
     public String getJobAgentName() {
         return this.jobAgentName;
@@ -28,7 +28,7 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final String jobName;
+        private final String jobName;
 
     public String getJobName() {
         return this.jobName;
@@ -39,7 +39,7 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final String serverName;
+        private final String serverName;
 
     public String getServerName() {
         return this.serverName;
@@ -61,7 +61,7 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stepName", required=true)
-    private final String stepName;
+        private final String stepName;
 
     public String getStepName() {
         return this.stepName;
@@ -140,7 +140,6 @@ public final class GetJobStepArgs extends io.pulumi.resources.InvokeArgs {
             this.stepName = Objects.requireNonNull(stepName);
             return this;
         }
-
         public GetJobStepArgs build() {
             return new GetJobStepArgs(jobAgentName, jobName, resourceGroupName, serverName, stepName);
         }

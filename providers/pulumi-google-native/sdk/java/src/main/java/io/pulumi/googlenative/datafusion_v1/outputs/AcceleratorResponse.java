@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class AcceleratorResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public AcceleratorResponse build() {
             return new AcceleratorResponse(acceleratorType, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revocationState", required=true)
-    private final String revocationState;
+      private final String revocationState;
 
     public String getRevocationState() {
         return this.revocationState;
@@ -32,7 +32,7 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="revocationTime", required=true)
-    private final String revocationTime;
+      private final String revocationTime;
 
     public String getRevocationTime() {
         return this.revocationTime;
@@ -81,7 +81,6 @@ public final class RevocationDetailsResponse extends io.pulumi.resources.InvokeA
             this.revocationTime = Objects.requireNonNull(revocationTime);
             return this;
         }
-
         public RevocationDetailsResponse build() {
             return new RevocationDetailsResponse(revocationState, revocationTime);
         }

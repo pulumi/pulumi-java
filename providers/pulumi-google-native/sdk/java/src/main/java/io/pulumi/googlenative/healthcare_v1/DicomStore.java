@@ -5,8 +5,8 @@ package io.pulumi.googlenative.healthcare_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1.DicomStoreArgs;
 import io.pulumi.googlenative.healthcare_v1.outputs.NotificationConfigResponse;
@@ -63,13 +63,6 @@ public class DicomStore extends io.pulumi.resources.CustomResource {
         return this.notificationConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DicomStore(String name) {
-        super("google-native:healthcare/v1:DicomStore", name, DicomStoreArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

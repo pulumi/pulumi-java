@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="begin")
-    private final @Nullable Input<Integer> begin;
+        private final @Nullable Input<Integer> begin;
 
     public Input<Integer> getBegin() {
         return this.begin == null ? Input.empty() : this.begin;
@@ -34,7 +34,7 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<Integer> end;
+        private final @Nullable Input<Integer> end;
 
     public Input<Integer> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -93,7 +93,6 @@ public final class HttpErrorRangeParametersArgs extends io.pulumi.resources.Reso
             this.end = Input.ofNullable(end);
             return this;
         }
-
         public HttpErrorRangeParametersArgs build() {
             return new HttpErrorRangeParametersArgs(begin, end);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.cdn.inputs.ResourceReferenceArgs;
 import io.pulumi.azurenative.cdn.inputs.SharedPrivateLinkResourcePropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="azureOrigin")
-    private final @Nullable Input<ResourceReferenceArgs> azureOrigin;
+        private final @Nullable Input<ResourceReferenceArgs> azureOrigin;
 
     public Input<ResourceReferenceArgs> getAzureOrigin() {
         return this.azureOrigin == null ? Input.empty() : this.azureOrigin;
@@ -35,7 +35,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable Input<Either<String,EnabledState>> enabledState;
+        private final @Nullable Input<Either<String,EnabledState>> enabledState;
 
     public Input<Either<String,EnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -46,7 +46,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostName", required=true)
-    private final Input<String> hostName;
+        private final Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName;
@@ -57,7 +57,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpPort")
-    private final @Nullable Input<Integer> httpPort;
+        private final @Nullable Input<Integer> httpPort;
 
     public Input<Integer> getHttpPort() {
         return this.httpPort == null ? Input.empty() : this.httpPort;
@@ -68,7 +68,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpsPort")
-    private final @Nullable Input<Integer> httpsPort;
+        private final @Nullable Input<Integer> httpsPort;
 
     public Input<Integer> getHttpsPort() {
         return this.httpsPort == null ? Input.empty() : this.httpsPort;
@@ -79,7 +79,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originGroupName", required=true)
-    private final Input<String> originGroupName;
+        private final Input<String> originGroupName;
 
     public Input<String> getOriginGroupName() {
         return this.originGroupName;
@@ -90,7 +90,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originHostHeader")
-    private final @Nullable Input<String> originHostHeader;
+        private final @Nullable Input<String> originHostHeader;
 
     public Input<String> getOriginHostHeader() {
         return this.originHostHeader == null ? Input.empty() : this.originHostHeader;
@@ -101,7 +101,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="originName")
-    private final @Nullable Input<String> originName;
+        private final @Nullable Input<String> originName;
 
     public Input<String> getOriginName() {
         return this.originName == null ? Input.empty() : this.originName;
@@ -112,7 +112,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+        private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -123,7 +123,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="profileName", required=true)
-    private final Input<String> profileName;
+        private final Input<String> profileName;
 
     public Input<String> getProfileName() {
         return this.profileName;
@@ -134,7 +134,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -145,7 +145,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedPrivateLinkResource")
-    private final @Nullable Input<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource;
+        private final @Nullable Input<SharedPrivateLinkResourcePropertiesArgs> sharedPrivateLinkResource;
 
     public Input<SharedPrivateLinkResourcePropertiesArgs> getSharedPrivateLinkResource() {
         return this.sharedPrivateLinkResource == null ? Input.empty() : this.sharedPrivateLinkResource;
@@ -156,7 +156,7 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="weight")
-    private final @Nullable Input<Integer> weight;
+        private final @Nullable Input<Integer> weight;
 
     public Input<Integer> getWeight() {
         return this.weight == null ? Input.empty() : this.weight;
@@ -380,7 +380,6 @@ public final class AFDOriginArgs extends io.pulumi.resources.ResourceArgs {
             this.weight = Input.ofNullable(weight);
             return this;
         }
-
         public AFDOriginArgs build() {
             return new AFDOriginArgs(azureOrigin, enabledState, hostName, httpPort, httpsPort, originGroupName, originHostHeader, originName, priority, profileName, resourceGroupName, sharedPrivateLinkResource, weight);
         }

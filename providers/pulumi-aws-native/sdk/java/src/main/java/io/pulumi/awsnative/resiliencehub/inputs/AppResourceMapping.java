@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.resiliencehub.inputs;
 
 import io.pulumi.awsnative.resiliencehub.inputs.AppPhysicalResourceId;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,28 +20,28 @@ public final class AppResourceMapping extends io.pulumi.resources.InvokeArgs {
     public static final AppResourceMapping Empty = new AppResourceMapping();
 
     @InputImport(name="logicalStackName")
-    private final @Nullable String logicalStackName;
+        private final @Nullable String logicalStackName;
 
     public Optional<String> getLogicalStackName() {
         return this.logicalStackName == null ? Optional.empty() : Optional.ofNullable(this.logicalStackName);
     }
 
     @InputImport(name="mappingType", required=true)
-    private final String mappingType;
+        private final String mappingType;
 
     public String getMappingType() {
         return this.mappingType;
     }
 
     @InputImport(name="physicalResourceId", required=true)
-    private final AppPhysicalResourceId physicalResourceId;
+        private final AppPhysicalResourceId physicalResourceId;
 
     public AppPhysicalResourceId getPhysicalResourceId() {
         return this.physicalResourceId;
     }
 
     @InputImport(name="resourceName")
-    private final @Nullable String resourceName;
+        private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
@@ -110,7 +110,6 @@ public final class AppResourceMapping extends io.pulumi.resources.InvokeArgs {
             this.resourceName = resourceName;
             return this;
         }
-
         public AppResourceMapping build() {
             return new AppResourceMapping(logicalStackName, mappingType, physicalResourceId, resourceName);
         }

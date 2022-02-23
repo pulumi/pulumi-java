@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
     public static final FlowVeevaSourcePropertiesArgs Empty = new FlowVeevaSourcePropertiesArgs();
 
     @InputImport(name="documentType")
-    private final @Nullable Input<String> documentType;
+        private final @Nullable Input<String> documentType;
 
     public Input<String> getDocumentType() {
         return this.documentType == null ? Input.empty() : this.documentType;
     }
 
     @InputImport(name="includeAllVersions")
-    private final @Nullable Input<Boolean> includeAllVersions;
+        private final @Nullable Input<Boolean> includeAllVersions;
 
     public Input<Boolean> getIncludeAllVersions() {
         return this.includeAllVersions == null ? Input.empty() : this.includeAllVersions;
     }
 
     @InputImport(name="includeRenditions")
-    private final @Nullable Input<Boolean> includeRenditions;
+        private final @Nullable Input<Boolean> includeRenditions;
 
     public Input<Boolean> getIncludeRenditions() {
         return this.includeRenditions == null ? Input.empty() : this.includeRenditions;
     }
 
     @InputImport(name="includeSourceFiles")
-    private final @Nullable Input<Boolean> includeSourceFiles;
+        private final @Nullable Input<Boolean> includeSourceFiles;
 
     public Input<Boolean> getIncludeSourceFiles() {
         return this.includeSourceFiles == null ? Input.empty() : this.includeSourceFiles;
     }
 
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -148,7 +148,6 @@ public final class FlowVeevaSourcePropertiesArgs extends io.pulumi.resources.Res
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public FlowVeevaSourcePropertiesArgs build() {
             return new FlowVeevaSourcePropertiesArgs(documentType, includeAllVersions, includeRenditions, includeSourceFiles, object);
         }

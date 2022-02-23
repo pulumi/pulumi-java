@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ResourceResponse {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public ResourceResponse build() {
             return new ResourceResponse(uri);
         }

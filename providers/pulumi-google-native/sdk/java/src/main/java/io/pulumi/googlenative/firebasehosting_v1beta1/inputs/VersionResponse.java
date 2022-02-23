@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.ActingUserResponse;
 import io.pulumi.googlenative.firebasehosting_v1beta1.inputs.ServingConfigResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="config", required=true)
-    private final ServingConfigResponse config;
+      private final ServingConfigResponse config;
 
     public ServingConfigResponse getConfig() {
         return this.config;
@@ -35,7 +35,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+      private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
@@ -46,7 +46,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createUser", required=true)
-    private final ActingUserResponse createUser;
+      private final ActingUserResponse createUser;
 
     public ActingUserResponse getCreateUser() {
         return this.createUser;
@@ -57,7 +57,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deleteTime", required=true)
-    private final String deleteTime;
+      private final String deleteTime;
 
     public String getDeleteTime() {
         return this.deleteTime;
@@ -68,7 +68,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deleteUser", required=true)
-    private final ActingUserResponse deleteUser;
+      private final ActingUserResponse deleteUser;
 
     public ActingUserResponse getDeleteUser() {
         return this.deleteUser;
@@ -79,7 +79,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fileCount", required=true)
-    private final String fileCount;
+      private final String fileCount;
 
     public String getFileCount() {
         return this.fileCount;
@@ -90,7 +90,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="finalizeTime", required=true)
-    private final String finalizeTime;
+      private final String finalizeTime;
 
     public String getFinalizeTime() {
         return this.finalizeTime;
@@ -101,7 +101,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="finalizeUser", required=true)
-    private final ActingUserResponse finalizeUser;
+      private final ActingUserResponse finalizeUser;
 
     public ActingUserResponse getFinalizeUser() {
         return this.finalizeUser;
@@ -112,7 +112,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -123,7 +123,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -134,7 +134,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+      private final String status;
 
     public String getStatus() {
         return this.status;
@@ -145,7 +145,7 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="versionBytes", required=true)
-    private final String versionBytes;
+      private final String versionBytes;
 
     public String getVersionBytes() {
         return this.versionBytes;
@@ -294,7 +294,6 @@ public final class VersionResponse extends io.pulumi.resources.InvokeArgs {
             this.versionBytes = Objects.requireNonNull(versionBytes);
             return this;
         }
-
         public VersionResponse build() {
             return new VersionResponse(config, createTime, createUser, deleteTime, deleteUser, fileCount, finalizeTime, finalizeUser, labels, name, status, versionBytes);
         }

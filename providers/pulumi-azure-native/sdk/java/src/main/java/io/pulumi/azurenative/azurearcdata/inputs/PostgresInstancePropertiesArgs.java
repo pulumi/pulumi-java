@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.inputs.BasicLoginInformationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="admin")
-    private final @Nullable Input<String> admin;
+        private final @Nullable Input<String> admin;
 
     public Input<String> getAdmin() {
         return this.admin == null ? Input.empty() : this.admin;
@@ -36,7 +36,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="basicLoginInformation")
-    private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
+        private final @Nullable Input<BasicLoginInformationArgs> basicLoginInformation;
 
     public Input<BasicLoginInformationArgs> getBasicLoginInformation() {
         return this.basicLoginInformation == null ? Input.empty() : this.basicLoginInformation;
@@ -47,7 +47,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="dataControllerId")
-    private final @Nullable Input<String> dataControllerId;
+        private final @Nullable Input<String> dataControllerId;
 
     public Input<String> getDataControllerId() {
         return this.dataControllerId == null ? Input.empty() : this.dataControllerId;
@@ -58,7 +58,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="k8sRaw")
-    private final @Nullable Input<Object> k8sRaw;
+        private final @Nullable Input<Object> k8sRaw;
 
     public Input<Object> getK8sRaw() {
         return this.k8sRaw == null ? Input.empty() : this.k8sRaw;
@@ -69,7 +69,7 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="lastUploadedDate")
-    private final @Nullable Input<String> lastUploadedDate;
+        private final @Nullable Input<String> lastUploadedDate;
 
     public Input<String> getLastUploadedDate() {
         return this.lastUploadedDate == null ? Input.empty() : this.lastUploadedDate;
@@ -173,7 +173,6 @@ public final class PostgresInstancePropertiesArgs extends io.pulumi.resources.Re
             this.lastUploadedDate = Input.ofNullable(lastUploadedDate);
             return this;
         }
-
         public PostgresInstancePropertiesArgs build() {
             return new PostgresInstancePropertiesArgs(admin, basicLoginInformation, dataControllerId, k8sRaw, lastUploadedDate);
         }

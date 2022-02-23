@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="documentation")
-    private final @Nullable Input<String> documentation;
+        private final @Nullable Input<String> documentation;
 
     public Input<String> getDocumentation() {
         return this.documentation == null ? Input.empty() : this.documentation;
@@ -45,7 +45,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverUrl")
-    private final @Nullable Input<String> serverUrl;
+        private final @Nullable Input<String> serverUrl;
 
     public Input<String> getServerUrl() {
         return this.serverUrl == null ? Input.empty() : this.serverUrl;
@@ -56,7 +56,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -67,7 +67,7 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -171,7 +171,6 @@ public final class GatewayApiMetadataPropertiesArgs extends io.pulumi.resources.
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public GatewayApiMetadataPropertiesArgs build() {
             return new GatewayApiMetadataPropertiesArgs(description, documentation, serverUrl, title, version);
         }

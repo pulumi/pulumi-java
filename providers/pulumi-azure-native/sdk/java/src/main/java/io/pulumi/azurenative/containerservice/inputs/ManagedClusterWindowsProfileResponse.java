@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="adminPassword")
-    private final @Nullable String adminPassword;
+        private final @Nullable String adminPassword;
 
     public Optional<String> getAdminPassword() {
         return this.adminPassword == null ? Optional.empty() : Optional.ofNullable(this.adminPassword);
@@ -35,7 +35,7 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="adminUsername", required=true)
-    private final String adminUsername;
+        private final String adminUsername;
 
     public String getAdminUsername() {
         return this.adminUsername;
@@ -46,7 +46,7 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableCSIProxy")
-    private final @Nullable Boolean enableCSIProxy;
+        private final @Nullable Boolean enableCSIProxy;
 
     public Optional<Boolean> getEnableCSIProxy() {
         return this.enableCSIProxy == null ? Optional.empty() : Optional.ofNullable(this.enableCSIProxy);
@@ -57,7 +57,7 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable String licenseType;
+        private final @Nullable String licenseType;
 
     public Optional<String> getLicenseType() {
         return this.licenseType == null ? Optional.empty() : Optional.ofNullable(this.licenseType);
@@ -126,7 +126,6 @@ public final class ManagedClusterWindowsProfileResponse extends io.pulumi.resour
             this.licenseType = licenseType;
             return this;
         }
-
         public ManagedClusterWindowsProfileResponse build() {
             return new ManagedClusterWindowsProfileResponse(adminPassword, adminUsername, enableCSIProxy, licenseType);
         }

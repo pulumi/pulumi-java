@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -42,7 +42,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="accessTokenSecret")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> accessTokenSecret;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getAccessTokenSecret() {
         return this.accessTokenSecret == null ? Input.empty() : this.accessTokenSecret;
@@ -53,7 +53,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -64,7 +64,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="companyId")
-    private final @Nullable Input<Object> companyId;
+        private final @Nullable Input<Object> companyId;
 
     public Input<Object> getCompanyId() {
         return this.companyId == null ? Input.empty() : this.companyId;
@@ -75,7 +75,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -86,7 +86,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="connectionProperties")
-    private final @Nullable Input<Object> connectionProperties;
+        private final @Nullable Input<Object> connectionProperties;
 
     public Input<Object> getConnectionProperties() {
         return this.connectionProperties == null ? Input.empty() : this.connectionProperties;
@@ -97,7 +97,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="consumerKey")
-    private final @Nullable Input<Object> consumerKey;
+        private final @Nullable Input<Object> consumerKey;
 
     public Input<Object> getConsumerKey() {
         return this.consumerKey == null ? Input.empty() : this.consumerKey;
@@ -108,7 +108,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="consumerSecret")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> consumerSecret;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getConsumerSecret() {
         return this.consumerSecret == null ? Input.empty() : this.consumerSecret;
@@ -119,7 +119,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -130,7 +130,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -141,7 +141,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<Object> endpoint;
+        private final @Nullable Input<Object> endpoint;
 
     public Input<Object> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -152,7 +152,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -164,7 +164,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -175,7 +175,7 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Input<Object> useEncryptedEndpoints;
+        private final @Nullable Input<Object> useEncryptedEndpoints;
 
     public Input<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
@@ -414,7 +414,6 @@ public final class QuickBooksLinkedServiceArgs extends io.pulumi.resources.Resou
             this.useEncryptedEndpoints = Input.ofNullable(useEncryptedEndpoints);
             return this;
         }
-
         public QuickBooksLinkedServiceArgs build() {
             return new QuickBooksLinkedServiceArgs(accessToken, accessTokenSecret, annotations, companyId, connectVia, connectionProperties, consumerKey, consumerSecret, description, encryptedCredential, endpoint, parameters, type, useEncryptedEndpoints);
         }

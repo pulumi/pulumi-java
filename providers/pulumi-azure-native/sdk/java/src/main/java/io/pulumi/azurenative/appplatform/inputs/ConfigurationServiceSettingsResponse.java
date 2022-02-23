@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.ConfigurationServiceGitPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConfigurationServiceSettingsResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="gitProperty")
-    private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
+        private final @Nullable ConfigurationServiceGitPropertyResponse gitProperty;
 
     public Optional<ConfigurationServiceGitPropertyResponse> getGitProperty() {
         return this.gitProperty == null ? Optional.empty() : Optional.ofNullable(this.gitProperty);
@@ -61,7 +61,6 @@ public final class ConfigurationServiceSettingsResponse extends io.pulumi.resour
             this.gitProperty = gitProperty;
             return this;
         }
-
         public ConfigurationServiceSettingsResponse build() {
             return new ConfigurationServiceSettingsResponse(gitProperty);
         }

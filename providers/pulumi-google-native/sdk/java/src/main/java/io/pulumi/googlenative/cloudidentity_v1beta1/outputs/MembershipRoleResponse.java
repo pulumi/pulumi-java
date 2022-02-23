@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.ExpiryDetailResponse;
 import io.pulumi.googlenative.cloudidentity_v1beta1.outputs.RestrictionEvaluationsResponse;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class MembershipRoleResponse {
             this.restrictionEvaluations = Objects.requireNonNull(restrictionEvaluations);
             return this;
         }
-
         public MembershipRoleResponse build() {
             return new MembershipRoleResponse(expiryDetail, name, restrictionEvaluations);
         }

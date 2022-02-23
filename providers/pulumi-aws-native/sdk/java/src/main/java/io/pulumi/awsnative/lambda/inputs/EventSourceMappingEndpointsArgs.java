@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kafkaBootstrapServers")
-    private final @Nullable Input<List<String>> kafkaBootstrapServers;
+        private final @Nullable Input<List<String>> kafkaBootstrapServers;
 
     public Input<List<String>> getKafkaBootstrapServers() {
         return this.kafkaBootstrapServers == null ? Input.empty() : this.kafkaBootstrapServers;
@@ -67,7 +67,6 @@ public final class EventSourceMappingEndpointsArgs extends io.pulumi.resources.R
             this.kafkaBootstrapServers = Input.ofNullable(kafkaBootstrapServers);
             return this;
         }
-
         public EventSourceMappingEndpointsArgs build() {
             return new EventSourceMappingEndpointsArgs(kafkaBootstrapServers);
         }

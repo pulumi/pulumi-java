@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class StorageProfileResponse {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(diskSizeInGB, fileShareName, storageAccountResourceId);
         }

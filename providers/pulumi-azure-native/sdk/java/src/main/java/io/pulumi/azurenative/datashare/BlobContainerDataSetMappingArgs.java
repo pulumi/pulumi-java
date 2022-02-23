@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final Input<String> containerName;
+        private final Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName;
@@ -41,7 +41,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataSetId", required=true)
-    private final Input<String> dataSetId;
+        private final Input<String> dataSetId;
 
     public Input<String> getDataSetId() {
         return this.dataSetId;
@@ -52,7 +52,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataSetMappingName")
-    private final @Nullable Input<String> dataSetMappingName;
+        private final @Nullable Input<String> dataSetMappingName;
 
     public Input<String> getDataSetMappingName() {
         return this.dataSetMappingName == null ? Input.empty() : this.dataSetMappingName;
@@ -64,7 +64,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -75,7 +75,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroup", required=true)
-    private final Input<String> resourceGroup;
+        private final Input<String> resourceGroup;
 
     public Input<String> getResourceGroup() {
         return this.resourceGroup;
@@ -86,7 +86,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -97,7 +97,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final Input<String> shareSubscriptionName;
+        private final Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -108,7 +108,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountName", required=true)
-    private final Input<String> storageAccountName;
+        private final Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName;
@@ -119,7 +119,7 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final Input<String> subscriptionId;
+        private final Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId;
@@ -298,7 +298,6 @@ public final class BlobContainerDataSetMappingArgs extends io.pulumi.resources.R
             this.subscriptionId = Input.of(Objects.requireNonNull(subscriptionId));
             return this;
         }
-
         public BlobContainerDataSetMappingArgs build() {
             return new BlobContainerDataSetMappingArgs(accountName, containerName, dataSetId, dataSetMappingName, kind, resourceGroup, resourceGroupName, shareSubscriptionName, storageAccountName, subscriptionId);
         }

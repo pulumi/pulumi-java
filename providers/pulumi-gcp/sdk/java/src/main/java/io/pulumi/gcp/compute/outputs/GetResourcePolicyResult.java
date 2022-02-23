@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyGroupPlacementPolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicyInstanceSchedulePolicy;
 import io.pulumi.gcp.compute.outputs.GetResourcePolicySnapshotSchedulePolicy;
@@ -179,7 +179,6 @@ public final class GetResourcePolicyResult {
             this.snapshotSchedulePolicies = Objects.requireNonNull(snapshotSchedulePolicies);
             return this;
         }
-
         public GetResourcePolicyResult build() {
             return new GetResourcePolicyResult(description, groupPlacementPolicies, id, instanceSchedulePolicies, name, project, region, selfLink, snapshotSchedulePolicies);
         }

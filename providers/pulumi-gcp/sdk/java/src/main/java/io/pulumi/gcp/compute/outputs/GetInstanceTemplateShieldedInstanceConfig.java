@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -71,7 +71,6 @@ public final class GetInstanceTemplateShieldedInstanceConfig {
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public GetInstanceTemplateShieldedInstanceConfig build() {
             return new GetInstanceTemplateShieldedInstanceConfig(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

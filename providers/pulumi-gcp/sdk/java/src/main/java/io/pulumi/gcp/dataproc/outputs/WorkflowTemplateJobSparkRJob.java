@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobSparkRJobLoggingConfig;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class WorkflowTemplateJobSparkRJob {
             this.properties = properties;
             return this;
         }
-
         public WorkflowTemplateJobSparkRJob build() {
             return new WorkflowTemplateJobSparkRJob(archiveUris, args, fileUris, loggingConfig, mainRFileUri, properties);
         }

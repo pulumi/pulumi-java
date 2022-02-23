@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * 
      */
     @InputImport(name="agentChannel", required=true)
-    private final Integer agentChannel;
+      private final Integer agentChannel;
 
     public Integer getAgentChannel() {
         return this.agentChannel;
@@ -32,7 +32,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
      * 
      */
     @InputImport(name="customerChannel", required=true)
-    private final Integer customerChannel;
+      private final Integer customerChannel;
 
     public Integer getCustomerChannel() {
         return this.customerChannel;
@@ -81,7 +81,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationCallMetadataRes
             this.customerChannel = Objects.requireNonNull(customerChannel);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationCallMetadataResponse(agentChannel, customerChannel);
         }

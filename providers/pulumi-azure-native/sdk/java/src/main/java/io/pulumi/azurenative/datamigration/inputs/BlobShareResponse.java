@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sasUri", required=true)
-    private final String sasUri;
+        private final String sasUri;
 
     public String getSasUri() {
         return this.sasUri;
@@ -59,7 +59,6 @@ public final class BlobShareResponse extends io.pulumi.resources.InvokeArgs {
             this.sasUri = Objects.requireNonNull(sasUri);
             return this;
         }
-
         public BlobShareResponse build() {
             return new BlobShareResponse(sasUri);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firebasehosting_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firebasehosting_v1beta1.DomainArgs;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.DomainProvisioningResponse;
@@ -106,13 +106,6 @@ public class Domain extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Domain(String name) {
-        super("google-native:firebasehosting/v1beta1:Domain", name, DomainArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

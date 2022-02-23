@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="activateDate", required=true)
-    private final String activateDate;
+        private final String activateDate;
 
     public String getActivateDate() {
         return this.activateDate;
@@ -35,7 +35,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certVersion")
-    private final @Nullable String certVersion;
+        private final @Nullable String certVersion;
 
     public Optional<String> getCertVersion() {
         return this.certVersion == null ? Optional.empty() : Optional.ofNullable(this.certVersion);
@@ -46,7 +46,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dnsNames", required=true)
-    private final List<String> dnsNames;
+        private final List<String> dnsNames;
 
     public List<String> getDnsNames() {
         return this.dnsNames;
@@ -57,7 +57,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expirationDate", required=true)
-    private final String expirationDate;
+        private final String expirationDate;
 
     public String getExpirationDate() {
         return this.expirationDate;
@@ -68,7 +68,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="issuedDate", required=true)
-    private final String issuedDate;
+        private final String issuedDate;
 
     public String getIssuedDate() {
         return this.issuedDate;
@@ -79,7 +79,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="issuer", required=true)
-    private final String issuer;
+        private final String issuer;
 
     public String getIssuer() {
         return this.issuer;
@@ -90,7 +90,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="keyVaultCertName", required=true)
-    private final String keyVaultCertName;
+        private final String keyVaultCertName;
 
     public String getKeyVaultCertName() {
         return this.keyVaultCertName;
@@ -101,7 +101,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="subjectName", required=true)
-    private final String subjectName;
+        private final String subjectName;
 
     public String getSubjectName() {
         return this.subjectName;
@@ -112,7 +112,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="thumbprint", required=true)
-    private final String thumbprint;
+        private final String thumbprint;
 
     public String getThumbprint() {
         return this.thumbprint;
@@ -123,7 +123,7 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="vaultUri", required=true)
-    private final String vaultUri;
+        private final String vaultUri;
 
     public String getVaultUri() {
         return this.vaultUri;
@@ -252,7 +252,6 @@ public final class CertificatePropertiesResponse extends io.pulumi.resources.Inv
             this.vaultUri = Objects.requireNonNull(vaultUri);
             return this;
         }
-
         public CertificatePropertiesResponse build() {
             return new CertificatePropertiesResponse(activateDate, certVersion, dnsNames, expirationDate, issuedDate, issuer, keyVaultCertName, subjectName, thumbprint, vaultUri);
         }

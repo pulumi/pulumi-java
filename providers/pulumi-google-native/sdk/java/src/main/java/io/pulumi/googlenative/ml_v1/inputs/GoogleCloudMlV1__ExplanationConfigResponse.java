@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__IntegratedGradientsAttributionResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__SampledShapleyAttributionResponse;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__XraiAttributionResponse;
@@ -23,7 +23,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="integratedGradientsAttribution", required=true)
-    private final GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
+      private final GoogleCloudMlV1__IntegratedGradientsAttributionResponse integratedGradientsAttribution;
 
     public GoogleCloudMlV1__IntegratedGradientsAttributionResponse getIntegratedGradientsAttribution() {
         return this.integratedGradientsAttribution;
@@ -34,7 +34,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="sampledShapleyAttribution", required=true)
-    private final GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
+      private final GoogleCloudMlV1__SampledShapleyAttributionResponse sampledShapleyAttribution;
 
     public GoogleCloudMlV1__SampledShapleyAttributionResponse getSampledShapleyAttribution() {
         return this.sampledShapleyAttribution;
@@ -45,7 +45,7 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="xraiAttribution", required=true)
-    private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
+      private final GoogleCloudMlV1__XraiAttributionResponse xraiAttribution;
 
     public GoogleCloudMlV1__XraiAttributionResponse getXraiAttribution() {
         return this.xraiAttribution;
@@ -104,7 +104,6 @@ public final class GoogleCloudMlV1__ExplanationConfigResponse extends io.pulumi.
             this.xraiAttribution = Objects.requireNonNull(xraiAttribution);
             return this;
         }
-
         public GoogleCloudMlV1__ExplanationConfigResponse build() {
             return new GoogleCloudMlV1__ExplanationConfigResponse(integratedGradientsAttribution, sampledShapleyAttribution, xraiAttribution);
         }

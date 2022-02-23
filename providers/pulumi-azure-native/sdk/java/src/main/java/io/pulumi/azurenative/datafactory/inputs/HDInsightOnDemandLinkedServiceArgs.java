@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.inputs.ScriptActionArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -34,7 +34,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="additionalLinkedServiceNames")
-    private final @Nullable Input<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames;
+        private final @Nullable Input<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames;
 
     public Input<List<LinkedServiceReferenceArgs>> getAdditionalLinkedServiceNames() {
         return this.additionalLinkedServiceNames == null ? Input.empty() : this.additionalLinkedServiceNames;
@@ -45,7 +45,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -56,7 +56,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterNamePrefix")
-    private final @Nullable Input<Object> clusterNamePrefix;
+        private final @Nullable Input<Object> clusterNamePrefix;
 
     public Input<Object> getClusterNamePrefix() {
         return this.clusterNamePrefix == null ? Input.empty() : this.clusterNamePrefix;
@@ -67,7 +67,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterPassword")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClusterPassword() {
         return this.clusterPassword == null ? Input.empty() : this.clusterPassword;
@@ -78,7 +78,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterResourceGroup", required=true)
-    private final Input<Object> clusterResourceGroup;
+        private final Input<Object> clusterResourceGroup;
 
     public Input<Object> getClusterResourceGroup() {
         return this.clusterResourceGroup;
@@ -89,7 +89,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterSize", required=true)
-    private final Input<Object> clusterSize;
+        private final Input<Object> clusterSize;
 
     public Input<Object> getClusterSize() {
         return this.clusterSize;
@@ -100,7 +100,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterSshPassword")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getClusterSshPassword() {
         return this.clusterSshPassword == null ? Input.empty() : this.clusterSshPassword;
@@ -111,7 +111,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterSshUserName")
-    private final @Nullable Input<Object> clusterSshUserName;
+        private final @Nullable Input<Object> clusterSshUserName;
 
     public Input<Object> getClusterSshUserName() {
         return this.clusterSshUserName == null ? Input.empty() : this.clusterSshUserName;
@@ -122,7 +122,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterType")
-    private final @Nullable Input<Object> clusterType;
+        private final @Nullable Input<Object> clusterType;
 
     public Input<Object> getClusterType() {
         return this.clusterType == null ? Input.empty() : this.clusterType;
@@ -133,7 +133,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="clusterUserName")
-    private final @Nullable Input<Object> clusterUserName;
+        private final @Nullable Input<Object> clusterUserName;
 
     public Input<Object> getClusterUserName() {
         return this.clusterUserName == null ? Input.empty() : this.clusterUserName;
@@ -144,7 +144,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -155,7 +155,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="coreConfiguration")
-    private final @Nullable Input<Object> coreConfiguration;
+        private final @Nullable Input<Object> coreConfiguration;
 
     public Input<Object> getCoreConfiguration() {
         return this.coreConfiguration == null ? Input.empty() : this.coreConfiguration;
@@ -166,7 +166,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+        private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -177,7 +177,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dataNodeSize")
-    private final @Nullable Input<Object> dataNodeSize;
+        private final @Nullable Input<Object> dataNodeSize;
 
     public Input<Object> getDataNodeSize() {
         return this.dataNodeSize == null ? Input.empty() : this.dataNodeSize;
@@ -188,7 +188,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -199,7 +199,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -210,7 +210,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hBaseConfiguration")
-    private final @Nullable Input<Object> hBaseConfiguration;
+        private final @Nullable Input<Object> hBaseConfiguration;
 
     public Input<Object> getHBaseConfiguration() {
         return this.hBaseConfiguration == null ? Input.empty() : this.hBaseConfiguration;
@@ -221,7 +221,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hcatalogLinkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getHcatalogLinkedServiceName() {
         return this.hcatalogLinkedServiceName == null ? Input.empty() : this.hcatalogLinkedServiceName;
@@ -232,7 +232,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hdfsConfiguration")
-    private final @Nullable Input<Object> hdfsConfiguration;
+        private final @Nullable Input<Object> hdfsConfiguration;
 
     public Input<Object> getHdfsConfiguration() {
         return this.hdfsConfiguration == null ? Input.empty() : this.hdfsConfiguration;
@@ -243,7 +243,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="headNodeSize")
-    private final @Nullable Input<Object> headNodeSize;
+        private final @Nullable Input<Object> headNodeSize;
 
     public Input<Object> getHeadNodeSize() {
         return this.headNodeSize == null ? Input.empty() : this.headNodeSize;
@@ -254,7 +254,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hiveConfiguration")
-    private final @Nullable Input<Object> hiveConfiguration;
+        private final @Nullable Input<Object> hiveConfiguration;
 
     public Input<Object> getHiveConfiguration() {
         return this.hiveConfiguration == null ? Input.empty() : this.hiveConfiguration;
@@ -265,7 +265,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="hostSubscriptionId", required=true)
-    private final Input<Object> hostSubscriptionId;
+        private final Input<Object> hostSubscriptionId;
 
     public Input<Object> getHostSubscriptionId() {
         return this.hostSubscriptionId;
@@ -276,7 +276,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -287,7 +287,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="mapReduceConfiguration")
-    private final @Nullable Input<Object> mapReduceConfiguration;
+        private final @Nullable Input<Object> mapReduceConfiguration;
 
     public Input<Object> getMapReduceConfiguration() {
         return this.mapReduceConfiguration == null ? Input.empty() : this.mapReduceConfiguration;
@@ -298,7 +298,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="oozieConfiguration")
-    private final @Nullable Input<Object> oozieConfiguration;
+        private final @Nullable Input<Object> oozieConfiguration;
 
     public Input<Object> getOozieConfiguration() {
         return this.oozieConfiguration == null ? Input.empty() : this.oozieConfiguration;
@@ -309,7 +309,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -320,7 +320,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scriptActions")
-    private final @Nullable Input<List<ScriptActionArgs>> scriptActions;
+        private final @Nullable Input<List<ScriptActionArgs>> scriptActions;
 
     public Input<List<ScriptActionArgs>> getScriptActions() {
         return this.scriptActions == null ? Input.empty() : this.scriptActions;
@@ -331,7 +331,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Input<Object> servicePrincipalId;
+        private final @Nullable Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
@@ -342,7 +342,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
@@ -353,7 +353,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="sparkVersion")
-    private final @Nullable Input<Object> sparkVersion;
+        private final @Nullable Input<Object> sparkVersion;
 
     public Input<Object> getSparkVersion() {
         return this.sparkVersion == null ? Input.empty() : this.sparkVersion;
@@ -364,7 +364,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="stormConfiguration")
-    private final @Nullable Input<Object> stormConfiguration;
+        private final @Nullable Input<Object> stormConfiguration;
 
     public Input<Object> getStormConfiguration() {
         return this.stormConfiguration == null ? Input.empty() : this.stormConfiguration;
@@ -375,7 +375,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnetName")
-    private final @Nullable Input<Object> subnetName;
+        private final @Nullable Input<Object> subnetName;
 
     public Input<Object> getSubnetName() {
         return this.subnetName == null ? Input.empty() : this.subnetName;
@@ -386,7 +386,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tenant", required=true)
-    private final Input<Object> tenant;
+        private final Input<Object> tenant;
 
     public Input<Object> getTenant() {
         return this.tenant;
@@ -397,7 +397,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="timeToLive", required=true)
-    private final Input<Object> timeToLive;
+        private final Input<Object> timeToLive;
 
     public Input<Object> getTimeToLive() {
         return this.timeToLive;
@@ -409,7 +409,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -420,7 +420,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<Object> version;
+        private final Input<Object> version;
 
     public Input<Object> getVersion() {
         return this.version;
@@ -431,7 +431,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="virtualNetworkId")
-    private final @Nullable Input<Object> virtualNetworkId;
+        private final @Nullable Input<Object> virtualNetworkId;
 
     public Input<Object> getVirtualNetworkId() {
         return this.virtualNetworkId == null ? Input.empty() : this.virtualNetworkId;
@@ -442,7 +442,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="yarnConfiguration")
-    private final @Nullable Input<Object> yarnConfiguration;
+        private final @Nullable Input<Object> yarnConfiguration;
 
     public Input<Object> getYarnConfiguration() {
         return this.yarnConfiguration == null ? Input.empty() : this.yarnConfiguration;
@@ -453,7 +453,7 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="zookeeperNodeSize")
-    private final @Nullable Input<Object> zookeeperNodeSize;
+        private final @Nullable Input<Object> zookeeperNodeSize;
 
     public Input<Object> getZookeeperNodeSize() {
         return this.zookeeperNodeSize == null ? Input.empty() : this.zookeeperNodeSize;
@@ -1067,7 +1067,6 @@ public final class HDInsightOnDemandLinkedServiceArgs extends io.pulumi.resource
             this.zookeeperNodeSize = Input.ofNullable(zookeeperNodeSize);
             return this;
         }
-
         public HDInsightOnDemandLinkedServiceArgs build() {
             return new HDInsightOnDemandLinkedServiceArgs(additionalLinkedServiceNames, annotations, clusterNamePrefix, clusterPassword, clusterResourceGroup, clusterSize, clusterSshPassword, clusterSshUserName, clusterType, clusterUserName, connectVia, coreConfiguration, credential, dataNodeSize, description, encryptedCredential, hBaseConfiguration, hcatalogLinkedServiceName, hdfsConfiguration, headNodeSize, hiveConfiguration, hostSubscriptionId, linkedServiceName, mapReduceConfiguration, oozieConfiguration, parameters, scriptActions, servicePrincipalId, servicePrincipalKey, sparkVersion, stormConfiguration, subnetName, tenant, timeToLive, type, version, virtualNetworkId, yarnConfiguration, zookeeperNodeSize);
         }

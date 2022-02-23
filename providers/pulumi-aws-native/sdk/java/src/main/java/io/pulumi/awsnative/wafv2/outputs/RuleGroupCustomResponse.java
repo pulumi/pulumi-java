@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupCustomHTTPHeader;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -92,7 +92,6 @@ public final class RuleGroupCustomResponse {
             this.responseHeaders = responseHeaders;
             return this;
         }
-
         public RuleGroupCustomResponse build() {
             return new RuleGroupCustomResponse(customResponseBodyKey, responseCode, responseHeaders);
         }

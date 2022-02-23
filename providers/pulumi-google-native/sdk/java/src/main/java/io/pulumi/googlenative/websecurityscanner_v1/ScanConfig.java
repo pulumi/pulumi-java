@@ -5,8 +5,8 @@ package io.pulumi.googlenative.websecurityscanner_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.websecurityscanner_v1.ScanConfigArgs;
 import io.pulumi.googlenative.websecurityscanner_v1.outputs.AuthenticationResponse;
@@ -206,13 +206,6 @@ public class ScanConfig extends io.pulumi.resources.CustomResource {
         return this.userAgent;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ScanConfig(String name) {
-        super("google-native:websecurityscanner/v1:ScanConfig", name, ScanConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

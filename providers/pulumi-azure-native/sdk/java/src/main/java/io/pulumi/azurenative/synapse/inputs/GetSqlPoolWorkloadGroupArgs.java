@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="sqlPoolName", required=true)
-    private final String sqlPoolName;
+        private final String sqlPoolName;
 
     public String getSqlPoolName() {
         return this.sqlPoolName;
@@ -39,7 +39,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workloadGroupName", required=true)
-    private final String workloadGroupName;
+        private final String workloadGroupName;
 
     public String getWorkloadGroupName() {
         return this.workloadGroupName;
@@ -50,7 +50,7 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -119,7 +119,6 @@ public final class GetSqlPoolWorkloadGroupArgs extends io.pulumi.resources.Invok
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetSqlPoolWorkloadGroupArgs build() {
             return new GetSqlPoolWorkloadGroupArgs(resourceGroupName, sqlPoolName, workloadGroupName, workspaceName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs
      * 
      */
     @InputImport(name="cases")
-    private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
+      private final @Nullable Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> cases;
 
     public Input<List<GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseArgs>> getCases() {
         return this.cases == null ? Input.empty() : this.cases;
@@ -67,7 +67,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs
             this.cases = Input.ofNullable(cases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesArgs(cases);
         }

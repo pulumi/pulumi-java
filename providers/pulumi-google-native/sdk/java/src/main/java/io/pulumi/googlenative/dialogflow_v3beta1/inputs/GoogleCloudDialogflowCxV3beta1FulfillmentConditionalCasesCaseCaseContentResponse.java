@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1ResponseMessageResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * 
      */
     @InputImport(name="additionalCases", required=true)
-    private final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases;
+      private final GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse additionalCases;
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesResponse getAdditionalCases() {
         return this.additionalCases;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
      * 
      */
     @InputImport(name="message", required=true)
-    private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
+      private final GoogleCloudDialogflowCxV3beta1ResponseMessageResponse message;
 
     public GoogleCloudDialogflowCxV3beta1ResponseMessageResponse getMessage() {
         return this.message;
@@ -82,7 +82,6 @@ public final class GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCase
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse build() {
             return new GoogleCloudDialogflowCxV3beta1FulfillmentConditionalCasesCaseCaseContentResponse(additionalCases, message);
         }

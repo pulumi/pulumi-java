@@ -6,7 +6,7 @@ package io.pulumi.azurenative.azuredata;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.azuredata.inputs.GetSqlServerRegistrationArgs;
 import io.pulumi.azurenative.azuredata.outputs.GetSqlServerRegistrationResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

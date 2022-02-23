@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetClusterPodSecurityPolicyConfig extends io.pulumi.resources
     public static final GetClusterPodSecurityPolicyConfig Empty = new GetClusterPodSecurityPolicyConfig();
 
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -51,7 +51,6 @@ public final class GetClusterPodSecurityPolicyConfig extends io.pulumi.resources
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GetClusterPodSecurityPolicyConfig build() {
             return new GetClusterPodSecurityPolicyConfig(enabled);
         }

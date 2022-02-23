@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.ConditionIam;
 import io.pulumi.googlenative.compute_v1.enums.ConditionOp;
 import io.pulumi.googlenative.compute_v1.enums.ConditionSys;
@@ -27,7 +27,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iam")
-    private final @Nullable Input<ConditionIam> iam;
+      private final @Nullable Input<ConditionIam> iam;
 
     public Input<ConditionIam> getIam() {
         return this.iam == null ? Input.empty() : this.iam;
@@ -38,7 +38,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="op")
-    private final @Nullable Input<ConditionOp> op;
+      private final @Nullable Input<ConditionOp> op;
 
     public Input<ConditionOp> getOp() {
         return this.op == null ? Input.empty() : this.op;
@@ -49,7 +49,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="svc")
-    private final @Nullable Input<String> svc;
+      private final @Nullable Input<String> svc;
 
     public Input<String> getSvc() {
         return this.svc == null ? Input.empty() : this.svc;
@@ -60,7 +60,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sys")
-    private final @Nullable Input<ConditionSys> sys;
+      private final @Nullable Input<ConditionSys> sys;
 
     public Input<ConditionSys> getSys() {
         return this.sys == null ? Input.empty() : this.sys;
@@ -71,7 +71,7 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<String>> values;
+      private final @Nullable Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -175,7 +175,6 @@ public final class ConditionArgs extends io.pulumi.resources.ResourceArgs {
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public ConditionArgs build() {
             return new ConditionArgs(iam, op, svc, sys, values);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.AttachedVolume;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerImage;
 import io.pulumi.kubernetes.core_v1.outputs.NodeAddress;
@@ -284,7 +284,6 @@ public final class NodeStatus {
             this.volumesInUse = volumesInUse;
             return this;
         }
-
         public NodeStatus build() {
             return new NodeStatus(addresses, allocatable, capacity, conditions, config, daemonEndpoints, images, nodeInfo, phase, volumesAttached, volumesInUse);
         }

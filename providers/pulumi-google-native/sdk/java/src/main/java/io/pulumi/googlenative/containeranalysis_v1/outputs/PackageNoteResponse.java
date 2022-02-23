@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.DistributionResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class PackageNoteResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PackageNoteResponse build() {
             return new PackageNoteResponse(distribution, name);
         }

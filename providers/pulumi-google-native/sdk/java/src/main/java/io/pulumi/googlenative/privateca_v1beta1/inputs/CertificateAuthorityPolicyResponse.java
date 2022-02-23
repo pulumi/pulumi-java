@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedConfigListResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.AllowedSubjectAltNamesResponse;
 import io.pulumi.googlenative.privateca_v1beta1.inputs.IssuanceModesResponse;
@@ -27,7 +27,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedCommonNames", required=true)
-    private final List<String> allowedCommonNames;
+      private final List<String> allowedCommonNames;
 
     public List<String> getAllowedCommonNames() {
         return this.allowedCommonNames;
@@ -38,7 +38,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedConfigList", required=true)
-    private final AllowedConfigListResponse allowedConfigList;
+      private final AllowedConfigListResponse allowedConfigList;
 
     public AllowedConfigListResponse getAllowedConfigList() {
         return this.allowedConfigList;
@@ -49,7 +49,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedIssuanceModes", required=true)
-    private final IssuanceModesResponse allowedIssuanceModes;
+      private final IssuanceModesResponse allowedIssuanceModes;
 
     public IssuanceModesResponse getAllowedIssuanceModes() {
         return this.allowedIssuanceModes;
@@ -60,7 +60,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedLocationsAndOrganizations", required=true)
-    private final List<SubjectResponse> allowedLocationsAndOrganizations;
+      private final List<SubjectResponse> allowedLocationsAndOrganizations;
 
     public List<SubjectResponse> getAllowedLocationsAndOrganizations() {
         return this.allowedLocationsAndOrganizations;
@@ -71,7 +71,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allowedSans", required=true)
-    private final AllowedSubjectAltNamesResponse allowedSans;
+      private final AllowedSubjectAltNamesResponse allowedSans;
 
     public AllowedSubjectAltNamesResponse getAllowedSans() {
         return this.allowedSans;
@@ -82,7 +82,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maximumLifetime", required=true)
-    private final String maximumLifetime;
+      private final String maximumLifetime;
 
     public String getMaximumLifetime() {
         return this.maximumLifetime;
@@ -93,7 +93,7 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="overwriteConfigValues", required=true)
-    private final ReusableConfigWrapperResponse overwriteConfigValues;
+      private final ReusableConfigWrapperResponse overwriteConfigValues;
 
     public ReusableConfigWrapperResponse getOverwriteConfigValues() {
         return this.overwriteConfigValues;
@@ -192,7 +192,6 @@ public final class CertificateAuthorityPolicyResponse extends io.pulumi.resource
             this.overwriteConfigValues = Objects.requireNonNull(overwriteConfigValues);
             return this;
         }
-
         public CertificateAuthorityPolicyResponse build() {
             return new CertificateAuthorityPolicyResponse(allowedCommonNames, allowedConfigList, allowedIssuanceModes, allowedLocationsAndOrganizations, allowedSans, maximumLifetime, overwriteConfigValues);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.RecoveryGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class GetRecoveryGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetRecoveryGroupResult build() {
             return new GetRecoveryGroupResult(cells, recoveryGroupArn, tags);
         }

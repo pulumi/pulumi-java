@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.redshift.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="account", required=true)
-    private final String account;
+        private final String account;
 
     public String getAccount() {
         return this.account;
@@ -28,7 +28,7 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="clusterIdentifier", required=true)
-    private final String clusterIdentifier;
+        private final String clusterIdentifier;
 
     public String getClusterIdentifier() {
         return this.clusterIdentifier;
@@ -77,7 +77,6 @@ public final class GetEndpointAuthorizationArgs extends io.pulumi.resources.Invo
             this.clusterIdentifier = Objects.requireNonNull(clusterIdentifier);
             return this;
         }
-
         public GetEndpointAuthorizationArgs build() {
             return new GetEndpointAuthorizationArgs(account, clusterIdentifier);
         }

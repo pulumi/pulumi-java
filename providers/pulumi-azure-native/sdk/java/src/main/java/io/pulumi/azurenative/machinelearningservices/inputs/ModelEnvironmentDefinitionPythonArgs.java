@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
     public static final ModelEnvironmentDefinitionPythonArgs Empty = new ModelEnvironmentDefinitionPythonArgs();
 
     @InputImport(name="baseCondaEnvironment")
-    private final @Nullable Input<String> baseCondaEnvironment;
+        private final @Nullable Input<String> baseCondaEnvironment;
 
     public Input<String> getBaseCondaEnvironment() {
         return this.baseCondaEnvironment == null ? Input.empty() : this.baseCondaEnvironment;
@@ -32,7 +32,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="condaDependencies")
-    private final @Nullable Input<Object> condaDependencies;
+        private final @Nullable Input<Object> condaDependencies;
 
     public Input<Object> getCondaDependencies() {
         return this.condaDependencies == null ? Input.empty() : this.condaDependencies;
@@ -43,7 +43,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="interpreterPath")
-    private final @Nullable Input<String> interpreterPath;
+        private final @Nullable Input<String> interpreterPath;
 
     public Input<String> getInterpreterPath() {
         return this.interpreterPath == null ? Input.empty() : this.interpreterPath;
@@ -54,7 +54,7 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userManagedDependencies")
-    private final @Nullable Input<Boolean> userManagedDependencies;
+        private final @Nullable Input<Boolean> userManagedDependencies;
 
     public Input<Boolean> getUserManagedDependencies() {
         return this.userManagedDependencies == null ? Input.empty() : this.userManagedDependencies;
@@ -143,7 +143,6 @@ public final class ModelEnvironmentDefinitionPythonArgs extends io.pulumi.resour
             this.userManagedDependencies = Input.ofNullable(userManagedDependencies);
             return this;
         }
-
         public ModelEnvironmentDefinitionPythonArgs build() {
             return new ModelEnvironmentDefinitionPythonArgs(baseCondaEnvironment, condaDependencies, interpreterPath, userManagedDependencies);
         }

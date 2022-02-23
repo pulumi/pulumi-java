@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.synapse.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="delayInMinutes")
-    private final @Nullable Input<Integer> delayInMinutes;
+        private final @Nullable Input<Integer> delayInMinutes;
 
     public Input<Integer> getDelayInMinutes() {
         return this.delayInMinutes == null ? Input.empty() : this.delayInMinutes;
@@ -35,7 +35,7 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -94,7 +94,6 @@ public final class AutoPausePropertiesArgs extends io.pulumi.resources.ResourceA
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public AutoPausePropertiesArgs build() {
             return new AutoPausePropertiesArgs(delayInMinutes, enabled);
         }

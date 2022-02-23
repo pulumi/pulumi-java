@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.inputs.EC2FleetCapacityReservationOptionsRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -18,42 +18,42 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
     public static final EC2FleetOnDemandOptionsRequestArgs Empty = new EC2FleetOnDemandOptionsRequestArgs();
 
     @InputImport(name="allocationStrategy")
-    private final @Nullable Input<String> allocationStrategy;
+        private final @Nullable Input<String> allocationStrategy;
 
     public Input<String> getAllocationStrategy() {
         return this.allocationStrategy == null ? Input.empty() : this.allocationStrategy;
     }
 
     @InputImport(name="capacityReservationOptions")
-    private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
+        private final @Nullable Input<EC2FleetCapacityReservationOptionsRequestArgs> capacityReservationOptions;
 
     public Input<EC2FleetCapacityReservationOptionsRequestArgs> getCapacityReservationOptions() {
         return this.capacityReservationOptions == null ? Input.empty() : this.capacityReservationOptions;
     }
 
     @InputImport(name="maxTotalPrice")
-    private final @Nullable Input<String> maxTotalPrice;
+        private final @Nullable Input<String> maxTotalPrice;
 
     public Input<String> getMaxTotalPrice() {
         return this.maxTotalPrice == null ? Input.empty() : this.maxTotalPrice;
     }
 
     @InputImport(name="minTargetCapacity")
-    private final @Nullable Input<Integer> minTargetCapacity;
+        private final @Nullable Input<Integer> minTargetCapacity;
 
     public Input<Integer> getMinTargetCapacity() {
         return this.minTargetCapacity == null ? Input.empty() : this.minTargetCapacity;
     }
 
     @InputImport(name="singleAvailabilityZone")
-    private final @Nullable Input<Boolean> singleAvailabilityZone;
+        private final @Nullable Input<Boolean> singleAvailabilityZone;
 
     public Input<Boolean> getSingleAvailabilityZone() {
         return this.singleAvailabilityZone == null ? Input.empty() : this.singleAvailabilityZone;
     }
 
     @InputImport(name="singleInstanceType")
-    private final @Nullable Input<Boolean> singleInstanceType;
+        private final @Nullable Input<Boolean> singleInstanceType;
 
     public Input<Boolean> getSingleInstanceType() {
         return this.singleInstanceType == null ? Input.empty() : this.singleInstanceType;
@@ -172,7 +172,6 @@ public final class EC2FleetOnDemandOptionsRequestArgs extends io.pulumi.resource
             this.singleInstanceType = Input.ofNullable(singleInstanceType);
             return this;
         }
-
         public EC2FleetOnDemandOptionsRequestArgs build() {
             return new EC2FleetOnDemandOptionsRequestArgs(allocationStrategy, capacityReservationOptions, maxTotalPrice, minTargetCapacity, singleAvailabilityZone, singleInstanceType);
         }

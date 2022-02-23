@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromTemplateSchedulingNodeAffinityArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -19,35 +19,35 @@ public final class InstanceFromTemplateSchedulingArgs extends io.pulumi.resource
     public static final InstanceFromTemplateSchedulingArgs Empty = new InstanceFromTemplateSchedulingArgs();
 
     @InputImport(name="automaticRestart")
-    private final @Nullable Input<Boolean> automaticRestart;
+        private final @Nullable Input<Boolean> automaticRestart;
 
     public Input<Boolean> getAutomaticRestart() {
         return this.automaticRestart == null ? Input.empty() : this.automaticRestart;
     }
 
     @InputImport(name="minNodeCpus")
-    private final @Nullable Input<Integer> minNodeCpus;
+        private final @Nullable Input<Integer> minNodeCpus;
 
     public Input<Integer> getMinNodeCpus() {
         return this.minNodeCpus == null ? Input.empty() : this.minNodeCpus;
     }
 
     @InputImport(name="nodeAffinities")
-    private final @Nullable Input<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> nodeAffinities;
+        private final @Nullable Input<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> nodeAffinities;
 
     public Input<List<InstanceFromTemplateSchedulingNodeAffinityArgs>> getNodeAffinities() {
         return this.nodeAffinities == null ? Input.empty() : this.nodeAffinities;
     }
 
     @InputImport(name="onHostMaintenance")
-    private final @Nullable Input<String> onHostMaintenance;
+        private final @Nullable Input<String> onHostMaintenance;
 
     public Input<String> getOnHostMaintenance() {
         return this.onHostMaintenance == null ? Input.empty() : this.onHostMaintenance;
     }
 
     @InputImport(name="preemptible")
-    private final @Nullable Input<Boolean> preemptible;
+        private final @Nullable Input<Boolean> preemptible;
 
     public Input<Boolean> getPreemptible() {
         return this.preemptible == null ? Input.empty() : this.preemptible;
@@ -151,7 +151,6 @@ public final class InstanceFromTemplateSchedulingArgs extends io.pulumi.resource
             this.preemptible = Input.ofNullable(preemptible);
             return this;
         }
-
         public InstanceFromTemplateSchedulingArgs build() {
             return new InstanceFromTemplateSchedulingArgs(automaticRestart, minNodeCpus, nodeAffinities, onHostMaintenance, preemptible);
         }

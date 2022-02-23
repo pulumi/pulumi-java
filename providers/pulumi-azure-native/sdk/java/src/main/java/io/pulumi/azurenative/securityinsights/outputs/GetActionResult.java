@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class GetActionResult {
             this.workflowId = workflowId;
             return this;
         }
-
         public GetActionResult build() {
             return new GetActionResult(etag, id, logicAppResourceId, name, type, workflowId);
         }

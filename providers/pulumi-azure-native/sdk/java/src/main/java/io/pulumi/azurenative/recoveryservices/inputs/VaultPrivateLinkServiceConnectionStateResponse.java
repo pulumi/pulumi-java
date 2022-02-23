@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
      * 
      */
     @InputImport(name="actionsRequired", required=true)
-    private final String actionsRequired;
+        private final String actionsRequired;
 
     public String getActionsRequired() {
         return this.actionsRequired;
@@ -32,7 +32,7 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -43,7 +43,7 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -102,7 +102,6 @@ public final class VaultPrivateLinkServiceConnectionStateResponse extends io.pul
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public VaultPrivateLinkServiceConnectionStateResponse build() {
             return new VaultPrivateLinkServiceConnectionStateResponse(actionsRequired, description, status);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.loadtestservice.inputs;
 import io.pulumi.azurenative.loadtestservice.enums.SystemAssignedServiceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,SystemAssignedServiceIdentityType>> type;
+        private final Input<Either<String,SystemAssignedServiceIdentityType>> type;
 
     public Input<Either<String,SystemAssignedServiceIdentityType>> getType() {
         return this.type;
@@ -67,7 +67,6 @@ public final class SystemAssignedServiceIdentityArgs extends io.pulumi.resources
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SystemAssignedServiceIdentityArgs build() {
             return new SystemAssignedServiceIdentityArgs(type);
         }

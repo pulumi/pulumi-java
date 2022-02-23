@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class BudgetComparisonExpressionResponse {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public BudgetComparisonExpressionResponse build() {
             return new BudgetComparisonExpressionResponse(name, operator, values);
         }

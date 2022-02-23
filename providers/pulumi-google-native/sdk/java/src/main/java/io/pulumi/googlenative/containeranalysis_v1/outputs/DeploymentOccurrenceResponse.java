@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class DeploymentOccurrenceResponse {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public DeploymentOccurrenceResponse build() {
             return new DeploymentOccurrenceResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
         }

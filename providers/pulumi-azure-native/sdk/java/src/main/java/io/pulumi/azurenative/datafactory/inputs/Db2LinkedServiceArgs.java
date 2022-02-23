@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -43,7 +43,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="authenticationType")
-    private final @Nullable Input<Either<String,Db2AuthenticationType>> authenticationType;
+        private final @Nullable Input<Either<String,Db2AuthenticationType>> authenticationType;
 
     public Input<Either<String,Db2AuthenticationType>> getAuthenticationType() {
         return this.authenticationType == null ? Input.empty() : this.authenticationType;
@@ -54,7 +54,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="certificateCommonName")
-    private final @Nullable Input<Object> certificateCommonName;
+        private final @Nullable Input<Object> certificateCommonName;
 
     public Input<Object> getCertificateCommonName() {
         return this.certificateCommonName == null ? Input.empty() : this.certificateCommonName;
@@ -65,7 +65,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -76,7 +76,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<Object> connectionString;
+        private final @Nullable Input<Object> connectionString;
 
     public Input<Object> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -87,7 +87,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="database")
-    private final @Nullable Input<Object> database;
+        private final @Nullable Input<Object> database;
 
     public Input<Object> getDatabase() {
         return this.database == null ? Input.empty() : this.database;
@@ -98,7 +98,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -109,7 +109,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -120,7 +120,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="packageCollection")
-    private final @Nullable Input<Object> packageCollection;
+        private final @Nullable Input<Object> packageCollection;
 
     public Input<Object> getPackageCollection() {
         return this.packageCollection == null ? Input.empty() : this.packageCollection;
@@ -131,7 +131,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -142,7 +142,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -153,7 +153,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="server")
-    private final @Nullable Input<Object> server;
+        private final @Nullable Input<Object> server;
 
     public Input<Object> getServer() {
         return this.server == null ? Input.empty() : this.server;
@@ -165,7 +165,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -176,7 +176,7 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<Object> username;
+        private final @Nullable Input<Object> username;
 
     public Input<Object> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -415,7 +415,6 @@ public final class Db2LinkedServiceArgs extends io.pulumi.resources.ResourceArgs
             this.username = Input.ofNullable(username);
             return this;
         }
-
         public Db2LinkedServiceArgs build() {
             return new Db2LinkedServiceArgs(annotations, authenticationType, certificateCommonName, connectVia, connectionString, database, description, encryptedCredential, packageCollection, parameters, password, server, type, username);
         }

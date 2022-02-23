@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datastream_v1.inputs.MysqlSourceConfigResponse;
 import io.pulumi.googlenative.datastream_v1.inputs.OracleSourceConfigResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mysqlSourceConfig", required=true)
-    private final MysqlSourceConfigResponse mysqlSourceConfig;
+      private final MysqlSourceConfigResponse mysqlSourceConfig;
 
     public MysqlSourceConfigResponse getMysqlSourceConfig() {
         return this.mysqlSourceConfig;
@@ -34,7 +34,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oracleSourceConfig", required=true)
-    private final OracleSourceConfigResponse oracleSourceConfig;
+      private final OracleSourceConfigResponse oracleSourceConfig;
 
     public OracleSourceConfigResponse getOracleSourceConfig() {
         return this.oracleSourceConfig;
@@ -45,7 +45,7 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceConnectionProfile", required=true)
-    private final String sourceConnectionProfile;
+      private final String sourceConnectionProfile;
 
     public String getSourceConnectionProfile() {
         return this.sourceConnectionProfile;
@@ -104,7 +104,6 @@ public final class SourceConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.sourceConnectionProfile = Objects.requireNonNull(sourceConnectionProfile);
             return this;
         }
-
         public SourceConfigResponse build() {
             return new SourceConfigResponse(mysqlSourceConfig, oracleSourceConfig, sourceConnectionProfile);
         }

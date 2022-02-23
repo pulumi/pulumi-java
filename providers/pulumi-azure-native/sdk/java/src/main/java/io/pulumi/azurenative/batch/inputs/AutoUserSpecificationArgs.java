@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.enums.AutoUserScope;
 import io.pulumi.azurenative.batch.enums.ElevationLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,7 +20,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="elevationLevel")
-    private final @Nullable Input<ElevationLevel> elevationLevel;
+        private final @Nullable Input<ElevationLevel> elevationLevel;
 
     public Input<ElevationLevel> getElevationLevel() {
         return this.elevationLevel == null ? Input.empty() : this.elevationLevel;
@@ -31,7 +31,7 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable Input<AutoUserScope> scope;
+        private final @Nullable Input<AutoUserScope> scope;
 
     public Input<AutoUserScope> getScope() {
         return this.scope == null ? Input.empty() : this.scope;
@@ -90,7 +90,6 @@ public final class AutoUserSpecificationArgs extends io.pulumi.resources.Resourc
             this.scope = Input.ofNullable(scope);
             return this;
         }
-
         public AutoUserSpecificationArgs build() {
             return new AutoUserSpecificationArgs(elevationLevel, scope);
         }

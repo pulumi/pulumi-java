@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudwatch.outputs;
 
 import io.pulumi.awsnative.cloudwatch.outputs.MetricStreamFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -225,7 +225,6 @@ public final class GetMetricStreamResult {
             this.state = state;
             return this;
         }
-
         public GetMetricStreamResult build() {
             return new GetMetricStreamResult(arn, creationDate, excludeFilters, firehoseArn, includeFilters, lastUpdateDate, outputFormat, roleArn, state);
         }

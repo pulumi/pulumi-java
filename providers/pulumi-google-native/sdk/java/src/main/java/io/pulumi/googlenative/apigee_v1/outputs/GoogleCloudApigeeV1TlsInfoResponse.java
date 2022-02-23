@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TlsInfoCommonNameResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class GoogleCloudApigeeV1TlsInfoResponse {
             this.trustStore = Objects.requireNonNull(trustStore);
             return this;
         }
-
         public GoogleCloudApigeeV1TlsInfoResponse build() {
             return new GoogleCloudApigeeV1TlsInfoResponse(ciphers, clientAuthEnabled, commonName, enabled, ignoreValidationErrors, keyAlias, keyStore, protocols, trustStore);
         }

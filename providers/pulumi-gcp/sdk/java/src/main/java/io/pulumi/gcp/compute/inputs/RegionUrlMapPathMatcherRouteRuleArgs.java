@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleHeaderActionArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleMatchRuleArgs;
 import io.pulumi.gcp.compute.inputs.RegionUrlMapPathMatcherRouteRuleRouteActionArgs;
@@ -28,7 +28,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
+        private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleHeaderActionArgs> headerAction;
 
     public Input<RegionUrlMapPathMatcherRouteRuleHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -40,7 +40,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="matchRules")
-    private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
+        private final @Nullable Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleArgs>> matchRules;
 
     public Input<List<RegionUrlMapPathMatcherRouteRuleMatchRuleArgs>> getMatchRules() {
         return this.matchRules == null ? Input.empty() : this.matchRules;
@@ -63,7 +63,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -80,7 +80,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="routeAction")
-    private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionArgs> routeAction;
+        private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleRouteActionArgs> routeAction;
 
     public Input<RegionUrlMapPathMatcherRouteRuleRouteActionArgs> getRouteAction() {
         return this.routeAction == null ? Input.empty() : this.routeAction;
@@ -91,7 +91,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+        private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -105,7 +105,7 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="urlRedirect")
-    private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
+        private final @Nullable Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs> urlRedirect;
 
     public Input<RegionUrlMapPathMatcherRouteRuleUrlRedirectArgs> getUrlRedirect() {
         return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
@@ -224,7 +224,6 @@ public final class RegionUrlMapPathMatcherRouteRuleArgs extends io.pulumi.resour
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }
-
         public RegionUrlMapPathMatcherRouteRuleArgs build() {
             return new RegionUrlMapPathMatcherRouteRuleArgs(headerAction, matchRules, priority, routeAction, service, urlRedirect);
         }

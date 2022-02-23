@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.policysimulator_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.policysimulator_v1beta1.outputs.GoogleTypeDateResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse
             this.unchangedCount = Objects.requireNonNull(unchangedCount);
             return this;
         }
-
         public GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse build() {
             return new GoogleCloudPolicysimulatorV1beta1ReplayResultsSummaryResponse(differenceCount, errorCount, logCount, newestDate, oldestDate, unchangedCount);
         }

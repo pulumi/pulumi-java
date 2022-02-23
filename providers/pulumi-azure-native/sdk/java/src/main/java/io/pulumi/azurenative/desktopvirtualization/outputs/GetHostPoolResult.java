@@ -8,7 +8,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.RegistrationInfoRespo
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -691,7 +691,6 @@ public final class GetHostPoolResult {
             this.vmTemplate = vmTemplate;
             return this;
         }
-
         public GetHostPoolResult build() {
             return new GetHostPoolResult(applicationGroupReferences, cloudPcResource, customRdpProperty, description, etag, friendlyName, hostPoolType, id, identity, kind, loadBalancerType, location, managedBy, maxSessionLimit, migrationRequest, name, objectId, personalDesktopAssignmentType, plan, preferredAppGroupType, registrationInfo, ring, sku, ssoClientId, ssoClientSecretKeyVaultPath, ssoSecretType, ssoadfsAuthority, startVMOnConnect, tags, type, validationEnvironment, vmTemplate);
         }

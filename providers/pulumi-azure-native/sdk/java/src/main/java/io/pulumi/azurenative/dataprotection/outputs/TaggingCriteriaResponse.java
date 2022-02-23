@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dataprotection.outputs;
 
 import io.pulumi.azurenative.dataprotection.outputs.RetentionTagResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ScheduleBasedBackupCriteriaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.List;
@@ -121,7 +121,6 @@ public final class TaggingCriteriaResponse {
             this.taggingPriority = Objects.requireNonNull(taggingPriority);
             return this;
         }
-
         public TaggingCriteriaResponse build() {
             return new TaggingCriteriaResponse(criteria, isDefault, tagInfo, taggingPriority);
         }

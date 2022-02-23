@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="colSpan", required=true)
-    private final Input<Integer> colSpan;
+        private final Input<Integer> colSpan;
 
     public Input<Integer> getColSpan() {
         return this.colSpan;
@@ -37,7 +37,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,Object>> metadata;
+        private final @Nullable Input<Map<String,Object>> metadata;
 
     public Input<Map<String,Object>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -48,7 +48,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="rowSpan", required=true)
-    private final Input<Integer> rowSpan;
+        private final Input<Integer> rowSpan;
 
     public Input<Integer> getRowSpan() {
         return this.rowSpan;
@@ -59,7 +59,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="x", required=true)
-    private final Input<Integer> x;
+        private final Input<Integer> x;
 
     public Input<Integer> getX() {
         return this.x;
@@ -70,7 +70,7 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="y", required=true)
-    private final Input<Integer> y;
+        private final Input<Integer> y;
 
     public Input<Integer> getY() {
         return this.y;
@@ -174,7 +174,6 @@ public final class DashboardPartsPositionArgs extends io.pulumi.resources.Resour
             this.y = Input.of(Objects.requireNonNull(y));
             return this;
         }
-
         public DashboardPartsPositionArgs build() {
             return new DashboardPartsPositionArgs(colSpan, metadata, rowSpan, x, y);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPolicyDefinitionResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -269,7 +269,6 @@ public final class GetServiceEndpointPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServiceEndpointPolicyResult build() {
             return new GetServiceEndpointPolicyResult(etag, id, kind, location, name, provisioningState, resourceGuid, serviceEndpointPolicyDefinitions, subnets, tags, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iotanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class DatastoreServiceManagedS3 {
         public Builder(DatastoreServiceManagedS3 defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public DatastoreServiceManagedS3 build() {
             return new DatastoreServiceManagedS3();
         }

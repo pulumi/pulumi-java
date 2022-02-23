@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudasset_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudasset_v1.inputs.PubsubDestinationResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="pubsubDestination", required=true)
-    private final PubsubDestinationResponse pubsubDestination;
+      private final PubsubDestinationResponse pubsubDestination;
 
     public PubsubDestinationResponse getPubsubDestination() {
         return this.pubsubDestination;
@@ -59,7 +59,6 @@ public final class FeedOutputConfigResponse extends io.pulumi.resources.InvokeAr
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public FeedOutputConfigResponse build() {
             return new FeedOutputConfigResponse(pubsubDestination);
         }

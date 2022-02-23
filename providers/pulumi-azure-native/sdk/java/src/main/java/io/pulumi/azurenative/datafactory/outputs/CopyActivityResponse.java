@@ -147,7 +147,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -686,7 +686,6 @@ public final class CopyActivityResponse {
             this.validateDataConsistency = validateDataConsistency;
             return this;
         }
-
         public CopyActivityResponse build() {
             return new CopyActivityResponse(dataIntegrationUnits, dependsOn, description, enableSkipIncompatibleRow, enableStaging, inputs, linkedServiceName, logSettings, logStorageSettings, name, outputs, parallelCopies, policy, preserve, preserveRules, redirectIncompatibleRowSettings, sink, skipErrorFile, source, stagingSettings, translator, type, userProperties, validateDataConsistency);
         }

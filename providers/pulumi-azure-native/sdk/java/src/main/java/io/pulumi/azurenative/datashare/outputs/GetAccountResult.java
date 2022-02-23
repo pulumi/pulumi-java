@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.IdentityResponse;
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -268,7 +268,6 @@ public final class GetAccountResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(createdAt, id, identity, location, name, provisioningState, systemData, tags, type, userEmail, userName);
         }

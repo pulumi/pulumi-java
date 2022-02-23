@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagesync.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class FilesNotTieringErrorResponse {
             this.fileCount = Objects.requireNonNull(fileCount);
             return this;
         }
-
         public FilesNotTieringErrorResponse build() {
             return new FilesNotTieringErrorResponse(errorCode, fileCount);
         }

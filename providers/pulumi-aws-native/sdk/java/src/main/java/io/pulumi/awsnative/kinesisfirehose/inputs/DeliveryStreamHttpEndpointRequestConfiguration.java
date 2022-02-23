@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.awsnative.kinesisfirehose.enums.DeliveryStreamHttpEndpointRequestConfigurationContentEncoding;
 import io.pulumi.awsnative.kinesisfirehose.inputs.DeliveryStreamHttpEndpointCommonAttribute;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,14 +17,14 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration extends io.pul
     public static final DeliveryStreamHttpEndpointRequestConfiguration Empty = new DeliveryStreamHttpEndpointRequestConfiguration();
 
     @InputImport(name="commonAttributes")
-    private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
+        private final @Nullable List<DeliveryStreamHttpEndpointCommonAttribute> commonAttributes;
 
     public List<DeliveryStreamHttpEndpointCommonAttribute> getCommonAttributes() {
         return this.commonAttributes == null ? List.of() : this.commonAttributes;
     }
 
     @InputImport(name="contentEncoding")
-    private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
+        private final @Nullable DeliveryStreamHttpEndpointRequestConfigurationContentEncoding contentEncoding;
 
     public Optional<DeliveryStreamHttpEndpointRequestConfigurationContentEncoding> getContentEncoding() {
         return this.contentEncoding == null ? Optional.empty() : Optional.ofNullable(this.contentEncoding);
@@ -73,7 +73,6 @@ public final class DeliveryStreamHttpEndpointRequestConfiguration extends io.pul
             this.contentEncoding = contentEncoding;
             return this;
         }
-
         public DeliveryStreamHttpEndpointRequestConfiguration build() {
             return new DeliveryStreamHttpEndpointRequestConfiguration(commonAttributes, contentEncoding);
         }

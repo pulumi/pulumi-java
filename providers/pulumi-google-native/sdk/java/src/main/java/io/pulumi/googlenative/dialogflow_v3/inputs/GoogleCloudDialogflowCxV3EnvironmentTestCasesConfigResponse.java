@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
      * 
      */
     @InputImport(name="enableContinuousRun", required=true)
-    private final Boolean enableContinuousRun;
+      private final Boolean enableContinuousRun;
 
     public Boolean getEnableContinuousRun() {
         return this.enableContinuousRun;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
      * 
      */
     @InputImport(name="enablePredeploymentRun", required=true)
-    private final Boolean enablePredeploymentRun;
+      private final Boolean enablePredeploymentRun;
 
     public Boolean getEnablePredeploymentRun() {
         return this.enablePredeploymentRun;
@@ -45,7 +45,7 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
      * 
      */
     @InputImport(name="testCases", required=true)
-    private final List<String> testCases;
+      private final List<String> testCases;
 
     public List<String> getTestCases() {
         return this.testCases;
@@ -104,7 +104,6 @@ public final class GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse e
             this.testCases = Objects.requireNonNull(testCases);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse build() {
             return new GoogleCloudDialogflowCxV3EnvironmentTestCasesConfigResponse(enableContinuousRun, enablePredeploymentRun, testCases);
         }

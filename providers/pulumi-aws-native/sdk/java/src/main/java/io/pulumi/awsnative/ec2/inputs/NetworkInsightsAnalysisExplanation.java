@@ -10,7 +10,7 @@ import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisLoadBalance
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisRouteTableRoute;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisAnalysisSecurityGroupRule;
 import io.pulumi.awsnative.ec2.inputs.NetworkInsightsAnalysisPortRange;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,315 +24,315 @@ public final class NetworkInsightsAnalysisExplanation extends io.pulumi.resource
     public static final NetworkInsightsAnalysisExplanation Empty = new NetworkInsightsAnalysisExplanation();
 
     @InputImport(name="acl")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent acl;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent acl;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getAcl() {
         return this.acl == null ? Optional.empty() : Optional.ofNullable(this.acl);
     }
 
     @InputImport(name="aclRule")
-    private final @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
+        private final @Nullable NetworkInsightsAnalysisAnalysisAclRule aclRule;
 
     public Optional<NetworkInsightsAnalysisAnalysisAclRule> getAclRule() {
         return this.aclRule == null ? Optional.empty() : Optional.ofNullable(this.aclRule);
     }
 
     @InputImport(name="address")
-    private final @Nullable String address;
+        private final @Nullable String address;
 
     public Optional<String> getAddress() {
         return this.address == null ? Optional.empty() : Optional.ofNullable(this.address);
     }
 
     @InputImport(name="addresses")
-    private final @Nullable List<String> addresses;
+        private final @Nullable List<String> addresses;
 
     public List<String> getAddresses() {
         return this.addresses == null ? List.of() : this.addresses;
     }
 
     @InputImport(name="attachedTo")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent attachedTo;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent attachedTo;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getAttachedTo() {
         return this.attachedTo == null ? Optional.empty() : Optional.ofNullable(this.attachedTo);
     }
 
     @InputImport(name="availabilityZones")
-    private final @Nullable List<String> availabilityZones;
+        private final @Nullable List<String> availabilityZones;
 
     public List<String> getAvailabilityZones() {
         return this.availabilityZones == null ? List.of() : this.availabilityZones;
     }
 
     @InputImport(name="cidrs")
-    private final @Nullable List<String> cidrs;
+        private final @Nullable List<String> cidrs;
 
     public List<String> getCidrs() {
         return this.cidrs == null ? List.of() : this.cidrs;
     }
 
     @InputImport(name="classicLoadBalancerListener")
-    private final @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerListener classicLoadBalancerListener;
+        private final @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerListener classicLoadBalancerListener;
 
     public Optional<NetworkInsightsAnalysisAnalysisLoadBalancerListener> getClassicLoadBalancerListener() {
         return this.classicLoadBalancerListener == null ? Optional.empty() : Optional.ofNullable(this.classicLoadBalancerListener);
     }
 
     @InputImport(name="component")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent component;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent component;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getComponent() {
         return this.component == null ? Optional.empty() : Optional.ofNullable(this.component);
     }
 
     @InputImport(name="customerGateway")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent customerGateway;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent customerGateway;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getCustomerGateway() {
         return this.customerGateway == null ? Optional.empty() : Optional.ofNullable(this.customerGateway);
     }
 
     @InputImport(name="destination")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent destination;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent destination;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getDestination() {
         return this.destination == null ? Optional.empty() : Optional.ofNullable(this.destination);
     }
 
     @InputImport(name="destinationVpc")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent destinationVpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getDestinationVpc() {
         return this.destinationVpc == null ? Optional.empty() : Optional.ofNullable(this.destinationVpc);
     }
 
     @InputImport(name="direction")
-    private final @Nullable String direction;
+        private final @Nullable String direction;
 
     public Optional<String> getDirection() {
         return this.direction == null ? Optional.empty() : Optional.ofNullable(this.direction);
     }
 
     @InputImport(name="elasticLoadBalancerListener")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent elasticLoadBalancerListener;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent elasticLoadBalancerListener;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getElasticLoadBalancerListener() {
         return this.elasticLoadBalancerListener == null ? Optional.empty() : Optional.ofNullable(this.elasticLoadBalancerListener);
     }
 
     @InputImport(name="explanationCode")
-    private final @Nullable String explanationCode;
+        private final @Nullable String explanationCode;
 
     public Optional<String> getExplanationCode() {
         return this.explanationCode == null ? Optional.empty() : Optional.ofNullable(this.explanationCode);
     }
 
     @InputImport(name="ingressRouteTable")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent ingressRouteTable;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent ingressRouteTable;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getIngressRouteTable() {
         return this.ingressRouteTable == null ? Optional.empty() : Optional.ofNullable(this.ingressRouteTable);
     }
 
     @InputImport(name="internetGateway")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent internetGateway;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent internetGateway;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getInternetGateway() {
         return this.internetGateway == null ? Optional.empty() : Optional.ofNullable(this.internetGateway);
     }
 
     @InputImport(name="loadBalancerArn")
-    private final @Nullable String loadBalancerArn;
+        private final @Nullable String loadBalancerArn;
 
     public Optional<String> getLoadBalancerArn() {
         return this.loadBalancerArn == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerArn);
     }
 
     @InputImport(name="loadBalancerListenerPort")
-    private final @Nullable Integer loadBalancerListenerPort;
+        private final @Nullable Integer loadBalancerListenerPort;
 
     public Optional<Integer> getLoadBalancerListenerPort() {
         return this.loadBalancerListenerPort == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerListenerPort);
     }
 
     @InputImport(name="loadBalancerTarget")
-    private final @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerTarget loadBalancerTarget;
+        private final @Nullable NetworkInsightsAnalysisAnalysisLoadBalancerTarget loadBalancerTarget;
 
     public Optional<NetworkInsightsAnalysisAnalysisLoadBalancerTarget> getLoadBalancerTarget() {
         return this.loadBalancerTarget == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerTarget);
     }
 
     @InputImport(name="loadBalancerTargetGroup")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent loadBalancerTargetGroup;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent loadBalancerTargetGroup;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getLoadBalancerTargetGroup() {
         return this.loadBalancerTargetGroup == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerTargetGroup);
     }
 
     @InputImport(name="loadBalancerTargetGroups")
-    private final @Nullable List<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroups;
+        private final @Nullable List<NetworkInsightsAnalysisAnalysisComponent> loadBalancerTargetGroups;
 
     public List<NetworkInsightsAnalysisAnalysisComponent> getLoadBalancerTargetGroups() {
         return this.loadBalancerTargetGroups == null ? List.of() : this.loadBalancerTargetGroups;
     }
 
     @InputImport(name="loadBalancerTargetPort")
-    private final @Nullable Integer loadBalancerTargetPort;
+        private final @Nullable Integer loadBalancerTargetPort;
 
     public Optional<Integer> getLoadBalancerTargetPort() {
         return this.loadBalancerTargetPort == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerTargetPort);
     }
 
     @InputImport(name="missingComponent")
-    private final @Nullable String missingComponent;
+        private final @Nullable String missingComponent;
 
     public Optional<String> getMissingComponent() {
         return this.missingComponent == null ? Optional.empty() : Optional.ofNullable(this.missingComponent);
     }
 
     @InputImport(name="natGateway")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent natGateway;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent natGateway;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getNatGateway() {
         return this.natGateway == null ? Optional.empty() : Optional.ofNullable(this.natGateway);
     }
 
     @InputImport(name="networkInterface")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent networkInterface;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent networkInterface;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getNetworkInterface() {
         return this.networkInterface == null ? Optional.empty() : Optional.ofNullable(this.networkInterface);
     }
 
     @InputImport(name="packetField")
-    private final @Nullable String packetField;
+        private final @Nullable String packetField;
 
     public Optional<String> getPacketField() {
         return this.packetField == null ? Optional.empty() : Optional.ofNullable(this.packetField);
     }
 
     @InputImport(name="port")
-    private final @Nullable Integer port;
+        private final @Nullable Integer port;
 
     public Optional<Integer> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
     }
 
     @InputImport(name="portRanges")
-    private final @Nullable List<NetworkInsightsAnalysisPortRange> portRanges;
+        private final @Nullable List<NetworkInsightsAnalysisPortRange> portRanges;
 
     public List<NetworkInsightsAnalysisPortRange> getPortRanges() {
         return this.portRanges == null ? List.of() : this.portRanges;
     }
 
     @InputImport(name="prefixList")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent prefixList;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent prefixList;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getPrefixList() {
         return this.prefixList == null ? Optional.empty() : Optional.ofNullable(this.prefixList);
     }
 
     @InputImport(name="protocols")
-    private final @Nullable List<String> protocols;
+        private final @Nullable List<String> protocols;
 
     public List<String> getProtocols() {
         return this.protocols == null ? List.of() : this.protocols;
     }
 
     @InputImport(name="routeTable")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent routeTable;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent routeTable;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getRouteTable() {
         return this.routeTable == null ? Optional.empty() : Optional.ofNullable(this.routeTable);
     }
 
     @InputImport(name="routeTableRoute")
-    private final @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute;
+        private final @Nullable NetworkInsightsAnalysisAnalysisRouteTableRoute routeTableRoute;
 
     public Optional<NetworkInsightsAnalysisAnalysisRouteTableRoute> getRouteTableRoute() {
         return this.routeTableRoute == null ? Optional.empty() : Optional.ofNullable(this.routeTableRoute);
     }
 
     @InputImport(name="securityGroup")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent securityGroup;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent securityGroup;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getSecurityGroup() {
         return this.securityGroup == null ? Optional.empty() : Optional.ofNullable(this.securityGroup);
     }
 
     @InputImport(name="securityGroupRule")
-    private final @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule;
+        private final @Nullable NetworkInsightsAnalysisAnalysisSecurityGroupRule securityGroupRule;
 
     public Optional<NetworkInsightsAnalysisAnalysisSecurityGroupRule> getSecurityGroupRule() {
         return this.securityGroupRule == null ? Optional.empty() : Optional.ofNullable(this.securityGroupRule);
     }
 
     @InputImport(name="securityGroups")
-    private final @Nullable List<NetworkInsightsAnalysisAnalysisComponent> securityGroups;
+        private final @Nullable List<NetworkInsightsAnalysisAnalysisComponent> securityGroups;
 
     public List<NetworkInsightsAnalysisAnalysisComponent> getSecurityGroups() {
         return this.securityGroups == null ? List.of() : this.securityGroups;
     }
 
     @InputImport(name="sourceVpc")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent sourceVpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getSourceVpc() {
         return this.sourceVpc == null ? Optional.empty() : Optional.ofNullable(this.sourceVpc);
     }
 
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
     }
 
     @InputImport(name="subnet")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnet;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
     }
 
     @InputImport(name="subnetRouteTable")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent subnetRouteTable;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getSubnetRouteTable() {
         return this.subnetRouteTable == null ? Optional.empty() : Optional.ofNullable(this.subnetRouteTable);
     }
 
     @InputImport(name="vpc")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpc;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpc() {
         return this.vpc == null ? Optional.empty() : Optional.ofNullable(this.vpc);
     }
 
     @InputImport(name="vpcEndpoint")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpcEndpoint;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpcEndpoint() {
         return this.vpcEndpoint == null ? Optional.empty() : Optional.ofNullable(this.vpcEndpoint);
     }
 
     @InputImport(name="vpcPeeringConnection")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpcPeeringConnection;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpcPeeringConnection() {
         return this.vpcPeeringConnection == null ? Optional.empty() : Optional.ofNullable(this.vpcPeeringConnection);
     }
 
     @InputImport(name="vpnConnection")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpnConnection;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpnConnection;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpnConnection() {
         return this.vpnConnection == null ? Optional.empty() : Optional.ofNullable(this.vpnConnection);
     }
 
     @InputImport(name="vpnGateway")
-    private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpnGateway;
+        private final @Nullable NetworkInsightsAnalysisAnalysisComponent vpnGateway;
 
     public Optional<NetworkInsightsAnalysisAnalysisComponent> getVpnGateway() {
         return this.vpnGateway == null ? Optional.empty() : Optional.ofNullable(this.vpnGateway);
@@ -811,7 +811,6 @@ public final class NetworkInsightsAnalysisExplanation extends io.pulumi.resource
             this.vpnGateway = vpnGateway;
             return this;
         }
-
         public NetworkInsightsAnalysisExplanation build() {
             return new NetworkInsightsAnalysisExplanation(acl, aclRule, address, addresses, attachedTo, availabilityZones, cidrs, classicLoadBalancerListener, component, customerGateway, destination, destinationVpc, direction, elasticLoadBalancerListener, explanationCode, ingressRouteTable, internetGateway, loadBalancerArn, loadBalancerListenerPort, loadBalancerTarget, loadBalancerTargetGroup, loadBalancerTargetGroups, loadBalancerTargetPort, missingComponent, natGateway, networkInterface, packetField, port, portRanges, prefixList, protocols, routeTable, routeTableRoute, securityGroup, securityGroupRule, securityGroups, sourceVpc, state, subnet, subnetRouteTable, vpc, vpcEndpoint, vpcPeeringConnection, vpnConnection, vpnGateway);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.FolderSinkArgs;
 import io.pulumi.gcp.logging.inputs.FolderSinkState;
@@ -191,13 +191,6 @@ public class FolderSink extends io.pulumi.resources.CustomResource {
         return this.writerIdentity;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FolderSink(String name) {
-        super("gcp:logging/folderSink:FolderSink", name, FolderSinkArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

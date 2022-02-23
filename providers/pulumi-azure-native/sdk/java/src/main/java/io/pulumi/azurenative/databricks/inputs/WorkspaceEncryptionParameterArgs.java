@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databricks.inputs;
 
 import io.pulumi.azurenative.databricks.inputs.EncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<EncryptionArgs> value;
+        private final @Nullable Input<EncryptionArgs> value;
 
     public Input<EncryptionArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -66,7 +66,6 @@ public final class WorkspaceEncryptionParameterArgs extends io.pulumi.resources.
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public WorkspaceEncryptionParameterArgs build() {
             return new WorkspaceEncryptionParameterArgs(value);
         }

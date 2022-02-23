@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class NodePoolNetworkConfigGetArgs extends io.pulumi.resources.Reso
     public static final NodePoolNetworkConfigGetArgs Empty = new NodePoolNetworkConfigGetArgs();
 
     @InputImport(name="createPodRange")
-    private final @Nullable Input<Boolean> createPodRange;
+        private final @Nullable Input<Boolean> createPodRange;
 
     public Input<Boolean> getCreatePodRange() {
         return this.createPodRange == null ? Input.empty() : this.createPodRange;
     }
 
     @InputImport(name="podIpv4CidrBlock")
-    private final @Nullable Input<String> podIpv4CidrBlock;
+        private final @Nullable Input<String> podIpv4CidrBlock;
 
     public Input<String> getPodIpv4CidrBlock() {
         return this.podIpv4CidrBlock == null ? Input.empty() : this.podIpv4CidrBlock;
     }
 
     @InputImport(name="podRange", required=true)
-    private final Input<String> podRange;
+        private final Input<String> podRange;
 
     public Input<String> getPodRange() {
         return this.podRange;
@@ -104,7 +104,6 @@ public final class NodePoolNetworkConfigGetArgs extends io.pulumi.resources.Reso
             this.podRange = Input.of(Objects.requireNonNull(podRange));
             return this;
         }
-
         public NodePoolNetworkConfigGetArgs build() {
             return new NodePoolNetworkConfigGetArgs(createPodRange, podIpv4CidrBlock, podRange);
         }

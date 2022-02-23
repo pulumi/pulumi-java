@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scheduleExpression", required=true)
-    private final String scheduleExpression;
+        private final String scheduleExpression;
 
     public String getScheduleExpression() {
         return this.scheduleExpression;
@@ -59,7 +59,6 @@ public final class MonitoringScheduleScheduleConfig extends io.pulumi.resources.
             this.scheduleExpression = Objects.requireNonNull(scheduleExpression);
             return this;
         }
-
         public MonitoringScheduleScheduleConfig build() {
             return new MonitoringScheduleScheduleConfig(scheduleExpression);
         }

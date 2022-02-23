@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class ToolResultsExecutionResponse {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public ToolResultsExecutionResponse build() {
             return new ToolResultsExecutionResponse(executionId, historyId, project);
         }

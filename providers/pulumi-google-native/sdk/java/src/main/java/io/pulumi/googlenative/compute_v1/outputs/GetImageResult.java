@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.DeprecationStatusResponse;
 import io.pulumi.googlenative.compute_v1.outputs.GuestOsFeatureResponse;
@@ -670,7 +670,6 @@ public final class GetImageResult {
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
         public GetImageResult build() {
             return new GetImageResult(archiveSizeBytes, creationTimestamp, deprecated, description, diskSizeGb, family, guestOsFeatures, imageEncryptionKey, kind, labelFingerprint, labels, licenseCodes, licenses, name, rawDisk, satisfiesPzs, selfLink, shieldedInstanceInitialState, sourceDisk, sourceDiskEncryptionKey, sourceDiskId, sourceImage, sourceImageEncryptionKey, sourceImageId, sourceSnapshot, sourceSnapshotEncryptionKey, sourceSnapshotId, sourceType, status, storageLocations);
         }

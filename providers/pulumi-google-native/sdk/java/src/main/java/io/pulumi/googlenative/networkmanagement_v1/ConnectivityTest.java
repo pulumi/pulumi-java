@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networkmanagement_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkmanagement_v1.ConnectivityTestArgs;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.EndpointResponse;
@@ -178,13 +178,6 @@ public class ConnectivityTest extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ConnectivityTest(String name) {
-        super("google-native:networkmanagement/v1:ConnectivityTest", name, ConnectivityTestArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

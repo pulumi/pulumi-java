@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse {
             this.targetUri = Objects.requireNonNull(targetUri);
             return this;
         }
-
         public GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse build() {
             return new GoogleCloudNetworksecurityV1beta1GrpcEndpointResponse(targetUri);
         }

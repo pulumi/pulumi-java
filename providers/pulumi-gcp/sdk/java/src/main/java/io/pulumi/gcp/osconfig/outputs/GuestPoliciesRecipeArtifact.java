@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifactGcs;
 import io.pulumi.gcp.osconfig.outputs.GuestPoliciesRecipeArtifactRemote;
 import java.lang.Boolean;
@@ -131,7 +131,6 @@ public final class GuestPoliciesRecipeArtifact {
             this.remote = remote;
             return this;
         }
-
         public GuestPoliciesRecipeArtifact build() {
             return new GuestPoliciesRecipeArtifact(allowInsecure, gcs, id, remote);
         }

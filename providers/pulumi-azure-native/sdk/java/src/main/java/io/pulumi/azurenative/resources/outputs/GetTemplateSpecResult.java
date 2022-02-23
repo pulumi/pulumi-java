@@ -5,7 +5,7 @@ package io.pulumi.azurenative.resources.outputs;
 
 import io.pulumi.azurenative.resources.outputs.SystemDataResponse;
 import io.pulumi.azurenative.resources.outputs.TemplateSpecVersionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -248,7 +248,6 @@ public final class GetTemplateSpecResult {
             this.versions = Objects.requireNonNull(versions);
             return this;
         }
-
         public GetTemplateSpecResult build() {
             return new GetTemplateSpecResult(description, displayName, id, location, metadata, name, systemData, tags, type, versions);
         }

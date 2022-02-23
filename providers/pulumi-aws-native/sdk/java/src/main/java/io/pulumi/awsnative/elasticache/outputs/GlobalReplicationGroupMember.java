@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.elasticache.outputs;
 
 import io.pulumi.awsnative.elasticache.enums.GlobalReplicationGroupMemberRole;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class GlobalReplicationGroupMember {
             this.role = role;
             return this;
         }
-
         public GlobalReplicationGroupMember build() {
             return new GlobalReplicationGroupMember(replicationGroupId, replicationGroupRegion, role);
         }

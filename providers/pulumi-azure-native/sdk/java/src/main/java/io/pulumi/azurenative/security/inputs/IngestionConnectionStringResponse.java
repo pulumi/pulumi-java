@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -32,7 +32,7 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class IngestionConnectionStringResponse extends io.pulumi.resources
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public IngestionConnectionStringResponse build() {
             return new IngestionConnectionStringResponse(location, value);
         }

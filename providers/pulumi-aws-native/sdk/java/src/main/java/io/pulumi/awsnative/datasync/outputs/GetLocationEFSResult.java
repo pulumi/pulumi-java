@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.outputs.LocationEFSTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class GetLocationEFSResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationEFSResult build() {
             return new GetLocationEFSResult(locationArn, locationUri, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudsearch_v1.outputs.GSuitePrincipalResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class GetDataSourceResult {
             this.shortName = Objects.requireNonNull(shortName);
             return this;
         }
-
         public GetDataSourceResult build() {
             return new GetDataSourceResult(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);
         }

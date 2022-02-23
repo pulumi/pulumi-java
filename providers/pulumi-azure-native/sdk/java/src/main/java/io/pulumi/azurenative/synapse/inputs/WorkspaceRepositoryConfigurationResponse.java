@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.synapse.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable String accountName;
+        private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
@@ -34,7 +34,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="collaborationBranch")
-    private final @Nullable String collaborationBranch;
+        private final @Nullable String collaborationBranch;
 
     public Optional<String> getCollaborationBranch() {
         return this.collaborationBranch == null ? Optional.empty() : Optional.ofNullable(this.collaborationBranch);
@@ -45,7 +45,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable String hostName;
+        private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
@@ -56,7 +56,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="lastCommitId")
-    private final @Nullable String lastCommitId;
+        private final @Nullable String lastCommitId;
 
     public Optional<String> getLastCommitId() {
         return this.lastCommitId == null ? Optional.empty() : Optional.ofNullable(this.lastCommitId);
@@ -67,7 +67,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="projectName")
-    private final @Nullable String projectName;
+        private final @Nullable String projectName;
 
     public Optional<String> getProjectName() {
         return this.projectName == null ? Optional.empty() : Optional.ofNullable(this.projectName);
@@ -78,7 +78,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="repositoryName")
-    private final @Nullable String repositoryName;
+        private final @Nullable String repositoryName;
 
     public Optional<String> getRepositoryName() {
         return this.repositoryName == null ? Optional.empty() : Optional.ofNullable(this.repositoryName);
@@ -89,7 +89,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="rootFolder")
-    private final @Nullable String rootFolder;
+        private final @Nullable String rootFolder;
 
     public Optional<String> getRootFolder() {
         return this.rootFolder == null ? Optional.empty() : Optional.ofNullable(this.rootFolder);
@@ -100,7 +100,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -111,7 +111,7 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -230,7 +230,6 @@ public final class WorkspaceRepositoryConfigurationResponse extends io.pulumi.re
             this.type = type;
             return this;
         }
-
         public WorkspaceRepositoryConfigurationResponse build() {
             return new WorkspaceRepositoryConfigurationResponse(accountName, collaborationBranch, hostName, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

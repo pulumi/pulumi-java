@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * 
      */
     @InputImport(name="answer", required=true)
-    private final String answer;
+      private final String answer;
 
     public String getAnswer() {
         return this.answer;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * 
      */
     @InputImport(name="confidenceScore", required=true)
-    private final Double confidenceScore;
+      private final Double confidenceScore;
 
     public Double getConfidenceScore() {
         return this.confidenceScore;
@@ -45,7 +45,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -56,7 +56,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * 
      */
     @InputImport(name="queryRecord", required=true)
-    private final String queryRecord;
+      private final String queryRecord;
 
     public String getQueryRecord() {
         return this.queryRecord;
@@ -67,7 +67,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * 
      */
     @InputImport(name="question", required=true)
-    private final String question;
+      private final String question;
 
     public String getQuestion() {
         return this.question;
@@ -78,7 +78,7 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -167,7 +167,6 @@ public final class GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse exten
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1FaqAnswerDataResponse(answer, confidenceScore, metadata, queryRecord, question, source);
         }

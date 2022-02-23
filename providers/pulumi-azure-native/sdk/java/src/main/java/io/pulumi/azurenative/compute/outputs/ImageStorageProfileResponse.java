@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.ImageDataDiskResponse;
 import io.pulumi.azurenative.compute.outputs.ImageOSDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class ImageStorageProfileResponse {
             this.zoneResilient = zoneResilient;
             return this;
         }
-
         public ImageStorageProfileResponse build() {
             return new ImageStorageProfileResponse(dataDisks, osDisk, zoneResilient);
         }

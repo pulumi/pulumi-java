@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.CrossVersionObjectReference;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.HorizontalPodAutoscalerBehavior;
 import io.pulumi.kubernetes.autoscaling_v2beta2.outputs.MetricSpec;
@@ -143,7 +143,6 @@ public final class HorizontalPodAutoscalerSpec {
             this.scaleTargetRef = Objects.requireNonNull(scaleTargetRef);
             return this;
         }
-
         public HorizontalPodAutoscalerSpec build() {
             return new HorizontalPodAutoscalerSpec(behavior, maxReplicas, metrics, minReplicas, scaleTargetRef);
         }

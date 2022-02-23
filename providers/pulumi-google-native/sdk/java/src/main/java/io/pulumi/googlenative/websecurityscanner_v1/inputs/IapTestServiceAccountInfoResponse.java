@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class IapTestServiceAccountInfoResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="targetAudienceClientId", required=true)
-    private final String targetAudienceClientId;
+      private final String targetAudienceClientId;
 
     public String getTargetAudienceClientId() {
         return this.targetAudienceClientId;
@@ -59,7 +59,6 @@ public final class IapTestServiceAccountInfoResponse extends io.pulumi.resources
             this.targetAudienceClientId = Objects.requireNonNull(targetAudienceClientId);
             return this;
         }
-
         public IapTestServiceAccountInfoResponse build() {
             return new IapTestServiceAccountInfoResponse(targetAudienceClientId);
         }

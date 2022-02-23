@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class RegionInstanceGroupManagerUpdatePolicy {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RegionInstanceGroupManagerUpdatePolicy build() {
             return new RegionInstanceGroupManagerUpdatePolicy(instanceRedistributionType, maxSurgeFixed, maxSurgePercent, maxUnavailableFixed, maxUnavailablePercent, minReadySec, minimalAction, replacementMethod, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigee.OrganizationArgs;
 import io.pulumi.gcp.apigee.inputs.OrganizationState;
@@ -198,13 +198,6 @@ public class Organization extends io.pulumi.resources.CustomResource {
         return this.subscriptionType;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Organization(String name) {
-        super("gcp:apigee/organization:Organization", name, OrganizationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

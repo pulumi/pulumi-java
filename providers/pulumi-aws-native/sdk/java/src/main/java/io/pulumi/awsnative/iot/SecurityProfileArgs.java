@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileBehaviorArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricToRetainArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="additionalMetricsToRetainV2")
-    private final @Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
+        private final @Nullable Input<List<SecurityProfileMetricToRetainArgs>> additionalMetricsToRetainV2;
 
     public Input<List<SecurityProfileMetricToRetainArgs>> getAdditionalMetricsToRetainV2() {
         return this.additionalMetricsToRetainV2 == null ? Input.empty() : this.additionalMetricsToRetainV2;
@@ -35,7 +35,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="alertTargets")
-    private final @Nullable Input<Object> alertTargets;
+        private final @Nullable Input<Object> alertTargets;
 
     public Input<Object> getAlertTargets() {
         return this.alertTargets == null ? Input.empty() : this.alertTargets;
@@ -46,7 +46,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="behaviors")
-    private final @Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors;
+        private final @Nullable Input<List<SecurityProfileBehaviorArgs>> behaviors;
 
     public Input<List<SecurityProfileBehaviorArgs>> getBehaviors() {
         return this.behaviors == null ? Input.empty() : this.behaviors;
@@ -57,7 +57,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityProfileDescription")
-    private final @Nullable Input<String> securityProfileDescription;
+        private final @Nullable Input<String> securityProfileDescription;
 
     public Input<String> getSecurityProfileDescription() {
         return this.securityProfileDescription == null ? Input.empty() : this.securityProfileDescription;
@@ -68,7 +68,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityProfileName")
-    private final @Nullable Input<String> securityProfileName;
+        private final @Nullable Input<String> securityProfileName;
 
     public Input<String> getSecurityProfileName() {
         return this.securityProfileName == null ? Input.empty() : this.securityProfileName;
@@ -79,7 +79,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<SecurityProfileTagArgs>> tags;
+        private final @Nullable Input<List<SecurityProfileTagArgs>> tags;
 
     public Input<List<SecurityProfileTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -90,7 +90,7 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="targetArns")
-    private final @Nullable Input<List<String>> targetArns;
+        private final @Nullable Input<List<String>> targetArns;
 
     public Input<List<String>> getTargetArns() {
         return this.targetArns == null ? Input.empty() : this.targetArns;
@@ -224,7 +224,6 @@ public final class SecurityProfileArgs extends io.pulumi.resources.ResourceArgs 
             this.targetArns = Input.ofNullable(targetArns);
             return this;
         }
-
         public SecurityProfileArgs build() {
             return new SecurityProfileArgs(additionalMetricsToRetainV2, alertTargets, behaviors, securityProfileDescription, securityProfileName, tags, targetArns);
         }

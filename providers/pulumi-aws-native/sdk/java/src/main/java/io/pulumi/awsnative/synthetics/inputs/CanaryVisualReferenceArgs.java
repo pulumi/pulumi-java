@@ -5,7 +5,7 @@ package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.awsnative.synthetics.inputs.CanaryBaseScreenshotArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="baseCanaryRunId", required=true)
-    private final Input<String> baseCanaryRunId;
+        private final Input<String> baseCanaryRunId;
 
     public Input<String> getBaseCanaryRunId() {
         return this.baseCanaryRunId;
@@ -32,7 +32,7 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="baseScreenshots")
-    private final @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots;
+        private final @Nullable Input<List<CanaryBaseScreenshotArgs>> baseScreenshots;
 
     public Input<List<CanaryBaseScreenshotArgs>> getBaseScreenshots() {
         return this.baseScreenshots == null ? Input.empty() : this.baseScreenshots;
@@ -91,7 +91,6 @@ public final class CanaryVisualReferenceArgs extends io.pulumi.resources.Resourc
             this.baseScreenshots = Input.ofNullable(baseScreenshots);
             return this;
         }
-
         public CanaryVisualReferenceArgs build() {
             return new CanaryVisualReferenceArgs(baseCanaryRunId, baseScreenshots);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasS3BucketLogDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class BotAliasAudioLogDestination {
             this.s3Bucket = s3Bucket;
             return this;
         }
-
         public BotAliasAudioLogDestination build() {
             return new BotAliasAudioLogDestination(s3Bucket);
         }

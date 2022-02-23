@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetStorageAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStorageAccountResult build() {
             return new GetStorageAccountResult(blobEndpoint, containerCount, dataPolicy, description, id, name, storageAccountCredentialId, storageAccountStatus, systemData, type);
         }

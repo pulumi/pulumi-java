@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.SecurityAssessmentMetadataPartnerDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -336,7 +336,6 @@ public final class GetAssessmentMetadataInSubscriptionResult {
             this.userImpact = userImpact;
             return this;
         }
-
         public GetAssessmentMetadataInSubscriptionResult build() {
             return new GetAssessmentMetadataInSubscriptionResult(assessmentType, categories, description, displayName, id, implementationEffort, name, partnerData, policyDefinitionId, preview, remediationDescription, severity, threats, type, userImpact);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse build() {
             return new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse(keyName, primaryKey, rights, secondaryKey);
         }

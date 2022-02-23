@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.forecast.inputs;
 
 import io.pulumi.awsnative.forecast.inputs.AttributesItemProperties;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -16,7 +16,7 @@ public final class SchemaProperties extends io.pulumi.resources.InvokeArgs {
     public static final SchemaProperties Empty = new SchemaProperties();
 
     @InputImport(name="attributes")
-    private final @Nullable List<AttributesItemProperties> attributes;
+        private final @Nullable List<AttributesItemProperties> attributes;
 
     public List<AttributesItemProperties> getAttributes() {
         return this.attributes == null ? List.of() : this.attributes;
@@ -54,7 +54,6 @@ public final class SchemaProperties extends io.pulumi.resources.InvokeArgs {
             this.attributes = attributes;
             return this;
         }
-
         public SchemaProperties build() {
             return new SchemaProperties(attributes);
         }

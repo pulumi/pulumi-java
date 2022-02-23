@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datacatalog_v1.inputs.GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * 
      */
     @InputImport(name="cloudSql", required=true)
-    private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
+      private final GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse cloudSql;
 
     public GoogleCloudDatacatalogV1CloudSqlBigQueryConnectionSpecResponse getCloudSql() {
         return this.cloudSql;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * 
      */
     @InputImport(name="connectionType", required=true)
-    private final String connectionType;
+      private final String connectionType;
 
     public String getConnectionType() {
         return this.connectionType;
@@ -45,7 +45,7 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
      * 
      */
     @InputImport(name="hasCredential", required=true)
-    private final Boolean hasCredential;
+      private final Boolean hasCredential;
 
     public Boolean getHasCredential() {
         return this.hasCredential;
@@ -104,7 +104,6 @@ public final class GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse extend
             this.hasCredential = Objects.requireNonNull(hasCredential);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse build() {
             return new GoogleCloudDatacatalogV1BigQueryConnectionSpecResponse(cloudSql, connectionType, hasCredential);
         }

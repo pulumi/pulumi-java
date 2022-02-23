@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.DurationResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="maintenanceDuration", required=true)
-    private final DurationResponse maintenanceDuration;
+      private final DurationResponse maintenanceDuration;
 
     public DurationResponse getMaintenanceDuration() {
         return this.maintenanceDuration;
@@ -33,7 +33,7 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -82,7 +82,6 @@ public final class NodeGroupMaintenanceWindowResponse extends io.pulumi.resource
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public NodeGroupMaintenanceWindowResponse build() {
             return new NodeGroupMaintenanceWindowResponse(maintenanceDuration, startTime);
         }

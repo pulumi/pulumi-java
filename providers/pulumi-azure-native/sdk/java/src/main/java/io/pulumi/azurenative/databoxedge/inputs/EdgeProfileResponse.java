@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.inputs;
 
 import io.pulumi.azurenative.databoxedge.inputs.EdgeProfileSubscriptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EdgeProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscription")
-    private final @Nullable EdgeProfileSubscriptionResponse subscription;
+        private final @Nullable EdgeProfileSubscriptionResponse subscription;
 
     public Optional<EdgeProfileSubscriptionResponse> getSubscription() {
         return this.subscription == null ? Optional.empty() : Optional.ofNullable(this.subscription);
@@ -61,7 +61,6 @@ public final class EdgeProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.subscription = subscription;
             return this;
         }
-
         public EdgeProfileResponse build() {
             return new EdgeProfileResponse(subscription);
         }

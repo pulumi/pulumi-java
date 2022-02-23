@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupsGroup;
 import java.lang.String;
 import java.util.List;
@@ -89,7 +89,6 @@ public final class GetGroupsResult {
             this.parent = Objects.requireNonNull(parent);
             return this;
         }
-
         public GetGroupsResult build() {
             return new GetGroupsResult(groups, id, parent);
         }

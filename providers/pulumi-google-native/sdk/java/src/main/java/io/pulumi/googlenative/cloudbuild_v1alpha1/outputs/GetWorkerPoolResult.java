@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1alpha1.outputs.WorkerConfigResponse;
 import java.lang.String;
 import java.util.List;
@@ -244,7 +244,6 @@ public final class GetWorkerPoolResult {
             this.workerCount = Objects.requireNonNull(workerCount);
             return this;
         }
-
         public GetWorkerPoolResult build() {
             return new GetWorkerPoolResult(createTime, deleteTime, name, project, regions, serviceAccountEmail, status, updateTime, workerConfig, workerCount);
         }

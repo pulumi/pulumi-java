@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -305,7 +305,6 @@ public final class InstanceGroupManagerActionsSummaryResponse {
             this.verifying = Objects.requireNonNull(verifying);
             return this;
         }
-
         public InstanceGroupManagerActionsSummaryResponse build() {
             return new InstanceGroupManagerActionsSummaryResponse(abandoning, creating, creatingWithoutRetries, deleting, none, recreating, refreshing, restarting, resuming, starting, stopping, suspending, verifying);
         }

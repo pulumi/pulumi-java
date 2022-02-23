@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aad.inputs;
 
 import io.pulumi.azurenative.aad.inputs.MigrationProgressResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="migrationProgress", required=true)
-    private final MigrationProgressResponse migrationProgress;
+        private final MigrationProgressResponse migrationProgress;
 
     public MigrationProgressResponse getMigrationProgress() {
         return this.migrationProgress;
@@ -33,7 +33,7 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="oldSubnetId", required=true)
-    private final String oldSubnetId;
+        private final String oldSubnetId;
 
     public String getOldSubnetId() {
         return this.oldSubnetId;
@@ -44,7 +44,7 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="oldVnetSiteId", required=true)
-    private final String oldVnetSiteId;
+        private final String oldVnetSiteId;
 
     public String getOldVnetSiteId() {
         return this.oldVnetSiteId;
@@ -103,7 +103,6 @@ public final class MigrationPropertiesResponse extends io.pulumi.resources.Invok
             this.oldVnetSiteId = Objects.requireNonNull(oldVnetSiteId);
             return this;
         }
-
         public MigrationPropertiesResponse build() {
             return new MigrationPropertiesResponse(migrationProgress, oldSubnetId, oldVnetSiteId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable String contentType;
+        private final @Nullable String contentType;
 
     public Optional<String> getContentType() {
         return this.contentType == null ? Optional.empty() : Optional.ofNullable(this.contentType);
@@ -31,7 +31,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="correlationId")
-    private final @Nullable String correlationId;
+        private final @Nullable String correlationId;
 
     public Optional<String> getCorrelationId() {
         return this.correlationId == null ? Optional.empty() : Optional.ofNullable(this.correlationId);
@@ -42,7 +42,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="forcePersistence")
-    private final @Nullable Boolean forcePersistence;
+        private final @Nullable Boolean forcePersistence;
 
     public Optional<Boolean> getForcePersistence() {
         return this.forcePersistence == null ? Optional.empty() : Optional.ofNullable(this.forcePersistence);
@@ -53,7 +53,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="label")
-    private final @Nullable String label;
+        private final @Nullable String label;
 
     public Optional<String> getLabel() {
         return this.label == null ? Optional.empty() : Optional.ofNullable(this.label);
@@ -64,7 +64,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="messageId")
-    private final @Nullable String messageId;
+        private final @Nullable String messageId;
 
     public Optional<String> getMessageId() {
         return this.messageId == null ? Optional.empty() : Optional.ofNullable(this.messageId);
@@ -75,7 +75,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable String partitionKey;
+        private final @Nullable String partitionKey;
 
     public Optional<String> getPartitionKey() {
         return this.partitionKey == null ? Optional.empty() : Optional.ofNullable(this.partitionKey);
@@ -86,7 +86,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="replyTo")
-    private final @Nullable String replyTo;
+        private final @Nullable String replyTo;
 
     public Optional<String> getReplyTo() {
         return this.replyTo == null ? Optional.empty() : Optional.ofNullable(this.replyTo);
@@ -97,7 +97,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="replyToSessionId")
-    private final @Nullable String replyToSessionId;
+        private final @Nullable String replyToSessionId;
 
     public Optional<String> getReplyToSessionId() {
         return this.replyToSessionId == null ? Optional.empty() : Optional.ofNullable(this.replyToSessionId);
@@ -108,7 +108,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="scheduledEnqueueTimeUtc")
-    private final @Nullable String scheduledEnqueueTimeUtc;
+        private final @Nullable String scheduledEnqueueTimeUtc;
 
     public Optional<String> getScheduledEnqueueTimeUtc() {
         return this.scheduledEnqueueTimeUtc == null ? Optional.empty() : Optional.ofNullable(this.scheduledEnqueueTimeUtc);
@@ -119,7 +119,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="sessionId")
-    private final @Nullable String sessionId;
+        private final @Nullable String sessionId;
 
     public Optional<String> getSessionId() {
         return this.sessionId == null ? Optional.empty() : Optional.ofNullable(this.sessionId);
@@ -130,7 +130,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="timeToLive")
-    private final @Nullable String timeToLive;
+        private final @Nullable String timeToLive;
 
     public Optional<String> getTimeToLive() {
         return this.timeToLive == null ? Optional.empty() : Optional.ofNullable(this.timeToLive);
@@ -141,7 +141,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="to")
-    private final @Nullable String to;
+        private final @Nullable String to;
 
     public Optional<String> getTo() {
         return this.to == null ? Optional.empty() : Optional.ofNullable(this.to);
@@ -152,7 +152,7 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="viaPartitionKey")
-    private final @Nullable String viaPartitionKey;
+        private final @Nullable String viaPartitionKey;
 
     public Optional<String> getViaPartitionKey() {
         return this.viaPartitionKey == null ? Optional.empty() : Optional.ofNullable(this.viaPartitionKey);
@@ -311,7 +311,6 @@ public final class ServiceBusBrokeredMessagePropertiesResponse extends io.pulumi
             this.viaPartitionKey = viaPartitionKey;
             return this;
         }
-
         public ServiceBusBrokeredMessagePropertiesResponse build() {
             return new ServiceBusBrokeredMessagePropertiesResponse(contentType, correlationId, forcePersistence, label, messageId, partitionKey, replyTo, replyToSessionId, scheduledEnqueueTimeUtc, sessionId, timeToLive, to, viaPartitionKey);
         }

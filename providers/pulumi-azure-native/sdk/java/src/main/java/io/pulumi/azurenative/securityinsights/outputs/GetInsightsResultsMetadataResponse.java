@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.outputs;
 
 import io.pulumi.azurenative.securityinsights.outputs.GetInsightsErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class GetInsightsResultsMetadataResponse {
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public GetInsightsResultsMetadataResponse build() {
             return new GetInsightsResultsMetadataResponse(errors, totalCount);
         }

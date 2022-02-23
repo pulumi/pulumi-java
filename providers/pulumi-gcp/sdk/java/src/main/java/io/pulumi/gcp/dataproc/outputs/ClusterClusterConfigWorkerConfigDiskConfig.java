@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -108,7 +108,6 @@ public final class ClusterClusterConfigWorkerConfigDiskConfig {
             this.numLocalSsds = numLocalSsds;
             return this;
         }
-
         public ClusterClusterConfigWorkerConfigDiskConfig build() {
             return new ClusterClusterConfigWorkerConfigDiskConfig(bootDiskSizeGb, bootDiskType, numLocalSsds);
         }

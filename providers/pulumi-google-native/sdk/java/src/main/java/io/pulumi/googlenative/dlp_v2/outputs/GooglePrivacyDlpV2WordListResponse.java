@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2WordListResponse {
             this.words = Objects.requireNonNull(words);
             return this;
         }
-
         public GooglePrivacyDlpV2WordListResponse build() {
             return new GooglePrivacyDlpV2WordListResponse(words);
         }

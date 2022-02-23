@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class CanarySchedule {
             this.expression = Objects.requireNonNull(expression);
             return this;
         }
-
         public CanarySchedule build() {
             return new CanarySchedule(durationInSeconds, expression);
         }

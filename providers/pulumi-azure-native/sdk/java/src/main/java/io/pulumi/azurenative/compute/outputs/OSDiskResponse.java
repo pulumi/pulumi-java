@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.outputs.DiffDiskSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.ManagedDiskParametersResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualHardDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -292,7 +292,6 @@ public final class OSDiskResponse {
             this.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
-
         public OSDiskResponse build() {
             return new OSDiskResponse(caching, createOption, deleteOption, diffDiskSettings, diskSizeGB, encryptionSettings, image, managedDisk, name, osType, vhd, writeAcceleratorEnabled);
         }

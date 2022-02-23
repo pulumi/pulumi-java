@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.enums.DiskCreateOption;
 import io.pulumi.azurenative.compute.inputs.ImageDiskReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createOption", required=true)
-    private final Input<Either<String,DiskCreateOption>> createOption;
+        private final Input<Either<String,DiskCreateOption>> createOption;
 
     public Input<Either<String,DiskCreateOption>> getCreateOption() {
         return this.createOption;
@@ -39,7 +39,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="galleryImageReference")
-    private final @Nullable Input<ImageDiskReferenceArgs> galleryImageReference;
+        private final @Nullable Input<ImageDiskReferenceArgs> galleryImageReference;
 
     public Input<ImageDiskReferenceArgs> getGalleryImageReference() {
         return this.galleryImageReference == null ? Input.empty() : this.galleryImageReference;
@@ -50,7 +50,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable Input<ImageDiskReferenceArgs> imageReference;
+        private final @Nullable Input<ImageDiskReferenceArgs> imageReference;
 
     public Input<ImageDiskReferenceArgs> getImageReference() {
         return this.imageReference == null ? Input.empty() : this.imageReference;
@@ -61,7 +61,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicalSectorSize")
-    private final @Nullable Input<Integer> logicalSectorSize;
+        private final @Nullable Input<Integer> logicalSectorSize;
 
     public Input<Integer> getLogicalSectorSize() {
         return this.logicalSectorSize == null ? Input.empty() : this.logicalSectorSize;
@@ -72,7 +72,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceResourceId")
-    private final @Nullable Input<String> sourceResourceId;
+        private final @Nullable Input<String> sourceResourceId;
 
     public Input<String> getSourceResourceId() {
         return this.sourceResourceId == null ? Input.empty() : this.sourceResourceId;
@@ -83,7 +83,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceUri")
-    private final @Nullable Input<String> sourceUri;
+        private final @Nullable Input<String> sourceUri;
 
     public Input<String> getSourceUri() {
         return this.sourceUri == null ? Input.empty() : this.sourceUri;
@@ -94,7 +94,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountId")
-    private final @Nullable Input<String> storageAccountId;
+        private final @Nullable Input<String> storageAccountId;
 
     public Input<String> getStorageAccountId() {
         return this.storageAccountId == null ? Input.empty() : this.storageAccountId;
@@ -105,7 +105,7 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uploadSizeBytes")
-    private final @Nullable Input<Double> uploadSizeBytes;
+        private final @Nullable Input<Double> uploadSizeBytes;
 
     public Input<Double> getUploadSizeBytes() {
         return this.uploadSizeBytes == null ? Input.empty() : this.uploadSizeBytes;
@@ -254,7 +254,6 @@ public final class CreationDataArgs extends io.pulumi.resources.ResourceArgs {
             this.uploadSizeBytes = Input.ofNullable(uploadSizeBytes);
             return this;
         }
-
         public CreationDataArgs build() {
             return new CreationDataArgs(createOption, galleryImageReference, imageReference, logicalSectorSize, sourceResourceId, sourceUri, storageAccountId, uploadSizeBytes);
         }

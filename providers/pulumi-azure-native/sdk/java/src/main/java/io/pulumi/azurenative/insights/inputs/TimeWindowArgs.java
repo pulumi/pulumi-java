@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end", required=true)
-    private final Input<String> end;
+        private final Input<String> end;
 
     public Input<String> getEnd() {
         return this.end;
@@ -34,7 +34,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start", required=true)
-    private final Input<String> start;
+        private final Input<String> start;
 
     public Input<String> getStart() {
         return this.start;
@@ -45,7 +45,7 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
@@ -119,7 +119,6 @@ public final class TimeWindowArgs extends io.pulumi.resources.ResourceArgs {
             this.timeZone = Input.ofNullable(timeZone);
             return this;
         }
-
         public TimeWindowArgs build() {
             return new TimeWindowArgs(end, start, timeZone);
         }

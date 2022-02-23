@@ -13,7 +13,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.HyperVReplicaReplicationDe
 import io.pulumi.azurenative.recoveryservices.outputs.InMageAzureV2ReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmReplicationDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageReplicationDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -613,7 +613,6 @@ public final class ReplicationProtectedItemPropertiesResponse {
             this.testFailoverStateDescription = testFailoverStateDescription;
             return this;
         }
-
         public ReplicationProtectedItemPropertiesResponse build() {
             return new ReplicationProtectedItemPropertiesResponse(activeLocation, allowedOperations, currentScenario, failoverHealth, failoverRecoveryPointId, friendlyName, healthErrors, lastSuccessfulFailoverTime, lastSuccessfulTestFailoverTime, policyFriendlyName, policyId, primaryFabricFriendlyName, primaryFabricProvider, primaryProtectionContainerFriendlyName, protectableItemId, protectedItemType, protectionState, protectionStateDescription, providerSpecificDetails, recoveryContainerId, recoveryFabricFriendlyName, recoveryFabricId, recoveryProtectionContainerFriendlyName, recoveryServicesProviderId, replicationHealth, testFailoverState, testFailoverStateDescription);
         }

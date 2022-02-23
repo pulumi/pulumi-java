@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.NodeConfigDefaultsResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class NodePoolDefaultsResponse {
             this.nodeConfigDefaults = Objects.requireNonNull(nodeConfigDefaults);
             return this;
         }
-
         public NodePoolDefaultsResponse build() {
             return new NodePoolDefaultsResponse(nodeConfigDefaults);
         }

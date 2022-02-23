@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -32,7 +32,7 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -81,7 +81,6 @@ public final class SecretVersionResponse extends io.pulumi.resources.InvokeArgs 
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SecretVersionResponse build() {
             return new SecretVersionResponse(path, version);
         }

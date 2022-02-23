@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attachedTo")
-    private final @Nullable String attachedTo;
+        private final @Nullable String attachedTo;
 
     public Optional<String> getAttachedTo() {
         return this.attachedTo == null ? Optional.empty() : Optional.ofNullable(this.attachedTo);
@@ -36,7 +36,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="attachmentState")
-    private final @Nullable String attachmentState;
+        private final @Nullable String attachmentState;
 
     public Optional<String> getAttachmentState() {
         return this.attachmentState == null ? Optional.empty() : Optional.ofNullable(this.attachmentState);
@@ -47,7 +47,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final String diskName;
+        private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -58,7 +58,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iOPS")
-    private final @Nullable Integer iOPS;
+        private final @Nullable Integer iOPS;
 
     public Optional<Integer> getIOPS() {
         return this.iOPS == null ? Optional.empty() : Optional.ofNullable(this.iOPS);
@@ -69,7 +69,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isSystemDisk")
-    private final @Nullable Boolean isSystemDisk;
+        private final @Nullable Boolean isSystemDisk;
 
     public Optional<Boolean> getIsSystemDisk() {
         return this.isSystemDisk == null ? Optional.empty() : Optional.ofNullable(this.isSystemDisk);
@@ -80,7 +80,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+        private final String path;
 
     public String getPath() {
         return this.path;
@@ -91,7 +91,7 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeInGb")
-    private final @Nullable String sizeInGb;
+        private final @Nullable String sizeInGb;
 
     public Optional<String> getSizeInGb() {
         return this.sizeInGb == null ? Optional.empty() : Optional.ofNullable(this.sizeInGb);
@@ -190,7 +190,6 @@ public final class InstanceDisk extends io.pulumi.resources.InvokeArgs {
             this.sizeInGb = sizeInGb;
             return this;
         }
-
         public InstanceDisk build() {
             return new InstanceDisk(attachedTo, attachmentState, diskName, iOPS, isSystemDisk, path, sizeInGb);
         }

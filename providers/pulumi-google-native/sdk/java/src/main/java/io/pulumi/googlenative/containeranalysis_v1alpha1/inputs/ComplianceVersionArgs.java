@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="cpeUri")
-    private final @Nullable Input<String> cpeUri;
+      private final @Nullable Input<String> cpeUri;
 
     public Input<String> getCpeUri() {
         return this.cpeUri == null ? Input.empty() : this.cpeUri;
@@ -34,7 +34,7 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -93,7 +93,6 @@ public final class ComplianceVersionArgs extends io.pulumi.resources.ResourceArg
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ComplianceVersionArgs build() {
             return new ComplianceVersionArgs(cpeUri, version);
         }

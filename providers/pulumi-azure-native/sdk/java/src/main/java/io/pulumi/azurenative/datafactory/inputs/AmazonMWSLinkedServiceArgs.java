@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="accessKeyId", required=true)
-    private final Input<Object> accessKeyId;
+        private final Input<Object> accessKeyId;
 
     public Input<Object> getAccessKeyId() {
         return this.accessKeyId;
@@ -42,7 +42,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -53,7 +53,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -64,7 +64,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -75,7 +75,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -86,7 +86,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<Object> endpoint;
+        private final Input<Object> endpoint;
 
     public Input<Object> getEndpoint() {
         return this.endpoint;
@@ -97,7 +97,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="marketplaceID", required=true)
-    private final Input<Object> marketplaceID;
+        private final Input<Object> marketplaceID;
 
     public Input<Object> getMarketplaceID() {
         return this.marketplaceID;
@@ -108,7 +108,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="mwsAuthToken")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> mwsAuthToken;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getMwsAuthToken() {
         return this.mwsAuthToken == null ? Input.empty() : this.mwsAuthToken;
@@ -119,7 +119,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -130,7 +130,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="secretKey")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> secretKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getSecretKey() {
         return this.secretKey == null ? Input.empty() : this.secretKey;
@@ -141,7 +141,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="sellerID", required=true)
-    private final Input<Object> sellerID;
+        private final Input<Object> sellerID;
 
     public Input<Object> getSellerID() {
         return this.sellerID;
@@ -153,7 +153,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -164,7 +164,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Input<Object> useEncryptedEndpoints;
+        private final @Nullable Input<Object> useEncryptedEndpoints;
 
     public Input<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Input.empty() : this.useEncryptedEndpoints;
@@ -175,7 +175,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="useHostVerification")
-    private final @Nullable Input<Object> useHostVerification;
+        private final @Nullable Input<Object> useHostVerification;
 
     public Input<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Input.empty() : this.useHostVerification;
@@ -186,7 +186,7 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="usePeerVerification")
-    private final @Nullable Input<Object> usePeerVerification;
+        private final @Nullable Input<Object> usePeerVerification;
 
     public Input<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Input.empty() : this.usePeerVerification;
@@ -440,7 +440,6 @@ public final class AmazonMWSLinkedServiceArgs extends io.pulumi.resources.Resour
             this.usePeerVerification = Input.ofNullable(usePeerVerification);
             return this;
         }
-
         public AmazonMWSLinkedServiceArgs build() {
             return new AmazonMWSLinkedServiceArgs(accessKeyId, annotations, connectVia, description, encryptedCredential, endpoint, marketplaceID, mwsAuthToken, parameters, secretKey, sellerID, type, useEncryptedEndpoints, useHostVerification, usePeerVerification);
         }

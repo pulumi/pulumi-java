@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="backendAddressPool")
-    private final @Nullable SubResourceResponse backendAddressPool;
+        private final @Nullable SubResourceResponse backendAddressPool;
 
     public Optional<SubResourceResponse> getBackendAddressPool() {
         return this.backendAddressPool == null ? Optional.empty() : Optional.ofNullable(this.backendAddressPool);
@@ -36,7 +36,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="backendHttpSettings")
-    private final @Nullable SubResourceResponse backendHttpSettings;
+        private final @Nullable SubResourceResponse backendHttpSettings;
 
     public Optional<SubResourceResponse> getBackendHttpSettings() {
         return this.backendHttpSettings == null ? Optional.empty() : Optional.ofNullable(this.backendHttpSettings);
@@ -47,7 +47,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -58,7 +58,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="httpListener")
-    private final @Nullable SubResourceResponse httpListener;
+        private final @Nullable SubResourceResponse httpListener;
 
     public Optional<SubResourceResponse> getHttpListener() {
         return this.httpListener == null ? Optional.empty() : Optional.ofNullable(this.httpListener);
@@ -69,7 +69,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -80,7 +80,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -91,7 +91,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -102,7 +102,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -113,7 +113,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="redirectConfiguration")
-    private final @Nullable SubResourceResponse redirectConfiguration;
+        private final @Nullable SubResourceResponse redirectConfiguration;
 
     public Optional<SubResourceResponse> getRedirectConfiguration() {
         return this.redirectConfiguration == null ? Optional.empty() : Optional.ofNullable(this.redirectConfiguration);
@@ -124,7 +124,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="rewriteRuleSet")
-    private final @Nullable SubResourceResponse rewriteRuleSet;
+        private final @Nullable SubResourceResponse rewriteRuleSet;
 
     public Optional<SubResourceResponse> getRewriteRuleSet() {
         return this.rewriteRuleSet == null ? Optional.empty() : Optional.ofNullable(this.rewriteRuleSet);
@@ -135,7 +135,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="ruleType")
-    private final @Nullable String ruleType;
+        private final @Nullable String ruleType;
 
     public Optional<String> getRuleType() {
         return this.ruleType == null ? Optional.empty() : Optional.ofNullable(this.ruleType);
@@ -146,7 +146,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -157,7 +157,7 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
      * 
      */
     @InputImport(name="urlPathMap")
-    private final @Nullable SubResourceResponse urlPathMap;
+        private final @Nullable SubResourceResponse urlPathMap;
 
     public Optional<SubResourceResponse> getUrlPathMap() {
         return this.urlPathMap == null ? Optional.empty() : Optional.ofNullable(this.urlPathMap);
@@ -316,7 +316,6 @@ public final class ApplicationGatewayRequestRoutingRuleResponse extends io.pulum
             this.urlPathMap = urlPathMap;
             return this;
         }
-
         public ApplicationGatewayRequestRoutingRuleResponse build() {
             return new ApplicationGatewayRequestRoutingRuleResponse(backendAddressPool, backendHttpSettings, etag, httpListener, id, name, priority, provisioningState, redirectConfiguration, rewriteRuleSet, ruleType, type, urlPathMap);
         }

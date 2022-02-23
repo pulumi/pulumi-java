@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs;
@@ -26,7 +26,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="coolDownPeriod")
-    private final @Nullable Input<String> coolDownPeriod;
+        private final @Nullable Input<String> coolDownPeriod;
 
     public Input<String> getCoolDownPeriod() {
         return this.coolDownPeriod == null ? Input.empty() : this.coolDownPeriod;
@@ -38,7 +38,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cpuUtilization", required=true)
-    private final Input<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
+        private final Input<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> cpuUtilization;
 
     public Input<FlexibleAppVersionAutomaticScalingCpuUtilizationGetArgs> getCpuUtilization() {
         return this.cpuUtilization;
@@ -50,7 +50,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="diskUtilization")
-    private final @Nullable Input<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
+        private final @Nullable Input<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> diskUtilization;
 
     public Input<FlexibleAppVersionAutomaticScalingDiskUtilizationGetArgs> getDiskUtilization() {
         return this.diskUtilization == null ? Input.empty() : this.diskUtilization;
@@ -62,7 +62,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxConcurrentRequests")
-    private final @Nullable Input<Integer> maxConcurrentRequests;
+        private final @Nullable Input<Integer> maxConcurrentRequests;
 
     public Input<Integer> getMaxConcurrentRequests() {
         return this.maxConcurrentRequests == null ? Input.empty() : this.maxConcurrentRequests;
@@ -73,7 +73,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxIdleInstances")
-    private final @Nullable Input<Integer> maxIdleInstances;
+        private final @Nullable Input<Integer> maxIdleInstances;
 
     public Input<Integer> getMaxIdleInstances() {
         return this.maxIdleInstances == null ? Input.empty() : this.maxIdleInstances;
@@ -84,7 +84,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxPendingLatency")
-    private final @Nullable Input<String> maxPendingLatency;
+        private final @Nullable Input<String> maxPendingLatency;
 
     public Input<String> getMaxPendingLatency() {
         return this.maxPendingLatency == null ? Input.empty() : this.maxPendingLatency;
@@ -95,7 +95,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="maxTotalInstances")
-    private final @Nullable Input<Integer> maxTotalInstances;
+        private final @Nullable Input<Integer> maxTotalInstances;
 
     public Input<Integer> getMaxTotalInstances() {
         return this.maxTotalInstances == null ? Input.empty() : this.maxTotalInstances;
@@ -106,7 +106,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minIdleInstances")
-    private final @Nullable Input<Integer> minIdleInstances;
+        private final @Nullable Input<Integer> minIdleInstances;
 
     public Input<Integer> getMinIdleInstances() {
         return this.minIdleInstances == null ? Input.empty() : this.minIdleInstances;
@@ -117,7 +117,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minPendingLatency")
-    private final @Nullable Input<String> minPendingLatency;
+        private final @Nullable Input<String> minPendingLatency;
 
     public Input<String> getMinPendingLatency() {
         return this.minPendingLatency == null ? Input.empty() : this.minPendingLatency;
@@ -128,7 +128,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="minTotalInstances")
-    private final @Nullable Input<Integer> minTotalInstances;
+        private final @Nullable Input<Integer> minTotalInstances;
 
     public Input<Integer> getMinTotalInstances() {
         return this.minTotalInstances == null ? Input.empty() : this.minTotalInstances;
@@ -140,7 +140,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="networkUtilization")
-    private final @Nullable Input<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
+        private final @Nullable Input<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> networkUtilization;
 
     public Input<FlexibleAppVersionAutomaticScalingNetworkUtilizationGetArgs> getNetworkUtilization() {
         return this.networkUtilization == null ? Input.empty() : this.networkUtilization;
@@ -152,7 +152,7 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="requestUtilization")
-    private final @Nullable Input<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
+        private final @Nullable Input<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> requestUtilization;
 
     public Input<FlexibleAppVersionAutomaticScalingRequestUtilizationGetArgs> getRequestUtilization() {
         return this.requestUtilization == null ? Input.empty() : this.requestUtilization;
@@ -361,7 +361,6 @@ public final class FlexibleAppVersionAutomaticScalingGetArgs extends io.pulumi.r
             this.requestUtilization = Input.ofNullable(requestUtilization);
             return this;
         }
-
         public FlexibleAppVersionAutomaticScalingGetArgs build() {
             return new FlexibleAppVersionAutomaticScalingGetArgs(coolDownPeriod, cpuUtilization, diskUtilization, maxConcurrentRequests, maxIdleInstances, maxPendingLatency, maxTotalInstances, minIdleInstances, minPendingLatency, minTotalInstances, networkUtilization, requestUtilization);
         }

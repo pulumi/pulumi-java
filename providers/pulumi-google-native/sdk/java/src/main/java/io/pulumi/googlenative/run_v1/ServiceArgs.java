@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1.inputs.ObjectMetaArgs;
 import io.pulumi.googlenative.run_v1.inputs.ServiceSpecArgs;
 import io.pulumi.googlenative.run_v1.inputs.ServiceStatusArgs;
@@ -22,14 +22,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+      private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
     }
 
     @InputImport(name="dryRun")
-    private final @Nullable Input<String> dryRun;
+      private final @Nullable Input<String> dryRun;
 
     public Input<String> getDryRun() {
         return this.dryRun == null ? Input.empty() : this.dryRun;
@@ -40,14 +40,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -58,14 +58,14 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+      private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -76,7 +76,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<ServiceSpecArgs> spec;
+      private final @Nullable Input<ServiceSpecArgs> spec;
 
     public Input<ServiceSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -87,7 +87,7 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<ServiceStatusArgs> status;
+      private final @Nullable Input<ServiceStatusArgs> status;
 
     public Input<ServiceStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -236,7 +236,6 @@ public final class ServiceArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ServiceArgs build() {
             return new ServiceArgs(apiVersion, dryRun, kind, location, metadata, project, spec, status);
         }

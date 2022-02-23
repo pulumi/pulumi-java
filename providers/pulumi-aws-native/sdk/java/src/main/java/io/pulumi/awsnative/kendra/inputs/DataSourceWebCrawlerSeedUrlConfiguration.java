@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration extends io.pulumi.re
     public static final DataSourceWebCrawlerSeedUrlConfiguration Empty = new DataSourceWebCrawlerSeedUrlConfiguration();
 
     @InputImport(name="seedUrls", required=true)
-    private final List<String> seedUrls;
+        private final List<String> seedUrls;
 
     public List<String> getSeedUrls() {
         return this.seedUrls;
     }
 
     @InputImport(name="webCrawlerMode")
-    private final @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode;
+        private final @Nullable DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode webCrawlerMode;
 
     public Optional<DataSourceWebCrawlerSeedUrlConfigurationWebCrawlerMode> getWebCrawlerMode() {
         return this.webCrawlerMode == null ? Optional.empty() : Optional.ofNullable(this.webCrawlerMode);
@@ -73,7 +73,6 @@ public final class DataSourceWebCrawlerSeedUrlConfiguration extends io.pulumi.re
             this.webCrawlerMode = webCrawlerMode;
             return this;
         }
-
         public DataSourceWebCrawlerSeedUrlConfiguration build() {
             return new DataSourceWebCrawlerSeedUrlConfiguration(seedUrls, webCrawlerMode);
         }

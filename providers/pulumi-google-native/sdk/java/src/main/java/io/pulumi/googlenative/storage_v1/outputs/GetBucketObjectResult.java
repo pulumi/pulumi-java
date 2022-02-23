@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectCustomerEncryptionResponse;
 import io.pulumi.googlenative.storage_v1.outputs.BucketObjectOwnerResponse;
 import io.pulumi.googlenative.storage_v1.outputs.ObjectAccessControlResponse;
@@ -690,7 +690,6 @@ public final class GetBucketObjectResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetBucketObjectResult build() {
             return new GetBucketObjectResult(acl, bucket, cacheControl, componentCount, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customTime, customerEncryption, etag, eventBasedHold, generation, kind, kmsKeyName, md5Hash, mediaLink, metadata, metageneration, name, owner, retentionExpirationTime, selfLink, size, storageClass, temporaryHold, timeCreated, timeDeleted, timeStorageClassUpdated, updated);
         }

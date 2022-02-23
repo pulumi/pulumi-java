@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.MaterialResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SlsaBuilderResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.SlsaMetadataResponse;
@@ -120,7 +120,6 @@ public final class SlsaProvenanceResponse {
             this.recipe = Objects.requireNonNull(recipe);
             return this;
         }
-
         public SlsaProvenanceResponse build() {
             return new SlsaProvenanceResponse(builder, materials, metadata, recipe);
         }

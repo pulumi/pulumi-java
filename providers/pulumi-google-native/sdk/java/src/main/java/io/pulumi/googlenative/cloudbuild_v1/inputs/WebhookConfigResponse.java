@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+      private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -32,7 +32,7 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -81,7 +81,6 @@ public final class WebhookConfigResponse extends io.pulumi.resources.InvokeArgs 
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public WebhookConfigResponse build() {
             return new WebhookConfigResponse(secret, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GcfsConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public GcfsConfigResponse build() {
             return new GcfsConfigResponse(enabled);
         }

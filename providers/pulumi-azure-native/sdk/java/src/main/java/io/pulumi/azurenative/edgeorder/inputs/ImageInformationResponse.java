@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageType", required=true)
-    private final String imageType;
+        private final String imageType;
 
     public String getImageType() {
         return this.imageType;
@@ -32,7 +32,7 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="imageUrl", required=true)
-    private final String imageUrl;
+        private final String imageUrl;
 
     public String getImageUrl() {
         return this.imageUrl;
@@ -81,7 +81,6 @@ public final class ImageInformationResponse extends io.pulumi.resources.InvokeAr
             this.imageUrl = Objects.requireNonNull(imageUrl);
             return this;
         }
-
         public ImageInformationResponse build() {
             return new ImageInformationResponse(imageType, imageUrl);
         }

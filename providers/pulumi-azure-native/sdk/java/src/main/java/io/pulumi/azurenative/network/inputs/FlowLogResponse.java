@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.inputs.FlowLogFormatParametersResponse;
 import io.pulumi.azurenative.network.inputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.inputs.TrafficAnalyticsPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -39,7 +39,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -50,7 +50,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="flowAnalyticsConfiguration")
-    private final @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
+        private final @Nullable TrafficAnalyticsPropertiesResponse flowAnalyticsConfiguration;
 
     public Optional<TrafficAnalyticsPropertiesResponse> getFlowAnalyticsConfiguration() {
         return this.flowAnalyticsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.flowAnalyticsConfiguration);
@@ -61,7 +61,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable FlowLogFormatParametersResponse format;
+        private final @Nullable FlowLogFormatParametersResponse format;
 
     public Optional<FlowLogFormatParametersResponse> getFormat() {
         return this.format == null ? Optional.empty() : Optional.ofNullable(this.format);
@@ -72,7 +72,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -83,7 +83,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -94,7 +94,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -105,7 +105,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -116,7 +116,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable RetentionPolicyParametersResponse retentionPolicy;
+        private final @Nullable RetentionPolicyParametersResponse retentionPolicy;
 
     public Optional<RetentionPolicyParametersResponse> getRetentionPolicy() {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
@@ -127,7 +127,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageId", required=true)
-    private final String storageId;
+        private final String storageId;
 
     public String getStorageId() {
         return this.storageId;
@@ -138,7 +138,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -149,7 +149,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetResourceGuid", required=true)
-    private final String targetResourceGuid;
+        private final String targetResourceGuid;
 
     public String getTargetResourceGuid() {
         return this.targetResourceGuid;
@@ -160,7 +160,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetResourceId", required=true)
-    private final String targetResourceId;
+        private final String targetResourceId;
 
     public String getTargetResourceId() {
         return this.targetResourceId;
@@ -171,7 +171,7 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -340,7 +340,6 @@ public final class FlowLogResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FlowLogResponse build() {
             return new FlowLogResponse(enabled, etag, flowAnalyticsConfiguration, format, id, location, name, provisioningState, retentionPolicy, storageId, tags, targetResourceGuid, targetResourceId, type);
         }

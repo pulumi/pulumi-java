@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.ConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -181,7 +181,6 @@ public final class ConditionsResponse {
             this.targetResourceType = targetResourceType;
             return this;
         }
-
         public ConditionsResponse build() {
             return new ConditionsResponse(alertContext, alertRuleId, description, monitorCondition, monitorService, severity, targetResourceType);
         }

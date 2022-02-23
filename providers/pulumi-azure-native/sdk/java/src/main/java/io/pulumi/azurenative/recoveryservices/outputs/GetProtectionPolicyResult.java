@@ -9,7 +9,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.AzureSqlProtectionPolicyRe
 import io.pulumi.azurenative.recoveryservices.outputs.AzureVmWorkloadProtectionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.GenericProtectionPolicyResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.MabProtectionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -189,7 +189,6 @@ public final class GetProtectionPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProtectionPolicyResult build() {
             return new GetProtectionPolicyResult(eTag, id, location, name, properties, tags, type);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.insights.inputs.ScaleCapacityArgs;
 import io.pulumi.azurenative.insights.inputs.ScaleRuleArgs;
 import io.pulumi.azurenative.insights.inputs.TimeWindowArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="capacity", required=true)
-    private final Input<ScaleCapacityArgs> capacity;
+        private final Input<ScaleCapacityArgs> capacity;
 
     public Input<ScaleCapacityArgs> getCapacity() {
         return this.capacity;
@@ -39,7 +39,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fixedDate")
-    private final @Nullable Input<TimeWindowArgs> fixedDate;
+        private final @Nullable Input<TimeWindowArgs> fixedDate;
 
     public Input<TimeWindowArgs> getFixedDate() {
         return this.fixedDate == null ? Input.empty() : this.fixedDate;
@@ -50,7 +50,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -61,7 +61,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable Input<RecurrenceArgs> recurrence;
+        private final @Nullable Input<RecurrenceArgs> recurrence;
 
     public Input<RecurrenceArgs> getRecurrence() {
         return this.recurrence == null ? Input.empty() : this.recurrence;
@@ -72,7 +72,7 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<ScaleRuleArgs>> rules;
+        private final Input<List<ScaleRuleArgs>> rules;
 
     public Input<List<ScaleRuleArgs>> getRules() {
         return this.rules;
@@ -176,7 +176,6 @@ public final class AutoscaleProfileArgs extends io.pulumi.resources.ResourceArgs
             this.rules = Input.of(Objects.requireNonNull(rules));
             return this;
         }
-
         public AutoscaleProfileArgs build() {
             return new AutoscaleProfileArgs(capacity, fixedDate, name, recurrence, rules);
         }

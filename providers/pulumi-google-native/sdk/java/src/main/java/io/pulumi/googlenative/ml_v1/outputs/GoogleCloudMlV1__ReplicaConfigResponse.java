@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__AcceleratorConfigResponse;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__DiskConfigResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class GoogleCloudMlV1__ReplicaConfigResponse {
             this.tpuTfVersion = Objects.requireNonNull(tpuTfVersion);
             return this;
         }
-
         public GoogleCloudMlV1__ReplicaConfigResponse build() {
             return new GoogleCloudMlV1__ReplicaConfigResponse(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
         }

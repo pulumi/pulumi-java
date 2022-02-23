@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigRespon
             this.exactMatchConfig = Objects.requireNonNull(exactMatchConfig);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigResponse(exactMatchConfig);
         }

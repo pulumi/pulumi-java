@@ -5,8 +5,8 @@ package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.PolicyArgs;
 import io.pulumi.gcp.dns.inputs.PolicyState;
@@ -165,13 +165,6 @@ public class Policy extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Policy(String name) {
-        super("gcp:dns/policy:Policy", name, PolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

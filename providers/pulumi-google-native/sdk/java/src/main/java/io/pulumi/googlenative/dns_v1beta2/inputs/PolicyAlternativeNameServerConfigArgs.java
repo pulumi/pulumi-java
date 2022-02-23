@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.inputs.PolicyAlternativeNameServerConfigTargetNameServerArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
     public static final PolicyAlternativeNameServerConfigArgs Empty = new PolicyAlternativeNameServerConfigArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -28,7 +28,7 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetNameServers")
-    private final @Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
+      private final @Nullable Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> targetNameServers;
 
     public Input<List<PolicyAlternativeNameServerConfigTargetNameServerArgs>> getTargetNameServers() {
         return this.targetNameServers == null ? Input.empty() : this.targetNameServers;
@@ -87,7 +87,6 @@ public final class PolicyAlternativeNameServerConfigArgs extends io.pulumi.resou
             this.targetNameServers = Input.ofNullable(targetNameServers);
             return this;
         }
-
         public PolicyAlternativeNameServerConfigArgs build() {
             return new PolicyAlternativeNameServerConfigArgs(kind, targetNameServers);
         }

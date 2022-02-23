@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationRegexGetArgs;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationValuesGetArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="regex")
-    private final @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex;
+        private final @Nullable Input<WorkflowTemplateParameterValidationRegexGetArgs> regex;
 
     public Input<WorkflowTemplateParameterValidationRegexGetArgs> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -31,7 +31,7 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values;
+        private final @Nullable Input<WorkflowTemplateParameterValidationValuesGetArgs> values;
 
     public Input<WorkflowTemplateParameterValidationValuesGetArgs> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -90,7 +90,6 @@ public final class WorkflowTemplateParameterValidationGetArgs extends io.pulumi.
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public WorkflowTemplateParameterValidationGetArgs build() {
             return new WorkflowTemplateParameterValidationGetArgs(regex, values);
         }

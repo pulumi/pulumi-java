@@ -7,7 +7,7 @@ import io.pulumi.azurenative.desktopvirtualization.enums.CommandLineSetting;
 import io.pulumi.azurenative.desktopvirtualization.enums.RemoteApplicationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationGroupName", required=true)
-    private final Input<String> applicationGroupName;
+        private final Input<String> applicationGroupName;
 
     public Input<String> getApplicationGroupName() {
         return this.applicationGroupName;
@@ -35,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationName")
-    private final @Nullable Input<String> applicationName;
+        private final @Nullable Input<String> applicationName;
 
     public Input<String> getApplicationName() {
         return this.applicationName == null ? Input.empty() : this.applicationName;
@@ -46,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="applicationType")
-    private final @Nullable Input<Either<String,RemoteApplicationType>> applicationType;
+        private final @Nullable Input<Either<String,RemoteApplicationType>> applicationType;
 
     public Input<Either<String,RemoteApplicationType>> getApplicationType() {
         return this.applicationType == null ? Input.empty() : this.applicationType;
@@ -57,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLineArguments")
-    private final @Nullable Input<String> commandLineArguments;
+        private final @Nullable Input<String> commandLineArguments;
 
     public Input<String> getCommandLineArguments() {
         return this.commandLineArguments == null ? Input.empty() : this.commandLineArguments;
@@ -68,7 +68,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="commandLineSetting", required=true)
-    private final Input<Either<String,CommandLineSetting>> commandLineSetting;
+        private final Input<Either<String,CommandLineSetting>> commandLineSetting;
 
     public Input<Either<String,CommandLineSetting>> getCommandLineSetting() {
         return this.commandLineSetting;
@@ -79,7 +79,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -90,7 +90,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filePath")
-    private final @Nullable Input<String> filePath;
+        private final @Nullable Input<String> filePath;
 
     public Input<String> getFilePath() {
         return this.filePath == null ? Input.empty() : this.filePath;
@@ -101,7 +101,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -112,7 +112,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconIndex")
-    private final @Nullable Input<Integer> iconIndex;
+        private final @Nullable Input<Integer> iconIndex;
 
     public Input<Integer> getIconIndex() {
         return this.iconIndex == null ? Input.empty() : this.iconIndex;
@@ -123,7 +123,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iconPath")
-    private final @Nullable Input<String> iconPath;
+        private final @Nullable Input<String> iconPath;
 
     public Input<String> getIconPath() {
         return this.iconPath == null ? Input.empty() : this.iconPath;
@@ -134,7 +134,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msixPackageApplicationId")
-    private final @Nullable Input<String> msixPackageApplicationId;
+        private final @Nullable Input<String> msixPackageApplicationId;
 
     public Input<String> getMsixPackageApplicationId() {
         return this.msixPackageApplicationId == null ? Input.empty() : this.msixPackageApplicationId;
@@ -145,7 +145,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="msixPackageFamilyName")
-    private final @Nullable Input<String> msixPackageFamilyName;
+        private final @Nullable Input<String> msixPackageFamilyName;
 
     public Input<String> getMsixPackageFamilyName() {
         return this.msixPackageFamilyName == null ? Input.empty() : this.msixPackageFamilyName;
@@ -156,7 +156,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -167,7 +167,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="showInPortal")
-    private final @Nullable Input<Boolean> showInPortal;
+        private final @Nullable Input<Boolean> showInPortal;
 
     public Input<Boolean> getShowInPortal() {
         return this.showInPortal == null ? Input.empty() : this.showInPortal;
@@ -406,7 +406,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.showInPortal = Input.ofNullable(showInPortal);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(applicationGroupName, applicationName, applicationType, commandLineArguments, commandLineSetting, description, filePath, friendlyName, iconIndex, iconPath, msixPackageApplicationId, msixPackageFamilyName, resourceGroupName, showInPortal);
         }

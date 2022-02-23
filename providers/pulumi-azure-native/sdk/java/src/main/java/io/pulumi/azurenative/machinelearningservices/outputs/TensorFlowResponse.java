@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class TensorFlowResponse {
             this.workerCount = workerCount;
             return this;
         }
-
         public TensorFlowResponse build() {
             return new TensorFlowResponse(distributionType, parameterServerCount, workerCount);
         }

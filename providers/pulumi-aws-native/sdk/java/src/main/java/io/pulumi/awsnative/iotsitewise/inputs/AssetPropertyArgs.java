@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.enums.AssetPropertyNotificationState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias")
-    private final @Nullable Input<String> alias;
+        private final @Nullable Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias == null ? Input.empty() : this.alias;
@@ -35,7 +35,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="logicalId", required=true)
-    private final Input<String> logicalId;
+        private final Input<String> logicalId;
 
     public Input<String> getLogicalId() {
         return this.logicalId;
@@ -46,7 +46,7 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notificationState")
-    private final @Nullable Input<AssetPropertyNotificationState> notificationState;
+        private final @Nullable Input<AssetPropertyNotificationState> notificationState;
 
     public Input<AssetPropertyNotificationState> getNotificationState() {
         return this.notificationState == null ? Input.empty() : this.notificationState;
@@ -120,7 +120,6 @@ public final class AssetPropertyArgs extends io.pulumi.resources.ResourceArgs {
             this.notificationState = Input.ofNullable(notificationState);
             return this;
         }
-
         public AssetPropertyArgs build() {
             return new AssetPropertyArgs(alias, logicalId, notificationState);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="backendService")
-    private final @Nullable Input<String> backendService;
+        private final @Nullable Input<String> backendService;
 
     public Input<String> getBackendService() {
         return this.backendService == null ? Input.empty() : this.backendService;
@@ -32,7 +32,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="creationTimestamp")
-    private final @Nullable Input<String> creationTimestamp;
+        private final @Nullable Input<String> creationTimestamp;
 
     public Input<String> getCreationTimestamp() {
         return this.creationTimestamp == null ? Input.empty() : this.creationTimestamp;
@@ -43,7 +43,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -60,7 +60,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -72,7 +72,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -84,7 +84,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyBind")
-    private final @Nullable Input<Boolean> proxyBind;
+        private final @Nullable Input<Boolean> proxyBind;
 
     public Input<Boolean> getProxyBind() {
         return this.proxyBind == null ? Input.empty() : this.proxyBind;
@@ -98,7 +98,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyHeader")
-    private final @Nullable Input<String> proxyHeader;
+        private final @Nullable Input<String> proxyHeader;
 
     public Input<String> getProxyHeader() {
         return this.proxyHeader == null ? Input.empty() : this.proxyHeader;
@@ -109,7 +109,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="proxyId")
-    private final @Nullable Input<Integer> proxyId;
+        private final @Nullable Input<Integer> proxyId;
 
     public Input<Integer> getProxyId() {
         return this.proxyId == null ? Input.empty() : this.proxyId;
@@ -120,7 +120,7 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+        private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
@@ -284,7 +284,6 @@ public final class TargetTCPProxyState extends io.pulumi.resources.ResourceArgs 
             this.selfLink = Input.ofNullable(selfLink);
             return this;
         }
-
         public TargetTCPProxyState build() {
             return new TargetTCPProxyState(backendService, creationTimestamp, description, name, project, proxyBind, proxyHeader, proxyId, selfLink);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1.enums.NodeTaintEffect;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="effect")
-    private final @Nullable Input<NodeTaintEffect> effect;
+      private final @Nullable Input<NodeTaintEffect> effect;
 
     public Input<NodeTaintEffect> getEffect() {
         return this.effect == null ? Input.empty() : this.effect;
@@ -35,7 +35,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="key")
-    private final @Nullable Input<String> key;
+      private final @Nullable Input<String> key;
 
     public Input<String> getKey() {
         return this.key == null ? Input.empty() : this.key;
@@ -46,7 +46,7 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+      private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -120,7 +120,6 @@ public final class NodeTaintArgs extends io.pulumi.resources.ResourceArgs {
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public NodeTaintArgs build() {
             return new NodeTaintArgs(effect, key, value);
         }

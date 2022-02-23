@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SystemDataResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TokenCredentialsPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -225,7 +225,6 @@ public final class GetTokenResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetTokenResult build() {
             return new GetTokenResult(creationDate, credentials, id, name, provisioningState, scopeMapId, status, systemData, type);
         }

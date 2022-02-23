@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="jarFileUris", required=true)
-    private final List<String> jarFileUris;
+      private final List<String> jarFileUris;
 
     public List<String> getJarFileUris() {
         return this.jarFileUris;
@@ -34,7 +34,7 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="queryFileUri", required=true)
-    private final String queryFileUri;
+      private final String queryFileUri;
 
     public String getQueryFileUri() {
         return this.queryFileUri;
@@ -45,7 +45,7 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="queryVariables", required=true)
-    private final Map<String,String> queryVariables;
+      private final Map<String,String> queryVariables;
 
     public Map<String,String> getQueryVariables() {
         return this.queryVariables;
@@ -104,7 +104,6 @@ public final class SparkSqlBatchResponse extends io.pulumi.resources.InvokeArgs 
             this.queryVariables = Objects.requireNonNull(queryVariables);
             return this;
         }
-
         public SparkSqlBatchResponse build() {
             return new SparkSqlBatchResponse(jarFileUris, queryFileUri, queryVariables);
         }

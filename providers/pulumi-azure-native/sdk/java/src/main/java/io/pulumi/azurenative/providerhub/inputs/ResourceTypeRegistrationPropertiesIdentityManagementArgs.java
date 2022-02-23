@@ -6,7 +6,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 import io.pulumi.azurenative.providerhub.enums.IdentityManagementTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +17,14 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
     public static final ResourceTypeRegistrationPropertiesIdentityManagementArgs Empty = new ResourceTypeRegistrationPropertiesIdentityManagementArgs();
 
     @InputImport(name="applicationId")
-    private final @Nullable Input<String> applicationId;
+        private final @Nullable Input<String> applicationId;
 
     public Input<String> getApplicationId() {
         return this.applicationId == null ? Input.empty() : this.applicationId;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,IdentityManagementTypes>> type;
+        private final @Nullable Input<Either<String,IdentityManagementTypes>> type;
 
     public Input<Either<String,IdentityManagementTypes>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -83,7 +83,6 @@ public final class ResourceTypeRegistrationPropertiesIdentityManagementArgs exte
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ResourceTypeRegistrationPropertiesIdentityManagementArgs build() {
             return new ResourceTypeRegistrationPropertiesIdentityManagementArgs(applicationId, type);
         }

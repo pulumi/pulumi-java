@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.inputs;
 
 import io.pulumi.azurenative.storsimple.inputs.VolumeFailoverMetadataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="volumeContainerId")
-    private final @Nullable String volumeContainerId;
+        private final @Nullable String volumeContainerId;
 
     public Optional<String> getVolumeContainerId() {
         return this.volumeContainerId == null ? Optional.empty() : Optional.ofNullable(this.volumeContainerId);
@@ -36,7 +36,7 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="volumes")
-    private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
+        private final @Nullable List<VolumeFailoverMetadataResponse> volumes;
 
     public List<VolumeFailoverMetadataResponse> getVolumes() {
         return this.volumes == null ? List.of() : this.volumes;
@@ -85,7 +85,6 @@ public final class VolumeContainerFailoverMetadataResponse extends io.pulumi.res
             this.volumes = volumes;
             return this;
         }
-
         public VolumeContainerFailoverMetadataResponse build() {
             return new VolumeContainerFailoverMetadataResponse(volumeContainerId, volumes);
         }

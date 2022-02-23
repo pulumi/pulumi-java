@@ -5,8 +5,8 @@ package io.pulumi.googlenative.containeranalysis_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.OccurrenceArgs;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationResponse;
@@ -358,13 +358,6 @@ public class Occurrence extends io.pulumi.resources.CustomResource {
         return this.vulnerabilityDetails;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Occurrence(String name) {
-        super("google-native:containeranalysis/v1alpha1:Occurrence", name, OccurrenceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.binaryauthorization_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetAttestorArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetAttestorArgs Empty = new GetAttestorArgs();
 
     @InputImport(name="attestorId", required=true)
-    private final String attestorId;
+      private final String attestorId;
 
     public String getAttestorId() {
         return this.attestorId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetAttestorArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetAttestorArgs build() {
             return new GetAttestorArgs(attestorId, project);
         }

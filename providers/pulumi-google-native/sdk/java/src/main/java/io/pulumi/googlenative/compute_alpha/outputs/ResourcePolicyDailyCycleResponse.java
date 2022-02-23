@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class ResourcePolicyDailyCycleResponse {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public ResourcePolicyDailyCycleResponse build() {
             return new ResourcePolicyDailyCycleResponse(daysInCycle, duration, startTime);
         }

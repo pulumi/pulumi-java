@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -202,7 +202,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubject {
             this.streetAddress = streetAddress;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubject build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubject(commonName, countryCode, locality, organization, organizationalUnit, postalCode, province, streetAddress);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class DocumentDbOutputDataSourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DocumentDbOutputDataSourceResponse build() {
             return new DocumentDbOutputDataSourceResponse(accountId, accountKey, collectionNamePattern, database, documentId, partitionKey, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,14 +17,14 @@ public final class BasicAuthResponse extends io.pulumi.resources.InvokeArgs {
     public static final BasicAuthResponse Empty = new BasicAuthResponse();
 
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
     }
 
     @InputImport(name="user", required=true)
-    private final String user;
+      private final String user;
 
     public String getUser() {
         return this.user;
@@ -73,7 +73,6 @@ public final class BasicAuthResponse extends io.pulumi.resources.InvokeArgs {
             this.user = Objects.requireNonNull(user);
             return this;
         }
-
         public BasicAuthResponse build() {
             return new BasicAuthResponse(password, user);
         }

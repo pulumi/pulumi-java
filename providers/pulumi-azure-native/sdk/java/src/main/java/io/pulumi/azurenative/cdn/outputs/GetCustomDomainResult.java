@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.outputs.CdnManagedHttpsParametersResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
 import io.pulumi.azurenative.cdn.outputs.UserManagedHttpsParametersResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -269,7 +269,6 @@ public final class GetCustomDomainResult {
             this.validationData = validationData;
             return this;
         }
-
         public GetCustomDomainResult build() {
             return new GetCustomDomainResult(customHttpsParameters, customHttpsProvisioningState, customHttpsProvisioningSubstate, hostName, id, name, provisioningState, resourceState, systemData, type, validationData);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.IPConfigurationBgpPeeringAddressResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -122,7 +122,6 @@ public final class BgpSettingsResponse {
             this.peerWeight = peerWeight;
             return this;
         }
-
         public BgpSettingsResponse build() {
             return new BgpSettingsResponse(asn, bgpPeeringAddress, bgpPeeringAddresses, peerWeight);
         }

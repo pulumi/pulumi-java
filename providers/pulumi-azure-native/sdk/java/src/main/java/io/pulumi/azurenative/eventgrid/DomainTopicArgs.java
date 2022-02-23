@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventgrid;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+        private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -30,7 +30,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainTopicName")
-    private final @Nullable Input<String> domainTopicName;
+        private final @Nullable Input<String> domainTopicName;
 
     public Input<String> getDomainTopicName() {
         return this.domainTopicName == null ? Input.empty() : this.domainTopicName;
@@ -41,7 +41,7 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -115,7 +115,6 @@ public final class DomainTopicArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DomainTopicArgs build() {
             return new DomainTopicArgs(domainName, domainTopicName, resourceGroupName);
         }

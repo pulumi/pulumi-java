@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-    private final String domainId;
+        private final String domainId;
 
     public String getDomainId() {
         return this.domainId;
@@ -28,7 +28,7 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userProfileName", required=true)
-    private final String userProfileName;
+        private final String userProfileName;
 
     public String getUserProfileName() {
         return this.userProfileName;
@@ -77,7 +77,6 @@ public final class GetUserProfileArgs extends io.pulumi.resources.InvokeArgs {
             this.userProfileName = Objects.requireNonNull(userProfileName);
             return this;
         }
-
         public GetUserProfileArgs build() {
             return new GetUserProfileArgs(domainId, userProfileName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class TagTemplateFieldTypeEnumTypeAllowedValue {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public TagTemplateFieldTypeEnumTypeAllowedValue build() {
             return new TagTemplateFieldTypeEnumTypeAllowedValue(displayName);
         }

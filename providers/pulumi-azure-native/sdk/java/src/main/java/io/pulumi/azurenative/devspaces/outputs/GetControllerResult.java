@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devspaces.outputs;
 
 import io.pulumi.azurenative.devspaces.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -266,7 +266,6 @@ public final class GetControllerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetControllerResult build() {
             return new GetControllerResult(dataPlaneFqdn, hostSuffix, id, location, name, provisioningState, sku, tags, targetContainerHostApiServerFqdn, targetContainerHostResourceId, type);
         }

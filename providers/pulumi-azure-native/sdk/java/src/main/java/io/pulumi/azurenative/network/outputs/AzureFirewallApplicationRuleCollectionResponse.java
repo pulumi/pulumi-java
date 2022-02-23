@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.AzureFirewallApplicationRuleResponse;
 import io.pulumi.azurenative.network.outputs.AzureFirewallRCActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -185,7 +185,6 @@ public final class AzureFirewallApplicationRuleCollectionResponse {
             this.rules = rules;
             return this;
         }
-
         public AzureFirewallApplicationRuleCollectionResponse build() {
             return new AzureFirewallApplicationRuleCollectionResponse(action, etag, id, name, priority, provisioningState, rules);
         }

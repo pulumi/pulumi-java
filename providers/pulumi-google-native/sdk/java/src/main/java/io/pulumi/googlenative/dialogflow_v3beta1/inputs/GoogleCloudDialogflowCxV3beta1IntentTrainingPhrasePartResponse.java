@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
      * 
      */
     @InputImport(name="parameterId", required=true)
-    private final String parameterId;
+      private final String parameterId;
 
     public String getParameterId() {
         return this.parameterId;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartRespons
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentTrainingPhrasePartResponse(parameterId, text);
         }

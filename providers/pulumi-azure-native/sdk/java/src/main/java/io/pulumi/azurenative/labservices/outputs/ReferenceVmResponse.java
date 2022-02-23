@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.VmStateDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ReferenceVmResponse {
             this.vmStateDetails = Objects.requireNonNull(vmStateDetails);
             return this;
         }
-
         public ReferenceVmResponse build() {
             return new ReferenceVmResponse(password, userName, vmResourceId, vmStateDetails);
         }

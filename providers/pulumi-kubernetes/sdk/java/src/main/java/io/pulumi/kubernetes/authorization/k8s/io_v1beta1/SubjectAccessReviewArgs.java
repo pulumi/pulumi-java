@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.authorization.k8s.io_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.authorization.k8s.io_v1beta1.inputs.SubjectAccessReviewSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class SubjectAccessReviewArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -32,14 +32,14 @@ public final class SubjectAccessReviewArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
     }
 
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -50,7 +50,7 @@ public final class SubjectAccessReviewArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<SubjectAccessReviewSpecArgs> spec;
+        private final Input<SubjectAccessReviewSpecArgs> spec;
 
     public Input<SubjectAccessReviewSpecArgs> getSpec() {
         return this.spec;
@@ -139,7 +139,6 @@ public final class SubjectAccessReviewArgs extends io.pulumi.resources.ResourceA
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public SubjectAccessReviewArgs build() {
             return new SubjectAccessReviewArgs(apiVersion, kind, metadata, spec);
         }

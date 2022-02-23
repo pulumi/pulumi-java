@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.ManagedIntegrationRuntimeErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
+        private final @Nullable List<ManagedIntegrationRuntimeErrorResponse> errors;
 
     public List<ManagedIntegrationRuntimeErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
@@ -36,7 +36,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="nodeId", required=true)
-    private final String nodeId;
+        private final String nodeId;
 
     public String getNodeId() {
         return this.nodeId;
@@ -47,7 +47,7 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -106,7 +106,6 @@ public final class ManagedIntegrationRuntimeNodeResponse extends io.pulumi.resou
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ManagedIntegrationRuntimeNodeResponse build() {
             return new ManagedIntegrationRuntimeNodeResponse(errors, nodeId, status);
         }

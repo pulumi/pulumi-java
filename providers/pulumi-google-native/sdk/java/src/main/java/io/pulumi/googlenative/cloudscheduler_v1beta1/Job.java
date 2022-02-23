@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudscheduler_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.JobArgs;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.AppEngineHttpTargetResponse;
@@ -235,13 +235,6 @@ public class Job extends io.pulumi.resources.CustomResource {
         return this.userUpdateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Job(String name) {
-        super("google-native:cloudscheduler/v1beta1:Job", name, JobArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

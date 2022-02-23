@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.enums.MessageFilterType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="messageFilterType", required=true)
-    private final Input<Either<String,MessageFilterType>> messageFilterType;
+        private final Input<Either<String,MessageFilterType>> messageFilterType;
 
     public Input<Either<String,MessageFilterType>> getMessageFilterType() {
         return this.messageFilterType;
@@ -67,7 +67,6 @@ public final class X12MessageFilterArgs extends io.pulumi.resources.ResourceArgs
             this.messageFilterType = Input.of(Objects.requireNonNull(messageFilterType));
             return this;
         }
-
         public X12MessageFilterArgs build() {
             return new X12MessageFilterArgs(messageFilterType);
         }

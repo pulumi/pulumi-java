@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="enablePrivateEndpoint", required=true)
-    private final Boolean enablePrivateEndpoint;
+      private final Boolean enablePrivateEndpoint;
 
     public Boolean getEnablePrivateEndpoint() {
         return this.enablePrivateEndpoint;
@@ -33,7 +33,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="masterIpv4CidrBlock", required=true)
-    private final String masterIpv4CidrBlock;
+      private final String masterIpv4CidrBlock;
 
     public String getMasterIpv4CidrBlock() {
         return this.masterIpv4CidrBlock;
@@ -44,7 +44,7 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="masterIpv4ReservedRange", required=true)
-    private final String masterIpv4ReservedRange;
+      private final String masterIpv4ReservedRange;
 
     public String getMasterIpv4ReservedRange() {
         return this.masterIpv4ReservedRange;
@@ -103,7 +103,6 @@ public final class PrivateClusterConfigResponse extends io.pulumi.resources.Invo
             this.masterIpv4ReservedRange = Objects.requireNonNull(masterIpv4ReservedRange);
             return this;
         }
-
         public PrivateClusterConfigResponse build() {
             return new PrivateClusterConfigResponse(enablePrivateEndpoint, masterIpv4CidrBlock, masterIpv4ReservedRange);
         }

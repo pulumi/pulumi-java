@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -32,7 +32,7 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="matchedIpRange", required=true)
-    private final String matchedIpRange;
+      private final String matchedIpRange;
 
     public String getMatchedIpRange() {
         return this.matchedIpRange;
@@ -43,7 +43,7 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -102,7 +102,6 @@ public final class NetworkInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public NetworkInfoResponse build() {
             return new NetworkInfoResponse(displayName, matchedIpRange, uri);
         }

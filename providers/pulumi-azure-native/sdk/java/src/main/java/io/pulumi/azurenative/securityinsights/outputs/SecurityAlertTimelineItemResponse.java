@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -246,7 +246,6 @@ public final class SecurityAlertTimelineItemResponse {
             this.timeGenerated = Objects.requireNonNull(timeGenerated);
             return this;
         }
-
         public SecurityAlertTimelineItemResponse build() {
             return new SecurityAlertTimelineItemResponse(alertType, azureResourceId, description, displayName, endTimeUtc, kind, productName, severity, startTimeUtc, timeGenerated);
         }

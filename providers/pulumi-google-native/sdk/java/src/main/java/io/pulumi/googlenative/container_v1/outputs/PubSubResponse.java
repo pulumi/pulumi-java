@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1.outputs.FilterResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class PubSubResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubSubResponse build() {
             return new PubSubResponse(enabled, filter, topic);
         }

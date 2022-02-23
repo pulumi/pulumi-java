@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.ModelQualityJobDefinitionVpcConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ModelQualityJobDefinitionNetworkConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableInterContainerTrafficEncryption")
-    private final @Nullable Input<Boolean> enableInterContainerTrafficEncryption;
+        private final @Nullable Input<Boolean> enableInterContainerTrafficEncryption;
 
     public Input<Boolean> getEnableInterContainerTrafficEncryption() {
         return this.enableInterContainerTrafficEncryption == null ? Input.empty() : this.enableInterContainerTrafficEncryption;
@@ -35,14 +35,14 @@ public final class ModelQualityJobDefinitionNetworkConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableNetworkIsolation")
-    private final @Nullable Input<Boolean> enableNetworkIsolation;
+        private final @Nullable Input<Boolean> enableNetworkIsolation;
 
     public Input<Boolean> getEnableNetworkIsolation() {
         return this.enableNetworkIsolation == null ? Input.empty() : this.enableNetworkIsolation;
     }
 
     @InputImport(name="vpcConfig")
-    private final @Nullable Input<ModelQualityJobDefinitionVpcConfigArgs> vpcConfig;
+        private final @Nullable Input<ModelQualityJobDefinitionVpcConfigArgs> vpcConfig;
 
     public Input<ModelQualityJobDefinitionVpcConfigArgs> getVpcConfig() {
         return this.vpcConfig == null ? Input.empty() : this.vpcConfig;
@@ -116,7 +116,6 @@ public final class ModelQualityJobDefinitionNetworkConfigArgs extends io.pulumi.
             this.vpcConfig = Input.ofNullable(vpcConfig);
             return this;
         }
-
         public ModelQualityJobDefinitionNetworkConfigArgs build() {
             return new ModelQualityJobDefinitionNetworkConfigArgs(enableInterContainerTrafficEncryption, enableNetworkIsolation, vpcConfig);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.IpAddressRangeResponse;
 import io.pulumi.azurenative.logic.outputs.OpenAuthenticationAccessPoliciesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class FlowAccessControlConfigurationPolicyResponse {
             this.openAuthenticationPolicies = openAuthenticationPolicies;
             return this;
         }
-
         public FlowAccessControlConfigurationPolicyResponse build() {
             return new FlowAccessControlConfigurationPolicyResponse(allowedCallerIpAddresses, openAuthenticationPolicies);
         }

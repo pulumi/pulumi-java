@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.AppEngineHttpTargetResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.HttpTargetResponse;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.PubsubTargetResponse;
@@ -353,7 +353,6 @@ public final class GetJobResult {
             this.userUpdateTime = Objects.requireNonNull(userUpdateTime);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(appEngineHttpTarget, attemptDeadline, description, httpTarget, lastAttemptTime, legacyAppEngineCron, name, pubsubTarget, retryConfig, schedule, scheduleTime, state, status, timeZone, userUpdateTime);
         }

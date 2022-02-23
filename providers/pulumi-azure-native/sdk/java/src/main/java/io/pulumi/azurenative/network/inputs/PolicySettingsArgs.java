@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.WebApplicationFirewallEnabledState;
 import io.pulumi.azurenative.network.enums.WebApplicationFirewallMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fileUploadLimitInMb")
-    private final @Nullable Input<Integer> fileUploadLimitInMb;
+        private final @Nullable Input<Integer> fileUploadLimitInMb;
 
     public Input<Integer> getFileUploadLimitInMb() {
         return this.fileUploadLimitInMb == null ? Input.empty() : this.fileUploadLimitInMb;
@@ -39,7 +39,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxRequestBodySizeInKb")
-    private final @Nullable Input<Integer> maxRequestBodySizeInKb;
+        private final @Nullable Input<Integer> maxRequestBodySizeInKb;
 
     public Input<Integer> getMaxRequestBodySizeInKb() {
         return this.maxRequestBodySizeInKb == null ? Input.empty() : this.maxRequestBodySizeInKb;
@@ -50,7 +50,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,WebApplicationFirewallMode>> mode;
+        private final @Nullable Input<Either<String,WebApplicationFirewallMode>> mode;
 
     public Input<Either<String,WebApplicationFirewallMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -61,7 +61,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestBodyCheck")
-    private final @Nullable Input<Boolean> requestBodyCheck;
+        private final @Nullable Input<Boolean> requestBodyCheck;
 
     public Input<Boolean> getRequestBodyCheck() {
         return this.requestBodyCheck == null ? Input.empty() : this.requestBodyCheck;
@@ -72,7 +72,7 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,WebApplicationFirewallEnabledState>> state;
+        private final @Nullable Input<Either<String,WebApplicationFirewallEnabledState>> state;
 
     public Input<Either<String,WebApplicationFirewallEnabledState>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -176,7 +176,6 @@ public final class PolicySettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public PolicySettingsArgs build() {
             return new PolicySettingsArgs(fileUploadLimitInMb, maxRequestBodySizeInKb, mode, requestBodyCheck, state);
         }

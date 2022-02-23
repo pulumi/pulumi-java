@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerConfigResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PullRequestFilterResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.PushFilterResponse;
@@ -161,7 +161,6 @@ public final class BitbucketServerTriggerConfigResponse {
             this.repoSlug = Objects.requireNonNull(repoSlug);
             return this;
         }
-
         public BitbucketServerTriggerConfigResponse build() {
             return new BitbucketServerTriggerConfigResponse(bitbucketServerConfig, bitbucketServerConfigResource, projectKey, pullRequest, push, repoSlug);
         }

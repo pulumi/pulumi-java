@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.enums.ServicePlacementConstraintType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
     public static final ServicePlacementConstraintArgs Empty = new ServicePlacementConstraintArgs();
 
     @InputImport(name="expression")
-    private final @Nullable Input<String> expression;
+        private final @Nullable Input<String> expression;
 
     public Input<String> getExpression() {
         return this.expression == null ? Input.empty() : this.expression;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<ServicePlacementConstraintType> type;
+        private final Input<ServicePlacementConstraintType> type;
 
     public Input<ServicePlacementConstraintType> getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class ServicePlacementConstraintArgs extends io.pulumi.resources.Re
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ServicePlacementConstraintArgs build() {
             return new ServicePlacementConstraintArgs(expression, type);
         }

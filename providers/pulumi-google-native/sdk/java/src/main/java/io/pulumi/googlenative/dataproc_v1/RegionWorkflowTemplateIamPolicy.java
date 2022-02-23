@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dataproc_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1.RegionWorkflowTemplateIamPolicyArgs;
 import io.pulumi.googlenative.dataproc_v1.outputs.BindingResponse;
@@ -66,13 +66,6 @@ public class RegionWorkflowTemplateIamPolicy extends io.pulumi.resources.CustomR
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionWorkflowTemplateIamPolicy(String name) {
-        super("google-native:dataproc/v1:RegionWorkflowTemplateIamPolicy", name, RegionWorkflowTemplateIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

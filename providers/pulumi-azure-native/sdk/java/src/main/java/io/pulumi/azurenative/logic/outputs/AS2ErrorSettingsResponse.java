@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class AS2ErrorSettingsResponse {
             this.suspendDuplicateMessage = Objects.requireNonNull(suspendDuplicateMessage);
             return this;
         }
-
         public AS2ErrorSettingsResponse build() {
             return new AS2ErrorSettingsResponse(resendIfMDNNotReceived, suspendDuplicateMessage);
         }

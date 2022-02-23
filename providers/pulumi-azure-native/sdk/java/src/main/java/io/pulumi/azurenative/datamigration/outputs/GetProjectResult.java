@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datamigration.outputs.MiSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.MySqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.PostgreSqlConnectionInfoResponse;
 import io.pulumi.azurenative.datamigration.outputs.SqlConnectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -294,7 +294,6 @@ public final class GetProjectResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProjectResult build() {
             return new GetProjectResult(creationTime, databasesInfo, id, location, name, provisioningState, sourceConnectionInfo, sourcePlatform, tags, targetConnectionInfo, targetPlatform, type);
         }

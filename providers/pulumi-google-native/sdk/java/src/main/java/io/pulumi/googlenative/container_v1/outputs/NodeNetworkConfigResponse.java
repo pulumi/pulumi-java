@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class NodeNetworkConfigResponse {
             this.podRange = Objects.requireNonNull(podRange);
             return this;
         }
-
         public NodeNetworkConfigResponse build() {
             return new NodeNetworkConfigResponse(createPodRange, podIpv4CidrBlock, podRange);
         }

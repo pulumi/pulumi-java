@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.AutoprovisioningNodePoolDefaultsResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.ResourceLimitResponse;
 import java.lang.Boolean;
@@ -141,7 +141,6 @@ public final class ClusterAutoscalingResponse {
             this.resourceLimits = Objects.requireNonNull(resourceLimits);
             return this;
         }
-
         public ClusterAutoscalingResponse build() {
             return new ClusterAutoscalingResponse(autoprovisioningLocations, autoprovisioningNodePoolDefaults, autoscalingProfile, enableNodeAutoprovisioning, resourceLimits);
         }

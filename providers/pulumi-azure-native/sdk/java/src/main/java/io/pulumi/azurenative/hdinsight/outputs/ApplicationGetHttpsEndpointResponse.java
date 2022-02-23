@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -184,7 +184,6 @@ public final class ApplicationGetHttpsEndpointResponse {
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }
-
         public ApplicationGetHttpsEndpointResponse build() {
             return new ApplicationGetHttpsEndpointResponse(accessModes, destinationPort, disableGatewayAuth, location, privateIPAddress, publicPort, subDomainSuffix);
         }

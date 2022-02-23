@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebaseml_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.ModelStateResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.OperationResponse;
 import io.pulumi.googlenative.firebaseml_v1beta2.outputs.TfLiteModelResponse;
@@ -246,7 +246,6 @@ public final class GetModelResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetModelResult build() {
             return new GetModelResult(activeOperations, createTime, displayName, etag, modelHash, name, state, tags, tfliteModel, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Integer count;
+        private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -36,7 +36,7 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="durationType")
-    private final @Nullable String durationType;
+        private final @Nullable String durationType;
 
     public Optional<String> getDurationType() {
         return this.durationType == null ? Optional.empty() : Optional.ofNullable(this.durationType);
@@ -85,7 +85,6 @@ public final class RetentionDurationResponse extends io.pulumi.resources.InvokeA
             this.durationType = durationType;
             return this;
         }
-
         public RetentionDurationResponse build() {
             return new RetentionDurationResponse(count, durationType);
         }

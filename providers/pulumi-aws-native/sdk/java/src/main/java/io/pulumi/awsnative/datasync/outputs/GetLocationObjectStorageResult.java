@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.outputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationObjectStorageServerProtocol;
 import io.pulumi.awsnative.datasync.outputs.LocationObjectStorageTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -185,7 +185,6 @@ public final class GetLocationObjectStorageResult {
             this.tags = tags;
             return this;
         }
-
         public GetLocationObjectStorageResult build() {
             return new GetLocationObjectStorageResult(accessKey, agentArns, locationArn, locationUri, serverPort, serverProtocol, tags);
         }

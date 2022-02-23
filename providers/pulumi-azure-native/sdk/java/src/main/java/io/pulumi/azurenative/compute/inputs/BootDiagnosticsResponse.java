@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Boolean enabled;
+        private final @Nullable Boolean enabled;
 
     public Optional<Boolean> getEnabled() {
         return this.enabled == null ? Optional.empty() : Optional.ofNullable(this.enabled);
@@ -35,7 +35,7 @@ public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="storageUri")
-    private final @Nullable String storageUri;
+        private final @Nullable String storageUri;
 
     public Optional<String> getStorageUri() {
         return this.storageUri == null ? Optional.empty() : Optional.ofNullable(this.storageUri);
@@ -84,7 +84,6 @@ public final class BootDiagnosticsResponse extends io.pulumi.resources.InvokeArg
             this.storageUri = storageUri;
             return this;
         }
-
         public BootDiagnosticsResponse build() {
             return new BootDiagnosticsResponse(enabled, storageUri);
         }

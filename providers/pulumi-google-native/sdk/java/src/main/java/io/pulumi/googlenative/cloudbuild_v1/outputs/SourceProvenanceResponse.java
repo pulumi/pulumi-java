@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceResponse;
@@ -120,7 +120,6 @@ public final class SourceProvenanceResponse {
             this.resolvedStorageSourceManifest = Objects.requireNonNull(resolvedStorageSourceManifest);
             return this;
         }
-
         public SourceProvenanceResponse build() {
             return new SourceProvenanceResponse(fileHashes, resolvedRepoSource, resolvedStorageSource, resolvedStorageSourceManifest);
         }

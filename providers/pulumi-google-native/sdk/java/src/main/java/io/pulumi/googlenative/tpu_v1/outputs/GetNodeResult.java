@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.tpu_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.tpu_v1.outputs.NetworkEndpointResponse;
 import io.pulumi.googlenative.tpu_v1.outputs.SchedulingConfigResponse;
 import io.pulumi.googlenative.tpu_v1.outputs.SymptomResponse;
@@ -395,7 +395,6 @@ public final class GetNodeResult {
             this.useServiceNetworking = Objects.requireNonNull(useServiceNetworking);
             return this;
         }
-
         public GetNodeResult build() {
             return new GetNodeResult(acceleratorType, apiVersion, cidrBlock, createTime, description, health, healthDescription, labels, name, network, networkEndpoints, schedulingConfig, serviceAccount, state, symptoms, tensorflowVersion, useServiceNetworking);
         }

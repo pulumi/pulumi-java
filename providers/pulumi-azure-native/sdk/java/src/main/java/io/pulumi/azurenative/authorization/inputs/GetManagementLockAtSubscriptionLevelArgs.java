@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="lockName", required=true)
-    private final String lockName;
+        private final String lockName;
 
     public String getLockName() {
         return this.lockName;
@@ -55,7 +55,6 @@ public final class GetManagementLockAtSubscriptionLevelArgs extends io.pulumi.re
             this.lockName = Objects.requireNonNull(lockName);
             return this;
         }
-
         public GetManagementLockAtSubscriptionLevelArgs build() {
             return new GetManagementLockAtSubscriptionLevelArgs(lockName);
         }

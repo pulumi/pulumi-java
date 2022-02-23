@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleHeaderMatch;
 import io.pulumi.gcp.networkservices.outputs.EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatch;
 import java.lang.Boolean;
@@ -182,7 +182,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule {
             this.queryParameterMatches = queryParameterMatches;
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRule(fullPathMatch, headerMatches, ignoreCase, pathTemplateMatch, prefixMatch, queryParameterMatches);
         }

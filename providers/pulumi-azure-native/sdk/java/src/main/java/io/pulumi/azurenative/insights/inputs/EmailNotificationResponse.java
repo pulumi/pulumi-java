@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class EmailNotificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="customEmails")
-    private final @Nullable List<String> customEmails;
+        private final @Nullable List<String> customEmails;
 
     public List<String> getCustomEmails() {
         return this.customEmails == null ? List.of() : this.customEmails;
@@ -36,7 +36,7 @@ public final class EmailNotificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sendToSubscriptionAdministrator")
-    private final @Nullable Boolean sendToSubscriptionAdministrator;
+        private final @Nullable Boolean sendToSubscriptionAdministrator;
 
     public Optional<Boolean> getSendToSubscriptionAdministrator() {
         return this.sendToSubscriptionAdministrator == null ? Optional.empty() : Optional.ofNullable(this.sendToSubscriptionAdministrator);
@@ -47,7 +47,7 @@ public final class EmailNotificationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sendToSubscriptionCoAdministrators")
-    private final @Nullable Boolean sendToSubscriptionCoAdministrators;
+        private final @Nullable Boolean sendToSubscriptionCoAdministrators;
 
     public Optional<Boolean> getSendToSubscriptionCoAdministrators() {
         return this.sendToSubscriptionCoAdministrators == null ? Optional.empty() : Optional.ofNullable(this.sendToSubscriptionCoAdministrators);
@@ -106,7 +106,6 @@ public final class EmailNotificationResponse extends io.pulumi.resources.InvokeA
             this.sendToSubscriptionCoAdministrators = sendToSubscriptionCoAdministrators;
             return this;
         }
-
         public EmailNotificationResponse build() {
             return new EmailNotificationResponse(customEmails, sendToSubscriptionAdministrator, sendToSubscriptionCoAdministrators);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.VirtualNetworkGatewaySkuName;
 import io.pulumi.azurenative.network.enums.VirtualNetworkGatewaySkuTier;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<Either<String,VirtualNetworkGatewaySkuName>> name;
+        private final @Nullable Input<Either<String,VirtualNetworkGatewaySkuName>> name;
 
     public Input<Either<String,VirtualNetworkGatewaySkuName>> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -37,7 +37,7 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<Either<String,VirtualNetworkGatewaySkuTier>> tier;
+        private final @Nullable Input<Either<String,VirtualNetworkGatewaySkuTier>> tier;
 
     public Input<Either<String,VirtualNetworkGatewaySkuTier>> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -96,7 +96,6 @@ public final class VirtualNetworkGatewaySkuArgs extends io.pulumi.resources.Reso
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public VirtualNetworkGatewaySkuArgs build() {
             return new VirtualNetworkGatewaySkuArgs(name, tier);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.healthcare_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.healthcare_v1beta1.AttributeDefinitionArgs;
 import java.lang.String;
@@ -104,13 +104,6 @@ public class AttributeDefinition extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AttributeDefinition(String name) {
-        super("google-native:healthcare/v1beta1:AttributeDefinition", name, AttributeDefinitionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

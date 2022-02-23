@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudtasks_v2beta2.inputs.AppEngineRoutingResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="appEngineRoutingOverride", required=true)
-    private final AppEngineRoutingResponse appEngineRoutingOverride;
+      private final AppEngineRoutingResponse appEngineRoutingOverride;
 
     public AppEngineRoutingResponse getAppEngineRoutingOverride() {
         return this.appEngineRoutingOverride;
@@ -59,7 +59,6 @@ public final class AppEngineHttpTargetResponse extends io.pulumi.resources.Invok
             this.appEngineRoutingOverride = Objects.requireNonNull(appEngineRoutingOverride);
             return this;
         }
-
         public AppEngineHttpTargetResponse build() {
             return new AppEngineHttpTargetResponse(appEngineRoutingOverride);
         }

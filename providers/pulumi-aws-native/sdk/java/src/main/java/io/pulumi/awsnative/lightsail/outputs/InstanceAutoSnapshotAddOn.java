@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class InstanceAutoSnapshotAddOn {
             this.snapshotTimeOfDay = snapshotTimeOfDay;
             return this;
         }
-
         public InstanceAutoSnapshotAddOn build() {
             return new InstanceAutoSnapshotAddOn(snapshotTimeOfDay);
         }

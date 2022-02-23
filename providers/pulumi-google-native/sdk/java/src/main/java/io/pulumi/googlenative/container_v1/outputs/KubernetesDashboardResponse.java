@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class KubernetesDashboardResponse {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public KubernetesDashboardResponse build() {
             return new KubernetesDashboardResponse(disabled);
         }

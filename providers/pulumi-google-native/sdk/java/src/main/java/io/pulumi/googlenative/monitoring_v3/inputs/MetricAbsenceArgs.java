@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.AggregationArgs;
 import io.pulumi.googlenative.monitoring_v3.inputs.TriggerArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="aggregations")
-    private final @Nullable Input<List<AggregationArgs>> aggregations;
+      private final @Nullable Input<List<AggregationArgs>> aggregations;
 
     public Input<List<AggregationArgs>> getAggregations() {
         return this.aggregations == null ? Input.empty() : this.aggregations;
@@ -37,7 +37,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="duration")
-    private final @Nullable Input<String> duration;
+      private final @Nullable Input<String> duration;
 
     public Input<String> getDuration() {
         return this.duration == null ? Input.empty() : this.duration;
@@ -48,7 +48,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -59,7 +59,7 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trigger")
-    private final @Nullable Input<TriggerArgs> trigger;
+      private final @Nullable Input<TriggerArgs> trigger;
 
     public Input<TriggerArgs> getTrigger() {
         return this.trigger == null ? Input.empty() : this.trigger;
@@ -148,7 +148,6 @@ public final class MetricAbsenceArgs extends io.pulumi.resources.ResourceArgs {
             this.trigger = Input.ofNullable(trigger);
             return this;
         }
-
         public MetricAbsenceArgs build() {
             return new MetricAbsenceArgs(aggregations, duration, filter, trigger);
         }

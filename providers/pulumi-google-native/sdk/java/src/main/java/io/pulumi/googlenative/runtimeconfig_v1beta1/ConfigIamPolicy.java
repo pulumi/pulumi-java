@@ -5,8 +5,8 @@ package io.pulumi.googlenative.runtimeconfig_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.ConfigIamPolicyArgs;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.BindingResponse;
@@ -66,13 +66,6 @@ public class ConfigIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ConfigIamPolicy(String name) {
-        super("google-native:runtimeconfig/v1beta1:ConfigIamPolicy", name, ConfigIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -70,7 +70,6 @@ public final class RuleGroupJsonMatchPattern {
             this.includedPaths = includedPaths;
             return this;
         }
-
         public RuleGroupJsonMatchPattern build() {
             return new RuleGroupJsonMatchPattern(all, includedPaths);
         }

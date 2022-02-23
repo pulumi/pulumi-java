@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.StatusResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.inputs.TraceResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="error", required=true)
-    private final StatusResponse error;
+      private final StatusResponse error;
 
     public StatusResponse getError() {
         return this.error;
@@ -35,7 +35,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="result", required=true)
-    private final String result;
+      private final String result;
 
     public String getResult() {
         return this.result;
@@ -46,7 +46,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="traces", required=true)
-    private final List<TraceResponse> traces;
+      private final List<TraceResponse> traces;
 
     public List<TraceResponse> getTraces() {
         return this.traces;
@@ -57,7 +57,7 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="verifyTime", required=true)
-    private final String verifyTime;
+      private final String verifyTime;
 
     public String getVerifyTime() {
         return this.verifyTime;
@@ -126,7 +126,6 @@ public final class ReachabilityDetailsResponse extends io.pulumi.resources.Invok
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ReachabilityDetailsResponse build() {
             return new ReachabilityDetailsResponse(error, result, traces, verifyTime);
         }

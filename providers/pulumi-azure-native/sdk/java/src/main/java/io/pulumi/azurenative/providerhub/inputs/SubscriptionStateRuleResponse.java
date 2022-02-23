@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class SubscriptionStateRuleResponse extends io.pulumi.resources.Inv
     public static final SubscriptionStateRuleResponse Empty = new SubscriptionStateRuleResponse();
 
     @InputImport(name="allowedActions")
-    private final @Nullable List<String> allowedActions;
+        private final @Nullable List<String> allowedActions;
 
     public List<String> getAllowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
     }
 
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -72,7 +72,6 @@ public final class SubscriptionStateRuleResponse extends io.pulumi.resources.Inv
             this.state = state;
             return this;
         }
-
         public SubscriptionStateRuleResponse build() {
             return new SubscriptionStateRuleResponse(allowedActions, state);
         }

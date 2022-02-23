@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningcompute.outputs.ContainerRegistryPro
 import io.pulumi.azurenative.machinelearningcompute.outputs.ErrorResponseWrapperResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.GlobalServiceConfigurationResponse;
 import io.pulumi.azurenative.machinelearningcompute.outputs.StorageAccountPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -378,7 +378,6 @@ public final class GetOperationalizationClusterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOperationalizationClusterResult build() {
             return new GetOperationalizationClusterResult(appInsights, clusterType, containerRegistry, containerService, createdOn, description, globalServiceConfiguration, id, location, modifiedOn, name, provisioningErrors, provisioningState, storageAccount, tags, type);
         }

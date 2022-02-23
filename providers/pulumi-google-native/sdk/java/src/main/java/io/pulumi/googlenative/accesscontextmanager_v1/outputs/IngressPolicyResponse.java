@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.IngressFromResponse;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.IngressToResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class IngressPolicyResponse {
             this.ingressTo = Objects.requireNonNull(ingressTo);
             return this;
         }
-
         public IngressPolicyResponse build() {
             return new IngressPolicyResponse(ingressFrom, ingressTo);
         }

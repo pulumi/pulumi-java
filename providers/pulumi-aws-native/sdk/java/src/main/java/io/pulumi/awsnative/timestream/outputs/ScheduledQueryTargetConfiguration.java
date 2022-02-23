@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQueryTimestreamConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class ScheduledQueryTargetConfiguration {
             this.timestreamConfiguration = Objects.requireNonNull(timestreamConfiguration);
             return this;
         }
-
         public ScheduledQueryTargetConfiguration build() {
             return new ScheduledQueryTargetConfiguration(timestreamConfiguration);
         }

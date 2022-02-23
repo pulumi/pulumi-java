@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight.outputs;
 import io.pulumi.awsnative.quicksight.enums.ThemeResourceStatus;
 import io.pulumi.awsnative.quicksight.outputs.ThemeConfiguration;
 import io.pulumi.awsnative.quicksight.outputs.ThemeError;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -193,7 +193,6 @@ public final class ThemeVersion {
             this.versionNumber = versionNumber;
             return this;
         }
-
         public ThemeVersion build() {
             return new ThemeVersion(arn, baseThemeId, configuration, createdTime, description, errors, status, versionNumber);
         }

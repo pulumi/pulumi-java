@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.InterconnectCircuitInfoResponse;
 import io.pulumi.googlenative.compute_v1.outputs.InterconnectOutageNotificationResponse;
 import java.lang.Boolean;
@@ -499,7 +499,6 @@ public final class GetInterconnectResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetInterconnectResult build() {
             return new GetInterconnectResult(adminEnabled, circuitInfos, creationTimestamp, customerName, description, expectedOutages, googleIpAddress, googleReferenceId, interconnectAttachments, interconnectType, kind, linkType, location, name, nocContactEmail, operationalStatus, peerIpAddress, provisionedLinkCount, requestedLinkCount, satisfiesPzs, selfLink, state);
         }

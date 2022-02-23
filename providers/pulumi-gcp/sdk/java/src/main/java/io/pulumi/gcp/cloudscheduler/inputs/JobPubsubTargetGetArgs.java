@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudscheduler.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+        private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -34,7 +34,7 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+        private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -48,7 +48,7 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final Input<String> topicName;
+        private final Input<String> topicName;
 
     public Input<String> getTopicName() {
         return this.topicName;
@@ -122,7 +122,6 @@ public final class JobPubsubTargetGetArgs extends io.pulumi.resources.ResourceAr
             this.topicName = Input.of(Objects.requireNonNull(topicName));
             return this;
         }
-
         public JobPubsubTargetGetArgs build() {
             return new JobPubsubTargetGetArgs(attributes, data, topicName);
         }

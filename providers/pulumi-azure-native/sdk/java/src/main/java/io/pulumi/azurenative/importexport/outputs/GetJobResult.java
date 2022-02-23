@@ -6,7 +6,7 @@ package io.pulumi.azurenative.importexport.outputs;
 import io.pulumi.azurenative.importexport.outputs.IdentityDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.JobDetailsResponse;
 import io.pulumi.azurenative.importexport.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -206,7 +206,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(id, identity, location, name, properties, systemData, tags, type);
         }

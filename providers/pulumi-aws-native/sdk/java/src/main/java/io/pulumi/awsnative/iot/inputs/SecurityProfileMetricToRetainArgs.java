@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricDimensionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,14 +24,14 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="metric", required=true)
-    private final Input<String> metric;
+        private final Input<String> metric;
 
     public Input<String> getMetric() {
         return this.metric;
     }
 
     @InputImport(name="metricDimension")
-    private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
+        private final @Nullable Input<SecurityProfileMetricDimensionArgs> metricDimension;
 
     public Input<SecurityProfileMetricDimensionArgs> getMetricDimension() {
         return this.metricDimension == null ? Input.empty() : this.metricDimension;
@@ -90,7 +90,6 @@ public final class SecurityProfileMetricToRetainArgs extends io.pulumi.resources
             this.metricDimension = Input.ofNullable(metricDimension);
             return this;
         }
-
         public SecurityProfileMetricToRetainArgs build() {
             return new SecurityProfileMetricToRetainArgs(metric, metricDimension);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.FlowAccessControlConfigurationPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -118,7 +118,6 @@ public final class FlowAccessControlConfigurationResponse {
             this.workflowManagement = workflowManagement;
             return this;
         }
-
         public FlowAccessControlConfigurationResponse build() {
             return new FlowAccessControlConfigurationResponse(actions, contents, triggers, workflowManagement);
         }

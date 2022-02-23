@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.ConditionResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class BasicLevelResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public BasicLevelResponse build() {
             return new BasicLevelResponse(combiningFunction, conditions);
         }

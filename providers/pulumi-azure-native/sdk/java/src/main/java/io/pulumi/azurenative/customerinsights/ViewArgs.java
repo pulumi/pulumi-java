@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="definition", required=true)
-    private final Input<String> definition;
+        private final Input<String> definition;
 
     public Input<String> getDefinition() {
         return this.definition;
@@ -31,7 +31,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<Map<String,String>> displayName;
+        private final @Nullable Input<Map<String,String>> displayName;
 
     public Input<Map<String,String>> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -42,7 +42,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hubName", required=true)
-    private final Input<String> hubName;
+        private final Input<String> hubName;
 
     public Input<String> getHubName() {
         return this.hubName;
@@ -53,7 +53,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -64,7 +64,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userId")
-    private final @Nullable Input<String> userId;
+        private final @Nullable Input<String> userId;
 
     public Input<String> getUserId() {
         return this.userId == null ? Input.empty() : this.userId;
@@ -75,7 +75,7 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="viewName")
-    private final @Nullable Input<String> viewName;
+        private final @Nullable Input<String> viewName;
 
     public Input<String> getViewName() {
         return this.viewName == null ? Input.empty() : this.viewName;
@@ -194,7 +194,6 @@ public final class ViewArgs extends io.pulumi.resources.ResourceArgs {
             this.viewName = Input.ofNullable(viewName);
             return this;
         }
-
         public ViewArgs build() {
             return new ViewArgs(definition, displayName, hubName, resourceGroupName, userId, viewName);
         }

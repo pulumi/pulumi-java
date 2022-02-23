@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudsearch_v1.inputs.GSuitePrincipalArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableModifications")
-    private final @Nullable Input<Boolean> disableModifications;
+      private final @Nullable Input<Boolean> disableModifications;
 
     public Input<Boolean> getDisableModifications() {
         return this.disableModifications == null ? Input.empty() : this.disableModifications;
@@ -33,7 +33,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="disableServing")
-    private final @Nullable Input<Boolean> disableServing;
+      private final @Nullable Input<Boolean> disableServing;
 
     public Input<Boolean> getDisableServing() {
         return this.disableServing == null ? Input.empty() : this.disableServing;
@@ -44,7 +44,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -55,7 +55,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="indexingServiceAccounts")
-    private final @Nullable Input<List<String>> indexingServiceAccounts;
+      private final @Nullable Input<List<String>> indexingServiceAccounts;
 
     public Input<List<String>> getIndexingServiceAccounts() {
         return this.indexingServiceAccounts == null ? Input.empty() : this.indexingServiceAccounts;
@@ -66,7 +66,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemsVisibility")
-    private final @Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility;
+      private final @Nullable Input<List<GSuitePrincipalArgs>> itemsVisibility;
 
     public Input<List<GSuitePrincipalArgs>> getItemsVisibility() {
         return this.itemsVisibility == null ? Input.empty() : this.itemsVisibility;
@@ -77,7 +77,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationIds")
-    private final @Nullable Input<List<String>> operationIds;
+      private final @Nullable Input<List<String>> operationIds;
 
     public Input<List<String>> getOperationIds() {
         return this.operationIds == null ? Input.empty() : this.operationIds;
@@ -99,7 +99,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="returnThumbnailUrls")
-    private final @Nullable Input<Boolean> returnThumbnailUrls;
+      private final @Nullable Input<Boolean> returnThumbnailUrls;
 
     public Input<Boolean> getReturnThumbnailUrls() {
         return this.returnThumbnailUrls == null ? Input.empty() : this.returnThumbnailUrls;
@@ -110,7 +110,7 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shortName")
-    private final @Nullable Input<String> shortName;
+      private final @Nullable Input<String> shortName;
 
     public Input<String> getShortName() {
         return this.shortName == null ? Input.empty() : this.shortName;
@@ -274,7 +274,6 @@ public final class DataSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.shortName = Input.ofNullable(shortName);
             return this;
         }
-
         public DataSourceArgs build() {
             return new DataSourceArgs(disableModifications, disableServing, displayName, indexingServiceAccounts, itemsVisibility, name, operationIds, returnThumbnailUrls, shortName);
         }

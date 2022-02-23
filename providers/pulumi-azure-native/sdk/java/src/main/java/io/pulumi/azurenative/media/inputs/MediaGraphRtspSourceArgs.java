@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.MediaGraphClearEndpointArgs;
 import io.pulumi.azurenative.media.inputs.MediaGraphTlsEndpointArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -26,7 +26,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpoint", required=true)
-    private final Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
+        private final Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> endpoint;
 
     public Input<Either<MediaGraphClearEndpointArgs,MediaGraphTlsEndpointArgs>> getEndpoint() {
         return this.endpoint;
@@ -37,7 +37,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -49,7 +49,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -60,7 +60,7 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="transport", required=true)
-    private final Input<Either<String,MediaGraphRtspTransport>> transport;
+        private final Input<Either<String,MediaGraphRtspTransport>> transport;
 
     public Input<Either<String,MediaGraphRtspTransport>> getTransport() {
         return this.transport;
@@ -149,7 +149,6 @@ public final class MediaGraphRtspSourceArgs extends io.pulumi.resources.Resource
             this.transport = Input.of(Objects.requireNonNull(transport));
             return this;
         }
-
         public MediaGraphRtspSourceArgs build() {
             return new MediaGraphRtspSourceArgs(endpoint, name, odataType, transport);
         }

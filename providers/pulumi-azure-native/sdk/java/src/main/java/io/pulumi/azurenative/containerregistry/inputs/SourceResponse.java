@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addr")
-    private final @Nullable String addr;
+        private final @Nullable String addr;
 
     public Optional<String> getAddr() {
         return this.addr == null ? Optional.empty() : Optional.ofNullable(this.addr);
@@ -34,7 +34,7 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceID")
-    private final @Nullable String instanceID;
+        private final @Nullable String instanceID;
 
     public Optional<String> getInstanceID() {
         return this.instanceID == null ? Optional.empty() : Optional.ofNullable(this.instanceID);
@@ -83,7 +83,6 @@ public final class SourceResponse extends io.pulumi.resources.InvokeArgs {
             this.instanceID = instanceID;
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(addr, instanceID);
         }

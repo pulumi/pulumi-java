@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AnalysisDateTimeParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -34,7 +34,7 @@ public final class AnalysisDateTimeParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -93,7 +93,6 @@ public final class AnalysisDateTimeParameterArgs extends io.pulumi.resources.Res
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public AnalysisDateTimeParameterArgs build() {
             return new AnalysisDateTimeParameterArgs(name, values);
         }

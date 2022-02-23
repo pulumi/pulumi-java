@@ -5,8 +5,8 @@ package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.NamespaceIamPolicyArgs;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamPolicyState;
@@ -102,13 +102,6 @@ public class NamespaceIamPolicy extends io.pulumi.resources.CustomResource {
         return this.policyData;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NamespaceIamPolicy(String name) {
-        super("gcp:servicedirectory/namespaceIamPolicy:NamespaceIamPolicy", name, NamespaceIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

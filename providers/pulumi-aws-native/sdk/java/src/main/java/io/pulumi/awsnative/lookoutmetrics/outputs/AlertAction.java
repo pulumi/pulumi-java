@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lookoutmetrics.outputs;
 
 import io.pulumi.awsnative.lookoutmetrics.outputs.AlertLambdaConfiguration;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AlertSNSConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -61,7 +61,6 @@ public final class AlertAction {
             this.sNSConfiguration = sNSConfiguration;
             return this;
         }
-
         public AlertAction build() {
             return new AlertAction(lambdaConfiguration, sNSConfiguration);
         }

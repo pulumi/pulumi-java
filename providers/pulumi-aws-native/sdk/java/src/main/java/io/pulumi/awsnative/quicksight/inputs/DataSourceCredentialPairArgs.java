@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.inputs.DataSourceParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -33,7 +33,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="alternateDataSourceParameters")
-    private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
+        private final @Nullable Input<List<DataSourceParametersArgs>> alternateDataSourceParameters;
 
     public Input<List<DataSourceParametersArgs>> getAlternateDataSourceParameters() {
         return this.alternateDataSourceParameters == null ? Input.empty() : this.alternateDataSourceParameters;
@@ -44,7 +44,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<String> password;
+        private final Input<String> password;
 
     public Input<String> getPassword() {
         return this.password;
@@ -55,7 +55,7 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="username", required=true)
-    private final Input<String> username;
+        private final Input<String> username;
 
     public Input<String> getUsername() {
         return this.username;
@@ -129,7 +129,6 @@ public final class DataSourceCredentialPairArgs extends io.pulumi.resources.Reso
             this.username = Input.of(Objects.requireNonNull(username));
             return this;
         }
-
         public DataSourceCredentialPairArgs build() {
             return new DataSourceCredentialPairArgs(alternateDataSourceParameters, password, username);
         }

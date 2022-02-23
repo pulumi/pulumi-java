@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class IpMappingResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public IpMappingResponse build() {
             return new IpMappingResponse(ipAddress, timeToRetire, type);
         }

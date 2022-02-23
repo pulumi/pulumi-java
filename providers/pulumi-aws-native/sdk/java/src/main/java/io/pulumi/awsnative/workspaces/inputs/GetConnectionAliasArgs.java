@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.workspaces.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetConnectionAliasArgs extends io.pulumi.resources.InvokeArgs
     public static final GetConnectionAliasArgs Empty = new GetConnectionAliasArgs();
 
     @InputImport(name="aliasId", required=true)
-    private final String aliasId;
+        private final String aliasId;
 
     public String getAliasId() {
         return this.aliasId;
@@ -51,7 +51,6 @@ public final class GetConnectionAliasArgs extends io.pulumi.resources.InvokeArgs
             this.aliasId = Objects.requireNonNull(aliasId);
             return this;
         }
-
         public GetConnectionAliasArgs build() {
             return new GetConnectionAliasArgs(aliasId);
         }

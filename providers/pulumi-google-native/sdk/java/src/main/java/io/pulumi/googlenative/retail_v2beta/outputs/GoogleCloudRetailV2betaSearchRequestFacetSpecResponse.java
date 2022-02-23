@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2beta.outputs.GoogleCloudRetailV2betaSearchRequestFacetSpecFacetKeyResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GoogleCloudRetailV2betaSearchRequestFacetSpecResponse {
             this.limit = Objects.requireNonNull(limit);
             return this;
         }
-
         public GoogleCloudRetailV2betaSearchRequestFacetSpecResponse build() {
             return new GoogleCloudRetailV2betaSearchRequestFacetSpecResponse(enableDynamicPosition, excludedFilterKeys, facetKey, limit);
         }

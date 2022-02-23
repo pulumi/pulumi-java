@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleTypeDateResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GoogleTypeTimeOfDayResponse;
 import java.lang.Boolean;
@@ -204,7 +204,6 @@ public final class GooglePrivacyDlpV2ValueResponse {
             this.timestampValue = Objects.requireNonNull(timestampValue);
             return this;
         }
-
         public GooglePrivacyDlpV2ValueResponse build() {
             return new GooglePrivacyDlpV2ValueResponse(booleanValue, dateValue, dayOfWeekValue, floatValue, integerValue, stringValue, timeValue, timestampValue);
         }

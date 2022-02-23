@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class PackageInformationResponse {
             this.trackingNumber = Objects.requireNonNull(trackingNumber);
             return this;
         }
-
         public PackageInformationResponse build() {
             return new PackageInformationResponse(carrierName, driveCount, shipDate, trackingNumber);
         }

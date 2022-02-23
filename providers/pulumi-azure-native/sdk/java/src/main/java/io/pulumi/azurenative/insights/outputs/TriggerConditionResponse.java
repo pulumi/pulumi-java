@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.LogMetricTriggerResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class TriggerConditionResponse {
             this.thresholdOperator = Objects.requireNonNull(thresholdOperator);
             return this;
         }
-
         public TriggerConditionResponse build() {
             return new TriggerConditionResponse(metricTrigger, threshold, thresholdOperator);
         }

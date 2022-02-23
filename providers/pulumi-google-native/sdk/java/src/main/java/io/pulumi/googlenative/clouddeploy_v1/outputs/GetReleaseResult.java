@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.BuildArtifactResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.DeliveryPipelineResponse;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.TargetResponse;
@@ -415,7 +415,6 @@ public final class GetReleaseResult {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetReleaseResult build() {
             return new GetReleaseResult(annotations, buildArtifacts, createTime, deliveryPipelineSnapshot, description, etag, labels, name, renderEndTime, renderStartTime, renderState, skaffoldConfigPath, skaffoldConfigUri, skaffoldVersion, targetArtifacts, targetRenders, targetSnapshots, uid);
         }

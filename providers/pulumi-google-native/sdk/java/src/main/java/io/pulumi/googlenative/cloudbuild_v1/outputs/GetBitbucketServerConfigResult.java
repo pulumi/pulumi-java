@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerRepositoryIdResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.BitbucketServerSecretsResponse;
 import java.lang.String;
@@ -245,7 +245,6 @@ public final class GetBitbucketServerConfigResult {
             this.webhookKey = Objects.requireNonNull(webhookKey);
             return this;
         }
-
         public GetBitbucketServerConfigResult build() {
             return new GetBitbucketServerConfigResult(apiKey, connectedRepositories, createTime, hostUri, name, peeredNetwork, secrets, sslCa, username, webhookKey);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.edgeorder.inputs;
 import io.pulumi.azurenative.edgeorder.enums.DoubleEncryptionStatus;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="doubleEncryptionStatus")
-    private final @Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
+        private final @Nullable Input<Either<String,DoubleEncryptionStatus>> doubleEncryptionStatus;
 
     public Input<Either<String,DoubleEncryptionStatus>> getDoubleEncryptionStatus() {
         return this.doubleEncryptionStatus == null ? Input.empty() : this.doubleEncryptionStatus;
@@ -68,7 +68,6 @@ public final class EncryptionPreferencesArgs extends io.pulumi.resources.Resourc
             this.doubleEncryptionStatus = Input.ofNullable(doubleEncryptionStatus);
             return this;
         }
-
         public EncryptionPreferencesArgs build() {
             return new EncryptionPreferencesArgs(doubleEncryptionStatus);
         }

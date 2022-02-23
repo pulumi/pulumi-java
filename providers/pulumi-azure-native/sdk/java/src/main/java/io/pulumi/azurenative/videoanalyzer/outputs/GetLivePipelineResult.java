@@ -5,7 +5,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -227,7 +227,6 @@ public final class GetLivePipelineResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetLivePipelineResult build() {
             return new GetLivePipelineResult(bitrateKbps, description, id, name, parameters, state, systemData, topologyName, type);
         }

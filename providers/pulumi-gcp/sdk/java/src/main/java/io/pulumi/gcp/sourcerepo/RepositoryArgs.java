@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -47,7 +47,7 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubConfigs")
-    private final @Nullable Input<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
+        private final @Nullable Input<List<RepositoryPubsubConfigArgs>> pubsubConfigs;
 
     public Input<List<RepositoryPubsubConfigArgs>> getPubsubConfigs() {
         return this.pubsubConfigs == null ? Input.empty() : this.pubsubConfigs;
@@ -121,7 +121,6 @@ public final class RepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.pubsubConfigs = Input.ofNullable(pubsubConfigs);
             return this;
         }
-
         public RepositoryArgs build() {
             return new RepositoryArgs(name, project, pubsubConfigs);
         }

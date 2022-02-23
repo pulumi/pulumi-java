@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="billingAccount")
-    private final @Nullable String billingAccount;
+        private final @Nullable String billingAccount;
 
     public Optional<String> getBillingAccount() {
         return this.billingAccount == null ? Optional.empty() : Optional.ofNullable(this.billingAccount);
@@ -31,7 +31,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -42,7 +42,7 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="open")
-    private final @Nullable Boolean open;
+        private final @Nullable Boolean open;
 
     public Optional<Boolean> getOpen() {
         return this.open == null ? Optional.empty() : Optional.ofNullable(this.open);
@@ -101,7 +101,6 @@ public final class GetBillingAccountArgs extends io.pulumi.resources.InvokeArgs 
             this.open = open;
             return this;
         }
-
         public GetBillingAccountArgs build() {
             return new GetBillingAccountArgs(billingAccount, displayName, open);
         }

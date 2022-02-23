@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.inputs;
 
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeProtocol;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,49 +17,49 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
     public static final NetworkInsightsAccessScopePacketHeaderStatementRequestArgs Empty = new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs();
 
     @InputImport(name="destinationAddresses")
-    private final @Nullable Input<List<String>> destinationAddresses;
+        private final @Nullable Input<List<String>> destinationAddresses;
 
     public Input<List<String>> getDestinationAddresses() {
         return this.destinationAddresses == null ? Input.empty() : this.destinationAddresses;
     }
 
     @InputImport(name="destinationPorts")
-    private final @Nullable Input<List<String>> destinationPorts;
+        private final @Nullable Input<List<String>> destinationPorts;
 
     public Input<List<String>> getDestinationPorts() {
         return this.destinationPorts == null ? Input.empty() : this.destinationPorts;
     }
 
     @InputImport(name="destinationPrefixLists")
-    private final @Nullable Input<List<String>> destinationPrefixLists;
+        private final @Nullable Input<List<String>> destinationPrefixLists;
 
     public Input<List<String>> getDestinationPrefixLists() {
         return this.destinationPrefixLists == null ? Input.empty() : this.destinationPrefixLists;
     }
 
     @InputImport(name="protocols")
-    private final @Nullable Input<List<NetworkInsightsAccessScopeProtocol>> protocols;
+        private final @Nullable Input<List<NetworkInsightsAccessScopeProtocol>> protocols;
 
     public Input<List<NetworkInsightsAccessScopeProtocol>> getProtocols() {
         return this.protocols == null ? Input.empty() : this.protocols;
     }
 
     @InputImport(name="sourceAddresses")
-    private final @Nullable Input<List<String>> sourceAddresses;
+        private final @Nullable Input<List<String>> sourceAddresses;
 
     public Input<List<String>> getSourceAddresses() {
         return this.sourceAddresses == null ? Input.empty() : this.sourceAddresses;
     }
 
     @InputImport(name="sourcePorts")
-    private final @Nullable Input<List<String>> sourcePorts;
+        private final @Nullable Input<List<String>> sourcePorts;
 
     public Input<List<String>> getSourcePorts() {
         return this.sourcePorts == null ? Input.empty() : this.sourcePorts;
     }
 
     @InputImport(name="sourcePrefixLists")
-    private final @Nullable Input<List<String>> sourcePrefixLists;
+        private final @Nullable Input<List<String>> sourcePrefixLists;
 
     public Input<List<String>> getSourcePrefixLists() {
         return this.sourcePrefixLists == null ? Input.empty() : this.sourcePrefixLists;
@@ -193,7 +193,6 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequestArgs ex
             this.sourcePrefixLists = Input.ofNullable(sourcePrefixLists);
             return this;
         }
-
         public NetworkInsightsAccessScopePacketHeaderStatementRequestArgs build() {
             return new NetworkInsightsAccessScopePacketHeaderStatementRequestArgs(destinationAddresses, destinationPorts, destinationPrefixLists, protocols, sourceAddresses, sourcePorts, sourcePrefixLists);
         }

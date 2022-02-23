@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.StandardAppVersionArgs;
 import io.pulumi.gcp.appengine.inputs.StandardAppVersionState;
@@ -370,13 +370,6 @@ public class StandardAppVersion extends io.pulumi.resources.CustomResource {
         return this.vpcAccessConnector;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public StandardAppVersion(String name) {
-        super("gcp:appengine/standardAppVersion:StandardAppVersion", name, StandardAppVersionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

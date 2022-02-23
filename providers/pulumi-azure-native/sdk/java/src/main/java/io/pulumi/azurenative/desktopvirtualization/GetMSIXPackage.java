@@ -6,7 +6,7 @@ package io.pulumi.azurenative.desktopvirtualization;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.desktopvirtualization.inputs.GetMSIXPackageArgs;
 import io.pulumi.azurenative.desktopvirtualization.outputs.GetMSIXPackageResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

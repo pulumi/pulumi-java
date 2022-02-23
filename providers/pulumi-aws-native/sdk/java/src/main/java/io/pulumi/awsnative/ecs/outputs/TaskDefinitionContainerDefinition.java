@@ -19,7 +19,7 @@ import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSecret;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionSystemControl;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionUlimit;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionVolumeFrom;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -609,7 +609,6 @@ public final class TaskDefinitionContainerDefinition {
             this.workingDirectory = workingDirectory;
             return this;
         }
-
         public TaskDefinitionContainerDefinition build() {
             return new TaskDefinitionContainerDefinition(command, cpu, dependsOn, disableNetworking, dnsSearchDomains, dnsServers, dockerLabels, dockerSecurityOptions, entryPoint, environment, environmentFiles, essential, extraHosts, firelensConfiguration, healthCheck, hostname, image, interactive, links, linuxParameters, logConfiguration, memory, memoryReservation, mountPoints, name, portMappings, privileged, pseudoTerminal, readonlyRootFilesystem, repositoryCredentials, resourceRequirements, secrets, startTimeout, stopTimeout, systemControls, ulimits, user, volumesFrom, workingDirectory);
         }

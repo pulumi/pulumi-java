@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class KeyVaultLastAccessStatusContractPropertiesResponse {
             this.timeStampUtc = timeStampUtc;
             return this;
         }
-
         public KeyVaultLastAccessStatusContractPropertiesResponse build() {
             return new KeyVaultLastAccessStatusContractPropertiesResponse(code, message, timeStampUtc);
         }

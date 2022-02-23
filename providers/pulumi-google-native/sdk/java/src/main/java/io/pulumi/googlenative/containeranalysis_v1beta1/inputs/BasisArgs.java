@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1beta1.inputs.FingerprintArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final Input<FingerprintArgs> fingerprint;
+      private final Input<FingerprintArgs> fingerprint;
 
     public Input<FingerprintArgs> getFingerprint() {
         return this.fingerprint;
@@ -34,7 +34,7 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceUrl", required=true)
-    private final Input<String> resourceUrl;
+      private final Input<String> resourceUrl;
 
     public Input<String> getResourceUrl() {
         return this.resourceUrl;
@@ -93,7 +93,6 @@ public final class BasisArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceUrl = Input.of(Objects.requireNonNull(resourceUrl));
             return this;
         }
-
         public BasisArgs build() {
             return new BasisArgs(fingerprint, resourceUrl);
         }

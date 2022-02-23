@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssmincidents.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
     public static final ReplicationSetRegionConfigurationArgs Empty = new ReplicationSetRegionConfigurationArgs();
 
     @InputImport(name="sseKmsKeyId", required=true)
-    private final Input<String> sseKmsKeyId;
+        private final Input<String> sseKmsKeyId;
 
     public Input<String> getSseKmsKeyId() {
         return this.sseKmsKeyId;
@@ -61,7 +61,6 @@ public final class ReplicationSetRegionConfigurationArgs extends io.pulumi.resou
             this.sseKmsKeyId = Input.of(Objects.requireNonNull(sseKmsKeyId));
             return this;
         }
-
         public ReplicationSetRegionConfigurationArgs build() {
             return new ReplicationSetRegionConfigurationArgs(sseKmsKeyId);
         }

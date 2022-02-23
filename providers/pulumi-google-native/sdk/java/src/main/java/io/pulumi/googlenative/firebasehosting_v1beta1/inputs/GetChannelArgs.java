@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetChannelArgs Empty = new GetChannelArgs();
 
     @InputImport(name="channelId", required=true)
-    private final String channelId;
+      private final String channelId;
 
     public String getChannelId() {
         return this.channelId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="siteId", required=true)
-    private final String siteId;
+      private final String siteId;
 
     public String getSiteId() {
         return this.siteId;
@@ -88,7 +88,6 @@ public final class GetChannelArgs extends io.pulumi.resources.InvokeArgs {
             this.siteId = Objects.requireNonNull(siteId);
             return this;
         }
-
         public GetChannelArgs build() {
             return new GetChannelArgs(channelId, project, siteId);
         }

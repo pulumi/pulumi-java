@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__StudyConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetStudyResult {
             this.studyConfig = Objects.requireNonNull(studyConfig);
             return this;
         }
-
         public GetStudyResult build() {
             return new GetStudyResult(createTime, inactiveReason, name, state, studyConfig);
         }

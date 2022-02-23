@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ManagementLockOwnerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+        private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -61,7 +61,6 @@ public final class ManagementLockOwnerResponse extends io.pulumi.resources.Invok
             this.applicationId = applicationId;
             return this;
         }
-
         public ManagementLockOwnerResponse build() {
             return new ManagementLockOwnerResponse(applicationId);
         }

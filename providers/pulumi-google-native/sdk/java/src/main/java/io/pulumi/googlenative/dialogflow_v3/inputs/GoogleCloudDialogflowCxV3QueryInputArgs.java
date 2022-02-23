@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3AudioInputArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3DtmfInputArgs;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3EventInputArgs;
@@ -28,7 +28,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="audio")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3AudioInputArgs> audio;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3AudioInputArgs> audio;
 
     public Input<GoogleCloudDialogflowCxV3AudioInputArgs> getAudio() {
         return this.audio == null ? Input.empty() : this.audio;
@@ -39,7 +39,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="dtmf")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3DtmfInputArgs> dtmf;
 
     public Input<GoogleCloudDialogflowCxV3DtmfInputArgs> getDtmf() {
         return this.dtmf == null ? Input.empty() : this.dtmf;
@@ -50,7 +50,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="event")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3EventInputArgs> event;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3EventInputArgs> event;
 
     public Input<GoogleCloudDialogflowCxV3EventInputArgs> getEvent() {
         return this.event == null ? Input.empty() : this.event;
@@ -61,7 +61,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="intent")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3IntentInputArgs> intent;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3IntentInputArgs> intent;
 
     public Input<GoogleCloudDialogflowCxV3IntentInputArgs> getIntent() {
         return this.intent == null ? Input.empty() : this.intent;
@@ -72,7 +72,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="languageCode", required=true)
-    private final Input<String> languageCode;
+      private final Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode;
@@ -83,7 +83,7 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="text")
-    private final @Nullable Input<GoogleCloudDialogflowCxV3TextInputArgs> text;
+      private final @Nullable Input<GoogleCloudDialogflowCxV3TextInputArgs> text;
 
     public Input<GoogleCloudDialogflowCxV3TextInputArgs> getText() {
         return this.text == null ? Input.empty() : this.text;
@@ -202,7 +202,6 @@ public final class GoogleCloudDialogflowCxV3QueryInputArgs extends io.pulumi.res
             this.text = Input.ofNullable(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3QueryInputArgs build() {
             return new GoogleCloudDialogflowCxV3QueryInputArgs(audio, dtmf, event, intent, languageCode, text);
         }

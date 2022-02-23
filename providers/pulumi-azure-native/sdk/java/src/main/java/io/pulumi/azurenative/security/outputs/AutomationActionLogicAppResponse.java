@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class AutomationActionLogicAppResponse {
             this.uri = uri;
             return this;
         }
-
         public AutomationActionLogicAppResponse build() {
             return new AutomationActionLogicAppResponse(actionType, logicAppResourceId, uri);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+        private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -34,7 +34,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isWebchatPreviewEnabled", required=true)
-    private final Input<Boolean> isWebchatPreviewEnabled;
+        private final Input<Boolean> isWebchatPreviewEnabled;
 
     public Input<Boolean> getIsWebchatPreviewEnabled() {
         return this.isWebchatPreviewEnabled;
@@ -45,7 +45,7 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="siteName", required=true)
-    private final Input<String> siteName;
+        private final Input<String> siteName;
 
     public Input<String> getSiteName() {
         return this.siteName;
@@ -119,7 +119,6 @@ public final class WebChatSiteArgs extends io.pulumi.resources.ResourceArgs {
             this.siteName = Input.of(Objects.requireNonNull(siteName));
             return this;
         }
-
         public WebChatSiteArgs build() {
             return new WebChatSiteArgs(isEnabled, isWebchatPreviewEnabled, siteName);
         }

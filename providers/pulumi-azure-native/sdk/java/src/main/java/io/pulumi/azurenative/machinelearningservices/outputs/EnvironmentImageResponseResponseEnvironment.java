@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDef
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponsePython;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponseR;
 import io.pulumi.azurenative.machinelearningservices.outputs.ModelEnvironmentDefinitionResponseResponseSpark;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -207,7 +207,6 @@ public final class EnvironmentImageResponseResponseEnvironment {
             this.version = version;
             return this;
         }
-
         public EnvironmentImageResponseResponseEnvironment build() {
             return new EnvironmentImageResponseResponseEnvironment(docker, environmentVariables, inferencingStackVersion, name, python, r, spark, version);
         }

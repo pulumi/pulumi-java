@@ -8,7 +8,7 @@ import io.pulumi.azurenative.azurearcdata.outputs.LogAnalyticsWorkspaceConfigRes
 import io.pulumi.azurenative.azurearcdata.outputs.OnPremisePropertyResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.UploadServicePrincipalResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.UploadWatermarkResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -200,7 +200,6 @@ public final class DataControllerPropertiesResponse {
             this.uploadWatermark = uploadWatermark;
             return this;
         }
-
         public DataControllerPropertiesResponse build() {
             return new DataControllerPropertiesResponse(basicLoginInformation, k8sRaw, lastUploadedDate, logAnalyticsWorkspaceConfig, onPremiseProperty, provisioningState, uploadServicePrincipal, uploadWatermark);
         }

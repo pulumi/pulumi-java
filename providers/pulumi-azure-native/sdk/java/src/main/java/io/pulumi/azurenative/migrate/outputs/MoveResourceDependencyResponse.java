@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.AutomaticResolutionPropertiesResponse;
 import io.pulumi.azurenative.migrate.outputs.ManualResolutionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class MoveResourceDependencyResponse {
             this.resolutionType = resolutionType;
             return this;
         }
-
         public MoveResourceDependencyResponse build() {
             return new MoveResourceDependencyResponse(automaticResolution, dependencyType, id, isOptional, manualResolution, resolutionStatus, resolutionType);
         }

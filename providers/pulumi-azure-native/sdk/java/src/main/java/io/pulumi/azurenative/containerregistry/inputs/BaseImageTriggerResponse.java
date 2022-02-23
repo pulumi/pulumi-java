@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="baseImageTriggerType", required=true)
-    private final String baseImageTriggerType;
+        private final String baseImageTriggerType;
 
     public String getBaseImageTriggerType() {
         return this.baseImageTriggerType;
@@ -34,7 +34,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -56,7 +56,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="updateTriggerEndpoint")
-    private final @Nullable String updateTriggerEndpoint;
+        private final @Nullable String updateTriggerEndpoint;
 
     public Optional<String> getUpdateTriggerEndpoint() {
         return this.updateTriggerEndpoint == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerEndpoint);
@@ -67,7 +67,7 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="updateTriggerPayloadType")
-    private final @Nullable String updateTriggerPayloadType;
+        private final @Nullable String updateTriggerPayloadType;
 
     public Optional<String> getUpdateTriggerPayloadType() {
         return this.updateTriggerPayloadType == null ? Optional.empty() : Optional.ofNullable(this.updateTriggerPayloadType);
@@ -146,7 +146,6 @@ public final class BaseImageTriggerResponse extends io.pulumi.resources.InvokeAr
             this.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;
         }
-
         public BaseImageTriggerResponse build() {
             return new BaseImageTriggerResponse(baseImageTriggerType, name, status, updateTriggerEndpoint, updateTriggerPayloadType);
         }

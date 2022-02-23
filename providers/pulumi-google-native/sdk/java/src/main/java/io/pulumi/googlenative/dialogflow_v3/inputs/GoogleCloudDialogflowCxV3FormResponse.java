@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3FormParameterResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
+      private final List<GoogleCloudDialogflowCxV3FormParameterResponse> parameters;
 
     public List<GoogleCloudDialogflowCxV3FormParameterResponse> getParameters() {
         return this.parameters;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3FormResponse extends io.pulumi.resou
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3FormResponse build() {
             return new GoogleCloudDialogflowCxV3FormResponse(parameters);
         }

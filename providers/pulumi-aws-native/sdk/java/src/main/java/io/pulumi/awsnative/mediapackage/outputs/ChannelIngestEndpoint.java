@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class ChannelIngestEndpoint {
             this.username = username;
             return this;
         }
-
         public ChannelIngestEndpoint build() {
             return new ChannelIngestEndpoint(id, password, url, username);
         }

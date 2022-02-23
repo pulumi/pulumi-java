@@ -30,7 +30,6 @@ public final class JobParameterMapArgs extends io.pulumi.resources.ResourceArgs 
         public Builder(JobParameterMapArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public JobParameterMapArgs build() {
             return new JobParameterMapArgs();
         }

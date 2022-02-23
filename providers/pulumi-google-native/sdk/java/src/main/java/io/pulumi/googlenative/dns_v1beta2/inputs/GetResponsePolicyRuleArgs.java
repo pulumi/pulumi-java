@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetResponsePolicyRuleArgs extends io.pulumi.resources.InvokeA
     public static final GetResponsePolicyRuleArgs Empty = new GetResponsePolicyRuleArgs();
 
     @InputImport(name="clientOperationId")
-    private final @Nullable String clientOperationId;
+      private final @Nullable String clientOperationId;
 
     public Optional<String> getClientOperationId() {
         return this.clientOperationId == null ? Optional.empty() : Optional.ofNullable(this.clientOperationId);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="responsePolicy", required=true)
-    private final String responsePolicy;
+      private final String responsePolicy;
 
     public String getResponsePolicy() {
         return this.responsePolicy;
     }
 
     @InputImport(name="responsePolicyRule", required=true)
-    private final String responsePolicyRule;
+      private final String responsePolicyRule;
 
     public String getResponsePolicyRule() {
         return this.responsePolicyRule;
@@ -105,7 +105,6 @@ public final class GetResponsePolicyRuleArgs extends io.pulumi.resources.InvokeA
             this.responsePolicyRule = Objects.requireNonNull(responsePolicyRule);
             return this;
         }
-
         public GetResponsePolicyRuleArgs build() {
             return new GetResponsePolicyRuleArgs(clientOperationId, project, responsePolicy, responsePolicyRule);
         }

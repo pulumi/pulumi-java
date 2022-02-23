@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.MetadataItemsItemResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class MetadataResponse {
             this.kind = Objects.requireNonNull(kind);
             return this;
         }
-
         public MetadataResponse build() {
             return new MetadataResponse(fingerprint, items, kind);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lightsail;
 
 import io.pulumi.awsnative.lightsail.inputs.LoadBalancerTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attachedInstances")
-    private final @Nullable Input<List<String>> attachedInstances;
+        private final @Nullable Input<List<String>> attachedInstances;
 
     public Input<List<String>> getAttachedInstances() {
         return this.attachedInstances == null ? Input.empty() : this.attachedInstances;
@@ -34,7 +34,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="healthCheckPath")
-    private final @Nullable Input<String> healthCheckPath;
+        private final @Nullable Input<String> healthCheckPath;
 
     public Input<String> getHealthCheckPath() {
         return this.healthCheckPath == null ? Input.empty() : this.healthCheckPath;
@@ -45,7 +45,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instancePort", required=true)
-    private final Input<Integer> instancePort;
+        private final Input<Integer> instancePort;
 
     public Input<Integer> getInstancePort() {
         return this.instancePort;
@@ -56,7 +56,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddressType")
-    private final @Nullable Input<String> ipAddressType;
+        private final @Nullable Input<String> ipAddressType;
 
     public Input<String> getIpAddressType() {
         return this.ipAddressType == null ? Input.empty() : this.ipAddressType;
@@ -67,7 +67,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="loadBalancerName")
-    private final @Nullable Input<String> loadBalancerName;
+        private final @Nullable Input<String> loadBalancerName;
 
     public Input<String> getLoadBalancerName() {
         return this.loadBalancerName == null ? Input.empty() : this.loadBalancerName;
@@ -78,7 +78,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionStickinessEnabled")
-    private final @Nullable Input<Boolean> sessionStickinessEnabled;
+        private final @Nullable Input<Boolean> sessionStickinessEnabled;
 
     public Input<Boolean> getSessionStickinessEnabled() {
         return this.sessionStickinessEnabled == null ? Input.empty() : this.sessionStickinessEnabled;
@@ -89,7 +89,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sessionStickinessLBCookieDurationSeconds")
-    private final @Nullable Input<String> sessionStickinessLBCookieDurationSeconds;
+        private final @Nullable Input<String> sessionStickinessLBCookieDurationSeconds;
 
     public Input<String> getSessionStickinessLBCookieDurationSeconds() {
         return this.sessionStickinessLBCookieDurationSeconds == null ? Input.empty() : this.sessionStickinessLBCookieDurationSeconds;
@@ -100,7 +100,7 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<LoadBalancerTagArgs>> tags;
+        private final @Nullable Input<List<LoadBalancerTagArgs>> tags;
 
     public Input<List<LoadBalancerTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -249,7 +249,6 @@ public final class LoadBalancerArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public LoadBalancerArgs build() {
             return new LoadBalancerArgs(attachedInstances, healthCheckPath, instancePort, ipAddressType, loadBalancerName, sessionStickinessEnabled, sessionStickinessLBCookieDurationSeconds, tags);
         }

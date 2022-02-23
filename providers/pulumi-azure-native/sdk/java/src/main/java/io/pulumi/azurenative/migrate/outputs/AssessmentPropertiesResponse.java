@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.outputs;
 
 import io.pulumi.azurenative.migrate.outputs.VmUptimeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -666,7 +666,6 @@ public final class AssessmentPropertiesResponse {
             this.vmUptime = Objects.requireNonNull(vmUptime);
             return this;
         }
-
         public AssessmentPropertiesResponse build() {
             return new AssessmentPropertiesResponse(azureDiskType, azureHybridUseBenefit, azureLocation, azureOfferCode, azurePricingTier, azureStorageRedundancy, azureVmFamilies, confidenceRatingInPercentage, createdTimestamp, currency, discountPercentage, eaSubscriptionId, monthlyBandwidthCost, monthlyComputeCost, monthlyPremiumStorageCost, monthlyStandardSSDStorageCost, monthlyStorageCost, numberOfMachines, percentile, perfDataEndTime, perfDataStartTime, pricesTimestamp, reservedInstance, scalingFactor, sizingCriterion, stage, status, timeRange, updatedTimestamp, vmUptime);
         }

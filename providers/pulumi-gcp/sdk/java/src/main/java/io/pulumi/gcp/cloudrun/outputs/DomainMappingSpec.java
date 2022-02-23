@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -110,7 +110,6 @@ public final class DomainMappingSpec {
             this.routeName = Objects.requireNonNull(routeName);
             return this;
         }
-
         public DomainMappingSpec build() {
             return new DomainMappingSpec(certificateMode, forceOverride, routeName);
         }

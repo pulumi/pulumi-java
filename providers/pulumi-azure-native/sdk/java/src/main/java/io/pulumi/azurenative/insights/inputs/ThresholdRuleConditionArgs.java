@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.inputs.RuleManagementEventDataSourceArgs;
 import io.pulumi.azurenative.insights.inputs.RuleMetricDataSourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="dataSource")
-    private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
+        private final @Nullable Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> dataSource;
 
     public Input<Either<RuleManagementEventDataSourceArgs,RuleMetricDataSourceArgs>> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
@@ -41,7 +41,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -52,7 +52,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<ConditionOperator> operator;
+        private final Input<ConditionOperator> operator;
 
     public Input<ConditionOperator> getOperator() {
         return this.operator;
@@ -63,7 +63,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="threshold", required=true)
-    private final Input<Double> threshold;
+        private final Input<Double> threshold;
 
     public Input<Double> getThreshold() {
         return this.threshold;
@@ -74,7 +74,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="timeAggregation")
-    private final @Nullable Input<TimeAggregationOperator> timeAggregation;
+        private final @Nullable Input<TimeAggregationOperator> timeAggregation;
 
     public Input<TimeAggregationOperator> getTimeAggregation() {
         return this.timeAggregation == null ? Input.empty() : this.timeAggregation;
@@ -85,7 +85,7 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="windowSize")
-    private final @Nullable Input<String> windowSize;
+        private final @Nullable Input<String> windowSize;
 
     public Input<String> getWindowSize() {
         return this.windowSize == null ? Input.empty() : this.windowSize;
@@ -204,7 +204,6 @@ public final class ThresholdRuleConditionArgs extends io.pulumi.resources.Resour
             this.windowSize = Input.ofNullable(windowSize);
             return this;
         }
-
         public ThresholdRuleConditionArgs build() {
             return new ThresholdRuleConditionArgs(dataSource, odataType, operator, threshold, timeAggregation, windowSize);
         }

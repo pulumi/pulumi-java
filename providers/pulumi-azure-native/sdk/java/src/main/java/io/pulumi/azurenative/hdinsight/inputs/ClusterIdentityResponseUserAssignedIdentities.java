@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+        private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -30,7 +30,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -41,7 +41,7 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -100,7 +100,6 @@ public final class ClusterIdentityResponseUserAssignedIdentities extends io.pulu
             this.tenantId = tenantId;
             return this;
         }
-
         public ClusterIdentityResponseUserAssignedIdentities build() {
             return new ClusterIdentityResponseUserAssignedIdentities(clientId, principalId, tenantId);
         }

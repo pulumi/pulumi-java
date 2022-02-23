@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="modifiedSwaggerUrl")
-    private final @Nullable Input<String> modifiedSwaggerUrl;
+        private final @Nullable Input<String> modifiedSwaggerUrl;
 
     public Input<String> getModifiedSwaggerUrl() {
         return this.modifiedSwaggerUrl == null ? Input.empty() : this.modifiedSwaggerUrl;
@@ -34,7 +34,7 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="originalSwaggerUrl")
-    private final @Nullable Input<String> originalSwaggerUrl;
+        private final @Nullable Input<String> originalSwaggerUrl;
 
     public Input<String> getOriginalSwaggerUrl() {
         return this.originalSwaggerUrl == null ? Input.empty() : this.originalSwaggerUrl;
@@ -93,7 +93,6 @@ public final class ApiResourceDefinitionsArgs extends io.pulumi.resources.Resour
             this.originalSwaggerUrl = Input.ofNullable(originalSwaggerUrl);
             return this;
         }
-
         public ApiResourceDefinitionsArgs build() {
             return new ApiResourceDefinitionsArgs(modifiedSwaggerUrl, originalSwaggerUrl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataRespons
         public Builder(GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse build() {
             return new GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse();
         }

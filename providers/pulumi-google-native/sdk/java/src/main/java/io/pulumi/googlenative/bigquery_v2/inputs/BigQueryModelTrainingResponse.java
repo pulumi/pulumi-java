@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="currentIteration", required=true)
-    private final Integer currentIteration;
+      private final Integer currentIteration;
 
     public Integer getCurrentIteration() {
         return this.currentIteration;
@@ -29,7 +29,7 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="expectedTotalIterations", required=true)
-    private final String expectedTotalIterations;
+      private final String expectedTotalIterations;
 
     public String getExpectedTotalIterations() {
         return this.expectedTotalIterations;
@@ -78,7 +78,6 @@ public final class BigQueryModelTrainingResponse extends io.pulumi.resources.Inv
             this.expectedTotalIterations = Objects.requireNonNull(expectedTotalIterations);
             return this;
         }
-
         public BigQueryModelTrainingResponse build() {
             return new BigQueryModelTrainingResponse(currentIteration, expectedTotalIterations);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.LightHouseAuthorizationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization ex
     public static final ProviderHubMetadataResponseThirdPartyProviderAuthorization Empty = new ProviderHubMetadataResponseThirdPartyProviderAuthorization();
 
     @InputImport(name="authorizations")
-    private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
+        private final @Nullable List<LightHouseAuthorizationResponse> authorizations;
 
     public List<LightHouseAuthorizationResponse> getAuthorizations() {
         return this.authorizations == null ? List.of() : this.authorizations;
     }
 
     @InputImport(name="managedByTenantId")
-    private final @Nullable String managedByTenantId;
+        private final @Nullable String managedByTenantId;
 
     public Optional<String> getManagedByTenantId() {
         return this.managedByTenantId == null ? Optional.empty() : Optional.ofNullable(this.managedByTenantId);
@@ -73,7 +73,6 @@ public final class ProviderHubMetadataResponseThirdPartyProviderAuthorization ex
             this.managedByTenantId = managedByTenantId;
             return this;
         }
-
         public ProviderHubMetadataResponseThirdPartyProviderAuthorization build() {
             return new ProviderHubMetadataResponseThirdPartyProviderAuthorization(authorizations, managedByTenantId);
         }

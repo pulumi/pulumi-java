@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datacatalog.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable String objectId;
+        private final @Nullable String objectId;
 
     public Optional<String> getObjectId() {
         return this.objectId == null ? Optional.empty() : Optional.ofNullable(this.objectId);
@@ -34,7 +34,7 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="upn")
-    private final @Nullable String upn;
+        private final @Nullable String upn;
 
     public Optional<String> getUpn() {
         return this.upn == null ? Optional.empty() : Optional.ofNullable(this.upn);
@@ -83,7 +83,6 @@ public final class PrincipalsResponse extends io.pulumi.resources.InvokeArgs {
             this.upn = upn;
             return this;
         }
-
         public PrincipalsResponse build() {
             return new PrincipalsResponse(objectId, upn);
         }

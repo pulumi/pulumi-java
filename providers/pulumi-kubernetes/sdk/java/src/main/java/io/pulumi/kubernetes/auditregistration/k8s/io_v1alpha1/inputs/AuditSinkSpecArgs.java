@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.PolicyArgs;
 import io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs.WebhookArgs;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policy", required=true)
-    private final Input<PolicyArgs> policy;
+        private final Input<PolicyArgs> policy;
 
     public Input<PolicyArgs> getPolicy() {
         return this.policy;
@@ -34,7 +34,7 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webhook", required=true)
-    private final Input<WebhookArgs> webhook;
+        private final Input<WebhookArgs> webhook;
 
     public Input<WebhookArgs> getWebhook() {
         return this.webhook;
@@ -93,7 +93,6 @@ public final class AuditSinkSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.webhook = Input.of(Objects.requireNonNull(webhook));
             return this;
         }
-
         public AuditSinkSpecArgs build() {
             return new AuditSinkSpecArgs(policy, webhook);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends io.pulumi.
      * 
      */
     @InputImport(name="requestHeadersToAdds", required=true)
-    private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
+      private final List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> requestHeadersToAdds;
 
     public List<SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionResponse> getRequestHeadersToAdds() {
         return this.requestHeadersToAdds;
@@ -56,7 +56,6 @@ public final class SecurityPolicyRuleHttpHeaderActionResponse extends io.pulumi.
             this.requestHeadersToAdds = Objects.requireNonNull(requestHeadersToAdds);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionResponse build() {
             return new SecurityPolicyRuleHttpHeaderActionResponse(requestHeadersToAdds);
         }

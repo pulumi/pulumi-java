@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepLinuxExecStepConfig;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentPatchConfigPreStepWindowsExecStepConfig;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class PatchDeploymentPatchConfigPreStep {
             this.windowsExecStepConfig = windowsExecStepConfig;
             return this;
         }
-
         public PatchDeploymentPatchConfigPreStep build() {
             return new PatchDeploymentPatchConfigPreStep(linuxExecStepConfig, windowsExecStepConfig);
         }

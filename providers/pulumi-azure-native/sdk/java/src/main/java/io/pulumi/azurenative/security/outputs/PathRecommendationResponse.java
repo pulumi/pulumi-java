@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.PublisherInfoResponse;
 import io.pulumi.azurenative.security.outputs.UserRecommendationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -211,7 +211,6 @@ public final class PathRecommendationResponse {
             this.usernames = usernames;
             return this;
         }
-
         public PathRecommendationResponse build() {
             return new PathRecommendationResponse(action, common, configurationStatus, fileType, path, publisherInfo, type, userSids, usernames);
         }

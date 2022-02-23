@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.appflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -183,7 +183,6 @@ public final class ConnectorProfileSnowflakeConnectorProfileProperties {
             this.warehouse = Objects.requireNonNull(warehouse);
             return this;
         }
-
         public ConnectorProfileSnowflakeConnectorProfileProperties build() {
             return new ConnectorProfileSnowflakeConnectorProfileProperties(accountName, bucketName, bucketPrefix, privateLinkServiceName, region, stage, warehouse);
         }

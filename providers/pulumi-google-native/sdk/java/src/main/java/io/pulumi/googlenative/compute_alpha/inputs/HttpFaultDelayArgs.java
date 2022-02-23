@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fixedDelay")
-    private final @Nullable Input<DurationArgs> fixedDelay;
+      private final @Nullable Input<DurationArgs> fixedDelay;
 
     public Input<DurationArgs> getFixedDelay() {
         return this.fixedDelay == null ? Input.empty() : this.fixedDelay;
@@ -35,7 +35,7 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="percentage")
-    private final @Nullable Input<Double> percentage;
+      private final @Nullable Input<Double> percentage;
 
     public Input<Double> getPercentage() {
         return this.percentage == null ? Input.empty() : this.percentage;
@@ -94,7 +94,6 @@ public final class HttpFaultDelayArgs extends io.pulumi.resources.ResourceArgs {
             this.percentage = Input.ofNullable(percentage);
             return this;
         }
-
         public HttpFaultDelayArgs build() {
             return new HttpFaultDelayArgs(fixedDelay, percentage);
         }

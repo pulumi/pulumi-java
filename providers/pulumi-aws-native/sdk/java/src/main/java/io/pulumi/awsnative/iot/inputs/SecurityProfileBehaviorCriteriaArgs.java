@@ -8,7 +8,7 @@ import io.pulumi.awsnative.iot.inputs.SecurityProfileMachineLearningDetectionCon
 import io.pulumi.awsnative.iot.inputs.SecurityProfileMetricValueArgs;
 import io.pulumi.awsnative.iot.inputs.SecurityProfileStatisticalThresholdArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="comparisonOperator")
-    private final @Nullable Input<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator;
+        private final @Nullable Input<SecurityProfileBehaviorCriteriaComparisonOperator> comparisonOperator;
 
     public Input<SecurityProfileBehaviorCriteriaComparisonOperator> getComparisonOperator() {
         return this.comparisonOperator == null ? Input.empty() : this.comparisonOperator;
@@ -38,7 +38,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consecutiveDatapointsToAlarm")
-    private final @Nullable Input<Integer> consecutiveDatapointsToAlarm;
+        private final @Nullable Input<Integer> consecutiveDatapointsToAlarm;
 
     public Input<Integer> getConsecutiveDatapointsToAlarm() {
         return this.consecutiveDatapointsToAlarm == null ? Input.empty() : this.consecutiveDatapointsToAlarm;
@@ -49,7 +49,7 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="consecutiveDatapointsToClear")
-    private final @Nullable Input<Integer> consecutiveDatapointsToClear;
+        private final @Nullable Input<Integer> consecutiveDatapointsToClear;
 
     public Input<Integer> getConsecutiveDatapointsToClear() {
         return this.consecutiveDatapointsToClear == null ? Input.empty() : this.consecutiveDatapointsToClear;
@@ -60,28 +60,28 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="durationSeconds")
-    private final @Nullable Input<Integer> durationSeconds;
+        private final @Nullable Input<Integer> durationSeconds;
 
     public Input<Integer> getDurationSeconds() {
         return this.durationSeconds == null ? Input.empty() : this.durationSeconds;
     }
 
     @InputImport(name="mlDetectionConfig")
-    private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig;
+        private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigArgs> mlDetectionConfig;
 
     public Input<SecurityProfileMachineLearningDetectionConfigArgs> getMlDetectionConfig() {
         return this.mlDetectionConfig == null ? Input.empty() : this.mlDetectionConfig;
     }
 
     @InputImport(name="statisticalThreshold")
-    private final @Nullable Input<SecurityProfileStatisticalThresholdArgs> statisticalThreshold;
+        private final @Nullable Input<SecurityProfileStatisticalThresholdArgs> statisticalThreshold;
 
     public Input<SecurityProfileStatisticalThresholdArgs> getStatisticalThreshold() {
         return this.statisticalThreshold == null ? Input.empty() : this.statisticalThreshold;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<SecurityProfileMetricValueArgs> value;
+        private final @Nullable Input<SecurityProfileMetricValueArgs> value;
 
     public Input<SecurityProfileMetricValueArgs> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -215,7 +215,6 @@ public final class SecurityProfileBehaviorCriteriaArgs extends io.pulumi.resourc
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public SecurityProfileBehaviorCriteriaArgs build() {
             return new SecurityProfileBehaviorCriteriaArgs(comparisonOperator, consecutiveDatapointsToAlarm, consecutiveDatapointsToClear, durationSeconds, mlDetectionConfig, statisticalThreshold, value);
         }

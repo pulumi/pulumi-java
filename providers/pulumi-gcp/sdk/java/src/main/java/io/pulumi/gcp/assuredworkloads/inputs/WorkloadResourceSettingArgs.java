@@ -4,7 +4,7 @@
 package io.pulumi.gcp.assuredworkloads.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -30,7 +30,7 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable Input<String> resourceType;
+        private final @Nullable Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType == null ? Input.empty() : this.resourceType;
@@ -89,7 +89,6 @@ public final class WorkloadResourceSettingArgs extends io.pulumi.resources.Resou
             this.resourceType = Input.ofNullable(resourceType);
             return this;
         }
-
         public WorkloadResourceSettingArgs build() {
             return new WorkloadResourceSettingArgs(resourceId, resourceType);
         }

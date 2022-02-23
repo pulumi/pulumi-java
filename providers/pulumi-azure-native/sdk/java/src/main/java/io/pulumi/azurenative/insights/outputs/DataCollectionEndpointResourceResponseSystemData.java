@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class DataCollectionEndpointResourceResponseSystemData {
             this.lastModifiedByType = lastModifiedByType;
             return this;
         }
-
         public DataCollectionEndpointResourceResponseSystemData build() {
             return new DataCollectionEndpointResourceResponseSystemData(createdAt, createdBy, createdByType, lastModifiedAt, lastModifiedBy, lastModifiedByType);
         }

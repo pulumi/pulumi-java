@@ -4,7 +4,7 @@
 package io.pulumi.example.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
     public static final ConfigMapArgs Empty = new ConfigMapArgs();
 
     @InputImport(name="config")
-    private final @Nullable Input<String> config;
+      private final @Nullable Input<String> config;
 
     public Input<String> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -58,7 +58,6 @@ public final class ConfigMapArgs extends io.pulumi.resources.ResourceArgs {
             this.config = Input.ofNullable(config);
             return this;
         }
-
         public ConfigMapArgs build() {
             return new ConfigMapArgs(config);
         }

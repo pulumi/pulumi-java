@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigateway_v1beta.outputs.ApigatewayApiConfigFileResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ApigatewayApiConfigOpenApiDocumentResponse {
             this.document = Objects.requireNonNull(document);
             return this;
         }
-
         public ApigatewayApiConfigOpenApiDocumentResponse build() {
             return new ApigatewayApiConfigOpenApiDocumentResponse(document);
         }

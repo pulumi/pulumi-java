@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.UpcomingMaintenanceTimeWindowResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class UpcomingMaintenanceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UpcomingMaintenanceResponse build() {
             return new UpcomingMaintenanceResponse(canReschedule, startTimeWindow, type);
         }

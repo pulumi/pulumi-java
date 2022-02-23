@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
      * 
      */
     @InputImport(name="colls")
-    private final @Nullable String colls;
+        private final @Nullable String colls;
 
     public Optional<String> getColls() {
         return this.colls == null ? Optional.empty() : Optional.ofNullable(this.colls);
@@ -31,7 +31,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -42,7 +42,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -53,7 +53,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
      * 
      */
     @InputImport(name="rid", required=true)
-    private final String rid;
+        private final String rid;
 
     public String getRid() {
         return this.rid;
@@ -64,7 +64,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
      * 
      */
     @InputImport(name="ts", required=true)
-    private final Double ts;
+        private final Double ts;
 
     public Double getTs() {
         return this.ts;
@@ -75,7 +75,7 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
      * 
      */
     @InputImport(name="users")
-    private final @Nullable String users;
+        private final @Nullable String users;
 
     public Optional<String> getUsers() {
         return this.users == null ? Optional.empty() : Optional.ofNullable(this.users);
@@ -164,7 +164,6 @@ public final class SqlDatabaseGetPropertiesResponseResource extends io.pulumi.re
             this.users = users;
             return this;
         }
-
         public SqlDatabaseGetPropertiesResponseResource build() {
             return new SqlDatabaseGetPropertiesResponseResource(colls, etag, id, rid, ts, users);
         }

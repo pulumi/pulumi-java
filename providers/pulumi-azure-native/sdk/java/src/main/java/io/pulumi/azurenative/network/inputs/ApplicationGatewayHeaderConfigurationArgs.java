@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+        private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -34,7 +34,7 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="headerValue")
-    private final @Nullable Input<String> headerValue;
+        private final @Nullable Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue == null ? Input.empty() : this.headerValue;
@@ -93,7 +93,6 @@ public final class ApplicationGatewayHeaderConfigurationArgs extends io.pulumi.r
             this.headerValue = Input.ofNullable(headerValue);
             return this;
         }
-
         public ApplicationGatewayHeaderConfigurationArgs build() {
             return new ApplicationGatewayHeaderConfigurationArgs(headerName, headerValue);
         }

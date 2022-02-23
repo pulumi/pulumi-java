@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionPerInstanceConfigPreservedStateDiskArgs;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="disks")
-    private final @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
+        private final @Nullable Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> disks;
 
     public Input<List<RegionPerInstanceConfigPreservedStateDiskArgs>> getDisks() {
         return this.disks == null ? Input.empty() : this.disks;
@@ -34,7 +34,7 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -93,7 +93,6 @@ public final class RegionPerInstanceConfigPreservedStateArgs extends io.pulumi.r
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public RegionPerInstanceConfigPreservedStateArgs build() {
             return new RegionPerInstanceConfigPreservedStateArgs(disks, metadata);
         }

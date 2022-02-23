@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.BoundObjectReference;
 import java.lang.Integer;
 import java.lang.String;
@@ -100,7 +100,6 @@ public final class TokenRequestSpec {
             this.expirationSeconds = expirationSeconds;
             return this;
         }
-
         public TokenRequestSpec build() {
             return new TokenRequestSpec(audiences, boundObjectRef, expirationSeconds);
         }

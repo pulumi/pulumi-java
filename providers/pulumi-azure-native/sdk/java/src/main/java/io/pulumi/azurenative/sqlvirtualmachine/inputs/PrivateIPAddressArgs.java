@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+        private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -34,7 +34,7 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="subnetResourceId")
-    private final @Nullable Input<String> subnetResourceId;
+        private final @Nullable Input<String> subnetResourceId;
 
     public Input<String> getSubnetResourceId() {
         return this.subnetResourceId == null ? Input.empty() : this.subnetResourceId;
@@ -93,7 +93,6 @@ public final class PrivateIPAddressArgs extends io.pulumi.resources.ResourceArgs
             this.subnetResourceId = Input.ofNullable(subnetResourceId);
             return this;
         }
-
         public PrivateIPAddressArgs build() {
             return new PrivateIPAddressArgs(ipAddress, subnetResourceId);
         }

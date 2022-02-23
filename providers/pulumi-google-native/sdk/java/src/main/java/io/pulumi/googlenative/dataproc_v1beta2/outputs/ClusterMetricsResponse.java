@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ClusterMetricsResponse {
             this.yarnMetrics = Objects.requireNonNull(yarnMetrics);
             return this;
         }
-
         public ClusterMetricsResponse build() {
             return new ClusterMetricsResponse(hdfsMetrics, yarnMetrics);
         }

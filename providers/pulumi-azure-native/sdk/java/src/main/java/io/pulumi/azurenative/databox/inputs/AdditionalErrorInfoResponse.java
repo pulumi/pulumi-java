@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="info")
-    private final @Nullable Object info;
+        private final @Nullable Object info;
 
     public Optional<Object> getInfo() {
         return this.info == null ? Optional.empty() : Optional.ofNullable(this.info);
@@ -35,7 +35,7 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -84,7 +84,6 @@ public final class AdditionalErrorInfoResponse extends io.pulumi.resources.Invok
             this.type = type;
             return this;
         }
-
         public AdditionalErrorInfoResponse build() {
             return new AdditionalErrorInfoResponse(info, type);
         }

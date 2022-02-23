@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.IPVersion;
 import io.pulumi.azurenative.network.inputs.SubnetArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -39,7 +39,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -50,7 +50,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Input<Boolean> primary;
+        private final @Nullable Input<Boolean> primary;
 
     public Input<Boolean> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -61,7 +61,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable Input<String> privateIPAddress;
+        private final @Nullable Input<String> privateIPAddress;
 
     public Input<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Input.empty() : this.privateIPAddress;
@@ -72,7 +72,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-    private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
+        private final @Nullable Input<Either<String,IPVersion>> privateIPAddressVersion;
 
     public Input<Either<String,IPVersion>> getPrivateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Input.empty() : this.privateIPAddressVersion;
@@ -83,7 +83,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="privateIPAllocationMethod")
-    private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
+        private final @Nullable Input<Either<String,IPAllocationMethod>> privateIPAllocationMethod;
 
     public Input<Either<String,IPAllocationMethod>> getPrivateIPAllocationMethod() {
         return this.privateIPAllocationMethod == null ? Input.empty() : this.privateIPAllocationMethod;
@@ -94,7 +94,7 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetArgs> subnet;
+        private final @Nullable Input<SubnetArgs> subnet;
 
     public Input<SubnetArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -228,7 +228,6 @@ public final class PrivateLinkServiceIpConfigurationArgs extends io.pulumi.resou
             this.subnet = Input.ofNullable(subnet);
             return this;
         }
-
         public PrivateLinkServiceIpConfigurationArgs build() {
             return new PrivateLinkServiceIpConfigurationArgs(id, name, primary, privateIPAddress, privateIPAddressVersion, privateIPAllocationMethod, subnet);
         }

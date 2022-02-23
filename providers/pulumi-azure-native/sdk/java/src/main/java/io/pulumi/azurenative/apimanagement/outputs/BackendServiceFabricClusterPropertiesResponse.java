@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.X509CertificateNameResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class BackendServiceFabricClusterPropertiesResponse {
             this.serverX509Names = serverX509Names;
             return this;
         }
-
         public BackendServiceFabricClusterPropertiesResponse build() {
             return new BackendServiceFabricClusterPropertiesResponse(clientCertificateId, clientCertificatethumbprint, managementEndpoints, maxPartitionResolutionRetries, serverCertificateThumbprints, serverX509Names);
         }

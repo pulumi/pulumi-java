@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.CassandraSchemaResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -184,7 +184,6 @@ public final class CassandraTableGetPropertiesResponseResource {
             this.ts = Objects.requireNonNull(ts);
             return this;
         }
-
         public CassandraTableGetPropertiesResponseResource build() {
             return new CassandraTableGetPropertiesResponseResource(analyticalStorageTtl, defaultTtl, etag, id, rid, schema, ts);
         }

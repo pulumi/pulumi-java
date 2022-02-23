@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
      * 
      */
     @InputImport(name="exactMatchConfig")
-    private final @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
+      private final @Nullable Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> exactMatchConfig;
 
     public Input<GoogleCloudContactcenterinsightsV1ExactMatchConfigArgs> getExactMatchConfig() {
         return this.exactMatchConfig == null ? Input.empty() : this.exactMatchConfig;
@@ -66,7 +66,6 @@ public final class GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs e
             this.exactMatchConfig = Input.ofNullable(exactMatchConfig);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs build() {
             return new GoogleCloudContactcenterinsightsV1PhraseMatchRuleConfigArgs(exactMatchConfig);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomBooleanParameterR
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomObjectParameterResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceCustomStringParameterResponse;
 import io.pulumi.azurenative.databricks.outputs.WorkspaceEncryptionParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -373,7 +373,6 @@ public final class WorkspaceCustomParametersResponse {
             this.vnetAddressPrefix = vnetAddressPrefix;
             return this;
         }
-
         public WorkspaceCustomParametersResponse build() {
             return new WorkspaceCustomParametersResponse(amlWorkspaceId, customPrivateSubnetName, customPublicSubnetName, customVirtualNetworkId, enableNoPublicIp, encryption, loadBalancerBackendPoolName, loadBalancerId, natGatewayName, prepareEncryption, publicIpName, requireInfrastructureEncryption, resourceTags, storageAccountName, storageAccountSkuName, vnetAddressPrefix);
         }

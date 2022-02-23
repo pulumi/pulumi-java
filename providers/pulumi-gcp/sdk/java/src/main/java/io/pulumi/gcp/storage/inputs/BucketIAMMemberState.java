@@ -4,7 +4,7 @@
 package io.pulumi.gcp.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.storage.inputs.BucketIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="bucket")
-    private final @Nullable Input<String> bucket;
+        private final @Nullable Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket == null ? Input.empty() : this.bucket;
@@ -32,7 +32,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<BucketIAMMemberConditionGetArgs> condition;
+        private final @Nullable Input<BucketIAMMemberConditionGetArgs> condition;
 
     public Input<BucketIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -43,14 +43,14 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -63,7 +63,7 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -167,7 +167,6 @@ public final class BucketIAMMemberState extends io.pulumi.resources.ResourceArgs
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public BucketIAMMemberState build() {
             return new BucketIAMMemberState(bucket, condition, etag, member, role);
         }

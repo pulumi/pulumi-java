@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.gkehub.inputs.FeatureStateStateGetArgs;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class FeatureStateGetArgs extends io.pulumi.resources.ResourceArgs 
     public static final FeatureStateGetArgs Empty = new FeatureStateGetArgs();
 
     @InputImport(name="states")
-    private final @Nullable Input<List<FeatureStateStateGetArgs>> states;
+        private final @Nullable Input<List<FeatureStateStateGetArgs>> states;
 
     public Input<List<FeatureStateStateGetArgs>> getStates() {
         return this.states == null ? Input.empty() : this.states;
@@ -59,7 +59,6 @@ public final class FeatureStateGetArgs extends io.pulumi.resources.ResourceArgs 
             this.states = Input.ofNullable(states);
             return this;
         }
-
         public FeatureStateGetArgs build() {
             return new FeatureStateGetArgs(states);
         }

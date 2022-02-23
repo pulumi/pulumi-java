@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentModelArgs;
 import io.pulumi.azurenative.cognitiveservices.inputs.DeploymentScaleSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<DeploymentModelArgs> model;
+        private final @Nullable Input<DeploymentModelArgs> model;
 
     public Input<DeploymentModelArgs> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -35,7 +35,7 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scaleSettings")
-    private final @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
+        private final @Nullable Input<DeploymentScaleSettingsArgs> scaleSettings;
 
     public Input<DeploymentScaleSettingsArgs> getScaleSettings() {
         return this.scaleSettings == null ? Input.empty() : this.scaleSettings;
@@ -94,7 +94,6 @@ public final class DeploymentPropertiesArgs extends io.pulumi.resources.Resource
             this.scaleSettings = Input.ofNullable(scaleSettings);
             return this;
         }
-
         public DeploymentPropertiesArgs build() {
             return new DeploymentPropertiesArgs(model, scaleSettings);
         }

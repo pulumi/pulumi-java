@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.inputs;
 
 import io.pulumi.azurenative.batch.enums.LoginMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="loginMode")
-    private final @Nullable Input<LoginMode> loginMode;
+        private final @Nullable Input<LoginMode> loginMode;
 
     public Input<LoginMode> getLoginMode() {
         return this.loginMode == null ? Input.empty() : this.loginMode;
@@ -62,7 +62,6 @@ public final class WindowsUserConfigurationArgs extends io.pulumi.resources.Reso
             this.loginMode = Input.ofNullable(loginMode);
             return this;
         }
-
         public WindowsUserConfigurationArgs build() {
             return new WindowsUserConfigurationArgs(loginMode);
         }

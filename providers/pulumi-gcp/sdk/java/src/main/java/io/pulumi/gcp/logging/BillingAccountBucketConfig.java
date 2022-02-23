@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.BillingAccountBucketConfigArgs;
 import io.pulumi.gcp.logging.inputs.BillingAccountBucketConfigState;
@@ -133,13 +133,6 @@ public class BillingAccountBucketConfig extends io.pulumi.resources.CustomResour
         return this.retentionDays;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public BillingAccountBucketConfig(String name) {
-        super("gcp:logging/billingAccountBucketConfig:BillingAccountBucketConfig", name, BillingAccountBucketConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

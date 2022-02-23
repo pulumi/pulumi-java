@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowFailoverConfigState;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +69,6 @@ public final class FlowFailoverConfig {
             this.state = state;
             return this;
         }
-
         public FlowFailoverConfig build() {
             return new FlowFailoverConfig(recoveryWindow, state);
         }

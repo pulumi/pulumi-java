@@ -6,7 +6,7 @@ package io.pulumi.awsnative.amplify.outputs;
 import io.pulumi.awsnative.amplify.enums.AppAutoBranchCreationConfigStage;
 import io.pulumi.awsnative.amplify.outputs.AppBasicAuthConfig;
 import io.pulumi.awsnative.amplify.outputs.AppEnvironmentVariable;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -169,7 +169,6 @@ public final class AppAutoBranchCreationConfig {
             this.stage = stage;
             return this;
         }
-
         public AppAutoBranchCreationConfig build() {
             return new AppAutoBranchCreationConfig(autoBranchCreationPatterns, basicAuthConfig, buildSpec, enableAutoBranchCreation, enableAutoBuild, enablePerformanceMode, enablePullRequestPreview, environmentVariables, pullRequestEnvironmentName, stage);
         }

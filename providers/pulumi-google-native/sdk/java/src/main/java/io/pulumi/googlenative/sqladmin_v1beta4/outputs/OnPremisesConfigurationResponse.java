@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1beta4.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sqladmin_v1beta4.outputs.InstanceReferenceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class OnPremisesConfigurationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public OnPremisesConfigurationResponse build() {
             return new OnPremisesConfigurationResponse(caCertificate, clientCertificate, clientKey, dumpFilePath, hostPort, kind, password, sourceInstance, username);
         }

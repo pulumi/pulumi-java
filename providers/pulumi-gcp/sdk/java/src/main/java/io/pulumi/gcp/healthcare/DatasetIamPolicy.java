@@ -5,8 +5,8 @@ package io.pulumi.gcp.healthcare;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.healthcare.DatasetIamPolicyArgs;
 import io.pulumi.gcp.healthcare.inputs.DatasetIamPolicyState;
@@ -114,13 +114,6 @@ public class DatasetIamPolicy extends io.pulumi.resources.CustomResource {
         return this.policyData;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DatasetIamPolicy(String name) {
-        super("gcp:healthcare/datasetIamPolicy:DatasetIamPolicy", name, DatasetIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

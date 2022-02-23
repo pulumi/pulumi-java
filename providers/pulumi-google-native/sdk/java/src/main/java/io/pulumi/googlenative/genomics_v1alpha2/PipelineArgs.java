@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.genomics_v1alpha2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.DockerExecutorArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineParameterArgs;
 import io.pulumi.googlenative.genomics_v1alpha2.inputs.PipelineResourcesArgs;
@@ -23,7 +23,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="docker")
-    private final @Nullable Input<DockerExecutorArgs> docker;
+      private final @Nullable Input<DockerExecutorArgs> docker;
 
     public Input<DockerExecutorArgs> getDocker() {
         return this.docker == null ? Input.empty() : this.docker;
@@ -45,7 +45,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputParameters")
-    private final @Nullable Input<List<PipelineParameterArgs>> inputParameters;
+      private final @Nullable Input<List<PipelineParameterArgs>> inputParameters;
 
     public Input<List<PipelineParameterArgs>> getInputParameters() {
         return this.inputParameters == null ? Input.empty() : this.inputParameters;
@@ -56,7 +56,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outputParameters")
-    private final @Nullable Input<List<PipelineParameterArgs>> outputParameters;
+      private final @Nullable Input<List<PipelineParameterArgs>> outputParameters;
 
     public Input<List<PipelineParameterArgs>> getOutputParameters() {
         return this.outputParameters == null ? Input.empty() : this.outputParameters;
@@ -78,7 +78,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pipelineId")
-    private final @Nullable Input<String> pipelineId;
+      private final @Nullable Input<String> pipelineId;
 
     public Input<String> getPipelineId() {
         return this.pipelineId == null ? Input.empty() : this.pipelineId;
@@ -89,7 +89,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -100,7 +100,7 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<PipelineResourcesArgs> resources;
+      private final Input<PipelineResourcesArgs> resources;
 
     public Input<PipelineResourcesArgs> getResources() {
         return this.resources;
@@ -249,7 +249,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.resources = Input.of(Objects.requireNonNull(resources));
             return this;
         }
-
         public PipelineArgs build() {
             return new PipelineArgs(description, docker, inputParameters, name, outputParameters, pipelineId, project, resources);
         }

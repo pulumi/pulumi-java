@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.EnvironmentResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ExecutionStageStateResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.JobMetadataResponse;
@@ -523,7 +523,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(clientRequestId, createTime, createdFromSnapshotId, currentState, currentStateTime, environment, jobMetadata, labels, location, name, pipelineDescription, project, replaceJobId, replacedByJobId, requestedState, satisfiesPzs, stageStates, startTime, steps, stepsLocation, tempFiles, transformNameMapping, type);
         }

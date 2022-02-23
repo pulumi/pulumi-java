@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
 import java.lang.Integer;
 import java.lang.String;
@@ -134,7 +134,6 @@ public final class TopologySpreadConstraint {
             this.whenUnsatisfiable = Objects.requireNonNull(whenUnsatisfiable);
             return this;
         }
-
         public TopologySpreadConstraint build() {
             return new TopologySpreadConstraint(labelSelector, maxSkew, topologyKey, whenUnsatisfiable);
         }

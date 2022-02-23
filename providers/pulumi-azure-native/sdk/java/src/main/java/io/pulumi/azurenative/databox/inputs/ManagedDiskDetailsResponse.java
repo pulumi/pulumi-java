@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="dataAccountType", required=true)
-    private final String dataAccountType;
+        private final String dataAccountType;
 
     public String getDataAccountType() {
         return this.dataAccountType;
@@ -33,7 +33,7 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupId", required=true)
-    private final String resourceGroupId;
+        private final String resourceGroupId;
 
     public String getResourceGroupId() {
         return this.resourceGroupId;
@@ -44,7 +44,7 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="stagingStorageAccountId", required=true)
-    private final String stagingStorageAccountId;
+        private final String stagingStorageAccountId;
 
     public String getStagingStorageAccountId() {
         return this.stagingStorageAccountId;
@@ -103,7 +103,6 @@ public final class ManagedDiskDetailsResponse extends io.pulumi.resources.Invoke
             this.stagingStorageAccountId = Objects.requireNonNull(stagingStorageAccountId);
             return this;
         }
-
         public ManagedDiskDetailsResponse build() {
             return new ManagedDiskDetailsResponse(dataAccountType, resourceGroupId, stagingStorageAccountId);
         }

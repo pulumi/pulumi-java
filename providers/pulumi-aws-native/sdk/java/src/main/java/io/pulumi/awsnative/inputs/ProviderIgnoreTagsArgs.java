@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyPrefixes")
-    private final @Nullable Input<List<String>> keyPrefixes;
+        private final @Nullable Input<List<String>> keyPrefixes;
 
     public Input<List<String>> getKeyPrefixes() {
         return this.keyPrefixes == null ? Input.empty() : this.keyPrefixes;
@@ -35,7 +35,7 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<List<String>> keys;
+        private final @Nullable Input<List<String>> keys;
 
     public Input<List<String>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -94,7 +94,6 @@ public final class ProviderIgnoreTagsArgs extends io.pulumi.resources.ResourceAr
             this.keys = Input.ofNullable(keys);
             return this;
         }
-
         public ProviderIgnoreTagsArgs build() {
             return new ProviderIgnoreTagsArgs(keyPrefixes, keys);
         }

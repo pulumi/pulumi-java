@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -53,7 +53,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -64,7 +64,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -75,7 +75,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="host", required=true)
-    private final Object host;
+        private final Object host;
 
     public Object getHost() {
         return this.host;
@@ -86,7 +86,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -97,7 +97,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password == null ? null : this.password;
@@ -108,7 +108,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Object port;
+        private final @Nullable Object port;
 
     public Optional<Object> getPort() {
         return this.port == null ? Optional.empty() : Optional.ofNullable(this.port);
@@ -120,7 +120,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -131,7 +131,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="useEncryptedEndpoints")
-    private final @Nullable Object useEncryptedEndpoints;
+        private final @Nullable Object useEncryptedEndpoints;
 
     public Optional<Object> getUseEncryptedEndpoints() {
         return this.useEncryptedEndpoints == null ? Optional.empty() : Optional.ofNullable(this.useEncryptedEndpoints);
@@ -142,7 +142,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="useHostVerification")
-    private final @Nullable Object useHostVerification;
+        private final @Nullable Object useHostVerification;
 
     public Optional<Object> getUseHostVerification() {
         return this.useHostVerification == null ? Optional.empty() : Optional.ofNullable(this.useHostVerification);
@@ -153,7 +153,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="usePeerVerification")
-    private final @Nullable Object usePeerVerification;
+        private final @Nullable Object usePeerVerification;
 
     public Optional<Object> getUsePeerVerification() {
         return this.usePeerVerification == null ? Optional.empty() : Optional.ofNullable(this.usePeerVerification);
@@ -164,7 +164,7 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="username", required=true)
-    private final Object username;
+        private final Object username;
 
     public Object getUsername() {
         return this.username;
@@ -323,7 +323,6 @@ public final class JiraLinkedServiceResponse extends io.pulumi.resources.InvokeA
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public JiraLinkedServiceResponse build() {
             return new JiraLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, host, parameters, password, port, type, useEncryptedEndpoints, useHostVerification, usePeerVerification, username);
         }

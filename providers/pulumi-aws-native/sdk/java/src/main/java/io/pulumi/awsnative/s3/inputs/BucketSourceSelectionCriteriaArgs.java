@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3.inputs;
 import io.pulumi.awsnative.s3.inputs.BucketReplicaModificationsArgs;
 import io.pulumi.awsnative.s3.inputs.BucketSseKmsEncryptedObjectsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="replicaModifications")
-    private final @Nullable Input<BucketReplicaModificationsArgs> replicaModifications;
+        private final @Nullable Input<BucketReplicaModificationsArgs> replicaModifications;
 
     public Input<BucketReplicaModificationsArgs> getReplicaModifications() {
         return this.replicaModifications == null ? Input.empty() : this.replicaModifications;
@@ -35,7 +35,7 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="sseKmsEncryptedObjects")
-    private final @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
+        private final @Nullable Input<BucketSseKmsEncryptedObjectsArgs> sseKmsEncryptedObjects;
 
     public Input<BucketSseKmsEncryptedObjectsArgs> getSseKmsEncryptedObjects() {
         return this.sseKmsEncryptedObjects == null ? Input.empty() : this.sseKmsEncryptedObjects;
@@ -94,7 +94,6 @@ public final class BucketSourceSelectionCriteriaArgs extends io.pulumi.resources
             this.sseKmsEncryptedObjects = Input.ofNullable(sseKmsEncryptedObjects);
             return this;
         }
-
         public BucketSourceSelectionCriteriaArgs build() {
             return new BucketSourceSelectionCriteriaArgs(replicaModifications, sseKmsEncryptedObjects);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ValueArgs;
 import java.lang.Double;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
      * 
      */
     @InputImport(name="bucketSize", required=true)
-    private final Input<Double> bucketSize;
+      private final Input<Double> bucketSize;
 
     public Input<Double> getBucketSize() {
         return this.bucketSize;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
      * 
      */
     @InputImport(name="lowerBound", required=true)
-    private final Input<GooglePrivacyDlpV2ValueArgs> lowerBound;
+      private final Input<GooglePrivacyDlpV2ValueArgs> lowerBound;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getLowerBound() {
         return this.lowerBound;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
      * 
      */
     @InputImport(name="upperBound", required=true)
-    private final Input<GooglePrivacyDlpV2ValueArgs> upperBound;
+      private final Input<GooglePrivacyDlpV2ValueArgs> upperBound;
 
     public Input<GooglePrivacyDlpV2ValueArgs> getUpperBound() {
         return this.upperBound;
@@ -119,7 +119,6 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigArgs extends io.pul
             this.upperBound = Input.of(Objects.requireNonNull(upperBound));
             return this;
         }
-
         public GooglePrivacyDlpV2FixedSizeBucketingConfigArgs build() {
             return new GooglePrivacyDlpV2FixedSizeBucketingConfigArgs(bucketSize, lowerBound, upperBound);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.outputs.CustomAccountResponse;
 import io.pulumi.googlenative.websecurityscanner_v1alpha.outputs.GoogleAccountResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class AuthenticationResponse {
             this.googleAccount = Objects.requireNonNull(googleAccount);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(customAccount, googleAccount);
         }

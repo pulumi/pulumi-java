@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -35,7 +35,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="migrationSetting")
-    private final @Nullable Input<Map<String,String>> migrationSetting;
+        private final @Nullable Input<Map<String,String>> migrationSetting;
 
     public Input<Map<String,String>> getMigrationSetting() {
         return this.migrationSetting == null ? Input.empty() : this.migrationSetting;
@@ -46,7 +46,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="schemaName")
-    private final @Nullable Input<String> schemaName;
+        private final @Nullable Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName == null ? Input.empty() : this.schemaName;
@@ -68,7 +68,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sourceSetting")
-    private final @Nullable Input<Map<String,String>> sourceSetting;
+        private final @Nullable Input<Map<String,String>> sourceSetting;
 
     public Input<Map<String,String>> getSourceSetting() {
         return this.sourceSetting == null ? Input.empty() : this.sourceSetting;
@@ -79,7 +79,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="tableMap")
-    private final @Nullable Input<Map<String,String>> tableMap;
+        private final @Nullable Input<Map<String,String>> tableMap;
 
     public Input<Map<String,String>> getTableMap() {
         return this.tableMap == null ? Input.empty() : this.tableMap;
@@ -90,7 +90,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="targetDatabaseName")
-    private final @Nullable Input<String> targetDatabaseName;
+        private final @Nullable Input<String> targetDatabaseName;
 
     public Input<String> getTargetDatabaseName() {
         return this.targetDatabaseName == null ? Input.empty() : this.targetDatabaseName;
@@ -101,7 +101,7 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
      * 
      */
     @InputImport(name="targetSetting")
-    private final @Nullable Input<Map<String,String>> targetSetting;
+        private final @Nullable Input<Map<String,String>> targetSetting;
 
     public Input<Map<String,String>> getTargetSetting() {
         return this.targetSetting == null ? Input.empty() : this.targetSetting;
@@ -250,7 +250,6 @@ public final class MigrateSqlServerSqlDbSyncDatabaseInputArgs extends io.pulumi.
             this.targetSetting = Input.ofNullable(targetSetting);
             return this;
         }
-
         public MigrateSqlServerSqlDbSyncDatabaseInputArgs build() {
             return new MigrateSqlServerSqlDbSyncDatabaseInputArgs(id, migrationSetting, name, schemaName, sourceSetting, tableMap, targetDatabaseName, targetSetting);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.subscription.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="aliasName", required=true)
-    private final String aliasName;
+        private final String aliasName;
 
     public String getAliasName() {
         return this.aliasName;
@@ -55,7 +55,6 @@ public final class GetAliasArgs extends io.pulumi.resources.InvokeArgs {
             this.aliasName = Objects.requireNonNull(aliasName);
             return this;
         }
-
         public GetAliasArgs build() {
             return new GetAliasArgs(aliasName);
         }

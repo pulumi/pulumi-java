@@ -5,7 +5,7 @@ package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.LaunchProfileStreamingSessionStorageMode;
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamingSessionStorageRoot;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -72,7 +72,6 @@ public final class LaunchProfileStreamConfigurationSessionStorage {
             this.root = root;
             return this;
         }
-
         public LaunchProfileStreamConfigurationSessionStorage build() {
             return new LaunchProfileStreamConfigurationSessionStorage(mode, root);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,35 +15,35 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
     public static final LinkedAccessCheckArgs Empty = new LinkedAccessCheckArgs();
 
     @InputImport(name="actionName")
-    private final @Nullable Input<String> actionName;
+        private final @Nullable Input<String> actionName;
 
     public Input<String> getActionName() {
         return this.actionName == null ? Input.empty() : this.actionName;
     }
 
     @InputImport(name="linkedAction")
-    private final @Nullable Input<String> linkedAction;
+        private final @Nullable Input<String> linkedAction;
 
     public Input<String> getLinkedAction() {
         return this.linkedAction == null ? Input.empty() : this.linkedAction;
     }
 
     @InputImport(name="linkedActionVerb")
-    private final @Nullable Input<String> linkedActionVerb;
+        private final @Nullable Input<String> linkedActionVerb;
 
     public Input<String> getLinkedActionVerb() {
         return this.linkedActionVerb == null ? Input.empty() : this.linkedActionVerb;
     }
 
     @InputImport(name="linkedProperty")
-    private final @Nullable Input<String> linkedProperty;
+        private final @Nullable Input<String> linkedProperty;
 
     public Input<String> getLinkedProperty() {
         return this.linkedProperty == null ? Input.empty() : this.linkedProperty;
     }
 
     @InputImport(name="linkedType")
-    private final @Nullable Input<String> linkedType;
+        private final @Nullable Input<String> linkedType;
 
     public Input<String> getLinkedType() {
         return this.linkedType == null ? Input.empty() : this.linkedType;
@@ -147,7 +147,6 @@ public final class LinkedAccessCheckArgs extends io.pulumi.resources.ResourceArg
             this.linkedType = Input.ofNullable(linkedType);
             return this;
         }
-
         public LinkedAccessCheckArgs build() {
             return new LinkedAccessCheckArgs(actionName, linkedAction, linkedActionVerb, linkedProperty, linkedType);
         }

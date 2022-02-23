@@ -10,7 +10,7 @@ import io.pulumi.azurenative.security.inputs.OnPremiseSqlResourceDetailsArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentMetadataPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.SecurityAssessmentPartnerDataArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalData")
-    private final @Nullable Input<Map<String,String>> additionalData;
+        private final @Nullable Input<Map<String,String>> additionalData;
 
     public Input<Map<String,String>> getAdditionalData() {
         return this.additionalData == null ? Input.empty() : this.additionalData;
@@ -38,7 +38,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assessmentName")
-    private final @Nullable Input<String> assessmentName;
+        private final @Nullable Input<String> assessmentName;
 
     public Input<String> getAssessmentName() {
         return this.assessmentName == null ? Input.empty() : this.assessmentName;
@@ -49,7 +49,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata;
+        private final @Nullable Input<SecurityAssessmentMetadataPropertiesArgs> metadata;
 
     public Input<SecurityAssessmentMetadataPropertiesArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -60,7 +60,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="partnersData")
-    private final @Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData;
+        private final @Nullable Input<SecurityAssessmentPartnerDataArgs> partnersData;
 
     public Input<SecurityAssessmentPartnerDataArgs> getPartnersData() {
         return this.partnersData == null ? Input.empty() : this.partnersData;
@@ -71,7 +71,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceDetails", required=true)
-    private final Input<Object> resourceDetails;
+        private final Input<Object> resourceDetails;
 
     public Input<Object> getResourceDetails() {
         return this.resourceDetails;
@@ -82,7 +82,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -93,7 +93,7 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<AssessmentStatusArgs> status;
+        private final Input<AssessmentStatusArgs> status;
 
     public Input<AssessmentStatusArgs> getStatus() {
         return this.status;
@@ -227,7 +227,6 @@ public final class AssessmentArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public AssessmentArgs build() {
             return new AssessmentArgs(additionalData, assessmentName, metadata, partnersData, resourceDetails, resourceId, status);
         }

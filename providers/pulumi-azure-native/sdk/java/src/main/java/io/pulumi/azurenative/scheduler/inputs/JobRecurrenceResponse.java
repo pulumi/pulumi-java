@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.inputs.JobRecurrenceScheduleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Integer count;
+        private final @Nullable Integer count;
 
     public Optional<Integer> getCount() {
         return this.count == null ? Optional.empty() : Optional.ofNullable(this.count);
@@ -32,7 +32,7 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable String endTime;
+        private final @Nullable String endTime;
 
     public Optional<String> getEndTime() {
         return this.endTime == null ? Optional.empty() : Optional.ofNullable(this.endTime);
@@ -43,7 +43,7 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable String frequency;
+        private final @Nullable String frequency;
 
     public Optional<String> getFrequency() {
         return this.frequency == null ? Optional.empty() : Optional.ofNullable(this.frequency);
@@ -54,14 +54,14 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Integer interval;
+        private final @Nullable Integer interval;
 
     public Optional<Integer> getInterval() {
         return this.interval == null ? Optional.empty() : Optional.ofNullable(this.interval);
     }
 
     @InputImport(name="schedule")
-    private final @Nullable JobRecurrenceScheduleResponse schedule;
+        private final @Nullable JobRecurrenceScheduleResponse schedule;
 
     public Optional<JobRecurrenceScheduleResponse> getSchedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
@@ -140,7 +140,6 @@ public final class JobRecurrenceResponse extends io.pulumi.resources.InvokeArgs 
             this.schedule = schedule;
             return this;
         }
-
         public JobRecurrenceResponse build() {
             return new JobRecurrenceResponse(count, endTime, frequency, interval, schedule);
         }

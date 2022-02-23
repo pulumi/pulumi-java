@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
      * 
      */
     @InputImport(name="onHealthCheck")
-    private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
+      private final @Nullable Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> onHealthCheck;
 
     public Input<InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersOnHealthCheck> getOnHealthCheck() {
         return this.onHealthCheck == null ? Input.empty() : this.onHealthCheck;
@@ -62,7 +62,6 @@ public final class InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs 
             this.onHealthCheck = Input.ofNullable(onHealthCheck);
             return this;
         }
-
         public InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs build() {
             return new InstanceGroupManagerAutoHealingPolicyAutoHealingTriggersArgs(onHealthCheck);
         }

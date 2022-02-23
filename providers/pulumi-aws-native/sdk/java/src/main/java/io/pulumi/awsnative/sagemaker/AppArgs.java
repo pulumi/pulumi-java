@@ -7,7 +7,7 @@ import io.pulumi.awsnative.sagemaker.enums.AppType;
 import io.pulumi.awsnative.sagemaker.inputs.AppResourceSpecArgs;
 import io.pulumi.awsnative.sagemaker.inputs.AppTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appName")
-    private final @Nullable Input<String> appName;
+        private final @Nullable Input<String> appName;
 
     public Input<String> getAppName() {
         return this.appName == null ? Input.empty() : this.appName;
@@ -34,7 +34,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appType", required=true)
-    private final Input<AppType> appType;
+        private final Input<AppType> appType;
 
     public Input<AppType> getAppType() {
         return this.appType;
@@ -45,7 +45,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainId", required=true)
-    private final Input<String> domainId;
+        private final Input<String> domainId;
 
     public Input<String> getDomainId() {
         return this.domainId;
@@ -56,7 +56,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceSpec")
-    private final @Nullable Input<AppResourceSpecArgs> resourceSpec;
+        private final @Nullable Input<AppResourceSpecArgs> resourceSpec;
 
     public Input<AppResourceSpecArgs> getResourceSpec() {
         return this.resourceSpec == null ? Input.empty() : this.resourceSpec;
@@ -67,7 +67,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<AppTagArgs>> tags;
+        private final @Nullable Input<List<AppTagArgs>> tags;
 
     public Input<List<AppTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -78,7 +78,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userProfileName", required=true)
-    private final Input<String> userProfileName;
+        private final Input<String> userProfileName;
 
     public Input<String> getUserProfileName() {
         return this.userProfileName;
@@ -197,7 +197,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.userProfileName = Input.of(Objects.requireNonNull(userProfileName));
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(appName, appType, domainId, resourceSpec, tags, userProfileName);
         }

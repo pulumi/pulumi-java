@@ -5,8 +5,8 @@ package io.pulumi.googlenative.storage_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.storage_v1.HmacKeyArgs;
 import java.lang.String;
@@ -146,13 +146,6 @@ public class HmacKey extends io.pulumi.resources.CustomResource {
         return this.updated;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public HmacKey(String name) {
-        super("google-native:storage/v1:HmacKey", name, HmacKeyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeGb", required=true)
-    private final Double sizeGb;
+      private final Double sizeGb;
 
     public Double getSizeGb() {
         return this.sizeGb;
@@ -44,7 +44,7 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="volumeType", required=true)
-    private final String volumeType;
+      private final String volumeType;
 
     public String getVolumeType() {
         return this.volumeType;
@@ -103,7 +103,6 @@ public final class VolumeResponse extends io.pulumi.resources.InvokeArgs {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public VolumeResponse build() {
             return new VolumeResponse(name, sizeGb, volumeType);
         }

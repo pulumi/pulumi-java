@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.outputs.ManagedInstanceExternalAdministratorRes
 import io.pulumi.azurenative.sql.outputs.ManagedInstancePecPropertyResponse;
 import io.pulumi.azurenative.sql.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.sql.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -653,7 +653,6 @@ public final class GetManagedInstanceResult {
             this.zoneRedundant = zoneRedundant;
             return this;
         }
-
         public GetManagedInstanceResult build() {
             return new GetManagedInstanceResult(administratorLogin, administrators, collation, dnsZone, fullyQualifiedDomainName, id, identity, instancePoolId, keyId, licenseType, location, maintenanceConfigurationId, minimalTlsVersion, name, primaryUserAssignedIdentityId, privateEndpointConnections, provisioningState, proxyOverride, publicDataEndpointEnabled, sku, state, storageAccountType, storageSizeInGB, subnetId, tags, timezoneId, type, vCores, zoneRedundant);
         }

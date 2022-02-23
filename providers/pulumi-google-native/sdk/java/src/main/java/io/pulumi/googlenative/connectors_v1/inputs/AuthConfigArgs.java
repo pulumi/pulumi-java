@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.connectors_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.connectors_v1.enums.AuthConfigAuthType;
 import io.pulumi.googlenative.connectors_v1.inputs.ConfigVariableArgs;
 import io.pulumi.googlenative.connectors_v1.inputs.Oauth2ClientCredentialsArgs;
@@ -28,7 +28,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalVariables")
-    private final @Nullable Input<List<ConfigVariableArgs>> additionalVariables;
+      private final @Nullable Input<List<ConfigVariableArgs>> additionalVariables;
 
     public Input<List<ConfigVariableArgs>> getAdditionalVariables() {
         return this.additionalVariables == null ? Input.empty() : this.additionalVariables;
@@ -39,7 +39,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authType")
-    private final @Nullable Input<AuthConfigAuthType> authType;
+      private final @Nullable Input<AuthConfigAuthType> authType;
 
     public Input<AuthConfigAuthType> getAuthType() {
         return this.authType == null ? Input.empty() : this.authType;
@@ -50,7 +50,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauth2ClientCredentials")
-    private final @Nullable Input<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
+      private final @Nullable Input<Oauth2ClientCredentialsArgs> oauth2ClientCredentials;
 
     public Input<Oauth2ClientCredentialsArgs> getOauth2ClientCredentials() {
         return this.oauth2ClientCredentials == null ? Input.empty() : this.oauth2ClientCredentials;
@@ -61,7 +61,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oauth2JwtBearer")
-    private final @Nullable Input<Oauth2JwtBearerArgs> oauth2JwtBearer;
+      private final @Nullable Input<Oauth2JwtBearerArgs> oauth2JwtBearer;
 
     public Input<Oauth2JwtBearerArgs> getOauth2JwtBearer() {
         return this.oauth2JwtBearer == null ? Input.empty() : this.oauth2JwtBearer;
@@ -72,7 +72,7 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userPassword")
-    private final @Nullable Input<UserPasswordArgs> userPassword;
+      private final @Nullable Input<UserPasswordArgs> userPassword;
 
     public Input<UserPasswordArgs> getUserPassword() {
         return this.userPassword == null ? Input.empty() : this.userPassword;
@@ -176,7 +176,6 @@ public final class AuthConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.userPassword = Input.ofNullable(userPassword);
             return this;
         }
-
         public AuthConfigArgs build() {
             return new AuthConfigArgs(additionalVariables, authType, oauth2ClientCredentials, oauth2JwtBearer, userPassword);
         }

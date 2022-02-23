@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DicomStoreStreamConfigBigqueryDestination {
             this.tableUri = Objects.requireNonNull(tableUri);
             return this;
         }
-
         public DicomStoreStreamConfigBigqueryDestination build() {
             return new DicomStoreStreamConfigBigqueryDestination(tableUri);
         }

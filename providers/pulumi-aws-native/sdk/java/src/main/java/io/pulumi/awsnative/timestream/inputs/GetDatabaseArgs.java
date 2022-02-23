@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.timestream.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -55,7 +55,6 @@ public final class GetDatabaseArgs extends io.pulumi.resources.InvokeArgs {
             this.databaseName = Objects.requireNonNull(databaseName);
             return this;
         }
-
         public GetDatabaseArgs build() {
             return new GetDatabaseArgs(databaseName);
         }

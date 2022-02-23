@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ContactSettingsResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.DnsSettingsResponse;
 import io.pulumi.googlenative.domains_v1alpha2.outputs.ManagementSettingsResponse;
@@ -289,7 +289,6 @@ public final class GetRegistrationResult {
             this.supportedPrivacy = Objects.requireNonNull(supportedPrivacy);
             return this;
         }
-
         public GetRegistrationResult build() {
             return new GetRegistrationResult(contactSettings, createTime, dnsSettings, domainName, expireTime, issues, labels, managementSettings, name, pendingContactSettings, state, supportedPrivacy);
         }

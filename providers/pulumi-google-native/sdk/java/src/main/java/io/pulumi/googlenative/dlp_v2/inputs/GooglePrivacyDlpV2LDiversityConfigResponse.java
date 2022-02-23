@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="quasiIds", required=true)
-    private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
+      private final List<GooglePrivacyDlpV2FieldIdResponse> quasiIds;
 
     public List<GooglePrivacyDlpV2FieldIdResponse> getQuasiIds() {
         return this.quasiIds;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
      * 
      */
     @InputImport(name="sensitiveAttribute", required=true)
-    private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
+      private final GooglePrivacyDlpV2FieldIdResponse sensitiveAttribute;
 
     public GooglePrivacyDlpV2FieldIdResponse getSensitiveAttribute() {
         return this.sensitiveAttribute;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2LDiversityConfigResponse extends io.pulumi.
             this.sensitiveAttribute = Objects.requireNonNull(sensitiveAttribute);
             return this;
         }
-
         public GooglePrivacyDlpV2LDiversityConfigResponse build() {
             return new GooglePrivacyDlpV2LDiversityConfigResponse(quasiIds, sensitiveAttribute);
         }

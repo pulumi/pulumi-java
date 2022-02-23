@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InspectionRuleResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GooglePrivacyDlpV2InspectionRuleSetResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public GooglePrivacyDlpV2InspectionRuleSetResponse build() {
             return new GooglePrivacyDlpV2InspectionRuleSetResponse(infoTypes, rules);
         }

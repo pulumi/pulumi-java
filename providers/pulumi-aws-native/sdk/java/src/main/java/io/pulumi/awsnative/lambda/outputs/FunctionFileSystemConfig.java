@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class FunctionFileSystemConfig {
             this.localMountPath = Objects.requireNonNull(localMountPath);
             return this;
         }
-
         public FunctionFileSystemConfig build() {
             return new FunctionFileSystemConfig(arn, localMountPath);
         }

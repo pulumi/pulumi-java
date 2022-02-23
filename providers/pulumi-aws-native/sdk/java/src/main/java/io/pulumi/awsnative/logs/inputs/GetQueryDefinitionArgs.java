@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.logs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetQueryDefinitionArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queryDefinitionId", required=true)
-    private final String queryDefinitionId;
+        private final String queryDefinitionId;
 
     public String getQueryDefinitionId() {
         return this.queryDefinitionId;
@@ -55,7 +55,6 @@ public final class GetQueryDefinitionArgs extends io.pulumi.resources.InvokeArgs
             this.queryDefinitionId = Objects.requireNonNull(queryDefinitionId);
             return this;
         }
-
         public GetQueryDefinitionArgs build() {
             return new GetQueryDefinitionArgs(queryDefinitionId);
         }

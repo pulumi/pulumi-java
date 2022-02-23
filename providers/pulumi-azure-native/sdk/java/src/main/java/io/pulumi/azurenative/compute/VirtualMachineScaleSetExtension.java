@@ -8,8 +8,8 @@ import io.pulumi.azurenative.compute.VirtualMachineScaleSetExtensionArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -185,13 +185,6 @@ public class VirtualMachineScaleSetExtension extends io.pulumi.resources.CustomR
         return this.typeHandlerVersion;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public VirtualMachineScaleSetExtension(String name) {
-        super("azure-native:compute:VirtualMachineScaleSetExtension", name, VirtualMachineScaleSetExtensionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

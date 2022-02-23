@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyFilterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class BlobInventoryPolicyDefinitionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="filters", required=true)
-    private final BlobInventoryPolicyFilterResponse filters;
+        private final BlobInventoryPolicyFilterResponse filters;
 
     public BlobInventoryPolicyFilterResponse getFilters() {
         return this.filters;
@@ -59,7 +59,6 @@ public final class BlobInventoryPolicyDefinitionResponse extends io.pulumi.resou
             this.filters = Objects.requireNonNull(filters);
             return this;
         }
-
         public BlobInventoryPolicyDefinitionResponse build() {
             return new BlobInventoryPolicyDefinitionResponse(filters);
         }

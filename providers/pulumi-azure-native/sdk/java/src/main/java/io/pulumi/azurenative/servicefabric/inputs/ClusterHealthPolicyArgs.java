@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.ApplicationHealthPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="applicationHealthPolicies")
-    private final @Nullable Input<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies;
+        private final @Nullable Input<Map<String,ApplicationHealthPolicyArgs>> applicationHealthPolicies;
 
     public Input<Map<String,ApplicationHealthPolicyArgs>> getApplicationHealthPolicies() {
         return this.applicationHealthPolicies == null ? Input.empty() : this.applicationHealthPolicies;
@@ -42,7 +42,7 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxPercentUnhealthyApplications")
-    private final @Nullable Input<Integer> maxPercentUnhealthyApplications;
+        private final @Nullable Input<Integer> maxPercentUnhealthyApplications;
 
     public Input<Integer> getMaxPercentUnhealthyApplications() {
         return this.maxPercentUnhealthyApplications == null ? Input.empty() : this.maxPercentUnhealthyApplications;
@@ -60,7 +60,7 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="maxPercentUnhealthyNodes")
-    private final @Nullable Input<Integer> maxPercentUnhealthyNodes;
+        private final @Nullable Input<Integer> maxPercentUnhealthyNodes;
 
     public Input<Integer> getMaxPercentUnhealthyNodes() {
         return this.maxPercentUnhealthyNodes == null ? Input.empty() : this.maxPercentUnhealthyNodes;
@@ -134,7 +134,6 @@ public final class ClusterHealthPolicyArgs extends io.pulumi.resources.ResourceA
             this.maxPercentUnhealthyNodes = Input.ofNullable(maxPercentUnhealthyNodes);
             return this;
         }
-
         public ClusterHealthPolicyArgs build() {
             return new ClusterHealthPolicyArgs(applicationHealthPolicies, maxPercentUnhealthyApplications, maxPercentUnhealthyNodes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2InfoTypeTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2RecordTransformationsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2TransformationErrorHandlingResponse;
@@ -97,7 +97,6 @@ public final class GooglePrivacyDlpV2DeidentifyConfigResponse {
             this.transformationErrorHandling = Objects.requireNonNull(transformationErrorHandling);
             return this;
         }
-
         public GooglePrivacyDlpV2DeidentifyConfigResponse build() {
             return new GooglePrivacyDlpV2DeidentifyConfigResponse(infoTypeTransformations, recordTransformations, transformationErrorHandling);
         }

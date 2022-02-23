@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -221,7 +221,6 @@ public final class GetHmacKeyResult {
             this.updated = Objects.requireNonNull(updated);
             return this;
         }
-
         public GetHmacKeyResult build() {
             return new GetHmacKeyResult(accessId, etag, kind, project, selfLink, serviceAccountEmail, state, timeCreated, updated);
         }

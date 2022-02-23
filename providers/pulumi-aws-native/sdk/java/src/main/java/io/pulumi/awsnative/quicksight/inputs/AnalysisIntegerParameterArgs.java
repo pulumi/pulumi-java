@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<Double>> values;
+        private final Input<List<Double>> values;
 
     public Input<List<Double>> getValues() {
         return this.values;
@@ -94,7 +94,6 @@ public final class AnalysisIntegerParameterArgs extends io.pulumi.resources.Reso
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public AnalysisIntegerParameterArgs build() {
             return new AnalysisIntegerParameterArgs(name, values);
         }

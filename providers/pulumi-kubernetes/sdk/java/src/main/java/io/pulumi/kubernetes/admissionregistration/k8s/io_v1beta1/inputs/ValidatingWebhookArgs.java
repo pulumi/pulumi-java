@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.RuleWithOperationsArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.WebhookClientConfigArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
@@ -28,7 +28,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="admissionReviewVersions")
-    private final @Nullable Input<List<String>> admissionReviewVersions;
+        private final @Nullable Input<List<String>> admissionReviewVersions;
 
     public Input<List<String>> getAdmissionReviewVersions() {
         return this.admissionReviewVersions == null ? Input.empty() : this.admissionReviewVersions;
@@ -39,7 +39,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="clientConfig", required=true)
-    private final Input<WebhookClientConfigArgs> clientConfig;
+        private final Input<WebhookClientConfigArgs> clientConfig;
 
     public Input<WebhookClientConfigArgs> getClientConfig() {
         return this.clientConfig;
@@ -50,7 +50,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="failurePolicy")
-    private final @Nullable Input<String> failurePolicy;
+        private final @Nullable Input<String> failurePolicy;
 
     public Input<String> getFailurePolicy() {
         return this.failurePolicy == null ? Input.empty() : this.failurePolicy;
@@ -67,7 +67,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="matchPolicy")
-    private final @Nullable Input<String> matchPolicy;
+        private final @Nullable Input<String> matchPolicy;
 
     public Input<String> getMatchPolicy() {
         return this.matchPolicy == null ? Input.empty() : this.matchPolicy;
@@ -78,7 +78,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="namespaceSelector")
-    private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
+        private final @Nullable Input<LabelSelectorArgs> namespaceSelector;
 
     public Input<LabelSelectorArgs> getNamespaceSelector() {
         return this.namespaceSelector == null ? Input.empty() : this.namespaceSelector;
@@ -130,7 +130,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="objectSelector")
-    private final @Nullable Input<LabelSelectorArgs> objectSelector;
+        private final @Nullable Input<LabelSelectorArgs> objectSelector;
 
     public Input<LabelSelectorArgs> getObjectSelector() {
         return this.objectSelector == null ? Input.empty() : this.objectSelector;
@@ -141,7 +141,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<RuleWithOperationsArgs>> rules;
+        private final @Nullable Input<List<RuleWithOperationsArgs>> rules;
 
     public Input<List<RuleWithOperationsArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -152,7 +152,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sideEffects")
-    private final @Nullable Input<String> sideEffects;
+        private final @Nullable Input<String> sideEffects;
 
     public Input<String> getSideEffects() {
         return this.sideEffects == null ? Input.empty() : this.sideEffects;
@@ -163,7 +163,7 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="timeoutSeconds")
-    private final @Nullable Input<Integer> timeoutSeconds;
+        private final @Nullable Input<Integer> timeoutSeconds;
 
     public Input<Integer> getTimeoutSeconds() {
         return this.timeoutSeconds == null ? Input.empty() : this.timeoutSeconds;
@@ -342,7 +342,6 @@ public final class ValidatingWebhookArgs extends io.pulumi.resources.ResourceArg
             this.timeoutSeconds = Input.ofNullable(timeoutSeconds);
             return this;
         }
-
         public ValidatingWebhookArgs build() {
             return new ValidatingWebhookArgs(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, rules, sideEffects, timeoutSeconds);
         }

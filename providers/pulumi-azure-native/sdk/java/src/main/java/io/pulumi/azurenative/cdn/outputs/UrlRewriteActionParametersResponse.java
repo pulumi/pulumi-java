@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -111,7 +111,6 @@ public final class UrlRewriteActionParametersResponse {
             this.sourcePattern = Objects.requireNonNull(sourcePattern);
             return this;
         }
-
         public UrlRewriteActionParametersResponse build() {
             return new UrlRewriteActionParametersResponse(destination, odataType, preserveUnmatchedPath, sourcePattern);
         }

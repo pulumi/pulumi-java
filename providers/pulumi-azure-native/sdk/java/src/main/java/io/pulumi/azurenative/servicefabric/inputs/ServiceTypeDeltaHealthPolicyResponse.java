@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ServiceTypeDeltaHealthPolicyResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="maxPercentDeltaUnhealthyServices")
-    private final @Nullable Integer maxPercentDeltaUnhealthyServices;
+        private final @Nullable Integer maxPercentDeltaUnhealthyServices;
 
     public Optional<Integer> getMaxPercentDeltaUnhealthyServices() {
         return this.maxPercentDeltaUnhealthyServices == null ? Optional.empty() : Optional.ofNullable(this.maxPercentDeltaUnhealthyServices);
@@ -63,7 +63,6 @@ public final class ServiceTypeDeltaHealthPolicyResponse extends io.pulumi.resour
             this.maxPercentDeltaUnhealthyServices = maxPercentDeltaUnhealthyServices;
             return this;
         }
-
         public ServiceTypeDeltaHealthPolicyResponse build() {
             return new ServiceTypeDeltaHealthPolicyResponse(maxPercentDeltaUnhealthyServices);
         }

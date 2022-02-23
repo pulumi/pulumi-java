@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ReturnShippingResponse {
             this.carrierName = Objects.requireNonNull(carrierName);
             return this;
         }
-
         public ReturnShippingResponse build() {
             return new ReturnShippingResponse(carrierAccountNumber, carrierName);
         }

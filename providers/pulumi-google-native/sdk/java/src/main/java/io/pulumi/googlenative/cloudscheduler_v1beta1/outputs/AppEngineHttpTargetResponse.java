@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudscheduler_v1beta1.outputs.AppEngineRoutingResponse;
 import java.lang.String;
 import java.util.Map;
@@ -139,7 +139,6 @@ public final class AppEngineHttpTargetResponse {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
-
         public AppEngineHttpTargetResponse build() {
             return new AppEngineHttpTargetResponse(appEngineRouting, body, headers, httpMethod, relativeUri);
         }

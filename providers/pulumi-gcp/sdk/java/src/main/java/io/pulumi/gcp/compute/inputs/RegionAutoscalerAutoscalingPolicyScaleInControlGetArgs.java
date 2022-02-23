@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs extend
      * 
      */
     @InputImport(name="maxScaledInReplicas")
-    private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs> maxScaledInReplicas;
+        private final @Nullable Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs> maxScaledInReplicas;
 
     public Input<RegionAutoscalerAutoscalingPolicyScaleInControlMaxScaledInReplicasGetArgs> getMaxScaledInReplicas() {
         return this.maxScaledInReplicas == null ? Input.empty() : this.maxScaledInReplicas;
@@ -33,7 +33,7 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs extend
      * 
      */
     @InputImport(name="timeWindowSec")
-    private final @Nullable Input<Integer> timeWindowSec;
+        private final @Nullable Input<Integer> timeWindowSec;
 
     public Input<Integer> getTimeWindowSec() {
         return this.timeWindowSec == null ? Input.empty() : this.timeWindowSec;
@@ -92,7 +92,6 @@ public final class RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs extend
             this.timeWindowSec = Input.ofNullable(timeWindowSec);
             return this;
         }
-
         public RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs build() {
             return new RegionAutoscalerAutoscalingPolicyScaleInControlGetArgs(maxScaledInReplicas, timeWindowSec);
         }

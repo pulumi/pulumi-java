@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionConditionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="acceptedNames", required=true)
-    private final Input<CustomResourceDefinitionNamesArgs> acceptedNames;
+        private final Input<CustomResourceDefinitionNamesArgs> acceptedNames;
 
     public Input<CustomResourceDefinitionNamesArgs> getAcceptedNames() {
         return this.acceptedNames;
@@ -37,7 +37,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions;
+        private final @Nullable Input<List<CustomResourceDefinitionConditionArgs>> conditions;
 
     public Input<List<CustomResourceDefinitionConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -48,7 +48,7 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="storedVersions", required=true)
-    private final Input<List<String>> storedVersions;
+        private final Input<List<String>> storedVersions;
 
     public Input<List<String>> getStoredVersions() {
         return this.storedVersions;
@@ -122,7 +122,6 @@ public final class CustomResourceDefinitionStatusArgs extends io.pulumi.resource
             this.storedVersions = Input.of(Objects.requireNonNull(storedVersions));
             return this;
         }
-
         public CustomResourceDefinitionStatusArgs build() {
             return new CustomResourceDefinitionStatusArgs(acceptedNames, conditions, storedVersions);
         }

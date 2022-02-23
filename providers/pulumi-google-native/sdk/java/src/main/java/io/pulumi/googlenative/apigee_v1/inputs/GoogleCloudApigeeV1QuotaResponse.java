@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="interval", required=true)
-    private final String interval;
+      private final String interval;
 
     public String getInterval() {
         return this.interval;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="limit", required=true)
-    private final String limit;
+      private final String limit;
 
     public String getLimit() {
         return this.limit;
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="timeUnit", required=true)
-    private final String timeUnit;
+      private final String timeUnit;
 
     public String getTimeUnit() {
         return this.timeUnit;
@@ -102,7 +102,6 @@ public final class GoogleCloudApigeeV1QuotaResponse extends io.pulumi.resources.
             this.timeUnit = Objects.requireNonNull(timeUnit);
             return this;
         }
-
         public GoogleCloudApigeeV1QuotaResponse build() {
             return new GoogleCloudApigeeV1QuotaResponse(interval, limit, timeUnit);
         }

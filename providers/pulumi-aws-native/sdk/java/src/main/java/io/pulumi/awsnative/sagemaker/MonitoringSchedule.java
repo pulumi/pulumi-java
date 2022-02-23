@@ -11,8 +11,8 @@ import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringExecuti
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -140,13 +140,6 @@ public class MonitoringSchedule extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MonitoringSchedule(String name) {
-        super("aws-native:sagemaker:MonitoringSchedule", name, MonitoringScheduleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

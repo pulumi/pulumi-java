@@ -5,8 +5,8 @@ package io.pulumi.gcp.osconfig;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.osconfig.PatchDeploymentArgs;
 import io.pulumi.gcp.osconfig.inputs.PatchDeploymentState;
@@ -266,13 +266,6 @@ public class PatchDeployment extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PatchDeployment(String name) {
-        super("gcp:osconfig/patchDeployment:PatchDeployment", name, PatchDeploymentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

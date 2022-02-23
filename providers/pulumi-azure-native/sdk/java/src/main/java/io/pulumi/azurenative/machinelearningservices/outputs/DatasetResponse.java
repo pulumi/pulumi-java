@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetResponseLatest;
 import io.pulumi.azurenative.machinelearningservices.outputs.DatasetStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -290,7 +290,6 @@ public final class DatasetResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public DatasetResponse build() {
             return new DatasetResponse(createdTime, datasetId, datasetState, datasetType, defaultCompute, description, etag, isVisible, latest, modifiedTime, name, tags);
         }

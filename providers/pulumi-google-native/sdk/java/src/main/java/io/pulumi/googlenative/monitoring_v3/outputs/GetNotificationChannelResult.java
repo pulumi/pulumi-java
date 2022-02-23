@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.MutationRecordResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -246,7 +246,6 @@ public final class GetNotificationChannelResult {
             this.verificationStatus = Objects.requireNonNull(verificationStatus);
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(creationRecord, description, displayName, enabled, labels, mutationRecords, name, type, userLabels, verificationStatus);
         }

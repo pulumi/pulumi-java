@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.evidently.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -17,35 +17,35 @@ public final class FeatureVariationObject extends io.pulumi.resources.InvokeArgs
     public static final FeatureVariationObject Empty = new FeatureVariationObject();
 
     @InputImport(name="booleanValue")
-    private final @Nullable Boolean booleanValue;
+        private final @Nullable Boolean booleanValue;
 
     public Optional<Boolean> getBooleanValue() {
         return this.booleanValue == null ? Optional.empty() : Optional.ofNullable(this.booleanValue);
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable Double doubleValue;
+        private final @Nullable Double doubleValue;
 
     public Optional<Double> getDoubleValue() {
         return this.doubleValue == null ? Optional.empty() : Optional.ofNullable(this.doubleValue);
     }
 
     @InputImport(name="longValue")
-    private final @Nullable Double longValue;
+        private final @Nullable Double longValue;
 
     public Optional<Double> getLongValue() {
         return this.longValue == null ? Optional.empty() : Optional.ofNullable(this.longValue);
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable String stringValue;
+        private final @Nullable String stringValue;
 
     public Optional<String> getStringValue() {
         return this.stringValue == null ? Optional.empty() : Optional.ofNullable(this.stringValue);
     }
 
     @InputImport(name="variationName")
-    private final @Nullable String variationName;
+        private final @Nullable String variationName;
 
     public Optional<String> getVariationName() {
         return this.variationName == null ? Optional.empty() : Optional.ofNullable(this.variationName);
@@ -124,7 +124,6 @@ public final class FeatureVariationObject extends io.pulumi.resources.InvokeArgs
             this.variationName = variationName;
             return this;
         }
-
         public FeatureVariationObject build() {
             return new FeatureVariationObject(booleanValue, doubleValue, longValue, stringValue, variationName);
         }

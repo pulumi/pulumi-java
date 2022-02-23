@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.accessanalyzer.outputs;
 
 import io.pulumi.awsnative.accessanalyzer.outputs.AnalyzerFilter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -68,7 +68,6 @@ public final class AnalyzerArchiveRule {
             this.ruleName = Objects.requireNonNull(ruleName);
             return this;
         }
-
         public AnalyzerArchiveRule build() {
             return new AnalyzerArchiveRule(filter, ruleName);
         }

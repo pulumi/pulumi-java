@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v2alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v2alpha1.outputs.CronJobSpec;
 import io.pulumi.kubernetes.batch_v2alpha1.outputs.CronJobStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class CronJob {
             this.status = status;
             return this;
         }
-
         public CronJob build() {
             return new CronJob(apiVersion, kind, metadata, spec, status);
         }

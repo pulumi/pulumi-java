@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
     public static final IndexSearchArgs Empty = new IndexSearchArgs();
 
     @InputImport(name="displayable")
-    private final @Nullable Input<Boolean> displayable;
+        private final @Nullable Input<Boolean> displayable;
 
     public Input<Boolean> getDisplayable() {
         return this.displayable == null ? Input.empty() : this.displayable;
     }
 
     @InputImport(name="facetable")
-    private final @Nullable Input<Boolean> facetable;
+        private final @Nullable Input<Boolean> facetable;
 
     public Input<Boolean> getFacetable() {
         return this.facetable == null ? Input.empty() : this.facetable;
     }
 
     @InputImport(name="searchable")
-    private final @Nullable Input<Boolean> searchable;
+        private final @Nullable Input<Boolean> searchable;
 
     public Input<Boolean> getSearchable() {
         return this.searchable == null ? Input.empty() : this.searchable;
     }
 
     @InputImport(name="sortable")
-    private final @Nullable Input<Boolean> sortable;
+        private final @Nullable Input<Boolean> sortable;
 
     public Input<Boolean> getSortable() {
         return this.sortable == null ? Input.empty() : this.sortable;
@@ -125,7 +125,6 @@ public final class IndexSearchArgs extends io.pulumi.resources.ResourceArgs {
             this.sortable = Input.ofNullable(sortable);
             return this;
         }
-
         public IndexSearchArgs build() {
             return new IndexSearchArgs(displayable, facetable, searchable, sortable);
         }

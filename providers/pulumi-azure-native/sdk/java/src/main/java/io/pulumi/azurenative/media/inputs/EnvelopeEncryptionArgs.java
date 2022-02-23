@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="clearTracks")
-    private final @Nullable Input<List<TrackSelectionArgs>> clearTracks;
+        private final @Nullable Input<List<TrackSelectionArgs>> clearTracks;
 
     public Input<List<TrackSelectionArgs>> getClearTracks() {
         return this.clearTracks == null ? Input.empty() : this.clearTracks;
@@ -38,7 +38,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="contentKeys")
-    private final @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
+        private final @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
 
     public Input<StreamingPolicyContentKeysArgs> getContentKeys() {
         return this.contentKeys == null ? Input.empty() : this.contentKeys;
@@ -49,7 +49,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="customKeyAcquisitionUrlTemplate")
-    private final @Nullable Input<String> customKeyAcquisitionUrlTemplate;
+        private final @Nullable Input<String> customKeyAcquisitionUrlTemplate;
 
     public Input<String> getCustomKeyAcquisitionUrlTemplate() {
         return this.customKeyAcquisitionUrlTemplate == null ? Input.empty() : this.customKeyAcquisitionUrlTemplate;
@@ -60,7 +60,7 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+        private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
 
     public Input<EnabledProtocolsArgs> getEnabledProtocols() {
         return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
@@ -149,7 +149,6 @@ public final class EnvelopeEncryptionArgs extends io.pulumi.resources.ResourceAr
             this.enabledProtocols = Input.ofNullable(enabledProtocols);
             return this;
         }
-
         public EnvelopeEncryptionArgs build() {
             return new EnvelopeEncryptionArgs(clearTracks, contentKeys, customKeyAcquisitionUrlTemplate, enabledProtocols);
         }

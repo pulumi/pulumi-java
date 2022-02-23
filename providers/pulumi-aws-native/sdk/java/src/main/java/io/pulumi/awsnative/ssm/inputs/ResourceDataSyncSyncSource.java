@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ssm.inputs;
 
 import io.pulumi.awsnative.ssm.inputs.ResourceDataSyncAwsOrganizationsSource;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,28 +18,28 @@ public final class ResourceDataSyncSyncSource extends io.pulumi.resources.Invoke
     public static final ResourceDataSyncSyncSource Empty = new ResourceDataSyncSyncSource();
 
     @InputImport(name="awsOrganizationsSource")
-    private final @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
+        private final @Nullable ResourceDataSyncAwsOrganizationsSource awsOrganizationsSource;
 
     public Optional<ResourceDataSyncAwsOrganizationsSource> getAwsOrganizationsSource() {
         return this.awsOrganizationsSource == null ? Optional.empty() : Optional.ofNullable(this.awsOrganizationsSource);
     }
 
     @InputImport(name="includeFutureRegions")
-    private final @Nullable Boolean includeFutureRegions;
+        private final @Nullable Boolean includeFutureRegions;
 
     public Optional<Boolean> getIncludeFutureRegions() {
         return this.includeFutureRegions == null ? Optional.empty() : Optional.ofNullable(this.includeFutureRegions);
     }
 
     @InputImport(name="sourceRegions", required=true)
-    private final List<String> sourceRegions;
+        private final List<String> sourceRegions;
 
     public List<String> getSourceRegions() {
         return this.sourceRegions;
     }
 
     @InputImport(name="sourceType", required=true)
-    private final String sourceType;
+        private final String sourceType;
 
     public String getSourceType() {
         return this.sourceType;
@@ -108,7 +108,6 @@ public final class ResourceDataSyncSyncSource extends io.pulumi.resources.Invoke
             this.sourceType = Objects.requireNonNull(sourceType);
             return this;
         }
-
         public ResourceDataSyncSyncSource build() {
             return new ResourceDataSyncSyncSource(awsOrganizationsSource, includeFutureRegions, sourceRegions, sourceType);
         }

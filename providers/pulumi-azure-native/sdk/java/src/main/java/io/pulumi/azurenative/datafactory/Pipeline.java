@@ -50,8 +50,8 @@ import io.pulumi.azurenative.datafactory.outputs.WebHookActivityResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -235,13 +235,6 @@ public class Pipeline extends io.pulumi.resources.CustomResource {
         return this.variables;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Pipeline(String name) {
-        super("azure-native:datafactory:Pipeline", name, PipelineArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

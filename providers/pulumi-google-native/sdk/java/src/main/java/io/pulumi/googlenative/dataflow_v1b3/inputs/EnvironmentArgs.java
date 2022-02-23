@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.EnvironmentFlexResourceSchedulingGoal;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DebugOptionsArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.WorkerPoolArgs;
@@ -28,7 +28,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterManagerApiService")
-    private final @Nullable Input<String> clusterManagerApiService;
+      private final @Nullable Input<String> clusterManagerApiService;
 
     public Input<String> getClusterManagerApiService() {
         return this.clusterManagerApiService == null ? Input.empty() : this.clusterManagerApiService;
@@ -39,7 +39,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataset")
-    private final @Nullable Input<String> dataset;
+      private final @Nullable Input<String> dataset;
 
     public Input<String> getDataset() {
         return this.dataset == null ? Input.empty() : this.dataset;
@@ -50,7 +50,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="debugOptions")
-    private final @Nullable Input<DebugOptionsArgs> debugOptions;
+      private final @Nullable Input<DebugOptionsArgs> debugOptions;
 
     public Input<DebugOptionsArgs> getDebugOptions() {
         return this.debugOptions == null ? Input.empty() : this.debugOptions;
@@ -61,7 +61,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="experiments")
-    private final @Nullable Input<List<String>> experiments;
+      private final @Nullable Input<List<String>> experiments;
 
     public Input<List<String>> getExperiments() {
         return this.experiments == null ? Input.empty() : this.experiments;
@@ -72,7 +72,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flexResourceSchedulingGoal")
-    private final @Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
+      private final @Nullable Input<EnvironmentFlexResourceSchedulingGoal> flexResourceSchedulingGoal;
 
     public Input<EnvironmentFlexResourceSchedulingGoal> getFlexResourceSchedulingGoal() {
         return this.flexResourceSchedulingGoal == null ? Input.empty() : this.flexResourceSchedulingGoal;
@@ -83,7 +83,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalExperiments")
-    private final @Nullable Input<Map<String,String>> internalExperiments;
+      private final @Nullable Input<Map<String,String>> internalExperiments;
 
     public Input<Map<String,String>> getInternalExperiments() {
         return this.internalExperiments == null ? Input.empty() : this.internalExperiments;
@@ -94,7 +94,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sdkPipelineOptions")
-    private final @Nullable Input<Map<String,String>> sdkPipelineOptions;
+      private final @Nullable Input<Map<String,String>> sdkPipelineOptions;
 
     public Input<Map<String,String>> getSdkPipelineOptions() {
         return this.sdkPipelineOptions == null ? Input.empty() : this.sdkPipelineOptions;
@@ -105,7 +105,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccountEmail")
-    private final @Nullable Input<String> serviceAccountEmail;
+      private final @Nullable Input<String> serviceAccountEmail;
 
     public Input<String> getServiceAccountEmail() {
         return this.serviceAccountEmail == null ? Input.empty() : this.serviceAccountEmail;
@@ -116,7 +116,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceKmsKeyName")
-    private final @Nullable Input<String> serviceKmsKeyName;
+      private final @Nullable Input<String> serviceKmsKeyName;
 
     public Input<String> getServiceKmsKeyName() {
         return this.serviceKmsKeyName == null ? Input.empty() : this.serviceKmsKeyName;
@@ -127,7 +127,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceOptions")
-    private final @Nullable Input<List<String>> serviceOptions;
+      private final @Nullable Input<List<String>> serviceOptions;
 
     public Input<List<String>> getServiceOptions() {
         return this.serviceOptions == null ? Input.empty() : this.serviceOptions;
@@ -138,7 +138,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tempStoragePrefix")
-    private final @Nullable Input<String> tempStoragePrefix;
+      private final @Nullable Input<String> tempStoragePrefix;
 
     public Input<String> getTempStoragePrefix() {
         return this.tempStoragePrefix == null ? Input.empty() : this.tempStoragePrefix;
@@ -149,7 +149,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userAgent")
-    private final @Nullable Input<Map<String,String>> userAgent;
+      private final @Nullable Input<Map<String,String>> userAgent;
 
     public Input<Map<String,String>> getUserAgent() {
         return this.userAgent == null ? Input.empty() : this.userAgent;
@@ -160,7 +160,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Map<String,String>> version;
+      private final @Nullable Input<Map<String,String>> version;
 
     public Input<Map<String,String>> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -171,7 +171,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerPools")
-    private final @Nullable Input<List<WorkerPoolArgs>> workerPools;
+      private final @Nullable Input<List<WorkerPoolArgs>> workerPools;
 
     public Input<List<WorkerPoolArgs>> getWorkerPools() {
         return this.workerPools == null ? Input.empty() : this.workerPools;
@@ -182,7 +182,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerRegion")
-    private final @Nullable Input<String> workerRegion;
+      private final @Nullable Input<String> workerRegion;
 
     public Input<String> getWorkerRegion() {
         return this.workerRegion == null ? Input.empty() : this.workerRegion;
@@ -193,7 +193,7 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerZone")
-    private final @Nullable Input<String> workerZone;
+      private final @Nullable Input<String> workerZone;
 
     public Input<String> getWorkerZone() {
         return this.workerZone == null ? Input.empty() : this.workerZone;
@@ -462,7 +462,6 @@ public final class EnvironmentArgs extends io.pulumi.resources.ResourceArgs {
             this.workerZone = Input.ofNullable(workerZone);
             return this;
         }
-
         public EnvironmentArgs build() {
             return new EnvironmentArgs(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
         }

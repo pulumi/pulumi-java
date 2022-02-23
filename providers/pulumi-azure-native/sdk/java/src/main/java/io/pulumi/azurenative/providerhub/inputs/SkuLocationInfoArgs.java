@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuZoneDetailArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,35 +17,35 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
     public static final SkuLocationInfoArgs Empty = new SkuLocationInfoArgs();
 
     @InputImport(name="extendedLocations")
-    private final @Nullable Input<List<String>> extendedLocations;
+        private final @Nullable Input<List<String>> extendedLocations;
 
     public Input<List<String>> getExtendedLocations() {
         return this.extendedLocations == null ? Input.empty() : this.extendedLocations;
     }
 
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
     }
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="zoneDetails")
-    private final @Nullable Input<List<SkuZoneDetailArgs>> zoneDetails;
+        private final @Nullable Input<List<SkuZoneDetailArgs>> zoneDetails;
 
     public Input<List<SkuZoneDetailArgs>> getZoneDetails() {
         return this.zoneDetails == null ? Input.empty() : this.zoneDetails;
     }
 
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -149,7 +149,6 @@ public final class SkuLocationInfoArgs extends io.pulumi.resources.ResourceArgs 
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public SkuLocationInfoArgs build() {
             return new SkuLocationInfoArgs(extendedLocations, location, type, zoneDetails, zones);
         }

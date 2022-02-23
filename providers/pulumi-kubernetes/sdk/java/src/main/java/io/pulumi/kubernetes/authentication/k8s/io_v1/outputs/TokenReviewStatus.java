@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authentication.k8s.io_v1.outputs.UserInfo;
 import java.lang.Boolean;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class TokenReviewStatus {
             this.user = user;
             return this;
         }
-
         public TokenReviewStatus build() {
             return new TokenReviewStatus(audiences, authenticated, error, user);
         }

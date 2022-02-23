@@ -8,8 +8,8 @@ import io.pulumi.awsnative.networkmanager.GlobalNetworkArgs;
 import io.pulumi.awsnative.networkmanager.outputs.GlobalNetworkTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -65,13 +65,6 @@ public class GlobalNetwork extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GlobalNetwork(String name) {
-        super("aws-native:networkmanager:GlobalNetwork", name, GlobalNetworkArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

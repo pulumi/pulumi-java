@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class MachinePropertiesResponseOsProfile {
             this.computerName = Objects.requireNonNull(computerName);
             return this;
         }
-
         public MachinePropertiesResponseOsProfile build() {
             return new MachinePropertiesResponseOsProfile(computerName);
         }

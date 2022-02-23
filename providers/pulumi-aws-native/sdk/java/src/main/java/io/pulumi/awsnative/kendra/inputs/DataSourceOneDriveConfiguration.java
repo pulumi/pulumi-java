@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceOneDriveUsers;
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,49 +19,49 @@ public final class DataSourceOneDriveConfiguration extends io.pulumi.resources.I
     public static final DataSourceOneDriveConfiguration Empty = new DataSourceOneDriveConfiguration();
 
     @InputImport(name="disableLocalGroups")
-    private final @Nullable Boolean disableLocalGroups;
+        private final @Nullable Boolean disableLocalGroups;
 
     public Optional<Boolean> getDisableLocalGroups() {
         return this.disableLocalGroups == null ? Optional.empty() : Optional.ofNullable(this.disableLocalGroups);
     }
 
     @InputImport(name="exclusionPatterns")
-    private final @Nullable List<String> exclusionPatterns;
+        private final @Nullable List<String> exclusionPatterns;
 
     public List<String> getExclusionPatterns() {
         return this.exclusionPatterns == null ? List.of() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
+        private final @Nullable List<DataSourceToIndexFieldMapping> fieldMappings;
 
     public List<DataSourceToIndexFieldMapping> getFieldMappings() {
         return this.fieldMappings == null ? List.of() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-    private final @Nullable List<String> inclusionPatterns;
+        private final @Nullable List<String> inclusionPatterns;
 
     public List<String> getInclusionPatterns() {
         return this.inclusionPatterns == null ? List.of() : this.inclusionPatterns;
     }
 
     @InputImport(name="oneDriveUsers", required=true)
-    private final DataSourceOneDriveUsers oneDriveUsers;
+        private final DataSourceOneDriveUsers oneDriveUsers;
 
     public DataSourceOneDriveUsers getOneDriveUsers() {
         return this.oneDriveUsers;
     }
 
     @InputImport(name="secretArn", required=true)
-    private final String secretArn;
+        private final String secretArn;
 
     public String getSecretArn() {
         return this.secretArn;
     }
 
     @InputImport(name="tenantDomain", required=true)
-    private final String tenantDomain;
+        private final String tenantDomain;
 
     public String getTenantDomain() {
         return this.tenantDomain;
@@ -160,7 +160,6 @@ public final class DataSourceOneDriveConfiguration extends io.pulumi.resources.I
             this.tenantDomain = Objects.requireNonNull(tenantDomain);
             return this;
         }
-
         public DataSourceOneDriveConfiguration build() {
             return new DataSourceOneDriveConfiguration(disableLocalGroups, exclusionPatterns, fieldMappings, inclusionPatterns, oneDriveUsers, secretArn, tenantDomain);
         }

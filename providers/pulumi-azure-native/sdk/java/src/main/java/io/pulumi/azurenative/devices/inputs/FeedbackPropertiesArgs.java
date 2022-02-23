@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lockDurationAsIso8601")
-    private final @Nullable Input<String> lockDurationAsIso8601;
+        private final @Nullable Input<String> lockDurationAsIso8601;
 
     public Input<String> getLockDurationAsIso8601() {
         return this.lockDurationAsIso8601 == null ? Input.empty() : this.lockDurationAsIso8601;
@@ -35,7 +35,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="maxDeliveryCount")
-    private final @Nullable Input<Integer> maxDeliveryCount;
+        private final @Nullable Input<Integer> maxDeliveryCount;
 
     public Input<Integer> getMaxDeliveryCount() {
         return this.maxDeliveryCount == null ? Input.empty() : this.maxDeliveryCount;
@@ -46,7 +46,7 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ttlAsIso8601")
-    private final @Nullable Input<String> ttlAsIso8601;
+        private final @Nullable Input<String> ttlAsIso8601;
 
     public Input<String> getTtlAsIso8601() {
         return this.ttlAsIso8601 == null ? Input.empty() : this.ttlAsIso8601;
@@ -120,7 +120,6 @@ public final class FeedbackPropertiesArgs extends io.pulumi.resources.ResourceAr
             this.ttlAsIso8601 = Input.ofNullable(ttlAsIso8601);
             return this;
         }
-
         public FeedbackPropertiesArgs build() {
             return new FeedbackPropertiesArgs(lockDurationAsIso8601, maxDeliveryCount, ttlAsIso8601);
         }

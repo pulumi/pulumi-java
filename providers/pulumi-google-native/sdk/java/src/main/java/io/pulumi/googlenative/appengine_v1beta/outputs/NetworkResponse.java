@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +160,6 @@ public final class NetworkResponse {
             this.subnetworkName = Objects.requireNonNull(subnetworkName);
             return this;
         }
-
         public NetworkResponse build() {
             return new NetworkResponse(forwardedPorts, instanceIpMode, instanceTag, name, sessionAffinity, subnetworkName);
         }

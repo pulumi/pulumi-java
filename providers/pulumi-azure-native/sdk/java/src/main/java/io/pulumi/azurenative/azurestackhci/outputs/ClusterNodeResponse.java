@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurestackhci.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class ClusterNodeResponse {
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public ClusterNodeResponse build() {
             return new ClusterNodeResponse(coreCount, id, manufacturer, memoryInGiB, model, name, osName, osVersion, serialNumber);
         }

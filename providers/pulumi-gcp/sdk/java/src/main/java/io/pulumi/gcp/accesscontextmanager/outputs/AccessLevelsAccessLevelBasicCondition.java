@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelsAccessLevelBasicConditionDevicePolicy;
 import java.lang.Boolean;
 import java.lang.String;
@@ -215,7 +215,6 @@ public final class AccessLevelsAccessLevelBasicCondition {
             this.requiredAccessLevels = requiredAccessLevels;
             return this;
         }
-
         public AccessLevelsAccessLevelBasicCondition build() {
             return new AccessLevelsAccessLevelBasicCondition(devicePolicy, ipSubnetworks, members, negate, regions, requiredAccessLevels);
         }

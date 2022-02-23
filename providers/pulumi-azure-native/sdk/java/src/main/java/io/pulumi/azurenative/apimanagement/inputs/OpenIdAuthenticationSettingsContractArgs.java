@@ -6,7 +6,7 @@ package io.pulumi.azurenative.apimanagement.inputs;
 import io.pulumi.azurenative.apimanagement.enums.BearerTokenSendingMethods;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="bearerTokenSendingMethods")
-    private final @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
+        private final @Nullable Input<List<Either<String,BearerTokenSendingMethods>>> bearerTokenSendingMethods;
 
     public Input<List<Either<String,BearerTokenSendingMethods>>> getBearerTokenSendingMethods() {
         return this.bearerTokenSendingMethods == null ? Input.empty() : this.bearerTokenSendingMethods;
@@ -37,7 +37,7 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="openidProviderId")
-    private final @Nullable Input<String> openidProviderId;
+        private final @Nullable Input<String> openidProviderId;
 
     public Input<String> getOpenidProviderId() {
         return this.openidProviderId == null ? Input.empty() : this.openidProviderId;
@@ -96,7 +96,6 @@ public final class OpenIdAuthenticationSettingsContractArgs extends io.pulumi.re
             this.openidProviderId = Input.ofNullable(openidProviderId);
             return this;
         }
-
         public OpenIdAuthenticationSettingsContractArgs build() {
             return new OpenIdAuthenticationSettingsContractArgs(bearerTokenSendingMethods, openidProviderId);
         }

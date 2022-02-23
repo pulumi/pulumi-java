@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2FulfillmentResponse;
 import io.pulumi.googlenative.dialogflow_v2.outputs.GoogleCloudDialogflowV2TextToSpeechSettingsResponse;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class GetEnvironmentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(agentVersion, description, fulfillment, name, state, textToSpeechSettings, updateTime);
         }

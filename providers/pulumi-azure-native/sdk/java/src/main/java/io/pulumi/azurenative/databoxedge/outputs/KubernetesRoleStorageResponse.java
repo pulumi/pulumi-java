@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesRoleStorageClassInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class KubernetesRoleStorageResponse {
             this.storageClasses = Objects.requireNonNull(storageClasses);
             return this;
         }
-
         public KubernetesRoleStorageResponse build() {
             return new KubernetesRoleStorageResponse(endpoints, storageClasses);
         }

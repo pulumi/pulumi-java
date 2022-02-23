@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetControlPanelArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="controlPanelArn", required=true)
-    private final String controlPanelArn;
+        private final String controlPanelArn;
 
     public String getControlPanelArn() {
         return this.controlPanelArn;
@@ -55,7 +55,6 @@ public final class GetControlPanelArgs extends io.pulumi.resources.InvokeArgs {
             this.controlPanelArn = Objects.requireNonNull(controlPanelArn);
             return this;
         }
-
         public GetControlPanelArgs build() {
             return new GetControlPanelArgs(controlPanelArn);
         }

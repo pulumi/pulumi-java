@@ -5,7 +5,7 @@ package io.pulumi.azurenative.confidentialledger.inputs;
 
 import io.pulumi.azurenative.confidentialledger.inputs.AADBasedSecurityPrincipalResponse;
 import io.pulumi.azurenative.confidentialledger.inputs.CertBasedSecurityPrincipalResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="aadBasedSecurityPrincipals")
-    private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
+        private final @Nullable List<AADBasedSecurityPrincipalResponse> aadBasedSecurityPrincipals;
 
     public List<AADBasedSecurityPrincipalResponse> getAadBasedSecurityPrincipals() {
         return this.aadBasedSecurityPrincipals == null ? List.of() : this.aadBasedSecurityPrincipals;
@@ -37,7 +37,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="certBasedSecurityPrincipals")
-    private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
+        private final @Nullable List<CertBasedSecurityPrincipalResponse> certBasedSecurityPrincipals;
 
     public List<CertBasedSecurityPrincipalResponse> getCertBasedSecurityPrincipals() {
         return this.certBasedSecurityPrincipals == null ? List.of() : this.certBasedSecurityPrincipals;
@@ -48,7 +48,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="identityServiceUri", required=true)
-    private final String identityServiceUri;
+        private final String identityServiceUri;
 
     public String getIdentityServiceUri() {
         return this.identityServiceUri;
@@ -59,7 +59,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ledgerInternalNamespace", required=true)
-    private final String ledgerInternalNamespace;
+        private final String ledgerInternalNamespace;
 
     public String getLedgerInternalNamespace() {
         return this.ledgerInternalNamespace;
@@ -70,7 +70,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ledgerName", required=true)
-    private final String ledgerName;
+        private final String ledgerName;
 
     public String getLedgerName() {
         return this.ledgerName;
@@ -81,7 +81,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ledgerStorageAccount")
-    private final @Nullable String ledgerStorageAccount;
+        private final @Nullable String ledgerStorageAccount;
 
     public Optional<String> getLedgerStorageAccount() {
         return this.ledgerStorageAccount == null ? Optional.empty() : Optional.ofNullable(this.ledgerStorageAccount);
@@ -92,7 +92,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ledgerType")
-    private final @Nullable String ledgerType;
+        private final @Nullable String ledgerType;
 
     public Optional<String> getLedgerType() {
         return this.ledgerType == null ? Optional.empty() : Optional.ofNullable(this.ledgerType);
@@ -103,7 +103,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ledgerUri", required=true)
-    private final String ledgerUri;
+        private final String ledgerUri;
 
     public String getLedgerUri() {
         return this.ledgerUri;
@@ -114,7 +114,7 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -233,7 +233,6 @@ public final class LedgerPropertiesResponse extends io.pulumi.resources.InvokeAr
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public LedgerPropertiesResponse build() {
             return new LedgerPropertiesResponse(aadBasedSecurityPrincipals, certBasedSecurityPrincipals, identityServiceUri, ledgerInternalNamespace, ledgerName, ledgerStorageAccount, ledgerType, ledgerUri, provisioningState);
         }

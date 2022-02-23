@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudrun;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudrun.IamPolicyArgs;
 import io.pulumi.gcp.cloudrun.inputs.IamPolicyState;
@@ -132,13 +132,6 @@ public class IamPolicy extends io.pulumi.resources.CustomResource {
         return this.service;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IamPolicy(String name) {
-        super("gcp:cloudrun/iamPolicy:IamPolicy", name, IamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

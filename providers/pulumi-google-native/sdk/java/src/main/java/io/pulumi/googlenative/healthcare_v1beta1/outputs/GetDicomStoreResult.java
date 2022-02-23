@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.GoogleCloudHealthcareV1beta1DicomStreamConfigResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.NotificationConfigResponse;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class GetDicomStoreResult {
             this.streamConfigs = Objects.requireNonNull(streamConfigs);
             return this;
         }
-
         public GetDicomStoreResult build() {
             return new GetDicomStoreResult(labels, name, notificationConfig, streamConfigs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.r
      * 
      */
     @InputImport(name="topicArn", required=true)
-    private final String topicArn;
+        private final String topicArn;
 
     public String getTopicArn() {
         return this.topicArn;
@@ -59,7 +59,6 @@ public final class MitigationActionPublishFindingToSnsParams extends io.pulumi.r
             this.topicArn = Objects.requireNonNull(topicArn);
             return this;
         }
-
         public MitigationActionPublishFindingToSnsParams build() {
             return new MitigationActionPublishFindingToSnsParams(topicArn);
         }

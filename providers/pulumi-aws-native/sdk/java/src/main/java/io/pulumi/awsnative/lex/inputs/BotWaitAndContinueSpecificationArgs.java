@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.inputs.BotResponseSpecificationArgs;
 import io.pulumi.awsnative.lex.inputs.BotStillWaitingResponseSpecificationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="continueResponse", required=true)
-    private final Input<BotResponseSpecificationArgs> continueResponse;
+        private final Input<BotResponseSpecificationArgs> continueResponse;
 
     public Input<BotResponseSpecificationArgs> getContinueResponse() {
         return this.continueResponse;
@@ -36,7 +36,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="isActive")
-    private final @Nullable Input<Boolean> isActive;
+        private final @Nullable Input<Boolean> isActive;
 
     public Input<Boolean> getIsActive() {
         return this.isActive == null ? Input.empty() : this.isActive;
@@ -47,7 +47,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="stillWaitingResponse")
-    private final @Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
+        private final @Nullable Input<BotStillWaitingResponseSpecificationArgs> stillWaitingResponse;
 
     public Input<BotStillWaitingResponseSpecificationArgs> getStillWaitingResponse() {
         return this.stillWaitingResponse == null ? Input.empty() : this.stillWaitingResponse;
@@ -58,7 +58,7 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="waitingResponse", required=true)
-    private final Input<BotResponseSpecificationArgs> waitingResponse;
+        private final Input<BotResponseSpecificationArgs> waitingResponse;
 
     public Input<BotResponseSpecificationArgs> getWaitingResponse() {
         return this.waitingResponse;
@@ -147,7 +147,6 @@ public final class BotWaitAndContinueSpecificationArgs extends io.pulumi.resourc
             this.waitingResponse = Input.of(Objects.requireNonNull(waitingResponse));
             return this;
         }
-
         public BotWaitAndContinueSpecificationArgs build() {
             return new BotWaitAndContinueSpecificationArgs(continueResponse, isActive, stillWaitingResponse, waitingResponse);
         }

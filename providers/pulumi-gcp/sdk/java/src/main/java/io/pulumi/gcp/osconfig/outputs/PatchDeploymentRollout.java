@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRolloutDisruptionBudget;
 import java.lang.String;
 import java.util.Objects;
@@ -87,7 +87,6 @@ public final class PatchDeploymentRollout {
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public PatchDeploymentRollout build() {
             return new PatchDeploymentRollout(disruptionBudget, mode);
         }

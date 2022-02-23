@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleS3OutputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -18,7 +18,7 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
     public static final MonitoringScheduleMonitoringOutputArgs Empty = new MonitoringScheduleMonitoringOutputArgs();
 
     @InputImport(name="s3Output", required=true)
-    private final Input<MonitoringScheduleS3OutputArgs> s3Output;
+        private final Input<MonitoringScheduleS3OutputArgs> s3Output;
 
     public Input<MonitoringScheduleS3OutputArgs> getS3Output() {
         return this.s3Output;
@@ -61,7 +61,6 @@ public final class MonitoringScheduleMonitoringOutputArgs extends io.pulumi.reso
             this.s3Output = Input.of(Objects.requireNonNull(s3Output));
             return this;
         }
-
         public MonitoringScheduleMonitoringOutputArgs build() {
             return new MonitoringScheduleMonitoringOutputArgs(s3Output);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
      * 
      */
     @InputImport(name="boundingBoxEvaluationOptions")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> boundingBoxEvaluationOptions;
 
     public Input<GoogleCloudDatalabelingV1beta1BoundingBoxEvaluationOptionsArgs> getBoundingBoxEvaluationOptions() {
         return this.boundingBoxEvaluationOptions == null ? Input.empty() : this.boundingBoxEvaluationOptions;
@@ -66,7 +66,6 @@ public final class GoogleCloudDatalabelingV1beta1EvaluationConfigArgs extends io
             this.boundingBoxEvaluationOptions = Input.ofNullable(boundingBoxEvaluationOptions);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1EvaluationConfigArgs build() {
             return new GoogleCloudDatalabelingV1beta1EvaluationConfigArgs(boundingBoxEvaluationOptions);
         }

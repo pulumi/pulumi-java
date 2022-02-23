@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -34,7 +34,7 @@ public final class HubResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable String resourceType;
+        private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
@@ -83,7 +83,6 @@ public final class HubResponse extends io.pulumi.resources.InvokeArgs {
             this.resourceType = resourceType;
             return this;
         }
-
         public HubResponse build() {
             return new HubResponse(resourceId, resourceType);
         }

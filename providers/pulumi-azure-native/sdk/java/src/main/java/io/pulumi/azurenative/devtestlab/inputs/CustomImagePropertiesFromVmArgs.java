@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.inputs.LinuxOsInfoArgs;
 import io.pulumi.azurenative.devtestlab.inputs.WindowsOsInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="linuxOsInfo")
-    private final @Nullable Input<LinuxOsInfoArgs> linuxOsInfo;
+        private final @Nullable Input<LinuxOsInfoArgs> linuxOsInfo;
 
     public Input<LinuxOsInfoArgs> getLinuxOsInfo() {
         return this.linuxOsInfo == null ? Input.empty() : this.linuxOsInfo;
@@ -36,7 +36,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sourceVmId")
-    private final @Nullable Input<String> sourceVmId;
+        private final @Nullable Input<String> sourceVmId;
 
     public Input<String> getSourceVmId() {
         return this.sourceVmId == null ? Input.empty() : this.sourceVmId;
@@ -47,7 +47,7 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowsOsInfo")
-    private final @Nullable Input<WindowsOsInfoArgs> windowsOsInfo;
+        private final @Nullable Input<WindowsOsInfoArgs> windowsOsInfo;
 
     public Input<WindowsOsInfoArgs> getWindowsOsInfo() {
         return this.windowsOsInfo == null ? Input.empty() : this.windowsOsInfo;
@@ -121,7 +121,6 @@ public final class CustomImagePropertiesFromVmArgs extends io.pulumi.resources.R
             this.windowsOsInfo = Input.ofNullable(windowsOsInfo);
             return this;
         }
-
         public CustomImagePropertiesFromVmArgs build() {
             return new CustomImagePropertiesFromVmArgs(linuxOsInfo, sourceVmId, windowsOsInfo);
         }

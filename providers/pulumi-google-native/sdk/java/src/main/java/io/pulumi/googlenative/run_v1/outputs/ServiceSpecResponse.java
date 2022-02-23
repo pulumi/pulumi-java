@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.RevisionTemplateResponse;
 import io.pulumi.googlenative.run_v1.outputs.TrafficTargetResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class ServiceSpecResponse {
             this.traffic = Objects.requireNonNull(traffic);
             return this;
         }
-
         public ServiceSpecResponse build() {
             return new ServiceSpecResponse(template, traffic);
         }

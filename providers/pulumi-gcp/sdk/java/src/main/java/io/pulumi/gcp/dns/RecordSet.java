@@ -5,8 +5,8 @@ package io.pulumi.gcp.dns;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dns.RecordSetArgs;
 import io.pulumi.gcp.dns.inputs.RecordSetState;
@@ -132,13 +132,6 @@ public class RecordSet extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RecordSet(String name) {
-        super("gcp:dns/recordSet:RecordSet", name, RecordSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deviceupdate;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.deviceupdate.inputs.GetPrivateEndpointConnectionProxyArgs;
 import io.pulumi.azurenative.deviceupdate.outputs.GetPrivateEndpointConnectionProxyResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

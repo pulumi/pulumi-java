@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.Integer;
@@ -141,7 +141,6 @@ public final class AndroidTestLoopResponse {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-
         public AndroidTestLoopResponse build() {
             return new AndroidTestLoopResponse(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
         }

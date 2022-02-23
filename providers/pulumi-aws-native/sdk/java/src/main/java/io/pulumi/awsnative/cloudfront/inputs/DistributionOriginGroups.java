@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroup;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -17,14 +17,14 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
     public static final DistributionOriginGroups Empty = new DistributionOriginGroups();
 
     @InputImport(name="items")
-    private final @Nullable List<DistributionOriginGroup> items;
+        private final @Nullable List<DistributionOriginGroup> items;
 
     public List<DistributionOriginGroup> getItems() {
         return this.items == null ? List.of() : this.items;
     }
 
     @InputImport(name="quantity", required=true)
-    private final Integer quantity;
+        private final Integer quantity;
 
     public Integer getQuantity() {
         return this.quantity;
@@ -73,7 +73,6 @@ public final class DistributionOriginGroups extends io.pulumi.resources.InvokeAr
             this.quantity = Objects.requireNonNull(quantity);
             return this;
         }
-
         public DistributionOriginGroups build() {
             return new DistributionOriginGroups(items, quantity);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable Input<String> resourceId;
+        private final @Nullable Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId == null ? Input.empty() : this.resourceId;
@@ -34,7 +34,7 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -93,7 +93,6 @@ public final class ResourceAccessRuleArgs extends io.pulumi.resources.ResourceAr
             this.tenantId = Input.ofNullable(tenantId);
             return this;
         }
-
         public ResourceAccessRuleArgs build() {
             return new ResourceAccessRuleArgs(resourceId, tenantId);
         }

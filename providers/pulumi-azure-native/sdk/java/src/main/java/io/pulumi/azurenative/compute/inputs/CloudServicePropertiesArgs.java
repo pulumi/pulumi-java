@@ -10,7 +10,7 @@ import io.pulumi.azurenative.compute.inputs.CloudServiceOsProfileArgs;
 import io.pulumi.azurenative.compute.inputs.CloudServiceRoleProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="allowModelOverride")
-    private final @Nullable Input<Boolean> allowModelOverride;
+        private final @Nullable Input<Boolean> allowModelOverride;
 
     public Input<Boolean> getAllowModelOverride() {
         return this.allowModelOverride == null ? Input.empty() : this.allowModelOverride;
@@ -42,7 +42,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<String> configuration;
+        private final @Nullable Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -54,7 +54,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="configurationUrl")
-    private final @Nullable Input<String> configurationUrl;
+        private final @Nullable Input<String> configurationUrl;
 
     public Input<String> getConfigurationUrl() {
         return this.configurationUrl == null ? Input.empty() : this.configurationUrl;
@@ -65,7 +65,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="extensionProfile")
-    private final @Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile;
+        private final @Nullable Input<CloudServiceExtensionProfileArgs> extensionProfile;
 
     public Input<CloudServiceExtensionProfileArgs> getExtensionProfile() {
         return this.extensionProfile == null ? Input.empty() : this.extensionProfile;
@@ -76,7 +76,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="networkProfile")
-    private final @Nullable Input<CloudServiceNetworkProfileArgs> networkProfile;
+        private final @Nullable Input<CloudServiceNetworkProfileArgs> networkProfile;
 
     public Input<CloudServiceNetworkProfileArgs> getNetworkProfile() {
         return this.networkProfile == null ? Input.empty() : this.networkProfile;
@@ -87,7 +87,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="osProfile")
-    private final @Nullable Input<CloudServiceOsProfileArgs> osProfile;
+        private final @Nullable Input<CloudServiceOsProfileArgs> osProfile;
 
     public Input<CloudServiceOsProfileArgs> getOsProfile() {
         return this.osProfile == null ? Input.empty() : this.osProfile;
@@ -99,7 +99,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="packageUrl")
-    private final @Nullable Input<String> packageUrl;
+        private final @Nullable Input<String> packageUrl;
 
     public Input<String> getPackageUrl() {
         return this.packageUrl == null ? Input.empty() : this.packageUrl;
@@ -110,7 +110,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="roleProfile")
-    private final @Nullable Input<CloudServiceRoleProfileArgs> roleProfile;
+        private final @Nullable Input<CloudServiceRoleProfileArgs> roleProfile;
 
     public Input<CloudServiceRoleProfileArgs> getRoleProfile() {
         return this.roleProfile == null ? Input.empty() : this.roleProfile;
@@ -122,7 +122,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="startCloudService")
-    private final @Nullable Input<Boolean> startCloudService;
+        private final @Nullable Input<Boolean> startCloudService;
 
     public Input<Boolean> getStartCloudService() {
         return this.startCloudService == null ? Input.empty() : this.startCloudService;
@@ -135,7 +135,7 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="upgradeMode")
-    private final @Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode;
+        private final @Nullable Input<Either<String,CloudServiceUpgradeMode>> upgradeMode;
 
     public Input<Either<String,CloudServiceUpgradeMode>> getUpgradeMode() {
         return this.upgradeMode == null ? Input.empty() : this.upgradeMode;
@@ -314,7 +314,6 @@ public final class CloudServicePropertiesArgs extends io.pulumi.resources.Resour
             this.upgradeMode = Input.ofNullable(upgradeMode);
             return this;
         }
-
         public CloudServicePropertiesArgs build() {
             return new CloudServicePropertiesArgs(allowModelOverride, configuration, configurationUrl, extensionProfile, networkProfile, osProfile, packageUrl, roleProfile, startCloudService, upgradeMode);
         }

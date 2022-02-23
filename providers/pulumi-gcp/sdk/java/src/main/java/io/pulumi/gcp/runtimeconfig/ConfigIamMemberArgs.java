@@ -4,7 +4,7 @@
 package io.pulumi.gcp.runtimeconfig;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.runtimeconfig.inputs.ConfigIamMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
     public static final ConfigIamMemberArgs Empty = new ConfigIamMemberArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<ConfigIamMemberConditionArgs> condition;
+        private final @Nullable Input<ConfigIamMemberConditionArgs> condition;
 
     public Input<ConfigIamMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="config", required=true)
-    private final Input<String> config;
+        private final Input<String> config;
 
     public Input<String> getConfig() {
         return this.config;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -46,7 +46,7 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -163,7 +163,6 @@ public final class ConfigIamMemberArgs extends io.pulumi.resources.ResourceArgs 
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public ConfigIamMemberArgs build() {
             return new ConfigIamMemberArgs(condition, config, member, project, role);
         }

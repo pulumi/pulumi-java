@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<Integer> instances;
+      private final @Nullable Input<Integer> instances;
 
     public Input<Integer> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -66,7 +66,6 @@ public final class ManualScalingArgs extends io.pulumi.resources.ResourceArgs {
             this.instances = Input.ofNullable(instances);
             return this;
         }
-
         public ManualScalingArgs build() {
             return new ManualScalingArgs(instances);
         }

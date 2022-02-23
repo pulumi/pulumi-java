@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="migrationPath")
-    private final @Nullable String migrationPath;
+        private final @Nullable String migrationPath;
 
     public Optional<String> getMigrationPath() {
         return this.migrationPath == null ? Optional.empty() : Optional.ofNullable(this.migrationPath);
@@ -34,7 +34,7 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="operation")
-    private final @Nullable String operation;
+        private final @Nullable String operation;
 
     public Optional<String> getOperation() {
         return this.operation == null ? Optional.empty() : Optional.ofNullable(this.operation);
@@ -83,7 +83,6 @@ public final class MigrationRequestPropertiesResponse extends io.pulumi.resource
             this.operation = operation;
             return this;
         }
-
         public MigrationRequestPropertiesResponse build() {
             return new MigrationRequestPropertiesResponse(migrationPath, operation);
         }

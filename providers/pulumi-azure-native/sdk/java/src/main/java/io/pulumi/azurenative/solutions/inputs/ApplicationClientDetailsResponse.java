@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+        private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -34,7 +34,7 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="oid")
-    private final @Nullable String oid;
+        private final @Nullable String oid;
 
     public Optional<String> getOid() {
         return this.oid == null ? Optional.empty() : Optional.ofNullable(this.oid);
@@ -45,7 +45,7 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="puid")
-    private final @Nullable String puid;
+        private final @Nullable String puid;
 
     public Optional<String> getPuid() {
         return this.puid == null ? Optional.empty() : Optional.ofNullable(this.puid);
@@ -104,7 +104,6 @@ public final class ApplicationClientDetailsResponse extends io.pulumi.resources.
             this.puid = puid;
             return this;
         }
-
         public ApplicationClientDetailsResponse build() {
             return new ApplicationClientDetailsResponse(applicationId, oid, puid);
         }

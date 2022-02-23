@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultPort")
-    private final @Nullable Input<Integer> defaultPort;
+        private final @Nullable Input<Integer> defaultPort;
 
     public Input<Integer> getDefaultPort() {
         return this.defaultPort == null ? Input.empty() : this.defaultPort;
@@ -33,7 +33,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -50,7 +50,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -62,7 +62,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -75,7 +75,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkEndpointType")
-    private final @Nullable Input<String> networkEndpointType;
+        private final @Nullable Input<String> networkEndpointType;
 
     public Input<String> getNetworkEndpointType() {
         return this.networkEndpointType == null ? Input.empty() : this.networkEndpointType;
@@ -87,7 +87,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -98,7 +98,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetwork")
-    private final @Nullable Input<String> subnetwork;
+        private final @Nullable Input<String> subnetwork;
 
     public Input<String> getSubnetwork() {
         return this.subnetwork == null ? Input.empty() : this.subnetwork;
@@ -109,7 +109,7 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -258,7 +258,6 @@ public final class NetworkEndpointGroupArgs extends io.pulumi.resources.Resource
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public NetworkEndpointGroupArgs build() {
             return new NetworkEndpointGroupArgs(defaultPort, description, name, network, networkEndpointType, project, subnetwork, zone);
         }

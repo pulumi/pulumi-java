@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse extends io.
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -32,7 +32,7 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse extends io.
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -81,7 +81,6 @@ public final class GoogleCloudRetailV2betaConditionTimeRangeResponse extends io.
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionTimeRangeResponse build() {
             return new GoogleCloudRetailV2betaConditionTimeRangeResponse(endTime, startTime);
         }

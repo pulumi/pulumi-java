@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class DicomStoreNotificationConfigGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="pubsubTopic", required=true)
-    private final Input<String> pubsubTopic;
+        private final Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic;
@@ -66,7 +66,6 @@ public final class DicomStoreNotificationConfigGetArgs extends io.pulumi.resourc
             this.pubsubTopic = Input.of(Objects.requireNonNull(pubsubTopic));
             return this;
         }
-
         public DicomStoreNotificationConfigGetArgs build() {
             return new DicomStoreNotificationConfigGetArgs(pubsubTopic);
         }

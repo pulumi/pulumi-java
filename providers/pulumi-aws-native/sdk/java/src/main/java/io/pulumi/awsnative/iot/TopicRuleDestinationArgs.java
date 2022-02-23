@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iot.enums.TopicRuleDestinationStatus;
 import io.pulumi.awsnative.iot.inputs.TopicRuleDestinationHttpUrlDestinationSummaryArgs;
 import io.pulumi.awsnative.iot.inputs.TopicRuleDestinationVpcDestinationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,7 +21,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="httpUrlProperties")
-    private final @Nullable Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
+        private final @Nullable Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> httpUrlProperties;
 
     public Input<TopicRuleDestinationHttpUrlDestinationSummaryArgs> getHttpUrlProperties() {
         return this.httpUrlProperties == null ? Input.empty() : this.httpUrlProperties;
@@ -32,7 +32,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<TopicRuleDestinationStatus> status;
+        private final @Nullable Input<TopicRuleDestinationStatus> status;
 
     public Input<TopicRuleDestinationStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -43,7 +43,7 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="vpcProperties")
-    private final @Nullable Input<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
+        private final @Nullable Input<TopicRuleDestinationVpcDestinationPropertiesArgs> vpcProperties;
 
     public Input<TopicRuleDestinationVpcDestinationPropertiesArgs> getVpcProperties() {
         return this.vpcProperties == null ? Input.empty() : this.vpcProperties;
@@ -117,7 +117,6 @@ public final class TopicRuleDestinationArgs extends io.pulumi.resources.Resource
             this.vpcProperties = Input.ofNullable(vpcProperties);
             return this;
         }
-
         public TopicRuleDestinationArgs build() {
             return new TopicRuleDestinationArgs(httpUrlProperties, status, vpcProperties);
         }

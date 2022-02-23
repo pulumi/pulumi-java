@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.ml_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__AcceleratorConfigArgs;
 import io.pulumi.googlenative.ml_v1.inputs.GoogleCloudMlV1__DiskConfigArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="acceleratorConfig")
-    private final @Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
+      private final @Nullable Input<GoogleCloudMlV1__AcceleratorConfigArgs> acceleratorConfig;
 
     public Input<GoogleCloudMlV1__AcceleratorConfigArgs> getAcceleratorConfig() {
         return this.acceleratorConfig == null ? Input.empty() : this.acceleratorConfig;
@@ -37,7 +37,7 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="containerArgs")
-    private final @Nullable Input<List<String>> containerArgs;
+      private final @Nullable Input<List<String>> containerArgs;
 
     public Input<List<String>> getContainerArgs() {
         return this.containerArgs == null ? Input.empty() : this.containerArgs;
@@ -48,7 +48,7 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="containerCommand")
-    private final @Nullable Input<List<String>> containerCommand;
+      private final @Nullable Input<List<String>> containerCommand;
 
     public Input<List<String>> getContainerCommand() {
         return this.containerCommand == null ? Input.empty() : this.containerCommand;
@@ -59,7 +59,7 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskConfig")
-    private final @Nullable Input<GoogleCloudMlV1__DiskConfigArgs> diskConfig;
+      private final @Nullable Input<GoogleCloudMlV1__DiskConfigArgs> diskConfig;
 
     public Input<GoogleCloudMlV1__DiskConfigArgs> getDiskConfig() {
         return this.diskConfig == null ? Input.empty() : this.diskConfig;
@@ -70,7 +70,7 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -81,7 +81,7 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="tpuTfVersion")
-    private final @Nullable Input<String> tpuTfVersion;
+      private final @Nullable Input<String> tpuTfVersion;
 
     public Input<String> getTpuTfVersion() {
         return this.tpuTfVersion == null ? Input.empty() : this.tpuTfVersion;
@@ -200,7 +200,6 @@ public final class GoogleCloudMlV1__ReplicaConfigArgs extends io.pulumi.resource
             this.tpuTfVersion = Input.ofNullable(tpuTfVersion);
             return this;
         }
-
         public GoogleCloudMlV1__ReplicaConfigArgs build() {
             return new GoogleCloudMlV1__ReplicaConfigArgs(acceleratorConfig, containerArgs, containerCommand, diskConfig, imageUri, tpuTfVersion);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.AKSVariantResponseR
 import io.pulumi.azurenative.machinelearningservices.outputs.IdentityResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SkuResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -231,7 +231,6 @@ public final class GetEndpointVariantResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEndpointVariantResult build() {
             return new GetEndpointVariantResult(id, identity, location, name, properties, sku, systemData, tags, type);
         }

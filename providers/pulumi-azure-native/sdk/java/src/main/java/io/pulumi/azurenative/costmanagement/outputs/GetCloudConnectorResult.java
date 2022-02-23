@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.ConnectorCollectionInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -414,7 +414,6 @@ public final class GetCloudConnectorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCloudConnectorResult build() {
             return new GetCloudConnectorResult(billingModel, collectionInfo, createdOn, credentialsKey, daysTrialRemaining, defaultManagementGroupId, displayName, externalBillingAccountId, id, kind, modifiedOn, name, providerBillingAccountDisplayName, providerBillingAccountId, reportId, status, subscriptionId, type);
         }

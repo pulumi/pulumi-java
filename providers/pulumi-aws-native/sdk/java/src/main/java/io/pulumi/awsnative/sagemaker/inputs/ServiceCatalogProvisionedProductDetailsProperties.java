@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends io.
     public static final ServiceCatalogProvisionedProductDetailsProperties Empty = new ServiceCatalogProvisionedProductDetailsProperties();
 
     @InputImport(name="provisionedProductId")
-    private final @Nullable String provisionedProductId;
+        private final @Nullable String provisionedProductId;
 
     public Optional<String> getProvisionedProductId() {
         return this.provisionedProductId == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductId);
     }
 
     @InputImport(name="provisionedProductStatusMessage")
-    private final @Nullable String provisionedProductStatusMessage;
+        private final @Nullable String provisionedProductStatusMessage;
 
     public Optional<String> getProvisionedProductStatusMessage() {
         return this.provisionedProductStatusMessage == null ? Optional.empty() : Optional.ofNullable(this.provisionedProductStatusMessage);
@@ -75,7 +75,6 @@ public final class ServiceCatalogProvisionedProductDetailsProperties extends io.
             this.provisionedProductStatusMessage = provisionedProductStatusMessage;
             return this;
         }
-
         public ServiceCatalogProvisionedProductDetailsProperties build() {
             return new ServiceCatalogProvisionedProductDetailsProperties(provisionedProductId, provisionedProductStatusMessage);
         }

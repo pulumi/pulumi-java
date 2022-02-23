@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+        private final String apiId;
 
     public String getApiId() {
         return this.apiId;
@@ -28,7 +28,7 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="operationId", required=true)
-    private final String operationId;
+        private final String operationId;
 
     public String getOperationId() {
         return this.operationId;
@@ -39,7 +39,7 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -61,7 +61,7 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="tagId", required=true)
-    private final String tagId;
+        private final String tagId;
 
     public String getTagId() {
         return this.tagId;
@@ -140,7 +140,6 @@ public final class GetTagByOperationArgs extends io.pulumi.resources.InvokeArgs 
             this.tagId = Objects.requireNonNull(tagId);
             return this;
         }
-
         public GetTagByOperationArgs build() {
             return new GetTagByOperationArgs(apiId, operationId, resourceGroupName, serviceName, tagId);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.automation.outputs;
 import io.pulumi.azurenative.automation.outputs.ContentLinkResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookDraftResponse;
 import io.pulumi.azurenative.automation.outputs.RunbookParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -482,7 +482,6 @@ public final class GetRunbookResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRunbookResult build() {
             return new GetRunbookResult(creationTime, description, draft, etag, id, jobCount, lastModifiedBy, lastModifiedTime, location, logActivityTrace, logProgress, logVerbose, name, outputTypes, parameters, provisioningState, publishContentLink, runbookType, state, tags, type);
         }

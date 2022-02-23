@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -285,7 +285,6 @@ public final class GoogleCloudMlV1__PredictionInputResponse {
             this.versionName = Objects.requireNonNull(versionName);
             return this;
         }
-
         public GoogleCloudMlV1__PredictionInputResponse build() {
             return new GoogleCloudMlV1__PredictionInputResponse(batchSize, dataFormat, inputPaths, maxWorkerCount, modelName, outputDataFormat, outputPath, region, runtimeVersion, signatureName, uri, versionName);
         }

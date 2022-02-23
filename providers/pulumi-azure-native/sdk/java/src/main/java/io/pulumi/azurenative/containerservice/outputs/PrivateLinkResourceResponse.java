@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class PrivateLinkResourceResponse {
             this.type = type;
             return this;
         }
-
         public PrivateLinkResourceResponse build() {
             return new PrivateLinkResourceResponse(groupId, id, name, privateLinkServiceID, requiredMembers, type);
         }

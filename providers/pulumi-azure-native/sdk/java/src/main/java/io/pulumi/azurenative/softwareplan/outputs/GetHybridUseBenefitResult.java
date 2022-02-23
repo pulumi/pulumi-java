@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.softwareplan.outputs;
 
 import io.pulumi.azurenative.softwareplan.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -202,7 +202,6 @@ public final class GetHybridUseBenefitResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHybridUseBenefitResult build() {
             return new GetHybridUseBenefitResult(createdDate, etag, id, lastUpdatedDate, name, provisioningState, sku, type);
         }

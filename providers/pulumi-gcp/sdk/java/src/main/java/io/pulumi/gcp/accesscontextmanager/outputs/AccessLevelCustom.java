@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.accesscontextmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.accesscontextmanager.outputs.AccessLevelCustomExpr;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class AccessLevelCustom {
             this.expr = Objects.requireNonNull(expr);
             return this;
         }
-
         public AccessLevelCustom build() {
             return new AccessLevelCustom(expr);
         }

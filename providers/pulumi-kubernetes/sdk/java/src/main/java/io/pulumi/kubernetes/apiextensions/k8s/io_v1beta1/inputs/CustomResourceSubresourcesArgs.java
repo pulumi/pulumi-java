@@ -5,7 +5,7 @@ package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import com.google.gson.JsonElement;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs.CustomResourceSubresourceScaleArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<CustomResourceSubresourceScaleArgs> scale;
+        private final @Nullable Input<CustomResourceSubresourceScaleArgs> scale;
 
     public Input<CustomResourceSubresourceScaleArgs> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -35,7 +35,7 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<JsonElement> status;
+        private final @Nullable Input<JsonElement> status;
 
     public Input<JsonElement> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -94,7 +94,6 @@ public final class CustomResourceSubresourcesArgs extends io.pulumi.resources.Re
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public CustomResourceSubresourcesArgs build() {
             return new CustomResourceSubresourcesArgs(scale, status);
         }

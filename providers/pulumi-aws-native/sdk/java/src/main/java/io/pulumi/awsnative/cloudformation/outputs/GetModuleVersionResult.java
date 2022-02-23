@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.ModuleVersionVisibility;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -212,7 +212,6 @@ public final class GetModuleVersionResult {
             this.visibility = visibility;
             return this;
         }
-
         public GetModuleVersionResult build() {
             return new GetModuleVersionResult(arn, description, documentationUrl, isDefaultVersion, schema, timeCreated, versionId, visibility);
         }

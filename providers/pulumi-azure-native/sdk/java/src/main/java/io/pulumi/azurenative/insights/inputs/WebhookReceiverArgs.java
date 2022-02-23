@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="identifierUri")
-    private final @Nullable Input<String> identifierUri;
+        private final @Nullable Input<String> identifierUri;
 
     public Input<String> getIdentifierUri() {
         return this.identifierUri == null ? Input.empty() : this.identifierUri;
@@ -35,7 +35,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="objectId")
-    private final @Nullable Input<String> objectId;
+        private final @Nullable Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId == null ? Input.empty() : this.objectId;
@@ -57,7 +57,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="serviceUri", required=true)
-    private final Input<String> serviceUri;
+        private final Input<String> serviceUri;
 
     public Input<String> getServiceUri() {
         return this.serviceUri;
@@ -68,7 +68,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -79,7 +79,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useAadAuth")
-    private final @Nullable Input<Boolean> useAadAuth;
+        private final @Nullable Input<Boolean> useAadAuth;
 
     public Input<Boolean> getUseAadAuth() {
         return this.useAadAuth == null ? Input.empty() : this.useAadAuth;
@@ -90,7 +90,7 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Input<Boolean> useCommonAlertSchema;
+        private final @Nullable Input<Boolean> useCommonAlertSchema;
 
     public Input<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Input.empty() : this.useCommonAlertSchema;
@@ -224,7 +224,6 @@ public final class WebhookReceiverArgs extends io.pulumi.resources.ResourceArgs 
             this.useCommonAlertSchema = Input.ofNullable(useCommonAlertSchema);
             return this;
         }
-
         public WebhookReceiverArgs build() {
             return new WebhookReceiverArgs(identifierUri, name, objectId, serviceUri, tenantId, useAadAuth, useCommonAlertSchema);
         }

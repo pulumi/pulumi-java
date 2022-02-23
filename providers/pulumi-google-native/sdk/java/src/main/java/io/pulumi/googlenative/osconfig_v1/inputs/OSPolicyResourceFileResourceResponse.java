@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyResourceFileResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -33,7 +33,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="file", required=true)
-    private final OSPolicyResourceFileResponse file;
+      private final OSPolicyResourceFileResponse file;
 
     public OSPolicyResourceFileResponse getFile() {
         return this.file;
@@ -44,7 +44,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -55,7 +55,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final String permissions;
+      private final String permissions;
 
     public String getPermissions() {
         return this.permissions;
@@ -66,7 +66,7 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -145,7 +145,6 @@ public final class OSPolicyResourceFileResourceResponse extends io.pulumi.resour
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public OSPolicyResourceFileResourceResponse build() {
             return new OSPolicyResourceFileResourceResponse(content, file, path, permissions, state);
         }

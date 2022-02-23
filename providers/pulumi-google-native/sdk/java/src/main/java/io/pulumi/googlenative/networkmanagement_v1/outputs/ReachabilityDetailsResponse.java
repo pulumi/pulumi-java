@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.StatusResponse;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.TraceResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class ReachabilityDetailsResponse {
             this.verifyTime = Objects.requireNonNull(verifyTime);
             return this;
         }
-
         public ReachabilityDetailsResponse build() {
             return new ReachabilityDetailsResponse(error, result, traces, verifyTime);
         }

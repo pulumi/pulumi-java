@@ -7,7 +7,7 @@ import io.pulumi.azurenative.testbase.outputs.PackageValidationResultResponse;
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
 import io.pulumi.azurenative.testbase.outputs.TargetOSInfoResponse;
 import io.pulumi.azurenative.testbase.outputs.TestResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -439,7 +439,6 @@ public final class GetPackageResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetPackageResult build() {
             return new GetPackageResult(applicationName, blobPath, etag, flightingRing, id, isEnabled, lastModifiedTime, location, name, packageStatus, provisioningState, systemData, tags, targetOSList, testTypes, tests, type, validationResults, version);
         }

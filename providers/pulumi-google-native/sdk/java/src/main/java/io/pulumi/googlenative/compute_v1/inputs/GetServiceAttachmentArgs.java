@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetServiceAttachmentArgs extends io.pulumi.resources.InvokeAr
     public static final GetServiceAttachmentArgs Empty = new GetServiceAttachmentArgs();
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
     }
 
     @InputImport(name="serviceAttachment", required=true)
-    private final String serviceAttachment;
+      private final String serviceAttachment;
 
     public String getServiceAttachment() {
         return this.serviceAttachment;
@@ -88,7 +88,6 @@ public final class GetServiceAttachmentArgs extends io.pulumi.resources.InvokeAr
             this.serviceAttachment = Objects.requireNonNull(serviceAttachment);
             return this;
         }
-
         public GetServiceAttachmentArgs build() {
             return new GetServiceAttachmentArgs(project, region, serviceAttachment);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.toolresults_v1beta3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crashed")
-    private final @Nullable Input<Boolean> crashed;
+      private final @Nullable Input<Boolean> crashed;
 
     public Input<Boolean> getCrashed() {
         return this.crashed == null ? Input.empty() : this.crashed;
@@ -34,7 +34,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceOutOfMemory")
-    private final @Nullable Input<Boolean> deviceOutOfMemory;
+      private final @Nullable Input<Boolean> deviceOutOfMemory;
 
     public Input<Boolean> getDeviceOutOfMemory() {
         return this.deviceOutOfMemory == null ? Input.empty() : this.deviceOutOfMemory;
@@ -45,7 +45,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failedRoboscript")
-    private final @Nullable Input<Boolean> failedRoboscript;
+      private final @Nullable Input<Boolean> failedRoboscript;
 
     public Input<Boolean> getFailedRoboscript() {
         return this.failedRoboscript == null ? Input.empty() : this.failedRoboscript;
@@ -56,7 +56,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notInstalled")
-    private final @Nullable Input<Boolean> notInstalled;
+      private final @Nullable Input<Boolean> notInstalled;
 
     public Input<Boolean> getNotInstalled() {
         return this.notInstalled == null ? Input.empty() : this.notInstalled;
@@ -67,7 +67,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="otherNativeCrash")
-    private final @Nullable Input<Boolean> otherNativeCrash;
+      private final @Nullable Input<Boolean> otherNativeCrash;
 
     public Input<Boolean> getOtherNativeCrash() {
         return this.otherNativeCrash == null ? Input.empty() : this.otherNativeCrash;
@@ -78,7 +78,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timedOut")
-    private final @Nullable Input<Boolean> timedOut;
+      private final @Nullable Input<Boolean> timedOut;
 
     public Input<Boolean> getTimedOut() {
         return this.timedOut == null ? Input.empty() : this.timedOut;
@@ -89,7 +89,7 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unableToCrawl")
-    private final @Nullable Input<Boolean> unableToCrawl;
+      private final @Nullable Input<Boolean> unableToCrawl;
 
     public Input<Boolean> getUnableToCrawl() {
         return this.unableToCrawl == null ? Input.empty() : this.unableToCrawl;
@@ -223,7 +223,6 @@ public final class FailureDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.unableToCrawl = Input.ofNullable(unableToCrawl);
             return this;
         }
-
         public FailureDetailArgs build() {
             return new FailureDetailArgs(crashed, deviceOutOfMemory, failedRoboscript, notInstalled, otherNativeCrash, timedOut, unableToCrawl);
         }

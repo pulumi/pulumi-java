@@ -7,7 +7,7 @@ import io.pulumi.azurenative.containerregistry.outputs.ActorResponse;
 import io.pulumi.azurenative.containerregistry.outputs.RequestResponse;
 import io.pulumi.azurenative.containerregistry.outputs.SourceResponse;
 import io.pulumi.azurenative.containerregistry.outputs.TargetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -185,7 +185,6 @@ public final class EventContentResponse {
             this.timestamp = timestamp;
             return this;
         }
-
         public EventContentResponse build() {
             return new EventContentResponse(action, actor, id, request, source, target, timestamp);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.analysisservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayResourceId")
-    private final @Nullable Input<String> gatewayResourceId;
+        private final @Nullable Input<String> gatewayResourceId;
 
     public Input<String> getGatewayResourceId() {
         return this.gatewayResourceId == null ? Input.empty() : this.gatewayResourceId;
@@ -66,7 +66,6 @@ public final class GatewayDetailsArgs extends io.pulumi.resources.ResourceArgs {
             this.gatewayResourceId = Input.ofNullable(gatewayResourceId);
             return this;
         }
-
         public GatewayDetailsArgs build() {
             return new GatewayDetailsArgs(gatewayResourceId);
         }

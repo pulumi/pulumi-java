@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -14,42 +14,42 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
     public static final GetProjectProject Empty = new GetProjectProject();
 
     @InputImport(name="createTime", required=true)
-    private final String createTime;
+        private final String createTime;
 
     public String getCreateTime() {
         return this.createTime;
     }
 
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+        private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
     }
 
     @InputImport(name="lifecycleState", required=true)
-    private final String lifecycleState;
+        private final String lifecycleState;
 
     public String getLifecycleState() {
         return this.lifecycleState;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="number", required=true)
-    private final String number;
+        private final String number;
 
     public String getNumber() {
         return this.number;
     }
 
     @InputImport(name="parent", required=true)
-    private final Map<String,String> parent;
+        private final Map<String,String> parent;
 
     public Map<String,String> getParent() {
         return this.parent;
@@ -60,7 +60,7 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="projectId", required=true)
-    private final String projectId;
+        private final String projectId;
 
     public String getProjectId() {
         return this.projectId;
@@ -159,7 +159,6 @@ public final class GetProjectProject extends io.pulumi.resources.InvokeArgs {
             this.projectId = Objects.requireNonNull(projectId);
             return this;
         }
-
         public GetProjectProject build() {
             return new GetProjectProject(createTime, labels, lifecycleState, name, number, parent, projectId);
         }

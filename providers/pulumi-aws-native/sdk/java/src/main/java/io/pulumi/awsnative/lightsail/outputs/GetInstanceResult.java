@@ -9,7 +9,7 @@ import io.pulumi.awsnative.lightsail.outputs.InstanceLocation;
 import io.pulumi.awsnative.lightsail.outputs.InstanceNetworking;
 import io.pulumi.awsnative.lightsail.outputs.InstanceState;
 import io.pulumi.awsnative.lightsail.outputs.InstanceTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -338,7 +338,6 @@ public final class GetInstanceResult {
             this.userName = userName;
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(addOns, hardware, instanceArn, isStaticIp, keyPairName, location, networking, privateIpAddress, publicIpAddress, resourceType, sshKeyName, state, supportCode, tags, userData, userName);
         }

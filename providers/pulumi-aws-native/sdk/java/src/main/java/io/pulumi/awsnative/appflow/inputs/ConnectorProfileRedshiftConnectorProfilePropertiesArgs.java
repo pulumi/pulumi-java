@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
@@ -30,7 +30,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="bucketPrefix")
-    private final @Nullable Input<String> bucketPrefix;
+        private final @Nullable Input<String> bucketPrefix;
 
     public Input<String> getBucketPrefix() {
         return this.bucketPrefix == null ? Input.empty() : this.bucketPrefix;
@@ -41,7 +41,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="databaseUrl", required=true)
-    private final Input<String> databaseUrl;
+        private final Input<String> databaseUrl;
 
     public Input<String> getDatabaseUrl() {
         return this.databaseUrl;
@@ -52,7 +52,7 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -141,7 +141,6 @@ public final class ConnectorProfileRedshiftConnectorProfilePropertiesArgs extend
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public ConnectorProfileRedshiftConnectorProfilePropertiesArgs build() {
             return new ConnectorProfileRedshiftConnectorProfilePropertiesArgs(bucketName, bucketPrefix, databaseUrl, roleArn);
         }

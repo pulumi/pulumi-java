@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.enums.SecurityPolicyRuleMatcherVersionedExpr;
 import io.pulumi.googlenative.compute_v1.inputs.ExprArgs;
 import io.pulumi.googlenative.compute_v1.inputs.SecurityPolicyRuleMatcherConfigArgs;
@@ -25,7 +25,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<SecurityPolicyRuleMatcherConfigArgs> config;
+      private final @Nullable Input<SecurityPolicyRuleMatcherConfigArgs> config;
 
     public Input<SecurityPolicyRuleMatcherConfigArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -36,7 +36,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="expr")
-    private final @Nullable Input<ExprArgs> expr;
+      private final @Nullable Input<ExprArgs> expr;
 
     public Input<ExprArgs> getExpr() {
         return this.expr == null ? Input.empty() : this.expr;
@@ -47,7 +47,7 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="versionedExpr")
-    private final @Nullable Input<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr;
+      private final @Nullable Input<SecurityPolicyRuleMatcherVersionedExpr> versionedExpr;
 
     public Input<SecurityPolicyRuleMatcherVersionedExpr> getVersionedExpr() {
         return this.versionedExpr == null ? Input.empty() : this.versionedExpr;
@@ -121,7 +121,6 @@ public final class SecurityPolicyRuleMatcherArgs extends io.pulumi.resources.Res
             this.versionedExpr = Input.ofNullable(versionedExpr);
             return this;
         }
-
         public SecurityPolicyRuleMatcherArgs build() {
             return new SecurityPolicyRuleMatcherArgs(config, expr, versionedExpr);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class OAuth2AuthenticationSettingsContractResponse extends io.pulum
      * 
      */
     @InputImport(name="authorizationServerId")
-    private final @Nullable String authorizationServerId;
+        private final @Nullable String authorizationServerId;
 
     public Optional<String> getAuthorizationServerId() {
         return this.authorizationServerId == null ? Optional.empty() : Optional.ofNullable(this.authorizationServerId);
@@ -34,7 +34,7 @@ public final class OAuth2AuthenticationSettingsContractResponse extends io.pulum
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable String scope;
+        private final @Nullable String scope;
 
     public Optional<String> getScope() {
         return this.scope == null ? Optional.empty() : Optional.ofNullable(this.scope);
@@ -83,7 +83,6 @@ public final class OAuth2AuthenticationSettingsContractResponse extends io.pulum
             this.scope = scope;
             return this;
         }
-
         public OAuth2AuthenticationSettingsContractResponse build() {
             return new OAuth2AuthenticationSettingsContractResponse(authorizationServerId, scope);
         }

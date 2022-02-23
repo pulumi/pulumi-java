@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.LoggingComponentConfigResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class LoggingConfigResponse {
             this.componentConfig = Objects.requireNonNull(componentConfig);
             return this;
         }
-
         public LoggingConfigResponse build() {
             return new LoggingConfigResponse(componentConfig);
         }

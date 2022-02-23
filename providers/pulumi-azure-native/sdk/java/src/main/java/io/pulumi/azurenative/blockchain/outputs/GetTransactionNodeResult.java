@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.blockchain.outputs;
 
 import io.pulumi.azurenative.blockchain.outputs.FirewallRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetTransactionNodeResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetTransactionNodeResult build() {
             return new GetTransactionNodeResult(dns, firewallRules, id, location, name, password, provisioningState, publicKey, type, userName);
         }

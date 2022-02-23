@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.UpgradeDistributionResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.VersionResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distributions", required=true)
-    private final List<UpgradeDistributionResponse> distributions;
+      private final List<UpgradeDistributionResponse> distributions;
 
     public List<UpgradeDistributionResponse> getDistributions() {
         return this.distributions;
@@ -35,7 +35,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="package", required=true)
-    private final String $package;
+      private final String $package;
 
     public String get$package() {
         return this.$package;
@@ -46,7 +46,7 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final VersionResponse version;
+      private final VersionResponse version;
 
     public VersionResponse getVersion() {
         return this.version;
@@ -105,7 +105,6 @@ public final class UpgradeNoteResponse extends io.pulumi.resources.InvokeArgs {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public UpgradeNoteResponse build() {
             return new UpgradeNoteResponse(distributions, $package, version);
         }

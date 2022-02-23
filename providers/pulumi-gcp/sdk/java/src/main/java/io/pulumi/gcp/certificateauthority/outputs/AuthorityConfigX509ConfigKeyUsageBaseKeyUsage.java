@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -223,7 +223,6 @@ public final class AuthorityConfigX509ConfigKeyUsageBaseKeyUsage {
             this.keyEncipherment = keyEncipherment;
             return this;
         }
-
         public AuthorityConfigX509ConfigKeyUsageBaseKeyUsage build() {
             return new AuthorityConfigX509ConfigKeyUsageBaseKeyUsage(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

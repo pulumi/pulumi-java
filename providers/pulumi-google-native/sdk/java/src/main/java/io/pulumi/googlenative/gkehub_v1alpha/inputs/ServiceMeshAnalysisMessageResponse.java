@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha.inputs.ServiceMeshAnalysisMessageBaseResponse;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="args", required=true)
-    private final Map<String,String> args;
+      private final Map<String,String> args;
 
     public Map<String,String> getArgs() {
         return this.args;
@@ -35,7 +35,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+      private final String description;
 
     public String getDescription() {
         return this.description;
@@ -46,7 +46,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="messageBase", required=true)
-    private final ServiceMeshAnalysisMessageBaseResponse messageBase;
+      private final ServiceMeshAnalysisMessageBaseResponse messageBase;
 
     public ServiceMeshAnalysisMessageBaseResponse getMessageBase() {
         return this.messageBase;
@@ -57,7 +57,7 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourcePaths", required=true)
-    private final List<String> resourcePaths;
+      private final List<String> resourcePaths;
 
     public List<String> getResourcePaths() {
         return this.resourcePaths;
@@ -126,7 +126,6 @@ public final class ServiceMeshAnalysisMessageResponse extends io.pulumi.resource
             this.resourcePaths = Objects.requireNonNull(resourcePaths);
             return this;
         }
-
         public ServiceMeshAnalysisMessageResponse build() {
             return new ServiceMeshAnalysisMessageResponse(args, description, messageBase, resourcePaths);
         }

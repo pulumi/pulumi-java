@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotcoredeviceadvisor.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
     public static final SuiteDefinitionDeviceUnderTestArgs Empty = new SuiteDefinitionDeviceUnderTestArgs();
 
     @InputImport(name="certificateArn")
-    private final @Nullable Input<String> certificateArn;
+        private final @Nullable Input<String> certificateArn;
 
     public Input<String> getCertificateArn() {
         return this.certificateArn == null ? Input.empty() : this.certificateArn;
     }
 
     @InputImport(name="thingArn")
-    private final @Nullable Input<String> thingArn;
+        private final @Nullable Input<String> thingArn;
 
     public Input<String> getThingArn() {
         return this.thingArn == null ? Input.empty() : this.thingArn;
@@ -81,7 +81,6 @@ public final class SuiteDefinitionDeviceUnderTestArgs extends io.pulumi.resource
             this.thingArn = Input.ofNullable(thingArn);
             return this;
         }
-
         public SuiteDefinitionDeviceUnderTestArgs build() {
             return new SuiteDefinitionDeviceUnderTestArgs(certificateArn, thingArn);
         }

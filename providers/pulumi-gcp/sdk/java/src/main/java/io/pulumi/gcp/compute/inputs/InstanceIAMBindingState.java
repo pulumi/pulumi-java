@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceIAMBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<InstanceIAMBindingConditionGetArgs> condition;
+        private final @Nullable Input<InstanceIAMBindingConditionGetArgs> condition;
 
     public Input<InstanceIAMBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -33,7 +33,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -44,14 +44,14 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="instanceName")
-    private final @Nullable Input<String> instanceName;
+        private final @Nullable Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName == null ? Input.empty() : this.instanceName;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -63,7 +63,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -76,7 +76,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -89,7 +89,7 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -223,7 +223,6 @@ public final class InstanceIAMBindingState extends io.pulumi.resources.ResourceA
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceIAMBindingState build() {
             return new InstanceIAMBindingState(condition, etag, instanceName, members, project, role, zone);
         }

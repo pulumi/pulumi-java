@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.offazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class SiteSpnPropertiesResponse {
             this.tenantId = tenantId;
             return this;
         }
-
         public SiteSpnPropertiesResponse build() {
             return new SiteSpnPropertiesResponse(aadAuthority, applicationId, audience, objectId, rawCertData, tenantId);
         }

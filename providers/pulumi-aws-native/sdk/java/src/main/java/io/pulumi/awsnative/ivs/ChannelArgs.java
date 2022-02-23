@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.inputs.ChannelTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorized")
-    private final @Nullable Input<Boolean> authorized;
+        private final @Nullable Input<Boolean> authorized;
 
     public Input<Boolean> getAuthorized() {
         return this.authorized == null ? Input.empty() : this.authorized;
@@ -35,7 +35,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="latencyMode")
-    private final @Nullable Input<ChannelLatencyMode> latencyMode;
+        private final @Nullable Input<ChannelLatencyMode> latencyMode;
 
     public Input<ChannelLatencyMode> getLatencyMode() {
         return this.latencyMode == null ? Input.empty() : this.latencyMode;
@@ -46,7 +46,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordingConfigurationArn")
-    private final @Nullable Input<String> recordingConfigurationArn;
+        private final @Nullable Input<String> recordingConfigurationArn;
 
     public Input<String> getRecordingConfigurationArn() {
         return this.recordingConfigurationArn == null ? Input.empty() : this.recordingConfigurationArn;
@@ -68,7 +68,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ChannelTagArgs>> tags;
+        private final @Nullable Input<List<ChannelTagArgs>> tags;
 
     public Input<List<ChannelTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -79,7 +79,7 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ChannelType> type;
+        private final @Nullable Input<ChannelType> type;
 
     public Input<ChannelType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -198,7 +198,6 @@ public final class ChannelArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ChannelArgs build() {
             return new ChannelArgs(authorized, latencyMode, name, recordingConfigurationArn, tags, type);
         }

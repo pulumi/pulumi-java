@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.speech_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class PhraseResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PhraseResponse build() {
             return new PhraseResponse(boost, value);
         }

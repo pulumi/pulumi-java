@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.GalleryArtifactVersionSourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="hostCaching")
-    private final @Nullable String hostCaching;
+        private final @Nullable String hostCaching;
 
     public Optional<String> getHostCaching() {
         return this.hostCaching == null ? Optional.empty() : Optional.ofNullable(this.hostCaching);
@@ -36,7 +36,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="lun", required=true)
-    private final Integer lun;
+        private final Integer lun;
 
     public Integer getLun() {
         return this.lun;
@@ -47,7 +47,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sizeInGB", required=true)
-    private final Integer sizeInGB;
+        private final Integer sizeInGB;
 
     public Integer getSizeInGB() {
         return this.sizeInGB;
@@ -58,7 +58,7 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="source")
-    private final @Nullable GalleryArtifactVersionSourceResponse source;
+        private final @Nullable GalleryArtifactVersionSourceResponse source;
 
     public Optional<GalleryArtifactVersionSourceResponse> getSource() {
         return this.source == null ? Optional.empty() : Optional.ofNullable(this.source);
@@ -127,7 +127,6 @@ public final class GalleryDataDiskImageResponse extends io.pulumi.resources.Invo
             this.source = source;
             return this;
         }
-
         public GalleryDataDiskImageResponse build() {
             return new GalleryDataDiskImageResponse(hostCaching, lun, sizeInGB, source);
         }

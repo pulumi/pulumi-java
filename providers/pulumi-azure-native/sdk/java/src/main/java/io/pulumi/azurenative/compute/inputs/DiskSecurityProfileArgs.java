@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.enums.DiskSecurityTypes;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="securityType")
-    private final @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
+        private final @Nullable Input<Either<String,DiskSecurityTypes>> securityType;
 
     public Input<Either<String,DiskSecurityTypes>> getSecurityType() {
         return this.securityType == null ? Input.empty() : this.securityType;
@@ -68,7 +68,6 @@ public final class DiskSecurityProfileArgs extends io.pulumi.resources.ResourceA
             this.securityType = Input.ofNullable(securityType);
             return this;
         }
-
         public DiskSecurityProfileArgs build() {
             return new DiskSecurityProfileArgs(securityType);
         }

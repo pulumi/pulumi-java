@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="compositeModelProperties")
-    private final @Nullable Input<List<AssetModelPropertyArgs>> compositeModelProperties;
+        private final @Nullable Input<List<AssetModelPropertyArgs>> compositeModelProperties;
 
     public Input<List<AssetModelPropertyArgs>> getCompositeModelProperties() {
         return this.compositeModelProperties == null ? Input.empty() : this.compositeModelProperties;
@@ -36,7 +36,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -147,7 +147,6 @@ public final class AssetModelCompositeModelArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AssetModelCompositeModelArgs build() {
             return new AssetModelCompositeModelArgs(compositeModelProperties, description, name, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="humanReadableName")
-    private final @Nullable Input<String> humanReadableName;
+      private final @Nullable Input<String> humanReadableName;
 
     public Input<String> getHumanReadableName() {
         return this.humanReadableName == null ? Input.empty() : this.humanReadableName;
@@ -66,7 +66,6 @@ public final class AttestationAuthorityHintArgs extends io.pulumi.resources.Reso
             this.humanReadableName = Input.ofNullable(humanReadableName);
             return this;
         }
-
         public AttestationAuthorityHintArgs build() {
             return new AttestationAuthorityHintArgs(humanReadableName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.organizations.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.organizations.outputs.PolicyListPolicyAllow;
 import io.pulumi.gcp.organizations.outputs.PolicyListPolicyDeny;
 import java.lang.Boolean;
@@ -115,7 +115,6 @@ public final class PolicyListPolicy {
             this.suggestedValue = suggestedValue;
             return this;
         }
-
         public PolicyListPolicy build() {
             return new PolicyListPolicy(allow, deny, inheritFromParent, suggestedValue);
         }

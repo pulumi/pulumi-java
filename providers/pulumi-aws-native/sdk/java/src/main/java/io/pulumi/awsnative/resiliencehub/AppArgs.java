@@ -6,7 +6,7 @@ package io.pulumi.awsnative.resiliencehub;
 import io.pulumi.awsnative.resiliencehub.inputs.AppResourceMappingArgs;
 import io.pulumi.awsnative.resiliencehub.inputs.AppTagMapArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appTemplateBody", required=true)
-    private final Input<String> appTemplateBody;
+        private final Input<String> appTemplateBody;
 
     public Input<String> getAppTemplateBody() {
         return this.appTemplateBody;
@@ -33,7 +33,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -44,7 +44,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resiliencyPolicyArn")
-    private final @Nullable Input<String> resiliencyPolicyArn;
+        private final @Nullable Input<String> resiliencyPolicyArn;
 
     public Input<String> getResiliencyPolicyArn() {
         return this.resiliencyPolicyArn == null ? Input.empty() : this.resiliencyPolicyArn;
@@ -66,14 +66,14 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceMappings", required=true)
-    private final Input<List<AppResourceMappingArgs>> resourceMappings;
+        private final Input<List<AppResourceMappingArgs>> resourceMappings;
 
     public Input<List<AppResourceMappingArgs>> getResourceMappings() {
         return this.resourceMappings;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<AppTagMapArgs> tags;
+        private final @Nullable Input<AppTagMapArgs> tags;
 
     public Input<AppTagMapArgs> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -192,7 +192,6 @@ public final class AppArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public AppArgs build() {
             return new AppArgs(appTemplateBody, description, name, resiliencyPolicyArn, resourceMappings, tags);
         }

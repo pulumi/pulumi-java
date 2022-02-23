@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.securityinsights.inputs;
 
 import io.pulumi.azurenative.securityinsights.inputs.GetInsightsErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="errors")
-    private final @Nullable List<GetInsightsErrorResponse> errors;
+        private final @Nullable List<GetInsightsErrorResponse> errors;
 
     public List<GetInsightsErrorResponse> getErrors() {
         return this.errors == null ? List.of() : this.errors;
@@ -36,7 +36,7 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="totalCount", required=true)
-    private final Integer totalCount;
+        private final Integer totalCount;
 
     public Integer getTotalCount() {
         return this.totalCount;
@@ -85,7 +85,6 @@ public final class GetInsightsResultsMetadataResponse extends io.pulumi.resource
             this.totalCount = Objects.requireNonNull(totalCount);
             return this;
         }
-
         public GetInsightsResultsMetadataResponse build() {
             return new GetInsightsResultsMetadataResponse(errors, totalCount);
         }

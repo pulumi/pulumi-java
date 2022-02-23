@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeDataFlowPropertiesResponse;
 import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeVNetPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="dataFlowProperties")
-    private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
+        private final @Nullable IntegrationRuntimeDataFlowPropertiesResponse dataFlowProperties;
 
     public Optional<IntegrationRuntimeDataFlowPropertiesResponse> getDataFlowProperties() {
         return this.dataFlowProperties == null ? Optional.empty() : Optional.ofNullable(this.dataFlowProperties);
@@ -37,7 +37,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="maxParallelExecutionsPerNode")
-    private final @Nullable Integer maxParallelExecutionsPerNode;
+        private final @Nullable Integer maxParallelExecutionsPerNode;
 
     public Optional<Integer> getMaxParallelExecutionsPerNode() {
         return this.maxParallelExecutionsPerNode == null ? Optional.empty() : Optional.ofNullable(this.maxParallelExecutionsPerNode);
@@ -59,7 +59,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="nodeSize")
-    private final @Nullable String nodeSize;
+        private final @Nullable String nodeSize;
 
     public Optional<String> getNodeSize() {
         return this.nodeSize == null ? Optional.empty() : Optional.ofNullable(this.nodeSize);
@@ -70,7 +70,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="numberOfNodes")
-    private final @Nullable Integer numberOfNodes;
+        private final @Nullable Integer numberOfNodes;
 
     public Optional<Integer> getNumberOfNodes() {
         return this.numberOfNodes == null ? Optional.empty() : Optional.ofNullable(this.numberOfNodes);
@@ -81,7 +81,7 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="vNetProperties")
-    private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
+        private final @Nullable IntegrationRuntimeVNetPropertiesResponse vNetProperties;
 
     public Optional<IntegrationRuntimeVNetPropertiesResponse> getVNetProperties() {
         return this.vNetProperties == null ? Optional.empty() : Optional.ofNullable(this.vNetProperties);
@@ -170,7 +170,6 @@ public final class IntegrationRuntimeComputePropertiesResponse extends io.pulumi
             this.vNetProperties = vNetProperties;
             return this;
         }
-
         public IntegrationRuntimeComputePropertiesResponse build() {
             return new IntegrationRuntimeComputePropertiesResponse(dataFlowProperties, location, maxParallelExecutionsPerNode, nodeSize, numberOfNodes, vNetProperties);
         }

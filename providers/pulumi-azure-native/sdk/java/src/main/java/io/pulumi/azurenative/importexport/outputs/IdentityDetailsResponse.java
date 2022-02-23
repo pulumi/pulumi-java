@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.importexport.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class IdentityDetailsResponse {
             this.type = type;
             return this;
         }
-
         public IdentityDetailsResponse build() {
             return new IdentityDetailsResponse(principalId, tenantId, type);
         }

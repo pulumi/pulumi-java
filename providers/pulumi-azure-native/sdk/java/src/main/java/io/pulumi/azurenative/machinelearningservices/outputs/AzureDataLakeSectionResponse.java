@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -308,7 +308,6 @@ public final class AzureDataLakeSectionResponse {
             this.thumbprint = thumbprint;
             return this;
         }
-
         public AzureDataLakeSectionResponse build() {
             return new AzureDataLakeSectionResponse(authorityUrl, certificate, clientId, clientSecret, credentialType, isCertAuth, resourceGroup, resourceUri, serviceDataAccessAuthIdentity, storeName, subscriptionId, tenantId, thumbprint);
         }

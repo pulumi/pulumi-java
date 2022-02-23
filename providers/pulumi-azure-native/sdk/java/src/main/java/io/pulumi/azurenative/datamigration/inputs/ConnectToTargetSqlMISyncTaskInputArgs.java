@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 import io.pulumi.azurenative.datamigration.inputs.AzureActiveDirectoryAppArgs;
 import io.pulumi.azurenative.datamigration.inputs.MiSqlConnectionInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -23,7 +23,7 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="azureApp", required=true)
-    private final Input<AzureActiveDirectoryAppArgs> azureApp;
+        private final Input<AzureActiveDirectoryAppArgs> azureApp;
 
     public Input<AzureActiveDirectoryAppArgs> getAzureApp() {
         return this.azureApp;
@@ -34,7 +34,7 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetConnectionInfo", required=true)
-    private final Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
+        private final Input<MiSqlConnectionInfoArgs> targetConnectionInfo;
 
     public Input<MiSqlConnectionInfoArgs> getTargetConnectionInfo() {
         return this.targetConnectionInfo;
@@ -93,7 +93,6 @@ public final class ConnectToTargetSqlMISyncTaskInputArgs extends io.pulumi.resou
             this.targetConnectionInfo = Input.of(Objects.requireNonNull(targetConnectionInfo));
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskInputArgs build() {
             return new ConnectToTargetSqlMISyncTaskInputArgs(azureApp, targetConnectionInfo);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.VersionSourceResponse;
 import java.lang.String;
 import java.util.List;
@@ -77,7 +77,6 @@ public final class Hl7SchemaConfigResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public Hl7SchemaConfigResponse build() {
             return new Hl7SchemaConfigResponse(messageSchemaConfigs, version);
         }

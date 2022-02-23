@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -88,7 +88,6 @@ public final class GetLocationsResult {
             this.project = Objects.requireNonNull(project);
             return this;
         }
-
         public GetLocationsResult build() {
             return new GetLocationsResult(id, locations, project);
         }

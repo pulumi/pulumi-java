@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceArn", required=true)
-    private final String resourceArn;
+        private final String resourceArn;
 
     public String getResourceArn() {
         return this.resourceArn;
@@ -55,7 +55,6 @@ public final class GetLoggingConfigurationArgs extends io.pulumi.resources.Invok
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public GetLoggingConfigurationArgs build() {
             return new GetLoggingConfigurationArgs(resourceArn);
         }

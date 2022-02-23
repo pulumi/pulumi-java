@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetSubnetworkSecondaryIpRange;
 import java.lang.Boolean;
 import java.lang.String;
@@ -246,7 +246,6 @@ public final class GetSubnetworkResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetSubnetworkResult build() {
             return new GetSubnetworkResult(description, gatewayAddress, id, ipCidrRange, name, network, privateIpGoogleAccess, project, region, secondaryIpRanges, selfLink);
         }

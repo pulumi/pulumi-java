@@ -6,7 +6,7 @@ package io.pulumi.azurenative.costmanagement.outputs;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDefinitionResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportDeliveryInfoResponse;
 import io.pulumi.azurenative.costmanagement.outputs.ReportScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -206,7 +206,6 @@ public final class GetReportResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetReportResult build() {
             return new GetReportResult(definition, deliveryInfo, format, id, name, schedule, tags, type);
         }

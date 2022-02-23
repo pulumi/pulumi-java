@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.notebooks_v1.inputs.ContainerImageResponse;
 import io.pulumi.googlenative.notebooks_v1.inputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.inputs.LocalDiskResponse;
@@ -29,7 +29,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="acceleratorConfig", required=true)
-    private final RuntimeAcceleratorConfigResponse acceleratorConfig;
+      private final RuntimeAcceleratorConfigResponse acceleratorConfig;
 
     public RuntimeAcceleratorConfigResponse getAcceleratorConfig() {
         return this.acceleratorConfig;
@@ -40,7 +40,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="containerImages", required=true)
-    private final List<ContainerImageResponse> containerImages;
+      private final List<ContainerImageResponse> containerImages;
 
     public List<ContainerImageResponse> getContainerImages() {
         return this.containerImages;
@@ -51,7 +51,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dataDisk", required=true)
-    private final LocalDiskResponse dataDisk;
+      private final LocalDiskResponse dataDisk;
 
     public LocalDiskResponse getDataDisk() {
         return this.dataDisk;
@@ -62,7 +62,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="encryptionConfig", required=true)
-    private final EncryptionConfigResponse encryptionConfig;
+      private final EncryptionConfigResponse encryptionConfig;
 
     public EncryptionConfigResponse getEncryptionConfig() {
         return this.encryptionConfig;
@@ -73,7 +73,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="guestAttributes", required=true)
-    private final Map<String,String> guestAttributes;
+      private final Map<String,String> guestAttributes;
 
     public Map<String,String> getGuestAttributes() {
         return this.guestAttributes;
@@ -84,7 +84,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="internalIpOnly", required=true)
-    private final Boolean internalIpOnly;
+      private final Boolean internalIpOnly;
 
     public Boolean getInternalIpOnly() {
         return this.internalIpOnly;
@@ -95,7 +95,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -106,7 +106,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -117,7 +117,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Map<String,String> metadata;
+      private final Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata;
@@ -128,7 +128,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -139,7 +139,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="nicType", required=true)
-    private final String nicType;
+      private final String nicType;
 
     public String getNicType() {
         return this.nicType;
@@ -150,7 +150,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="shieldedInstanceConfig", required=true)
-    private final RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
+      private final RuntimeShieldedInstanceConfigResponse shieldedInstanceConfig;
 
     public RuntimeShieldedInstanceConfigResponse getShieldedInstanceConfig() {
         return this.shieldedInstanceConfig;
@@ -161,7 +161,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnet", required=true)
-    private final String subnet;
+      private final String subnet;
 
     public String getSubnet() {
         return this.subnet;
@@ -172,7 +172,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="tags", required=true)
-    private final List<String> tags;
+      private final List<String> tags;
 
     public List<String> getTags() {
         return this.tags;
@@ -183,7 +183,7 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+      private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -362,7 +362,6 @@ public final class VirtualMachineConfigResponse extends io.pulumi.resources.Invo
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public VirtualMachineConfigResponse build() {
             return new VirtualMachineConfigResponse(acceleratorConfig, containerImages, dataDisk, encryptionConfig, guestAttributes, internalIpOnly, labels, machineType, metadata, network, nicType, shieldedInstanceConfig, subnet, tags, zone);
         }

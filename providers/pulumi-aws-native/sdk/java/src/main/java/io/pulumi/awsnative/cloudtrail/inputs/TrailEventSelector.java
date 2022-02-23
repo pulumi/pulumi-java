@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudtrail.inputs;
 
 import io.pulumi.awsnative.cloudtrail.enums.TrailEventSelectorReadWriteType;
 import io.pulumi.awsnative.cloudtrail.inputs.TrailDataResource;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
     public static final TrailEventSelector Empty = new TrailEventSelector();
 
     @InputImport(name="dataResources")
-    private final @Nullable List<TrailDataResource> dataResources;
+        private final @Nullable List<TrailDataResource> dataResources;
 
     public List<TrailDataResource> getDataResources() {
         return this.dataResources == null ? List.of() : this.dataResources;
@@ -34,7 +34,7 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="excludeManagementEventSources")
-    private final @Nullable List<String> excludeManagementEventSources;
+        private final @Nullable List<String> excludeManagementEventSources;
 
     public List<String> getExcludeManagementEventSources() {
         return this.excludeManagementEventSources == null ? List.of() : this.excludeManagementEventSources;
@@ -45,7 +45,7 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="includeManagementEvents")
-    private final @Nullable Boolean includeManagementEvents;
+        private final @Nullable Boolean includeManagementEvents;
 
     public Optional<Boolean> getIncludeManagementEvents() {
         return this.includeManagementEvents == null ? Optional.empty() : Optional.ofNullable(this.includeManagementEvents);
@@ -56,7 +56,7 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="readWriteType")
-    private final @Nullable TrailEventSelectorReadWriteType readWriteType;
+        private final @Nullable TrailEventSelectorReadWriteType readWriteType;
 
     public Optional<TrailEventSelectorReadWriteType> getReadWriteType() {
         return this.readWriteType == null ? Optional.empty() : Optional.ofNullable(this.readWriteType);
@@ -125,7 +125,6 @@ public final class TrailEventSelector extends io.pulumi.resources.InvokeArgs {
             this.readWriteType = readWriteType;
             return this;
         }
-
         public TrailEventSelector build() {
             return new TrailEventSelector(dataResources, excludeManagementEventSources, includeManagementEvents, readWriteType);
         }

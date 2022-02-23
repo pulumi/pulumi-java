@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsub_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsub_v1beta2.outputs.PushConfigResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class GetSubscriptionResult {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(ackDeadlineSeconds, name, pushConfig, topic);
         }

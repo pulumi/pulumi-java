@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="gatingControls", required=true)
-    private final Input<List<String>> gatingControls;
+        private final Input<List<String>> gatingControls;
 
     public Input<List<String>> getGatingControls() {
         return this.gatingControls;
@@ -36,7 +36,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="targetControls", required=true)
-    private final Input<List<String>> targetControls;
+        private final Input<List<String>> targetControls;
 
     public Input<List<String>> getTargetControls() {
         return this.targetControls;
@@ -47,7 +47,7 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="waitPeriodMs", required=true)
-    private final Input<Integer> waitPeriodMs;
+        private final Input<Integer> waitPeriodMs;
 
     public Input<Integer> getWaitPeriodMs() {
         return this.waitPeriodMs;
@@ -121,7 +121,6 @@ public final class SafetyRuleGatingRuleArgs extends io.pulumi.resources.Resource
             this.waitPeriodMs = Input.of(Objects.requireNonNull(waitPeriodMs));
             return this;
         }
-
         public SafetyRuleGatingRuleArgs build() {
             return new SafetyRuleGatingRuleArgs(gatingControls, targetControls, waitPeriodMs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
      * 
      */
     @InputImport(name="displayText", required=true)
-    private final String displayText;
+      private final String displayText;
 
     public String getDisplayText() {
         return this.displayText;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
      * 
      */
     @InputImport(name="ssml", required=true)
-    private final String ssml;
+      private final String ssml;
 
     public String getSsml() {
         return this.ssml;
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
      * 
      */
     @InputImport(name="textToSpeech", required=true)
-    private final String textToSpeech;
+      private final String textToSpeech;
 
     public String getTextToSpeech() {
         return this.textToSpeech;
@@ -102,7 +102,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseRespon
             this.textToSpeech = Objects.requireNonNull(textToSpeech);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageSimpleResponseResponse(displayText, ssml, textToSpeech);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -160,7 +160,6 @@ public final class GetEventSourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventSourceResult build() {
             return new GetEventSourceResult(id, kind, location, name, tags, type);
         }

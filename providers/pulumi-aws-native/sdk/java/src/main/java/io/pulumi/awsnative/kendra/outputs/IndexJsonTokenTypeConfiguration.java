@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.kendra.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class IndexJsonTokenTypeConfiguration {
             this.userNameAttributeField = Objects.requireNonNull(userNameAttributeField);
             return this;
         }
-
         public IndexJsonTokenTypeConfiguration build() {
             return new IndexJsonTokenTypeConfiguration(groupAttributeField, userNameAttributeField);
         }

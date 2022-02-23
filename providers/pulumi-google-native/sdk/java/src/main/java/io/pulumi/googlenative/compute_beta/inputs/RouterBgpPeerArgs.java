@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.RouterBgpPeerAdvertiseMode;
 import io.pulumi.googlenative.compute_beta.enums.RouterBgpPeerAdvertisedGroupsItem;
 import io.pulumi.googlenative.compute_beta.enums.RouterBgpPeerEnable;
@@ -27,7 +27,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertiseMode")
-    private final @Nullable Input<RouterBgpPeerAdvertiseMode> advertiseMode;
+      private final @Nullable Input<RouterBgpPeerAdvertiseMode> advertiseMode;
 
     public Input<RouterBgpPeerAdvertiseMode> getAdvertiseMode() {
         return this.advertiseMode == null ? Input.empty() : this.advertiseMode;
@@ -38,7 +38,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedGroups")
-    private final @Nullable Input<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
+      private final @Nullable Input<List<RouterBgpPeerAdvertisedGroupsItem>> advertisedGroups;
 
     public Input<List<RouterBgpPeerAdvertisedGroupsItem>> getAdvertisedGroups() {
         return this.advertisedGroups == null ? Input.empty() : this.advertisedGroups;
@@ -49,7 +49,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedIpRanges")
-    private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
+      private final @Nullable Input<List<RouterAdvertisedIpRangeArgs>> advertisedIpRanges;
 
     public Input<List<RouterAdvertisedIpRangeArgs>> getAdvertisedIpRanges() {
         return this.advertisedIpRanges == null ? Input.empty() : this.advertisedIpRanges;
@@ -60,7 +60,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="advertisedRoutePriority")
-    private final @Nullable Input<Integer> advertisedRoutePriority;
+      private final @Nullable Input<Integer> advertisedRoutePriority;
 
     public Input<Integer> getAdvertisedRoutePriority() {
         return this.advertisedRoutePriority == null ? Input.empty() : this.advertisedRoutePriority;
@@ -71,7 +71,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bfd")
-    private final @Nullable Input<RouterBgpPeerBfdArgs> bfd;
+      private final @Nullable Input<RouterBgpPeerBfdArgs> bfd;
 
     public Input<RouterBgpPeerBfdArgs> getBfd() {
         return this.bfd == null ? Input.empty() : this.bfd;
@@ -82,7 +82,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<RouterBgpPeerEnable> enable;
+      private final @Nullable Input<RouterBgpPeerEnable> enable;
 
     public Input<RouterBgpPeerEnable> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -93,7 +93,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableIpv6")
-    private final @Nullable Input<Boolean> enableIpv6;
+      private final @Nullable Input<Boolean> enableIpv6;
 
     public Input<Boolean> getEnableIpv6() {
         return this.enableIpv6 == null ? Input.empty() : this.enableIpv6;
@@ -104,7 +104,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="interfaceName")
-    private final @Nullable Input<String> interfaceName;
+      private final @Nullable Input<String> interfaceName;
 
     public Input<String> getInterfaceName() {
         return this.interfaceName == null ? Input.empty() : this.interfaceName;
@@ -115,7 +115,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable Input<String> ipAddress;
+      private final @Nullable Input<String> ipAddress;
 
     public Input<String> getIpAddress() {
         return this.ipAddress == null ? Input.empty() : this.ipAddress;
@@ -126,7 +126,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipv6NexthopAddress")
-    private final @Nullable Input<String> ipv6NexthopAddress;
+      private final @Nullable Input<String> ipv6NexthopAddress;
 
     public Input<String> getIpv6NexthopAddress() {
         return this.ipv6NexthopAddress == null ? Input.empty() : this.ipv6NexthopAddress;
@@ -137,7 +137,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -148,7 +148,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerAsn")
-    private final @Nullable Input<Integer> peerAsn;
+      private final @Nullable Input<Integer> peerAsn;
 
     public Input<Integer> getPeerAsn() {
         return this.peerAsn == null ? Input.empty() : this.peerAsn;
@@ -159,7 +159,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIpAddress")
-    private final @Nullable Input<String> peerIpAddress;
+      private final @Nullable Input<String> peerIpAddress;
 
     public Input<String> getPeerIpAddress() {
         return this.peerIpAddress == null ? Input.empty() : this.peerIpAddress;
@@ -170,7 +170,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIpv6NexthopAddress")
-    private final @Nullable Input<String> peerIpv6NexthopAddress;
+      private final @Nullable Input<String> peerIpv6NexthopAddress;
 
     public Input<String> getPeerIpv6NexthopAddress() {
         return this.peerIpv6NexthopAddress == null ? Input.empty() : this.peerIpv6NexthopAddress;
@@ -181,7 +181,7 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routerApplianceInstance")
-    private final @Nullable Input<String> routerApplianceInstance;
+      private final @Nullable Input<String> routerApplianceInstance;
 
     public Input<String> getRouterApplianceInstance() {
         return this.routerApplianceInstance == null ? Input.empty() : this.routerApplianceInstance;
@@ -435,7 +435,6 @@ public final class RouterBgpPeerArgs extends io.pulumi.resources.ResourceArgs {
             this.routerApplianceInstance = Input.ofNullable(routerApplianceInstance);
             return this;
         }
-
         public RouterBgpPeerArgs build() {
             return new RouterBgpPeerArgs(advertiseMode, advertisedGroups, advertisedIpRanges, advertisedRoutePriority, bfd, enable, enableIpv6, interfaceName, ipAddress, ipv6NexthopAddress, name, peerAsn, peerIpAddress, peerIpv6NexthopAddress, routerApplianceInstance);
         }

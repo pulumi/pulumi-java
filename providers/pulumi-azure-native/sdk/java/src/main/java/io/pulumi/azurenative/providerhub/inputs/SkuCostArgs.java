@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
     public static final SkuCostArgs Empty = new SkuCostArgs();
 
     @InputImport(name="extendedUnit")
-    private final @Nullable Input<String> extendedUnit;
+        private final @Nullable Input<String> extendedUnit;
 
     public Input<String> getExtendedUnit() {
         return this.extendedUnit == null ? Input.empty() : this.extendedUnit;
     }
 
     @InputImport(name="meterId", required=true)
-    private final Input<String> meterId;
+        private final Input<String> meterId;
 
     public Input<String> getMeterId() {
         return this.meterId;
     }
 
     @InputImport(name="quantity")
-    private final @Nullable Input<Integer> quantity;
+        private final @Nullable Input<Integer> quantity;
 
     public Input<Integer> getQuantity() {
         return this.quantity == null ? Input.empty() : this.quantity;
@@ -104,7 +104,6 @@ public final class SkuCostArgs extends io.pulumi.resources.ResourceArgs {
             this.quantity = Input.ofNullable(quantity);
             return this;
         }
-
         public SkuCostArgs build() {
             return new SkuCostArgs(extendedUnit, meterId, quantity);
         }

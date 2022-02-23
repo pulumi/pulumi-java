@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.DataCenterResourceResponseProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -117,7 +117,6 @@ public final class GetCassandraDataCenterResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetCassandraDataCenterResult build() {
             return new GetCassandraDataCenterResult(id, name, properties, type);
         }

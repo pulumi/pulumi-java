@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class RetryConfigResponse {
             this.unlimitedAttempts = Objects.requireNonNull(unlimitedAttempts);
             return this;
         }
-
         public RetryConfigResponse build() {
             return new RetryConfigResponse(maxAttempts, maxBackoff, maxDoublings, maxRetryDuration, minBackoff, unlimitedAttempts);
         }

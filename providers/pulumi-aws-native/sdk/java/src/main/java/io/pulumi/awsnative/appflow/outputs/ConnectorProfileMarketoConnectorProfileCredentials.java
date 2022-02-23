@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appflow.outputs;
 
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConnectorOAuthRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class ConnectorProfileMarketoConnectorProfileCredentials {
             this.connectorOAuthRequest = connectorOAuthRequest;
             return this;
         }
-
         public ConnectorProfileMarketoConnectorProfileCredentials build() {
             return new ConnectorProfileMarketoConnectorProfileCredentials(accessToken, clientId, clientSecret, connectorOAuthRequest);
         }

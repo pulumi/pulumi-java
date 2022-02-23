@@ -15,7 +15,7 @@ import io.pulumi.azurenative.network.outputs.ServiceAssociationLinkResponse;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPolicyResponse;
 import io.pulumi.azurenative.network.outputs.ServiceEndpointPropertiesFormatResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -530,7 +530,6 @@ public final class GetSubnetResult {
             this.type = type;
             return this;
         }
-
         public GetSubnetResult build() {
             return new GetSubnetResult(addressPrefix, addressPrefixes, applicationGatewayIpConfigurations, delegations, etag, id, ipAllocations, ipConfigurationProfiles, ipConfigurations, name, natGateway, networkSecurityGroup, privateEndpointNetworkPolicies, privateEndpoints, privateLinkServiceNetworkPolicies, provisioningState, purpose, resourceNavigationLinks, routeTable, serviceAssociationLinks, serviceEndpointPolicies, serviceEndpoints, type);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.quantum.outputs;
 import io.pulumi.azurenative.quantum.outputs.ProviderResponse;
 import io.pulumi.azurenative.quantum.outputs.QuantumWorkspaceResponseIdentity;
 import io.pulumi.azurenative.quantum.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -291,7 +291,6 @@ public final class GetWorkspaceResult {
             this.usable = Objects.requireNonNull(usable);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(endpointUri, id, identity, location, name, providers, provisioningState, storageAccount, systemData, tags, type, usable);
         }

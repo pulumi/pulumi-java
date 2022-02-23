@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGb", required=true)
-    private final String diskSizeGb;
+      private final String diskSizeGb;
 
     public String getDiskSizeGb() {
         return this.diskSizeGb;
@@ -33,7 +33,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="machineType", required=true)
-    private final String machineType;
+      private final String machineType;
 
     public String getMachineType() {
         return this.machineType;
@@ -44,7 +44,7 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="noExternalIp", required=true)
-    private final Boolean noExternalIp;
+      private final Boolean noExternalIp;
 
     public Boolean getNoExternalIp() {
         return this.noExternalIp;
@@ -103,7 +103,6 @@ public final class WorkerConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.noExternalIp = Objects.requireNonNull(noExternalIp);
             return this;
         }
-
         public WorkerConfigResponse build() {
             return new WorkerConfigResponse(diskSizeGb, machineType, noExternalIp);
         }

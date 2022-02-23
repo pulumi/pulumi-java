@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -30,7 +30,7 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
      * 
      */
     @InputImport(name="roleSessionName")
-    private final @Nullable Input<String> roleSessionName;
+        private final @Nullable Input<String> roleSessionName;
 
     public Input<String> getRoleSessionName() {
         return this.roleSessionName == null ? Input.empty() : this.roleSessionName;
@@ -89,7 +89,6 @@ public final class AwsClusterControlPlaneAwsServicesAuthenticationArgs extends i
             this.roleSessionName = Input.ofNullable(roleSessionName);
             return this;
         }
-
         public AwsClusterControlPlaneAwsServicesAuthenticationArgs build() {
             return new AwsClusterControlPlaneAwsServicesAuthenticationArgs(roleArn, roleSessionName);
         }

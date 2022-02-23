@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.DestinationResponse;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.MatchingCriteriaResponse;
 import io.pulumi.googlenative.eventarc_v1beta1.outputs.TransportResponse;
@@ -226,7 +226,6 @@ public final class GetTriggerResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTriggerResult build() {
             return new GetTriggerResult(createTime, destination, etag, labels, matchingCriteria, name, serviceAccount, transport, updateTime);
         }

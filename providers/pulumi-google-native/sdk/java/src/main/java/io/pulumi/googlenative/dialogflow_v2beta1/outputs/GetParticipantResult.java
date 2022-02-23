@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class GetParticipantResult {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GetParticipantResult build() {
             return new GetParticipantResult(documentsMetadataFilters, name, obfuscatedExternalUserId, role);
         }

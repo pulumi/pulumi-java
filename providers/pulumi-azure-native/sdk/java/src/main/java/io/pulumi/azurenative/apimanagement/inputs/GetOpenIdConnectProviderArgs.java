@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="opid", required=true)
-    private final String opid;
+        private final String opid;
 
     public String getOpid() {
         return this.opid;
@@ -28,7 +28,7 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -98,7 +98,6 @@ public final class GetOpenIdConnectProviderArgs extends io.pulumi.resources.Invo
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public GetOpenIdConnectProviderArgs build() {
             return new GetOpenIdConnectProviderArgs(opid, resourceGroupName, serviceName);
         }

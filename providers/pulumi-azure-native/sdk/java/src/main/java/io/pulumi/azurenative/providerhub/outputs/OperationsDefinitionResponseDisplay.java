@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.providerhub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -84,7 +84,6 @@ public final class OperationsDefinitionResponseDisplay {
             this.resource = Objects.requireNonNull(resource);
             return this;
         }
-
         public OperationsDefinitionResponseDisplay build() {
             return new OperationsDefinitionResponseDisplay(description, operation, provider, resource);
         }

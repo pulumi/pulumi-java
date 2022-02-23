@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class LaunchConfigurationMetadataOptions {
             this.httpTokens = httpTokens;
             return this;
         }
-
         public LaunchConfigurationMetadataOptions build() {
             return new LaunchConfigurationMetadataOptions(httpEndpoint, httpPutResponseHopLimit, httpTokens);
         }

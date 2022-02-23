@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.storage_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemActionArgs;
 import io.pulumi.googlenative.storage_v1.inputs.BucketLifecycleRuleItemConditionArgs;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="action")
-    private final @Nullable Input<BucketLifecycleRuleItemActionArgs> action;
+      private final @Nullable Input<BucketLifecycleRuleItemActionArgs> action;
 
     public Input<BucketLifecycleRuleItemActionArgs> getAction() {
         return this.action == null ? Input.empty() : this.action;
@@ -31,7 +31,7 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<BucketLifecycleRuleItemConditionArgs> condition;
+      private final @Nullable Input<BucketLifecycleRuleItemConditionArgs> condition;
 
     public Input<BucketLifecycleRuleItemConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -90,7 +90,6 @@ public final class BucketLifecycleRuleItemArgs extends io.pulumi.resources.Resou
             this.condition = Input.ofNullable(condition);
             return this;
         }
-
         public BucketLifecycleRuleItemArgs build() {
             return new BucketLifecycleRuleItemArgs(action, condition);
         }

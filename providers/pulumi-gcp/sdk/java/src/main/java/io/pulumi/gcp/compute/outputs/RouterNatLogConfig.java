@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class RouterNatLogConfig {
             this.filter = Objects.requireNonNull(filter);
             return this;
         }
-
         public RouterNatLogConfig build() {
             return new RouterNatLogConfig(enable, filter);
         }

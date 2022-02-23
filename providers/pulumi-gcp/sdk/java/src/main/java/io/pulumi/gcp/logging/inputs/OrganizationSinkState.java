@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkBigqueryOptionsGetArgs;
 import io.pulumi.gcp.logging.inputs.OrganizationSinkExclusionGetArgs;
 import java.lang.Boolean;
@@ -23,7 +23,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="bigqueryOptions")
-    private final @Nullable Input<OrganizationSinkBigqueryOptionsGetArgs> bigqueryOptions;
+        private final @Nullable Input<OrganizationSinkBigqueryOptionsGetArgs> bigqueryOptions;
 
     public Input<OrganizationSinkBigqueryOptionsGetArgs> getBigqueryOptions() {
         return this.bigqueryOptions == null ? Input.empty() : this.bigqueryOptions;
@@ -34,7 +34,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+        private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -59,7 +59,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -70,7 +70,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="exclusions")
-    private final @Nullable Input<List<OrganizationSinkExclusionGetArgs>> exclusions;
+        private final @Nullable Input<List<OrganizationSinkExclusionGetArgs>> exclusions;
 
     public Input<List<OrganizationSinkExclusionGetArgs>> getExclusions() {
         return this.exclusions == null ? Input.empty() : this.exclusions;
@@ -82,7 +82,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<String> filter;
+        private final @Nullable Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -94,7 +94,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="includeChildren")
-    private final @Nullable Input<Boolean> includeChildren;
+        private final @Nullable Input<Boolean> includeChildren;
 
     public Input<Boolean> getIncludeChildren() {
         return this.includeChildren == null ? Input.empty() : this.includeChildren;
@@ -105,7 +105,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -116,7 +116,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="orgId")
-    private final @Nullable Input<String> orgId;
+        private final @Nullable Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId == null ? Input.empty() : this.orgId;
@@ -128,7 +128,7 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="writerIdentity")
-    private final @Nullable Input<String> writerIdentity;
+        private final @Nullable Input<String> writerIdentity;
 
     public Input<String> getWriterIdentity() {
         return this.writerIdentity == null ? Input.empty() : this.writerIdentity;
@@ -307,7 +307,6 @@ public final class OrganizationSinkState extends io.pulumi.resources.ResourceArg
             this.writerIdentity = Input.ofNullable(writerIdentity);
             return this;
         }
-
         public OrganizationSinkState build() {
             return new OrganizationSinkState(bigqueryOptions, description, destination, disabled, exclusions, filter, includeChildren, name, orgId, writerIdentity);
         }

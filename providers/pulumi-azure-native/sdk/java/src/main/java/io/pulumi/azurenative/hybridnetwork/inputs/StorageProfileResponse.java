@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.inputs;
 import io.pulumi.azurenative.hybridnetwork.inputs.DataDiskResponse;
 import io.pulumi.azurenative.hybridnetwork.inputs.ImageReferenceResponse;
 import io.pulumi.azurenative.hybridnetwork.inputs.OsDiskResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable List<DataDiskResponse> dataDisks;
+        private final @Nullable List<DataDiskResponse> dataDisks;
 
     public List<DataDiskResponse> getDataDisks() {
         return this.dataDisks == null ? List.of() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable ImageReferenceResponse imageReference;
+        private final @Nullable ImageReferenceResponse imageReference;
 
     public Optional<ImageReferenceResponse> getImageReference() {
         return this.imageReference == null ? Optional.empty() : Optional.ofNullable(this.imageReference);
@@ -48,7 +48,7 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="osDisk")
-    private final @Nullable OsDiskResponse osDisk;
+        private final @Nullable OsDiskResponse osDisk;
 
     public Optional<OsDiskResponse> getOsDisk() {
         return this.osDisk == null ? Optional.empty() : Optional.ofNullable(this.osDisk);
@@ -107,7 +107,6 @@ public final class StorageProfileResponse extends io.pulumi.resources.InvokeArgs
             this.osDisk = osDisk;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(dataDisks, imageReference, osDisk);
         }

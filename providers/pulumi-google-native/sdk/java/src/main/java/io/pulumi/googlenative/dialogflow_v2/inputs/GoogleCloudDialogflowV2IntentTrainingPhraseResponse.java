@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
      * 
      */
     @InputImport(name="parts", required=true)
-    private final List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts;
+      private final List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> parts;
 
     public List<GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse> getParts() {
         return this.parts;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
      * 
      */
     @InputImport(name="timesAddedCount", required=true)
-    private final Integer timesAddedCount;
+      private final Integer timesAddedCount;
 
     public Integer getTimesAddedCount() {
         return this.timesAddedCount;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -126,7 +126,6 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhraseResponse extends i
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentTrainingPhraseResponse build() {
             return new GoogleCloudDialogflowV2IntentTrainingPhraseResponse(name, parts, timesAddedCount, type);
         }

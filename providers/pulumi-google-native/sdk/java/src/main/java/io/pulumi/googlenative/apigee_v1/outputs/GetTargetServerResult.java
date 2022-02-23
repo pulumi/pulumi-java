@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1TlsInfoResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -182,7 +182,6 @@ public final class GetTargetServerResult {
             this.sSLInfo = Objects.requireNonNull(sSLInfo);
             return this;
         }
-
         public GetTargetServerResult build() {
             return new GetTargetServerResult(description, host, isEnabled, name, port, protocol, sSLInfo);
         }

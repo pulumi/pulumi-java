@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.outputs;
 
 import io.pulumi.azurenative.keyvault.outputs.KeyAttributesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -282,7 +282,6 @@ public final class GetKeyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(attributes, curveName, id, keyOps, keySize, keyUri, keyUriWithVersion, kty, location, name, tags, type);
         }

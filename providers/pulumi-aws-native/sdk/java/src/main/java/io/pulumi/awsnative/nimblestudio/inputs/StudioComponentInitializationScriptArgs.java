@@ -6,7 +6,7 @@ package io.pulumi.awsnative.nimblestudio.inputs;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentInitializationScriptRunContext;
 import io.pulumi.awsnative.nimblestudio.enums.StudioComponentLaunchProfilePlatform;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,21 +25,21 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="launchProfileProtocolVersion")
-    private final @Nullable Input<String> launchProfileProtocolVersion;
+        private final @Nullable Input<String> launchProfileProtocolVersion;
 
     public Input<String> getLaunchProfileProtocolVersion() {
         return this.launchProfileProtocolVersion == null ? Input.empty() : this.launchProfileProtocolVersion;
     }
 
     @InputImport(name="platform")
-    private final @Nullable Input<StudioComponentLaunchProfilePlatform> platform;
+        private final @Nullable Input<StudioComponentLaunchProfilePlatform> platform;
 
     public Input<StudioComponentLaunchProfilePlatform> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
     }
 
     @InputImport(name="runContext")
-    private final @Nullable Input<StudioComponentInitializationScriptRunContext> runContext;
+        private final @Nullable Input<StudioComponentInitializationScriptRunContext> runContext;
 
     public Input<StudioComponentInitializationScriptRunContext> getRunContext() {
         return this.runContext == null ? Input.empty() : this.runContext;
@@ -50,7 +50,7 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<String> script;
+        private final @Nullable Input<String> script;
 
     public Input<String> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -139,7 +139,6 @@ public final class StudioComponentInitializationScriptArgs extends io.pulumi.res
             this.script = Input.ofNullable(script);
             return this;
         }
-
         public StudioComponentInitializationScriptArgs build() {
             return new StudioComponentInitializationScriptArgs(launchProfileProtocolVersion, platform, runContext, script);
         }

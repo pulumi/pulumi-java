@@ -5,7 +5,7 @@ package io.pulumi.azurenative.kubernetes.outputs;
 
 import io.pulumi.azurenative.kubernetes.outputs.CredentialResultResponse;
 import io.pulumi.azurenative.kubernetes.outputs.HybridConnectionConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -76,7 +76,6 @@ public final class ListConnectedClusterUserCredentialResult {
             this.kubeconfigs = Objects.requireNonNull(kubeconfigs);
             return this;
         }
-
         public ListConnectedClusterUserCredentialResult build() {
             return new ListConnectedClusterUserCredentialResult(hybridConnectionConfig, kubeconfigs);
         }

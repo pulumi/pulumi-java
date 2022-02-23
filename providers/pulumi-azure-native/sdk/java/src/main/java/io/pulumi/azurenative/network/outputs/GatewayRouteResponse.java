@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GatewayRouteResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public GatewayRouteResponse build() {
             return new GatewayRouteResponse(asPath, localAddress, network, nextHop, origin, sourcePeer, weight);
         }

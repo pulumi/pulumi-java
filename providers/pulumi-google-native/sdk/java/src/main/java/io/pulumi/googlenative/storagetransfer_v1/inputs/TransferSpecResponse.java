@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AwsS3DataResponse;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.AzureBlobStorageDataResponse;
 import io.pulumi.googlenative.storagetransfer_v1.inputs.GcsDataResponse;
@@ -29,7 +29,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="awsS3DataSource", required=true)
-    private final AwsS3DataResponse awsS3DataSource;
+      private final AwsS3DataResponse awsS3DataSource;
 
     public AwsS3DataResponse getAwsS3DataSource() {
         return this.awsS3DataSource;
@@ -40,7 +40,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="azureBlobStorageDataSource", required=true)
-    private final AzureBlobStorageDataResponse azureBlobStorageDataSource;
+      private final AzureBlobStorageDataResponse azureBlobStorageDataSource;
 
     public AzureBlobStorageDataResponse getAzureBlobStorageDataSource() {
         return this.azureBlobStorageDataSource;
@@ -51,7 +51,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcsDataSink", required=true)
-    private final GcsDataResponse gcsDataSink;
+      private final GcsDataResponse gcsDataSink;
 
     public GcsDataResponse getGcsDataSink() {
         return this.gcsDataSink;
@@ -62,7 +62,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcsDataSource", required=true)
-    private final GcsDataResponse gcsDataSource;
+      private final GcsDataResponse gcsDataSource;
 
     public GcsDataResponse getGcsDataSource() {
         return this.gcsDataSource;
@@ -73,7 +73,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gcsIntermediateDataLocation", required=true)
-    private final GcsDataResponse gcsIntermediateDataLocation;
+      private final GcsDataResponse gcsIntermediateDataLocation;
 
     public GcsDataResponse getGcsIntermediateDataLocation() {
         return this.gcsIntermediateDataLocation;
@@ -84,7 +84,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpDataSource", required=true)
-    private final HttpDataResponse httpDataSource;
+      private final HttpDataResponse httpDataSource;
 
     public HttpDataResponse getHttpDataSource() {
         return this.httpDataSource;
@@ -95,7 +95,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objectConditions", required=true)
-    private final ObjectConditionsResponse objectConditions;
+      private final ObjectConditionsResponse objectConditions;
 
     public ObjectConditionsResponse getObjectConditions() {
         return this.objectConditions;
@@ -106,7 +106,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="posixDataSink", required=true)
-    private final PosixFilesystemResponse posixDataSink;
+      private final PosixFilesystemResponse posixDataSink;
 
     public PosixFilesystemResponse getPosixDataSink() {
         return this.posixDataSink;
@@ -117,7 +117,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="posixDataSource", required=true)
-    private final PosixFilesystemResponse posixDataSource;
+      private final PosixFilesystemResponse posixDataSource;
 
     public PosixFilesystemResponse getPosixDataSource() {
         return this.posixDataSource;
@@ -128,7 +128,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sinkAgentPoolName", required=true)
-    private final String sinkAgentPoolName;
+      private final String sinkAgentPoolName;
 
     public String getSinkAgentPoolName() {
         return this.sinkAgentPoolName;
@@ -139,7 +139,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sourceAgentPoolName", required=true)
-    private final String sourceAgentPoolName;
+      private final String sourceAgentPoolName;
 
     public String getSourceAgentPoolName() {
         return this.sourceAgentPoolName;
@@ -150,7 +150,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transferManifest", required=true)
-    private final TransferManifestResponse transferManifest;
+      private final TransferManifestResponse transferManifest;
 
     public TransferManifestResponse getTransferManifest() {
         return this.transferManifest;
@@ -161,7 +161,7 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="transferOptions", required=true)
-    private final TransferOptionsResponse transferOptions;
+      private final TransferOptionsResponse transferOptions;
 
     public TransferOptionsResponse getTransferOptions() {
         return this.transferOptions;
@@ -320,7 +320,6 @@ public final class TransferSpecResponse extends io.pulumi.resources.InvokeArgs {
             this.transferOptions = Objects.requireNonNull(transferOptions);
             return this;
         }
-
         public TransferSpecResponse build() {
             return new TransferSpecResponse(awsS3DataSource, azureBlobStorageDataSource, gcsDataSink, gcsDataSource, gcsIntermediateDataLocation, httpDataSource, objectConditions, posixDataSink, posixDataSource, sinkAgentPoolName, sourceAgentPoolName, transferManifest, transferOptions);
         }

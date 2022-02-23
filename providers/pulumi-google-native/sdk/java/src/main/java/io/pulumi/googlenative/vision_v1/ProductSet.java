@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vision_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vision_v1.ProductSetArgs;
 import io.pulumi.googlenative.vision_v1.outputs.StatusResponse;
@@ -76,13 +76,6 @@ public class ProductSet extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ProductSet(String name) {
-        super("google-native:vision/v1:ProductSet", name, ProductSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
             this.lastChangeDate = Objects.requireNonNull(lastChangeDate);
             return this;
         }
-
         public CognitiveServicesAccountSkuChangeInfoResponse build() {
             return new CognitiveServicesAccountSkuChangeInfoResponse(countOfDowngrades, countOfUpgradesAfterDowngrades, lastChangeDate);
         }

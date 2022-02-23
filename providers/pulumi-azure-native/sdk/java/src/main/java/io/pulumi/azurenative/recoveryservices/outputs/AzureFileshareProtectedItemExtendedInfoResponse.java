@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class AzureFileshareProtectedItemExtendedInfoResponse {
             this.resourceStateSyncTime = Objects.requireNonNull(resourceStateSyncTime);
             return this;
         }
-
         public AzureFileshareProtectedItemExtendedInfoResponse build() {
             return new AzureFileshareProtectedItemExtendedInfoResponse(oldestRecoveryPoint, policyState, recoveryPointCount, resourceState, resourceStateSyncTime);
         }

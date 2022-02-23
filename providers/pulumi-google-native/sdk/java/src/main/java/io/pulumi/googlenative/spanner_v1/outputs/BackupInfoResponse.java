@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.spanner_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class BackupInfoResponse {
             this.versionTime = Objects.requireNonNull(versionTime);
             return this;
         }
-
         public BackupInfoResponse build() {
             return new BackupInfoResponse(backup, createTime, sourceDatabase, versionTime);
         }

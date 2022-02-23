@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement;
 
 import io.pulumi.azurenative.operationsmanagement.inputs.ManagementAssociationPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -31,7 +31,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="managementAssociationName")
-    private final @Nullable Input<String> managementAssociationName;
+        private final @Nullable Input<String> managementAssociationName;
 
     public Input<String> getManagementAssociationName() {
         return this.managementAssociationName == null ? Input.empty() : this.managementAssociationName;
@@ -42,7 +42,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<ManagementAssociationPropertiesArgs> properties;
+        private final @Nullable Input<ManagementAssociationPropertiesArgs> properties;
 
     public Input<ManagementAssociationPropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -53,7 +53,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="providerName", required=true)
-    private final Input<String> providerName;
+        private final Input<String> providerName;
 
     public Input<String> getProviderName() {
         return this.providerName;
@@ -64,7 +64,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -86,7 +86,7 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+        private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -220,7 +220,6 @@ public final class ManagementAssociationArgs extends io.pulumi.resources.Resourc
             this.resourceType = Input.of(Objects.requireNonNull(resourceType));
             return this;
         }
-
         public ManagementAssociationArgs build() {
             return new ManagementAssociationArgs(location, managementAssociationName, properties, providerName, resourceGroupName, resourceName, resourceType);
         }

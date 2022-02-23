@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineNetworkInterfaceIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -241,7 +241,6 @@ public final class VirtualMachineNetworkInterfaceConfigurationResponse {
             this.primary = primary;
             return this;
         }
-
         public VirtualMachineNetworkInterfaceConfigurationResponse build() {
             return new VirtualMachineNetworkInterfaceConfigurationResponse(deleteOption, dnsSettings, dscpConfiguration, enableAcceleratedNetworking, enableFpga, enableIPForwarding, ipConfigurations, name, networkSecurityGroup, primary);
         }

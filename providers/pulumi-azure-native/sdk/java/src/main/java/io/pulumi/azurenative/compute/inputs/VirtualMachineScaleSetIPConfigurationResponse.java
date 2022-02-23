@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetPublicIPAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="applicationGatewayBackendAddressPools")
-    private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
+        private final @Nullable List<SubResourceResponse> applicationGatewayBackendAddressPools;
 
     public List<SubResourceResponse> getApplicationGatewayBackendAddressPools() {
         return this.applicationGatewayBackendAddressPools == null ? List.of() : this.applicationGatewayBackendAddressPools;
@@ -39,7 +39,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="applicationSecurityGroups")
-    private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
+        private final @Nullable List<SubResourceResponse> applicationSecurityGroups;
 
     public List<SubResourceResponse> getApplicationSecurityGroups() {
         return this.applicationSecurityGroups == null ? List.of() : this.applicationSecurityGroups;
@@ -50,7 +50,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -61,7 +61,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="loadBalancerBackendAddressPools")
-    private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
+        private final @Nullable List<SubResourceResponse> loadBalancerBackendAddressPools;
 
     public List<SubResourceResponse> getLoadBalancerBackendAddressPools() {
         return this.loadBalancerBackendAddressPools == null ? List.of() : this.loadBalancerBackendAddressPools;
@@ -72,7 +72,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="loadBalancerInboundNatPools")
-    private final @Nullable List<SubResourceResponse> loadBalancerInboundNatPools;
+        private final @Nullable List<SubResourceResponse> loadBalancerInboundNatPools;
 
     public List<SubResourceResponse> getLoadBalancerInboundNatPools() {
         return this.loadBalancerInboundNatPools == null ? List.of() : this.loadBalancerInboundNatPools;
@@ -83,7 +83,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -94,7 +94,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Boolean primary;
+        private final @Nullable Boolean primary;
 
     public Optional<Boolean> getPrimary() {
         return this.primary == null ? Optional.empty() : Optional.ofNullable(this.primary);
@@ -105,7 +105,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="privateIPAddressVersion")
-    private final @Nullable String privateIPAddressVersion;
+        private final @Nullable String privateIPAddressVersion;
 
     public Optional<String> getPrivateIPAddressVersion() {
         return this.privateIPAddressVersion == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddressVersion);
@@ -116,7 +116,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-    private final @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration;
+        private final @Nullable VirtualMachineScaleSetPublicIPAddressConfigurationResponse publicIPAddressConfiguration;
 
     public Optional<VirtualMachineScaleSetPublicIPAddressConfigurationResponse> getPublicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Optional.empty() : Optional.ofNullable(this.publicIPAddressConfiguration);
@@ -127,7 +127,7 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable ApiEntityReferenceResponse subnet;
+        private final @Nullable ApiEntityReferenceResponse subnet;
 
     public Optional<ApiEntityReferenceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -256,7 +256,6 @@ public final class VirtualMachineScaleSetIPConfigurationResponse extends io.pulu
             this.subnet = subnet;
             return this;
         }
-
         public VirtualMachineScaleSetIPConfigurationResponse build() {
             return new VirtualMachineScaleSetIPConfigurationResponse(applicationGatewayBackendAddressPools, applicationSecurityGroups, id, loadBalancerBackendAddressPools, loadBalancerInboundNatPools, name, primary, privateIPAddressVersion, publicIPAddressConfiguration, subnet);
         }

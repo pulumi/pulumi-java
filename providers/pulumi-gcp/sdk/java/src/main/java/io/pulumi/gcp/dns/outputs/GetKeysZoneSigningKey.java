@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dns.outputs.GetKeysZoneSigningKeyDigest;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -225,7 +225,6 @@ public final class GetKeysZoneSigningKey {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public GetKeysZoneSigningKey build() {
             return new GetKeysZoneSigningKey(algorithm, creationTime, description, digests, id, isActive, keyLength, keyTag, publicKey);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.filestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -158,7 +158,6 @@ public final class InstanceNetwork {
             this.reservedIpRange = reservedIpRange;
             return this;
         }
-
         public InstanceNetwork build() {
             return new InstanceNetwork(connectMode, ipAddresses, modes, network, reservedIpRange);
         }

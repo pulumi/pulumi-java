@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.PubSubResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="pubsub", required=true)
-    private final PubSubResponse pubsub;
+      private final PubSubResponse pubsub;
 
     public PubSubResponse getPubsub() {
         return this.pubsub;
@@ -59,7 +59,6 @@ public final class NotificationConfigResponse extends io.pulumi.resources.Invoke
             this.pubsub = Objects.requireNonNull(pubsub);
             return this;
         }
-
         public NotificationConfigResponse build() {
             return new NotificationConfigResponse(pubsub);
         }

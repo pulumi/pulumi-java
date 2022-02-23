@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="sqlVirtualMachineName", required=true)
-    private final String sqlVirtualMachineName;
+        private final String sqlVirtualMachineName;
 
     public String getSqlVirtualMachineName() {
         return this.sqlVirtualMachineName;
@@ -100,7 +100,6 @@ public final class GetSqlVirtualMachineArgs extends io.pulumi.resources.InvokeAr
             this.sqlVirtualMachineName = Objects.requireNonNull(sqlVirtualMachineName);
             return this;
         }
-
         public GetSqlVirtualMachineArgs build() {
             return new GetSqlVirtualMachineArgs(expand, resourceGroupName, sqlVirtualMachineName);
         }

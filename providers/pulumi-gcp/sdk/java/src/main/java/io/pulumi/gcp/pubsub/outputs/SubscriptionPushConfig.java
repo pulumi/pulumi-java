@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.pubsub.outputs.SubscriptionPushConfigOidcToken;
 import java.lang.String;
 import java.util.Map;
@@ -141,7 +141,6 @@ public final class SubscriptionPushConfig {
             this.pushEndpoint = Objects.requireNonNull(pushEndpoint);
             return this;
         }
-
         public SubscriptionPushConfig build() {
             return new SubscriptionPushConfig(attributes, oidcToken, pushEndpoint);
         }

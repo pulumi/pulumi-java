@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="environmentName", required=true)
-    private final String environmentName;
+        private final String environmentName;
 
     public String getEnvironmentName() {
         return this.environmentName;
@@ -28,7 +28,7 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="referenceDataSetName", required=true)
-    private final String referenceDataSetName;
+        private final String referenceDataSetName;
 
     public String getReferenceDataSetName() {
         return this.referenceDataSetName;
@@ -39,7 +39,7 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetReferenceDataSetArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetReferenceDataSetArgs build() {
             return new GetReferenceDataSetArgs(environmentName, referenceDataSetName, resourceGroupName);
         }

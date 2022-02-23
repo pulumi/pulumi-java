@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TableDataSetResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class TimeSeriesTableResponse {
             this.dataSets = Objects.requireNonNull(dataSets);
             return this;
         }
-
         public TimeSeriesTableResponse build() {
             return new TimeSeriesTableResponse(dataSets);
         }

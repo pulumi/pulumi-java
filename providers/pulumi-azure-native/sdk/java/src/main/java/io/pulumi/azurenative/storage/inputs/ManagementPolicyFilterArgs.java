@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.TagFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="blobIndexMatch")
-    private final @Nullable Input<List<TagFilterArgs>> blobIndexMatch;
+        private final @Nullable Input<List<TagFilterArgs>> blobIndexMatch;
 
     public Input<List<TagFilterArgs>> getBlobIndexMatch() {
         return this.blobIndexMatch == null ? Input.empty() : this.blobIndexMatch;
@@ -36,7 +36,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="blobTypes", required=true)
-    private final Input<List<String>> blobTypes;
+        private final Input<List<String>> blobTypes;
 
     public Input<List<String>> getBlobTypes() {
         return this.blobTypes;
@@ -47,7 +47,7 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="prefixMatch")
-    private final @Nullable Input<List<String>> prefixMatch;
+        private final @Nullable Input<List<String>> prefixMatch;
 
     public Input<List<String>> getPrefixMatch() {
         return this.prefixMatch == null ? Input.empty() : this.prefixMatch;
@@ -121,7 +121,6 @@ public final class ManagementPolicyFilterArgs extends io.pulumi.resources.Resour
             this.prefixMatch = Input.ofNullable(prefixMatch);
             return this;
         }
-
         public ManagementPolicyFilterArgs build() {
             return new ManagementPolicyFilterArgs(blobIndexMatch, blobTypes, prefixMatch);
         }

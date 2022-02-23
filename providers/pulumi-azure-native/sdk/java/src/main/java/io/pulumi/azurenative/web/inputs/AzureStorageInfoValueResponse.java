@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accessKey")
-    private final @Nullable String accessKey;
+        private final @Nullable String accessKey;
 
     public Optional<String> getAccessKey() {
         return this.accessKey == null ? Optional.empty() : Optional.ofNullable(this.accessKey);
@@ -34,7 +34,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable String accountName;
+        private final @Nullable String accountName;
 
     public Optional<String> getAccountName() {
         return this.accountName == null ? Optional.empty() : Optional.ofNullable(this.accountName);
@@ -45,7 +45,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="mountPath")
-    private final @Nullable String mountPath;
+        private final @Nullable String mountPath;
 
     public Optional<String> getMountPath() {
         return this.mountPath == null ? Optional.empty() : Optional.ofNullable(this.mountPath);
@@ -56,7 +56,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="shareName")
-    private final @Nullable String shareName;
+        private final @Nullable String shareName;
 
     public Optional<String> getShareName() {
         return this.shareName == null ? Optional.empty() : Optional.ofNullable(this.shareName);
@@ -67,7 +67,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -78,7 +78,7 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -167,7 +167,6 @@ public final class AzureStorageInfoValueResponse extends io.pulumi.resources.Inv
             this.type = type;
             return this;
         }
-
         public AzureStorageInfoValueResponse build() {
             return new AzureStorageInfoValueResponse(accessKey, accountName, mountPath, shareName, state, type);
         }

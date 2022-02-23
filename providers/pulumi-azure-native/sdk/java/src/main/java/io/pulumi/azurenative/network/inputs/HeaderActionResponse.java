@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headerActionType", required=true)
-    private final String headerActionType;
+        private final String headerActionType;
 
     public String getHeaderActionType() {
         return this.headerActionType;
@@ -34,7 +34,7 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headerName", required=true)
-    private final String headerName;
+        private final String headerName;
 
     public String getHeaderName() {
         return this.headerName;
@@ -45,7 +45,7 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="value")
-    private final @Nullable String value;
+        private final @Nullable String value;
 
     public Optional<String> getValue() {
         return this.value == null ? Optional.empty() : Optional.ofNullable(this.value);
@@ -104,7 +104,6 @@ public final class HeaderActionResponse extends io.pulumi.resources.InvokeArgs {
             this.value = value;
             return this;
         }
-
         public HeaderActionResponse build() {
             return new HeaderActionResponse(headerActionType, headerName, value);
         }

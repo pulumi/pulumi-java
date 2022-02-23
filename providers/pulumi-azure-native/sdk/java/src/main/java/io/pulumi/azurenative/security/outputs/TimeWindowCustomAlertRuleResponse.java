@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -183,7 +183,6 @@ public final class TimeWindowCustomAlertRuleResponse {
             this.timeWindowSize = Objects.requireNonNull(timeWindowSize);
             return this;
         }
-
         public TimeWindowCustomAlertRuleResponse build() {
             return new TimeWindowCustomAlertRuleResponse(description, displayName, isEnabled, maxThreshold, minThreshold, ruleType, timeWindowSize);
         }

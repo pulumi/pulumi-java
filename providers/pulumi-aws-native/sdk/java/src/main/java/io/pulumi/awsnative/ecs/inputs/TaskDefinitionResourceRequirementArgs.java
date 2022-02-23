@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class TaskDefinitionResourceRequirementArgs extends io.pulumi.resou
     public static final TaskDefinitionResourceRequirementArgs Empty = new TaskDefinitionResourceRequirementArgs();
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
     }
 
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -80,7 +80,6 @@ public final class TaskDefinitionResourceRequirementArgs extends io.pulumi.resou
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public TaskDefinitionResourceRequirementArgs build() {
             return new TaskDefinitionResourceRequirementArgs(type, value);
         }

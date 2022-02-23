@@ -5,8 +5,8 @@ package io.pulumi.googlenative.appengine_v1alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.appengine_v1alpha.AuthorizedCertificateArgs;
 import io.pulumi.googlenative.appengine_v1alpha.outputs.CertificateRawDataResponse;
@@ -136,13 +136,6 @@ public class AuthorizedCertificate extends io.pulumi.resources.CustomResource {
         return this.visibleDomainMappings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AuthorizedCertificate(String name) {
-        super("google-native:appengine/v1alpha:AuthorizedCertificate", name, AuthorizedCertificateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

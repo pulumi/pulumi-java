@@ -11,7 +11,7 @@ import io.pulumi.azurenative.securityinsights.inputs.IncidentLabelArgs;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentOwnerInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="classification")
-    private final @Nullable Input<Either<String,IncidentClassification>> classification;
+        private final @Nullable Input<Either<String,IncidentClassification>> classification;
 
     public Input<Either<String,IncidentClassification>> getClassification() {
         return this.classification == null ? Input.empty() : this.classification;
@@ -42,7 +42,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="classificationComment")
-    private final @Nullable Input<String> classificationComment;
+        private final @Nullable Input<String> classificationComment;
 
     public Input<String> getClassificationComment() {
         return this.classificationComment == null ? Input.empty() : this.classificationComment;
@@ -53,7 +53,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="classificationReason")
-    private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
+        private final @Nullable Input<Either<String,IncidentClassificationReason>> classificationReason;
 
     public Input<Either<String,IncidentClassificationReason>> getClassificationReason() {
         return this.classificationReason == null ? Input.empty() : this.classificationReason;
@@ -64,7 +64,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<IncidentLabelArgs>> labels;
+        private final @Nullable Input<List<IncidentLabelArgs>> labels;
 
     public Input<List<IncidentLabelArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -75,7 +75,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="owner")
-    private final @Nullable Input<IncidentOwnerInfoArgs> owner;
+        private final @Nullable Input<IncidentOwnerInfoArgs> owner;
 
     public Input<IncidentOwnerInfoArgs> getOwner() {
         return this.owner == null ? Input.empty() : this.owner;
@@ -86,7 +86,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="severity")
-    private final @Nullable Input<Either<String,IncidentSeverity>> severity;
+        private final @Nullable Input<Either<String,IncidentSeverity>> severity;
 
     public Input<Either<String,IncidentSeverity>> getSeverity() {
         return this.severity == null ? Input.empty() : this.severity;
@@ -97,7 +97,7 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,IncidentStatus>> status;
+        private final @Nullable Input<Either<String,IncidentStatus>> status;
 
     public Input<Either<String,IncidentStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -231,7 +231,6 @@ public final class AutomationRuleModifyPropertiesActionActionConfigurationArgs e
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public AutomationRuleModifyPropertiesActionActionConfigurationArgs build() {
             return new AutomationRuleModifyPropertiesActionActionConfigurationArgs(classification, classificationComment, classificationReason, labels, owner, severity, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.composer_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clusterIpv4CidrBlock", required=true)
-    private final String clusterIpv4CidrBlock;
+      private final String clusterIpv4CidrBlock;
 
     public String getClusterIpv4CidrBlock() {
         return this.clusterIpv4CidrBlock;
@@ -33,7 +33,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="clusterSecondaryRangeName", required=true)
-    private final String clusterSecondaryRangeName;
+      private final String clusterSecondaryRangeName;
 
     public String getClusterSecondaryRangeName() {
         return this.clusterSecondaryRangeName;
@@ -44,7 +44,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicesIpv4CidrBlock", required=true)
-    private final String servicesIpv4CidrBlock;
+      private final String servicesIpv4CidrBlock;
 
     public String getServicesIpv4CidrBlock() {
         return this.servicesIpv4CidrBlock;
@@ -55,7 +55,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="servicesSecondaryRangeName", required=true)
-    private final String servicesSecondaryRangeName;
+      private final String servicesSecondaryRangeName;
 
     public String getServicesSecondaryRangeName() {
         return this.servicesSecondaryRangeName;
@@ -66,7 +66,7 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="useIpAliases", required=true)
-    private final Boolean useIpAliases;
+      private final Boolean useIpAliases;
 
     public Boolean getUseIpAliases() {
         return this.useIpAliases;
@@ -145,7 +145,6 @@ public final class IPAllocationPolicyResponse extends io.pulumi.resources.Invoke
             this.useIpAliases = Objects.requireNonNull(useIpAliases);
             return this;
         }
-
         public IPAllocationPolicyResponse build() {
             return new IPAllocationPolicyResponse(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName, useIpAliases);
         }

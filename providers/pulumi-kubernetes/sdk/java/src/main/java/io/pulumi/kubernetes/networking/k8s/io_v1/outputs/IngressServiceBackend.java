@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.ServiceBackendPort;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class IngressServiceBackend {
             this.port = port;
             return this;
         }
-
         public IngressServiceBackend build() {
             return new IngressServiceBackend(name, port);
         }

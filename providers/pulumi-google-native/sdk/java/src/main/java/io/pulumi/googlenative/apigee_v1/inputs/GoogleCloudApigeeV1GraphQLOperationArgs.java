@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operation")
-    private final @Nullable Input<String> operation;
+      private final @Nullable Input<String> operation;
 
     public Input<String> getOperation() {
         return this.operation == null ? Input.empty() : this.operation;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="operationTypes", required=true)
-    private final Input<List<String>> operationTypes;
+      private final Input<List<String>> operationTypes;
 
     public Input<List<String>> getOperationTypes() {
         return this.operationTypes;
@@ -94,7 +94,6 @@ public final class GoogleCloudApigeeV1GraphQLOperationArgs extends io.pulumi.res
             this.operationTypes = Input.of(Objects.requireNonNull(operationTypes));
             return this;
         }
-
         public GoogleCloudApigeeV1GraphQLOperationArgs build() {
             return new GoogleCloudApigeeV1GraphQLOperationArgs(operation, operationTypes);
         }

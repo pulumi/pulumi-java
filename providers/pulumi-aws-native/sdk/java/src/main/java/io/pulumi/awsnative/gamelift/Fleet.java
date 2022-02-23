@@ -14,8 +14,8 @@ import io.pulumi.awsnative.gamelift.outputs.FleetResourceCreationLimitPolicy;
 import io.pulumi.awsnative.gamelift.outputs.FleetRuntimeConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -350,13 +350,6 @@ public class Fleet extends io.pulumi.resources.CustomResource {
         return this.serverLaunchPath;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Fleet(String name) {
-        super("aws-native:gamelift:Fleet", name, FleetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

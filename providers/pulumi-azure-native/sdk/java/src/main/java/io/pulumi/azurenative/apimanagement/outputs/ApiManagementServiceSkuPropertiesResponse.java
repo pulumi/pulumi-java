@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ApiManagementServiceSkuPropertiesResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ApiManagementServiceSkuPropertiesResponse build() {
             return new ApiManagementServiceSkuPropertiesResponse(capacity, name);
         }

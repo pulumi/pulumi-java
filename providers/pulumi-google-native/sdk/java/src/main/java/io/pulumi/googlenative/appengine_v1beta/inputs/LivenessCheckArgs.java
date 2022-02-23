@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="checkInterval")
-    private final @Nullable Input<String> checkInterval;
+      private final @Nullable Input<String> checkInterval;
 
     public Input<String> getCheckInterval() {
         return this.checkInterval == null ? Input.empty() : this.checkInterval;
@@ -35,7 +35,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failureThreshold")
-    private final @Nullable Input<Integer> failureThreshold;
+      private final @Nullable Input<Integer> failureThreshold;
 
     public Input<Integer> getFailureThreshold() {
         return this.failureThreshold == null ? Input.empty() : this.failureThreshold;
@@ -46,7 +46,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+      private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
@@ -57,7 +57,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDelay")
-    private final @Nullable Input<String> initialDelay;
+      private final @Nullable Input<String> initialDelay;
 
     public Input<String> getInitialDelay() {
         return this.initialDelay == null ? Input.empty() : this.initialDelay;
@@ -68,7 +68,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+      private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -79,7 +79,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="successThreshold")
-    private final @Nullable Input<Integer> successThreshold;
+      private final @Nullable Input<Integer> successThreshold;
 
     public Input<Integer> getSuccessThreshold() {
         return this.successThreshold == null ? Input.empty() : this.successThreshold;
@@ -90,7 +90,7 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<String> timeout;
+      private final @Nullable Input<String> timeout;
 
     public Input<String> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -224,7 +224,6 @@ public final class LivenessCheckArgs extends io.pulumi.resources.ResourceArgs {
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public LivenessCheckArgs build() {
             return new LivenessCheckArgs(checkInterval, failureThreshold, host, initialDelay, path, successThreshold, timeout);
         }

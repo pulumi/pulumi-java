@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -29,7 +29,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
      * 
      */
     @InputImport(name="transitGatewayAttachmentId", required=true)
-    private final Input<String> transitGatewayAttachmentId;
+        private final Input<String> transitGatewayAttachmentId;
 
     public Input<String> getTransitGatewayAttachmentId() {
         return this.transitGatewayAttachmentId;
@@ -40,7 +40,7 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
      * 
      */
     @InputImport(name="transitGatewayMulticastDomainId", required=true)
-    private final Input<String> transitGatewayMulticastDomainId;
+        private final Input<String> transitGatewayMulticastDomainId;
 
     public Input<String> getTransitGatewayMulticastDomainId() {
         return this.transitGatewayMulticastDomainId;
@@ -114,7 +114,6 @@ public final class TransitGatewayMulticastDomainAssociationArgs extends io.pulum
             this.transitGatewayMulticastDomainId = Input.of(Objects.requireNonNull(transitGatewayMulticastDomainId));
             return this;
         }
-
         public TransitGatewayMulticastDomainAssociationArgs build() {
             return new TransitGatewayMulticastDomainAssociationArgs(subnetId, transitGatewayAttachmentId, transitGatewayMulticastDomainId);
         }

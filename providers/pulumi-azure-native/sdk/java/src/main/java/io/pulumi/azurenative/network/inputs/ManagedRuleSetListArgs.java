@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FrontDoorManagedRuleSetArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="managedRuleSets")
-    private final @Nullable Input<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
+        private final @Nullable Input<List<FrontDoorManagedRuleSetArgs>> managedRuleSets;
 
     public Input<List<FrontDoorManagedRuleSetArgs>> getManagedRuleSets() {
         return this.managedRuleSets == null ? Input.empty() : this.managedRuleSets;
@@ -67,7 +67,6 @@ public final class ManagedRuleSetListArgs extends io.pulumi.resources.ResourceAr
             this.managedRuleSets = Input.ofNullable(managedRuleSets);
             return this;
         }
-
         public ManagedRuleSetListArgs build() {
             return new ManagedRuleSetListArgs(managedRuleSets);
         }

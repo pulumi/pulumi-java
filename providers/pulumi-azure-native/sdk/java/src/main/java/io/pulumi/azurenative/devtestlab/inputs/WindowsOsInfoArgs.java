@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.WindowsOsState;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="windowsOsState")
-    private final @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
+        private final @Nullable Input<Either<String,WindowsOsState>> windowsOsState;
 
     public Input<Either<String,WindowsOsState>> getWindowsOsState() {
         return this.windowsOsState == null ? Input.empty() : this.windowsOsState;
@@ -68,7 +68,6 @@ public final class WindowsOsInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.windowsOsState = Input.ofNullable(windowsOsState);
             return this;
         }
-
         public WindowsOsInfoArgs build() {
             return new WindowsOsInfoArgs(windowsOsState);
         }

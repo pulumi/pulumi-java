@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BucketResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class GooglePrivacyDlpV2BucketingConfigResponse {
             this.buckets = Objects.requireNonNull(buckets);
             return this;
         }
-
         public GooglePrivacyDlpV2BucketingConfigResponse build() {
             return new GooglePrivacyDlpV2BucketingConfigResponse(buckets);
         }

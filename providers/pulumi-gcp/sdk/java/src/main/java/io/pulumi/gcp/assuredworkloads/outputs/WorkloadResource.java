@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.assuredworkloads.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class WorkloadResource {
             this.resourceType = resourceType;
             return this;
         }
-
         public WorkloadResource build() {
             return new WorkloadResource(resourceId, resourceType);
         }

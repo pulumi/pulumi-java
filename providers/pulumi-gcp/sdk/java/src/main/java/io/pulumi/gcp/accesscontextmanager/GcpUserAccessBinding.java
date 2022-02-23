@@ -5,8 +5,8 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.GcpUserAccessBindingArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.GcpUserAccessBindingState;
@@ -94,13 +94,6 @@ public class GcpUserAccessBinding extends io.pulumi.resources.CustomResource {
         return this.organizationId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GcpUserAccessBinding(String name) {
-        super("gcp:accesscontextmanager/gcpUserAccessBinding:GcpUserAccessBinding", name, GcpUserAccessBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

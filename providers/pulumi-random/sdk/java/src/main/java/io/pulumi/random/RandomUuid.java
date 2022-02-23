@@ -5,8 +5,8 @@ package io.pulumi.random;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomUuidArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomUuidState;
@@ -62,13 +62,6 @@ public class RandomUuid extends io.pulumi.resources.CustomResource {
         return this.result;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RandomUuid(String name) {
-        super("random:index/randomUuid:RandomUuid", name, RandomUuidArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

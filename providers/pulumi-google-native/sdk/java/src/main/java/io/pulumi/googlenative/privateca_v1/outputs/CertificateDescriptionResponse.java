@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.CertificateFingerprintResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.KeyIdResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.PublicKeyResponse;
@@ -206,7 +206,6 @@ public final class CertificateDescriptionResponse {
             this.x509Description = Objects.requireNonNull(x509Description);
             return this;
         }
-
         public CertificateDescriptionResponse build() {
             return new CertificateDescriptionResponse(aiaIssuingCertificateUrls, authorityKeyId, certFingerprint, crlDistributionPoints, publicKey, subjectDescription, subjectKeyId, x509Description);
         }

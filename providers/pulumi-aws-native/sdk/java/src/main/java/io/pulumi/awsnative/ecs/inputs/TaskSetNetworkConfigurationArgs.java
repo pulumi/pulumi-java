@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.TaskSetAwsVpcConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
     public static final TaskSetNetworkConfigurationArgs Empty = new TaskSetNetworkConfigurationArgs();
 
     @InputImport(name="awsVpcConfiguration")
-    private final @Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
+        private final @Nullable Input<TaskSetAwsVpcConfigurationArgs> awsVpcConfiguration;
 
     public Input<TaskSetAwsVpcConfigurationArgs> getAwsVpcConfiguration() {
         return this.awsVpcConfiguration == null ? Input.empty() : this.awsVpcConfiguration;
@@ -62,7 +62,6 @@ public final class TaskSetNetworkConfigurationArgs extends io.pulumi.resources.R
             this.awsVpcConfiguration = Input.ofNullable(awsVpcConfiguration);
             return this;
         }
-
         public TaskSetNetworkConfigurationArgs build() {
             return new TaskSetNetworkConfigurationArgs(awsVpcConfiguration);
         }

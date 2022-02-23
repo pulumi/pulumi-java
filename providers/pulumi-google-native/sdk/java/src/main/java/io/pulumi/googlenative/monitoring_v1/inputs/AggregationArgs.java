@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.enums.AggregationCrossSeriesReducer;
 import io.pulumi.googlenative.monitoring_v1.enums.AggregationPerSeriesAligner;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alignmentPeriod")
-    private final @Nullable Input<String> alignmentPeriod;
+      private final @Nullable Input<String> alignmentPeriod;
 
     public Input<String> getAlignmentPeriod() {
         return this.alignmentPeriod == null ? Input.empty() : this.alignmentPeriod;
@@ -37,7 +37,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="crossSeriesReducer")
-    private final @Nullable Input<AggregationCrossSeriesReducer> crossSeriesReducer;
+      private final @Nullable Input<AggregationCrossSeriesReducer> crossSeriesReducer;
 
     public Input<AggregationCrossSeriesReducer> getCrossSeriesReducer() {
         return this.crossSeriesReducer == null ? Input.empty() : this.crossSeriesReducer;
@@ -48,7 +48,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupByFields")
-    private final @Nullable Input<List<String>> groupByFields;
+      private final @Nullable Input<List<String>> groupByFields;
 
     public Input<List<String>> getGroupByFields() {
         return this.groupByFields == null ? Input.empty() : this.groupByFields;
@@ -59,7 +59,7 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="perSeriesAligner")
-    private final @Nullable Input<AggregationPerSeriesAligner> perSeriesAligner;
+      private final @Nullable Input<AggregationPerSeriesAligner> perSeriesAligner;
 
     public Input<AggregationPerSeriesAligner> getPerSeriesAligner() {
         return this.perSeriesAligner == null ? Input.empty() : this.perSeriesAligner;
@@ -148,7 +148,6 @@ public final class AggregationArgs extends io.pulumi.resources.ResourceArgs {
             this.perSeriesAligner = Input.ofNullable(perSeriesAligner);
             return this;
         }
-
         public AggregationArgs build() {
             return new AggregationArgs(alignmentPeriod, crossSeriesReducer, groupByFields, perSeriesAligner);
         }

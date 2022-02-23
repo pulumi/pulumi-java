@@ -5,7 +5,7 @@ package io.pulumi.azurenative.storagesync.outputs;
 
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncActivityStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncSessionStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -266,7 +266,6 @@ public final class ServerEndpointSyncStatusResponse {
             this.uploadStatus = Objects.requireNonNull(uploadStatus);
             return this;
         }
-
         public ServerEndpointSyncStatusResponse build() {
             return new ServerEndpointSyncStatusResponse(combinedHealth, downloadActivity, downloadHealth, downloadStatus, lastUpdatedTimestamp, offlineDataTransferStatus, syncActivity, totalPersistentFilesNotSyncingCount, uploadActivity, uploadHealth, uploadStatus);
         }

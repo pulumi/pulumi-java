@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2ActionArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2BigQueryTableArgs;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2PrivacyMetricArgs;
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="actions")
-    private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
+      private final @Nullable Input<List<GooglePrivacyDlpV2ActionArgs>> actions;
 
     public Input<List<GooglePrivacyDlpV2ActionArgs>> getActions() {
         return this.actions == null ? Input.empty() : this.actions;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="privacyMetric")
-    private final @Nullable Input<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
+      private final @Nullable Input<GooglePrivacyDlpV2PrivacyMetricArgs> privacyMetric;
 
     public Input<GooglePrivacyDlpV2PrivacyMetricArgs> getPrivacyMetric() {
         return this.privacyMetric == null ? Input.empty() : this.privacyMetric;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
      * 
      */
     @InputImport(name="sourceTable")
-    private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
+      private final @Nullable Input<GooglePrivacyDlpV2BigQueryTableArgs> sourceTable;
 
     public Input<GooglePrivacyDlpV2BigQueryTableArgs> getSourceTable() {
         return this.sourceTable == null ? Input.empty() : this.sourceTable;
@@ -122,7 +122,6 @@ public final class GooglePrivacyDlpV2RiskAnalysisJobConfigArgs extends io.pulumi
             this.sourceTable = Input.ofNullable(sourceTable);
             return this;
         }
-
         public GooglePrivacyDlpV2RiskAnalysisJobConfigArgs build() {
             return new GooglePrivacyDlpV2RiskAnalysisJobConfigArgs(actions, privacyMetric, sourceTable);
         }

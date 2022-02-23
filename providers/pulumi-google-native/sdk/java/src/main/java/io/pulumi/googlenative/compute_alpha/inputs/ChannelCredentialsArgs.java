@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ChannelCredentialsChannelCredentialType;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="certificates")
-    private final @Nullable Input<TlsCertificatePathsArgs> certificates;
+      private final @Nullable Input<TlsCertificatePathsArgs> certificates;
 
     public Input<TlsCertificatePathsArgs> getCertificates() {
         return this.certificates == null ? Input.empty() : this.certificates;
@@ -35,7 +35,7 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="channelCredentialType")
-    private final @Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType;
+      private final @Nullable Input<ChannelCredentialsChannelCredentialType> channelCredentialType;
 
     public Input<ChannelCredentialsChannelCredentialType> getChannelCredentialType() {
         return this.channelCredentialType == null ? Input.empty() : this.channelCredentialType;
@@ -94,7 +94,6 @@ public final class ChannelCredentialsArgs extends io.pulumi.resources.ResourceAr
             this.channelCredentialType = Input.ofNullable(channelCredentialType);
             return this;
         }
-
         public ChannelCredentialsArgs build() {
             return new ChannelCredentialsArgs(certificates, channelCredentialType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="createdAt", required=true)
-    private final String createdAt;
+      private final String createdAt;
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -32,7 +32,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="lastModifiedAt", required=true)
-    private final String lastModifiedAt;
+      private final String lastModifiedAt;
 
     public String getLastModifiedAt() {
         return this.lastModifiedAt;
@@ -43,7 +43,7 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="subType", required=true)
-    private final String subType;
+      private final String subType;
 
     public String getSubType() {
         return this.subType;
@@ -102,7 +102,6 @@ public final class GoogleCloudApigeeV1EntityMetadataResponse extends io.pulumi.r
             this.subType = Objects.requireNonNull(subType);
             return this;
         }
-
         public GoogleCloudApigeeV1EntityMetadataResponse build() {
             return new GoogleCloudApigeeV1EntityMetadataResponse(createdAt, lastModifiedAt, subType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.myedgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.myedgeorder.outputs.LinkResponse;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +160,6 @@ public final class DescriptionResponse {
             this.shortDescription = Objects.requireNonNull(shortDescription);
             return this;
         }
-
         public DescriptionResponse build() {
             return new DescriptionResponse(attributes, descriptionType, keywords, links, longDescription, shortDescription);
         }

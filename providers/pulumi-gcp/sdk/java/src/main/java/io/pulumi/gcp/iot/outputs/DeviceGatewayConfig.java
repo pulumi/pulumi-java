@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -128,7 +128,6 @@ public final class DeviceGatewayConfig {
             this.lastAccessedGatewayTime = lastAccessedGatewayTime;
             return this;
         }
-
         public DeviceGatewayConfig build() {
             return new DeviceGatewayConfig(gatewayAuthMethod, gatewayType, lastAccessedGatewayId, lastAccessedGatewayTime);
         }

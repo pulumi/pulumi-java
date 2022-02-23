@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.AppEngineHttpQueueResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.QueueStatsResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta3.outputs.RateLimitsResponse;
@@ -268,7 +268,6 @@ public final class GetQueueResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(appEngineHttpQueue, name, purgeTime, rateLimits, retryConfig, stackdriverLoggingConfig, state, stats, taskTtl, tombstoneTtl, type);
         }

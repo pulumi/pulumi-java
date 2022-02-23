@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskCount")
-    private final @Nullable Input<Integer> diskCount;
+      private final @Nullable Input<Integer> diskCount;
 
     public Input<Integer> getDiskCount() {
         return this.diskCount == null ? Input.empty() : this.diskCount;
@@ -31,7 +31,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskSizeGb")
-    private final @Nullable Input<Integer> diskSizeGb;
+      private final @Nullable Input<Integer> diskSizeGb;
 
     public Input<Integer> getDiskSizeGb() {
         return this.diskSizeGb == null ? Input.empty() : this.diskSizeGb;
@@ -42,7 +42,7 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<String> diskType;
+      private final @Nullable Input<String> diskType;
 
     public Input<String> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -116,7 +116,6 @@ public final class LocalDiskArgs extends io.pulumi.resources.ResourceArgs {
             this.diskType = Input.ofNullable(diskType);
             return this;
         }
-
         public LocalDiskArgs build() {
             return new LocalDiskArgs(diskCount, diskSizeGb, diskType);
         }

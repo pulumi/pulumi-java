@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VMResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="bsl", required=true)
-    private final String bsl;
+        private final String bsl;
 
     public String getBsl() {
         return this.bsl;
@@ -33,7 +33,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="createdAt", required=true)
-    private final String createdAt;
+        private final String createdAt;
 
     public String getCreatedAt() {
         return this.createdAt;
@@ -44,7 +44,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -55,7 +55,7 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="vm", required=true)
-    private final VMResponse vm;
+        private final VMResponse vm;
 
     public VMResponse getVm() {
         return this.vm;
@@ -124,7 +124,6 @@ public final class BastionShareableLinkResponse extends io.pulumi.resources.Invo
             this.vm = Objects.requireNonNull(vm);
             return this;
         }
-
         public BastionShareableLinkResponse build() {
             return new BastionShareableLinkResponse(bsl, createdAt, message, vm);
         }

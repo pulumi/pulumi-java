@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @InputImport(name="retainedBackups", required=true)
-    private final Input<Integer> retainedBackups;
+        private final Input<Integer> retainedBackups;
 
     public Input<Integer> getRetainedBackups() {
         return this.retainedBackups;
@@ -32,7 +32,7 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
      * 
      */
     @InputImport(name="retentionUnit")
-    private final @Nullable Input<String> retentionUnit;
+        private final @Nullable Input<String> retentionUnit;
 
     public Input<String> getRetentionUnit() {
         return this.retentionUnit == null ? Input.empty() : this.retentionUnit;
@@ -91,7 +91,6 @@ public final class DatabaseInstanceSettingsBackupConfigurationBackupRetentionSet
             this.retentionUnit = Input.ofNullable(retentionUnit);
             return this;
         }
-
         public DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs build() {
             return new DatabaseInstanceSettingsBackupConfigurationBackupRetentionSettingsArgs(retainedBackups, retentionUnit);
         }

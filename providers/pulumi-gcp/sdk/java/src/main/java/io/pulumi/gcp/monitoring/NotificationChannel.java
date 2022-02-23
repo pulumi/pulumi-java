@@ -5,8 +5,8 @@ package io.pulumi.gcp.monitoring;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.monitoring.NotificationChannelArgs;
 import io.pulumi.gcp.monitoring.inputs.NotificationChannelState;
@@ -233,13 +233,6 @@ public class NotificationChannel extends io.pulumi.resources.CustomResource {
         return this.verificationStatus;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NotificationChannel(String name) {
-        super("gcp:monitoring/notificationChannel:NotificationChannel", name, NotificationChannelArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

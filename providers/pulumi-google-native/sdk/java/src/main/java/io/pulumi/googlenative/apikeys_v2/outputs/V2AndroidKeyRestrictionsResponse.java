@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apikeys_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apikeys_v2.outputs.V2AndroidApplicationResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class V2AndroidKeyRestrictionsResponse {
             this.allowedApplications = Objects.requireNonNull(allowedApplications);
             return this;
         }
-
         public V2AndroidKeyRestrictionsResponse build() {
             return new V2AndroidKeyRestrictionsResponse(allowedApplications);
         }

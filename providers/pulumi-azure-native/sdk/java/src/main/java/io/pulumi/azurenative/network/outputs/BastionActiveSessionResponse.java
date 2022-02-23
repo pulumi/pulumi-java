@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -265,7 +265,6 @@ public final class BastionActiveSessionResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public BastionActiveSessionResponse build() {
             return new BastionActiveSessionResponse(protocol, resourceType, sessionDurationInMins, sessionId, startTime, targetHostName, targetIpAddress, targetResourceGroup, targetResourceId, targetSubscriptionId, userName);
         }

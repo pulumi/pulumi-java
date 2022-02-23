@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerinstance.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class VolumeMountResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public VolumeMountResponse build() {
             return new VolumeMountResponse(mountPath, name, readOnly);
         }

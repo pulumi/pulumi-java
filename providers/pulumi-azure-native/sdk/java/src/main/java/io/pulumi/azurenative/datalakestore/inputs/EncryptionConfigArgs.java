@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakestore.inputs;
 import io.pulumi.azurenative.datalakestore.enums.EncryptionConfigType;
 import io.pulumi.azurenative.datalakestore.inputs.KeyVaultMetaInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="keyVaultMetaInfo")
-    private final @Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
+        private final @Nullable Input<KeyVaultMetaInfoArgs> keyVaultMetaInfo;
 
     public Input<KeyVaultMetaInfoArgs> getKeyVaultMetaInfo() {
         return this.keyVaultMetaInfo == null ? Input.empty() : this.keyVaultMetaInfo;
@@ -35,7 +35,7 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<EncryptionConfigType> type;
+        private final Input<EncryptionConfigType> type;
 
     public Input<EncryptionConfigType> getType() {
         return this.type;
@@ -94,7 +94,6 @@ public final class EncryptionConfigArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public EncryptionConfigArgs build() {
             return new EncryptionConfigArgs(keyVaultMetaInfo, type);
         }

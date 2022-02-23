@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicelinker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="authType", required=true)
-    private final String authType;
+        private final String authType;
 
     public String getAuthType() {
         return this.authType;
@@ -33,7 +33,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="clientId", required=true)
-    private final String clientId;
+        private final String clientId;
 
     public String getClientId() {
         return this.clientId;
@@ -44,7 +44,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -55,7 +55,7 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="secret", required=true)
-    private final String secret;
+        private final String secret;
 
     public String getSecret() {
         return this.secret;
@@ -124,7 +124,6 @@ public final class ServicePrincipalSecretAuthInfoResponse extends io.pulumi.reso
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public ServicePrincipalSecretAuthInfoResponse build() {
             return new ServicePrincipalSecretAuthInfoResponse(authType, clientId, principalId, secret);
         }

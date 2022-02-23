@@ -7,7 +7,7 @@ import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeAdditionalInstanceConf
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeComponentConfigurationArgs;
 import io.pulumi.awsnative.imagebuilder.inputs.ImageRecipeInstanceBlockDeviceMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalInstanceConfiguration")
-    private final @Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
+        private final @Nullable Input<ImageRecipeAdditionalInstanceConfigurationArgs> additionalInstanceConfiguration;
 
     public Input<ImageRecipeAdditionalInstanceConfigurationArgs> getAdditionalInstanceConfiguration() {
         return this.additionalInstanceConfiguration == null ? Input.empty() : this.additionalInstanceConfiguration;
@@ -35,7 +35,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="blockDeviceMappings")
-    private final @Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
+        private final @Nullable Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> blockDeviceMappings;
 
     public Input<List<ImageRecipeInstanceBlockDeviceMappingArgs>> getBlockDeviceMappings() {
         return this.blockDeviceMappings == null ? Input.empty() : this.blockDeviceMappings;
@@ -46,7 +46,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components", required=true)
-    private final Input<List<ImageRecipeComponentConfigurationArgs>> components;
+        private final Input<List<ImageRecipeComponentConfigurationArgs>> components;
 
     public Input<List<ImageRecipeComponentConfigurationArgs>> getComponents() {
         return this.components;
@@ -57,7 +57,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -68,7 +68,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -79,7 +79,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parentImage", required=true)
-    private final Input<String> parentImage;
+        private final Input<String> parentImage;
 
     public Input<String> getParentImage() {
         return this.parentImage;
@@ -90,7 +90,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Object> tags;
+        private final @Nullable Input<Object> tags;
 
     public Input<Object> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -101,7 +101,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -112,7 +112,7 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workingDirectory")
-    private final @Nullable Input<String> workingDirectory;
+        private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
@@ -276,7 +276,6 @@ public final class ImageRecipeArgs extends io.pulumi.resources.ResourceArgs {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }
-
         public ImageRecipeArgs build() {
             return new ImageRecipeArgs(additionalInstanceConfiguration, blockDeviceMappings, components, description, name, parentImage, tags, version, workingDirectory);
         }

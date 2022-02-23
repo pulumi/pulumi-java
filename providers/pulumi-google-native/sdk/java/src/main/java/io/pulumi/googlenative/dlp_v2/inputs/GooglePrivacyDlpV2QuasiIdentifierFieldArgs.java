@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2FieldIdArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
      * 
      */
     @InputImport(name="customTag")
-    private final @Nullable Input<String> customTag;
+      private final @Nullable Input<String> customTag;
 
     public Input<String> getCustomTag() {
         return this.customTag == null ? Input.empty() : this.customTag;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
+      private final @Nullable Input<GooglePrivacyDlpV2FieldIdArgs> field;
 
     public Input<GooglePrivacyDlpV2FieldIdArgs> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -94,7 +94,6 @@ public final class GooglePrivacyDlpV2QuasiIdentifierFieldArgs extends io.pulumi.
             this.field = Input.ofNullable(field);
             return this;
         }
-
         public GooglePrivacyDlpV2QuasiIdentifierFieldArgs build() {
             return new GooglePrivacyDlpV2QuasiIdentifierFieldArgs(customTag, field);
         }

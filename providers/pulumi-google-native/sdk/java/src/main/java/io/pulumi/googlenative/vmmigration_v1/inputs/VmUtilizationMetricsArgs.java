@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuAveragePercent")
-    private final @Nullable Input<Integer> cpuAveragePercent;
+      private final @Nullable Input<Integer> cpuAveragePercent;
 
     public Input<Integer> getCpuAveragePercent() {
         return this.cpuAveragePercent == null ? Input.empty() : this.cpuAveragePercent;
@@ -35,7 +35,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="cpuMaxPercent")
-    private final @Nullable Input<Integer> cpuMaxPercent;
+      private final @Nullable Input<Integer> cpuMaxPercent;
 
     public Input<Integer> getCpuMaxPercent() {
         return this.cpuMaxPercent == null ? Input.empty() : this.cpuMaxPercent;
@@ -46,7 +46,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskIoRateAverageKbps")
-    private final @Nullable Input<String> diskIoRateAverageKbps;
+      private final @Nullable Input<String> diskIoRateAverageKbps;
 
     public Input<String> getDiskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps == null ? Input.empty() : this.diskIoRateAverageKbps;
@@ -57,7 +57,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskIoRateMaxKbps")
-    private final @Nullable Input<String> diskIoRateMaxKbps;
+      private final @Nullable Input<String> diskIoRateMaxKbps;
 
     public Input<String> getDiskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps == null ? Input.empty() : this.diskIoRateMaxKbps;
@@ -68,7 +68,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memoryAveragePercent")
-    private final @Nullable Input<Integer> memoryAveragePercent;
+      private final @Nullable Input<Integer> memoryAveragePercent;
 
     public Input<Integer> getMemoryAveragePercent() {
         return this.memoryAveragePercent == null ? Input.empty() : this.memoryAveragePercent;
@@ -79,7 +79,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="memoryMaxPercent")
-    private final @Nullable Input<Integer> memoryMaxPercent;
+      private final @Nullable Input<Integer> memoryMaxPercent;
 
     public Input<Integer> getMemoryMaxPercent() {
         return this.memoryMaxPercent == null ? Input.empty() : this.memoryMaxPercent;
@@ -90,7 +90,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkThroughputAverageKbps")
-    private final @Nullable Input<String> networkThroughputAverageKbps;
+      private final @Nullable Input<String> networkThroughputAverageKbps;
 
     public Input<String> getNetworkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps == null ? Input.empty() : this.networkThroughputAverageKbps;
@@ -101,7 +101,7 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="networkThroughputMaxKbps")
-    private final @Nullable Input<String> networkThroughputMaxKbps;
+      private final @Nullable Input<String> networkThroughputMaxKbps;
 
     public Input<String> getNetworkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps == null ? Input.empty() : this.networkThroughputMaxKbps;
@@ -250,7 +250,6 @@ public final class VmUtilizationMetricsArgs extends io.pulumi.resources.Resource
             this.networkThroughputMaxKbps = Input.ofNullable(networkThroughputMaxKbps);
             return this;
         }
-
         public VmUtilizationMetricsArgs build() {
             return new VmUtilizationMetricsArgs(cpuAveragePercent, cpuMaxPercent, diskIoRateAverageKbps, diskIoRateMaxKbps, memoryAveragePercent, memoryMaxPercent, networkThroughputAverageKbps, networkThroughputMaxKbps);
         }

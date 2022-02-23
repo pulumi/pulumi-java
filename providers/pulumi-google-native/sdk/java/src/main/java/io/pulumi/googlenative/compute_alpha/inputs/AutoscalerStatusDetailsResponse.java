@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class AutoscalerStatusDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -28,7 +28,7 @@ public final class AutoscalerStatusDetailsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -77,7 +77,6 @@ public final class AutoscalerStatusDetailsResponse extends io.pulumi.resources.I
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AutoscalerStatusDetailsResponse build() {
             return new AutoscalerStatusDetailsResponse(message, type);
         }

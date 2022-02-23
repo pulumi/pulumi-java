@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class GetPartitionResult {
             this.partition = Objects.requireNonNull(partition);
             return this;
         }
-
         public GetPartitionResult build() {
             return new GetPartitionResult(partition);
         }

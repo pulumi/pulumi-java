@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.streamanalytics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class ClusterJobResponse {
             this.streamingUnits = Objects.requireNonNull(streamingUnits);
             return this;
         }
-
         public ClusterJobResponse build() {
             return new ClusterJobResponse(id, jobState, streamingUnits);
         }

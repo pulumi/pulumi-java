@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.DatabaseDumpResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetMetadataImportResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetMetadataImportResult build() {
             return new GetMetadataImportResult(createTime, databaseDump, description, endTime, name, state, updateTime);
         }

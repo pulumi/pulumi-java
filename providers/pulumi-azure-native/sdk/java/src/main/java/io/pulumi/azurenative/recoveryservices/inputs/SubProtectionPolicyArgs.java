@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.SimpleRetentionPolicyArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.SimpleSchedulePolicyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -31,7 +31,7 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policyType")
-    private final @Nullable Input<Either<String,PolicyType>> policyType;
+        private final @Nullable Input<Either<String,PolicyType>> policyType;
 
     public Input<Either<String,PolicyType>> getPolicyType() {
         return this.policyType == null ? Input.empty() : this.policyType;
@@ -42,7 +42,7 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
+        private final @Nullable Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> retentionPolicy;
 
     public Input<Either<LongTermRetentionPolicyArgs,SimpleRetentionPolicyArgs>> getRetentionPolicy() {
         return this.retentionPolicy == null ? Input.empty() : this.retentionPolicy;
@@ -53,7 +53,7 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="schedulePolicy")
-    private final @Nullable Input<Object> schedulePolicy;
+        private final @Nullable Input<Object> schedulePolicy;
 
     public Input<Object> getSchedulePolicy() {
         return this.schedulePolicy == null ? Input.empty() : this.schedulePolicy;
@@ -127,7 +127,6 @@ public final class SubProtectionPolicyArgs extends io.pulumi.resources.ResourceA
             this.schedulePolicy = Input.ofNullable(schedulePolicy);
             return this;
         }
-
         public SubProtectionPolicyArgs build() {
             return new SubProtectionPolicyArgs(policyType, retentionPolicy, schedulePolicy);
         }

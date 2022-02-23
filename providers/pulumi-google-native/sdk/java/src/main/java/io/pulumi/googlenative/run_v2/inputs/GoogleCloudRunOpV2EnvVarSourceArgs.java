@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v2.inputs.GoogleCloudRunOpV2SecretKeySelectorArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="secretKeyRef")
-    private final @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
+      private final @Nullable Input<GoogleCloudRunOpV2SecretKeySelectorArgs> secretKeyRef;
 
     public Input<GoogleCloudRunOpV2SecretKeySelectorArgs> getSecretKeyRef() {
         return this.secretKeyRef == null ? Input.empty() : this.secretKeyRef;
@@ -66,7 +66,6 @@ public final class GoogleCloudRunOpV2EnvVarSourceArgs extends io.pulumi.resource
             this.secretKeyRef = Input.ofNullable(secretKeyRef);
             return this;
         }
-
         public GoogleCloudRunOpV2EnvVarSourceArgs build() {
             return new GoogleCloudRunOpV2EnvVarSourceArgs(secretKeyRef);
         }

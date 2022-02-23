@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
     public static final GetOrganizationPolicyArgs Empty = new GetOrganizationPolicyArgs();
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="policyId", required=true)
-    private final String policyId;
+      private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
@@ -69,7 +69,6 @@ public final class GetOrganizationPolicyArgs extends io.pulumi.resources.InvokeA
             this.policyId = Objects.requireNonNull(policyId);
             return this;
         }
-
         public GetOrganizationPolicyArgs build() {
             return new GetOrganizationPolicyArgs(organizationId, policyId);
         }

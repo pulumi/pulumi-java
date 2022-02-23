@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="restApiId")
-    private final @Nullable String restApiId;
+        private final @Nullable String restApiId;
 
     public Optional<String> getRestApiId() {
         return this.restApiId == null ? Optional.empty() : Optional.ofNullable(this.restApiId);
@@ -30,7 +30,7 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="stageName")
-    private final @Nullable String stageName;
+        private final @Nullable String stageName;
 
     public Optional<String> getStageName() {
         return this.stageName == null ? Optional.empty() : Optional.ofNullable(this.stageName);
@@ -79,7 +79,6 @@ public final class ApiKeyStageKey extends io.pulumi.resources.InvokeArgs {
             this.stageName = stageName;
             return this;
         }
-
         public ApiKeyStageKey build() {
             return new ApiKeyStageKey(restApiId, stageName);
         }

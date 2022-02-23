@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final String automationAccountName;
+        private final String automationAccountName;
 
     public String getAutomationAccountName() {
         return this.automationAccountName;
@@ -28,7 +28,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="variableName", required=true)
-    private final String variableName;
+        private final String variableName;
 
     public String getVariableName() {
         return this.variableName;
@@ -98,7 +98,6 @@ public final class GetVariableArgs extends io.pulumi.resources.InvokeArgs {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public GetVariableArgs build() {
             return new GetVariableArgs(automationAccountName, resourceGroupName, variableName);
         }

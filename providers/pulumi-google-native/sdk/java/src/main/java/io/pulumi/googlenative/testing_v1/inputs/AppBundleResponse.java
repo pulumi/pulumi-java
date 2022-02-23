@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AppBundleResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bundleLocation", required=true)
-    private final FileReferenceResponse bundleLocation;
+      private final FileReferenceResponse bundleLocation;
 
     public FileReferenceResponse getBundleLocation() {
         return this.bundleLocation;
@@ -59,7 +59,6 @@ public final class AppBundleResponse extends io.pulumi.resources.InvokeArgs {
             this.bundleLocation = Objects.requireNonNull(bundleLocation);
             return this;
         }
-
         public AppBundleResponse build() {
             return new AppBundleResponse(bundleLocation);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics.inputs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetContentVersionValueArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.DatasetOutputFileUriValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
     public static final DatasetVariableArgs Empty = new DatasetVariableArgs();
 
     @InputImport(name="datasetContentVersionValue")
-    private final @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue;
+        private final @Nullable Input<DatasetContentVersionValueArgs> datasetContentVersionValue;
 
     public Input<DatasetContentVersionValueArgs> getDatasetContentVersionValue() {
         return this.datasetContentVersionValue == null ? Input.empty() : this.datasetContentVersionValue;
     }
 
     @InputImport(name="doubleValue")
-    private final @Nullable Input<Double> doubleValue;
+        private final @Nullable Input<Double> doubleValue;
 
     public Input<Double> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
     }
 
     @InputImport(name="outputFileUriValue")
-    private final @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue;
+        private final @Nullable Input<DatasetOutputFileUriValueArgs> outputFileUriValue;
 
     public Input<DatasetOutputFileUriValueArgs> getOutputFileUriValue() {
         return this.outputFileUriValue == null ? Input.empty() : this.outputFileUriValue;
     }
 
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+        private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
     }
 
     @InputImport(name="variableName", required=true)
-    private final Input<String> variableName;
+        private final Input<String> variableName;
 
     public Input<String> getVariableName() {
         return this.variableName;
@@ -150,7 +150,6 @@ public final class DatasetVariableArgs extends io.pulumi.resources.ResourceArgs 
             this.variableName = Input.of(Objects.requireNonNull(variableName));
             return this;
         }
-
         public DatasetVariableArgs build() {
             return new DatasetVariableArgs(datasetContentVersionValue, doubleValue, outputFileUriValue, stringValue, variableName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="monitors", required=true)
-    private final Input<List<String>> monitors;
+        private final Input<List<String>> monitors;
 
     public Input<List<String>> getMonitors() {
         return this.monitors;
@@ -37,7 +37,7 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -48,7 +48,7 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -59,7 +59,7 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretFile")
-    private final @Nullable Input<String> secretFile;
+        private final @Nullable Input<String> secretFile;
 
     public Input<String> getSecretFile() {
         return this.secretFile == null ? Input.empty() : this.secretFile;
@@ -70,7 +70,7 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<SecretReferenceArgs> secretRef;
+        private final @Nullable Input<SecretReferenceArgs> secretRef;
 
     public Input<SecretReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -81,7 +81,7 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+        private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -200,7 +200,6 @@ public final class CephFSPersistentVolumeSourceArgs extends io.pulumi.resources.
             this.user = Input.ofNullable(user);
             return this;
         }
-
         public CephFSPersistentVolumeSourceArgs build() {
             return new CephFSPersistentVolumeSourceArgs(monitors, path, readOnly, secretFile, secretRef, user);
         }

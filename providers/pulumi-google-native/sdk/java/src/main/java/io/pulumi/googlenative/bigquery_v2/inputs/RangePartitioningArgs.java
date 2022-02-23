@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.RangePartitioningRangeArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -31,7 +31,7 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="range")
-    private final @Nullable Input<RangePartitioningRangeArgs> range;
+      private final @Nullable Input<RangePartitioningRangeArgs> range;
 
     public Input<RangePartitioningRangeArgs> getRange() {
         return this.range == null ? Input.empty() : this.range;
@@ -90,7 +90,6 @@ public final class RangePartitioningArgs extends io.pulumi.resources.ResourceArg
             this.range = Input.ofNullable(range);
             return this;
         }
-
         public RangePartitioningArgs build() {
             return new RangePartitioningArgs(field, range);
         }

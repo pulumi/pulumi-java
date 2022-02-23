@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="inlineCode", required=true)
-    private final String inlineCode;
+      private final String inlineCode;
 
     public String getInlineCode() {
         return this.inlineCode;
@@ -32,7 +32,7 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final String resourceUri;
+      private final String resourceUri;
 
     public String getResourceUri() {
         return this.resourceUri;
@@ -81,7 +81,6 @@ public final class UserDefinedFunctionResourceResponse extends io.pulumi.resourc
             this.resourceUri = Objects.requireNonNull(resourceUri);
             return this;
         }
-
         public UserDefinedFunctionResourceResponse build() {
             return new UserDefinedFunctionResourceResponse(inlineCode, resourceUri);
         }

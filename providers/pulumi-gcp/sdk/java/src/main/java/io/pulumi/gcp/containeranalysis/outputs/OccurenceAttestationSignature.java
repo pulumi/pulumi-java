@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.containeranalysis.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -106,7 +106,6 @@ public final class OccurenceAttestationSignature {
             this.signature = signature;
             return this;
         }
-
         public OccurenceAttestationSignature build() {
             return new OccurenceAttestationSignature(publicKeyId, signature);
         }

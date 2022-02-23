@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -38,7 +38,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dependsOn", required=true)
-    private final List<PipelineReferenceResponse> dependsOn;
+        private final List<PipelineReferenceResponse> dependsOn;
 
     public List<PipelineReferenceResponse> getDependsOn() {
         return this.dependsOn;
@@ -49,7 +49,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -60,7 +60,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="pipeline", required=true)
-    private final TriggerPipelineReferenceResponse pipeline;
+        private final TriggerPipelineReferenceResponse pipeline;
 
     public TriggerPipelineReferenceResponse getPipeline() {
         return this.pipeline;
@@ -71,7 +71,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="runDimension", required=true)
-    private final String runDimension;
+        private final String runDimension;
 
     public String getRunDimension() {
         return this.runDimension;
@@ -82,7 +82,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="runtimeState", required=true)
-    private final String runtimeState;
+        private final String runtimeState;
 
     public String getRuntimeState() {
         return this.runtimeState;
@@ -94,7 +94,7 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -193,7 +193,6 @@ public final class ChainingTriggerResponse extends io.pulumi.resources.InvokeArg
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ChainingTriggerResponse build() {
             return new ChainingTriggerResponse(annotations, dependsOn, description, pipeline, runDimension, runtimeState, type);
         }

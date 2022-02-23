@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="deploymentName", required=true)
-    private final String deploymentName;
+        private final String deploymentName;
 
     public String getDeploymentName() {
         return this.deploymentName;
@@ -28,7 +28,7 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final String groupId;
+        private final String groupId;
 
     public String getGroupId() {
         return this.groupId;
@@ -77,7 +77,6 @@ public final class GetDeploymentAtManagementGroupScopeArgs extends io.pulumi.res
             this.groupId = Objects.requireNonNull(groupId);
             return this;
         }
-
         public GetDeploymentAtManagementGroupScopeArgs build() {
             return new GetDeploymentAtManagementGroupScopeArgs(deploymentName, groupId);
         }

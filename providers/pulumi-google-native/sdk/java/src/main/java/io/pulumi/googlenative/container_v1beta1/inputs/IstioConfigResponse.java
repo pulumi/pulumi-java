@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="auth", required=true)
-    private final String auth;
+      private final String auth;
 
     public String getAuth() {
         return this.auth;
@@ -33,7 +33,7 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -82,7 +82,6 @@ public final class IstioConfigResponse extends io.pulumi.resources.InvokeArgs {
             this.disabled = Objects.requireNonNull(disabled);
             return this;
         }
-
         public IstioConfigResponse build() {
             return new IstioConfigResponse(auth, disabled);
         }

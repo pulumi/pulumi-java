@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.inputs;
 import io.pulumi.azurenative.network.enums.ProbeProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -37,7 +37,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="intervalInSeconds")
-    private final @Nullable Input<Integer> intervalInSeconds;
+        private final @Nullable Input<Integer> intervalInSeconds;
 
     public Input<Integer> getIntervalInSeconds() {
         return this.intervalInSeconds == null ? Input.empty() : this.intervalInSeconds;
@@ -48,7 +48,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -59,7 +59,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfProbes")
-    private final @Nullable Input<Integer> numberOfProbes;
+        private final @Nullable Input<Integer> numberOfProbes;
 
     public Input<Integer> getNumberOfProbes() {
         return this.numberOfProbes == null ? Input.empty() : this.numberOfProbes;
@@ -70,7 +70,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -81,7 +81,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,ProbeProtocol>> protocol;
+        private final Input<Either<String,ProbeProtocol>> protocol;
 
     public Input<Either<String,ProbeProtocol>> getProtocol() {
         return this.protocol;
@@ -92,7 +92,7 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requestPath")
-    private final @Nullable Input<String> requestPath;
+        private final @Nullable Input<String> requestPath;
 
     public Input<String> getRequestPath() {
         return this.requestPath == null ? Input.empty() : this.requestPath;
@@ -226,7 +226,6 @@ public final class ProbeArgs extends io.pulumi.resources.ResourceArgs {
             this.requestPath = Input.ofNullable(requestPath);
             return this;
         }
-
         public ProbeArgs build() {
             return new ProbeArgs(id, intervalInSeconds, name, numberOfProbes, port, protocol, requestPath);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.inputs.PredictionDistributionDefinitionResponseDistributions;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="distributions")
-    private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
+        private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
 
     public List<PredictionDistributionDefinitionResponseDistributions> getDistributions() {
         return this.distributions == null ? List.of() : this.distributions;
@@ -36,7 +36,7 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="totalNegatives")
-    private final @Nullable Double totalNegatives;
+        private final @Nullable Double totalNegatives;
 
     public Optional<Double> getTotalNegatives() {
         return this.totalNegatives == null ? Optional.empty() : Optional.ofNullable(this.totalNegatives);
@@ -47,7 +47,7 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="totalPositives")
-    private final @Nullable Double totalPositives;
+        private final @Nullable Double totalPositives;
 
     public Optional<Double> getTotalPositives() {
         return this.totalPositives == null ? Optional.empty() : Optional.ofNullable(this.totalPositives);
@@ -106,7 +106,6 @@ public final class PredictionDistributionDefinitionResponse extends io.pulumi.re
             this.totalPositives = totalPositives;
             return this;
         }
-
         public PredictionDistributionDefinitionResponse build() {
             return new PredictionDistributionDefinitionResponse(distributions, totalNegatives, totalPositives);
         }

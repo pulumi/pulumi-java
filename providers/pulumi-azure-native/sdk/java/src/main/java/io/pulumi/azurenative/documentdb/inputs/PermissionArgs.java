@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataActions")
-    private final @Nullable Input<List<String>> dataActions;
+        private final @Nullable Input<List<String>> dataActions;
 
     public Input<List<String>> getDataActions() {
         return this.dataActions == null ? Input.empty() : this.dataActions;
@@ -35,7 +35,7 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notDataActions")
-    private final @Nullable Input<List<String>> notDataActions;
+        private final @Nullable Input<List<String>> notDataActions;
 
     public Input<List<String>> getNotDataActions() {
         return this.notDataActions == null ? Input.empty() : this.notDataActions;
@@ -94,7 +94,6 @@ public final class PermissionArgs extends io.pulumi.resources.ResourceArgs {
             this.notDataActions = Input.ofNullable(notDataActions);
             return this;
         }
-
         public PermissionArgs build() {
             return new PermissionArgs(dataActions, notDataActions);
         }

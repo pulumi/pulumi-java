@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.HTTPHeader;
 import java.lang.Integer;
 import java.lang.String;
@@ -151,7 +151,6 @@ public final class HTTPGetAction {
             this.scheme = scheme;
             return this;
         }
-
         public HTTPGetAction build() {
             return new HTTPGetAction(host, httpHeaders, path, port, scheme);
         }

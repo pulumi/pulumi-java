@@ -4,7 +4,7 @@
 package io.pulumi.random.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -23,7 +23,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="keepers")
-    private final @Nullable Input<Map<String,Object>> keepers;
+        private final @Nullable Input<Map<String,Object>> keepers;
 
     public Input<Map<String,Object>> getKeepers() {
         return this.keepers == null ? Input.empty() : this.keepers;
@@ -34,7 +34,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="length")
-    private final @Nullable Input<Integer> length;
+        private final @Nullable Input<Integer> length;
 
     public Input<Integer> getLength() {
         return this.length == null ? Input.empty() : this.length;
@@ -45,7 +45,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lower")
-    private final @Nullable Input<Boolean> lower;
+        private final @Nullable Input<Boolean> lower;
 
     public Input<Boolean> getLower() {
         return this.lower == null ? Input.empty() : this.lower;
@@ -56,7 +56,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minLower")
-    private final @Nullable Input<Integer> minLower;
+        private final @Nullable Input<Integer> minLower;
 
     public Input<Integer> getMinLower() {
         return this.minLower == null ? Input.empty() : this.minLower;
@@ -67,7 +67,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minNumeric")
-    private final @Nullable Input<Integer> minNumeric;
+        private final @Nullable Input<Integer> minNumeric;
 
     public Input<Integer> getMinNumeric() {
         return this.minNumeric == null ? Input.empty() : this.minNumeric;
@@ -78,7 +78,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minSpecial")
-    private final @Nullable Input<Integer> minSpecial;
+        private final @Nullable Input<Integer> minSpecial;
 
     public Input<Integer> getMinSpecial() {
         return this.minSpecial == null ? Input.empty() : this.minSpecial;
@@ -89,7 +89,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minUpper")
-    private final @Nullable Input<Integer> minUpper;
+        private final @Nullable Input<Integer> minUpper;
 
     public Input<Integer> getMinUpper() {
         return this.minUpper == null ? Input.empty() : this.minUpper;
@@ -100,7 +100,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Boolean> number;
+        private final @Nullable Input<Boolean> number;
 
     public Input<Boolean> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -111,7 +111,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="overrideSpecial")
-    private final @Nullable Input<String> overrideSpecial;
+        private final @Nullable Input<String> overrideSpecial;
 
     public Input<String> getOverrideSpecial() {
         return this.overrideSpecial == null ? Input.empty() : this.overrideSpecial;
@@ -122,7 +122,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="result")
-    private final @Nullable Input<String> result;
+        private final @Nullable Input<String> result;
 
     public Input<String> getResult() {
         return this.result == null ? Input.empty() : this.result;
@@ -133,7 +133,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="special")
-    private final @Nullable Input<Boolean> special;
+        private final @Nullable Input<Boolean> special;
 
     public Input<Boolean> getSpecial() {
         return this.special == null ? Input.empty() : this.special;
@@ -144,7 +144,7 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="upper")
-    private final @Nullable Input<Boolean> upper;
+        private final @Nullable Input<Boolean> upper;
 
     public Input<Boolean> getUpper() {
         return this.upper == null ? Input.empty() : this.upper;
@@ -353,7 +353,6 @@ public final class RandomPasswordState extends io.pulumi.resources.ResourceArgs 
             this.upper = Input.ofNullable(upper);
             return this;
         }
-
         public RandomPasswordState build() {
             return new RandomPasswordState(keepers, length, lower, minLower, minNumeric, minSpecial, minUpper, number, overrideSpecial, result, special, upper);
         }

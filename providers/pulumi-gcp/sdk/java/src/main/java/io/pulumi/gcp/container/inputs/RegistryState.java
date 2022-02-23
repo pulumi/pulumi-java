@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketSelfLink")
-    private final @Nullable Input<String> bucketSelfLink;
+        private final @Nullable Input<String> bucketSelfLink;
 
     public Input<String> getBucketSelfLink() {
         return this.bucketSelfLink == null ? Input.empty() : this.bucketSelfLink;
@@ -30,7 +30,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -41,7 +41,7 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -115,7 +115,6 @@ public final class RegistryState extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public RegistryState build() {
             return new RegistryState(bucketSelfLink, location, project);
         }

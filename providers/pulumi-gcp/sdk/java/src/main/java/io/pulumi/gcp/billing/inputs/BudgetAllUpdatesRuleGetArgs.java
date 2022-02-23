@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disableDefaultIamRecipients")
-    private final @Nullable Input<Boolean> disableDefaultIamRecipients;
+        private final @Nullable Input<Boolean> disableDefaultIamRecipients;
 
     public Input<Boolean> getDisableDefaultIamRecipients() {
         return this.disableDefaultIamRecipients == null ? Input.empty() : this.disableDefaultIamRecipients;
@@ -38,7 +38,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="monitoringNotificationChannels")
-    private final @Nullable Input<List<String>> monitoringNotificationChannels;
+        private final @Nullable Input<List<String>> monitoringNotificationChannels;
 
     public Input<List<String>> getMonitoringNotificationChannels() {
         return this.monitoringNotificationChannels == null ? Input.empty() : this.monitoringNotificationChannels;
@@ -52,7 +52,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="pubsubTopic")
-    private final @Nullable Input<String> pubsubTopic;
+        private final @Nullable Input<String> pubsubTopic;
 
     public Input<String> getPubsubTopic() {
         return this.pubsubTopic == null ? Input.empty() : this.pubsubTopic;
@@ -65,7 +65,7 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="schemaVersion")
-    private final @Nullable Input<String> schemaVersion;
+        private final @Nullable Input<String> schemaVersion;
 
     public Input<String> getSchemaVersion() {
         return this.schemaVersion == null ? Input.empty() : this.schemaVersion;
@@ -154,7 +154,6 @@ public final class BudgetAllUpdatesRuleGetArgs extends io.pulumi.resources.Resou
             this.schemaVersion = Input.ofNullable(schemaVersion);
             return this;
         }
-
         public BudgetAllUpdatesRuleGetArgs build() {
             return new BudgetAllUpdatesRuleGetArgs(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }

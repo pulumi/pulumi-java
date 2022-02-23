@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2RedactConfigResponse extends io.pulumi.reso
         public Builder(GooglePrivacyDlpV2RedactConfigResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2RedactConfigResponse build() {
             return new GooglePrivacyDlpV2RedactConfigResponse();
         }

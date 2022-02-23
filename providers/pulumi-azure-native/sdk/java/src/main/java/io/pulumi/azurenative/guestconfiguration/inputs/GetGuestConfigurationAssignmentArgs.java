@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="guestConfigurationAssignmentName", required=true)
-    private final String guestConfigurationAssignmentName;
+        private final String guestConfigurationAssignmentName;
 
     public String getGuestConfigurationAssignmentName() {
         return this.guestConfigurationAssignmentName;
@@ -28,7 +28,7 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="vmName", required=true)
-    private final String vmName;
+        private final String vmName;
 
     public String getVmName() {
         return this.vmName;
@@ -98,7 +98,6 @@ public final class GetGuestConfigurationAssignmentArgs extends io.pulumi.resourc
             this.vmName = Objects.requireNonNull(vmName);
             return this;
         }
-
         public GetGuestConfigurationAssignmentArgs build() {
             return new GetGuestConfigurationAssignmentArgs(guestConfigurationAssignmentName, resourceGroupName, vmName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.CycleStepResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -35,7 +35,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="progress", required=true)
-    private final Integer progress;
+      private final Integer progress;
 
     public Integer getProgress() {
         return this.progress;
@@ -46,7 +46,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="progressPercent", required=true)
-    private final Integer progressPercent;
+      private final Integer progressPercent;
 
     public Integer getProgressPercent() {
         return this.progressPercent;
@@ -57,7 +57,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -68,7 +68,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="steps", required=true)
-    private final List<CycleStepResponse> steps;
+      private final List<CycleStepResponse> steps;
 
     public List<CycleStepResponse> getSteps() {
         return this.steps;
@@ -79,7 +79,7 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="totalPauseDuration", required=true)
-    private final String totalPauseDuration;
+      private final String totalPauseDuration;
 
     public String getTotalPauseDuration() {
         return this.totalPauseDuration;
@@ -168,7 +168,6 @@ public final class ReplicationCycleResponse extends io.pulumi.resources.InvokeAr
             this.totalPauseDuration = Objects.requireNonNull(totalPauseDuration);
             return this;
         }
-
         public ReplicationCycleResponse build() {
             return new ReplicationCycleResponse(endTime, progress, progressPercent, startTime, steps, totalPauseDuration);
         }

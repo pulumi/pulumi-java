@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetHcVpnGatewayVpnInterface;
 import java.lang.String;
 import java.util.List;
@@ -148,7 +148,6 @@ public final class GetHcVpnGatewayResult {
             this.vpnInterfaces = Objects.requireNonNull(vpnInterfaces);
             return this;
         }
-
         public GetHcVpnGatewayResult build() {
             return new GetHcVpnGatewayResult(description, id, name, network, project, region, selfLink, vpnInterfaces);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -80,7 +80,6 @@ public final class AzureActiveDirectoryLoginResponse {
             this.loginParameters = loginParameters;
             return this;
         }
-
         public AzureActiveDirectoryLoginResponse build() {
             return new AzureActiveDirectoryLoginResponse(disableWWWAuthenticate, loginParameters);
         }

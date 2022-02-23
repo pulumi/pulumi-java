@@ -11,7 +11,7 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyTokenRestrictionRespo
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyUnknownConfigurationResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyUnknownRestrictionResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyWidevineConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -127,7 +127,6 @@ public final class ContentKeyPolicyOptionResponse {
             this.restriction = Objects.requireNonNull(restriction);
             return this;
         }
-
         public ContentKeyPolicyOptionResponse build() {
             return new ContentKeyPolicyOptionResponse(configuration, name, policyOptionId, restriction);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRouteArgs Empty = new GetRouteArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="privateConnectionId", required=true)
-    private final String privateConnectionId;
+      private final String privateConnectionId;
 
     public String getPrivateConnectionId() {
         return this.privateConnectionId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="routeId", required=true)
-    private final String routeId;
+      private final String routeId;
 
     public String getRouteId() {
         return this.routeId;
@@ -105,7 +105,6 @@ public final class GetRouteArgs extends io.pulumi.resources.InvokeArgs {
             this.routeId = Objects.requireNonNull(routeId);
             return this;
         }
-
         public GetRouteArgs build() {
             return new GetRouteArgs(location, privateConnectionId, project, routeId);
         }

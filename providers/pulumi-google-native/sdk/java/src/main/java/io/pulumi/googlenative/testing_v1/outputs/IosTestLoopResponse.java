@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class IosTestLoopResponse {
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-
         public IosTestLoopResponse build() {
             return new IosTestLoopResponse(appBundleId, appIpa, scenarios);
         }

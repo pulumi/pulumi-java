@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepArchiveExtractionArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepDpkgInstallationArgs;
 import io.pulumi.gcp.osconfig.inputs.GuestPoliciesRecipeInstallStepFileCopyArgs;
@@ -26,7 +26,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="archiveExtraction")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepArchiveExtractionArgs> archiveExtraction;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepArchiveExtractionArgs> archiveExtraction;
 
     public Input<GuestPoliciesRecipeInstallStepArchiveExtractionArgs> getArchiveExtraction() {
         return this.archiveExtraction == null ? Input.empty() : this.archiveExtraction;
@@ -38,7 +38,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="dpkgInstallation")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepDpkgInstallationArgs> dpkgInstallation;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepDpkgInstallationArgs> dpkgInstallation;
 
     public Input<GuestPoliciesRecipeInstallStepDpkgInstallationArgs> getDpkgInstallation() {
         return this.dpkgInstallation == null ? Input.empty() : this.dpkgInstallation;
@@ -50,7 +50,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileCopy")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepFileCopyArgs> fileCopy;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepFileCopyArgs> fileCopy;
 
     public Input<GuestPoliciesRecipeInstallStepFileCopyArgs> getFileCopy() {
         return this.fileCopy == null ? Input.empty() : this.fileCopy;
@@ -62,7 +62,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="fileExec")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepFileExecArgs> fileExec;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepFileExecArgs> fileExec;
 
     public Input<GuestPoliciesRecipeInstallStepFileExecArgs> getFileExec() {
         return this.fileExec == null ? Input.empty() : this.fileExec;
@@ -74,7 +74,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="msiInstallation")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepMsiInstallationArgs> msiInstallation;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepMsiInstallationArgs> msiInstallation;
 
     public Input<GuestPoliciesRecipeInstallStepMsiInstallationArgs> getMsiInstallation() {
         return this.msiInstallation == null ? Input.empty() : this.msiInstallation;
@@ -86,7 +86,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="rpmInstallation")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepRpmInstallationArgs> rpmInstallation;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepRpmInstallationArgs> rpmInstallation;
 
     public Input<GuestPoliciesRecipeInstallStepRpmInstallationArgs> getRpmInstallation() {
         return this.rpmInstallation == null ? Input.empty() : this.rpmInstallation;
@@ -98,7 +98,7 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scriptRun")
-    private final @Nullable Input<GuestPoliciesRecipeInstallStepScriptRunArgs> scriptRun;
+        private final @Nullable Input<GuestPoliciesRecipeInstallStepScriptRunArgs> scriptRun;
 
     public Input<GuestPoliciesRecipeInstallStepScriptRunArgs> getScriptRun() {
         return this.scriptRun == null ? Input.empty() : this.scriptRun;
@@ -232,7 +232,6 @@ public final class GuestPoliciesRecipeInstallStepArgs extends io.pulumi.resource
             this.scriptRun = Input.ofNullable(scriptRun);
             return this;
         }
-
         public GuestPoliciesRecipeInstallStepArgs build() {
             return new GuestPoliciesRecipeInstallStepArgs(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

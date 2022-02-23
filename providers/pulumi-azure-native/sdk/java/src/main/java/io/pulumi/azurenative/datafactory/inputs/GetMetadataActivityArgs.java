@@ -26,7 +26,7 @@ import io.pulumi.azurenative.datafactory.inputs.SftpReadSettingsArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.azurenative.datafactory.inputs.XmlReadSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -47,7 +47,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataset", required=true)
-    private final Input<DatasetReferenceArgs> dataset;
+        private final Input<DatasetReferenceArgs> dataset;
 
     public Input<DatasetReferenceArgs> getDataset() {
         return this.dataset;
@@ -58,7 +58,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -69,7 +69,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -80,7 +80,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="fieldList")
-    private final @Nullable Input<List<Object>> fieldList;
+        private final @Nullable Input<List<Object>> fieldList;
 
     public Input<List<Object>> getFieldList() {
         return this.fieldList == null ? Input.empty() : this.fieldList;
@@ -91,7 +91,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="formatSettings")
-    private final @Nullable Input<Object> formatSettings;
+        private final @Nullable Input<Object> formatSettings;
 
     public Input<Object> getFormatSettings() {
         return this.formatSettings == null ? Input.empty() : this.formatSettings;
@@ -102,7 +102,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -113,7 +113,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -124,7 +124,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -135,7 +135,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="storeSettings")
-    private final @Nullable Input<Object> storeSettings;
+        private final @Nullable Input<Object> storeSettings;
 
     public Input<Object> getStoreSettings() {
         return this.storeSettings == null ? Input.empty() : this.storeSettings;
@@ -147,7 +147,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -158,7 +158,7 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -352,7 +352,6 @@ public final class GetMetadataActivityArgs extends io.pulumi.resources.ResourceA
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public GetMetadataActivityArgs build() {
             return new GetMetadataActivityArgs(dataset, dependsOn, description, fieldList, formatSettings, linkedServiceName, name, policy, storeSettings, type, userProperties);
         }

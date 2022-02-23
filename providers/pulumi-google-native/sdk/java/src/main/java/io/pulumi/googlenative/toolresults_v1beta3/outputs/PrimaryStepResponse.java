@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.IndividualOutcomeResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class PrimaryStepResponse {
             this.rollUp = Objects.requireNonNull(rollUp);
             return this;
         }
-
         public PrimaryStepResponse build() {
             return new PrimaryStepResponse(individualOutcome, rollUp);
         }

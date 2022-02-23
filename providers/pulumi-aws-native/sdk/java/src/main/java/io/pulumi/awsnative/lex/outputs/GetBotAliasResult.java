@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lex.enums.BotAliasStatus;
 import io.pulumi.awsnative.lex.outputs.BotAliasConversationLogSettings;
 import io.pulumi.awsnative.lex.outputs.BotAliasLocaleSettingsItem;
 import io.pulumi.awsnative.lex.outputs.SentimentAnalysisSettingsProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -164,7 +164,6 @@ public final class GetBotAliasResult {
             this.sentimentAnalysisSettings = sentimentAnalysisSettings;
             return this;
         }
-
         public GetBotAliasResult build() {
             return new GetBotAliasResult(arn, botAliasId, botAliasLocaleSettings, botAliasName, botAliasStatus, botVersion, conversationLogSettings, description, sentimentAnalysisSettings);
         }

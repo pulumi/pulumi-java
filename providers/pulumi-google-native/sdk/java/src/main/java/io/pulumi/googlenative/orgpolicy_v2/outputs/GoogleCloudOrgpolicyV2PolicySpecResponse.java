@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecPolicyRuleResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class GoogleCloudOrgpolicyV2PolicySpecResponse {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GoogleCloudOrgpolicyV2PolicySpecResponse build() {
             return new GoogleCloudOrgpolicyV2PolicySpecResponse(etag, inheritFromParent, reset, rules, updateTime);
         }

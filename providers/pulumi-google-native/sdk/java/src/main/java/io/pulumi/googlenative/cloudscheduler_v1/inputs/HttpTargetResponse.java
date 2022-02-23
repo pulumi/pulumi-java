@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudscheduler_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudscheduler_v1.inputs.OAuthTokenResponse;
 import io.pulumi.googlenative.cloudscheduler_v1.inputs.OidcTokenResponse;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="body", required=true)
-    private final String body;
+      private final String body;
 
     public String getBody() {
         return this.body;
@@ -35,7 +35,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="headers", required=true)
-    private final Map<String,String> headers;
+      private final Map<String,String> headers;
 
     public Map<String,String> getHeaders() {
         return this.headers;
@@ -46,7 +46,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="httpMethod", required=true)
-    private final String httpMethod;
+      private final String httpMethod;
 
     public String getHttpMethod() {
         return this.httpMethod;
@@ -57,7 +57,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oauthToken", required=true)
-    private final OAuthTokenResponse oauthToken;
+      private final OAuthTokenResponse oauthToken;
 
     public OAuthTokenResponse getOauthToken() {
         return this.oauthToken;
@@ -68,7 +68,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="oidcToken", required=true)
-    private final OidcTokenResponse oidcToken;
+      private final OidcTokenResponse oidcToken;
 
     public OidcTokenResponse getOidcToken() {
         return this.oidcToken;
@@ -79,7 +79,7 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+      private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -168,7 +168,6 @@ public final class HttpTargetResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public HttpTargetResponse build() {
             return new HttpTargetResponse(body, headers, httpMethod, oauthToken, oidcToken, uri);
         }

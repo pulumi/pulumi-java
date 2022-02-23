@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1beta1.outputs.QueuingConfiguration;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class LimitResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public LimitResponse build() {
             return new LimitResponse(queuing, type);
         }

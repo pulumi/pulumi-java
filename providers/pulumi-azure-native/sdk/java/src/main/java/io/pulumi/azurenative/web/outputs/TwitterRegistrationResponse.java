@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -82,7 +82,6 @@ public final class TwitterRegistrationResponse {
             this.consumerSecretSettingName = consumerSecretSettingName;
             return this;
         }
-
         public TwitterRegistrationResponse build() {
             return new TwitterRegistrationResponse(consumerKey, consumerSecretSettingName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="binaryName")
-    private final @Nullable Input<String> binaryName;
+        private final @Nullable Input<String> binaryName;
 
     public Input<String> getBinaryName() {
         return this.binaryName == null ? Input.empty() : this.binaryName;
@@ -34,7 +34,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="productName")
-    private final @Nullable Input<String> productName;
+        private final @Nullable Input<String> productName;
 
     public Input<String> getProductName() {
         return this.productName == null ? Input.empty() : this.productName;
@@ -45,7 +45,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publisherName")
-    private final @Nullable Input<String> publisherName;
+        private final @Nullable Input<String> publisherName;
 
     public Input<String> getPublisherName() {
         return this.publisherName == null ? Input.empty() : this.publisherName;
@@ -56,7 +56,7 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -145,7 +145,6 @@ public final class PublisherInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public PublisherInfoArgs build() {
             return new PublisherInfoArgs(binaryName, productName, publisherName, version);
         }

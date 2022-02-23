@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datadog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class MonitoredResourceResponse {
             this.sendingMetrics = sendingMetrics;
             return this;
         }
-
         public MonitoredResourceResponse build() {
             return new MonitoredResourceResponse(id, reasonForLogsStatus, reasonForMetricsStatus, sendingLogs, sendingMetrics);
         }

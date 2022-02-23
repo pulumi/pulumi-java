@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -34,7 +34,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="divisor")
-    private final @Nullable Input<String> divisor;
+        private final @Nullable Input<String> divisor;
 
     public Input<String> getDivisor() {
         return this.divisor == null ? Input.empty() : this.divisor;
@@ -45,7 +45,7 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+        private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -119,7 +119,6 @@ public final class ResourceFieldSelectorArgs extends io.pulumi.resources.Resourc
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public ResourceFieldSelectorArgs build() {
             return new ResourceFieldSelectorArgs(containerName, divisor, resource);
         }

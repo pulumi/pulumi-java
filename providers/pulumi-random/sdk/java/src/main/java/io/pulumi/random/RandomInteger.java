@@ -5,8 +5,8 @@ package io.pulumi.random;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.random.RandomIntegerArgs;
 import io.pulumi.random.Utilities;
 import io.pulumi.random.inputs.RandomIntegerState;
@@ -105,13 +105,6 @@ public class RandomInteger extends io.pulumi.resources.CustomResource {
         return this.seed;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RandomInteger(String name) {
-        super("random:index/randomInteger:RandomInteger", name, RandomIntegerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

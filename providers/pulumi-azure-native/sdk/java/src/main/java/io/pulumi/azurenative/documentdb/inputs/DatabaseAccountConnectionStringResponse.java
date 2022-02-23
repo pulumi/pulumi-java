@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DatabaseAccountConnectionStringResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectionString", required=true)
-    private final String connectionString;
+        private final String connectionString;
 
     public String getConnectionString() {
         return this.connectionString;
@@ -32,7 +32,7 @@ public final class DatabaseAccountConnectionStringResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -81,7 +81,6 @@ public final class DatabaseAccountConnectionStringResponse extends io.pulumi.res
             this.description = Objects.requireNonNull(description);
             return this;
         }
-
         public DatabaseAccountConnectionStringResponse build() {
             return new DatabaseAccountConnectionStringResponse(connectionString, description);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
      * 
      */
     @InputImport(name="headerName")
-    private final @Nullable Input<String> headerName;
+      private final @Nullable Input<String> headerName;
 
     public Input<String> getHeaderName() {
         return this.headerName == null ? Input.empty() : this.headerName;
@@ -30,7 +30,7 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
      * 
      */
     @InputImport(name="headerValue")
-    private final @Nullable Input<String> headerValue;
+      private final @Nullable Input<String> headerValue;
 
     public Input<String> getHeaderValue() {
         return this.headerValue == null ? Input.empty() : this.headerValue;
@@ -89,7 +89,6 @@ public final class SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs extend
             this.headerValue = Input.ofNullable(headerValue);
             return this;
         }
-
         public SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs build() {
             return new SecurityPolicyRuleHttpHeaderActionHttpHeaderOptionArgs(headerName, headerValue);
         }

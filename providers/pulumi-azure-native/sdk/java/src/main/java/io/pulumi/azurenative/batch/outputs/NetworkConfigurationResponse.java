@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch.outputs;
 
 import io.pulumi.azurenative.batch.outputs.PoolEndpointConfigurationResponse;
 import io.pulumi.azurenative.batch.outputs.PublicIPAddressConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class NetworkConfigurationResponse {
             this.subnetId = subnetId;
             return this;
         }
-
         public NetworkConfigurationResponse build() {
             return new NetworkConfigurationResponse(endpointConfiguration, publicIPAddressConfiguration, subnetId);
         }

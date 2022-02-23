@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse {
             this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
             return this;
         }
-
         public GooglePrivacyDlpV2LikelihoodAdjustmentResponse build() {
             return new GooglePrivacyDlpV2LikelihoodAdjustmentResponse(fixedLikelihood, relativeLikelihood);
         }

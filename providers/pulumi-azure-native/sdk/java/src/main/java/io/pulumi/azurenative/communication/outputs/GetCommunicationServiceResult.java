@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.communication.outputs;
 
 import io.pulumi.azurenative.communication.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -288,7 +288,6 @@ public final class GetCommunicationServiceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetCommunicationServiceResult build() {
             return new GetCommunicationServiceResult(dataLocation, hostName, id, immutableResourceId, location, name, notificationHubId, provisioningState, systemData, tags, type, version);
         }

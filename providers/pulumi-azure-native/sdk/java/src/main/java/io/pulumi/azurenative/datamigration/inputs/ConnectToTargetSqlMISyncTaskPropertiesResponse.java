@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datamigration.inputs.MigrateMISyncCompleteCommandPr
 import io.pulumi.azurenative.datamigration.inputs.MigrateSyncCompleteCommandPropertiesResponse;
 import io.pulumi.azurenative.datamigration.inputs.ODataErrorResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -30,7 +30,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="commands", required=true)
-    private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
+        private final List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> commands;
 
     public List<Either<MigrateMISyncCompleteCommandPropertiesResponse,MigrateSyncCompleteCommandPropertiesResponse>> getCommands() {
         return this.commands;
@@ -41,7 +41,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="errors", required=true)
-    private final List<ODataErrorResponse> errors;
+        private final List<ODataErrorResponse> errors;
 
     public List<ODataErrorResponse> getErrors() {
         return this.errors;
@@ -52,7 +52,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="input")
-    private final @Nullable ConnectToTargetSqlMISyncTaskInputResponse input;
+        private final @Nullable ConnectToTargetSqlMISyncTaskInputResponse input;
 
     public Optional<ConnectToTargetSqlMISyncTaskInputResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -63,7 +63,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="output", required=true)
-    private final List<ConnectToTargetSqlMISyncTaskOutputResponse> output;
+        private final List<ConnectToTargetSqlMISyncTaskOutputResponse> output;
 
     public List<ConnectToTargetSqlMISyncTaskOutputResponse> getOutput() {
         return this.output;
@@ -74,7 +74,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+        private final String state;
 
     public String getState() {
         return this.state;
@@ -86,7 +86,7 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final String taskType;
+        private final String taskType;
 
     public String getTaskType() {
         return this.taskType;
@@ -175,7 +175,6 @@ public final class ConnectToTargetSqlMISyncTaskPropertiesResponse extends io.pul
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public ConnectToTargetSqlMISyncTaskPropertiesResponse build() {
             return new ConnectToTargetSqlMISyncTaskPropertiesResponse(commands, errors, input, output, state, taskType);
         }

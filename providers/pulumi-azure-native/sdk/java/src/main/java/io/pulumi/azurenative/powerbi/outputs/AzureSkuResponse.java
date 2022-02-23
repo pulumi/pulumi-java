@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbi.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class AzureSkuResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public AzureSkuResponse build() {
             return new AzureSkuResponse(name, tier);
         }

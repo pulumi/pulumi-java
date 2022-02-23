@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branchName", required=true)
-    private final String branchName;
+      private final String branchName;
 
     public String getBranchName() {
         return this.branchName;
@@ -32,7 +32,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="commitSha", required=true)
-    private final String commitSha;
+      private final String commitSha;
 
     public String getCommitSha() {
         return this.commitSha;
@@ -43,7 +43,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project", required=true)
-    private final String project;
+      private final String project;
 
     public String getProject() {
         return this.project;
@@ -54,7 +54,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="repoName", required=true)
-    private final String repoName;
+      private final String repoName;
 
     public String getRepoName() {
         return this.repoName;
@@ -65,7 +65,7 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tagName", required=true)
-    private final String tagName;
+      private final String tagName;
 
     public String getTagName() {
         return this.tagName;
@@ -144,7 +144,6 @@ public final class RepoSourceResponse extends io.pulumi.resources.InvokeArgs {
             this.tagName = Objects.requireNonNull(tagName);
             return this;
         }
-
         public RepoSourceResponse build() {
             return new RepoSourceResponse(branchName, commitSha, project, repoName, tagName);
         }

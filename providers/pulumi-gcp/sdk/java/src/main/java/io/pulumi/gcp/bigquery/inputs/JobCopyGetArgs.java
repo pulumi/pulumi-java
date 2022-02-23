@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.JobCopyDestinationEncryptionConfigurationGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobCopyDestinationTableGetArgs;
 import io.pulumi.gcp.bigquery.inputs.JobCopySourceTableGetArgs;
@@ -28,7 +28,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createDisposition")
-    private final @Nullable Input<String> createDisposition;
+        private final @Nullable Input<String> createDisposition;
 
     public Input<String> getCreateDisposition() {
         return this.createDisposition == null ? Input.empty() : this.createDisposition;
@@ -40,7 +40,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationEncryptionConfiguration")
-    private final @Nullable Input<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
+        private final @Nullable Input<JobCopyDestinationEncryptionConfigurationGetArgs> destinationEncryptionConfiguration;
 
     public Input<JobCopyDestinationEncryptionConfigurationGetArgs> getDestinationEncryptionConfiguration() {
         return this.destinationEncryptionConfiguration == null ? Input.empty() : this.destinationEncryptionConfiguration;
@@ -52,7 +52,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destinationTable")
-    private final @Nullable Input<JobCopyDestinationTableGetArgs> destinationTable;
+        private final @Nullable Input<JobCopyDestinationTableGetArgs> destinationTable;
 
     public Input<JobCopyDestinationTableGetArgs> getDestinationTable() {
         return this.destinationTable == null ? Input.empty() : this.destinationTable;
@@ -64,7 +64,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceTables", required=true)
-    private final Input<List<JobCopySourceTableGetArgs>> sourceTables;
+        private final Input<List<JobCopySourceTableGetArgs>> sourceTables;
 
     public Input<List<JobCopySourceTableGetArgs>> getSourceTables() {
         return this.sourceTables;
@@ -82,7 +82,7 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="writeDisposition")
-    private final @Nullable Input<String> writeDisposition;
+        private final @Nullable Input<String> writeDisposition;
 
     public Input<String> getWriteDisposition() {
         return this.writeDisposition == null ? Input.empty() : this.writeDisposition;
@@ -186,7 +186,6 @@ public final class JobCopyGetArgs extends io.pulumi.resources.ResourceArgs {
             this.writeDisposition = Input.ofNullable(writeDisposition);
             return this;
         }
-
         public JobCopyGetArgs build() {
             return new JobCopyGetArgs(createDisposition, destinationEncryptionConfiguration, destinationTable, sourceTables, writeDisposition);
         }

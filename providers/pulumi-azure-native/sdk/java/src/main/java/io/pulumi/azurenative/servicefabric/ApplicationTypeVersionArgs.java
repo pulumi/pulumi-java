@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="appPackageUrl", required=true)
-    private final Input<String> appPackageUrl;
+        private final Input<String> appPackageUrl;
 
     public Input<String> getAppPackageUrl() {
         return this.appPackageUrl;
@@ -31,7 +31,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="applicationTypeName", required=true)
-    private final Input<String> applicationTypeName;
+        private final Input<String> applicationTypeName;
 
     public Input<String> getApplicationTypeName() {
         return this.applicationTypeName;
@@ -42,7 +42,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -53,7 +53,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -64,7 +64,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -86,7 +86,7 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -220,7 +220,6 @@ public final class ApplicationTypeVersionArgs extends io.pulumi.resources.Resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ApplicationTypeVersionArgs build() {
             return new ApplicationTypeVersionArgs(appPackageUrl, applicationTypeName, clusterName, location, resourceGroupName, tags, version);
         }

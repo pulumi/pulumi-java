@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ApiCategoryDataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetApicategoryResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetApicategoryResult build() {
             return new GetApicategoryResult(data, errorCode, message, requestId, status);
         }

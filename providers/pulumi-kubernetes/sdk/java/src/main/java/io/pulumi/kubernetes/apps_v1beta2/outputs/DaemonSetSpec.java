@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apps_v1beta2.outputs.DaemonSetUpdateStrategy;
 import io.pulumi.kubernetes.core_v1.outputs.PodTemplateSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
@@ -142,7 +142,6 @@ public final class DaemonSetSpec {
             this.updateStrategy = updateStrategy;
             return this;
         }
-
         public DaemonSetSpec build() {
             return new DaemonSetSpec(minReadySeconds, revisionHistoryLimit, selector, template, updateStrategy);
         }

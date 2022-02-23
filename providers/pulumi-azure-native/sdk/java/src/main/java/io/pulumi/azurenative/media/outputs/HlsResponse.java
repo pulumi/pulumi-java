@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class HlsResponse {
             this.fragmentsPerTsSegment = fragmentsPerTsSegment;
             return this;
         }
-
         public HlsResponse build() {
             return new HlsResponse(fragmentsPerTsSegment);
         }

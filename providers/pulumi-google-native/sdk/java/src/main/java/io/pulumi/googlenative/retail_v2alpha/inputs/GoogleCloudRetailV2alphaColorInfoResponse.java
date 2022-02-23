@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="colorFamilies", required=true)
-    private final List<String> colorFamilies;
+      private final List<String> colorFamilies;
 
     public List<String> getColorFamilies() {
         return this.colorFamilies;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="colors", required=true)
-    private final List<String> colors;
+      private final List<String> colors;
 
     public List<String> getColors() {
         return this.colors;
@@ -82,7 +82,6 @@ public final class GoogleCloudRetailV2alphaColorInfoResponse extends io.pulumi.r
             this.colors = Objects.requireNonNull(colors);
             return this;
         }
-
         public GoogleCloudRetailV2alphaColorInfoResponse build() {
             return new GoogleCloudRetailV2alphaColorInfoResponse(colorFamilies, colors);
         }

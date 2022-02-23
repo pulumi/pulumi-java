@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lookoutmetrics.inputs;
 
 import io.pulumi.awsnative.lookoutmetrics.inputs.AnomalyDetectorFileFormatDescriptor;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,28 +17,28 @@ public final class AnomalyDetectorS3SourceConfig extends io.pulumi.resources.Inv
     public static final AnomalyDetectorS3SourceConfig Empty = new AnomalyDetectorS3SourceConfig();
 
     @InputImport(name="fileFormatDescriptor", required=true)
-    private final AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
+        private final AnomalyDetectorFileFormatDescriptor fileFormatDescriptor;
 
     public AnomalyDetectorFileFormatDescriptor getFileFormatDescriptor() {
         return this.fileFormatDescriptor;
     }
 
     @InputImport(name="historicalDataPathList")
-    private final @Nullable List<String> historicalDataPathList;
+        private final @Nullable List<String> historicalDataPathList;
 
     public List<String> getHistoricalDataPathList() {
         return this.historicalDataPathList == null ? List.of() : this.historicalDataPathList;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
     }
 
     @InputImport(name="templatedPathList")
-    private final @Nullable List<String> templatedPathList;
+        private final @Nullable List<String> templatedPathList;
 
     public List<String> getTemplatedPathList() {
         return this.templatedPathList == null ? List.of() : this.templatedPathList;
@@ -107,7 +107,6 @@ public final class AnomalyDetectorS3SourceConfig extends io.pulumi.resources.Inv
             this.templatedPathList = templatedPathList;
             return this;
         }
-
         public AnomalyDetectorS3SourceConfig build() {
             return new AnomalyDetectorS3SourceConfig(fileFormatDescriptor, historicalDataPathList, roleArn, templatedPathList);
         }

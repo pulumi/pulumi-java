@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.FilterItems;
 import io.pulumi.azurenative.network.inputs.OrderBy;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable List<FilterItems> filters;
+        private final @Nullable List<FilterItems> filters;
 
     public List<FilterItems> getFilters() {
         return this.filters == null ? List.of() : this.filters;
@@ -34,7 +34,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="firewallPolicyName", required=true)
-    private final String firewallPolicyName;
+        private final String firewallPolicyName;
 
     public String getFirewallPolicyName() {
         return this.firewallPolicyName;
@@ -45,7 +45,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="orderBy")
-    private final @Nullable OrderBy orderBy;
+        private final @Nullable OrderBy orderBy;
 
     public Optional<OrderBy> getOrderBy() {
         return this.orderBy == null ? Optional.empty() : Optional.ofNullable(this.orderBy);
@@ -56,7 +56,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resultsPerPage")
-    private final @Nullable Integer resultsPerPage;
+        private final @Nullable Integer resultsPerPage;
 
     public Optional<Integer> getResultsPerPage() {
         return this.resultsPerPage == null ? Optional.empty() : Optional.ofNullable(this.resultsPerPage);
@@ -78,7 +78,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="search")
-    private final @Nullable String search;
+        private final @Nullable String search;
 
     public Optional<String> getSearch() {
         return this.search == null ? Optional.empty() : Optional.ofNullable(this.search);
@@ -89,7 +89,7 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="skip")
-    private final @Nullable Integer skip;
+        private final @Nullable Integer skip;
 
     public Optional<Integer> getSkip() {
         return this.skip == null ? Optional.empty() : Optional.ofNullable(this.skip);
@@ -188,7 +188,6 @@ public final class ListFirewallPolicyIdpsSignatureArgs extends io.pulumi.resourc
             this.skip = skip;
             return this;
         }
-
         public ListFirewallPolicyIdpsSignatureArgs build() {
             return new ListFirewallPolicyIdpsSignatureArgs(filters, firewallPolicyName, orderBy, resourceGroupName, resultsPerPage, search, skip);
         }

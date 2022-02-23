@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networkconnectivity_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.SpokeIamPolicyArgs;
 import io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class SpokeIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SpokeIamPolicy(String name) {
-        super("google-native:networkconnectivity/v1alpha1:SpokeIamPolicy", name, SpokeIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

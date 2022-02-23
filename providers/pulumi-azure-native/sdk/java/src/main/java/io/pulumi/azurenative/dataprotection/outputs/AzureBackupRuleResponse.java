@@ -8,7 +8,7 @@ import io.pulumi.azurenative.dataprotection.outputs.AzureBackupParamsResponse;
 import io.pulumi.azurenative.dataprotection.outputs.DataStoreInfoBaseResponse;
 import io.pulumi.azurenative.dataprotection.outputs.ScheduleBasedTriggerContextResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -136,7 +136,6 @@ public final class AzureBackupRuleResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public AzureBackupRuleResponse build() {
             return new AzureBackupRuleResponse(backupParameters, dataStore, name, objectType, trigger);
         }

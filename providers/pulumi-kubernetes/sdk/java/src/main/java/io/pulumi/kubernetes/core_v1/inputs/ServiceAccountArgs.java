@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.LocalObjectReferenceArgs;
 import io.pulumi.kubernetes.core_v1.inputs.ObjectReferenceArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -28,7 +28,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -39,7 +39,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automountServiceAccountToken")
-    private final @Nullable Input<Boolean> automountServiceAccountToken;
+        private final @Nullable Input<Boolean> automountServiceAccountToken;
 
     public Input<Boolean> getAutomountServiceAccountToken() {
         return this.automountServiceAccountToken == null ? Input.empty() : this.automountServiceAccountToken;
@@ -50,7 +50,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="imagePullSecrets")
-    private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
+        private final @Nullable Input<List<LocalObjectReferenceArgs>> imagePullSecrets;
 
     public Input<List<LocalObjectReferenceArgs>> getImagePullSecrets() {
         return this.imagePullSecrets == null ? Input.empty() : this.imagePullSecrets;
@@ -61,7 +61,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -72,7 +72,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -83,7 +83,7 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable Input<List<ObjectReferenceArgs>> secrets;
+        private final @Nullable Input<List<ObjectReferenceArgs>> secrets;
 
     public Input<List<ObjectReferenceArgs>> getSecrets() {
         return this.secrets == null ? Input.empty() : this.secrets;
@@ -202,7 +202,6 @@ public final class ServiceAccountArgs extends io.pulumi.resources.ResourceArgs {
             this.secrets = Input.ofNullable(secrets);
             return this;
         }
-
         public ServiceAccountArgs build() {
             return new ServiceAccountArgs(apiVersion, automountServiceAccountToken, imagePullSecrets, kind, metadata, secrets);
         }

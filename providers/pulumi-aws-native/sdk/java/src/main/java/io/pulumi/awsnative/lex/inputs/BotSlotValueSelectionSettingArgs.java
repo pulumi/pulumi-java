@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.inputs;
 import io.pulumi.awsnative.lex.enums.BotSlotValueResolutionStrategy;
 import io.pulumi.awsnative.lex.inputs.BotSlotValueRegexFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -20,14 +20,14 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
     public static final BotSlotValueSelectionSettingArgs Empty = new BotSlotValueSelectionSettingArgs();
 
     @InputImport(name="regexFilter")
-    private final @Nullable Input<BotSlotValueRegexFilterArgs> regexFilter;
+        private final @Nullable Input<BotSlotValueRegexFilterArgs> regexFilter;
 
     public Input<BotSlotValueRegexFilterArgs> getRegexFilter() {
         return this.regexFilter == null ? Input.empty() : this.regexFilter;
     }
 
     @InputImport(name="resolutionStrategy", required=true)
-    private final Input<BotSlotValueResolutionStrategy> resolutionStrategy;
+        private final Input<BotSlotValueResolutionStrategy> resolutionStrategy;
 
     public Input<BotSlotValueResolutionStrategy> getResolutionStrategy() {
         return this.resolutionStrategy;
@@ -86,7 +86,6 @@ public final class BotSlotValueSelectionSettingArgs extends io.pulumi.resources.
             this.resolutionStrategy = Input.of(Objects.requireNonNull(resolutionStrategy));
             return this;
         }
-
         public BotSlotValueSelectionSettingArgs build() {
             return new BotSlotValueSelectionSettingArgs(regexFilter, resolutionStrategy);
         }

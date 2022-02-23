@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datapipelines_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datapipelines_v1.outputs.GoogleCloudDatapipelinesV1RuntimeEnvironmentResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse {
             this.update = Objects.requireNonNull(update);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse build() {
             return new GoogleCloudDatapipelinesV1LaunchTemplateParametersResponse(environment, jobName, parameters, transformNameMapping, update);
         }

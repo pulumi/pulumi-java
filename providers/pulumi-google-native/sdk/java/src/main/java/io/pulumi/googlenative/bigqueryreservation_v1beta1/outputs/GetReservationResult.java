@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryreservation_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetReservationResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetReservationResult build() {
             return new GetReservationResult(creationTime, ignoreIdleSlots, name, slotCapacity, updateTime);
         }

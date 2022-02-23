@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.acmpca.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class CertificateQualifier {
             this.cpsUri = Objects.requireNonNull(cpsUri);
             return this;
         }
-
         public CertificateQualifier build() {
             return new CertificateQualifier(cpsUri);
         }

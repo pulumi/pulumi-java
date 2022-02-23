@@ -11,8 +11,8 @@ import io.pulumi.awsnative.ec2.outputs.IPAMPoolProvisionedCidr;
 import io.pulumi.awsnative.ec2.outputs.IPAMPoolTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -312,13 +312,6 @@ public class IPAMPool extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IPAMPool(String name) {
-        super("aws-native:ec2:IPAMPool", name, IPAMPoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

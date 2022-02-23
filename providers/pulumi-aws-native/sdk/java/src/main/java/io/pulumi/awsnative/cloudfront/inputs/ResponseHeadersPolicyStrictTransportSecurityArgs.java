@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
     public static final ResponseHeadersPolicyStrictTransportSecurityArgs Empty = new ResponseHeadersPolicyStrictTransportSecurityArgs();
 
     @InputImport(name="accessControlMaxAgeSec", required=true)
-    private final Input<Integer> accessControlMaxAgeSec;
+        private final Input<Integer> accessControlMaxAgeSec;
 
     public Input<Integer> getAccessControlMaxAgeSec() {
         return this.accessControlMaxAgeSec;
     }
 
     @InputImport(name="includeSubdomains")
-    private final @Nullable Input<Boolean> includeSubdomains;
+        private final @Nullable Input<Boolean> includeSubdomains;
 
     public Input<Boolean> getIncludeSubdomains() {
         return this.includeSubdomains == null ? Input.empty() : this.includeSubdomains;
     }
 
     @InputImport(name="override", required=true)
-    private final Input<Boolean> override;
+        private final Input<Boolean> override;
 
     public Input<Boolean> getOverride() {
         return this.override;
     }
 
     @InputImport(name="preload")
-    private final @Nullable Input<Boolean> preload;
+        private final @Nullable Input<Boolean> preload;
 
     public Input<Boolean> getPreload() {
         return this.preload == null ? Input.empty() : this.preload;
@@ -126,7 +126,6 @@ public final class ResponseHeadersPolicyStrictTransportSecurityArgs extends io.p
             this.preload = Input.ofNullable(preload);
             return this;
         }
-
         public ResponseHeadersPolicyStrictTransportSecurityArgs build() {
             return new ResponseHeadersPolicyStrictTransportSecurityArgs(accessControlMaxAgeSec, includeSubdomains, override, preload);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudMlV1__ContainerPortResponse {
             this.containerPort = Objects.requireNonNull(containerPort);
             return this;
         }
-
         public GoogleCloudMlV1__ContainerPortResponse build() {
             return new GoogleCloudMlV1__ContainerPortResponse(containerPort);
         }

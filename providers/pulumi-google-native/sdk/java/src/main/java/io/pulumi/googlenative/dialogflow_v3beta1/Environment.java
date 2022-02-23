@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dialogflow_v3beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dialogflow_v3beta1.EnvironmentArgs;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1EnvironmentTestCasesConfigResponse;
@@ -106,13 +106,6 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.versionConfigs;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Environment(String name) {
-        super("google-native:dialogflow/v3beta1:Environment", name, EnvironmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

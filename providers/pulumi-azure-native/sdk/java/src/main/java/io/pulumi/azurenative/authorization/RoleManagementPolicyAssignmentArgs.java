@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable Input<String> policyId;
+        private final @Nullable Input<String> policyId;
 
     public Input<String> getPolicyId() {
         return this.policyId == null ? Input.empty() : this.policyId;
@@ -30,7 +30,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleDefinitionId")
-    private final @Nullable Input<String> roleDefinitionId;
+        private final @Nullable Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId == null ? Input.empty() : this.roleDefinitionId;
@@ -41,7 +41,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="roleManagementPolicyAssignmentName")
-    private final @Nullable Input<String> roleManagementPolicyAssignmentName;
+        private final @Nullable Input<String> roleManagementPolicyAssignmentName;
 
     public Input<String> getRoleManagementPolicyAssignmentName() {
         return this.roleManagementPolicyAssignmentName == null ? Input.empty() : this.roleManagementPolicyAssignmentName;
@@ -52,7 +52,7 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -141,7 +141,6 @@ public final class RoleManagementPolicyAssignmentArgs extends io.pulumi.resource
             this.scope = Input.of(Objects.requireNonNull(scope));
             return this;
         }
-
         public RoleManagementPolicyAssignmentArgs build() {
             return new RoleManagementPolicyAssignmentArgs(policyId, roleDefinitionId, roleManagementPolicyAssignmentName, scope);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,28 +18,28 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+        private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
     }
 
     @InputImport(name="diskEncryptionKeyRaw", required=true)
-    private final String diskEncryptionKeyRaw;
+        private final String diskEncryptionKeyRaw;
 
     public String getDiskEncryptionKeyRaw() {
         return this.diskEncryptionKeyRaw;
     }
 
     @InputImport(name="diskEncryptionKeySha256", required=true)
-    private final String diskEncryptionKeySha256;
+        private final String diskEncryptionKeySha256;
 
     public String getDiskEncryptionKeySha256() {
         return this.diskEncryptionKeySha256;
     }
 
     @InputImport(name="kmsKeySelfLink", required=true)
-    private final String kmsKeySelfLink;
+        private final String kmsKeySelfLink;
 
     public String getKmsKeySelfLink() {
         return this.kmsKeySelfLink;
@@ -50,7 +50,7 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="mode", required=true)
-    private final String mode;
+        private final String mode;
 
     public String getMode() {
         return this.mode;
@@ -61,7 +61,7 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+        private final String source;
 
     public String getSource() {
         return this.source;
@@ -150,7 +150,6 @@ public final class GetInstanceAttachedDisk extends io.pulumi.resources.InvokeArg
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public GetInstanceAttachedDisk build() {
             return new GetInstanceAttachedDisk(deviceName, diskEncryptionKeyRaw, diskEncryptionKeySha256, kmsKeySelfLink, mode, source);
         }

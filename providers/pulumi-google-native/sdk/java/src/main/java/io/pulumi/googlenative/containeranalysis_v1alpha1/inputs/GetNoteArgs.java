@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetNoteArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetNoteArgs Empty = new GetNoteArgs();
 
     @InputImport(name="noteId", required=true)
-    private final String noteId;
+      private final String noteId;
 
     public String getNoteId() {
         return this.noteId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetNoteArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetNoteArgs build() {
             return new GetNoteArgs(noteId, project);
         }

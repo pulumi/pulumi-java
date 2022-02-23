@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatchConfig;
 import io.pulumi.gcp.compute.outputs.SecurityPolicyRuleMatchExpr;
 import java.lang.String;
@@ -111,7 +111,6 @@ public final class SecurityPolicyRuleMatch {
             this.versionedExpr = versionedExpr;
             return this;
         }
-
         public SecurityPolicyRuleMatch build() {
             return new SecurityPolicyRuleMatch(config, expr, versionedExpr);
         }

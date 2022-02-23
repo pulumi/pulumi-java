@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.GRPCHealthCheckResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.HTTP2HealthCheckResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.HTTPHealthCheckResponse;
@@ -405,7 +405,6 @@ public final class GetRegionHealthCheckResult {
             this.unhealthyThreshold = Objects.requireNonNull(unhealthyThreshold);
             return this;
         }
-
         public GetRegionHealthCheckResult build() {
             return new GetRegionHealthCheckResult(checkIntervalSec, creationTimestamp, description, grpcHealthCheck, healthyThreshold, http2HealthCheck, httpHealthCheck, httpsHealthCheck, kind, logConfig, name, region, selfLink, selfLinkWithId, sslHealthCheck, tcpHealthCheck, timeoutSec, type, udpHealthCheck, unhealthyThreshold);
         }

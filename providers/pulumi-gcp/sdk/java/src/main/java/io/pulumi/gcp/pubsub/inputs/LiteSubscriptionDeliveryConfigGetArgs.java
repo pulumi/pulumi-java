@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="deliveryRequirement", required=true)
-    private final Input<String> deliveryRequirement;
+        private final Input<String> deliveryRequirement;
 
     public Input<String> getDeliveryRequirement() {
         return this.deliveryRequirement;
@@ -62,7 +62,6 @@ public final class LiteSubscriptionDeliveryConfigGetArgs extends io.pulumi.resou
             this.deliveryRequirement = Input.of(Objects.requireNonNull(deliveryRequirement));
             return this;
         }
-
         public LiteSubscriptionDeliveryConfigGetArgs build() {
             return new LiteSubscriptionDeliveryConfigGetArgs(deliveryRequirement);
         }

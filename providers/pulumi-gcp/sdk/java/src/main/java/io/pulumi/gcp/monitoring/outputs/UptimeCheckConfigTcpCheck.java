@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class UptimeCheckConfigTcpCheck {
             this.port = Objects.requireNonNull(port);
             return this;
         }
-
         public UptimeCheckConfigTcpCheck build() {
             return new UptimeCheckConfigTcpCheck(port);
         }

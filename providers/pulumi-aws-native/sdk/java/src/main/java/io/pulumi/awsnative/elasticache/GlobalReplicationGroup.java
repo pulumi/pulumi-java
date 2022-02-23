@@ -9,8 +9,8 @@ import io.pulumi.awsnative.elasticache.outputs.GlobalReplicationGroupMember;
 import io.pulumi.awsnative.elasticache.outputs.GlobalReplicationGroupRegionalConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -178,13 +178,6 @@ public class GlobalReplicationGroup extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GlobalReplicationGroup(String name) {
-        super("aws-native:elasticache:GlobalReplicationGroup", name, GlobalReplicationGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

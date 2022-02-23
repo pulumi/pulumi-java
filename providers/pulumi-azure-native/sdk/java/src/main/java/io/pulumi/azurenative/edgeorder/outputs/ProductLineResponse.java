@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.outputs.FilterablePropertyResponse;
 import io.pulumi.azurenative.edgeorder.outputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ImageInformationResponse;
 import io.pulumi.azurenative.edgeorder.outputs.ProductResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -208,7 +208,6 @@ public final class ProductLineResponse {
             this.products = Objects.requireNonNull(products);
             return this;
         }
-
         public ProductLineResponse build() {
             return new ProductLineResponse(availabilityInformation, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation, products);
         }

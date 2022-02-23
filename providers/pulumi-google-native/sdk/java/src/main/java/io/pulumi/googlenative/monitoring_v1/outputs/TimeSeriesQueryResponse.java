@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesFilterRatioResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.TimeSeriesFilterResponse;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class TimeSeriesQueryResponse {
             this.unitOverride = Objects.requireNonNull(unitOverride);
             return this;
         }
-
         public TimeSeriesQueryResponse build() {
             return new TimeSeriesQueryResponse(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
         }

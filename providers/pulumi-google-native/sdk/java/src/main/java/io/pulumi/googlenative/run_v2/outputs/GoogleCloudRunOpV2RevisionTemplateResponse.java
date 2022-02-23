@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ContainerResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionScalingResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2VolumeResponse;
@@ -313,7 +313,6 @@ public final class GoogleCloudRunOpV2RevisionTemplateResponse {
             this.vpcAccess = Objects.requireNonNull(vpcAccess);
             return this;
         }
-
         public GoogleCloudRunOpV2RevisionTemplateResponse build() {
             return new GoogleCloudRunOpV2RevisionTemplateResponse(annotations, confidential, containerConcurrency, containers, encryptionKey, executionEnvironment, labels, revision, scaling, serviceAccount, timeout, volumes, vpcAccess);
         }

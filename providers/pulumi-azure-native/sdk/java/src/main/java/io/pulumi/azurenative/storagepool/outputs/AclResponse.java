@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class AclResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public AclResponse build() {
             return new AclResponse(initiatorIqn, mappedLuns, password, username);
         }

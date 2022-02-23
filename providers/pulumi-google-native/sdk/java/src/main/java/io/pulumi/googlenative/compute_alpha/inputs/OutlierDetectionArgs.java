@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.DurationArgs;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="baseEjectionTime")
-    private final @Nullable Input<DurationArgs> baseEjectionTime;
+      private final @Nullable Input<DurationArgs> baseEjectionTime;
 
     public Input<DurationArgs> getBaseEjectionTime() {
         return this.baseEjectionTime == null ? Input.empty() : this.baseEjectionTime;
@@ -35,7 +35,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="consecutiveErrors")
-    private final @Nullable Input<Integer> consecutiveErrors;
+      private final @Nullable Input<Integer> consecutiveErrors;
 
     public Input<Integer> getConsecutiveErrors() {
         return this.consecutiveErrors == null ? Input.empty() : this.consecutiveErrors;
@@ -46,7 +46,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="consecutiveGatewayFailure")
-    private final @Nullable Input<Integer> consecutiveGatewayFailure;
+      private final @Nullable Input<Integer> consecutiveGatewayFailure;
 
     public Input<Integer> getConsecutiveGatewayFailure() {
         return this.consecutiveGatewayFailure == null ? Input.empty() : this.consecutiveGatewayFailure;
@@ -57,7 +57,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcingConsecutiveErrors")
-    private final @Nullable Input<Integer> enforcingConsecutiveErrors;
+      private final @Nullable Input<Integer> enforcingConsecutiveErrors;
 
     public Input<Integer> getEnforcingConsecutiveErrors() {
         return this.enforcingConsecutiveErrors == null ? Input.empty() : this.enforcingConsecutiveErrors;
@@ -68,7 +68,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcingConsecutiveGatewayFailure")
-    private final @Nullable Input<Integer> enforcingConsecutiveGatewayFailure;
+      private final @Nullable Input<Integer> enforcingConsecutiveGatewayFailure;
 
     public Input<Integer> getEnforcingConsecutiveGatewayFailure() {
         return this.enforcingConsecutiveGatewayFailure == null ? Input.empty() : this.enforcingConsecutiveGatewayFailure;
@@ -79,7 +79,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="enforcingSuccessRate")
-    private final @Nullable Input<Integer> enforcingSuccessRate;
+      private final @Nullable Input<Integer> enforcingSuccessRate;
 
     public Input<Integer> getEnforcingSuccessRate() {
         return this.enforcingSuccessRate == null ? Input.empty() : this.enforcingSuccessRate;
@@ -90,7 +90,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="interval")
-    private final @Nullable Input<DurationArgs> interval;
+      private final @Nullable Input<DurationArgs> interval;
 
     public Input<DurationArgs> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
@@ -101,7 +101,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxEjectionPercent")
-    private final @Nullable Input<Integer> maxEjectionPercent;
+      private final @Nullable Input<Integer> maxEjectionPercent;
 
     public Input<Integer> getMaxEjectionPercent() {
         return this.maxEjectionPercent == null ? Input.empty() : this.maxEjectionPercent;
@@ -112,7 +112,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="successRateMinimumHosts")
-    private final @Nullable Input<Integer> successRateMinimumHosts;
+      private final @Nullable Input<Integer> successRateMinimumHosts;
 
     public Input<Integer> getSuccessRateMinimumHosts() {
         return this.successRateMinimumHosts == null ? Input.empty() : this.successRateMinimumHosts;
@@ -123,7 +123,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="successRateRequestVolume")
-    private final @Nullable Input<Integer> successRateRequestVolume;
+      private final @Nullable Input<Integer> successRateRequestVolume;
 
     public Input<Integer> getSuccessRateRequestVolume() {
         return this.successRateRequestVolume == null ? Input.empty() : this.successRateRequestVolume;
@@ -134,7 +134,7 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="successRateStdevFactor")
-    private final @Nullable Input<Integer> successRateStdevFactor;
+      private final @Nullable Input<Integer> successRateStdevFactor;
 
     public Input<Integer> getSuccessRateStdevFactor() {
         return this.successRateStdevFactor == null ? Input.empty() : this.successRateStdevFactor;
@@ -328,7 +328,6 @@ public final class OutlierDetectionArgs extends io.pulumi.resources.ResourceArgs
             this.successRateStdevFactor = Input.ofNullable(successRateStdevFactor);
             return this;
         }
-
         public OutlierDetectionArgs build() {
             return new OutlierDetectionArgs(baseEjectionTime, consecutiveErrors, consecutiveGatewayFailure, enforcingConsecutiveErrors, enforcingConsecutiveGatewayFailure, enforcingSuccessRate, interval, maxEjectionPercent, successRateMinimumHosts, successRateRequestVolume, successRateStdevFactor);
         }

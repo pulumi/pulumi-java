@@ -5,7 +5,7 @@ package io.pulumi.awsnative.rds.outputs;
 
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatAuthScheme;
 import io.pulumi.awsnative.rds.enums.DBProxyAuthFormatIAMAuth;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class DBProxyAuthFormat {
             this.userName = userName;
             return this;
         }
-
         public DBProxyAuthFormat build() {
             return new DBProxyAuthFormat(authScheme, description, iAMAuth, secretArn, userName);
         }

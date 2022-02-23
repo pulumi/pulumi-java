@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,14 +21,14 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
     }
 
     @InputImport(name="networkInterface", required=true)
-    private final String networkInterface;
+      private final String networkInterface;
 
     public String getNetworkInterface() {
         return this.networkInterface;
@@ -39,7 +39,7 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="virtualMachine", required=true)
-    private final String virtualMachine;
+      private final String virtualMachine;
 
     public String getVirtualMachine() {
         return this.virtualMachine;
@@ -98,7 +98,6 @@ public final class RouterApplianceInstanceResponse extends io.pulumi.resources.I
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public RouterApplianceInstanceResponse build() {
             return new RouterApplianceInstanceResponse(ipAddress, networkInterface, virtualMachine);
         }

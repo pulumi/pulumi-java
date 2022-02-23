@@ -4,7 +4,7 @@
 package io.pulumi.gcp.endpoints.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.endpoints.inputs.ServiceApiGetArgs;
 import io.pulumi.gcp.endpoints.inputs.ServiceEndpointGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apis")
-    private final @Nullable Input<List<ServiceApiGetArgs>> apis;
+        private final @Nullable Input<List<ServiceApiGetArgs>> apis;
 
     public Input<List<ServiceApiGetArgs>> getApis() {
         return this.apis == null ? Input.empty() : this.apis;
@@ -34,7 +34,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configId")
-    private final @Nullable Input<String> configId;
+        private final @Nullable Input<String> configId;
 
     public Input<String> getConfigId() {
         return this.configId == null ? Input.empty() : this.configId;
@@ -45,7 +45,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsAddress")
-    private final @Nullable Input<String> dnsAddress;
+        private final @Nullable Input<String> dnsAddress;
 
     public Input<String> getDnsAddress() {
         return this.dnsAddress == null ? Input.empty() : this.dnsAddress;
@@ -56,7 +56,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable Input<List<ServiceEndpointGetArgs>> endpoints;
+        private final @Nullable Input<List<ServiceEndpointGetArgs>> endpoints;
 
     public Input<List<ServiceEndpointGetArgs>> getEndpoints() {
         return this.endpoints == null ? Input.empty() : this.endpoints;
@@ -68,7 +68,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="grpcConfig")
-    private final @Nullable Input<String> grpcConfig;
+        private final @Nullable Input<String> grpcConfig;
 
     public Input<String> getGrpcConfig() {
         return this.grpcConfig == null ? Input.empty() : this.grpcConfig;
@@ -80,7 +80,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="openapiConfig")
-    private final @Nullable Input<String> openapiConfig;
+        private final @Nullable Input<String> openapiConfig;
 
     public Input<String> getOpenapiConfig() {
         return this.openapiConfig == null ? Input.empty() : this.openapiConfig;
@@ -91,7 +91,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -103,7 +103,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocOutputBase64")
-    private final @Nullable Input<String> protocOutputBase64;
+        private final @Nullable Input<String> protocOutputBase64;
 
     public Input<String> getProtocOutputBase64() {
         return this.protocOutputBase64 == null ? Input.empty() : this.protocOutputBase64;
@@ -114,7 +114,7 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+        private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -278,7 +278,6 @@ public final class ServiceState extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
-
         public ServiceState build() {
             return new ServiceState(apis, configId, dnsAddress, endpoints, grpcConfig, openapiConfig, project, protocOutputBase64, serviceName);
         }

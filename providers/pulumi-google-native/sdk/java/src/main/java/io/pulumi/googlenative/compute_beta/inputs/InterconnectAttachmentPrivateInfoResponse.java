@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class InterconnectAttachmentPrivateInfoResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="tag8021q", required=true)
-    private final Integer tag8021q;
+      private final Integer tag8021q;
 
     public Integer getTag8021q() {
         return this.tag8021q;
@@ -59,7 +59,6 @@ public final class InterconnectAttachmentPrivateInfoResponse extends io.pulumi.r
             this.tag8021q = Objects.requireNonNull(tag8021q);
             return this;
         }
-
         public InterconnectAttachmentPrivateInfoResponse build() {
             return new InterconnectAttachmentPrivateInfoResponse(tag8021q);
         }

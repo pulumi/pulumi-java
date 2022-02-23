@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AddonsConfigResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertiesResponse;
 import java.lang.Boolean;
@@ -477,7 +477,6 @@ public final class GetOrganizationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrganizationResult build() {
             return new GetOrganizationResult(addonsConfig, analyticsRegion, attributes, authorizedNetwork, billingType, caCertificate, createdAt, customerName, description, displayName, environments, expiresAt, lastModifiedAt, name, portalDisabled, project, properties, runtimeDatabaseEncryptionKeyName, runtimeType, state, type);
         }

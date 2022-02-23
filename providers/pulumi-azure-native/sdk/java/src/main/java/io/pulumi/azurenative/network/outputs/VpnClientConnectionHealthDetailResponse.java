@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -285,7 +285,6 @@ public final class VpnClientConnectionHealthDetailResponse {
             this.vpnUserName = Objects.requireNonNull(vpnUserName);
             return this;
         }
-
         public VpnClientConnectionHealthDetailResponse build() {
             return new VpnClientConnectionHealthDetailResponse(egressBytesTransferred, egressPacketsTransferred, ingressBytesTransferred, ingressPacketsTransferred, maxBandwidth, maxPacketsPerSecond, privateIpAddress, publicIpAddress, vpnConnectionDuration, vpnConnectionId, vpnConnectionTime, vpnUserName);
         }

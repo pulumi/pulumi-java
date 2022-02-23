@@ -7,7 +7,7 @@ import io.pulumi.awsnative.ecs.enums.ClusterCapacityProviderAssociationsCapacity
 import io.pulumi.awsnative.ecs.inputs.ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
     public static final ClusterCapacityProviderAssociationsArgs Empty = new ClusterCapacityProviderAssociationsArgs();
 
     @InputImport(name="capacityProviders", required=true)
-    private final Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
+        private final Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> capacityProviders;
 
     public Input<List<Either<ClusterCapacityProviderAssociationsCapacityProvider,String>>> getCapacityProviders() {
         return this.capacityProviders;
     }
 
     @InputImport(name="cluster", required=true)
-    private final Input<String> cluster;
+        private final Input<String> cluster;
 
     public Input<String> getCluster() {
         return this.cluster;
     }
 
     @InputImport(name="defaultCapacityProviderStrategy", required=true)
-    private final Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
+        private final Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> defaultCapacityProviderStrategy;
 
     public Input<List<ClusterCapacityProviderAssociationsCapacityProviderStrategyArgs>> getDefaultCapacityProviderStrategy() {
         return this.defaultCapacityProviderStrategy;
@@ -106,7 +106,6 @@ public final class ClusterCapacityProviderAssociationsArgs extends io.pulumi.res
             this.defaultCapacityProviderStrategy = Input.of(Objects.requireNonNull(defaultCapacityProviderStrategy));
             return this;
         }
-
         public ClusterCapacityProviderAssociationsArgs build() {
             return new ClusterCapacityProviderAssociationsArgs(capacityProviders, cluster, defaultCapacityProviderStrategy);
         }

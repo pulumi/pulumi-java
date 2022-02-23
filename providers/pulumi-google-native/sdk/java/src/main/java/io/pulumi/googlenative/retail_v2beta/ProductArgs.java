@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.retail_v2beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.retail_v2beta.enums.ProductAvailability;
 import io.pulumi.googlenative.retail_v2beta.enums.ProductType;
 import io.pulumi.googlenative.retail_v2beta.inputs.GoogleCloudRetailV2betaAudienceArgs;
@@ -31,7 +31,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="attributes")
-    private final @Nullable Input<Map<String,String>> attributes;
+      private final @Nullable Input<Map<String,String>> attributes;
 
     public Input<Map<String,String>> getAttributes() {
         return this.attributes == null ? Input.empty() : this.attributes;
@@ -42,7 +42,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audience")
-    private final @Nullable Input<GoogleCloudRetailV2betaAudienceArgs> audience;
+      private final @Nullable Input<GoogleCloudRetailV2betaAudienceArgs> audience;
 
     public Input<GoogleCloudRetailV2betaAudienceArgs> getAudience() {
         return this.audience == null ? Input.empty() : this.audience;
@@ -53,7 +53,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availability")
-    private final @Nullable Input<ProductAvailability> availability;
+      private final @Nullable Input<ProductAvailability> availability;
 
     public Input<ProductAvailability> getAvailability() {
         return this.availability == null ? Input.empty() : this.availability;
@@ -64,7 +64,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableQuantity")
-    private final @Nullable Input<Integer> availableQuantity;
+      private final @Nullable Input<Integer> availableQuantity;
 
     public Input<Integer> getAvailableQuantity() {
         return this.availableQuantity == null ? Input.empty() : this.availableQuantity;
@@ -75,14 +75,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="availableTime")
-    private final @Nullable Input<String> availableTime;
+      private final @Nullable Input<String> availableTime;
 
     public Input<String> getAvailableTime() {
         return this.availableTime == null ? Input.empty() : this.availableTime;
     }
 
     @InputImport(name="branchId", required=true)
-    private final Input<String> branchId;
+      private final Input<String> branchId;
 
     public Input<String> getBranchId() {
         return this.branchId;
@@ -93,14 +93,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brands")
-    private final @Nullable Input<List<String>> brands;
+      private final @Nullable Input<List<String>> brands;
 
     public Input<List<String>> getBrands() {
         return this.brands == null ? Input.empty() : this.brands;
     }
 
     @InputImport(name="catalogId", required=true)
-    private final Input<String> catalogId;
+      private final Input<String> catalogId;
 
     public Input<String> getCatalogId() {
         return this.catalogId;
@@ -111,7 +111,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<List<String>> categories;
+      private final @Nullable Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -122,7 +122,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collectionMemberIds")
-    private final @Nullable Input<List<String>> collectionMemberIds;
+      private final @Nullable Input<List<String>> collectionMemberIds;
 
     public Input<List<String>> getCollectionMemberIds() {
         return this.collectionMemberIds == null ? Input.empty() : this.collectionMemberIds;
@@ -133,7 +133,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="colorInfo")
-    private final @Nullable Input<GoogleCloudRetailV2betaColorInfoArgs> colorInfo;
+      private final @Nullable Input<GoogleCloudRetailV2betaColorInfoArgs> colorInfo;
 
     public Input<GoogleCloudRetailV2betaColorInfoArgs> getColorInfo() {
         return this.colorInfo == null ? Input.empty() : this.colorInfo;
@@ -144,7 +144,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<String>> conditions;
+      private final @Nullable Input<List<String>> conditions;
 
     public Input<List<String>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -155,7 +155,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -166,7 +166,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+      private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -177,7 +177,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fulfillmentInfo")
-    private final @Nullable Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo;
+      private final @Nullable Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> fulfillmentInfo;
 
     public Input<List<GoogleCloudRetailV2betaFulfillmentInfoArgs>> getFulfillmentInfo() {
         return this.fulfillmentInfo == null ? Input.empty() : this.fulfillmentInfo;
@@ -188,7 +188,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gtin")
-    private final @Nullable Input<String> gtin;
+      private final @Nullable Input<String> gtin;
 
     public Input<String> getGtin() {
         return this.gtin == null ? Input.empty() : this.gtin;
@@ -199,7 +199,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -210,7 +210,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="images")
-    private final @Nullable Input<List<GoogleCloudRetailV2betaImageArgs>> images;
+      private final @Nullable Input<List<GoogleCloudRetailV2betaImageArgs>> images;
 
     public Input<List<GoogleCloudRetailV2betaImageArgs>> getImages() {
         return this.images == null ? Input.empty() : this.images;
@@ -221,14 +221,14 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="languageCode")
-    private final @Nullable Input<String> languageCode;
+      private final @Nullable Input<String> languageCode;
 
     public Input<String> getLanguageCode() {
         return this.languageCode == null ? Input.empty() : this.languageCode;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -239,7 +239,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="materials")
-    private final @Nullable Input<List<String>> materials;
+      private final @Nullable Input<List<String>> materials;
 
     public Input<List<String>> getMaterials() {
         return this.materials == null ? Input.empty() : this.materials;
@@ -250,7 +250,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -261,7 +261,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patterns")
-    private final @Nullable Input<List<String>> patterns;
+      private final @Nullable Input<List<String>> patterns;
 
     public Input<List<String>> getPatterns() {
         return this.patterns == null ? Input.empty() : this.patterns;
@@ -272,7 +272,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priceInfo")
-    private final @Nullable Input<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo;
+      private final @Nullable Input<GoogleCloudRetailV2betaPriceInfoArgs> priceInfo;
 
     public Input<GoogleCloudRetailV2betaPriceInfoArgs> getPriceInfo() {
         return this.priceInfo == null ? Input.empty() : this.priceInfo;
@@ -283,21 +283,21 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryProductId")
-    private final @Nullable Input<String> primaryProductId;
+      private final @Nullable Input<String> primaryProductId;
 
     public Input<String> getPrimaryProductId() {
         return this.primaryProductId == null ? Input.empty() : this.primaryProductId;
     }
 
     @InputImport(name="productId", required=true)
-    private final Input<String> productId;
+      private final Input<String> productId;
 
     public Input<String> getProductId() {
         return this.productId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -308,7 +308,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="promotions")
-    private final @Nullable Input<List<GoogleCloudRetailV2betaPromotionArgs>> promotions;
+      private final @Nullable Input<List<GoogleCloudRetailV2betaPromotionArgs>> promotions;
 
     public Input<List<GoogleCloudRetailV2betaPromotionArgs>> getPromotions() {
         return this.promotions == null ? Input.empty() : this.promotions;
@@ -319,7 +319,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="publishTime")
-    private final @Nullable Input<String> publishTime;
+      private final @Nullable Input<String> publishTime;
 
     public Input<String> getPublishTime() {
         return this.publishTime == null ? Input.empty() : this.publishTime;
@@ -330,7 +330,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rating")
-    private final @Nullable Input<GoogleCloudRetailV2betaRatingArgs> rating;
+      private final @Nullable Input<GoogleCloudRetailV2betaRatingArgs> rating;
 
     public Input<GoogleCloudRetailV2betaRatingArgs> getRating() {
         return this.rating == null ? Input.empty() : this.rating;
@@ -341,7 +341,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retrievableFields")
-    private final @Nullable Input<String> retrievableFields;
+      private final @Nullable Input<String> retrievableFields;
 
     public Input<String> getRetrievableFields() {
         return this.retrievableFields == null ? Input.empty() : this.retrievableFields;
@@ -352,7 +352,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sizes")
-    private final @Nullable Input<List<String>> sizes;
+      private final @Nullable Input<List<String>> sizes;
 
     public Input<List<String>> getSizes() {
         return this.sizes == null ? Input.empty() : this.sizes;
@@ -363,7 +363,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+      private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -374,7 +374,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+      private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -385,7 +385,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+      private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -396,7 +396,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ProductType> type;
+      private final @Nullable Input<ProductType> type;
 
     public Input<ProductType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -407,7 +407,7 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+      private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -991,7 +991,6 @@ public final class ProductArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public ProductArgs build() {
             return new ProductArgs(attributes, audience, availability, availableQuantity, availableTime, branchId, brands, catalogId, categories, collectionMemberIds, colorInfo, conditions, description, expireTime, fulfillmentInfo, gtin, id, images, languageCode, location, materials, name, patterns, priceInfo, primaryProductId, productId, project, promotions, publishTime, rating, retrievableFields, sizes, tags, title, ttl, type, uri);
         }

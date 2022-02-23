@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,14 +20,14 @@ public final class AutoScaleRunErrorResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
     }
 
     @InputImport(name="details")
-    private final @Nullable List<AutoScaleRunErrorResponse> details;
+        private final @Nullable List<AutoScaleRunErrorResponse> details;
 
     public List<AutoScaleRunErrorResponse> getDetails() {
         return this.details == null ? List.of() : this.details;
@@ -38,7 +38,7 @@ public final class AutoScaleRunErrorResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+        private final String message;
 
     public String getMessage() {
         return this.message;
@@ -97,7 +97,6 @@ public final class AutoScaleRunErrorResponse extends io.pulumi.resources.InvokeA
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public AutoScaleRunErrorResponse build() {
             return new AutoScaleRunErrorResponse(code, details, message);
         }

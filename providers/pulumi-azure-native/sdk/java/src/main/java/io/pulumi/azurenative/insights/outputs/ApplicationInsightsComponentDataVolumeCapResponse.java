@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -162,7 +162,6 @@ public final class ApplicationInsightsComponentDataVolumeCapResponse {
             this.warningThreshold = warningThreshold;
             return this;
         }
-
         public ApplicationInsightsComponentDataVolumeCapResponse build() {
             return new ApplicationInsightsComponentDataVolumeCapResponse(cap, maxHistoryCap, resetTime, stopSendNotificationWhenHitCap, stopSendNotificationWhenHitThreshold, warningThreshold);
         }

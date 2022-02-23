@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.inputs;
 
 import io.pulumi.azurenative.customerinsights.enums.LinkTypes;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="interactionFieldName", required=true)
-    private final Input<String> interactionFieldName;
+        private final Input<String> interactionFieldName;
 
     public Input<String> getInteractionFieldName() {
         return this.interactionFieldName;
@@ -35,7 +35,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="linkType")
-    private final @Nullable Input<LinkTypes> linkType;
+        private final @Nullable Input<LinkTypes> linkType;
 
     public Input<LinkTypes> getLinkType() {
         return this.linkType == null ? Input.empty() : this.linkType;
@@ -46,7 +46,7 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="relationshipFieldName", required=true)
-    private final Input<String> relationshipFieldName;
+        private final Input<String> relationshipFieldName;
 
     public Input<String> getRelationshipFieldName() {
         return this.relationshipFieldName;
@@ -120,7 +120,6 @@ public final class RelationshipLinkFieldMappingArgs extends io.pulumi.resources.
             this.relationshipFieldName = Input.of(Objects.requireNonNull(relationshipFieldName));
             return this;
         }
-
         public RelationshipLinkFieldMappingArgs build() {
             return new RelationshipLinkFieldMappingArgs(interactionFieldName, linkType, relationshipFieldName);
         }

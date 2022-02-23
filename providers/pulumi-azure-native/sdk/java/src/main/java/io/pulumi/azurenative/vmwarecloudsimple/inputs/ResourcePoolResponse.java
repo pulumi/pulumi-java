@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fullName", required=true)
-    private final String fullName;
+        private final String fullName;
 
     public String getFullName() {
         return this.fullName;
@@ -32,7 +32,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -54,7 +54,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -65,7 +65,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="privateCloudId", required=true)
-    private final String privateCloudId;
+        private final String privateCloudId;
 
     public String getPrivateCloudId() {
         return this.privateCloudId;
@@ -76,7 +76,7 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -165,7 +165,6 @@ public final class ResourcePoolResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourcePoolResponse build() {
             return new ResourcePoolResponse(fullName, id, location, name, privateCloudId, type);
         }

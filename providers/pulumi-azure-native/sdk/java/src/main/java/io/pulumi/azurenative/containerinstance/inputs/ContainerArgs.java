@@ -9,7 +9,7 @@ import io.pulumi.azurenative.containerinstance.inputs.EnvironmentVariableArgs;
 import io.pulumi.azurenative.containerinstance.inputs.ResourceRequirementsArgs;
 import io.pulumi.azurenative.containerinstance.inputs.VolumeMountArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+        private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -40,7 +40,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
+        private final @Nullable Input<List<EnvironmentVariableArgs>> environmentVariables;
 
     public Input<List<EnvironmentVariableArgs>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -51,7 +51,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+        private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -62,7 +62,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="livenessProbe")
-    private final @Nullable Input<ContainerProbeArgs> livenessProbe;
+        private final @Nullable Input<ContainerProbeArgs> livenessProbe;
 
     public Input<ContainerProbeArgs> getLivenessProbe() {
         return this.livenessProbe == null ? Input.empty() : this.livenessProbe;
@@ -73,7 +73,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -84,7 +84,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<ContainerPortArgs>> ports;
+        private final @Nullable Input<List<ContainerPortArgs>> ports;
 
     public Input<List<ContainerPortArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -95,7 +95,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readinessProbe")
-    private final @Nullable Input<ContainerProbeArgs> readinessProbe;
+        private final @Nullable Input<ContainerProbeArgs> readinessProbe;
 
     public Input<ContainerProbeArgs> getReadinessProbe() {
         return this.readinessProbe == null ? Input.empty() : this.readinessProbe;
@@ -106,7 +106,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resources", required=true)
-    private final Input<ResourceRequirementsArgs> resources;
+        private final Input<ResourceRequirementsArgs> resources;
 
     public Input<ResourceRequirementsArgs> getResources() {
         return this.resources;
@@ -117,7 +117,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeMounts")
-    private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
+        private final @Nullable Input<List<VolumeMountArgs>> volumeMounts;
 
     public Input<List<VolumeMountArgs>> getVolumeMounts() {
         return this.volumeMounts == null ? Input.empty() : this.volumeMounts;
@@ -281,7 +281,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeMounts = Input.ofNullable(volumeMounts);
             return this;
         }
-
         public ContainerArgs build() {
             return new ContainerArgs(command, environmentVariables, image, livenessProbe, name, ports, readinessProbe, resources, volumeMounts);
         }

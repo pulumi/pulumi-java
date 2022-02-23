@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class EventSeries {
             this.state = state;
             return this;
         }
-
         public EventSeries build() {
             return new EventSeries(count, lastObservedTime, state);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SoftwareRecipeStepInstallDpkgResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final String artifactId;
+      private final String artifactId;
 
     public String getArtifactId() {
         return this.artifactId;
@@ -59,7 +59,6 @@ public final class SoftwareRecipeStepInstallDpkgResponse extends io.pulumi.resou
             this.artifactId = Objects.requireNonNull(artifactId);
             return this;
         }
-
         public SoftwareRecipeStepInstallDpkgResponse build() {
             return new SoftwareRecipeStepInstallDpkgResponse(artifactId);
         }

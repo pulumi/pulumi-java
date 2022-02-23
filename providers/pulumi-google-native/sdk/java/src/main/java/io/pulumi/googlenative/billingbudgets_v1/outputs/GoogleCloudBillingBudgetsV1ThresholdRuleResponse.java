@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudBillingBudgetsV1ThresholdRuleResponse {
             this.thresholdPercent = Objects.requireNonNull(thresholdPercent);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1ThresholdRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1ThresholdRuleResponse(spendBasis, thresholdPercent);
         }

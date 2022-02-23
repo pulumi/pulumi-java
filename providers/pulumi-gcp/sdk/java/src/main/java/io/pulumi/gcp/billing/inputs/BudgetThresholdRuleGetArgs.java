@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="spendBasis")
-    private final @Nullable Input<String> spendBasis;
+        private final @Nullable Input<String> spendBasis;
 
     public Input<String> getSpendBasis() {
         return this.spendBasis == null ? Input.empty() : this.spendBasis;
@@ -35,7 +35,7 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="thresholdPercent", required=true)
-    private final Input<Double> thresholdPercent;
+        private final Input<Double> thresholdPercent;
 
     public Input<Double> getThresholdPercent() {
         return this.thresholdPercent;
@@ -94,7 +94,6 @@ public final class BudgetThresholdRuleGetArgs extends io.pulumi.resources.Resour
             this.thresholdPercent = Input.of(Objects.requireNonNull(thresholdPercent));
             return this;
         }
-
         public BudgetThresholdRuleGetArgs build() {
             return new BudgetThresholdRuleGetArgs(spendBasis, thresholdPercent);
         }

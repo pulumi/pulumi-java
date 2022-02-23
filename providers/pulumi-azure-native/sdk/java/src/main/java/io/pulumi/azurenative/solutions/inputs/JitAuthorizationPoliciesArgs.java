@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.solutions.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -33,7 +33,7 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="roleDefinitionId", required=true)
-    private final Input<String> roleDefinitionId;
+        private final Input<String> roleDefinitionId;
 
     public Input<String> getRoleDefinitionId() {
         return this.roleDefinitionId;
@@ -92,7 +92,6 @@ public final class JitAuthorizationPoliciesArgs extends io.pulumi.resources.Reso
             this.roleDefinitionId = Input.of(Objects.requireNonNull(roleDefinitionId));
             return this;
         }
-
         public JitAuthorizationPoliciesArgs build() {
             return new JitAuthorizationPoliciesArgs(principalId, roleDefinitionId);
         }

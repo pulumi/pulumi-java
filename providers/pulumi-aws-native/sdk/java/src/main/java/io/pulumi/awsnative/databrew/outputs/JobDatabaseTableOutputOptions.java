@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.outputs;
 
 import io.pulumi.awsnative.databrew.outputs.JobS3Location;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class JobDatabaseTableOutputOptions {
             this.tempDirectory = tempDirectory;
             return this;
         }
-
         public JobDatabaseTableOutputOptions build() {
             return new JobDatabaseTableOutputOptions(tableName, tempDirectory);
         }

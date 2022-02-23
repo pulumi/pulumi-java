@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExportDatasetConfigurationResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="columns")
-    private final @Nullable List<String> columns;
+        private final @Nullable List<String> columns;
 
     public List<String> getColumns() {
         return this.columns == null ? List.of() : this.columns;
@@ -62,7 +62,6 @@ public final class ExportDatasetConfigurationResponse extends io.pulumi.resource
             this.columns = columns;
             return this;
         }
-
         public ExportDatasetConfigurationResponse build() {
             return new ExportDatasetConfigurationResponse(columns);
         }

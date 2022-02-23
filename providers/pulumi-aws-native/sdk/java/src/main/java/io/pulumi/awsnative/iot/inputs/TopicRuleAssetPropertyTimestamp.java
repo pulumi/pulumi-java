@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class TopicRuleAssetPropertyTimestamp extends io.pulumi.resources.I
     public static final TopicRuleAssetPropertyTimestamp Empty = new TopicRuleAssetPropertyTimestamp();
 
     @InputImport(name="offsetInNanos")
-    private final @Nullable String offsetInNanos;
+        private final @Nullable String offsetInNanos;
 
     public Optional<String> getOffsetInNanos() {
         return this.offsetInNanos == null ? Optional.empty() : Optional.ofNullable(this.offsetInNanos);
     }
 
     @InputImport(name="timeInSeconds", required=true)
-    private final String timeInSeconds;
+        private final String timeInSeconds;
 
     public String getTimeInSeconds() {
         return this.timeInSeconds;
@@ -71,7 +71,6 @@ public final class TopicRuleAssetPropertyTimestamp extends io.pulumi.resources.I
             this.timeInSeconds = Objects.requireNonNull(timeInSeconds);
             return this;
         }
-
         public TopicRuleAssetPropertyTimestamp build() {
             return new TopicRuleAssetPropertyTimestamp(offsetInNanos, timeInSeconds);
         }

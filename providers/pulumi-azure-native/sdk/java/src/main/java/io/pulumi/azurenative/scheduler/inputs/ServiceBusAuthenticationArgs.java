@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.inputs;
 
 import io.pulumi.azurenative.scheduler.enums.ServiceBusAuthenticationType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sasKey")
-    private final @Nullable Input<String> sasKey;
+        private final @Nullable Input<String> sasKey;
 
     public Input<String> getSasKey() {
         return this.sasKey == null ? Input.empty() : this.sasKey;
@@ -31,7 +31,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="sasKeyName")
-    private final @Nullable Input<String> sasKeyName;
+        private final @Nullable Input<String> sasKeyName;
 
     public Input<String> getSasKeyName() {
         return this.sasKeyName == null ? Input.empty() : this.sasKeyName;
@@ -42,7 +42,7 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ServiceBusAuthenticationType> type;
+        private final @Nullable Input<ServiceBusAuthenticationType> type;
 
     public Input<ServiceBusAuthenticationType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -116,7 +116,6 @@ public final class ServiceBusAuthenticationArgs extends io.pulumi.resources.Reso
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ServiceBusAuthenticationArgs build() {
             return new ServiceBusAuthenticationArgs(sasKey, sasKeyName, type);
         }

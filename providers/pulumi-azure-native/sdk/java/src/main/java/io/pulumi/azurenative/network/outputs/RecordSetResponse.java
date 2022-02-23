@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -162,7 +162,6 @@ public final class RecordSetResponse {
             this.ttl = ttl;
             return this;
         }
-
         public RecordSetResponse build() {
             return new RecordSetResponse(fqdn, ipAddresses, provisioningState, recordSetName, recordType, ttl);
         }

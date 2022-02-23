@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.LoggingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.QueryListResponse;
 import java.lang.Boolean;
@@ -184,7 +184,6 @@ public final class PrestoJobResponse {
             this.queryList = Objects.requireNonNull(queryList);
             return this;
         }
-
         public PrestoJobResponse build() {
             return new PrestoJobResponse(clientTags, continueOnFailure, loggingConfig, outputFormat, properties, queryFileUri, queryList);
         }

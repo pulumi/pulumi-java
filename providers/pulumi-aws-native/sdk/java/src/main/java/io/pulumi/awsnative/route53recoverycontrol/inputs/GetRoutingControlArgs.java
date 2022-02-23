@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRoutingControlArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="routingControlArn", required=true)
-    private final String routingControlArn;
+        private final String routingControlArn;
 
     public String getRoutingControlArn() {
         return this.routingControlArn;
@@ -55,7 +55,6 @@ public final class GetRoutingControlArgs extends io.pulumi.resources.InvokeArgs 
             this.routingControlArn = Objects.requireNonNull(routingControlArn);
             return this;
         }
-
         public GetRoutingControlArgs build() {
             return new GetRoutingControlArgs(routingControlArn);
         }

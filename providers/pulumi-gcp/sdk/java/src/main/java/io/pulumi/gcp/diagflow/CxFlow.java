@@ -5,8 +5,8 @@ package io.pulumi.gcp.diagflow;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.diagflow.CxFlowArgs;
 import io.pulumi.gcp.diagflow.inputs.CxFlowState;
@@ -204,13 +204,6 @@ public class CxFlow extends io.pulumi.resources.CustomResource {
         return this.transitionRoutes;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CxFlow(String name) {
-        super("gcp:diagflow/cxFlow:CxFlow", name, CxFlowArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

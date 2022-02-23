@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DestinationsSpecResponseAzureMonitorMetrics;
 import io.pulumi.azurenative.insights.outputs.LogAnalyticsDestinationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class DataCollectionRuleResponseDestinations {
             this.logAnalytics = logAnalytics;
             return this;
         }
-
         public DataCollectionRuleResponseDestinations build() {
             return new DataCollectionRuleResponseDestinations(azureMonitorMetrics, logAnalytics);
         }

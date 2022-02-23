@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
      * 
      */
     @InputImport(name="objectIdPaths")
-    private final @Nullable Input<List<Integer>> objectIdPaths;
+        private final @Nullable Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths == null ? Input.empty() : this.objectIdPaths;
@@ -63,7 +63,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.objectIdPaths = Input.ofNullable(objectIdPaths);
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectIdArgs(objectIdPaths);
         }

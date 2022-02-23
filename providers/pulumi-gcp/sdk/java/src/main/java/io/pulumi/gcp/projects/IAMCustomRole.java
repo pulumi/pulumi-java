@@ -5,8 +5,8 @@ package io.pulumi.gcp.projects;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.projects.IAMCustomRoleArgs;
 import io.pulumi.gcp.projects.inputs.IAMCustomRoleState;
@@ -168,13 +168,6 @@ public class IAMCustomRole extends io.pulumi.resources.CustomResource {
         return this.title;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IAMCustomRole(String name) {
-        super("gcp:projects/iAMCustomRole:IAMCustomRole", name, IAMCustomRoleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

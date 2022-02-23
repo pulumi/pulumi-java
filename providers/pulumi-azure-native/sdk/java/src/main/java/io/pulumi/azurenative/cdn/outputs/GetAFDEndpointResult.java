@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -260,7 +260,6 @@ public final class GetAFDEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAFDEndpointResult build() {
             return new GetAFDEndpointResult(deploymentStatus, enabledState, hostName, id, location, name, originResponseTimeoutSeconds, provisioningState, systemData, tags, type);
         }

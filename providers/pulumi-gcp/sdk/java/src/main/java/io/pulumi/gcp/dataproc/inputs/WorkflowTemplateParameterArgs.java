@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.WorkflowTemplateParameterValidationArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fields", required=true)
-    private final Input<List<String>> fields;
+        private final Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields;
@@ -43,7 +43,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -54,7 +54,7 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="validation")
-    private final @Nullable Input<WorkflowTemplateParameterValidationArgs> validation;
+        private final @Nullable Input<WorkflowTemplateParameterValidationArgs> validation;
 
     public Input<WorkflowTemplateParameterValidationArgs> getValidation() {
         return this.validation == null ? Input.empty() : this.validation;
@@ -143,7 +143,6 @@ public final class WorkflowTemplateParameterArgs extends io.pulumi.resources.Res
             this.validation = Input.ofNullable(validation);
             return this;
         }
-
         public WorkflowTemplateParameterArgs build() {
             return new WorkflowTemplateParameterArgs(description, fields, name, validation);
         }

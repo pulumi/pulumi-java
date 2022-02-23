@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="keyid", required=true)
-    private final String keyid;
+      private final String keyid;
 
     public String getKeyid() {
         return this.keyid;
@@ -32,7 +32,7 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sig", required=true)
-    private final String sig;
+      private final String sig;
 
     public String getSig() {
         return this.sig;
@@ -81,7 +81,6 @@ public final class EnvelopeSignatureResponse extends io.pulumi.resources.InvokeA
             this.sig = Objects.requireNonNull(sig);
             return this;
         }
-
         public EnvelopeSignatureResponse build() {
             return new EnvelopeSignatureResponse(keyid, sig);
         }

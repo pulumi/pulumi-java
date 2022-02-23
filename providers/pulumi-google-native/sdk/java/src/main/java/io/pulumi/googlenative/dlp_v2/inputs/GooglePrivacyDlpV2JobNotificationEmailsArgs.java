@@ -34,7 +34,6 @@ public final class GooglePrivacyDlpV2JobNotificationEmailsArgs extends io.pulumi
         public Builder(GooglePrivacyDlpV2JobNotificationEmailsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooglePrivacyDlpV2JobNotificationEmailsArgs build() {
             return new GooglePrivacyDlpV2JobNotificationEmailsArgs();
         }

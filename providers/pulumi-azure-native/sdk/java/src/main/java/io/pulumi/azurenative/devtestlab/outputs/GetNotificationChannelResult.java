@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.EventResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -310,7 +310,6 @@ public final class GetNotificationChannelResult {
             this.webHookUrl = webHookUrl;
             return this;
         }
-
         public GetNotificationChannelResult build() {
             return new GetNotificationChannelResult(createdDate, description, emailRecipient, events, id, location, name, notificationLocale, provisioningState, tags, type, uniqueIdentifier, webHookUrl);
         }

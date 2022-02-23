@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="add")
-    private final @Nullable Input<List<String>> add;
+        private final @Nullable Input<List<String>> add;
 
     public Input<List<String>> getAdd() {
         return this.add == null ? Input.empty() : this.add;
@@ -35,7 +35,7 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="drop")
-    private final @Nullable Input<List<String>> drop;
+        private final @Nullable Input<List<String>> drop;
 
     public Input<List<String>> getDrop() {
         return this.drop == null ? Input.empty() : this.drop;
@@ -94,7 +94,6 @@ public final class CapabilitiesArgs extends io.pulumi.resources.ResourceArgs {
             this.drop = Input.ofNullable(drop);
             return this;
         }
-
         public CapabilitiesArgs build() {
             return new CapabilitiesArgs(add, drop);
         }

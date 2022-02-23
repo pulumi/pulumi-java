@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="caCertificate", required=true)
-    private final String caCertificate;
+      private final String caCertificate;
 
     public String getCaCertificate() {
         return this.caCertificate;
@@ -34,7 +34,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientCertificate", required=true)
-    private final String clientCertificate;
+      private final String clientCertificate;
 
     public String getClientCertificate() {
         return this.clientCertificate;
@@ -45,7 +45,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientKey", required=true)
-    private final String clientKey;
+      private final String clientKey;
 
     public String getClientKey() {
         return this.clientKey;
@@ -56,7 +56,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="connectRetryInterval", required=true)
-    private final Integer connectRetryInterval;
+      private final Integer connectRetryInterval;
 
     public Integer getConnectRetryInterval() {
         return this.connectRetryInterval;
@@ -67,7 +67,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="dumpFilePath", required=true)
-    private final String dumpFilePath;
+      private final String dumpFilePath;
 
     public String getDumpFilePath() {
         return this.dumpFilePath;
@@ -78,7 +78,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -89,7 +89,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="masterHeartbeatPeriod", required=true)
-    private final String masterHeartbeatPeriod;
+      private final String masterHeartbeatPeriod;
 
     public String getMasterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod;
@@ -100,7 +100,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+      private final String password;
 
     public String getPassword() {
         return this.password;
@@ -111,7 +111,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="sslCipher", required=true)
-    private final String sslCipher;
+      private final String sslCipher;
 
     public String getSslCipher() {
         return this.sslCipher;
@@ -122,7 +122,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="username", required=true)
-    private final String username;
+      private final String username;
 
     public String getUsername() {
         return this.username;
@@ -133,7 +133,7 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="verifyServerCertificate", required=true)
-    private final Boolean verifyServerCertificate;
+      private final Boolean verifyServerCertificate;
 
     public Boolean getVerifyServerCertificate() {
         return this.verifyServerCertificate;
@@ -272,7 +272,6 @@ public final class MySqlReplicaConfigurationResponse extends io.pulumi.resources
             this.verifyServerCertificate = Objects.requireNonNull(verifyServerCertificate);
             return this;
         }
-
         public MySqlReplicaConfigurationResponse build() {
             return new MySqlReplicaConfigurationResponse(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, kind, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

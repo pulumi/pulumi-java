@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RegionNetworkEndpointGroupArgs;
 import io.pulumi.gcp.compute.inputs.RegionNetworkEndpointGroupState;
@@ -209,13 +209,6 @@ public class RegionNetworkEndpointGroup extends io.pulumi.resources.CustomResour
         return this.selfLink;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionNetworkEndpointGroup(String name) {
-        super("gcp:compute/regionNetworkEndpointGroup:RegionNetworkEndpointGroup", name, RegionNetworkEndpointGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

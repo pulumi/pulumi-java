@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.CostAllocationRuleDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="createdDate", required=true)
-    private final String createdDate;
+        private final String createdDate;
 
     public String getCreatedDate() {
         return this.createdDate;
@@ -35,7 +35,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -46,7 +46,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="details", required=true)
-    private final CostAllocationRuleDetailsResponse details;
+        private final CostAllocationRuleDetailsResponse details;
 
     public CostAllocationRuleDetailsResponse getDetails() {
         return this.details;
@@ -57,7 +57,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -68,7 +68,7 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="updatedDate", required=true)
-    private final String updatedDate;
+        private final String updatedDate;
 
     public String getUpdatedDate() {
         return this.updatedDate;
@@ -147,7 +147,6 @@ public final class CostAllocationRulePropertiesResponse extends io.pulumi.resour
             this.updatedDate = Objects.requireNonNull(updatedDate);
             return this;
         }
-
         public CostAllocationRulePropertiesResponse build() {
             return new CostAllocationRulePropertiesResponse(createdDate, description, details, status, updatedDate);
         }

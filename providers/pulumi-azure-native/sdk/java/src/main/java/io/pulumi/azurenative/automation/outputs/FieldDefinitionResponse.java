@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class FieldDefinitionResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FieldDefinitionResponse build() {
             return new FieldDefinitionResponse(isEncrypted, isOptional, type);
         }

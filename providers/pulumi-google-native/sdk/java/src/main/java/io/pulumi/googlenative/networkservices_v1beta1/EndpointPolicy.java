@@ -5,8 +5,8 @@ package io.pulumi.googlenative.networkservices_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.networkservices_v1beta1.EndpointPolicyArgs;
 import io.pulumi.googlenative.networkservices_v1beta1.outputs.EndpointMatcherResponse;
@@ -176,13 +176,6 @@ public class EndpointPolicy extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EndpointPolicy(String name) {
-        super("google-native:networkservices/v1beta1:EndpointPolicy", name, EndpointPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

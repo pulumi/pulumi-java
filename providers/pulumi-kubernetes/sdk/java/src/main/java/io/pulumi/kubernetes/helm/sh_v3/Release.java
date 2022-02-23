@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.helm.sh_v3;
 import io.pulumi.core.AssetOrArchive;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.helm.sh_v3.ReleaseArgs;
 import io.pulumi.kubernetes.helm.sh_v3.outputs.ReleaseStatus;
@@ -518,13 +518,6 @@ public class Release extends io.pulumi.resources.CustomResource {
         return this.waitForJobs;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Release(String name) {
-        super("kubernetes:helm.sh/v3:Release", name, ReleaseArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.composer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -87,7 +87,6 @@ public final class EnvironmentConfigWorkloadsConfigScheduler {
             this.storageGb = storageGb;
             return this;
         }
-
         public EnvironmentConfigWorkloadsConfigScheduler build() {
             return new EnvironmentConfigWorkloadsConfigScheduler(count, cpu, memoryGb, storageGb);
         }

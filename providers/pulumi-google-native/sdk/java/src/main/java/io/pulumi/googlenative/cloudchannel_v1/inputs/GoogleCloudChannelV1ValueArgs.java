@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudchannel_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="boolValue")
-    private final @Nullable Input<Boolean> boolValue;
+      private final @Nullable Input<Boolean> boolValue;
 
     public Input<Boolean> getBoolValue() {
         return this.boolValue == null ? Input.empty() : this.boolValue;
@@ -37,7 +37,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="doubleValue")
-    private final @Nullable Input<Double> doubleValue;
+      private final @Nullable Input<Double> doubleValue;
 
     public Input<Double> getDoubleValue() {
         return this.doubleValue == null ? Input.empty() : this.doubleValue;
@@ -48,7 +48,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="int64Value")
-    private final @Nullable Input<String> int64Value;
+      private final @Nullable Input<String> int64Value;
 
     public Input<String> getInt64Value() {
         return this.int64Value == null ? Input.empty() : this.int64Value;
@@ -59,7 +59,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="protoValue")
-    private final @Nullable Input<Map<String,String>> protoValue;
+      private final @Nullable Input<Map<String,String>> protoValue;
 
     public Input<Map<String,String>> getProtoValue() {
         return this.protoValue == null ? Input.empty() : this.protoValue;
@@ -70,7 +70,7 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="stringValue")
-    private final @Nullable Input<String> stringValue;
+      private final @Nullable Input<String> stringValue;
 
     public Input<String> getStringValue() {
         return this.stringValue == null ? Input.empty() : this.stringValue;
@@ -174,7 +174,6 @@ public final class GoogleCloudChannelV1ValueArgs extends io.pulumi.resources.Res
             this.stringValue = Input.ofNullable(stringValue);
             return this;
         }
-
         public GoogleCloudChannelV1ValueArgs build() {
             return new GoogleCloudChannelV1ValueArgs(boolValue, doubleValue, int64Value, protoValue, stringValue);
         }

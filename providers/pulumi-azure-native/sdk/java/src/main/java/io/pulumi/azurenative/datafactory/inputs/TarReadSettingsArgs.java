@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="preserveCompressionFileNameAsFolder")
-    private final @Nullable Input<Object> preserveCompressionFileNameAsFolder;
+        private final @Nullable Input<Object> preserveCompressionFileNameAsFolder;
 
     public Input<Object> getPreserveCompressionFileNameAsFolder() {
         return this.preserveCompressionFileNameAsFolder == null ? Input.empty() : this.preserveCompressionFileNameAsFolder;
@@ -36,7 +36,7 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -95,7 +95,6 @@ public final class TarReadSettingsArgs extends io.pulumi.resources.ResourceArgs 
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public TarReadSettingsArgs build() {
             return new TarReadSettingsArgs(preserveCompressionFileNameAsFolder, type);
         }

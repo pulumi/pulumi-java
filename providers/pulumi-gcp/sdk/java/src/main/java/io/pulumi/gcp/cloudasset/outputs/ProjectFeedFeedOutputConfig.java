@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudasset.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudasset.outputs.ProjectFeedFeedOutputConfigPubsubDestination;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class ProjectFeedFeedOutputConfig {
             this.pubsubDestination = Objects.requireNonNull(pubsubDestination);
             return this;
         }
-
         public ProjectFeedFeedOutputConfig build() {
             return new ProjectFeedFeedOutputConfig(pubsubDestination);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobStatisticsResponse;
@@ -204,7 +204,6 @@ public final class GetJobResult {
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(configuration, etag, jobReference, kind, selfLink, statistics, status, userEmail);
         }

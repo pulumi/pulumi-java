@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.AuthConfigResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConfigVariableResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.ConnectionStatusResponse;
@@ -375,7 +375,6 @@ public final class GetConnectionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(authConfig, configVariables, connectorVersion, createTime, description, egressBackends, envoyImageLocation, imageLocation, labels, lockConfig, name, serviceAccount, serviceDirectory, status, suspended, updateTime);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceImageRepositoryImageRepositoryType;
 import io.pulumi.awsnative.apprunner.outputs.ServiceImageConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -91,7 +91,6 @@ public final class ServiceImageRepository {
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
-
         public ServiceImageRepository build() {
             return new ServiceImageRepository(imageConfiguration, imageIdentifier, imageRepositoryType);
         }

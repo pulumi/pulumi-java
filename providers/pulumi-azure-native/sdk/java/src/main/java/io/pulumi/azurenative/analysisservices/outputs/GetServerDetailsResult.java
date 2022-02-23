@@ -7,7 +7,7 @@ import io.pulumi.azurenative.analysisservices.outputs.GatewayDetailsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.IPv4FirewallSettingsResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ResourceSkuResponse;
 import io.pulumi.azurenative.analysisservices.outputs.ServerAdministratorsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -376,7 +376,6 @@ public final class GetServerDetailsResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerDetailsResult build() {
             return new GetServerDetailsResult(asAdministrators, backupBlobContainerUri, gatewayDetails, id, ipV4FirewallSettings, location, managedMode, name, provisioningState, querypoolConnectionMode, serverFullName, serverMonitorMode, sku, state, tags, type);
         }

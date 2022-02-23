@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapGetArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationUrlDispatchRuleGetArgs;
@@ -23,7 +23,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appId")
-    private final @Nullable Input<String> appId;
+        private final @Nullable Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId == null ? Input.empty() : this.appId;
@@ -34,7 +34,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authDomain")
-    private final @Nullable Input<String> authDomain;
+        private final @Nullable Input<String> authDomain;
 
     public Input<String> getAuthDomain() {
         return this.authDomain == null ? Input.empty() : this.authDomain;
@@ -45,7 +45,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="codeBucket")
-    private final @Nullable Input<String> codeBucket;
+        private final @Nullable Input<String> codeBucket;
 
     public Input<String> getCodeBucket() {
         return this.codeBucket == null ? Input.empty() : this.codeBucket;
@@ -59,7 +59,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-    private final @Nullable Input<String> databaseType;
+        private final @Nullable Input<String> databaseType;
 
     public Input<String> getDatabaseType() {
         return this.databaseType == null ? Input.empty() : this.databaseType;
@@ -70,7 +70,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultBucket")
-    private final @Nullable Input<String> defaultBucket;
+        private final @Nullable Input<String> defaultBucket;
 
     public Input<String> getDefaultBucket() {
         return this.defaultBucket == null ? Input.empty() : this.defaultBucket;
@@ -81,7 +81,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultHostname")
-    private final @Nullable Input<String> defaultHostname;
+        private final @Nullable Input<String> defaultHostname;
 
     public Input<String> getDefaultHostname() {
         return this.defaultHostname == null ? Input.empty() : this.defaultHostname;
@@ -92,7 +92,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSettings")
-    private final @Nullable Input<ApplicationFeatureSettingsGetArgs> featureSettings;
+        private final @Nullable Input<ApplicationFeatureSettingsGetArgs> featureSettings;
 
     public Input<ApplicationFeatureSettingsGetArgs> getFeatureSettings() {
         return this.featureSettings == null ? Input.empty() : this.featureSettings;
@@ -103,7 +103,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gcrDomain")
-    private final @Nullable Input<String> gcrDomain;
+        private final @Nullable Input<String> gcrDomain;
 
     public Input<String> getGcrDomain() {
         return this.gcrDomain == null ? Input.empty() : this.gcrDomain;
@@ -114,7 +114,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iap")
-    private final @Nullable Input<ApplicationIapGetArgs> iap;
+        private final @Nullable Input<ApplicationIapGetArgs> iap;
 
     public Input<ApplicationIapGetArgs> getIap() {
         return this.iap == null ? Input.empty() : this.iap;
@@ -126,7 +126,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationId")
-    private final @Nullable Input<String> locationId;
+        private final @Nullable Input<String> locationId;
 
     public Input<String> getLocationId() {
         return this.locationId == null ? Input.empty() : this.locationId;
@@ -137,7 +137,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -150,7 +150,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -161,7 +161,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servingStatus")
-    private final @Nullable Input<String> servingStatus;
+        private final @Nullable Input<String> servingStatus;
 
     public Input<String> getServingStatus() {
         return this.servingStatus == null ? Input.empty() : this.servingStatus;
@@ -172,7 +172,7 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlDispatchRules")
-    private final @Nullable Input<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
+        private final @Nullable Input<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
 
     public Input<List<ApplicationUrlDispatchRuleGetArgs>> getUrlDispatchRules() {
         return this.urlDispatchRules == null ? Input.empty() : this.urlDispatchRules;
@@ -411,7 +411,6 @@ public final class ApplicationState extends io.pulumi.resources.ResourceArgs {
             this.urlDispatchRules = Input.ofNullable(urlDispatchRules);
             return this;
         }
-
         public ApplicationState build() {
             return new ApplicationState(appId, authDomain, codeBucket, databaseType, defaultBucket, defaultHostname, featureSettings, gcrDomain, iap, locationId, name, project, servingStatus, urlDispatchRules);
         }

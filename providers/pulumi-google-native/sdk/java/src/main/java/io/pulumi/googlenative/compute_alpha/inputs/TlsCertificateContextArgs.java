@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.TlsCertificateContextCertificateSource;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsArgs;
@@ -25,7 +25,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificatePaths")
-    private final @Nullable Input<TlsCertificatePathsArgs> certificatePaths;
+      private final @Nullable Input<TlsCertificatePathsArgs> certificatePaths;
 
     public Input<TlsCertificatePathsArgs> getCertificatePaths() {
         return this.certificatePaths == null ? Input.empty() : this.certificatePaths;
@@ -36,7 +36,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateSource")
-    private final @Nullable Input<TlsCertificateContextCertificateSource> certificateSource;
+      private final @Nullable Input<TlsCertificateContextCertificateSource> certificateSource;
 
     public Input<TlsCertificateContextCertificateSource> getCertificateSource() {
         return this.certificateSource == null ? Input.empty() : this.certificateSource;
@@ -47,7 +47,7 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sdsConfig")
-    private final @Nullable Input<SdsConfigArgs> sdsConfig;
+      private final @Nullable Input<SdsConfigArgs> sdsConfig;
 
     public Input<SdsConfigArgs> getSdsConfig() {
         return this.sdsConfig == null ? Input.empty() : this.sdsConfig;
@@ -121,7 +121,6 @@ public final class TlsCertificateContextArgs extends io.pulumi.resources.Resourc
             this.sdsConfig = Input.ofNullable(sdsConfig);
             return this;
         }
-
         public TlsCertificateContextArgs build() {
             return new TlsCertificateContextArgs(certificatePaths, certificateSource, sdsConfig);
         }

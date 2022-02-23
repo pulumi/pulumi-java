@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.EdifactOneWayAgreementResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -21,7 +21,7 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="receiveAgreement", required=true)
-    private final EdifactOneWayAgreementResponse receiveAgreement;
+        private final EdifactOneWayAgreementResponse receiveAgreement;
 
     public EdifactOneWayAgreementResponse getReceiveAgreement() {
         return this.receiveAgreement;
@@ -32,7 +32,7 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sendAgreement", required=true)
-    private final EdifactOneWayAgreementResponse sendAgreement;
+        private final EdifactOneWayAgreementResponse sendAgreement;
 
     public EdifactOneWayAgreementResponse getSendAgreement() {
         return this.sendAgreement;
@@ -81,7 +81,6 @@ public final class EdifactAgreementContentResponse extends io.pulumi.resources.I
             this.sendAgreement = Objects.requireNonNull(sendAgreement);
             return this;
         }
-
         public EdifactAgreementContentResponse build() {
             return new EdifactAgreementContentResponse(receiveAgreement, sendAgreement);
         }

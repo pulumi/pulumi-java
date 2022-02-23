@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="connectionLimit")
-    private final @Nullable Input<Integer> connectionLimit;
+      private final @Nullable Input<Integer> connectionLimit;
 
     public Input<Integer> getConnectionLimit() {
         return this.connectionLimit == null ? Input.empty() : this.connectionLimit;
@@ -31,7 +31,7 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="projectIdOrNum")
-    private final @Nullable Input<String> projectIdOrNum;
+      private final @Nullable Input<String> projectIdOrNum;
 
     public Input<String> getProjectIdOrNum() {
         return this.projectIdOrNum == null ? Input.empty() : this.projectIdOrNum;
@@ -90,7 +90,6 @@ public final class ServiceAttachmentConsumerProjectLimitArgs extends io.pulumi.r
             this.projectIdOrNum = Input.ofNullable(projectIdOrNum);
             return this;
         }
-
         public ServiceAttachmentConsumerProjectLimitArgs build() {
             return new ServiceAttachmentConsumerProjectLimitArgs(connectionLimit, projectIdOrNum);
         }

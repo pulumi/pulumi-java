@@ -34,7 +34,6 @@ public final class AppDevExperienceFeatureSpecResponse extends io.pulumi.resourc
         public Builder(AppDevExperienceFeatureSpecResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public AppDevExperienceFeatureSpecResponse build() {
             return new AppDevExperienceFeatureSpecResponse();
         }

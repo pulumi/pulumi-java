@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.addons.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="planTypeName", required=true)
-    private final String planTypeName;
+        private final String planTypeName;
 
     public String getPlanTypeName() {
         return this.planTypeName;
@@ -28,7 +28,7 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="providerName", required=true)
-    private final String providerName;
+        private final String providerName;
 
     public String getProviderName() {
         return this.providerName;
@@ -77,7 +77,6 @@ public final class GetSupportPlanTypeArgs extends io.pulumi.resources.InvokeArgs
             this.providerName = Objects.requireNonNull(providerName);
             return this;
         }
-
         public GetSupportPlanTypeArgs build() {
             return new GetSupportPlanTypeArgs(planTypeName, providerName);
         }

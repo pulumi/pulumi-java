@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights.outputs;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseExchange;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseSharePoint;
 import io.pulumi.azurenative.securityinsights.outputs.OfficeDataConnectorDataTypesResponseTeams;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -99,7 +99,6 @@ public final class OfficeDataConnectorDataTypesResponse {
             this.teams = teams;
             return this;
         }
-
         public OfficeDataConnectorDataTypesResponse build() {
             return new OfficeDataConnectorDataTypesResponse(exchange, sharePoint, teams);
         }

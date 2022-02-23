@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef;
 import java.util.List;
 import java.util.Objects;
@@ -14,7 +14,7 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom extends io.pulumi
     public static final GetServiceTemplateSpecContainerEnvValueFrom Empty = new GetServiceTemplateSpecContainerEnvValueFrom();
 
     @InputImport(name="secretKeyReves", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
+        private final List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> secretKeyReves;
 
     public List<GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef> getSecretKeyReves() {
         return this.secretKeyReves;
@@ -52,7 +52,6 @@ public final class GetServiceTemplateSpecContainerEnvValueFrom extends io.pulumi
             this.secretKeyReves = Objects.requireNonNull(secretKeyReves);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvValueFrom build() {
             return new GetServiceTemplateSpecContainerEnvValueFrom(secretKeyReves);
         }

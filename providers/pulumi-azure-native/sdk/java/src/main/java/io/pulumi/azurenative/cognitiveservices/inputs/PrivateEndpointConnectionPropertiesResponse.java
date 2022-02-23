@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cognitiveservices.inputs;
 
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateEndpointResponse;
 import io.pulumi.azurenative.cognitiveservices.inputs.PrivateLinkServiceConnectionStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="groupIds")
-    private final @Nullable List<String> groupIds;
+        private final @Nullable List<String> groupIds;
 
     public List<String> getGroupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
@@ -37,7 +37,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable PrivateEndpointResponse privateEndpoint;
+        private final @Nullable PrivateEndpointResponse privateEndpoint;
 
     public Optional<PrivateEndpointResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -48,7 +48,7 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState", required=true)
-    private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
+        private final PrivateLinkServiceConnectionStateResponse privateLinkServiceConnectionState;
 
     public PrivateLinkServiceConnectionStateResponse getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState;
@@ -107,7 +107,6 @@ public final class PrivateEndpointConnectionPropertiesResponse extends io.pulumi
             this.privateLinkServiceConnectionState = Objects.requireNonNull(privateLinkServiceConnectionState);
             return this;
         }
-
         public PrivateEndpointConnectionPropertiesResponse build() {
             return new PrivateEndpointConnectionPropertiesResponse(groupIds, privateEndpoint, privateLinkServiceConnectionState);
         }

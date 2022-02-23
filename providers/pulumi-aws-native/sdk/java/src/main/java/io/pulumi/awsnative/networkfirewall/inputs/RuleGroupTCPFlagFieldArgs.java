@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupTCPFlag;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupTCPFlagFieldArgs Empty = new RuleGroupTCPFlagFieldArgs();
 
     @InputImport(name="flags", required=true)
-    private final Input<List<RuleGroupTCPFlag>> flags;
+        private final Input<List<RuleGroupTCPFlag>> flags;
 
     public Input<List<RuleGroupTCPFlag>> getFlags() {
         return this.flags;
     }
 
     @InputImport(name="masks")
-    private final @Nullable Input<List<RuleGroupTCPFlag>> masks;
+        private final @Nullable Input<List<RuleGroupTCPFlag>> masks;
 
     public Input<List<RuleGroupTCPFlag>> getMasks() {
         return this.masks == null ? Input.empty() : this.masks;
@@ -82,7 +82,6 @@ public final class RuleGroupTCPFlagFieldArgs extends io.pulumi.resources.Resourc
             this.masks = Input.ofNullable(masks);
             return this;
         }
-
         public RuleGroupTCPFlagFieldArgs build() {
             return new RuleGroupTCPFlagFieldArgs(flags, masks);
         }

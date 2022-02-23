@@ -5,8 +5,8 @@ package io.pulumi.googlenative.pubsublite_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.pubsublite_v1.ReservationArgs;
 import java.lang.String;
@@ -47,13 +47,6 @@ public class Reservation extends io.pulumi.resources.CustomResource {
         return this.throughputCapacity;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Reservation(String name) {
-        super("google-native:pubsublite/v1:Reservation", name, ReservationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

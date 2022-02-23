@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -413,7 +413,6 @@ public final class ProcessServerDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ProcessServerDetailsResponse build() {
             return new ProcessServerDetailsResponse(availableMemoryInBytes, availableSpaceInBytes, freeSpacePercentage, health, healthErrors, historicHealth, id, lastHeartbeatUtc, memoryUsagePercentage, name, processorUsagePercentage, throughputInBytes, throughputUploadPendingDataInBytes, totalMemoryInBytes, totalSpaceInBytes, usedMemoryInBytes, usedSpaceInBytes, version);
         }

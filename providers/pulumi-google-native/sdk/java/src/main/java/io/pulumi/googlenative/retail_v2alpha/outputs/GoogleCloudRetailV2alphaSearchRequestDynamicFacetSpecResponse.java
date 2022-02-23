@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse
             this.mode = Objects.requireNonNull(mode);
             return this;
         }
-
         public GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse build() {
             return new GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse(mode);
         }

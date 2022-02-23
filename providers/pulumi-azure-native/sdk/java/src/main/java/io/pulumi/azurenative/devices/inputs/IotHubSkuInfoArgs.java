@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devices.inputs;
 import io.pulumi.azurenative.devices.enums.IotHubSku;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Double> capacity;
+        private final @Nullable Input<Double> capacity;
 
     public Input<Double> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<Either<String,IotHubSku>> name;
+        private final Input<Either<String,IotHubSku>> name;
 
     public Input<Either<String,IotHubSku>> getName() {
         return this.name;
@@ -96,7 +96,6 @@ public final class IotHubSkuInfoArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public IotHubSkuInfoArgs build() {
             return new IotHubSkuInfoArgs(capacity, name);
         }

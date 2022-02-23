@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.WorkloadCrrAccessTokenResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -183,7 +183,6 @@ public final class GetRecoveryPointAccessTokenResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRecoveryPointAccessTokenResult build() {
             return new GetRecoveryPointAccessTokenResult(eTag, id, location, name, properties, tags, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.inputs.DomainCustomImage;
 import io.pulumi.awsnative.sagemaker.inputs.DomainResourceSpec;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DomainKernelGatewayAppSettings extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="customImages")
-    private final @Nullable List<DomainCustomImage> customImages;
+        private final @Nullable List<DomainCustomImage> customImages;
 
     public List<DomainCustomImage> getCustomImages() {
         return this.customImages == null ? List.of() : this.customImages;
@@ -36,7 +36,7 @@ public final class DomainKernelGatewayAppSettings extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="defaultResourceSpec")
-    private final @Nullable DomainResourceSpec defaultResourceSpec;
+        private final @Nullable DomainResourceSpec defaultResourceSpec;
 
     public Optional<DomainResourceSpec> getDefaultResourceSpec() {
         return this.defaultResourceSpec == null ? Optional.empty() : Optional.ofNullable(this.defaultResourceSpec);
@@ -85,7 +85,6 @@ public final class DomainKernelGatewayAppSettings extends io.pulumi.resources.In
             this.defaultResourceSpec = defaultResourceSpec;
             return this;
         }
-
         public DomainKernelGatewayAppSettings build() {
             return new DomainKernelGatewayAppSettings(customImages, defaultResourceSpec);
         }

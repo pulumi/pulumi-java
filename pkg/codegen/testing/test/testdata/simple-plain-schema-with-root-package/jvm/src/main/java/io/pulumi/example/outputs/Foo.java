@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -114,7 +114,6 @@ public final class Foo {
             this.f = f;
             return this;
         }
-
         public Foo build() {
             return new Foo(a, b, c, d, e, f);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class CanonicalProfileDefinitionResponseProperties {
             this.value = value;
             return this;
         }
-
         public CanonicalProfileDefinitionResponseProperties build() {
             return new CanonicalProfileDefinitionResponseProperties(profileName, profilePropertyName, rank, type, value);
         }

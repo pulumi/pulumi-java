@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1.outputs.MysqlColumnResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class MysqlTableResponse {
             this.table = Objects.requireNonNull(table);
             return this;
         }
-
         public MysqlTableResponse build() {
             return new MysqlTableResponse(mysqlColumns, table);
         }

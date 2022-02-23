@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDefaultDataset;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDestinationEncryptionConfiguration;
 import io.pulumi.gcp.bigquery.outputs.JobQueryDestinationTable;
@@ -465,7 +465,6 @@ public final class JobQuery {
             this.writeDisposition = writeDisposition;
             return this;
         }
-
         public JobQuery build() {
             return new JobQuery(allowLargeResults, createDisposition, defaultDataset, destinationEncryptionConfiguration, destinationTable, flattenResults, maximumBillingTier, maximumBytesBilled, parameterMode, priority, query, schemaUpdateOptions, scriptOptions, useLegacySql, useQueryCache, userDefinedFunctionResources, writeDisposition);
         }

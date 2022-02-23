@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.CloudSqlConnectionProfileResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.MySqlConnectionProfileResponse;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.StatusResponse;
@@ -246,7 +246,6 @@ public final class GetConnectionProfileResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConnectionProfileResult build() {
             return new GetConnectionProfileResult(cloudsql, createTime, displayName, error, labels, mysql, name, provider, state, updateTime);
         }

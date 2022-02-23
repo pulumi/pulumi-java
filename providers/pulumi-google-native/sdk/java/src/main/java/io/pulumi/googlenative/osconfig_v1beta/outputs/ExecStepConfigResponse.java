@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.GcsObjectResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class ExecStepConfigResponse {
             this.localPath = Objects.requireNonNull(localPath);
             return this;
         }
-
         public ExecStepConfigResponse build() {
             return new ExecStepConfigResponse(allowedSuccessCodes, gcsObject, interpreter, localPath);
         }

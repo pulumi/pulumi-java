@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ContainerServiceSshPublicKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class ContainerServiceSshConfigurationResponse {
             this.publicKeys = Objects.requireNonNull(publicKeys);
             return this;
         }
-
         public ContainerServiceSshConfigurationResponse build() {
             return new ContainerServiceSshConfigurationResponse(publicKeys);
         }

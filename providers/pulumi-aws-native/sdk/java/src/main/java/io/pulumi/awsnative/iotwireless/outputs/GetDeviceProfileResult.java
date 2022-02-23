@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.DeviceProfileLoRaWANDeviceProfile;
 import io.pulumi.awsnative.iotwireless.outputs.DeviceProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class GetDeviceProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetDeviceProfileResult build() {
             return new GetDeviceProfileResult(arn, id, loRaWAN, name, tags);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub.outputs;
 
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutPropertiesResponseSpecification;
 import io.pulumi.azurenative.providerhub.outputs.DefaultRolloutPropertiesResponseStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -75,7 +75,6 @@ public final class DefaultRolloutResponseProperties {
             this.status = status;
             return this;
         }
-
         public DefaultRolloutResponseProperties build() {
             return new DefaultRolloutResponseProperties(provisioningState, specification, status);
         }

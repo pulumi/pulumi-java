@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudDatalabelingV1beta1ImageClassificationConfigRespon
             this.answerAggregationType = Objects.requireNonNull(answerAggregationType);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1ImageClassificationConfigResponse(allowMultiLabel, annotationSpecSet, answerAggregationType);
         }

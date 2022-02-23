@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VideoMediaInfoResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="segmentLength", required=true)
-    private final String segmentLength;
+        private final String segmentLength;
 
     public String getSegmentLength() {
         return this.segmentLength;
@@ -59,7 +59,6 @@ public final class VideoMediaInfoResponse extends io.pulumi.resources.InvokeArgs
             this.segmentLength = Objects.requireNonNull(segmentLength);
             return this;
         }
-
         public VideoMediaInfoResponse build() {
             return new VideoMediaInfoResponse(segmentLength);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.DataCatalogConfigArgs;
 import io.pulumi.googlenative.metastore_v1beta.inputs.DataplexConfigArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataCatalogConfig")
-    private final @Nullable Input<DataCatalogConfigArgs> dataCatalogConfig;
+      private final @Nullable Input<DataCatalogConfigArgs> dataCatalogConfig;
 
     public Input<DataCatalogConfigArgs> getDataCatalogConfig() {
         return this.dataCatalogConfig == null ? Input.empty() : this.dataCatalogConfig;
@@ -35,7 +35,7 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dataplexConfig")
-    private final @Nullable Input<DataplexConfigArgs> dataplexConfig;
+      private final @Nullable Input<DataplexConfigArgs> dataplexConfig;
 
     public Input<DataplexConfigArgs> getDataplexConfig() {
         return this.dataplexConfig == null ? Input.empty() : this.dataplexConfig;
@@ -94,7 +94,6 @@ public final class MetadataIntegrationArgs extends io.pulumi.resources.ResourceA
             this.dataplexConfig = Input.ofNullable(dataplexConfig);
             return this;
         }
-
         public MetadataIntegrationArgs build() {
             return new MetadataIntegrationArgs(dataCatalogConfig, dataplexConfig);
         }

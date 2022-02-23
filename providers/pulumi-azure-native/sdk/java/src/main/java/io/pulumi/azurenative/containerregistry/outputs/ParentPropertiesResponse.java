@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.outputs;
 
 import io.pulumi.azurenative.containerregistry.outputs.SyncPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class ParentPropertiesResponse {
             this.syncProperties = Objects.requireNonNull(syncProperties);
             return this;
         }
-
         public ParentPropertiesResponse build() {
             return new ParentPropertiesResponse(id, syncProperties);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.TriggerResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class MonitoringQueryLanguageConditionResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MonitoringQueryLanguageConditionResponse build() {
             return new MonitoringQueryLanguageConditionResponse(duration, query, trigger);
         }

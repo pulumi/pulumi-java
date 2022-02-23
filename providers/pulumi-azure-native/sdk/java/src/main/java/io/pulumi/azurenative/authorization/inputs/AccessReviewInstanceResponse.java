@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="endDateTime")
-    private final @Nullable String endDateTime;
+        private final @Nullable String endDateTime;
 
     public Optional<String> getEndDateTime() {
         return this.endDateTime == null ? Optional.empty() : Optional.ofNullable(this.endDateTime);
@@ -34,7 +34,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -45,7 +45,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -56,7 +56,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="startDateTime")
-    private final @Nullable String startDateTime;
+        private final @Nullable String startDateTime;
 
     public Optional<String> getStartDateTime() {
         return this.startDateTime == null ? Optional.empty() : Optional.ofNullable(this.startDateTime);
@@ -67,7 +67,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -78,7 +78,7 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -167,7 +167,6 @@ public final class AccessReviewInstanceResponse extends io.pulumi.resources.Invo
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AccessReviewInstanceResponse build() {
             return new AccessReviewInstanceResponse(endDateTime, id, name, startDateTime, status, type);
         }

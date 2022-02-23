@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.BlobRestoreRangeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class BlobRestoreParametersResponse {
             this.timeToRestore = Objects.requireNonNull(timeToRestore);
             return this;
         }
-
         public BlobRestoreParametersResponse build() {
             return new BlobRestoreParametersResponse(blobRanges, timeToRestore);
         }

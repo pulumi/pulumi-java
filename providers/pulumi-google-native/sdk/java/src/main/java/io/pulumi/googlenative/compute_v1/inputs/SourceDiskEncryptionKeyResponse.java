@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.CustomerEncryptionKeyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="diskEncryptionKey", required=true)
-    private final CustomerEncryptionKeyResponse diskEncryptionKey;
+      private final CustomerEncryptionKeyResponse diskEncryptionKey;
 
     public CustomerEncryptionKeyResponse getDiskEncryptionKey() {
         return this.diskEncryptionKey;
@@ -29,7 +29,7 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="sourceDisk", required=true)
-    private final String sourceDisk;
+      private final String sourceDisk;
 
     public String getSourceDisk() {
         return this.sourceDisk;
@@ -78,7 +78,6 @@ public final class SourceDiskEncryptionKeyResponse extends io.pulumi.resources.I
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public SourceDiskEncryptionKeyResponse build() {
             return new SourceDiskEncryptionKeyResponse(diskEncryptionKey, sourceDisk);
         }

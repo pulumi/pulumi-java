@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2;
 import io.pulumi.awsnative.ec2.inputs.OptionsPropertiesArgs;
 import io.pulumi.awsnative.ec2.inputs.TransitGatewayMulticastDomainTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="options")
-    private final @Nullable Input<OptionsPropertiesArgs> options;
+        private final @Nullable Input<OptionsPropertiesArgs> options;
 
     public Input<OptionsPropertiesArgs> getOptions() {
         return this.options == null ? Input.empty() : this.options;
@@ -33,7 +33,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<TransitGatewayMulticastDomainTagArgs>> tags;
+        private final @Nullable Input<List<TransitGatewayMulticastDomainTagArgs>> tags;
 
     public Input<List<TransitGatewayMulticastDomainTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -44,7 +44,7 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="transitGatewayId", required=true)
-    private final Input<String> transitGatewayId;
+        private final Input<String> transitGatewayId;
 
     public Input<String> getTransitGatewayId() {
         return this.transitGatewayId;
@@ -118,7 +118,6 @@ public final class TransitGatewayMulticastDomainArgs extends io.pulumi.resources
             this.transitGatewayId = Input.of(Objects.requireNonNull(transitGatewayId));
             return this;
         }
-
         public TransitGatewayMulticastDomainArgs build() {
             return new TransitGatewayMulticastDomainArgs(options, tags, transitGatewayId);
         }

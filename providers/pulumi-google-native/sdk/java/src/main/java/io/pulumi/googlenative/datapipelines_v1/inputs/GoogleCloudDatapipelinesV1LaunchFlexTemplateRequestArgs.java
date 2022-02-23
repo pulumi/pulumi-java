@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="launchParameter", required=true)
-    private final Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
+      private final Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> launchParameter;
 
     public Input<GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs> getLaunchParameter() {
         return this.launchParameter;
@@ -36,7 +36,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+      private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -47,7 +47,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="project", required=true)
-    private final Input<String> project;
+      private final Input<String> project;
 
     public Input<String> getProject() {
         return this.project;
@@ -58,7 +58,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
      * 
      */
     @InputImport(name="validateOnly")
-    private final @Nullable Input<Boolean> validateOnly;
+      private final @Nullable Input<Boolean> validateOnly;
 
     public Input<Boolean> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -147,7 +147,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs exten
             this.validateOnly = Input.ofNullable(validateOnly);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateRequestArgs(launchParameter, location, project, validateOnly);
         }

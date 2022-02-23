@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdaptiveProtectionConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAdvancedOptionsConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SecurityPolicyAssociationResponse;
@@ -394,7 +394,6 @@ public final class GetOrganizationSecurityPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetOrganizationSecurityPolicyResult build() {
             return new GetOrganizationSecurityPolicyResult(adaptiveProtectionConfig, advancedOptionsConfig, associations, creationTimestamp, description, displayName, fingerprint, kind, labelFingerprint, labels, name, parent, recaptchaOptionsConfig, ruleTupleCount, rules, selfLink, selfLinkWithId, type);
         }

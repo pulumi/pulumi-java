@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.GetBucketObjectContentCustomerEncryption;
 import java.lang.Boolean;
 import java.lang.String;
@@ -340,7 +340,6 @@ public final class GetBucketObjectContentResult {
             this.temporaryHold = Objects.requireNonNull(temporaryHold);
             return this;
         }
-
         public GetBucketObjectContentResult build() {
             return new GetBucketObjectContentResult(bucket, cacheControl, content, contentDisposition, contentEncoding, contentLanguage, contentType, crc32c, customerEncryptions, detectMd5hash, eventBasedHold, id, kmsKeyName, md5hash, mediaLink, metadata, name, outputName, selfLink, source, storageClass, temporaryHold);
         }

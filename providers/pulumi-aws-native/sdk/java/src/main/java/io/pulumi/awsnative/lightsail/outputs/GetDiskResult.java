@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.outputs;
 import io.pulumi.awsnative.lightsail.outputs.DiskAddOn;
 import io.pulumi.awsnative.lightsail.outputs.DiskLocation;
 import io.pulumi.awsnative.lightsail.outputs.DiskTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -276,7 +276,6 @@ public final class GetDiskResult {
             this.tags = tags;
             return this;
         }
-
         public GetDiskResult build() {
             return new GetDiskResult(addOns, attachedTo, attachmentState, diskArn, iops, isAttached, location, path, resourceType, state, supportCode, tags);
         }

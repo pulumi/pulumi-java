@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,21 +15,21 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
     public static final DomainMasterUserOptionsArgs Empty = new DomainMasterUserOptionsArgs();
 
     @InputImport(name="masterUserARN")
-    private final @Nullable Input<String> masterUserARN;
+        private final @Nullable Input<String> masterUserARN;
 
     public Input<String> getMasterUserARN() {
         return this.masterUserARN == null ? Input.empty() : this.masterUserARN;
     }
 
     @InputImport(name="masterUserName")
-    private final @Nullable Input<String> masterUserName;
+        private final @Nullable Input<String> masterUserName;
 
     public Input<String> getMasterUserName() {
         return this.masterUserName == null ? Input.empty() : this.masterUserName;
     }
 
     @InputImport(name="masterUserPassword")
-    private final @Nullable Input<String> masterUserPassword;
+        private final @Nullable Input<String> masterUserPassword;
 
     public Input<String> getMasterUserPassword() {
         return this.masterUserPassword == null ? Input.empty() : this.masterUserPassword;
@@ -103,7 +103,6 @@ public final class DomainMasterUserOptionsArgs extends io.pulumi.resources.Resou
             this.masterUserPassword = Input.ofNullable(masterUserPassword);
             return this;
         }
-
         public DomainMasterUserOptionsArgs build() {
             return new DomainMasterUserOptionsArgs(masterUserARN, masterUserName, masterUserPassword);
         }

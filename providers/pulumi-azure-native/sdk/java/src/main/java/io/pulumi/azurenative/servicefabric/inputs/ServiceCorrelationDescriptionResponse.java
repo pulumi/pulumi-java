@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ServiceCorrelationDescriptionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="scheme", required=true)
-    private final String scheme;
+        private final String scheme;
 
     public String getScheme() {
         return this.scheme;
@@ -32,7 +32,7 @@ public final class ServiceCorrelationDescriptionResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -81,7 +81,6 @@ public final class ServiceCorrelationDescriptionResponse extends io.pulumi.resou
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ServiceCorrelationDescriptionResponse build() {
             return new ServiceCorrelationDescriptionResponse(scheme, serviceName);
         }

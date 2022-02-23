@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketRedirectRuleProtocol;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable Input<String> hostName;
+        private final @Nullable Input<String> hostName;
 
     public Input<String> getHostName() {
         return this.hostName == null ? Input.empty() : this.hostName;
@@ -35,7 +35,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="httpRedirectCode")
-    private final @Nullable Input<String> httpRedirectCode;
+        private final @Nullable Input<String> httpRedirectCode;
 
     public Input<String> getHttpRedirectCode() {
         return this.httpRedirectCode == null ? Input.empty() : this.httpRedirectCode;
@@ -46,7 +46,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<BucketRedirectRuleProtocol> protocol;
+        private final @Nullable Input<BucketRedirectRuleProtocol> protocol;
 
     public Input<BucketRedirectRuleProtocol> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -57,7 +57,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replaceKeyPrefixWith")
-    private final @Nullable Input<String> replaceKeyPrefixWith;
+        private final @Nullable Input<String> replaceKeyPrefixWith;
 
     public Input<String> getReplaceKeyPrefixWith() {
         return this.replaceKeyPrefixWith == null ? Input.empty() : this.replaceKeyPrefixWith;
@@ -68,7 +68,7 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="replaceKeyWith")
-    private final @Nullable Input<String> replaceKeyWith;
+        private final @Nullable Input<String> replaceKeyWith;
 
     public Input<String> getReplaceKeyWith() {
         return this.replaceKeyWith == null ? Input.empty() : this.replaceKeyWith;
@@ -172,7 +172,6 @@ public final class BucketRedirectRuleArgs extends io.pulumi.resources.ResourceAr
             this.replaceKeyWith = Input.ofNullable(replaceKeyWith);
             return this;
         }
-
         public BucketRedirectRuleArgs build() {
             return new BucketRedirectRuleArgs(hostName, httpRedirectCode, protocol, replaceKeyPrefixWith, replaceKeyWith);
         }

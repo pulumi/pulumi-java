@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="factoryName", required=true)
-    private final String factoryName;
+        private final String factoryName;
 
     public String getFactoryName() {
         return this.factoryName;
@@ -28,7 +28,7 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="integrationRuntimeName", required=true)
-    private final String integrationRuntimeName;
+        private final String integrationRuntimeName;
 
     public String getIntegrationRuntimeName() {
         return this.integrationRuntimeName;
@@ -39,7 +39,7 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetIntegrationRuntimeConnectionInfoArgs extends io.pulumi.res
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetIntegrationRuntimeConnectionInfoArgs build() {
             return new GetIntegrationRuntimeConnectionInfoArgs(factoryName, integrationRuntimeName, resourceGroupName);
         }

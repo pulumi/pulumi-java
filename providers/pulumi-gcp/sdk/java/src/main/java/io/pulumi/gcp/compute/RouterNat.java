@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.RouterNatArgs;
 import io.pulumi.gcp.compute.inputs.RouterNatState;
@@ -321,13 +321,6 @@ public class RouterNat extends io.pulumi.resources.CustomResource {
         return this.udpIdleTimeoutSec;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RouterNat(String name) {
-        super("gcp:compute/routerNat:RouterNat", name, RouterNatArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

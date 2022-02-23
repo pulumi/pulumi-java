@@ -4,7 +4,7 @@
 package io.pulumi.gcp.identityplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.identityplatform.inputs.TenantInboundSamlConfigIdpConfigIdpCertificateArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="idpCertificates", required=true)
-    private final Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
+        private final Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> idpCertificates;
 
     public Input<List<TenantInboundSamlConfigIdpConfigIdpCertificateArgs>> getIdpCertificates() {
         return this.idpCertificates;
@@ -34,7 +34,7 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="idpEntityId", required=true)
-    private final Input<String> idpEntityId;
+        private final Input<String> idpEntityId;
 
     public Input<String> getIdpEntityId() {
         return this.idpEntityId;
@@ -45,7 +45,7 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="signRequest")
-    private final @Nullable Input<Boolean> signRequest;
+        private final @Nullable Input<Boolean> signRequest;
 
     public Input<Boolean> getSignRequest() {
         return this.signRequest == null ? Input.empty() : this.signRequest;
@@ -56,7 +56,7 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="ssoUrl", required=true)
-    private final Input<String> ssoUrl;
+        private final Input<String> ssoUrl;
 
     public Input<String> getSsoUrl() {
         return this.ssoUrl;
@@ -145,7 +145,6 @@ public final class TenantInboundSamlConfigIdpConfigArgs extends io.pulumi.resour
             this.ssoUrl = Input.of(Objects.requireNonNull(ssoUrl));
             return this;
         }
-
         public TenantInboundSamlConfigIdpConfigArgs build() {
             return new TenantInboundSamlConfigIdpConfigArgs(idpCertificates, idpEntityId, signRequest, ssoUrl);
         }

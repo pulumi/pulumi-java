@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
     public static final TaskDefinitionRepositoryCredentialsArgs Empty = new TaskDefinitionRepositoryCredentialsArgs();
 
     @InputImport(name="credentialsParameter")
-    private final @Nullable Input<String> credentialsParameter;
+        private final @Nullable Input<String> credentialsParameter;
 
     public Input<String> getCredentialsParameter() {
         return this.credentialsParameter == null ? Input.empty() : this.credentialsParameter;
@@ -58,7 +58,6 @@ public final class TaskDefinitionRepositoryCredentialsArgs extends io.pulumi.res
             this.credentialsParameter = Input.ofNullable(credentialsParameter);
             return this;
         }
-
         public TaskDefinitionRepositoryCredentialsArgs build() {
             return new TaskDefinitionRepositoryCredentialsArgs(credentialsParameter);
         }

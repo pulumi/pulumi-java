@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector.inputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorOutcome;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTag;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
     public static final DetectorRule Empty = new DetectorRule();
 
     @InputImport(name="arn")
-    private final @Nullable String arn;
+        private final @Nullable String arn;
 
     public Optional<String> getArn() {
         return this.arn == null ? Optional.empty() : Optional.ofNullable(this.arn);
@@ -30,7 +30,7 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable String createdTime;
+        private final @Nullable String createdTime;
 
     public Optional<String> getCreatedTime() {
         return this.createdTime == null ? Optional.empty() : Optional.ofNullable(this.createdTime);
@@ -41,28 +41,28 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
     }
 
     @InputImport(name="detectorId")
-    private final @Nullable String detectorId;
+        private final @Nullable String detectorId;
 
     public Optional<String> getDetectorId() {
         return this.detectorId == null ? Optional.empty() : Optional.ofNullable(this.detectorId);
     }
 
     @InputImport(name="expression")
-    private final @Nullable String expression;
+        private final @Nullable String expression;
 
     public Optional<String> getExpression() {
         return this.expression == null ? Optional.empty() : Optional.ofNullable(this.expression);
     }
 
     @InputImport(name="language")
-    private final @Nullable DetectorRuleLanguage language;
+        private final @Nullable DetectorRuleLanguage language;
 
     public Optional<DetectorRuleLanguage> getLanguage() {
         return this.language == null ? Optional.empty() : Optional.ofNullable(this.language);
@@ -73,28 +73,28 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable String lastUpdatedTime;
+        private final @Nullable String lastUpdatedTime;
 
     public Optional<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Optional.empty() : Optional.ofNullable(this.lastUpdatedTime);
     }
 
     @InputImport(name="outcomes")
-    private final @Nullable List<DetectorOutcome> outcomes;
+        private final @Nullable List<DetectorOutcome> outcomes;
 
     public List<DetectorOutcome> getOutcomes() {
         return this.outcomes == null ? List.of() : this.outcomes;
     }
 
     @InputImport(name="ruleId")
-    private final @Nullable String ruleId;
+        private final @Nullable String ruleId;
 
     public Optional<String> getRuleId() {
         return this.ruleId == null ? Optional.empty() : Optional.ofNullable(this.ruleId);
     }
 
     @InputImport(name="ruleVersion")
-    private final @Nullable String ruleVersion;
+        private final @Nullable String ruleVersion;
 
     public Optional<String> getRuleVersion() {
         return this.ruleVersion == null ? Optional.empty() : Optional.ofNullable(this.ruleVersion);
@@ -105,7 +105,7 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable List<DetectorTag> tags;
+        private final @Nullable List<DetectorTag> tags;
 
     public List<DetectorTag> getTags() {
         return this.tags == null ? List.of() : this.tags;
@@ -244,7 +244,6 @@ public final class DetectorRule extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public DetectorRule build() {
             return new DetectorRule(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
         }

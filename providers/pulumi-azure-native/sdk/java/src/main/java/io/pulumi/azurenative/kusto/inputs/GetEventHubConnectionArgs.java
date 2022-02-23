@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final String clusterName;
+        private final String clusterName;
 
     public String getClusterName() {
         return this.clusterName;
@@ -28,7 +28,7 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -39,7 +39,7 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="eventHubConnectionName", required=true)
-    private final String eventHubConnectionName;
+        private final String eventHubConnectionName;
 
     public String getEventHubConnectionName() {
         return this.eventHubConnectionName;
@@ -50,7 +50,7 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetEventHubConnectionArgs extends io.pulumi.resources.InvokeA
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetEventHubConnectionArgs build() {
             return new GetEventHubConnectionArgs(clusterName, databaseName, eventHubConnectionName, resourceGroupName);
         }

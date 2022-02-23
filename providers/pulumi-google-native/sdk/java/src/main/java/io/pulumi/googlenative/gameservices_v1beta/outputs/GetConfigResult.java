@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.FleetConfigResponse;
 import io.pulumi.googlenative.gameservices_v1beta.outputs.ScalingConfigResponse;
 import java.lang.String;
@@ -183,7 +183,6 @@ public final class GetConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(createTime, description, fleetConfigs, labels, name, scalingConfigs, updateTime);
         }

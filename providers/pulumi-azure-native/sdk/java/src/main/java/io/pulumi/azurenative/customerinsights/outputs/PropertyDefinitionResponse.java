@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.DataSourcePrecedenceResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ProfileEnumValidValuesFormatResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -375,7 +375,6 @@ public final class PropertyDefinitionResponse {
             this.schemaItemPropLink = schemaItemPropLink;
             return this;
         }
-
         public PropertyDefinitionResponse build() {
             return new PropertyDefinitionResponse(arrayValueSeparator, dataSourcePrecedenceRules, enumValidValues, fieldName, fieldType, isArray, isAvailableInGraph, isEnum, isFlagEnum, isImage, isLocalizedString, isName, isRequired, maxLength, propertyId, schemaItemPropLink);
         }

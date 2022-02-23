@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class KeyVaultKeyReferenceResponseKeyVault {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KeyVaultKeyReferenceResponseKeyVault build() {
             return new KeyVaultKeyReferenceResponseKeyVault(id, name, type);
         }

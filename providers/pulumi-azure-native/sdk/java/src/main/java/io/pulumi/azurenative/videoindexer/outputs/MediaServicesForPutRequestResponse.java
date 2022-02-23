@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoindexer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class MediaServicesForPutRequestResponse {
             this.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
-
         public MediaServicesForPutRequestResponse build() {
             return new MediaServicesForPutRequestResponse(resourceId, userAssignedIdentity);
         }

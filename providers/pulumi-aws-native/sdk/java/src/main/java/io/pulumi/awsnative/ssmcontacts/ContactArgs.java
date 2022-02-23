@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ssmcontacts;
 import io.pulumi.awsnative.ssmcontacts.enums.ContactType;
 import io.pulumi.awsnative.ssmcontacts.inputs.ContactStageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alias", required=true)
-    private final Input<String> alias;
+        private final Input<String> alias;
 
     public Input<String> getAlias() {
         return this.alias;
@@ -32,7 +32,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -43,7 +43,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="plan", required=true)
-    private final Input<List<ContactStageArgs>> plan;
+        private final Input<List<ContactStageArgs>> plan;
 
     public Input<List<ContactStageArgs>> getPlan() {
         return this.plan;
@@ -54,7 +54,7 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<ContactType> type;
+        private final Input<ContactType> type;
 
     public Input<ContactType> getType() {
         return this.type;
@@ -143,7 +143,6 @@ public final class ContactArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public ContactArgs build() {
             return new ContactArgs(alias, displayName, plan, type);
         }

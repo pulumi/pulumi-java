@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountKey")
-    private final @Nullable Input<String> storageAccountKey;
+        private final @Nullable Input<String> storageAccountKey;
 
     public Input<String> getStorageAccountKey() {
         return this.storageAccountKey == null ? Input.empty() : this.storageAccountKey;
@@ -34,7 +34,7 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="storageAccountName")
-    private final @Nullable Input<String> storageAccountName;
+        private final @Nullable Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
@@ -93,7 +93,6 @@ public final class StorageAccountConfigurationArgs extends io.pulumi.resources.R
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
-
         public StorageAccountConfigurationArgs build() {
             return new StorageAccountConfigurationArgs(storageAccountKey, storageAccountName);
         }

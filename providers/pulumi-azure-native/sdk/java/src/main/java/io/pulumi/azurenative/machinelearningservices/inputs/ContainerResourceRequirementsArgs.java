@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+        private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -37,7 +37,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="cpuLimit")
-    private final @Nullable Input<Double> cpuLimit;
+        private final @Nullable Input<Double> cpuLimit;
 
     public Input<Double> getCpuLimit() {
         return this.cpuLimit == null ? Input.empty() : this.cpuLimit;
@@ -48,7 +48,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="fpga")
-    private final @Nullable Input<Integer> fpga;
+        private final @Nullable Input<Integer> fpga;
 
     public Input<Integer> getFpga() {
         return this.fpga == null ? Input.empty() : this.fpga;
@@ -59,7 +59,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="gpu")
-    private final @Nullable Input<Integer> gpu;
+        private final @Nullable Input<Integer> gpu;
 
     public Input<Integer> getGpu() {
         return this.gpu == null ? Input.empty() : this.gpu;
@@ -71,7 +71,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="memoryInGB")
-    private final @Nullable Input<Double> memoryInGB;
+        private final @Nullable Input<Double> memoryInGB;
 
     public Input<Double> getMemoryInGB() {
         return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
@@ -83,7 +83,7 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="memoryInGBLimit")
-    private final @Nullable Input<Double> memoryInGBLimit;
+        private final @Nullable Input<Double> memoryInGBLimit;
 
     public Input<Double> getMemoryInGBLimit() {
         return this.memoryInGBLimit == null ? Input.empty() : this.memoryInGBLimit;
@@ -202,7 +202,6 @@ public final class ContainerResourceRequirementsArgs extends io.pulumi.resources
             this.memoryInGBLimit = Input.ofNullable(memoryInGBLimit);
             return this;
         }
-
         public ContainerResourceRequirementsArgs build() {
             return new ContainerResourceRequirementsArgs(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.run_v1alpha1.inputs.GoogleRpcStatusResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class InstanceAttemptResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="exitCode", required=true)
-    private final Integer exitCode;
+      private final Integer exitCode;
 
     public Integer getExitCode() {
         return this.exitCode;
@@ -33,7 +33,7 @@ public final class InstanceAttemptResultResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="status", required=true)
-    private final GoogleRpcStatusResponse status;
+      private final GoogleRpcStatusResponse status;
 
     public GoogleRpcStatusResponse getStatus() {
         return this.status;
@@ -82,7 +82,6 @@ public final class InstanceAttemptResultResponse extends io.pulumi.resources.Inv
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public InstanceAttemptResultResponse build() {
             return new InstanceAttemptResultResponse(exitCode, status);
         }

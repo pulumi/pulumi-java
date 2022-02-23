@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.inputs.EnabledProtocolsArgs;
 import io.pulumi.azurenative.media.inputs.StreamingPolicyContentKeysArgs;
 import io.pulumi.azurenative.media.inputs.TrackSelectionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="clearTracks")
-    private final @Nullable Input<List<TrackSelectionArgs>> clearTracks;
+        private final @Nullable Input<List<TrackSelectionArgs>> clearTracks;
 
     public Input<List<TrackSelectionArgs>> getClearTracks() {
         return this.clearTracks == null ? Input.empty() : this.clearTracks;
@@ -38,7 +38,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="contentKeys")
-    private final @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
+        private final @Nullable Input<StreamingPolicyContentKeysArgs> contentKeys;
 
     public Input<StreamingPolicyContentKeysArgs> getContentKeys() {
         return this.contentKeys == null ? Input.empty() : this.contentKeys;
@@ -49,7 +49,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="drm")
-    private final @Nullable Input<CbcsDrmConfigurationArgs> drm;
+        private final @Nullable Input<CbcsDrmConfigurationArgs> drm;
 
     public Input<CbcsDrmConfigurationArgs> getDrm() {
         return this.drm == null ? Input.empty() : this.drm;
@@ -60,7 +60,7 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="enabledProtocols")
-    private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
+        private final @Nullable Input<EnabledProtocolsArgs> enabledProtocols;
 
     public Input<EnabledProtocolsArgs> getEnabledProtocols() {
         return this.enabledProtocols == null ? Input.empty() : this.enabledProtocols;
@@ -149,7 +149,6 @@ public final class CommonEncryptionCbcsArgs extends io.pulumi.resources.Resource
             this.enabledProtocols = Input.ofNullable(enabledProtocols);
             return this;
         }
-
         public CommonEncryptionCbcsArgs build() {
             return new CommonEncryptionCbcsArgs(clearTracks, contentKeys, drm, enabledProtocols);
         }

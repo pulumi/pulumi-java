@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class BackendServiceFailoverPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="disableConnectionDrainOnFailover")
-    private final @Nullable Input<Boolean> disableConnectionDrainOnFailover;
+      private final @Nullable Input<Boolean> disableConnectionDrainOnFailover;
 
     public Input<Boolean> getDisableConnectionDrainOnFailover() {
         return this.disableConnectionDrainOnFailover == null ? Input.empty() : this.disableConnectionDrainOnFailover;
@@ -35,7 +35,7 @@ public final class BackendServiceFailoverPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="dropTrafficIfUnhealthy")
-    private final @Nullable Input<Boolean> dropTrafficIfUnhealthy;
+      private final @Nullable Input<Boolean> dropTrafficIfUnhealthy;
 
     public Input<Boolean> getDropTrafficIfUnhealthy() {
         return this.dropTrafficIfUnhealthy == null ? Input.empty() : this.dropTrafficIfUnhealthy;
@@ -46,7 +46,7 @@ public final class BackendServiceFailoverPolicyArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="failoverRatio")
-    private final @Nullable Input<Double> failoverRatio;
+      private final @Nullable Input<Double> failoverRatio;
 
     public Input<Double> getFailoverRatio() {
         return this.failoverRatio == null ? Input.empty() : this.failoverRatio;
@@ -120,7 +120,6 @@ public final class BackendServiceFailoverPolicyArgs extends io.pulumi.resources.
             this.failoverRatio = Input.ofNullable(failoverRatio);
             return this;
         }
-
         public BackendServiceFailoverPolicyArgs build() {
             return new BackendServiceFailoverPolicyArgs(disableConnectionDrainOnFailover, dropTrafficIfUnhealthy, failoverRatio);
         }

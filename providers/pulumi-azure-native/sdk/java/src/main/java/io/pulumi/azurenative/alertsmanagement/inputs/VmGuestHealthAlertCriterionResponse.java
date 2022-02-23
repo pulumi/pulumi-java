@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.HealthStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="healthStates", required=true)
-    private final List<HealthStateResponse> healthStates;
+        private final List<HealthStateResponse> healthStates;
 
     public List<HealthStateResponse> getHealthStates() {
         return this.healthStates;
@@ -36,7 +36,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="monitorNames")
-    private final @Nullable List<String> monitorNames;
+        private final @Nullable List<String> monitorNames;
 
     public List<String> getMonitorNames() {
         return this.monitorNames == null ? List.of() : this.monitorNames;
@@ -47,7 +47,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="monitorTypes")
-    private final @Nullable List<String> monitorTypes;
+        private final @Nullable List<String> monitorTypes;
 
     public List<String> getMonitorTypes() {
         return this.monitorTypes == null ? List.of() : this.monitorTypes;
@@ -59,7 +59,7 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+        private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -128,7 +128,6 @@ public final class VmGuestHealthAlertCriterionResponse extends io.pulumi.resourc
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public VmGuestHealthAlertCriterionResponse build() {
             return new VmGuestHealthAlertCriterionResponse(healthStates, monitorNames, monitorTypes, namespace);
         }

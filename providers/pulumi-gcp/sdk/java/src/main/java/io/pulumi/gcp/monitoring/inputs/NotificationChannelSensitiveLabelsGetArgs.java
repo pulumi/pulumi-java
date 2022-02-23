@@ -4,7 +4,7 @@
 package io.pulumi.gcp.monitoring.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="authToken")
-    private final @Nullable Input<String> authToken;
+        private final @Nullable Input<String> authToken;
 
     public Input<String> getAuthToken() {
         return this.authToken == null ? Input.empty() : this.authToken;
@@ -32,7 +32,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -44,7 +44,7 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="serviceKey")
-    private final @Nullable Input<String> serviceKey;
+        private final @Nullable Input<String> serviceKey;
 
     public Input<String> getServiceKey() {
         return this.serviceKey == null ? Input.empty() : this.serviceKey;
@@ -118,7 +118,6 @@ public final class NotificationChannelSensitiveLabelsGetArgs extends io.pulumi.r
             this.serviceKey = Input.ofNullable(serviceKey);
             return this;
         }
-
         public NotificationChannelSensitiveLabelsGetArgs build() {
             return new NotificationChannelSensitiveLabelsGetArgs(authToken, password, serviceKey);
         }

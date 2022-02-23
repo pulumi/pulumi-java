@@ -9,7 +9,7 @@ import io.pulumi.azurenative.synapse.outputs.EnvironmentVariableSetupResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeCustomSetupScriptPropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeDataProxyPropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.IntegrationRuntimeSsisCatalogInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -168,7 +168,6 @@ public final class IntegrationRuntimeSsisPropertiesResponse {
             this.licenseType = licenseType;
             return this;
         }
-
         public IntegrationRuntimeSsisPropertiesResponse build() {
             return new IntegrationRuntimeSsisPropertiesResponse(catalogInfo, customSetupScriptProperties, dataProxyProperties, edition, expressCustomSetupProperties, licenseType);
         }

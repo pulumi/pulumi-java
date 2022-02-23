@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.PipelineElapsedTimeMetricPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elapsedTimeMetric")
-    private final @Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
+        private final @Nullable Input<PipelineElapsedTimeMetricPolicyArgs> elapsedTimeMetric;
 
     public Input<PipelineElapsedTimeMetricPolicyArgs> getElapsedTimeMetric() {
         return this.elapsedTimeMetric == null ? Input.empty() : this.elapsedTimeMetric;
@@ -66,7 +66,6 @@ public final class PipelinePolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.elapsedTimeMetric = Input.ofNullable(elapsedTimeMetric);
             return this;
         }
-
         public PipelinePolicyArgs build() {
             return new PipelinePolicyArgs(elapsedTimeMetric);
         }

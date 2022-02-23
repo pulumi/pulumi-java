@@ -6,7 +6,7 @@ package io.pulumi.awsnative.quicksight;
 import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.quicksight.inputs.GetDataSetArgs;
 import io.pulumi.awsnative.quicksight.outputs.GetDataSetResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

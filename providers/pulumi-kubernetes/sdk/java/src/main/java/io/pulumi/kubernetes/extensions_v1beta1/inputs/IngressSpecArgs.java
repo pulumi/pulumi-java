@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IngressBackendArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IngressRuleArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.IngressTLSArgs;
@@ -27,7 +27,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backend")
-    private final @Nullable Input<IngressBackendArgs> backend;
+        private final @Nullable Input<IngressBackendArgs> backend;
 
     public Input<IngressBackendArgs> getBackend() {
         return this.backend == null ? Input.empty() : this.backend;
@@ -38,7 +38,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingressClassName")
-    private final @Nullable Input<String> ingressClassName;
+        private final @Nullable Input<String> ingressClassName;
 
     public Input<String> getIngressClassName() {
         return this.ingressClassName == null ? Input.empty() : this.ingressClassName;
@@ -49,7 +49,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<IngressRuleArgs>> rules;
+        private final @Nullable Input<List<IngressRuleArgs>> rules;
 
     public Input<List<IngressRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -60,7 +60,7 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tls")
-    private final @Nullable Input<List<IngressTLSArgs>> tls;
+        private final @Nullable Input<List<IngressTLSArgs>> tls;
 
     public Input<List<IngressTLSArgs>> getTls() {
         return this.tls == null ? Input.empty() : this.tls;
@@ -149,7 +149,6 @@ public final class IngressSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.tls = Input.ofNullable(tls);
             return this;
         }
-
         public IngressSpecArgs build() {
             return new IngressSpecArgs(backend, ingressClassName, rules, tls);
         }

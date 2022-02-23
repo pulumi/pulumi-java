@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.apigee_v1.inputs.GoogleCloudApigeeV1CertInfoResponse;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1CertificateResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="certInfo", required=true)
-    private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
+      private final List<GoogleCloudApigeeV1CertInfoResponse> certInfo;
 
     public List<GoogleCloudApigeeV1CertInfoResponse> getCertInfo() {
         return this.certInfo;
@@ -56,7 +56,6 @@ public final class GoogleCloudApigeeV1CertificateResponse extends io.pulumi.reso
             this.certInfo = Objects.requireNonNull(certInfo);
             return this;
         }
-
         public GoogleCloudApigeeV1CertificateResponse build() {
             return new GoogleCloudApigeeV1CertificateResponse(certInfo);
         }

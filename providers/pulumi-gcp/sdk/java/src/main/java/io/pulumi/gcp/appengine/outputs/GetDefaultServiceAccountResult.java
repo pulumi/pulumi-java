@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -150,7 +150,6 @@ public final class GetDefaultServiceAccountResult {
             this.uniqueId = Objects.requireNonNull(uniqueId);
             return this;
         }
-
         public GetDefaultServiceAccountResult build() {
             return new GetDefaultServiceAccountResult(displayName, email, id, name, project, uniqueId);
         }

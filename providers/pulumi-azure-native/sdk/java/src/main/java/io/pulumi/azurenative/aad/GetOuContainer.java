@@ -6,7 +6,7 @@ package io.pulumi.azurenative.aad;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.aad.inputs.GetOuContainerArgs;
 import io.pulumi.azurenative.aad.outputs.GetOuContainerResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

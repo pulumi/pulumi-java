@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.AutoscaleNotificationResponse;
 import io.pulumi.azurenative.insights.outputs.AutoscaleProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -249,7 +249,6 @@ public final class GetAutoscaleSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutoscaleSettingResult build() {
             return new GetAutoscaleSettingResult(enabled, id, location, name, notifications, profiles, tags, targetResourceLocation, targetResourceUri, type);
         }

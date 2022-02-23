@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.MatchVariableResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -142,7 +142,6 @@ public final class MatchConditionResponse {
             this.transforms = transforms;
             return this;
         }
-
         public MatchConditionResponse build() {
             return new MatchConditionResponse(matchValues, matchVariables, negationConditon, operator, transforms);
         }

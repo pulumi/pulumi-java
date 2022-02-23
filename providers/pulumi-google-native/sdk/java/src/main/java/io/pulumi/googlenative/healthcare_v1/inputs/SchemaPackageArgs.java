@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1.enums.SchemaPackageSchematizedParsingType;
 import io.pulumi.googlenative.healthcare_v1.enums.SchemaPackageUnexpectedSegmentHandling;
 import io.pulumi.googlenative.healthcare_v1.inputs.Hl7SchemaConfigArgs;
@@ -28,7 +28,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ignoreMinOccurs")
-    private final @Nullable Input<Boolean> ignoreMinOccurs;
+      private final @Nullable Input<Boolean> ignoreMinOccurs;
 
     public Input<Boolean> getIgnoreMinOccurs() {
         return this.ignoreMinOccurs == null ? Input.empty() : this.ignoreMinOccurs;
@@ -39,7 +39,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schemas")
-    private final @Nullable Input<List<Hl7SchemaConfigArgs>> schemas;
+      private final @Nullable Input<List<Hl7SchemaConfigArgs>> schemas;
 
     public Input<List<Hl7SchemaConfigArgs>> getSchemas() {
         return this.schemas == null ? Input.empty() : this.schemas;
@@ -50,7 +50,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schematizedParsingType")
-    private final @Nullable Input<SchemaPackageSchematizedParsingType> schematizedParsingType;
+      private final @Nullable Input<SchemaPackageSchematizedParsingType> schematizedParsingType;
 
     public Input<SchemaPackageSchematizedParsingType> getSchematizedParsingType() {
         return this.schematizedParsingType == null ? Input.empty() : this.schematizedParsingType;
@@ -61,7 +61,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="types")
-    private final @Nullable Input<List<Hl7TypesConfigArgs>> types;
+      private final @Nullable Input<List<Hl7TypesConfigArgs>> types;
 
     public Input<List<Hl7TypesConfigArgs>> getTypes() {
         return this.types == null ? Input.empty() : this.types;
@@ -72,7 +72,7 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="unexpectedSegmentHandling")
-    private final @Nullable Input<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
+      private final @Nullable Input<SchemaPackageUnexpectedSegmentHandling> unexpectedSegmentHandling;
 
     public Input<SchemaPackageUnexpectedSegmentHandling> getUnexpectedSegmentHandling() {
         return this.unexpectedSegmentHandling == null ? Input.empty() : this.unexpectedSegmentHandling;
@@ -176,7 +176,6 @@ public final class SchemaPackageArgs extends io.pulumi.resources.ResourceArgs {
             this.unexpectedSegmentHandling = Input.ofNullable(unexpectedSegmentHandling);
             return this;
         }
-
         public SchemaPackageArgs build() {
             return new SchemaPackageArgs(ignoreMinOccurs, schemas, schematizedParsingType, types, unexpectedSegmentHandling);
         }

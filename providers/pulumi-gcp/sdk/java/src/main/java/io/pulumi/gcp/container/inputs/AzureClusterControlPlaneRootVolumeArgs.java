@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AzureClusterControlPlaneRootVolumeArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="sizeGib")
-    private final @Nullable Input<Integer> sizeGib;
+        private final @Nullable Input<Integer> sizeGib;
 
     public Input<Integer> getSizeGib() {
         return this.sizeGib == null ? Input.empty() : this.sizeGib;
@@ -62,7 +62,6 @@ public final class AzureClusterControlPlaneRootVolumeArgs extends io.pulumi.reso
             this.sizeGib = Input.ofNullable(sizeGib);
             return this;
         }
-
         public AzureClusterControlPlaneRootVolumeArgs build() {
             return new AzureClusterControlPlaneRootVolumeArgs(sizeGib);
         }

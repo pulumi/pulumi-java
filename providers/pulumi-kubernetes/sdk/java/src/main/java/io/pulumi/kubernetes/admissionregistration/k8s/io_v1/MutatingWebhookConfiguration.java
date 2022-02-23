@@ -6,8 +6,8 @@ package io.pulumi.kubernetes.admissionregistration.k8s.io_v1;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.MutatingWebhookConfigurationArgs;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1.outputs.MutatingWebhook;
@@ -79,13 +79,6 @@ public class MutatingWebhookConfiguration extends io.pulumi.resources.CustomReso
         return this.webhooks;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public MutatingWebhookConfiguration(String name) {
-        super("kubernetes:admissionregistration.k8s.io/v1:MutatingWebhookConfiguration", name, MutatingWebhookConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.outputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationConfigurationSource;
 import io.pulumi.awsnative.apprunner.outputs.ServiceCodeConfigurationValues;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -69,7 +69,6 @@ public final class ServiceCodeConfiguration {
             this.configurationSource = Objects.requireNonNull(configurationSource);
             return this;
         }
-
         public ServiceCodeConfiguration build() {
             return new ServiceCodeConfiguration(codeConfigurationValues, configurationSource);
         }

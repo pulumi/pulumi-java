@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class SomeOtherObject {
             this.baz = baz;
             return this;
         }
-
         public SomeOtherObject build() {
             return new SomeOtherObject(baz);
         }

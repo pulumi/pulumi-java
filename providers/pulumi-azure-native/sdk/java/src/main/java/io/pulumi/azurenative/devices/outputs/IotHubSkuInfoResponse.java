@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class IotHubSkuInfoResponse {
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public IotHubSkuInfoResponse build() {
             return new IotHubSkuInfoResponse(capacity, name, tier);
         }

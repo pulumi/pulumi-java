@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1SentimentDataResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * 
      */
     @InputImport(name="entityUniqueId", required=true)
-    private final String entityUniqueId;
+      private final String entityUniqueId;
 
     public String getEntityUniqueId() {
         return this.entityUniqueId;
@@ -33,7 +33,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * 
      */
     @InputImport(name="sentiment", required=true)
-    private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
+      private final GoogleCloudContactcenterinsightsV1SentimentDataResponse sentiment;
 
     public GoogleCloudContactcenterinsightsV1SentimentDataResponse getSentiment() {
         return this.sentiment;
@@ -44,7 +44,7 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -103,7 +103,6 @@ public final class GoogleCloudContactcenterinsightsV1EntityMentionDataResponse e
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1EntityMentionDataResponse build() {
             return new GoogleCloudContactcenterinsightsV1EntityMentionDataResponse(entityUniqueId, sentiment, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="delegateeProject")
-    private final @Nullable Input<String> delegateeProject;
+      private final @Nullable Input<String> delegateeProject;
 
     public Input<String> getDelegateeProject() {
         return this.delegateeProject == null ? Input.empty() : this.delegateeProject;
@@ -35,7 +35,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="ipCidrRange")
-    private final @Nullable Input<String> ipCidrRange;
+      private final @Nullable Input<String> ipCidrRange;
 
     public Input<String> getIpCidrRange() {
         return this.ipCidrRange == null ? Input.empty() : this.ipCidrRange;
@@ -57,7 +57,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="isAddress")
-    private final @Nullable Input<Boolean> isAddress;
+      private final @Nullable Input<Boolean> isAddress;
 
     public Input<Boolean> getIsAddress() {
         return this.isAddress == null ? Input.empty() : this.isAddress;
@@ -68,7 +68,7 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -172,7 +172,6 @@ public final class PublicDelegatedPrefixPublicDelegatedSubPrefixArgs extends io.
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public PublicDelegatedPrefixPublicDelegatedSubPrefixArgs build() {
             return new PublicDelegatedPrefixPublicDelegatedSubPrefixArgs(delegateeProject, description, ipCidrRange, isAddress, name);
         }

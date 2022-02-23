@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networksecurity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networksecurity_v1.outputs.CertificateProviderInstanceResponse;
 import io.pulumi.googlenative.networksecurity_v1.outputs.GoogleCloudNetworksecurityV1GrpcEndpointResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ValidationCAResponse {
             this.grpcEndpoint = Objects.requireNonNull(grpcEndpoint);
             return this;
         }
-
         public ValidationCAResponse build() {
             return new ValidationCAResponse(certificateProviderInstance, grpcEndpoint);
         }

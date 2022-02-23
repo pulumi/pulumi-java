@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -29,7 +29,7 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final Input<String> principalId;
+        private final Input<String> principalId;
 
     public Input<String> getPrincipalId() {
         return this.principalId;
@@ -88,7 +88,6 @@ public final class ApplicationUserAssignedIdentityArgs extends io.pulumi.resourc
             this.principalId = Input.of(Objects.requireNonNull(principalId));
             return this;
         }
-
         public ApplicationUserAssignedIdentityArgs build() {
             return new ApplicationUserAssignedIdentityArgs(name, principalId);
         }

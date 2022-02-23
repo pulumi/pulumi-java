@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.outputs.IdentityResponse;
 import io.pulumi.azurenative.automation.outputs.PrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.automation.outputs.SkuResponse;
 import io.pulumi.azurenative.automation.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -441,7 +441,6 @@ public final class GetAutomationAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutomationAccountResult build() {
             return new GetAutomationAccountResult(automationHybridServiceUrl, creationTime, description, disableLocalAuth, encryption, etag, id, identity, lastModifiedBy, lastModifiedTime, location, name, privateEndpointConnections, publicNetworkAccess, sku, state, systemData, tags, type);
         }

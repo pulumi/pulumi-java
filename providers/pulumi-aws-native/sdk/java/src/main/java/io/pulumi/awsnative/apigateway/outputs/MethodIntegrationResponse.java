@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.outputs;
 
 import io.pulumi.awsnative.apigateway.enums.MethodIntegrationResponseContentHandling;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -141,7 +141,6 @@ public final class MethodIntegrationResponse {
             this.statusCode = Objects.requireNonNull(statusCode);
             return this;
         }
-
         public MethodIntegrationResponse build() {
             return new MethodIntegrationResponse(contentHandling, responseParameters, responseTemplates, selectionPattern, statusCode);
         }

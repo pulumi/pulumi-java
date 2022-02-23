@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GlobalForwardingRuleMetadataFilterFilterLabel;
 import java.lang.String;
 import java.util.List;
@@ -94,7 +94,6 @@ public final class GlobalForwardingRuleMetadataFilter {
             this.filterMatchCriteria = Objects.requireNonNull(filterMatchCriteria);
             return this;
         }
-
         public GlobalForwardingRuleMetadataFilter build() {
             return new GlobalForwardingRuleMetadataFilter(filterLabels, filterMatchCriteria);
         }

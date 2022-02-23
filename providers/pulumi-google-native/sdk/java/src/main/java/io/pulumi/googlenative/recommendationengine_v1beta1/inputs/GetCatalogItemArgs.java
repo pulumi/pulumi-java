@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCatalogItemArgs Empty = new GetCatalogItemArgs();
 
     @InputImport(name="catalogId", required=true)
-    private final String catalogId;
+      private final String catalogId;
 
     public String getCatalogId() {
         return this.catalogId;
     }
 
     @InputImport(name="catalogItemId", required=true)
-    private final String catalogItemId;
+      private final String catalogItemId;
 
     public String getCatalogItemId() {
         return this.catalogItemId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -105,7 +105,6 @@ public final class GetCatalogItemArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCatalogItemArgs build() {
             return new GetCatalogItemArgs(catalogId, catalogItemId, location, project);
         }

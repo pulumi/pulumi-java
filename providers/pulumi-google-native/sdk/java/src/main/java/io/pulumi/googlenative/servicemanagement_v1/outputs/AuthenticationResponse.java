@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthProviderResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthenticationRuleResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class AuthenticationResponse {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public AuthenticationResponse build() {
             return new AuthenticationResponse(providers, rules);
         }

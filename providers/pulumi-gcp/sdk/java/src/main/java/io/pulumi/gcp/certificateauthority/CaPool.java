@@ -5,8 +5,8 @@ package io.pulumi.gcp.certificateauthority;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.certificateauthority.CaPoolArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolState;
@@ -153,13 +153,6 @@ public class CaPool extends io.pulumi.resources.CustomResource {
         return this.tier;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CaPool(String name) {
-        super("gcp:certificateauthority/caPool:CaPool", name, CaPoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

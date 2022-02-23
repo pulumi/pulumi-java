@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class ResourceReferenceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ResourceReferenceResponse build() {
             return new ResourceReferenceResponse(id, name, type);
         }

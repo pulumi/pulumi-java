@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -309,7 +309,6 @@ public final class GetVolumeResult {
             this.volumeType = Objects.requireNonNull(volumeType);
             return this;
         }
-
         public GetVolumeResult build() {
             return new GetVolumeResult(accessControlRecordIds, backupPolicyIds, backupStatus, id, kind, monitoringStatus, name, operationStatus, sizeInBytes, type, volumeContainerId, volumeStatus, volumeType);
         }

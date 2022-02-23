@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class GoogleCloudDialogflowCxV3VersionVariantsVariantResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3VersionVariantsVariantResponse build() {
             return new GoogleCloudDialogflowCxV3VersionVariantsVariantResponse(isControlGroup, trafficAllocation, version);
         }

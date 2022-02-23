@@ -6,7 +6,7 @@ package io.pulumi.azurenative.deploymentmanager.outputs;
 import io.pulumi.azurenative.deploymentmanager.outputs.MessageResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.ResourceOperationResponse;
 import io.pulumi.azurenative.deploymentmanager.outputs.StepOperationInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -164,7 +164,6 @@ public final class RolloutStepResponse {
             this.stepGroup = stepGroup;
             return this;
         }
-
         public RolloutStepResponse build() {
             return new RolloutStepResponse(messages, name, operationInfo, resourceOperations, status, stepGroup);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipActivitySettingsResponse;
 import io.pulumi.azurenative.logic.outputs.RosettaNetPipRoleSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -352,7 +352,6 @@ public final class GetRosettaNetProcessConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRosettaNetProcessConfigurationResult build() {
             return new GetRosettaNetProcessConfigurationResult(activitySettings, changedTime, createdTime, description, id, initiatorRoleSettings, location, metadata, name, processCode, processName, processVersion, responderRoleSettings, tags, type);
         }

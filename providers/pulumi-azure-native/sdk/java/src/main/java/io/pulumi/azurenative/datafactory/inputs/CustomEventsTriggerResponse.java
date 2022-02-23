@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -37,7 +37,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -48,7 +48,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="events", required=true)
-    private final List<Object> events;
+        private final List<Object> events;
 
     public List<Object> getEvents() {
         return this.events;
@@ -59,7 +59,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="pipelines")
-    private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
+        private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
@@ -70,7 +70,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="runtimeState", required=true)
-    private final String runtimeState;
+        private final String runtimeState;
 
     public String getRuntimeState() {
         return this.runtimeState;
@@ -81,7 +81,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -92,7 +92,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="subjectBeginsWith")
-    private final @Nullable String subjectBeginsWith;
+        private final @Nullable String subjectBeginsWith;
 
     public Optional<String> getSubjectBeginsWith() {
         return this.subjectBeginsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectBeginsWith);
@@ -103,7 +103,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="subjectEndsWith")
-    private final @Nullable String subjectEndsWith;
+        private final @Nullable String subjectEndsWith;
 
     public Optional<String> getSubjectEndsWith() {
         return this.subjectEndsWith == null ? Optional.empty() : Optional.ofNullable(this.subjectEndsWith);
@@ -115,7 +115,7 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -234,7 +234,6 @@ public final class CustomEventsTriggerResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CustomEventsTriggerResponse build() {
             return new CustomEventsTriggerResponse(annotations, description, events, pipelines, runtimeState, scope, subjectBeginsWith, subjectEndsWith, type);
         }

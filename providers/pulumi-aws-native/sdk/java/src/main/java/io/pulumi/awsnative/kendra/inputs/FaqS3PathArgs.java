@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class FaqS3PathArgs extends io.pulumi.resources.ResourceArgs {
     public static final FaqS3PathArgs Empty = new FaqS3PathArgs();
 
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
     }
 
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -80,7 +80,6 @@ public final class FaqS3PathArgs extends io.pulumi.resources.ResourceArgs {
             this.key = Input.of(Objects.requireNonNull(key));
             return this;
         }
-
         public FaqS3PathArgs build() {
             return new FaqS3PathArgs(bucket, key);
         }

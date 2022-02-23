@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.domainregistration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class HostNameResponse {
             this.siteNames = siteNames;
             return this;
         }
-
         public HostNameResponse build() {
             return new HostNameResponse(azureResourceName, azureResourceType, customHostNameDnsRecordType, hostNameType, name, siteNames);
         }

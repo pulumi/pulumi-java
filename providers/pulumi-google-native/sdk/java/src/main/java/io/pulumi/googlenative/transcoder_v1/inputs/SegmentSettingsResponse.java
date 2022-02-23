@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SegmentSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="individualSegments", required=true)
-    private final Boolean individualSegments;
+      private final Boolean individualSegments;
 
     public Boolean getIndividualSegments() {
         return this.individualSegments;
@@ -33,7 +33,7 @@ public final class SegmentSettingsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="segmentDuration", required=true)
-    private final String segmentDuration;
+      private final String segmentDuration;
 
     public String getSegmentDuration() {
         return this.segmentDuration;
@@ -82,7 +82,6 @@ public final class SegmentSettingsResponse extends io.pulumi.resources.InvokeArg
             this.segmentDuration = Objects.requireNonNull(segmentDuration);
             return this;
         }
-
         public SegmentSettingsResponse build() {
             return new SegmentSettingsResponse(individualSegments, segmentDuration);
         }

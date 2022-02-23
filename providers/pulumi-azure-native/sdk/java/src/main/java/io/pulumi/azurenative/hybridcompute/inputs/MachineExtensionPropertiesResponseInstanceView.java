@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute.inputs;
 
 import io.pulumi.azurenative.hybridcompute.inputs.MachineExtensionInstanceViewResponseStatus;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
      * 
      */
     @InputImport(name="status")
-    private final @Nullable MachineExtensionInstanceViewResponseStatus status;
+        private final @Nullable MachineExtensionInstanceViewResponseStatus status;
 
     public Optional<MachineExtensionInstanceViewResponseStatus> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -46,7 +46,7 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -57,7 +57,7 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
      * 
      */
     @InputImport(name="typeHandlerVersion", required=true)
-    private final String typeHandlerVersion;
+        private final String typeHandlerVersion;
 
     public String getTypeHandlerVersion() {
         return this.typeHandlerVersion;
@@ -126,7 +126,6 @@ public final class MachineExtensionPropertiesResponseInstanceView extends io.pul
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public MachineExtensionPropertiesResponseInstanceView build() {
             return new MachineExtensionPropertiesResponseInstanceView(name, status, type, typeHandlerVersion);
         }

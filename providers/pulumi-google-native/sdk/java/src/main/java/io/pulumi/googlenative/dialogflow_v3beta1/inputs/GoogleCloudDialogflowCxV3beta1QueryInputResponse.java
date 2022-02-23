@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1AudioInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1DtmfInputResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventInputResponse;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * 
      */
     @InputImport(name="audio", required=true)
-    private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
+      private final GoogleCloudDialogflowCxV3beta1AudioInputResponse audio;
 
     public GoogleCloudDialogflowCxV3beta1AudioInputResponse getAudio() {
         return this.audio;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * 
      */
     @InputImport(name="dtmf", required=true)
-    private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
+      private final GoogleCloudDialogflowCxV3beta1DtmfInputResponse dtmf;
 
     public GoogleCloudDialogflowCxV3beta1DtmfInputResponse getDtmf() {
         return this.dtmf;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * 
      */
     @InputImport(name="event", required=true)
-    private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
+      private final GoogleCloudDialogflowCxV3beta1EventInputResponse event;
 
     public GoogleCloudDialogflowCxV3beta1EventInputResponse getEvent() {
         return this.event;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * 
      */
     @InputImport(name="intent", required=true)
-    private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
+      private final GoogleCloudDialogflowCxV3beta1IntentInputResponse intent;
 
     public GoogleCloudDialogflowCxV3beta1IntentInputResponse getIntent() {
         return this.intent;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * 
      */
     @InputImport(name="languageCode", required=true)
-    private final String languageCode;
+      private final String languageCode;
 
     public String getLanguageCode() {
         return this.languageCode;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
      * 
      */
     @InputImport(name="text", required=true)
-    private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
+      private final GoogleCloudDialogflowCxV3beta1TextInputResponse text;
 
     public GoogleCloudDialogflowCxV3beta1TextInputResponse getText() {
         return this.text;
@@ -170,7 +170,6 @@ public final class GoogleCloudDialogflowCxV3beta1QueryInputResponse extends io.p
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1QueryInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1QueryInputResponse(audio, dtmf, event, intent, languageCode, text);
         }

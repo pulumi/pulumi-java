@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1beta1.enums.ManagementSettingsTransferLockState;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="transferLockState")
-    private final @Nullable Input<ManagementSettingsTransferLockState> transferLockState;
+      private final @Nullable Input<ManagementSettingsTransferLockState> transferLockState;
 
     public Input<ManagementSettingsTransferLockState> getTransferLockState() {
         return this.transferLockState == null ? Input.empty() : this.transferLockState;
@@ -66,7 +66,6 @@ public final class ManagementSettingsArgs extends io.pulumi.resources.ResourceAr
             this.transferLockState = Input.ofNullable(transferLockState);
             return this;
         }
-
         public ManagementSettingsArgs build() {
             return new ManagementSettingsArgs(transferLockState);
         }

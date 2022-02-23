@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketReplicationRuleAndOperator;
 import io.pulumi.awsnative.s3.inputs.BucketTagFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -17,21 +17,21 @@ public final class BucketReplicationRuleFilter extends io.pulumi.resources.Invok
     public static final BucketReplicationRuleFilter Empty = new BucketReplicationRuleFilter();
 
     @InputImport(name="and")
-    private final @Nullable BucketReplicationRuleAndOperator and;
+        private final @Nullable BucketReplicationRuleAndOperator and;
 
     public Optional<BucketReplicationRuleAndOperator> getAnd() {
         return this.and == null ? Optional.empty() : Optional.ofNullable(this.and);
     }
 
     @InputImport(name="prefix")
-    private final @Nullable String prefix;
+        private final @Nullable String prefix;
 
     public Optional<String> getPrefix() {
         return this.prefix == null ? Optional.empty() : Optional.ofNullable(this.prefix);
     }
 
     @InputImport(name="tagFilter")
-    private final @Nullable BucketTagFilter tagFilter;
+        private final @Nullable BucketTagFilter tagFilter;
 
     public Optional<BucketTagFilter> getTagFilter() {
         return this.tagFilter == null ? Optional.empty() : Optional.ofNullable(this.tagFilter);
@@ -90,7 +90,6 @@ public final class BucketReplicationRuleFilter extends io.pulumi.resources.Invok
             this.tagFilter = tagFilter;
             return this;
         }
-
         public BucketReplicationRuleFilter build() {
             return new BucketReplicationRuleFilter(and, prefix, tagFilter);
         }

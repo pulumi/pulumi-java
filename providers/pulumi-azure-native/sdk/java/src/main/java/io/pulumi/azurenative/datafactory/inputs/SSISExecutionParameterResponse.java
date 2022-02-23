@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SSISExecutionParameterResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="value", required=true)
-    private final Object value;
+        private final Object value;
 
     public Object getValue() {
         return this.value;
@@ -59,7 +59,6 @@ public final class SSISExecutionParameterResponse extends io.pulumi.resources.In
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SSISExecutionParameterResponse build() {
             return new SSISExecutionParameterResponse(value);
         }

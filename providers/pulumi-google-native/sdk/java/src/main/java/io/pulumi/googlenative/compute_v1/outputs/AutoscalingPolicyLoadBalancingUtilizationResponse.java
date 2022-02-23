@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AutoscalingPolicyLoadBalancingUtilizationResponse {
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyLoadBalancingUtilizationResponse build() {
             return new AutoscalingPolicyLoadBalancingUtilizationResponse(utilizationTarget);
         }

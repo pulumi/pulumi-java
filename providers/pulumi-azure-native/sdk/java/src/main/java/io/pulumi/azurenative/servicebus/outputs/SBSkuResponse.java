@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class SBSkuResponse {
             this.tier = tier;
             return this;
         }
-
         public SBSkuResponse build() {
             return new SBSkuResponse(capacity, name, tier);
         }

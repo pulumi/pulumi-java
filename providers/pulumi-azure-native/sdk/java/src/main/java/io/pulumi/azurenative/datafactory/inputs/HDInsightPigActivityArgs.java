@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="arguments")
-    private final @Nullable Input<Object> arguments;
+        private final @Nullable Input<Object> arguments;
 
     public Input<Object> getArguments() {
         return this.arguments == null ? Input.empty() : this.arguments;
@@ -43,7 +43,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defines")
-    private final @Nullable Input<Map<String,Object>> defines;
+        private final @Nullable Input<Map<String,Object>> defines;
 
     public Input<Map<String,Object>> getDefines() {
         return this.defines == null ? Input.empty() : this.defines;
@@ -54,7 +54,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -65,7 +65,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -76,7 +76,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="getDebugInfo")
-    private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
+        private final @Nullable Input<Either<String,HDInsightActivityDebugInfoOption>> getDebugInfo;
 
     public Input<Either<String,HDInsightActivityDebugInfoOption>> getGetDebugInfo() {
         return this.getDebugInfo == null ? Input.empty() : this.getDebugInfo;
@@ -87,7 +87,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final @Nullable Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName == null ? Input.empty() : this.linkedServiceName;
@@ -98,7 +98,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -109,7 +109,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -120,7 +120,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scriptLinkedService")
-    private final @Nullable Input<LinkedServiceReferenceArgs> scriptLinkedService;
+        private final @Nullable Input<LinkedServiceReferenceArgs> scriptLinkedService;
 
     public Input<LinkedServiceReferenceArgs> getScriptLinkedService() {
         return this.scriptLinkedService == null ? Input.empty() : this.scriptLinkedService;
@@ -131,7 +131,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="scriptPath")
-    private final @Nullable Input<Object> scriptPath;
+        private final @Nullable Input<Object> scriptPath;
 
     public Input<Object> getScriptPath() {
         return this.scriptPath == null ? Input.empty() : this.scriptPath;
@@ -142,7 +142,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="storageLinkedServices")
-    private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
+        private final @Nullable Input<List<LinkedServiceReferenceArgs>> storageLinkedServices;
 
     public Input<List<LinkedServiceReferenceArgs>> getStorageLinkedServices() {
         return this.storageLinkedServices == null ? Input.empty() : this.storageLinkedServices;
@@ -154,7 +154,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -165,7 +165,7 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -389,7 +389,6 @@ public final class HDInsightPigActivityArgs extends io.pulumi.resources.Resource
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public HDInsightPigActivityArgs build() {
             return new HDInsightPigActivityArgs(arguments, defines, dependsOn, description, getDebugInfo, linkedServiceName, name, policy, scriptLinkedService, scriptPath, storageLinkedServices, type, userProperties);
         }

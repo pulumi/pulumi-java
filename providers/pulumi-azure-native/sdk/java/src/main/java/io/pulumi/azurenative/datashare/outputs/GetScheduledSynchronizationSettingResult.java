@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -245,7 +245,6 @@ public final class GetScheduledSynchronizationSettingResult {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public GetScheduledSynchronizationSettingResult build() {
             return new GetScheduledSynchronizationSettingResult(createdAt, id, kind, name, provisioningState, recurrenceInterval, synchronizationTime, systemData, type, userName);
         }

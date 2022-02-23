@@ -9,7 +9,7 @@ import io.pulumi.azurenative.media.outputs.LiveEventInputResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventPreviewResponse;
 import io.pulumi.azurenative.media.outputs.LiveEventTranscriptionResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -442,7 +442,6 @@ public final class GetLiveEventResult {
             this.useStaticHostname = useStaticHostname;
             return this;
         }
-
         public GetLiveEventResult build() {
             return new GetLiveEventResult(created, crossSiteAccessPolicies, description, encoding, hostnamePrefix, id, input, lastModified, location, name, preview, provisioningState, resourceState, streamOptions, systemData, tags, transcriptions, type, useStaticHostname);
         }

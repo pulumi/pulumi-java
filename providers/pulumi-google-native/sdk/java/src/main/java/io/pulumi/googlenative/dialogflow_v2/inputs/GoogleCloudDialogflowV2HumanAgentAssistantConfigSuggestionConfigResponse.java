@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.inputs.GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse;
 import java.lang.Boolean;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
      * 
      */
     @InputImport(name="featureConfigs", required=true)
-    private final List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
+      private final List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> featureConfigs;
 
     public List<GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionFeatureConfigResponse> getFeatureConfigs() {
         return this.featureConfigs;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
      * 
      */
     @InputImport(name="groupSuggestionResponses", required=true)
-    private final Boolean groupSuggestionResponses;
+      private final Boolean groupSuggestionResponses;
 
     public Boolean getGroupSuggestionResponses() {
         return this.groupSuggestionResponses;
@@ -83,7 +83,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionCon
             this.groupSuggestionResponses = Objects.requireNonNull(groupSuggestionResponses);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionConfigResponse(featureConfigs, groupSuggestionResponses);
         }

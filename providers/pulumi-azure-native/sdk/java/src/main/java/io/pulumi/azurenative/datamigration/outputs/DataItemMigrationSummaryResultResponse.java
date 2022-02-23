@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class DataItemMigrationSummaryResultResponse {
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public DataItemMigrationSummaryResultResponse build() {
             return new DataItemMigrationSummaryResultResponse(endedOn, errorPrefix, itemsCompletedCount, itemsCount, name, resultPrefix, startedOn, state, statusMessage);
         }

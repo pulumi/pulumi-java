@@ -103,7 +103,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlSourceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -348,7 +348,6 @@ public final class LookupActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public LookupActivityResponse build() {
             return new LookupActivityResponse(dataset, dependsOn, description, firstRowOnly, linkedServiceName, name, policy, source, type, userProperties);
         }

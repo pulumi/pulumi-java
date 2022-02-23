@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -223,7 +223,6 @@ public final class GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse {
             this.userEmailAddress = Objects.requireNonNull(userEmailAddress);
             return this;
         }
-
         public GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse build() {
             return new GoogleCloudDatalabelingV1beta1HumanAnnotationConfigResponse(annotatedDatasetDescription, annotatedDatasetDisplayName, contributorEmails, instruction, labelGroup, languageCode, questionDuration, replicaCount, userEmailAddress);
         }

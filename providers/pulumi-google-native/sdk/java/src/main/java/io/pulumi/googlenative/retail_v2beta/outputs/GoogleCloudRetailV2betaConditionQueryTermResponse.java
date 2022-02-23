@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2betaConditionQueryTermResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GoogleCloudRetailV2betaConditionQueryTermResponse build() {
             return new GoogleCloudRetailV2betaConditionQueryTermResponse(fullMatch, value);
         }

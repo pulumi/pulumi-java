@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class UsagePlanThrottleSettings extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="burstLimit")
-    private final @Nullable Integer burstLimit;
+        private final @Nullable Integer burstLimit;
 
     public Optional<Integer> getBurstLimit() {
         return this.burstLimit == null ? Optional.empty() : Optional.ofNullable(this.burstLimit);
@@ -31,7 +31,7 @@ public final class UsagePlanThrottleSettings extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="rateLimit")
-    private final @Nullable Double rateLimit;
+        private final @Nullable Double rateLimit;
 
     public Optional<Double> getRateLimit() {
         return this.rateLimit == null ? Optional.empty() : Optional.ofNullable(this.rateLimit);
@@ -80,7 +80,6 @@ public final class UsagePlanThrottleSettings extends io.pulumi.resources.InvokeA
             this.rateLimit = rateLimit;
             return this;
         }
-
         public UsagePlanThrottleSettings build() {
             return new UsagePlanThrottleSettings(burstLimit, rateLimit);
         }

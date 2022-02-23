@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeSystemsManagerAgent;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class ImageRecipeAdditionalInstanceConfiguration {
             this.userDataOverride = userDataOverride;
             return this;
         }
-
         public ImageRecipeAdditionalInstanceConfiguration build() {
             return new ImageRecipeAdditionalInstanceConfiguration(systemsManagerAgent, userDataOverride);
         }

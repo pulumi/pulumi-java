@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.AptRepositoryArchiveType;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="archiveType")
-    private final @Nullable Input<AptRepositoryArchiveType> archiveType;
+      private final @Nullable Input<AptRepositoryArchiveType> archiveType;
 
     public Input<AptRepositoryArchiveType> getArchiveType() {
         return this.archiveType == null ? Input.empty() : this.archiveType;
@@ -36,7 +36,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="components", required=true)
-    private final Input<List<String>> components;
+      private final Input<List<String>> components;
 
     public Input<List<String>> getComponents() {
         return this.components;
@@ -47,7 +47,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="distribution", required=true)
-    private final Input<String> distribution;
+      private final Input<String> distribution;
 
     public Input<String> getDistribution() {
         return this.distribution;
@@ -58,7 +58,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gpgKey")
-    private final @Nullable Input<String> gpgKey;
+      private final @Nullable Input<String> gpgKey;
 
     public Input<String> getGpgKey() {
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
@@ -69,7 +69,7 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+      private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -173,7 +173,6 @@ public final class AptRepositoryArgs extends io.pulumi.resources.ResourceArgs {
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public AptRepositoryArgs build() {
             return new AptRepositoryArgs(archiveType, components, distribution, gpgKey, uri);
         }

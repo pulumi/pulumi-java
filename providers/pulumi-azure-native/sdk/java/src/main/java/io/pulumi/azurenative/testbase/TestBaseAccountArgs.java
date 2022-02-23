@@ -5,7 +5,7 @@ package io.pulumi.azurenative.testbase;
 
 import io.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -33,7 +33,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -44,7 +44,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restore")
-    private final @Nullable Input<Boolean> restore;
+        private final @Nullable Input<Boolean> restore;
 
     public Input<Boolean> getRestore() {
         return this.restore == null ? Input.empty() : this.restore;
@@ -55,7 +55,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<TestBaseAccountSKUArgs> sku;
+        private final Input<TestBaseAccountSKUArgs> sku;
 
     public Input<TestBaseAccountSKUArgs> getSku() {
         return this.sku;
@@ -66,7 +66,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -77,7 +77,7 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="testBaseAccountName")
-    private final @Nullable Input<String> testBaseAccountName;
+        private final @Nullable Input<String> testBaseAccountName;
 
     public Input<String> getTestBaseAccountName() {
         return this.testBaseAccountName == null ? Input.empty() : this.testBaseAccountName;
@@ -196,7 +196,6 @@ public final class TestBaseAccountArgs extends io.pulumi.resources.ResourceArgs 
             this.testBaseAccountName = Input.ofNullable(testBaseAccountName);
             return this;
         }
-
         public TestBaseAccountArgs build() {
             return new TestBaseAccountArgs(location, resourceGroupName, restore, sku, tags, testBaseAccountName);
         }

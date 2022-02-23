@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="exponent", required=true)
-    private final String exponent;
+        private final String exponent;
 
     public String getExponent() {
         return this.exponent;
@@ -32,7 +32,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="modulus", required=true)
-    private final String modulus;
+        private final String modulus;
 
     public String getModulus() {
         return this.modulus;
@@ -44,7 +44,7 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -103,7 +103,6 @@ public final class ContentKeyPolicyRsaTokenKeyResponse extends io.pulumi.resourc
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public ContentKeyPolicyRsaTokenKeyResponse build() {
             return new ContentKeyPolicyRsaTokenKeyResponse(exponent, modulus, odataType);
         }

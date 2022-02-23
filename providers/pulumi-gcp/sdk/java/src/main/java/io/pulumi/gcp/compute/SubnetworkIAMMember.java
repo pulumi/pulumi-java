@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SubnetworkIAMMemberArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkIAMMemberState;
@@ -167,13 +167,6 @@ public class SubnetworkIAMMember extends io.pulumi.resources.CustomResource {
         return this.subnetwork;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SubnetworkIAMMember(String name) {
-        super("gcp:compute/subnetworkIAMMember:SubnetworkIAMMember", name, SubnetworkIAMMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -19,8 +19,8 @@ import io.pulumi.azurenative.containerinstance.outputs.VolumeResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -316,13 +316,6 @@ public class ContainerGroup extends io.pulumi.resources.CustomResource {
         return this.volumes;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ContainerGroup(String name) {
-        super("azure-native:containerinstance:ContainerGroup", name, ContainerGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

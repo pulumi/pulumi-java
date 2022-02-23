@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.scheduling.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -184,7 +184,6 @@ public final class PriorityClass {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public PriorityClass build() {
             return new PriorityClass(apiVersion, description, globalDefault, kind, metadata, preemptionPolicy, value);
         }

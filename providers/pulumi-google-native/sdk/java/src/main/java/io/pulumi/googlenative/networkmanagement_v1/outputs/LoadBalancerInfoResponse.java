@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1.outputs.LoadBalancerBackendResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class LoadBalancerInfoResponse {
             this.loadBalancerType = Objects.requireNonNull(loadBalancerType);
             return this;
         }
-
         public LoadBalancerInfoResponse build() {
             return new LoadBalancerInfoResponse(backendType, backendUri, backends, healthCheckUri, loadBalancerType);
         }

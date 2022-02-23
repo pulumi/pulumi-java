@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datacatalog.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.datacatalog.outputs.EntryGcsFilesetSpecSampleGcsFileSpec;
 import java.lang.String;
 import java.util.List;
@@ -101,7 +101,6 @@ public final class EntryGcsFilesetSpec {
             this.sampleGcsFileSpecs = sampleGcsFileSpecs;
             return this;
         }
-
         public EntryGcsFilesetSpec build() {
             return new EntryGcsFilesetSpec(filePatterns, sampleGcsFileSpecs);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.inputs.TopicRulePutAssetPropertyValueEntryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
     public static final TopicRuleIotSiteWiseActionArgs Empty = new TopicRuleIotSiteWiseActionArgs();
 
     @InputImport(name="putAssetPropertyValueEntries", required=true)
-    private final Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
+        private final Input<List<TopicRulePutAssetPropertyValueEntryArgs>> putAssetPropertyValueEntries;
 
     public Input<List<TopicRulePutAssetPropertyValueEntryArgs>> getPutAssetPropertyValueEntries() {
         return this.putAssetPropertyValueEntries;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -82,7 +82,6 @@ public final class TopicRuleIotSiteWiseActionArgs extends io.pulumi.resources.Re
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public TopicRuleIotSiteWiseActionArgs build() {
             return new TopicRuleIotSiteWiseActionArgs(putAssetPropertyValueEntries, roleArn);
         }

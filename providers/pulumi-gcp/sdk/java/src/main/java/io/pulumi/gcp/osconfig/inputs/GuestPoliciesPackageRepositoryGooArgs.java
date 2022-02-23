@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -32,7 +32,7 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -91,7 +91,6 @@ public final class GuestPoliciesPackageRepositoryGooArgs extends io.pulumi.resou
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public GuestPoliciesPackageRepositoryGooArgs build() {
             return new GuestPoliciesPackageRepositoryGooArgs(name, url);
         }

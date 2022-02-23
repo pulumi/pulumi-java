@@ -5,8 +5,8 @@ package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.DatabaseIAMPolicyArgs;
 import io.pulumi.gcp.spanner.inputs.DatabaseIAMPolicyState;
@@ -135,13 +135,6 @@ public class DatabaseIAMPolicy extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DatabaseIAMPolicy(String name) {
-        super("gcp:spanner/databaseIAMPolicy:DatabaseIAMPolicy", name, DatabaseIAMPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

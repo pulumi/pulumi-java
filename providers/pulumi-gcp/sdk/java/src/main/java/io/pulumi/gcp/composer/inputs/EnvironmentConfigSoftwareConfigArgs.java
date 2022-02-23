@@ -4,7 +4,7 @@
 package io.pulumi.gcp.composer.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -17,42 +17,42 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
     public static final EnvironmentConfigSoftwareConfigArgs Empty = new EnvironmentConfigSoftwareConfigArgs();
 
     @InputImport(name="airflowConfigOverrides")
-    private final @Nullable Input<Map<String,String>> airflowConfigOverrides;
+        private final @Nullable Input<Map<String,String>> airflowConfigOverrides;
 
     public Input<Map<String,String>> getAirflowConfigOverrides() {
         return this.airflowConfigOverrides == null ? Input.empty() : this.airflowConfigOverrides;
     }
 
     @InputImport(name="envVariables")
-    private final @Nullable Input<Map<String,String>> envVariables;
+        private final @Nullable Input<Map<String,String>> envVariables;
 
     public Input<Map<String,String>> getEnvVariables() {
         return this.envVariables == null ? Input.empty() : this.envVariables;
     }
 
     @InputImport(name="imageVersion")
-    private final @Nullable Input<String> imageVersion;
+        private final @Nullable Input<String> imageVersion;
 
     public Input<String> getImageVersion() {
         return this.imageVersion == null ? Input.empty() : this.imageVersion;
     }
 
     @InputImport(name="pypiPackages")
-    private final @Nullable Input<Map<String,String>> pypiPackages;
+        private final @Nullable Input<Map<String,String>> pypiPackages;
 
     public Input<Map<String,String>> getPypiPackages() {
         return this.pypiPackages == null ? Input.empty() : this.pypiPackages;
     }
 
     @InputImport(name="pythonVersion")
-    private final @Nullable Input<String> pythonVersion;
+        private final @Nullable Input<String> pythonVersion;
 
     public Input<String> getPythonVersion() {
         return this.pythonVersion == null ? Input.empty() : this.pythonVersion;
     }
 
     @InputImport(name="schedulerCount")
-    private final @Nullable Input<Integer> schedulerCount;
+        private final @Nullable Input<Integer> schedulerCount;
 
     public Input<Integer> getSchedulerCount() {
         return this.schedulerCount == null ? Input.empty() : this.schedulerCount;
@@ -171,7 +171,6 @@ public final class EnvironmentConfigSoftwareConfigArgs extends io.pulumi.resourc
             this.schedulerCount = Input.ofNullable(schedulerCount);
             return this;
         }
-
         public EnvironmentConfigSoftwareConfigArgs build() {
             return new EnvironmentConfigSoftwareConfigArgs(airflowConfigOverrides, envVariables, imageVersion, pypiPackages, pythonVersion, schedulerCount);
         }

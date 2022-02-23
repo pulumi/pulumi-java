@@ -5,7 +5,7 @@ package io.pulumi.azurenative.managedservices.outputs;
 
 import io.pulumi.azurenative.managedservices.outputs.PlanResponse;
 import io.pulumi.azurenative.managedservices.outputs.RegistrationDefinitionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class GetRegistrationDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRegistrationDefinitionResult build() {
             return new GetRegistrationDefinitionResult(id, name, plan, properties, type);
         }

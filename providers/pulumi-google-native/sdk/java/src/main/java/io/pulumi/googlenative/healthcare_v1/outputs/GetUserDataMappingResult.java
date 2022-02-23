@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.AttributeResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class GetUserDataMappingResult {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetUserDataMappingResult build() {
             return new GetUserDataMappingResult(archiveTime, archived, dataId, name, resourceAttributes, userId);
         }

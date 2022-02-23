@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.inputs.ProxyServerPropertiesArgs;
 import io.pulumi.azurenative.security.inputs.ServicePrincipalPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="autoProvision", required=true)
-    private final Input<Either<String,AutoProvision>> autoProvision;
+        private final Input<Either<String,AutoProvision>> autoProvision;
 
     public Input<Either<String,AutoProvision>> getAutoProvision() {
         return this.autoProvision;
@@ -38,7 +38,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="proxyServer")
-    private final @Nullable Input<ProxyServerPropertiesArgs> proxyServer;
+        private final @Nullable Input<ProxyServerPropertiesArgs> proxyServer;
 
     public Input<ProxyServerPropertiesArgs> getProxyServer() {
         return this.proxyServer == null ? Input.empty() : this.proxyServer;
@@ -49,7 +49,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -60,7 +60,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable Input<String> resourceGroupName;
+        private final @Nullable Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
@@ -71,7 +71,7 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipal")
-    private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
+        private final @Nullable Input<ServicePrincipalPropertiesArgs> servicePrincipal;
 
     public Input<ServicePrincipalPropertiesArgs> getServicePrincipal() {
         return this.servicePrincipal == null ? Input.empty() : this.servicePrincipal;
@@ -175,7 +175,6 @@ public final class HybridComputeSettingsPropertiesArgs extends io.pulumi.resourc
             this.servicePrincipal = Input.ofNullable(servicePrincipal);
             return this;
         }
-
         public HybridComputeSettingsPropertiesArgs build() {
             return new HybridComputeSettingsPropertiesArgs(autoProvision, proxyServer, region, resourceGroupName, servicePrincipal);
         }

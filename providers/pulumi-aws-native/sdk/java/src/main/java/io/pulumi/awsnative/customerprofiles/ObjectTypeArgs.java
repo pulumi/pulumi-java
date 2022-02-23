@@ -7,7 +7,7 @@ import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeKeyMapArgs;
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowProfileCreation")
-    private final @Nullable Input<Boolean> allowProfileCreation;
+        private final @Nullable Input<Boolean> allowProfileCreation;
 
     public Input<Boolean> getAllowProfileCreation() {
         return this.allowProfileCreation == null ? Input.empty() : this.allowProfileCreation;
@@ -36,7 +36,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+        private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -58,7 +58,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionKey")
-    private final @Nullable Input<String> encryptionKey;
+        private final @Nullable Input<String> encryptionKey;
 
     public Input<String> getEncryptionKey() {
         return this.encryptionKey == null ? Input.empty() : this.encryptionKey;
@@ -69,7 +69,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDays")
-    private final @Nullable Input<Integer> expirationDays;
+        private final @Nullable Input<Integer> expirationDays;
 
     public Input<Integer> getExpirationDays() {
         return this.expirationDays == null ? Input.empty() : this.expirationDays;
@@ -80,7 +80,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<ObjectTypeFieldMapArgs>> fields;
+        private final @Nullable Input<List<ObjectTypeFieldMapArgs>> fields;
 
     public Input<List<ObjectTypeFieldMapArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -91,7 +91,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<List<ObjectTypeKeyMapArgs>> keys;
+        private final @Nullable Input<List<ObjectTypeKeyMapArgs>> keys;
 
     public Input<List<ObjectTypeKeyMapArgs>> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -102,7 +102,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectTypeName")
-    private final @Nullable Input<String> objectTypeName;
+        private final @Nullable Input<String> objectTypeName;
 
     public Input<String> getObjectTypeName() {
         return this.objectTypeName == null ? Input.empty() : this.objectTypeName;
@@ -113,7 +113,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ObjectTypeTagArgs>> tags;
+        private final @Nullable Input<List<ObjectTypeTagArgs>> tags;
 
     public Input<List<ObjectTypeTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -124,7 +124,7 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateId")
-    private final @Nullable Input<String> templateId;
+        private final @Nullable Input<String> templateId;
 
     public Input<String> getTemplateId() {
         return this.templateId == null ? Input.empty() : this.templateId;
@@ -303,7 +303,6 @@ public final class ObjectTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.templateId = Input.ofNullable(templateId);
             return this;
         }
-
         public ObjectTypeArgs build() {
             return new ObjectTypeArgs(allowProfileCreation, description, domainName, encryptionKey, expirationDays, fields, keys, objectTypeName, tags, templateId);
         }

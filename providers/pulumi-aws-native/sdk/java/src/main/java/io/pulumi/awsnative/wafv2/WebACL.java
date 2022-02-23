@@ -14,8 +14,8 @@ import io.pulumi.awsnative.wafv2.outputs.WebACLTag;
 import io.pulumi.awsnative.wafv2.outputs.WebACLVisibilityConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -108,13 +108,6 @@ public class WebACL extends io.pulumi.resources.CustomResource {
         return this.visibilityConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WebACL(String name) {
-        super("aws-native:wafv2:WebACL", name, WebACLArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

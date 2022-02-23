@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.UptimeCheckConfigHttpCheckAuthInfo;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -256,7 +256,6 @@ public final class UptimeCheckConfigHttpCheck {
             this.validateSsl = validateSsl;
             return this;
         }
-
         public UptimeCheckConfigHttpCheck build() {
             return new UptimeCheckConfigHttpCheck(authInfo, body, contentType, headers, maskHeaders, path, port, requestMethod, useSsl, validateSsl);
         }

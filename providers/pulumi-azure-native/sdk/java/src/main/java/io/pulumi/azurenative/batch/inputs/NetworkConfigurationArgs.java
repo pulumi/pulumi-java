@@ -6,7 +6,7 @@ package io.pulumi.azurenative.batch.inputs;
 import io.pulumi.azurenative.batch.inputs.PoolEndpointConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.PublicIPAddressConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="endpointConfiguration")
-    private final @Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration;
+        private final @Nullable Input<PoolEndpointConfigurationArgs> endpointConfiguration;
 
     public Input<PoolEndpointConfigurationArgs> getEndpointConfiguration() {
         return this.endpointConfiguration == null ? Input.empty() : this.endpointConfiguration;
@@ -36,7 +36,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicIPAddressConfiguration")
-    private final @Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
+        private final @Nullable Input<PublicIPAddressConfigurationArgs> publicIPAddressConfiguration;
 
     public Input<PublicIPAddressConfigurationArgs> getPublicIPAddressConfiguration() {
         return this.publicIPAddressConfiguration == null ? Input.empty() : this.publicIPAddressConfiguration;
@@ -47,7 +47,7 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable Input<String> subnetId;
+        private final @Nullable Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId == null ? Input.empty() : this.subnetId;
@@ -121,7 +121,6 @@ public final class NetworkConfigurationArgs extends io.pulumi.resources.Resource
             this.subnetId = Input.ofNullable(subnetId);
             return this;
         }
-
         public NetworkConfigurationArgs build() {
             return new NetworkConfigurationArgs(endpointConfiguration, publicIPAddressConfiguration, subnetId);
         }

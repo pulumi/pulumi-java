@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -40,7 +40,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="baseRequestId")
-    private final @Nullable Object baseRequestId;
+        private final @Nullable Object baseRequestId;
 
     public Optional<Object> getBaseRequestId() {
         return this.baseRequestId == null ? Optional.empty() : Optional.ofNullable(this.baseRequestId);
@@ -51,7 +51,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -62,7 +62,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="excludeLastRequest")
-    private final @Nullable Object excludeLastRequest;
+        private final @Nullable Object excludeLastRequest;
 
     public Optional<Object> getExcludeLastRequest() {
         return this.excludeLastRequest == null ? Optional.empty() : Optional.ofNullable(this.excludeLastRequest);
@@ -73,7 +73,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="folder")
-    private final @Nullable DatasetResponseFolder folder;
+        private final @Nullable DatasetResponseFolder folder;
 
     public Optional<DatasetResponseFolder> getFolder() {
         return this.folder == null ? Optional.empty() : Optional.ofNullable(this.folder);
@@ -84,7 +84,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final LinkedServiceReferenceResponse linkedServiceName;
+        private final LinkedServiceReferenceResponse linkedServiceName;
 
     public LinkedServiceReferenceResponse getLinkedServiceName() {
         return this.linkedServiceName;
@@ -95,7 +95,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="openHubDestinationName", required=true)
-    private final Object openHubDestinationName;
+        private final Object openHubDestinationName;
 
     public Object getOpenHubDestinationName() {
         return this.openHubDestinationName;
@@ -106,7 +106,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -117,7 +117,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="schema")
-    private final @Nullable Object schema;
+        private final @Nullable Object schema;
 
     public Optional<Object> getSchema() {
         return this.schema == null ? Optional.empty() : Optional.ofNullable(this.schema);
@@ -128,7 +128,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="structure")
-    private final @Nullable Object structure;
+        private final @Nullable Object structure;
 
     public Optional<Object> getStructure() {
         return this.structure == null ? Optional.empty() : Optional.ofNullable(this.structure);
@@ -140,7 +140,7 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -279,7 +279,6 @@ public final class SapOpenHubTableDatasetResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SapOpenHubTableDatasetResponse build() {
             return new SapOpenHubTableDatasetResponse(annotations, baseRequestId, description, excludeLastRequest, folder, linkedServiceName, openHubDestinationName, parameters, schema, structure, type);
         }

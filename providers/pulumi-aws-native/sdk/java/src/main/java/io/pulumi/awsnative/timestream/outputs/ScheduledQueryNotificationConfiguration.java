@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.timestream.outputs;
 
 import io.pulumi.awsnative.timestream.outputs.ScheduledQuerySnsConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class ScheduledQueryNotificationConfiguration {
             this.snsConfiguration = Objects.requireNonNull(snsConfiguration);
             return this;
         }
-
         public ScheduledQueryNotificationConfiguration build() {
             return new ScheduledQueryNotificationConfiguration(snsConfiguration);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datastream_v1alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datastream_v1alpha1.StreamArgs;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.BackfillAllStrategyResponse;
@@ -195,13 +195,6 @@ public class Stream extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Stream(String name) {
-        super("google-native:datastream/v1alpha1:Stream", name, StreamArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

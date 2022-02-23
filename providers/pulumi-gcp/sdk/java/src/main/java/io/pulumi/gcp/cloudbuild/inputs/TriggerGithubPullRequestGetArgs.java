@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="branch", required=true)
-    private final Input<String> branch;
+        private final Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch;
@@ -32,7 +32,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="commentControl")
-    private final @Nullable Input<String> commentControl;
+        private final @Nullable Input<String> commentControl;
 
     public Input<String> getCommentControl() {
         return this.commentControl == null ? Input.empty() : this.commentControl;
@@ -43,7 +43,7 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="invertRegex")
-    private final @Nullable Input<Boolean> invertRegex;
+        private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
@@ -117,7 +117,6 @@ public final class TriggerGithubPullRequestGetArgs extends io.pulumi.resources.R
             this.invertRegex = Input.ofNullable(invertRegex);
             return this;
         }
-
         public TriggerGithubPullRequestGetArgs build() {
             return new TriggerGithubPullRequestGetArgs(branch, commentControl, invertRegex);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
     public static final GetManagedInstanceAdministratorArgs Empty = new GetManagedInstanceAdministratorArgs();
 
     @InputImport(name="administratorName", required=true)
-    private final String administratorName;
+        private final String administratorName;
 
     public String getAdministratorName() {
         return this.administratorName;
@@ -24,7 +24,7 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final String managedInstanceName;
+        private final String managedInstanceName;
 
     public String getManagedInstanceName() {
         return this.managedInstanceName;
@@ -35,7 +35,7 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -94,7 +94,6 @@ public final class GetManagedInstanceAdministratorArgs extends io.pulumi.resourc
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagedInstanceAdministratorArgs build() {
             return new GetManagedInstanceAdministratorArgs(administratorName, managedInstanceName, resourceGroupName);
         }

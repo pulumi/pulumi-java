@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -223,7 +223,6 @@ public final class OracleColumnResponse {
             this.scale = Objects.requireNonNull(scale);
             return this;
         }
-
         public OracleColumnResponse build() {
             return new OracleColumnResponse(columnName, dataType, encoding, length, nullable, ordinalPosition, precision, primaryKey, scale);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1.enums.VpcAccessConnectorEgressSetting;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="egressSetting")
-    private final @Nullable Input<VpcAccessConnectorEgressSetting> egressSetting;
+      private final @Nullable Input<VpcAccessConnectorEgressSetting> egressSetting;
 
     public Input<VpcAccessConnectorEgressSetting> getEgressSetting() {
         return this.egressSetting == null ? Input.empty() : this.egressSetting;
@@ -35,7 +35,7 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,6 @@ public final class VpcAccessConnectorArgs extends io.pulumi.resources.ResourceAr
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public VpcAccessConnectorArgs build() {
             return new VpcAccessConnectorArgs(egressSetting, name);
         }

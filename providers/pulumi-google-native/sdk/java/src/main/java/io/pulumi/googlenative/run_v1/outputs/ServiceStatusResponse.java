@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.AddressableResponse;
 import io.pulumi.googlenative.run_v1.outputs.GoogleCloudRunV1ConditionResponse;
 import io.pulumi.googlenative.run_v1.outputs.TrafficTargetResponse;
@@ -184,7 +184,6 @@ public final class ServiceStatusResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public ServiceStatusResponse build() {
             return new ServiceStatusResponse(address, conditions, latestCreatedRevisionName, latestReadyRevisionName, observedGeneration, traffic, url);
         }

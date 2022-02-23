@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.enums.CertificateMode;
 import io.pulumi.awsnative.iot.enums.CertificateStatus;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,35 +17,35 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
     public static final CertificateArgs Empty = new CertificateArgs();
 
     @InputImport(name="cACertificatePem")
-    private final @Nullable Input<String> cACertificatePem;
+        private final @Nullable Input<String> cACertificatePem;
 
     public Input<String> getCACertificatePem() {
         return this.cACertificatePem == null ? Input.empty() : this.cACertificatePem;
     }
 
     @InputImport(name="certificateMode")
-    private final @Nullable Input<CertificateMode> certificateMode;
+        private final @Nullable Input<CertificateMode> certificateMode;
 
     public Input<CertificateMode> getCertificateMode() {
         return this.certificateMode == null ? Input.empty() : this.certificateMode;
     }
 
     @InputImport(name="certificatePem")
-    private final @Nullable Input<String> certificatePem;
+        private final @Nullable Input<String> certificatePem;
 
     public Input<String> getCertificatePem() {
         return this.certificatePem == null ? Input.empty() : this.certificatePem;
     }
 
     @InputImport(name="certificateSigningRequest")
-    private final @Nullable Input<String> certificateSigningRequest;
+        private final @Nullable Input<String> certificateSigningRequest;
 
     public Input<String> getCertificateSigningRequest() {
         return this.certificateSigningRequest == null ? Input.empty() : this.certificateSigningRequest;
     }
 
     @InputImport(name="status", required=true)
-    private final Input<CertificateStatus> status;
+        private final Input<CertificateStatus> status;
 
     public Input<CertificateStatus> getStatus() {
         return this.status;
@@ -149,7 +149,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(cACertificatePem, certificateMode, certificatePem, certificateSigningRequest, status);
         }

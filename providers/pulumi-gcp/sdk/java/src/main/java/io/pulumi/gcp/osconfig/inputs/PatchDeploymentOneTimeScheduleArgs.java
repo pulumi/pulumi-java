@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class PatchDeploymentOneTimeScheduleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="executeTime", required=true)
-    private final Input<String> executeTime;
+        private final Input<String> executeTime;
 
     public Input<String> getExecuteTime() {
         return this.executeTime;
@@ -62,7 +62,6 @@ public final class PatchDeploymentOneTimeScheduleArgs extends io.pulumi.resource
             this.executeTime = Input.of(Objects.requireNonNull(executeTime));
             return this;
         }
-
         public PatchDeploymentOneTimeScheduleArgs build() {
             return new PatchDeploymentOneTimeScheduleArgs(executeTime);
         }

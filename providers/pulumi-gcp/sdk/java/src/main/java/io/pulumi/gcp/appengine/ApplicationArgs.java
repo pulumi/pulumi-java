@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.ApplicationFeatureSettingsArgs;
 import io.pulumi.gcp.appengine.inputs.ApplicationIapArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authDomain")
-    private final @Nullable Input<String> authDomain;
+        private final @Nullable Input<String> authDomain;
 
     public Input<String> getAuthDomain() {
         return this.authDomain == null ? Input.empty() : this.authDomain;
@@ -35,7 +35,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseType")
-    private final @Nullable Input<String> databaseType;
+        private final @Nullable Input<String> databaseType;
 
     public Input<String> getDatabaseType() {
         return this.databaseType == null ? Input.empty() : this.databaseType;
@@ -46,7 +46,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureSettings")
-    private final @Nullable Input<ApplicationFeatureSettingsArgs> featureSettings;
+        private final @Nullable Input<ApplicationFeatureSettingsArgs> featureSettings;
 
     public Input<ApplicationFeatureSettingsArgs> getFeatureSettings() {
         return this.featureSettings == null ? Input.empty() : this.featureSettings;
@@ -57,7 +57,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="iap")
-    private final @Nullable Input<ApplicationIapArgs> iap;
+        private final @Nullable Input<ApplicationIapArgs> iap;
 
     public Input<ApplicationIapArgs> getIap() {
         return this.iap == null ? Input.empty() : this.iap;
@@ -69,7 +69,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationId", required=true)
-    private final Input<String> locationId;
+        private final Input<String> locationId;
 
     public Input<String> getLocationId() {
         return this.locationId;
@@ -82,7 +82,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -93,7 +93,7 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="servingStatus")
-    private final @Nullable Input<String> servingStatus;
+        private final @Nullable Input<String> servingStatus;
 
     public Input<String> getServingStatus() {
         return this.servingStatus == null ? Input.empty() : this.servingStatus;
@@ -227,7 +227,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.servingStatus = Input.ofNullable(servingStatus);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(authDomain, databaseType, featureSettings, iap, locationId, project, servingStatus);
         }

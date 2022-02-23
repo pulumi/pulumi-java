@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="count", required=true)
-    private final Integer count;
+      private final Integer count;
 
     public Integer getCount() {
         return this.count;
@@ -33,7 +33,7 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="percent", required=true)
-    private final Double percent;
+      private final Double percent;
 
     public Double getPercent() {
         return this.percent;
@@ -82,7 +82,6 @@ public final class TriggerResponse extends io.pulumi.resources.InvokeArgs {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public TriggerResponse build() {
             return new TriggerResponse(count, percent);
         }

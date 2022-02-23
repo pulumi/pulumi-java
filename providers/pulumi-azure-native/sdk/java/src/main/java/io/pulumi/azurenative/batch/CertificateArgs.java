@@ -5,7 +5,7 @@ package io.pulumi.azurenative.batch;
 
 import io.pulumi.azurenative.batch.enums.CertificateFormat;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -31,7 +31,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateName")
-    private final @Nullable Input<String> certificateName;
+        private final @Nullable Input<String> certificateName;
 
     public Input<String> getCertificateName() {
         return this.certificateName == null ? Input.empty() : this.certificateName;
@@ -42,7 +42,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="data", required=true)
-    private final Input<String> data;
+        private final Input<String> data;
 
     public Input<String> getData() {
         return this.data;
@@ -53,7 +53,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="format")
-    private final @Nullable Input<CertificateFormat> format;
+        private final @Nullable Input<CertificateFormat> format;
 
     public Input<CertificateFormat> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -64,7 +64,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+        private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -75,7 +75,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -86,7 +86,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprint")
-    private final @Nullable Input<String> thumbprint;
+        private final @Nullable Input<String> thumbprint;
 
     public Input<String> getThumbprint() {
         return this.thumbprint == null ? Input.empty() : this.thumbprint;
@@ -97,7 +97,7 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="thumbprintAlgorithm")
-    private final @Nullable Input<String> thumbprintAlgorithm;
+        private final @Nullable Input<String> thumbprintAlgorithm;
 
     public Input<String> getThumbprintAlgorithm() {
         return this.thumbprintAlgorithm == null ? Input.empty() : this.thumbprintAlgorithm;
@@ -246,7 +246,6 @@ public final class CertificateArgs extends io.pulumi.resources.ResourceArgs {
             this.thumbprintAlgorithm = Input.ofNullable(thumbprintAlgorithm);
             return this;
         }
-
         public CertificateArgs build() {
             return new CertificateArgs(accountName, certificateName, data, format, password, resourceGroupName, thumbprint, thumbprintAlgorithm);
         }

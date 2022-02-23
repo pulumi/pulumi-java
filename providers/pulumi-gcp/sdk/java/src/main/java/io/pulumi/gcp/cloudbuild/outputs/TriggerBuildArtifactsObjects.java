@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudbuild.outputs.TriggerBuildArtifactsObjectsTiming;
 import java.lang.String;
 import java.util.List;
@@ -107,7 +107,6 @@ public final class TriggerBuildArtifactsObjects {
             this.timings = timings;
             return this;
         }
-
         public TriggerBuildArtifactsObjects build() {
             return new TriggerBuildArtifactsObjects(location, paths, timings);
         }

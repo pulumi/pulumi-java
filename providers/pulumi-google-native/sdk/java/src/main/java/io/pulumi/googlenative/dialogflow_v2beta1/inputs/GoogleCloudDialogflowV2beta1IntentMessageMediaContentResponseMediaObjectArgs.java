@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageImageArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="contentUrl", required=true)
-    private final Input<String> contentUrl;
+      private final Input<String> contentUrl;
 
     public Input<String> getContentUrl() {
         return this.contentUrl;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -46,7 +46,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="icon")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> icon;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getIcon() {
         return this.icon == null ? Input.empty() : this.icon;
@@ -57,7 +57,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="largeImage")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> largeImage;
 
     public Input<GoogleCloudDialogflowV2beta1IntentMessageImageArgs> getLargeImage() {
         return this.largeImage == null ? Input.empty() : this.largeImage;
@@ -68,7 +68,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -172,7 +172,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponseMediaObjectArgs(contentUrl, description, icon, largeImage, name);
         }

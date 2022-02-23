@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.GoogleMonitoringV3RangeResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class DistributionCutResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public DistributionCutResponse build() {
             return new DistributionCutResponse(distributionFilter, range);
         }

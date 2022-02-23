@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.kusto;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="clusterName", required=true)
-    private final Input<String> clusterName;
+        private final Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName;
@@ -30,7 +30,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="groupId", required=true)
-    private final Input<String> groupId;
+        private final Input<String> groupId;
 
     public Input<String> getGroupId() {
         return this.groupId;
@@ -41,7 +41,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="managedPrivateEndpointName")
-    private final @Nullable Input<String> managedPrivateEndpointName;
+        private final @Nullable Input<String> managedPrivateEndpointName;
 
     public Input<String> getManagedPrivateEndpointName() {
         return this.managedPrivateEndpointName == null ? Input.empty() : this.managedPrivateEndpointName;
@@ -52,7 +52,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateLinkResourceId", required=true)
-    private final Input<String> privateLinkResourceId;
+        private final Input<String> privateLinkResourceId;
 
     public Input<String> getPrivateLinkResourceId() {
         return this.privateLinkResourceId;
@@ -63,7 +63,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="privateLinkResourceRegion")
-    private final @Nullable Input<String> privateLinkResourceRegion;
+        private final @Nullable Input<String> privateLinkResourceRegion;
 
     public Input<String> getPrivateLinkResourceRegion() {
         return this.privateLinkResourceRegion == null ? Input.empty() : this.privateLinkResourceRegion;
@@ -74,7 +74,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="requestMessage")
-    private final @Nullable Input<String> requestMessage;
+        private final @Nullable Input<String> requestMessage;
 
     public Input<String> getRequestMessage() {
         return this.requestMessage == null ? Input.empty() : this.requestMessage;
@@ -85,7 +85,7 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -219,7 +219,6 @@ public final class ManagedPrivateEndpointArgs extends io.pulumi.resources.Resour
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ManagedPrivateEndpointArgs build() {
             return new ManagedPrivateEndpointArgs(clusterName, groupId, managedPrivateEndpointName, privateLinkResourceId, privateLinkResourceRegion, requestMessage, resourceGroupName);
         }

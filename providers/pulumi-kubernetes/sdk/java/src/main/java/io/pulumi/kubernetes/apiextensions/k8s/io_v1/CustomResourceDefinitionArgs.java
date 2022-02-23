@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionSpecArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -32,7 +32,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -43,7 +43,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -54,7 +54,7 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="spec", required=true)
-    private final Input<CustomResourceDefinitionSpecArgs> spec;
+        private final Input<CustomResourceDefinitionSpecArgs> spec;
 
     public Input<CustomResourceDefinitionSpecArgs> getSpec() {
         return this.spec;
@@ -143,7 +143,6 @@ public final class CustomResourceDefinitionArgs extends io.pulumi.resources.Reso
             this.spec = Input.of(Objects.requireNonNull(spec));
             return this;
         }
-
         public CustomResourceDefinitionArgs build() {
             return new CustomResourceDefinitionArgs(apiVersion, kind, metadata, spec);
         }

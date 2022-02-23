@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.authorization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="lockName", required=true)
-    private final String lockName;
+        private final String lockName;
 
     public String getLockName() {
         return this.lockName;
@@ -28,7 +28,7 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -77,7 +77,6 @@ public final class GetManagementLockAtResourceGroupLevelArgs extends io.pulumi.r
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetManagementLockAtResourceGroupLevelArgs build() {
             return new GetManagementLockAtResourceGroupLevelArgs(lockName, resourceGroupName);
         }

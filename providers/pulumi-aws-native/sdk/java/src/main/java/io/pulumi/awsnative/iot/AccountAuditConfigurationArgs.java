@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iot;
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditCheckConfigurationsArgs;
 import io.pulumi.awsnative.iot.inputs.AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,21 +21,21 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="accountId", required=true)
-    private final Input<String> accountId;
+        private final Input<String> accountId;
 
     public Input<String> getAccountId() {
         return this.accountId;
     }
 
     @InputImport(name="auditCheckConfigurations", required=true)
-    private final Input<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
+        private final Input<AccountAuditConfigurationAuditCheckConfigurationsArgs> auditCheckConfigurations;
 
     public Input<AccountAuditConfigurationAuditCheckConfigurationsArgs> getAuditCheckConfigurations() {
         return this.auditCheckConfigurations;
     }
 
     @InputImport(name="auditNotificationTargetConfigurations")
-    private final @Nullable Input<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
+        private final @Nullable Input<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> auditNotificationTargetConfigurations;
 
     public Input<AccountAuditConfigurationAuditNotificationTargetConfigurationsArgs> getAuditNotificationTargetConfigurations() {
         return this.auditNotificationTargetConfigurations == null ? Input.empty() : this.auditNotificationTargetConfigurations;
@@ -46,7 +46,7 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="roleArn", required=true)
-    private final Input<String> roleArn;
+        private final Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn;
@@ -135,7 +135,6 @@ public final class AccountAuditConfigurationArgs extends io.pulumi.resources.Res
             this.roleArn = Input.of(Objects.requireNonNull(roleArn));
             return this;
         }
-
         public AccountAuditConfigurationArgs build() {
             return new AccountAuditConfigurationArgs(accountId, auditCheckConfigurations, auditNotificationTargetConfigurations, roleArn);
         }

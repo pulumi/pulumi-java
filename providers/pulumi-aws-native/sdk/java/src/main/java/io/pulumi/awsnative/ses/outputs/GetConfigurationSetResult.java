@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetConfigurationSetResult {
         public Builder(GetConfigurationSetResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetConfigurationSetResult build() {
             return new GetConfigurationSetResult();
         }

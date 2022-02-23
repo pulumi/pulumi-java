@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 
 import io.pulumi.awsnative.apprunner.enums.ServiceImageRepositoryImageRepositoryType;
 import io.pulumi.awsnative.apprunner.inputs.ServiceImageConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
     public static final ServiceImageRepository Empty = new ServiceImageRepository();
 
     @InputImport(name="imageConfiguration")
-    private final @Nullable ServiceImageConfiguration imageConfiguration;
+        private final @Nullable ServiceImageConfiguration imageConfiguration;
 
     public Optional<ServiceImageConfiguration> getImageConfiguration() {
         return this.imageConfiguration == null ? Optional.empty() : Optional.ofNullable(this.imageConfiguration);
@@ -32,7 +32,7 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageIdentifier", required=true)
-    private final String imageIdentifier;
+        private final String imageIdentifier;
 
     public String getImageIdentifier() {
         return this.imageIdentifier;
@@ -43,7 +43,7 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="imageRepositoryType", required=true)
-    private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
+        private final ServiceImageRepositoryImageRepositoryType imageRepositoryType;
 
     public ServiceImageRepositoryImageRepositoryType getImageRepositoryType() {
         return this.imageRepositoryType;
@@ -102,7 +102,6 @@ public final class ServiceImageRepository extends io.pulumi.resources.InvokeArgs
             this.imageRepositoryType = Objects.requireNonNull(imageRepositoryType);
             return this;
         }
-
         public ServiceImageRepository build() {
             return new ServiceImageRepository(imageConfiguration, imageIdentifier, imageRepositoryType);
         }

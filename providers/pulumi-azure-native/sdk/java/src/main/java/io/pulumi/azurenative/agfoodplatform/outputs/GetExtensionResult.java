@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.agfoodplatform.outputs;
 
 import io.pulumi.azurenative.agfoodplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -243,7 +243,6 @@ public final class GetExtensionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetExtensionResult build() {
             return new GetExtensionResult(eTag, extensionApiDocsLink, extensionAuthLink, extensionCategory, extensionId, id, installedExtensionVersion, name, systemData, type);
         }

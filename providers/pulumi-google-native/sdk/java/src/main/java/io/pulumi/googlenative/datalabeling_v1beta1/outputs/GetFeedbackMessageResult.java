@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1OperatorFeedbackMetadataResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1RequesterFeedbackMetadataResponse;
 import java.lang.String;
@@ -144,7 +144,6 @@ public final class GetFeedbackMessageResult {
             this.requesterFeedbackMetadata = Objects.requireNonNull(requesterFeedbackMetadata);
             return this;
         }
-
         public GetFeedbackMessageResult build() {
             return new GetFeedbackMessageResult(body, createTime, image, name, operatorFeedbackMetadata, requesterFeedbackMetadata);
         }

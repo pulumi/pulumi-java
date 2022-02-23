@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ScopeElementResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="field")
-    private final @Nullable String field;
+        private final @Nullable String field;
 
     public Optional<String> getField() {
         return this.field == null ? Optional.empty() : Optional.ofNullable(this.field);
@@ -61,7 +61,6 @@ public final class ScopeElementResponse extends io.pulumi.resources.InvokeArgs {
             this.field = field;
             return this;
         }
-
         public ScopeElementResponse build() {
             return new ScopeElementResponse(field);
         }

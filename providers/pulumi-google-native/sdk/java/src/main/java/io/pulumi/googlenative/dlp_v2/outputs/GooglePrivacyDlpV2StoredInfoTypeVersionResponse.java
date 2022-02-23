@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ErrorResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeConfigResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeStatsResponse;
@@ -141,7 +141,6 @@ public final class GooglePrivacyDlpV2StoredInfoTypeVersionResponse {
             this.stats = Objects.requireNonNull(stats);
             return this;
         }
-
         public GooglePrivacyDlpV2StoredInfoTypeVersionResponse build() {
             return new GooglePrivacyDlpV2StoredInfoTypeVersionResponse(config, createTime, errors, state, stats);
         }

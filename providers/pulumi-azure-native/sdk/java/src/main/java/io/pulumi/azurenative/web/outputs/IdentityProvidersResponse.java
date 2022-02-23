@@ -12,7 +12,7 @@ import io.pulumi.azurenative.web.outputs.GitHubResponse;
 import io.pulumi.azurenative.web.outputs.GoogleResponse;
 import io.pulumi.azurenative.web.outputs.LegacyMicrosoftAccountResponse;
 import io.pulumi.azurenative.web.outputs.TwitterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -235,7 +235,6 @@ public final class IdentityProvidersResponse {
             this.twitter = twitter;
             return this;
         }
-
         public IdentityProvidersResponse build() {
             return new IdentityProvidersResponse(apple, azureActiveDirectory, azureStaticWebApps, customOpenIdConnectProviders, facebook, gitHub, google, legacyMicrosoftAccount, twitter);
         }

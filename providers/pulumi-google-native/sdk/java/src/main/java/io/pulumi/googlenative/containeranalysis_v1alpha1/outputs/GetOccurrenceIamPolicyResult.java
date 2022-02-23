@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BindingResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -98,7 +98,6 @@ public final class GetOccurrenceIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetOccurrenceIamPolicyResult build() {
             return new GetOccurrenceIamPolicyResult(bindings, etag, version);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.confidentialledger.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="cert")
-    private final @Nullable String cert;
+        private final @Nullable String cert;
 
     public Optional<String> getCert() {
         return this.cert == null ? Optional.empty() : Optional.ofNullable(this.cert);
@@ -34,7 +34,7 @@ public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="ledgerRoleName")
-    private final @Nullable String ledgerRoleName;
+        private final @Nullable String ledgerRoleName;
 
     public Optional<String> getLedgerRoleName() {
         return this.ledgerRoleName == null ? Optional.empty() : Optional.ofNullable(this.ledgerRoleName);
@@ -83,7 +83,6 @@ public final class CertBasedSecurityPrincipalResponse extends io.pulumi.resource
             this.ledgerRoleName = ledgerRoleName;
             return this;
         }
-
         public CertBasedSecurityPrincipalResponse build() {
             return new CertBasedSecurityPrincipalResponse(cert, ledgerRoleName);
         }

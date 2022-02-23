@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class FlexibleAppVersionEntrypoint {
             this.shell = Objects.requireNonNull(shell);
             return this;
         }
-
         public FlexibleAppVersionEntrypoint build() {
             return new FlexibleAppVersionEntrypoint(shell);
         }

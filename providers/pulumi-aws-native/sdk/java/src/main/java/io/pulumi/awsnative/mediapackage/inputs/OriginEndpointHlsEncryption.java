@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.awsnative.mediapackage.enums.OriginEndpointHlsEncryptionEncryptionMethod;
 import io.pulumi.awsnative.mediapackage.inputs.OriginEndpointSpekeKeyProvider;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="constantInitializationVector")
-    private final @Nullable String constantInitializationVector;
+        private final @Nullable String constantInitializationVector;
 
     public Optional<String> getConstantInitializationVector() {
         return this.constantInitializationVector == null ? Optional.empty() : Optional.ofNullable(this.constantInitializationVector);
@@ -38,7 +38,7 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="encryptionMethod")
-    private final @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
+        private final @Nullable OriginEndpointHlsEncryptionEncryptionMethod encryptionMethod;
 
     public Optional<OriginEndpointHlsEncryptionEncryptionMethod> getEncryptionMethod() {
         return this.encryptionMethod == null ? Optional.empty() : Optional.ofNullable(this.encryptionMethod);
@@ -49,7 +49,7 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="keyRotationIntervalSeconds")
-    private final @Nullable Integer keyRotationIntervalSeconds;
+        private final @Nullable Integer keyRotationIntervalSeconds;
 
     public Optional<Integer> getKeyRotationIntervalSeconds() {
         return this.keyRotationIntervalSeconds == null ? Optional.empty() : Optional.ofNullable(this.keyRotationIntervalSeconds);
@@ -60,14 +60,14 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="repeatExtXKey")
-    private final @Nullable Boolean repeatExtXKey;
+        private final @Nullable Boolean repeatExtXKey;
 
     public Optional<Boolean> getRepeatExtXKey() {
         return this.repeatExtXKey == null ? Optional.empty() : Optional.ofNullable(this.repeatExtXKey);
     }
 
     @InputImport(name="spekeKeyProvider", required=true)
-    private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
+        private final OriginEndpointSpekeKeyProvider spekeKeyProvider;
 
     public OriginEndpointSpekeKeyProvider getSpekeKeyProvider() {
         return this.spekeKeyProvider;
@@ -146,7 +146,6 @@ public final class OriginEndpointHlsEncryption extends io.pulumi.resources.Invok
             this.spekeKeyProvider = Objects.requireNonNull(spekeKeyProvider);
             return this;
         }
-
         public OriginEndpointHlsEncryption build() {
             return new OriginEndpointHlsEncryption(constantInitializationVector, encryptionMethod, keyRotationIntervalSeconds, repeatExtXKey, spekeKeyProvider);
         }

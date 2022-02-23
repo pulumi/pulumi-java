@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -87,7 +87,6 @@ public final class JitSchedulingPolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JitSchedulingPolicyResponse build() {
             return new JitSchedulingPolicyResponse(duration, startTime, type);
         }

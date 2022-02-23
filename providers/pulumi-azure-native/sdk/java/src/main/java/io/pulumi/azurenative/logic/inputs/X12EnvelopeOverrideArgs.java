@@ -7,7 +7,7 @@ import io.pulumi.azurenative.logic.enums.X12DateFormat;
 import io.pulumi.azurenative.logic.enums.X12TimeFormat;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="dateFormat", required=true)
-    private final Input<Either<String,X12DateFormat>> dateFormat;
+        private final Input<Either<String,X12DateFormat>> dateFormat;
 
     public Input<Either<String,X12DateFormat>> getDateFormat() {
         return this.dateFormat;
@@ -37,7 +37,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="functionalIdentifierCode")
-    private final @Nullable Input<String> functionalIdentifierCode;
+        private final @Nullable Input<String> functionalIdentifierCode;
 
     public Input<String> getFunctionalIdentifierCode() {
         return this.functionalIdentifierCode == null ? Input.empty() : this.functionalIdentifierCode;
@@ -48,7 +48,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="headerVersion", required=true)
-    private final Input<String> headerVersion;
+        private final Input<String> headerVersion;
 
     public Input<String> getHeaderVersion() {
         return this.headerVersion;
@@ -59,7 +59,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="messageId", required=true)
-    private final Input<String> messageId;
+        private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;
@@ -70,7 +70,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="protocolVersion", required=true)
-    private final Input<String> protocolVersion;
+        private final Input<String> protocolVersion;
 
     public Input<String> getProtocolVersion() {
         return this.protocolVersion;
@@ -81,7 +81,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="receiverApplicationId", required=true)
-    private final Input<String> receiverApplicationId;
+        private final Input<String> receiverApplicationId;
 
     public Input<String> getReceiverApplicationId() {
         return this.receiverApplicationId;
@@ -92,7 +92,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="responsibleAgencyCode", required=true)
-    private final Input<String> responsibleAgencyCode;
+        private final Input<String> responsibleAgencyCode;
 
     public Input<String> getResponsibleAgencyCode() {
         return this.responsibleAgencyCode;
@@ -103,7 +103,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="senderApplicationId", required=true)
-    private final Input<String> senderApplicationId;
+        private final Input<String> senderApplicationId;
 
     public Input<String> getSenderApplicationId() {
         return this.senderApplicationId;
@@ -114,7 +114,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="targetNamespace", required=true)
-    private final Input<String> targetNamespace;
+        private final Input<String> targetNamespace;
 
     public Input<String> getTargetNamespace() {
         return this.targetNamespace;
@@ -125,7 +125,7 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeFormat", required=true)
-    private final Input<Either<String,X12TimeFormat>> timeFormat;
+        private final Input<Either<String,X12TimeFormat>> timeFormat;
 
     public Input<Either<String,X12TimeFormat>> getTimeFormat() {
         return this.timeFormat;
@@ -304,7 +304,6 @@ public final class X12EnvelopeOverrideArgs extends io.pulumi.resources.ResourceA
             this.timeFormat = Input.of(Objects.requireNonNull(timeFormat));
             return this;
         }
-
         public X12EnvelopeOverrideArgs build() {
             return new X12EnvelopeOverrideArgs(dateFormat, functionalIdentifierCode, headerVersion, messageId, protocolVersion, receiverApplicationId, responsibleAgencyCode, senderApplicationId, targetNamespace, timeFormat);
         }

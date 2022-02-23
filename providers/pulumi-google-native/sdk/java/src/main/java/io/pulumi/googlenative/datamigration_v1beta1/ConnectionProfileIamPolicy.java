@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datamigration_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datamigration_v1beta1.ConnectionProfileIamPolicyArgs;
 import io.pulumi.googlenative.datamigration_v1beta1.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class ConnectionProfileIamPolicy extends io.pulumi.resources.CustomResour
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ConnectionProfileIamPolicy(String name) {
-        super("google-native:datamigration/v1beta1:ConnectionProfileIamPolicy", name, ConnectionProfileIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

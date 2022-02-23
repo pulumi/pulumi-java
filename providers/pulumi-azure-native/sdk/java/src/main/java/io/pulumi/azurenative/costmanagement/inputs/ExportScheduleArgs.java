@@ -8,7 +8,7 @@ import io.pulumi.azurenative.costmanagement.enums.StatusType;
 import io.pulumi.azurenative.costmanagement.inputs.ExportRecurrencePeriodArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrence")
-    private final @Nullable Input<Either<String,RecurrenceType>> recurrence;
+        private final @Nullable Input<Either<String,RecurrenceType>> recurrence;
 
     public Input<Either<String,RecurrenceType>> getRecurrence() {
         return this.recurrence == null ? Input.empty() : this.recurrence;
@@ -38,7 +38,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recurrencePeriod")
-    private final @Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod;
+        private final @Nullable Input<ExportRecurrencePeriodArgs> recurrencePeriod;
 
     public Input<ExportRecurrencePeriodArgs> getRecurrencePeriod() {
         return this.recurrencePeriod == null ? Input.empty() : this.recurrencePeriod;
@@ -49,7 +49,7 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,StatusType>> status;
+        private final @Nullable Input<Either<String,StatusType>> status;
 
     public Input<Either<String,StatusType>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -123,7 +123,6 @@ public final class ExportScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ExportScheduleArgs build() {
             return new ExportScheduleArgs(recurrence, recurrencePeriod, status);
         }

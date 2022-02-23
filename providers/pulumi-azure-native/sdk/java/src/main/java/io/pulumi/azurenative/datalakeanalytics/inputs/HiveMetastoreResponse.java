@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final String databaseName;
+        private final String databaseName;
 
     public String getDatabaseName() {
         return this.databaseName;
@@ -28,7 +28,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -39,7 +39,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -50,7 +50,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="nestedResourceProvisioningState", required=true)
-    private final String nestedResourceProvisioningState;
+        private final String nestedResourceProvisioningState;
 
     public String getNestedResourceProvisioningState() {
         return this.nestedResourceProvisioningState;
@@ -61,7 +61,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -72,7 +72,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="runtimeVersion", required=true)
-    private final String runtimeVersion;
+        private final String runtimeVersion;
 
     public String getRuntimeVersion() {
         return this.runtimeVersion;
@@ -83,7 +83,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serverUri", required=true)
-    private final String serverUri;
+        private final String serverUri;
 
     public String getServerUri() {
         return this.serverUri;
@@ -94,7 +94,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -105,7 +105,7 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="userName", required=true)
-    private final String userName;
+        private final String userName;
 
     public String getUserName() {
         return this.userName;
@@ -224,7 +224,6 @@ public final class HiveMetastoreResponse extends io.pulumi.resources.InvokeArgs 
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public HiveMetastoreResponse build() {
             return new HiveMetastoreResponse(databaseName, id, name, nestedResourceProvisioningState, password, runtimeVersion, serverUri, type, userName);
         }

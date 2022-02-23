@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class KubernetesDashboardArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -66,7 +66,6 @@ public final class KubernetesDashboardArgs extends io.pulumi.resources.ResourceA
             this.disabled = Input.ofNullable(disabled);
             return this;
         }
-
         public KubernetesDashboardArgs build() {
             return new KubernetesDashboardArgs(disabled);
         }

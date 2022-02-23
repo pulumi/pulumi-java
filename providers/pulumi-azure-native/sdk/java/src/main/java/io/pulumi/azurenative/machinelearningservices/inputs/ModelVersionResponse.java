@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.FlavorDataResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datastoreId")
-    private final @Nullable String datastoreId;
+        private final @Nullable String datastoreId;
 
     public Optional<String> getDatastoreId() {
         return this.datastoreId == null ? Optional.empty() : Optional.ofNullable(this.datastoreId);
@@ -37,7 +37,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -48,7 +48,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="flavors")
-    private final @Nullable Map<String,FlavorDataResponse> flavors;
+        private final @Nullable Map<String,FlavorDataResponse> flavors;
 
     public Map<String,FlavorDataResponse> getFlavors() {
         return this.flavors == null ? Map.of() : this.flavors;
@@ -59,7 +59,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="isAnonymous")
-    private final @Nullable Boolean isAnonymous;
+        private final @Nullable Boolean isAnonymous;
 
     public Optional<Boolean> getIsAnonymous() {
         return this.isAnonymous == null ? Optional.empty() : Optional.ofNullable(this.isAnonymous);
@@ -70,7 +70,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+        private final String path;
 
     public String getPath() {
         return this.path;
@@ -81,7 +81,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -92,7 +92,7 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -191,7 +191,6 @@ public final class ModelVersionResponse extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public ModelVersionResponse build() {
             return new ModelVersionResponse(datastoreId, description, flavors, isAnonymous, path, properties, tags);
         }

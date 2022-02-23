@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.forecast.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDatasetGroupArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="datasetGroupArn", required=true)
-    private final String datasetGroupArn;
+        private final String datasetGroupArn;
 
     public String getDatasetGroupArn() {
         return this.datasetGroupArn;
@@ -55,7 +55,6 @@ public final class GetDatasetGroupArgs extends io.pulumi.resources.InvokeArgs {
             this.datasetGroupArn = Objects.requireNonNull(datasetGroupArn);
             return this;
         }
-
         public GetDatasetGroupArgs build() {
             return new GetDatasetGroupArgs(datasetGroupArn);
         }

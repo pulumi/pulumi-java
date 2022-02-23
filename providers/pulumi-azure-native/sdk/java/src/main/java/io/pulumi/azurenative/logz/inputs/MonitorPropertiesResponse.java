@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logz.inputs;
 import io.pulumi.azurenative.logz.inputs.LogzOrganizationPropertiesResponse;
 import io.pulumi.azurenative.logz.inputs.PlanDataResponse;
 import io.pulumi.azurenative.logz.inputs.UserInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
     public static final MonitorPropertiesResponse Empty = new MonitorPropertiesResponse();
 
     @InputImport(name="liftrResourceCategory", required=true)
-    private final String liftrResourceCategory;
+        private final String liftrResourceCategory;
 
     public String getLiftrResourceCategory() {
         return this.liftrResourceCategory;
@@ -34,14 +34,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="liftrResourcePreference", required=true)
-    private final Integer liftrResourcePreference;
+        private final Integer liftrResourcePreference;
 
     public Integer getLiftrResourcePreference() {
         return this.liftrResourcePreference;
     }
 
     @InputImport(name="logzOrganizationProperties")
-    private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
+        private final @Nullable LogzOrganizationPropertiesResponse logzOrganizationProperties;
 
     public Optional<LogzOrganizationPropertiesResponse> getLogzOrganizationProperties() {
         return this.logzOrganizationProperties == null ? Optional.empty() : Optional.ofNullable(this.logzOrganizationProperties);
@@ -52,7 +52,7 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="marketplaceSubscriptionStatus")
-    private final @Nullable String marketplaceSubscriptionStatus;
+        private final @Nullable String marketplaceSubscriptionStatus;
 
     public Optional<String> getMarketplaceSubscriptionStatus() {
         return this.marketplaceSubscriptionStatus == null ? Optional.empty() : Optional.ofNullable(this.marketplaceSubscriptionStatus);
@@ -63,14 +63,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="monitoringStatus")
-    private final @Nullable String monitoringStatus;
+        private final @Nullable String monitoringStatus;
 
     public Optional<String> getMonitoringStatus() {
         return this.monitoringStatus == null ? Optional.empty() : Optional.ofNullable(this.monitoringStatus);
     }
 
     @InputImport(name="planData")
-    private final @Nullable PlanDataResponse planData;
+        private final @Nullable PlanDataResponse planData;
 
     public Optional<PlanDataResponse> getPlanData() {
         return this.planData == null ? Optional.empty() : Optional.ofNullable(this.planData);
@@ -81,14 +81,14 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
     }
 
     @InputImport(name="userInfo")
-    private final @Nullable UserInfoResponse userInfo;
+        private final @Nullable UserInfoResponse userInfo;
 
     public Optional<UserInfoResponse> getUserInfo() {
         return this.userInfo == null ? Optional.empty() : Optional.ofNullable(this.userInfo);
@@ -197,7 +197,6 @@ public final class MonitorPropertiesResponse extends io.pulumi.resources.InvokeA
             this.userInfo = userInfo;
             return this;
         }
-
         public MonitorPropertiesResponse build() {
             return new MonitorPropertiesResponse(liftrResourceCategory, liftrResourcePreference, logzOrganizationProperties, marketplaceSubscriptionStatus, monitoringStatus, planData, provisioningState, userInfo);
         }

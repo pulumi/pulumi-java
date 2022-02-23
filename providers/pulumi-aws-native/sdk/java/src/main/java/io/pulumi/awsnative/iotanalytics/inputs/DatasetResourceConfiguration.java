@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotanalytics.inputs;
 
 import io.pulumi.awsnative.iotanalytics.enums.DatasetResourceConfigurationComputeType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -14,14 +14,14 @@ public final class DatasetResourceConfiguration extends io.pulumi.resources.Invo
     public static final DatasetResourceConfiguration Empty = new DatasetResourceConfiguration();
 
     @InputImport(name="computeType", required=true)
-    private final DatasetResourceConfigurationComputeType computeType;
+        private final DatasetResourceConfigurationComputeType computeType;
 
     public DatasetResourceConfigurationComputeType getComputeType() {
         return this.computeType;
     }
 
     @InputImport(name="volumeSizeInGB", required=true)
-    private final Integer volumeSizeInGB;
+        private final Integer volumeSizeInGB;
 
     public Integer getVolumeSizeInGB() {
         return this.volumeSizeInGB;
@@ -70,7 +70,6 @@ public final class DatasetResourceConfiguration extends io.pulumi.resources.Invo
             this.volumeSizeInGB = Objects.requireNonNull(volumeSizeInGB);
             return this;
         }
-
         public DatasetResourceConfiguration build() {
             return new DatasetResourceConfiguration(computeType, volumeSizeInGB);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetEvaluationJobArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEvaluationJobArgs Empty = new GetEvaluationJobArgs();
 
     @InputImport(name="evaluationJobId", required=true)
-    private final String evaluationJobId;
+      private final String evaluationJobId;
 
     public String getEvaluationJobId() {
         return this.evaluationJobId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetEvaluationJobArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetEvaluationJobArgs build() {
             return new GetEvaluationJobArgs(evaluationJobId, project);
         }

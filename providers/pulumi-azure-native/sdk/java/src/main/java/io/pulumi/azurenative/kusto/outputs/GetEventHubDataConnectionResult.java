@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.kusto.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -331,7 +331,6 @@ public final class GetEventHubDataConnectionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEventHubDataConnectionResult build() {
             return new GetEventHubDataConnectionResult(compression, consumerGroup, dataFormat, eventHubResourceId, eventSystemProperties, id, kind, location, managedIdentityResourceId, mappingRuleName, name, provisioningState, tableName, type);
         }

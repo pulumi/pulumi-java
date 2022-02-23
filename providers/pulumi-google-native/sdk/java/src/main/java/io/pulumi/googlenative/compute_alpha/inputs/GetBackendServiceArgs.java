@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetBackendServiceArgs extends io.pulumi.resources.InvokeArgs 
     public static final GetBackendServiceArgs Empty = new GetBackendServiceArgs();
 
     @InputImport(name="backendService", required=true)
-    private final String backendService;
+      private final String backendService;
 
     public String getBackendService() {
         return this.backendService;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetBackendServiceArgs extends io.pulumi.resources.InvokeArgs 
             this.project = project;
             return this;
         }
-
         public GetBackendServiceArgs build() {
             return new GetBackendServiceArgs(backendService, project);
         }

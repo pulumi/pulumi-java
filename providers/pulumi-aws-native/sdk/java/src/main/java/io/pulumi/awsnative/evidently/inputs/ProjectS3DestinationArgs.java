@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.evidently.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
     public static final ProjectS3DestinationArgs Empty = new ProjectS3DestinationArgs();
 
     @InputImport(name="bucketName", required=true)
-    private final Input<String> bucketName;
+        private final Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName;
     }
 
     @InputImport(name="prefix")
-    private final @Nullable Input<String> prefix;
+        private final @Nullable Input<String> prefix;
 
     public Input<String> getPrefix() {
         return this.prefix == null ? Input.empty() : this.prefix;
@@ -81,7 +81,6 @@ public final class ProjectS3DestinationArgs extends io.pulumi.resources.Resource
             this.prefix = Input.ofNullable(prefix);
             return this;
         }
-
         public ProjectS3DestinationArgs build() {
             return new ProjectS3DestinationArgs(bucketName, prefix);
         }

@@ -10,8 +10,8 @@ import io.pulumi.awsnative.appflow.enums.ConnectorProfileConnectorType;
 import io.pulumi.awsnative.appflow.outputs.ConnectorProfileConfig;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -120,13 +120,6 @@ public class ConnectorProfile extends io.pulumi.resources.CustomResource {
         return this.kMSArn;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ConnectorProfile(String name) {
-        super("aws-native:appflow:ConnectorProfile", name, ConnectorProfileArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

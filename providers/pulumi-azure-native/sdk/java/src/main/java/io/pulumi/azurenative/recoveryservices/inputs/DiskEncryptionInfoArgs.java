@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.DiskEncryptionKeyInfoArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.KeyEncryptionKeyInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="diskEncryptionKeyInfo")
-    private final @Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
+        private final @Nullable Input<DiskEncryptionKeyInfoArgs> diskEncryptionKeyInfo;
 
     public Input<DiskEncryptionKeyInfoArgs> getDiskEncryptionKeyInfo() {
         return this.diskEncryptionKeyInfo == null ? Input.empty() : this.diskEncryptionKeyInfo;
@@ -35,7 +35,7 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyEncryptionKeyInfo")
-    private final @Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
+        private final @Nullable Input<KeyEncryptionKeyInfoArgs> keyEncryptionKeyInfo;
 
     public Input<KeyEncryptionKeyInfoArgs> getKeyEncryptionKeyInfo() {
         return this.keyEncryptionKeyInfo == null ? Input.empty() : this.keyEncryptionKeyInfo;
@@ -94,7 +94,6 @@ public final class DiskEncryptionInfoArgs extends io.pulumi.resources.ResourceAr
             this.keyEncryptionKeyInfo = Input.ofNullable(keyEncryptionKeyInfo);
             return this;
         }
-
         public DiskEncryptionInfoArgs build() {
             return new DiskEncryptionInfoArgs(diskEncryptionKeyInfo, keyEncryptionKeyInfo);
         }

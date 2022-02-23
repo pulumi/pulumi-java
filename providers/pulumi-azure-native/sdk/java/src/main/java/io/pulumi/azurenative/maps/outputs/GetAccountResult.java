@@ -5,7 +5,7 @@ package io.pulumi.azurenative.maps.outputs;
 
 import io.pulumi.azurenative.maps.outputs.MapsAccountPropertiesResponse;
 import io.pulumi.azurenative.maps.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetAccountResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(id, location, name, properties, sku, tags, type);
         }

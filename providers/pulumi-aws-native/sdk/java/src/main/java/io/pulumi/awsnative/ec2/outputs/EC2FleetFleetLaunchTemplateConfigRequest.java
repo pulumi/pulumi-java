@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.EC2FleetFleetLaunchTemplateOverridesRequest;
 import io.pulumi.awsnative.ec2.outputs.EC2FleetFleetLaunchTemplateSpecificationRequest;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -62,7 +62,6 @@ public final class EC2FleetFleetLaunchTemplateConfigRequest {
             this.overrides = overrides;
             return this;
         }
-
         public EC2FleetFleetLaunchTemplateConfigRequest build() {
             return new EC2FleetFleetLaunchTemplateConfigRequest(launchTemplateSpecification, overrides);
         }

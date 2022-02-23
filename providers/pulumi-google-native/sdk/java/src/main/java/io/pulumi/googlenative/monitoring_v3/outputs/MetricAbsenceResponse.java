@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.TriggerResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class MetricAbsenceResponse {
             this.trigger = Objects.requireNonNull(trigger);
             return this;
         }
-
         public MetricAbsenceResponse build() {
             return new MetricAbsenceResponse(aggregations, duration, filter, trigger);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.containerregistry.inputs.CredentialsArgs;
 import io.pulumi.azurenative.containerregistry.inputs.PlatformPropertiesArgs;
 import io.pulumi.azurenative.containerregistry.inputs.SetValueArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -30,7 +30,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agentConfiguration")
-    private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
+        private final @Nullable Input<AgentPropertiesArgs> agentConfiguration;
 
     public Input<AgentPropertiesArgs> getAgentConfiguration() {
         return this.agentConfiguration == null ? Input.empty() : this.agentConfiguration;
@@ -41,7 +41,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="agentPoolName")
-    private final @Nullable Input<String> agentPoolName;
+        private final @Nullable Input<String> agentPoolName;
 
     public Input<String> getAgentPoolName() {
         return this.agentPoolName == null ? Input.empty() : this.agentPoolName;
@@ -52,7 +52,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable Input<CredentialsArgs> credentials;
+        private final @Nullable Input<CredentialsArgs> credentials;
 
     public Input<CredentialsArgs> getCredentials() {
         return this.credentials == null ? Input.empty() : this.credentials;
@@ -63,7 +63,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encodedTaskContent", required=true)
-    private final Input<String> encodedTaskContent;
+        private final Input<String> encodedTaskContent;
 
     public Input<String> getEncodedTaskContent() {
         return this.encodedTaskContent;
@@ -74,7 +74,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="encodedValuesContent")
-    private final @Nullable Input<String> encodedValuesContent;
+        private final @Nullable Input<String> encodedValuesContent;
 
     public Input<String> getEncodedValuesContent() {
         return this.encodedValuesContent == null ? Input.empty() : this.encodedValuesContent;
@@ -85,7 +85,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="isArchiveEnabled")
-    private final @Nullable Input<Boolean> isArchiveEnabled;
+        private final @Nullable Input<Boolean> isArchiveEnabled;
 
     public Input<Boolean> getIsArchiveEnabled() {
         return this.isArchiveEnabled == null ? Input.empty() : this.isArchiveEnabled;
@@ -96,7 +96,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="logTemplate")
-    private final @Nullable Input<String> logTemplate;
+        private final @Nullable Input<String> logTemplate;
 
     public Input<String> getLogTemplate() {
         return this.logTemplate == null ? Input.empty() : this.logTemplate;
@@ -107,7 +107,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="platform", required=true)
-    private final Input<PlatformPropertiesArgs> platform;
+        private final Input<PlatformPropertiesArgs> platform;
 
     public Input<PlatformPropertiesArgs> getPlatform() {
         return this.platform;
@@ -119,7 +119,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="sourceLocation")
-    private final @Nullable Input<String> sourceLocation;
+        private final @Nullable Input<String> sourceLocation;
 
     public Input<String> getSourceLocation() {
         return this.sourceLocation == null ? Input.empty() : this.sourceLocation;
@@ -130,7 +130,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+        private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -142,7 +142,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -153,7 +153,7 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="values")
-    private final @Nullable Input<List<SetValueArgs>> values;
+        private final @Nullable Input<List<SetValueArgs>> values;
 
     public Input<List<SetValueArgs>> getValues() {
         return this.values == null ? Input.empty() : this.values;
@@ -362,7 +362,6 @@ public final class EncodedTaskRunRequestArgs extends io.pulumi.resources.Resourc
             this.values = Input.ofNullable(values);
             return this;
         }
-
         public EncodedTaskRunRequestArgs build() {
             return new EncodedTaskRunRequestArgs(agentConfiguration, agentPoolName, credentials, encodedTaskContent, encodedValuesContent, isArchiveEnabled, logTemplate, platform, sourceLocation, timeout, type, values);
         }

@@ -11,8 +11,8 @@ import io.pulumi.awsnative.datasync.outputs.LocationHDFSQopConfiguration;
 import io.pulumi.awsnative.datasync.outputs.LocationHDFSTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -227,13 +227,6 @@ public class LocationHDFS extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LocationHDFS(String name) {
-        super("aws-native:datasync:LocationHDFS", name, LocationHDFSArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

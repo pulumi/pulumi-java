@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="appBundleId", required=true)
-    private final String appBundleId;
+      private final String appBundleId;
 
     public String getAppBundleId() {
         return this.appBundleId;
@@ -34,7 +34,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testSpecialEntitlements", required=true)
-    private final Boolean testSpecialEntitlements;
+      private final Boolean testSpecialEntitlements;
 
     public Boolean getTestSpecialEntitlements() {
         return this.testSpecialEntitlements;
@@ -45,7 +45,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="testsZip", required=true)
-    private final FileReferenceResponse testsZip;
+      private final FileReferenceResponse testsZip;
 
     public FileReferenceResponse getTestsZip() {
         return this.testsZip;
@@ -56,7 +56,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xcodeVersion", required=true)
-    private final String xcodeVersion;
+      private final String xcodeVersion;
 
     public String getXcodeVersion() {
         return this.xcodeVersion;
@@ -67,7 +67,7 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="xctestrun", required=true)
-    private final FileReferenceResponse xctestrun;
+      private final FileReferenceResponse xctestrun;
 
     public FileReferenceResponse getXctestrun() {
         return this.xctestrun;
@@ -146,7 +146,6 @@ public final class IosXcTestResponse extends io.pulumi.resources.InvokeArgs {
             this.xctestrun = Objects.requireNonNull(xctestrun);
             return this;
         }
-
         public IosXcTestResponse build() {
             return new IosXcTestResponse(appBundleId, testSpecialEntitlements, testsZip, xcodeVersion, xctestrun);
         }

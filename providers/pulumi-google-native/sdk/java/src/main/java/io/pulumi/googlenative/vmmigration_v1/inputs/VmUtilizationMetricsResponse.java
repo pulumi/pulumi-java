@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="cpuAveragePercent", required=true)
-    private final Integer cpuAveragePercent;
+      private final Integer cpuAveragePercent;
 
     public Integer getCpuAveragePercent() {
         return this.cpuAveragePercent;
@@ -33,7 +33,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="cpuMaxPercent", required=true)
-    private final Integer cpuMaxPercent;
+      private final Integer cpuMaxPercent;
 
     public Integer getCpuMaxPercent() {
         return this.cpuMaxPercent;
@@ -44,7 +44,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="diskIoRateAverageKbps", required=true)
-    private final String diskIoRateAverageKbps;
+      private final String diskIoRateAverageKbps;
 
     public String getDiskIoRateAverageKbps() {
         return this.diskIoRateAverageKbps;
@@ -55,7 +55,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="diskIoRateMaxKbps", required=true)
-    private final String diskIoRateMaxKbps;
+      private final String diskIoRateMaxKbps;
 
     public String getDiskIoRateMaxKbps() {
         return this.diskIoRateMaxKbps;
@@ -66,7 +66,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="memoryAveragePercent", required=true)
-    private final Integer memoryAveragePercent;
+      private final Integer memoryAveragePercent;
 
     public Integer getMemoryAveragePercent() {
         return this.memoryAveragePercent;
@@ -77,7 +77,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="memoryMaxPercent", required=true)
-    private final Integer memoryMaxPercent;
+      private final Integer memoryMaxPercent;
 
     public Integer getMemoryMaxPercent() {
         return this.memoryMaxPercent;
@@ -88,7 +88,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="networkThroughputAverageKbps", required=true)
-    private final String networkThroughputAverageKbps;
+      private final String networkThroughputAverageKbps;
 
     public String getNetworkThroughputAverageKbps() {
         return this.networkThroughputAverageKbps;
@@ -99,7 +99,7 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="networkThroughputMaxKbps", required=true)
-    private final String networkThroughputMaxKbps;
+      private final String networkThroughputMaxKbps;
 
     public String getNetworkThroughputMaxKbps() {
         return this.networkThroughputMaxKbps;
@@ -208,7 +208,6 @@ public final class VmUtilizationMetricsResponse extends io.pulumi.resources.Invo
             this.networkThroughputMaxKbps = Objects.requireNonNull(networkThroughputMaxKbps);
             return this;
         }
-
         public VmUtilizationMetricsResponse build() {
             return new VmUtilizationMetricsResponse(cpuAveragePercent, cpuMaxPercent, diskIoRateAverageKbps, diskIoRateMaxKbps, memoryAveragePercent, memoryMaxPercent, networkThroughputAverageKbps, networkThroughputMaxKbps);
         }

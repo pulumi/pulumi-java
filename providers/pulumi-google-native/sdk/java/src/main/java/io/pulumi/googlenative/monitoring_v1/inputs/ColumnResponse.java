@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.WidgetResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="weight", required=true)
-    private final String weight;
+      private final String weight;
 
     public String getWeight() {
         return this.weight;
@@ -34,7 +34,7 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="widgets", required=true)
-    private final List<WidgetResponse> widgets;
+      private final List<WidgetResponse> widgets;
 
     public List<WidgetResponse> getWidgets() {
         return this.widgets;
@@ -83,7 +83,6 @@ public final class ColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(weight, widgets);
         }

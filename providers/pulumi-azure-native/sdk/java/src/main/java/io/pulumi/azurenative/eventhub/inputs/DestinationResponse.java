@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventhub.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="archiveNameFormat")
-    private final @Nullable String archiveNameFormat;
+        private final @Nullable String archiveNameFormat;
 
     public Optional<String> getArchiveNameFormat() {
         return this.archiveNameFormat == null ? Optional.empty() : Optional.ofNullable(this.archiveNameFormat);
@@ -34,7 +34,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="blobContainer")
-    private final @Nullable String blobContainer;
+        private final @Nullable String blobContainer;
 
     public Optional<String> getBlobContainer() {
         return this.blobContainer == null ? Optional.empty() : Optional.ofNullable(this.blobContainer);
@@ -45,7 +45,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="storageAccountResourceId")
-    private final @Nullable String storageAccountResourceId;
+        private final @Nullable String storageAccountResourceId;
 
     public Optional<String> getStorageAccountResourceId() {
         return this.storageAccountResourceId == null ? Optional.empty() : Optional.ofNullable(this.storageAccountResourceId);
@@ -125,7 +125,6 @@ public final class DestinationResponse extends io.pulumi.resources.InvokeArgs {
             this.storageAccountResourceId = storageAccountResourceId;
             return this;
         }
-
         public DestinationResponse build() {
             return new DestinationResponse(archiveNameFormat, blobContainer, name, storageAccountResourceId);
         }

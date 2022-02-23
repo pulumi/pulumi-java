@@ -10,8 +10,8 @@ import io.pulumi.awsnative.backup.outputs.ReportPlanTag;
 import io.pulumi.awsnative.backup.outputs.ReportSettingProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -107,13 +107,6 @@ public class ReportPlan extends io.pulumi.resources.CustomResource {
         return this.reportSetting;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ReportPlan(String name) {
-        super("aws-native:backup:ReportPlan", name, ReportPlanArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

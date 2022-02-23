@@ -5,8 +5,8 @@ package io.pulumi.gcp.networkservices;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.networkservices.EdgeCacheKeysetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheKeysetState;
@@ -128,13 +128,6 @@ public class EdgeCacheKeyset extends io.pulumi.resources.CustomResource {
         return this.publicKeys;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EdgeCacheKeyset(String name) {
-        super("gcp:networkservices/edgeCacheKeyset:EdgeCacheKeyset", name, EdgeCacheKeysetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

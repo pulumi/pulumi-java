@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3outposts;
 
 import io.pulumi.awsnative.s3outposts.enums.EndpointAccessType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accessType")
-    private final @Nullable Input<EndpointAccessType> accessType;
+        private final @Nullable Input<EndpointAccessType> accessType;
 
     public Input<EndpointAccessType> getAccessType() {
         return this.accessType == null ? Input.empty() : this.accessType;
@@ -31,7 +31,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customerOwnedIpv4Pool")
-    private final @Nullable Input<String> customerOwnedIpv4Pool;
+        private final @Nullable Input<String> customerOwnedIpv4Pool;
 
     public Input<String> getCustomerOwnedIpv4Pool() {
         return this.customerOwnedIpv4Pool == null ? Input.empty() : this.customerOwnedIpv4Pool;
@@ -42,7 +42,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="outpostId", required=true)
-    private final Input<String> outpostId;
+        private final Input<String> outpostId;
 
     public Input<String> getOutpostId() {
         return this.outpostId;
@@ -53,7 +53,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroupId", required=true)
-    private final Input<String> securityGroupId;
+        private final Input<String> securityGroupId;
 
     public Input<String> getSecurityGroupId() {
         return this.securityGroupId;
@@ -64,7 +64,7 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetId", required=true)
-    private final Input<String> subnetId;
+        private final Input<String> subnetId;
 
     public Input<String> getSubnetId() {
         return this.subnetId;
@@ -168,7 +168,6 @@ public final class EndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.subnetId = Input.of(Objects.requireNonNull(subnetId));
             return this;
         }
-
         public EndpointArgs build() {
             return new EndpointArgs(accessType, customerOwnedIpv4Pool, outpostId, securityGroupId, subnetId);
         }

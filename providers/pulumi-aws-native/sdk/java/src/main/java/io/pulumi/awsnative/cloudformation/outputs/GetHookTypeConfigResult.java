@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -101,7 +101,6 @@ public final class GetHookTypeConfigResult {
             this.typeName = typeName;
             return this;
         }
-
         public GetHookTypeConfigResult build() {
             return new GetHookTypeConfigResult(configuration, configurationArn, typeName);
         }

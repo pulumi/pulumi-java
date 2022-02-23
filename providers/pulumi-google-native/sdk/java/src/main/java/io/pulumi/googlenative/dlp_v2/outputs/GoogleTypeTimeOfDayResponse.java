@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class GoogleTypeTimeOfDayResponse {
             this.seconds = Objects.requireNonNull(seconds);
             return this;
         }
-
         public GoogleTypeTimeOfDayResponse build() {
             return new GoogleTypeTimeOfDayResponse(hours, minutes, nanos, seconds);
         }

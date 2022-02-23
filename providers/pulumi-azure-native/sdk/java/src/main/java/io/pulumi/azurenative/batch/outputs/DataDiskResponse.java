@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -129,7 +129,6 @@ public final class DataDiskResponse {
             this.storageAccountType = storageAccountType;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(caching, diskSizeGB, lun, storageAccountType);
         }

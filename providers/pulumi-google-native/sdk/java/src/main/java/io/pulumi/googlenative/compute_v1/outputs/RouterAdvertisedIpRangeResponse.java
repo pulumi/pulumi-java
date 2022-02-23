@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class RouterAdvertisedIpRangeResponse {
             this.range = Objects.requireNonNull(range);
             return this;
         }
-
         public RouterAdvertisedIpRangeResponse build() {
             return new RouterAdvertisedIpRangeResponse(description, range);
         }

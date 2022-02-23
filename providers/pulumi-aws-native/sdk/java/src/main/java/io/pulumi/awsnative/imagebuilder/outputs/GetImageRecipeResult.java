@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.outputs.ImageRecipeAdditionalInstanceConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class GetImageRecipeResult {
             this.arn = arn;
             return this;
         }
-
         public GetImageRecipeResult build() {
             return new GetImageRecipeResult(additionalInstanceConfiguration, arn);
         }

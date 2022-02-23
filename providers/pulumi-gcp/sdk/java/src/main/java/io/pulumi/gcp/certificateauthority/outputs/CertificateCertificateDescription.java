@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionAuthorityKeyId;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionCertFingerprint;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionConfigValue;
@@ -154,7 +154,6 @@ public final class CertificateCertificateDescription {
             this.subjectKeyIds = subjectKeyIds;
             return this;
         }
-
         public CertificateCertificateDescription build() {
             return new CertificateCertificateDescription(aiaIssuingCertificateUrls, authorityKeyIds, certFingerprints, configValues, crlDistributionPoints, publicKeys, subjectDescriptions, subjectKeyIds);
         }

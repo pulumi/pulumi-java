@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.operationalinsights;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdDate")
-    private final @Nullable Input<String> createdDate;
+        private final @Nullable Input<String> createdDate;
 
     public Input<String> getCreatedDate() {
         return this.createdDate == null ? Input.empty() : this.createdDate;
@@ -32,7 +32,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataExportId")
-    private final @Nullable Input<String> dataExportId;
+        private final @Nullable Input<String> dataExportId;
 
     public Input<String> getDataExportId() {
         return this.dataExportId == null ? Input.empty() : this.dataExportId;
@@ -43,7 +43,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataExportName")
-    private final @Nullable Input<String> dataExportName;
+        private final @Nullable Input<String> dataExportName;
 
     public Input<String> getDataExportName() {
         return this.dataExportName == null ? Input.empty() : this.dataExportName;
@@ -54,7 +54,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+        private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -65,7 +65,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubName")
-    private final @Nullable Input<String> eventHubName;
+        private final @Nullable Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName == null ? Input.empty() : this.eventHubName;
@@ -76,7 +76,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lastModifiedDate")
-    private final @Nullable Input<String> lastModifiedDate;
+        private final @Nullable Input<String> lastModifiedDate;
 
     public Input<String> getLastModifiedDate() {
         return this.lastModifiedDate == null ? Input.empty() : this.lastModifiedDate;
@@ -87,7 +87,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -109,7 +109,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tableNames", required=true)
-    private final Input<List<String>> tableNames;
+        private final Input<List<String>> tableNames;
 
     public Input<List<String>> getTableNames() {
         return this.tableNames;
@@ -120,7 +120,7 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -299,7 +299,6 @@ public final class DataExportArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public DataExportArgs build() {
             return new DataExportArgs(createdDate, dataExportId, dataExportName, enable, eventHubName, lastModifiedDate, resourceGroupName, resourceId, tableNames, workspaceName);
         }

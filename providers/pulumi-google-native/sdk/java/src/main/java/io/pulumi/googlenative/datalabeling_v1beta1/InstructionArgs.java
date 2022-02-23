@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datalabeling_v1beta1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datalabeling_v1beta1.enums.InstructionDataType;
 import io.pulumi.googlenative.datalabeling_v1beta1.inputs.GoogleCloudDatalabelingV1beta1PdfInstructionArgs;
 import java.lang.String;
@@ -21,7 +21,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final Input<InstructionDataType> dataType;
+      private final Input<InstructionDataType> dataType;
 
     public Input<InstructionDataType> getDataType() {
         return this.dataType;
@@ -32,7 +32,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -43,7 +43,7 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -54,14 +54,14 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pdfInstruction")
-    private final @Nullable Input<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
+      private final @Nullable Input<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> pdfInstruction;
 
     public Input<GoogleCloudDatalabelingV1beta1PdfInstructionArgs> getPdfInstruction() {
         return this.pdfInstruction == null ? Input.empty() : this.pdfInstruction;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -165,7 +165,6 @@ public final class InstructionArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public InstructionArgs build() {
             return new InstructionArgs(dataType, description, displayName, pdfInstruction, project);
         }

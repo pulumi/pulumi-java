@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetScheduledAlertRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetScheduledAlertRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="ruleId", required=true)
-    private final String ruleId;
+        private final String ruleId;
 
     public String getRuleId() {
         return this.ruleId;
@@ -39,7 +39,7 @@ public final class GetScheduledAlertRuleArgs extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final String workspaceName;
+        private final String workspaceName;
 
     public String getWorkspaceName() {
         return this.workspaceName;
@@ -98,7 +98,6 @@ public final class GetScheduledAlertRuleArgs extends io.pulumi.resources.InvokeA
             this.workspaceName = Objects.requireNonNull(workspaceName);
             return this;
         }
-
         public GetScheduledAlertRuleArgs build() {
             return new GetScheduledAlertRuleArgs(resourceGroupName, ruleId, workspaceName);
         }

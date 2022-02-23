@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -172,7 +172,6 @@ public final class GetManagedZoneResult {
             this.visibility = Objects.requireNonNull(visibility);
             return this;
         }
-
         public GetManagedZoneResult build() {
             return new GetManagedZoneResult(description, dnsName, id, name, nameServers, project, visibility);
         }

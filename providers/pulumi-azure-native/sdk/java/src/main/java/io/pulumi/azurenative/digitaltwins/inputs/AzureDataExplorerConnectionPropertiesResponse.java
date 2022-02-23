@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.digitaltwins.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="adxDatabaseName", required=true)
-    private final String adxDatabaseName;
+        private final String adxDatabaseName;
 
     public String getAdxDatabaseName() {
         return this.adxDatabaseName;
@@ -34,7 +34,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="adxEndpointUri", required=true)
-    private final String adxEndpointUri;
+        private final String adxEndpointUri;
 
     public String getAdxEndpointUri() {
         return this.adxEndpointUri;
@@ -45,7 +45,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="adxResourceId", required=true)
-    private final String adxResourceId;
+        private final String adxResourceId;
 
     public String getAdxResourceId() {
         return this.adxResourceId;
@@ -56,7 +56,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="adxTableName")
-    private final @Nullable String adxTableName;
+        private final @Nullable String adxTableName;
 
     public Optional<String> getAdxTableName() {
         return this.adxTableName == null ? Optional.empty() : Optional.ofNullable(this.adxTableName);
@@ -68,7 +68,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="connectionType", required=true)
-    private final String connectionType;
+        private final String connectionType;
 
     public String getConnectionType() {
         return this.connectionType;
@@ -79,7 +79,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="eventHubConsumerGroup")
-    private final @Nullable String eventHubConsumerGroup;
+        private final @Nullable String eventHubConsumerGroup;
 
     public Optional<String> getEventHubConsumerGroup() {
         return this.eventHubConsumerGroup == null ? Optional.empty() : Optional.ofNullable(this.eventHubConsumerGroup);
@@ -90,7 +90,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="eventHubEndpointUri", required=true)
-    private final String eventHubEndpointUri;
+        private final String eventHubEndpointUri;
 
     public String getEventHubEndpointUri() {
         return this.eventHubEndpointUri;
@@ -101,7 +101,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="eventHubEntityPath", required=true)
-    private final String eventHubEntityPath;
+        private final String eventHubEntityPath;
 
     public String getEventHubEntityPath() {
         return this.eventHubEntityPath;
@@ -112,7 +112,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="eventHubNamespaceResourceId", required=true)
-    private final String eventHubNamespaceResourceId;
+        private final String eventHubNamespaceResourceId;
 
     public String getEventHubNamespaceResourceId() {
         return this.eventHubNamespaceResourceId;
@@ -123,7 +123,7 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -252,7 +252,6 @@ public final class AzureDataExplorerConnectionPropertiesResponse extends io.pulu
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public AzureDataExplorerConnectionPropertiesResponse build() {
             return new AzureDataExplorerConnectionPropertiesResponse(adxDatabaseName, adxEndpointUri, adxResourceId, adxTableName, connectionType, eventHubConsumerGroup, eventHubEndpointUri, eventHubEntityPath, eventHubNamespaceResourceId, provisioningState);
         }

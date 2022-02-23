@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.BackendAuthorizationHeaderCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -142,7 +142,6 @@ public final class BackendCredentialsContractResponse {
             this.query = query;
             return this;
         }
-
         public BackendCredentialsContractResponse build() {
             return new BackendCredentialsContractResponse(authorization, certificate, certificateIds, header, query);
         }

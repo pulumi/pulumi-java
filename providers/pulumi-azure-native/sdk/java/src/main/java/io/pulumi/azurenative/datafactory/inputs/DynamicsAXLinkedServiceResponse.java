@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="aadResourceId", required=true)
-    private final Object aadResourceId;
+        private final Object aadResourceId;
 
     public Object getAadResourceId() {
         return this.aadResourceId;
@@ -42,7 +42,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -53,7 +53,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -64,7 +64,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -75,7 +75,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -86,7 +86,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -97,7 +97,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="servicePrincipalId", required=true)
-    private final Object servicePrincipalId;
+        private final Object servicePrincipalId;
 
     public Object getServicePrincipalId() {
         return this.servicePrincipalId;
@@ -108,7 +108,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="servicePrincipalKey", required=true)
-    private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+        private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey;
@@ -119,7 +119,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="tenant", required=true)
-    private final Object tenant;
+        private final Object tenant;
 
     public Object getTenant() {
         return this.tenant;
@@ -131,7 +131,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -142,7 +142,7 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="url", required=true)
-    private final Object url;
+        private final Object url;
 
     public Object getUrl() {
         return this.url;
@@ -281,7 +281,6 @@ public final class DynamicsAXLinkedServiceResponse extends io.pulumi.resources.I
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DynamicsAXLinkedServiceResponse build() {
             return new DynamicsAXLinkedServiceResponse(aadResourceId, annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, tenant, type, url);
         }

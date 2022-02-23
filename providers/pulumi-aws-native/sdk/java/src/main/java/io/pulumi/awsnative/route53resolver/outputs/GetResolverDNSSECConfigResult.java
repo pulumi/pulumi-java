@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.route53resolver.outputs;
 
 import io.pulumi.awsnative.route53resolver.enums.ResolverDNSSECConfigValidationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class GetResolverDNSSECConfigResult {
             this.validationStatus = validationStatus;
             return this;
         }
-
         public GetResolverDNSSECConfigResult build() {
             return new GetResolverDNSSECConfigResult(id, ownerId, validationStatus);
         }

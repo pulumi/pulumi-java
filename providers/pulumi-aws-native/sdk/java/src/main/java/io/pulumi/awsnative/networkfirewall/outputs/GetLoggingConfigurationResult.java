@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.networkfirewall.outputs;
 
 import io.pulumi.awsnative.networkfirewall.outputs.LoggingConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class GetLoggingConfigurationResult {
             this.loggingConfiguration = loggingConfiguration;
             return this;
         }
-
         public GetLoggingConfigurationResult build() {
             return new GetLoggingConfigurationResult(loggingConfiguration);
         }

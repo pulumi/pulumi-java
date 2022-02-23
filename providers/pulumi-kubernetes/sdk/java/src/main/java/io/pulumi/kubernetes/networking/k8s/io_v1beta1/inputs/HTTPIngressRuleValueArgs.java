@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.networking.k8s.io_v1beta1.inputs.HTTPIngressPathArgs;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="paths", required=true)
-    private final Input<List<HTTPIngressPathArgs>> paths;
+        private final Input<List<HTTPIngressPathArgs>> paths;
 
     public Input<List<HTTPIngressPathArgs>> getPaths() {
         return this.paths;
@@ -66,7 +66,6 @@ public final class HTTPIngressRuleValueArgs extends io.pulumi.resources.Resource
             this.paths = Input.of(Objects.requireNonNull(paths));
             return this;
         }
-
         public HTTPIngressRuleValueArgs build() {
             return new HTTPIngressRuleValueArgs(paths);
         }

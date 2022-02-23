@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -138,7 +138,6 @@ public final class GetEdgeModuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEdgeModuleResult build() {
             return new GetEdgeModuleResult(edgeModuleId, id, name, systemData, type);
         }

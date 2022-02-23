@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Object;
@@ -21,7 +21,7 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="percentTraffic")
-    private final @Nullable Input<Double> percentTraffic;
+        private final @Nullable Input<Double> percentTraffic;
 
     public Input<Double> getPercentTraffic() {
         return this.percentTraffic == null ? Input.empty() : this.percentTraffic;
@@ -32,7 +32,7 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="stageVariableOverrides")
-    private final @Nullable Input<Object> stageVariableOverrides;
+        private final @Nullable Input<Object> stageVariableOverrides;
 
     public Input<Object> getStageVariableOverrides() {
         return this.stageVariableOverrides == null ? Input.empty() : this.stageVariableOverrides;
@@ -43,7 +43,7 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="useStageCache")
-    private final @Nullable Input<Boolean> useStageCache;
+        private final @Nullable Input<Boolean> useStageCache;
 
     public Input<Boolean> getUseStageCache() {
         return this.useStageCache == null ? Input.empty() : this.useStageCache;
@@ -117,7 +117,6 @@ public final class DeploymentCanarySettingsArgs extends io.pulumi.resources.Reso
             this.useStageCache = Input.ofNullable(useStageCache);
             return this;
         }
-
         public DeploymentCanarySettingsArgs build() {
             return new DeploymentCanarySettingsArgs(percentTraffic, stageVariableOverrides, useStageCache);
         }

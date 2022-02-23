@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.clouddeploy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class DefaultPoolResponse {
             this.serviceAccount = Objects.requireNonNull(serviceAccount);
             return this;
         }
-
         public DefaultPoolResponse build() {
             return new DefaultPoolResponse(artifactStorage, serviceAccount);
         }

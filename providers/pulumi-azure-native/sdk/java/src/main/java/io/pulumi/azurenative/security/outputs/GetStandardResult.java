@@ -5,7 +5,7 @@ package io.pulumi.azurenative.security.outputs;
 
 import io.pulumi.azurenative.security.outputs.StandardComponentPropertiesResponse;
 import io.pulumi.azurenative.security.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -311,7 +311,6 @@ public final class GetStandardResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStandardResult build() {
             return new GetStandardResult(category, components, description, displayName, etag, id, kind, location, name, standardType, systemData, tags, type);
         }

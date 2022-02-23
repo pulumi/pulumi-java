@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.NonCompliantFileArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,14 +21,14 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
     public static final ComplianceOccurrenceArgs Empty = new ComplianceOccurrenceArgs();
 
     @InputImport(name="nonComplianceReason")
-    private final @Nullable Input<String> nonComplianceReason;
+      private final @Nullable Input<String> nonComplianceReason;
 
     public Input<String> getNonComplianceReason() {
         return this.nonComplianceReason == null ? Input.empty() : this.nonComplianceReason;
     }
 
     @InputImport(name="nonCompliantFiles")
-    private final @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
+      private final @Nullable Input<List<NonCompliantFileArgs>> nonCompliantFiles;
 
     public Input<List<NonCompliantFileArgs>> getNonCompliantFiles() {
         return this.nonCompliantFiles == null ? Input.empty() : this.nonCompliantFiles;
@@ -87,7 +87,6 @@ public final class ComplianceOccurrenceArgs extends io.pulumi.resources.Resource
             this.nonCompliantFiles = Input.ofNullable(nonCompliantFiles);
             return this;
         }
-
         public ComplianceOccurrenceArgs build() {
             return new ComplianceOccurrenceArgs(nonComplianceReason, nonCompliantFiles);
         }

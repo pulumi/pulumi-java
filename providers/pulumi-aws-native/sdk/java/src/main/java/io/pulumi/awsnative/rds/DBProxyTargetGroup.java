@@ -9,8 +9,8 @@ import io.pulumi.awsnative.rds.enums.DBProxyTargetGroupTargetGroupName;
 import io.pulumi.awsnative.rds.outputs.DBProxyTargetGroupConnectionPoolConfigurationInfoFormat;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -82,13 +82,6 @@ public class DBProxyTargetGroup extends io.pulumi.resources.CustomResource {
         return this.targetGroupName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DBProxyTargetGroup(String name) {
-        super("aws-native:rds:DBProxyTargetGroup", name, DBProxyTargetGroupArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

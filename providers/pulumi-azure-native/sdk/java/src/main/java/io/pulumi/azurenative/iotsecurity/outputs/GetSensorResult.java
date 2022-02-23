@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.iotsecurity.outputs;
 
 import io.pulumi.azurenative.iotsecurity.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -330,7 +330,6 @@ public final class GetSensorResult {
             this.zone = zone;
             return this;
         }
-
         public GetSensorResult build() {
             return new GetSensorResult(connectivityTime, dynamicLearning, id, learningMode, name, sensorStatus, sensorType, sensorVersion, systemData, tiAutomaticUpdates, tiStatus, tiVersion, type, zone);
         }

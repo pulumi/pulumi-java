@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SecuritySettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="clientTlsPolicy", required=true)
-    private final String clientTlsPolicy;
+      private final String clientTlsPolicy;
 
     public String getClientTlsPolicy() {
         return this.clientTlsPolicy;
@@ -33,7 +33,7 @@ public final class SecuritySettingsResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subjectAltNames", required=true)
-    private final List<String> subjectAltNames;
+      private final List<String> subjectAltNames;
 
     public List<String> getSubjectAltNames() {
         return this.subjectAltNames;
@@ -82,7 +82,6 @@ public final class SecuritySettingsResponse extends io.pulumi.resources.InvokeAr
             this.subjectAltNames = Objects.requireNonNull(subjectAltNames);
             return this;
         }
-
         public SecuritySettingsResponse build() {
             return new SecuritySettingsResponse(clientTlsPolicy, subjectAltNames);
         }

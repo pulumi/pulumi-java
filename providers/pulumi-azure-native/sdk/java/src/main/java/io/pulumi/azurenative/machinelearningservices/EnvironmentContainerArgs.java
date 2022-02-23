@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentContainerArgs> properties;
+        private final Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentContainerArgs> properties;
 
     public Input<io.pulumi.azurenative.machinelearningservices.inputs.EnvironmentContainerArgs> getProperties() {
         return this.properties;
@@ -41,7 +41,7 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -141,7 +141,6 @@ public final class EnvironmentContainerArgs extends io.pulumi.resources.Resource
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public EnvironmentContainerArgs build() {
             return new EnvironmentContainerArgs(name, properties, resourceGroupName, workspaceName);
         }

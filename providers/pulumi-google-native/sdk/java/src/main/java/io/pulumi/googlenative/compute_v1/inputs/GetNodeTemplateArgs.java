@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetNodeTemplateArgs Empty = new GetNodeTemplateArgs();
 
     @InputImport(name="nodeTemplate", required=true)
-    private final String nodeTemplate;
+      private final String nodeTemplate;
 
     public String getNodeTemplate() {
         return this.nodeTemplate;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetNodeTemplateArgs extends io.pulumi.resources.InvokeArgs {
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetNodeTemplateArgs build() {
             return new GetNodeTemplateArgs(nodeTemplate, project, region);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.documentdb.inputs.ContainerPartitionKeyArgs;
 import io.pulumi.azurenative.documentdb.inputs.IndexingPolicyArgs;
 import io.pulumi.azurenative.documentdb.inputs.UniqueKeyPolicyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="conflictResolutionPolicy")
-    private final @Nullable Input<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
+        private final @Nullable Input<ConflictResolutionPolicyArgs> conflictResolutionPolicy;
 
     public Input<ConflictResolutionPolicyArgs> getConflictResolutionPolicy() {
         return this.conflictResolutionPolicy == null ? Input.empty() : this.conflictResolutionPolicy;
@@ -39,7 +39,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="defaultTtl")
-    private final @Nullable Input<Integer> defaultTtl;
+        private final @Nullable Input<Integer> defaultTtl;
 
     public Input<Integer> getDefaultTtl() {
         return this.defaultTtl == null ? Input.empty() : this.defaultTtl;
@@ -50,7 +50,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -61,7 +61,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="indexingPolicy")
-    private final @Nullable Input<IndexingPolicyArgs> indexingPolicy;
+        private final @Nullable Input<IndexingPolicyArgs> indexingPolicy;
 
     public Input<IndexingPolicyArgs> getIndexingPolicy() {
         return this.indexingPolicy == null ? Input.empty() : this.indexingPolicy;
@@ -72,7 +72,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="partitionKey")
-    private final @Nullable Input<ContainerPartitionKeyArgs> partitionKey;
+        private final @Nullable Input<ContainerPartitionKeyArgs> partitionKey;
 
     public Input<ContainerPartitionKeyArgs> getPartitionKey() {
         return this.partitionKey == null ? Input.empty() : this.partitionKey;
@@ -83,7 +83,7 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="uniqueKeyPolicy")
-    private final @Nullable Input<UniqueKeyPolicyArgs> uniqueKeyPolicy;
+        private final @Nullable Input<UniqueKeyPolicyArgs> uniqueKeyPolicy;
 
     public Input<UniqueKeyPolicyArgs> getUniqueKeyPolicy() {
         return this.uniqueKeyPolicy == null ? Input.empty() : this.uniqueKeyPolicy;
@@ -202,7 +202,6 @@ public final class GremlinGraphResourceArgs extends io.pulumi.resources.Resource
             this.uniqueKeyPolicy = Input.ofNullable(uniqueKeyPolicy);
             return this;
         }
-
         public GremlinGraphResourceArgs build() {
             return new GremlinGraphResourceArgs(conflictResolutionPolicy, defaultTtl, id, indexingPolicy, partitionKey, uniqueKeyPolicy);
         }

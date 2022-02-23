@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -86,7 +86,6 @@ public final class DomainMappingStatusCondition {
             this.type = type;
             return this;
         }
-
         public DomainMappingStatusCondition build() {
             return new DomainMappingStatusCondition(message, reason, status, type);
         }

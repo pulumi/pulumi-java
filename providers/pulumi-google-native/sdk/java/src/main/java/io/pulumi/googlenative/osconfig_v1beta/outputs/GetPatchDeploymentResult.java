@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.OneTimeScheduleResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PatchConfigResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.PatchInstanceFilterResponse;
@@ -289,7 +289,6 @@ public final class GetPatchDeploymentResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetPatchDeploymentResult build() {
             return new GetPatchDeploymentResult(createTime, description, duration, instanceFilter, lastExecuteTime, name, oneTimeSchedule, patchConfig, recurringSchedule, rollout, state, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.powerbidedicated.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAutoScaleVCoreArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetAutoScaleVCoreArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="vcoreName", required=true)
-    private final String vcoreName;
+        private final String vcoreName;
 
     public String getVcoreName() {
         return this.vcoreName;
@@ -77,7 +77,6 @@ public final class GetAutoScaleVCoreArgs extends io.pulumi.resources.InvokeArgs 
             this.vcoreName = Objects.requireNonNull(vcoreName);
             return this;
         }
-
         public GetAutoScaleVCoreArgs build() {
             return new GetAutoScaleVCoreArgs(resourceGroupName, vcoreName);
         }

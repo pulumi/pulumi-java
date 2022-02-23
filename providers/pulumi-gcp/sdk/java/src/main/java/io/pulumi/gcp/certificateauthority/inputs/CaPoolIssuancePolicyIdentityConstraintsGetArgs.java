@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
      * 
      */
     @InputImport(name="allowSubjectAltNamesPassthrough", required=true)
-    private final Input<Boolean> allowSubjectAltNamesPassthrough;
+        private final Input<Boolean> allowSubjectAltNamesPassthrough;
 
     public Input<Boolean> getAllowSubjectAltNamesPassthrough() {
         return this.allowSubjectAltNamesPassthrough;
@@ -33,7 +33,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
      * 
      */
     @InputImport(name="allowSubjectPassthrough", required=true)
-    private final Input<Boolean> allowSubjectPassthrough;
+        private final Input<Boolean> allowSubjectPassthrough;
 
     public Input<Boolean> getAllowSubjectPassthrough() {
         return this.allowSubjectPassthrough;
@@ -47,7 +47,7 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
      * 
      */
     @InputImport(name="celExpression")
-    private final @Nullable Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
+        private final @Nullable Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> celExpression;
 
     public Input<CaPoolIssuancePolicyIdentityConstraintsCelExpressionGetArgs> getCelExpression() {
         return this.celExpression == null ? Input.empty() : this.celExpression;
@@ -121,7 +121,6 @@ public final class CaPoolIssuancePolicyIdentityConstraintsGetArgs extends io.pul
             this.celExpression = Input.ofNullable(celExpression);
             return this;
         }
-
         public CaPoolIssuancePolicyIdentityConstraintsGetArgs build() {
             return new CaPoolIssuancePolicyIdentityConstraintsGetArgs(allowSubjectAltNamesPassthrough, allowSubjectPassthrough, celExpression);
         }

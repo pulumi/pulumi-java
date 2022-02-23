@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datapipelines_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.datapipelines_v1.inputs.GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="containerSpecGcsPath")
-    private final @Nullable Input<String> containerSpecGcsPath;
+      private final @Nullable Input<String> containerSpecGcsPath;
 
     public Input<String> getContainerSpecGcsPath() {
         return this.containerSpecGcsPath == null ? Input.empty() : this.containerSpecGcsPath;
@@ -37,7 +37,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment;
+      private final @Nullable Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> environment;
 
     public Input<GoogleCloudDatapipelinesV1FlexTemplateRuntimeEnvironmentArgs> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -48,7 +48,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="jobName", required=true)
-    private final Input<String> jobName;
+      private final Input<String> jobName;
 
     public Input<String> getJobName() {
         return this.jobName;
@@ -59,7 +59,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="launchOptions")
-    private final @Nullable Input<Map<String,String>> launchOptions;
+      private final @Nullable Input<Map<String,String>> launchOptions;
 
     public Input<Map<String,String>> getLaunchOptions() {
         return this.launchOptions == null ? Input.empty() : this.launchOptions;
@@ -70,7 +70,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -81,7 +81,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="transformNameMappings")
-    private final @Nullable Input<Map<String,String>> transformNameMappings;
+      private final @Nullable Input<Map<String,String>> transformNameMappings;
 
     public Input<Map<String,String>> getTransformNameMappings() {
         return this.transformNameMappings == null ? Input.empty() : this.transformNameMappings;
@@ -92,7 +92,7 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
      * 
      */
     @InputImport(name="update")
-    private final @Nullable Input<Boolean> update;
+      private final @Nullable Input<Boolean> update;
 
     public Input<Boolean> getUpdate() {
         return this.update == null ? Input.empty() : this.update;
@@ -226,7 +226,6 @@ public final class GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs ext
             this.update = Input.ofNullable(update);
             return this;
         }
-
         public GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs build() {
             return new GoogleCloudDatapipelinesV1LaunchFlexTemplateParameterArgs(containerSpecGcsPath, environment, jobName, launchOptions, parameters, transformNameMappings, update);
         }

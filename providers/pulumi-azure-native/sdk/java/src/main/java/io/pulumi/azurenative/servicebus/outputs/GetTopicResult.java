@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicebus.outputs;
 
 import io.pulumi.azurenative.servicebus.outputs.MessageCountDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -437,7 +437,6 @@ public final class GetTopicResult {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public GetTopicResult build() {
             return new GetTopicResult(accessedAt, autoDeleteOnIdle, countDetails, createdAt, defaultMessageTimeToLive, duplicateDetectionHistoryTimeWindow, enableBatchedOperations, enableExpress, enablePartitioning, id, maxSizeInMegabytes, name, requiresDuplicateDetection, sizeInBytes, status, subscriptionCount, supportOrdering, type, updatedAt);
         }

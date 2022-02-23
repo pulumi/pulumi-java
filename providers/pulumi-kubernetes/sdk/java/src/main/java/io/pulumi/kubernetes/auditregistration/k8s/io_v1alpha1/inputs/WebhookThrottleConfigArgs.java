@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="burst")
-    private final @Nullable Input<Integer> burst;
+        private final @Nullable Input<Integer> burst;
 
     public Input<Integer> getBurst() {
         return this.burst == null ? Input.empty() : this.burst;
@@ -34,7 +34,7 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="qps")
-    private final @Nullable Input<Integer> qps;
+        private final @Nullable Input<Integer> qps;
 
     public Input<Integer> getQps() {
         return this.qps == null ? Input.empty() : this.qps;
@@ -93,7 +93,6 @@ public final class WebhookThrottleConfigArgs extends io.pulumi.resources.Resourc
             this.qps = Input.ofNullable(qps);
             return this;
         }
-
         public WebhookThrottleConfigArgs build() {
             return new WebhookThrottleConfigArgs(burst, qps);
         }

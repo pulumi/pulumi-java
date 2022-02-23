@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managednetwork.inputs;
 
 import io.pulumi.azurenative.managednetwork.inputs.ResourceIdResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managementGroups")
-    private final @Nullable List<ResourceIdResponse> managementGroups;
+        private final @Nullable List<ResourceIdResponse> managementGroups;
 
     public List<ResourceIdResponse> getManagementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
@@ -35,7 +35,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnets")
-    private final @Nullable List<ResourceIdResponse> subnets;
+        private final @Nullable List<ResourceIdResponse> subnets;
 
     public List<ResourceIdResponse> getSubnets() {
         return this.subnets == null ? List.of() : this.subnets;
@@ -46,7 +46,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscriptions")
-    private final @Nullable List<ResourceIdResponse> subscriptions;
+        private final @Nullable List<ResourceIdResponse> subscriptions;
 
     public List<ResourceIdResponse> getSubscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
@@ -57,7 +57,7 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualNetworks")
-    private final @Nullable List<ResourceIdResponse> virtualNetworks;
+        private final @Nullable List<ResourceIdResponse> virtualNetworks;
 
     public List<ResourceIdResponse> getVirtualNetworks() {
         return this.virtualNetworks == null ? List.of() : this.virtualNetworks;
@@ -126,7 +126,6 @@ public final class ScopeResponse extends io.pulumi.resources.InvokeArgs {
             this.virtualNetworks = virtualNetworks;
             return this;
         }
-
         public ScopeResponse build() {
             return new ScopeResponse(managementGroups, subnets, subscriptions, virtualNetworks);
         }

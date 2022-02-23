@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class SqlUpsertSettingsResponse {
             this.useTempDB = useTempDB;
             return this;
         }
-
         public SqlUpsertSettingsResponse build() {
             return new SqlUpsertSettingsResponse(interimSchemaName, keys, useTempDB);
         }

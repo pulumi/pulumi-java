@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class AzureOperationalStoreParametersResponse {
             this.resourceGroupId = resourceGroupId;
             return this;
         }
-
         public AzureOperationalStoreParametersResponse build() {
             return new AzureOperationalStoreParametersResponse(dataStoreType, objectType, resourceGroupId);
         }

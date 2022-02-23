@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.JobTemplateExponentialRolloutRate;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class JobExecutionsRolloutConfigProperties {
             this.maximumPerMinute = maximumPerMinute;
             return this;
         }
-
         public JobExecutionsRolloutConfigProperties build() {
             return new JobExecutionsRolloutConfigProperties(exponentialRolloutRate, maximumPerMinute);
         }

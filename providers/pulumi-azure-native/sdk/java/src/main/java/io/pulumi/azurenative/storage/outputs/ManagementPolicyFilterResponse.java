@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.TagFilterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ManagementPolicyFilterResponse {
             this.prefixMatch = prefixMatch;
             return this;
         }
-
         public ManagementPolicyFilterResponse build() {
             return new ManagementPolicyFilterResponse(blobIndexMatch, blobTypes, prefixMatch);
         }

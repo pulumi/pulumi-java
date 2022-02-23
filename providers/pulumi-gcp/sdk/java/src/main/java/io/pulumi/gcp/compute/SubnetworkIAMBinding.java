@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.SubnetworkIAMBindingArgs;
 import io.pulumi.gcp.compute.inputs.SubnetworkIAMBindingState;
@@ -168,13 +168,6 @@ public class SubnetworkIAMBinding extends io.pulumi.resources.CustomResource {
         return this.subnetwork;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SubnetworkIAMBinding(String name) {
-        super("gcp:compute/subnetworkIAMBinding:SubnetworkIAMBinding", name, SubnetworkIAMBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.AuthRequirementResponse;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OAuthRequirementsResponse;
 import java.lang.Boolean;
@@ -120,7 +120,6 @@ public final class AuthenticationRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public AuthenticationRuleResponse build() {
             return new AuthenticationRuleResponse(allowWithoutCredential, oauth, requirements, selector);
         }

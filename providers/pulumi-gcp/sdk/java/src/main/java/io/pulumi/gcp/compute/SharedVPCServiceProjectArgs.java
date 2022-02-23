@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="hostProject", required=true)
-    private final Input<String> hostProject;
+        private final Input<String> hostProject;
 
     public Input<String> getHostProject() {
         return this.hostProject;
@@ -29,7 +29,7 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serviceProject", required=true)
-    private final Input<String> serviceProject;
+        private final Input<String> serviceProject;
 
     public Input<String> getServiceProject() {
         return this.serviceProject;
@@ -88,7 +88,6 @@ public final class SharedVPCServiceProjectArgs extends io.pulumi.resources.Resou
             this.serviceProject = Input.of(Objects.requireNonNull(serviceProject));
             return this;
         }
-
         public SharedVPCServiceProjectArgs build() {
             return new SharedVPCServiceProjectArgs(hostProject, serviceProject);
         }

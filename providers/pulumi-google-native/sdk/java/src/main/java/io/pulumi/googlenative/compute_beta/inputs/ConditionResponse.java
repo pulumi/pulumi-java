@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iam", required=true)
-    private final String iam;
+      private final String iam;
 
     public String getIam() {
         return this.iam;
@@ -33,7 +33,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="op", required=true)
-    private final String op;
+      private final String op;
 
     public String getOp() {
         return this.op;
@@ -44,7 +44,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="svc", required=true)
-    private final String svc;
+      private final String svc;
 
     public String getSvc() {
         return this.svc;
@@ -55,7 +55,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sys", required=true)
-    private final String sys;
+      private final String sys;
 
     public String getSys() {
         return this.sys;
@@ -66,7 +66,7 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="values", required=true)
-    private final List<String> values;
+      private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -145,7 +145,6 @@ public final class ConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public ConditionResponse build() {
             return new ConditionResponse(iam, op, svc, sys, values);
         }

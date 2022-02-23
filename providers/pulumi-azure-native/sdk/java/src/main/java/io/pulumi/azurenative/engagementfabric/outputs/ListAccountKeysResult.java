@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.engagementfabric.outputs;
 
 import io.pulumi.azurenative.engagementfabric.outputs.KeyDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class ListAccountKeysResult {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ListAccountKeysResult build() {
             return new ListAccountKeysResult(value);
         }

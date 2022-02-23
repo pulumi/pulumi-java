@@ -16,8 +16,8 @@ import io.pulumi.azurenative.network.outputs.VpnServerConfigVpnClientRootCertifi
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -293,13 +293,6 @@ public class VpnServerConfiguration extends io.pulumi.resources.CustomResource {
         return this.vpnProtocols;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public VpnServerConfiguration(String name) {
-        super("azure-native:network:VpnServerConfiguration", name, VpnServerConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

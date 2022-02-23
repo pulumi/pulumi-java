@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -163,7 +163,6 @@ public final class ComputeConfigurationResponse {
             this.target = target;
             return this;
         }
-
         public ComputeConfigurationResponse build() {
             return new ComputeConfigurationResponse(instanceCount, instanceType, isLocal, location, properties, target);
         }

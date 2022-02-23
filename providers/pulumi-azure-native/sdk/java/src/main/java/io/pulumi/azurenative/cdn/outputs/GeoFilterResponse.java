@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GeoFilterResponse {
             this.relativePath = Objects.requireNonNull(relativePath);
             return this;
         }
-
         public GeoFilterResponse build() {
             return new GeoFilterResponse(action, countryCodes, relativePath);
         }

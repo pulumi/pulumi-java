@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -28,7 +28,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="premierAddOnName", required=true)
-    private final String premierAddOnName;
+        private final String premierAddOnName;
 
     public String getPremierAddOnName() {
         return this.premierAddOnName;
@@ -39,7 +39,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="slot", required=true)
-    private final String slot;
+        private final String slot;
 
     public String getSlot() {
         return this.slot;
@@ -119,7 +119,6 @@ public final class GetWebAppPremierAddOnSlotArgs extends io.pulumi.resources.Inv
             this.slot = Objects.requireNonNull(slot);
             return this;
         }
-
         public GetWebAppPremierAddOnSlotArgs build() {
             return new GetWebAppPremierAddOnSlotArgs(name, premierAddOnName, resourceGroupName, slot);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iot.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.iot.outputs.DeviceCredentialPublicKey;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class DeviceCredential {
             this.publicKey = Objects.requireNonNull(publicKey);
             return this;
         }
-
         public DeviceCredential build() {
             return new DeviceCredential(expirationTime, publicKey);
         }

@@ -7,7 +7,7 @@ import io.pulumi.awsnative.evidently.outputs.ExperimentMetricGoalObject;
 import io.pulumi.awsnative.evidently.outputs.ExperimentOnlineAbConfigObject;
 import io.pulumi.awsnative.evidently.outputs.ExperimentTag;
 import io.pulumi.awsnative.evidently.outputs.ExperimentTreatmentObject;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -152,7 +152,6 @@ public final class GetExperimentResult {
             this.treatments = treatments;
             return this;
         }
-
         public GetExperimentResult build() {
             return new GetExperimentResult(arn, description, metricGoals, onlineAbConfig, randomizationSalt, samplingRate, tags, treatments);
         }

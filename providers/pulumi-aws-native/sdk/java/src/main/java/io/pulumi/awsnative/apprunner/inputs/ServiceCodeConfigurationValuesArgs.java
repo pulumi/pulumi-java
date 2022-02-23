@@ -6,7 +6,7 @@ package io.pulumi.awsnative.apprunner.inputs;
 import io.pulumi.awsnative.apprunner.enums.ServiceCodeConfigurationValuesRuntime;
 import io.pulumi.awsnative.apprunner.inputs.ServiceKeyValuePairArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="buildCommand")
-    private final @Nullable Input<String> buildCommand;
+        private final @Nullable Input<String> buildCommand;
 
     public Input<String> getBuildCommand() {
         return this.buildCommand == null ? Input.empty() : this.buildCommand;
@@ -37,7 +37,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+        private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -48,14 +48,14 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="runtime", required=true)
-    private final Input<ServiceCodeConfigurationValuesRuntime> runtime;
+        private final Input<ServiceCodeConfigurationValuesRuntime> runtime;
 
     public Input<ServiceCodeConfigurationValuesRuntime> getRuntime() {
         return this.runtime;
     }
 
     @InputImport(name="runtimeEnvironmentVariables")
-    private final @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
+        private final @Nullable Input<List<ServiceKeyValuePairArgs>> runtimeEnvironmentVariables;
 
     public Input<List<ServiceKeyValuePairArgs>> getRuntimeEnvironmentVariables() {
         return this.runtimeEnvironmentVariables == null ? Input.empty() : this.runtimeEnvironmentVariables;
@@ -66,7 +66,7 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="startCommand")
-    private final @Nullable Input<String> startCommand;
+        private final @Nullable Input<String> startCommand;
 
     public Input<String> getStartCommand() {
         return this.startCommand == null ? Input.empty() : this.startCommand;
@@ -170,7 +170,6 @@ public final class ServiceCodeConfigurationValuesArgs extends io.pulumi.resource
             this.startCommand = Input.ofNullable(startCommand);
             return this;
         }
-
         public ServiceCodeConfigurationValuesArgs build() {
             return new ServiceCodeConfigurationValuesArgs(buildCommand, port, runtime, runtimeEnvironmentVariables, startCommand);
         }

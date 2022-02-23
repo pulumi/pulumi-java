@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.FirewallPolicyAssociationArgs;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyAssociationState;
@@ -92,13 +92,6 @@ public class FirewallPolicyAssociation extends io.pulumi.resources.CustomResourc
         return this.shortName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FirewallPolicyAssociation(String name) {
-        super("gcp:compute/firewallPolicyAssociation:FirewallPolicyAssociation", name, FirewallPolicyAssociationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

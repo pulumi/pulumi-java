@@ -8,8 +8,8 @@ import io.pulumi.azurenative.web.WebAppAuthSettingsArgs;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -709,13 +709,6 @@ public class WebAppAuthSettings extends io.pulumi.resources.CustomResource {
         return this.validateIssuer;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WebAppAuthSettings(String name) {
-        super("azure-native:web:WebAppAuthSettings", name, WebAppAuthSettingsArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.bigquery.outputs.TableExternalDataConfigurationCsvOptions;
 import io.pulumi.gcp.bigquery.outputs.TableExternalDataConfigurationGoogleSheetsOptions;
 import io.pulumi.gcp.bigquery.outputs.TableExternalDataConfigurationHivePartitioningOptions;
@@ -308,7 +308,6 @@ public final class TableExternalDataConfiguration {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public TableExternalDataConfiguration build() {
             return new TableExternalDataConfiguration(autodetect, compression, csvOptions, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, schema, sourceFormat, sourceUris);
         }

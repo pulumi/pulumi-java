@@ -8,7 +8,7 @@ import io.pulumi.azurenative.databoxedge.outputs.IoTDeviceInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.IoTEdgeAgentInfoResponse;
 import io.pulumi.azurenative.databoxedge.outputs.MountPointMapResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -315,7 +315,6 @@ public final class GetIoTRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIoTRoleResult build() {
             return new GetIoTRoleResult(computeResource, hostPlatform, hostPlatformType, id, ioTDeviceDetails, ioTEdgeAgentInfo, ioTEdgeDeviceDetails, kind, name, roleStatus, shareMappings, systemData, type);
         }

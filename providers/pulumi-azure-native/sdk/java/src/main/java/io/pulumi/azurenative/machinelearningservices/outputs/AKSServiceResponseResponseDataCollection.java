@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class AKSServiceResponseResponseDataCollection {
             this.storageEnabled = storageEnabled;
             return this;
         }
-
         public AKSServiceResponseResponseDataCollection build() {
             return new AKSServiceResponseResponseDataCollection(eventHubEnabled, storageEnabled);
         }

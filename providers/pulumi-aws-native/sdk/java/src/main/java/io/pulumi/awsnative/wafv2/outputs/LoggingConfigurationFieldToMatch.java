@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchJsonBodyProperties;
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatchSingleHeaderProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class LoggingConfigurationFieldToMatch {
             this.uriPath = uriPath;
             return this;
         }
-
         public LoggingConfigurationFieldToMatch build() {
             return new LoggingConfigurationFieldToMatch(jsonBody, method, queryString, singleHeader, uriPath);
         }

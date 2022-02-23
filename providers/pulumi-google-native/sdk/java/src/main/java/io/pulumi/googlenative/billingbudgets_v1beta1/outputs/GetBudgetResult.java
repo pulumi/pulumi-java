@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1AllUpdatesRuleResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1BudgetAmountResponse;
 import io.pulumi.googlenative.billingbudgets_v1beta1.outputs.GoogleCloudBillingBudgetsV1beta1FilterResponse;
@@ -184,7 +184,6 @@ public final class GetBudgetResult {
             this.thresholdRules = Objects.requireNonNull(thresholdRules);
             return this;
         }
-
         public GetBudgetResult build() {
             return new GetBudgetResult(allUpdatesRule, amount, budgetFilter, displayName, etag, name, thresholdRules);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.autoscaling_v2beta1.inputs.CrossVersionObjectReferenceArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.LabelSelectorArgs;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="averageValue")
-    private final @Nullable Input<String> averageValue;
+        private final @Nullable Input<String> averageValue;
 
     public Input<String> getAverageValue() {
         return this.averageValue == null ? Input.empty() : this.averageValue;
@@ -36,7 +36,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="currentValue", required=true)
-    private final Input<String> currentValue;
+        private final Input<String> currentValue;
 
     public Input<String> getCurrentValue() {
         return this.currentValue;
@@ -47,7 +47,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="metricName", required=true)
-    private final Input<String> metricName;
+        private final Input<String> metricName;
 
     public Input<String> getMetricName() {
         return this.metricName;
@@ -58,7 +58,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<LabelSelectorArgs> selector;
+        private final @Nullable Input<LabelSelectorArgs> selector;
 
     public Input<LabelSelectorArgs> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -69,7 +69,7 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<CrossVersionObjectReferenceArgs> target;
+        private final Input<CrossVersionObjectReferenceArgs> target;
 
     public Input<CrossVersionObjectReferenceArgs> getTarget() {
         return this.target;
@@ -173,7 +173,6 @@ public final class ObjectMetricStatusArgs extends io.pulumi.resources.ResourceAr
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public ObjectMetricStatusArgs build() {
             return new ObjectMetricStatusArgs(averageValue, currentValue, metricName, selector, target);
         }

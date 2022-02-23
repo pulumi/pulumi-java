@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.inputs.DynamicMetricCriteriaArgs;
 import io.pulumi.azurenative.insights.inputs.MetricCriteriaArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
      * 
      */
     @InputImport(name="allOf")
-    private final @Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
+        private final @Nullable Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> allOf;
 
     public Input<List<Either<DynamicMetricCriteriaArgs,MetricCriteriaArgs>>> getAllOf() {
         return this.allOf == null ? Input.empty() : this.allOf;
@@ -39,7 +39,7 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -98,7 +98,6 @@ public final class MetricAlertMultipleResourceMultipleMetricCriteriaArgs extends
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public MetricAlertMultipleResourceMultipleMetricCriteriaArgs build() {
             return new MetricAlertMultipleResourceMultipleMetricCriteriaArgs(allOf, odataType);
         }

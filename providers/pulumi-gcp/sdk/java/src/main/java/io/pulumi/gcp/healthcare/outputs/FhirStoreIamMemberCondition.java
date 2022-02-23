@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.healthcare.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class FhirStoreIamMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public FhirStoreIamMemberCondition build() {
             return new FhirStoreIamMemberCondition(description, expression, title);
         }

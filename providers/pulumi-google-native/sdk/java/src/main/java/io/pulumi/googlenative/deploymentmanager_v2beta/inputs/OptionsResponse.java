@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.AsyncOptionsResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.InputMappingResponse;
 import io.pulumi.googlenative.deploymentmanager_v2beta.inputs.ValidationOptionsResponse;
@@ -25,7 +25,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="asyncOptions", required=true)
-    private final List<AsyncOptionsResponse> asyncOptions;
+      private final List<AsyncOptionsResponse> asyncOptions;
 
     public List<AsyncOptionsResponse> getAsyncOptions() {
         return this.asyncOptions;
@@ -36,7 +36,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputMappings", required=true)
-    private final List<InputMappingResponse> inputMappings;
+      private final List<InputMappingResponse> inputMappings;
 
     public List<InputMappingResponse> getInputMappings() {
         return this.inputMappings;
@@ -47,7 +47,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="validationOptions", required=true)
-    private final ValidationOptionsResponse validationOptions;
+      private final ValidationOptionsResponse validationOptions;
 
     public ValidationOptionsResponse getValidationOptions() {
         return this.validationOptions;
@@ -58,7 +58,7 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="virtualProperties", required=true)
-    private final String virtualProperties;
+      private final String virtualProperties;
 
     public String getVirtualProperties() {
         return this.virtualProperties;
@@ -127,7 +127,6 @@ public final class OptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.virtualProperties = Objects.requireNonNull(virtualProperties);
             return this;
         }
-
         public OptionsResponse build() {
             return new OptionsResponse(asyncOptions, inputMappings, validationOptions, virtualProperties);
         }

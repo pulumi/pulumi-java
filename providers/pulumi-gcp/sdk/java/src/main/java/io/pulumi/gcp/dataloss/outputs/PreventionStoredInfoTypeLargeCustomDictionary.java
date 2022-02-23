@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryBigQueryField;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryCloudStorageFileSet;
 import io.pulumi.gcp.dataloss.outputs.PreventionStoredInfoTypeLargeCustomDictionaryOutputPath;
@@ -107,7 +107,6 @@ public final class PreventionStoredInfoTypeLargeCustomDictionary {
             this.outputPath = Objects.requireNonNull(outputPath);
             return this;
         }
-
         public PreventionStoredInfoTypeLargeCustomDictionary build() {
             return new PreventionStoredInfoTypeLargeCustomDictionary(bigQueryField, cloudStorageFileSet, outputPath);
         }

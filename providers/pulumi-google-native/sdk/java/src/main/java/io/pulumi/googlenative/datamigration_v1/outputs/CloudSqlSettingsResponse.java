@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datamigration_v1.outputs.SqlIpConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -371,7 +371,6 @@ public final class CloudSqlSettingsResponse {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public CloudSqlSettingsResponse build() {
             return new CloudSqlSettingsResponse(activationPolicy, autoStorageIncrease, cmekKeyName, collation, dataDiskSizeGb, dataDiskType, databaseFlags, databaseVersion, ipConfig, rootPassword, rootPasswordSet, sourceId, storageAutoResizeLimit, tier, userLabels, zone);
         }

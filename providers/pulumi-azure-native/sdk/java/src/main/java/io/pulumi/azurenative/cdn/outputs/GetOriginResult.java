@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -415,7 +415,6 @@ public final class GetOriginResult {
             this.weight = weight;
             return this;
         }
-
         public GetOriginResult build() {
             return new GetOriginResult(enabled, hostName, httpPort, httpsPort, id, name, originHostHeader, priority, privateEndpointStatus, privateLinkAlias, privateLinkApprovalMessage, privateLinkLocation, privateLinkResourceId, provisioningState, resourceState, systemData, type, weight);
         }

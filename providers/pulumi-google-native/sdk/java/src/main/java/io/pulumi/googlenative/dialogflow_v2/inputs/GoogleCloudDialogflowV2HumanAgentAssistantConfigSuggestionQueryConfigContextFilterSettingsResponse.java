@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @InputImport(name="dropHandoffMessages", required=true)
-    private final Boolean dropHandoffMessages;
+      private final Boolean dropHandoffMessages;
 
     public Boolean getDropHandoffMessages() {
         return this.dropHandoffMessages;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @InputImport(name="dropIvrMessages", required=true)
-    private final Boolean dropIvrMessages;
+      private final Boolean dropIvrMessages;
 
     public Boolean getDropIvrMessages() {
         return this.dropIvrMessages;
@@ -43,7 +43,7 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
      * 
      */
     @InputImport(name="dropVirtualAgentMessages", required=true)
-    private final Boolean dropVirtualAgentMessages;
+      private final Boolean dropVirtualAgentMessages;
 
     public Boolean getDropVirtualAgentMessages() {
         return this.dropVirtualAgentMessages;
@@ -102,7 +102,6 @@ public final class GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQue
             this.dropVirtualAgentMessages = Objects.requireNonNull(dropVirtualAgentMessages);
             return this;
         }
-
         public GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse build() {
             return new GoogleCloudDialogflowV2HumanAgentAssistantConfigSuggestionQueryConfigContextFilterSettingsResponse(dropHandoffMessages, dropIvrMessages, dropVirtualAgentMessages);
         }

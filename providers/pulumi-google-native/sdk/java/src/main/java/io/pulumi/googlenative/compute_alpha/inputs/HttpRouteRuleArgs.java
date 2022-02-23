@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpFilterConfigArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpRedirectActionArgs;
@@ -30,7 +30,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -41,7 +41,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="headerAction")
-    private final @Nullable Input<HttpHeaderActionArgs> headerAction;
+      private final @Nullable Input<HttpHeaderActionArgs> headerAction;
 
     public Input<HttpHeaderActionArgs> getHeaderAction() {
         return this.headerAction == null ? Input.empty() : this.headerAction;
@@ -52,7 +52,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpFilterConfigs")
-    private final @Nullable Input<List<HttpFilterConfigArgs>> httpFilterConfigs;
+      private final @Nullable Input<List<HttpFilterConfigArgs>> httpFilterConfigs;
 
     public Input<List<HttpFilterConfigArgs>> getHttpFilterConfigs() {
         return this.httpFilterConfigs == null ? Input.empty() : this.httpFilterConfigs;
@@ -63,7 +63,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="httpFilterMetadata")
-    private final @Nullable Input<List<HttpFilterConfigArgs>> httpFilterMetadata;
+      private final @Nullable Input<List<HttpFilterConfigArgs>> httpFilterMetadata;
 
     public Input<List<HttpFilterConfigArgs>> getHttpFilterMetadata() {
         return this.httpFilterMetadata == null ? Input.empty() : this.httpFilterMetadata;
@@ -74,7 +74,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="matchRules")
-    private final @Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules;
+      private final @Nullable Input<List<HttpRouteRuleMatchArgs>> matchRules;
 
     public Input<List<HttpRouteRuleMatchArgs>> getMatchRules() {
         return this.matchRules == null ? Input.empty() : this.matchRules;
@@ -85,7 +85,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Input<Integer> priority;
+      private final @Nullable Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority == null ? Input.empty() : this.priority;
@@ -96,7 +96,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="routeAction")
-    private final @Nullable Input<HttpRouteActionArgs> routeAction;
+      private final @Nullable Input<HttpRouteActionArgs> routeAction;
 
     public Input<HttpRouteActionArgs> getRouteAction() {
         return this.routeAction == null ? Input.empty() : this.routeAction;
@@ -107,7 +107,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<String> service;
+      private final @Nullable Input<String> service;
 
     public Input<String> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -118,7 +118,7 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="urlRedirect")
-    private final @Nullable Input<HttpRedirectActionArgs> urlRedirect;
+      private final @Nullable Input<HttpRedirectActionArgs> urlRedirect;
 
     public Input<HttpRedirectActionArgs> getUrlRedirect() {
         return this.urlRedirect == null ? Input.empty() : this.urlRedirect;
@@ -282,7 +282,6 @@ public final class HttpRouteRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.urlRedirect = Input.ofNullable(urlRedirect);
             return this;
         }
-
         public HttpRouteRuleArgs build() {
             return new HttpRouteRuleArgs(description, headerAction, httpFilterConfigs, httpFilterMetadata, matchRules, priority, routeAction, service, urlRedirect);
         }

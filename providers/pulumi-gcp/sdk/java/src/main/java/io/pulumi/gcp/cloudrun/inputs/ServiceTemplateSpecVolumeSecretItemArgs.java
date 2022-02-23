@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -35,7 +35,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Integer> mode;
+        private final @Nullable Input<Integer> mode;
 
     public Input<Integer> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -49,7 +49,7 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="path", required=true)
-    private final Input<String> path;
+        private final Input<String> path;
 
     public Input<String> getPath() {
         return this.path;
@@ -123,7 +123,6 @@ public final class ServiceTemplateSpecVolumeSecretItemArgs extends io.pulumi.res
             this.path = Input.of(Objects.requireNonNull(path));
             return this;
         }
-
         public ServiceTemplateSpecVolumeSecretItemArgs build() {
             return new ServiceTemplateSpecVolumeSecretItemArgs(key, mode, path);
         }

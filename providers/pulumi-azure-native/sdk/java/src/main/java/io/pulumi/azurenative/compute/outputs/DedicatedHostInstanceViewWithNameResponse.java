@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.DedicatedHostAvailableCapacityResponse;
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class DedicatedHostInstanceViewWithNameResponse {
             this.statuses = statuses;
             return this;
         }
-
         public DedicatedHostInstanceViewWithNameResponse build() {
             return new DedicatedHostInstanceViewWithNameResponse(assetId, availableCapacity, name, statuses);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<String> secret;
+        private final Input<String> secret;
 
     public Input<String> getSecret() {
         return this.secret;
@@ -33,7 +33,7 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -92,7 +92,6 @@ public final class TriggerWebhookConfigArgs extends io.pulumi.resources.Resource
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public TriggerWebhookConfigArgs build() {
             return new TriggerWebhookConfigArgs(secret, state);
         }

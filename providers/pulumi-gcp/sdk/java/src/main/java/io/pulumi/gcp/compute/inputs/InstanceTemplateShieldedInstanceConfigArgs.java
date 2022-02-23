@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InstanceTemplateShieldedInstanceConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableIntegrityMonitoring")
-    private final @Nullable Input<Boolean> enableIntegrityMonitoring;
+        private final @Nullable Input<Boolean> enableIntegrityMonitoring;
 
     public Input<Boolean> getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring == null ? Input.empty() : this.enableIntegrityMonitoring;
@@ -30,7 +30,7 @@ public final class InstanceTemplateShieldedInstanceConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableSecureBoot")
-    private final @Nullable Input<Boolean> enableSecureBoot;
+        private final @Nullable Input<Boolean> enableSecureBoot;
 
     public Input<Boolean> getEnableSecureBoot() {
         return this.enableSecureBoot == null ? Input.empty() : this.enableSecureBoot;
@@ -41,7 +41,7 @@ public final class InstanceTemplateShieldedInstanceConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="enableVtpm")
-    private final @Nullable Input<Boolean> enableVtpm;
+        private final @Nullable Input<Boolean> enableVtpm;
 
     public Input<Boolean> getEnableVtpm() {
         return this.enableVtpm == null ? Input.empty() : this.enableVtpm;
@@ -115,7 +115,6 @@ public final class InstanceTemplateShieldedInstanceConfigArgs extends io.pulumi.
             this.enableVtpm = Input.ofNullable(enableVtpm);
             return this;
         }
-
         public InstanceTemplateShieldedInstanceConfigArgs build() {
             return new InstanceTemplateShieldedInstanceConfigArgs(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

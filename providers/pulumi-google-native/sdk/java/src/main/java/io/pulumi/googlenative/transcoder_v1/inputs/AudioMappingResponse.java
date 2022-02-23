@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="atomKey", required=true)
-    private final String atomKey;
+      private final String atomKey;
 
     public String getAtomKey() {
         return this.atomKey;
@@ -34,7 +34,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="gainDb", required=true)
-    private final Double gainDb;
+      private final Double gainDb;
 
     public Double getGainDb() {
         return this.gainDb;
@@ -45,7 +45,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputChannel", required=true)
-    private final Integer inputChannel;
+      private final Integer inputChannel;
 
     public Integer getInputChannel() {
         return this.inputChannel;
@@ -56,7 +56,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputKey", required=true)
-    private final String inputKey;
+      private final String inputKey;
 
     public String getInputKey() {
         return this.inputKey;
@@ -67,7 +67,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputTrack", required=true)
-    private final Integer inputTrack;
+      private final Integer inputTrack;
 
     public Integer getInputTrack() {
         return this.inputTrack;
@@ -78,7 +78,7 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="outputChannel", required=true)
-    private final Integer outputChannel;
+      private final Integer outputChannel;
 
     public Integer getOutputChannel() {
         return this.outputChannel;
@@ -167,7 +167,6 @@ public final class AudioMappingResponse extends io.pulumi.resources.InvokeArgs {
             this.outputChannel = Objects.requireNonNull(outputChannel);
             return this;
         }
-
         public AudioMappingResponse build() {
             return new AudioMappingResponse(atomKey, gainDb, inputChannel, inputKey, inputTrack, outputChannel);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetJobTriggerArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetJobTriggerArgs Empty = new GetJobTriggerArgs();
 
     @InputImport(name="jobTriggerId", required=true)
-    private final String jobTriggerId;
+      private final String jobTriggerId;
 
     public String getJobTriggerId() {
         return this.jobTriggerId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetJobTriggerArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetJobTriggerArgs build() {
             return new GetJobTriggerArgs(jobTriggerId, location, project);
         }

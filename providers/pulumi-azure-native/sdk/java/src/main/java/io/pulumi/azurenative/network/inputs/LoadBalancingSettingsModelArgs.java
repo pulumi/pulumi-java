@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="additionalLatencyMilliseconds")
-    private final @Nullable Input<Integer> additionalLatencyMilliseconds;
+        private final @Nullable Input<Integer> additionalLatencyMilliseconds;
 
     public Input<Integer> getAdditionalLatencyMilliseconds() {
         return this.additionalLatencyMilliseconds == null ? Input.empty() : this.additionalLatencyMilliseconds;
@@ -35,7 +35,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -46,7 +46,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -57,7 +57,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="sampleSize")
-    private final @Nullable Input<Integer> sampleSize;
+        private final @Nullable Input<Integer> sampleSize;
 
     public Input<Integer> getSampleSize() {
         return this.sampleSize == null ? Input.empty() : this.sampleSize;
@@ -68,7 +68,7 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="successfulSamplesRequired")
-    private final @Nullable Input<Integer> successfulSamplesRequired;
+        private final @Nullable Input<Integer> successfulSamplesRequired;
 
     public Input<Integer> getSuccessfulSamplesRequired() {
         return this.successfulSamplesRequired == null ? Input.empty() : this.successfulSamplesRequired;
@@ -172,7 +172,6 @@ public final class LoadBalancingSettingsModelArgs extends io.pulumi.resources.Re
             this.successfulSamplesRequired = Input.ofNullable(successfulSamplesRequired);
             return this;
         }
-
         public LoadBalancingSettingsModelArgs build() {
             return new LoadBalancingSettingsModelArgs(additionalLatencyMilliseconds, id, name, sampleSize, successfulSamplesRequired);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.firestore_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.firestore_v1beta2.IndexArgs;
 import io.pulumi.googlenative.firestore_v1beta2.outputs.GoogleFirestoreAdminV1beta2IndexFieldResponse;
@@ -78,13 +78,6 @@ public class Index extends io.pulumi.resources.CustomResource {
         return this.state;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Index(String name) {
-        super("google-native:firestore/v1beta2:Index", name, IndexArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

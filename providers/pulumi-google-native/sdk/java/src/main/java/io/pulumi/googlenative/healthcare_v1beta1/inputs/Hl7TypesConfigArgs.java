@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.TypeArgs;
 import io.pulumi.googlenative.healthcare_v1beta1.inputs.VersionSourceArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<List<TypeArgs>> type;
+      private final @Nullable Input<List<TypeArgs>> type;
 
     public Input<List<TypeArgs>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -36,7 +36,7 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<List<VersionSourceArgs>> version;
+      private final @Nullable Input<List<VersionSourceArgs>> version;
 
     public Input<List<VersionSourceArgs>> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -95,7 +95,6 @@ public final class Hl7TypesConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public Hl7TypesConfigArgs build() {
             return new Hl7TypesConfigArgs(type, version);
         }

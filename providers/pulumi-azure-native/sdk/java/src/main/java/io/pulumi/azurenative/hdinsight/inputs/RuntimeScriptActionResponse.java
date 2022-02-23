@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="applicationName", required=true)
-    private final String applicationName;
+        private final String applicationName;
 
     public String getApplicationName() {
         return this.applicationName;
@@ -35,7 +35,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -46,7 +46,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable String parameters;
+        private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
@@ -57,7 +57,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="roles", required=true)
-    private final List<String> roles;
+        private final List<String> roles;
 
     public List<String> getRoles() {
         return this.roles;
@@ -68,7 +68,7 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="uri", required=true)
-    private final String uri;
+        private final String uri;
 
     public String getUri() {
         return this.uri;
@@ -147,7 +147,6 @@ public final class RuntimeScriptActionResponse extends io.pulumi.resources.Invok
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public RuntimeScriptActionResponse build() {
             return new RuntimeScriptActionResponse(applicationName, name, parameters, roles, uri);
         }

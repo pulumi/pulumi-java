@@ -3,7 +3,7 @@
 
 package io.pulumi.example.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.example.Resource;
 import io.pulumi.example.outputs.ConfigMap;
 import io.pulumi.example.outputs.SomeOtherObject;
@@ -120,7 +120,6 @@ public final class Object {
             this.stillOthers = stillOthers;
             return this;
         }
-
         public Object build() {
             return new Object(bar, configs, foo, others, stillOthers);
         }

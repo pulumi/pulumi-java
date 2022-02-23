@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.guestconfiguration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class VMSSVMInfoResponse {
             this.vmResourceId = Objects.requireNonNull(vmResourceId);
             return this;
         }
-
         public VMSSVMInfoResponse build() {
             return new VMSSVMInfoResponse(complianceStatus, lastComplianceChecked, latestReportId, vmId, vmResourceId);
         }

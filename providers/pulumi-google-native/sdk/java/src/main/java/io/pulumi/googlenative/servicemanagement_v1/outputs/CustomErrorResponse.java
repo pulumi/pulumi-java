@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.CustomErrorRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class CustomErrorResponse {
             this.types = Objects.requireNonNull(types);
             return this;
         }
-
         public CustomErrorResponse build() {
             return new CustomErrorResponse(rules, types);
         }

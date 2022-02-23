@@ -7,7 +7,7 @@ import io.pulumi.azurenative.documentdb.outputs.CompositePathResponse;
 import io.pulumi.azurenative.documentdb.outputs.ExcludedPathResponse;
 import io.pulumi.azurenative.documentdb.outputs.IncludedPathResponse;
 import io.pulumi.azurenative.documentdb.outputs.SpatialSpecResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -166,7 +166,6 @@ public final class IndexingPolicyResponse {
             this.spatialIndexes = spatialIndexes;
             return this;
         }
-
         public IndexingPolicyResponse build() {
             return new IndexingPolicyResponse(automatic, compositeIndexes, excludedPaths, includedPaths, indexingMode, spatialIndexes);
         }

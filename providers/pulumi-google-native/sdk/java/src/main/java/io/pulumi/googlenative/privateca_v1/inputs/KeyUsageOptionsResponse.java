@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="certSign", required=true)
-    private final Boolean certSign;
+      private final Boolean certSign;
 
     public Boolean getCertSign() {
         return this.certSign;
@@ -32,7 +32,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="contentCommitment", required=true)
-    private final Boolean contentCommitment;
+      private final Boolean contentCommitment;
 
     public Boolean getContentCommitment() {
         return this.contentCommitment;
@@ -43,7 +43,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="crlSign", required=true)
-    private final Boolean crlSign;
+      private final Boolean crlSign;
 
     public Boolean getCrlSign() {
         return this.crlSign;
@@ -54,7 +54,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="dataEncipherment", required=true)
-    private final Boolean dataEncipherment;
+      private final Boolean dataEncipherment;
 
     public Boolean getDataEncipherment() {
         return this.dataEncipherment;
@@ -65,7 +65,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="decipherOnly", required=true)
-    private final Boolean decipherOnly;
+      private final Boolean decipherOnly;
 
     public Boolean getDecipherOnly() {
         return this.decipherOnly;
@@ -76,7 +76,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="digitalSignature", required=true)
-    private final Boolean digitalSignature;
+      private final Boolean digitalSignature;
 
     public Boolean getDigitalSignature() {
         return this.digitalSignature;
@@ -87,7 +87,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="encipherOnly", required=true)
-    private final Boolean encipherOnly;
+      private final Boolean encipherOnly;
 
     public Boolean getEncipherOnly() {
         return this.encipherOnly;
@@ -98,7 +98,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="keyAgreement", required=true)
-    private final Boolean keyAgreement;
+      private final Boolean keyAgreement;
 
     public Boolean getKeyAgreement() {
         return this.keyAgreement;
@@ -109,7 +109,7 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="keyEncipherment", required=true)
-    private final Boolean keyEncipherment;
+      private final Boolean keyEncipherment;
 
     public Boolean getKeyEncipherment() {
         return this.keyEncipherment;
@@ -228,7 +228,6 @@ public final class KeyUsageOptionsResponse extends io.pulumi.resources.InvokeArg
             this.keyEncipherment = Objects.requireNonNull(keyEncipherment);
             return this;
         }
-
         public KeyUsageOptionsResponse build() {
             return new KeyUsageOptionsResponse(certSign, contentCommitment, crlSign, dataEncipherment, decipherOnly, digitalSignature, encipherOnly, keyAgreement, keyEncipherment);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.logic.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IpAddressRangeResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="addressRange")
-    private final @Nullable String addressRange;
+        private final @Nullable String addressRange;
 
     public Optional<String> getAddressRange() {
         return this.addressRange == null ? Optional.empty() : Optional.ofNullable(this.addressRange);
@@ -61,7 +61,6 @@ public final class IpAddressRangeResponse extends io.pulumi.resources.InvokeArgs
             this.addressRange = addressRange;
             return this;
         }
-
         public IpAddressRangeResponse build() {
             return new IpAddressRangeResponse(addressRange);
         }

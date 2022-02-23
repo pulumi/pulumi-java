@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ExpressRouteGatewayPropertiesResponseBounds;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration {
             this.bounds = bounds;
             return this;
         }
-
         public ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration build() {
             return new ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration(bounds);
         }

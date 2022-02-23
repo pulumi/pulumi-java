@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.importexport.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierAccountNumber", required=true)
-    private final Input<String> carrierAccountNumber;
+        private final Input<String> carrierAccountNumber;
 
     public Input<String> getCarrierAccountNumber() {
         return this.carrierAccountNumber;
@@ -33,7 +33,7 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="carrierName", required=true)
-    private final Input<String> carrierName;
+        private final Input<String> carrierName;
 
     public Input<String> getCarrierName() {
         return this.carrierName;
@@ -92,7 +92,6 @@ public final class ReturnShippingArgs extends io.pulumi.resources.ResourceArgs {
             this.carrierName = Input.of(Objects.requireNonNull(carrierName));
             return this;
         }
-
         public ReturnShippingArgs build() {
             return new ReturnShippingArgs(carrierAccountNumber, carrierName);
         }

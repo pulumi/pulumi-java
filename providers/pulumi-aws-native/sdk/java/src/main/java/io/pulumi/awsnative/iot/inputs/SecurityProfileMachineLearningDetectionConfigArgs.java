@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMachineLearningDetectionConfigConfidenceLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
      * 
      */
     @InputImport(name="confidenceLevel")
-    private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
+        private final @Nullable Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> confidenceLevel;
 
     public Input<SecurityProfileMachineLearningDetectionConfigConfidenceLevel> getConfidenceLevel() {
         return this.confidenceLevel == null ? Input.empty() : this.confidenceLevel;
@@ -66,7 +66,6 @@ public final class SecurityProfileMachineLearningDetectionConfigArgs extends io.
             this.confidenceLevel = Input.ofNullable(confidenceLevel);
             return this;
         }
-
         public SecurityProfileMachineLearningDetectionConfigArgs build() {
             return new SecurityProfileMachineLearningDetectionConfigArgs(confidenceLevel);
         }

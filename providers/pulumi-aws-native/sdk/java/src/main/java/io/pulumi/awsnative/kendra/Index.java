@@ -14,8 +14,8 @@ import io.pulumi.awsnative.kendra.outputs.IndexTag;
 import io.pulumi.awsnative.kendra.outputs.IndexUserTokenConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -133,13 +133,6 @@ public class Index extends io.pulumi.resources.CustomResource {
         return this.userTokenConfigurations;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Index(String name) {
-        super("aws-native:kendra:Index", name, IndexArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

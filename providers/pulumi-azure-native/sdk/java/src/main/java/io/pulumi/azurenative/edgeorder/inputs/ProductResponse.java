@@ -10,7 +10,7 @@ import io.pulumi.azurenative.edgeorder.inputs.DescriptionResponse;
 import io.pulumi.azurenative.edgeorder.inputs.FilterablePropertyResponse;
 import io.pulumi.azurenative.edgeorder.inputs.HierarchyInformationResponse;
 import io.pulumi.azurenative.edgeorder.inputs.ImageInformationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="availabilityInformation", required=true)
-    private final AvailabilityInformationResponse availabilityInformation;
+        private final AvailabilityInformationResponse availabilityInformation;
 
     public AvailabilityInformationResponse getAvailabilityInformation() {
         return this.availabilityInformation;
@@ -40,7 +40,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="configurations", required=true)
-    private final List<ConfigurationResponse> configurations;
+        private final List<ConfigurationResponse> configurations;
 
     public List<ConfigurationResponse> getConfigurations() {
         return this.configurations;
@@ -51,7 +51,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="costInformation", required=true)
-    private final CostInformationResponse costInformation;
+        private final CostInformationResponse costInformation;
 
     public CostInformationResponse getCostInformation() {
         return this.costInformation;
@@ -62,7 +62,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final DescriptionResponse description;
+        private final DescriptionResponse description;
 
     public DescriptionResponse getDescription() {
         return this.description;
@@ -73,7 +73,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -84,7 +84,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="filterableProperties", required=true)
-    private final List<FilterablePropertyResponse> filterableProperties;
+        private final List<FilterablePropertyResponse> filterableProperties;
 
     public List<FilterablePropertyResponse> getFilterableProperties() {
         return this.filterableProperties;
@@ -95,7 +95,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hierarchyInformation", required=true)
-    private final HierarchyInformationResponse hierarchyInformation;
+        private final HierarchyInformationResponse hierarchyInformation;
 
     public HierarchyInformationResponse getHierarchyInformation() {
         return this.hierarchyInformation;
@@ -106,7 +106,7 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="imageInformation", required=true)
-    private final List<ImageInformationResponse> imageInformation;
+        private final List<ImageInformationResponse> imageInformation;
 
     public List<ImageInformationResponse> getImageInformation() {
         return this.imageInformation;
@@ -215,7 +215,6 @@ public final class ProductResponse extends io.pulumi.resources.InvokeArgs {
             this.imageInformation = Objects.requireNonNull(imageInformation);
             return this;
         }
-
         public ProductResponse build() {
             return new ProductResponse(availabilityInformation, configurations, costInformation, description, displayName, filterableProperties, hierarchyInformation, imageInformation);
         }

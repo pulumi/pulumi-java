@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.FlowLogResponse;
 import io.pulumi.azurenative.network.outputs.NetworkInterfaceResponse;
 import io.pulumi.azurenative.network.outputs.SecurityRuleResponse;
 import io.pulumi.azurenative.network.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -313,7 +313,6 @@ public final class NetworkSecurityGroupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NetworkSecurityGroupResponse build() {
             return new NetworkSecurityGroupResponse(defaultSecurityRules, etag, flowLogs, id, location, name, networkInterfaces, provisioningState, resourceGuid, securityRules, subnets, tags, type);
         }

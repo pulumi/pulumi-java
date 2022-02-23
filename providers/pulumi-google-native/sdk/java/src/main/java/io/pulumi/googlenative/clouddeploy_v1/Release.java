@@ -5,8 +5,8 @@ package io.pulumi.googlenative.clouddeploy_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.clouddeploy_v1.ReleaseArgs;
 import io.pulumi.googlenative.clouddeploy_v1.outputs.BuildArtifactResponse;
@@ -279,13 +279,6 @@ public class Release extends io.pulumi.resources.CustomResource {
         return this.uid;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Release(String name) {
-        super("google-native:clouddeploy/v1:Release", name, ReleaseArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

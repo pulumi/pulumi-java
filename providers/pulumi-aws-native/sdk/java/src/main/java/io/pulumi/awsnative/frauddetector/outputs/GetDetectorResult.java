@@ -9,7 +9,7 @@ import io.pulumi.awsnative.frauddetector.outputs.DetectorEventType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorModel;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorRule;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -256,7 +256,6 @@ public final class GetDetectorResult {
             this.tags = tags;
             return this;
         }
-
         public GetDetectorResult build() {
             return new GetDetectorResult(arn, associatedModels, createdTime, description, detectorVersionId, detectorVersionStatus, eventType, lastUpdatedTime, ruleExecutionMode, rules, tags);
         }

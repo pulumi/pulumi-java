@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.enums.DataBindingMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="datastoreId")
-    private final @Nullable Input<String> datastoreId;
+        private final @Nullable Input<String> datastoreId;
 
     public Input<String> getDatastoreId() {
         return this.datastoreId == null ? Input.empty() : this.datastoreId;
@@ -32,7 +32,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,DataBindingMode>> mode;
+        private final @Nullable Input<Either<String,DataBindingMode>> mode;
 
     public Input<Either<String,DataBindingMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -43,7 +43,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pathOnCompute")
-    private final @Nullable Input<String> pathOnCompute;
+        private final @Nullable Input<String> pathOnCompute;
 
     public Input<String> getPathOnCompute() {
         return this.pathOnCompute == null ? Input.empty() : this.pathOnCompute;
@@ -54,7 +54,7 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="pathOnDatastore")
-    private final @Nullable Input<String> pathOnDatastore;
+        private final @Nullable Input<String> pathOnDatastore;
 
     public Input<String> getPathOnDatastore() {
         return this.pathOnDatastore == null ? Input.empty() : this.pathOnDatastore;
@@ -143,7 +143,6 @@ public final class OutputDataBindingArgs extends io.pulumi.resources.ResourceArg
             this.pathOnDatastore = Input.ofNullable(pathOnDatastore);
             return this;
         }
-
         public OutputDataBindingArgs build() {
             return new OutputDataBindingArgs(datastoreId, mode, pathOnCompute, pathOnDatastore);
         }

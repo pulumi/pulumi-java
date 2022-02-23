@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+      private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -35,7 +35,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * 
      */
     @InputImport(name="excludeRegex")
-    private final @Nullable Input<List<String>> excludeRegex;
+      private final @Nullable Input<List<String>> excludeRegex;
 
     public Input<List<String>> getExcludeRegex() {
         return this.excludeRegex == null ? Input.empty() : this.excludeRegex;
@@ -46,7 +46,7 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
      * 
      */
     @InputImport(name="includeRegex")
-    private final @Nullable Input<List<String>> includeRegex;
+      private final @Nullable Input<List<String>> includeRegex;
 
     public Input<List<String>> getIncludeRegex() {
         return this.includeRegex == null ? Input.empty() : this.includeRegex;
@@ -120,7 +120,6 @@ public final class GooglePrivacyDlpV2CloudStorageRegexFileSetArgs extends io.pul
             this.includeRegex = Input.ofNullable(includeRegex);
             return this;
         }
-
         public GooglePrivacyDlpV2CloudStorageRegexFileSetArgs build() {
             return new GooglePrivacyDlpV2CloudStorageRegexFileSetArgs(bucketName, excludeRegex, includeRegex);
         }

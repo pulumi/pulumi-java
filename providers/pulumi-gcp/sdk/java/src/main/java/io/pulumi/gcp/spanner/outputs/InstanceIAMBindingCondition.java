@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.spanner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class InstanceIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public InstanceIAMBindingCondition build() {
             return new InstanceIAMBindingCondition(description, expression, title);
         }

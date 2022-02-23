@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ClusterSelectorResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.inputs.ManagedClusterResponse;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="clusterSelector", required=true)
-    private final ClusterSelectorResponse clusterSelector;
+      private final ClusterSelectorResponse clusterSelector;
 
     public ClusterSelectorResponse getClusterSelector() {
         return this.clusterSelector;
@@ -33,7 +33,7 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="managedCluster", required=true)
-    private final ManagedClusterResponse managedCluster;
+      private final ManagedClusterResponse managedCluster;
 
     public ManagedClusterResponse getManagedCluster() {
         return this.managedCluster;
@@ -82,7 +82,6 @@ public final class WorkflowTemplatePlacementResponse extends io.pulumi.resources
             this.managedCluster = Objects.requireNonNull(managedCluster);
             return this;
         }
-
         public WorkflowTemplatePlacementResponse build() {
             return new WorkflowTemplatePlacementResponse(clusterSelector, managedCluster);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.blueprint.outputs;
 import io.pulumi.azurenative.blueprint.outputs.BlueprintStatusResponse;
 import io.pulumi.azurenative.blueprint.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.blueprint.outputs.ResourceGroupDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -269,7 +269,6 @@ public final class GetPublishedBlueprintResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPublishedBlueprintResult build() {
             return new GetPublishedBlueprintResult(blueprintName, changeNotes, description, displayName, id, name, parameters, resourceGroups, status, targetScope, type);
         }

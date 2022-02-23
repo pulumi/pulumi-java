@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.MediaGraphUsernamePasswordCredentialsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="credentials")
-    private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
+        private final @Nullable MediaGraphUsernamePasswordCredentialsResponse credentials;
 
     public Optional<MediaGraphUsernamePasswordCredentialsResponse> getCredentials() {
         return this.credentials == null ? Optional.empty() : Optional.ofNullable(this.credentials);
@@ -36,7 +36,7 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -47,7 +47,7 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -106,7 +106,6 @@ public final class MediaGraphClearEndpointResponse extends io.pulumi.resources.I
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public MediaGraphClearEndpointResponse build() {
             return new MediaGraphClearEndpointResponse(credentials, odataType, url);
         }

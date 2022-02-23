@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetIPAMArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipamId", required=true)
-    private final String ipamId;
+        private final String ipamId;
 
     public String getIpamId() {
         return this.ipamId;
@@ -55,7 +55,6 @@ public final class GetIPAMArgs extends io.pulumi.resources.InvokeArgs {
             this.ipamId = Objects.requireNonNull(ipamId);
             return this;
         }
-
         public GetIPAMArgs build() {
             return new GetIPAMArgs(ipamId);
         }

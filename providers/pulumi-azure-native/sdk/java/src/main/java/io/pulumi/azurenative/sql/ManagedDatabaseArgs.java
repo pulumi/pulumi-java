@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.CatalogCollationType;
 import io.pulumi.azurenative.sql.enums.ManagedDatabaseCreateMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="autoCompleteRestore")
-    private final @Nullable Input<Boolean> autoCompleteRestore;
+        private final @Nullable Input<Boolean> autoCompleteRestore;
 
     public Input<Boolean> getAutoCompleteRestore() {
         return this.autoCompleteRestore == null ? Input.empty() : this.autoCompleteRestore;
@@ -35,7 +35,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="catalogCollation")
-    private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
+        private final @Nullable Input<Either<String,CatalogCollationType>> catalogCollation;
 
     public Input<Either<String,CatalogCollationType>> getCatalogCollation() {
         return this.catalogCollation == null ? Input.empty() : this.catalogCollation;
@@ -46,7 +46,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+        private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -57,7 +57,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="createMode")
-    private final @Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode;
+        private final @Nullable Input<Either<String,ManagedDatabaseCreateMode>> createMode;
 
     public Input<Either<String,ManagedDatabaseCreateMode>> getCreateMode() {
         return this.createMode == null ? Input.empty() : this.createMode;
@@ -68,7 +68,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -79,7 +79,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="lastBackupName")
-    private final @Nullable Input<String> lastBackupName;
+        private final @Nullable Input<String> lastBackupName;
 
     public Input<String> getLastBackupName() {
         return this.lastBackupName == null ? Input.empty() : this.lastBackupName;
@@ -90,7 +90,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -101,7 +101,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="longTermRetentionBackupResourceId")
-    private final @Nullable Input<String> longTermRetentionBackupResourceId;
+        private final @Nullable Input<String> longTermRetentionBackupResourceId;
 
     public Input<String> getLongTermRetentionBackupResourceId() {
         return this.longTermRetentionBackupResourceId == null ? Input.empty() : this.longTermRetentionBackupResourceId;
@@ -112,7 +112,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final Input<String> managedInstanceName;
+        private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -123,7 +123,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="recoverableDatabaseId")
-    private final @Nullable Input<String> recoverableDatabaseId;
+        private final @Nullable Input<String> recoverableDatabaseId;
 
     public Input<String> getRecoverableDatabaseId() {
         return this.recoverableDatabaseId == null ? Input.empty() : this.recoverableDatabaseId;
@@ -134,7 +134,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -145,7 +145,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restorableDroppedDatabaseId")
-    private final @Nullable Input<String> restorableDroppedDatabaseId;
+        private final @Nullable Input<String> restorableDroppedDatabaseId;
 
     public Input<String> getRestorableDroppedDatabaseId() {
         return this.restorableDroppedDatabaseId == null ? Input.empty() : this.restorableDroppedDatabaseId;
@@ -156,7 +156,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="restorePointInTime")
-    private final @Nullable Input<String> restorePointInTime;
+        private final @Nullable Input<String> restorePointInTime;
 
     public Input<String> getRestorePointInTime() {
         return this.restorePointInTime == null ? Input.empty() : this.restorePointInTime;
@@ -167,7 +167,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sourceDatabaseId")
-    private final @Nullable Input<String> sourceDatabaseId;
+        private final @Nullable Input<String> sourceDatabaseId;
 
     public Input<String> getSourceDatabaseId() {
         return this.sourceDatabaseId == null ? Input.empty() : this.sourceDatabaseId;
@@ -178,7 +178,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageContainerSasToken")
-    private final @Nullable Input<String> storageContainerSasToken;
+        private final @Nullable Input<String> storageContainerSasToken;
 
     public Input<String> getStorageContainerSasToken() {
         return this.storageContainerSasToken == null ? Input.empty() : this.storageContainerSasToken;
@@ -189,7 +189,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="storageContainerUri")
-    private final @Nullable Input<String> storageContainerUri;
+        private final @Nullable Input<String> storageContainerUri;
 
     public Input<String> getStorageContainerUri() {
         return this.storageContainerUri == null ? Input.empty() : this.storageContainerUri;
@@ -200,7 +200,7 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -484,7 +484,6 @@ public final class ManagedDatabaseArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ManagedDatabaseArgs build() {
             return new ManagedDatabaseArgs(autoCompleteRestore, catalogCollation, collation, createMode, databaseName, lastBackupName, location, longTermRetentionBackupResourceId, managedInstanceName, recoverableDatabaseId, resourceGroupName, restorableDroppedDatabaseId, restorePointInTime, sourceDatabaseId, storageContainerSasToken, storageContainerUri, tags);
         }

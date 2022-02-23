@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.KeyToPath;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -122,7 +122,6 @@ public final class ConfigMapVolumeSource {
             this.optional = optional;
             return this;
         }
-
         public ConfigMapVolumeSource build() {
             return new ConfigMapVolumeSource(defaultMode, items, name, optional);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ControlResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environment", required=true)
-    private final String environment;
+      private final String environment;
 
     public String getEnvironment() {
         return this.environment;
@@ -59,7 +59,6 @@ public final class ControlResponse extends io.pulumi.resources.InvokeArgs {
             this.environment = Objects.requireNonNull(environment);
             return this;
         }
-
         public ControlResponse build() {
             return new ControlResponse(environment);
         }

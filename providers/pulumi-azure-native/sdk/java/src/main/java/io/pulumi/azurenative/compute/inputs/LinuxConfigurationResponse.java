@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LinuxPatchSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.SshConfigurationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="disablePasswordAuthentication")
-    private final @Nullable Boolean disablePasswordAuthentication;
+        private final @Nullable Boolean disablePasswordAuthentication;
 
     public Optional<Boolean> getDisablePasswordAuthentication() {
         return this.disablePasswordAuthentication == null ? Optional.empty() : Optional.ofNullable(this.disablePasswordAuthentication);
@@ -36,7 +36,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="patchSettings")
-    private final @Nullable LinuxPatchSettingsResponse patchSettings;
+        private final @Nullable LinuxPatchSettingsResponse patchSettings;
 
     public Optional<LinuxPatchSettingsResponse> getPatchSettings() {
         return this.patchSettings == null ? Optional.empty() : Optional.ofNullable(this.patchSettings);
@@ -47,7 +47,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisionVMAgent")
-    private final @Nullable Boolean provisionVMAgent;
+        private final @Nullable Boolean provisionVMAgent;
 
     public Optional<Boolean> getProvisionVMAgent() {
         return this.provisionVMAgent == null ? Optional.empty() : Optional.ofNullable(this.provisionVMAgent);
@@ -58,7 +58,7 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="ssh")
-    private final @Nullable SshConfigurationResponse ssh;
+        private final @Nullable SshConfigurationResponse ssh;
 
     public Optional<SshConfigurationResponse> getSsh() {
         return this.ssh == null ? Optional.empty() : Optional.ofNullable(this.ssh);
@@ -127,7 +127,6 @@ public final class LinuxConfigurationResponse extends io.pulumi.resources.Invoke
             this.ssh = ssh;
             return this;
         }
-
         public LinuxConfigurationResponse build() {
             return new LinuxConfigurationResponse(disablePasswordAuthentication, patchSettings, provisionVMAgent, ssh);
         }

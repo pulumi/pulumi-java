@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.DimensionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class CriteriaResponse {
             this.metricName = Objects.requireNonNull(metricName);
             return this;
         }
-
         public CriteriaResponse build() {
             return new CriteriaResponse(dimensions, metricName);
         }

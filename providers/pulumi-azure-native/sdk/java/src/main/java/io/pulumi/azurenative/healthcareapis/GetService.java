@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthcareapis;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.healthcareapis.inputs.GetServiceArgs;
 import io.pulumi.azurenative.healthcareapis.outputs.GetServiceResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

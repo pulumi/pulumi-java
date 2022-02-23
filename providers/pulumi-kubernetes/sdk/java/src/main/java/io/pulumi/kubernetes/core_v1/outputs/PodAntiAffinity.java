@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PodAffinityTerm;
 import io.pulumi.kubernetes.core_v1.outputs.WeightedPodAffinityTerm;
 import java.util.List;
@@ -77,7 +77,6 @@ public final class PodAntiAffinity {
             this.requiredDuringSchedulingIgnoredDuringExecution = requiredDuringSchedulingIgnoredDuringExecution;
             return this;
         }
-
         public PodAntiAffinity build() {
             return new PodAntiAffinity(preferredDuringSchedulingIgnoredDuringExecution, requiredDuringSchedulingIgnoredDuringExecution);
         }

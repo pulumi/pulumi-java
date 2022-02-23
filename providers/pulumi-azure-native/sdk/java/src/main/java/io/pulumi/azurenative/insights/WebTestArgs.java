@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.WebTestKind;
 import io.pulumi.azurenative.insights.inputs.WebTestGeolocationArgs;
 import io.pulumi.azurenative.insights.inputs.WebTestPropertiesConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<WebTestPropertiesConfigurationArgs> configuration;
+        private final @Nullable Input<WebTestPropertiesConfigurationArgs> configuration;
 
     public Input<WebTestPropertiesConfigurationArgs> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -37,7 +37,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -48,7 +48,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -59,7 +59,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frequency")
-    private final @Nullable Input<Integer> frequency;
+        private final @Nullable Input<Integer> frequency;
 
     public Input<Integer> getFrequency() {
         return this.frequency == null ? Input.empty() : this.frequency;
@@ -70,7 +70,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<WebTestKind> kind;
+        private final @Nullable Input<WebTestKind> kind;
 
     public Input<WebTestKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -81,7 +81,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -92,7 +92,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-    private final Input<List<WebTestGeolocationArgs>> locations;
+        private final Input<List<WebTestGeolocationArgs>> locations;
 
     public Input<List<WebTestGeolocationArgs>> getLocations() {
         return this.locations;
@@ -103,7 +103,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -114,7 +114,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="retryEnabled")
-    private final @Nullable Input<Boolean> retryEnabled;
+        private final @Nullable Input<Boolean> retryEnabled;
 
     public Input<Boolean> getRetryEnabled() {
         return this.retryEnabled == null ? Input.empty() : this.retryEnabled;
@@ -125,7 +125,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syntheticMonitorId", required=true)
-    private final Input<String> syntheticMonitorId;
+        private final Input<String> syntheticMonitorId;
 
     public Input<String> getSyntheticMonitorId() {
         return this.syntheticMonitorId;
@@ -136,7 +136,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -147,7 +147,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<Integer> timeout;
+        private final @Nullable Input<Integer> timeout;
 
     public Input<Integer> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -158,7 +158,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webTestKind", required=true)
-    private final Input<WebTestKind> webTestKind;
+        private final Input<WebTestKind> webTestKind;
 
     public Input<WebTestKind> getWebTestKind() {
         return this.webTestKind;
@@ -169,7 +169,7 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="webTestName")
-    private final @Nullable Input<String> webTestName;
+        private final @Nullable Input<String> webTestName;
 
     public Input<String> getWebTestName() {
         return this.webTestName == null ? Input.empty() : this.webTestName;
@@ -408,7 +408,6 @@ public final class WebTestArgs extends io.pulumi.resources.ResourceArgs {
             this.webTestName = Input.ofNullable(webTestName);
             return this;
         }
-
         public WebTestArgs build() {
             return new WebTestArgs(configuration, description, enabled, frequency, kind, location, locations, resourceGroupName, retryEnabled, syntheticMonitorId, tags, timeout, webTestKind, webTestName);
         }

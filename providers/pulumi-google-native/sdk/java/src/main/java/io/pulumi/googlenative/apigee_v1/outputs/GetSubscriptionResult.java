@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class GetSubscriptionResult {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public GetSubscriptionResult build() {
             return new GetSubscriptionResult(apiproduct, createdAt, endTime, lastModifiedAt, name, startTime);
         }

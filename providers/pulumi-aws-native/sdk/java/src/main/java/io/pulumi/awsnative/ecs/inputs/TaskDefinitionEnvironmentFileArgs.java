@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class TaskDefinitionEnvironmentFileArgs extends io.pulumi.resources
     public static final TaskDefinitionEnvironmentFileArgs Empty = new TaskDefinitionEnvironmentFileArgs();
 
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
@@ -81,7 +81,6 @@ public final class TaskDefinitionEnvironmentFileArgs extends io.pulumi.resources
             this.value = Input.ofNullable(value);
             return this;
         }
-
         public TaskDefinitionEnvironmentFileArgs build() {
             return new TaskDefinitionEnvironmentFileArgs(type, value);
         }

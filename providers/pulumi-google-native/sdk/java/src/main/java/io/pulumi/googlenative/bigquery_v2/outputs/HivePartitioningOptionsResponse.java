@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class HivePartitioningOptionsResponse {
             this.sourceUriPrefix = Objects.requireNonNull(sourceUriPrefix);
             return this;
         }
-
         public HivePartitioningOptionsResponse build() {
             return new HivePartitioningOptionsResponse(mode, requirePartitionFilter, sourceUriPrefix);
         }

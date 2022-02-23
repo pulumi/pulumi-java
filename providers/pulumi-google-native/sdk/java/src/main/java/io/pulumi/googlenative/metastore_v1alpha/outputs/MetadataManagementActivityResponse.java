@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.MetadataExportResponse;
 import io.pulumi.googlenative.metastore_v1alpha.outputs.RestoreResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class MetadataManagementActivityResponse {
             this.restores = Objects.requireNonNull(restores);
             return this;
         }
-
         public MetadataManagementActivityResponse build() {
             return new MetadataManagementActivityResponse(metadataExports, restores);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.enums.KeyType;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -21,7 +21,7 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="keyType")
-    private final @Nullable Either<String,KeyType> keyType;
+        private final @Nullable Either<String,KeyType> keyType;
 
     public Either<String,KeyType> getKeyType() {
         return this.keyType == null ? null : this.keyType;
@@ -32,7 +32,7 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="notAfter")
-    private final @Nullable String notAfter;
+        private final @Nullable String notAfter;
 
     public Optional<String> getNotAfter() {
         return this.notAfter == null ? Optional.empty() : Optional.ofNullable(this.notAfter);
@@ -43,7 +43,7 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="workflowName", required=true)
-    private final String workflowName;
+        private final String workflowName;
 
     public String getWorkflowName() {
         return this.workflowName;
@@ -123,7 +123,6 @@ public final class ListWorkflowCallbackUrlArgs extends io.pulumi.resources.Invok
             this.workflowName = Objects.requireNonNull(workflowName);
             return this;
         }
-
         public ListWorkflowCallbackUrlArgs build() {
             return new ListWorkflowCallbackUrlArgs(keyType, notAfter, resourceGroupName, workflowName);
         }

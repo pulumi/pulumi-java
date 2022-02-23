@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.Object;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class GetKeyResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(apiProducts, attributes, consumerKey, consumerSecret, expiresAt, expiresInSeconds, issuedAt, scopes, status);
         }

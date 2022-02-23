@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -120,7 +120,6 @@ public final class ClusterDefinitionResponse {
             this.kind = kind;
             return this;
         }
-
         public ClusterDefinitionResponse build() {
             return new ClusterDefinitionResponse(blueprint, componentVersion, configurations, kind);
         }

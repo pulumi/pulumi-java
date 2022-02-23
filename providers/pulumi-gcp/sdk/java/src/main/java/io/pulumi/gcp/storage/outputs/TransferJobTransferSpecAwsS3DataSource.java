@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.storage.outputs.TransferJobTransferSpecAwsS3DataSourceAwsAccessKey;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class TransferJobTransferSpecAwsS3DataSource {
             this.roleArn = roleArn;
             return this;
         }
-
         public TransferJobTransferSpecAwsS3DataSource build() {
             return new TransferJobTransferSpecAwsS3DataSource(awsAccessKey, bucketName, roleArn);
         }

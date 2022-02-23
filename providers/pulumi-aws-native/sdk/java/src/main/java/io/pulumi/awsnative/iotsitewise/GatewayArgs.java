@@ -7,7 +7,7 @@ import io.pulumi.awsnative.iotsitewise.inputs.GatewayCapabilitySummaryArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayPlatformArgs;
 import io.pulumi.awsnative.iotsitewise.inputs.GatewayTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayCapabilitySummaries")
-    private final @Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
+        private final @Nullable Input<List<GatewayCapabilitySummaryArgs>> gatewayCapabilitySummaries;
 
     public Input<List<GatewayCapabilitySummaryArgs>> getGatewayCapabilitySummaries() {
         return this.gatewayCapabilitySummaries == null ? Input.empty() : this.gatewayCapabilitySummaries;
@@ -34,7 +34,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName")
-    private final @Nullable Input<String> gatewayName;
+        private final @Nullable Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName == null ? Input.empty() : this.gatewayName;
@@ -45,7 +45,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayPlatform", required=true)
-    private final Input<GatewayPlatformArgs> gatewayPlatform;
+        private final Input<GatewayPlatformArgs> gatewayPlatform;
 
     public Input<GatewayPlatformArgs> getGatewayPlatform() {
         return this.gatewayPlatform;
@@ -56,7 +56,7 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<GatewayTagArgs>> tags;
+        private final @Nullable Input<List<GatewayTagArgs>> tags;
 
     public Input<List<GatewayTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -145,7 +145,6 @@ public final class GatewayArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GatewayArgs build() {
             return new GatewayArgs(gatewayCapabilitySummaries, gatewayName, gatewayPlatform, tags);
         }

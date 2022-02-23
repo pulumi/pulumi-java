@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serviceArn", required=true)
-    private final String serviceArn;
+        private final String serviceArn;
 
     public String getServiceArn() {
         return this.serviceArn;
@@ -55,7 +55,6 @@ public final class GetServiceArgs extends io.pulumi.resources.InvokeArgs {
             this.serviceArn = Objects.requireNonNull(serviceArn);
             return this;
         }
-
         public GetServiceArgs build() {
             return new GetServiceArgs(serviceArn);
         }

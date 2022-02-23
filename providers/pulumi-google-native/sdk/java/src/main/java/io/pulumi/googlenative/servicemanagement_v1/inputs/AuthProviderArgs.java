@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.JwtLocationArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audiences")
-    private final @Nullable Input<String> audiences;
+      private final @Nullable Input<String> audiences;
 
     public Input<String> getAudiences() {
         return this.audiences == null ? Input.empty() : this.audiences;
@@ -36,7 +36,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authorizationUrl")
-    private final @Nullable Input<String> authorizationUrl;
+      private final @Nullable Input<String> authorizationUrl;
 
     public Input<String> getAuthorizationUrl() {
         return this.authorizationUrl == null ? Input.empty() : this.authorizationUrl;
@@ -47,7 +47,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -58,7 +58,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+      private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -69,7 +69,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwksUri")
-    private final @Nullable Input<String> jwksUri;
+      private final @Nullable Input<String> jwksUri;
 
     public Input<String> getJwksUri() {
         return this.jwksUri == null ? Input.empty() : this.jwksUri;
@@ -80,7 +80,7 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="jwtLocations")
-    private final @Nullable Input<List<JwtLocationArgs>> jwtLocations;
+      private final @Nullable Input<List<JwtLocationArgs>> jwtLocations;
 
     public Input<List<JwtLocationArgs>> getJwtLocations() {
         return this.jwtLocations == null ? Input.empty() : this.jwtLocations;
@@ -199,7 +199,6 @@ public final class AuthProviderArgs extends io.pulumi.resources.ResourceArgs {
             this.jwtLocations = Input.ofNullable(jwtLocations);
             return this;
         }
-
         public AuthProviderArgs build() {
             return new AuthProviderArgs(audiences, authorizationUrl, id, issuer, jwksUri, jwtLocations);
         }

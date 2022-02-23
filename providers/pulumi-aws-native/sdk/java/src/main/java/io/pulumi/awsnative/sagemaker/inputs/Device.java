@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -34,7 +34,7 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final String deviceName;
+        private final String deviceName;
 
     public String getDeviceName() {
         return this.deviceName;
@@ -45,7 +45,7 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iotThingName")
-    private final @Nullable String iotThingName;
+        private final @Nullable String iotThingName;
 
     public Optional<String> getIotThingName() {
         return this.iotThingName == null ? Optional.empty() : Optional.ofNullable(this.iotThingName);
@@ -104,7 +104,6 @@ public final class Device extends io.pulumi.resources.InvokeArgs {
             this.iotThingName = iotThingName;
             return this;
         }
-
         public Device build() {
             return new Device(description, deviceName, iotThingName);
         }

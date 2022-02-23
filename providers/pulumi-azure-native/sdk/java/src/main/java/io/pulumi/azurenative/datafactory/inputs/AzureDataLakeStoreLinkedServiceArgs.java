@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationArgs;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -32,7 +32,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accountName")
-    private final @Nullable Input<Object> accountName;
+        private final @Nullable Input<Object> accountName;
 
     public Input<Object> getAccountName() {
         return this.accountName == null ? Input.empty() : this.accountName;
@@ -43,7 +43,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<List<Object>> annotations;
+        private final @Nullable Input<List<Object>> annotations;
 
     public Input<List<Object>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -54,7 +54,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="azureCloudType")
-    private final @Nullable Input<Object> azureCloudType;
+        private final @Nullable Input<Object> azureCloudType;
 
     public Input<Object> getAzureCloudType() {
         return this.azureCloudType == null ? Input.empty() : this.azureCloudType;
@@ -65,7 +65,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
+        private final @Nullable Input<IntegrationRuntimeReferenceArgs> connectVia;
 
     public Input<IntegrationRuntimeReferenceArgs> getConnectVia() {
         return this.connectVia == null ? Input.empty() : this.connectVia;
@@ -76,7 +76,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="credential")
-    private final @Nullable Input<CredentialReferenceArgs> credential;
+        private final @Nullable Input<CredentialReferenceArgs> credential;
 
     public Input<CredentialReferenceArgs> getCredential() {
         return this.credential == null ? Input.empty() : this.credential;
@@ -87,7 +87,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataLakeStoreUri", required=true)
-    private final Input<Object> dataLakeStoreUri;
+        private final Input<Object> dataLakeStoreUri;
 
     public Input<Object> getDataLakeStoreUri() {
         return this.dataLakeStoreUri;
@@ -98,7 +98,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -109,7 +109,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Input<Object> encryptedCredential;
+        private final @Nullable Input<Object> encryptedCredential;
 
     public Input<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Input.empty() : this.encryptedCredential;
@@ -120,7 +120,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
+        private final @Nullable Input<Map<String,ParameterSpecificationArgs>> parameters;
 
     public Input<Map<String,ParameterSpecificationArgs>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -131,7 +131,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="resourceGroupName")
-    private final @Nullable Input<Object> resourceGroupName;
+        private final @Nullable Input<Object> resourceGroupName;
 
     public Input<Object> getResourceGroupName() {
         return this.resourceGroupName == null ? Input.empty() : this.resourceGroupName;
@@ -142,7 +142,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalId")
-    private final @Nullable Input<Object> servicePrincipalId;
+        private final @Nullable Input<Object> servicePrincipalId;
 
     public Input<Object> getServicePrincipalId() {
         return this.servicePrincipalId == null ? Input.empty() : this.servicePrincipalId;
@@ -153,7 +153,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="servicePrincipalKey")
-    private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
+        private final @Nullable Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getServicePrincipalKey() {
         return this.servicePrincipalKey == null ? Input.empty() : this.servicePrincipalKey;
@@ -164,7 +164,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<Object> subscriptionId;
+        private final @Nullable Input<Object> subscriptionId;
 
     public Input<Object> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -175,7 +175,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tenant")
-    private final @Nullable Input<Object> tenant;
+        private final @Nullable Input<Object> tenant;
 
     public Input<Object> getTenant() {
         return this.tenant == null ? Input.empty() : this.tenant;
@@ -187,7 +187,7 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -441,7 +441,6 @@ public final class AzureDataLakeStoreLinkedServiceArgs extends io.pulumi.resourc
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public AzureDataLakeStoreLinkedServiceArgs build() {
             return new AzureDataLakeStoreLinkedServiceArgs(accountName, annotations, azureCloudType, connectVia, credential, dataLakeStoreUri, description, encryptedCredential, parameters, resourceGroupName, servicePrincipalId, servicePrincipalKey, subscriptionId, tenant, type);
         }

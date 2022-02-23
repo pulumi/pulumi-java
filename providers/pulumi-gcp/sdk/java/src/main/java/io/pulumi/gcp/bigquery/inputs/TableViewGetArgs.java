@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TableViewGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+        private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -32,7 +32,7 @@ public final class TableViewGetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useLegacySql")
-    private final @Nullable Input<Boolean> useLegacySql;
+        private final @Nullable Input<Boolean> useLegacySql;
 
     public Input<Boolean> getUseLegacySql() {
         return this.useLegacySql == null ? Input.empty() : this.useLegacySql;
@@ -91,7 +91,6 @@ public final class TableViewGetArgs extends io.pulumi.resources.ResourceArgs {
             this.useLegacySql = Input.ofNullable(useLegacySql);
             return this;
         }
-
         public TableViewGetArgs build() {
             return new TableViewGetArgs(query, useLegacySql);
         }

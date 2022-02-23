@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.frauddetector.outputs;
 
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +160,6 @@ public final class DetectorEntityType {
             this.tags = tags;
             return this;
         }
-
         public DetectorEntityType build() {
             return new DetectorEntityType(arn, createdTime, description, inline, lastUpdatedTime, name, tags);
         }

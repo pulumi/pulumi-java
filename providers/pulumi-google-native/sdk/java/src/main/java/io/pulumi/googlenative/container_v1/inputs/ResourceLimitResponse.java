@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="maximum", required=true)
-    private final String maximum;
+      private final String maximum;
 
     public String getMaximum() {
         return this.maximum;
@@ -32,7 +32,7 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="minimum", required=true)
-    private final String minimum;
+      private final String minimum;
 
     public String getMinimum() {
         return this.minimum;
@@ -43,7 +43,7 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+      private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -102,7 +102,6 @@ public final class ResourceLimitResponse extends io.pulumi.resources.InvokeArgs 
             this.resourceType = Objects.requireNonNull(resourceType);
             return this;
         }
-
         public ResourceLimitResponse build() {
             return new ResourceLimitResponse(maximum, minimum, resourceType);
         }

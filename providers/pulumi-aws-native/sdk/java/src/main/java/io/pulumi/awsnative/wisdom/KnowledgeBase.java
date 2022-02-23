@@ -12,8 +12,8 @@ import io.pulumi.awsnative.wisdom.outputs.KnowledgeBaseSourceConfiguration;
 import io.pulumi.awsnative.wisdom.outputs.KnowledgeBaseTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -79,13 +79,6 @@ public class KnowledgeBase extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public KnowledgeBase(String name) {
-        super("aws-native:wisdom:KnowledgeBase", name, KnowledgeBaseArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

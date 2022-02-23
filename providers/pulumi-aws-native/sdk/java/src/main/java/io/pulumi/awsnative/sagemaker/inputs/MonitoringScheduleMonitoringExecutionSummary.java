@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,14 +24,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
      * 
      */
     @InputImport(name="creationTime", required=true)
-    private final String creationTime;
+        private final String creationTime;
 
     public String getCreationTime() {
         return this.creationTime;
     }
 
     @InputImport(name="endpointName")
-    private final @Nullable String endpointName;
+        private final @Nullable String endpointName;
 
     public Optional<String> getEndpointName() {
         return this.endpointName == null ? Optional.empty() : Optional.ofNullable(this.endpointName);
@@ -42,7 +42,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
      * 
      */
     @InputImport(name="failureReason")
-    private final @Nullable String failureReason;
+        private final @Nullable String failureReason;
 
     public Optional<String> getFailureReason() {
         return this.failureReason == null ? Optional.empty() : Optional.ofNullable(this.failureReason);
@@ -53,7 +53,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
      * 
      */
     @InputImport(name="lastModifiedTime", required=true)
-    private final String lastModifiedTime;
+        private final String lastModifiedTime;
 
     public String getLastModifiedTime() {
         return this.lastModifiedTime;
@@ -64,14 +64,14 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
      * 
      */
     @InputImport(name="monitoringExecutionStatus", required=true)
-    private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
+        private final MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus monitoringExecutionStatus;
 
     public MonitoringScheduleMonitoringExecutionSummaryMonitoringExecutionStatus getMonitoringExecutionStatus() {
         return this.monitoringExecutionStatus;
     }
 
     @InputImport(name="monitoringScheduleName", required=true)
-    private final String monitoringScheduleName;
+        private final String monitoringScheduleName;
 
     public String getMonitoringScheduleName() {
         return this.monitoringScheduleName;
@@ -82,7 +82,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
      * 
      */
     @InputImport(name="processingJobArn")
-    private final @Nullable String processingJobArn;
+        private final @Nullable String processingJobArn;
 
     public Optional<String> getProcessingJobArn() {
         return this.processingJobArn == null ? Optional.empty() : Optional.ofNullable(this.processingJobArn);
@@ -93,7 +93,7 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
      * 
      */
     @InputImport(name="scheduledTime", required=true)
-    private final String scheduledTime;
+        private final String scheduledTime;
 
     public String getScheduledTime() {
         return this.scheduledTime;
@@ -202,7 +202,6 @@ public final class MonitoringScheduleMonitoringExecutionSummary extends io.pulum
             this.scheduledTime = Objects.requireNonNull(scheduledTime);
             return this;
         }
-
         public MonitoringScheduleMonitoringExecutionSummary build() {
             return new MonitoringScheduleMonitoringExecutionSummary(creationTime, endpointName, failureReason, lastModifiedTime, monitoringExecutionStatus, monitoringScheduleName, processingJobArn, scheduledTime);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.insights.outputs;
 import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDataSources;
 import io.pulumi.azurenative.insights.outputs.DataCollectionRuleResponseDestinations;
 import io.pulumi.azurenative.insights.outputs.DataFlowResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -314,7 +314,6 @@ public final class GetDataCollectionRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDataCollectionRuleResult build() {
             return new GetDataCollectionRuleResult(dataFlows, dataSources, description, destinations, etag, id, immutableId, kind, location, name, provisioningState, tags, type);
         }

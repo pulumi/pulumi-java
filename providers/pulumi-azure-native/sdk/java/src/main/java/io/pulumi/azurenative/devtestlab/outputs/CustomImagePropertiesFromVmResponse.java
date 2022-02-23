@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.LinuxOsInfoResponse;
 import io.pulumi.azurenative.devtestlab.outputs.WindowsOsInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class CustomImagePropertiesFromVmResponse {
             this.windowsOsInfo = windowsOsInfo;
             return this;
         }
-
         public CustomImagePropertiesFromVmResponse build() {
             return new CustomImagePropertiesFromVmResponse(linuxOsInfo, sourceVmId, windowsOsInfo);
         }

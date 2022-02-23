@@ -8,7 +8,7 @@ import io.pulumi.azurenative.synapse.outputs.AutoScalePropertiesResponse;
 import io.pulumi.azurenative.synapse.outputs.DynamicExecutorAllocationResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryInfoResponse;
 import io.pulumi.azurenative.synapse.outputs.LibraryRequirementsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -526,7 +526,6 @@ public final class GetBigDataPoolResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBigDataPoolResult build() {
             return new GetBigDataPoolResult(autoPause, autoScale, cacheSize, creationDate, customLibraries, defaultSparkLogFolder, dynamicExecutorAllocation, id, isComputeIsolationEnabled, lastSucceededTimestamp, libraryRequirements, location, name, nodeCount, nodeSize, nodeSizeFamily, provisioningState, sessionLevelPackagesEnabled, sparkConfigProperties, sparkEventsFolder, sparkVersion, tags, type);
         }

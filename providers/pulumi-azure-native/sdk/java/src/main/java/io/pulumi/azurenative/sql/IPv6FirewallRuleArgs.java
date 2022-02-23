@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="endIPv6Address")
-    private final @Nullable Input<String> endIPv6Address;
+        private final @Nullable Input<String> endIPv6Address;
 
     public Input<String> getEndIPv6Address() {
         return this.endIPv6Address == null ? Input.empty() : this.endIPv6Address;
@@ -30,7 +30,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="firewallRuleName")
-    private final @Nullable Input<String> firewallRuleName;
+        private final @Nullable Input<String> firewallRuleName;
 
     public Input<String> getFirewallRuleName() {
         return this.firewallRuleName == null ? Input.empty() : this.firewallRuleName;
@@ -41,7 +41,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -74,7 +74,7 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="startIPv6Address")
-    private final @Nullable Input<String> startIPv6Address;
+        private final @Nullable Input<String> startIPv6Address;
 
     public Input<String> getStartIPv6Address() {
         return this.startIPv6Address == null ? Input.empty() : this.startIPv6Address;
@@ -193,7 +193,6 @@ public final class IPv6FirewallRuleArgs extends io.pulumi.resources.ResourceArgs
             this.startIPv6Address = Input.ofNullable(startIPv6Address);
             return this;
         }
-
         public IPv6FirewallRuleArgs build() {
             return new IPv6FirewallRuleArgs(endIPv6Address, firewallRuleName, name, resourceGroupName, serverName, startIPv6Address);
         }

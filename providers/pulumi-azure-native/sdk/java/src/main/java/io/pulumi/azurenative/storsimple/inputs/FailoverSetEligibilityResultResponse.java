@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="errorMessage")
-    private final @Nullable String errorMessage;
+        private final @Nullable String errorMessage;
 
     public Optional<String> getErrorMessage() {
         return this.errorMessage == null ? Optional.empty() : Optional.ofNullable(this.errorMessage);
@@ -35,7 +35,7 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="isEligibleForFailover")
-    private final @Nullable Boolean isEligibleForFailover;
+        private final @Nullable Boolean isEligibleForFailover;
 
     public Optional<Boolean> getIsEligibleForFailover() {
         return this.isEligibleForFailover == null ? Optional.empty() : Optional.ofNullable(this.isEligibleForFailover);
@@ -84,7 +84,6 @@ public final class FailoverSetEligibilityResultResponse extends io.pulumi.resour
             this.isEligibleForFailover = isEligibleForFailover;
             return this;
         }
-
         public FailoverSetEligibilityResultResponse build() {
             return new FailoverSetEligibilityResultResponse(errorMessage, isEligibleForFailover);
         }

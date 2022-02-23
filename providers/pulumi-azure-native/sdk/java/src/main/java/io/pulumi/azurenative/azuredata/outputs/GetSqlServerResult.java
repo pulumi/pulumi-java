@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azuredata.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class GetSqlServerResult {
             this.version = version;
             return this;
         }
-
         public GetSqlServerResult build() {
             return new GetSqlServerResult(cores, edition, id, name, propertyBag, registrationID, type, version);
         }

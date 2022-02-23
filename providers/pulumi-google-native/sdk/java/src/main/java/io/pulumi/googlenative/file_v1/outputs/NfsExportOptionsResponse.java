@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.file_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class NfsExportOptionsResponse {
             this.squashMode = Objects.requireNonNull(squashMode);
             return this;
         }
-
         public NfsExportOptionsResponse build() {
             return new NfsExportOptionsResponse(accessMode, anonGid, anonUid, ipRanges, squashMode);
         }

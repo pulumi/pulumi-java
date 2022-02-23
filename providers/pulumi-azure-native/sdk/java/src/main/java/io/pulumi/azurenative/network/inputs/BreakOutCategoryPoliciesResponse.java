@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="allow")
-    private final @Nullable Boolean allow;
+        private final @Nullable Boolean allow;
 
     public Optional<Boolean> getAllow() {
         return this.allow == null ? Optional.empty() : Optional.ofNullable(this.allow);
@@ -34,7 +34,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Boolean $default;
+        private final @Nullable Boolean $default;
 
     public Optional<Boolean> get$default() {
         return this.$default == null ? Optional.empty() : Optional.ofNullable(this.$default);
@@ -45,7 +45,7 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="optimize")
-    private final @Nullable Boolean optimize;
+        private final @Nullable Boolean optimize;
 
     public Optional<Boolean> getOptimize() {
         return this.optimize == null ? Optional.empty() : Optional.ofNullable(this.optimize);
@@ -104,7 +104,6 @@ public final class BreakOutCategoryPoliciesResponse extends io.pulumi.resources.
             this.optimize = optimize;
             return this;
         }
-
         public BreakOutCategoryPoliciesResponse build() {
             return new BreakOutCategoryPoliciesResponse(allow, $default, optimize);
         }

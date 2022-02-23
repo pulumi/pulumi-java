@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.macie.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class FindingsFilterCriterion {
         public Builder(FindingsFilterCriterion defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public FindingsFilterCriterion build() {
             return new FindingsFilterCriterion();
         }

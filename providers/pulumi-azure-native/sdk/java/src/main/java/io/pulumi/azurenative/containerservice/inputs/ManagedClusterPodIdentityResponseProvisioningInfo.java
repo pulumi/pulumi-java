@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.CloudErrorResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
      * 
      */
     @InputImport(name="error")
-    private final @Nullable CloudErrorResponse error;
+        private final @Nullable CloudErrorResponse error;
 
     public Optional<CloudErrorResponse> getError() {
         return this.error == null ? Optional.empty() : Optional.ofNullable(this.error);
@@ -57,7 +57,6 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends io.
             this.error = error;
             return this;
         }
-
         public ManagedClusterPodIdentityResponseProvisioningInfo build() {
             return new ManagedClusterPodIdentityResponseProvisioningInfo(error);
         }

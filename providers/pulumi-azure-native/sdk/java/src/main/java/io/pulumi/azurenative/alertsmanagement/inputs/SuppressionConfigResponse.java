@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.inputs;
 
 import io.pulumi.azurenative.alertsmanagement.inputs.SuppressionScheduleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="recurrenceType", required=true)
-    private final String recurrenceType;
+        private final String recurrenceType;
 
     public String getRecurrenceType() {
         return this.recurrenceType;
@@ -35,7 +35,7 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable SuppressionScheduleResponse schedule;
+        private final @Nullable SuppressionScheduleResponse schedule;
 
     public Optional<SuppressionScheduleResponse> getSchedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
@@ -84,7 +84,6 @@ public final class SuppressionConfigResponse extends io.pulumi.resources.InvokeA
             this.schedule = schedule;
             return this;
         }
-
         public SuppressionConfigResponse build() {
             return new SuppressionConfigResponse(recurrenceType, schedule);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs;
 
 import io.pulumi.awsnative.ivs.inputs.StreamKeyTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="channelArn", required=true)
-    private final Input<String> channelArn;
+        private final Input<String> channelArn;
 
     public Input<String> getChannelArn() {
         return this.channelArn;
@@ -32,7 +32,7 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<StreamKeyTagArgs>> tags;
+        private final @Nullable Input<List<StreamKeyTagArgs>> tags;
 
     public Input<List<StreamKeyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -91,7 +91,6 @@ public final class StreamKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public StreamKeyArgs build() {
             return new StreamKeyArgs(channelArn, tags);
         }

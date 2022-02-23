@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerinstance.inputs;
 import io.pulumi.azurenative.containerinstance.enums.ContainerGroupNetworkProtocol;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -37,7 +37,7 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
+        private final @Nullable Input<Either<String,ContainerGroupNetworkProtocol>> protocol;
 
     public Input<Either<String,ContainerGroupNetworkProtocol>> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -96,7 +96,6 @@ public final class PortArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.ofNullable(protocol);
             return this;
         }
-
         public PortArgs build() {
             return new PortArgs(port, protocol);
         }

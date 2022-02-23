@@ -5,8 +5,8 @@ package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.apigateway.ApiConfigIamPolicyArgs;
 import io.pulumi.gcp.apigateway.inputs.ApiConfigIamPolicyState;
@@ -126,13 +126,6 @@ public class ApiConfigIamPolicy extends io.pulumi.resources.CustomResource {
         return this.project;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ApiConfigIamPolicy(String name) {
-        super("gcp:apigateway/apiConfigIamPolicy:ApiConfigIamPolicy", name, ApiConfigIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

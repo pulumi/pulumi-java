@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="goal", required=true)
-    private final String goal;
+        private final String goal;
 
     public String getGoal() {
         return this.goal;
@@ -32,7 +32,7 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primaryMetric", required=true)
-    private final String primaryMetric;
+        private final String primaryMetric;
 
     public String getPrimaryMetric() {
         return this.primaryMetric;
@@ -81,7 +81,6 @@ public final class ObjectiveResponse extends io.pulumi.resources.InvokeArgs {
             this.primaryMetric = Objects.requireNonNull(primaryMetric);
             return this;
         }
-
         public ObjectiveResponse build() {
             return new ObjectiveResponse(goal, primaryMetric);
         }

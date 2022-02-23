@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.DebugOptionsResponse;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.WorkerPoolResponse;
 import java.lang.String;
@@ -393,7 +393,6 @@ public final class EnvironmentResponse {
             this.workerZone = Objects.requireNonNull(workerZone);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(clusterManagerApiService, dataset, debugOptions, experiments, flexResourceSchedulingGoal, internalExperiments, sdkPipelineOptions, serviceAccountEmail, serviceKmsKeyName, serviceOptions, shuffleMode, tempStoragePrefix, userAgent, version, workerPools, workerRegion, workerZone);
         }

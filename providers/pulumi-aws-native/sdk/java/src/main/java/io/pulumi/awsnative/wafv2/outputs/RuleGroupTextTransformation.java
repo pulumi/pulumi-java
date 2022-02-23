@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.enums.RuleGroupTextTransformationType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class RuleGroupTextTransformation {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RuleGroupTextTransformation build() {
             return new RuleGroupTextTransformation(priority, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.runtimeconfig;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.runtimeconfig.VariableArgs;
 import io.pulumi.gcp.runtimeconfig.inputs.VariableState;
@@ -124,13 +124,6 @@ public class Variable extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Variable(String name) {
-        super("gcp:runtimeconfig/variable:Variable", name, VariableArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

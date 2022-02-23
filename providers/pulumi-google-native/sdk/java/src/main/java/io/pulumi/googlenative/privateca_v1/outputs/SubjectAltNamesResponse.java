@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ExtensionResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class SubjectAltNamesResponse {
             this.uris = Objects.requireNonNull(uris);
             return this;
         }
-
         public SubjectAltNamesResponse build() {
             return new SubjectAltNamesResponse(customSans, dnsNames, emailAddresses, ipAddresses, uris);
         }

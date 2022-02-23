@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConsentLinkDefinitionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ListConnectionConsentLinksResult {
             this.value = value;
             return this;
         }
-
         public ListConnectionConsentLinksResult build() {
             return new ListConnectionConsentLinksResult(value);
         }

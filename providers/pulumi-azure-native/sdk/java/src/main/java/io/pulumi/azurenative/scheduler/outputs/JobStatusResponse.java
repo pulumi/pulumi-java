@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class JobStatusResponse {
             this.nextExecutionTime = Objects.requireNonNull(nextExecutionTime);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(executionCount, failureCount, faultedCount, lastExecutionTime, nextExecutionTime);
         }

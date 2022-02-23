@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.binaryauthorization_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.binaryauthorization_v1beta1.inputs.AttestorPublicKeyArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="noteReference", required=true)
-    private final Input<String> noteReference;
+      private final Input<String> noteReference;
 
     public Input<String> getNoteReference() {
         return this.noteReference;
@@ -36,7 +36,7 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicKeys")
-    private final @Nullable Input<List<AttestorPublicKeyArgs>> publicKeys;
+      private final @Nullable Input<List<AttestorPublicKeyArgs>> publicKeys;
 
     public Input<List<AttestorPublicKeyArgs>> getPublicKeys() {
         return this.publicKeys == null ? Input.empty() : this.publicKeys;
@@ -95,7 +95,6 @@ public final class UserOwnedDrydockNoteArgs extends io.pulumi.resources.Resource
             this.publicKeys = Input.ofNullable(publicKeys);
             return this;
         }
-
         public UserOwnedDrydockNoteArgs build() {
             return new UserOwnedDrydockNoteArgs(noteReference, publicKeys);
         }

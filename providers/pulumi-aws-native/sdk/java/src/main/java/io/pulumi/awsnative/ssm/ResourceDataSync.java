@@ -9,8 +9,8 @@ import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncS3Destination;
 import io.pulumi.awsnative.ssm.outputs.ResourceDataSyncSyncSource;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -75,13 +75,6 @@ public class ResourceDataSync extends io.pulumi.resources.CustomResource {
         return this.syncType;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ResourceDataSync(String name) {
-        super("aws-native:ssm:ResourceDataSync", name, ResourceDataSyncArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

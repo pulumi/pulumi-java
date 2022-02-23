@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class NetworkRoutingConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="routingMode", required=true)
-    private final String routingMode;
+      private final String routingMode;
 
     public String getRoutingMode() {
         return this.routingMode;
@@ -59,7 +59,6 @@ public final class NetworkRoutingConfigResponse extends io.pulumi.resources.Invo
             this.routingMode = Objects.requireNonNull(routingMode);
             return this;
         }
-
         public NetworkRoutingConfigResponse build() {
             return new NetworkRoutingConfigResponse(routingMode);
         }

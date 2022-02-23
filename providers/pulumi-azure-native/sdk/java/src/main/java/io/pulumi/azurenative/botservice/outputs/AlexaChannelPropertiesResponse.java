@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class AlexaChannelPropertiesResponse {
             this.urlFragment = Objects.requireNonNull(urlFragment);
             return this;
         }
-
         public AlexaChannelPropertiesResponse build() {
             return new AlexaChannelPropertiesResponse(alexaSkillId, isEnabled, serviceEndpointUri, urlFragment);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridnetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="createOption")
-    private final @Nullable String createOption;
+        private final @Nullable String createOption;
 
     public Optional<String> getCreateOption() {
         return this.createOption == null ? Optional.empty() : Optional.ofNullable(this.createOption);
@@ -35,7 +35,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Integer diskSizeGB;
+        private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
@@ -46,7 +46,7 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -105,7 +105,6 @@ public final class DataDiskResponse extends io.pulumi.resources.InvokeArgs {
             this.name = name;
             return this;
         }
-
         public DataDiskResponse build() {
             return new DataDiskResponse(createOption, diskSizeGB, name);
         }

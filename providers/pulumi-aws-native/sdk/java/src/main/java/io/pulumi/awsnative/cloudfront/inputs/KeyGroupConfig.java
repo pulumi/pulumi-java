@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class KeyGroupConfig extends io.pulumi.resources.InvokeArgs {
     public static final KeyGroupConfig Empty = new KeyGroupConfig();
 
     @InputImport(name="comment")
-    private final @Nullable String comment;
+        private final @Nullable String comment;
 
     public Optional<String> getComment() {
         return this.comment == null ? Optional.empty() : Optional.ofNullable(this.comment);
     }
 
     @InputImport(name="items", required=true)
-    private final List<String> items;
+        private final List<String> items;
 
     public List<String> getItems() {
         return this.items;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -89,7 +89,6 @@ public final class KeyGroupConfig extends io.pulumi.resources.InvokeArgs {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public KeyGroupConfig build() {
             return new KeyGroupConfig(comment, items, name);
         }

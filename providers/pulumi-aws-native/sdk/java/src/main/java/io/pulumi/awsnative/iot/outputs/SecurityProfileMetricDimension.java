@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.SecurityProfileMetricDimensionOperator;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class SecurityProfileMetricDimension {
             this.operator = operator;
             return this;
         }
-
         public SecurityProfileMetricDimension build() {
             return new SecurityProfileMetricDimension(dimensionName, operator);
         }

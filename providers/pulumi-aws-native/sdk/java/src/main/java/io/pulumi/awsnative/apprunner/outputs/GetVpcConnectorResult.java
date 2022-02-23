@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class GetVpcConnectorResult {
             this.vpcConnectorRevision = vpcConnectorRevision;
             return this;
         }
-
         public GetVpcConnectorResult build() {
             return new GetVpcConnectorResult(vpcConnectorArn, vpcConnectorRevision);
         }

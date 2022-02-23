@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetVersionResult {
             this.versionNumber = Objects.requireNonNull(versionNumber);
             return this;
         }
-
         public GetVersionResult build() {
             return new GetVersionResult(createTime, description, name, status, versionNumber);
         }

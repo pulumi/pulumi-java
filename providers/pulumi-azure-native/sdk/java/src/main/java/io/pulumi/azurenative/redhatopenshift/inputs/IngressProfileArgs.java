@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+        private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -34,7 +34,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -45,7 +45,7 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="visibility")
-    private final @Nullable Input<String> visibility;
+        private final @Nullable Input<String> visibility;
 
     public Input<String> getVisibility() {
         return this.visibility == null ? Input.empty() : this.visibility;
@@ -119,7 +119,6 @@ public final class IngressProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.visibility = Input.ofNullable(visibility);
             return this;
         }
-
         public IngressProfileArgs build() {
             return new IngressProfileArgs(ip, name, visibility);
         }

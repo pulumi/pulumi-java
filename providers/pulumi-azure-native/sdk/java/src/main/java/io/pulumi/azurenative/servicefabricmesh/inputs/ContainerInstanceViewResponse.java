@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerEventResponse;
 import io.pulumi.azurenative.servicefabricmesh.inputs.ContainerStateResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="currentState")
-    private final @Nullable ContainerStateResponse currentState;
+        private final @Nullable ContainerStateResponse currentState;
 
     public Optional<ContainerStateResponse> getCurrentState() {
         return this.currentState == null ? Optional.empty() : Optional.ofNullable(this.currentState);
@@ -37,7 +37,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="events")
-    private final @Nullable List<ContainerEventResponse> events;
+        private final @Nullable List<ContainerEventResponse> events;
 
     public List<ContainerEventResponse> getEvents() {
         return this.events == null ? List.of() : this.events;
@@ -48,7 +48,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="previousState")
-    private final @Nullable ContainerStateResponse previousState;
+        private final @Nullable ContainerStateResponse previousState;
 
     public Optional<ContainerStateResponse> getPreviousState() {
         return this.previousState == null ? Optional.empty() : Optional.ofNullable(this.previousState);
@@ -59,7 +59,7 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="restartCount")
-    private final @Nullable Integer restartCount;
+        private final @Nullable Integer restartCount;
 
     public Optional<Integer> getRestartCount() {
         return this.restartCount == null ? Optional.empty() : Optional.ofNullable(this.restartCount);
@@ -128,7 +128,6 @@ public final class ContainerInstanceViewResponse extends io.pulumi.resources.Inv
             this.restartCount = restartCount;
             return this;
         }
-
         public ContainerInstanceViewResponse build() {
             return new ContainerInstanceViewResponse(currentState, events, previousState, restartCount);
         }

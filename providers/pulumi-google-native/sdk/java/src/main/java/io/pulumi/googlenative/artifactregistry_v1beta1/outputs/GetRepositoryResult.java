@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.artifactregistry_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetRepositoryResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(createTime, description, format, kmsKeyName, labels, name, updateTime);
         }

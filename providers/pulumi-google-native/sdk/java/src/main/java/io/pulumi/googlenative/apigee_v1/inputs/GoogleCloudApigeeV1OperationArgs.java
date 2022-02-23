@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apigee_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="methods")
-    private final @Nullable Input<List<String>> methods;
+      private final @Nullable Input<List<String>> methods;
 
     public Input<List<String>> getMethods() {
         return this.methods == null ? Input.empty() : this.methods;
@@ -35,7 +35,7 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+      private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -94,7 +94,6 @@ public final class GoogleCloudApigeeV1OperationArgs extends io.pulumi.resources.
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public GoogleCloudApigeeV1OperationArgs build() {
             return new GoogleCloudApigeeV1OperationArgs(methods, resource);
         }

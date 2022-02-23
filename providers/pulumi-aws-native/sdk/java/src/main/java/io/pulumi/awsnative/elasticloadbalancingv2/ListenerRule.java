@@ -9,8 +9,8 @@ import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleAction;
 import io.pulumi.awsnative.elasticloadbalancingv2.outputs.ListenerRuleRuleCondition;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -60,13 +60,6 @@ public class ListenerRule extends io.pulumi.resources.CustomResource {
         return this.ruleArn;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ListenerRule(String name) {
-        super("aws-native:elasticloadbalancingv2:ListenerRule", name, ListenerRuleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

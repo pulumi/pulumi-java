@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1EventHandlerResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FormResponse;
 import io.pulumi.googlenative.dialogflow_v3beta1.inputs.GoogleCloudDialogflowCxV3beta1FulfillmentResponse;
@@ -26,7 +26,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+      private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -37,7 +37,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="entryFulfillment", required=true)
-    private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment;
+      private final GoogleCloudDialogflowCxV3beta1FulfillmentResponse entryFulfillment;
 
     public GoogleCloudDialogflowCxV3beta1FulfillmentResponse getEntryFulfillment() {
         return this.entryFulfillment;
@@ -48,7 +48,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="eventHandlers", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers;
+      private final List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> eventHandlers;
 
     public List<GoogleCloudDialogflowCxV3beta1EventHandlerResponse> getEventHandlers() {
         return this.eventHandlers;
@@ -59,7 +59,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="form", required=true)
-    private final GoogleCloudDialogflowCxV3beta1FormResponse form;
+      private final GoogleCloudDialogflowCxV3beta1FormResponse form;
 
     public GoogleCloudDialogflowCxV3beta1FormResponse getForm() {
         return this.form;
@@ -70,7 +70,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -81,7 +81,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="transitionRouteGroups", required=true)
-    private final List<String> transitionRouteGroups;
+      private final List<String> transitionRouteGroups;
 
     public List<String> getTransitionRouteGroups() {
         return this.transitionRouteGroups;
@@ -92,7 +92,7 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
      * 
      */
     @InputImport(name="transitionRoutes", required=true)
-    private final List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes;
+      private final List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> transitionRoutes;
 
     public List<GoogleCloudDialogflowCxV3beta1TransitionRouteResponse> getTransitionRoutes() {
         return this.transitionRoutes;
@@ -191,7 +191,6 @@ public final class GoogleCloudDialogflowCxV3beta1PageResponse extends io.pulumi.
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1PageResponse build() {
             return new GoogleCloudDialogflowCxV3beta1PageResponse(displayName, entryFulfillment, eventHandlers, form, name, transitionRouteGroups, transitionRoutes);
         }

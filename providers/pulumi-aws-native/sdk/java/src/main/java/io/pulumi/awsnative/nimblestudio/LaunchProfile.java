@@ -9,8 +9,8 @@ import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileStreamConfiguration
 import io.pulumi.awsnative.nimblestudio.outputs.LaunchProfileTags;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -130,13 +130,6 @@ public class LaunchProfile extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public LaunchProfile(String name) {
-        super("aws-native:nimblestudio:LaunchProfile", name, LaunchProfileArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class CanaryBaseScreenshot {
             this.screenshotName = Objects.requireNonNull(screenshotName);
             return this;
         }
-
         public CanaryBaseScreenshot build() {
             return new CanaryBaseScreenshot(ignoreCoordinates, screenshotName);
         }

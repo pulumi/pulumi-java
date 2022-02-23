@@ -8,7 +8,7 @@ import io.pulumi.azurenative.media.outputs.DeinterlaceResponse;
 import io.pulumi.azurenative.media.outputs.RectangleResponse;
 import io.pulumi.azurenative.media.outputs.VideoOverlayResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -124,7 +124,6 @@ public final class FiltersResponse {
             this.rotation = rotation;
             return this;
         }
-
         public FiltersResponse build() {
             return new FiltersResponse(crop, deinterlace, overlays, rotation);
         }

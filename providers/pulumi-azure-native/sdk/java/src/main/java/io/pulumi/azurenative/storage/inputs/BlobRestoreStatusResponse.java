@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.azurenative.storage.inputs.BlobRestoreParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="failureReason", required=true)
-    private final String failureReason;
+        private final String failureReason;
 
     public String getFailureReason() {
         return this.failureReason;
@@ -33,7 +33,7 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final BlobRestoreParametersResponse parameters;
+        private final BlobRestoreParametersResponse parameters;
 
     public BlobRestoreParametersResponse getParameters() {
         return this.parameters;
@@ -44,7 +44,7 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="restoreId", required=true)
-    private final String restoreId;
+        private final String restoreId;
 
     public String getRestoreId() {
         return this.restoreId;
@@ -55,7 +55,7 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -124,7 +124,6 @@ public final class BlobRestoreStatusResponse extends io.pulumi.resources.InvokeA
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public BlobRestoreStatusResponse build() {
             return new BlobRestoreStatusResponse(failureReason, parameters, restoreId, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class SecurityPolicyAssociationResponse {
             this.securityPolicyId = Objects.requireNonNull(securityPolicyId);
             return this;
         }
-
         public SecurityPolicyAssociationResponse build() {
             return new SecurityPolicyAssociationResponse(attachmentId, displayName, name, securityPolicyId);
         }

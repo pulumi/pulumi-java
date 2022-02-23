@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.RouterAdvertisedIpRangeResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class RouterBgpResponse {
             this.keepaliveInterval = Objects.requireNonNull(keepaliveInterval);
             return this;
         }
-
         public RouterBgpResponse build() {
             return new RouterBgpResponse(advertiseMode, advertisedGroups, advertisedIpRanges, asn, keepaliveInterval);
         }

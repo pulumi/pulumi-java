@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.connectedvmwarevsphere;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="metadataName")
-    private final @Nullable Input<String> metadataName;
+        private final @Nullable Input<String> metadataName;
 
     public Input<String> getMetadataName() {
         return this.metadataName == null ? Input.empty() : this.metadataName;
@@ -30,7 +30,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="publicKey")
-    private final @Nullable Input<String> publicKey;
+        private final @Nullable Input<String> publicKey;
 
     public Input<String> getPublicKey() {
         return this.publicKey == null ? Input.empty() : this.publicKey;
@@ -41,7 +41,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="virtualMachineName", required=true)
-    private final Input<String> virtualMachineName;
+        private final Input<String> virtualMachineName;
 
     public Input<String> getVirtualMachineName() {
         return this.virtualMachineName;
@@ -63,7 +63,7 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vmId")
-    private final @Nullable Input<String> vmId;
+        private final @Nullable Input<String> vmId;
 
     public Input<String> getVmId() {
         return this.vmId == null ? Input.empty() : this.vmId;
@@ -167,7 +167,6 @@ public final class HybridIdentityMetadatumArgs extends io.pulumi.resources.Resou
             this.vmId = Input.ofNullable(vmId);
             return this;
         }
-
         public HybridIdentityMetadatumArgs build() {
             return new HybridIdentityMetadatumArgs(metadataName, publicKey, resourceGroupName, virtualMachineName, vmId);
         }

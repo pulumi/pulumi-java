@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.awsnative.cloudfront.inputs.DistributionOriginGroupMemberArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DistributionOriginGroupMembersArgs extends io.pulumi.resource
     public static final DistributionOriginGroupMembersArgs Empty = new DistributionOriginGroupMembersArgs();
 
     @InputImport(name="items", required=true)
-    private final Input<List<DistributionOriginGroupMemberArgs>> items;
+        private final Input<List<DistributionOriginGroupMemberArgs>> items;
 
     public Input<List<DistributionOriginGroupMemberArgs>> getItems() {
         return this.items;
     }
 
     @InputImport(name="quantity", required=true)
-    private final Input<Integer> quantity;
+        private final Input<Integer> quantity;
 
     public Input<Integer> getQuantity() {
         return this.quantity;
@@ -82,7 +82,6 @@ public final class DistributionOriginGroupMembersArgs extends io.pulumi.resource
             this.quantity = Input.of(Objects.requireNonNull(quantity));
             return this;
         }
-
         public DistributionOriginGroupMembersArgs build() {
             return new DistributionOriginGroupMembersArgs(items, quantity);
         }

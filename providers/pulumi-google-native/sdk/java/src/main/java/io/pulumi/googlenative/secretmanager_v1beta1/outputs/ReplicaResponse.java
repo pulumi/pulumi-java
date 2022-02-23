@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.secretmanager_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ReplicaResponse {
             this.location = Objects.requireNonNull(location);
             return this;
         }
-
         public ReplicaResponse build() {
             return new ReplicaResponse(location);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ServiceMeshTypeResponse {
             this.displayName = Objects.requireNonNull(displayName);
             return this;
         }
-
         public ServiceMeshTypeResponse build() {
             return new ServiceMeshTypeResponse(code, displayName);
         }

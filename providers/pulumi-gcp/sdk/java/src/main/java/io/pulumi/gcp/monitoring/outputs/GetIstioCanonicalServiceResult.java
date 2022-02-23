@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.monitoring.outputs.GetIstioCanonicalServiceTelemetry;
 import java.lang.String;
 import java.util.List;
@@ -161,7 +161,6 @@ public final class GetIstioCanonicalServiceResult {
             this.telemetries = Objects.requireNonNull(telemetries);
             return this;
         }
-
         public GetIstioCanonicalServiceResult build() {
             return new GetIstioCanonicalServiceResult(canonicalService, canonicalServiceNamespace, displayName, id, meshUid, name, project, serviceId, telemetries);
         }

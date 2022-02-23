@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.outputs;
 
 import io.pulumi.awsnative.nimblestudio.enums.StudioEncryptionConfigurationKeyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +69,6 @@ public final class StudioEncryptionConfiguration {
             this.keyType = Objects.requireNonNull(keyType);
             return this;
         }
-
         public StudioEncryptionConfiguration build() {
             return new StudioEncryptionConfiguration(keyArn, keyType);
         }

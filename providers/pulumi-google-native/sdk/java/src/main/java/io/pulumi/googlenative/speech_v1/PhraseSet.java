@@ -5,8 +5,8 @@ package io.pulumi.googlenative.speech_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.speech_v1.PhraseSetArgs;
 import io.pulumi.googlenative.speech_v1.outputs.PhraseResponse;
@@ -64,13 +64,6 @@ public class PhraseSet extends io.pulumi.resources.CustomResource {
         return this.phrases;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PhraseSet(String name) {
-        super("google-native:speech/v1:PhraseSet", name, PhraseSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

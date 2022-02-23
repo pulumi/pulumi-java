@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsDiskType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.enums.ComputeEngineTargetDefaultsLicenseType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.inputs.ComputeSchedulingArgs;
@@ -30,7 +30,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="additionalLicenses")
-    private final @Nullable Input<List<String>> additionalLicenses;
+      private final @Nullable Input<List<String>> additionalLicenses;
 
     public Input<List<String>> getAdditionalLicenses() {
         return this.additionalLicenses == null ? Input.empty() : this.additionalLicenses;
@@ -41,7 +41,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="computeScheduling")
-    private final @Nullable Input<ComputeSchedulingArgs> computeScheduling;
+      private final @Nullable Input<ComputeSchedulingArgs> computeScheduling;
 
     public Input<ComputeSchedulingArgs> getComputeScheduling() {
         return this.computeScheduling == null ? Input.empty() : this.computeScheduling;
@@ -52,7 +52,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType;
+      private final @Nullable Input<ComputeEngineTargetDefaultsDiskType> diskType;
 
     public Input<ComputeEngineTargetDefaultsDiskType> getDiskType() {
         return this.diskType == null ? Input.empty() : this.diskType;
@@ -63,7 +63,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -74,7 +74,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType;
+      private final @Nullable Input<ComputeEngineTargetDefaultsLicenseType> licenseType;
 
     public Input<ComputeEngineTargetDefaultsLicenseType> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -85,7 +85,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="machineType")
-    private final @Nullable Input<String> machineType;
+      private final @Nullable Input<String> machineType;
 
     public Input<String> getMachineType() {
         return this.machineType == null ? Input.empty() : this.machineType;
@@ -96,7 +96,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="machineTypeSeries")
-    private final @Nullable Input<String> machineTypeSeries;
+      private final @Nullable Input<String> machineTypeSeries;
 
     public Input<String> getMachineTypeSeries() {
         return this.machineTypeSeries == null ? Input.empty() : this.machineTypeSeries;
@@ -107,7 +107,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+      private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -118,7 +118,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkInterfaces")
-    private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
+      private final @Nullable Input<List<NetworkInterfaceArgs>> networkInterfaces;
 
     public Input<List<NetworkInterfaceArgs>> getNetworkInterfaces() {
         return this.networkInterfaces == null ? Input.empty() : this.networkInterfaces;
@@ -129,7 +129,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="networkTags")
-    private final @Nullable Input<List<String>> networkTags;
+      private final @Nullable Input<List<String>> networkTags;
 
     public Input<List<String>> getNetworkTags() {
         return this.networkTags == null ? Input.empty() : this.networkTags;
@@ -140,7 +140,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="secureBoot")
-    private final @Nullable Input<Boolean> secureBoot;
+      private final @Nullable Input<Boolean> secureBoot;
 
     public Input<Boolean> getSecureBoot() {
         return this.secureBoot == null ? Input.empty() : this.secureBoot;
@@ -151,7 +151,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+      private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -162,7 +162,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="targetProject")
-    private final @Nullable Input<String> targetProject;
+      private final @Nullable Input<String> targetProject;
 
     public Input<String> getTargetProject() {
         return this.targetProject == null ? Input.empty() : this.targetProject;
@@ -173,7 +173,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="vmName")
-    private final @Nullable Input<String> vmName;
+      private final @Nullable Input<String> vmName;
 
     public Input<String> getVmName() {
         return this.vmName == null ? Input.empty() : this.vmName;
@@ -184,7 +184,7 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -438,7 +438,6 @@ public final class ComputeEngineTargetDefaultsArgs extends io.pulumi.resources.R
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public ComputeEngineTargetDefaultsArgs build() {
             return new ComputeEngineTargetDefaultsArgs(additionalLicenses, computeScheduling, diskType, labels, licenseType, machineType, machineTypeSeries, metadata, networkInterfaces, networkTags, secureBoot, serviceAccount, targetProject, vmName, zone);
         }

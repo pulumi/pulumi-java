@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="effect", required=true)
-    private final Input<String> effect;
+        private final Input<String> effect;
 
     public Input<String> getEffect() {
         return this.effect;
@@ -29,7 +29,7 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="key", required=true)
-    private final Input<String> key;
+        private final Input<String> key;
 
     public Input<String> getKey() {
         return this.key;
@@ -40,7 +40,7 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -114,7 +114,6 @@ public final class AwsNodePoolConfigTaintArgs extends io.pulumi.resources.Resour
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public AwsNodePoolConfigTaintArgs build() {
             return new AwsNodePoolConfigTaintArgs(effect, key, value);
         }

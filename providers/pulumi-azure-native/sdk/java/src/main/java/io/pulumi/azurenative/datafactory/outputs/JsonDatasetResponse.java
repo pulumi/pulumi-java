@@ -20,7 +20,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -287,7 +287,6 @@ public final class JsonDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public JsonDatasetResponse build() {
             return new JsonDatasetResponse(annotations, compression, description, encodingName, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.securitycenter_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.securitycenter_v1.NotificationConfigArgs;
 import io.pulumi.googlenative.securitycenter_v1.outputs.StreamingConfigResponse;
@@ -90,13 +90,6 @@ public class NotificationConfig extends io.pulumi.resources.CustomResource {
         return this.streamingConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NotificationConfig(String name) {
-        super("google-native:securitycenter/v1:NotificationConfig", name, NotificationConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

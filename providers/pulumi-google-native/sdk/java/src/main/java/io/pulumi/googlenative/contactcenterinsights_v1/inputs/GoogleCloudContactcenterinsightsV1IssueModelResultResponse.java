@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1IssueAssignmentResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
      * 
      */
     @InputImport(name="issueModel", required=true)
-    private final String issueModel;
+      private final String issueModel;
 
     public String getIssueModel() {
         return this.issueModel;
@@ -34,7 +34,7 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
      * 
      */
     @InputImport(name="issues", required=true)
-    private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
+      private final List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> issues;
 
     public List<GoogleCloudContactcenterinsightsV1IssueAssignmentResponse> getIssues() {
         return this.issues;
@@ -83,7 +83,6 @@ public final class GoogleCloudContactcenterinsightsV1IssueModelResultResponse ex
             this.issues = Objects.requireNonNull(issues);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1IssueModelResultResponse build() {
             return new GoogleCloudContactcenterinsightsV1IssueModelResultResponse(issueModel, issues);
         }

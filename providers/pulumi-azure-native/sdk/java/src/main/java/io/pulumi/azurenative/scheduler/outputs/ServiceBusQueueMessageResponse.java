@@ -5,7 +5,7 @@ package io.pulumi.azurenative.scheduler.outputs;
 
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusAuthenticationResponse;
 import io.pulumi.azurenative.scheduler.outputs.ServiceBusBrokeredMessagePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -184,7 +184,6 @@ public final class ServiceBusQueueMessageResponse {
             this.transportType = transportType;
             return this;
         }
-
         public ServiceBusQueueMessageResponse build() {
             return new ServiceBusQueueMessageResponse(authentication, brokeredMessageProperties, customMessageProperties, message, namespace, queueName, transportType);
         }

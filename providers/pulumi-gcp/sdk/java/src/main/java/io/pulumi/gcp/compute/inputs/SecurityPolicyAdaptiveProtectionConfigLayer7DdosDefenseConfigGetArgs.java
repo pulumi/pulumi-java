@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+        private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -31,7 +31,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
      * 
      */
     @InputImport(name="ruleVisibility")
-    private final @Nullable Input<String> ruleVisibility;
+        private final @Nullable Input<String> ruleVisibility;
 
     public Input<String> getRuleVisibility() {
         return this.ruleVisibility == null ? Input.empty() : this.ruleVisibility;
@@ -90,7 +90,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfig
             this.ruleVisibility = Input.ofNullable(ruleVisibility);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigGetArgs(enable, ruleVisibility);
         }

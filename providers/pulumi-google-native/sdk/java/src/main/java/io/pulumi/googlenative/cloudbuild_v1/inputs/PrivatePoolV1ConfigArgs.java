@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.NetworkConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.WorkerConfigArgs;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<NetworkConfigArgs> networkConfig;
+      private final @Nullable Input<NetworkConfigArgs> networkConfig;
 
     public Input<NetworkConfigArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -35,7 +35,7 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<WorkerConfigArgs> workerConfig;
+      private final @Nullable Input<WorkerConfigArgs> workerConfig;
 
     public Input<WorkerConfigArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -94,7 +94,6 @@ public final class PrivatePoolV1ConfigArgs extends io.pulumi.resources.ResourceA
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
-
         public PrivatePoolV1ConfigArgs build() {
             return new PrivatePoolV1ConfigArgs(networkConfig, workerConfig);
         }

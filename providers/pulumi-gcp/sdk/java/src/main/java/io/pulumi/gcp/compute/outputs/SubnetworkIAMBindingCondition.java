@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class SubnetworkIAMBindingCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public SubnetworkIAMBindingCondition build() {
             return new SubnetworkIAMBindingCondition(description, expression, title);
         }

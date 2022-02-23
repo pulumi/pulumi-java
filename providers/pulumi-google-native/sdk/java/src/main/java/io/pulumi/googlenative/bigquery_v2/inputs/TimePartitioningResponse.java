@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expirationMs", required=true)
-    private final String expirationMs;
+      private final String expirationMs;
 
     public String getExpirationMs() {
         return this.expirationMs;
@@ -29,14 +29,14 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="field", required=true)
-    private final String field;
+      private final String field;
 
     public String getField() {
         return this.field;
     }
 
     @InputImport(name="requirePartitionFilter", required=true)
-    private final Boolean requirePartitionFilter;
+      private final Boolean requirePartitionFilter;
 
     public Boolean getRequirePartitionFilter() {
         return this.requirePartitionFilter;
@@ -47,7 +47,7 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -116,7 +116,6 @@ public final class TimePartitioningResponse extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public TimePartitioningResponse build() {
             return new TimePartitioningResponse(expirationMs, field, requirePartitionFilter, type);
         }

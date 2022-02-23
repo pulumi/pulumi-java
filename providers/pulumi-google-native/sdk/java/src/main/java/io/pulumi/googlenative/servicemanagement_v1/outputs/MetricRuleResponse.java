@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class MetricRuleResponse {
             this.selector = Objects.requireNonNull(selector);
             return this;
         }
-
         public MetricRuleResponse build() {
             return new MetricRuleResponse(metricCosts, selector);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="interconnectAttachment")
-    private final @Nullable Input<String> interconnectAttachment;
+      private final @Nullable Input<String> interconnectAttachment;
 
     public Input<String> getInterconnectAttachment() {
         return this.interconnectAttachment == null ? Input.empty() : this.interconnectAttachment;
@@ -66,7 +66,6 @@ public final class VpnGatewayVpnGatewayInterfaceArgs extends io.pulumi.resources
             this.interconnectAttachment = Input.ofNullable(interconnectAttachment);
             return this;
         }
-
         public VpnGatewayVpnGatewayInterfaceArgs build() {
             return new VpnGatewayVpnGatewayInterfaceArgs(interconnectAttachment);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1.inputs.MethodSelectorArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="methodSelectors")
-    private final @Nullable Input<List<MethodSelectorArgs>> methodSelectors;
+      private final @Nullable Input<List<MethodSelectorArgs>> methodSelectors;
 
     public Input<List<MethodSelectorArgs>> getMethodSelectors() {
         return this.methodSelectors == null ? Input.empty() : this.methodSelectors;
@@ -36,7 +36,7 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName")
-    private final @Nullable Input<String> serviceName;
+      private final @Nullable Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName == null ? Input.empty() : this.serviceName;
@@ -95,7 +95,6 @@ public final class ApiOperationArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceName = Input.ofNullable(serviceName);
             return this;
         }
-
         public ApiOperationArgs build() {
             return new ApiOperationArgs(methodSelectors, serviceName);
         }

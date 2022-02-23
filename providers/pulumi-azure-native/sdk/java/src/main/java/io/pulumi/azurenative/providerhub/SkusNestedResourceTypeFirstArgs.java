@@ -5,7 +5,7 @@ package io.pulumi.azurenative.providerhub;
 
 import io.pulumi.azurenative.providerhub.inputs.SkuResourcePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nestedResourceTypeFirst", required=true)
-    private final Input<String> nestedResourceTypeFirst;
+        private final Input<String> nestedResourceTypeFirst;
 
     public Input<String> getNestedResourceTypeFirst() {
         return this.nestedResourceTypeFirst;
     }
 
     @InputImport(name="properties")
-    private final @Nullable Input<SkuResourcePropertiesArgs> properties;
+        private final @Nullable Input<SkuResourcePropertiesArgs> properties;
 
     public Input<SkuResourcePropertiesArgs> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -38,7 +38,7 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final Input<String> providerNamespace;
+        private final Input<String> providerNamespace;
 
     public Input<String> getProviderNamespace() {
         return this.providerNamespace;
@@ -49,7 +49,7 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final Input<String> resourceType;
+        private final Input<String> resourceType;
 
     public Input<String> getPropResourceType() {
         return this.resourceType;
@@ -60,7 +60,7 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<String> sku;
+        private final @Nullable Input<String> sku;
 
     public Input<String> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -164,7 +164,6 @@ public final class SkusNestedResourceTypeFirstArgs extends io.pulumi.resources.R
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public SkusNestedResourceTypeFirstArgs build() {
             return new SkusNestedResourceTypeFirstArgs(nestedResourceTypeFirst, properties, providerNamespace, resourceType, sku);
         }

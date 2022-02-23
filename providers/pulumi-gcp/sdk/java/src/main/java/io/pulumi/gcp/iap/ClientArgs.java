@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="brand", required=true)
-    private final Input<String> brand;
+        private final Input<String> brand;
 
     public Input<String> getBrand() {
         return this.brand;
@@ -31,7 +31,7 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -90,7 +90,6 @@ public final class ClientArgs extends io.pulumi.resources.ResourceArgs {
             this.displayName = Input.of(Objects.requireNonNull(displayName));
             return this;
         }
-
         public ClientArgs build() {
             return new ClientArgs(brand, displayName);
         }

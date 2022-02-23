@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.ToyStoreArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Chew;
@@ -42,13 +42,6 @@ public class ToyStore extends io.pulumi.resources.CustomResource {
         return this.wanted;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ToyStore(String name) {
-        super("example::ToyStore", name, ToyStoreArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

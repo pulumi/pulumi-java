@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="messageId", required=true)
-    private final Input<String> messageId;
+        private final Input<String> messageId;
 
     public Input<String> getMessageId() {
         return this.messageId;
@@ -34,7 +34,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaName", required=true)
-    private final Input<String> schemaName;
+        private final Input<String> schemaName;
 
     public Input<String> getSchemaName() {
         return this.schemaName;
@@ -45,7 +45,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schemaVersion", required=true)
-    private final Input<String> schemaVersion;
+        private final Input<String> schemaVersion;
 
     public Input<String> getSchemaVersion() {
         return this.schemaVersion;
@@ -56,7 +56,7 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="senderApplicationId")
-    private final @Nullable Input<String> senderApplicationId;
+        private final @Nullable Input<String> senderApplicationId;
 
     public Input<String> getSenderApplicationId() {
         return this.senderApplicationId == null ? Input.empty() : this.senderApplicationId;
@@ -145,7 +145,6 @@ public final class X12SchemaReferenceArgs extends io.pulumi.resources.ResourceAr
             this.senderApplicationId = Input.ofNullable(senderApplicationId);
             return this;
         }
-
         public X12SchemaReferenceArgs build() {
             return new X12SchemaReferenceArgs(messageId, schemaName, schemaVersion, senderApplicationId);
         }

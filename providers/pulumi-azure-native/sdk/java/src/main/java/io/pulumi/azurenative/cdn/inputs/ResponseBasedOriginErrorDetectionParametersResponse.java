@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.HttpErrorRangeParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
      * 
      */
     @InputImport(name="httpErrorRanges")
-    private final @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges;
+        private final @Nullable List<HttpErrorRangeParametersResponse> httpErrorRanges;
 
     public List<HttpErrorRangeParametersResponse> getHttpErrorRanges() {
         return this.httpErrorRanges == null ? List.of() : this.httpErrorRanges;
@@ -37,7 +37,7 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
      * 
      */
     @InputImport(name="responseBasedDetectedErrorTypes")
-    private final @Nullable String responseBasedDetectedErrorTypes;
+        private final @Nullable String responseBasedDetectedErrorTypes;
 
     public Optional<String> getResponseBasedDetectedErrorTypes() {
         return this.responseBasedDetectedErrorTypes == null ? Optional.empty() : Optional.ofNullable(this.responseBasedDetectedErrorTypes);
@@ -48,7 +48,7 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
      * 
      */
     @InputImport(name="responseBasedFailoverThresholdPercentage")
-    private final @Nullable Integer responseBasedFailoverThresholdPercentage;
+        private final @Nullable Integer responseBasedFailoverThresholdPercentage;
 
     public Optional<Integer> getResponseBasedFailoverThresholdPercentage() {
         return this.responseBasedFailoverThresholdPercentage == null ? Optional.empty() : Optional.ofNullable(this.responseBasedFailoverThresholdPercentage);
@@ -107,7 +107,6 @@ public final class ResponseBasedOriginErrorDetectionParametersResponse extends i
             this.responseBasedFailoverThresholdPercentage = responseBasedFailoverThresholdPercentage;
             return this;
         }
-
         public ResponseBasedOriginErrorDetectionParametersResponse build() {
             return new ResponseBasedOriginErrorDetectionParametersResponse(httpErrorRanges, responseBasedDetectedErrorTypes, responseBasedFailoverThresholdPercentage);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.s3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class BucketFilterRule {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BucketFilterRule build() {
             return new BucketFilterRule(name, value);
         }

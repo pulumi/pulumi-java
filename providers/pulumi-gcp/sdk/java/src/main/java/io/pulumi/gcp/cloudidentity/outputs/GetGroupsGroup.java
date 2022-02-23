@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudidentity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudidentity.outputs.GetGroupsGroupGroupKey;
 import java.lang.String;
 import java.util.List;
@@ -160,7 +160,6 @@ public final class GetGroupsGroup {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupsGroup build() {
             return new GetGroupsGroup(createTime, description, displayName, groupKeys, initialGroupConfig, labels, name, parent, updateTime);
         }

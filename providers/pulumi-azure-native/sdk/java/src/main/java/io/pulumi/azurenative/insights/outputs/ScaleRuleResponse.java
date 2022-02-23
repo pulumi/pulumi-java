@@ -5,7 +5,7 @@ package io.pulumi.azurenative.insights.outputs;
 
 import io.pulumi.azurenative.insights.outputs.MetricTriggerResponse;
 import io.pulumi.azurenative.insights.outputs.ScaleActionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -75,7 +75,6 @@ public final class ScaleRuleResponse {
             this.scaleAction = Objects.requireNonNull(scaleAction);
             return this;
         }
-
         public ScaleRuleResponse build() {
             return new ScaleRuleResponse(metricTrigger, scaleAction);
         }

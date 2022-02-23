@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -102,7 +102,6 @@ public final class ComponentSetupResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ComponentSetupResponse build() {
             return new ComponentSetupResponse(componentName, licenseKey, type);
         }

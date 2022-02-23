@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable String keyName;
+        private final @Nullable String keyName;
 
     public Optional<String> getKeyName() {
         return this.keyName == null ? Optional.empty() : Optional.ofNullable(this.keyName);
@@ -35,7 +35,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
      * 
      */
     @InputImport(name="keyVault")
-    private final @Nullable ResourceReferenceResponse keyVault;
+        private final @Nullable ResourceReferenceResponse keyVault;
 
     public Optional<ResourceReferenceResponse> getKeyVault() {
         return this.keyVault == null ? Optional.empty() : Optional.ofNullable(this.keyVault);
@@ -46,7 +46,7 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable String keyVersion;
+        private final @Nullable String keyVersion;
 
     public Optional<String> getKeyVersion() {
         return this.keyVersion == null ? Optional.empty() : Optional.ofNullable(this.keyVersion);
@@ -105,7 +105,6 @@ public final class IntegrationServiceEnvironmenEncryptionKeyReferenceResponse ex
             this.keyVersion = keyVersion;
             return this;
         }
-
         public IntegrationServiceEnvironmenEncryptionKeyReferenceResponse build() {
             return new IntegrationServiceEnvironmenEncryptionKeyReferenceResponse(keyName, keyVault, keyVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class AutomationRunbookReceiverResponse {
             this.webhookResourceId = Objects.requireNonNull(webhookResourceId);
             return this;
         }
-
         public AutomationRunbookReceiverResponse build() {
             return new AutomationRunbookReceiverResponse(automationAccountId, isGlobalRunbook, name, runbookName, serviceUri, useCommonAlertSchema, webhookResourceId);
         }

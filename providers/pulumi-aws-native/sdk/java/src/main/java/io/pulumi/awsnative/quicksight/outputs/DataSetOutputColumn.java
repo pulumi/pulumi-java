@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.enums.DataSetColumnDataType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -90,7 +90,6 @@ public final class DataSetOutputColumn {
             this.type = type;
             return this;
         }
-
         public DataSetOutputColumn build() {
             return new DataSetOutputColumn(description, name, type);
         }

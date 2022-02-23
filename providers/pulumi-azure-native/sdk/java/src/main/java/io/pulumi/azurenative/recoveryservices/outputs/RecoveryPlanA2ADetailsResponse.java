@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class RecoveryPlanA2ADetailsResponse {
             this.recoveryZone = recoveryZone;
             return this;
         }
-
         public RecoveryPlanA2ADetailsResponse build() {
             return new RecoveryPlanA2ADetailsResponse(instanceType, primaryZone, recoveryZone);
         }

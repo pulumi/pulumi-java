@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="container", required=true)
-    private final Input<String> container;
+        private final Input<String> container;
 
     public Input<String> getContainer() {
         return this.container;
@@ -35,7 +35,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentAverageUtilization")
-    private final @Nullable Input<Integer> currentAverageUtilization;
+        private final @Nullable Input<Integer> currentAverageUtilization;
 
     public Input<Integer> getCurrentAverageUtilization() {
         return this.currentAverageUtilization == null ? Input.empty() : this.currentAverageUtilization;
@@ -46,7 +46,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="currentAverageValue", required=true)
-    private final Input<String> currentAverageValue;
+        private final Input<String> currentAverageValue;
 
     public Input<String> getCurrentAverageValue() {
         return this.currentAverageValue;
@@ -57,7 +57,7 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -146,7 +146,6 @@ public final class ContainerResourceMetricStatusArgs extends io.pulumi.resources
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public ContainerResourceMetricStatusArgs build() {
             return new ContainerResourceMetricStatusArgs(container, currentAverageUtilization, currentAverageValue, name);
         }

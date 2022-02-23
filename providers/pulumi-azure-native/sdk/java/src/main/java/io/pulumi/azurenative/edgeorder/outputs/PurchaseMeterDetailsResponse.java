@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class PurchaseMeterDetailsResponse {
             this.termId = Objects.requireNonNull(termId);
             return this;
         }
-
         public PurchaseMeterDetailsResponse build() {
             return new PurchaseMeterDetailsResponse(billingType, chargingType, multiplier, productId, skuId, termId);
         }

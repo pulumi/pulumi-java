@@ -19,7 +19,7 @@ import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageLocationResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpLocationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -265,7 +265,6 @@ public final class ParquetDatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParquetDatasetResponse build() {
             return new ParquetDatasetResponse(annotations, compressionCodec, description, folder, linkedServiceName, location, parameters, schema, structure, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Boolean;
 import java.lang.String;
@@ -184,7 +184,6 @@ public final class Secret {
             this.type = type;
             return this;
         }
-
         public Secret build() {
             return new Secret(apiVersion, data, immutable, kind, metadata, stringData, type);
         }

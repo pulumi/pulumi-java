@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableVariableType;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -215,7 +215,6 @@ public final class DetectorEventVariable {
             this.variableType = variableType;
             return this;
         }
-
         public DetectorEventVariable build() {
             return new DetectorEventVariable(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }

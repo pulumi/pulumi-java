@@ -6,7 +6,7 @@ package io.pulumi.azurenative.peering.inputs;
 import io.pulumi.azurenative.peering.enums.Role;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+        private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -36,7 +36,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="phone")
-    private final @Nullable Input<String> phone;
+        private final @Nullable Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone == null ? Input.empty() : this.phone;
@@ -47,7 +47,7 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<Either<String,Role>> role;
+        private final @Nullable Input<Either<String,Role>> role;
 
     public Input<Either<String,Role>> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -121,7 +121,6 @@ public final class ContactDetailArgs extends io.pulumi.resources.ResourceArgs {
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public ContactDetailArgs build() {
             return new ContactDetailArgs(email, phone, role);
         }

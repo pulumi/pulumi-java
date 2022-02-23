@@ -5,7 +5,7 @@ package io.pulumi.azurenative.avs.outputs;
 
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentPortVifResponse;
 import io.pulumi.azurenative.avs.outputs.WorkloadNetworkSegmentSubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -248,7 +248,6 @@ public final class GetWorkloadNetworkSegmentResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkSegmentResult build() {
             return new GetWorkloadNetworkSegmentResult(connectedGateway, displayName, id, name, portVif, provisioningState, revision, status, subnet, type);
         }

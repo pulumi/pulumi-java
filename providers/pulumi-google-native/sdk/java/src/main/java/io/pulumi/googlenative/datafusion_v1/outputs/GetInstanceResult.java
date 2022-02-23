@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datafusion_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datafusion_v1.outputs.AcceleratorResponse;
 import io.pulumi.googlenative.datafusion_v1.outputs.CryptoKeyConfigResponse;
 import io.pulumi.googlenative.datafusion_v1.outputs.NetworkConfigResponse;
@@ -606,7 +606,6 @@ public final class GetInstanceResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(accelerators, apiEndpoint, availableVersion, createTime, cryptoKeyConfig, dataprocServiceAccount, description, disabledReason, displayName, enableRbac, enableStackdriverLogging, enableStackdriverMonitoring, gcsBucket, labels, name, networkConfig, options, p4ServiceAccount, privateInstance, serviceEndpoint, state, stateMessage, tenantProjectId, type, updateTime, version, zone);
         }

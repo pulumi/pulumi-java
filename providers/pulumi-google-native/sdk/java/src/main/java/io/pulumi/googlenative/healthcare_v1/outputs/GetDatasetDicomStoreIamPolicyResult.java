@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.healthcare_v1.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetDatasetDicomStoreIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetDatasetDicomStoreIamPolicyResult build() {
             return new GetDatasetDicomStoreIamPolicyResult(auditConfigs, bindings, etag, version);
         }

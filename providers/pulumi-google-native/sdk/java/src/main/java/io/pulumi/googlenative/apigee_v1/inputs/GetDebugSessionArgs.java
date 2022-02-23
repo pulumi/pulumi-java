@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,35 +13,35 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetDebugSessionArgs Empty = new GetDebugSessionArgs();
 
     @InputImport(name="apiId", required=true)
-    private final String apiId;
+      private final String apiId;
 
     public String getApiId() {
         return this.apiId;
     }
 
     @InputImport(name="debugsessionId", required=true)
-    private final String debugsessionId;
+      private final String debugsessionId;
 
     public String getDebugsessionId() {
         return this.debugsessionId;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final String organizationId;
+      private final String organizationId;
 
     public String getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="revisionId", required=true)
-    private final String revisionId;
+      private final String revisionId;
 
     public String getRevisionId() {
         return this.revisionId;
@@ -120,7 +120,6 @@ public final class GetDebugSessionArgs extends io.pulumi.resources.InvokeArgs {
             this.revisionId = Objects.requireNonNull(revisionId);
             return this;
         }
-
         public GetDebugSessionArgs build() {
             return new GetDebugSessionArgs(apiId, debugsessionId, environmentId, organizationId, revisionId);
         }

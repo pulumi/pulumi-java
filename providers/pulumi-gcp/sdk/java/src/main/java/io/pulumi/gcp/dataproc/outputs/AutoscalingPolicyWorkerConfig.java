@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -123,7 +123,6 @@ public final class AutoscalingPolicyWorkerConfig {
             this.weight = weight;
             return this;
         }
-
         public AutoscalingPolicyWorkerConfig build() {
             return new AutoscalingPolicyWorkerConfig(maxInstances, minInstances, weight);
         }

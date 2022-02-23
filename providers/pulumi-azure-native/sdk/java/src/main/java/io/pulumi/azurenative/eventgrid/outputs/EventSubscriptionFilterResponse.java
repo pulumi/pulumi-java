@@ -15,7 +15,7 @@ import io.pulumi.azurenative.eventgrid.outputs.StringContainsAdvancedFilterRespo
 import io.pulumi.azurenative.eventgrid.outputs.StringEndsWithAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringInAdvancedFilterResponse;
 import io.pulumi.azurenative.eventgrid.outputs.StringNotInAdvancedFilterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -162,7 +162,6 @@ public final class EventSubscriptionFilterResponse {
             this.subjectEndsWith = subjectEndsWith;
             return this;
         }
-
         public EventSubscriptionFilterResponse build() {
             return new EventSubscriptionFilterResponse(advancedFilters, includedEventTypes, isSubjectCaseSensitive, subjectBeginsWith, subjectEndsWith);
         }

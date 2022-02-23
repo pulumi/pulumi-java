@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -139,7 +139,6 @@ public final class RecipeResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public RecipeResponse build() {
             return new RecipeResponse(arguments, definedInMaterial, entryPoint, environment, type);
         }

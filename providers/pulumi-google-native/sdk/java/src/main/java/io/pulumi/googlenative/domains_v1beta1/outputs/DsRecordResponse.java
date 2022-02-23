@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class DsRecordResponse {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
         }
-
         public DsRecordResponse build() {
             return new DsRecordResponse(algorithm, digest, digestType, keyTag);
         }

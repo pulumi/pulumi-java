@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lookoutmetrics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class AlertLambdaConfiguration {
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public AlertLambdaConfiguration build() {
             return new AlertLambdaConfiguration(lambdaArn, roleArn);
         }

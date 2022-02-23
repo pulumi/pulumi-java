@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.GetInstanceAdvancedMachineFeature;
 import io.pulumi.gcp.compute.outputs.GetInstanceAttachedDisk;
 import io.pulumi.gcp.compute.outputs.GetInstanceBootDisk;
@@ -722,7 +722,6 @@ public final class GetInstanceResult {
             this.zone = zone;
             return this;
         }
-
         public GetInstanceResult build() {
             return new GetInstanceResult(advancedMachineFeatures, allowStoppingForUpdate, attachedDisks, bootDisks, canIpForward, confidentialInstanceConfigs, cpuPlatform, currentStatus, deletionProtection, description, desiredStatus, enableDisplay, guestAccelerators, hostname, id, instanceId, labelFingerprint, labels, machineType, metadata, metadataFingerprint, metadataStartupScript, minCpuPlatform, name, networkInterfaces, networkPerformanceConfigs, project, reservationAffinities, resourcePolicies, schedulings, scratchDisks, selfLink, serviceAccounts, shieldedInstanceConfigs, tags, tagsFingerprint, zone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetKnowledgeBaseArgs Empty = new GetKnowledgeBaseArgs();
 
     @InputImport(name="knowledgeBaseId", required=true)
-    private final String knowledgeBaseId;
+      private final String knowledgeBaseId;
 
     public String getKnowledgeBaseId() {
         return this.knowledgeBaseId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetKnowledgeBaseArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetKnowledgeBaseArgs build() {
             return new GetKnowledgeBaseArgs(knowledgeBaseId, location, project);
         }

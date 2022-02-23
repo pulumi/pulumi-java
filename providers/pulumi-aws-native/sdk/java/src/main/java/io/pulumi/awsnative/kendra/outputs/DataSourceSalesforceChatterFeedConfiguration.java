@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.outputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceSalesforceChatterFeedIncludeFilterType;
 import io.pulumi.awsnative.kendra.outputs.DataSourceToIndexFieldMapping;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -89,7 +89,6 @@ public final class DataSourceSalesforceChatterFeedConfiguration {
             this.includeFilterTypes = includeFilterTypes;
             return this;
         }
-
         public DataSourceSalesforceChatterFeedConfiguration build() {
             return new DataSourceSalesforceChatterFeedConfiguration(documentDataFieldName, documentTitleFieldName, fieldMappings, includeFilterTypes);
         }

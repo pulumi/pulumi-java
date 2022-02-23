@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.extensions_v1beta1.inputs.HTTPIngressRuleValueArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -29,14 +29,14 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable Input<String> host;
+        private final @Nullable Input<String> host;
 
     public Input<String> getHost() {
         return this.host == null ? Input.empty() : this.host;
     }
 
     @InputImport(name="http")
-    private final @Nullable Input<HTTPIngressRuleValueArgs> http;
+        private final @Nullable Input<HTTPIngressRuleValueArgs> http;
 
     public Input<HTTPIngressRuleValueArgs> getHttp() {
         return this.http == null ? Input.empty() : this.http;
@@ -95,7 +95,6 @@ public final class IngressRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.http = Input.ofNullable(http);
             return this;
         }
-
         public IngressRuleArgs build() {
             return new IngressRuleArgs(host, http);
         }

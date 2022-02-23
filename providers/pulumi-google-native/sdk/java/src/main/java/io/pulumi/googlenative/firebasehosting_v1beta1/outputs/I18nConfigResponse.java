@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class I18nConfigResponse {
             this.root = Objects.requireNonNull(root);
             return this;
         }
-
         public I18nConfigResponse build() {
             return new I18nConfigResponse(root);
         }

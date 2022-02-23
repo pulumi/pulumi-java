@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.AcceleratorConfigResponse;
 import io.pulumi.googlenative.compute_beta.outputs.MetadataResponse;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkInterfaceResponse;
@@ -336,7 +336,6 @@ public final class SourceInstancePropertiesResponse {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public SourceInstancePropertiesResponse build() {
             return new SourceInstancePropertiesResponse(canIpForward, deletionProtection, description, disks, guestAccelerators, labels, machineType, metadata, minCpuPlatform, networkInterfaces, postKeyRevocationActionType, scheduling, serviceAccounts, tags);
         }

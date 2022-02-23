@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.enums.Kind;
 import io.pulumi.azurenative.insights.inputs.WorkbookManagedIdentityArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category", required=true)
-    private final Input<String> category;
+        private final Input<String> category;
 
     public Input<String> getCategory() {
         return this.category;
@@ -34,7 +34,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -45,7 +45,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -56,7 +56,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<WorkbookManagedIdentityArgs> identity;
+        private final @Nullable Input<WorkbookManagedIdentityArgs> identity;
 
     public Input<WorkbookManagedIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -67,7 +67,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<Either<String,Kind>> kind;
+        private final @Nullable Input<Either<String,Kind>> kind;
 
     public Input<Either<String,Kind>> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -78,7 +78,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -89,7 +89,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,7 +100,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -111,7 +111,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable Input<String> resourceName;
+        private final @Nullable Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName == null ? Input.empty() : this.resourceName;
@@ -122,7 +122,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serializedData", required=true)
-    private final Input<String> serializedData;
+        private final Input<String> serializedData;
 
     public Input<String> getSerializedData() {
         return this.serializedData;
@@ -133,7 +133,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceId")
-    private final @Nullable Input<String> sourceId;
+        private final @Nullable Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId == null ? Input.empty() : this.sourceId;
@@ -144,7 +144,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageUri")
-    private final @Nullable Input<String> storageUri;
+        private final @Nullable Input<String> storageUri;
 
     public Input<String> getStorageUri() {
         return this.storageUri == null ? Input.empty() : this.storageUri;
@@ -155,7 +155,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -166,7 +166,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+        private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -177,7 +177,7 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -431,7 +431,6 @@ public final class WorkbookArgs extends io.pulumi.resources.ResourceArgs {
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public WorkbookArgs build() {
             return new WorkbookArgs(category, displayName, id, identity, kind, location, name, resourceGroupName, resourceName, serializedData, sourceId, storageUri, tags, type, version);
         }

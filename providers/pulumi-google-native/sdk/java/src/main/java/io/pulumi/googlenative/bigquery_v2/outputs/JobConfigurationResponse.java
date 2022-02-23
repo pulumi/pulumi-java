@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationExtractResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationLoadResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.JobConfigurationQueryResponse;
@@ -206,7 +206,6 @@ public final class JobConfigurationResponse {
             this.query = Objects.requireNonNull(query);
             return this;
         }
-
         public JobConfigurationResponse build() {
             return new JobConfigurationResponse(copy, dryRun, extract, jobTimeoutMs, jobType, labels, load, query);
         }

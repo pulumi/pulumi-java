@@ -5,8 +5,8 @@ package io.pulumi.googlenative.tpu_v2alpha1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.tpu_v2alpha1.NodeArgs;
 import io.pulumi.googlenative.tpu_v2alpha1.outputs.AttachedDiskResponse;
@@ -294,13 +294,6 @@ public class Node extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Node(String name) {
-        super("google-native:tpu/v2alpha1:Node", name, NodeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

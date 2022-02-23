@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="catalog", required=true)
-    private final Input<String> catalog;
+        private final Input<String> catalog;
 
     public Input<String> getCatalog() {
         return this.catalog;
@@ -34,7 +34,7 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="host", required=true)
-    private final Input<String> host;
+        private final Input<String> host;
 
     public Input<String> getHost() {
         return this.host;
@@ -45,7 +45,7 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Double> port;
+        private final Input<Double> port;
 
     public Input<Double> getPort() {
         return this.port;
@@ -119,7 +119,6 @@ public final class DataSourcePrestoParametersArgs extends io.pulumi.resources.Re
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public DataSourcePrestoParametersArgs build() {
             return new DataSourcePrestoParametersArgs(catalog, host, port);
         }

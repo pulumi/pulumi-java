@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.metastore_v1beta.outputs.ServiceResponse;
 import java.lang.String;
 import java.util.List;
@@ -181,7 +181,6 @@ public final class GetBackupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(createTime, description, endTime, name, restoringServices, serviceRevision, state);
         }

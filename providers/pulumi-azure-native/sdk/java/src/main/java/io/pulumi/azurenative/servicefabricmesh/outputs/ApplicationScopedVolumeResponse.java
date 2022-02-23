@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
 import io.pulumi.azurenative.servicefabricmesh.outputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class ApplicationScopedVolumeResponse {
             this.readOnly = readOnly;
             return this;
         }
-
         public ApplicationScopedVolumeResponse build() {
             return new ApplicationScopedVolumeResponse(creationParameters, destinationPath, name, readOnly);
         }

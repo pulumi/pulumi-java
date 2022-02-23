@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.enums.ServerBindingType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServerBindingArgs Empty = new ServerBindingArgs();
 
     @InputImport(name="type")
-    private final @Nullable Input<ServerBindingType> type;
+      private final @Nullable Input<ServerBindingType> type;
 
     public Input<ServerBindingType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -58,7 +58,6 @@ public final class ServerBindingArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public ServerBindingArgs build() {
             return new ServerBindingArgs(type);
         }

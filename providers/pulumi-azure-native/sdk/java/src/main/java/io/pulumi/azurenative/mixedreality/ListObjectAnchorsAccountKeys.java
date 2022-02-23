@@ -6,7 +6,7 @@ package io.pulumi.azurenative.mixedreality;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.mixedreality.inputs.ListObjectAnchorsAccountKeysArgs;
 import io.pulumi.azurenative.mixedreality.outputs.ListObjectAnchorsAccountKeysResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

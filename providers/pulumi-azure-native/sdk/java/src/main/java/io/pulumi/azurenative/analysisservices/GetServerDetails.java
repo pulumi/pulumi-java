@@ -6,7 +6,7 @@ package io.pulumi.azurenative.analysisservices;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.analysisservices.inputs.GetServerDetailsArgs;
 import io.pulumi.azurenative.analysisservices.outputs.GetServerDetailsResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

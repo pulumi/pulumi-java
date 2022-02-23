@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.sagemaker.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class ModelBiasJobDefinitionConstraintsResource {
             this.s3Uri = s3Uri;
             return this;
         }
-
         public ModelBiasJobDefinitionConstraintsResource build() {
             return new ModelBiasJobDefinitionConstraintsResource(s3Uri);
         }

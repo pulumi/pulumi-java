@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class FilterFileDetailsResponse {
             this.filterFileType = Objects.requireNonNull(filterFileType);
             return this;
         }
-
         public FilterFileDetailsResponse build() {
             return new FilterFileDetailsResponse(filterFilePath, filterFileType);
         }

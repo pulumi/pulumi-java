@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetIdentityResponseUserAssignedIdentities;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class VirtualMachineScaleSetIdentityResponse {
             this.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
-
         public VirtualMachineScaleSetIdentityResponse build() {
             return new VirtualMachineScaleSetIdentityResponse(principalId, tenantId, type, userAssignedIdentities);
         }

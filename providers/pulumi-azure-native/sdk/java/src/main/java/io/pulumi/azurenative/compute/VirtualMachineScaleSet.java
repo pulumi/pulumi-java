@@ -18,8 +18,8 @@ import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProfileResp
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -381,13 +381,6 @@ public class VirtualMachineScaleSet extends io.pulumi.resources.CustomResource {
         return this.zones;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public VirtualMachineScaleSet(String name) {
-        super("azure-native:compute:VirtualMachineScaleSet", name, VirtualMachineScaleSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

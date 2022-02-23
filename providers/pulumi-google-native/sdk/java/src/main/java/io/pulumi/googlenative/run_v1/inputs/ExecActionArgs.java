@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.run_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+      private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -67,7 +67,6 @@ public final class ExecActionArgs extends io.pulumi.resources.ResourceArgs {
             this.command = Input.ofNullable(command);
             return this;
         }
-
         public ExecActionArgs build() {
             return new ExecActionArgs(command);
         }

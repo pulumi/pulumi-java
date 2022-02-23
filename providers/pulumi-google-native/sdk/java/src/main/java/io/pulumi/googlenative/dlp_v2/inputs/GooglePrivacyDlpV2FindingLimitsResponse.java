@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2InfoTypeLimitResponse;
 import java.lang.Integer;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxFindingsPerInfoType", required=true)
-    private final List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
+      private final List<GooglePrivacyDlpV2InfoTypeLimitResponse> maxFindingsPerInfoType;
 
     public List<GooglePrivacyDlpV2InfoTypeLimitResponse> getMaxFindingsPerInfoType() {
         return this.maxFindingsPerInfoType;
@@ -34,7 +34,7 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxFindingsPerItem", required=true)
-    private final Integer maxFindingsPerItem;
+      private final Integer maxFindingsPerItem;
 
     public Integer getMaxFindingsPerItem() {
         return this.maxFindingsPerItem;
@@ -45,7 +45,7 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxFindingsPerRequest", required=true)
-    private final Integer maxFindingsPerRequest;
+      private final Integer maxFindingsPerRequest;
 
     public Integer getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
@@ -104,7 +104,6 @@ public final class GooglePrivacyDlpV2FindingLimitsResponse extends io.pulumi.res
             this.maxFindingsPerRequest = Objects.requireNonNull(maxFindingsPerRequest);
             return this;
         }
-
         public GooglePrivacyDlpV2FindingLimitsResponse build() {
             return new GooglePrivacyDlpV2FindingLimitsResponse(maxFindingsPerInfoType, maxFindingsPerItem, maxFindingsPerRequest);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.servicemanagement_v1.outputs.OptionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class MethodResponse {
             this.syntax = Objects.requireNonNull(syntax);
             return this;
         }
-
         public MethodResponse build() {
             return new MethodResponse(name, options, requestStreaming, requestTypeUrl, responseStreaming, responseTypeUrl, syntax);
         }

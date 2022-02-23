@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="roleId", required=true)
-    private final String roleId;
+        private final String roleId;
 
     public String getRoleId() {
         return this.roleId;
@@ -46,7 +46,7 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="useCommonAlertSchema")
-    private final @Nullable Boolean useCommonAlertSchema;
+        private final @Nullable Boolean useCommonAlertSchema;
 
     public Optional<Boolean> getUseCommonAlertSchema() {
         return this.useCommonAlertSchema == null ? Optional.empty() : Optional.ofNullable(this.useCommonAlertSchema);
@@ -105,7 +105,6 @@ public final class ArmRoleReceiverResponse extends io.pulumi.resources.InvokeArg
             this.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
-
         public ArmRoleReceiverResponse build() {
             return new ArmRoleReceiverResponse(name, roleId, useCommonAlertSchema);
         }

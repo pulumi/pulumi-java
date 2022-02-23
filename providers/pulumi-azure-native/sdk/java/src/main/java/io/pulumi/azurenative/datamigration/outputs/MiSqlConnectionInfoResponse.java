@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class MiSqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public MiSqlConnectionInfoResponse build() {
             return new MiSqlConnectionInfoResponse(managedInstanceResourceId, password, type, userName);
         }

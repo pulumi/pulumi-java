@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ContentMatcherResponse {
             this.matcher = Objects.requireNonNull(matcher);
             return this;
         }
-
         public ContentMatcherResponse build() {
             return new ContentMatcherResponse(content, matcher);
         }

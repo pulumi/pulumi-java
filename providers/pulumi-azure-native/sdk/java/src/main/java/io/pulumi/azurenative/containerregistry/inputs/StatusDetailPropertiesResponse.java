@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="code", required=true)
-    private final String code;
+        private final String code;
 
     public String getCode() {
         return this.code;
@@ -32,7 +32,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="correlationId", required=true)
-    private final String correlationId;
+        private final String correlationId;
 
     public String getCorrelationId() {
         return this.correlationId;
@@ -43,7 +43,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -54,7 +54,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="timestamp", required=true)
-    private final String timestamp;
+        private final String timestamp;
 
     public String getTimestamp() {
         return this.timestamp;
@@ -65,7 +65,7 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -144,7 +144,6 @@ public final class StatusDetailPropertiesResponse extends io.pulumi.resources.In
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StatusDetailPropertiesResponse build() {
             return new StatusDetailPropertiesResponse(code, correlationId, description, timestamp, type);
         }

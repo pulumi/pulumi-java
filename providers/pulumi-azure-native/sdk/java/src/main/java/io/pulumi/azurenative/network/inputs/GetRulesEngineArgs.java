@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frontDoorName", required=true)
-    private final String frontDoorName;
+        private final String frontDoorName;
 
     public String getFrontDoorName() {
         return this.frontDoorName;
@@ -28,7 +28,7 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rulesEngineName", required=true)
-    private final String rulesEngineName;
+        private final String rulesEngineName;
 
     public String getRulesEngineName() {
         return this.rulesEngineName;
@@ -98,7 +98,6 @@ public final class GetRulesEngineArgs extends io.pulumi.resources.InvokeArgs {
             this.rulesEngineName = Objects.requireNonNull(rulesEngineName);
             return this;
         }
-
         public GetRulesEngineArgs build() {
             return new GetRulesEngineArgs(frontDoorName, resourceGroupName, rulesEngineName);
         }

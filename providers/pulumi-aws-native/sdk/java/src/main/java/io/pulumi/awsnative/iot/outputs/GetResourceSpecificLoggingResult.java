@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.ResourceSpecificLoggingLogLevel;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class GetResourceSpecificLoggingResult {
             this.targetId = targetId;
             return this;
         }
-
         public GetResourceSpecificLoggingResult build() {
             return new GetResourceSpecificLoggingResult(logLevel, targetId);
         }

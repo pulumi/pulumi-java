@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.WebACLPositionalConstraint;
 import io.pulumi.awsnative.wafv2.inputs.WebACLFieldToMatch;
 import io.pulumi.awsnative.wafv2.inputs.WebACLTextTransformation;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,35 +23,35 @@ public final class WebACLByteMatchStatement extends io.pulumi.resources.InvokeAr
     public static final WebACLByteMatchStatement Empty = new WebACLByteMatchStatement();
 
     @InputImport(name="fieldToMatch", required=true)
-    private final WebACLFieldToMatch fieldToMatch;
+        private final WebACLFieldToMatch fieldToMatch;
 
     public WebACLFieldToMatch getFieldToMatch() {
         return this.fieldToMatch;
     }
 
     @InputImport(name="positionalConstraint", required=true)
-    private final WebACLPositionalConstraint positionalConstraint;
+        private final WebACLPositionalConstraint positionalConstraint;
 
     public WebACLPositionalConstraint getPositionalConstraint() {
         return this.positionalConstraint;
     }
 
     @InputImport(name="searchString")
-    private final @Nullable String searchString;
+        private final @Nullable String searchString;
 
     public Optional<String> getSearchString() {
         return this.searchString == null ? Optional.empty() : Optional.ofNullable(this.searchString);
     }
 
     @InputImport(name="searchStringBase64")
-    private final @Nullable String searchStringBase64;
+        private final @Nullable String searchStringBase64;
 
     public Optional<String> getSearchStringBase64() {
         return this.searchStringBase64 == null ? Optional.empty() : Optional.ofNullable(this.searchStringBase64);
     }
 
     @InputImport(name="textTransformations", required=true)
-    private final List<WebACLTextTransformation> textTransformations;
+        private final List<WebACLTextTransformation> textTransformations;
 
     public List<WebACLTextTransformation> getTextTransformations() {
         return this.textTransformations;
@@ -130,7 +130,6 @@ public final class WebACLByteMatchStatement extends io.pulumi.resources.InvokeAr
             this.textTransformations = Objects.requireNonNull(textTransformations);
             return this;
         }
-
         public WebACLByteMatchStatement build() {
             return new WebACLByteMatchStatement(fieldToMatch, positionalConstraint, searchString, searchStringBase64, textTransformations);
         }

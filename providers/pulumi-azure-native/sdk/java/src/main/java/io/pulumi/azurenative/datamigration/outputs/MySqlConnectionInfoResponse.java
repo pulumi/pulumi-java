@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class MySqlConnectionInfoResponse {
             this.userName = userName;
             return this;
         }
-
         public MySqlConnectionInfoResponse build() {
             return new MySqlConnectionInfoResponse(password, port, serverName, type, userName);
         }

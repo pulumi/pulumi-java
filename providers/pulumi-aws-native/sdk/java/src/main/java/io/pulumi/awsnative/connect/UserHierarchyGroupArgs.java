@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.connect;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final Input<String> instanceArn;
+        private final Input<String> instanceArn;
 
     public Input<String> getInstanceArn() {
         return this.instanceArn;
@@ -30,7 +30,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -41,7 +41,7 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="parentGroupArn")
-    private final @Nullable Input<String> parentGroupArn;
+        private final @Nullable Input<String> parentGroupArn;
 
     public Input<String> getParentGroupArn() {
         return this.parentGroupArn == null ? Input.empty() : this.parentGroupArn;
@@ -115,7 +115,6 @@ public final class UserHierarchyGroupArgs extends io.pulumi.resources.ResourceAr
             this.parentGroupArn = Input.ofNullable(parentGroupArn);
             return this;
         }
-
         public UserHierarchyGroupArgs build() {
             return new UserHierarchyGroupArgs(instanceArn, name, parentGroupArn);
         }

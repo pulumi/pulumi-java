@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class NodeStateCountsResponse {
             this.unusableNodeCount = Objects.requireNonNull(unusableNodeCount);
             return this;
         }
-
         public NodeStateCountsResponse build() {
             return new NodeStateCountsResponse(idleNodeCount, leavingNodeCount, preemptedNodeCount, preparingNodeCount, runningNodeCount, unusableNodeCount);
         }

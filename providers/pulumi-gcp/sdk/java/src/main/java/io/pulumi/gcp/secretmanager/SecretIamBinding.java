@@ -5,8 +5,8 @@ package io.pulumi.gcp.secretmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.secretmanager.SecretIamBindingArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretIamBindingState;
@@ -126,13 +126,6 @@ public class SecretIamBinding extends io.pulumi.resources.CustomResource {
         return this.secretId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SecretIamBinding(String name) {
-        super("gcp:secretmanager/secretIamBinding:SecretIamBinding", name, SecretIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

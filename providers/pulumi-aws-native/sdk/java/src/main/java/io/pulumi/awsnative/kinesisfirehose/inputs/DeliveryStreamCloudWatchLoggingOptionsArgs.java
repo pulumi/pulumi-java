@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,21 +16,21 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
     public static final DeliveryStreamCloudWatchLoggingOptionsArgs Empty = new DeliveryStreamCloudWatchLoggingOptionsArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
     }
 
     @InputImport(name="logGroupName")
-    private final @Nullable Input<String> logGroupName;
+        private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
     }
 
     @InputImport(name="logStreamName")
-    private final @Nullable Input<String> logStreamName;
+        private final @Nullable Input<String> logStreamName;
 
     public Input<String> getLogStreamName() {
         return this.logStreamName == null ? Input.empty() : this.logStreamName;
@@ -104,7 +104,6 @@ public final class DeliveryStreamCloudWatchLoggingOptionsArgs extends io.pulumi.
             this.logStreamName = Input.ofNullable(logStreamName);
             return this;
         }
-
         public DeliveryStreamCloudWatchLoggingOptionsArgs build() {
             return new DeliveryStreamCloudWatchLoggingOptionsArgs(enabled, logGroupName, logStreamName);
         }

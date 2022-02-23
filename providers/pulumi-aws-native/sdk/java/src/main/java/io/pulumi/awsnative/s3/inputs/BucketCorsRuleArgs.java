@@ -5,7 +5,7 @@ package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketCorsRuleAllowedMethodsItem;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedHeaders")
-    private final @Nullable Input<List<String>> allowedHeaders;
+        private final @Nullable Input<List<String>> allowedHeaders;
 
     public Input<List<String>> getAllowedHeaders() {
         return this.allowedHeaders == null ? Input.empty() : this.allowedHeaders;
@@ -37,7 +37,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedMethods", required=true)
-    private final Input<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
+        private final Input<List<BucketCorsRuleAllowedMethodsItem>> allowedMethods;
 
     public Input<List<BucketCorsRuleAllowedMethodsItem>> getAllowedMethods() {
         return this.allowedMethods;
@@ -48,7 +48,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allowedOrigins", required=true)
-    private final Input<List<String>> allowedOrigins;
+        private final Input<List<String>> allowedOrigins;
 
     public Input<List<String>> getAllowedOrigins() {
         return this.allowedOrigins;
@@ -59,7 +59,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exposedHeaders")
-    private final @Nullable Input<List<String>> exposedHeaders;
+        private final @Nullable Input<List<String>> exposedHeaders;
 
     public Input<List<String>> getExposedHeaders() {
         return this.exposedHeaders == null ? Input.empty() : this.exposedHeaders;
@@ -70,7 +70,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -81,7 +81,7 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxAge")
-    private final @Nullable Input<Integer> maxAge;
+        private final @Nullable Input<Integer> maxAge;
 
     public Input<Integer> getMaxAge() {
         return this.maxAge == null ? Input.empty() : this.maxAge;
@@ -200,7 +200,6 @@ public final class BucketCorsRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.maxAge = Input.ofNullable(maxAge);
             return this;
         }
-
         public BucketCorsRuleArgs build() {
             return new BucketCorsRuleArgs(allowedHeaders, allowedMethods, allowedOrigins, exposedHeaders, id, maxAge);
         }

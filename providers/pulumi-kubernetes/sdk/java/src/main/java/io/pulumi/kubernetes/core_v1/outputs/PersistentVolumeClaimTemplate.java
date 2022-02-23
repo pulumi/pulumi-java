@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.PersistentVolumeClaimSpec;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class PersistentVolumeClaimTemplate {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public PersistentVolumeClaimTemplate build() {
             return new PersistentVolumeClaimTemplate(metadata, spec);
         }

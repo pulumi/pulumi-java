@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="canonicalCode", required=true)
-    private final String canonicalCode;
+      private final String canonicalCode;
 
     public String getCanonicalCode() {
         return this.canonicalCode;
@@ -32,7 +32,7 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="message", required=true)
-    private final String message;
+      private final String message;
 
     public String getMessage() {
         return this.message;
@@ -81,7 +81,6 @@ public final class StatusConditionResponse extends io.pulumi.resources.InvokeArg
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public StatusConditionResponse build() {
             return new StatusConditionResponse(canonicalCode, message);
         }

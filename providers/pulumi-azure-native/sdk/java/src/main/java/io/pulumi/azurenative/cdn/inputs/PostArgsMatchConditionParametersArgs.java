@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cdn.enums.PostArgsOperator;
 import io.pulumi.azurenative.cdn.enums.Transform;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -28,7 +28,7 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="matchValues")
-    private final @Nullable Input<List<String>> matchValues;
+        private final @Nullable Input<List<String>> matchValues;
 
     public Input<List<String>> getMatchValues() {
         return this.matchValues == null ? Input.empty() : this.matchValues;
@@ -39,14 +39,14 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="negateCondition")
-    private final @Nullable Input<Boolean> negateCondition;
+        private final @Nullable Input<Boolean> negateCondition;
 
     public Input<Boolean> getNegateCondition() {
         return this.negateCondition == null ? Input.empty() : this.negateCondition;
     }
 
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -57,7 +57,7 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,PostArgsOperator>> operator;
+        private final Input<Either<String,PostArgsOperator>> operator;
 
     public Input<Either<String,PostArgsOperator>> getOperator() {
         return this.operator;
@@ -68,7 +68,7 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+        private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -79,7 +79,7 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="transforms")
-    private final @Nullable Input<List<Either<String,Transform>>> transforms;
+        private final @Nullable Input<List<Either<String,Transform>>> transforms;
 
     public Input<List<Either<String,Transform>>> getTransforms() {
         return this.transforms == null ? Input.empty() : this.transforms;
@@ -198,7 +198,6 @@ public final class PostArgsMatchConditionParametersArgs extends io.pulumi.resour
             this.transforms = Input.ofNullable(transforms);
             return this;
         }
-
         public PostArgsMatchConditionParametersArgs build() {
             return new PostArgsMatchConditionParametersArgs(matchValues, negateCondition, odataType, operator, selector, transforms);
         }

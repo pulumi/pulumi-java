@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayCapabilitySummary;
 import io.pulumi.awsnative.iotsitewise.outputs.GatewayTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class GetGatewayResult {
             this.tags = tags;
             return this;
         }
-
         public GetGatewayResult build() {
             return new GetGatewayResult(gatewayCapabilitySummaries, gatewayId, gatewayName, tags);
         }

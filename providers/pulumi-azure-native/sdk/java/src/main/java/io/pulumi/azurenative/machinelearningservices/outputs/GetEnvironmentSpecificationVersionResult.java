@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.outputs;
 
 import io.pulumi.azurenative.machinelearningservices.outputs.EnvironmentSpecificationVersionResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -139,7 +139,6 @@ public final class GetEnvironmentSpecificationVersionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEnvironmentSpecificationVersionResult build() {
             return new GetEnvironmentSpecificationVersionResult(id, name, properties, systemData, type);
         }

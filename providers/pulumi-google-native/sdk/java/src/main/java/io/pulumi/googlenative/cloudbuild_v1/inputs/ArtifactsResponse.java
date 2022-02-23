@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudbuild_v1.inputs.ArtifactObjectsResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="images", required=true)
-    private final List<String> images;
+      private final List<String> images;
 
     public List<String> getImages() {
         return this.images;
@@ -34,7 +34,7 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="objects", required=true)
-    private final ArtifactObjectsResponse objects;
+      private final ArtifactObjectsResponse objects;
 
     public ArtifactObjectsResponse getObjects() {
         return this.objects;
@@ -83,7 +83,6 @@ public final class ArtifactsResponse extends io.pulumi.resources.InvokeArgs {
             this.objects = Objects.requireNonNull(objects);
             return this;
         }
-
         public ArtifactsResponse build() {
             return new ArtifactsResponse(images, objects);
         }

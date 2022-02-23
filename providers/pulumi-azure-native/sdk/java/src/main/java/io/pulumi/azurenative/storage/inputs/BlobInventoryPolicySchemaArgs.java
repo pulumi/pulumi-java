@@ -7,7 +7,7 @@ import io.pulumi.azurenative.storage.enums.InventoryRuleType;
 import io.pulumi.azurenative.storage.inputs.BlobInventoryPolicyRuleArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+        private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
@@ -38,7 +38,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Input<Boolean> enabled;
+        private final Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled;
@@ -49,7 +49,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<BlobInventoryPolicyRuleArgs>> rules;
+        private final Input<List<BlobInventoryPolicyRuleArgs>> rules;
 
     public Input<List<BlobInventoryPolicyRuleArgs>> getRules() {
         return this.rules;
@@ -60,7 +60,7 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,InventoryRuleType>> type;
+        private final Input<Either<String,InventoryRuleType>> type;
 
     public Input<Either<String,InventoryRuleType>> getType() {
         return this.type;
@@ -149,7 +149,6 @@ public final class BlobInventoryPolicySchemaArgs extends io.pulumi.resources.Res
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public BlobInventoryPolicySchemaArgs build() {
             return new BlobInventoryPolicySchemaArgs(destination, enabled, rules, type);
         }

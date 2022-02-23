@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="email")
-    private final @Nullable String email;
+        private final @Nullable String email;
 
     public Optional<String> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
@@ -35,7 +35,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Double expireTime;
+        private final @Nullable Double expireTime;
 
     public Optional<Double> getExpireTime() {
         return this.expireTime == null ? Optional.empty() : Optional.ofNullable(this.expireTime);
@@ -46,7 +46,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="host")
-    private final @Nullable String host;
+        private final @Nullable String host;
 
     public Optional<String> getHost() {
         return this.host == null ? Optional.empty() : Optional.ofNullable(this.host);
@@ -57,7 +57,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="minimumTtl")
-    private final @Nullable Double minimumTtl;
+        private final @Nullable Double minimumTtl;
 
     public Optional<Double> getMinimumTtl() {
         return this.minimumTtl == null ? Optional.empty() : Optional.ofNullable(this.minimumTtl);
@@ -68,7 +68,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="refreshTime")
-    private final @Nullable Double refreshTime;
+        private final @Nullable Double refreshTime;
 
     public Optional<Double> getRefreshTime() {
         return this.refreshTime == null ? Optional.empty() : Optional.ofNullable(this.refreshTime);
@@ -79,7 +79,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retryTime")
-    private final @Nullable Double retryTime;
+        private final @Nullable Double retryTime;
 
     public Optional<Double> getRetryTime() {
         return this.retryTime == null ? Optional.empty() : Optional.ofNullable(this.retryTime);
@@ -90,7 +90,7 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serialNumber")
-    private final @Nullable Double serialNumber;
+        private final @Nullable Double serialNumber;
 
     public Optional<Double> getSerialNumber() {
         return this.serialNumber == null ? Optional.empty() : Optional.ofNullable(this.serialNumber);
@@ -189,7 +189,6 @@ public final class SoaRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.serialNumber = serialNumber;
             return this;
         }
-
         public SoaRecordResponse build() {
             return new SoaRecordResponse(email, expireTime, host, minimumTtl, refreshTime, retryTime, serialNumber);
         }

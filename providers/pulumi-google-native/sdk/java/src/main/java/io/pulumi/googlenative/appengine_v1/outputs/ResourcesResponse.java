@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.appengine_v1.outputs.VolumeResponse;
 import java.lang.Double;
 import java.lang.String;
@@ -140,7 +140,6 @@ public final class ResourcesResponse {
             this.volumes = Objects.requireNonNull(volumes);
             return this;
         }
-
         public ResourcesResponse build() {
             return new ResourcesResponse(cpu, diskGb, kmsKeyReference, memoryGb, volumes);
         }

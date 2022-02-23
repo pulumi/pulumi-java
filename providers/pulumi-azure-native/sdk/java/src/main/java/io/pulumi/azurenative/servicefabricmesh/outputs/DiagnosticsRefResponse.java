@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -78,7 +78,6 @@ public final class DiagnosticsRefResponse {
             this.sinkRefs = sinkRefs;
             return this;
         }
-
         public DiagnosticsRefResponse build() {
             return new DiagnosticsRefResponse(enabled, sinkRefs);
         }

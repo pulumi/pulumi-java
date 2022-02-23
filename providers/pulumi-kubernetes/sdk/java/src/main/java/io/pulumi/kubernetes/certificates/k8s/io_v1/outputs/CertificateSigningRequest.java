@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.certificates.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestSpec;
 import io.pulumi.kubernetes.certificates.k8s.io_v1.outputs.CertificateSigningRequestStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -134,7 +134,6 @@ public final class CertificateSigningRequest {
             this.status = status;
             return this;
         }
-
         public CertificateSigningRequest build() {
             return new CertificateSigningRequest(apiVersion, kind, metadata, spec, status);
         }

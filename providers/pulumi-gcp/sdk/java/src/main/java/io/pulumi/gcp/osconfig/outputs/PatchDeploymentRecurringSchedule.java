@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleMonthly;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleTimeOfDay;
 import io.pulumi.gcp.osconfig.outputs.PatchDeploymentRecurringScheduleTimeZone;
@@ -228,7 +228,6 @@ public final class PatchDeploymentRecurringSchedule {
             this.weekly = weekly;
             return this;
         }
-
         public PatchDeploymentRecurringSchedule build() {
             return new PatchDeploymentRecurringSchedule(endTime, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
         }

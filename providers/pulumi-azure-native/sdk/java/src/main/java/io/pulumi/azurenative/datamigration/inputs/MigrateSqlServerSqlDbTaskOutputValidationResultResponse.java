@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrationValidationDatabaseSummaryResultResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -36,7 +36,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @InputImport(name="migrationId", required=true)
-    private final String migrationId;
+        private final String migrationId;
 
     public String getMigrationId() {
         return this.migrationId;
@@ -48,7 +48,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -59,7 +59,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @InputImport(name="status", required=true)
-    private final String status;
+        private final String status;
 
     public String getStatus() {
         return this.status;
@@ -70,7 +70,7 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
      * 
      */
     @InputImport(name="summaryResults")
-    private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
+        private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
 
     public Map<String,MigrationValidationDatabaseSummaryResultResponse> getSummaryResults() {
         return this.summaryResults == null ? Map.of() : this.summaryResults;
@@ -149,7 +149,6 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse exten
             this.summaryResults = summaryResults;
             return this;
         }
-
         public MigrateSqlServerSqlDbTaskOutputValidationResultResponse build() {
             return new MigrateSqlServerSqlDbTaskOutputValidationResultResponse(id, migrationId, resultType, status, summaryResults);
         }

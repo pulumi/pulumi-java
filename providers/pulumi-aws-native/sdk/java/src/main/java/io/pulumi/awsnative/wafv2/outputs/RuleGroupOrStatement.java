@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RuleGroupStatement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -45,7 +45,6 @@ public final class RuleGroupOrStatement {
             this.statements = Objects.requireNonNull(statements);
             return this;
         }
-
         public RuleGroupOrStatement build() {
             return new RuleGroupOrStatement(statements);
         }

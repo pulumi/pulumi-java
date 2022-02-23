@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -287,7 +287,6 @@ public final class GetIdentityProviderResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIdentityProviderResult build() {
             return new GetIdentityProviderResult(allowedTenants, authority, clientId, clientSecret, id, name, passwordResetPolicyName, profileEditingPolicyName, signinPolicyName, signinTenant, signupPolicyName, type);
         }

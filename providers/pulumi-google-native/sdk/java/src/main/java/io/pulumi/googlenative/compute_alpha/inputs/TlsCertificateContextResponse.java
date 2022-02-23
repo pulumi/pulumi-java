@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.SdsConfigResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.TlsCertificatePathsResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificatePaths", required=true)
-    private final TlsCertificatePathsResponse certificatePaths;
+      private final TlsCertificatePathsResponse certificatePaths;
 
     public TlsCertificatePathsResponse getCertificatePaths() {
         return this.certificatePaths;
@@ -34,7 +34,7 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="certificateSource", required=true)
-    private final String certificateSource;
+      private final String certificateSource;
 
     public String getCertificateSource() {
         return this.certificateSource;
@@ -45,7 +45,7 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="sdsConfig", required=true)
-    private final SdsConfigResponse sdsConfig;
+      private final SdsConfigResponse sdsConfig;
 
     public SdsConfigResponse getSdsConfig() {
         return this.sdsConfig;
@@ -104,7 +104,6 @@ public final class TlsCertificateContextResponse extends io.pulumi.resources.Inv
             this.sdsConfig = Objects.requireNonNull(sdsConfig);
             return this;
         }
-
         public TlsCertificateContextResponse build() {
             return new TlsCertificateContextResponse(certificatePaths, certificateSource, sdsConfig);
         }

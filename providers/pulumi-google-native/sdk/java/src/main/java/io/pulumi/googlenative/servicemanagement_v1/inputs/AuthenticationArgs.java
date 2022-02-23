@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthProviderArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.AuthenticationRuleArgs;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="providers")
-    private final @Nullable Input<List<AuthProviderArgs>> providers;
+      private final @Nullable Input<List<AuthProviderArgs>> providers;
 
     public Input<List<AuthProviderArgs>> getProviders() {
         return this.providers == null ? Input.empty() : this.providers;
@@ -36,7 +36,7 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<AuthenticationRuleArgs>> rules;
+      private final @Nullable Input<List<AuthenticationRuleArgs>> rules;
 
     public Input<List<AuthenticationRuleArgs>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -95,7 +95,6 @@ public final class AuthenticationArgs extends io.pulumi.resources.ResourceArgs {
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public AuthenticationArgs build() {
             return new AuthenticationArgs(providers, rules);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskDefinitionEFSVolumeConfigurationTransitEncryption;
 import io.pulumi.awsnative.ecs.outputs.TaskDefinitionAuthorizationConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -102,7 +102,6 @@ public final class TaskDefinitionEFSVolumeConfiguration {
             this.transitEncryptionPort = transitEncryptionPort;
             return this;
         }
-
         public TaskDefinitionEFSVolumeConfiguration build() {
             return new TaskDefinitionEFSVolumeConfiguration(authorizationConfig, filesystemId, rootDirectory, transitEncryption, transitEncryptionPort);
         }

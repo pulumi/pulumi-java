@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.PacketMirroringFilterResponse;
 import io.pulumi.googlenative.compute_beta.outputs.PacketMirroringForwardingRuleInfoResponse;
 import io.pulumi.googlenative.compute_beta.outputs.PacketMirroringMirroredResourceInfoResponse;
@@ -289,7 +289,6 @@ public final class GetPacketMirroringResult {
             this.selfLink = Objects.requireNonNull(selfLink);
             return this;
         }
-
         public GetPacketMirroringResult build() {
             return new GetPacketMirroringResult(collectorIlb, creationTimestamp, description, enable, filter, kind, mirroredResources, name, network, priority, region, selfLink);
         }

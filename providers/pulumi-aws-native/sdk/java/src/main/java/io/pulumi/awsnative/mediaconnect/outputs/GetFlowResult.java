@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.outputs.FlowFailoverConfig;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class GetFlowResult {
             this.sourceFailoverConfig = sourceFailoverConfig;
             return this;
         }
-
         public GetFlowResult build() {
             return new GetFlowResult(flowArn, flowAvailabilityZone, source, sourceFailoverConfig);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -66,7 +66,6 @@ public final class CopyOnExpiryOptionArgs extends io.pulumi.resources.ResourceAr
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public CopyOnExpiryOptionArgs build() {
             return new CopyOnExpiryOptionArgs(objectType);
         }

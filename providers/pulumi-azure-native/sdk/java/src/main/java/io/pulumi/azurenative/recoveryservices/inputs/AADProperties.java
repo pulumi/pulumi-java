@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,35 +15,35 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
     public static final AADProperties Empty = new AADProperties();
 
     @InputImport(name="audience")
-    private final @Nullable String audience;
+        private final @Nullable String audience;
 
     public Optional<String> getAudience() {
         return this.audience == null ? Optional.empty() : Optional.ofNullable(this.audience);
     }
 
     @InputImport(name="authority")
-    private final @Nullable String authority;
+        private final @Nullable String authority;
 
     public Optional<String> getAuthority() {
         return this.authority == null ? Optional.empty() : Optional.ofNullable(this.authority);
     }
 
     @InputImport(name="servicePrincipalClientId")
-    private final @Nullable String servicePrincipalClientId;
+        private final @Nullable String servicePrincipalClientId;
 
     public Optional<String> getServicePrincipalClientId() {
         return this.servicePrincipalClientId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalClientId);
     }
 
     @InputImport(name="servicePrincipalObjectId")
-    private final @Nullable String servicePrincipalObjectId;
+        private final @Nullable String servicePrincipalObjectId;
 
     public Optional<String> getServicePrincipalObjectId() {
         return this.servicePrincipalObjectId == null ? Optional.empty() : Optional.ofNullable(this.servicePrincipalObjectId);
     }
 
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -122,7 +122,6 @@ public final class AADProperties extends io.pulumi.resources.InvokeArgs {
             this.tenantId = tenantId;
             return this;
         }
-
         public AADProperties build() {
             return new AADProperties(audience, authority, servicePrincipalClientId, servicePrincipalObjectId, tenantId);
         }

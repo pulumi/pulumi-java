@@ -4,7 +4,7 @@
 package io.pulumi.foobar.deeply_nested_module;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
     public static final ResourceArgs Empty = new ResourceArgs();
 
     @InputImport(name="baz")
-    private final @Nullable Input<String> baz;
+      private final @Nullable Input<String> baz;
 
     public Input<String> getBaz() {
         return this.baz == null ? Input.empty() : this.baz;
@@ -58,7 +58,6 @@ public final class ResourceArgs extends io.pulumi.resources.ResourceArgs {
             this.baz = Input.ofNullable(baz).asSecret();
             return this;
         }
-
         public ResourceArgs build() {
             return new ResourceArgs(baz);
         }

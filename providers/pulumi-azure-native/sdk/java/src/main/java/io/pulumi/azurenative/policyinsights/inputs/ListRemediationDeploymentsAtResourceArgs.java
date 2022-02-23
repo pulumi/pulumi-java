@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="remediationName", required=true)
-    private final String remediationName;
+        private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -31,7 +31,7 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -42,7 +42,7 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="top")
-    private final @Nullable Integer top;
+        private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
@@ -101,7 +101,6 @@ public final class ListRemediationDeploymentsAtResourceArgs extends io.pulumi.re
             this.top = top;
             return this;
         }
-
         public ListRemediationDeploymentsAtResourceArgs build() {
             return new ListRemediationDeploymentsAtResourceArgs(remediationName, resourceId, top);
         }

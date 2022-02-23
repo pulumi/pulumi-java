@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ContainerPortResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2EnvVarResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ResourceRequirementsResponse;
@@ -205,7 +205,6 @@ public final class GoogleCloudRunOpV2ContainerResponse {
             this.volumeMounts = Objects.requireNonNull(volumeMounts);
             return this;
         }
-
         public GoogleCloudRunOpV2ContainerResponse build() {
             return new GoogleCloudRunOpV2ContainerResponse(args, command, env, image, name, ports, resources, volumeMounts);
         }

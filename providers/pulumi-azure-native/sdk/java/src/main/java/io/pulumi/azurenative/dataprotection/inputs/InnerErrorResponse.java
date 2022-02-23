@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dataprotection.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalInfo")
-    private final @Nullable Map<String,String> additionalInfo;
+        private final @Nullable Map<String,String> additionalInfo;
 
     public Map<String,String> getAdditionalInfo() {
         return this.additionalInfo == null ? Map.of() : this.additionalInfo;
@@ -35,7 +35,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -46,7 +46,7 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="embeddedInnerError")
-    private final @Nullable InnerErrorResponse embeddedInnerError;
+        private final @Nullable InnerErrorResponse embeddedInnerError;
 
     public Optional<InnerErrorResponse> getEmbeddedInnerError() {
         return this.embeddedInnerError == null ? Optional.empty() : Optional.ofNullable(this.embeddedInnerError);
@@ -105,7 +105,6 @@ public final class InnerErrorResponse extends io.pulumi.resources.InvokeArgs {
             this.embeddedInnerError = embeddedInnerError;
             return this;
         }
-
         public InnerErrorResponse build() {
             return new InnerErrorResponse(additionalInfo, code, embeddedInnerError);
         }

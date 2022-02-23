@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.InstanceViewStatusResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -20,7 +20,7 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="colocationStatus")
-    private final @Nullable InstanceViewStatusResponse colocationStatus;
+        private final @Nullable InstanceViewStatusResponse colocationStatus;
 
     public Optional<InstanceViewStatusResponse> getColocationStatus() {
         return this.colocationStatus == null ? Optional.empty() : Optional.ofNullable(this.colocationStatus);
@@ -31,7 +31,7 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -80,7 +80,6 @@ public final class SubResourceWithColocationStatusResponse extends io.pulumi.res
             this.id = id;
             return this;
         }
-
         public SubResourceWithColocationStatusResponse build() {
             return new SubResourceWithColocationStatusResponse(colocationStatus, id);
         }

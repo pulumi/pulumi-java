@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tags.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -30,7 +30,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -41,7 +41,7 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagValue")
-    private final @Nullable Input<String> tagValue;
+        private final @Nullable Input<String> tagValue;
 
     public Input<String> getTagValue() {
         return this.tagValue == null ? Input.empty() : this.tagValue;
@@ -115,7 +115,6 @@ public final class TagBindingState extends io.pulumi.resources.ResourceArgs {
             this.tagValue = Input.ofNullable(tagValue);
             return this;
         }
-
         public TagBindingState build() {
             return new TagBindingState(name, parent, tagValue);
         }

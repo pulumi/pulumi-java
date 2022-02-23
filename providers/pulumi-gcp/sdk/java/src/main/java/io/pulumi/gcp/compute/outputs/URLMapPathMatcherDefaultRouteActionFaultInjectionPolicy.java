@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyAbort;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherDefaultRouteActionFaultInjectionPolicyDelay;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy {
             this.delay = delay;
             return this;
         }
-
         public URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy build() {
             return new URLMapPathMatcherDefaultRouteActionFaultInjectionPolicy(abort, delay);
         }

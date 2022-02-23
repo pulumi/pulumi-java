@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ApiOAuthSettingsParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -185,7 +185,6 @@ public final class ApiOAuthSettingsResponse {
             this.scopes = scopes;
             return this;
         }
-
         public ApiOAuthSettingsResponse build() {
             return new ApiOAuthSettingsResponse(clientId, clientSecret, customParameters, identityProvider, properties, redirectUrl, scopes);
         }

@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ivs.StreamKeyArgs;
 import io.pulumi.awsnative.ivs.outputs.StreamKeyTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -77,13 +77,6 @@ public class StreamKey extends io.pulumi.resources.CustomResource {
         return this.value;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public StreamKey(String name) {
-        super("aws-native:ivs:StreamKey", name, StreamKeyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

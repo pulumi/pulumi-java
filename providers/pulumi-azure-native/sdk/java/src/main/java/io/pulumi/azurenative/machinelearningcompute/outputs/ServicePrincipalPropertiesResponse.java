@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningcompute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ServicePrincipalPropertiesResponse {
             this.secret = Objects.requireNonNull(secret);
             return this;
         }
-
         public ServicePrincipalPropertiesResponse build() {
             return new ServicePrincipalPropertiesResponse(clientId, secret);
         }

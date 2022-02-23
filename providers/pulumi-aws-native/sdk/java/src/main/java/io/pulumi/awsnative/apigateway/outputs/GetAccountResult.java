@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class GetAccountResult {
             this.id = id;
             return this;
         }
-
         public GetAccountResult build() {
             return new GetAccountResult(cloudWatchRoleArn, id);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.opsworkscm;
 import io.pulumi.awsnative.opsworkscm.inputs.ServerEngineAttributeArgs;
 import io.pulumi.awsnative.opsworkscm.inputs.ServerTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,147 +20,147 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
     public static final ServerArgs Empty = new ServerArgs();
 
     @InputImport(name="associatePublicIpAddress")
-    private final @Nullable Input<Boolean> associatePublicIpAddress;
+        private final @Nullable Input<Boolean> associatePublicIpAddress;
 
     public Input<Boolean> getAssociatePublicIpAddress() {
         return this.associatePublicIpAddress == null ? Input.empty() : this.associatePublicIpAddress;
     }
 
     @InputImport(name="backupId")
-    private final @Nullable Input<String> backupId;
+        private final @Nullable Input<String> backupId;
 
     public Input<String> getBackupId() {
         return this.backupId == null ? Input.empty() : this.backupId;
     }
 
     @InputImport(name="backupRetentionCount")
-    private final @Nullable Input<Integer> backupRetentionCount;
+        private final @Nullable Input<Integer> backupRetentionCount;
 
     public Input<Integer> getBackupRetentionCount() {
         return this.backupRetentionCount == null ? Input.empty() : this.backupRetentionCount;
     }
 
     @InputImport(name="customCertificate")
-    private final @Nullable Input<String> customCertificate;
+        private final @Nullable Input<String> customCertificate;
 
     public Input<String> getCustomCertificate() {
         return this.customCertificate == null ? Input.empty() : this.customCertificate;
     }
 
     @InputImport(name="customDomain")
-    private final @Nullable Input<String> customDomain;
+        private final @Nullable Input<String> customDomain;
 
     public Input<String> getCustomDomain() {
         return this.customDomain == null ? Input.empty() : this.customDomain;
     }
 
     @InputImport(name="customPrivateKey")
-    private final @Nullable Input<String> customPrivateKey;
+        private final @Nullable Input<String> customPrivateKey;
 
     public Input<String> getCustomPrivateKey() {
         return this.customPrivateKey == null ? Input.empty() : this.customPrivateKey;
     }
 
     @InputImport(name="disableAutomatedBackup")
-    private final @Nullable Input<Boolean> disableAutomatedBackup;
+        private final @Nullable Input<Boolean> disableAutomatedBackup;
 
     public Input<Boolean> getDisableAutomatedBackup() {
         return this.disableAutomatedBackup == null ? Input.empty() : this.disableAutomatedBackup;
     }
 
     @InputImport(name="engine")
-    private final @Nullable Input<String> engine;
+        private final @Nullable Input<String> engine;
 
     public Input<String> getEngine() {
         return this.engine == null ? Input.empty() : this.engine;
     }
 
     @InputImport(name="engineAttributes")
-    private final @Nullable Input<List<ServerEngineAttributeArgs>> engineAttributes;
+        private final @Nullable Input<List<ServerEngineAttributeArgs>> engineAttributes;
 
     public Input<List<ServerEngineAttributeArgs>> getEngineAttributes() {
         return this.engineAttributes == null ? Input.empty() : this.engineAttributes;
     }
 
     @InputImport(name="engineModel")
-    private final @Nullable Input<String> engineModel;
+        private final @Nullable Input<String> engineModel;
 
     public Input<String> getEngineModel() {
         return this.engineModel == null ? Input.empty() : this.engineModel;
     }
 
     @InputImport(name="engineVersion")
-    private final @Nullable Input<String> engineVersion;
+        private final @Nullable Input<String> engineVersion;
 
     public Input<String> getEngineVersion() {
         return this.engineVersion == null ? Input.empty() : this.engineVersion;
     }
 
     @InputImport(name="instanceProfileArn", required=true)
-    private final Input<String> instanceProfileArn;
+        private final Input<String> instanceProfileArn;
 
     public Input<String> getInstanceProfileArn() {
         return this.instanceProfileArn;
     }
 
     @InputImport(name="instanceType", required=true)
-    private final Input<String> instanceType;
+        private final Input<String> instanceType;
 
     public Input<String> getInstanceType() {
         return this.instanceType;
     }
 
     @InputImport(name="keyPair")
-    private final @Nullable Input<String> keyPair;
+        private final @Nullable Input<String> keyPair;
 
     public Input<String> getKeyPair() {
         return this.keyPair == null ? Input.empty() : this.keyPair;
     }
 
     @InputImport(name="preferredBackupWindow")
-    private final @Nullable Input<String> preferredBackupWindow;
+        private final @Nullable Input<String> preferredBackupWindow;
 
     public Input<String> getPreferredBackupWindow() {
         return this.preferredBackupWindow == null ? Input.empty() : this.preferredBackupWindow;
     }
 
     @InputImport(name="preferredMaintenanceWindow")
-    private final @Nullable Input<String> preferredMaintenanceWindow;
+        private final @Nullable Input<String> preferredMaintenanceWindow;
 
     public Input<String> getPreferredMaintenanceWindow() {
         return this.preferredMaintenanceWindow == null ? Input.empty() : this.preferredMaintenanceWindow;
     }
 
     @InputImport(name="securityGroupIds")
-    private final @Nullable Input<List<String>> securityGroupIds;
+        private final @Nullable Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds == null ? Input.empty() : this.securityGroupIds;
     }
 
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+        private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
     }
 
     @InputImport(name="serviceRoleArn", required=true)
-    private final Input<String> serviceRoleArn;
+        private final Input<String> serviceRoleArn;
 
     public Input<String> getServiceRoleArn() {
         return this.serviceRoleArn;
     }
 
     @InputImport(name="subnetIds")
-    private final @Nullable Input<List<String>> subnetIds;
+        private final @Nullable Input<List<String>> subnetIds;
 
     public Input<List<String>> getSubnetIds() {
         return this.subnetIds == null ? Input.empty() : this.subnetIds;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ServerTagArgs>> tags;
+        private final @Nullable Input<List<ServerTagArgs>> tags;
 
     public Input<List<ServerTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -504,7 +504,6 @@ public final class ServerArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ServerArgs build() {
             return new ServerArgs(associatePublicIpAddress, backupId, backupRetentionCount, customCertificate, customDomain, customPrivateKey, disableAutomatedBackup, engine, engineAttributes, engineModel, engineVersion, instanceProfileArn, instanceType, keyPair, preferredBackupWindow, preferredMaintenanceWindow, securityGroupIds, serverName, serviceRoleArn, subnetIds, tags);
         }

@@ -10,8 +10,8 @@ import io.pulumi.awsnative.wisdom.outputs.AssistantServerSideEncryptionConfigura
 import io.pulumi.awsnative.wisdom.outputs.AssistantTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -65,13 +65,6 @@ public class Assistant extends io.pulumi.resources.CustomResource {
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Assistant(String name) {
-        super("aws-native:wisdom:Assistant", name, AssistantArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

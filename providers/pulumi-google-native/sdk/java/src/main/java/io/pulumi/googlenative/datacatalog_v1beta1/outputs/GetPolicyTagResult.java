@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetPolicyTagResult {
             this.parentPolicyTag = Objects.requireNonNull(parentPolicyTag);
             return this;
         }
-
         public GetPolicyTagResult build() {
             return new GetPolicyTagResult(childPolicyTags, description, displayName, name, parentPolicyTag);
         }

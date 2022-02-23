@@ -17,7 +17,7 @@ import io.pulumi.azurenative.datafactory.outputs.HdfsReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.HttpReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.OracleCloudStorageReadSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpReadSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -198,7 +198,6 @@ public final class BinarySourceResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BinarySourceResponse build() {
             return new BinarySourceResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sourceRetryCount, sourceRetryWait, storeSettings, type);
         }

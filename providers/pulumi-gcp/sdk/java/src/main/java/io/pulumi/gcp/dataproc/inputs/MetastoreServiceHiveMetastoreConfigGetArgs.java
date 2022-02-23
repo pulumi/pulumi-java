@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataproc.inputs.MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="configOverrides")
-    private final @Nullable Input<Map<String,String>> configOverrides;
+        private final @Nullable Input<Map<String,String>> configOverrides;
 
     public Input<Map<String,String>> getConfigOverrides() {
         return this.configOverrides == null ? Input.empty() : this.configOverrides;
@@ -34,7 +34,7 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="kerberosConfig")
-    private final @Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig;
+        private final @Nullable Input<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> kerberosConfig;
 
     public Input<MetastoreServiceHiveMetastoreConfigKerberosConfigGetArgs> getKerberosConfig() {
         return this.kerberosConfig == null ? Input.empty() : this.kerberosConfig;
@@ -45,7 +45,7 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -119,7 +119,6 @@ public final class MetastoreServiceHiveMetastoreConfigGetArgs extends io.pulumi.
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigGetArgs build() {
             return new MetastoreServiceHiveMetastoreConfigGetArgs(configOverrides, kerberosConfig, version);
         }

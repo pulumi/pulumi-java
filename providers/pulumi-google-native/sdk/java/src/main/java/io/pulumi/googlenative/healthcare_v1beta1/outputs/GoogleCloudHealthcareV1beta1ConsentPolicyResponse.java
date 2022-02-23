@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.AttributeResponse;
 import io.pulumi.googlenative.healthcare_v1beta1.outputs.ExprResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GoogleCloudHealthcareV1beta1ConsentPolicyResponse {
             this.resourceAttributes = Objects.requireNonNull(resourceAttributes);
             return this;
         }
-
         public GoogleCloudHealthcareV1beta1ConsentPolicyResponse build() {
             return new GoogleCloudHealthcareV1beta1ConsentPolicyResponse(authorizationRule, resourceAttributes);
         }

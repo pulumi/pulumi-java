@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class RestorePolicyPropertiesResponse {
             this.minRestoreTime = Objects.requireNonNull(minRestoreTime);
             return this;
         }
-
         public RestorePolicyPropertiesResponse build() {
             return new RestorePolicyPropertiesResponse(days, enabled, lastEnabledTime, minRestoreTime);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.delegatednetwork.inputs;
 
 import io.pulumi.azurenative.delegatednetwork.enums.ResourceIdentityType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class OrchestratorIdentityArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<ResourceIdentityType> type;
+        private final @Nullable Input<ResourceIdentityType> type;
 
     public Input<ResourceIdentityType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -62,7 +62,6 @@ public final class OrchestratorIdentityArgs extends io.pulumi.resources.Resource
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public OrchestratorIdentityArgs build() {
             return new OrchestratorIdentityArgs(type);
         }

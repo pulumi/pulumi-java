@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.KeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class EncryptionResponse {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public EncryptionResponse build() {
             return new EncryptionResponse(keySource, keyVaultProperties);
         }

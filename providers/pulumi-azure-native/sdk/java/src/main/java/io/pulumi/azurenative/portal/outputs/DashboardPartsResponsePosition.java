@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.portal.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class DashboardPartsResponsePosition {
             this.y = Objects.requireNonNull(y);
             return this;
         }
-
         public DashboardPartsResponsePosition build() {
             return new DashboardPartsResponsePosition(colSpan, metadata, rowSpan, x, y);
         }

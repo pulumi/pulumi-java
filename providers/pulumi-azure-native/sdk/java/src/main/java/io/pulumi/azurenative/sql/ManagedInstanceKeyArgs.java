@@ -6,7 +6,7 @@ package io.pulumi.azurenative.sql;
 import io.pulumi.azurenative.sql.enums.ServerKeyType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="keyName")
-    private final @Nullable Input<String> keyName;
+        private final @Nullable Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName == null ? Input.empty() : this.keyName;
@@ -32,7 +32,7 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="managedInstanceName", required=true)
-    private final Input<String> managedInstanceName;
+        private final Input<String> managedInstanceName;
 
     public Input<String> getManagedInstanceName() {
         return this.managedInstanceName;
@@ -43,7 +43,7 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serverKeyType", required=true)
-    private final Input<Either<String,ServerKeyType>> serverKeyType;
+        private final Input<Either<String,ServerKeyType>> serverKeyType;
 
     public Input<Either<String,ServerKeyType>> getServerKeyType() {
         return this.serverKeyType;
@@ -65,7 +65,7 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -169,7 +169,6 @@ public final class ManagedInstanceKeyArgs extends io.pulumi.resources.ResourceAr
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public ManagedInstanceKeyArgs build() {
             return new ManagedInstanceKeyArgs(keyName, managedInstanceName, resourceGroupName, serverKeyType, uri);
         }

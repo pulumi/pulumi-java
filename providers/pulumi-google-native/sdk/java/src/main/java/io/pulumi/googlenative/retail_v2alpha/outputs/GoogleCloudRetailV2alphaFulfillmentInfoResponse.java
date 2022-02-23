@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudRetailV2alphaFulfillmentInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GoogleCloudRetailV2alphaFulfillmentInfoResponse build() {
             return new GoogleCloudRetailV2alphaFulfillmentInfoResponse(placeIds, type);
         }

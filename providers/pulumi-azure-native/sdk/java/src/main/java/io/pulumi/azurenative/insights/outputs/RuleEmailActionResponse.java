@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -101,7 +101,6 @@ public final class RuleEmailActionResponse {
             this.sendToServiceOwners = sendToServiceOwners;
             return this;
         }
-
         public RuleEmailActionResponse build() {
             return new RuleEmailActionResponse(customEmails, odataType, sendToServiceOwners);
         }

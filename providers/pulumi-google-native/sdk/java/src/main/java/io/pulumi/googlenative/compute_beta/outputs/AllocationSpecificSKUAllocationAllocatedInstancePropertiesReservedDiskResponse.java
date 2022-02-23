@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class AllocationSpecificSKUAllocationAllocatedInstancePropertiesRes
             this.$interface = Objects.requireNonNull($interface);
             return this;
         }
-
         public AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse build() {
             return new AllocationSpecificSKUAllocationAllocatedInstancePropertiesReservedDiskResponse(diskSizeGb, $interface);
         }

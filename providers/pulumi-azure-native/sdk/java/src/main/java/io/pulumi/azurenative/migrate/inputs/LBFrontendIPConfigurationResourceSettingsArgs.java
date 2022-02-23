@@ -5,7 +5,7 @@ package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.SubnetReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -36,7 +36,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="privateIpAddress")
-    private final @Nullable Input<String> privateIpAddress;
+        private final @Nullable Input<String> privateIpAddress;
 
     public Input<String> getPrivateIpAddress() {
         return this.privateIpAddress == null ? Input.empty() : this.privateIpAddress;
@@ -47,7 +47,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="privateIpAllocationMethod")
-    private final @Nullable Input<String> privateIpAllocationMethod;
+        private final @Nullable Input<String> privateIpAllocationMethod;
 
     public Input<String> getPrivateIpAllocationMethod() {
         return this.privateIpAllocationMethod == null ? Input.empty() : this.privateIpAllocationMethod;
@@ -58,7 +58,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable Input<SubnetReferenceArgs> subnet;
+        private final @Nullable Input<SubnetReferenceArgs> subnet;
 
     public Input<SubnetReferenceArgs> getSubnet() {
         return this.subnet == null ? Input.empty() : this.subnet;
@@ -69,7 +69,7 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<String> zones;
+        private final @Nullable Input<String> zones;
 
     public Input<String> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -173,7 +173,6 @@ public final class LBFrontendIPConfigurationResourceSettingsArgs extends io.pulu
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public LBFrontendIPConfigurationResourceSettingsArgs build() {
             return new LBFrontendIPConfigurationResourceSettingsArgs(name, privateIpAddress, privateIpAllocationMethod, subnet, zones);
         }

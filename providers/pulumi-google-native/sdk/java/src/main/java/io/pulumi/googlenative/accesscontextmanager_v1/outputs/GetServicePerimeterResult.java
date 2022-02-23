@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1.outputs.ServicePerimeterConfigResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class GetServicePerimeterResult {
             this.useExplicitDryRunSpec = Objects.requireNonNull(useExplicitDryRunSpec);
             return this;
         }
-
         public GetServicePerimeterResult build() {
             return new GetServicePerimeterResult(description, name, perimeterType, spec, status, title, useExplicitDryRunSpec);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.MitigationActionUpdateCACertificateParamsAction;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class MitigationActionUpdateCACertificateParams {
             this.action = Objects.requireNonNull(action);
             return this;
         }
-
         public MitigationActionUpdateCACertificateParams build() {
             return new MitigationActionUpdateCACertificateParams(action);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePath;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordList;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             this.wordList = wordList;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary build() {
             return new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionary(cloudStoragePath, wordList);
         }

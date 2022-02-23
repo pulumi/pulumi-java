@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.EventTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.HttpsTriggerResponse;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.SecretEnvVarResponse;
@@ -712,7 +712,6 @@ public final class GetFunctionResult {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, buildId, buildName, buildWorkerPool, description, dockerRepository, entryPoint, environmentVariables, eventTrigger, httpsTrigger, ingressSettings, kmsKeyName, labels, maxInstances, minInstances, name, network, runtime, secretEnvironmentVariables, secretVolumes, serviceAccountEmail, sourceArchiveUrl, sourceRepository, sourceToken, sourceUploadUrl, status, timeout, updateTime, versionId, vpcConnector, vpcConnectorEgressSettings);
         }

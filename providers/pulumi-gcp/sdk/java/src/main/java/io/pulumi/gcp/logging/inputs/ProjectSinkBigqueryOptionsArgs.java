@@ -4,7 +4,7 @@
 package io.pulumi.gcp.logging.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ProjectSinkBigqueryOptionsArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="usePartitionedTables", required=true)
-    private final Input<Boolean> usePartitionedTables;
+        private final Input<Boolean> usePartitionedTables;
 
     public Input<Boolean> getUsePartitionedTables() {
         return this.usePartitionedTables;
@@ -64,7 +64,6 @@ public final class ProjectSinkBigqueryOptionsArgs extends io.pulumi.resources.Re
             this.usePartitionedTables = Input.of(Objects.requireNonNull(usePartitionedTables));
             return this;
         }
-
         public ProjectSinkBigqueryOptionsArgs build() {
             return new ProjectSinkBigqueryOptionsArgs(usePartitionedTables);
         }

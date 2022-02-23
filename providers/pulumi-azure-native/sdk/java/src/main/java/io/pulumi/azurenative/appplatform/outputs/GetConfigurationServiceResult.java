@@ -5,7 +5,7 @@ package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.ConfigurationServicePropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -139,7 +139,6 @@ public final class GetConfigurationServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationServiceResult build() {
             return new GetConfigurationServiceResult(id, name, properties, systemData, type);
         }

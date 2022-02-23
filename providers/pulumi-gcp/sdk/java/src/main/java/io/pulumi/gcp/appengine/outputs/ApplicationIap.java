@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.appengine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -123,7 +123,6 @@ public final class ApplicationIap {
             this.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
-
         public ApplicationIap build() {
             return new ApplicationIap(enabled, oauth2ClientId, oauth2ClientSecret, oauth2ClientSecretSha256);
         }

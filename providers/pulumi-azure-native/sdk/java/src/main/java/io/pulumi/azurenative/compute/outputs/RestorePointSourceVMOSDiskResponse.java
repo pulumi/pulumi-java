@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.outputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.outputs.ManagedDiskParametersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -185,7 +185,6 @@ public final class RestorePointSourceVMOSDiskResponse {
             this.osType = osType;
             return this;
         }
-
         public RestorePointSourceVMOSDiskResponse build() {
             return new RestorePointSourceVMOSDiskResponse(caching, diskRestorePoint, diskSizeGB, encryptionSettings, managedDisk, name, osType);
         }

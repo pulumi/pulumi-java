@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -66,7 +66,6 @@ public final class GameServerClusterConnectionInfoGkeClusterReference {
             this.cluster = Objects.requireNonNull(cluster);
             return this;
         }
-
         public GameServerClusterConnectionInfoGkeClusterReference build() {
             return new GameServerClusterConnectionInfoGkeClusterReference(cluster);
         }

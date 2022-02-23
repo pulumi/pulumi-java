@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.ResourcePolicyDailyCycleResponse;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse {
             this.dailyMaintenanceWindow = Objects.requireNonNull(dailyMaintenanceWindow);
             return this;
         }
-
         public ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse build() {
             return new ResourcePolicyVmMaintenancePolicyMaintenanceWindowResponse(dailyMaintenanceWindow);
         }

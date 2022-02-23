@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepCopyFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepExecFileResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepExtractArchiveResponse;
@@ -185,7 +185,6 @@ public final class SoftwareRecipeStepResponse {
             this.scriptRun = Objects.requireNonNull(scriptRun);
             return this;
         }
-
         public SoftwareRecipeStepResponse build() {
             return new SoftwareRecipeStepResponse(archiveExtraction, dpkgInstallation, fileCopy, fileExec, msiInstallation, rpmInstallation, scriptRun);
         }

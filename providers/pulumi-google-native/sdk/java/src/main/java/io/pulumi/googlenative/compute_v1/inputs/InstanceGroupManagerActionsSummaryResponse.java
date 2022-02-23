@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="abandoning", required=true)
-    private final Integer abandoning;
+      private final Integer abandoning;
 
     public Integer getAbandoning() {
         return this.abandoning;
@@ -28,7 +28,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="creating", required=true)
-    private final Integer creating;
+      private final Integer creating;
 
     public Integer getCreating() {
         return this.creating;
@@ -39,7 +39,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="creatingWithoutRetries", required=true)
-    private final Integer creatingWithoutRetries;
+      private final Integer creatingWithoutRetries;
 
     public Integer getCreatingWithoutRetries() {
         return this.creatingWithoutRetries;
@@ -50,7 +50,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="deleting", required=true)
-    private final Integer deleting;
+      private final Integer deleting;
 
     public Integer getDeleting() {
         return this.deleting;
@@ -61,7 +61,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="none", required=true)
-    private final Integer none;
+      private final Integer none;
 
     public Integer getNone() {
         return this.none;
@@ -72,7 +72,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="recreating", required=true)
-    private final Integer recreating;
+      private final Integer recreating;
 
     public Integer getRecreating() {
         return this.recreating;
@@ -83,7 +83,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="refreshing", required=true)
-    private final Integer refreshing;
+      private final Integer refreshing;
 
     public Integer getRefreshing() {
         return this.refreshing;
@@ -94,7 +94,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="restarting", required=true)
-    private final Integer restarting;
+      private final Integer restarting;
 
     public Integer getRestarting() {
         return this.restarting;
@@ -105,7 +105,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="resuming", required=true)
-    private final Integer resuming;
+      private final Integer resuming;
 
     public Integer getResuming() {
         return this.resuming;
@@ -116,7 +116,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="starting", required=true)
-    private final Integer starting;
+      private final Integer starting;
 
     public Integer getStarting() {
         return this.starting;
@@ -127,7 +127,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="stopping", required=true)
-    private final Integer stopping;
+      private final Integer stopping;
 
     public Integer getStopping() {
         return this.stopping;
@@ -138,7 +138,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="suspending", required=true)
-    private final Integer suspending;
+      private final Integer suspending;
 
     public Integer getSuspending() {
         return this.suspending;
@@ -149,7 +149,7 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
      * 
      */
     @InputImport(name="verifying", required=true)
-    private final Integer verifying;
+      private final Integer verifying;
 
     public Integer getVerifying() {
         return this.verifying;
@@ -308,7 +308,6 @@ public final class InstanceGroupManagerActionsSummaryResponse extends io.pulumi.
             this.verifying = Objects.requireNonNull(verifying);
             return this;
         }
-
         public InstanceGroupManagerActionsSummaryResponse build() {
             return new InstanceGroupManagerActionsSummaryResponse(abandoning, creating, creatingWithoutRetries, deleting, none, recreating, refreshing, restarting, resuming, starting, stopping, suspending, verifying);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="coreQuota", required=true)
-    private final Integer coreQuota;
+        private final Integer coreQuota;
 
     public Integer getCoreQuota() {
         return this.coreQuota;
@@ -33,7 +33,7 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -82,7 +82,6 @@ public final class VirtualMachineFamilyCoreQuotaResponse extends io.pulumi.resou
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public VirtualMachineFamilyCoreQuotaResponse build() {
             return new VirtualMachineFamilyCoreQuotaResponse(coreQuota, name);
         }

@@ -8,7 +8,7 @@ import io.pulumi.awsnative.licensemanager.outputs.LicenseEntitlement;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseIssuerData;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseMetadata;
 import io.pulumi.awsnative.licensemanager.outputs.LicenseValidityDateFormat;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -252,7 +252,6 @@ public final class GetLicenseResult {
             this.version = version;
             return this;
         }
-
         public GetLicenseResult build() {
             return new GetLicenseResult(beneficiary, consumptionConfiguration, entitlements, homeRegion, issuer, licenseArn, licenseMetadata, licenseName, productName, productSKU, validity, version);
         }

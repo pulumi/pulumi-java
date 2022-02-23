@@ -4,7 +4,7 @@
 package io.pulumi.example;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.example.enums.RubberTreeVariety;
 import io.pulumi.example.inputs.ObjectArgs;
 import io.pulumi.example.inputs.ObjectWithNodeOptionalInputsArgs;
@@ -18,28 +18,28 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
     public static final TypeUsesArgs Empty = new TypeUsesArgs();
 
     @InputImport(name="bar")
-    private final @Nullable Input<SomeOtherObjectArgs> bar;
+      private final @Nullable Input<SomeOtherObjectArgs> bar;
 
     public Input<SomeOtherObjectArgs> getBar() {
         return this.bar == null ? Input.empty() : this.bar;
     }
 
     @InputImport(name="baz")
-    private final @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz;
+      private final @Nullable Input<ObjectWithNodeOptionalInputsArgs> baz;
 
     public Input<ObjectWithNodeOptionalInputsArgs> getBaz() {
         return this.baz == null ? Input.empty() : this.baz;
     }
 
     @InputImport(name="foo")
-    private final @Nullable Input<ObjectArgs> foo;
+      private final @Nullable Input<ObjectArgs> foo;
 
     public Input<ObjectArgs> getFoo() {
         return this.foo == null ? Input.empty() : this.foo;
     }
 
     @InputImport(name="qux")
-    private final @Nullable Input<RubberTreeVariety> qux;
+      private final @Nullable Input<RubberTreeVariety> qux;
 
     public Input<RubberTreeVariety> getQux() {
         return this.qux == null ? Input.empty() : this.qux;
@@ -128,7 +128,6 @@ public final class TypeUsesArgs extends io.pulumi.resources.ResourceArgs {
             this.qux = Input.ofNullable(qux);
             return this;
         }
-
         public TypeUsesArgs build() {
             return new TypeUsesArgs(bar, baz, foo, qux);
         }

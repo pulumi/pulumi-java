@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2BigQueryOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2CloudStorageOptionsResponse;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2DatastoreOptionsResponse;
@@ -133,7 +133,6 @@ public final class GooglePrivacyDlpV2StorageConfigResponse {
             this.timespanConfig = Objects.requireNonNull(timespanConfig);
             return this;
         }
-
         public GooglePrivacyDlpV2StorageConfigResponse build() {
             return new GooglePrivacyDlpV2StorageConfigResponse(bigQueryOptions, cloudStorageOptions, datastoreOptions, hybridOptions, timespanConfig);
         }

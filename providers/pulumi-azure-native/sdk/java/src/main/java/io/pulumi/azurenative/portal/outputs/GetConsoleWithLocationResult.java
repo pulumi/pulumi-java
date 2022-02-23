@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.ConsolePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -52,7 +52,6 @@ public final class GetConsoleWithLocationResult {
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public GetConsoleWithLocationResult build() {
             return new GetConsoleWithLocationResult(properties);
         }

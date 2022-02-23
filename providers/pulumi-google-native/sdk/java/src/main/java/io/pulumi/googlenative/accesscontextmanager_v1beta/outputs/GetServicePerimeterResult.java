@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.accesscontextmanager_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.outputs.ServicePerimeterConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetServicePerimeterResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetServicePerimeterResult build() {
             return new GetServicePerimeterResult(description, name, perimeterType, status, title);
         }

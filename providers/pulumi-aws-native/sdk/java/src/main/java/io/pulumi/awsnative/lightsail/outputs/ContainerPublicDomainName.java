@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -69,7 +69,6 @@ public final class ContainerPublicDomainName {
             this.domainNames = domainNames;
             return this;
         }
-
         public ContainerPublicDomainName build() {
             return new ContainerPublicDomainName(certificateName, domainNames);
         }

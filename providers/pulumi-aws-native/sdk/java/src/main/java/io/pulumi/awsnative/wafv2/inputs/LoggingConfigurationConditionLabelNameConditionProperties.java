@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
      * 
      */
     @InputImport(name="labelName", required=true)
-    private final String labelName;
+        private final String labelName;
 
     public String getLabelName() {
         return this.labelName;
@@ -59,7 +59,6 @@ public final class LoggingConfigurationConditionLabelNameConditionProperties ext
             this.labelName = Objects.requireNonNull(labelName);
             return this;
         }
-
         public LoggingConfigurationConditionLabelNameConditionProperties build() {
             return new LoggingConfigurationConditionLabelNameConditionProperties(labelName);
         }

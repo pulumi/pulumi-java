@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabricmesh.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ResourceRequestsResponse {
             this.memoryInGB = Objects.requireNonNull(memoryInGB);
             return this;
         }
-
         public ResourceRequestsResponse build() {
             return new ResourceRequestsResponse(cpu, memoryInGB);
         }

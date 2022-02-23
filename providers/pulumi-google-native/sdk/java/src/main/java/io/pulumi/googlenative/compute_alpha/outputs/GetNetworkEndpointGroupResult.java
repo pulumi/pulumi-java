@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.NetworkEndpointGroupAppEngineResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.NetworkEndpointGroupCloudFunctionResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.NetworkEndpointGroupCloudRunResponse;
@@ -458,7 +458,6 @@ public final class GetNetworkEndpointGroupResult {
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public GetNetworkEndpointGroupResult build() {
             return new GetNetworkEndpointGroupResult(annotations, appEngine, cloudFunction, cloudRun, creationTimestamp, defaultPort, description, kind, name, network, networkEndpointType, pscTargetService, region, selfLink, selfLinkWithId, serverlessDeployment, size, subnetwork, type, zone);
         }

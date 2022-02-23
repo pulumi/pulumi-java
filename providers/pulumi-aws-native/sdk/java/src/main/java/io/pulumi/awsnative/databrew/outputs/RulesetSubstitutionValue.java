@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.databrew.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class RulesetSubstitutionValue {
             this.valueReference = Objects.requireNonNull(valueReference);
             return this;
         }
-
         public RulesetSubstitutionValue build() {
             return new RulesetSubstitutionValue(value, valueReference);
         }

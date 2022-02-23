@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TriggerGithubPushArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="branch")
-    private final @Nullable Input<String> branch;
+        private final @Nullable Input<String> branch;
 
     public Input<String> getBranch() {
         return this.branch == null ? Input.empty() : this.branch;
@@ -31,7 +31,7 @@ public final class TriggerGithubPushArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="invertRegex")
-    private final @Nullable Input<Boolean> invertRegex;
+        private final @Nullable Input<Boolean> invertRegex;
 
     public Input<Boolean> getInvertRegex() {
         return this.invertRegex == null ? Input.empty() : this.invertRegex;
@@ -42,7 +42,7 @@ public final class TriggerGithubPushArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable Input<String> tag;
+        private final @Nullable Input<String> tag;
 
     public Input<String> getTag() {
         return this.tag == null ? Input.empty() : this.tag;
@@ -116,7 +116,6 @@ public final class TriggerGithubPushArgs extends io.pulumi.resources.ResourceArg
             this.tag = Input.ofNullable(tag);
             return this;
         }
-
         public TriggerGithubPushArgs build() {
             return new TriggerGithubPushArgs(branch, invertRegex, tag);
         }

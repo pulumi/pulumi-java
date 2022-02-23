@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.inputs;
 
 import io.pulumi.azurenative.testbase.inputs.TestBaseAccountSKUCapabilityResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="capabilities", required=true)
-    private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
+        private final List<TestBaseAccountSKUCapabilityResponse> capabilities;
 
     public List<TestBaseAccountSKUCapabilityResponse> getCapabilities() {
         return this.capabilities;
@@ -36,7 +36,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="locations")
-    private final @Nullable List<String> locations;
+        private final @Nullable List<String> locations;
 
     public List<String> getLocations() {
         return this.locations == null ? List.of() : this.locations;
@@ -47,7 +47,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable String resourceType;
+        private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
@@ -69,7 +69,7 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="tier", required=true)
-    private final String tier;
+        private final String tier;
 
     public String getTier() {
         return this.tier;
@@ -148,7 +148,6 @@ public final class TestBaseAccountSKUResponse extends io.pulumi.resources.Invoke
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public TestBaseAccountSKUResponse build() {
             return new TestBaseAccountSKUResponse(capabilities, locations, name, resourceType, tier);
         }

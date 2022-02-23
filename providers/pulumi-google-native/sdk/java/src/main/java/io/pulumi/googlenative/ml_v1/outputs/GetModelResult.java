@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleCloudMlV1__VersionResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -204,7 +204,6 @@ public final class GetModelResult {
             this.regions = Objects.requireNonNull(regions);
             return this;
         }
-
         public GetModelResult build() {
             return new GetModelResult(defaultVersion, description, etag, labels, name, onlinePredictionConsoleLogging, onlinePredictionLogging, regions);
         }

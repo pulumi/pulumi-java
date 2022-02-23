@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -204,7 +204,6 @@ public final class BindingResourcePropertiesResponse {
             this.updatedAt = Objects.requireNonNull(updatedAt);
             return this;
         }
-
         public BindingResourcePropertiesResponse build() {
             return new BindingResourcePropertiesResponse(bindingParameters, createdAt, generatedProperties, key, resourceId, resourceName, resourceType, updatedAt);
         }

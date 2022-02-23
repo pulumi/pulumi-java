@@ -5,8 +5,8 @@ package io.pulumi.googlenative.retail_v2alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.retail_v2alpha.ServingConfigArgs;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaSearchRequestDynamicFacetSpecResponse;
@@ -260,13 +260,6 @@ public class ServingConfig extends io.pulumi.resources.CustomResource {
         return this.twowaySynonymsControlIds;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ServingConfig(String name) {
-        super("google-native:retail/v2alpha:ServingConfig", name, ServingConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

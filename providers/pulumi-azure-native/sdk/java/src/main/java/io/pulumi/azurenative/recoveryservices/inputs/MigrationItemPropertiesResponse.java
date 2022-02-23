@@ -6,7 +6,7 @@ package io.pulumi.azurenative.recoveryservices.inputs;
 import io.pulumi.azurenative.recoveryservices.inputs.CurrentJobDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtMigrationDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="allowedOperations", required=true)
-    private final List<String> allowedOperations;
+        private final List<String> allowedOperations;
 
     public List<String> getAllowedOperations() {
         return this.allowedOperations;
@@ -38,7 +38,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="currentJob", required=true)
-    private final CurrentJobDetailsResponse currentJob;
+        private final CurrentJobDetailsResponse currentJob;
 
     public CurrentJobDetailsResponse getCurrentJob() {
         return this.currentJob;
@@ -49,7 +49,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="health", required=true)
-    private final String health;
+        private final String health;
 
     public String getHealth() {
         return this.health;
@@ -60,7 +60,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="healthErrors", required=true)
-    private final List<HealthErrorResponse> healthErrors;
+        private final List<HealthErrorResponse> healthErrors;
 
     public List<HealthErrorResponse> getHealthErrors() {
         return this.healthErrors;
@@ -71,7 +71,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="machineName", required=true)
-    private final String machineName;
+        private final String machineName;
 
     public String getMachineName() {
         return this.machineName;
@@ -82,7 +82,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="migrationState", required=true)
-    private final String migrationState;
+        private final String migrationState;
 
     public String getMigrationState() {
         return this.migrationState;
@@ -93,7 +93,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="migrationStateDescription", required=true)
-    private final String migrationStateDescription;
+        private final String migrationStateDescription;
 
     public String getMigrationStateDescription() {
         return this.migrationStateDescription;
@@ -104,7 +104,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="policyFriendlyName", required=true)
-    private final String policyFriendlyName;
+        private final String policyFriendlyName;
 
     public String getPolicyFriendlyName() {
         return this.policyFriendlyName;
@@ -115,7 +115,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="policyId", required=true)
-    private final String policyId;
+        private final String policyId;
 
     public String getPolicyId() {
         return this.policyId;
@@ -126,7 +126,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="providerSpecificDetails")
-    private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
+        private final @Nullable VMwareCbtMigrationDetailsResponse providerSpecificDetails;
 
     public Optional<VMwareCbtMigrationDetailsResponse> getProviderSpecificDetails() {
         return this.providerSpecificDetails == null ? Optional.empty() : Optional.ofNullable(this.providerSpecificDetails);
@@ -137,7 +137,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="recoveryServicesProviderId", required=true)
-    private final String recoveryServicesProviderId;
+        private final String recoveryServicesProviderId;
 
     public String getRecoveryServicesProviderId() {
         return this.recoveryServicesProviderId;
@@ -148,7 +148,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="testMigrateState", required=true)
-    private final String testMigrateState;
+        private final String testMigrateState;
 
     public String getTestMigrateState() {
         return this.testMigrateState;
@@ -159,7 +159,7 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="testMigrateStateDescription", required=true)
-    private final String testMigrateStateDescription;
+        private final String testMigrateStateDescription;
 
     public String getTestMigrateStateDescription() {
         return this.testMigrateStateDescription;
@@ -318,7 +318,6 @@ public final class MigrationItemPropertiesResponse extends io.pulumi.resources.I
             this.testMigrateStateDescription = Objects.requireNonNull(testMigrateStateDescription);
             return this;
         }
-
         public MigrationItemPropertiesResponse build() {
             return new MigrationItemPropertiesResponse(allowedOperations, currentJob, health, healthErrors, machineName, migrationState, migrationStateDescription, policyFriendlyName, policyId, providerSpecificDetails, recoveryServicesProviderId, testMigrateState, testMigrateStateDescription);
         }

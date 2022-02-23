@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.osconfig_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1beta.enums.SoftwareRecipeStepExtractArchiveType;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="artifactId", required=true)
-    private final Input<String> artifactId;
+      private final Input<String> artifactId;
 
     public Input<String> getArtifactId() {
         return this.artifactId;
@@ -35,7 +35,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="destination")
-    private final @Nullable Input<String> destination;
+      private final @Nullable Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination == null ? Input.empty() : this.destination;
@@ -46,7 +46,7 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<SoftwareRecipeStepExtractArchiveType> type;
+      private final Input<SoftwareRecipeStepExtractArchiveType> type;
 
     public Input<SoftwareRecipeStepExtractArchiveType> getType() {
         return this.type;
@@ -120,7 +120,6 @@ public final class SoftwareRecipeStepExtractArchiveArgs extends io.pulumi.resour
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public SoftwareRecipeStepExtractArchiveArgs build() {
             return new SoftwareRecipeStepExtractArchiveArgs(artifactId, destination, type);
         }

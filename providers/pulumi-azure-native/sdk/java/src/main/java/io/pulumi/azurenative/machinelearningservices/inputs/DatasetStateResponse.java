@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DatasetStateResponseDeprecatedBy;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="deprecatedBy")
-    private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
+        private final @Nullable DatasetStateResponseDeprecatedBy deprecatedBy;
 
     public Optional<DatasetStateResponseDeprecatedBy> getDeprecatedBy() {
         return this.deprecatedBy == null ? Optional.empty() : Optional.ofNullable(this.deprecatedBy);
@@ -35,7 +35,7 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -46,7 +46,7 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -105,7 +105,6 @@ public final class DatasetStateResponse extends io.pulumi.resources.InvokeArgs {
             this.state = state;
             return this;
         }
-
         public DatasetStateResponse build() {
             return new DatasetStateResponse(deprecatedBy, etag, state);
         }

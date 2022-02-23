@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable Input<String> platform;
+      private final @Nullable Input<String> platform;
 
     public Input<String> getPlatform() {
         return this.platform == null ? Input.empty() : this.platform;
@@ -34,7 +34,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="resource")
-    private final @Nullable Input<String> resource;
+      private final @Nullable Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource == null ? Input.empty() : this.resource;
@@ -45,7 +45,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="urlMask")
-    private final @Nullable Input<String> urlMask;
+      private final @Nullable Input<String> urlMask;
 
     public Input<String> getUrlMask() {
         return this.urlMask == null ? Input.empty() : this.urlMask;
@@ -56,7 +56,7 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+      private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -145,7 +145,6 @@ public final class NetworkEndpointGroupServerlessDeploymentArgs extends io.pulum
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public NetworkEndpointGroupServerlessDeploymentArgs build() {
             return new NetworkEndpointGroupServerlessDeploymentArgs(platform, resource, urlMask, version);
         }

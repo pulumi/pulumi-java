@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="compression", required=true)
-    private final String compression;
+      private final String compression;
 
     public String getCompression() {
         return this.compression;
@@ -32,7 +32,7 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="schemaFileFormat", required=true)
-    private final String schemaFileFormat;
+      private final String schemaFileFormat;
 
     public String getSchemaFileFormat() {
         return this.schemaFileFormat;
@@ -81,7 +81,6 @@ public final class JsonFileFormatResponse extends io.pulumi.resources.InvokeArgs
             this.schemaFileFormat = Objects.requireNonNull(schemaFileFormat);
             return this;
         }
-
         public JsonFileFormatResponse build() {
             return new JsonFileFormatResponse(compression, schemaFileFormat);
         }

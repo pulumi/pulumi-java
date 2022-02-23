@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanRunErrorTraceResponse;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanRunWarningTraceResponse;
 import java.lang.Boolean;
@@ -268,7 +268,6 @@ public final class ScanRunResponse {
             this.warningTraces = Objects.requireNonNull(warningTraces);
             return this;
         }
-
         public ScanRunResponse build() {
             return new ScanRunResponse(endTime, errorTrace, executionState, hasVulnerabilities, name, progressPercent, resultState, startTime, urlsCrawledCount, urlsTestedCount, warningTraces);
         }

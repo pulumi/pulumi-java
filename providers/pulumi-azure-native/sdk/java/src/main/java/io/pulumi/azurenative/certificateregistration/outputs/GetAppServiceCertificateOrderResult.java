@@ -6,7 +6,7 @@ package io.pulumi.azurenative.certificateregistration.outputs;
 import io.pulumi.azurenative.certificateregistration.outputs.AppServiceCertificateResponse;
 import io.pulumi.azurenative.certificateregistration.outputs.CertificateDetailsResponse;
 import io.pulumi.azurenative.certificateregistration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -587,7 +587,6 @@ public final class GetAppServiceCertificateOrderResult {
             this.validityInYears = validityInYears;
             return this;
         }
-
         public GetAppServiceCertificateOrderResult build() {
             return new GetAppServiceCertificateOrderResult(appServiceCertificateNotRenewableReasons, autoRenew, certificates, csr, distinguishedName, domainVerificationToken, expirationTime, id, intermediate, isPrivateKeyExternal, keySize, kind, lastCertificateIssuanceTime, location, name, nextAutoRenewalTimeStamp, productType, provisioningState, root, serialNumber, signedCertificate, status, systemData, tags, type, validityInYears);
         }

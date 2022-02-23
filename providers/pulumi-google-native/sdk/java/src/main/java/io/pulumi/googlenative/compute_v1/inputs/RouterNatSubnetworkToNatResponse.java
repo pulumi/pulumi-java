@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="secondaryIpRangeNames", required=true)
-    private final List<String> secondaryIpRangeNames;
+      private final List<String> secondaryIpRangeNames;
 
     public List<String> getSecondaryIpRangeNames() {
         return this.secondaryIpRangeNames;
@@ -44,7 +44,7 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="sourceIpRangesToNat", required=true)
-    private final List<String> sourceIpRangesToNat;
+      private final List<String> sourceIpRangesToNat;
 
     public List<String> getSourceIpRangesToNat() {
         return this.sourceIpRangesToNat;
@@ -103,7 +103,6 @@ public final class RouterNatSubnetworkToNatResponse extends io.pulumi.resources.
             this.sourceIpRangesToNat = Objects.requireNonNull(sourceIpRangesToNat);
             return this;
         }
-
         public RouterNatSubnetworkToNatResponse build() {
             return new RouterNatSubnetworkToNatResponse(name, secondaryIpRangeNames, sourceIpRangesToNat);
         }

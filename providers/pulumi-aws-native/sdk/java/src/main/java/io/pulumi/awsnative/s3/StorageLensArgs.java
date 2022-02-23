@@ -6,7 +6,7 @@ package io.pulumi.awsnative.s3;
 import io.pulumi.awsnative.s3.inputs.StorageLensConfigurationArgs;
 import io.pulumi.awsnative.s3.inputs.StorageLensTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
     public static final StorageLensArgs Empty = new StorageLensArgs();
 
     @InputImport(name="storageLensConfiguration", required=true)
-    private final Input<StorageLensConfigurationArgs> storageLensConfiguration;
+        private final Input<StorageLensConfigurationArgs> storageLensConfiguration;
 
     public Input<StorageLensConfigurationArgs> getStorageLensConfiguration() {
         return this.storageLensConfiguration;
@@ -28,7 +28,7 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<StorageLensTagArgs>> tags;
+        private final @Nullable Input<List<StorageLensTagArgs>> tags;
 
     public Input<List<StorageLensTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,6 @@ public final class StorageLensArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public StorageLensArgs build() {
             return new StorageLensArgs(storageLensConfiguration, tags);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RouterPeerAdvertisedIpRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class RouterPeerAdvertisedIpRangeGetArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="range", required=true)
-    private final Input<String> range;
+        private final Input<String> range;
 
     public Input<String> getRange() {
         return this.range;
@@ -90,7 +90,6 @@ public final class RouterPeerAdvertisedIpRangeGetArgs extends io.pulumi.resource
             this.range = Input.of(Objects.requireNonNull(range));
             return this;
         }
-
         public RouterPeerAdvertisedIpRangeGetArgs build() {
             return new RouterPeerAdvertisedIpRangeGetArgs(description, range);
         }

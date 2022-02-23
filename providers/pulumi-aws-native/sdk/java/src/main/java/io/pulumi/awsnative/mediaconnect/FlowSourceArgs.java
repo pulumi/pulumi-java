@@ -6,7 +6,7 @@ package io.pulumi.awsnative.mediaconnect;
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.inputs.FlowSourceEncryptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="decryption")
-    private final @Nullable Input<FlowSourceEncryptionArgs> decryption;
+        private final @Nullable Input<FlowSourceEncryptionArgs> decryption;
 
     public Input<FlowSourceEncryptionArgs> getDecryption() {
         return this.decryption == null ? Input.empty() : this.decryption;
@@ -33,7 +33,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
@@ -44,7 +44,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="entitlementArn")
-    private final @Nullable Input<String> entitlementArn;
+        private final @Nullable Input<String> entitlementArn;
 
     public Input<String> getEntitlementArn() {
         return this.entitlementArn == null ? Input.empty() : this.entitlementArn;
@@ -55,7 +55,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="flowArn")
-    private final @Nullable Input<String> flowArn;
+        private final @Nullable Input<String> flowArn;
 
     public Input<String> getFlowArn() {
         return this.flowArn == null ? Input.empty() : this.flowArn;
@@ -66,7 +66,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ingestPort")
-    private final @Nullable Input<Integer> ingestPort;
+        private final @Nullable Input<Integer> ingestPort;
 
     public Input<Integer> getIngestPort() {
         return this.ingestPort == null ? Input.empty() : this.ingestPort;
@@ -77,7 +77,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxBitrate")
-    private final @Nullable Input<Integer> maxBitrate;
+        private final @Nullable Input<Integer> maxBitrate;
 
     public Input<Integer> getMaxBitrate() {
         return this.maxBitrate == null ? Input.empty() : this.maxBitrate;
@@ -88,7 +88,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maxLatency")
-    private final @Nullable Input<Integer> maxLatency;
+        private final @Nullable Input<Integer> maxLatency;
 
     public Input<Integer> getMaxLatency() {
         return this.maxLatency == null ? Input.empty() : this.maxLatency;
@@ -99,7 +99,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -110,7 +110,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<FlowSourceProtocol> protocol;
+        private final @Nullable Input<FlowSourceProtocol> protocol;
 
     public Input<FlowSourceProtocol> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -121,7 +121,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="streamId")
-    private final @Nullable Input<String> streamId;
+        private final @Nullable Input<String> streamId;
 
     public Input<String> getStreamId() {
         return this.streamId == null ? Input.empty() : this.streamId;
@@ -132,7 +132,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcInterfaceName")
-    private final @Nullable Input<String> vpcInterfaceName;
+        private final @Nullable Input<String> vpcInterfaceName;
 
     public Input<String> getVpcInterfaceName() {
         return this.vpcInterfaceName == null ? Input.empty() : this.vpcInterfaceName;
@@ -143,7 +143,7 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="whitelistCidr")
-    private final @Nullable Input<String> whitelistCidr;
+        private final @Nullable Input<String> whitelistCidr;
 
     public Input<String> getWhitelistCidr() {
         return this.whitelistCidr == null ? Input.empty() : this.whitelistCidr;
@@ -352,7 +352,6 @@ public final class FlowSourceArgs extends io.pulumi.resources.ResourceArgs {
             this.whitelistCidr = Input.ofNullable(whitelistCidr);
             return this;
         }
-
         public FlowSourceArgs build() {
             return new FlowSourceArgs(decryption, description, entitlementArn, flowArn, ingestPort, maxBitrate, maxLatency, name, protocol, streamId, vpcInterfaceName, whitelistCidr);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -181,7 +181,6 @@ public final class UserInfoResponse {
             this.userTenantId = userTenantId;
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(userAltSecId, userIdp, userIss, userName, userObjectId, userPuId, userTenantId);
         }

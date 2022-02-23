@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class StandardAppVersionEntrypointGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="shell", required=true)
-    private final Input<String> shell;
+        private final Input<String> shell;
 
     public Input<String> getShell() {
         return this.shell;
@@ -61,7 +61,6 @@ public final class StandardAppVersionEntrypointGetArgs extends io.pulumi.resourc
             this.shell = Input.of(Objects.requireNonNull(shell));
             return this;
         }
-
         public StandardAppVersionEntrypointGetArgs build() {
             return new StandardAppVersionEntrypointGetArgs(shell);
         }

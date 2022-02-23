@@ -12,7 +12,7 @@ import io.pulumi.awsnative.lambda.outputs.FunctionImageConfig;
 import io.pulumi.awsnative.lambda.outputs.FunctionTag;
 import io.pulumi.awsnative.lambda.outputs.FunctionTracingConfig;
 import io.pulumi.awsnative.lambda.outputs.FunctionVpcConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -457,7 +457,6 @@ public final class GetFunctionResult {
             this.vpcConfig = vpcConfig;
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(architectures, arn, codeSigningConfigArn, deadLetterConfig, description, environment, fileSystemConfigs, handler, imageConfig, kmsKeyArn, layers, memorySize, packageType, reservedConcurrentExecutions, role, runtime, tags, timeout, tracingConfig, vpcConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class MongoDbAtlasSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public MongoDbAtlasSinkResponse build() {
             return new MongoDbAtlasSinkResponse(disableMetricsCollection, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

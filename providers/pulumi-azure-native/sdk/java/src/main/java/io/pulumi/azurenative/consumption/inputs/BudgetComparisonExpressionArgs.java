@@ -6,7 +6,7 @@ package io.pulumi.azurenative.consumption.inputs;
 import io.pulumi.azurenative.consumption.enums.BudgetOperatorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -36,7 +36,7 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="operator", required=true)
-    private final Input<Either<String,BudgetOperatorType>> operator;
+        private final Input<Either<String,BudgetOperatorType>> operator;
 
     public Input<Either<String,BudgetOperatorType>> getOperator() {
         return this.operator;
@@ -47,7 +47,7 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="values", required=true)
-    private final Input<List<String>> values;
+        private final Input<List<String>> values;
 
     public Input<List<String>> getValues() {
         return this.values;
@@ -121,7 +121,6 @@ public final class BudgetComparisonExpressionArgs extends io.pulumi.resources.Re
             this.values = Input.of(Objects.requireNonNull(values));
             return this;
         }
-
         public BudgetComparisonExpressionArgs build() {
             return new BudgetComparisonExpressionArgs(name, operator, values);
         }

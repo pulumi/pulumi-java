@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -28,7 +28,7 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="snapshotPolicyName", required=true)
-    private final String snapshotPolicyName;
+        private final String snapshotPolicyName;
 
     public String getSnapshotPolicyName() {
         return this.snapshotPolicyName;
@@ -98,7 +98,6 @@ public final class GetSnapshotPolicyArgs extends io.pulumi.resources.InvokeArgs 
             this.snapshotPolicyName = Objects.requireNonNull(snapshotPolicyName);
             return this;
         }
-
         public GetSnapshotPolicyArgs build() {
             return new GetSnapshotPolicyArgs(accountName, resourceGroupName, snapshotPolicyName);
         }

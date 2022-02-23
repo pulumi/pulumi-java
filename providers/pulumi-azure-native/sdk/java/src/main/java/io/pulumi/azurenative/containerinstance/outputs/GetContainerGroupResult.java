@@ -14,7 +14,7 @@ import io.pulumi.azurenative.containerinstance.outputs.ImageRegistryCredentialRe
 import io.pulumi.azurenative.containerinstance.outputs.InitContainerDefinitionResponse;
 import io.pulumi.azurenative.containerinstance.outputs.IpAddressResponse;
 import io.pulumi.azurenative.containerinstance.outputs.VolumeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -473,7 +473,6 @@ public final class GetContainerGroupResult {
             this.volumes = volumes;
             return this;
         }
-
         public GetContainerGroupResult build() {
             return new GetContainerGroupResult(containers, diagnostics, dnsConfig, encryptionProperties, id, identity, imageRegistryCredentials, initContainers, instanceView, ipAddress, location, name, networkProfile, osType, provisioningState, restartPolicy, sku, tags, type, volumes);
         }

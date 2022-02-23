@@ -5,7 +5,7 @@ package io.pulumi.awsnative.route53recoveryreadiness.outputs;
 
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetResource;
 import io.pulumi.awsnative.route53recoveryreadiness.outputs.ResourceSetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -100,7 +100,6 @@ public final class GetResourceSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetResourceSetResult build() {
             return new GetResourceSetResult(resourceSetArn, resources, tags);
         }

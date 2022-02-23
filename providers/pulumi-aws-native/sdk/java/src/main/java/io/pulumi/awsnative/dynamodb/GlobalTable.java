@@ -16,8 +16,8 @@ import io.pulumi.awsnative.dynamodb.outputs.GlobalTableTimeToLiveSpecification;
 import io.pulumi.awsnative.dynamodb.outputs.GlobalTableWriteProvisionedThroughputSettings;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -113,13 +113,6 @@ public class GlobalTable extends io.pulumi.resources.CustomResource {
         return this.writeProvisionedThroughputSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GlobalTable(String name) {
-        super("aws-native:dynamodb:GlobalTable", name, GlobalTableArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

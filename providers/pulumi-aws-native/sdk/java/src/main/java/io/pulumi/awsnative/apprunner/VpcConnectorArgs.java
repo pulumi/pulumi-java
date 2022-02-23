@@ -5,7 +5,7 @@ package io.pulumi.awsnative.apprunner;
 
 import io.pulumi.awsnative.apprunner.inputs.VpcConnectorTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="securityGroups")
-    private final @Nullable Input<List<String>> securityGroups;
+        private final @Nullable Input<List<String>> securityGroups;
 
     public Input<List<String>> getSecurityGroups() {
         return this.securityGroups == null ? Input.empty() : this.securityGroups;
@@ -32,7 +32,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+        private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;
@@ -43,7 +43,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<VpcConnectorTagArgs>> tags;
+        private final @Nullable Input<List<VpcConnectorTagArgs>> tags;
 
     public Input<List<VpcConnectorTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -54,7 +54,7 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcConnectorName")
-    private final @Nullable Input<String> vpcConnectorName;
+        private final @Nullable Input<String> vpcConnectorName;
 
     public Input<String> getVpcConnectorName() {
         return this.vpcConnectorName == null ? Input.empty() : this.vpcConnectorName;
@@ -143,7 +143,6 @@ public final class VpcConnectorArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcConnectorName = Input.ofNullable(vpcConnectorName);
             return this;
         }
-
         public VpcConnectorArgs build() {
             return new VpcConnectorArgs(securityGroups, subnets, tags, vpcConnectorName);
         }

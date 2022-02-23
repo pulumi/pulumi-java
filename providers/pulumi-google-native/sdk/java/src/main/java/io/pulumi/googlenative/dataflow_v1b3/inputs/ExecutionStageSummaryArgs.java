@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.enums.ExecutionStageSummaryKind;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentSourceArgs;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ComponentTransformArgs;
@@ -28,7 +28,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="componentSource")
-    private final @Nullable Input<List<ComponentSourceArgs>> componentSource;
+      private final @Nullable Input<List<ComponentSourceArgs>> componentSource;
 
     public Input<List<ComponentSourceArgs>> getComponentSource() {
         return this.componentSource == null ? Input.empty() : this.componentSource;
@@ -39,7 +39,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="componentTransform")
-    private final @Nullable Input<List<ComponentTransformArgs>> componentTransform;
+      private final @Nullable Input<List<ComponentTransformArgs>> componentTransform;
 
     public Input<List<ComponentTransformArgs>> getComponentTransform() {
         return this.componentTransform == null ? Input.empty() : this.componentTransform;
@@ -50,7 +50,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -61,7 +61,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inputSource")
-    private final @Nullable Input<List<StageSourceArgs>> inputSource;
+      private final @Nullable Input<List<StageSourceArgs>> inputSource;
 
     public Input<List<StageSourceArgs>> getInputSource() {
         return this.inputSource == null ? Input.empty() : this.inputSource;
@@ -72,7 +72,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<ExecutionStageSummaryKind> kind;
+      private final @Nullable Input<ExecutionStageSummaryKind> kind;
 
     public Input<ExecutionStageSummaryKind> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -83,7 +83,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -94,7 +94,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="outputSource")
-    private final @Nullable Input<List<StageSourceArgs>> outputSource;
+      private final @Nullable Input<List<StageSourceArgs>> outputSource;
 
     public Input<List<StageSourceArgs>> getOutputSource() {
         return this.outputSource == null ? Input.empty() : this.outputSource;
@@ -105,7 +105,7 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="prerequisiteStage")
-    private final @Nullable Input<List<String>> prerequisiteStage;
+      private final @Nullable Input<List<String>> prerequisiteStage;
 
     public Input<List<String>> getPrerequisiteStage() {
         return this.prerequisiteStage == null ? Input.empty() : this.prerequisiteStage;
@@ -254,7 +254,6 @@ public final class ExecutionStageSummaryArgs extends io.pulumi.resources.Resourc
             this.prerequisiteStage = Input.ofNullable(prerequisiteStage);
             return this;
         }
-
         public ExecutionStageSummaryArgs build() {
             return new ExecutionStageSummaryArgs(componentSource, componentTransform, id, inputSource, kind, name, outputSource, prerequisiteStage);
         }

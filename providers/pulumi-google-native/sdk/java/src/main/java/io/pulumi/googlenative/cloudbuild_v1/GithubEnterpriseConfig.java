@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudbuild_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudbuild_v1.GithubEnterpriseConfigArgs;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.GitHubEnterpriseSecretsResponse;
@@ -146,13 +146,6 @@ public class GithubEnterpriseConfig extends io.pulumi.resources.CustomResource {
         return this.webhookKey;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GithubEnterpriseConfig(String name) {
-        super("google-native:cloudbuild/v1:GithubEnterpriseConfig", name, GithubEnterpriseConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

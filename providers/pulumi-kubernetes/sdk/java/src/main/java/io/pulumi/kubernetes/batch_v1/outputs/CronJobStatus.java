@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.String;
 import java.util.List;
@@ -99,7 +99,6 @@ public final class CronJobStatus {
             this.lastSuccessfulTime = lastSuccessfulTime;
             return this;
         }
-
         public CronJobStatus build() {
             return new CronJobStatus(active, lastScheduleTime, lastSuccessfulTime);
         }

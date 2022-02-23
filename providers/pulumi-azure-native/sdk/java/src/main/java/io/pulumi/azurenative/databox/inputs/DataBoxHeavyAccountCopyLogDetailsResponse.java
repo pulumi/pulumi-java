@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final String accountName;
+        private final String accountName;
 
     public String getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="copyLogDetailsType", required=true)
-    private final String copyLogDetailsType;
+        private final String copyLogDetailsType;
 
     public String getCopyLogDetailsType() {
         return this.copyLogDetailsType;
@@ -45,7 +45,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="copyLogLink", required=true)
-    private final List<String> copyLogLink;
+        private final List<String> copyLogLink;
 
     public List<String> getCopyLogLink() {
         return this.copyLogLink;
@@ -56,7 +56,7 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="copyVerboseLogLink", required=true)
-    private final List<String> copyVerboseLogLink;
+        private final List<String> copyVerboseLogLink;
 
     public List<String> getCopyVerboseLogLink() {
         return this.copyVerboseLogLink;
@@ -125,7 +125,6 @@ public final class DataBoxHeavyAccountCopyLogDetailsResponse extends io.pulumi.r
             this.copyVerboseLogLink = Objects.requireNonNull(copyVerboseLogLink);
             return this;
         }
-
         public DataBoxHeavyAccountCopyLogDetailsResponse build() {
             return new DataBoxHeavyAccountCopyLogDetailsResponse(accountName, copyLogDetailsType, copyLogLink, copyVerboseLogLink);
         }

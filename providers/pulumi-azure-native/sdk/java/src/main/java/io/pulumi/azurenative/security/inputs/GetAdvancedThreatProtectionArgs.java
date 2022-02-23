@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -28,7 +28,7 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="settingName", required=true)
-    private final String settingName;
+        private final String settingName;
 
     public String getSettingName() {
         return this.settingName;
@@ -77,7 +77,6 @@ public final class GetAdvancedThreatProtectionArgs extends io.pulumi.resources.I
             this.settingName = Objects.requireNonNull(settingName);
             return this;
         }
-
         public GetAdvancedThreatProtectionArgs build() {
             return new GetAdvancedThreatProtectionArgs(resourceId, settingName);
         }

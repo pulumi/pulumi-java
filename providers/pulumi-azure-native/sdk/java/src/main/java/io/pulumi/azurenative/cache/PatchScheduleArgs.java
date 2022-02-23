@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cache;
 
 import io.pulumi.azurenative.cache.inputs.ScheduleEntryArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="default")
-    private final @Nullable Input<String> $default;
+        private final @Nullable Input<String> $default;
 
     public Input<String> get$default() {
         return this.$default == null ? Input.empty() : this.$default;
@@ -32,7 +32,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -54,7 +54,7 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scheduleEntries", required=true)
-    private final Input<List<ScheduleEntryArgs>> scheduleEntries;
+        private final Input<List<ScheduleEntryArgs>> scheduleEntries;
 
     public Input<List<ScheduleEntryArgs>> getScheduleEntries() {
         return this.scheduleEntries;
@@ -143,7 +143,6 @@ public final class PatchScheduleArgs extends io.pulumi.resources.ResourceArgs {
             this.scheduleEntries = Input.of(Objects.requireNonNull(scheduleEntries));
             return this;
         }
-
         public PatchScheduleArgs build() {
             return new PatchScheduleArgs($default, name, resourceGroupName, scheduleEntries);
         }

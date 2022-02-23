@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -204,7 +204,6 @@ public final class GetWorkloadNetworkDhcpResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDhcpResult build() {
             return new GetWorkloadNetworkDhcpResult(dhcpType, displayName, id, name, provisioningState, revision, segments, type);
         }

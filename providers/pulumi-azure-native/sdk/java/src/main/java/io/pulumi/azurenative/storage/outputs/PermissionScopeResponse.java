@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class PermissionScopeResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public PermissionScopeResponse build() {
             return new PermissionScopeResponse(permissions, resourceName, service);
         }

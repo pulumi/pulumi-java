@@ -5,8 +5,8 @@ package io.pulumi.gcp.dataloss;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.dataloss.PreventionInspectTemplateArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateState;
@@ -123,13 +123,6 @@ public class PreventionInspectTemplate extends io.pulumi.resources.CustomResourc
         return this.parent;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PreventionInspectTemplate(String name) {
-        super("gcp:dataloss/preventionInspectTemplate:PreventionInspectTemplate", name, PreventionInspectTemplateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

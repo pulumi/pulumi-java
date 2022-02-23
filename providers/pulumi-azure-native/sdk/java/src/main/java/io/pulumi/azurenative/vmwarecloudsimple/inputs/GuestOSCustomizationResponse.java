@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.vmwarecloudsimple.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable List<String> dnsServers;
+        private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -35,7 +35,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="hostName")
-    private final @Nullable String hostName;
+        private final @Nullable String hostName;
 
     public Optional<String> getHostName() {
         return this.hostName == null ? Optional.empty() : Optional.ofNullable(this.hostName);
@@ -46,7 +46,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -57,7 +57,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="policyId")
-    private final @Nullable String policyId;
+        private final @Nullable String policyId;
 
     public Optional<String> getPolicyId() {
         return this.policyId == null ? Optional.empty() : Optional.ofNullable(this.policyId);
@@ -68,7 +68,7 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="username")
-    private final @Nullable String username;
+        private final @Nullable String username;
 
     public Optional<String> getUsername() {
         return this.username == null ? Optional.empty() : Optional.ofNullable(this.username);
@@ -147,7 +147,6 @@ public final class GuestOSCustomizationResponse extends io.pulumi.resources.Invo
             this.username = username;
             return this;
         }
-
         public GuestOSCustomizationResponse build() {
             return new GuestOSCustomizationResponse(dnsServers, hostName, password, policyId, username);
         }

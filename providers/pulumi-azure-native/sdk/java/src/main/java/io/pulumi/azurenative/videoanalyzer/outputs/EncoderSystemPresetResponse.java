@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.videoanalyzer.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,7 +76,6 @@ public final class EncoderSystemPresetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncoderSystemPresetResponse build() {
             return new EncoderSystemPresetResponse(name, type);
         }

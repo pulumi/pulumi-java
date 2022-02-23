@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.elastic.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class ElasticCloudDeploymentResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public ElasticCloudDeploymentResponse build() {
             return new ElasticCloudDeploymentResponse(azureSubscriptionId, deploymentId, elasticsearchRegion, elasticsearchServiceUrl, kibanaServiceUrl, kibanaSsoUrl, name);
         }

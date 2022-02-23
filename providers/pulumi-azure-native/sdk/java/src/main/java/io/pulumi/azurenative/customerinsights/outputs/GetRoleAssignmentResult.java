@@ -5,7 +5,7 @@ package io.pulumi.azurenative.customerinsights.outputs;
 
 import io.pulumi.azurenative.customerinsights.outputs.AssignmentPrincipalResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ResourceSetDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -521,7 +521,6 @@ public final class GetRoleAssignmentResult {
             this.widgetTypes = widgetTypes;
             return this;
         }
-
         public GetRoleAssignmentResult build() {
             return new GetRoleAssignmentResult(assignmentName, conflationPolicies, connectors, description, displayName, id, interactions, kpis, links, name, principals, profiles, provisioningState, relationshipLinks, relationships, role, roleAssignments, sasPolicies, segments, tenantId, type, views, widgetTypes);
         }

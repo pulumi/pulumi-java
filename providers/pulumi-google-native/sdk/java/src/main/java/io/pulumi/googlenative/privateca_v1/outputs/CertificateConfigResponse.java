@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1.outputs.PublicKeyResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.SubjectConfigResponse;
 import io.pulumi.googlenative.privateca_v1.outputs.X509ParametersResponse;
@@ -97,7 +97,6 @@ public final class CertificateConfigResponse {
             this.x509Config = Objects.requireNonNull(x509Config);
             return this;
         }
-
         public CertificateConfigResponse build() {
             return new CertificateConfigResponse(publicKey, subjectConfig, x509Config);
         }

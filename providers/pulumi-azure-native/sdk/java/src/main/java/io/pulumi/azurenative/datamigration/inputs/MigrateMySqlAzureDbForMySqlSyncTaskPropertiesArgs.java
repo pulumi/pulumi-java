@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.MigrateMySqlAzureDbForMySqlSyncTaskInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
+        private final @Nullable Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> input;
 
     public Input<MigrateMySqlAzureDbForMySqlSyncTaskInputArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
@@ -36,7 +36,7 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.
      * 
      */
     @InputImport(name="taskType", required=true)
-    private final Input<String> taskType;
+        private final Input<String> taskType;
 
     public Input<String> getTaskType() {
         return this.taskType;
@@ -95,7 +95,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs extends io.
             this.taskType = Input.of(Objects.requireNonNull(taskType));
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskPropertiesArgs(input, taskType);
         }

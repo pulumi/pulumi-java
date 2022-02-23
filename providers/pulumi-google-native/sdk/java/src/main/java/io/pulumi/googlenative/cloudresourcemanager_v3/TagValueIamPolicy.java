@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudresourcemanager_v3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudresourcemanager_v3.TagValueIamPolicyArgs;
 import io.pulumi.googlenative.cloudresourcemanager_v3.outputs.AuditConfigResponse;
@@ -81,13 +81,6 @@ public class TagValueIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TagValueIamPolicy(String name) {
-        super("google-native:cloudresourcemanager/v3:TagValueIamPolicy", name, TagValueIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

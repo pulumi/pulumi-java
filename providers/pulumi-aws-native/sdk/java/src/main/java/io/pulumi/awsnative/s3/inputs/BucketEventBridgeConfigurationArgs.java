@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="eventBridgeEnabled", required=true)
-    private final Input<Boolean> eventBridgeEnabled;
+        private final Input<Boolean> eventBridgeEnabled;
 
     public Input<Boolean> getEventBridgeEnabled() {
         return this.eventBridgeEnabled;
@@ -65,7 +65,6 @@ public final class BucketEventBridgeConfigurationArgs extends io.pulumi.resource
             this.eventBridgeEnabled = Input.of(Objects.requireNonNull(eventBridgeEnabled));
             return this;
         }
-
         public BucketEventBridgeConfigurationArgs build() {
             return new BucketEventBridgeConfigurationArgs(eventBridgeEnabled);
         }

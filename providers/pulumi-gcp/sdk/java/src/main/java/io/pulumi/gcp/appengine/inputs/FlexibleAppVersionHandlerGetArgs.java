@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionHandlerScriptGetArgs;
 import io.pulumi.gcp.appengine.inputs.FlexibleAppVersionHandlerStaticFilesGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="authFailAction")
-    private final @Nullable Input<String> authFailAction;
+        private final @Nullable Input<String> authFailAction;
 
     public Input<String> getAuthFailAction() {
         return this.authFailAction == null ? Input.empty() : this.authFailAction;
@@ -36,7 +36,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<String> login;
+        private final @Nullable Input<String> login;
 
     public Input<String> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -48,7 +48,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="redirectHttpResponseCode")
-    private final @Nullable Input<String> redirectHttpResponseCode;
+        private final @Nullable Input<String> redirectHttpResponseCode;
 
     public Input<String> getRedirectHttpResponseCode() {
         return this.redirectHttpResponseCode == null ? Input.empty() : this.redirectHttpResponseCode;
@@ -59,7 +59,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="script")
-    private final @Nullable Input<FlexibleAppVersionHandlerScriptGetArgs> script;
+        private final @Nullable Input<FlexibleAppVersionHandlerScriptGetArgs> script;
 
     public Input<FlexibleAppVersionHandlerScriptGetArgs> getScript() {
         return this.script == null ? Input.empty() : this.script;
@@ -71,7 +71,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="securityLevel")
-    private final @Nullable Input<String> securityLevel;
+        private final @Nullable Input<String> securityLevel;
 
     public Input<String> getSecurityLevel() {
         return this.securityLevel == null ? Input.empty() : this.securityLevel;
@@ -84,7 +84,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="staticFiles")
-    private final @Nullable Input<FlexibleAppVersionHandlerStaticFilesGetArgs> staticFiles;
+        private final @Nullable Input<FlexibleAppVersionHandlerStaticFilesGetArgs> staticFiles;
 
     public Input<FlexibleAppVersionHandlerStaticFilesGetArgs> getStaticFiles() {
         return this.staticFiles == null ? Input.empty() : this.staticFiles;
@@ -96,7 +96,7 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="urlRegex")
-    private final @Nullable Input<String> urlRegex;
+        private final @Nullable Input<String> urlRegex;
 
     public Input<String> getUrlRegex() {
         return this.urlRegex == null ? Input.empty() : this.urlRegex;
@@ -230,7 +230,6 @@ public final class FlexibleAppVersionHandlerGetArgs extends io.pulumi.resources.
             this.urlRegex = Input.ofNullable(urlRegex);
             return this;
         }
-
         public FlexibleAppVersionHandlerGetArgs build() {
             return new FlexibleAppVersionHandlerGetArgs(authFailAction, login, redirectHttpResponseCode, script, securityLevel, staticFiles, urlRegex);
         }

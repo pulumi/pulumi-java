@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
      * 
      */
     @InputImport(name="exclusionRule")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> exclusionRule;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleGetArgs> getExclusionRule() {
         return this.exclusionRule == null ? Input.empty() : this.exclusionRule;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
      * 
      */
     @InputImport(name="hotwordRule")
-    private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule;
+        private final @Nullable Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> hotwordRule;
 
     public Input<PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRuleGetArgs> getHotwordRule() {
         return this.hotwordRule == null ? Input.empty() : this.hotwordRule;
@@ -92,7 +92,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs exte
             this.hotwordRule = Input.ofNullable(hotwordRule);
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRuleGetArgs(exclusionRule, hotwordRule);
         }

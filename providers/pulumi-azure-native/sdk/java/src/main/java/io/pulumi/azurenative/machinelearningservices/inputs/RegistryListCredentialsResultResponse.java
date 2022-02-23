@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.PasswordResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -17,21 +17,21 @@ public final class RegistryListCredentialsResultResponse extends io.pulumi.resou
     public static final RegistryListCredentialsResultResponse Empty = new RegistryListCredentialsResultResponse();
 
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="passwords")
-    private final @Nullable List<PasswordResponse> passwords;
+        private final @Nullable List<PasswordResponse> passwords;
 
     public List<PasswordResponse> getPasswords() {
         return this.passwords == null ? List.of() : this.passwords;
     }
 
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -90,7 +90,6 @@ public final class RegistryListCredentialsResultResponse extends io.pulumi.resou
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public RegistryListCredentialsResultResponse build() {
             return new RegistryListCredentialsResultResponse(location, passwords, username);
         }

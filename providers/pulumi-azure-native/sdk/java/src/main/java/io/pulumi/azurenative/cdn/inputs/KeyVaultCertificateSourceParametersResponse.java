@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,14 +23,14 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="deleteRule", required=true)
-    private final String deleteRule;
+        private final String deleteRule;
 
     public String getDeleteRule() {
         return this.deleteRule;
     }
 
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -41,7 +41,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -52,7 +52,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="secretName", required=true)
-    private final String secretName;
+        private final String secretName;
 
     public String getSecretName() {
         return this.secretName;
@@ -63,7 +63,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="secretVersion")
-    private final @Nullable String secretVersion;
+        private final @Nullable String secretVersion;
 
     public Optional<String> getSecretVersion() {
         return this.secretVersion == null ? Optional.empty() : Optional.ofNullable(this.secretVersion);
@@ -74,7 +74,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+        private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -85,7 +85,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="updateRule", required=true)
-    private final String updateRule;
+        private final String updateRule;
 
     public String getUpdateRule() {
         return this.updateRule;
@@ -96,7 +96,7 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final String vaultName;
+        private final String vaultName;
 
     public String getVaultName() {
         return this.vaultName;
@@ -205,7 +205,6 @@ public final class KeyVaultCertificateSourceParametersResponse extends io.pulumi
             this.vaultName = Objects.requireNonNull(vaultName);
             return this;
         }
-
         public KeyVaultCertificateSourceParametersResponse build() {
             return new KeyVaultCertificateSourceParametersResponse(deleteRule, odataType, resourceGroupName, secretName, secretVersion, subscriptionId, updateRule, vaultName);
         }

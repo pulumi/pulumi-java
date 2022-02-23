@@ -20,7 +20,7 @@ import io.pulumi.awsnative.quicksight.inputs.DataSourceSnowflakeParameters;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceSparkParameters;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceSqlServerParameters;
 import io.pulumi.awsnative.quicksight.inputs.DataSourceTeradataParameters;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -37,119 +37,119 @@ public final class DataSourceParameters extends io.pulumi.resources.InvokeArgs {
     public static final DataSourceParameters Empty = new DataSourceParameters();
 
     @InputImport(name="amazonElasticsearchParameters")
-    private final @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
+        private final @Nullable DataSourceAmazonElasticsearchParameters amazonElasticsearchParameters;
 
     public Optional<DataSourceAmazonElasticsearchParameters> getAmazonElasticsearchParameters() {
         return this.amazonElasticsearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonElasticsearchParameters);
     }
 
     @InputImport(name="amazonOpenSearchParameters")
-    private final @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
+        private final @Nullable DataSourceAmazonOpenSearchParameters amazonOpenSearchParameters;
 
     public Optional<DataSourceAmazonOpenSearchParameters> getAmazonOpenSearchParameters() {
         return this.amazonOpenSearchParameters == null ? Optional.empty() : Optional.ofNullable(this.amazonOpenSearchParameters);
     }
 
     @InputImport(name="athenaParameters")
-    private final @Nullable DataSourceAthenaParameters athenaParameters;
+        private final @Nullable DataSourceAthenaParameters athenaParameters;
 
     public Optional<DataSourceAthenaParameters> getAthenaParameters() {
         return this.athenaParameters == null ? Optional.empty() : Optional.ofNullable(this.athenaParameters);
     }
 
     @InputImport(name="auroraParameters")
-    private final @Nullable DataSourceAuroraParameters auroraParameters;
+        private final @Nullable DataSourceAuroraParameters auroraParameters;
 
     public Optional<DataSourceAuroraParameters> getAuroraParameters() {
         return this.auroraParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraParameters);
     }
 
     @InputImport(name="auroraPostgreSqlParameters")
-    private final @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
+        private final @Nullable DataSourceAuroraPostgreSqlParameters auroraPostgreSqlParameters;
 
     public Optional<DataSourceAuroraPostgreSqlParameters> getAuroraPostgreSqlParameters() {
         return this.auroraPostgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.auroraPostgreSqlParameters);
     }
 
     @InputImport(name="mariaDbParameters")
-    private final @Nullable DataSourceMariaDbParameters mariaDbParameters;
+        private final @Nullable DataSourceMariaDbParameters mariaDbParameters;
 
     public Optional<DataSourceMariaDbParameters> getMariaDbParameters() {
         return this.mariaDbParameters == null ? Optional.empty() : Optional.ofNullable(this.mariaDbParameters);
     }
 
     @InputImport(name="mySqlParameters")
-    private final @Nullable DataSourceMySqlParameters mySqlParameters;
+        private final @Nullable DataSourceMySqlParameters mySqlParameters;
 
     public Optional<DataSourceMySqlParameters> getMySqlParameters() {
         return this.mySqlParameters == null ? Optional.empty() : Optional.ofNullable(this.mySqlParameters);
     }
 
     @InputImport(name="oracleParameters")
-    private final @Nullable DataSourceOracleParameters oracleParameters;
+        private final @Nullable DataSourceOracleParameters oracleParameters;
 
     public Optional<DataSourceOracleParameters> getOracleParameters() {
         return this.oracleParameters == null ? Optional.empty() : Optional.ofNullable(this.oracleParameters);
     }
 
     @InputImport(name="postgreSqlParameters")
-    private final @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
+        private final @Nullable DataSourcePostgreSqlParameters postgreSqlParameters;
 
     public Optional<DataSourcePostgreSqlParameters> getPostgreSqlParameters() {
         return this.postgreSqlParameters == null ? Optional.empty() : Optional.ofNullable(this.postgreSqlParameters);
     }
 
     @InputImport(name="prestoParameters")
-    private final @Nullable DataSourcePrestoParameters prestoParameters;
+        private final @Nullable DataSourcePrestoParameters prestoParameters;
 
     public Optional<DataSourcePrestoParameters> getPrestoParameters() {
         return this.prestoParameters == null ? Optional.empty() : Optional.ofNullable(this.prestoParameters);
     }
 
     @InputImport(name="rdsParameters")
-    private final @Nullable DataSourceRdsParameters rdsParameters;
+        private final @Nullable DataSourceRdsParameters rdsParameters;
 
     public Optional<DataSourceRdsParameters> getRdsParameters() {
         return this.rdsParameters == null ? Optional.empty() : Optional.ofNullable(this.rdsParameters);
     }
 
     @InputImport(name="redshiftParameters")
-    private final @Nullable DataSourceRedshiftParameters redshiftParameters;
+        private final @Nullable DataSourceRedshiftParameters redshiftParameters;
 
     public Optional<DataSourceRedshiftParameters> getRedshiftParameters() {
         return this.redshiftParameters == null ? Optional.empty() : Optional.ofNullable(this.redshiftParameters);
     }
 
     @InputImport(name="s3Parameters")
-    private final @Nullable DataSourceS3Parameters s3Parameters;
+        private final @Nullable DataSourceS3Parameters s3Parameters;
 
     public Optional<DataSourceS3Parameters> getS3Parameters() {
         return this.s3Parameters == null ? Optional.empty() : Optional.ofNullable(this.s3Parameters);
     }
 
     @InputImport(name="snowflakeParameters")
-    private final @Nullable DataSourceSnowflakeParameters snowflakeParameters;
+        private final @Nullable DataSourceSnowflakeParameters snowflakeParameters;
 
     public Optional<DataSourceSnowflakeParameters> getSnowflakeParameters() {
         return this.snowflakeParameters == null ? Optional.empty() : Optional.ofNullable(this.snowflakeParameters);
     }
 
     @InputImport(name="sparkParameters")
-    private final @Nullable DataSourceSparkParameters sparkParameters;
+        private final @Nullable DataSourceSparkParameters sparkParameters;
 
     public Optional<DataSourceSparkParameters> getSparkParameters() {
         return this.sparkParameters == null ? Optional.empty() : Optional.ofNullable(this.sparkParameters);
     }
 
     @InputImport(name="sqlServerParameters")
-    private final @Nullable DataSourceSqlServerParameters sqlServerParameters;
+        private final @Nullable DataSourceSqlServerParameters sqlServerParameters;
 
     public Optional<DataSourceSqlServerParameters> getSqlServerParameters() {
         return this.sqlServerParameters == null ? Optional.empty() : Optional.ofNullable(this.sqlServerParameters);
     }
 
     @InputImport(name="teradataParameters")
-    private final @Nullable DataSourceTeradataParameters teradataParameters;
+        private final @Nullable DataSourceTeradataParameters teradataParameters;
 
     public Optional<DataSourceTeradataParameters> getTeradataParameters() {
         return this.teradataParameters == null ? Optional.empty() : Optional.ofNullable(this.teradataParameters);
@@ -348,7 +348,6 @@ public final class DataSourceParameters extends io.pulumi.resources.InvokeArgs {
             this.teradataParameters = teradataParameters;
             return this;
         }
-
         public DataSourceParameters build() {
             return new DataSourceParameters(amazonElasticsearchParameters, amazonOpenSearchParameters, athenaParameters, auroraParameters, auroraPostgreSqlParameters, mariaDbParameters, mySqlParameters, oracleParameters, postgreSqlParameters, prestoParameters, rdsParameters, redshiftParameters, s3Parameters, snowflakeParameters, sparkParameters, sqlServerParameters, teradataParameters);
         }

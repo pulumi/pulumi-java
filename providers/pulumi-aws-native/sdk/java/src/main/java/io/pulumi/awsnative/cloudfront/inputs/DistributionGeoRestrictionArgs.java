@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
     public static final DistributionGeoRestrictionArgs Empty = new DistributionGeoRestrictionArgs();
 
     @InputImport(name="locations")
-    private final @Nullable Input<List<String>> locations;
+        private final @Nullable Input<List<String>> locations;
 
     public Input<List<String>> getLocations() {
         return this.locations == null ? Input.empty() : this.locations;
     }
 
     @InputImport(name="restrictionType", required=true)
-    private final Input<String> restrictionType;
+        private final Input<String> restrictionType;
 
     public Input<String> getRestrictionType() {
         return this.restrictionType;
@@ -82,7 +82,6 @@ public final class DistributionGeoRestrictionArgs extends io.pulumi.resources.Re
             this.restrictionType = Input.of(Objects.requireNonNull(restrictionType));
             return this;
         }
-
         public DistributionGeoRestrictionArgs build() {
             return new DistributionGeoRestrictionArgs(locations, restrictionType);
         }

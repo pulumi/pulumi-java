@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_v1.outputs.GuestOsFeatureResponse;
 import java.lang.Boolean;
@@ -373,7 +373,6 @@ public final class SavedAttachedDiskResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SavedAttachedDiskResponse build() {
             return new SavedAttachedDiskResponse(autoDelete, boot, deviceName, diskEncryptionKey, diskSizeGb, diskType, guestOsFeatures, index, $interface, kind, licenses, mode, source, storageBytes, storageBytesStatus, type);
         }

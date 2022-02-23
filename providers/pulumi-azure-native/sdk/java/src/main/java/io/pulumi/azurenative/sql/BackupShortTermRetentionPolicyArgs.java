@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -31,7 +31,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="policyName")
-    private final @Nullable Input<String> policyName;
+        private final @Nullable Input<String> policyName;
 
     public Input<String> getPolicyName() {
         return this.policyName == null ? Input.empty() : this.policyName;
@@ -42,7 +42,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -53,7 +53,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+        private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -64,7 +64,7 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -168,7 +168,6 @@ public final class BackupShortTermRetentionPolicyArgs extends io.pulumi.resource
             this.serverName = Input.of(Objects.requireNonNull(serverName));
             return this;
         }
-
         public BackupShortTermRetentionPolicyArgs build() {
             return new BackupShortTermRetentionPolicyArgs(databaseName, policyName, resourceGroupName, retentionDays, serverName);
         }

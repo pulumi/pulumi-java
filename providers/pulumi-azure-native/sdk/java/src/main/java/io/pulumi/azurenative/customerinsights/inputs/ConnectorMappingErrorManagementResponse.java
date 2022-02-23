@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="errorLimit")
-    private final @Nullable Integer errorLimit;
+        private final @Nullable Integer errorLimit;
 
     public Optional<Integer> getErrorLimit() {
         return this.errorLimit == null ? Optional.empty() : Optional.ofNullable(this.errorLimit);
@@ -35,7 +35,7 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="errorManagementType", required=true)
-    private final String errorManagementType;
+        private final String errorManagementType;
 
     public String getErrorManagementType() {
         return this.errorManagementType;
@@ -84,7 +84,6 @@ public final class ConnectorMappingErrorManagementResponse extends io.pulumi.res
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }
-
         public ConnectorMappingErrorManagementResponse build() {
             return new ConnectorMappingErrorManagementResponse(errorLimit, errorManagementType);
         }

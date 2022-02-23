@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3beta1.outputs.GoogleCloudDialogflowCxV3beta1TransitionRouteResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GetTransitionRouteGroupResult {
             this.transitionRoutes = Objects.requireNonNull(transitionRoutes);
             return this;
         }
-
         public GetTransitionRouteGroupResult build() {
             return new GetTransitionRouteGroupResult(displayName, name, transitionRoutes);
         }

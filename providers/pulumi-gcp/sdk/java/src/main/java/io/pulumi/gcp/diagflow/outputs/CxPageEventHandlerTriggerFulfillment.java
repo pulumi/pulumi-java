@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageEventHandlerTriggerFulfillmentMessage;
 import java.lang.Boolean;
 import java.lang.String;
@@ -123,7 +123,6 @@ public final class CxPageEventHandlerTriggerFulfillment {
             this.webhook = webhook;
             return this;
         }
-
         public CxPageEventHandlerTriggerFulfillment build() {
             return new CxPageEventHandlerTriggerFulfillment(messages, returnPartialResponses, tag, webhook);
         }

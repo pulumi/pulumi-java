@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1.outputs.HTTPHeaderResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class HTTPGetActionResponse {
             this.scheme = Objects.requireNonNull(scheme);
             return this;
         }
-
         public HTTPGetActionResponse build() {
             return new HTTPGetActionResponse(host, httpHeaders, path, scheme);
         }

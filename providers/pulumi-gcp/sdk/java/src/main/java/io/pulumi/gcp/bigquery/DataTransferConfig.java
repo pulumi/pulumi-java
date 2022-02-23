@@ -5,8 +5,8 @@ package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.bigquery.DataTransferConfigArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigState;
@@ -314,13 +314,6 @@ public class DataTransferConfig extends io.pulumi.resources.CustomResource {
         return this.serviceAccountName;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DataTransferConfig(String name) {
-        super("gcp:bigquery/dataTransferConfig:DataTransferConfig", name, DataTransferConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

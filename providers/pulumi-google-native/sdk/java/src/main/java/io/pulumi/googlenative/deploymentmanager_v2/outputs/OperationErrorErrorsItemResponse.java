@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class OperationErrorErrorsItemResponse {
             this.message = Objects.requireNonNull(message);
             return this;
         }
-
         public OperationErrorErrorsItemResponse build() {
             return new OperationErrorErrorsItemResponse(code, location, message);
         }

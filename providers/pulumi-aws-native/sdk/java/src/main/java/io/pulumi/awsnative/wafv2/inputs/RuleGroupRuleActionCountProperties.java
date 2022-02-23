@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.RuleGroupCustomRequestHandling;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RuleGroupRuleActionCountProperties extends io.pulumi.resource
     public static final RuleGroupRuleActionCountProperties Empty = new RuleGroupRuleActionCountProperties();
 
     @InputImport(name="customRequestHandling")
-    private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
+        private final @Nullable RuleGroupCustomRequestHandling customRequestHandling;
 
     public Optional<RuleGroupCustomRequestHandling> getCustomRequestHandling() {
         return this.customRequestHandling == null ? Optional.empty() : Optional.ofNullable(this.customRequestHandling);
@@ -57,7 +57,6 @@ public final class RuleGroupRuleActionCountProperties extends io.pulumi.resource
             this.customRequestHandling = customRequestHandling;
             return this;
         }
-
         public RuleGroupRuleActionCountProperties build() {
             return new RuleGroupRuleActionCountProperties(customRequestHandling);
         }

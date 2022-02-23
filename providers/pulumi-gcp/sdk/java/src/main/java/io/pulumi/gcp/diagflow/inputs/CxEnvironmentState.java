@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.diagflow.inputs.CxEnvironmentVersionConfigGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -43,7 +43,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -67,7 +67,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -79,7 +79,7 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionConfigs")
-    private final @Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
+        private final @Nullable Input<List<CxEnvironmentVersionConfigGetArgs>> versionConfigs;
 
     public Input<List<CxEnvironmentVersionConfigGetArgs>> getVersionConfigs() {
         return this.versionConfigs == null ? Input.empty() : this.versionConfigs;
@@ -198,7 +198,6 @@ public final class CxEnvironmentState extends io.pulumi.resources.ResourceArgs {
             this.versionConfigs = Input.ofNullable(versionConfigs);
             return this;
         }
-
         public CxEnvironmentState build() {
             return new CxEnvironmentState(description, displayName, name, parent, updateTime, versionConfigs);
         }

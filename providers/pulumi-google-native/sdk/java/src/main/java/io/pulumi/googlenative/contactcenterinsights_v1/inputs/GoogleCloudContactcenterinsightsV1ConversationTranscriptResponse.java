@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.contactcenterinsights_v1.inputs.GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
      * 
      */
     @InputImport(name="transcriptSegments", required=true)
-    private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
+      private final List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> transcriptSegments;
 
     public List<GoogleCloudContactcenterinsightsV1ConversationTranscriptTranscriptSegmentResponse> getTranscriptSegments() {
         return this.transcriptSegments;
@@ -60,7 +60,6 @@ public final class GoogleCloudContactcenterinsightsV1ConversationTranscriptRespo
             this.transcriptSegments = Objects.requireNonNull(transcriptSegments);
             return this;
         }
-
         public GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse build() {
             return new GoogleCloudContactcenterinsightsV1ConversationTranscriptResponse(transcriptSegments);
         }

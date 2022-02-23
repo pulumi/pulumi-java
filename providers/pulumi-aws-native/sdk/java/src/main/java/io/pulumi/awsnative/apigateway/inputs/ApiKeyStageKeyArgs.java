@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="restApiId")
-    private final @Nullable Input<String> restApiId;
+        private final @Nullable Input<String> restApiId;
 
     public Input<String> getRestApiId() {
         return this.restApiId == null ? Input.empty() : this.restApiId;
@@ -30,7 +30,7 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stageName")
-    private final @Nullable Input<String> stageName;
+        private final @Nullable Input<String> stageName;
 
     public Input<String> getStageName() {
         return this.stageName == null ? Input.empty() : this.stageName;
@@ -89,7 +89,6 @@ public final class ApiKeyStageKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.stageName = Input.ofNullable(stageName);
             return this;
         }
-
         public ApiKeyStageKeyArgs build() {
             return new ApiKeyStageKeyArgs(restApiId, stageName);
         }

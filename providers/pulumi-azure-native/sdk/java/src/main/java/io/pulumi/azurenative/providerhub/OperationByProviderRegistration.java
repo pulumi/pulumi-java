@@ -9,8 +9,8 @@ import io.pulumi.azurenative.providerhub.outputs.OperationsDefinitionResponseDis
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -108,13 +108,6 @@ public class OperationByProviderRegistration extends io.pulumi.resources.CustomR
         return this.type;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public OperationByProviderRegistration(String name) {
-        super("azure-native:providerhub:OperationByProviderRegistration", name, OperationByProviderRegistrationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

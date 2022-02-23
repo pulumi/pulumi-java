@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="managedZone", required=true)
-    private final String managedZone;
+        private final String managedZone;
 
     public String getManagedZone() {
         return this.managedZone;
@@ -30,7 +30,7 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable String project;
+        private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -79,7 +79,6 @@ public final class GetKeysArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetKeysArgs build() {
             return new GetKeysArgs(managedZone, project);
         }

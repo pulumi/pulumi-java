@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lex.outputs;
 import io.pulumi.awsnative.lex.outputs.BotExternalSourceSetting;
 import io.pulumi.awsnative.lex.outputs.BotSlotTypeValue;
 import io.pulumi.awsnative.lex.outputs.BotSlotValueSelectionSetting;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -116,7 +116,6 @@ public final class BotSlotType {
             this.valueSelectionSetting = valueSelectionSetting;
             return this;
         }
-
         public BotSlotType build() {
             return new BotSlotType(description, externalSourceSetting, name, parentSlotTypeSignature, slotTypeValues, valueSelectionSetting);
         }

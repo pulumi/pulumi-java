@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -73,7 +73,6 @@ public final class GameServerGroupLaunchTemplate {
             this.version = version;
             return this;
         }
-
         public GameServerGroupLaunchTemplate build() {
             return new GameServerGroupLaunchTemplate(launchTemplateId, launchTemplateName, version);
         }

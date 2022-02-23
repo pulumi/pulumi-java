@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class GetWorkloadNetworkPublicIPResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkPublicIPResult build() {
             return new GetWorkloadNetworkPublicIPResult(displayName, id, name, numberOfPublicIPs, provisioningState, publicIPBlock, type);
         }

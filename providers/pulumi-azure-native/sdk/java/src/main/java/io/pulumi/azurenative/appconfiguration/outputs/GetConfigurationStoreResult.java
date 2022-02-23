@@ -7,7 +7,7 @@ import io.pulumi.azurenative.appconfiguration.outputs.EncryptionPropertiesRespon
 import io.pulumi.azurenative.appconfiguration.outputs.PrivateEndpointConnectionReferenceResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.ResourceIdentityResponse;
 import io.pulumi.azurenative.appconfiguration.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -313,7 +313,6 @@ public final class GetConfigurationStoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConfigurationStoreResult build() {
             return new GetConfigurationStoreResult(creationDate, encryption, endpoint, id, identity, location, name, privateEndpointConnections, provisioningState, publicNetworkAccess, sku, tags, type);
         }

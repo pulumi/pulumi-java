@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetLicenseArgs Empty = new GetLicenseArgs();
 
     @InputImport(name="license", required=true)
-    private final String license;
+      private final String license;
 
     public String getLicense() {
         return this.license;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -71,7 +71,6 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetLicenseArgs build() {
             return new GetLicenseArgs(license, project);
         }

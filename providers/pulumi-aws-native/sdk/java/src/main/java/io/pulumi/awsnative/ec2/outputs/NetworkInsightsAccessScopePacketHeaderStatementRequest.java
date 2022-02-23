@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.NetworkInsightsAccessScopeProtocol;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -126,7 +126,6 @@ public final class NetworkInsightsAccessScopePacketHeaderStatementRequest {
             this.sourcePrefixLists = sourcePrefixLists;
             return this;
         }
-
         public NetworkInsightsAccessScopePacketHeaderStatementRequest build() {
             return new NetworkInsightsAccessScopePacketHeaderStatementRequest(destinationAddresses, destinationPorts, destinationPrefixLists, protocols, sourceAddresses, sourcePorts, sourcePrefixLists);
         }

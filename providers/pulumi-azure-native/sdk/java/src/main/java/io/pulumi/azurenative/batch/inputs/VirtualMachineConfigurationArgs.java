@@ -11,7 +11,7 @@ import io.pulumi.azurenative.batch.inputs.NodePlacementConfigurationArgs;
 import io.pulumi.azurenative.batch.inputs.VMExtensionArgs;
 import io.pulumi.azurenative.batch.inputs.WindowsConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="containerConfiguration")
-    private final @Nullable Input<ContainerConfigurationArgs> containerConfiguration;
+        private final @Nullable Input<ContainerConfigurationArgs> containerConfiguration;
 
     public Input<ContainerConfigurationArgs> getContainerConfiguration() {
         return this.containerConfiguration == null ? Input.empty() : this.containerConfiguration;
@@ -38,7 +38,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable Input<List<DataDiskArgs>> dataDisks;
+        private final @Nullable Input<List<DataDiskArgs>> dataDisks;
 
     public Input<List<DataDiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -49,7 +49,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="diskEncryptionConfiguration")
-    private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
+        private final @Nullable Input<DiskEncryptionConfigurationArgs> diskEncryptionConfiguration;
 
     public Input<DiskEncryptionConfigurationArgs> getDiskEncryptionConfiguration() {
         return this.diskEncryptionConfiguration == null ? Input.empty() : this.diskEncryptionConfiguration;
@@ -60,14 +60,14 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="extensions")
-    private final @Nullable Input<List<VMExtensionArgs>> extensions;
+        private final @Nullable Input<List<VMExtensionArgs>> extensions;
 
     public Input<List<VMExtensionArgs>> getExtensions() {
         return this.extensions == null ? Input.empty() : this.extensions;
     }
 
     @InputImport(name="imageReference", required=true)
-    private final Input<ImageReferenceArgs> imageReference;
+        private final Input<ImageReferenceArgs> imageReference;
 
     public Input<ImageReferenceArgs> getImageReference() {
         return this.imageReference;
@@ -81,7 +81,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="licenseType")
-    private final @Nullable Input<String> licenseType;
+        private final @Nullable Input<String> licenseType;
 
     public Input<String> getLicenseType() {
         return this.licenseType == null ? Input.empty() : this.licenseType;
@@ -92,7 +92,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nodeAgentSkuId", required=true)
-    private final Input<String> nodeAgentSkuId;
+        private final Input<String> nodeAgentSkuId;
 
     public Input<String> getNodeAgentSkuId() {
         return this.nodeAgentSkuId;
@@ -103,7 +103,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="nodePlacementConfiguration")
-    private final @Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration;
+        private final @Nullable Input<NodePlacementConfigurationArgs> nodePlacementConfiguration;
 
     public Input<NodePlacementConfigurationArgs> getNodePlacementConfiguration() {
         return this.nodePlacementConfiguration == null ? Input.empty() : this.nodePlacementConfiguration;
@@ -114,7 +114,7 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="windowsConfiguration")
-    private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
+        private final @Nullable Input<WindowsConfigurationArgs> windowsConfiguration;
 
     public Input<WindowsConfigurationArgs> getWindowsConfiguration() {
         return this.windowsConfiguration == null ? Input.empty() : this.windowsConfiguration;
@@ -278,7 +278,6 @@ public final class VirtualMachineConfigurationArgs extends io.pulumi.resources.R
             this.windowsConfiguration = Input.ofNullable(windowsConfiguration);
             return this;
         }
-
         public VirtualMachineConfigurationArgs build() {
             return new VirtualMachineConfigurationArgs(containerConfiguration, dataDisks, diskEncryptionConfiguration, extensions, imageReference, licenseType, nodeAgentSkuId, nodePlacementConfiguration, windowsConfiguration);
         }

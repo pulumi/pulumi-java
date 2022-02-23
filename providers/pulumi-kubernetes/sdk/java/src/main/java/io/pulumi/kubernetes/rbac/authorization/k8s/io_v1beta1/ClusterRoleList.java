@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.meta_v1.outputs.ListMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1beta1.ClusterRoleListArgs;
@@ -78,13 +78,6 @@ public class ClusterRoleList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ClusterRoleList(String name) {
-        super("kubernetes:rbac.authorization.k8s.io/v1beta1:ClusterRoleList", name, ClusterRoleListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

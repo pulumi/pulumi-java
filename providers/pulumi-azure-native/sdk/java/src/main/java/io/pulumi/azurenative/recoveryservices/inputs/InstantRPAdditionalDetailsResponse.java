@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,14 +15,14 @@ public final class InstantRPAdditionalDetailsResponse extends io.pulumi.resource
     public static final InstantRPAdditionalDetailsResponse Empty = new InstantRPAdditionalDetailsResponse();
 
     @InputImport(name="azureBackupRGNamePrefix")
-    private final @Nullable String azureBackupRGNamePrefix;
+        private final @Nullable String azureBackupRGNamePrefix;
 
     public Optional<String> getAzureBackupRGNamePrefix() {
         return this.azureBackupRGNamePrefix == null ? Optional.empty() : Optional.ofNullable(this.azureBackupRGNamePrefix);
     }
 
     @InputImport(name="azureBackupRGNameSuffix")
-    private final @Nullable String azureBackupRGNameSuffix;
+        private final @Nullable String azureBackupRGNameSuffix;
 
     public Optional<String> getAzureBackupRGNameSuffix() {
         return this.azureBackupRGNameSuffix == null ? Optional.empty() : Optional.ofNullable(this.azureBackupRGNameSuffix);
@@ -71,7 +71,6 @@ public final class InstantRPAdditionalDetailsResponse extends io.pulumi.resource
             this.azureBackupRGNameSuffix = azureBackupRGNameSuffix;
             return this;
         }
-
         public InstantRPAdditionalDetailsResponse build() {
             return new InstantRPAdditionalDetailsResponse(azureBackupRGNamePrefix, azureBackupRGNameSuffix);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sagemaker.outputs;
 
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionEndpointInput;
 import io.pulumi.awsnative.sagemaker.outputs.ModelQualityJobDefinitionMonitoringGroundTruthS3Input;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -59,7 +59,6 @@ public final class ModelQualityJobDefinitionModelQualityJobInput {
             this.groundTruthS3Input = Objects.requireNonNull(groundTruthS3Input);
             return this;
         }
-
         public ModelQualityJobDefinitionModelQualityJobInput build() {
             return new ModelQualityJobDefinitionModelQualityJobInput(endpointInput, groundTruthS3Input);
         }

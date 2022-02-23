@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DiscoveryResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="analysisKind", required=true)
-    private final String analysisKind;
+      private final String analysisKind;
 
     public String getAnalysisKind() {
         return this.analysisKind;
@@ -59,7 +59,6 @@ public final class DiscoveryResponse extends io.pulumi.resources.InvokeArgs {
             this.analysisKind = Objects.requireNonNull(analysisKind);
             return this;
         }
-
         public DiscoveryResponse build() {
             return new DiscoveryResponse(analysisKind);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -24,7 +24,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @InputImport(name="chainName", required=true)
-    private final String chainName;
+      private final String chainName;
 
     public String getChainName() {
         return this.chainName;
@@ -35,7 +35,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @InputImport(name="guestFlush", required=true)
-    private final Boolean guestFlush;
+      private final Boolean guestFlush;
 
     public Boolean getGuestFlush() {
         return this.guestFlush;
@@ -46,7 +46,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @InputImport(name="labels", required=true)
-    private final Map<String,String> labels;
+      private final Map<String,String> labels;
 
     public Map<String,String> getLabels() {
         return this.labels;
@@ -57,7 +57,7 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
      * 
      */
     @InputImport(name="storageLocations", required=true)
-    private final List<String> storageLocations;
+      private final List<String> storageLocations;
 
     public List<String> getStorageLocations() {
         return this.storageLocations;
@@ -126,7 +126,6 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesRespons
             this.storageLocations = Objects.requireNonNull(storageLocations);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse build() {
             return new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesResponse(chainName, guestFlush, labels, storageLocations);
         }

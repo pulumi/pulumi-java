@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.managedservices.inputs;
 
 import io.pulumi.azurenative.managedservices.inputs.AuthorizationResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="authorizations", required=true)
-    private final List<AuthorizationResponse> authorizations;
+        private final List<AuthorizationResponse> authorizations;
 
     public List<AuthorizationResponse> getAuthorizations() {
         return this.authorizations;
@@ -36,7 +36,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="managedByTenantId", required=true)
-    private final String managedByTenantId;
+        private final String managedByTenantId;
 
     public String getManagedByTenantId() {
         return this.managedByTenantId;
@@ -58,7 +58,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="managedByTenantName", required=true)
-    private final String managedByTenantName;
+        private final String managedByTenantName;
 
     public String getManagedByTenantName() {
         return this.managedByTenantName;
@@ -69,7 +69,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -80,7 +80,7 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="registrationDefinitionName")
-    private final @Nullable String registrationDefinitionName;
+        private final @Nullable String registrationDefinitionName;
 
     public Optional<String> getRegistrationDefinitionName() {
         return this.registrationDefinitionName == null ? Optional.empty() : Optional.ofNullable(this.registrationDefinitionName);
@@ -169,7 +169,6 @@ public final class RegistrationDefinitionPropertiesResponse extends io.pulumi.re
             this.registrationDefinitionName = registrationDefinitionName;
             return this;
         }
-
         public RegistrationDefinitionPropertiesResponse build() {
             return new RegistrationDefinitionPropertiesResponse(authorizations, description, managedByTenantId, managedByTenantName, provisioningState, registrationDefinitionName);
         }

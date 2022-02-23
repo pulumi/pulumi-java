@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.UsageRuleResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="producerNotificationChannel", required=true)
-    private final String producerNotificationChannel;
+      private final String producerNotificationChannel;
 
     public String getProducerNotificationChannel() {
         return this.producerNotificationChannel;
@@ -34,7 +34,7 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requirements", required=true)
-    private final List<String> requirements;
+      private final List<String> requirements;
 
     public List<String> getRequirements() {
         return this.requirements;
@@ -45,7 +45,7 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<UsageRuleResponse> rules;
+      private final List<UsageRuleResponse> rules;
 
     public List<UsageRuleResponse> getRules() {
         return this.rules;
@@ -104,7 +104,6 @@ public final class UsageResponse extends io.pulumi.resources.InvokeArgs {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public UsageResponse build() {
             return new UsageResponse(producerNotificationChannel, requirements, rules);
         }

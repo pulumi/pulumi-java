@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -310,7 +310,6 @@ public final class GetIpAllocationResult {
             this.virtualNetwork = Objects.requireNonNull(virtualNetwork);
             return this;
         }
-
         public GetIpAllocationResult build() {
             return new GetIpAllocationResult(allocationTags, etag, id, ipamAllocationId, location, name, prefix, prefixLength, prefixType, subnet, tags, type, virtualNetwork);
         }

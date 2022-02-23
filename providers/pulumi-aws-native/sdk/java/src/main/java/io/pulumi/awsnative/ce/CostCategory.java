@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ce.CostCategoryArgs;
 import io.pulumi.awsnative.ce.enums.CostCategoryRuleVersion;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -94,13 +94,6 @@ public class CostCategory extends io.pulumi.resources.CustomResource {
         return this.splitChargeRules;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CostCategory(String name) {
-        super("aws-native:ce:CostCategory", name, CostCategoryArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew;
 import io.pulumi.awsnative.databrew.inputs.RulesetRuleArgs;
 import io.pulumi.awsnative.databrew.inputs.RulesetTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -44,14 +44,14 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rules", required=true)
-    private final Input<List<RulesetRuleArgs>> rules;
+        private final Input<List<RulesetRuleArgs>> rules;
 
     public Input<List<RulesetRuleArgs>> getRules() {
         return this.rules;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<RulesetTagArgs>> tags;
+        private final @Nullable Input<List<RulesetTagArgs>> tags;
 
     public Input<List<RulesetTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -62,7 +62,7 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetArn", required=true)
-    private final Input<String> targetArn;
+        private final Input<String> targetArn;
 
     public Input<String> getTargetArn() {
         return this.targetArn;
@@ -166,7 +166,6 @@ public final class RulesetArgs extends io.pulumi.resources.ResourceArgs {
             this.targetArn = Input.of(Objects.requireNonNull(targetArn));
             return this;
         }
-
         public RulesetArgs build() {
             return new RulesetArgs(description, name, rules, tags, targetArn);
         }

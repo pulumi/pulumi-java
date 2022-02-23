@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerStatusAllInstancesConfigResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerStatusStatefulResponse;
 import io.pulumi.googlenative.compute_alpha.inputs.InstanceGroupManagerStatusVersionTargetResponse;
@@ -21,7 +21,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="allInstancesConfig", required=true)
-    private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
+      private final InstanceGroupManagerStatusAllInstancesConfigResponse allInstancesConfig;
 
     public InstanceGroupManagerStatusAllInstancesConfigResponse getAllInstancesConfig() {
         return this.allInstancesConfig;
@@ -32,7 +32,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="autoscaler", required=true)
-    private final String autoscaler;
+      private final String autoscaler;
 
     public String getAutoscaler() {
         return this.autoscaler;
@@ -43,7 +43,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="isStable", required=true)
-    private final Boolean isStable;
+      private final Boolean isStable;
 
     public Boolean getIsStable() {
         return this.isStable;
@@ -54,7 +54,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="stateful", required=true)
-    private final InstanceGroupManagerStatusStatefulResponse stateful;
+      private final InstanceGroupManagerStatusStatefulResponse stateful;
 
     public InstanceGroupManagerStatusStatefulResponse getStateful() {
         return this.stateful;
@@ -65,7 +65,7 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="versionTarget", required=true)
-    private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
+      private final InstanceGroupManagerStatusVersionTargetResponse versionTarget;
 
     public InstanceGroupManagerStatusVersionTargetResponse getVersionTarget() {
         return this.versionTarget;
@@ -144,7 +144,6 @@ public final class InstanceGroupManagerStatusResponse extends io.pulumi.resource
             this.versionTarget = Objects.requireNonNull(versionTarget);
             return this;
         }
-
         public InstanceGroupManagerStatusResponse build() {
             return new InstanceGroupManagerStatusResponse(allInstancesConfig, autoscaler, isStable, stateful, versionTarget);
         }

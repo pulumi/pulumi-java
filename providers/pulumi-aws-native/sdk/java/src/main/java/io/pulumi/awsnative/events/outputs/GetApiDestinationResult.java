@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.events.outputs;
 
 import io.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class GetApiDestinationResult {
             this.invocationRateLimitPerSecond = invocationRateLimitPerSecond;
             return this;
         }
-
         public GetApiDestinationResult build() {
             return new GetApiDestinationResult(arn, connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datacatalog.outputs;
 
 import io.pulumi.azurenative.datacatalog.outputs.PrincipalsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -291,7 +291,6 @@ public final class GetADCCatalogResult {
             this.users = users;
             return this;
         }
-
         public GetADCCatalogResult build() {
             return new GetADCCatalogResult(admins, enableAutomaticUnitAdjustment, etag, id, location, name, sku, successfullyProvisioned, tags, type, units, users);
         }

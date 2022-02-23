@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetApiResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetApiResult build() {
             return new GetApiResult(createTime, displayName, labels, managedService, name, state, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+      private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -33,7 +33,7 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="toggleTime", required=true)
-    private final String toggleTime;
+      private final String toggleTime;
 
     public String getToggleTime() {
         return this.toggleTime;
@@ -82,7 +82,6 @@ public final class BucketAutoclassResponse extends io.pulumi.resources.InvokeArg
             this.toggleTime = Objects.requireNonNull(toggleTime);
             return this;
         }
-
         public BucketAutoclassResponse build() {
             return new BucketAutoclassResponse(enabled, toggleTime);
         }

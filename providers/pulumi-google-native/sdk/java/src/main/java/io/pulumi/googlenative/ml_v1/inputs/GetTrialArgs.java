@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetTrialArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetTrialArgs Empty = new GetTrialArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="studyId", required=true)
-    private final String studyId;
+      private final String studyId;
 
     public String getStudyId() {
         return this.studyId;
     }
 
     @InputImport(name="trialId", required=true)
-    private final String trialId;
+      private final String trialId;
 
     public String getTrialId() {
         return this.trialId;
@@ -105,7 +105,6 @@ public final class GetTrialArgs extends io.pulumi.resources.InvokeArgs {
             this.trialId = Objects.requireNonNull(trialId);
             return this;
         }
-
         public GetTrialArgs build() {
             return new GetTrialArgs(location, project, studyId, trialId);
         }

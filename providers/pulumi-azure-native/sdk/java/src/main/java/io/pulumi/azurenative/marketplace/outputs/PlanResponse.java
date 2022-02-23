@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.marketplace.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class PlanResponse {
             this.stackType = Objects.requireNonNull(stackType);
             return this;
         }
-
         public PlanResponse build() {
             return new PlanResponse(accessibility, altStackReference, planDisplayName, planId, skuId, stackType);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.projects.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -60,7 +60,6 @@ public final class GetOrganizationPolicyListPolicyAllow {
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetOrganizationPolicyListPolicyAllow build() {
             return new GetOrganizationPolicyListPolicyAllow(all, values);
         }

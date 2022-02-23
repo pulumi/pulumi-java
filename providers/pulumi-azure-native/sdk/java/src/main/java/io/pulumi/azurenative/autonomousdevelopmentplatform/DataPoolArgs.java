@@ -5,7 +5,7 @@ package io.pulumi.azurenative.autonomousdevelopmentplatform;
 
 import io.pulumi.azurenative.autonomousdevelopmentplatform.inputs.DataPoolLocationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -32,7 +32,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataPoolName")
-    private final @Nullable Input<String> dataPoolName;
+        private final @Nullable Input<String> dataPoolName;
 
     public Input<String> getDataPoolName() {
         return this.dataPoolName == null ? Input.empty() : this.dataPoolName;
@@ -43,7 +43,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locations", required=true)
-    private final Input<List<DataPoolLocationArgs>> locations;
+        private final Input<List<DataPoolLocationArgs>> locations;
 
     public Input<List<DataPoolLocationArgs>> getLocations() {
         return this.locations;
@@ -54,7 +54,7 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -143,7 +143,6 @@ public final class DataPoolArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DataPoolArgs build() {
             return new DataPoolArgs(accountName, dataPoolName, locations, resourceGroupName);
         }

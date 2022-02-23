@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable String expirationTime;
+        private final @Nullable String expirationTime;
 
     public Optional<String> getExpirationTime() {
         return this.expirationTime == null ? Optional.empty() : Optional.ofNullable(this.expirationTime);
@@ -34,7 +34,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="registrationTokenOperation")
-    private final @Nullable String registrationTokenOperation;
+        private final @Nullable String registrationTokenOperation;
 
     public Optional<String> getRegistrationTokenOperation() {
         return this.registrationTokenOperation == null ? Optional.empty() : Optional.ofNullable(this.registrationTokenOperation);
@@ -45,7 +45,7 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="token")
-    private final @Nullable String token;
+        private final @Nullable String token;
 
     public Optional<String> getToken() {
         return this.token == null ? Optional.empty() : Optional.ofNullable(this.token);
@@ -104,7 +104,6 @@ public final class RegistrationInfoResponse extends io.pulumi.resources.InvokeAr
             this.token = token;
             return this;
         }
-
         public RegistrationInfoResponse build() {
             return new RegistrationInfoResponse(expirationTime, registrationTokenOperation, token);
         }

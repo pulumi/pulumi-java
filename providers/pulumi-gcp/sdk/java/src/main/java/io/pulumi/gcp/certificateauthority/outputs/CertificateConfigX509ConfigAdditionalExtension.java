@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigX509ConfigAdditionalExtensionObjectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -101,7 +101,6 @@ public final class CertificateConfigX509ConfigAdditionalExtension {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public CertificateConfigX509ConfigAdditionalExtension build() {
             return new CertificateConfigX509ConfigAdditionalExtension(critical, objectId, value);
         }

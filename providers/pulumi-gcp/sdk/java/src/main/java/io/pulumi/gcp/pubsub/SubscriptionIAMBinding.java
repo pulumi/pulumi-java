@@ -5,8 +5,8 @@ package io.pulumi.gcp.pubsub;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.pubsub.SubscriptionIAMBindingArgs;
 import io.pulumi.gcp.pubsub.inputs.SubscriptionIAMBindingState;
@@ -130,13 +130,6 @@ public class SubscriptionIAMBinding extends io.pulumi.resources.CustomResource {
         return this.subscription;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public SubscriptionIAMBinding(String name) {
-        super("gcp:pubsub/subscriptionIAMBinding:SubscriptionIAMBinding", name, SubscriptionIAMBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

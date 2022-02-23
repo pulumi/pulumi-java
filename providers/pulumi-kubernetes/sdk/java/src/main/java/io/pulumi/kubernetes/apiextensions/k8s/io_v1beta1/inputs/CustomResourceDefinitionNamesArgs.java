@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<List<String>> categories;
+        private final @Nullable Input<List<String>> categories;
 
     public Input<List<String>> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -35,7 +35,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -46,7 +46,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="listKind")
-    private final @Nullable Input<String> listKind;
+        private final @Nullable Input<String> listKind;
 
     public Input<String> getListKind() {
         return this.listKind == null ? Input.empty() : this.listKind;
@@ -57,7 +57,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="plural", required=true)
-    private final Input<String> plural;
+        private final Input<String> plural;
 
     public Input<String> getPlural() {
         return this.plural;
@@ -68,7 +68,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="shortNames")
-    private final @Nullable Input<List<String>> shortNames;
+        private final @Nullable Input<List<String>> shortNames;
 
     public Input<List<String>> getShortNames() {
         return this.shortNames == null ? Input.empty() : this.shortNames;
@@ -79,7 +79,7 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="singular")
-    private final @Nullable Input<String> singular;
+        private final @Nullable Input<String> singular;
 
     public Input<String> getSingular() {
         return this.singular == null ? Input.empty() : this.singular;
@@ -198,7 +198,6 @@ public final class CustomResourceDefinitionNamesArgs extends io.pulumi.resources
             this.singular = Input.ofNullable(singular);
             return this;
         }
-
         public CustomResourceDefinitionNamesArgs build() {
             return new CustomResourceDefinitionNamesArgs(categories, kind, listKind, plural, shortNames, singular);
         }

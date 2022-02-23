@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class InstanceGroupAutoscalingPolicyConfigResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public InstanceGroupAutoscalingPolicyConfigResponse build() {
             return new InstanceGroupAutoscalingPolicyConfigResponse(maxInstances, minInstances, weight);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.enums.FlowWriteOperationType;
 import io.pulumi.awsnative.appflow.inputs.FlowErrorHandlingConfig;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class FlowSalesforceDestinationProperties extends io.pulumi.resourc
     public static final FlowSalesforceDestinationProperties Empty = new FlowSalesforceDestinationProperties();
 
     @InputImport(name="errorHandlingConfig")
-    private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
+        private final @Nullable FlowErrorHandlingConfig errorHandlingConfig;
 
     public Optional<FlowErrorHandlingConfig> getErrorHandlingConfig() {
         return this.errorHandlingConfig == null ? Optional.empty() : Optional.ofNullable(this.errorHandlingConfig);
@@ -29,21 +29,21 @@ public final class FlowSalesforceDestinationProperties extends io.pulumi.resourc
      * 
      */
     @InputImport(name="idFieldNames")
-    private final @Nullable List<String> idFieldNames;
+        private final @Nullable List<String> idFieldNames;
 
     public List<String> getIdFieldNames() {
         return this.idFieldNames == null ? List.of() : this.idFieldNames;
     }
 
     @InputImport(name="object", required=true)
-    private final String object;
+        private final String object;
 
     public String getObject() {
         return this.object;
     }
 
     @InputImport(name="writeOperationType")
-    private final @Nullable FlowWriteOperationType writeOperationType;
+        private final @Nullable FlowWriteOperationType writeOperationType;
 
     public Optional<FlowWriteOperationType> getWriteOperationType() {
         return this.writeOperationType == null ? Optional.empty() : Optional.ofNullable(this.writeOperationType);
@@ -112,7 +112,6 @@ public final class FlowSalesforceDestinationProperties extends io.pulumi.resourc
             this.writeOperationType = writeOperationType;
             return this;
         }
-
         public FlowSalesforceDestinationProperties build() {
             return new FlowSalesforceDestinationProperties(errorHandlingConfig, idFieldNames, object, writeOperationType);
         }

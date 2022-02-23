@@ -5,7 +5,7 @@ package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.awsnative.quicksight.enums.DashboardBehavior;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -19,7 +19,7 @@ public final class DashboardAdHocFilteringOptionArgs extends io.pulumi.resources
     public static final DashboardAdHocFilteringOptionArgs Empty = new DashboardAdHocFilteringOptionArgs();
 
     @InputImport(name="availabilityStatus")
-    private final @Nullable Input<DashboardBehavior> availabilityStatus;
+        private final @Nullable Input<DashboardBehavior> availabilityStatus;
 
     public Input<DashboardBehavior> getAvailabilityStatus() {
         return this.availabilityStatus == null ? Input.empty() : this.availabilityStatus;
@@ -62,7 +62,6 @@ public final class DashboardAdHocFilteringOptionArgs extends io.pulumi.resources
             this.availabilityStatus = Input.ofNullable(availabilityStatus);
             return this;
         }
-
         public DashboardAdHocFilteringOptionArgs build() {
             return new DashboardAdHocFilteringOptionArgs(availabilityStatus);
         }

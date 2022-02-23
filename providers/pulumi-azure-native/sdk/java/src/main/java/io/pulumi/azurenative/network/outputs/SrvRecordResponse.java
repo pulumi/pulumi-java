@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class SrvRecordResponse {
             this.weight = weight;
             return this;
         }
-
         public SrvRecordResponse build() {
             return new SrvRecordResponse(port, priority, target, weight);
         }

@@ -9,7 +9,7 @@ import io.pulumi.azurenative.insights.outputs.RuleEmailActionResponse;
 import io.pulumi.azurenative.insights.outputs.RuleWebhookActionResponse;
 import io.pulumi.azurenative.insights.outputs.ThresholdRuleConditionResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -296,7 +296,6 @@ public final class GetAlertRuleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAlertRuleResult build() {
             return new GetAlertRuleResult(action, actions, condition, description, id, isEnabled, lastUpdatedTime, location, name, provisioningState, tags, type);
         }

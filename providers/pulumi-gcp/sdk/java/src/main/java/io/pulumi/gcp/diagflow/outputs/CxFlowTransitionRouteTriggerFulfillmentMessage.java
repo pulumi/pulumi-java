@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxFlowTransitionRouteTriggerFulfillmentMessageText;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class CxFlowTransitionRouteTriggerFulfillmentMessage {
             this.text = text;
             return this;
         }
-
         public CxFlowTransitionRouteTriggerFulfillmentMessage build() {
             return new CxFlowTransitionRouteTriggerFulfillmentMessage(text);
         }

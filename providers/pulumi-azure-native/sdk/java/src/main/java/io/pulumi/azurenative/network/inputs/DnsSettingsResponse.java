@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enableProxy")
-    private final @Nullable Boolean enableProxy;
+        private final @Nullable Boolean enableProxy;
 
     public Optional<Boolean> getEnableProxy() {
         return this.enableProxy == null ? Optional.empty() : Optional.ofNullable(this.enableProxy);
@@ -36,7 +36,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="requireProxyForNetworkRules")
-    private final @Nullable Boolean requireProxyForNetworkRules;
+        private final @Nullable Boolean requireProxyForNetworkRules;
 
     public Optional<Boolean> getRequireProxyForNetworkRules() {
         return this.requireProxyForNetworkRules == null ? Optional.empty() : Optional.ofNullable(this.requireProxyForNetworkRules);
@@ -47,7 +47,7 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="servers")
-    private final @Nullable List<String> servers;
+        private final @Nullable List<String> servers;
 
     public List<String> getServers() {
         return this.servers == null ? List.of() : this.servers;
@@ -106,7 +106,6 @@ public final class DnsSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.servers = servers;
             return this;
         }
-
         public DnsSettingsResponse build() {
             return new DnsSettingsResponse(enableProxy, requireProxyForNetworkRules, servers);
         }

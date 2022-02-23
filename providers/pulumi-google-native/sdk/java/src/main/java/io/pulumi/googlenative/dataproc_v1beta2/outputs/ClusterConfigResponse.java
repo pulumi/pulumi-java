@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.AutoscalingConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.EncryptionConfigResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.EndpointConfigResponse;
@@ -359,7 +359,6 @@ public final class ClusterConfigResponse {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public ClusterConfigResponse build() {
             return new ClusterConfigResponse(autoscalingConfig, configBucket, encryptionConfig, endpointConfig, gceClusterConfig, gkeClusterConfig, initializationActions, lifecycleConfig, masterConfig, metastoreConfig, secondaryWorkerConfig, securityConfig, softwareConfig, tempBucket, workerConfig);
         }

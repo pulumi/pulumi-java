@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class FileReferenceResponse {
             this.fileUri = Objects.requireNonNull(fileUri);
             return this;
         }
-
         public FileReferenceResponse build() {
             return new FileReferenceResponse(fileUri);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.web.outputs.ErrorEntityResponse;
 import io.pulumi.azurenative.web.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.web.outputs.RemotePrivateEndpointConnectionResponse;
 import io.pulumi.azurenative.web.outputs.SkuDescriptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -297,7 +297,6 @@ public final class ResponseMessageEnvelopeRemotePrivateEndpointConnectionRespons
             this.zones = zones;
             return this;
         }
-
         public ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse build() {
             return new ResponseMessageEnvelopeRemotePrivateEndpointConnectionResponse(error, id, identity, location, name, plan, properties, sku, status, tags, type, zones);
         }

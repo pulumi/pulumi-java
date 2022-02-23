@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.eventarc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetTriggerIamPolicyArgs extends io.pulumi.resources.InvokeArg
     public static final GetTriggerIamPolicyArgs Empty = new GetTriggerIamPolicyArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="optionsRequestedPolicyVersion")
-    private final @Nullable String optionsRequestedPolicyVersion;
+      private final @Nullable String optionsRequestedPolicyVersion;
 
     public Optional<String> getOptionsRequestedPolicyVersion() {
         return this.optionsRequestedPolicyVersion == null ? Optional.empty() : Optional.ofNullable(this.optionsRequestedPolicyVersion);
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="triggerId", required=true)
-    private final String triggerId;
+      private final String triggerId;
 
     public String getTriggerId() {
         return this.triggerId;
@@ -105,7 +105,6 @@ public final class GetTriggerIamPolicyArgs extends io.pulumi.resources.InvokeArg
             this.triggerId = Objects.requireNonNull(triggerId);
             return this;
         }
-
         public GetTriggerIamPolicyArgs build() {
             return new GetTriggerIamPolicyArgs(location, optionsRequestedPolicyVersion, project, triggerId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="detail", required=true)
-    private final String detail;
+      private final String detail;
 
     public String getDetail() {
         return this.detail;
@@ -32,7 +32,7 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class FailureInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public FailureInfoResponse build() {
             return new FailureInfoResponse(detail, type);
         }

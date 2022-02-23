@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakestore.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class EncryptionIdentityResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EncryptionIdentityResponse build() {
             return new EncryptionIdentityResponse(principalId, tenantId, type);
         }

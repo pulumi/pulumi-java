@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudfront.outputs;
 
 import io.pulumi.awsnative.cloudfront.outputs.PublicKeyConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -74,7 +74,6 @@ public final class GetPublicKeyResult {
             this.publicKeyConfig = publicKeyConfig;
             return this;
         }
-
         public GetPublicKeyResult build() {
             return new GetPublicKeyResult(createdTime, id, publicKeyConfig);
         }

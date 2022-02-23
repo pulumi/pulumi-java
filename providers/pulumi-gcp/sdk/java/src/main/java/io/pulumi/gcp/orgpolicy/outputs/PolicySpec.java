@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRule;
 import java.lang.Boolean;
 import java.lang.String;
@@ -146,7 +146,6 @@ public final class PolicySpec {
             this.updateTime = updateTime;
             return this;
         }
-
         public PolicySpec build() {
             return new PolicySpec(etag, inheritFromParent, reset, rules, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class GetSecretResult {
             this.value = value;
             return this;
         }
-
         public GetSecretResult build() {
             return new GetSecretResult(id, location, name, provisioningState, tags, type, uniqueIdentifier, value);
         }

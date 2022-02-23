@@ -6,7 +6,7 @@ package io.pulumi.awsnative.eks.outputs;
 import io.pulumi.awsnative.eks.outputs.ClusterLogging;
 import io.pulumi.awsnative.eks.outputs.ClusterResourcesVpcConfig;
 import io.pulumi.awsnative.eks.outputs.ClusterTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -232,7 +232,6 @@ public final class GetClusterResult {
             this.version = version;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(arn, certificateAuthorityData, clusterSecurityGroupId, encryptionConfigKeyArn, endpoint, logging, openIdConnectIssuerUrl, resourcesVpcConfig, tags, version);
         }

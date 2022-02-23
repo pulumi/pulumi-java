@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,42 +15,42 @@ public final class GetContextArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetContextArgs Empty = new GetContextArgs();
 
     @InputImport(name="contextId", required=true)
-    private final String contextId;
+      private final String contextId;
 
     public String getContextId() {
         return this.contextId;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sessionId", required=true)
-    private final String sessionId;
+      private final String sessionId;
 
     public String getSessionId() {
         return this.sessionId;
     }
 
     @InputImport(name="userId", required=true)
-    private final String userId;
+      private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -139,7 +139,6 @@ public final class GetContextArgs extends io.pulumi.resources.InvokeArgs {
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetContextArgs build() {
             return new GetContextArgs(contextId, environmentId, location, project, sessionId, userId);
         }

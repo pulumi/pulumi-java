@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.CMKIdentityDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<CMKIdentityDefinitionArgs> identity;
+        private final @Nullable Input<CMKIdentityDefinitionArgs> identity;
 
     public Input<CMKIdentityDefinitionArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -35,7 +35,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final Input<String> keyName;
+        private final Input<String> keyName;
 
     public Input<String> getKeyName() {
         return this.keyName;
@@ -46,7 +46,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="keyVersion")
-    private final @Nullable Input<String> keyVersion;
+        private final @Nullable Input<String> keyVersion;
 
     public Input<String> getKeyVersion() {
         return this.keyVersion == null ? Input.empty() : this.keyVersion;
@@ -57,7 +57,7 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="vaultBaseUrl", required=true)
-    private final Input<String> vaultBaseUrl;
+        private final Input<String> vaultBaseUrl;
 
     public Input<String> getVaultBaseUrl() {
         return this.vaultBaseUrl;
@@ -146,7 +146,6 @@ public final class EncryptionConfigurationArgs extends io.pulumi.resources.Resou
             this.vaultBaseUrl = Input.of(Objects.requireNonNull(vaultBaseUrl));
             return this;
         }
-
         public EncryptionConfigurationArgs build() {
             return new EncryptionConfigurationArgs(identity, keyName, keyVersion, vaultBaseUrl);
         }

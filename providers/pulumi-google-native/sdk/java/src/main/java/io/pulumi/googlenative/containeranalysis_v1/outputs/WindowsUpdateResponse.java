@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.CategoryResponse;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.IdentityResponse;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class WindowsUpdateResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public WindowsUpdateResponse build() {
             return new WindowsUpdateResponse(categories, description, identity, kbArticleIds, lastPublishedTimestamp, supportUrl, title);
         }

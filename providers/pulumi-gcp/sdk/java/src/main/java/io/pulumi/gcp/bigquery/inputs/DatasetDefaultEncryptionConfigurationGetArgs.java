@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends io.pulum
      * 
      */
     @InputImport(name="kmsKeyName", required=true)
-    private final Input<String> kmsKeyName;
+        private final Input<String> kmsKeyName;
 
     public Input<String> getKmsKeyName() {
         return this.kmsKeyName;
@@ -63,7 +63,6 @@ public final class DatasetDefaultEncryptionConfigurationGetArgs extends io.pulum
             this.kmsKeyName = Input.of(Objects.requireNonNull(kmsKeyName));
             return this;
         }
-
         public DatasetDefaultEncryptionConfigurationGetArgs build() {
             return new DatasetDefaultEncryptionConfigurationGetArgs(kmsKeyName);
         }

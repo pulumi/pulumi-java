@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="allowedValues")
-    private final @Nullable List<Object> allowedValues;
+        private final @Nullable List<Object> allowedValues;
 
     public List<Object> getAllowedValues() {
         return this.allowedValues == null ? List.of() : this.allowedValues;
@@ -36,7 +36,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Object defaultValue;
+        private final @Nullable Object defaultValue;
 
     public Optional<Object> getDefaultValue() {
         return this.defaultValue == null ? Optional.empty() : Optional.ofNullable(this.defaultValue);
@@ -47,7 +47,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -58,7 +58,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -69,7 +69,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="strongType")
-    private final @Nullable String strongType;
+        private final @Nullable String strongType;
 
     public Optional<String> getStrongType() {
         return this.strongType == null ? Optional.empty() : Optional.ofNullable(this.strongType);
@@ -80,7 +80,7 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -169,7 +169,6 @@ public final class ParameterDefinitionResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ParameterDefinitionResponse build() {
             return new ParameterDefinitionResponse(allowedValues, defaultValue, description, displayName, strongType, type);
         }

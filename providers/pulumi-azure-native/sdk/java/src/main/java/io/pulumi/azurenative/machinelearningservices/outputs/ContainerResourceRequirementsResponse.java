@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.Objects;
@@ -169,7 +169,6 @@ public final class ContainerResourceRequirementsResponse {
             this.memoryInGBLimit = memoryInGBLimit;
             return this;
         }
-
         public ContainerResourceRequirementsResponse build() {
             return new ContainerResourceRequirementsResponse(cpu, cpuLimit, fpga, gpu, memoryInGB, memoryInGBLimit);
         }

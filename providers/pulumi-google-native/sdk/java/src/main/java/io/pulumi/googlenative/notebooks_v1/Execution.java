@@ -5,8 +5,8 @@ package io.pulumi.googlenative.notebooks_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.notebooks_v1.ExecutionArgs;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionTemplateResponse;
@@ -147,13 +147,6 @@ public class Execution extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Execution(String name) {
-        super("google-native:notebooks/v1:Execution", name, ExecutionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

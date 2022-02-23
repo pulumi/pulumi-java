@@ -7,7 +7,7 @@ import io.pulumi.azurenative.security.enums.RecommendationConfigStatus;
 import io.pulumi.azurenative.security.enums.RecommendationType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="recommendationType", required=true)
-    private final Input<Either<String,RecommendationType>> recommendationType;
+        private final Input<Either<String,RecommendationType>> recommendationType;
 
     public Input<Either<String,RecommendationType>> getRecommendationType() {
         return this.recommendationType;
@@ -36,7 +36,7 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="status", required=true)
-    private final Input<Either<String,RecommendationConfigStatus>> status;
+        private final Input<Either<String,RecommendationConfigStatus>> status;
 
     public Input<Either<String,RecommendationConfigStatus>> getStatus() {
         return this.status;
@@ -95,7 +95,6 @@ public final class RecommendationConfigurationPropertiesArgs extends io.pulumi.r
             this.status = Input.of(Objects.requireNonNull(status));
             return this;
         }
-
         public RecommendationConfigurationPropertiesArgs build() {
             return new RecommendationConfigurationPropertiesArgs(recommendationType, status);
         }

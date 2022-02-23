@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.SecretReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -163,7 +163,6 @@ public final class CephFSPersistentVolumeSource {
             this.user = user;
             return this;
         }
-
         public CephFSPersistentVolumeSource build() {
             return new CephFSPersistentVolumeSource(monitors, path, readOnly, secretFile, secretRef, user);
         }

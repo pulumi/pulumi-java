@@ -10,8 +10,8 @@ import io.pulumi.awsnative.mwaa.outputs.EnvironmentLoggingConfiguration;
 import io.pulumi.awsnative.mwaa.outputs.EnvironmentNetworkConfiguration;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -188,13 +188,6 @@ public class Environment extends io.pulumi.resources.CustomResource {
         return this.weeklyMaintenanceWindowStart;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Environment(String name) {
-        super("aws-native:mwaa:Environment", name, EnvironmentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.databrew.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class JobColumnSelectorArgs extends io.pulumi.resources.ResourceArg
     public static final JobColumnSelectorArgs Empty = new JobColumnSelectorArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="regex")
-    private final @Nullable Input<String> regex;
+        private final @Nullable Input<String> regex;
 
     public Input<String> getRegex() {
         return this.regex == null ? Input.empty() : this.regex;
@@ -81,7 +81,6 @@ public final class JobColumnSelectorArgs extends io.pulumi.resources.ResourceArg
             this.regex = Input.ofNullable(regex);
             return this;
         }
-
         public JobColumnSelectorArgs build() {
             return new JobColumnSelectorArgs(name, regex);
         }

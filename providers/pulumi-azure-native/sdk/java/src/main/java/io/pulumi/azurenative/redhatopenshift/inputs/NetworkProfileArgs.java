@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.redhatopenshift.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="podCidr")
-    private final @Nullable Input<String> podCidr;
+        private final @Nullable Input<String> podCidr;
 
     public Input<String> getPodCidr() {
         return this.podCidr == null ? Input.empty() : this.podCidr;
@@ -34,7 +34,7 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceCidr")
-    private final @Nullable Input<String> serviceCidr;
+        private final @Nullable Input<String> serviceCidr;
 
     public Input<String> getServiceCidr() {
         return this.serviceCidr == null ? Input.empty() : this.serviceCidr;
@@ -93,7 +93,6 @@ public final class NetworkProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.serviceCidr = Input.ofNullable(serviceCidr);
             return this;
         }
-
         public NetworkProfileArgs build() {
             return new NetworkProfileArgs(podCidr, serviceCidr);
         }

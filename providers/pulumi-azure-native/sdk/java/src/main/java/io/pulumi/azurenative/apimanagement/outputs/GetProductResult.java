@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.apimanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -246,7 +246,6 @@ public final class GetProductResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetProductResult build() {
             return new GetProductResult(approvalRequired, description, displayName, id, name, state, subscriptionRequired, subscriptionsLimit, terms, type);
         }

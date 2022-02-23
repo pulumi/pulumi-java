@@ -7,7 +7,7 @@ import io.pulumi.azurenative.azurearcdata.outputs.ExtendedLocationResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SqlManagedInstancePropertiesResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SqlManagedInstanceSkuResponse;
 import io.pulumi.azurenative.azurearcdata.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -228,7 +228,6 @@ public final class GetSqlManagedInstanceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlManagedInstanceResult build() {
             return new GetSqlManagedInstanceResult(extendedLocation, id, location, name, properties, sku, systemData, tags, type);
         }

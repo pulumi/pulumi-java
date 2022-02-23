@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.SecurityPolicyRuleRedirectOptionsType;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="target")
-    private final @Nullable Input<String> target;
+      private final @Nullable Input<String> target;
 
     public Input<String> getTarget() {
         return this.target == null ? Input.empty() : this.target;
@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<SecurityPolicyRuleRedirectOptionsType> type;
+      private final @Nullable Input<SecurityPolicyRuleRedirectOptionsType> type;
 
     public Input<SecurityPolicyRuleRedirectOptionsType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -90,7 +90,6 @@ public final class SecurityPolicyRuleRedirectOptionsArgs extends io.pulumi.resou
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public SecurityPolicyRuleRedirectOptionsArgs build() {
             return new SecurityPolicyRuleRedirectOptionsArgs(target, type);
         }

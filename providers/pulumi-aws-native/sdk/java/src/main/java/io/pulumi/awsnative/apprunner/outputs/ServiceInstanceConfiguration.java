@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apprunner.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class ServiceInstanceConfiguration {
             this.memory = memory;
             return this;
         }
-
         public ServiceInstanceConfiguration build() {
             return new ServiceInstanceConfiguration(cpu, instanceRoleArn, memory);
         }

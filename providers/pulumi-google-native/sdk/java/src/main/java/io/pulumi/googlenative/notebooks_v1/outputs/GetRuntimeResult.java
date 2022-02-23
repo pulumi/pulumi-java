@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeAccessConfigResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeMetricsResponse;
 import io.pulumi.googlenative.notebooks_v1.outputs.RuntimeSoftwareConfigResponse;
@@ -225,7 +225,6 @@ public final class GetRuntimeResult {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public GetRuntimeResult build() {
             return new GetRuntimeResult(accessConfig, createTime, healthState, metrics, name, softwareConfig, state, updateTime, virtualMachine);
         }

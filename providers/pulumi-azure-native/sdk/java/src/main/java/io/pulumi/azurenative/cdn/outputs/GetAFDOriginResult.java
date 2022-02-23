@@ -6,7 +6,7 @@ package io.pulumi.azurenative.cdn.outputs;
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
 import io.pulumi.azurenative.cdn.outputs.SharedPrivateLinkResourcePropertiesResponse;
 import io.pulumi.azurenative.cdn.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -345,7 +345,6 @@ public final class GetAFDOriginResult {
             this.weight = weight;
             return this;
         }
-
         public GetAFDOriginResult build() {
             return new GetAFDOriginResult(azureOrigin, deploymentStatus, enabledState, hostName, httpPort, httpsPort, id, name, originHostHeader, priority, provisioningState, sharedPrivateLinkResource, systemData, type, weight);
         }

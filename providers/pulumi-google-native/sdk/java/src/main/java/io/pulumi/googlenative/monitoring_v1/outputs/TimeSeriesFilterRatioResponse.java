@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.AggregationResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.PickTimeSeriesFilterResponse;
 import io.pulumi.googlenative.monitoring_v1.outputs.RatioPartResponse;
@@ -118,7 +118,6 @@ public final class TimeSeriesFilterRatioResponse {
             this.secondaryAggregation = Objects.requireNonNull(secondaryAggregation);
             return this;
         }
-
         public TimeSeriesFilterRatioResponse build() {
             return new TimeSeriesFilterRatioResponse(denominator, numerator, pickTimeSeriesFilter, secondaryAggregation);
         }

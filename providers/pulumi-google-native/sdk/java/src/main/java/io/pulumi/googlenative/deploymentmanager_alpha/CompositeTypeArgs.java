@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.deploymentmanager_alpha;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.deploymentmanager_alpha.enums.CompositeTypeStatus;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.CompositeTypeLabelEntryArgs;
 import io.pulumi.googlenative.deploymentmanager_alpha.inputs.TemplateContentsArgs;
@@ -23,14 +23,14 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+      private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -41,7 +41,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<CompositeTypeLabelEntryArgs>> labels;
+      private final @Nullable Input<List<CompositeTypeLabelEntryArgs>> labels;
 
     public Input<List<CompositeTypeLabelEntryArgs>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -52,21 +52,21 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="status")
-    private final @Nullable Input<CompositeTypeStatus> status;
+      private final @Nullable Input<CompositeTypeStatus> status;
 
     public Input<CompositeTypeStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -77,7 +77,7 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="templateContents")
-    private final @Nullable Input<TemplateContentsArgs> templateContents;
+      private final @Nullable Input<TemplateContentsArgs> templateContents;
 
     public Input<TemplateContentsArgs> getTemplateContents() {
         return this.templateContents == null ? Input.empty() : this.templateContents;
@@ -211,7 +211,6 @@ public final class CompositeTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.templateContents = Input.ofNullable(templateContents);
             return this;
         }
-
         public CompositeTypeArgs build() {
             return new CompositeTypeArgs(description, id, labels, name, project, status, templateContents);
         }

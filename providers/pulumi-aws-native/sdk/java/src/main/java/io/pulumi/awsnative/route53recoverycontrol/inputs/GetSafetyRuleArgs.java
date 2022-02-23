@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53recoverycontrol.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSafetyRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="safetyRuleArn", required=true)
-    private final String safetyRuleArn;
+        private final String safetyRuleArn;
 
     public String getSafetyRuleArn() {
         return this.safetyRuleArn;
@@ -55,7 +55,6 @@ public final class GetSafetyRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.safetyRuleArn = Objects.requireNonNull(safetyRuleArn);
             return this;
         }
-
         public GetSafetyRuleArgs build() {
             return new GetSafetyRuleArgs(safetyRuleArn);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.powerbidedicated.outputs;
 
 import io.pulumi.azurenative.powerbidedicated.outputs.AutoScaleVCoreSkuResponse;
 import io.pulumi.azurenative.powerbidedicated.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -248,7 +248,6 @@ public final class GetAutoScaleVCoreResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAutoScaleVCoreResult build() {
             return new GetAutoScaleVCoreResult(capacityLimit, capacityObjectId, id, location, name, provisioningState, sku, systemData, tags, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLogPattern;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class ApplicationLogPatternSet {
             this.patternSetName = Objects.requireNonNull(patternSetName);
             return this;
         }
-
         public ApplicationLogPatternSet build() {
             return new ApplicationLogPatternSet(logPatterns, patternSetName);
         }

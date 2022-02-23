@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -151,7 +151,6 @@ public final class ClusterClusterConfigSoftwareConfig {
             this.properties = properties;
             return this;
         }
-
         public ClusterClusterConfigSoftwareConfig build() {
             return new ClusterClusterConfigSoftwareConfig(imageVersion, optionalComponents, overrideProperties, properties);
         }

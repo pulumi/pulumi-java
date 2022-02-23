@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.ReplicationControllerConditionArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="availableReplicas")
-    private final @Nullable Input<Integer> availableReplicas;
+        private final @Nullable Input<Integer> availableReplicas;
 
     public Input<Integer> getAvailableReplicas() {
         return this.availableReplicas == null ? Input.empty() : this.availableReplicas;
@@ -36,7 +36,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<ReplicationControllerConditionArgs>> conditions;
+        private final @Nullable Input<List<ReplicationControllerConditionArgs>> conditions;
 
     public Input<List<ReplicationControllerConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -47,7 +47,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="fullyLabeledReplicas")
-    private final @Nullable Input<Integer> fullyLabeledReplicas;
+        private final @Nullable Input<Integer> fullyLabeledReplicas;
 
     public Input<Integer> getFullyLabeledReplicas() {
         return this.fullyLabeledReplicas == null ? Input.empty() : this.fullyLabeledReplicas;
@@ -58,7 +58,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="observedGeneration")
-    private final @Nullable Input<Integer> observedGeneration;
+        private final @Nullable Input<Integer> observedGeneration;
 
     public Input<Integer> getObservedGeneration() {
         return this.observedGeneration == null ? Input.empty() : this.observedGeneration;
@@ -69,7 +69,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="readyReplicas")
-    private final @Nullable Input<Integer> readyReplicas;
+        private final @Nullable Input<Integer> readyReplicas;
 
     public Input<Integer> getReadyReplicas() {
         return this.readyReplicas == null ? Input.empty() : this.readyReplicas;
@@ -80,7 +80,7 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="replicas", required=true)
-    private final Input<Integer> replicas;
+        private final Input<Integer> replicas;
 
     public Input<Integer> getReplicas() {
         return this.replicas;
@@ -199,7 +199,6 @@ public final class ReplicationControllerStatusArgs extends io.pulumi.resources.R
             this.replicas = Input.of(Objects.requireNonNull(replicas));
             return this;
         }
-
         public ReplicationControllerStatusArgs build() {
             return new ReplicationControllerStatusArgs(availableReplicas, conditions, fullyLabeledReplicas, observedGeneration, readyReplicas, replicas);
         }

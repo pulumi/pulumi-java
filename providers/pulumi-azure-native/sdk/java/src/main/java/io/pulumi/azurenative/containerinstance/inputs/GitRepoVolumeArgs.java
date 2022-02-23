@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerinstance.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="directory")
-    private final @Nullable Input<String> directory;
+        private final @Nullable Input<String> directory;
 
     public Input<String> getDirectory() {
         return this.directory == null ? Input.empty() : this.directory;
@@ -34,7 +34,7 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="repository", required=true)
-    private final Input<String> repository;
+        private final Input<String> repository;
 
     public Input<String> getRepository() {
         return this.repository;
@@ -45,7 +45,7 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revision")
-    private final @Nullable Input<String> revision;
+        private final @Nullable Input<String> revision;
 
     public Input<String> getRevision() {
         return this.revision == null ? Input.empty() : this.revision;
@@ -119,7 +119,6 @@ public final class GitRepoVolumeArgs extends io.pulumi.resources.ResourceArgs {
             this.revision = Input.ofNullable(revision);
             return this;
         }
-
         public GitRepoVolumeArgs build() {
             return new GitRepoVolumeArgs(directory, repository, revision);
         }

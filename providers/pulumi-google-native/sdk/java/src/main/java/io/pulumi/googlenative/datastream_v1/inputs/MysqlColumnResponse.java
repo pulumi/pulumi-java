@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="collation", required=true)
-    private final String collation;
+      private final String collation;
 
     public String getCollation() {
         return this.collation;
@@ -34,7 +34,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="column", required=true)
-    private final String column;
+      private final String column;
 
     public String getColumn() {
         return this.column;
@@ -45,7 +45,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dataType", required=true)
-    private final String dataType;
+      private final String dataType;
 
     public String getDataType() {
         return this.dataType;
@@ -56,7 +56,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="length", required=true)
-    private final Integer length;
+      private final Integer length;
 
     public Integer getLength() {
         return this.length;
@@ -67,7 +67,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="nullable", required=true)
-    private final Boolean nullable;
+      private final Boolean nullable;
 
     public Boolean getNullable() {
         return this.nullable;
@@ -78,7 +78,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ordinalPosition", required=true)
-    private final Integer ordinalPosition;
+      private final Integer ordinalPosition;
 
     public Integer getOrdinalPosition() {
         return this.ordinalPosition;
@@ -89,7 +89,7 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="primaryKey", required=true)
-    private final Boolean primaryKey;
+      private final Boolean primaryKey;
 
     public Boolean getPrimaryKey() {
         return this.primaryKey;
@@ -188,7 +188,6 @@ public final class MysqlColumnResponse extends io.pulumi.resources.InvokeArgs {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public MysqlColumnResponse build() {
             return new MysqlColumnResponse(collation, column, dataType, length, nullable, ordinalPosition, primaryKey);
         }

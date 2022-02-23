@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.outputs;
 
 import io.pulumi.azurenative.appplatform.outputs.BindingResourcePropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -117,7 +117,6 @@ public final class GetBindingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBindingResult build() {
             return new GetBindingResult(id, name, properties, type);
         }

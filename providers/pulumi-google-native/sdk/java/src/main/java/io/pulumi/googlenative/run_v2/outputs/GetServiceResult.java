@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2BinaryAuthorizationResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2ConditionResponse;
 import io.pulumi.googlenative.run_v2.outputs.GoogleCloudRunOpV2RevisionTemplateResponse;
@@ -628,7 +628,6 @@ public final class GetServiceResult {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetServiceResult build() {
             return new GetServiceResult(annotations, binaryAuthorization, client, clientVersion, conditions, createTime, creator, deleteTime, description, etag, expireTime, generation, ingress, labels, lastModifier, latestCreatedRevision, latestReadyRevision, launchStage, name, observedGeneration, reconciling, template, terminalCondition, traffic, trafficStatuses, uid, updateTime, uri);
         }

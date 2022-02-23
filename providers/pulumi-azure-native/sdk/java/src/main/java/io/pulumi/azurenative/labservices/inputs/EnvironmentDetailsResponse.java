@@ -5,7 +5,7 @@ package io.pulumi.azurenative.labservices.inputs;
 
 import io.pulumi.azurenative.labservices.inputs.LatestOperationResultResponse;
 import io.pulumi.azurenative.labservices.inputs.VirtualMachineDetailsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="description", required=true)
-    private final String description;
+        private final String description;
 
     public String getDescription() {
         return this.description;
@@ -34,7 +34,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="environmentState", required=true)
-    private final String environmentState;
+        private final String environmentState;
 
     public String getEnvironmentState() {
         return this.environmentState;
@@ -45,7 +45,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -56,7 +56,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="latestOperationResult", required=true)
-    private final LatestOperationResultResponse latestOperationResult;
+        private final LatestOperationResultResponse latestOperationResult;
 
     public LatestOperationResultResponse getLatestOperationResult() {
         return this.latestOperationResult;
@@ -67,7 +67,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -78,7 +78,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="passwordLastReset", required=true)
-    private final String passwordLastReset;
+        private final String passwordLastReset;
 
     public String getPasswordLastReset() {
         return this.passwordLastReset;
@@ -89,7 +89,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -100,7 +100,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="totalUsage", required=true)
-    private final String totalUsage;
+        private final String totalUsage;
 
     public String getTotalUsage() {
         return this.totalUsage;
@@ -111,7 +111,7 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="virtualMachineDetails", required=true)
-    private final VirtualMachineDetailsResponse virtualMachineDetails;
+        private final VirtualMachineDetailsResponse virtualMachineDetails;
 
     public VirtualMachineDetailsResponse getVirtualMachineDetails() {
         return this.virtualMachineDetails;
@@ -230,7 +230,6 @@ public final class EnvironmentDetailsResponse extends io.pulumi.resources.Invoke
             this.virtualMachineDetails = Objects.requireNonNull(virtualMachineDetails);
             return this;
         }
-
         public EnvironmentDetailsResponse build() {
             return new EnvironmentDetailsResponse(description, environmentState, id, latestOperationResult, name, passwordLastReset, provisioningState, totalUsage, virtualMachineDetails);
         }

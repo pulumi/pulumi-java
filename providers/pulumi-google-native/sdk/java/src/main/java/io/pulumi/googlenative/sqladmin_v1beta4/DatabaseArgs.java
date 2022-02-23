@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.sqladmin_v1beta4.inputs.SqlServerDatabaseDetailsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="charset")
-    private final @Nullable Input<String> charset;
+      private final @Nullable Input<String> charset;
 
     public Input<String> getCharset() {
         return this.charset == null ? Input.empty() : this.charset;
@@ -31,7 +31,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="collation")
-    private final @Nullable Input<String> collation;
+      private final @Nullable Input<String> collation;
 
     public Input<String> getCollation() {
         return this.collation == null ? Input.empty() : this.collation;
@@ -42,7 +42,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+      private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
@@ -53,7 +53,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -64,7 +64,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -86,14 +86,14 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selfLink")
-    private final @Nullable Input<String> selfLink;
+      private final @Nullable Input<String> selfLink;
 
     public Input<String> getSelfLink() {
         return this.selfLink == null ? Input.empty() : this.selfLink;
     }
 
     @InputImport(name="sqlserverDatabaseDetails")
-    private final @Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
+      private final @Nullable Input<SqlServerDatabaseDetailsArgs> sqlserverDatabaseDetails;
 
     public Input<SqlServerDatabaseDetailsArgs> getSqlserverDatabaseDetails() {
         return this.sqlserverDatabaseDetails == null ? Input.empty() : this.sqlserverDatabaseDetails;
@@ -242,7 +242,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.sqlserverDatabaseDetails = Input.ofNullable(sqlserverDatabaseDetails);
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(charset, collation, instance, kind, name, project, selfLink, sqlserverDatabaseDetails);
         }

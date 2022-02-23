@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudkms_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CertificateResponse;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="endpointFilter", required=true)
-    private final String endpointFilter;
+      private final String endpointFilter;
 
     public String getEndpointFilter() {
         return this.endpointFilter;
@@ -34,7 +34,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="hostname", required=true)
-    private final String hostname;
+      private final String hostname;
 
     public String getHostname() {
         return this.hostname;
@@ -45,7 +45,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serverCertificates", required=true)
-    private final List<CertificateResponse> serverCertificates;
+      private final List<CertificateResponse> serverCertificates;
 
     public List<CertificateResponse> getServerCertificates() {
         return this.serverCertificates;
@@ -56,7 +56,7 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="serviceDirectoryService", required=true)
-    private final String serviceDirectoryService;
+      private final String serviceDirectoryService;
 
     public String getServiceDirectoryService() {
         return this.serviceDirectoryService;
@@ -125,7 +125,6 @@ public final class ServiceResolverResponse extends io.pulumi.resources.InvokeArg
             this.serviceDirectoryService = Objects.requireNonNull(serviceDirectoryService);
             return this;
         }
-
         public ServiceResolverResponse build() {
             return new ServiceResolverResponse(endpointFilter, hostname, serverCertificates, serviceDirectoryService);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceModel")
-    private final @Nullable Input<String> deviceModel;
+        private final @Nullable Input<String> deviceModel;
 
     public Input<String> getDeviceModel() {
         return this.deviceModel == null ? Input.empty() : this.deviceModel;
@@ -35,7 +35,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="deviceVendor")
-    private final @Nullable Input<String> deviceVendor;
+        private final @Nullable Input<String> deviceVendor;
 
     public Input<String> getDeviceVendor() {
         return this.deviceVendor == null ? Input.empty() : this.deviceVendor;
@@ -46,7 +46,7 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="linkSpeedInMbps")
-    private final @Nullable Input<Integer> linkSpeedInMbps;
+        private final @Nullable Input<Integer> linkSpeedInMbps;
 
     public Input<Integer> getLinkSpeedInMbps() {
         return this.linkSpeedInMbps == null ? Input.empty() : this.linkSpeedInMbps;
@@ -120,7 +120,6 @@ public final class DevicePropertiesArgs extends io.pulumi.resources.ResourceArgs
             this.linkSpeedInMbps = Input.ofNullable(linkSpeedInMbps);
             return this;
         }
-
         public DevicePropertiesArgs build() {
             return new DevicePropertiesArgs(deviceModel, deviceVendor, linkSpeedInMbps);
         }

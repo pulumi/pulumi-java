@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2KAnonymityEquivalenceClassResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class GooglePrivacyDlpV2KAnonymityHistogramBucketResponse {
             this.equivalenceClassSizeUpperBound = Objects.requireNonNull(equivalenceClassSizeUpperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2KAnonymityHistogramBucketResponse build() {
             return new GooglePrivacyDlpV2KAnonymityHistogramBucketResponse(bucketSize, bucketValueCount, bucketValues, equivalenceClassSizeLowerBound, equivalenceClassSizeUpperBound);
         }

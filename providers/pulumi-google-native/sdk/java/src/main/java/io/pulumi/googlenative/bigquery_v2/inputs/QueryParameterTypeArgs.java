@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.QueryParameterTypeStructTypesItemArgs;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="arrayType")
-    private final @Nullable Input<QueryParameterTypeArgs> arrayType;
+      private final @Nullable Input<QueryParameterTypeArgs> arrayType;
 
     public Input<QueryParameterTypeArgs> getArrayType() {
         return this.arrayType == null ? Input.empty() : this.arrayType;
@@ -32,7 +32,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="structTypes")
-    private final @Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
+      private final @Nullable Input<List<QueryParameterTypeStructTypesItemArgs>> structTypes;
 
     public Input<List<QueryParameterTypeStructTypesItemArgs>> getStructTypes() {
         return this.structTypes == null ? Input.empty() : this.structTypes;
@@ -43,7 +43,7 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -117,7 +117,6 @@ public final class QueryParameterTypeArgs extends io.pulumi.resources.ResourceAr
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public QueryParameterTypeArgs build() {
             return new QueryParameterTypeArgs(arrayType, structTypes, type);
         }

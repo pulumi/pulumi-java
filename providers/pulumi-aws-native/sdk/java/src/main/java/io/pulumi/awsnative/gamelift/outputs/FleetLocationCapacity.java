@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.gamelift.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class FleetLocationCapacity {
             this.minSize = Objects.requireNonNull(minSize);
             return this;
         }
-
         public FleetLocationCapacity build() {
             return new FleetLocationCapacity(desiredEC2Instances, maxSize, minSize);
         }

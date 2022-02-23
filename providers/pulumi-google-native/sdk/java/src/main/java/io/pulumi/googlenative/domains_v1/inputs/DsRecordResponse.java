@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="algorithm", required=true)
-    private final String algorithm;
+      private final String algorithm;
 
     public String getAlgorithm() {
         return this.algorithm;
@@ -33,7 +33,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="digest", required=true)
-    private final String digest;
+      private final String digest;
 
     public String getDigest() {
         return this.digest;
@@ -44,7 +44,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="digestType", required=true)
-    private final String digestType;
+      private final String digestType;
 
     public String getDigestType() {
         return this.digestType;
@@ -55,7 +55,7 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyTag", required=true)
-    private final Integer keyTag;
+      private final Integer keyTag;
 
     public Integer getKeyTag() {
         return this.keyTag;
@@ -124,7 +124,6 @@ public final class DsRecordResponse extends io.pulumi.resources.InvokeArgs {
             this.keyTag = Objects.requireNonNull(keyTag);
             return this;
         }
-
         public DsRecordResponse build() {
             return new DsRecordResponse(algorithm, digest, digestType, keyTag);
         }

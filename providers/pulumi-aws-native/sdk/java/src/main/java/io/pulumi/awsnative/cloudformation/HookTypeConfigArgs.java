@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudformation;
 
 import io.pulumi.awsnative.cloudformation.enums.HookTypeConfigConfigurationAlias;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configuration")
-    private final @Nullable Input<String> configuration;
+        private final @Nullable Input<String> configuration;
 
     public Input<String> getConfiguration() {
         return this.configuration == null ? Input.empty() : this.configuration;
@@ -31,7 +31,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="configurationAlias")
-    private final @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
+        private final @Nullable Input<HookTypeConfigConfigurationAlias> configurationAlias;
 
     public Input<HookTypeConfigConfigurationAlias> getConfigurationAlias() {
         return this.configurationAlias == null ? Input.empty() : this.configurationAlias;
@@ -42,7 +42,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeArn")
-    private final @Nullable Input<String> typeArn;
+        private final @Nullable Input<String> typeArn;
 
     public Input<String> getTypeArn() {
         return this.typeArn == null ? Input.empty() : this.typeArn;
@@ -55,7 +55,7 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="typeName")
-    private final @Nullable Input<String> typeName;
+        private final @Nullable Input<String> typeName;
 
     public Input<String> getTypeName() {
         return this.typeName == null ? Input.empty() : this.typeName;
@@ -144,7 +144,6 @@ public final class HookTypeConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.typeName = Input.ofNullable(typeName);
             return this;
         }
-
         public HookTypeConfigArgs build() {
             return new HookTypeConfigArgs(configuration, configurationAlias, typeArn, typeName);
         }

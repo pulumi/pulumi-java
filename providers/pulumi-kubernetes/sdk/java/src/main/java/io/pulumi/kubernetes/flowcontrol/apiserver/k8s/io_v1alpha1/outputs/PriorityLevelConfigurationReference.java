@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class PriorityLevelConfigurationReference {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public PriorityLevelConfigurationReference build() {
             return new PriorityLevelConfigurationReference(name);
         }

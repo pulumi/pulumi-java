@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudtasks;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudtasks.QueueArgs;
 import io.pulumi.gcp.cloudtasks.inputs.QueueState;
@@ -169,13 +169,6 @@ public class Queue extends io.pulumi.resources.CustomResource {
         return this.stackdriverLoggingConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Queue(String name) {
-        super("gcp:cloudtasks/queue:Queue", name, QueueArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

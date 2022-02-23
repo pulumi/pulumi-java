@@ -10,8 +10,8 @@ import io.pulumi.azurenative.network.outputs.PacketCaptureStorageLocationRespons
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -162,13 +162,6 @@ public class PacketCapture extends io.pulumi.resources.CustomResource {
         return this.totalBytesPerSession;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PacketCapture(String name) {
-        super("azure-native:network:PacketCapture", name, PacketCaptureArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

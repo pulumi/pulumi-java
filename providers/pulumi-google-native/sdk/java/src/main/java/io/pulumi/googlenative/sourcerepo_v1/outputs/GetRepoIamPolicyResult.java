@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.sourcerepo_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.sourcerepo_v1.outputs.AuditConfigResponse;
 import io.pulumi.googlenative.sourcerepo_v1.outputs.BindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetRepoIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetRepoIamPolicyResult build() {
             return new GetRepoIamPolicyResult(auditConfigs, bindings, etag, version);
         }

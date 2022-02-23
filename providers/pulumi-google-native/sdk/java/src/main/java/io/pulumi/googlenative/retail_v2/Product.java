@@ -5,8 +5,8 @@ package io.pulumi.googlenative.retail_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.retail_v2.ProductArgs;
 import io.pulumi.googlenative.retail_v2.outputs.GoogleCloudRetailV2AudienceResponse;
@@ -478,13 +478,6 @@ public class Product extends io.pulumi.resources.CustomResource {
         return this.variants;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Product(String name) {
-        super("google-native:retail/v2:Product", name, ProductArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.events;
 
 import io.pulumi.awsnative.events.enums.ApiDestinationHttpMethod;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -21,21 +21,21 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionArn", required=true)
-    private final Input<String> connectionArn;
+        private final Input<String> connectionArn;
 
     public Input<String> getConnectionArn() {
         return this.connectionArn;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="httpMethod", required=true)
-    private final Input<ApiDestinationHttpMethod> httpMethod;
+        private final Input<ApiDestinationHttpMethod> httpMethod;
 
     public Input<ApiDestinationHttpMethod> getHttpMethod() {
         return this.httpMethod;
@@ -46,14 +46,14 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invocationEndpoint", required=true)
-    private final Input<String> invocationEndpoint;
+        private final Input<String> invocationEndpoint;
 
     public Input<String> getInvocationEndpoint() {
         return this.invocationEndpoint;
     }
 
     @InputImport(name="invocationRateLimitPerSecond")
-    private final @Nullable Input<Integer> invocationRateLimitPerSecond;
+        private final @Nullable Input<Integer> invocationRateLimitPerSecond;
 
     public Input<Integer> getInvocationRateLimitPerSecond() {
         return this.invocationRateLimitPerSecond == null ? Input.empty() : this.invocationRateLimitPerSecond;
@@ -64,7 +64,7 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -183,7 +183,6 @@ public final class ApiDestinationArgs extends io.pulumi.resources.ResourceArgs {
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public ApiDestinationArgs build() {
             return new ApiDestinationArgs(connectionArn, description, httpMethod, invocationEndpoint, invocationRateLimitPerSecond, name);
         }

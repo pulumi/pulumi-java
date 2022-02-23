@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxPageTransitionRouteTriggerFulfillment;
 import java.lang.String;
 import java.util.Objects;
@@ -173,7 +173,6 @@ public final class CxPageTransitionRoute {
             this.triggerFulfillment = triggerFulfillment;
             return this;
         }
-
         public CxPageTransitionRoute build() {
             return new CxPageTransitionRoute(condition, intent, name, targetFlow, targetPage, triggerFulfillment);
         }

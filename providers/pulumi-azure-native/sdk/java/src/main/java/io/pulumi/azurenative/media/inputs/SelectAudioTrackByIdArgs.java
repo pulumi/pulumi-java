@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.inputs;
 import io.pulumi.azurenative.media.enums.ChannelMapping;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="channelMapping")
-    private final @Nullable Input<Either<String,ChannelMapping>> channelMapping;
+        private final @Nullable Input<Either<String,ChannelMapping>> channelMapping;
 
     public Input<Either<String,ChannelMapping>> getChannelMapping() {
         return this.channelMapping == null ? Input.empty() : this.channelMapping;
@@ -38,7 +38,7 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -49,7 +49,7 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="trackId", required=true)
-    private final Input<Double> trackId;
+        private final Input<Double> trackId;
 
     public Input<Double> getTrackId() {
         return this.trackId;
@@ -123,7 +123,6 @@ public final class SelectAudioTrackByIdArgs extends io.pulumi.resources.Resource
             this.trackId = Input.of(Objects.requireNonNull(trackId));
             return this;
         }
-
         public SelectAudioTrackByIdArgs build() {
             return new SelectAudioTrackByIdArgs(channelMapping, odataType, trackId);
         }

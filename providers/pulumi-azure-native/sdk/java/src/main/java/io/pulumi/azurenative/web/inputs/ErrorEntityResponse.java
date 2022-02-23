@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="code")
-    private final @Nullable String code;
+        private final @Nullable String code;
 
     public Optional<String> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -35,7 +35,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="extendedCode")
-    private final @Nullable String extendedCode;
+        private final @Nullable String extendedCode;
 
     public Optional<String> getExtendedCode() {
         return this.extendedCode == null ? Optional.empty() : Optional.ofNullable(this.extendedCode);
@@ -46,7 +46,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="innerErrors")
-    private final @Nullable List<ErrorEntityResponse> innerErrors;
+        private final @Nullable List<ErrorEntityResponse> innerErrors;
 
     public List<ErrorEntityResponse> getInnerErrors() {
         return this.innerErrors == null ? List.of() : this.innerErrors;
@@ -57,7 +57,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -68,7 +68,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="messageTemplate")
-    private final @Nullable String messageTemplate;
+        private final @Nullable String messageTemplate;
 
     public Optional<String> getMessageTemplate() {
         return this.messageTemplate == null ? Optional.empty() : Optional.ofNullable(this.messageTemplate);
@@ -79,7 +79,7 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable List<String> parameters;
+        private final @Nullable List<String> parameters;
 
     public List<String> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -168,7 +168,6 @@ public final class ErrorEntityResponse extends io.pulumi.resources.InvokeArgs {
             this.parameters = parameters;
             return this;
         }
-
         public ErrorEntityResponse build() {
             return new ErrorEntityResponse(code, extendedCode, innerErrors, message, messageTemplate, parameters);
         }

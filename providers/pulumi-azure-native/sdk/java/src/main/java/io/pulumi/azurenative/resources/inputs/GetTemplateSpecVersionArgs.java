@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="templateSpecName", required=true)
-    private final String templateSpecName;
+        private final String templateSpecName;
 
     public String getTemplateSpecName() {
         return this.templateSpecName;
@@ -39,7 +39,7 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="templateSpecVersion", required=true)
-    private final String templateSpecVersion;
+        private final String templateSpecVersion;
 
     public String getTemplateSpecVersion() {
         return this.templateSpecVersion;
@@ -98,7 +98,6 @@ public final class GetTemplateSpecVersionArgs extends io.pulumi.resources.Invoke
             this.templateSpecVersion = Objects.requireNonNull(templateSpecVersion);
             return this;
         }
-
         public GetTemplateSpecVersionArgs build() {
             return new GetTemplateSpecVersionArgs(resourceGroupName, templateSpecName, templateSpecVersion);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1GraphQLOperationGroupResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1OperationGroupResponse;
@@ -364,7 +364,6 @@ public final class GetApiProductResult {
             this.scopes = Objects.requireNonNull(scopes);
             return this;
         }
-
         public GetApiProductResult build() {
             return new GetApiProductResult(apiResources, approvalType, attributes, createdAt, description, displayName, environments, graphqlOperationGroup, lastModifiedAt, name, operationGroup, proxies, quota, quotaInterval, quotaTimeUnit, scopes);
         }

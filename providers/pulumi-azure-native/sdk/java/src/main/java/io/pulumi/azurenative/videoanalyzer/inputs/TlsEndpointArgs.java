@@ -8,7 +8,7 @@ import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelArg
 import io.pulumi.azurenative.videoanalyzer.inputs.TlsValidationOptionsArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -27,7 +27,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="credentials", required=true)
-    private final Input<UsernamePasswordCredentialsArgs> credentials;
+        private final Input<UsernamePasswordCredentialsArgs> credentials;
 
     public Input<UsernamePasswordCredentialsArgs> getCredentials() {
         return this.credentials;
@@ -38,7 +38,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trustedCertificates")
-    private final @Nullable Input<PemCertificateListArgs> trustedCertificates;
+        private final @Nullable Input<PemCertificateListArgs> trustedCertificates;
 
     public Input<PemCertificateListArgs> getTrustedCertificates() {
         return this.trustedCertificates == null ? Input.empty() : this.trustedCertificates;
@@ -49,7 +49,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tunnel")
-    private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
+        private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
     public Input<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
         return this.tunnel == null ? Input.empty() : this.tunnel;
@@ -61,7 +61,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -72,7 +72,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -83,7 +83,7 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validationOptions")
-    private final @Nullable Input<TlsValidationOptionsArgs> validationOptions;
+        private final @Nullable Input<TlsValidationOptionsArgs> validationOptions;
 
     public Input<TlsValidationOptionsArgs> getValidationOptions() {
         return this.validationOptions == null ? Input.empty() : this.validationOptions;
@@ -202,7 +202,6 @@ public final class TlsEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.validationOptions = Input.ofNullable(validationOptions);
             return this;
         }
-
         public TlsEndpointArgs build() {
             return new TlsEndpointArgs(credentials, trustedCertificates, tunnel, type, url, validationOptions);
         }

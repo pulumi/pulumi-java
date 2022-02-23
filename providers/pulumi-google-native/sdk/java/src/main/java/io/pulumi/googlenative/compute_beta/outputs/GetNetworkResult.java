@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkPeeringResponse;
 import io.pulumi.googlenative.compute_beta.outputs.NetworkRoutingConfigResponse;
 import java.lang.Boolean;
@@ -268,7 +268,6 @@ public final class GetNetworkResult {
             this.subnetworks = Objects.requireNonNull(subnetworks);
             return this;
         }
-
         public GetNetworkResult build() {
             return new GetNetworkResult(autoCreateSubnetworks, creationTimestamp, description, gatewayIPv4, kind, mtu, name, peerings, routingConfig, selfLink, subnetworks);
         }

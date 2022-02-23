@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
      * 
      */
     @InputImport(name="remediationName", required=true)
-    private final String remediationName;
+        private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -31,7 +31,7 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
      * 
      */
     @InputImport(name="top")
-    private final @Nullable Integer top;
+        private final @Nullable Integer top;
 
     public Optional<Integer> getTop() {
         return this.top == null ? Optional.empty() : Optional.ofNullable(this.top);
@@ -80,7 +80,6 @@ public final class ListRemediationDeploymentsAtSubscriptionArgs extends io.pulum
             this.top = top;
             return this;
         }
-
         public ListRemediationDeploymentsAtSubscriptionArgs build() {
             return new ListRemediationDeploymentsAtSubscriptionArgs(remediationName, top);
         }

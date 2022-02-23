@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.outputs;
 import io.pulumi.azurenative.videoanalyzer.outputs.ParameterDefinitionResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.PipelineJobErrorResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -248,7 +248,6 @@ public final class GetPipelineJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPipelineJobResult build() {
             return new GetPipelineJobResult(description, error, expiration, id, name, parameters, state, systemData, topologyName, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="columnName")
-    private final @Nullable Input<Object> columnName;
+        private final @Nullable Input<Object> columnName;
 
     public Input<Object> getColumnName() {
         return this.columnName == null ? Input.empty() : this.columnName;
@@ -34,7 +34,7 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="defaultValue")
-    private final @Nullable Input<Object> defaultValue;
+        private final @Nullable Input<Object> defaultValue;
 
     public Input<Object> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -93,7 +93,6 @@ public final class DWCopyCommandDefaultValueArgs extends io.pulumi.resources.Res
             this.defaultValue = Input.ofNullable(defaultValue);
             return this;
         }
-
         public DWCopyCommandDefaultValueArgs build() {
             return new DWCopyCommandDefaultValueArgs(columnName, defaultValue);
         }

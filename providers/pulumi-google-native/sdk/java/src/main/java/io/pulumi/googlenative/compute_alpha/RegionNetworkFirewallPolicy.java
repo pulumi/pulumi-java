@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_alpha;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_alpha.RegionNetworkFirewallPolicyArgs;
 import io.pulumi.googlenative.compute_alpha.outputs.FirewallPolicyAssociationResponse;
@@ -220,13 +220,6 @@ public class RegionNetworkFirewallPolicy extends io.pulumi.resources.CustomResou
         return this.vpcNetworkScope;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionNetworkFirewallPolicy(String name) {
-        super("google-native:compute/alpha:RegionNetworkFirewallPolicy", name, RegionNetworkFirewallPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

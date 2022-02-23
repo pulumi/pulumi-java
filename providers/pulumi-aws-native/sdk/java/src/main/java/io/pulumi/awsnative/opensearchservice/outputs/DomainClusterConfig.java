@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.outputs;
 
 import io.pulumi.awsnative.opensearchservice.outputs.DomainZoneAwarenessConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -167,7 +167,6 @@ public final class DomainClusterConfig {
             this.zoneAwarenessEnabled = zoneAwarenessEnabled;
             return this;
         }
-
         public DomainClusterConfig build() {
             return new DomainClusterConfig(dedicatedMasterCount, dedicatedMasterEnabled, dedicatedMasterType, instanceCount, instanceType, warmCount, warmEnabled, warmType, zoneAwarenessConfig, zoneAwarenessEnabled);
         }

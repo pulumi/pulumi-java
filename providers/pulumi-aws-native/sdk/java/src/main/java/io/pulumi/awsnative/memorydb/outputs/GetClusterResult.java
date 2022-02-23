@@ -5,7 +5,7 @@ package io.pulumi.awsnative.memorydb.outputs;
 
 import io.pulumi.awsnative.memorydb.outputs.ClusterEndpoint;
 import io.pulumi.awsnative.memorydb.outputs.ClusterTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -484,7 +484,6 @@ public final class GetClusterResult {
             this.tags = tags;
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(aCLName, aRN, autoMinorVersionUpgrade, clusterEndpoint, description, engineVersion, finalSnapshotName, maintenanceWindow, nodeType, numReplicasPerShard, numShards, parameterGroupName, parameterGroupStatus, securityGroupIds, snapshotRetentionLimit, snapshotWindow, snsTopicArn, snsTopicStatus, status, subnetGroupName, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.SecurityScanConfigAuthenticationCustomAccount;
 import io.pulumi.gcp.compute.outputs.SecurityScanConfigAuthenticationGoogleAccount;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class SecurityScanConfigAuthentication {
             this.googleAccount = googleAccount;
             return this;
         }
-
         public SecurityScanConfigAuthentication build() {
             return new SecurityScanConfigAuthentication(customAccount, googleAccount);
         }

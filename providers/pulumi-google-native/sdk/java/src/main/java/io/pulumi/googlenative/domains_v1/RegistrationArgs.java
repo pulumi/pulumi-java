@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1.enums.RegistrationContactNoticesItem;
 import io.pulumi.googlenative.domains_v1.enums.RegistrationDomainNoticesItem;
 import io.pulumi.googlenative.domains_v1.inputs.ContactSettingsArgs;
@@ -28,7 +28,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactNotices")
-    private final @Nullable Input<List<RegistrationContactNoticesItem>> contactNotices;
+      private final @Nullable Input<List<RegistrationContactNoticesItem>> contactNotices;
 
     public Input<List<RegistrationContactNoticesItem>> getContactNotices() {
         return this.contactNotices == null ? Input.empty() : this.contactNotices;
@@ -39,7 +39,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contactSettings", required=true)
-    private final Input<ContactSettingsArgs> contactSettings;
+      private final Input<ContactSettingsArgs> contactSettings;
 
     public Input<ContactSettingsArgs> getContactSettings() {
         return this.contactSettings;
@@ -50,7 +50,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable Input<DnsSettingsArgs> dnsSettings;
+      private final @Nullable Input<DnsSettingsArgs> dnsSettings;
 
     public Input<DnsSettingsArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -61,7 +61,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+      private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -72,7 +72,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainNotices")
-    private final @Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices;
+      private final @Nullable Input<List<RegistrationDomainNoticesItem>> domainNotices;
 
     public Input<List<RegistrationDomainNoticesItem>> getDomainNotices() {
         return this.domainNotices == null ? Input.empty() : this.domainNotices;
@@ -83,14 +83,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -101,14 +101,14 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="managementSettings")
-    private final @Nullable Input<ManagementSettingsArgs> managementSettings;
+      private final @Nullable Input<ManagementSettingsArgs> managementSettings;
 
     public Input<ManagementSettingsArgs> getManagementSettings() {
         return this.managementSettings == null ? Input.empty() : this.managementSettings;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -119,7 +119,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="validateOnly")
-    private final @Nullable Input<Boolean> validateOnly;
+      private final @Nullable Input<Boolean> validateOnly;
 
     public Input<Boolean> getValidateOnly() {
         return this.validateOnly == null ? Input.empty() : this.validateOnly;
@@ -130,7 +130,7 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="yearlyPrice", required=true)
-    private final Input<MoneyArgs> yearlyPrice;
+      private final Input<MoneyArgs> yearlyPrice;
 
     public Input<MoneyArgs> getYearlyPrice() {
         return this.yearlyPrice;
@@ -324,7 +324,6 @@ public final class RegistrationArgs extends io.pulumi.resources.ResourceArgs {
             this.yearlyPrice = Input.of(Objects.requireNonNull(yearlyPrice));
             return this;
         }
-
         public RegistrationArgs build() {
             return new RegistrationArgs(contactNotices, contactSettings, dnsSettings, domainName, domainNotices, labels, location, managementSettings, project, validateOnly, yearlyPrice);
         }

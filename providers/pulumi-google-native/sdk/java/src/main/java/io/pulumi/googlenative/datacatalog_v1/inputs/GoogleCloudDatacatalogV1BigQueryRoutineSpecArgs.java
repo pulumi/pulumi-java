@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
      * 
      */
     @InputImport(name="importedLibraries")
-    private final @Nullable Input<List<String>> importedLibraries;
+      private final @Nullable Input<List<String>> importedLibraries;
 
     public Input<List<String>> getImportedLibraries() {
         return this.importedLibraries == null ? Input.empty() : this.importedLibraries;
@@ -67,7 +67,6 @@ public final class GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs extends io.pu
             this.importedLibraries = Input.ofNullable(importedLibraries);
             return this;
         }
-
         public GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs build() {
             return new GoogleCloudDatacatalogV1BigQueryRoutineSpecArgs(importedLibraries);
         }

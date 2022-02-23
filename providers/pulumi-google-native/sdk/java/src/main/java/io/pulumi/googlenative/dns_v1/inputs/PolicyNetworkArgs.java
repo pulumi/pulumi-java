@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
     public static final PolicyNetworkArgs Empty = new PolicyNetworkArgs();
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -26,7 +26,7 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkUrl")
-    private final @Nullable Input<String> networkUrl;
+      private final @Nullable Input<String> networkUrl;
 
     public Input<String> getNetworkUrl() {
         return this.networkUrl == null ? Input.empty() : this.networkUrl;
@@ -85,7 +85,6 @@ public final class PolicyNetworkArgs extends io.pulumi.resources.ResourceArgs {
             this.networkUrl = Input.ofNullable(networkUrl);
             return this;
         }
-
         public PolicyNetworkArgs build() {
             return new PolicyNetworkArgs(kind, networkUrl);
         }

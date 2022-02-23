@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 
 import io.pulumi.awsnative.wafv2.inputs.WebACLExcludedRule;
 import io.pulumi.awsnative.wafv2.inputs.WebACLStatement;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,35 +18,35 @@ public final class WebACLManagedRuleGroupStatement extends io.pulumi.resources.I
     public static final WebACLManagedRuleGroupStatement Empty = new WebACLManagedRuleGroupStatement();
 
     @InputImport(name="excludedRules")
-    private final @Nullable List<WebACLExcludedRule> excludedRules;
+        private final @Nullable List<WebACLExcludedRule> excludedRules;
 
     public List<WebACLExcludedRule> getExcludedRules() {
         return this.excludedRules == null ? List.of() : this.excludedRules;
     }
 
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
     }
 
     @InputImport(name="scopeDownStatement")
-    private final @Nullable WebACLStatement scopeDownStatement;
+        private final @Nullable WebACLStatement scopeDownStatement;
 
     public Optional<WebACLStatement> getScopeDownStatement() {
         return this.scopeDownStatement == null ? Optional.empty() : Optional.ofNullable(this.scopeDownStatement);
     }
 
     @InputImport(name="vendorName", required=true)
-    private final String vendorName;
+        private final String vendorName;
 
     public String getVendorName() {
         return this.vendorName;
     }
 
     @InputImport(name="version")
-    private final @Nullable String version;
+        private final @Nullable String version;
 
     public Optional<String> getVersion() {
         return this.version == null ? Optional.empty() : Optional.ofNullable(this.version);
@@ -125,7 +125,6 @@ public final class WebACLManagedRuleGroupStatement extends io.pulumi.resources.I
             this.version = version;
             return this;
         }
-
         public WebACLManagedRuleGroupStatement build() {
             return new WebACLManagedRuleGroupStatement(excludedRules, name, scopeDownStatement, vendorName, version);
         }

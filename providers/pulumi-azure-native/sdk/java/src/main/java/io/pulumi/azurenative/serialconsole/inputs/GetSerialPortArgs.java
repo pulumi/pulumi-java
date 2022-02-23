@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.serialconsole.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentResource", required=true)
-    private final String parentResource;
+        private final String parentResource;
 
     public String getParentResource() {
         return this.parentResource;
@@ -28,7 +28,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentResourceType", required=true)
-    private final String parentResourceType;
+        private final String parentResourceType;
 
     public String getParentResourceType() {
         return this.parentResourceType;
@@ -39,7 +39,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -50,7 +50,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceProviderNamespace", required=true)
-    private final String resourceProviderNamespace;
+        private final String resourceProviderNamespace;
 
     public String getResourceProviderNamespace() {
         return this.resourceProviderNamespace;
@@ -61,7 +61,7 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serialPort", required=true)
-    private final String serialPort;
+        private final String serialPort;
 
     public String getSerialPort() {
         return this.serialPort;
@@ -140,7 +140,6 @@ public final class GetSerialPortArgs extends io.pulumi.resources.InvokeArgs {
             this.serialPort = Objects.requireNonNull(serialPort);
             return this;
         }
-
         public GetSerialPortArgs build() {
             return new GetSerialPortArgs(parentResource, parentResourceType, resourceGroupName, resourceProviderNamespace, serialPort);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class BucketLifecycleConfiguration {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketLifecycleConfiguration build() {
             return new BucketLifecycleConfiguration(rules);
         }

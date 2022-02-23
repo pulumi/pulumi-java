@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.outputs;
 import io.pulumi.awsnative.appflow.enums.FlowTaskType;
 import io.pulumi.awsnative.appflow.outputs.FlowConnectorOperator;
 import io.pulumi.awsnative.appflow.outputs.FlowTaskPropertiesObject;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -143,7 +143,6 @@ public final class FlowTask {
             this.taskType = Objects.requireNonNull(taskType);
             return this;
         }
-
         public FlowTask build() {
             return new FlowTask(connectorOperator, destinationField, sourceFields, taskProperties, taskType);
         }

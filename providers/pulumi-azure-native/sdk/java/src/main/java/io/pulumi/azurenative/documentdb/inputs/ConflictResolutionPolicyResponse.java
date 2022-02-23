@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conflictResolutionPath")
-    private final @Nullable String conflictResolutionPath;
+        private final @Nullable String conflictResolutionPath;
 
     public Optional<String> getConflictResolutionPath() {
         return this.conflictResolutionPath == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionPath);
@@ -34,7 +34,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conflictResolutionProcedure")
-    private final @Nullable String conflictResolutionProcedure;
+        private final @Nullable String conflictResolutionProcedure;
 
     public Optional<String> getConflictResolutionProcedure() {
         return this.conflictResolutionProcedure == null ? Optional.empty() : Optional.ofNullable(this.conflictResolutionProcedure);
@@ -45,7 +45,7 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable String mode;
+        private final @Nullable String mode;
 
     public Optional<String> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -104,7 +104,6 @@ public final class ConflictResolutionPolicyResponse extends io.pulumi.resources.
             this.mode = mode;
             return this;
         }
-
         public ConflictResolutionPolicyResponse build() {
             return new ConflictResolutionPolicyResponse(conflictResolutionPath, conflictResolutionProcedure, mode);
         }

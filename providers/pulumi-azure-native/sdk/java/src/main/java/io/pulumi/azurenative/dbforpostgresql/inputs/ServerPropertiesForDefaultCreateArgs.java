@@ -11,7 +11,7 @@ import io.pulumi.azurenative.dbforpostgresql.enums.SslEnforcementEnum;
 import io.pulumi.azurenative.dbforpostgresql.inputs.StorageProfileArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -30,7 +30,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="administratorLogin", required=true)
-    private final Input<String> administratorLogin;
+        private final Input<String> administratorLogin;
 
     public Input<String> getAdministratorLogin() {
         return this.administratorLogin;
@@ -41,7 +41,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="administratorLoginPassword", required=true)
-    private final Input<String> administratorLoginPassword;
+        private final Input<String> administratorLoginPassword;
 
     public Input<String> getAdministratorLoginPassword() {
         return this.administratorLoginPassword;
@@ -53,7 +53,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="createMode", required=true)
-    private final Input<String> createMode;
+        private final Input<String> createMode;
 
     public Input<String> getCreateMode() {
         return this.createMode;
@@ -64,7 +64,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="infrastructureEncryption")
-    private final @Nullable Input<Either<String,InfrastructureEncryption>> infrastructureEncryption;
+        private final @Nullable Input<Either<String,InfrastructureEncryption>> infrastructureEncryption;
 
     public Input<Either<String,InfrastructureEncryption>> getInfrastructureEncryption() {
         return this.infrastructureEncryption == null ? Input.empty() : this.infrastructureEncryption;
@@ -75,7 +75,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="minimalTlsVersion")
-    private final @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
+        private final @Nullable Input<Either<String,MinimalTlsVersionEnum>> minimalTlsVersion;
 
     public Input<Either<String,MinimalTlsVersionEnum>> getMinimalTlsVersion() {
         return this.minimalTlsVersion == null ? Input.empty() : this.minimalTlsVersion;
@@ -86,7 +86,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccessEnum>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccessEnum>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -97,7 +97,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="sslEnforcement")
-    private final @Nullable Input<SslEnforcementEnum> sslEnforcement;
+        private final @Nullable Input<SslEnforcementEnum> sslEnforcement;
 
     public Input<SslEnforcementEnum> getSslEnforcement() {
         return this.sslEnforcement == null ? Input.empty() : this.sslEnforcement;
@@ -108,7 +108,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageProfile")
-    private final @Nullable Input<StorageProfileArgs> storageProfile;
+        private final @Nullable Input<StorageProfileArgs> storageProfile;
 
     public Input<StorageProfileArgs> getStorageProfile() {
         return this.storageProfile == null ? Input.empty() : this.storageProfile;
@@ -119,7 +119,7 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<Either<String,ServerVersion>> version;
+        private final @Nullable Input<Either<String,ServerVersion>> version;
 
     public Input<Either<String,ServerVersion>> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -283,7 +283,6 @@ public final class ServerPropertiesForDefaultCreateArgs extends io.pulumi.resour
             this.version = Input.ofNullable(version);
             return this;
         }
-
         public ServerPropertiesForDefaultCreateArgs build() {
             return new ServerPropertiesForDefaultCreateArgs(administratorLogin, administratorLoginPassword, createMode, infrastructureEncryption, minimalTlsVersion, publicNetworkAccess, sslEnforcement, storageProfile, version);
         }

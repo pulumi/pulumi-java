@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.ManualShardingResponse;
 import io.pulumi.googlenative.testing_v1.outputs.UniformShardingResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ShardingOptionResponse {
             this.uniformSharding = Objects.requireNonNull(uniformSharding);
             return this;
         }
-
         public ShardingOptionResponse build() {
             return new ShardingOptionResponse(manualSharding, uniformSharding);
         }

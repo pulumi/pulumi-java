@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -98,7 +98,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputErrorResponse {
             this.resultType = Objects.requireNonNull(resultType);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskOutputErrorResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputErrorResponse(error, id, resultType);
         }

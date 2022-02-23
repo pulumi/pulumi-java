@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.ErrorResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.VpcPeeringConfigResponse;
 import java.lang.String;
@@ -203,7 +203,6 @@ public final class GetPrivateConnectionResult {
             this.vpcPeeringConfig = Objects.requireNonNull(vpcPeeringConfig);
             return this;
         }
-
         public GetPrivateConnectionResult build() {
             return new GetPrivateConnectionResult(createTime, displayName, error, labels, name, state, updateTime, vpcPeeringConfig);
         }

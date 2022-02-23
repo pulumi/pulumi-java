@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kafkaconnect.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="mcuCount")
-    private final @Nullable Input<Integer> mcuCount;
+        private final @Nullable Input<Integer> mcuCount;
 
     public Input<Integer> getMcuCount() {
         return this.mcuCount == null ? Input.empty() : this.mcuCount;
@@ -34,7 +34,7 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="workerCount", required=true)
-    private final Input<Integer> workerCount;
+        private final Input<Integer> workerCount;
 
     public Input<Integer> getWorkerCount() {
         return this.workerCount;
@@ -93,7 +93,6 @@ public final class ConnectorProvisionedCapacityArgs extends io.pulumi.resources.
             this.workerCount = Input.of(Objects.requireNonNull(workerCount));
             return this;
         }
-
         public ConnectorProvisionedCapacityArgs build() {
             return new ConnectorProvisionedCapacityArgs(mcuCount, workerCount);
         }

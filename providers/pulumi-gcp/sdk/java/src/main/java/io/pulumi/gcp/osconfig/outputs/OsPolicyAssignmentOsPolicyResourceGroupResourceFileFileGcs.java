@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs {
             this.object = Objects.requireNonNull(object);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourceFileFileGcs(bucket, generation, object);
         }

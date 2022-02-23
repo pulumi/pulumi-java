@@ -10,8 +10,8 @@ import io.pulumi.awsnative.apigateway.outputs.MethodIntegration;
 import io.pulumi.awsnative.apigateway.outputs.MethodResponse;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -207,13 +207,6 @@ public class Method extends io.pulumi.resources.CustomResource {
         return this.restApiId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Method(String name) {
-        super("aws-native:apigateway:Method", name, MethodArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

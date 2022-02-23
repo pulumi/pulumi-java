@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.privateca_v1beta1.outputs.ObjectIdResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class X509ExtensionResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public X509ExtensionResponse build() {
             return new X509ExtensionResponse(critical, objectId, value);
         }

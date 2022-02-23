@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
      * 
      */
     @InputImport(name="fabricLocation", required=true)
-    private final String fabricLocation;
+        private final String fabricLocation;
 
     public String getFabricLocation() {
         return this.fabricLocation;
@@ -35,7 +35,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -46,7 +46,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
      * 
      */
     @InputImport(name="runbookId")
-    private final @Nullable String runbookId;
+        private final @Nullable String runbookId;
 
     public Optional<String> getRunbookId() {
         return this.runbookId == null ? Optional.empty() : Optional.ofNullable(this.runbookId);
@@ -57,7 +57,7 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable String timeout;
+        private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -126,7 +126,6 @@ public final class RecoveryPlanAutomationRunbookActionDetailsResponse extends io
             this.timeout = timeout;
             return this;
         }
-
         public RecoveryPlanAutomationRunbookActionDetailsResponse build() {
             return new RecoveryPlanAutomationRunbookActionDetailsResponse(fabricLocation, instanceType, runbookId, timeout);
         }

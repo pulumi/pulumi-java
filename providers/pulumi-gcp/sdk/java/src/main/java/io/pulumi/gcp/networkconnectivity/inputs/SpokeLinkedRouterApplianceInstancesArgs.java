@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkconnectivity.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkconnectivity.inputs.SpokeLinkedRouterApplianceInstancesInstanceArgs;
 import java.lang.Boolean;
 import java.util.List;
@@ -20,7 +20,7 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instances", required=true)
-    private final Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
+        private final Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> instances;
 
     public Input<List<SpokeLinkedRouterApplianceInstancesInstanceArgs>> getInstances() {
         return this.instances;
@@ -31,7 +31,7 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="siteToSiteDataTransfer", required=true)
-    private final Input<Boolean> siteToSiteDataTransfer;
+        private final Input<Boolean> siteToSiteDataTransfer;
 
     public Input<Boolean> getSiteToSiteDataTransfer() {
         return this.siteToSiteDataTransfer;
@@ -90,7 +90,6 @@ public final class SpokeLinkedRouterApplianceInstancesArgs extends io.pulumi.res
             this.siteToSiteDataTransfer = Input.of(Objects.requireNonNull(siteToSiteDataTransfer));
             return this;
         }
-
         public SpokeLinkedRouterApplianceInstancesArgs build() {
             return new SpokeLinkedRouterApplianceInstancesArgs(instances, siteToSiteDataTransfer);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datashare.enums.RecurrenceInterval;
 import io.pulumi.azurenative.datashare.enums.SynchronizationMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="recurrenceInterval", required=true)
-    private final Input<Either<String,RecurrenceInterval>> recurrenceInterval;
+        private final Input<Either<String,RecurrenceInterval>> recurrenceInterval;
 
     public Input<Either<String,RecurrenceInterval>> getRecurrenceInterval() {
         return this.recurrenceInterval;
@@ -56,7 +56,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -67,7 +67,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="shareSubscriptionName", required=true)
-    private final Input<String> shareSubscriptionName;
+        private final Input<String> shareSubscriptionName;
 
     public Input<String> getShareSubscriptionName() {
         return this.shareSubscriptionName;
@@ -78,7 +78,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="synchronizationMode")
-    private final @Nullable Input<Either<String,SynchronizationMode>> synchronizationMode;
+        private final @Nullable Input<Either<String,SynchronizationMode>> synchronizationMode;
 
     public Input<Either<String,SynchronizationMode>> getSynchronizationMode() {
         return this.synchronizationMode == null ? Input.empty() : this.synchronizationMode;
@@ -89,7 +89,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="synchronizationTime", required=true)
-    private final Input<String> synchronizationTime;
+        private final Input<String> synchronizationTime;
 
     public Input<String> getSynchronizationTime() {
         return this.synchronizationTime;
@@ -100,7 +100,7 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="triggerName")
-    private final @Nullable Input<String> triggerName;
+        private final @Nullable Input<String> triggerName;
 
     public Input<String> getTriggerName() {
         return this.triggerName == null ? Input.empty() : this.triggerName;
@@ -249,7 +249,6 @@ public final class ScheduledTriggerArgs extends io.pulumi.resources.ResourceArgs
             this.triggerName = Input.ofNullable(triggerName);
             return this;
         }
-
         public ScheduledTriggerArgs build() {
             return new ScheduledTriggerArgs(accountName, kind, recurrenceInterval, resourceGroupName, shareSubscriptionName, synchronizationMode, synchronizationTime, triggerName);
         }

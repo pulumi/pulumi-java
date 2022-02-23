@@ -7,7 +7,7 @@ import io.pulumi.azurenative.web.inputs.ContainerArgs;
 import io.pulumi.azurenative.web.inputs.DaprArgs;
 import io.pulumi.azurenative.web.inputs.ScaleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -29,7 +29,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containers")
-    private final @Nullable Input<List<ContainerArgs>> containers;
+        private final @Nullable Input<List<ContainerArgs>> containers;
 
     public Input<List<ContainerArgs>> getContainers() {
         return this.containers == null ? Input.empty() : this.containers;
@@ -40,7 +40,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dapr")
-    private final @Nullable Input<DaprArgs> dapr;
+        private final @Nullable Input<DaprArgs> dapr;
 
     public Input<DaprArgs> getDapr() {
         return this.dapr == null ? Input.empty() : this.dapr;
@@ -51,7 +51,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revisionSuffix")
-    private final @Nullable Input<String> revisionSuffix;
+        private final @Nullable Input<String> revisionSuffix;
 
     public Input<String> getRevisionSuffix() {
         return this.revisionSuffix == null ? Input.empty() : this.revisionSuffix;
@@ -62,7 +62,7 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<ScaleArgs> scale;
+        private final @Nullable Input<ScaleArgs> scale;
 
     public Input<ScaleArgs> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -151,7 +151,6 @@ public final class TemplateArgs extends io.pulumi.resources.ResourceArgs {
             this.scale = Input.ofNullable(scale);
             return this;
         }
-
         public TemplateArgs build() {
             return new TemplateArgs(containers, dapr, revisionSuffix, scale);
         }

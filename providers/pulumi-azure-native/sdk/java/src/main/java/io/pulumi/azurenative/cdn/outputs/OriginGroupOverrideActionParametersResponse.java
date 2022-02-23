@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -67,7 +67,6 @@ public final class OriginGroupOverrideActionParametersResponse {
             this.originGroup = Objects.requireNonNull(originGroup);
             return this;
         }
-
         public OriginGroupOverrideActionParametersResponse build() {
             return new OriginGroupOverrideActionParametersResponse(odataType, originGroup);
         }

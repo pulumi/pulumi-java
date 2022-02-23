@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudformation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetModuleDefaultVersionResult {
         public Builder(GetModuleDefaultVersionResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetModuleDefaultVersionResult build() {
             return new GetModuleDefaultVersionResult();
         }

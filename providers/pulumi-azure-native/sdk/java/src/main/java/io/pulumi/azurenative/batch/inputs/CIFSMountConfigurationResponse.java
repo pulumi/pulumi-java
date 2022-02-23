@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,14 +19,14 @@ public final class CIFSMountConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="mountOptions")
-    private final @Nullable String mountOptions;
+        private final @Nullable String mountOptions;
 
     public Optional<String> getMountOptions() {
         return this.mountOptions == null ? Optional.empty() : Optional.ofNullable(this.mountOptions);
     }
 
     @InputImport(name="password", required=true)
-    private final String password;
+        private final String password;
 
     public String getPassword() {
         return this.password;
@@ -37,21 +37,21 @@ public final class CIFSMountConfigurationResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="relativeMountPath", required=true)
-    private final String relativeMountPath;
+        private final String relativeMountPath;
 
     public String getRelativeMountPath() {
         return this.relativeMountPath;
     }
 
     @InputImport(name="source", required=true)
-    private final String source;
+        private final String source;
 
     public String getSource() {
         return this.source;
     }
 
     @InputImport(name="username", required=true)
-    private final String username;
+        private final String username;
 
     public String getUsername() {
         return this.username;
@@ -130,7 +130,6 @@ public final class CIFSMountConfigurationResponse extends io.pulumi.resources.In
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CIFSMountConfigurationResponse build() {
             return new CIFSMountConfigurationResponse(mountOptions, password, relativeMountPath, source, username);
         }

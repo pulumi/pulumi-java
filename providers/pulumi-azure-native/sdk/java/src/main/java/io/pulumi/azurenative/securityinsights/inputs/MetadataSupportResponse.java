@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="email")
-    private final @Nullable String email;
+        private final @Nullable String email;
 
     public Optional<String> getEmail() {
         return this.email == null ? Optional.empty() : Optional.ofNullable(this.email);
@@ -34,7 +34,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="link")
-    private final @Nullable String link;
+        private final @Nullable String link;
 
     public Optional<String> getLink() {
         return this.link == null ? Optional.empty() : Optional.ofNullable(this.link);
@@ -45,7 +45,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -56,7 +56,7 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="tier", required=true)
-    private final String tier;
+        private final String tier;
 
     public String getTier() {
         return this.tier;
@@ -125,7 +125,6 @@ public final class MetadataSupportResponse extends io.pulumi.resources.InvokeArg
             this.tier = Objects.requireNonNull(tier);
             return this;
         }
-
         public MetadataSupportResponse build() {
             return new MetadataSupportResponse(email, link, name, tier);
         }

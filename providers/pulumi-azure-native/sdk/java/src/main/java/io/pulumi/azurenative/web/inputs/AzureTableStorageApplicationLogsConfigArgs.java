@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.LogLevel;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="level")
-    private final @Nullable Input<LogLevel> level;
+        private final @Nullable Input<LogLevel> level;
 
     public Input<LogLevel> getLevel() {
         return this.level == null ? Input.empty() : this.level;
@@ -35,7 +35,7 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="sasUrl", required=true)
-    private final Input<String> sasUrl;
+        private final Input<String> sasUrl;
 
     public Input<String> getSasUrl() {
         return this.sasUrl;
@@ -94,7 +94,6 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends io.pulumi.
             this.sasUrl = Input.of(Objects.requireNonNull(sasUrl));
             return this;
         }
-
         public AzureTableStorageApplicationLogsConfigArgs build() {
             return new AzureTableStorageApplicationLogsConfigArgs(level, sasUrl);
         }

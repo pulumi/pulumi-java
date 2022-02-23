@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.ProtocolCustomSettingsFormatResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -248,7 +248,6 @@ public final class GetDdosCustomPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDdosCustomPolicyResult build() {
             return new GetDdosCustomPolicyResult(etag, id, location, name, protocolCustomSettings, provisioningState, publicIPAddresses, resourceGuid, tags, type);
         }

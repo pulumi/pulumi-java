@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datalakeanalytics.inputs;
 import io.pulumi.azurenative.datalakeanalytics.enums.AADObjectType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="maxDegreeOfParallelismPerJob")
-    private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
+        private final @Nullable Input<Integer> maxDegreeOfParallelismPerJob;
 
     public Input<Integer> getMaxDegreeOfParallelismPerJob() {
         return this.maxDegreeOfParallelismPerJob == null ? Input.empty() : this.maxDegreeOfParallelismPerJob;
@@ -37,7 +37,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="minPriorityPerJob")
-    private final @Nullable Input<Integer> minPriorityPerJob;
+        private final @Nullable Input<Integer> minPriorityPerJob;
 
     public Input<Integer> getMinPriorityPerJob() {
         return this.minPriorityPerJob == null ? Input.empty() : this.minPriorityPerJob;
@@ -48,7 +48,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -59,7 +59,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final Input<String> objectId;
+        private final Input<String> objectId;
 
     public Input<String> getObjectId() {
         return this.objectId;
@@ -70,7 +70,7 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
      * 
      */
     @InputImport(name="objectType", required=true)
-    private final Input<Either<String,AADObjectType>> objectType;
+        private final Input<Either<String,AADObjectType>> objectType;
 
     public Input<Either<String,AADObjectType>> getObjectType() {
         return this.objectType;
@@ -174,7 +174,6 @@ public final class CreateComputePolicyWithAccountParametersArgs extends io.pulum
             this.objectType = Input.of(Objects.requireNonNull(objectType));
             return this;
         }
-
         public CreateComputePolicyWithAccountParametersArgs build() {
             return new CreateComputePolicyWithAccountParametersArgs(maxDegreeOfParallelismPerJob, minPriorityPerJob, name, objectId, objectType);
         }

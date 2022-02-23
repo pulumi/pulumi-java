@@ -5,7 +5,7 @@ package io.pulumi.awsnative.sso.inputs;
 
 import io.pulumi.awsnative.sso.enums.AssignmentPrincipalType;
 import io.pulumi.awsnative.sso.enums.AssignmentTargetType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="instanceArn", required=true)
-    private final String instanceArn;
+        private final String instanceArn;
 
     public String getInstanceArn() {
         return this.instanceArn;
@@ -30,7 +30,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="permissionSetArn", required=true)
-    private final String permissionSetArn;
+        private final String permissionSetArn;
 
     public String getPermissionSetArn() {
         return this.permissionSetArn;
@@ -41,7 +41,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalId", required=true)
-    private final String principalId;
+        private final String principalId;
 
     public String getPrincipalId() {
         return this.principalId;
@@ -52,7 +52,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="principalType", required=true)
-    private final AssignmentPrincipalType principalType;
+        private final AssignmentPrincipalType principalType;
 
     public AssignmentPrincipalType getPrincipalType() {
         return this.principalType;
@@ -63,7 +63,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetId", required=true)
-    private final String targetId;
+        private final String targetId;
 
     public String getTargetId() {
         return this.targetId;
@@ -74,7 +74,7 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetType", required=true)
-    private final AssignmentTargetType targetType;
+        private final AssignmentTargetType targetType;
 
     public AssignmentTargetType getTargetType() {
         return this.targetType;
@@ -163,7 +163,6 @@ public final class GetAssignmentArgs extends io.pulumi.resources.InvokeArgs {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public GetAssignmentArgs build() {
             return new GetAssignmentArgs(instanceArn, permissionSetArn, principalId, principalType, targetId, targetType);
         }

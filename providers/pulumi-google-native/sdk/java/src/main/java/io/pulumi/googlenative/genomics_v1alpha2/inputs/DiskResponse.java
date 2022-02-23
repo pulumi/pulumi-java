@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="mountPoint", required=true)
-    private final String mountPoint;
+      private final String mountPoint;
 
     public String getMountPoint() {
         return this.mountPoint;
@@ -34,7 +34,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="readOnly", required=true)
-    private final Boolean readOnly;
+      private final Boolean readOnly;
 
     public Boolean getReadOnly() {
         return this.readOnly;
@@ -56,7 +56,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="sizeGb", required=true)
-    private final Integer sizeGb;
+      private final Integer sizeGb;
 
     public Integer getSizeGb() {
         return this.sizeGb;
@@ -67,7 +67,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final String source;
+      private final String source;
 
     public String getSource() {
         return this.source;
@@ -78,7 +78,7 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+      private final String type;
 
     public String getType() {
         return this.type;
@@ -167,7 +167,6 @@ public final class DiskResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public DiskResponse build() {
             return new DiskResponse(mountPoint, name, readOnly, sizeGb, source, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.ServiceTemplateSpecContainerEnvValueFromSecretKeyRef;
 import java.util.Objects;
 
@@ -54,7 +54,6 @@ public final class ServiceTemplateSpecContainerEnvValueFrom {
             this.secretKeyRef = Objects.requireNonNull(secretKeyRef);
             return this;
         }
-
         public ServiceTemplateSpecContainerEnvValueFrom build() {
             return new ServiceTemplateSpecContainerEnvValueFrom(secretKeyRef);
         }

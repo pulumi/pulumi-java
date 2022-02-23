@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheOriginTimeoutGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="failoverOrigin")
-    private final @Nullable Input<String> failoverOrigin;
+        private final @Nullable Input<String> failoverOrigin;
 
     public Input<String> getFailoverOrigin() {
         return this.failoverOrigin == null ? Input.empty() : this.failoverOrigin;
@@ -48,7 +48,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -66,7 +66,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxAttempts")
-    private final @Nullable Input<Integer> maxAttempts;
+        private final @Nullable Input<Integer> maxAttempts;
 
     public Input<Integer> getMaxAttempts() {
         return this.maxAttempts == null ? Input.empty() : this.maxAttempts;
@@ -79,7 +79,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -93,7 +93,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="originAddress")
-    private final @Nullable Input<String> originAddress;
+        private final @Nullable Input<String> originAddress;
 
     public Input<String> getOriginAddress() {
         return this.originAddress == null ? Input.empty() : this.originAddress;
@@ -105,7 +105,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<Integer> port;
+        private final @Nullable Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -117,7 +117,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -130,7 +130,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+        private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -153,7 +153,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="retryConditions")
-    private final @Nullable Input<List<String>> retryConditions;
+        private final @Nullable Input<List<String>> retryConditions;
 
     public Input<List<String>> getRetryConditions() {
         return this.retryConditions == null ? Input.empty() : this.retryConditions;
@@ -165,7 +165,7 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable Input<EdgeCacheOriginTimeoutGetArgs> timeout;
+        private final @Nullable Input<EdgeCacheOriginTimeoutGetArgs> timeout;
 
     public Input<EdgeCacheOriginTimeoutGetArgs> getTimeout() {
         return this.timeout == null ? Input.empty() : this.timeout;
@@ -359,7 +359,6 @@ public final class EdgeCacheOriginState extends io.pulumi.resources.ResourceArgs
             this.timeout = Input.ofNullable(timeout);
             return this;
         }
-
         public EdgeCacheOriginState build() {
             return new EdgeCacheOriginState(description, failoverOrigin, labels, maxAttempts, name, originAddress, port, project, protocol, retryConditions, timeout);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudbuild.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -99,7 +99,6 @@ public final class WorkerPoolWorkerConfig {
             this.noExternalIp = noExternalIp;
             return this;
         }
-
         public WorkerPoolWorkerConfig build() {
             return new WorkerPoolWorkerConfig(diskSizeGb, machineType, noExternalIp);
         }

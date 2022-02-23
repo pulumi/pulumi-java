@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.accesscontextmanager_v1beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.accesscontextmanager_v1beta.enums.OsConstraintOsType;
 import java.lang.Boolean;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumVersion")
-    private final @Nullable Input<String> minimumVersion;
+      private final @Nullable Input<String> minimumVersion;
 
     public Input<String> getMinimumVersion() {
         return this.minimumVersion == null ? Input.empty() : this.minimumVersion;
@@ -36,7 +36,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="osType", required=true)
-    private final Input<OsConstraintOsType> osType;
+      private final Input<OsConstraintOsType> osType;
 
     public Input<OsConstraintOsType> getOsType() {
         return this.osType;
@@ -47,7 +47,7 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="requireVerifiedChromeOs")
-    private final @Nullable Input<Boolean> requireVerifiedChromeOs;
+      private final @Nullable Input<Boolean> requireVerifiedChromeOs;
 
     public Input<Boolean> getRequireVerifiedChromeOs() {
         return this.requireVerifiedChromeOs == null ? Input.empty() : this.requireVerifiedChromeOs;
@@ -121,7 +121,6 @@ public final class OsConstraintArgs extends io.pulumi.resources.ResourceArgs {
             this.requireVerifiedChromeOs = Input.ofNullable(requireVerifiedChromeOs);
             return this;
         }
-
         public OsConstraintArgs build() {
             return new OsConstraintArgs(minimumVersion, osType, requireVerifiedChromeOs);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterRatioResponse;
 import io.pulumi.googlenative.monitoring_v1.inputs.TimeSeriesFilterResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeSeriesFilter", required=true)
-    private final TimeSeriesFilterResponse timeSeriesFilter;
+      private final TimeSeriesFilterResponse timeSeriesFilter;
 
     public TimeSeriesFilterResponse getTimeSeriesFilter() {
         return this.timeSeriesFilter;
@@ -34,7 +34,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeSeriesFilterRatio", required=true)
-    private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
+      private final TimeSeriesFilterRatioResponse timeSeriesFilterRatio;
 
     public TimeSeriesFilterRatioResponse getTimeSeriesFilterRatio() {
         return this.timeSeriesFilterRatio;
@@ -45,7 +45,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="timeSeriesQueryLanguage", required=true)
-    private final String timeSeriesQueryLanguage;
+      private final String timeSeriesQueryLanguage;
 
     public String getTimeSeriesQueryLanguage() {
         return this.timeSeriesQueryLanguage;
@@ -56,7 +56,7 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="unitOverride", required=true)
-    private final String unitOverride;
+      private final String unitOverride;
 
     public String getUnitOverride() {
         return this.unitOverride;
@@ -125,7 +125,6 @@ public final class TimeSeriesQueryResponse extends io.pulumi.resources.InvokeArg
             this.unitOverride = Objects.requireNonNull(unitOverride);
             return this;
         }
-
         public TimeSeriesQueryResponse build() {
             return new TimeSeriesQueryResponse(timeSeriesFilter, timeSeriesFilterRatio, timeSeriesQueryLanguage, unitOverride);
         }

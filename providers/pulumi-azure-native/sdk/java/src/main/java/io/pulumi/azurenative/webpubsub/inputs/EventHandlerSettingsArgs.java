@@ -5,7 +5,7 @@ package io.pulumi.azurenative.webpubsub.inputs;
 
 import io.pulumi.azurenative.webpubsub.inputs.EventHandlerTemplateArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="items")
-    private final @Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items;
+        private final @Nullable Input<Map<String,List<EventHandlerTemplateArgs>>> items;
 
     public Input<Map<String,List<EventHandlerTemplateArgs>>> getItems() {
         return this.items == null ? Input.empty() : this.items;
@@ -69,7 +69,6 @@ public final class EventHandlerSettingsArgs extends io.pulumi.resources.Resource
             this.items = Input.ofNullable(items);
             return this;
         }
-
         public EventHandlerSettingsArgs build() {
             return new EventHandlerSettingsArgs(items);
         }

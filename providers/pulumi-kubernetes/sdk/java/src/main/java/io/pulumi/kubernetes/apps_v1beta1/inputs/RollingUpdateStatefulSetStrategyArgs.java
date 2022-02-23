@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="partition")
-    private final @Nullable Input<Integer> partition;
+        private final @Nullable Input<Integer> partition;
 
     public Input<Integer> getPartition() {
         return this.partition == null ? Input.empty() : this.partition;
@@ -66,7 +66,6 @@ public final class RollingUpdateStatefulSetStrategyArgs extends io.pulumi.resour
             this.partition = Input.ofNullable(partition);
             return this;
         }
-
         public RollingUpdateStatefulSetStrategyArgs build() {
             return new RollingUpdateStatefulSetStrategyArgs(partition);
         }

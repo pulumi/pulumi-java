@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearning.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class ColumnSpecificationResponse {
             this.xMsIsordered = xMsIsordered;
             return this;
         }
-
         public ColumnSpecificationResponse build() {
             return new ColumnSpecificationResponse($enum, format, type, xMsIsnullable, xMsIsordered);
         }

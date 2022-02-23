@@ -12,8 +12,8 @@ import io.pulumi.azurenative.devtestlab.outputs.WeekDetailsResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -247,13 +247,6 @@ public class GlobalSchedule extends io.pulumi.resources.CustomResource {
         return this.weeklyRecurrence;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public GlobalSchedule(String name) {
-        super("azure-native:devtestlab:GlobalSchedule", name, GlobalScheduleArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

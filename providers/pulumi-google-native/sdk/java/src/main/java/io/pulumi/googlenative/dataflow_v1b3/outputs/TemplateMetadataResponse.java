@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.ParameterMetadataResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class TemplateMetadataResponse {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public TemplateMetadataResponse build() {
             return new TemplateMetadataResponse(description, name, parameters);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.appengine_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.appengine_v1beta.inputs.CertificateRawDataArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
     public static final AuthorizedCertificateArgs Empty = new AuthorizedCertificateArgs();
 
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -27,7 +27,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="certificateRawData")
-    private final @Nullable Input<CertificateRawDataArgs> certificateRawData;
+      private final @Nullable Input<CertificateRawDataArgs> certificateRawData;
 
     public Input<CertificateRawDataArgs> getCertificateRawData() {
         return this.certificateRawData == null ? Input.empty() : this.certificateRawData;
@@ -38,7 +38,7 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+      private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -112,7 +112,6 @@ public final class AuthorizedCertificateArgs extends io.pulumi.resources.Resourc
             this.displayName = Input.ofNullable(displayName);
             return this;
         }
-
         public AuthorizedCertificateArgs build() {
             return new AuthorizedCertificateArgs(appId, certificateRawData, displayName);
         }

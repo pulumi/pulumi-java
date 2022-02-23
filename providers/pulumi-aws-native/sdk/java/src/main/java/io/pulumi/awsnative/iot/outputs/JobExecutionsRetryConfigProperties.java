@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.outputs.JobTemplateRetryCriteria;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class JobExecutionsRetryConfigProperties {
             this.retryCriteriaList = retryCriteriaList;
             return this;
         }
-
         public JobExecutionsRetryConfigProperties build() {
             return new JobExecutionsRetryConfigProperties(retryCriteriaList);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.securityinsights;
 import io.pulumi.azurenative.securityinsights.inputs.IncidentInfoArgs;
 import io.pulumi.azurenative.securityinsights.inputs.UserInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bookmarkId")
-    private final @Nullable Input<String> bookmarkId;
+        private final @Nullable Input<String> bookmarkId;
 
     public Input<String> getBookmarkId() {
         return this.bookmarkId == null ? Input.empty() : this.bookmarkId;
@@ -33,7 +33,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="created")
-    private final @Nullable Input<String> created;
+        private final @Nullable Input<String> created;
 
     public Input<String> getCreated() {
         return this.created == null ? Input.empty() : this.created;
@@ -44,7 +44,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<UserInfoArgs> createdBy;
+        private final @Nullable Input<UserInfoArgs> createdBy;
 
     public Input<UserInfoArgs> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -55,7 +55,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -66,7 +66,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTime")
-    private final @Nullable Input<String> eventTime;
+        private final @Nullable Input<String> eventTime;
 
     public Input<String> getEventTime() {
         return this.eventTime == null ? Input.empty() : this.eventTime;
@@ -77,7 +77,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="incidentInfo")
-    private final @Nullable Input<IncidentInfoArgs> incidentInfo;
+        private final @Nullable Input<IncidentInfoArgs> incidentInfo;
 
     public Input<IncidentInfoArgs> getIncidentInfo() {
         return this.incidentInfo == null ? Input.empty() : this.incidentInfo;
@@ -88,7 +88,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<String>> labels;
+        private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -99,7 +99,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notes")
-    private final @Nullable Input<String> notes;
+        private final @Nullable Input<String> notes;
 
     public Input<String> getNotes() {
         return this.notes == null ? Input.empty() : this.notes;
@@ -110,7 +110,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="query", required=true)
-    private final Input<String> query;
+        private final Input<String> query;
 
     public Input<String> getQuery() {
         return this.query;
@@ -121,7 +121,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryEndTime")
-    private final @Nullable Input<String> queryEndTime;
+        private final @Nullable Input<String> queryEndTime;
 
     public Input<String> getQueryEndTime() {
         return this.queryEndTime == null ? Input.empty() : this.queryEndTime;
@@ -132,7 +132,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryResult")
-    private final @Nullable Input<String> queryResult;
+        private final @Nullable Input<String> queryResult;
 
     public Input<String> getQueryResult() {
         return this.queryResult == null ? Input.empty() : this.queryResult;
@@ -143,7 +143,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="queryStartTime")
-    private final @Nullable Input<String> queryStartTime;
+        private final @Nullable Input<String> queryStartTime;
 
     public Input<String> getQueryStartTime() {
         return this.queryStartTime == null ? Input.empty() : this.queryStartTime;
@@ -154,7 +154,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -165,7 +165,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-    private final @Nullable Input<String> updated;
+        private final @Nullable Input<String> updated;
 
     public Input<String> getUpdated() {
         return this.updated == null ? Input.empty() : this.updated;
@@ -176,7 +176,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedBy")
-    private final @Nullable Input<UserInfoArgs> updatedBy;
+        private final @Nullable Input<UserInfoArgs> updatedBy;
 
     public Input<UserInfoArgs> getUpdatedBy() {
         return this.updatedBy == null ? Input.empty() : this.updatedBy;
@@ -187,7 +187,7 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -456,7 +456,6 @@ public final class BookmarkArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public BookmarkArgs build() {
             return new BookmarkArgs(bookmarkId, created, createdBy, displayName, eventTime, incidentInfo, labels, notes, query, queryEndTime, queryResult, queryStartTime, resourceGroupName, updated, updatedBy, workspaceName);
         }

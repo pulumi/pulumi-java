@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs e
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -66,7 +66,6 @@ public final class ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs e
             this.odataType = Input.of(Objects.requireNonNull(odataType));
             return this;
         }
-
         public ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs build() {
             return new ContentKeyPolicyPlayReadyContentEncryptionKeyFromHeaderArgs(odataType);
         }

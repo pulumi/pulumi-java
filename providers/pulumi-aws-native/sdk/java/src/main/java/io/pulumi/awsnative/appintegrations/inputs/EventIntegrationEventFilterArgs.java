@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.appintegrations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+        private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -61,7 +61,6 @@ public final class EventIntegrationEventFilterArgs extends io.pulumi.resources.R
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public EventIntegrationEventFilterArgs build() {
             return new EventIntegrationEventFilterArgs(source);
         }

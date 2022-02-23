@@ -7,7 +7,7 @@ import io.pulumi.awsnative.apigateway.outputs.UsagePlanApiStage;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanQuotaSettings;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanTag;
 import io.pulumi.awsnative.apigateway.outputs.UsagePlanThrottleSettings;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -186,7 +186,6 @@ public final class GetUsagePlanResult {
             this.usagePlanName = usagePlanName;
             return this;
         }
-
         public GetUsagePlanResult build() {
             return new GetUsagePlanResult(apiStages, description, id, quota, tags, throttle, usagePlanName);
         }

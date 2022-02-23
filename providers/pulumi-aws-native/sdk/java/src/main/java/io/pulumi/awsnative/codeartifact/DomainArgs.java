@@ -5,7 +5,7 @@ package io.pulumi.awsnative.codeartifact;
 
 import io.pulumi.awsnative.codeartifact.inputs.DomainTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="domainName")
-    private final @Nullable Input<String> domainName;
+        private final @Nullable Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName == null ? Input.empty() : this.domainName;
@@ -33,7 +33,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="permissionsPolicyDocument")
-    private final @Nullable Input<Object> permissionsPolicyDocument;
+        private final @Nullable Input<Object> permissionsPolicyDocument;
 
     public Input<Object> getPermissionsPolicyDocument() {
         return this.permissionsPolicyDocument == null ? Input.empty() : this.permissionsPolicyDocument;
@@ -44,7 +44,7 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DomainTagArgs>> tags;
+        private final @Nullable Input<List<DomainTagArgs>> tags;
 
     public Input<List<DomainTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -118,7 +118,6 @@ public final class DomainArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public DomainArgs build() {
             return new DomainArgs(domainName, permissionsPolicyDocument, tags);
         }

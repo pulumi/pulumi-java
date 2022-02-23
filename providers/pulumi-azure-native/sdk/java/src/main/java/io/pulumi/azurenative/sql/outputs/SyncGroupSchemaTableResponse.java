@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.outputs;
 
 import io.pulumi.azurenative.sql.outputs.SyncGroupSchemaTableColumnResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class SyncGroupSchemaTableResponse {
             this.quotedName = quotedName;
             return this;
         }
-
         public SyncGroupSchemaTableResponse build() {
             return new SyncGroupSchemaTableResponse(columns, quotedName);
         }

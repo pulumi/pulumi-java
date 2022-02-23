@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.LoadBalancerOutboundRuleProtocol;
 import io.pulumi.azurenative.network.inputs.SubResourceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -29,7 +29,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="allocatedOutboundPorts")
-    private final @Nullable Input<Integer> allocatedOutboundPorts;
+        private final @Nullable Input<Integer> allocatedOutboundPorts;
 
     public Input<Integer> getAllocatedOutboundPorts() {
         return this.allocatedOutboundPorts == null ? Input.empty() : this.allocatedOutboundPorts;
@@ -40,7 +40,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="backendAddressPool", required=true)
-    private final Input<SubResourceArgs> backendAddressPool;
+        private final Input<SubResourceArgs> backendAddressPool;
 
     public Input<SubResourceArgs> getBackendAddressPool() {
         return this.backendAddressPool;
@@ -51,7 +51,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enableTcpReset")
-    private final @Nullable Input<Boolean> enableTcpReset;
+        private final @Nullable Input<Boolean> enableTcpReset;
 
     public Input<Boolean> getEnableTcpReset() {
         return this.enableTcpReset == null ? Input.empty() : this.enableTcpReset;
@@ -62,7 +62,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frontendIPConfigurations", required=true)
-    private final Input<List<SubResourceArgs>> frontendIPConfigurations;
+        private final Input<List<SubResourceArgs>> frontendIPConfigurations;
 
     public Input<List<SubResourceArgs>> getFrontendIPConfigurations() {
         return this.frontendIPConfigurations;
@@ -73,7 +73,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -84,7 +84,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Input<Integer> idleTimeoutInMinutes;
+        private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -95,7 +95,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -106,7 +106,7 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="protocol", required=true)
-    private final Input<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
+        private final Input<Either<String,LoadBalancerOutboundRuleProtocol>> protocol;
 
     public Input<Either<String,LoadBalancerOutboundRuleProtocol>> getProtocol() {
         return this.protocol;
@@ -255,7 +255,6 @@ public final class OutboundRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.protocol = Input.of(Objects.requireNonNull(protocol));
             return this;
         }
-
         public OutboundRuleArgs build() {
             return new OutboundRuleArgs(allocatedOutboundPorts, backendAddressPool, enableTcpReset, frontendIPConfigurations, id, idleTimeoutInMinutes, name, protocol);
         }

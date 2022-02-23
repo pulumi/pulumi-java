@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resourc
      * 
      */
     @InputImport(name="dataLakeStoreAccountName")
-    private final @Nullable String dataLakeStoreAccountName;
+        private final @Nullable String dataLakeStoreAccountName;
 
     public Optional<String> getDataLakeStoreAccountName() {
         return this.dataLakeStoreAccountName == null ? Optional.empty() : Optional.ofNullable(this.dataLakeStoreAccountName);
@@ -57,7 +57,6 @@ public final class DataLakeAnalyticsResponseProperties extends io.pulumi.resourc
             this.dataLakeStoreAccountName = dataLakeStoreAccountName;
             return this;
         }
-
         public DataLakeAnalyticsResponseProperties build() {
             return new DataLakeAnalyticsResponseProperties(dataLakeStoreAccountName);
         }

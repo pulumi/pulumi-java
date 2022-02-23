@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.datacatalog_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
      * 
      */
     @InputImport(name="designation")
-    private final @Nullable Input<String> designation;
+      private final @Nullable Input<String> designation;
 
     public Input<String> getDesignation() {
         return this.designation == null ? Input.empty() : this.designation;
@@ -34,7 +34,7 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
      * 
      */
     @InputImport(name="email")
-    private final @Nullable Input<String> email;
+      private final @Nullable Input<String> email;
 
     public Input<String> getEmail() {
         return this.email == null ? Input.empty() : this.email;
@@ -93,7 +93,6 @@ public final class GoogleCloudDatacatalogV1ContactsPersonArgs extends io.pulumi.
             this.email = Input.ofNullable(email);
             return this;
         }
-
         public GoogleCloudDatacatalogV1ContactsPersonArgs build() {
             return new GoogleCloudDatacatalogV1ContactsPersonArgs(designation, email);
         }

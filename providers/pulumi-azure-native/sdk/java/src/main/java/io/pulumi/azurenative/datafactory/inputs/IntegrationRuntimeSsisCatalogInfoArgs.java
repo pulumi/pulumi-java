@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.enums.IntegrationRuntimeSsisCatalogPric
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="catalogAdminPassword")
-    private final @Nullable Input<SecureStringArgs> catalogAdminPassword;
+        private final @Nullable Input<SecureStringArgs> catalogAdminPassword;
 
     public Input<SecureStringArgs> getCatalogAdminPassword() {
         return this.catalogAdminPassword == null ? Input.empty() : this.catalogAdminPassword;
@@ -37,7 +37,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="catalogAdminUserName")
-    private final @Nullable Input<String> catalogAdminUserName;
+        private final @Nullable Input<String> catalogAdminUserName;
 
     public Input<String> getCatalogAdminUserName() {
         return this.catalogAdminUserName == null ? Input.empty() : this.catalogAdminUserName;
@@ -48,7 +48,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="catalogPricingTier")
-    private final @Nullable Input<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
+        private final @Nullable Input<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
 
     public Input<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> getCatalogPricingTier() {
         return this.catalogPricingTier == null ? Input.empty() : this.catalogPricingTier;
@@ -59,7 +59,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="catalogServerEndpoint")
-    private final @Nullable Input<String> catalogServerEndpoint;
+        private final @Nullable Input<String> catalogServerEndpoint;
 
     public Input<String> getCatalogServerEndpoint() {
         return this.catalogServerEndpoint == null ? Input.empty() : this.catalogServerEndpoint;
@@ -70,7 +70,7 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="dualStandbyPairName")
-    private final @Nullable Input<String> dualStandbyPairName;
+        private final @Nullable Input<String> dualStandbyPairName;
 
     public Input<String> getDualStandbyPairName() {
         return this.dualStandbyPairName == null ? Input.empty() : this.dualStandbyPairName;
@@ -174,7 +174,6 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends io.pulumi.resou
             this.dualStandbyPairName = Input.ofNullable(dualStandbyPairName);
             return this;
         }
-
         public IntegrationRuntimeSsisCatalogInfoArgs build() {
             return new IntegrationRuntimeSsisCatalogInfoArgs(catalogAdminPassword, catalogAdminUserName, catalogPricingTier, catalogServerEndpoint, dualStandbyPairName);
         }

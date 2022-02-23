@@ -8,7 +8,7 @@ import io.pulumi.azurenative.automation.inputs.SUCSchedulePropertiesArgs;
 import io.pulumi.azurenative.automation.inputs.SoftwareUpdateConfigurationTasksArgs;
 import io.pulumi.azurenative.automation.inputs.UpdateConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -34,7 +34,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="error")
-    private final @Nullable Input<ErrorResponseArgs> error;
+        private final @Nullable Input<ErrorResponseArgs> error;
 
     public Input<ErrorResponseArgs> getError() {
         return this.error == null ? Input.empty() : this.error;
@@ -45,7 +45,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -56,7 +56,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="scheduleInfo", required=true)
-    private final Input<SUCSchedulePropertiesArgs> scheduleInfo;
+        private final Input<SUCSchedulePropertiesArgs> scheduleInfo;
 
     public Input<SUCSchedulePropertiesArgs> getScheduleInfo() {
         return this.scheduleInfo;
@@ -67,7 +67,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="softwareUpdateConfigurationName")
-    private final @Nullable Input<String> softwareUpdateConfigurationName;
+        private final @Nullable Input<String> softwareUpdateConfigurationName;
 
     public Input<String> getSoftwareUpdateConfigurationName() {
         return this.softwareUpdateConfigurationName == null ? Input.empty() : this.softwareUpdateConfigurationName;
@@ -78,7 +78,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="tasks")
-    private final @Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks;
+        private final @Nullable Input<SoftwareUpdateConfigurationTasksArgs> tasks;
 
     public Input<SoftwareUpdateConfigurationTasksArgs> getTasks() {
         return this.tasks == null ? Input.empty() : this.tasks;
@@ -89,7 +89,7 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="updateConfiguration", required=true)
-    private final Input<UpdateConfigurationArgs> updateConfiguration;
+        private final Input<UpdateConfigurationArgs> updateConfiguration;
 
     public Input<UpdateConfigurationArgs> getUpdateConfiguration() {
         return this.updateConfiguration;
@@ -223,7 +223,6 @@ public final class SoftwareUpdateConfigurationByNameArgs extends io.pulumi.resou
             this.updateConfiguration = Input.of(Objects.requireNonNull(updateConfiguration));
             return this;
         }
-
         public SoftwareUpdateConfigurationByNameArgs build() {
             return new SoftwareUpdateConfigurationByNameArgs(automationAccountName, error, resourceGroupName, scheduleInfo, softwareUpdateConfigurationName, tasks, updateConfiguration);
         }

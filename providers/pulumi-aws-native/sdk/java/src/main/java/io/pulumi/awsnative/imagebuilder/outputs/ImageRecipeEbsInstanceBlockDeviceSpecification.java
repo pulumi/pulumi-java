@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.outputs;
 
 import io.pulumi.awsnative.imagebuilder.enums.ImageRecipeEbsInstanceBlockDeviceSpecificationVolumeType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -205,7 +205,6 @@ public final class ImageRecipeEbsInstanceBlockDeviceSpecification {
             this.volumeType = volumeType;
             return this;
         }
-
         public ImageRecipeEbsInstanceBlockDeviceSpecification build() {
             return new ImageRecipeEbsInstanceBlockDeviceSpecification(deleteOnTermination, encrypted, iops, kmsKeyId, snapshotId, throughput, volumeSize, volumeType);
         }

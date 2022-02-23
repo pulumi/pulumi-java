@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.enums.IPAMScopeIpamScopeType;
 import io.pulumi.awsnative.ec2.outputs.IPAMScopeTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -199,7 +199,6 @@ public final class GetIPAMScopeResult {
             this.tags = tags;
             return this;
         }
-
         public GetIPAMScopeResult build() {
             return new GetIPAMScopeResult(arn, description, ipamArn, ipamScopeId, ipamScopeType, isDefault, poolCount, tags);
         }

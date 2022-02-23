@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.budgets.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,28 +16,28 @@ public final class BudgetsActionIamActionDefinition extends io.pulumi.resources.
     public static final BudgetsActionIamActionDefinition Empty = new BudgetsActionIamActionDefinition();
 
     @InputImport(name="groups")
-    private final @Nullable List<String> groups;
+        private final @Nullable List<String> groups;
 
     public List<String> getGroups() {
         return this.groups == null ? List.of() : this.groups;
     }
 
     @InputImport(name="policyArn", required=true)
-    private final String policyArn;
+        private final String policyArn;
 
     public String getPolicyArn() {
         return this.policyArn;
     }
 
     @InputImport(name="roles")
-    private final @Nullable List<String> roles;
+        private final @Nullable List<String> roles;
 
     public List<String> getRoles() {
         return this.roles == null ? List.of() : this.roles;
     }
 
     @InputImport(name="users")
-    private final @Nullable List<String> users;
+        private final @Nullable List<String> users;
 
     public List<String> getUsers() {
         return this.users == null ? List.of() : this.users;
@@ -106,7 +106,6 @@ public final class BudgetsActionIamActionDefinition extends io.pulumi.resources.
             this.users = users;
             return this;
         }
-
         public BudgetsActionIamActionDefinition build() {
             return new BudgetsActionIamActionDefinition(groups, policyArn, roles, users);
         }

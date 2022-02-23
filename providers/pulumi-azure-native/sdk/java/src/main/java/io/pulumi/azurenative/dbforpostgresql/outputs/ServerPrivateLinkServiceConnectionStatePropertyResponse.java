@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.dbforpostgresql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class ServerPrivateLinkServiceConnectionStatePropertyResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public ServerPrivateLinkServiceConnectionStatePropertyResponse build() {
             return new ServerPrivateLinkServiceConnectionStatePropertyResponse(actionsRequired, description, status);
         }

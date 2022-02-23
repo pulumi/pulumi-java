@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class SubnetworkLogConfigResponse {
             this.metadataFields = Objects.requireNonNull(metadataFields);
             return this;
         }
-
         public SubnetworkLogConfigResponse build() {
             return new SubnetworkLogConfigResponse(aggregationInterval, enable, filterExpr, flowSampling, metadata, metadataFields);
         }

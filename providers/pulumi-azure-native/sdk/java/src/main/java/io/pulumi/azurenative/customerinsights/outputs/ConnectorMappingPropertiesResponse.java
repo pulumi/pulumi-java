@@ -8,7 +8,7 @@ import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingCompleteOp
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingErrorManagementResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingFormatResponse;
 import io.pulumi.azurenative.customerinsights.outputs.ConnectorMappingStructureResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -209,7 +209,6 @@ public final class ConnectorMappingPropertiesResponse {
             this.structure = Objects.requireNonNull(structure);
             return this;
         }
-
         public ConnectorMappingPropertiesResponse build() {
             return new ConnectorMappingPropertiesResponse(availability, completeOperation, errorManagement, fileFilter, folderPath, format, hasHeader, structure);
         }

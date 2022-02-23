@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ec2.outputs;
 
 import io.pulumi.awsnative.ec2.outputs.SpotFleetInstanceIpv6Address;
 import io.pulumi.awsnative.ec2.outputs.SpotFleetPrivateIpAddressSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class SpotFleetInstanceNetworkInterfaceSpecification {
             this.subnetId = subnetId;
             return this;
         }
-
         public SpotFleetInstanceNetworkInterfaceSpecification build() {
             return new SpotFleetInstanceNetworkInterfaceSpecification(associatePublicIpAddress, deleteOnTermination, description, deviceIndex, groups, ipv6AddressCount, ipv6Addresses, networkInterfaceId, privateIpAddresses, secondaryPrivateIpAddressCount, subnetId);
         }

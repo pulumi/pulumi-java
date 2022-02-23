@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
     public static final DataSourceAccessControlListConfigurationArgs Empty = new DataSourceAccessControlListConfigurationArgs();
 
     @InputImport(name="keyPath")
-    private final @Nullable Input<String> keyPath;
+        private final @Nullable Input<String> keyPath;
 
     public Input<String> getKeyPath() {
         return this.keyPath == null ? Input.empty() : this.keyPath;
@@ -58,7 +58,6 @@ public final class DataSourceAccessControlListConfigurationArgs extends io.pulum
             this.keyPath = Input.ofNullable(keyPath);
             return this;
         }
-
         public DataSourceAccessControlListConfigurationArgs build() {
             return new DataSourceAccessControlListConfigurationArgs(keyPath);
         }

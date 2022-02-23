@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useSubDomainName")
-    private final @Nullable Input<Boolean> useSubDomainName;
+        private final @Nullable Input<Boolean> useSubDomainName;
 
     public Input<Boolean> getUseSubDomainName() {
         return this.useSubDomainName == null ? Input.empty() : this.useSubDomainName;
@@ -94,7 +94,6 @@ public final class CustomDomainArgs extends io.pulumi.resources.ResourceArgs {
             this.useSubDomainName = Input.ofNullable(useSubDomainName);
             return this;
         }
-
         public CustomDomainArgs build() {
             return new CustomDomainArgs(name, useSubDomainName);
         }

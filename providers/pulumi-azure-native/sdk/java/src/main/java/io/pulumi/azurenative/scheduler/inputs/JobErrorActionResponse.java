@@ -8,7 +8,7 @@ import io.pulumi.azurenative.scheduler.inputs.RetryPolicyResponse;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusQueueMessageResponse;
 import io.pulumi.azurenative.scheduler.inputs.ServiceBusTopicMessageResponse;
 import io.pulumi.azurenative.scheduler.inputs.StorageQueueMessageResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="queueMessage")
-    private final @Nullable StorageQueueMessageResponse queueMessage;
+        private final @Nullable StorageQueueMessageResponse queueMessage;
 
     public Optional<StorageQueueMessageResponse> getQueueMessage() {
         return this.queueMessage == null ? Optional.empty() : Optional.ofNullable(this.queueMessage);
@@ -35,7 +35,7 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="request")
-    private final @Nullable HttpRequestResponse request;
+        private final @Nullable HttpRequestResponse request;
 
     public Optional<HttpRequestResponse> getRequest() {
         return this.request == null ? Optional.empty() : Optional.ofNullable(this.request);
@@ -46,7 +46,7 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="retryPolicy")
-    private final @Nullable RetryPolicyResponse retryPolicy;
+        private final @Nullable RetryPolicyResponse retryPolicy;
 
     public Optional<RetryPolicyResponse> getRetryPolicy() {
         return this.retryPolicy == null ? Optional.empty() : Optional.ofNullable(this.retryPolicy);
@@ -57,7 +57,7 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serviceBusQueueMessage")
-    private final @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage;
+        private final @Nullable ServiceBusQueueMessageResponse serviceBusQueueMessage;
 
     public Optional<ServiceBusQueueMessageResponse> getServiceBusQueueMessage() {
         return this.serviceBusQueueMessage == null ? Optional.empty() : Optional.ofNullable(this.serviceBusQueueMessage);
@@ -68,7 +68,7 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="serviceBusTopicMessage")
-    private final @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage;
+        private final @Nullable ServiceBusTopicMessageResponse serviceBusTopicMessage;
 
     public Optional<ServiceBusTopicMessageResponse> getServiceBusTopicMessage() {
         return this.serviceBusTopicMessage == null ? Optional.empty() : Optional.ofNullable(this.serviceBusTopicMessage);
@@ -79,7 +79,7 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable String type;
+        private final @Nullable String type;
 
     public Optional<String> getType() {
         return this.type == null ? Optional.empty() : Optional.ofNullable(this.type);
@@ -168,7 +168,6 @@ public final class JobErrorActionResponse extends io.pulumi.resources.InvokeArgs
             this.type = type;
             return this;
         }
-
         public JobErrorActionResponse build() {
             return new JobErrorActionResponse(queueMessage, request, retryPolicy, serviceBusQueueMessage, serviceBusTopicMessage, type);
         }

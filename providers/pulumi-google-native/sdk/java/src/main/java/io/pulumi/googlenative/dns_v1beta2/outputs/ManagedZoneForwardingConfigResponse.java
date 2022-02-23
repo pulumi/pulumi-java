@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dns_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dns_v1beta2.outputs.ManagedZoneForwardingConfigNameServerTargetResponse;
 import java.lang.String;
 import java.util.List;
@@ -68,7 +68,6 @@ public final class ManagedZoneForwardingConfigResponse {
             this.targetNameServers = Objects.requireNonNull(targetNameServers);
             return this;
         }
-
         public ManagedZoneForwardingConfigResponse build() {
             return new ManagedZoneForwardingConfigResponse(kind, targetNameServers);
         }

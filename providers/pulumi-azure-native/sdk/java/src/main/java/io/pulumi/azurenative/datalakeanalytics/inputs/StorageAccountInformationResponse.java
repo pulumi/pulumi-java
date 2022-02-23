@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datalakeanalytics.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -32,7 +32,7 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="suffix", required=true)
-    private final String suffix;
+        private final String suffix;
 
     public String getSuffix() {
         return this.suffix;
@@ -54,7 +54,7 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -123,7 +123,6 @@ public final class StorageAccountInformationResponse extends io.pulumi.resources
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public StorageAccountInformationResponse build() {
             return new StorageAccountInformationResponse(id, name, suffix, type);
         }

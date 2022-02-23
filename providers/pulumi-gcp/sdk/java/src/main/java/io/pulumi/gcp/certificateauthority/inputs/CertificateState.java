@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateCertificateDescriptionGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateRevocationDetailGetArgs;
@@ -24,7 +24,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateAuthority")
-    private final @Nullable Input<String> certificateAuthority;
+        private final @Nullable Input<String> certificateAuthority;
 
     public Input<String> getCertificateAuthority() {
         return this.certificateAuthority == null ? Input.empty() : this.certificateAuthority;
@@ -36,7 +36,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateDescriptions")
-    private final @Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
+        private final @Nullable Input<List<CertificateCertificateDescriptionGetArgs>> certificateDescriptions;
 
     public Input<List<CertificateCertificateDescriptionGetArgs>> getCertificateDescriptions() {
         return this.certificateDescriptions == null ? Input.empty() : this.certificateDescriptions;
@@ -51,7 +51,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="certificateTemplate")
-    private final @Nullable Input<String> certificateTemplate;
+        private final @Nullable Input<String> certificateTemplate;
 
     public Input<String> getCertificateTemplate() {
         return this.certificateTemplate == null ? Input.empty() : this.certificateTemplate;
@@ -63,7 +63,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="config")
-    private final @Nullable Input<CertificateConfigGetArgs> config;
+        private final @Nullable Input<CertificateConfigGetArgs> config;
 
     public Input<CertificateConfigGetArgs> getConfig() {
         return this.config == null ? Input.empty() : this.config;
@@ -74,7 +74,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -85,7 +85,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -98,7 +98,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifetime")
-    private final @Nullable Input<String> lifetime;
+        private final @Nullable Input<String> lifetime;
 
     public Input<String> getLifetime() {
         return this.lifetime == null ? Input.empty() : this.lifetime;
@@ -110,7 +110,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -121,7 +121,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -132,7 +132,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCertificate")
-    private final @Nullable Input<String> pemCertificate;
+        private final @Nullable Input<String> pemCertificate;
 
     public Input<String> getPemCertificate() {
         return this.pemCertificate == null ? Input.empty() : this.pemCertificate;
@@ -143,7 +143,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCertificates")
-    private final @Nullable Input<List<String>> pemCertificates;
+        private final @Nullable Input<List<String>> pemCertificates;
 
     public Input<List<String>> getPemCertificates() {
         return this.pemCertificates == null ? Input.empty() : this.pemCertificates;
@@ -154,7 +154,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pemCsr")
-    private final @Nullable Input<String> pemCsr;
+        private final @Nullable Input<String> pemCsr;
 
     public Input<String> getPemCsr() {
         return this.pemCsr == null ? Input.empty() : this.pemCsr;
@@ -165,7 +165,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pool")
-    private final @Nullable Input<String> pool;
+        private final @Nullable Input<String> pool;
 
     public Input<String> getPool() {
         return this.pool == null ? Input.empty() : this.pool;
@@ -177,7 +177,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -189,7 +189,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="revocationDetails")
-    private final @Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails;
+        private final @Nullable Input<List<CertificateRevocationDetailGetArgs>> revocationDetails;
 
     public Input<List<CertificateRevocationDetailGetArgs>> getRevocationDetails() {
         return this.revocationDetails == null ? Input.empty() : this.revocationDetails;
@@ -200,7 +200,7 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -469,7 +469,6 @@ public final class CertificateState extends io.pulumi.resources.ResourceArgs {
             this.updateTime = Input.ofNullable(updateTime);
             return this;
         }
-
         public CertificateState build() {
             return new CertificateState(certificateAuthority, certificateDescriptions, certificateTemplate, config, createTime, labels, lifetime, location, name, pemCertificate, pemCertificates, pemCsr, pool, project, revocationDetails, updateTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.compute.outputs.URLMapPathMatcherRouteRuleRouteActionWeightedBackendServiceHeaderAction;
 import java.lang.Integer;
 import java.lang.String;
@@ -117,7 +117,6 @@ public final class URLMapPathMatcherRouteRuleRouteActionWeightedBackendService {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public URLMapPathMatcherRouteRuleRouteActionWeightedBackendService build() {
             return new URLMapPathMatcherRouteRuleRouteActionWeightedBackendService(backendService, headerAction, weight);
         }

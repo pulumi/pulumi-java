@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="managementResourceId", required=true)
-    private final String managementResourceId;
+        private final String managementResourceId;
 
     public String getManagementResourceId() {
         return this.managementResourceId;
@@ -32,7 +32,7 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="managementResourceTenantId", required=true)
-    private final String managementResourceTenantId;
+        private final String managementResourceTenantId;
 
     public String getManagementResourceTenantId() {
         return this.managementResourceTenantId;
@@ -43,7 +43,7 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="serialNumber", required=true)
-    private final String serialNumber;
+        private final String serialNumber;
 
     public String getSerialNumber() {
         return this.serialNumber;
@@ -102,7 +102,6 @@ public final class DeviceDetailsResponse extends io.pulumi.resources.InvokeArgs 
             this.serialNumber = Objects.requireNonNull(serialNumber);
             return this;
         }
-
         public DeviceDetailsResponse build() {
             return new DeviceDetailsResponse(managementResourceId, managementResourceTenantId, serialNumber);
         }

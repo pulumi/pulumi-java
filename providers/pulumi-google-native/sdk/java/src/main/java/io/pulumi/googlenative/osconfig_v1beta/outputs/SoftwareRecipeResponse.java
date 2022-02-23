@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeArtifactResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.SoftwareRecipeStepResponse;
 import java.lang.String;
@@ -161,7 +161,6 @@ public final class SoftwareRecipeResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public SoftwareRecipeResponse build() {
             return new SoftwareRecipeResponse(artifacts, desiredState, installSteps, name, updateSteps, version);
         }

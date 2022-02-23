@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appflow.inputs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs;
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
     public static final ConnectorProfileSAPODataConnectorProfileCredentialsArgs Empty = new ConnectorProfileSAPODataConnectorProfileCredentialsArgs();
 
     @InputImport(name="basicAuthCredentials")
-    private final @Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
+        private final @Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> basicAuthCredentials;
 
     public Input<ConnectorProfileSAPODataConnectorProfileCredentialsBasicAuthCredentialsPropertiesArgs> getBasicAuthCredentials() {
         return this.basicAuthCredentials == null ? Input.empty() : this.basicAuthCredentials;
     }
 
     @InputImport(name="oAuthCredentials")
-    private final @Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
+        private final @Nullable Input<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> oAuthCredentials;
 
     public Input<ConnectorProfileSAPODataConnectorProfileCredentialsOAuthCredentialsPropertiesArgs> getOAuthCredentials() {
         return this.oAuthCredentials == null ? Input.empty() : this.oAuthCredentials;
@@ -82,7 +82,6 @@ public final class ConnectorProfileSAPODataConnectorProfileCredentialsArgs exten
             this.oAuthCredentials = Input.ofNullable(oAuthCredentials);
             return this;
         }
-
         public ConnectorProfileSAPODataConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSAPODataConnectorProfileCredentialsArgs(basicAuthCredentials, oAuthCredentials);
         }

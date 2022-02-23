@@ -8,7 +8,7 @@ import io.pulumi.azurenative.hybridcompute.outputs.LocationDataResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponse;
 import io.pulumi.azurenative.hybridcompute.outputs.MachinePropertiesResponseOsProfile;
 import io.pulumi.azurenative.hybridcompute.outputs.MachineResponseIdentity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -558,7 +558,6 @@ public final class GetMachineResult {
             this.vmUuid = Objects.requireNonNull(vmUuid);
             return this;
         }
-
         public GetMachineResult build() {
             return new GetMachineResult(adFqdn, agentVersion, clientPublicKey, displayName, dnsFqdn, domainName, errorDetails, extensions, id, identity, lastStatusChange, location, locationData, machineFqdn, name, osName, osProfile, osSku, osVersion, provisioningState, status, tags, type, vmId, vmUuid);
         }

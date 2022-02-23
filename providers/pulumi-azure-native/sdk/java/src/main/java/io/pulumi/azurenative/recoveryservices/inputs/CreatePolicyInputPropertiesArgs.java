@@ -12,7 +12,7 @@ import io.pulumi.azurenative.recoveryservices.inputs.InMagePolicyInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.InMageRcmPolicyCreationInputArgs;
 import io.pulumi.azurenative.recoveryservices.inputs.VMwareCbtPolicyCreationInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -31,7 +31,7 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="providerSpecificInput")
-    private final @Nullable Input<Object> providerSpecificInput;
+        private final @Nullable Input<Object> providerSpecificInput;
 
     public Input<Object> getProviderSpecificInput() {
         return this.providerSpecificInput == null ? Input.empty() : this.providerSpecificInput;
@@ -74,7 +74,6 @@ public final class CreatePolicyInputPropertiesArgs extends io.pulumi.resources.R
             this.providerSpecificInput = Input.ofNullable(providerSpecificInput);
             return this;
         }
-
         public CreatePolicyInputPropertiesArgs build() {
             return new CreatePolicyInputPropertiesArgs(providerSpecificInput);
         }

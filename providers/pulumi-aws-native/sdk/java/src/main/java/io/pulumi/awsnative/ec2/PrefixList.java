@@ -10,8 +10,8 @@ import io.pulumi.awsnative.ec2.outputs.PrefixListEntry;
 import io.pulumi.awsnative.ec2.outputs.PrefixListTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -152,13 +152,6 @@ public class PrefixList extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PrefixList(String name) {
-        super("aws-native:ec2:PrefixList", name, PrefixListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

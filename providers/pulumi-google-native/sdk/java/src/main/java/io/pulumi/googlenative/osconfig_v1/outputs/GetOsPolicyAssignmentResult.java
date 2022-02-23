@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyAssignmentInstanceFilterResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyAssignmentRolloutResponse;
 import io.pulumi.googlenative.osconfig_v1.outputs.OSPolicyResponse;
@@ -310,7 +310,6 @@ public final class GetOsPolicyAssignmentResult {
             this.uid = Objects.requireNonNull(uid);
             return this;
         }
-
         public GetOsPolicyAssignmentResult build() {
             return new GetOsPolicyAssignmentResult(baseline, deleted, description, etag, instanceFilter, name, osPolicies, reconciling, revisionCreateTime, revisionId, rollout, rolloutState, uid);
         }

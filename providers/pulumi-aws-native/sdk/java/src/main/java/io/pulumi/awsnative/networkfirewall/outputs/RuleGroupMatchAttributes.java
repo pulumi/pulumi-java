@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.outputs;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupAddress;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupPortRange;
 import io.pulumi.awsnative.networkfirewall.outputs.RuleGroupTCPFlagField;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -115,7 +115,6 @@ public final class RuleGroupMatchAttributes {
             this.tCPFlags = tCPFlags;
             return this;
         }
-
         public RuleGroupMatchAttributes build() {
             return new RuleGroupMatchAttributes(destinationPorts, destinations, protocols, sourcePorts, sources, tCPFlags);
         }

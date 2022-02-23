@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.IterationResultResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="iterationResults", required=true)
-    private final List<IterationResultResponse> iterationResults;
+      private final List<IterationResultResponse> iterationResults;
 
     public List<IterationResultResponse> getIterationResults() {
         return this.iterationResults;
@@ -30,7 +30,7 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxIterations", required=true)
-    private final String maxIterations;
+      private final String maxIterations;
 
     public String getMaxIterations() {
         return this.maxIterations;
@@ -79,7 +79,6 @@ public final class MlStatisticsResponse extends io.pulumi.resources.InvokeArgs {
             this.maxIterations = Objects.requireNonNull(maxIterations);
             return this;
         }
-
         public MlStatisticsResponse build() {
             return new MlStatisticsResponse(iterationResults, maxIterations);
         }

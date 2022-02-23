@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.RestoreInfoResponse;
 import java.lang.String;
 import java.util.Map;
@@ -139,7 +139,6 @@ public final class GetTableResult {
             this.restoreInfo = Objects.requireNonNull(restoreInfo);
             return this;
         }
-
         public GetTableResult build() {
             return new GetTableResult(clusterStates, columnFamilies, granularity, name, restoreInfo);
         }

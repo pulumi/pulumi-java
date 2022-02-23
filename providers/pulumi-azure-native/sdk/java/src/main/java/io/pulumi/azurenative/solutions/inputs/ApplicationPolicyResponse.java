@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -34,7 +34,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable String parameters;
+        private final @Nullable String parameters;
 
     public Optional<String> getParameters() {
         return this.parameters == null ? Optional.empty() : Optional.ofNullable(this.parameters);
@@ -45,7 +45,7 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="policyDefinitionId")
-    private final @Nullable String policyDefinitionId;
+        private final @Nullable String policyDefinitionId;
 
     public Optional<String> getPolicyDefinitionId() {
         return this.policyDefinitionId == null ? Optional.empty() : Optional.ofNullable(this.policyDefinitionId);
@@ -104,7 +104,6 @@ public final class ApplicationPolicyResponse extends io.pulumi.resources.InvokeA
             this.policyDefinitionId = policyDefinitionId;
             return this;
         }
-
         public ApplicationPolicyResponse build() {
             return new ApplicationPolicyResponse(name, parameters, policyDefinitionId);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -330,7 +330,6 @@ public final class GetPrivateZoneResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPrivateZoneResult build() {
             return new GetPrivateZoneResult(etag, id, internalId, location, maxNumberOfRecordSets, maxNumberOfVirtualNetworkLinks, maxNumberOfVirtualNetworkLinksWithRegistration, name, numberOfRecordSets, numberOfVirtualNetworkLinks, numberOfVirtualNetworkLinksWithRegistration, provisioningState, tags, type);
         }

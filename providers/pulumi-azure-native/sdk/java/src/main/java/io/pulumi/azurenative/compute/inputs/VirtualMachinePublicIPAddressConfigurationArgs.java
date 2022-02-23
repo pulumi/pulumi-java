@@ -12,7 +12,7 @@ import io.pulumi.azurenative.compute.inputs.VirtualMachineIpTagArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -33,7 +33,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="deleteOption")
-    private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
+        private final @Nullable Input<Either<String,DeleteOptions>> deleteOption;
 
     public Input<Either<String,DeleteOptions>> getDeleteOption() {
         return this.deleteOption == null ? Input.empty() : this.deleteOption;
@@ -44,7 +44,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="dnsSettings")
-    private final @Nullable Input<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings;
+        private final @Nullable Input<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> dnsSettings;
 
     public Input<VirtualMachinePublicIPAddressDnsSettingsConfigurationArgs> getDnsSettings() {
         return this.dnsSettings == null ? Input.empty() : this.dnsSettings;
@@ -55,7 +55,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="idleTimeoutInMinutes")
-    private final @Nullable Input<Integer> idleTimeoutInMinutes;
+        private final @Nullable Input<Integer> idleTimeoutInMinutes;
 
     public Input<Integer> getIdleTimeoutInMinutes() {
         return this.idleTimeoutInMinutes == null ? Input.empty() : this.idleTimeoutInMinutes;
@@ -66,7 +66,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="ipTags")
-    private final @Nullable Input<List<VirtualMachineIpTagArgs>> ipTags;
+        private final @Nullable Input<List<VirtualMachineIpTagArgs>> ipTags;
 
     public Input<List<VirtualMachineIpTagArgs>> getIpTags() {
         return this.ipTags == null ? Input.empty() : this.ipTags;
@@ -77,7 +77,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -88,7 +88,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="publicIPAddressVersion")
-    private final @Nullable Input<Either<String,IPVersions>> publicIPAddressVersion;
+        private final @Nullable Input<Either<String,IPVersions>> publicIPAddressVersion;
 
     public Input<Either<String,IPVersions>> getPublicIPAddressVersion() {
         return this.publicIPAddressVersion == null ? Input.empty() : this.publicIPAddressVersion;
@@ -99,7 +99,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="publicIPAllocationMethod")
-    private final @Nullable Input<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod;
+        private final @Nullable Input<Either<String,PublicIPAllocationMethod>> publicIPAllocationMethod;
 
     public Input<Either<String,PublicIPAllocationMethod>> getPublicIPAllocationMethod() {
         return this.publicIPAllocationMethod == null ? Input.empty() : this.publicIPAllocationMethod;
@@ -110,7 +110,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="publicIPPrefix")
-    private final @Nullable Input<SubResourceArgs> publicIPPrefix;
+        private final @Nullable Input<SubResourceArgs> publicIPPrefix;
 
     public Input<SubResourceArgs> getPublicIPPrefix() {
         return this.publicIPPrefix == null ? Input.empty() : this.publicIPPrefix;
@@ -121,7 +121,7 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<PublicIPAddressSkuArgs> sku;
+        private final @Nullable Input<PublicIPAddressSkuArgs> sku;
 
     public Input<PublicIPAddressSkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -285,7 +285,6 @@ public final class VirtualMachinePublicIPAddressConfigurationArgs extends io.pul
             this.sku = Input.ofNullable(sku);
             return this;
         }
-
         public VirtualMachinePublicIPAddressConfigurationArgs build() {
             return new VirtualMachinePublicIPAddressConfigurationArgs(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, sku);
         }

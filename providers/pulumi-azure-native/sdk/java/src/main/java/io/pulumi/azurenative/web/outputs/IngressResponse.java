@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.TrafficWeightResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -156,7 +156,6 @@ public final class IngressResponse {
             this.transport = transport;
             return this;
         }
-
         public IngressResponse build() {
             return new IngressResponse(allowInsecure, external, fqdn, targetPort, traffic, transport);
         }

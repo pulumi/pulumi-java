@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.outputs;
 
 import io.pulumi.awsnative.synthetics.outputs.CanaryS3Encryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class CanaryArtifactConfig {
             this.s3Encryption = s3Encryption;
             return this;
         }
-
         public CanaryArtifactConfig build() {
             return new CanaryArtifactConfig(s3Encryption);
         }

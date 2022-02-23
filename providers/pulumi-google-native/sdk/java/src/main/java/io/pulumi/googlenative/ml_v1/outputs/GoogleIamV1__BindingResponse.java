@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.ml_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.ml_v1.outputs.GoogleType__ExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GoogleIamV1__BindingResponse {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public GoogleIamV1__BindingResponse build() {
             return new GoogleIamV1__BindingResponse(condition, members, role);
         }

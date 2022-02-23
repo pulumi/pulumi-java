@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -110,7 +110,6 @@ public final class CacheExpirationActionParametersResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public CacheExpirationActionParametersResponse build() {
             return new CacheExpirationActionParametersResponse(cacheBehavior, cacheDuration, cacheType, odataType);
         }

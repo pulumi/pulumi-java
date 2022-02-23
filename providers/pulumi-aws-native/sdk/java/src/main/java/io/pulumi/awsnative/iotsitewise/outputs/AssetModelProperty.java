@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotsitewise.outputs;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataType;
 import io.pulumi.awsnative.iotsitewise.enums.AssetModelDataTypeSpec;
 import io.pulumi.awsnative.iotsitewise.outputs.AssetModelPropertyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -163,7 +163,6 @@ public final class AssetModelProperty {
             this.unit = unit;
             return this;
         }
-
         public AssetModelProperty build() {
             return new AssetModelProperty(dataType, dataTypeSpec, logicalId, name, type, unit);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.azurenative.documentdb.inputs.PeriodicModePropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="periodicModeProperties")
-    private final @Nullable Input<PeriodicModePropertiesArgs> periodicModeProperties;
+        private final @Nullable Input<PeriodicModePropertiesArgs> periodicModeProperties;
 
     public Input<PeriodicModePropertiesArgs> getPeriodicModeProperties() {
         return this.periodicModeProperties == null ? Input.empty() : this.periodicModeProperties;
@@ -36,7 +36,7 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -95,7 +95,6 @@ public final class PeriodicModeBackupPolicyArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public PeriodicModeBackupPolicyArgs build() {
             return new PeriodicModeBackupPolicyArgs(periodicModeProperties, type);
         }

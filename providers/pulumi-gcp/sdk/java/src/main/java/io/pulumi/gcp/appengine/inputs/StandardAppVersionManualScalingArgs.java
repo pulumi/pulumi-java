@@ -4,7 +4,7 @@
 package io.pulumi.gcp.appengine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -20,7 +20,7 @@ public final class StandardAppVersionManualScalingArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="instances", required=true)
-    private final Input<Integer> instances;
+        private final Input<Integer> instances;
 
     public Input<Integer> getInstances() {
         return this.instances;
@@ -63,7 +63,6 @@ public final class StandardAppVersionManualScalingArgs extends io.pulumi.resourc
             this.instances = Input.of(Objects.requireNonNull(instances));
             return this;
         }
-
         public StandardAppVersionManualScalingArgs build() {
             return new StandardAppVersionManualScalingArgs(instances);
         }

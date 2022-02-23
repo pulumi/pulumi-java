@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.AsymmetricEncryptedSecretResponse;
 import io.pulumi.azurenative.databoxedge.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -185,7 +185,6 @@ public final class GetMECRoleResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMECRoleResult build() {
             return new GetMECRoleResult(connectionString, id, kind, name, roleStatus, systemData, type);
         }

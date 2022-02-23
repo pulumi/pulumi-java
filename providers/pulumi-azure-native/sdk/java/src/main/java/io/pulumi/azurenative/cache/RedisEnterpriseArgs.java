@@ -7,7 +7,7 @@ import io.pulumi.azurenative.cache.enums.TlsVersion;
 import io.pulumi.azurenative.cache.inputs.EnterpriseSkuArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -24,7 +24,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="clusterName")
-    private final @Nullable Input<String> clusterName;
+        private final @Nullable Input<String> clusterName;
 
     public Input<String> getClusterName() {
         return this.clusterName == null ? Input.empty() : this.clusterName;
@@ -35,7 +35,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,7 +46,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="minimumTlsVersion")
-    private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
+        private final @Nullable Input<Either<String,TlsVersion>> minimumTlsVersion;
 
     public Input<Either<String,TlsVersion>> getMinimumTlsVersion() {
         return this.minimumTlsVersion == null ? Input.empty() : this.minimumTlsVersion;
@@ -57,7 +57,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -68,7 +68,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="sku", required=true)
-    private final Input<EnterpriseSkuArgs> sku;
+        private final Input<EnterpriseSkuArgs> sku;
 
     public Input<EnterpriseSkuArgs> getSku() {
         return this.sku;
@@ -79,7 +79,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -90,7 +90,7 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="zones")
-    private final @Nullable Input<List<String>> zones;
+        private final @Nullable Input<List<String>> zones;
 
     public Input<List<String>> getZones() {
         return this.zones == null ? Input.empty() : this.zones;
@@ -224,7 +224,6 @@ public final class RedisEnterpriseArgs extends io.pulumi.resources.ResourceArgs 
             this.zones = Input.ofNullable(zones);
             return this;
         }
-
         public RedisEnterpriseArgs build() {
             return new RedisEnterpriseArgs(clusterName, location, minimumTlsVersion, resourceGroupName, sku, tags, zones);
         }

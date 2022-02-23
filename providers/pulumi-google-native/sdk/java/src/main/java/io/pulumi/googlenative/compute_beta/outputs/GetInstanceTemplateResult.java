@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.InstancePropertiesResponse;
 import io.pulumi.googlenative.compute_beta.outputs.SourceInstanceParamsResponse;
 import java.lang.String;
@@ -202,7 +202,6 @@ public final class GetInstanceTemplateResult {
             this.sourceInstanceParams = Objects.requireNonNull(sourceInstanceParams);
             return this;
         }
-
         public GetInstanceTemplateResult build() {
             return new GetInstanceTemplateResult(creationTimestamp, description, kind, name, properties, selfLink, sourceInstance, sourceInstanceParams);
         }

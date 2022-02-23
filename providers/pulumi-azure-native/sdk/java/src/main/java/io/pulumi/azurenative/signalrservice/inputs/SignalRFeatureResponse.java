@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.signalrservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="flag", required=true)
-    private final String flag;
+        private final String flag;
 
     public String getFlag() {
         return this.flag;
@@ -37,7 +37,7 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Map<String,String> properties;
+        private final @Nullable Map<String,String> properties;
 
     public Map<String,String> getProperties() {
         return this.properties == null ? Map.of() : this.properties;
@@ -48,7 +48,7 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -107,7 +107,6 @@ public final class SignalRFeatureResponse extends io.pulumi.resources.InvokeArgs
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public SignalRFeatureResponse build() {
             return new SignalRFeatureResponse(flag, properties, value);
         }

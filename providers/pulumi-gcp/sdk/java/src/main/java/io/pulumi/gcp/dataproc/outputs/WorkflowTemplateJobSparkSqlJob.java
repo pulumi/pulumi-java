@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobSparkSqlJobLoggingConfig;
 import io.pulumi.gcp.dataproc.outputs.WorkflowTemplateJobSparkSqlJobQueryList;
 import java.lang.String;
@@ -164,7 +164,6 @@ public final class WorkflowTemplateJobSparkSqlJob {
             this.scriptVariables = scriptVariables;
             return this;
         }
-
         public WorkflowTemplateJobSparkSqlJob build() {
             return new WorkflowTemplateJobSparkSqlJob(jarFileUris, loggingConfig, properties, queryFileUri, queryList, scriptVariables);
         }

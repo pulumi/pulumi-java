@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -160,7 +160,6 @@ public final class ArmRollingUpgradeMonitoringPolicyResponse {
             this.upgradeTimeout = upgradeTimeout;
             return this;
         }
-
         public ArmRollingUpgradeMonitoringPolicyResponse build() {
             return new ArmRollingUpgradeMonitoringPolicyResponse(failureAction, healthCheckRetryTimeout, healthCheckStableDuration, healthCheckWaitDuration, upgradeDomainTimeout, upgradeTimeout);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -35,7 +35,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable String clientSecret;
+        private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
@@ -46,7 +46,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="issuerUri")
-    private final @Nullable String issuerUri;
+        private final @Nullable String issuerUri;
 
     public Optional<String> getIssuerUri() {
         return this.issuerUri == null ? Optional.empty() : Optional.ofNullable(this.issuerUri);
@@ -57,7 +57,7 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="scope")
-    private final @Nullable List<String> scope;
+        private final @Nullable List<String> scope;
 
     public List<String> getScope() {
         return this.scope == null ? List.of() : this.scope;
@@ -126,7 +126,6 @@ public final class SsoPropertiesResponse extends io.pulumi.resources.InvokeArgs 
             this.scope = scope;
             return this;
         }
-
         public SsoPropertiesResponse build() {
             return new SsoPropertiesResponse(clientId, clientSecret, issuerUri, scope);
         }

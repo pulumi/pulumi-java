@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigPublicKeyGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigSubjectConfigGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CertificateConfigX509ConfigGetArgs;
@@ -21,7 +21,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final Input<CertificateConfigPublicKeyGetArgs> publicKey;
+        private final Input<CertificateConfigPublicKeyGetArgs> publicKey;
 
     public Input<CertificateConfigPublicKeyGetArgs> getPublicKey() {
         return this.publicKey;
@@ -33,7 +33,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subjectConfig", required=true)
-    private final Input<CertificateConfigSubjectConfigGetArgs> subjectConfig;
+        private final Input<CertificateConfigSubjectConfigGetArgs> subjectConfig;
 
     public Input<CertificateConfigSubjectConfigGetArgs> getSubjectConfig() {
         return this.subjectConfig;
@@ -45,7 +45,7 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="x509Config", required=true)
-    private final Input<CertificateConfigX509ConfigGetArgs> x509Config;
+        private final Input<CertificateConfigX509ConfigGetArgs> x509Config;
 
     public Input<CertificateConfigX509ConfigGetArgs> getX509Config() {
         return this.x509Config;
@@ -119,7 +119,6 @@ public final class CertificateConfigGetArgs extends io.pulumi.resources.Resource
             this.x509Config = Input.of(Objects.requireNonNull(x509Config));
             return this;
         }
-
         public CertificateConfigGetArgs build() {
             return new CertificateConfigGetArgs(publicKey, subjectConfig, x509Config);
         }

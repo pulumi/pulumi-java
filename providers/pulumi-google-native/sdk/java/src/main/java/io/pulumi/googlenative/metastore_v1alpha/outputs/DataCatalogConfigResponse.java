@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class DataCatalogConfigResponse {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public DataCatalogConfigResponse build() {
             return new DataCatalogConfigResponse(enabled);
         }

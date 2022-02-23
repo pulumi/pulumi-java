@@ -5,7 +5,7 @@ package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.LoggingConfigurationFieldToMatch;
 import io.pulumi.awsnative.wafv2.outputs.LoggingFilterProperties;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -122,7 +122,6 @@ public final class GetLoggingConfigurationResult {
             this.redactedFields = redactedFields;
             return this;
         }
-
         public GetLoggingConfigurationResult build() {
             return new GetLoggingConfigurationResult(logDestinationConfigs, loggingFilter, managedByFirewallManager, redactedFields);
         }

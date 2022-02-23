@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.VmGuestHealthAlertCriterionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class HealthAlertCriteriaResponse {
             this.allOf = allOf;
             return this;
         }
-
         public HealthAlertCriteriaResponse build() {
             return new HealthAlertCriteriaResponse(allOf);
         }

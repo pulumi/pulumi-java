@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dlp_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dlp_v2.inputs.GooglePrivacyDlpV2TableOptionsArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -48,7 +48,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="requiredFindingLabelKeys")
-    private final @Nullable Input<List<String>> requiredFindingLabelKeys;
+      private final @Nullable Input<List<String>> requiredFindingLabelKeys;
 
     public Input<List<String>> getRequiredFindingLabelKeys() {
         return this.requiredFindingLabelKeys == null ? Input.empty() : this.requiredFindingLabelKeys;
@@ -59,7 +59,7 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="tableOptions")
-    private final @Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
+      private final @Nullable Input<GooglePrivacyDlpV2TableOptionsArgs> tableOptions;
 
     public Input<GooglePrivacyDlpV2TableOptionsArgs> getTableOptions() {
         return this.tableOptions == null ? Input.empty() : this.tableOptions;
@@ -148,7 +148,6 @@ public final class GooglePrivacyDlpV2HybridOptionsArgs extends io.pulumi.resourc
             this.tableOptions = Input.ofNullable(tableOptions);
             return this;
         }
-
         public GooglePrivacyDlpV2HybridOptionsArgs build() {
             return new GooglePrivacyDlpV2HybridOptionsArgs(description, labels, requiredFindingLabelKeys, tableOptions);
         }

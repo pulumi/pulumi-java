@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="failoverPriority")
-    private final @Nullable Input<Integer> failoverPriority;
+        private final @Nullable Input<Integer> failoverPriority;
 
     public Input<Integer> getFailoverPriority() {
         return this.failoverPriority == null ? Input.empty() : this.failoverPriority;
@@ -36,7 +36,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isZoneRedundant")
-    private final @Nullable Input<Boolean> isZoneRedundant;
+        private final @Nullable Input<Boolean> isZoneRedundant;
 
     public Input<Boolean> getIsZoneRedundant() {
         return this.isZoneRedundant == null ? Input.empty() : this.isZoneRedundant;
@@ -47,7 +47,7 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="locationName")
-    private final @Nullable Input<String> locationName;
+        private final @Nullable Input<String> locationName;
 
     public Input<String> getLocationName() {
         return this.locationName == null ? Input.empty() : this.locationName;
@@ -121,7 +121,6 @@ public final class LocationArgs extends io.pulumi.resources.ResourceArgs {
             this.locationName = Input.ofNullable(locationName);
             return this;
         }
-
         public LocationArgs build() {
             return new LocationArgs(failoverPriority, isZoneRedundant, locationName);
         }

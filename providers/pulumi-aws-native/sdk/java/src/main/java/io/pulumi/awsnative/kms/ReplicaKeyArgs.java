@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kms;
 
 import io.pulumi.awsnative.kms.inputs.ReplicaKeyTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.Object;
@@ -24,7 +24,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -46,7 +46,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keyPolicy", required=true)
-    private final Input<Object> keyPolicy;
+        private final Input<Object> keyPolicy;
 
     public Input<Object> getKeyPolicy() {
         return this.keyPolicy;
@@ -57,7 +57,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pendingWindowInDays")
-    private final @Nullable Input<Integer> pendingWindowInDays;
+        private final @Nullable Input<Integer> pendingWindowInDays;
 
     public Input<Integer> getPendingWindowInDays() {
         return this.pendingWindowInDays == null ? Input.empty() : this.pendingWindowInDays;
@@ -68,7 +68,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primaryKeyArn", required=true)
-    private final Input<String> primaryKeyArn;
+        private final Input<String> primaryKeyArn;
 
     public Input<String> getPrimaryKeyArn() {
         return this.primaryKeyArn;
@@ -79,7 +79,7 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<ReplicaKeyTagArgs>> tags;
+        private final @Nullable Input<List<ReplicaKeyTagArgs>> tags;
 
     public Input<List<ReplicaKeyTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -198,7 +198,6 @@ public final class ReplicaKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public ReplicaKeyArgs build() {
             return new ReplicaKeyArgs(description, enabled, keyPolicy, pendingWindowInDays, primaryKeyArn, tags);
         }

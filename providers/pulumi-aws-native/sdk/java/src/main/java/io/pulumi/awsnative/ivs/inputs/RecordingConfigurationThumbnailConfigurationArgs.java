@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ivs.inputs;
 
 import io.pulumi.awsnative.ivs.enums.RecordingConfigurationThumbnailConfigurationRecordingMode;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="recordingMode", required=true)
-    private final Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
+        private final Input<RecordingConfigurationThumbnailConfigurationRecordingMode> recordingMode;
 
     public Input<RecordingConfigurationThumbnailConfigurationRecordingMode> getRecordingMode() {
         return this.recordingMode;
@@ -35,7 +35,7 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
      * 
      */
     @InputImport(name="targetIntervalSeconds")
-    private final @Nullable Input<Integer> targetIntervalSeconds;
+        private final @Nullable Input<Integer> targetIntervalSeconds;
 
     public Input<Integer> getTargetIntervalSeconds() {
         return this.targetIntervalSeconds == null ? Input.empty() : this.targetIntervalSeconds;
@@ -94,7 +94,6 @@ public final class RecordingConfigurationThumbnailConfigurationArgs extends io.p
             this.targetIntervalSeconds = Input.ofNullable(targetIntervalSeconds);
             return this;
         }
-
         public RecordingConfigurationThumbnailConfigurationArgs build() {
             return new RecordingConfigurationThumbnailConfigurationArgs(recordingMode, targetIntervalSeconds);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.desktopvirtualization.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ScalingHostPoolReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="hostPoolArmPath")
-    private final @Nullable String hostPoolArmPath;
+        private final @Nullable String hostPoolArmPath;
 
     public Optional<String> getHostPoolArmPath() {
         return this.hostPoolArmPath == null ? Optional.empty() : Optional.ofNullable(this.hostPoolArmPath);
@@ -35,7 +35,7 @@ public final class ScalingHostPoolReferenceResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scalingPlanEnabled")
-    private final @Nullable Boolean scalingPlanEnabled;
+        private final @Nullable Boolean scalingPlanEnabled;
 
     public Optional<Boolean> getScalingPlanEnabled() {
         return this.scalingPlanEnabled == null ? Optional.empty() : Optional.ofNullable(this.scalingPlanEnabled);
@@ -84,7 +84,6 @@ public final class ScalingHostPoolReferenceResponse extends io.pulumi.resources.
             this.scalingPlanEnabled = scalingPlanEnabled;
             return this;
         }
-
         public ScalingHostPoolReferenceResponse build() {
             return new ScalingHostPoolReferenceResponse(hostPoolArmPath, scalingPlanEnabled);
         }

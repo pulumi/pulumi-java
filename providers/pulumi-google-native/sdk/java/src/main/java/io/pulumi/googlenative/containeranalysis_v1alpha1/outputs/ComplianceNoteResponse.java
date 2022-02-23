@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.CisBenchmarkResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.ComplianceVersionResponse;
 import java.lang.String;
@@ -182,7 +182,6 @@ public final class ComplianceNoteResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ComplianceNoteResponse build() {
             return new ComplianceNoteResponse(cisBenchmark, description, rationale, remediation, scanInstructions, title, version);
         }

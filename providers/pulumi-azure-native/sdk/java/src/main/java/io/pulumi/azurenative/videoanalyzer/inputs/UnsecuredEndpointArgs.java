@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer.inputs;
 import io.pulumi.azurenative.videoanalyzer.inputs.SecureIotDeviceRemoteTunnelArgs;
 import io.pulumi.azurenative.videoanalyzer.inputs.UsernamePasswordCredentialsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="credentials", required=true)
-    private final Input<UsernamePasswordCredentialsArgs> credentials;
+        private final Input<UsernamePasswordCredentialsArgs> credentials;
 
     public Input<UsernamePasswordCredentialsArgs> getCredentials() {
         return this.credentials;
@@ -36,7 +36,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="tunnel")
-    private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
+        private final @Nullable Input<SecureIotDeviceRemoteTunnelArgs> tunnel;
 
     public Input<SecureIotDeviceRemoteTunnelArgs> getTunnel() {
         return this.tunnel == null ? Input.empty() : this.tunnel;
@@ -48,7 +48,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -59,7 +59,7 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="url", required=true)
-    private final Input<String> url;
+        private final Input<String> url;
 
     public Input<String> getUrl() {
         return this.url;
@@ -148,7 +148,6 @@ public final class UnsecuredEndpointArgs extends io.pulumi.resources.ResourceArg
             this.url = Input.of(Objects.requireNonNull(url));
             return this;
         }
-
         public UnsecuredEndpointArgs build() {
             return new UnsecuredEndpointArgs(credentials, tunnel, type, url);
         }

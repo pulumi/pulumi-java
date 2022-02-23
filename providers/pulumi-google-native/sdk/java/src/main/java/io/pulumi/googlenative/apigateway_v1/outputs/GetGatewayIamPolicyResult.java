@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayAuditConfigResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayBindingResponse;
 import java.lang.Integer;
@@ -120,7 +120,6 @@ public final class GetGatewayIamPolicyResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetGatewayIamPolicyResult build() {
             return new GetGatewayIamPolicyResult(auditConfigs, bindings, etag, version);
         }

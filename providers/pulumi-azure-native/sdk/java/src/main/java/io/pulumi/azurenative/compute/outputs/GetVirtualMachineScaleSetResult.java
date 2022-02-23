@@ -13,7 +13,7 @@ import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.UpgradePolicyResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetIdentityResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetVMProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -573,7 +573,6 @@ public final class GetVirtualMachineScaleSetResult {
             this.zones = zones;
             return this;
         }
-
         public GetVirtualMachineScaleSetResult build() {
             return new GetVirtualMachineScaleSetResult(additionalCapabilities, automaticRepairsPolicy, doNotRunExtensionsOnOverprovisionedVMs, extendedLocation, hostGroup, id, identity, location, name, orchestrationMode, overprovision, plan, platformFaultDomainCount, provisioningState, proximityPlacementGroup, scaleInPolicy, singlePlacementGroup, sku, tags, type, uniqueId, upgradePolicy, virtualMachineProfile, zoneBalance, zones);
         }

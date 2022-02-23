@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.HttpHostConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final Input<List<HttpHostConfigArgs>> hosts;
+        private final Input<List<HttpHostConfigArgs>> hosts;
 
     public Input<List<HttpHostConfigArgs>> getHosts() {
         return this.hosts;
@@ -36,7 +36,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="port", required=true)
-    private final Input<Integer> port;
+        private final Input<Integer> port;
 
     public Input<Integer> getPort() {
         return this.port;
@@ -121,7 +121,6 @@ public final class HttpConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.port = Input.of(Objects.requireNonNull(port));
             return this;
         }
-
         public HttpConfigArgs build() {
             return new HttpConfigArgs(hosts, name, port);
         }

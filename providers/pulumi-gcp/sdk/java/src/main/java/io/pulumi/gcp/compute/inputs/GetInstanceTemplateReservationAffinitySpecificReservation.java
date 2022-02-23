@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,14 +18,14 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation ext
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
     }
 
     @InputImport(name="values", required=true)
-    private final List<String> values;
+        private final List<String> values;
 
     public List<String> getValues() {
         return this.values;
@@ -74,7 +74,6 @@ public final class GetInstanceTemplateReservationAffinitySpecificReservation ext
             this.values = Objects.requireNonNull(values);
             return this;
         }
-
         public GetInstanceTemplateReservationAffinitySpecificReservation build() {
             return new GetInstanceTemplateReservationAffinitySpecificReservation(key, values);
         }

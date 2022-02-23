@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportCustomRoutes")
-    private final @Nullable Input<Boolean> exportCustomRoutes;
+        private final @Nullable Input<Boolean> exportCustomRoutes;
 
     public Input<Boolean> getExportCustomRoutes() {
         return this.exportCustomRoutes == null ? Input.empty() : this.exportCustomRoutes;
@@ -31,7 +31,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="exportSubnetRoutesWithPublicIp")
-    private final @Nullable Input<Boolean> exportSubnetRoutesWithPublicIp;
+        private final @Nullable Input<Boolean> exportSubnetRoutesWithPublicIp;
 
     public Input<Boolean> getExportSubnetRoutesWithPublicIp() {
         return this.exportSubnetRoutesWithPublicIp == null ? Input.empty() : this.exportSubnetRoutesWithPublicIp;
@@ -42,7 +42,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importCustomRoutes")
-    private final @Nullable Input<Boolean> importCustomRoutes;
+        private final @Nullable Input<Boolean> importCustomRoutes;
 
     public Input<Boolean> getImportCustomRoutes() {
         return this.importCustomRoutes == null ? Input.empty() : this.importCustomRoutes;
@@ -53,7 +53,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importSubnetRoutesWithPublicIp")
-    private final @Nullable Input<Boolean> importSubnetRoutesWithPublicIp;
+        private final @Nullable Input<Boolean> importSubnetRoutesWithPublicIp;
 
     public Input<Boolean> getImportSubnetRoutesWithPublicIp() {
         return this.importSubnetRoutesWithPublicIp == null ? Input.empty() : this.importSubnetRoutesWithPublicIp;
@@ -64,7 +64,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -75,7 +75,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network", required=true)
-    private final Input<String> network;
+        private final Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network;
@@ -87,7 +87,7 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerNetwork", required=true)
-    private final Input<String> peerNetwork;
+        private final Input<String> peerNetwork;
 
     public Input<String> getPeerNetwork() {
         return this.peerNetwork;
@@ -221,7 +221,6 @@ public final class NetworkPeeringArgs extends io.pulumi.resources.ResourceArgs {
             this.peerNetwork = Input.of(Objects.requireNonNull(peerNetwork));
             return this;
         }
-
         public NetworkPeeringArgs build() {
             return new NetworkPeeringArgs(exportCustomRoutes, exportSubnetRoutesWithPublicIp, importCustomRoutes, importSubnetRoutesWithPublicIp, name, network, peerNetwork);
         }

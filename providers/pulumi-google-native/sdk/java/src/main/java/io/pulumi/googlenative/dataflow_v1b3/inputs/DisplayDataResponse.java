@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="boolValue", required=true)
-    private final Boolean boolValue;
+      private final Boolean boolValue;
 
     public Boolean getBoolValue() {
         return this.boolValue;
@@ -34,7 +34,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="durationValue", required=true)
-    private final String durationValue;
+      private final String durationValue;
 
     public String getDurationValue() {
         return this.durationValue;
@@ -45,7 +45,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="floatValue", required=true)
-    private final Double floatValue;
+      private final Double floatValue;
 
     public Double getFloatValue() {
         return this.floatValue;
@@ -56,7 +56,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="int64Value", required=true)
-    private final String int64Value;
+      private final String int64Value;
 
     public String getInt64Value() {
         return this.int64Value;
@@ -67,7 +67,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="javaClassValue", required=true)
-    private final String javaClassValue;
+      private final String javaClassValue;
 
     public String getJavaClassValue() {
         return this.javaClassValue;
@@ -78,7 +78,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+      private final String key;
 
     public String getKey() {
         return this.key;
@@ -89,7 +89,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="label", required=true)
-    private final String label;
+      private final String label;
 
     public String getLabel() {
         return this.label;
@@ -100,7 +100,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespace", required=true)
-    private final String namespace;
+      private final String namespace;
 
     public String getNamespace() {
         return this.namespace;
@@ -111,7 +111,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="shortStrValue", required=true)
-    private final String shortStrValue;
+      private final String shortStrValue;
 
     public String getShortStrValue() {
         return this.shortStrValue;
@@ -122,7 +122,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="strValue", required=true)
-    private final String strValue;
+      private final String strValue;
 
     public String getStrValue() {
         return this.strValue;
@@ -133,7 +133,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="timestampValue", required=true)
-    private final String timestampValue;
+      private final String timestampValue;
 
     public String getTimestampValue() {
         return this.timestampValue;
@@ -144,7 +144,7 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+      private final String url;
 
     public String getUrl() {
         return this.url;
@@ -293,7 +293,6 @@ public final class DisplayDataResponse extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public DisplayDataResponse build() {
             return new DisplayDataResponse(boolValue, durationValue, floatValue, int64Value, javaClassValue, key, label, namespace, shortStrValue, strValue, timestampValue, url);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
      * 
      */
     @InputImport(name="predictiveMethod")
-    private final @Nullable Input<String> predictiveMethod;
+        private final @Nullable Input<String> predictiveMethod;
 
     public Input<String> getPredictiveMethod() {
         return this.predictiveMethod == null ? Input.empty() : this.predictiveMethod;
@@ -35,7 +35,7 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
      * 
      */
     @InputImport(name="target", required=true)
-    private final Input<Double> target;
+        private final Input<Double> target;
 
     public Input<Double> getTarget() {
         return this.target;
@@ -94,7 +94,6 @@ public final class AutoscalerAutoscalingPolicyCpuUtilizationArgs extends io.pulu
             this.target = Input.of(Objects.requireNonNull(target));
             return this;
         }
-
         public AutoscalerAutoscalingPolicyCpuUtilizationArgs build() {
             return new AutoscalerAutoscalingPolicyCpuUtilizationArgs(predictiveMethod, target);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceLogConfigGetArgs;
 import io.pulumi.gcp.networkservices.inputs.EdgeCacheServiceRoutingGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="disableQuic")
-    private final @Nullable Input<Boolean> disableQuic;
+        private final @Nullable Input<Boolean> disableQuic;
 
     public Input<Boolean> getDisableQuic() {
         return this.disableQuic == null ? Input.empty() : this.disableQuic;
@@ -46,7 +46,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="edgeSecurityPolicy")
-    private final @Nullable Input<String> edgeSecurityPolicy;
+        private final @Nullable Input<String> edgeSecurityPolicy;
 
     public Input<String> getEdgeSecurityPolicy() {
         return this.edgeSecurityPolicy == null ? Input.empty() : this.edgeSecurityPolicy;
@@ -58,7 +58,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="edgeSslCertificates")
-    private final @Nullable Input<List<String>> edgeSslCertificates;
+        private final @Nullable Input<List<String>> edgeSslCertificates;
 
     public Input<List<String>> getEdgeSslCertificates() {
         return this.edgeSslCertificates == null ? Input.empty() : this.edgeSslCertificates;
@@ -69,7 +69,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv4Addresses")
-    private final @Nullable Input<List<String>> ipv4Addresses;
+        private final @Nullable Input<List<String>> ipv4Addresses;
 
     public Input<List<String>> getIpv4Addresses() {
         return this.ipv4Addresses == null ? Input.empty() : this.ipv4Addresses;
@@ -80,7 +80,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="ipv6Addresses")
-    private final @Nullable Input<List<String>> ipv6Addresses;
+        private final @Nullable Input<List<String>> ipv6Addresses;
 
     public Input<List<String>> getIpv6Addresses() {
         return this.ipv6Addresses == null ? Input.empty() : this.ipv6Addresses;
@@ -91,7 +91,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -103,7 +103,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="logConfig")
-    private final @Nullable Input<EdgeCacheServiceLogConfigGetArgs> logConfig;
+        private final @Nullable Input<EdgeCacheServiceLogConfigGetArgs> logConfig;
 
     public Input<EdgeCacheServiceLogConfigGetArgs> getLogConfig() {
         return this.logConfig == null ? Input.empty() : this.logConfig;
@@ -114,7 +114,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -126,7 +126,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -139,7 +139,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="requireTls")
-    private final @Nullable Input<Boolean> requireTls;
+        private final @Nullable Input<Boolean> requireTls;
 
     public Input<Boolean> getRequireTls() {
         return this.requireTls == null ? Input.empty() : this.requireTls;
@@ -151,7 +151,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="routing")
-    private final @Nullable Input<EdgeCacheServiceRoutingGetArgs> routing;
+        private final @Nullable Input<EdgeCacheServiceRoutingGetArgs> routing;
 
     public Input<EdgeCacheServiceRoutingGetArgs> getRouting() {
         return this.routing == null ? Input.empty() : this.routing;
@@ -163,7 +163,7 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="sslPolicy")
-    private final @Nullable Input<String> sslPolicy;
+        private final @Nullable Input<String> sslPolicy;
 
     public Input<String> getSslPolicy() {
         return this.sslPolicy == null ? Input.empty() : this.sslPolicy;
@@ -387,7 +387,6 @@ public final class EdgeCacheServiceState extends io.pulumi.resources.ResourceArg
             this.sslPolicy = Input.ofNullable(sslPolicy);
             return this;
         }
-
         public EdgeCacheServiceState build() {
             return new EdgeCacheServiceState(description, disableQuic, edgeSecurityPolicy, edgeSslCertificates, ipv4Addresses, ipv6Addresses, labels, logConfig, name, project, requireTls, routing, sslPolicy);
         }

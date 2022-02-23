@@ -7,7 +7,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.MasterTargetServerResponse
 import io.pulumi.azurenative.recoveryservices.outputs.ProcessServerResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.RunAsAccountResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VersionDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -736,7 +736,6 @@ public final class VMwareDetailsResponse {
             this.webLoadStatus = webLoadStatus;
             return this;
         }
-
         public VMwareDetailsResponse build() {
             return new VMwareDetailsResponse(agentCount, agentExpiryDate, agentVersion, agentVersionDetails, availableMemoryInBytes, availableSpaceInBytes, cpuLoad, cpuLoadStatus, csServiceStatus, databaseServerLoad, databaseServerLoadStatus, hostName, instanceType, ipAddress, lastHeartbeat, masterTargetServers, memoryUsageStatus, processServerCount, processServers, protectedServers, psTemplateVersion, replicationPairCount, runAsAccounts, spaceUsageStatus, sslCertExpiryDate, sslCertExpiryRemainingDays, systemLoad, systemLoadStatus, totalMemoryInBytes, totalSpaceInBytes, versionStatus, webLoad, webLoadStatus);
         }

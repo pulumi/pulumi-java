@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.inputs.FeatureGroupTagArgs;
 import io.pulumi.awsnative.sagemaker.inputs.OfflineStoreConfigPropertiesArgs;
 import io.pulumi.awsnative.sagemaker.inputs.OnlineStoreConfigPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventTimeFeatureName", required=true)
-    private final Input<String> eventTimeFeatureName;
+        private final Input<String> eventTimeFeatureName;
 
     public Input<String> getEventTimeFeatureName() {
         return this.eventTimeFeatureName;
@@ -46,7 +46,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureDefinitions", required=true)
-    private final Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
+        private final Input<List<FeatureGroupFeatureDefinitionArgs>> featureDefinitions;
 
     public Input<List<FeatureGroupFeatureDefinitionArgs>> getFeatureDefinitions() {
         return this.featureDefinitions;
@@ -57,21 +57,21 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="featureGroupName")
-    private final @Nullable Input<String> featureGroupName;
+        private final @Nullable Input<String> featureGroupName;
 
     public Input<String> getFeatureGroupName() {
         return this.featureGroupName == null ? Input.empty() : this.featureGroupName;
     }
 
     @InputImport(name="offlineStoreConfig")
-    private final @Nullable Input<OfflineStoreConfigPropertiesArgs> offlineStoreConfig;
+        private final @Nullable Input<OfflineStoreConfigPropertiesArgs> offlineStoreConfig;
 
     public Input<OfflineStoreConfigPropertiesArgs> getOfflineStoreConfig() {
         return this.offlineStoreConfig == null ? Input.empty() : this.offlineStoreConfig;
     }
 
     @InputImport(name="onlineStoreConfig")
-    private final @Nullable Input<OnlineStoreConfigPropertiesArgs> onlineStoreConfig;
+        private final @Nullable Input<OnlineStoreConfigPropertiesArgs> onlineStoreConfig;
 
     public Input<OnlineStoreConfigPropertiesArgs> getOnlineStoreConfig() {
         return this.onlineStoreConfig == null ? Input.empty() : this.onlineStoreConfig;
@@ -82,7 +82,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="recordIdentifierFeatureName", required=true)
-    private final Input<String> recordIdentifierFeatureName;
+        private final Input<String> recordIdentifierFeatureName;
 
     public Input<String> getRecordIdentifierFeatureName() {
         return this.recordIdentifierFeatureName;
@@ -93,7 +93,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="roleArn")
-    private final @Nullable Input<String> roleArn;
+        private final @Nullable Input<String> roleArn;
 
     public Input<String> getRoleArn() {
         return this.roleArn == null ? Input.empty() : this.roleArn;
@@ -104,7 +104,7 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<FeatureGroupTagArgs>> tags;
+        private final @Nullable Input<List<FeatureGroupTagArgs>> tags;
 
     public Input<List<FeatureGroupTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -268,7 +268,6 @@ public final class FeatureGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public FeatureGroupArgs build() {
             return new FeatureGroupArgs(description, eventTimeFeatureName, featureDefinitions, featureGroupName, offlineStoreConfig, onlineStoreConfig, recordIdentifierFeatureName, roleArn, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConfidentialInstanceConfigResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="enableConfidentialCompute", required=true)
-    private final Boolean enableConfidentialCompute;
+      private final Boolean enableConfidentialCompute;
 
     public Boolean getEnableConfidentialCompute() {
         return this.enableConfidentialCompute;
@@ -59,7 +59,6 @@ public final class ConfidentialInstanceConfigResponse extends io.pulumi.resource
             this.enableConfidentialCompute = Objects.requireNonNull(enableConfidentialCompute);
             return this;
         }
-
         public ConfidentialInstanceConfigResponse build() {
             return new ConfidentialInstanceConfigResponse(enableConfidentialCompute);
         }

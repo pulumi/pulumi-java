@@ -11,7 +11,7 @@ import io.pulumi.azurenative.redhatopenshift.outputs.MasterProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.NetworkProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.ServicePrincipalProfileResponse;
 import io.pulumi.azurenative.redhatopenshift.outputs.WorkerProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -338,7 +338,6 @@ public final class GetOpenShiftClusterResult {
             this.workerProfiles = workerProfiles;
             return this;
         }
-
         public GetOpenShiftClusterResult build() {
             return new GetOpenShiftClusterResult(apiserverProfile, clusterProfile, consoleProfile, id, ingressProfiles, location, masterProfile, name, networkProfile, provisioningState, servicePrincipalProfile, tags, type, workerProfiles);
         }

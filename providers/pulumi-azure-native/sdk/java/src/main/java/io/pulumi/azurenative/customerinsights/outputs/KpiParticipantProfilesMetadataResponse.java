@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class KpiParticipantProfilesMetadataResponse {
             this.typeName = Objects.requireNonNull(typeName);
             return this;
         }
-
         public KpiParticipantProfilesMetadataResponse build() {
             return new KpiParticipantProfilesMetadataResponse(typeName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<String> ip;
+        private final @Nullable Input<String> ip;
 
     public Input<String> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -34,7 +34,7 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="port")
-    private final @Nullable Input<String> port;
+        private final @Nullable Input<String> port;
 
     public Input<String> getPort() {
         return this.port == null ? Input.empty() : this.port;
@@ -93,7 +93,6 @@ public final class ProxyServerPropertiesArgs extends io.pulumi.resources.Resourc
             this.port = Input.ofNullable(port);
             return this;
         }
-
         public ProxyServerPropertiesArgs build() {
             return new ProxyServerPropertiesArgs(ip, port);
         }

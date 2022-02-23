@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends io.pul
      * 
      */
     @InputImport(name="keyName", required=true)
-    private final String keyName;
+        private final String keyName;
 
     public String getKeyName() {
         return this.keyName;
@@ -34,7 +34,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends io.pul
      * 
      */
     @InputImport(name="primaryKey")
-    private final @Nullable String primaryKey;
+        private final @Nullable String primaryKey;
 
     public Optional<String> getPrimaryKey() {
         return this.primaryKey == null ? Optional.empty() : Optional.ofNullable(this.primaryKey);
@@ -45,7 +45,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends io.pul
      * 
      */
     @InputImport(name="rights", required=true)
-    private final String rights;
+        private final String rights;
 
     public String getRights() {
         return this.rights;
@@ -56,7 +56,7 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends io.pul
      * 
      */
     @InputImport(name="secondaryKey")
-    private final @Nullable String secondaryKey;
+        private final @Nullable String secondaryKey;
 
     public Optional<String> getSecondaryKey() {
         return this.secondaryKey == null ? Optional.empty() : Optional.ofNullable(this.secondaryKey);
@@ -125,7 +125,6 @@ public final class SharedAccessSignatureAuthorizationRuleResponse extends io.pul
             this.secondaryKey = secondaryKey;
             return this;
         }
-
         public SharedAccessSignatureAuthorizationRuleResponse build() {
             return new SharedAccessSignatureAuthorizationRuleResponse(keyName, primaryKey, rights, secondaryKey);
         }

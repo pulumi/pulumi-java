@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.apigateway.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetApiKeyArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="aPIKeyId", required=true)
-    private final String aPIKeyId;
+        private final String aPIKeyId;
 
     public String getAPIKeyId() {
         return this.aPIKeyId;
@@ -55,7 +55,6 @@ public final class GetApiKeyArgs extends io.pulumi.resources.InvokeArgs {
             this.aPIKeyId = Objects.requireNonNull(aPIKeyId);
             return this;
         }
-
         public GetApiKeyArgs build() {
             return new GetApiKeyArgs(aPIKeyId);
         }

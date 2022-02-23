@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databricks.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AddressSpaceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="addressPrefixes")
-    private final @Nullable List<String> addressPrefixes;
+        private final @Nullable List<String> addressPrefixes;
 
     public List<String> getAddressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
@@ -62,7 +62,6 @@ public final class AddressSpaceResponse extends io.pulumi.resources.InvokeArgs {
             this.addressPrefixes = addressPrefixes;
             return this;
         }
-
         public AddressSpaceResponse build() {
             return new AddressSpaceResponse(addressPrefixes);
         }

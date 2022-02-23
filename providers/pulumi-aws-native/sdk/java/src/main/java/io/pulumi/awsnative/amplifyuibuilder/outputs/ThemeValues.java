@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.amplifyuibuilder.outputs;
 
 import io.pulumi.awsnative.amplifyuibuilder.outputs.ThemeValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -61,7 +61,6 @@ public final class ThemeValues {
             this.value = value;
             return this;
         }
-
         public ThemeValues build() {
             return new ThemeValues(key, value);
         }

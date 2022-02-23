@@ -98,7 +98,7 @@ import io.pulumi.azurenative.datafactory.outputs.WebTableDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.XeroObjectDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.XmlDatasetResponse;
 import io.pulumi.azurenative.datafactory.outputs.ZohoObjectDatasetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -233,7 +233,6 @@ public final class GetDatasetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(etag, id, name, properties, type);
         }

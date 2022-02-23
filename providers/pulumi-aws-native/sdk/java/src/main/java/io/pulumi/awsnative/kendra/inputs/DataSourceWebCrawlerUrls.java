@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerSeedUrlConfiguration;
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerSiteMapsConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class DataSourceWebCrawlerUrls extends io.pulumi.resources.InvokeAr
     public static final DataSourceWebCrawlerUrls Empty = new DataSourceWebCrawlerUrls();
 
     @InputImport(name="seedUrlConfiguration")
-    private final @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration;
+        private final @Nullable DataSourceWebCrawlerSeedUrlConfiguration seedUrlConfiguration;
 
     public Optional<DataSourceWebCrawlerSeedUrlConfiguration> getSeedUrlConfiguration() {
         return this.seedUrlConfiguration == null ? Optional.empty() : Optional.ofNullable(this.seedUrlConfiguration);
     }
 
     @InputImport(name="siteMapsConfiguration")
-    private final @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration;
+        private final @Nullable DataSourceWebCrawlerSiteMapsConfiguration siteMapsConfiguration;
 
     public Optional<DataSourceWebCrawlerSiteMapsConfiguration> getSiteMapsConfiguration() {
         return this.siteMapsConfiguration == null ? Optional.empty() : Optional.ofNullable(this.siteMapsConfiguration);
@@ -72,7 +72,6 @@ public final class DataSourceWebCrawlerUrls extends io.pulumi.resources.InvokeAr
             this.siteMapsConfiguration = siteMapsConfiguration;
             return this;
         }
-
         public DataSourceWebCrawlerUrls build() {
             return new DataSourceWebCrawlerUrls(seedUrlConfiguration, siteMapsConfiguration);
         }

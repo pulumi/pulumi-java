@@ -4,7 +4,7 @@
 package io.pulumi.gcp.recaptcha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowAllBundleIds")
-    private final @Nullable Input<Boolean> allowAllBundleIds;
+        private final @Nullable Input<Boolean> allowAllBundleIds;
 
     public Input<Boolean> getAllowAllBundleIds() {
         return this.allowAllBundleIds == null ? Input.empty() : this.allowAllBundleIds;
@@ -32,7 +32,7 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedBundleIds")
-    private final @Nullable Input<List<String>> allowedBundleIds;
+        private final @Nullable Input<List<String>> allowedBundleIds;
 
     public Input<List<String>> getAllowedBundleIds() {
         return this.allowedBundleIds == null ? Input.empty() : this.allowedBundleIds;
@@ -91,7 +91,6 @@ public final class EnterpriseKeyIosSettingsArgs extends io.pulumi.resources.Reso
             this.allowedBundleIds = Input.ofNullable(allowedBundleIds);
             return this;
         }
-
         public EnterpriseKeyIosSettingsArgs build() {
             return new EnterpriseKeyIosSettingsArgs(allowAllBundleIds, allowedBundleIds);
         }

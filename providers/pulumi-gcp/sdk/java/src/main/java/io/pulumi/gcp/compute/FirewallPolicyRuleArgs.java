@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.FirewallPolicyRuleMatchArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -23,7 +23,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="action", required=true)
-    private final Input<String> action;
+        private final Input<String> action;
 
     public Input<String> getAction() {
         return this.action;
@@ -34,7 +34,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -45,7 +45,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="direction", required=true)
-    private final Input<String> direction;
+        private final Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction;
@@ -56,7 +56,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -67,7 +67,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="enableLogging")
-    private final @Nullable Input<Boolean> enableLogging;
+        private final @Nullable Input<Boolean> enableLogging;
 
     public Input<Boolean> getEnableLogging() {
         return this.enableLogging == null ? Input.empty() : this.enableLogging;
@@ -78,7 +78,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="firewallPolicy", required=true)
-    private final Input<String> firewallPolicy;
+        private final Input<String> firewallPolicy;
 
     public Input<String> getFirewallPolicy() {
         return this.firewallPolicy;
@@ -89,7 +89,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="match", required=true)
-    private final Input<FirewallPolicyRuleMatchArgs> match;
+        private final Input<FirewallPolicyRuleMatchArgs> match;
 
     public Input<FirewallPolicyRuleMatchArgs> getMatch() {
         return this.match;
@@ -100,7 +100,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="priority", required=true)
-    private final Input<Integer> priority;
+        private final Input<Integer> priority;
 
     public Input<Integer> getPriority() {
         return this.priority;
@@ -111,7 +111,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetResources")
-    private final @Nullable Input<List<String>> targetResources;
+        private final @Nullable Input<List<String>> targetResources;
 
     public Input<List<String>> getTargetResources() {
         return this.targetResources == null ? Input.empty() : this.targetResources;
@@ -122,7 +122,7 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="targetServiceAccounts")
-    private final @Nullable Input<List<String>> targetServiceAccounts;
+        private final @Nullable Input<List<String>> targetServiceAccounts;
 
     public Input<List<String>> getTargetServiceAccounts() {
         return this.targetServiceAccounts == null ? Input.empty() : this.targetServiceAccounts;
@@ -301,7 +301,6 @@ public final class FirewallPolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.targetServiceAccounts = Input.ofNullable(targetServiceAccounts);
             return this;
         }
-
         public FirewallPolicyRuleArgs build() {
             return new FirewallPolicyRuleArgs(action, description, direction, disabled, enableLogging, firewallPolicy, match, priority, targetResources, targetServiceAccounts);
         }

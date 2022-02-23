@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ExecutionTemplateResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class GetExecutionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetExecutionResult build() {
             return new GetExecutionResult(createTime, description, displayName, executionTemplate, jobUri, name, outputNotebookFile, state, updateTime);
         }

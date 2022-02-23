@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail.inputs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerEnvironmentVariableArgs;
 import io.pulumi.awsnative.lightsail.inputs.ContainerPortInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="command")
-    private final @Nullable Input<List<String>> command;
+        private final @Nullable Input<List<String>> command;
 
     public Input<List<String>> getCommand() {
         return this.command == null ? Input.empty() : this.command;
@@ -37,7 +37,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="containerName")
-    private final @Nullable Input<String> containerName;
+        private final @Nullable Input<String> containerName;
 
     public Input<String> getContainerName() {
         return this.containerName == null ? Input.empty() : this.containerName;
@@ -48,7 +48,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="environment")
-    private final @Nullable Input<List<ContainerEnvironmentVariableArgs>> environment;
+        private final @Nullable Input<List<ContainerEnvironmentVariableArgs>> environment;
 
     public Input<List<ContainerEnvironmentVariableArgs>> getEnvironment() {
         return this.environment == null ? Input.empty() : this.environment;
@@ -59,7 +59,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="image")
-    private final @Nullable Input<String> image;
+        private final @Nullable Input<String> image;
 
     public Input<String> getImage() {
         return this.image == null ? Input.empty() : this.image;
@@ -70,7 +70,7 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<ContainerPortInfoArgs>> ports;
+        private final @Nullable Input<List<ContainerPortInfoArgs>> ports;
 
     public Input<List<ContainerPortInfoArgs>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -174,7 +174,6 @@ public final class ContainerArgs extends io.pulumi.resources.ResourceArgs {
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public ContainerArgs build() {
             return new ContainerArgs(command, containerName, environment, image, ports);
         }

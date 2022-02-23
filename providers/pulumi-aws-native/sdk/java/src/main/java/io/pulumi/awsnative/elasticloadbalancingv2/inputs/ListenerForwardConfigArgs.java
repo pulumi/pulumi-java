@@ -6,7 +6,7 @@ package io.pulumi.awsnative.elasticloadbalancingv2.inputs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupStickinessConfigArgs;
 import io.pulumi.awsnative.elasticloadbalancingv2.inputs.ListenerTargetGroupTupleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,14 +17,14 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
     public static final ListenerForwardConfigArgs Empty = new ListenerForwardConfigArgs();
 
     @InputImport(name="targetGroupStickinessConfig")
-    private final @Nullable Input<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
+        private final @Nullable Input<ListenerTargetGroupStickinessConfigArgs> targetGroupStickinessConfig;
 
     public Input<ListenerTargetGroupStickinessConfigArgs> getTargetGroupStickinessConfig() {
         return this.targetGroupStickinessConfig == null ? Input.empty() : this.targetGroupStickinessConfig;
     }
 
     @InputImport(name="targetGroups")
-    private final @Nullable Input<List<ListenerTargetGroupTupleArgs>> targetGroups;
+        private final @Nullable Input<List<ListenerTargetGroupTupleArgs>> targetGroups;
 
     public Input<List<ListenerTargetGroupTupleArgs>> getTargetGroups() {
         return this.targetGroups == null ? Input.empty() : this.targetGroups;
@@ -83,7 +83,6 @@ public final class ListenerForwardConfigArgs extends io.pulumi.resources.Resourc
             this.targetGroups = Input.ofNullable(targetGroups);
             return this;
         }
-
         public ListenerForwardConfigArgs build() {
             return new ListenerForwardConfigArgs(targetGroupStickinessConfig, targetGroups);
         }

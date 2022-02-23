@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmLastAgentUpgradeE
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmMobilityAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmNicDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmProtectedDiskDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -987,7 +987,6 @@ public final class InMageRcmReplicationDetailsResponse {
             this.vmNics = Objects.requireNonNull(vmNics);
             return this;
         }
-
         public InMageRcmReplicationDetailsResponse build() {
             return new InMageRcmReplicationDetailsResponse(agentUpgradeBlockingErrorDetails, agentUpgradeState, allocatedMemoryInMB, discoveryType, fabricDiscoveryMachineId, failoverRecoveryPointId, firmwareType, initialReplicationProcessedBytes, initialReplicationProgressPercentage, initialReplicationTransferredBytes, instanceType, internalIdentifier, isLastUpgradeSuccessful, lastAgentUpgradeErrorDetails, lastAgentUpgradeFailedJobId, lastAgentUpgradeType, lastRecoveryPointId, lastRecoveryPointReceived, lastRpoCalculatedTime, lastRpoInSeconds, licenseType, mobilityAgentDetails, multiVmGroupName, osType, processServerId, processServerName, processorCoreCount, protectedDisks, resyncProcessedBytes, resyncProgressPercentage, resyncRequired, resyncState, resyncTransferredBytes, runAsAccountId, targetAvailabilitySetId, targetAvailabilityZone, targetBootDiagnosticsStorageAccountId, targetGeneration, targetNetworkId, targetProximityPlacementGroupId, targetResourceGroupId, targetVmName, targetVmSize, testNetworkId, vmNics);
         }

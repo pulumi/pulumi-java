@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IDRange;
 import java.lang.String;
 import java.util.List;
@@ -77,7 +77,6 @@ public final class RunAsGroupStrategyOptions {
             this.rule = Objects.requireNonNull(rule);
             return this;
         }
-
         public RunAsGroupStrategyOptions build() {
             return new RunAsGroupStrategyOptions(ranges, rule);
         }

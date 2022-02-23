@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.outputs;
 
 import io.pulumi.awsnative.iot.enums.TopicRuleDestinationStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class GetTopicRuleDestinationResult {
             this.statusReason = statusReason;
             return this;
         }
-
         public GetTopicRuleDestinationResult build() {
             return new GetTopicRuleDestinationResult(arn, status, statusReason);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -140,7 +140,6 @@ public final class SharedPrivateLinkResourcePropertiesResponse {
             this.status = status;
             return this;
         }
-
         public SharedPrivateLinkResourcePropertiesResponse build() {
             return new SharedPrivateLinkResourcePropertiesResponse(groupId, privateLink, privateLinkLocation, requestMessage, status);
         }

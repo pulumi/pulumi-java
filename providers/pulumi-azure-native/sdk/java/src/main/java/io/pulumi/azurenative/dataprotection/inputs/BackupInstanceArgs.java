@@ -7,7 +7,7 @@ import io.pulumi.azurenative.dataprotection.inputs.DatasourceArgs;
 import io.pulumi.azurenative.dataprotection.inputs.DatasourceSetArgs;
 import io.pulumi.azurenative.dataprotection.inputs.PolicyInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceInfo", required=true)
-    private final Input<DatasourceArgs> dataSourceInfo;
+        private final Input<DatasourceArgs> dataSourceInfo;
 
     public Input<DatasourceArgs> getDataSourceInfo() {
         return this.dataSourceInfo;
@@ -37,7 +37,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataSourceSetInfo")
-    private final @Nullable Input<DatasourceSetArgs> dataSourceSetInfo;
+        private final @Nullable Input<DatasourceSetArgs> dataSourceSetInfo;
 
     public Input<DatasourceSetArgs> getDataSourceSetInfo() {
         return this.dataSourceSetInfo == null ? Input.empty() : this.dataSourceSetInfo;
@@ -48,14 +48,14 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
     }
 
     @InputImport(name="objectType", required=true)
-    private final Input<String> objectType;
+        private final Input<String> objectType;
 
     public Input<String> getObjectType() {
         return this.objectType;
@@ -66,7 +66,7 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="policyInfo", required=true)
-    private final Input<PolicyInfoArgs> policyInfo;
+        private final Input<PolicyInfoArgs> policyInfo;
 
     public Input<PolicyInfoArgs> getPolicyInfo() {
         return this.policyInfo;
@@ -170,7 +170,6 @@ public final class BackupInstanceArgs extends io.pulumi.resources.ResourceArgs {
             this.policyInfo = Input.of(Objects.requireNonNull(policyInfo));
             return this;
         }
-
         public BackupInstanceArgs build() {
             return new BackupInstanceArgs(dataSourceInfo, dataSourceSetInfo, friendlyName, objectType, policyInfo);
         }

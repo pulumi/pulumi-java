@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.azurenative.appplatform.inputs.GatewayApiRouteResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="appResourceId")
-    private final @Nullable String appResourceId;
+        private final @Nullable String appResourceId;
 
     public Optional<String> getAppResourceId() {
         return this.appResourceId == null ? Optional.empty() : Optional.ofNullable(this.appResourceId);
@@ -36,7 +36,7 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -47,7 +47,7 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable List<GatewayApiRouteResponse> routes;
+        private final @Nullable List<GatewayApiRouteResponse> routes;
 
     public List<GatewayApiRouteResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
@@ -106,7 +106,6 @@ public final class GatewayRouteConfigPropertiesResponse extends io.pulumi.resour
             this.routes = routes;
             return this;
         }
-
         public GatewayRouteConfigPropertiesResponse build() {
             return new GatewayRouteConfigPropertiesResponse(appResourceId, provisioningState, routes);
         }

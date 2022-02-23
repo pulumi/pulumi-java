@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.VpnNatRuleType;
 import io.pulumi.azurenative.network.inputs.VpnNatRuleMappingArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="externalMappings")
-    private final @Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings;
+        private final @Nullable Input<List<VpnNatRuleMappingArgs>> externalMappings;
 
     public Input<List<VpnNatRuleMappingArgs>> getExternalMappings() {
         return this.externalMappings == null ? Input.empty() : this.externalMappings;
@@ -35,7 +35,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="gatewayName", required=true)
-    private final Input<String> gatewayName;
+        private final Input<String> gatewayName;
 
     public Input<String> getGatewayName() {
         return this.gatewayName;
@@ -46,7 +46,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -57,7 +57,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="internalMappings")
-    private final @Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings;
+        private final @Nullable Input<List<VpnNatRuleMappingArgs>> internalMappings;
 
     public Input<List<VpnNatRuleMappingArgs>> getInternalMappings() {
         return this.internalMappings == null ? Input.empty() : this.internalMappings;
@@ -68,7 +68,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipConfigurationId")
-    private final @Nullable Input<String> ipConfigurationId;
+        private final @Nullable Input<String> ipConfigurationId;
 
     public Input<String> getIpConfigurationId() {
         return this.ipConfigurationId == null ? Input.empty() : this.ipConfigurationId;
@@ -79,7 +79,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,VpnNatRuleMode>> mode;
+        private final @Nullable Input<Either<String,VpnNatRuleMode>> mode;
 
     public Input<Either<String,VpnNatRuleMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -90,7 +90,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -101,7 +101,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="natRuleName")
-    private final @Nullable Input<String> natRuleName;
+        private final @Nullable Input<String> natRuleName;
 
     public Input<String> getNatRuleName() {
         return this.natRuleName == null ? Input.empty() : this.natRuleName;
@@ -112,7 +112,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -123,7 +123,7 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,VpnNatRuleType>> type;
+        private final @Nullable Input<Either<String,VpnNatRuleType>> type;
 
     public Input<Either<String,VpnNatRuleType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -302,7 +302,6 @@ public final class NatRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public NatRuleArgs build() {
             return new NatRuleArgs(externalMappings, gatewayName, id, internalMappings, ipConfigurationId, mode, name, natRuleName, resourceGroupName, type);
         }

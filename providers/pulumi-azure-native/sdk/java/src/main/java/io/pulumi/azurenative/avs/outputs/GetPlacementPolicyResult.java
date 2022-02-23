@@ -6,7 +6,7 @@ package io.pulumi.azurenative.avs.outputs;
 import io.pulumi.azurenative.avs.outputs.VmHostPlacementPolicyPropertiesResponse;
 import io.pulumi.azurenative.avs.outputs.VmVmPlacementPolicyPropertiesResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -119,7 +119,6 @@ public final class GetPlacementPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPlacementPolicyResult build() {
             return new GetPlacementPolicyResult(id, name, properties, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="interimSchemaName")
-    private final @Nullable Object interimSchemaName;
+        private final @Nullable Object interimSchemaName;
 
     public Optional<Object> getInterimSchemaName() {
         return this.interimSchemaName == null ? Optional.empty() : Optional.ofNullable(this.interimSchemaName);
@@ -34,7 +34,7 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Object keys;
+        private final @Nullable Object keys;
 
     public Optional<Object> getKeys() {
         return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
@@ -83,7 +83,6 @@ public final class SqlDWUpsertSettingsResponse extends io.pulumi.resources.Invok
             this.keys = keys;
             return this;
         }
-
         public SqlDWUpsertSettingsResponse build() {
             return new SqlDWUpsertSettingsResponse(interimSchemaName, keys);
         }

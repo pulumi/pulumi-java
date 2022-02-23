@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class CertificateConfigX509ConfigAdditionalExtensionObjectIdArgs ex
      * 
      */
     @InputImport(name="objectIdPaths", required=true)
-    private final Input<List<Integer>> objectIdPaths;
+        private final Input<List<Integer>> objectIdPaths;
 
     public Input<List<Integer>> getObjectIdPaths() {
         return this.objectIdPaths;
@@ -62,7 +62,6 @@ public final class CertificateConfigX509ConfigAdditionalExtensionObjectIdArgs ex
             this.objectIdPaths = Input.of(Objects.requireNonNull(objectIdPaths));
             return this;
         }
-
         public CertificateConfigX509ConfigAdditionalExtensionObjectIdArgs build() {
             return new CertificateConfigX509ConfigAdditionalExtensionObjectIdArgs(objectIdPaths);
         }

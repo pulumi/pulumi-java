@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2ValueResponse;
 import java.lang.Double;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GooglePrivacyDlpV2FixedSizeBucketingConfigResponse {
             this.upperBound = Objects.requireNonNull(upperBound);
             return this;
         }
-
         public GooglePrivacyDlpV2FixedSizeBucketingConfigResponse build() {
             return new GooglePrivacyDlpV2FixedSizeBucketingConfigResponse(bucketSize, lowerBound, upperBound);
         }

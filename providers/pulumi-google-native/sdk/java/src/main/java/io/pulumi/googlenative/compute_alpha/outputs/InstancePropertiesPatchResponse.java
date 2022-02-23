@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class InstancePropertiesPatchResponse {
             this.metadata = Objects.requireNonNull(metadata);
             return this;
         }
-
         public InstancePropertiesPatchResponse build() {
             return new InstancePropertiesPatchResponse(labels, metadata);
         }

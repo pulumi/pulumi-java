@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1PropertiesResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -222,7 +222,6 @@ public final class GetEnvironmentResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEnvironmentResult build() {
             return new GetEnvironmentResult(apiProxyType, createdAt, deploymentType, description, displayName, lastModifiedAt, name, properties, state);
         }

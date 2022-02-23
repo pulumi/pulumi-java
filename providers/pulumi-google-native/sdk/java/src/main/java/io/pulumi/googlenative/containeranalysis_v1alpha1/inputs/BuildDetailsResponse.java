@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.BuildProvenanceResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.InTotoStatementResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="intotoStatement", required=true)
-    private final InTotoStatementResponse intotoStatement;
+      private final InTotoStatementResponse intotoStatement;
 
     public InTotoStatementResponse getIntotoStatement() {
         return this.intotoStatement;
@@ -34,7 +34,7 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provenance", required=true)
-    private final BuildProvenanceResponse provenance;
+      private final BuildProvenanceResponse provenance;
 
     public BuildProvenanceResponse getProvenance() {
         return this.provenance;
@@ -45,7 +45,7 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provenanceBytes", required=true)
-    private final String provenanceBytes;
+      private final String provenanceBytes;
 
     public String getProvenanceBytes() {
         return this.provenanceBytes;
@@ -104,7 +104,6 @@ public final class BuildDetailsResponse extends io.pulumi.resources.InvokeArgs {
             this.provenanceBytes = Objects.requireNonNull(provenanceBytes);
             return this;
         }
-
         public BuildDetailsResponse build() {
             return new BuildDetailsResponse(intotoStatement, provenance, provenanceBytes);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudscheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudscheduler.outputs.JobAppEngineHttpTargetAppEngineRouting;
 import java.lang.String;
 import java.util.Map;
@@ -159,7 +159,6 @@ public final class JobAppEngineHttpTarget {
             this.relativeUri = Objects.requireNonNull(relativeUri);
             return this;
         }
-
         public JobAppEngineHttpTarget build() {
             return new JobAppEngineHttpTarget(appEngineRouting, body, headers, httpMethod, relativeUri);
         }

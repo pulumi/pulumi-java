@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class EndpointAddress {
             this.targetRef = targetRef;
             return this;
         }
-
         public EndpointAddress build() {
             return new EndpointAddress(hostname, ip, nodeName, targetRef);
         }

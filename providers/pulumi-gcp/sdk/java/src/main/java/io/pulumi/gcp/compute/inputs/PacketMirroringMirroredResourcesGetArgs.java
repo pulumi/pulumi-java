@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesInstanceGetArgs;
 import io.pulumi.gcp.compute.inputs.PacketMirroringMirroredResourcesSubnetworkGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="instances")
-    private final @Nullable Input<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances;
+        private final @Nullable Input<List<PacketMirroringMirroredResourcesInstanceGetArgs>> instances;
 
     public Input<List<PacketMirroringMirroredResourcesInstanceGetArgs>> getInstances() {
         return this.instances == null ? Input.empty() : this.instances;
@@ -35,7 +35,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="subnetworks")
-    private final @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks;
+        private final @Nullable Input<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> subnetworks;
 
     public Input<List<PacketMirroringMirroredResourcesSubnetworkGetArgs>> getSubnetworks() {
         return this.subnetworks == null ? Input.empty() : this.subnetworks;
@@ -46,7 +46,7 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -120,7 +120,6 @@ public final class PacketMirroringMirroredResourcesGetArgs extends io.pulumi.res
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PacketMirroringMirroredResourcesGetArgs build() {
             return new PacketMirroringMirroredResourcesGetArgs(instances, subnetworks, tags);
         }

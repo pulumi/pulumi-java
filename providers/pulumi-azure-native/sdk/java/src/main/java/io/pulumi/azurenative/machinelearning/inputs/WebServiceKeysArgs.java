@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="primary")
-    private final @Nullable Input<String> primary;
+        private final @Nullable Input<String> primary;
 
     public Input<String> getPrimary() {
         return this.primary == null ? Input.empty() : this.primary;
@@ -34,7 +34,7 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secondary")
-    private final @Nullable Input<String> secondary;
+        private final @Nullable Input<String> secondary;
 
     public Input<String> getSecondary() {
         return this.secondary == null ? Input.empty() : this.secondary;
@@ -93,7 +93,6 @@ public final class WebServiceKeysArgs extends io.pulumi.resources.ResourceArgs {
             this.secondary = Input.ofNullable(secondary);
             return this;
         }
-
         public WebServiceKeysArgs build() {
             return new WebServiceKeysArgs(primary, secondary);
         }

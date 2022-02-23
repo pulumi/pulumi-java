@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class TensorFlowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="distributionType", required=true)
-    private final String distributionType;
+        private final String distributionType;
 
     public String getDistributionType() {
         return this.distributionType;
@@ -36,7 +36,7 @@ public final class TensorFlowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parameterServerCount")
-    private final @Nullable Integer parameterServerCount;
+        private final @Nullable Integer parameterServerCount;
 
     public Optional<Integer> getParameterServerCount() {
         return this.parameterServerCount == null ? Optional.empty() : Optional.ofNullable(this.parameterServerCount);
@@ -47,7 +47,7 @@ public final class TensorFlowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workerCount")
-    private final @Nullable Integer workerCount;
+        private final @Nullable Integer workerCount;
 
     public Optional<Integer> getWorkerCount() {
         return this.workerCount == null ? Optional.empty() : Optional.ofNullable(this.workerCount);
@@ -106,7 +106,6 @@ public final class TensorFlowResponse extends io.pulumi.resources.InvokeArgs {
             this.workerCount = workerCount;
             return this;
         }
-
         public TensorFlowResponse build() {
             return new TensorFlowResponse(distributionType, parameterServerCount, workerCount);
         }

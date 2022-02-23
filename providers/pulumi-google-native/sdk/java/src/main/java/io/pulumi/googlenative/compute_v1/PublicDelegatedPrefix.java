@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.PublicDelegatedPrefixArgs;
 import io.pulumi.googlenative.compute_v1.outputs.PublicDelegatedPrefixPublicDelegatedSubPrefixResponse;
@@ -190,13 +190,6 @@ public class PublicDelegatedPrefix extends io.pulumi.resources.CustomResource {
         return this.status;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PublicDelegatedPrefix(String name) {
-        super("google-native:compute/v1:PublicDelegatedPrefix", name, PublicDelegatedPrefixArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

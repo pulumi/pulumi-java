@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
     public static final DeliveryStreamHiveJsonSerDeArgs Empty = new DeliveryStreamHiveJsonSerDeArgs();
 
     @InputImport(name="timestampFormats")
-    private final @Nullable Input<List<String>> timestampFormats;
+        private final @Nullable Input<List<String>> timestampFormats;
 
     public Input<List<String>> getTimestampFormats() {
         return this.timestampFormats == null ? Input.empty() : this.timestampFormats;
@@ -59,7 +59,6 @@ public final class DeliveryStreamHiveJsonSerDeArgs extends io.pulumi.resources.R
             this.timestampFormats = Input.ofNullable(timestampFormats);
             return this;
         }
-
         public DeliveryStreamHiveJsonSerDeArgs build() {
             return new DeliveryStreamHiveJsonSerDeArgs(timestampFormats);
         }

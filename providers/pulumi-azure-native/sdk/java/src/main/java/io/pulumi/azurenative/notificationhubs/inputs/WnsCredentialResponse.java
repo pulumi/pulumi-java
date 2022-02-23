@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.notificationhubs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="packageSid")
-    private final @Nullable String packageSid;
+        private final @Nullable String packageSid;
 
     public Optional<String> getPackageSid() {
         return this.packageSid == null ? Optional.empty() : Optional.ofNullable(this.packageSid);
@@ -34,7 +34,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="secretKey")
-    private final @Nullable String secretKey;
+        private final @Nullable String secretKey;
 
     public Optional<String> getSecretKey() {
         return this.secretKey == null ? Optional.empty() : Optional.ofNullable(this.secretKey);
@@ -45,7 +45,7 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="windowsLiveEndpoint")
-    private final @Nullable String windowsLiveEndpoint;
+        private final @Nullable String windowsLiveEndpoint;
 
     public Optional<String> getWindowsLiveEndpoint() {
         return this.windowsLiveEndpoint == null ? Optional.empty() : Optional.ofNullable(this.windowsLiveEndpoint);
@@ -104,7 +104,6 @@ public final class WnsCredentialResponse extends io.pulumi.resources.InvokeArgs 
             this.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;
         }
-
         public WnsCredentialResponse build() {
             return new WnsCredentialResponse(packageSid, secretKey, windowsLiveEndpoint);
         }

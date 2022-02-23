@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -179,7 +179,6 @@ public final class GetGeoBackupPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGeoBackupPolicyResult build() {
             return new GetGeoBackupPolicyResult(id, kind, location, name, state, storageType, type);
         }

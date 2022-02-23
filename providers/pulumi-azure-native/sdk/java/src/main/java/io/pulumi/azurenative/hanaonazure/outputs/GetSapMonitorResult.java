@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -309,7 +309,6 @@ public final class GetSapMonitorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSapMonitorResult build() {
             return new GetSapMonitorResult(enableCustomerAnalytics, id, location, logAnalyticsWorkspaceArmId, logAnalyticsWorkspaceId, logAnalyticsWorkspaceSharedKey, managedResourceGroupName, monitorSubnet, name, provisioningState, sapMonitorCollectorVersion, tags, type);
         }

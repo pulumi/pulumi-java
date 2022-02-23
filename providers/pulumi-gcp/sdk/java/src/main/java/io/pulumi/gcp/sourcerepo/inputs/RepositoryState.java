@@ -4,7 +4,7 @@
 package io.pulumi.gcp.sourcerepo.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.sourcerepo.inputs.RepositoryPubsubConfigGetArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -35,7 +35,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -48,7 +48,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="pubsubConfigs")
-    private final @Nullable Input<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
+        private final @Nullable Input<List<RepositoryPubsubConfigGetArgs>> pubsubConfigs;
 
     public Input<List<RepositoryPubsubConfigGetArgs>> getPubsubConfigs() {
         return this.pubsubConfigs == null ? Input.empty() : this.pubsubConfigs;
@@ -59,7 +59,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<Integer> size;
+        private final @Nullable Input<Integer> size;
 
     public Input<Integer> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -70,7 +70,7 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable Input<String> url;
+        private final @Nullable Input<String> url;
 
     public Input<String> getUrl() {
         return this.url == null ? Input.empty() : this.url;
@@ -174,7 +174,6 @@ public final class RepositoryState extends io.pulumi.resources.ResourceArgs {
             this.url = Input.ofNullable(url);
             return this;
         }
-
         public RepositoryState build() {
             return new RepositoryState(name, project, pubsubConfigs, size, url);
         }

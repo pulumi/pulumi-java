@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -158,7 +158,6 @@ public final class ExtendedKeyUsageOptionsResponse {
             this.timeStamping = Objects.requireNonNull(timeStamping);
             return this;
         }
-
         public ExtendedKeyUsageOptionsResponse build() {
             return new ExtendedKeyUsageOptionsResponse(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

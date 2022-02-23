@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningexperimentation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -266,7 +266,6 @@ public final class GetWorkspaceResult {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public GetWorkspaceResult build() {
             return new GetWorkspaceResult(accountId, creationDate, description, friendlyName, id, location, name, provisioningState, tags, type, workspaceId);
         }

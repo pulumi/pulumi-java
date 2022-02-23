@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.firebasehosting_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.firebasehosting_v1beta1.outputs.CloudRunRewriteResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class RewriteResponse {
             this.run = Objects.requireNonNull(run);
             return this;
         }
-
         public RewriteResponse build() {
             return new RewriteResponse(dynamicLinks, function, glob, path, regex, run);
         }

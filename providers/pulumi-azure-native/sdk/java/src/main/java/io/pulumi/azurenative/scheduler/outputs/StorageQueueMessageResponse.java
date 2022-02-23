@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class StorageQueueMessageResponse {
             this.storageAccount = storageAccount;
             return this;
         }
-
         public StorageQueueMessageResponse build() {
             return new StorageQueueMessageResponse(message, queueName, sasToken, storageAccount);
         }

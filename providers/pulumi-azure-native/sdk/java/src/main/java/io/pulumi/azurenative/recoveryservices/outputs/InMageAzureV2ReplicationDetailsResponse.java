@@ -8,7 +8,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageAzureV2ManagedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.InMageAzureV2ProtectedDiskDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMNicDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -1199,7 +1199,6 @@ public final class InMageAzureV2ReplicationDetailsResponse {
             this.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
-
         public InMageAzureV2ReplicationDetailsResponse build() {
             return new InMageAzureV2ReplicationDetailsResponse(agentExpiryDate, agentVersion, azureVMDiskDetails, compressedDataRateInMB, datastores, discoveryType, diskResized, enableRdpOnTargetOption, infrastructureVmId, instanceType, ipAddress, isAgentUpdateRequired, isRebootAfterUpdateRequired, lastHeartbeat, lastRpoCalculatedTime, lastUpdateReceivedTime, licenseType, masterTargetId, multiVmGroupId, multiVmGroupName, multiVmSyncStatus, osDiskId, osType, osVersion, processServerId, processServerName, protectedDisks, protectedManagedDisks, protectionStage, recoveryAvailabilitySetId, recoveryAzureLogStorageAccountId, recoveryAzureResourceGroupId, recoveryAzureStorageAccount, recoveryAzureVMName, recoveryAzureVMSize, replicaId, resyncProgressPercentage, rpoInSeconds, selectedRecoveryAzureNetworkId, selectedSourceNicId, selectedTfoAzureNetworkId, sourceVmCpuCount, sourceVmRamSizeInMB, targetAvailabilityZone, targetProximityPlacementGroupId, targetVmId, uncompressedDataRateInMB, useManagedDisks, vCenterInfrastructureId, validationErrors, vhdName, vmId, vmNics, vmProtectionState, vmProtectionStateDescription);
         }

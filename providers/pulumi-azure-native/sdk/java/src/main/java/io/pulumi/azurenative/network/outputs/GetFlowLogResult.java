@@ -6,7 +6,7 @@ package io.pulumi.azurenative.network.outputs;
 import io.pulumi.azurenative.network.outputs.FlowLogFormatParametersResponse;
 import io.pulumi.azurenative.network.outputs.RetentionPolicyParametersResponse;
 import io.pulumi.azurenative.network.outputs.TrafficAnalyticsPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -333,7 +333,6 @@ public final class GetFlowLogResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFlowLogResult build() {
             return new GetFlowLogResult(enabled, etag, flowAnalyticsConfiguration, format, id, location, name, provisioningState, retentionPolicy, storageId, tags, targetResourceGuid, targetResourceId, type);
         }

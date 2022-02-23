@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 import io.pulumi.azurenative.devtestlab.outputs.ExternalSubnetResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetOverrideResponse;
 import io.pulumi.azurenative.devtestlab.outputs.SubnetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -312,7 +312,6 @@ public final class GetVirtualNetworkResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetVirtualNetworkResult build() {
             return new GetVirtualNetworkResult(allowedSubnets, createdDate, description, externalProviderResourceId, externalSubnets, id, location, name, provisioningState, subnetOverrides, tags, type, uniqueIdentifier);
         }

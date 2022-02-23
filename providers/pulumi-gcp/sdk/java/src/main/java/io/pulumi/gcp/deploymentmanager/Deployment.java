@@ -5,8 +5,8 @@ package io.pulumi.gcp.deploymentmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.deploymentmanager.DeploymentArgs;
 import io.pulumi.gcp.deploymentmanager.inputs.DeploymentState;
@@ -258,13 +258,6 @@ public class Deployment extends io.pulumi.resources.CustomResource {
         return this.target;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Deployment(String name) {
-        super("gcp:deploymentmanager/deployment:Deployment", name, DeploymentArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

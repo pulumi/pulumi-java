@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.DeliveryRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public EndpointPropertiesUpdateParametersResponseDeliveryPolicy build() {
             return new EndpointPropertiesUpdateParametersResponseDeliveryPolicy(description, rules);
         }

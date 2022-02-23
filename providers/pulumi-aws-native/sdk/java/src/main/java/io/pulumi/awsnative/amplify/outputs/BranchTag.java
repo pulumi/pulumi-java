@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.amplify.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -58,7 +58,6 @@ public final class BranchTag {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public BranchTag build() {
             return new BranchTag(key, value);
         }

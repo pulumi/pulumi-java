@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="channel", required=true)
-    private final String channel;
+        private final String channel;
 
     public String getChannel() {
         return this.channel;
@@ -30,7 +30,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -41,7 +41,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -52,7 +52,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable String parent;
+        private final @Nullable String parent;
 
     public Optional<String> getParent() {
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
@@ -63,7 +63,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -74,7 +74,7 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="subchannel", required=true)
-    private final String subchannel;
+        private final String subchannel;
 
     public String getSubchannel() {
         return this.subchannel;
@@ -163,7 +163,6 @@ public final class SettingsPropertiesResponseCache extends io.pulumi.resources.I
             this.subchannel = Objects.requireNonNull(subchannel);
             return this;
         }
-
         public SettingsPropertiesResponseCache build() {
             return new SettingsPropertiesResponseCache(channel, id, name, parent, status, subchannel);
         }

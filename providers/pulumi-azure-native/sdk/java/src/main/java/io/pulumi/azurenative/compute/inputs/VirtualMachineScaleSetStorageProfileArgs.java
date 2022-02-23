@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.inputs.ImageReferenceArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetDataDiskArgs;
 import io.pulumi.azurenative.compute.inputs.VirtualMachineScaleSetOSDiskArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="dataDisks")
-    private final @Nullable Input<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
+        private final @Nullable Input<List<VirtualMachineScaleSetDataDiskArgs>> dataDisks;
 
     public Input<List<VirtualMachineScaleSetDataDiskArgs>> getDataDisks() {
         return this.dataDisks == null ? Input.empty() : this.dataDisks;
@@ -37,7 +37,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="imageReference")
-    private final @Nullable Input<ImageReferenceArgs> imageReference;
+        private final @Nullable Input<ImageReferenceArgs> imageReference;
 
     public Input<ImageReferenceArgs> getImageReference() {
         return this.imageReference == null ? Input.empty() : this.imageReference;
@@ -48,7 +48,7 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="osDisk")
-    private final @Nullable Input<VirtualMachineScaleSetOSDiskArgs> osDisk;
+        private final @Nullable Input<VirtualMachineScaleSetOSDiskArgs> osDisk;
 
     public Input<VirtualMachineScaleSetOSDiskArgs> getOsDisk() {
         return this.osDisk == null ? Input.empty() : this.osDisk;
@@ -122,7 +122,6 @@ public final class VirtualMachineScaleSetStorageProfileArgs extends io.pulumi.re
             this.osDisk = Input.ofNullable(osDisk);
             return this;
         }
-
         public VirtualMachineScaleSetStorageProfileArgs build() {
             return new VirtualMachineScaleSetStorageProfileArgs(dataDisks, imageReference, osDisk);
         }

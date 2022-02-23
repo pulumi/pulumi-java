@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="networkInterfaceName", required=true)
-    private final String networkInterfaceName;
+        private final String networkInterfaceName;
 
     public String getNetworkInterfaceName() {
         return this.networkInterfaceName;
@@ -28,7 +28,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="tapConfigurationName", required=true)
-    private final String tapConfigurationName;
+        private final String tapConfigurationName;
 
     public String getTapConfigurationName() {
         return this.tapConfigurationName;
@@ -98,7 +98,6 @@ public final class GetNetworkInterfaceTapConfigurationArgs extends io.pulumi.res
             this.tapConfigurationName = Objects.requireNonNull(tapConfigurationName);
             return this;
         }
-
         public GetNetworkInterfaceTapConfigurationArgs build() {
             return new GetNetworkInterfaceTapConfigurationArgs(networkInterfaceName, resourceGroupName, tapConfigurationName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -78,7 +78,6 @@ public final class RollingUpdateDeployment {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public RollingUpdateDeployment build() {
             return new RollingUpdateDeployment(maxSurge, maxUnavailable);
         }

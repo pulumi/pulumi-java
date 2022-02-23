@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lambda.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class EventSourceMappingFilter {
             this.pattern = pattern;
             return this;
         }
-
         public EventSourceMappingFilter build() {
             return new EventSourceMappingFilter(pattern);
         }

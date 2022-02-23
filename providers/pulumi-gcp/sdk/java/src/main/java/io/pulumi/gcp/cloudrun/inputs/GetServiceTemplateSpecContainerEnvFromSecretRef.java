@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference;
 import java.lang.Boolean;
 import java.util.List;
@@ -15,14 +15,14 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef extends io.pu
     public static final GetServiceTemplateSpecContainerEnvFromSecretRef Empty = new GetServiceTemplateSpecContainerEnvFromSecretRef();
 
     @InputImport(name="localObjectReferences", required=true)
-    private final List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
+        private final List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> localObjectReferences;
 
     public List<GetServiceTemplateSpecContainerEnvFromSecretRefLocalObjectReference> getLocalObjectReferences() {
         return this.localObjectReferences;
     }
 
     @InputImport(name="optional", required=true)
-    private final Boolean optional;
+        private final Boolean optional;
 
     public Boolean getOptional() {
         return this.optional;
@@ -71,7 +71,6 @@ public final class GetServiceTemplateSpecContainerEnvFromSecretRef extends io.pu
             this.optional = Objects.requireNonNull(optional);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnvFromSecretRef build() {
             return new GetServiceTemplateSpecContainerEnvFromSecretRef(localObjectReferences, optional);
         }

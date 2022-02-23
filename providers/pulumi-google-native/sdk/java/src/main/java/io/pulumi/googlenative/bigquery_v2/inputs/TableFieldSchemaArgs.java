@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaCategoriesArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.TableFieldSchemaPolicyTagsArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="categories")
-    private final @Nullable Input<TableFieldSchemaCategoriesArgs> categories;
+      private final @Nullable Input<TableFieldSchemaCategoriesArgs> categories;
 
     public Input<TableFieldSchemaCategoriesArgs> getCategories() {
         return this.categories == null ? Input.empty() : this.categories;
@@ -33,7 +33,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="collationSpec")
-    private final @Nullable Input<String> collationSpec;
+      private final @Nullable Input<String> collationSpec;
 
     public Input<String> getCollationSpec() {
         return this.collationSpec == null ? Input.empty() : this.collationSpec;
@@ -44,7 +44,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -55,7 +55,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="fields")
-    private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
+      private final @Nullable Input<List<TableFieldSchemaArgs>> fields;
 
     public Input<List<TableFieldSchemaArgs>> getFields() {
         return this.fields == null ? Input.empty() : this.fields;
@@ -66,7 +66,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="maxLength")
-    private final @Nullable Input<String> maxLength;
+      private final @Nullable Input<String> maxLength;
 
     public Input<String> getMaxLength() {
         return this.maxLength == null ? Input.empty() : this.maxLength;
@@ -77,7 +77,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<String> mode;
+      private final @Nullable Input<String> mode;
 
     public Input<String> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -88,14 +88,14 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="policyTags")
-    private final @Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags;
+      private final @Nullable Input<TableFieldSchemaPolicyTagsArgs> policyTags;
 
     public Input<TableFieldSchemaPolicyTagsArgs> getPolicyTags() {
         return this.policyTags == null ? Input.empty() : this.policyTags;
@@ -106,7 +106,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="precision")
-    private final @Nullable Input<String> precision;
+      private final @Nullable Input<String> precision;
 
     public Input<String> getPrecision() {
         return this.precision == null ? Input.empty() : this.precision;
@@ -117,7 +117,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="scale")
-    private final @Nullable Input<String> scale;
+      private final @Nullable Input<String> scale;
 
     public Input<String> getScale() {
         return this.scale == null ? Input.empty() : this.scale;
@@ -128,7 +128,7 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -322,7 +322,6 @@ public final class TableFieldSchemaArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public TableFieldSchemaArgs build() {
             return new TableFieldSchemaArgs(categories, collationSpec, description, fields, maxLength, mode, name, policyTags, precision, scale, type);
         }

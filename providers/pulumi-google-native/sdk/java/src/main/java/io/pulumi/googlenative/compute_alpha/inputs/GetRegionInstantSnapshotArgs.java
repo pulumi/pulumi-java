@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRegionInstantSnapshotArgs extends io.pulumi.resources.Invo
     public static final GetRegionInstantSnapshotArgs Empty = new GetRegionInstantSnapshotArgs();
 
     @InputImport(name="instantSnapshot", required=true)
-    private final String instantSnapshot;
+      private final String instantSnapshot;
 
     public String getInstantSnapshot() {
         return this.instantSnapshot;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="region", required=true)
-    private final String region;
+      private final String region;
 
     public String getRegion() {
         return this.region;
@@ -88,7 +88,6 @@ public final class GetRegionInstantSnapshotArgs extends io.pulumi.resources.Invo
             this.region = Objects.requireNonNull(region);
             return this;
         }
-
         public GetRegionInstantSnapshotArgs build() {
             return new GetRegionInstantSnapshotArgs(instantSnapshot, project, region);
         }

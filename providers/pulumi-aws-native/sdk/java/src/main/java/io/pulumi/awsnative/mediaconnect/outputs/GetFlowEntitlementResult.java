@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEntitlementStatus;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowEntitlementEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -163,7 +163,6 @@ public final class GetFlowEntitlementResult {
             this.subscribers = subscribers;
             return this;
         }
-
         public GetFlowEntitlementResult build() {
             return new GetFlowEntitlementResult(description, encryption, entitlementArn, entitlementStatus, flowArn, subscribers);
         }

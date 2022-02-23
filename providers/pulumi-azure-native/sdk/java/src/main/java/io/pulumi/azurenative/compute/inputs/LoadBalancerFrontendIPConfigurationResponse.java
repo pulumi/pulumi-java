@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerFrontendIPConfigurationPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -29,7 +29,7 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi
      * 
      */
     @InputImport(name="properties", required=true)
-    private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
+        private final LoadBalancerFrontendIPConfigurationPropertiesResponse properties;
 
     public LoadBalancerFrontendIPConfigurationPropertiesResponse getProperties() {
         return this.properties;
@@ -78,7 +78,6 @@ public final class LoadBalancerFrontendIPConfigurationResponse extends io.pulumi
             this.properties = Objects.requireNonNull(properties);
             return this;
         }
-
         public LoadBalancerFrontendIPConfigurationResponse build() {
             return new LoadBalancerFrontendIPConfigurationResponse(name, properties);
         }

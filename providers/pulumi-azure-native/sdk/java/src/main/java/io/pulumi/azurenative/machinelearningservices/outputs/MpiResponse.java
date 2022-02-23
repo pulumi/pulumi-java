@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class MpiResponse {
             this.processCountPerInstance = processCountPerInstance;
             return this;
         }
-
         public MpiResponse build() {
             return new MpiResponse(distributionType, processCountPerInstance);
         }

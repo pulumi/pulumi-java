@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -175,7 +175,6 @@ public final class JitNetworkAccessRequestPortResponse {
             this.statusReason = Objects.requireNonNull(statusReason);
             return this;
         }
-
         public JitNetworkAccessRequestPortResponse build() {
             return new JitNetworkAccessRequestPortResponse(allowedSourceAddressPrefix, allowedSourceAddressPrefixes, endTimeUtc, mappedPort, number, status, statusReason);
         }

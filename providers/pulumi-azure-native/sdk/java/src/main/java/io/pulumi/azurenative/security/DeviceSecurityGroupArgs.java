@@ -8,7 +8,7 @@ import io.pulumi.azurenative.security.inputs.DenylistCustomAlertRuleArgs;
 import io.pulumi.azurenative.security.inputs.ThresholdCustomAlertRuleArgs;
 import io.pulumi.azurenative.security.inputs.TimeWindowCustomAlertRuleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="allowlistRules")
-    private final @Nullable Input<List<AllowlistCustomAlertRuleArgs>> allowlistRules;
+        private final @Nullable Input<List<AllowlistCustomAlertRuleArgs>> allowlistRules;
 
     public Input<List<AllowlistCustomAlertRuleArgs>> getAllowlistRules() {
         return this.allowlistRules == null ? Input.empty() : this.allowlistRules;
@@ -35,7 +35,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="denylistRules")
-    private final @Nullable Input<List<DenylistCustomAlertRuleArgs>> denylistRules;
+        private final @Nullable Input<List<DenylistCustomAlertRuleArgs>> denylistRules;
 
     public Input<List<DenylistCustomAlertRuleArgs>> getDenylistRules() {
         return this.denylistRules == null ? Input.empty() : this.denylistRules;
@@ -46,7 +46,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deviceSecurityGroupName")
-    private final @Nullable Input<String> deviceSecurityGroupName;
+        private final @Nullable Input<String> deviceSecurityGroupName;
 
     public Input<String> getDeviceSecurityGroupName() {
         return this.deviceSecurityGroupName == null ? Input.empty() : this.deviceSecurityGroupName;
@@ -57,7 +57,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final Input<String> resourceId;
+        private final Input<String> resourceId;
 
     public Input<String> getResourceId() {
         return this.resourceId;
@@ -68,7 +68,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="thresholdRules")
-    private final @Nullable Input<List<ThresholdCustomAlertRuleArgs>> thresholdRules;
+        private final @Nullable Input<List<ThresholdCustomAlertRuleArgs>> thresholdRules;
 
     public Input<List<ThresholdCustomAlertRuleArgs>> getThresholdRules() {
         return this.thresholdRules == null ? Input.empty() : this.thresholdRules;
@@ -79,7 +79,7 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="timeWindowRules")
-    private final @Nullable Input<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules;
+        private final @Nullable Input<List<TimeWindowCustomAlertRuleArgs>> timeWindowRules;
 
     public Input<List<TimeWindowCustomAlertRuleArgs>> getTimeWindowRules() {
         return this.timeWindowRules == null ? Input.empty() : this.timeWindowRules;
@@ -198,7 +198,6 @@ public final class DeviceSecurityGroupArgs extends io.pulumi.resources.ResourceA
             this.timeWindowRules = Input.ofNullable(timeWindowRules);
             return this;
         }
-
         public DeviceSecurityGroupArgs build() {
             return new DeviceSecurityGroupArgs(allowlistRules, denylistRules, deviceSecurityGroupName, resourceId, thresholdRules, timeWindowRules);
         }

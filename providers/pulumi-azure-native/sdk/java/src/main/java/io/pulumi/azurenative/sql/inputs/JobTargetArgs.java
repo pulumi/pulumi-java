@@ -7,7 +7,7 @@ import io.pulumi.azurenative.sql.enums.JobTargetGroupMembershipType;
 import io.pulumi.azurenative.sql.enums.JobTargetType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseName")
-    private final @Nullable Input<String> databaseName;
+        private final @Nullable Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName == null ? Input.empty() : this.databaseName;
@@ -37,7 +37,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="elasticPoolName")
-    private final @Nullable Input<String> elasticPoolName;
+        private final @Nullable Input<String> elasticPoolName;
 
     public Input<String> getElasticPoolName() {
         return this.elasticPoolName == null ? Input.empty() : this.elasticPoolName;
@@ -48,7 +48,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipType")
-    private final @Nullable Input<JobTargetGroupMembershipType> membershipType;
+        private final @Nullable Input<JobTargetGroupMembershipType> membershipType;
 
     public Input<JobTargetGroupMembershipType> getMembershipType() {
         return this.membershipType == null ? Input.empty() : this.membershipType;
@@ -59,7 +59,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="refreshCredential")
-    private final @Nullable Input<String> refreshCredential;
+        private final @Nullable Input<String> refreshCredential;
 
     public Input<String> getRefreshCredential() {
         return this.refreshCredential == null ? Input.empty() : this.refreshCredential;
@@ -70,7 +70,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverName")
-    private final @Nullable Input<String> serverName;
+        private final @Nullable Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName == null ? Input.empty() : this.serverName;
@@ -81,7 +81,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shardMapName")
-    private final @Nullable Input<String> shardMapName;
+        private final @Nullable Input<String> shardMapName;
 
     public Input<String> getShardMapName() {
         return this.shardMapName == null ? Input.empty() : this.shardMapName;
@@ -92,7 +92,7 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,JobTargetType>> type;
+        private final Input<Either<String,JobTargetType>> type;
 
     public Input<Either<String,JobTargetType>> getType() {
         return this.type;
@@ -226,7 +226,6 @@ public final class JobTargetArgs extends io.pulumi.resources.ResourceArgs {
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public JobTargetArgs build() {
             return new JobTargetArgs(databaseName, elasticPoolName, membershipType, refreshCredential, serverName, shardMapName, type);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.appplatform.enums.BindingType;
 import io.pulumi.azurenative.appplatform.inputs.BuildpackBindingLaunchPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="bindingType")
-    private final @Nullable Input<Either<String,BindingType>> bindingType;
+        private final @Nullable Input<Either<String,BindingType>> bindingType;
 
     public Input<Either<String,BindingType>> getBindingType() {
         return this.bindingType == null ? Input.empty() : this.bindingType;
@@ -37,7 +37,7 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="launchProperties")
-    private final @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
+        private final @Nullable Input<BuildpackBindingLaunchPropertiesArgs> launchProperties;
 
     public Input<BuildpackBindingLaunchPropertiesArgs> getLaunchProperties() {
         return this.launchProperties == null ? Input.empty() : this.launchProperties;
@@ -96,7 +96,6 @@ public final class BuildpackBindingPropertiesArgs extends io.pulumi.resources.Re
             this.launchProperties = Input.ofNullable(launchProperties);
             return this;
         }
-
         public BuildpackBindingPropertiesArgs build() {
             return new BuildpackBindingPropertiesArgs(bindingType, launchProperties);
         }

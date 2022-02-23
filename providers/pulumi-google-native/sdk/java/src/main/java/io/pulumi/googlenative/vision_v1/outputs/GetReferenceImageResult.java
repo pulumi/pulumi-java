@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vision_v1.outputs.BoundingPolyResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GetReferenceImageResult {
             this.uri = Objects.requireNonNull(uri);
             return this;
         }
-
         public GetReferenceImageResult build() {
             return new GetReferenceImageResult(boundingPolys, name, uri);
         }

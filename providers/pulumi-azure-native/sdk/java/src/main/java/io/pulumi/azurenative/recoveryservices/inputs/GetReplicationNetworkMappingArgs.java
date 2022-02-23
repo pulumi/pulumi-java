@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final String fabricName;
+        private final String fabricName;
 
     public String getFabricName() {
         return this.fabricName;
@@ -28,7 +28,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="networkMappingName", required=true)
-    private final String networkMappingName;
+        private final String networkMappingName;
 
     public String getNetworkMappingName() {
         return this.networkMappingName;
@@ -39,7 +39,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="networkName", required=true)
-    private final String networkName;
+        private final String networkName;
 
     public String getNetworkName() {
         return this.networkName;
@@ -50,7 +50,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -61,7 +61,7 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -140,7 +140,6 @@ public final class GetReplicationNetworkMappingArgs extends io.pulumi.resources.
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetReplicationNetworkMappingArgs build() {
             return new GetReplicationNetworkMappingArgs(fabricName, networkMappingName, networkName, resourceGroupName, resourceName);
         }

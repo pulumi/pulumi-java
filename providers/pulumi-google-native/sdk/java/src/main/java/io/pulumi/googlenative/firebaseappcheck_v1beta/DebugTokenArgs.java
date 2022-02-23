@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaseappcheck_v1beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
     public static final DebugTokenArgs Empty = new DebugTokenArgs();
 
     @InputImport(name="appId", required=true)
-    private final Input<String> appId;
+      private final Input<String> appId;
 
     public Input<String> getAppId() {
         return this.appId;
@@ -26,7 +26,7 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+      private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -37,14 +37,14 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -55,7 +55,7 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="token", required=true)
-    private final Input<String> token;
+      private final Input<String> token;
 
     public Input<String> getToken() {
         return this.token;
@@ -159,7 +159,6 @@ public final class DebugTokenArgs extends io.pulumi.resources.ResourceArgs {
             this.token = Input.of(Objects.requireNonNull(token));
             return this;
         }
-
         public DebugTokenArgs build() {
             return new DebugTokenArgs(appId, displayName, name, project, token);
         }

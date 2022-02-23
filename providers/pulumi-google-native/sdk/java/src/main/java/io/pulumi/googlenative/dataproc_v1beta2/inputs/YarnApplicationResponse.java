@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="progress", required=true)
-    private final Double progress;
+      private final Double progress;
 
     public Double getProgress() {
         return this.progress;
@@ -44,7 +44,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -55,7 +55,7 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="trackingUrl", required=true)
-    private final String trackingUrl;
+      private final String trackingUrl;
 
     public String getTrackingUrl() {
         return this.trackingUrl;
@@ -124,7 +124,6 @@ public final class YarnApplicationResponse extends io.pulumi.resources.InvokeArg
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public YarnApplicationResponse build() {
             return new YarnApplicationResponse(name, progress, state, trackingUrl);
         }

@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudasset_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudasset_v1.FeedArgs;
 import io.pulumi.googlenative.cloudasset_v1.outputs.ExprResponse;
@@ -121,13 +121,6 @@ public class Feed extends io.pulumi.resources.CustomResource {
         return this.relationshipTypes;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Feed(String name) {
-        super("google-native:cloudasset/v1:Feed", name, FeedArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

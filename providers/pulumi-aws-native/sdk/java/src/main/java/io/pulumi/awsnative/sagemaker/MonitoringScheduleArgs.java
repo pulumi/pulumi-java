@@ -8,7 +8,7 @@ import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleConfigArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleMonitoringExecutionSummaryArgs;
 import io.pulumi.awsnative.sagemaker.inputs.MonitoringScheduleTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
     public static final MonitoringScheduleArgs Empty = new MonitoringScheduleArgs();
 
     @InputImport(name="endpointName")
-    private final @Nullable Input<String> endpointName;
+        private final @Nullable Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName == null ? Input.empty() : this.endpointName;
@@ -31,7 +31,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="failureReason")
-    private final @Nullable Input<String> failureReason;
+        private final @Nullable Input<String> failureReason;
 
     public Input<String> getFailureReason() {
         return this.failureReason == null ? Input.empty() : this.failureReason;
@@ -42,21 +42,21 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="lastMonitoringExecutionSummary")
-    private final @Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
+        private final @Nullable Input<MonitoringScheduleMonitoringExecutionSummaryArgs> lastMonitoringExecutionSummary;
 
     public Input<MonitoringScheduleMonitoringExecutionSummaryArgs> getLastMonitoringExecutionSummary() {
         return this.lastMonitoringExecutionSummary == null ? Input.empty() : this.lastMonitoringExecutionSummary;
     }
 
     @InputImport(name="monitoringScheduleConfig", required=true)
-    private final Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
+        private final Input<MonitoringScheduleConfigArgs> monitoringScheduleConfig;
 
     public Input<MonitoringScheduleConfigArgs> getMonitoringScheduleConfig() {
         return this.monitoringScheduleConfig;
     }
 
     @InputImport(name="monitoringScheduleName")
-    private final @Nullable Input<String> monitoringScheduleName;
+        private final @Nullable Input<String> monitoringScheduleName;
 
     public Input<String> getMonitoringScheduleName() {
         return this.monitoringScheduleName == null ? Input.empty() : this.monitoringScheduleName;
@@ -67,7 +67,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="monitoringScheduleStatus")
-    private final @Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus;
+        private final @Nullable Input<MonitoringScheduleStatus> monitoringScheduleStatus;
 
     public Input<MonitoringScheduleStatus> getMonitoringScheduleStatus() {
         return this.monitoringScheduleStatus == null ? Input.empty() : this.monitoringScheduleStatus;
@@ -78,7 +78,7 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<MonitoringScheduleTagArgs>> tags;
+        private final @Nullable Input<List<MonitoringScheduleTagArgs>> tags;
 
     public Input<List<MonitoringScheduleTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -212,7 +212,6 @@ public final class MonitoringScheduleArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public MonitoringScheduleArgs build() {
             return new MonitoringScheduleArgs(endpointName, failureReason, lastMonitoringExecutionSummary, monitoringScheduleConfig, monitoringScheduleName, monitoringScheduleStatus, tags);
         }

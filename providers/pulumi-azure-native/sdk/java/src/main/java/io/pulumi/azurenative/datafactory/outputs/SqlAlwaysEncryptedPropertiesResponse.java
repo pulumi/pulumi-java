@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.outputs.AzureKeyVaultSecretReferenceRes
 import io.pulumi.azurenative.datafactory.outputs.CredentialReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -123,7 +123,6 @@ public final class SqlAlwaysEncryptedPropertiesResponse {
             this.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
-
         public SqlAlwaysEncryptedPropertiesResponse build() {
             return new SqlAlwaysEncryptedPropertiesResponse(alwaysEncryptedAkvAuthType, credential, servicePrincipalId, servicePrincipalKey);
         }

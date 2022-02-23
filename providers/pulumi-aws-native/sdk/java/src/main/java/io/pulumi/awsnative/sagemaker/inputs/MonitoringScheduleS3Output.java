@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.awsnative.sagemaker.enums.MonitoringScheduleS3OutputS3UploadMode;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class MonitoringScheduleS3Output extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="localPath", required=true)
-    private final String localPath;
+        private final String localPath;
 
     public String getLocalPath() {
         return this.localPath;
@@ -35,7 +35,7 @@ public final class MonitoringScheduleS3Output extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="s3UploadMode")
-    private final @Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode;
+        private final @Nullable MonitoringScheduleS3OutputS3UploadMode s3UploadMode;
 
     public Optional<MonitoringScheduleS3OutputS3UploadMode> getS3UploadMode() {
         return this.s3UploadMode == null ? Optional.empty() : Optional.ofNullable(this.s3UploadMode);
@@ -46,7 +46,7 @@ public final class MonitoringScheduleS3Output extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="s3Uri", required=true)
-    private final String s3Uri;
+        private final String s3Uri;
 
     public String getS3Uri() {
         return this.s3Uri;
@@ -105,7 +105,6 @@ public final class MonitoringScheduleS3Output extends io.pulumi.resources.Invoke
             this.s3Uri = Objects.requireNonNull(s3Uri);
             return this;
         }
-
         public MonitoringScheduleS3Output build() {
             return new MonitoringScheduleS3Output(localPath, s3UploadMode, s3Uri);
         }

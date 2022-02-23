@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.EndConditionResponse;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.outputs.StatusResponse;
 import java.lang.Boolean;
@@ -182,7 +182,6 @@ public final class GetWaiterResult {
             this.timeout = Objects.requireNonNull(timeout);
             return this;
         }
-
         public GetWaiterResult build() {
             return new GetWaiterResult(createTime, done, error, failure, name, success, timeout);
         }

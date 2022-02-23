@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.enums.GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
      * 
      */
     @InputImport(name="messageFormat")
-    private final @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
+      private final @Nullable Input<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> messageFormat;
 
     public Input<GoogleCloudDialogflowV2beta1NotificationConfigMessageFormat> getMessageFormat() {
         return this.messageFormat == null ? Input.empty() : this.messageFormat;
@@ -35,7 +35,7 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+      private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -94,7 +94,6 @@ public final class GoogleCloudDialogflowV2beta1NotificationConfigArgs extends io
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1NotificationConfigArgs build() {
             return new GoogleCloudDialogflowV2beta1NotificationConfigArgs(messageFormat, topic);
         }

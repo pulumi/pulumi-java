@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -25,7 +25,7 @@ public final class GoogleCloudDialogflowV2ContextArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="lifespanCount")
-    private final @Nullable Input<Integer> lifespanCount;
+      private final @Nullable Input<Integer> lifespanCount;
 
     public Input<Integer> getLifespanCount() {
         return this.lifespanCount == null ? Input.empty() : this.lifespanCount;
@@ -36,7 +36,7 @@ public final class GoogleCloudDialogflowV2ContextArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -47,7 +47,7 @@ public final class GoogleCloudDialogflowV2ContextArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Input<Map<String,String>> parameters;
+      private final @Nullable Input<Map<String,String>> parameters;
 
     public Input<Map<String,String>> getParameters() {
         return this.parameters == null ? Input.empty() : this.parameters;
@@ -121,7 +121,6 @@ public final class GoogleCloudDialogflowV2ContextArgs extends io.pulumi.resource
             this.parameters = Input.ofNullable(parameters);
             return this;
         }
-
         public GoogleCloudDialogflowV2ContextArgs build() {
             return new GoogleCloudDialogflowV2ContextArgs(lifespanCount, name, parameters);
         }

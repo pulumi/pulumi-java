@@ -5,7 +5,7 @@ package io.pulumi.awsnative.customerprofiles.inputs;
 
 import io.pulumi.awsnative.customerprofiles.inputs.ObjectTypeFieldArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,14 +16,14 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
     public static final ObjectTypeFieldMapArgs Empty = new ObjectTypeFieldMapArgs();
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="objectTypeField")
-    private final @Nullable Input<ObjectTypeFieldArgs> objectTypeField;
+        private final @Nullable Input<ObjectTypeFieldArgs> objectTypeField;
 
     public Input<ObjectTypeFieldArgs> getObjectTypeField() {
         return this.objectTypeField == null ? Input.empty() : this.objectTypeField;
@@ -82,7 +82,6 @@ public final class ObjectTypeFieldMapArgs extends io.pulumi.resources.ResourceAr
             this.objectTypeField = Input.ofNullable(objectTypeField);
             return this;
         }
-
         public ObjectTypeFieldMapArgs build() {
             return new ObjectTypeFieldMapArgs(name, objectTypeField);
         }

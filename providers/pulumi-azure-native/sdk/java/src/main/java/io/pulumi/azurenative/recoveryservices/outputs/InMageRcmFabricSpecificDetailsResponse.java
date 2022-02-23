@@ -10,7 +10,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.PushInstallerDetailsRespon
 import io.pulumi.azurenative.recoveryservices.outputs.RcmProxyDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ReplicationAgentDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.ReprotectAgentDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -357,7 +357,6 @@ public final class InMageRcmFabricSpecificDetailsResponse {
             this.vmwareSiteId = Objects.requireNonNull(vmwareSiteId);
             return this;
         }
-
         public InMageRcmFabricSpecificDetailsResponse build() {
             return new InMageRcmFabricSpecificDetailsResponse(agentDetails, controlPlaneUri, dataPlaneUri, dras, instanceType, physicalSiteId, processServers, pushInstallers, rcmProxies, replicationAgents, reprotectAgents, serviceContainerId, serviceEndpoint, serviceResourceId, vmwareSiteId);
         }

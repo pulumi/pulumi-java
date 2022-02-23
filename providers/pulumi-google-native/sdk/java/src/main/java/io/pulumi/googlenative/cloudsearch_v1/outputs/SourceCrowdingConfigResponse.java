@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsearch_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class SourceCrowdingConfigResponse {
             this.numSuggestions = Objects.requireNonNull(numSuggestions);
             return this;
         }
-
         public SourceCrowdingConfigResponse build() {
             return new SourceCrowdingConfigResponse(numResults, numSuggestions);
         }

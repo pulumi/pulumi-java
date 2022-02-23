@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.EdgeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.GkeClusterResponse;
 import io.pulumi.googlenative.gkehub_v1alpha2.inputs.KubernetesMetadataResponse;
@@ -26,7 +26,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="edgeCluster", required=true)
-    private final EdgeClusterResponse edgeCluster;
+      private final EdgeClusterResponse edgeCluster;
 
     public EdgeClusterResponse getEdgeCluster() {
         return this.edgeCluster;
@@ -37,7 +37,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="gkeCluster", required=true)
-    private final GkeClusterResponse gkeCluster;
+      private final GkeClusterResponse gkeCluster;
 
     public GkeClusterResponse getGkeCluster() {
         return this.gkeCluster;
@@ -48,7 +48,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kubernetesMetadata", required=true)
-    private final KubernetesMetadataResponse kubernetesMetadata;
+      private final KubernetesMetadataResponse kubernetesMetadata;
 
     public KubernetesMetadataResponse getKubernetesMetadata() {
         return this.kubernetesMetadata;
@@ -59,7 +59,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="kubernetesResource", required=true)
-    private final KubernetesResourceResponse kubernetesResource;
+      private final KubernetesResourceResponse kubernetesResource;
 
     public KubernetesResourceResponse getKubernetesResource() {
         return this.kubernetesResource;
@@ -70,7 +70,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="multiCloudCluster", required=true)
-    private final MultiCloudClusterResponse multiCloudCluster;
+      private final MultiCloudClusterResponse multiCloudCluster;
 
     public MultiCloudClusterResponse getMultiCloudCluster() {
         return this.multiCloudCluster;
@@ -81,7 +81,7 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
      * 
      */
     @InputImport(name="onPremCluster", required=true)
-    private final OnPremClusterResponse onPremCluster;
+      private final OnPremClusterResponse onPremCluster;
 
     public OnPremClusterResponse getOnPremCluster() {
         return this.onPremCluster;
@@ -170,7 +170,6 @@ public final class MembershipEndpointResponse extends io.pulumi.resources.Invoke
             this.onPremCluster = Objects.requireNonNull(onPremCluster);
             return this;
         }
-
         public MembershipEndpointResponse build() {
             return new MembershipEndpointResponse(edgeCluster, gkeCluster, kubernetesMetadata, kubernetesResource, multiCloudCluster, onPremCluster);
         }

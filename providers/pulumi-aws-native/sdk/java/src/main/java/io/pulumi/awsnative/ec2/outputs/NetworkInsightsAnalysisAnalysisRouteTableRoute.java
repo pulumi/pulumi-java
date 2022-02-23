@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -164,7 +164,6 @@ public final class NetworkInsightsAnalysisAnalysisRouteTableRoute {
             this.vpcPeeringConnectionId = vpcPeeringConnectionId;
             return this;
         }
-
         public NetworkInsightsAnalysisAnalysisRouteTableRoute build() {
             return new NetworkInsightsAnalysisAnalysisRouteTableRoute(destinationCidr, destinationPrefixListId, egressOnlyInternetGatewayId, gatewayId, instanceId, natGatewayId, networkInterfaceId, origin, transitGatewayId, vpcPeeringConnectionId);
         }

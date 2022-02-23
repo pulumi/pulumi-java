@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recommendationengine_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1CatalogItemCategoryHierarchyResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1FeatureMapResponse;
 import io.pulumi.googlenative.recommendationengine_v1beta1.outputs.GoogleCloudRecommendationengineV1beta1ProductCatalogItemResponse;
@@ -183,7 +183,6 @@ public final class GetCatalogItemResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetCatalogItemResult build() {
             return new GetCatalogItemResult(categoryHierarchies, description, itemAttributes, itemGroupId, productMetadata, tags, title);
         }

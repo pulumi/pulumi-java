@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.management.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class GetHierarchySettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetHierarchySettingResult build() {
             return new GetHierarchySettingResult(defaultManagementGroup, id, name, requireAuthorizationForGroupCreation, tenantId, type);
         }

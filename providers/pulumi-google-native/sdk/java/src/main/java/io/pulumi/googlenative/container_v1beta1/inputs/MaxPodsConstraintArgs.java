@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxPodsPerNode")
-    private final @Nullable Input<String> maxPodsPerNode;
+      private final @Nullable Input<String> maxPodsPerNode;
 
     public Input<String> getMaxPodsPerNode() {
         return this.maxPodsPerNode == null ? Input.empty() : this.maxPodsPerNode;
@@ -66,7 +66,6 @@ public final class MaxPodsConstraintArgs extends io.pulumi.resources.ResourceArg
             this.maxPodsPerNode = Input.ofNullable(maxPodsPerNode);
             return this;
         }
-
         public MaxPodsConstraintArgs build() {
             return new MaxPodsConstraintArgs(maxPodsPerNode);
         }

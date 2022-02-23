@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datamigration_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class StaticIpConnectivityResponse {
         public Builder(StaticIpConnectivityResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StaticIpConnectivityResponse build() {
             return new StaticIpConnectivityResponse();
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1AttemptResponse;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1EvaluationJobConfigResponse;
 import java.lang.Boolean;
@@ -246,7 +246,6 @@ public final class GetEvaluationJobResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetEvaluationJobResult build() {
             return new GetEvaluationJobResult(annotationSpecSet, attempts, createTime, description, evaluationJobConfig, labelMissingGroundTruth, modelVersion, name, schedule, state);
         }

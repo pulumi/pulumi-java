@@ -4,7 +4,7 @@
 package io.pulumi.gcp.organizations.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -32,7 +32,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -43,7 +43,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="folderId")
-    private final @Nullable Input<String> folderId;
+        private final @Nullable Input<String> folderId;
 
     public Input<String> getFolderId() {
         return this.folderId == null ? Input.empty() : this.folderId;
@@ -54,7 +54,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="lifecycleState")
-    private final @Nullable Input<String> lifecycleState;
+        private final @Nullable Input<String> lifecycleState;
 
     public Input<String> getLifecycleState() {
         return this.lifecycleState == null ? Input.empty() : this.lifecycleState;
@@ -65,7 +65,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -77,7 +77,7 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable Input<String> parent;
+        private final @Nullable Input<String> parent;
 
     public Input<String> getParent() {
         return this.parent == null ? Input.empty() : this.parent;
@@ -196,7 +196,6 @@ public final class FolderState extends io.pulumi.resources.ResourceArgs {
             this.parent = Input.ofNullable(parent);
             return this;
         }
-
         public FolderState build() {
             return new FolderState(createTime, displayName, folderId, lifecycleState, name, parent);
         }

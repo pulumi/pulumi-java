@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.InstanceViewStatusResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceWithColocationStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -248,7 +248,6 @@ public final class GetProximityPlacementGroupResult {
             this.virtualMachines = Objects.requireNonNull(virtualMachines);
             return this;
         }
-
         public GetProximityPlacementGroupResult build() {
             return new GetProximityPlacementGroupResult(availabilitySets, colocationStatus, id, location, name, proximityPlacementGroupType, tags, type, virtualMachineScaleSets, virtualMachines);
         }

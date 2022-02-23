@@ -6,7 +6,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderDirection;
 import io.pulumi.awsnative.networkfirewall.enums.RuleGroupHeaderProtocol;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -16,42 +16,42 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
     public static final RuleGroupHeaderArgs Empty = new RuleGroupHeaderArgs();
 
     @InputImport(name="destination", required=true)
-    private final Input<String> destination;
+        private final Input<String> destination;
 
     public Input<String> getDestination() {
         return this.destination;
     }
 
     @InputImport(name="destinationPort", required=true)
-    private final Input<String> destinationPort;
+        private final Input<String> destinationPort;
 
     public Input<String> getDestinationPort() {
         return this.destinationPort;
     }
 
     @InputImport(name="direction", required=true)
-    private final Input<RuleGroupHeaderDirection> direction;
+        private final Input<RuleGroupHeaderDirection> direction;
 
     public Input<RuleGroupHeaderDirection> getDirection() {
         return this.direction;
     }
 
     @InputImport(name="protocol", required=true)
-    private final Input<RuleGroupHeaderProtocol> protocol;
+        private final Input<RuleGroupHeaderProtocol> protocol;
 
     public Input<RuleGroupHeaderProtocol> getProtocol() {
         return this.protocol;
     }
 
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+        private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
     }
 
     @InputImport(name="sourcePort", required=true)
-    private final Input<String> sourcePort;
+        private final Input<String> sourcePort;
 
     public Input<String> getSourcePort() {
         return this.sourcePort;
@@ -170,7 +170,6 @@ public final class RuleGroupHeaderArgs extends io.pulumi.resources.ResourceArgs 
             this.sourcePort = Input.of(Objects.requireNonNull(sourcePort));
             return this;
         }
-
         public RuleGroupHeaderArgs build() {
             return new RuleGroupHeaderArgs(destination, destinationPort, direction, protocol, source, sourcePort);
         }

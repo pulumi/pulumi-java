@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyAssignmentInstanceFilterInventoryResponse;
 import io.pulumi.googlenative.osconfig_v1alpha.outputs.OSPolicyAssignmentLabelSetResponse;
 import java.lang.Boolean;
@@ -119,7 +119,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse {
             this.inventories = Objects.requireNonNull(inventories);
             return this;
         }
-
         public OSPolicyAssignmentInstanceFilterResponse build() {
             return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories);
         }

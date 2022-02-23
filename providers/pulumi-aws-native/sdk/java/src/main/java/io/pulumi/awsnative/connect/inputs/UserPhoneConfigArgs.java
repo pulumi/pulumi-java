@@ -5,7 +5,7 @@ package io.pulumi.awsnative.connect.inputs;
 
 import io.pulumi.awsnative.connect.enums.UserPhoneType;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -22,28 +22,28 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
     public static final UserPhoneConfigArgs Empty = new UserPhoneConfigArgs();
 
     @InputImport(name="afterContactWorkTimeLimit")
-    private final @Nullable Input<Integer> afterContactWorkTimeLimit;
+        private final @Nullable Input<Integer> afterContactWorkTimeLimit;
 
     public Input<Integer> getAfterContactWorkTimeLimit() {
         return this.afterContactWorkTimeLimit == null ? Input.empty() : this.afterContactWorkTimeLimit;
     }
 
     @InputImport(name="autoAccept")
-    private final @Nullable Input<Boolean> autoAccept;
+        private final @Nullable Input<Boolean> autoAccept;
 
     public Input<Boolean> getAutoAccept() {
         return this.autoAccept == null ? Input.empty() : this.autoAccept;
     }
 
     @InputImport(name="deskPhoneNumber")
-    private final @Nullable Input<String> deskPhoneNumber;
+        private final @Nullable Input<String> deskPhoneNumber;
 
     public Input<String> getDeskPhoneNumber() {
         return this.deskPhoneNumber == null ? Input.empty() : this.deskPhoneNumber;
     }
 
     @InputImport(name="phoneType", required=true)
-    private final Input<UserPhoneType> phoneType;
+        private final Input<UserPhoneType> phoneType;
 
     public Input<UserPhoneType> getPhoneType() {
         return this.phoneType;
@@ -132,7 +132,6 @@ public final class UserPhoneConfigArgs extends io.pulumi.resources.ResourceArgs 
             this.phoneType = Input.of(Objects.requireNonNull(phoneType));
             return this;
         }
-
         public UserPhoneConfigArgs build() {
             return new UserPhoneConfigArgs(afterContactWorkTimeLimit, autoAccept, deskPhoneNumber, phoneType);
         }

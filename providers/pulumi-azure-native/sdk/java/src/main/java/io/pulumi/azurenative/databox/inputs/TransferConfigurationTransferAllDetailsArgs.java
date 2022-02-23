@@ -5,7 +5,7 @@ package io.pulumi.azurenative.databox.inputs;
 
 import io.pulumi.azurenative.databox.inputs.TransferAllDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
      * 
      */
     @InputImport(name="include")
-    private final @Nullable Input<TransferAllDetailsArgs> include;
+        private final @Nullable Input<TransferAllDetailsArgs> include;
 
     public Input<TransferAllDetailsArgs> getInclude() {
         return this.include == null ? Input.empty() : this.include;
@@ -66,7 +66,6 @@ public final class TransferConfigurationTransferAllDetailsArgs extends io.pulumi
             this.include = Input.ofNullable(include);
             return this;
         }
-
         public TransferConfigurationTransferAllDetailsArgs build() {
             return new TransferConfigurationTransferAllDetailsArgs(include);
         }

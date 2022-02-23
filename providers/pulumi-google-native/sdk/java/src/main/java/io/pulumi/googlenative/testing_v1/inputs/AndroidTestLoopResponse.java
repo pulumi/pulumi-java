@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.AppBundleResponse;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceResponse;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appApk", required=true)
-    private final FileReferenceResponse appApk;
+      private final FileReferenceResponse appApk;
 
     public FileReferenceResponse getAppApk() {
         return this.appApk;
@@ -36,7 +36,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appBundle", required=true)
-    private final AppBundleResponse appBundle;
+      private final AppBundleResponse appBundle;
 
     public AppBundleResponse getAppBundle() {
         return this.appBundle;
@@ -47,7 +47,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="appPackageId", required=true)
-    private final String appPackageId;
+      private final String appPackageId;
 
     public String getAppPackageId() {
         return this.appPackageId;
@@ -58,7 +58,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scenarioLabels", required=true)
-    private final List<String> scenarioLabels;
+      private final List<String> scenarioLabels;
 
     public List<String> getScenarioLabels() {
         return this.scenarioLabels;
@@ -69,7 +69,7 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="scenarios", required=true)
-    private final List<Integer> scenarios;
+      private final List<Integer> scenarios;
 
     public List<Integer> getScenarios() {
         return this.scenarios;
@@ -148,7 +148,6 @@ public final class AndroidTestLoopResponse extends io.pulumi.resources.InvokeArg
             this.scenarios = Objects.requireNonNull(scenarios);
             return this;
         }
-
         public AndroidTestLoopResponse build() {
             return new AndroidTestLoopResponse(appApk, appBundle, appPackageId, scenarioLabels, scenarios);
         }

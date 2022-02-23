@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotwireless.outputs;
 
 import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupLoRaWAN;
 import io.pulumi.awsnative.iotwireless.outputs.MulticastGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class GetMulticastGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetMulticastGroupResult build() {
             return new GetMulticastGroupResult(arn, associateWirelessDevice, description, disassociateWirelessDevice, id, loRaWAN, name, status, tags);
         }

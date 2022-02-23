@@ -5,7 +5,7 @@ package io.pulumi.awsnative.location.inputs;
 
 import io.pulumi.awsnative.location.enums.PlaceIndexIntendedUse;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -15,7 +15,7 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
     public static final PlaceIndexDataSourceConfigurationArgs Empty = new PlaceIndexDataSourceConfigurationArgs();
 
     @InputImport(name="intendedUse")
-    private final @Nullable Input<PlaceIndexIntendedUse> intendedUse;
+        private final @Nullable Input<PlaceIndexIntendedUse> intendedUse;
 
     public Input<PlaceIndexIntendedUse> getIntendedUse() {
         return this.intendedUse == null ? Input.empty() : this.intendedUse;
@@ -58,7 +58,6 @@ public final class PlaceIndexDataSourceConfigurationArgs extends io.pulumi.resou
             this.intendedUse = Input.ofNullable(intendedUse);
             return this;
         }
-
         public PlaceIndexDataSourceConfigurationArgs build() {
             return new PlaceIndexDataSourceConfigurationArgs(intendedUse);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudrun.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudrun.inputs.ServiceTemplateSpecVolumeSecretArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -33,7 +33,7 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="secret", required=true)
-    private final Input<ServiceTemplateSpecVolumeSecretArgs> secret;
+        private final Input<ServiceTemplateSpecVolumeSecretArgs> secret;
 
     public Input<ServiceTemplateSpecVolumeSecretArgs> getSecret() {
         return this.secret;
@@ -92,7 +92,6 @@ public final class ServiceTemplateSpecVolumeArgs extends io.pulumi.resources.Res
             this.secret = Input.of(Objects.requireNonNull(secret));
             return this;
         }
-
         public ServiceTemplateSpecVolumeArgs build() {
             return new ServiceTemplateSpecVolumeArgs(name, secret);
         }

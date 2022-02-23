@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.HealthErrorResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -160,7 +160,6 @@ public final class ReprotectAgentDetailsResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public ReprotectAgentDetailsResponse build() {
             return new ReprotectAgentDetailsResponse(health, healthErrors, id, lastHeartbeatUtc, name, version);
         }

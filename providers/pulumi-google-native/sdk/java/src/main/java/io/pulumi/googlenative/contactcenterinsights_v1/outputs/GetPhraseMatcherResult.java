@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.contactcenterinsights_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.contactcenterinsights_v1.outputs.GoogleCloudContactcenterinsightsV1PhraseMatchRuleGroupResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -266,7 +266,6 @@ public final class GetPhraseMatcherResult {
             this.versionTag = Objects.requireNonNull(versionTag);
             return this;
         }
-
         public GetPhraseMatcherResult build() {
             return new GetPhraseMatcherResult(activationUpdateTime, active, displayName, name, phraseMatchRuleGroups, revisionCreateTime, revisionId, roleMatch, type, updateTime, versionTag);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -203,7 +203,6 @@ public final class DatabaseBackupInfoResponse {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public DatabaseBackupInfoResponse build() {
             return new DatabaseBackupInfoResponse(backupFiles, backupFinishDate, backupType, databaseName, familyCount, isCompressed, isDamaged, position);
         }

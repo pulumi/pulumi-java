@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.appengine_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class SslSettingsResponse {
             this.isManagedCertificate = Objects.requireNonNull(isManagedCertificate);
             return this;
         }
-
         public SslSettingsResponse build() {
             return new SslSettingsResponse(certificateId, isManagedCertificate);
         }

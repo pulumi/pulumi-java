@@ -10,8 +10,8 @@ import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineImageTestsConfigura
 import io.pulumi.awsnative.imagebuilder.outputs.ImagePipelineSchedule;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -192,13 +192,6 @@ public class ImagePipeline extends io.pulumi.resources.CustomResource {
         return this.tags;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ImagePipeline(String name) {
-        super("aws-native:imagebuilder:ImagePipeline", name, ImagePipelineArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.ClusterClusterConfigSecurityConfigKerberosConfig;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ClusterClusterConfigSecurityConfig {
             this.kerberosConfig = Objects.requireNonNull(kerberosConfig);
             return this;
         }
-
         public ClusterClusterConfigSecurityConfig build() {
             return new ClusterClusterConfigSecurityConfig(kerberosConfig);
         }

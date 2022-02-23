@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class HealthCheckSslHealthCheck {
             this.response = response;
             return this;
         }
-
         public HealthCheckSslHealthCheck build() {
             return new HealthCheckSslHealthCheck(port, portName, portSpecification, proxyHeader, request, response);
         }

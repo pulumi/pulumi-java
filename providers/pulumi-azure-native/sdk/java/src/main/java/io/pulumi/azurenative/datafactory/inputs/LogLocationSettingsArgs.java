@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -35,7 +35,7 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<Object> path;
+        private final @Nullable Input<Object> path;
 
     public Input<Object> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -94,7 +94,6 @@ public final class LogLocationSettingsArgs extends io.pulumi.resources.ResourceA
             this.path = Input.ofNullable(path);
             return this;
         }
-
         public LogLocationSettingsArgs build() {
             return new LogLocationSettingsArgs(linkedServiceName, path);
         }

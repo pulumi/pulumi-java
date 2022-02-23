@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class FulfillmentGenericWebService {
             this.username = username;
             return this;
         }
-
         public FulfillmentGenericWebService build() {
             return new FulfillmentGenericWebService(password, requestHeaders, uri, username);
         }

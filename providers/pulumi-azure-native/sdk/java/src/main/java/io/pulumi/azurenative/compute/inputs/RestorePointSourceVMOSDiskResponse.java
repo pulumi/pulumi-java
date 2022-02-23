@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.inputs;
 import io.pulumi.azurenative.compute.inputs.ApiEntityReferenceResponse;
 import io.pulumi.azurenative.compute.inputs.DiskEncryptionSettingsResponse;
 import io.pulumi.azurenative.compute.inputs.ManagedDiskParametersResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -27,7 +27,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="caching")
-    private final @Nullable String caching;
+        private final @Nullable String caching;
 
     public Optional<String> getCaching() {
         return this.caching == null ? Optional.empty() : Optional.ofNullable(this.caching);
@@ -38,7 +38,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskRestorePoint")
-    private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
+        private final @Nullable ApiEntityReferenceResponse diskRestorePoint;
 
     public Optional<ApiEntityReferenceResponse> getDiskRestorePoint() {
         return this.diskRestorePoint == null ? Optional.empty() : Optional.ofNullable(this.diskRestorePoint);
@@ -49,7 +49,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="diskSizeGB")
-    private final @Nullable Integer diskSizeGB;
+        private final @Nullable Integer diskSizeGB;
 
     public Optional<Integer> getDiskSizeGB() {
         return this.diskSizeGB == null ? Optional.empty() : Optional.ofNullable(this.diskSizeGB);
@@ -60,7 +60,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="encryptionSettings")
-    private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
+        private final @Nullable DiskEncryptionSettingsResponse encryptionSettings;
 
     public Optional<DiskEncryptionSettingsResponse> getEncryptionSettings() {
         return this.encryptionSettings == null ? Optional.empty() : Optional.ofNullable(this.encryptionSettings);
@@ -71,7 +71,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="managedDisk")
-    private final @Nullable ManagedDiskParametersResponse managedDisk;
+        private final @Nullable ManagedDiskParametersResponse managedDisk;
 
     public Optional<ManagedDiskParametersResponse> getManagedDisk() {
         return this.managedDisk == null ? Optional.empty() : Optional.ofNullable(this.managedDisk);
@@ -82,7 +82,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -93,7 +93,7 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="osType")
-    private final @Nullable String osType;
+        private final @Nullable String osType;
 
     public Optional<String> getOsType() {
         return this.osType == null ? Optional.empty() : Optional.ofNullable(this.osType);
@@ -192,7 +192,6 @@ public final class RestorePointSourceVMOSDiskResponse extends io.pulumi.resource
             this.osType = osType;
             return this;
         }
-
         public RestorePointSourceVMOSDiskResponse build() {
             return new RestorePointSourceVMOSDiskResponse(caching, diskRestorePoint, diskSizeGB, encryptionSettings, managedDisk, name, osType);
         }

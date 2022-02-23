@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.deploymentmanager_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="field", required=true)
-    private final String field;
+      private final String field;
 
     public String getField() {
         return this.field;
@@ -28,7 +28,7 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="level", required=true)
-    private final String level;
+      private final String level;
 
     public String getLevel() {
         return this.level;
@@ -77,7 +77,6 @@ public final class DiagnosticResponse extends io.pulumi.resources.InvokeArgs {
             this.level = Objects.requireNonNull(level);
             return this;
         }
-
         public DiagnosticResponse build() {
             return new DiagnosticResponse(field, level);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.keyvault.inputs;
 
 import io.pulumi.azurenative.keyvault.inputs.PermissionsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="applicationId")
-    private final @Nullable String applicationId;
+        private final @Nullable String applicationId;
 
     public Optional<String> getApplicationId() {
         return this.applicationId == null ? Optional.empty() : Optional.ofNullable(this.applicationId);
@@ -35,7 +35,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="objectId", required=true)
-    private final String objectId;
+        private final String objectId;
 
     public String getObjectId() {
         return this.objectId;
@@ -46,7 +46,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="permissions", required=true)
-    private final PermissionsResponse permissions;
+        private final PermissionsResponse permissions;
 
     public PermissionsResponse getPermissions() {
         return this.permissions;
@@ -57,7 +57,7 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -126,7 +126,6 @@ public final class AccessPolicyEntryResponse extends io.pulumi.resources.InvokeA
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public AccessPolicyEntryResponse build() {
             return new AccessPolicyEntryResponse(applicationId, objectId, permissions, tenantId);
         }

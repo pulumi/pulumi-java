@@ -5,7 +5,7 @@ package io.pulumi.azurenative.sql;
 
 import io.pulumi.azurenative.sql.enums.BlobAuditingPolicyState;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -79,7 +79,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="auditActionsAndGroups")
-    private final @Nullable Input<List<String>> auditActionsAndGroups;
+        private final @Nullable Input<List<String>> auditActionsAndGroups;
 
     public Input<List<String>> getAuditActionsAndGroups() {
         return this.auditActionsAndGroups == null ? Input.empty() : this.auditActionsAndGroups;
@@ -90,7 +90,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="blobAuditingPolicyName")
-    private final @Nullable Input<String> blobAuditingPolicyName;
+        private final @Nullable Input<String> blobAuditingPolicyName;
 
     public Input<String> getBlobAuditingPolicyName() {
         return this.blobAuditingPolicyName == null ? Input.empty() : this.blobAuditingPolicyName;
@@ -101,7 +101,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="databaseName", required=true)
-    private final Input<String> databaseName;
+        private final Input<String> databaseName;
 
     public Input<String> getDatabaseName() {
         return this.databaseName;
@@ -122,7 +122,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isAzureMonitorTargetEnabled")
-    private final @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
+        private final @Nullable Input<Boolean> isAzureMonitorTargetEnabled;
 
     public Input<Boolean> getIsAzureMonitorTargetEnabled() {
         return this.isAzureMonitorTargetEnabled == null ? Input.empty() : this.isAzureMonitorTargetEnabled;
@@ -133,7 +133,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="isStorageSecondaryKeyInUse")
-    private final @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
+        private final @Nullable Input<Boolean> isStorageSecondaryKeyInUse;
 
     public Input<Boolean> getIsStorageSecondaryKeyInUse() {
         return this.isStorageSecondaryKeyInUse == null ? Input.empty() : this.isStorageSecondaryKeyInUse;
@@ -145,7 +145,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="queueDelayMs")
-    private final @Nullable Input<Integer> queueDelayMs;
+        private final @Nullable Input<Integer> queueDelayMs;
 
     public Input<Integer> getQueueDelayMs() {
         return this.queueDelayMs == null ? Input.empty() : this.queueDelayMs;
@@ -156,7 +156,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -167,7 +167,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="retentionDays")
-    private final @Nullable Input<Integer> retentionDays;
+        private final @Nullable Input<Integer> retentionDays;
 
     public Input<Integer> getRetentionDays() {
         return this.retentionDays == null ? Input.empty() : this.retentionDays;
@@ -178,7 +178,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="serverName", required=true)
-    private final Input<String> serverName;
+        private final Input<String> serverName;
 
     public Input<String> getServerName() {
         return this.serverName;
@@ -189,7 +189,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="state", required=true)
-    private final Input<BlobAuditingPolicyState> state;
+        private final Input<BlobAuditingPolicyState> state;
 
     public Input<BlobAuditingPolicyState> getState() {
         return this.state;
@@ -205,7 +205,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageAccountAccessKey")
-    private final @Nullable Input<String> storageAccountAccessKey;
+        private final @Nullable Input<String> storageAccountAccessKey;
 
     public Input<String> getStorageAccountAccessKey() {
         return this.storageAccountAccessKey == null ? Input.empty() : this.storageAccountAccessKey;
@@ -216,7 +216,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageAccountSubscriptionId")
-    private final @Nullable Input<String> storageAccountSubscriptionId;
+        private final @Nullable Input<String> storageAccountSubscriptionId;
 
     public Input<String> getStorageAccountSubscriptionId() {
         return this.storageAccountSubscriptionId == null ? Input.empty() : this.storageAccountSubscriptionId;
@@ -227,7 +227,7 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="storageEndpoint")
-    private final @Nullable Input<String> storageEndpoint;
+        private final @Nullable Input<String> storageEndpoint;
 
     public Input<String> getStorageEndpoint() {
         return this.storageEndpoint == null ? Input.empty() : this.storageEndpoint;
@@ -451,7 +451,6 @@ public final class DatabaseBlobAuditingPolicyArgs extends io.pulumi.resources.Re
             this.storageEndpoint = Input.ofNullable(storageEndpoint);
             return this;
         }
-
         public DatabaseBlobAuditingPolicyArgs build() {
             return new DatabaseBlobAuditingPolicyArgs(auditActionsAndGroups, blobAuditingPolicyName, databaseName, isAzureMonitorTargetEnabled, isStorageSecondaryKeyInUse, queueDelayMs, resourceGroupName, retentionDays, serverName, state, storageAccountAccessKey, storageAccountSubscriptionId, storageEndpoint);
         }

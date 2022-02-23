@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vmmigration_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vmmigration_v1.DatacenterConnectorArgs;
 import io.pulumi.googlenative.vmmigration_v1.outputs.StatusResponse;
@@ -161,13 +161,6 @@ public class DatacenterConnector extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DatacenterConnector(String name) {
-        super("google-native:vmmigration/v1:DatacenterConnector", name, DatacenterConnectorArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

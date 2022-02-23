@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.outputs;
 
 import io.pulumi.azurenative.datafactory.outputs.RecurrenceScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class ScheduleTriggerRecurrenceResponse {
             this.timeZone = timeZone;
             return this;
         }
-
         public ScheduleTriggerRecurrenceResponse build() {
             return new ScheduleTriggerRecurrenceResponse(endTime, frequency, interval, schedule, startTime, timeZone);
         }

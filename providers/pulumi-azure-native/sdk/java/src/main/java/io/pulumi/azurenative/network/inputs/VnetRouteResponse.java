@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.StaticRouteResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="staticRoutes")
-    private final @Nullable List<StaticRouteResponse> staticRoutes;
+        private final @Nullable List<StaticRouteResponse> staticRoutes;
 
     public List<StaticRouteResponse> getStaticRoutes() {
         return this.staticRoutes == null ? List.of() : this.staticRoutes;
@@ -62,7 +62,6 @@ public final class VnetRouteResponse extends io.pulumi.resources.InvokeArgs {
             this.staticRoutes = staticRoutes;
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(staticRoutes);
         }

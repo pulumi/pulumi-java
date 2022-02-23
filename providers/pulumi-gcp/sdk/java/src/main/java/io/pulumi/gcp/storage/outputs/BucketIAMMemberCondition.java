@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class BucketIAMMemberCondition {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public BucketIAMMemberCondition build() {
             return new BucketIAMMemberCondition(description, expression, title);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 import io.pulumi.azurenative.containerservice.enums.Expander;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,119 +21,119 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
     public static final ManagedClusterPropertiesAutoScalerProfileArgs Empty = new ManagedClusterPropertiesAutoScalerProfileArgs();
 
     @InputImport(name="balanceSimilarNodeGroups")
-    private final @Nullable Input<String> balanceSimilarNodeGroups;
+        private final @Nullable Input<String> balanceSimilarNodeGroups;
 
     public Input<String> getBalanceSimilarNodeGroups() {
         return this.balanceSimilarNodeGroups == null ? Input.empty() : this.balanceSimilarNodeGroups;
     }
 
     @InputImport(name="expander")
-    private final @Nullable Input<Either<String,Expander>> expander;
+        private final @Nullable Input<Either<String,Expander>> expander;
 
     public Input<Either<String,Expander>> getExpander() {
         return this.expander == null ? Input.empty() : this.expander;
     }
 
     @InputImport(name="maxEmptyBulkDelete")
-    private final @Nullable Input<String> maxEmptyBulkDelete;
+        private final @Nullable Input<String> maxEmptyBulkDelete;
 
     public Input<String> getMaxEmptyBulkDelete() {
         return this.maxEmptyBulkDelete == null ? Input.empty() : this.maxEmptyBulkDelete;
     }
 
     @InputImport(name="maxGracefulTerminationSec")
-    private final @Nullable Input<String> maxGracefulTerminationSec;
+        private final @Nullable Input<String> maxGracefulTerminationSec;
 
     public Input<String> getMaxGracefulTerminationSec() {
         return this.maxGracefulTerminationSec == null ? Input.empty() : this.maxGracefulTerminationSec;
     }
 
     @InputImport(name="maxNodeProvisionTime")
-    private final @Nullable Input<String> maxNodeProvisionTime;
+        private final @Nullable Input<String> maxNodeProvisionTime;
 
     public Input<String> getMaxNodeProvisionTime() {
         return this.maxNodeProvisionTime == null ? Input.empty() : this.maxNodeProvisionTime;
     }
 
     @InputImport(name="maxTotalUnreadyPercentage")
-    private final @Nullable Input<String> maxTotalUnreadyPercentage;
+        private final @Nullable Input<String> maxTotalUnreadyPercentage;
 
     public Input<String> getMaxTotalUnreadyPercentage() {
         return this.maxTotalUnreadyPercentage == null ? Input.empty() : this.maxTotalUnreadyPercentage;
     }
 
     @InputImport(name="newPodScaleUpDelay")
-    private final @Nullable Input<String> newPodScaleUpDelay;
+        private final @Nullable Input<String> newPodScaleUpDelay;
 
     public Input<String> getNewPodScaleUpDelay() {
         return this.newPodScaleUpDelay == null ? Input.empty() : this.newPodScaleUpDelay;
     }
 
     @InputImport(name="okTotalUnreadyCount")
-    private final @Nullable Input<String> okTotalUnreadyCount;
+        private final @Nullable Input<String> okTotalUnreadyCount;
 
     public Input<String> getOkTotalUnreadyCount() {
         return this.okTotalUnreadyCount == null ? Input.empty() : this.okTotalUnreadyCount;
     }
 
     @InputImport(name="scaleDownDelayAfterAdd")
-    private final @Nullable Input<String> scaleDownDelayAfterAdd;
+        private final @Nullable Input<String> scaleDownDelayAfterAdd;
 
     public Input<String> getScaleDownDelayAfterAdd() {
         return this.scaleDownDelayAfterAdd == null ? Input.empty() : this.scaleDownDelayAfterAdd;
     }
 
     @InputImport(name="scaleDownDelayAfterDelete")
-    private final @Nullable Input<String> scaleDownDelayAfterDelete;
+        private final @Nullable Input<String> scaleDownDelayAfterDelete;
 
     public Input<String> getScaleDownDelayAfterDelete() {
         return this.scaleDownDelayAfterDelete == null ? Input.empty() : this.scaleDownDelayAfterDelete;
     }
 
     @InputImport(name="scaleDownDelayAfterFailure")
-    private final @Nullable Input<String> scaleDownDelayAfterFailure;
+        private final @Nullable Input<String> scaleDownDelayAfterFailure;
 
     public Input<String> getScaleDownDelayAfterFailure() {
         return this.scaleDownDelayAfterFailure == null ? Input.empty() : this.scaleDownDelayAfterFailure;
     }
 
     @InputImport(name="scaleDownUnneededTime")
-    private final @Nullable Input<String> scaleDownUnneededTime;
+        private final @Nullable Input<String> scaleDownUnneededTime;
 
     public Input<String> getScaleDownUnneededTime() {
         return this.scaleDownUnneededTime == null ? Input.empty() : this.scaleDownUnneededTime;
     }
 
     @InputImport(name="scaleDownUnreadyTime")
-    private final @Nullable Input<String> scaleDownUnreadyTime;
+        private final @Nullable Input<String> scaleDownUnreadyTime;
 
     public Input<String> getScaleDownUnreadyTime() {
         return this.scaleDownUnreadyTime == null ? Input.empty() : this.scaleDownUnreadyTime;
     }
 
     @InputImport(name="scaleDownUtilizationThreshold")
-    private final @Nullable Input<String> scaleDownUtilizationThreshold;
+        private final @Nullable Input<String> scaleDownUtilizationThreshold;
 
     public Input<String> getScaleDownUtilizationThreshold() {
         return this.scaleDownUtilizationThreshold == null ? Input.empty() : this.scaleDownUtilizationThreshold;
     }
 
     @InputImport(name="scanInterval")
-    private final @Nullable Input<String> scanInterval;
+        private final @Nullable Input<String> scanInterval;
 
     public Input<String> getScanInterval() {
         return this.scanInterval == null ? Input.empty() : this.scanInterval;
     }
 
     @InputImport(name="skipNodesWithLocalStorage")
-    private final @Nullable Input<String> skipNodesWithLocalStorage;
+        private final @Nullable Input<String> skipNodesWithLocalStorage;
 
     public Input<String> getSkipNodesWithLocalStorage() {
         return this.skipNodesWithLocalStorage == null ? Input.empty() : this.skipNodesWithLocalStorage;
     }
 
     @InputImport(name="skipNodesWithSystemPods")
-    private final @Nullable Input<String> skipNodesWithSystemPods;
+        private final @Nullable Input<String> skipNodesWithSystemPods;
 
     public Input<String> getSkipNodesWithSystemPods() {
         return this.skipNodesWithSystemPods == null ? Input.empty() : this.skipNodesWithSystemPods;
@@ -417,7 +417,6 @@ public final class ManagedClusterPropertiesAutoScalerProfileArgs extends io.pulu
             this.skipNodesWithSystemPods = Input.ofNullable(skipNodesWithSystemPods);
             return this;
         }
-
         public ManagedClusterPropertiesAutoScalerProfileArgs build() {
             return new ManagedClusterPropertiesAutoScalerProfileArgs(balanceSimilarNodeGroups, expander, maxEmptyBulkDelete, maxGracefulTerminationSec, maxNodeProvisionTime, maxTotalUnreadyPercentage, newPodScaleUpDelay, okTotalUnreadyCount, scaleDownDelayAfterAdd, scaleDownDelayAfterDelete, scaleDownDelayAfterFailure, scaleDownUnneededTime, scaleDownUnreadyTime, scaleDownUtilizationThreshold, scanInterval, skipNodesWithLocalStorage, skipNodesWithSystemPods);
         }

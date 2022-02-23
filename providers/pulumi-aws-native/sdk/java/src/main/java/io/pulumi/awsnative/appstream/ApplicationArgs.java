@@ -6,7 +6,7 @@ package io.pulumi.awsnative.appstream;
 import io.pulumi.awsnative.appstream.inputs.ApplicationS3LocationArgs;
 import io.pulumi.awsnative.appstream.inputs.ApplicationTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,84 +18,84 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
     public static final ApplicationArgs Empty = new ApplicationArgs();
 
     @InputImport(name="appBlockArn", required=true)
-    private final Input<String> appBlockArn;
+        private final Input<String> appBlockArn;
 
     public Input<String> getAppBlockArn() {
         return this.appBlockArn;
     }
 
     @InputImport(name="attributesToDelete")
-    private final @Nullable Input<List<String>> attributesToDelete;
+        private final @Nullable Input<List<String>> attributesToDelete;
 
     public Input<List<String>> getAttributesToDelete() {
         return this.attributesToDelete == null ? Input.empty() : this.attributesToDelete;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
     }
 
     @InputImport(name="iconS3Location", required=true)
-    private final Input<ApplicationS3LocationArgs> iconS3Location;
+        private final Input<ApplicationS3LocationArgs> iconS3Location;
 
     public Input<ApplicationS3LocationArgs> getIconS3Location() {
         return this.iconS3Location;
     }
 
     @InputImport(name="instanceFamilies", required=true)
-    private final Input<List<String>> instanceFamilies;
+        private final Input<List<String>> instanceFamilies;
 
     public Input<List<String>> getInstanceFamilies() {
         return this.instanceFamilies;
     }
 
     @InputImport(name="launchParameters")
-    private final @Nullable Input<String> launchParameters;
+        private final @Nullable Input<String> launchParameters;
 
     public Input<String> getLaunchParameters() {
         return this.launchParameters == null ? Input.empty() : this.launchParameters;
     }
 
     @InputImport(name="launchPath", required=true)
-    private final Input<String> launchPath;
+        private final Input<String> launchPath;
 
     public Input<String> getLaunchPath() {
         return this.launchPath;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="platforms", required=true)
-    private final Input<List<String>> platforms;
+        private final Input<List<String>> platforms;
 
     public Input<List<String>> getPlatforms() {
         return this.platforms;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<ApplicationTagArgs>> tags;
+        private final @Nullable Input<List<ApplicationTagArgs>> tags;
 
     public Input<List<ApplicationTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="workingDirectory")
-    private final @Nullable Input<String> workingDirectory;
+        private final @Nullable Input<String> workingDirectory;
 
     public Input<String> getWorkingDirectory() {
         return this.workingDirectory == null ? Input.empty() : this.workingDirectory;
@@ -304,7 +304,6 @@ public final class ApplicationArgs extends io.pulumi.resources.ResourceArgs {
             this.workingDirectory = Input.ofNullable(workingDirectory);
             return this;
         }
-
         public ApplicationArgs build() {
             return new ApplicationArgs(appBlockArn, attributesToDelete, description, displayName, iconS3Location, instanceFamilies, launchParameters, launchPath, name, platforms, tags, workingDirectory);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.KubernetesIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class NodeInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public NodeInfoResponse build() {
             return new NodeInfoResponse(ipConfiguration, name, type);
         }

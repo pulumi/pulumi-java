@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.IPConfigurationProfileResponse;
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="containerNetworkInterfaces")
-    private final @Nullable List<SubResourceResponse> containerNetworkInterfaces;
+        private final @Nullable List<SubResourceResponse> containerNetworkInterfaces;
 
     public List<SubResourceResponse> getContainerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
@@ -37,7 +37,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -48,7 +48,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -59,7 +59,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
+        private final @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
 
     public List<IPConfigurationProfileResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
@@ -70,7 +70,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -81,7 +81,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -92,7 +92,7 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -191,7 +191,6 @@ public final class ContainerNetworkInterfaceConfigurationResponse extends io.pul
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ContainerNetworkInterfaceConfigurationResponse build() {
             return new ContainerNetworkInterfaceConfigurationResponse(containerNetworkInterfaces, etag, id, ipConfigurations, name, provisioningState, type);
         }

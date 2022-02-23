@@ -7,7 +7,7 @@ import io.pulumi.azurenative.compute.outputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetIpTagResponse;
 import io.pulumi.azurenative.compute.outputs.VirtualMachineScaleSetPublicIPAddressConfigurationDnsSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -208,7 +208,6 @@ public final class VirtualMachineScaleSetPublicIPAddressConfigurationResponse {
             this.sku = sku;
             return this;
         }
-
         public VirtualMachineScaleSetPublicIPAddressConfigurationResponse build() {
             return new VirtualMachineScaleSetPublicIPAddressConfigurationResponse(deleteOption, dnsSettings, idleTimeoutInMinutes, ipTags, name, publicIPAddressVersion, publicIPPrefix, sku);
         }

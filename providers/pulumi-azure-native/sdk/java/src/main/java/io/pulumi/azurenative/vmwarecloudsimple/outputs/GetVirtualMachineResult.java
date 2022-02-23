@@ -8,7 +8,7 @@ import io.pulumi.azurenative.vmwarecloudsimple.outputs.ResourcePoolResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskControllerResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualDiskResponse;
 import io.pulumi.azurenative.vmwarecloudsimple.outputs.VirtualNicResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -610,7 +610,6 @@ public final class GetVirtualMachineResult {
             this.vmwaretools = Objects.requireNonNull(vmwaretools);
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(amountOfRam, controllers, customization, disks, dnsname, exposeToGuestVM, folder, guestOS, guestOSType, id, location, name, nics, numberOfCores, password, privateCloudId, provisioningState, publicIP, resourcePool, status, tags, templateId, type, username, vSphereNetworks, vmId, vmwaretools);
         }

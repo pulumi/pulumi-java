@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gkehub.outputs.FeatureMembershipConfigmanagementConfigSyncGit;
 import java.lang.String;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class FeatureMembershipConfigmanagementConfigSync {
             this.sourceFormat = sourceFormat;
             return this;
         }
-
         public FeatureMembershipConfigmanagementConfigSync build() {
             return new FeatureMembershipConfigmanagementConfigSync(git, sourceFormat);
         }

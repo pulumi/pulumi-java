@@ -7,7 +7,7 @@ import io.pulumi.azurenative.insights.outputs.ExtensionDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.PerfCounterDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.SyslogDataSourceResponse;
 import io.pulumi.azurenative.insights.outputs.WindowsEventLogDataSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -121,7 +121,6 @@ public final class DataCollectionRuleResponseDataSources {
             this.windowsEventLogs = windowsEventLogs;
             return this;
         }
-
         public DataCollectionRuleResponseDataSources build() {
             return new DataCollectionRuleResponseDataSources(extensions, performanceCounters, syslog, windowsEventLogs);
         }

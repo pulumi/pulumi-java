@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.KnowledgeBaseResponse;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class WindowsDetailResponse {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public WindowsDetailResponse build() {
             return new WindowsDetailResponse(cpeUri, description, fixingKbs, name);
         }

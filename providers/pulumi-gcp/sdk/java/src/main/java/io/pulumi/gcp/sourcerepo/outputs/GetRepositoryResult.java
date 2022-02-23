@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.sourcerepo.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.sourcerepo.outputs.GetRepositoryPubsubConfig;
 import java.lang.Integer;
 import java.lang.String;
@@ -123,7 +123,6 @@ public final class GetRepositoryResult {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GetRepositoryResult build() {
             return new GetRepositoryResult(id, name, project, pubsubConfigs, size, url);
         }

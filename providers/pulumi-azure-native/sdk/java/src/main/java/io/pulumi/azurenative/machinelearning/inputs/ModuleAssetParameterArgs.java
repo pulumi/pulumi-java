@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearning.inputs;
 
 import io.pulumi.azurenative.machinelearning.inputs.ModeValueInfoArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="modeValuesInfo")
-    private final @Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo;
+        private final @Nullable Input<Map<String,ModeValueInfoArgs>> modeValuesInfo;
 
     public Input<Map<String,ModeValueInfoArgs>> getModeValuesInfo() {
         return this.modeValuesInfo == null ? Input.empty() : this.modeValuesInfo;
@@ -36,7 +36,7 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -47,7 +47,7 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="parameterType")
-    private final @Nullable Input<String> parameterType;
+        private final @Nullable Input<String> parameterType;
 
     public Input<String> getParameterType() {
         return this.parameterType == null ? Input.empty() : this.parameterType;
@@ -121,7 +121,6 @@ public final class ModuleAssetParameterArgs extends io.pulumi.resources.Resource
             this.parameterType = Input.ofNullable(parameterType);
             return this;
         }
-
         public ModuleAssetParameterArgs build() {
             return new ModuleAssetParameterArgs(modeValuesInfo, name, parameterType);
         }

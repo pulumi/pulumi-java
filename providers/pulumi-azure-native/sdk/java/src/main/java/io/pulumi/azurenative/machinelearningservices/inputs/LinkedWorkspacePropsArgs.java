@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="linkedWorkspaceResourceId")
-    private final @Nullable Input<String> linkedWorkspaceResourceId;
+        private final @Nullable Input<String> linkedWorkspaceResourceId;
 
     public Input<String> getLinkedWorkspaceResourceId() {
         return this.linkedWorkspaceResourceId == null ? Input.empty() : this.linkedWorkspaceResourceId;
@@ -34,7 +34,7 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="userAssignedIdentityResourceId")
-    private final @Nullable Input<String> userAssignedIdentityResourceId;
+        private final @Nullable Input<String> userAssignedIdentityResourceId;
 
     public Input<String> getUserAssignedIdentityResourceId() {
         return this.userAssignedIdentityResourceId == null ? Input.empty() : this.userAssignedIdentityResourceId;
@@ -93,7 +93,6 @@ public final class LinkedWorkspacePropsArgs extends io.pulumi.resources.Resource
             this.userAssignedIdentityResourceId = Input.ofNullable(userAssignedIdentityResourceId);
             return this;
         }
-
         public LinkedWorkspacePropsArgs build() {
             return new LinkedWorkspacePropsArgs(linkedWorkspaceResourceId, userAssignedIdentityResourceId);
         }

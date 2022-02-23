@@ -12,7 +12,7 @@ import io.pulumi.azurenative.network.outputs.FirewallPolicyThreatIntelWhitelistR
 import io.pulumi.azurenative.network.outputs.FirewallPolicyTransportSecurityResponse;
 import io.pulumi.azurenative.network.outputs.ManagedServiceIdentityResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -465,7 +465,6 @@ public final class GetFirewallPolicyResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFirewallPolicyResult build() {
             return new GetFirewallPolicyResult(basePolicy, childPolicies, dnsSettings, etag, firewalls, id, identity, insights, intrusionDetection, location, name, provisioningState, ruleCollectionGroups, sku, snat, tags, threatIntelMode, threatIntelWhitelist, transportSecurity, type);
         }

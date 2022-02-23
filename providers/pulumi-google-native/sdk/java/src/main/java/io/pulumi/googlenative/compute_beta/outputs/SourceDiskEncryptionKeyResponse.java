@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_beta.outputs.CustomerEncryptionKeyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class SourceDiskEncryptionKeyResponse {
             this.sourceDisk = Objects.requireNonNull(sourceDisk);
             return this;
         }
-
         public SourceDiskEncryptionKeyResponse build() {
             return new SourceDiskEncryptionKeyResponse(diskEncryptionKey, sourceDisk);
         }

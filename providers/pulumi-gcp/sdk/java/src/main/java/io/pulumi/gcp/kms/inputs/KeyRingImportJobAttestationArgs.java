@@ -4,7 +4,7 @@
 package io.pulumi.gcp.kms.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,14 +15,14 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
     public static final KeyRingImportJobAttestationArgs Empty = new KeyRingImportJobAttestationArgs();
 
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
     }
 
     @InputImport(name="format")
-    private final @Nullable Input<String> format;
+        private final @Nullable Input<String> format;
 
     public Input<String> getFormat() {
         return this.format == null ? Input.empty() : this.format;
@@ -81,7 +81,6 @@ public final class KeyRingImportJobAttestationArgs extends io.pulumi.resources.R
             this.format = Input.ofNullable(format);
             return this;
         }
-
         public KeyRingImportJobAttestationArgs build() {
             return new KeyRingImportJobAttestationArgs(content, format);
         }

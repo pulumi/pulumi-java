@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="address")
-    private final @Nullable Input<String> address;
+        private final @Nullable Input<String> address;
 
     public Input<String> getAddress() {
         return this.address == null ? Input.empty() : this.address;
@@ -38,7 +38,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="addressType")
-    private final @Nullable Input<String> addressType;
+        private final @Nullable Input<String> addressType;
 
     public Input<String> getAddressType() {
         return this.addressType == null ? Input.empty() : this.addressType;
@@ -49,7 +49,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -61,7 +61,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ipVersion")
-    private final @Nullable Input<String> ipVersion;
+        private final @Nullable Input<String> ipVersion;
 
     public Input<String> getIpVersion() {
         return this.ipVersion == null ? Input.empty() : this.ipVersion;
@@ -72,7 +72,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -89,7 +89,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -103,7 +103,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -117,7 +117,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="prefixLength")
-    private final @Nullable Input<Integer> prefixLength;
+        private final @Nullable Input<Integer> prefixLength;
 
     public Input<Integer> getPrefixLength() {
         return this.prefixLength == null ? Input.empty() : this.prefixLength;
@@ -129,7 +129,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -142,7 +142,7 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-    private final @Nullable Input<String> purpose;
+        private final @Nullable Input<String> purpose;
 
     public Input<String> getPurpose() {
         return this.purpose == null ? Input.empty() : this.purpose;
@@ -321,7 +321,6 @@ public final class GlobalAddressArgs extends io.pulumi.resources.ResourceArgs {
             this.purpose = Input.ofNullable(purpose);
             return this;
         }
-
         public GlobalAddressArgs build() {
             return new GlobalAddressArgs(address, addressType, description, ipVersion, labels, name, network, prefixLength, project, purpose);
         }

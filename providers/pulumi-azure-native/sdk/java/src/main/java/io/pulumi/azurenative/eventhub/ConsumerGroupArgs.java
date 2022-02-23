@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.eventhub;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="consumerGroupName")
-    private final @Nullable Input<String> consumerGroupName;
+        private final @Nullable Input<String> consumerGroupName;
 
     public Input<String> getConsumerGroupName() {
         return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
@@ -30,7 +30,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eventHubName", required=true)
-    private final Input<String> eventHubName;
+        private final Input<String> eventHubName;
 
     public Input<String> getEventHubName() {
         return this.eventHubName;
@@ -41,7 +41,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final Input<String> namespaceName;
+        private final Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName;
@@ -52,7 +52,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userMetadata")
-    private final @Nullable Input<String> userMetadata;
+        private final @Nullable Input<String> userMetadata;
 
     public Input<String> getUserMetadata() {
         return this.userMetadata == null ? Input.empty() : this.userMetadata;
@@ -167,7 +167,6 @@ public final class ConsumerGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.userMetadata = Input.ofNullable(userMetadata);
             return this;
         }
-
         public ConsumerGroupArgs build() {
             return new ConsumerGroupArgs(consumerGroupName, eventHubName, namespaceName, resourceGroupName, userMetadata);
         }

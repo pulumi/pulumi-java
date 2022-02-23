@@ -8,7 +8,7 @@ import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.DetectorEventVariableVariableType;
 import io.pulumi.awsnative.frauddetector.inputs.DetectorTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
     public static final DetectorEventVariableArgs Empty = new DetectorEventVariableArgs();
 
     @InputImport(name="arn")
-    private final @Nullable Input<String> arn;
+        private final @Nullable Input<String> arn;
 
     public Input<String> getArn() {
         return this.arn == null ? Input.empty() : this.arn;
@@ -32,28 +32,28 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="createdTime")
-    private final @Nullable Input<String> createdTime;
+        private final @Nullable Input<String> createdTime;
 
     public Input<String> getCreatedTime() {
         return this.createdTime == null ? Input.empty() : this.createdTime;
     }
 
     @InputImport(name="dataSource")
-    private final @Nullable Input<DetectorEventVariableDataSource> dataSource;
+        private final @Nullable Input<DetectorEventVariableDataSource> dataSource;
 
     public Input<DetectorEventVariableDataSource> getDataSource() {
         return this.dataSource == null ? Input.empty() : this.dataSource;
     }
 
     @InputImport(name="dataType")
-    private final @Nullable Input<DetectorEventVariableDataType> dataType;
+        private final @Nullable Input<DetectorEventVariableDataType> dataType;
 
     public Input<DetectorEventVariableDataType> getDataType() {
         return this.dataType == null ? Input.empty() : this.dataType;
     }
 
     @InputImport(name="defaultValue")
-    private final @Nullable Input<String> defaultValue;
+        private final @Nullable Input<String> defaultValue;
 
     public Input<String> getDefaultValue() {
         return this.defaultValue == null ? Input.empty() : this.defaultValue;
@@ -64,14 +64,14 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="inline")
-    private final @Nullable Input<Boolean> inline;
+        private final @Nullable Input<Boolean> inline;
 
     public Input<Boolean> getInline() {
         return this.inline == null ? Input.empty() : this.inline;
@@ -82,14 +82,14 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="lastUpdatedTime")
-    private final @Nullable Input<String> lastUpdatedTime;
+        private final @Nullable Input<String> lastUpdatedTime;
 
     public Input<String> getLastUpdatedTime() {
         return this.lastUpdatedTime == null ? Input.empty() : this.lastUpdatedTime;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -100,14 +100,14 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<DetectorTagArgs>> tags;
+        private final @Nullable Input<List<DetectorTagArgs>> tags;
 
     public Input<List<DetectorTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
     }
 
     @InputImport(name="variableType")
-    private final @Nullable Input<DetectorEventVariableVariableType> variableType;
+        private final @Nullable Input<DetectorEventVariableVariableType> variableType;
 
     public Input<DetectorEventVariableVariableType> getVariableType() {
         return this.variableType == null ? Input.empty() : this.variableType;
@@ -301,7 +301,6 @@ public final class DetectorEventVariableArgs extends io.pulumi.resources.Resourc
             this.variableType = Input.ofNullable(variableType);
             return this;
         }
-
         public DetectorEventVariableArgs build() {
             return new DetectorEventVariableArgs(arn, createdTime, dataSource, dataType, defaultValue, description, inline, lastUpdatedTime, name, tags, variableType);
         }

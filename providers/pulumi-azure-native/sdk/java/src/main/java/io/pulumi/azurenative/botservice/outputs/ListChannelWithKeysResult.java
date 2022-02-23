@@ -18,7 +18,7 @@ import io.pulumi.azurenative.botservice.outputs.SlackChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.SmsChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.TelegramChannelResponse;
 import io.pulumi.azurenative.botservice.outputs.WebChatChannelResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -367,7 +367,6 @@ public final class ListChannelWithKeysResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public ListChannelWithKeysResult build() {
             return new ListChannelWithKeysResult(changedTime, entityTag, etag, id, kind, location, name, properties, provisioningState, resource, setting, sku, tags, type, zones);
         }

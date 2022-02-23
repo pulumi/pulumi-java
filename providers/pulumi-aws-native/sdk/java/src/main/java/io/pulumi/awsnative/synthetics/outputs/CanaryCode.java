@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.synthetics.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class CanaryCode {
             this.script = script;
             return this;
         }
-
         public CanaryCode build() {
             return new CanaryCode(handler, s3Bucket, s3Key, s3ObjectVersion, script);
         }

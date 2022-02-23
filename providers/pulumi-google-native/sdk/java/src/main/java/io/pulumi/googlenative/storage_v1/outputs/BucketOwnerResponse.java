@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class BucketOwnerResponse {
             this.entityId = Objects.requireNonNull(entityId);
             return this;
         }
-
         public BucketOwnerResponse build() {
             return new BucketOwnerResponse(entity, entityId);
         }

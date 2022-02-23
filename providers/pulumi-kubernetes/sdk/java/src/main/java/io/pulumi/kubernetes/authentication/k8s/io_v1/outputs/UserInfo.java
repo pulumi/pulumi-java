@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authentication.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -120,7 +120,6 @@ public final class UserInfo {
             this.username = username;
             return this;
         }
-
         public UserInfo build() {
             return new UserInfo(extra, groups, uid, username);
         }

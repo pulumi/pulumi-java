@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3WebhookGenericWebServiceResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigRespons
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse build() {
             return new GoogleCloudDialogflowCxV3WebhookServiceDirectoryConfigResponse(genericWebService, service);
         }

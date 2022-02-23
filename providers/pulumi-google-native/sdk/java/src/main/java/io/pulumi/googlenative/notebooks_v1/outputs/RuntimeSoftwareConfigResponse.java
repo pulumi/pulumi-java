@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.notebooks_v1.outputs.ContainerImageResponse;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -204,7 +204,6 @@ public final class RuntimeSoftwareConfigResponse {
             this.postStartupScript = Objects.requireNonNull(postStartupScript);
             return this;
         }
-
         public RuntimeSoftwareConfigResponse build() {
             return new RuntimeSoftwareConfigResponse(customGpuDriverPath, enableHealthMonitoring, idleShutdown, idleShutdownTimeout, installGpuDriver, kernels, notebookUpgradeSchedule, postStartupScript);
         }

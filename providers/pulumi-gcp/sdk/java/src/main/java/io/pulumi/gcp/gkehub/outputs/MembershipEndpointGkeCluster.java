@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gkehub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -44,7 +44,6 @@ public final class MembershipEndpointGkeCluster {
             this.resourceLink = Objects.requireNonNull(resourceLink);
             return this;
         }
-
         public MembershipEndpointGkeCluster build() {
             return new MembershipEndpointGkeCluster(resourceLink);
         }

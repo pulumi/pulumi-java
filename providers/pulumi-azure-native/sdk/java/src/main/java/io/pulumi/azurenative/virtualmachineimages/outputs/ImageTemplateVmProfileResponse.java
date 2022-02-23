@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.virtualmachineimages.outputs;
 
 import io.pulumi.azurenative.virtualmachineimages.outputs.VirtualNetworkConfigResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class ImageTemplateVmProfileResponse {
             this.vnetConfig = vnetConfig;
             return this;
         }
-
         public ImageTemplateVmProfileResponse build() {
             return new ImageTemplateVmProfileResponse(osDiskSizeGB, vmSize, vnetConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storage_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="defaultKmsKeyName", required=true)
-    private final String defaultKmsKeyName;
+      private final String defaultKmsKeyName;
 
     public String getDefaultKmsKeyName() {
         return this.defaultKmsKeyName;
@@ -59,7 +59,6 @@ public final class BucketEncryptionResponse extends io.pulumi.resources.InvokeAr
             this.defaultKmsKeyName = Objects.requireNonNull(defaultKmsKeyName);
             return this;
         }
-
         public BucketEncryptionResponse build() {
             return new BucketEncryptionResponse(defaultKmsKeyName);
         }

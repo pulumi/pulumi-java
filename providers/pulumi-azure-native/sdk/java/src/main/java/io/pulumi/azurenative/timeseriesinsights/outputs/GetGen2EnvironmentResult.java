@@ -8,7 +8,7 @@ import io.pulumi.azurenative.timeseriesinsights.outputs.Gen2StorageConfiguration
 import io.pulumi.azurenative.timeseriesinsights.outputs.SkuResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.TimeSeriesIdPropertyResponse;
 import io.pulumi.azurenative.timeseriesinsights.outputs.WarmStoreConfigurationPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -358,7 +358,6 @@ public final class GetGen2EnvironmentResult {
             this.warmStoreConfiguration = warmStoreConfiguration;
             return this;
         }
-
         public GetGen2EnvironmentResult build() {
             return new GetGen2EnvironmentResult(creationTime, dataAccessFqdn, dataAccessId, id, kind, location, name, provisioningState, sku, status, storageConfiguration, tags, timeSeriesIdProperties, type, warmStoreConfiguration);
         }

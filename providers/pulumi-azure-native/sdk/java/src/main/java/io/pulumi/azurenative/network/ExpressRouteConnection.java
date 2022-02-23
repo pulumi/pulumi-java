@@ -10,8 +10,8 @@ import io.pulumi.azurenative.network.outputs.RoutingConfigurationResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -148,13 +148,6 @@ public class ExpressRouteConnection extends io.pulumi.resources.CustomResource {
         return this.routingWeight;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ExpressRouteConnection(String name) {
-        super("azure-native:network:ExpressRouteConnection", name, ExpressRouteConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

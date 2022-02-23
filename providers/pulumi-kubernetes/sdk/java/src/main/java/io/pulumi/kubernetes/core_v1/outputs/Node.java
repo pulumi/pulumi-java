@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.NodeSpec;
 import io.pulumi.kubernetes.core_v1.outputs.NodeStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class Node {
             this.status = status;
             return this;
         }
-
         public Node build() {
             return new Node(apiVersion, kind, metadata, spec, status);
         }

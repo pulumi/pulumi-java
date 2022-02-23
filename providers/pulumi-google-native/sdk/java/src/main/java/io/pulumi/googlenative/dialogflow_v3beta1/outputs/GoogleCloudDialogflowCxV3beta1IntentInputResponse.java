@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GoogleCloudDialogflowCxV3beta1IntentInputResponse {
             this.intent = Objects.requireNonNull(intent);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1IntentInputResponse build() {
             return new GoogleCloudDialogflowCxV3beta1IntentInputResponse(intent);
         }

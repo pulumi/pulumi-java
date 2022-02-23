@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.delegatednetwork.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final String resourceName;
+        private final String resourceName;
 
     public String getPropResourceName() {
         return this.resourceName;
@@ -77,7 +77,6 @@ public final class GetOrchestratorInstanceServiceDetailsArgs extends io.pulumi.r
             this.resourceName = Objects.requireNonNull(resourceName);
             return this;
         }
-
         public GetOrchestratorInstanceServiceDetailsArgs build() {
             return new GetOrchestratorInstanceServiceDetailsArgs(resourceGroupName, resourceName);
         }

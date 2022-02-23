@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridnetwork.outputs;
 import io.pulumi.azurenative.hybridnetwork.outputs.DataDiskResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.ImageReferenceResponse;
 import io.pulumi.azurenative.hybridnetwork.outputs.OsDiskResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -100,7 +100,6 @@ public final class StorageProfileResponse {
             this.osDisk = osDisk;
             return this;
         }
-
         public StorageProfileResponse build() {
             return new StorageProfileResponse(dataDisks, imageReference, osDisk);
         }

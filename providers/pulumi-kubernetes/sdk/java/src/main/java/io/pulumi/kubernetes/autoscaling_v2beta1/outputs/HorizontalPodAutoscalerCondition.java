@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class HorizontalPodAutoscalerCondition {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public HorizontalPodAutoscalerCondition build() {
             return new HorizontalPodAutoscalerCondition(lastTransitionTime, message, reason, status, type);
         }

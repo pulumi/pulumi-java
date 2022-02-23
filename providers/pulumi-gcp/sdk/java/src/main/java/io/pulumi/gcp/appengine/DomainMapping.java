@@ -5,8 +5,8 @@ package io.pulumi.gcp.appengine;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.appengine.DomainMappingArgs;
 import io.pulumi.gcp.appengine.inputs.DomainMappingState;
@@ -143,13 +143,6 @@ public class DomainMapping extends io.pulumi.resources.CustomResource {
         return this.sslSettings;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DomainMapping(String name) {
-        super("gcp:appengine/domainMapping:DomainMapping", name, DomainMappingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

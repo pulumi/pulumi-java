@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrder;
 import io.pulumi.awsnative.databrew.enums.DatasetFilesLimitOrderedBy;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="maxFiles", required=true)
-    private final Input<Integer> maxFiles;
+        private final Input<Integer> maxFiles;
 
     public Input<Integer> getMaxFiles() {
         return this.maxFiles;
@@ -32,7 +32,7 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<DatasetFilesLimitOrder> order;
+        private final @Nullable Input<DatasetFilesLimitOrder> order;
 
     public Input<DatasetFilesLimitOrder> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -43,7 +43,7 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="orderedBy")
-    private final @Nullable Input<DatasetFilesLimitOrderedBy> orderedBy;
+        private final @Nullable Input<DatasetFilesLimitOrderedBy> orderedBy;
 
     public Input<DatasetFilesLimitOrderedBy> getOrderedBy() {
         return this.orderedBy == null ? Input.empty() : this.orderedBy;
@@ -117,7 +117,6 @@ public final class DatasetFilesLimitArgs extends io.pulumi.resources.ResourceArg
             this.orderedBy = Input.ofNullable(orderedBy);
             return this;
         }
-
         public DatasetFilesLimitArgs build() {
             return new DatasetFilesLimitArgs(maxFiles, order, orderedBy);
         }

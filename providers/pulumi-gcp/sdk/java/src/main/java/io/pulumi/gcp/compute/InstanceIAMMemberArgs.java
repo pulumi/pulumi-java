@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceIAMMemberConditionArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="condition")
-    private final @Nullable Input<InstanceIAMMemberConditionArgs> condition;
+        private final @Nullable Input<InstanceIAMMemberConditionArgs> condition;
 
     public Input<InstanceIAMMemberConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -32,14 +32,14 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="instanceName", required=true)
-    private final Input<String> instanceName;
+        private final Input<String> instanceName;
 
     public Input<String> getInstanceName() {
         return this.instanceName;
     }
 
     @InputImport(name="member", required=true)
-    private final Input<String> member;
+        private final Input<String> member;
 
     public Input<String> getMember() {
         return this.member;
@@ -51,7 +51,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -64,7 +64,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -77,7 +77,7 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -196,7 +196,6 @@ public final class InstanceIAMMemberArgs extends io.pulumi.resources.ResourceArg
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public InstanceIAMMemberArgs build() {
             return new InstanceIAMMemberArgs(condition, instanceName, member, project, role, zone);
         }

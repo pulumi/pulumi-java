@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.outputs;
 
 import io.pulumi.azurenative.storage.outputs.StorageAccountKeyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class ListStorageAccountKeysResult {
             this.keys = Objects.requireNonNull(keys);
             return this;
         }
-
         public ListStorageAccountKeysResult build() {
             return new ListStorageAccountKeysResult(keys);
         }

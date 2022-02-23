@@ -7,7 +7,7 @@ import io.pulumi.awsnative.lookoutmetrics.enums.AnomalyDetectorMetricSetMetricSe
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetric;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorMetricSource;
 import io.pulumi.awsnative.lookoutmetrics.outputs.AnomalyDetectorTimestampColumn;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -205,7 +205,6 @@ public final class AnomalyDetectorMetricSet {
             this.timezone = timezone;
             return this;
         }
-
         public AnomalyDetectorMetricSet build() {
             return new AnomalyDetectorMetricSet(dimensionList, metricList, metricSetDescription, metricSetFrequency, metricSetName, metricSource, offset, timestampColumn, timezone);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetDNSSECArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="hostedZoneId", required=true)
-    private final String hostedZoneId;
+        private final String hostedZoneId;
 
     public String getHostedZoneId() {
         return this.hostedZoneId;
@@ -55,7 +55,6 @@ public final class GetDNSSECArgs extends io.pulumi.resources.InvokeArgs {
             this.hostedZoneId = Objects.requireNonNull(hostedZoneId);
             return this;
         }
-
         public GetDNSSECArgs build() {
             return new GetDNSSECArgs(hostedZoneId);
         }

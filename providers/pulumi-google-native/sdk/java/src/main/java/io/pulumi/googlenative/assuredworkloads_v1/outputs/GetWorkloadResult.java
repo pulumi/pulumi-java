@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.assuredworkloads_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadKMSSettingsResponse;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceInfoResponse;
 import io.pulumi.googlenative.assuredworkloads_v1.outputs.GoogleCloudAssuredworkloadsV1WorkloadResourceSettingsResponse;
@@ -333,7 +333,6 @@ public final class GetWorkloadResult {
             this.saaEnrollmentResponse = Objects.requireNonNull(saaEnrollmentResponse);
             return this;
         }
-
         public GetWorkloadResult build() {
             return new GetWorkloadResult(billingAccount, complianceRegime, createTime, displayName, enableSovereignControls, etag, kajEnrollmentState, kmsSettings, labels, name, provisionedResourcesParent, resourceSettings, resources, saaEnrollmentResponse);
         }

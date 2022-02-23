@@ -7,7 +7,7 @@ import io.pulumi.azurenative.elastic.enums.ProvisioningState;
 import io.pulumi.azurenative.elastic.inputs.LogRulesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logRules")
-    private final @Nullable Input<LogRulesArgs> logRules;
+        private final @Nullable Input<LogRulesArgs> logRules;
 
     public Input<LogRulesArgs> getLogRules() {
         return this.logRules == null ? Input.empty() : this.logRules;
@@ -37,7 +37,7 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
+        private final @Nullable Input<Either<String,ProvisioningState>> provisioningState;
 
     public Input<Either<String,ProvisioningState>> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -96,7 +96,6 @@ public final class MonitoringTagRulesPropertiesArgs extends io.pulumi.resources.
             this.provisioningState = Input.ofNullable(provisioningState);
             return this;
         }
-
         public MonitoringTagRulesPropertiesArgs build() {
             return new MonitoringTagRulesPropertiesArgs(logRules, provisioningState);
         }

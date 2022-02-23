@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -18,7 +18,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+      private final String value;
 
     public String getValue() {
         return this.value;
@@ -29,7 +29,7 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
      * 
      */
     @InputImport(name="wildcardMatch", required=true)
-    private final Boolean wildcardMatch;
+      private final Boolean wildcardMatch;
 
     public Boolean getWildcardMatch() {
         return this.wildcardMatch;
@@ -78,7 +78,6 @@ public final class GoogleCloudApigeeV1TlsInfoCommonNameResponse extends io.pulum
             this.wildcardMatch = Objects.requireNonNull(wildcardMatch);
             return this;
         }
-
         public GoogleCloudApigeeV1TlsInfoCommonNameResponse build() {
             return new GoogleCloudApigeeV1TlsInfoCommonNameResponse(value, wildcardMatch);
         }

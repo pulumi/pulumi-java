@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.apikeys_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="allowedReferrers")
-    private final @Nullable Input<List<String>> allowedReferrers;
+      private final @Nullable Input<List<String>> allowedReferrers;
 
     public Input<List<String>> getAllowedReferrers() {
         return this.allowedReferrers == null ? Input.empty() : this.allowedReferrers;
@@ -67,7 +67,6 @@ public final class V2BrowserKeyRestrictionsArgs extends io.pulumi.resources.Reso
             this.allowedReferrers = Input.ofNullable(allowedReferrers);
             return this;
         }
-
         public V2BrowserKeyRestrictionsArgs build() {
             return new V2BrowserKeyRestrictionsArgs(allowedReferrers);
         }

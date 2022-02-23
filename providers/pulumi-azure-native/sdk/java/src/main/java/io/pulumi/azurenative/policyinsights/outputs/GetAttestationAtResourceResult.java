@@ -5,7 +5,7 @@ package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.AttestationEvidenceResponse;
 import io.pulumi.azurenative.policyinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -310,7 +310,6 @@ public final class GetAttestationAtResourceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAttestationAtResourceResult build() {
             return new GetAttestationAtResourceResult(comments, complianceState, evidence, expiresOn, id, lastComplianceStateChangeAt, name, owner, policyAssignmentId, policyDefinitionReferenceId, provisioningState, systemData, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.ConnStringValueTypePairResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -141,7 +141,6 @@ public final class ListWebAppConnectionStringsSlotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ListWebAppConnectionStringsSlotResult build() {
             return new ListWebAppConnectionStringsSlotResult(id, kind, name, properties, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.outputs;
 
 import io.pulumi.azurenative.apimanagement.outputs.TokenBodyParameterContractResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -436,7 +436,6 @@ public final class GetAuthorizationServerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetAuthorizationServerResult build() {
             return new GetAuthorizationServerResult(authorizationEndpoint, authorizationMethods, bearerTokenSendingMethods, clientAuthenticationMethod, clientId, clientRegistrationEndpoint, clientSecret, defaultScope, description, displayName, grantTypes, id, name, resourceOwnerPassword, resourceOwnerUsername, supportState, tokenBodyParameters, tokenEndpoint, type);
         }

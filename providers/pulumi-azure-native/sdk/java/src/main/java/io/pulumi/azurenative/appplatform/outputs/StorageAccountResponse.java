@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,7 +76,6 @@ public final class StorageAccountResponse {
             this.storageType = Objects.requireNonNull(storageType);
             return this;
         }
-
         public StorageAccountResponse build() {
             return new StorageAccountResponse(accountName, storageType);
         }

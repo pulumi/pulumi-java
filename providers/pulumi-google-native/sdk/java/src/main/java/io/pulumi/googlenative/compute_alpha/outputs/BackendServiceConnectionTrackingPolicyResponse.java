@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -118,7 +118,6 @@ public final class BackendServiceConnectionTrackingPolicyResponse {
             this.trackingMode = Objects.requireNonNull(trackingMode);
             return this;
         }
-
         public BackendServiceConnectionTrackingPolicyResponse build() {
             return new BackendServiceConnectionTrackingPolicyResponse(connectionPersistenceOnUnhealthyBackends, enableStrongAffinity, idleTimeoutSec, trackingMode);
         }

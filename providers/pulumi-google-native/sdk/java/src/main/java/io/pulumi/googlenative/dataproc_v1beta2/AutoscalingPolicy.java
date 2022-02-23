@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dataproc_v1beta2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataproc_v1beta2.AutoscalingPolicyArgs;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.BasicAutoscalingAlgorithmResponse;
@@ -70,13 +70,6 @@ public class AutoscalingPolicy extends io.pulumi.resources.CustomResource {
         return this.workerConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AutoscalingPolicy(String name) {
-        super("google-native:dataproc/v1beta2:AutoscalingPolicy", name, AutoscalingPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

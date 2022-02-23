@@ -5,7 +5,7 @@ package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.azurenative.servicefabricmesh.inputs.ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="creationParameters", required=true)
-    private final Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
+        private final Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> creationParameters;
 
     public Input<ApplicationScopedVolumeCreationParametersServiceFabricVolumeDiskArgs> getCreationParameters() {
         return this.creationParameters;
@@ -36,7 +36,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="destinationPath", required=true)
-    private final Input<String> destinationPath;
+        private final Input<String> destinationPath;
 
     public Input<String> getDestinationPath() {
         return this.destinationPath;
@@ -47,7 +47,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -147,7 +147,6 @@ public final class ApplicationScopedVolumeArgs extends io.pulumi.resources.Resou
             this.readOnly = Input.ofNullable(readOnly);
             return this;
         }
-
         public ApplicationScopedVolumeArgs build() {
             return new ApplicationScopedVolumeArgs(creationParameters, destinationPath, name, readOnly);
         }

@@ -12,7 +12,7 @@ import io.pulumi.azurenative.security.inputs.RecommendationConfigurationProperti
 import io.pulumi.azurenative.security.inputs.UserDefinedResourcesPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -29,7 +29,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="additionalWorkspaces")
-    private final @Nullable Input<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
+        private final @Nullable Input<List<AdditionalWorkspacesPropertiesArgs>> additionalWorkspaces;
 
     public Input<List<AdditionalWorkspacesPropertiesArgs>> getAdditionalWorkspaces() {
         return this.additionalWorkspaces == null ? Input.empty() : this.additionalWorkspaces;
@@ -40,7 +40,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="disabledDataSources")
-    private final @Nullable Input<List<Either<String,DataSource>>> disabledDataSources;
+        private final @Nullable Input<List<Either<String,DataSource>>> disabledDataSources;
 
     public Input<List<Either<String,DataSource>>> getDisabledDataSources() {
         return this.disabledDataSources == null ? Input.empty() : this.disabledDataSources;
@@ -51,7 +51,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -62,7 +62,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="export")
-    private final @Nullable Input<List<Either<String,ExportData>>> export;
+        private final @Nullable Input<List<Either<String,ExportData>>> export;
 
     public Input<List<Either<String,ExportData>>> getExport() {
         return this.export == null ? Input.empty() : this.export;
@@ -73,7 +73,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="iotHubs", required=true)
-    private final Input<List<String>> iotHubs;
+        private final Input<List<String>> iotHubs;
 
     public Input<List<String>> getIotHubs() {
         return this.iotHubs;
@@ -84,7 +84,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -95,7 +95,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="recommendationsConfiguration")
-    private final @Nullable Input<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
+        private final @Nullable Input<List<RecommendationConfigurationPropertiesArgs>> recommendationsConfiguration;
 
     public Input<List<RecommendationConfigurationPropertiesArgs>> getRecommendationsConfiguration() {
         return this.recommendationsConfiguration == null ? Input.empty() : this.recommendationsConfiguration;
@@ -106,7 +106,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -117,7 +117,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="solutionName")
-    private final @Nullable Input<String> solutionName;
+        private final @Nullable Input<String> solutionName;
 
     public Input<String> getSolutionName() {
         return this.solutionName == null ? Input.empty() : this.solutionName;
@@ -128,7 +128,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<Either<String,SecuritySolutionStatus>> status;
+        private final @Nullable Input<Either<String,SecuritySolutionStatus>> status;
 
     public Input<Either<String,SecuritySolutionStatus>> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -139,7 +139,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -150,7 +150,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="unmaskedIpLoggingStatus")
-    private final @Nullable Input<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
+        private final @Nullable Input<Either<String,UnmaskedIpLoggingStatus>> unmaskedIpLoggingStatus;
 
     public Input<Either<String,UnmaskedIpLoggingStatus>> getUnmaskedIpLoggingStatus() {
         return this.unmaskedIpLoggingStatus == null ? Input.empty() : this.unmaskedIpLoggingStatus;
@@ -161,7 +161,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="userDefinedResources")
-    private final @Nullable Input<UserDefinedResourcesPropertiesArgs> userDefinedResources;
+        private final @Nullable Input<UserDefinedResourcesPropertiesArgs> userDefinedResources;
 
     public Input<UserDefinedResourcesPropertiesArgs> getUserDefinedResources() {
         return this.userDefinedResources == null ? Input.empty() : this.userDefinedResources;
@@ -172,7 +172,7 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="workspace")
-    private final @Nullable Input<String> workspace;
+        private final @Nullable Input<String> workspace;
 
     public Input<String> getWorkspace() {
         return this.workspace == null ? Input.empty() : this.workspace;
@@ -411,7 +411,6 @@ public final class IotSecuritySolutionArgs extends io.pulumi.resources.ResourceA
             this.workspace = Input.ofNullable(workspace);
             return this;
         }
-
         public IotSecuritySolutionArgs build() {
             return new IotSecuritySolutionArgs(additionalWorkspaces, disabledDataSources, displayName, export, iotHubs, location, recommendationsConfiguration, resourceGroupName, solutionName, status, tags, unmaskedIpLoggingStatus, userDefinedResources, workspace);
         }

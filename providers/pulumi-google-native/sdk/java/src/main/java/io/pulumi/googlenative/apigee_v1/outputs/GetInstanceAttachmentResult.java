@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class GetInstanceAttachmentResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetInstanceAttachmentResult build() {
             return new GetInstanceAttachmentResult(createdAt, environment, name);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.applicationinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="pattern", required=true)
-    private final String pattern;
+        private final String pattern;
 
     public String getPattern() {
         return this.pattern;
@@ -33,7 +33,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="patternName", required=true)
-    private final String patternName;
+        private final String patternName;
 
     public String getPatternName() {
         return this.patternName;
@@ -44,7 +44,7 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="rank", required=true)
-    private final Integer rank;
+        private final Integer rank;
 
     public Integer getRank() {
         return this.rank;
@@ -103,7 +103,6 @@ public final class ApplicationLogPattern extends io.pulumi.resources.InvokeArgs 
             this.rank = Objects.requireNonNull(rank);
             return this;
         }
-
         public ApplicationLogPattern build() {
             return new ApplicationLogPattern(pattern, patternName, rank);
         }

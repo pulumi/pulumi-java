@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationControllerSpec;
 import io.pulumi.kubernetes.core_v1.outputs.ReplicationControllerStatus;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
@@ -142,7 +142,6 @@ public final class ReplicationController {
             this.status = status;
             return this;
         }
-
         public ReplicationController build() {
             return new ReplicationController(apiVersion, kind, metadata, spec, status);
         }

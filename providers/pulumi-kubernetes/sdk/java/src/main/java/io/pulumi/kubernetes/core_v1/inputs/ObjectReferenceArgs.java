@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="fieldPath")
-    private final @Nullable Input<String> fieldPath;
+        private final @Nullable Input<String> fieldPath;
 
     public Input<String> getFieldPath() {
         return this.fieldPath == null ? Input.empty() : this.fieldPath;
@@ -45,7 +45,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -56,7 +56,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -67,7 +67,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="namespace")
-    private final @Nullable Input<String> namespace;
+        private final @Nullable Input<String> namespace;
 
     public Input<String> getNamespace() {
         return this.namespace == null ? Input.empty() : this.namespace;
@@ -78,7 +78,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="resourceVersion")
-    private final @Nullable Input<String> resourceVersion;
+        private final @Nullable Input<String> resourceVersion;
 
     public Input<String> getResourceVersion() {
         return this.resourceVersion == null ? Input.empty() : this.resourceVersion;
@@ -89,7 +89,7 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+        private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -223,7 +223,6 @@ public final class ObjectReferenceArgs extends io.pulumi.resources.ResourceArgs 
             this.uid = Input.ofNullable(uid);
             return this;
         }
-
         public ObjectReferenceArgs build() {
             return new ObjectReferenceArgs(apiVersion, fieldPath, kind, name, namespace, resourceVersion, uid);
         }

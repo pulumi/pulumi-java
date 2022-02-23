@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -89,7 +89,6 @@ public final class NFSMountConfigurationResponse {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public NFSMountConfigurationResponse build() {
             return new NFSMountConfigurationResponse(mountOptions, relativeMountPath, source);
         }

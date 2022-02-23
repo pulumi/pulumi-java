@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.bigquery_v2.inputs.BqmlTrainingRunArgs;
 import io.pulumi.googlenative.bigquery_v2.inputs.ModelDefinitionModelOptionsArgs;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="modelOptions")
-    private final @Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions;
+      private final @Nullable Input<ModelDefinitionModelOptionsArgs> modelOptions;
 
     public Input<ModelDefinitionModelOptionsArgs> getModelOptions() {
         return this.modelOptions == null ? Input.empty() : this.modelOptions;
@@ -32,7 +32,7 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="trainingRuns")
-    private final @Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns;
+      private final @Nullable Input<List<BqmlTrainingRunArgs>> trainingRuns;
 
     public Input<List<BqmlTrainingRunArgs>> getTrainingRuns() {
         return this.trainingRuns == null ? Input.empty() : this.trainingRuns;
@@ -91,7 +91,6 @@ public final class ModelDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             this.trainingRuns = Input.ofNullable(trainingRuns);
             return this;
         }
-
         public ModelDefinitionArgs build() {
             return new ModelDefinitionArgs(modelOptions, trainingRuns);
         }

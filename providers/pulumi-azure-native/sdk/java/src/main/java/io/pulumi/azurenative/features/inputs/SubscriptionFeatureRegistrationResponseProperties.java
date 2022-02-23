@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.features.inputs;
 
 import io.pulumi.azurenative.features.inputs.AuthorizationProfileResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="approvalType", required=true)
-    private final String approvalType;
+        private final String approvalType;
 
     public String getApprovalType() {
         return this.approvalType;
@@ -33,7 +33,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="authorizationProfile")
-    private final @Nullable AuthorizationProfileResponse authorizationProfile;
+        private final @Nullable AuthorizationProfileResponse authorizationProfile;
 
     public Optional<AuthorizationProfileResponse> getAuthorizationProfile() {
         return this.authorizationProfile == null ? Optional.empty() : Optional.ofNullable(this.authorizationProfile);
@@ -44,7 +44,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -55,7 +55,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final String displayName;
+        private final String displayName;
 
     public String getDisplayName() {
         return this.displayName;
@@ -66,7 +66,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="documentationLink", required=true)
-    private final String documentationLink;
+        private final String documentationLink;
 
     public String getDocumentationLink() {
         return this.documentationLink;
@@ -77,7 +77,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="featureName", required=true)
-    private final String featureName;
+        private final String featureName;
 
     public String getFeatureName() {
         return this.featureName;
@@ -88,7 +88,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Map<String,String> metadata;
+        private final @Nullable Map<String,String> metadata;
 
     public Map<String,String> getMetadata() {
         return this.metadata == null ? Map.of() : this.metadata;
@@ -99,7 +99,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="providerNamespace", required=true)
-    private final String providerNamespace;
+        private final String providerNamespace;
 
     public String getProviderNamespace() {
         return this.providerNamespace;
@@ -110,7 +110,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="registrationDate", required=true)
-    private final String registrationDate;
+        private final String registrationDate;
 
     public String getRegistrationDate() {
         return this.registrationDate;
@@ -121,7 +121,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="releaseDate", required=true)
-    private final String releaseDate;
+        private final String releaseDate;
 
     public String getReleaseDate() {
         return this.releaseDate;
@@ -132,7 +132,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="shouldFeatureDisplayInPortal")
-    private final @Nullable Boolean shouldFeatureDisplayInPortal;
+        private final @Nullable Boolean shouldFeatureDisplayInPortal;
 
     public Optional<Boolean> getShouldFeatureDisplayInPortal() {
         return this.shouldFeatureDisplayInPortal == null ? Optional.empty() : Optional.ofNullable(this.shouldFeatureDisplayInPortal);
@@ -143,7 +143,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="state")
-    private final @Nullable String state;
+        private final @Nullable String state;
 
     public Optional<String> getState() {
         return this.state == null ? Optional.empty() : Optional.ofNullable(this.state);
@@ -154,7 +154,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="subscriptionId", required=true)
-    private final String subscriptionId;
+        private final String subscriptionId;
 
     public String getSubscriptionId() {
         return this.subscriptionId;
@@ -165,7 +165,7 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final String tenantId;
+        private final String tenantId;
 
     public String getTenantId() {
         return this.tenantId;
@@ -334,7 +334,6 @@ public final class SubscriptionFeatureRegistrationResponseProperties extends io.
             this.tenantId = Objects.requireNonNull(tenantId);
             return this;
         }
-
         public SubscriptionFeatureRegistrationResponseProperties build() {
             return new SubscriptionFeatureRegistrationResponseProperties(approvalType, authorizationProfile, description, displayName, documentationLink, featureName, metadata, providerNamespace, registrationDate, releaseDate, shouldFeatureDisplayInPortal, state, subscriptionId, tenantId);
         }

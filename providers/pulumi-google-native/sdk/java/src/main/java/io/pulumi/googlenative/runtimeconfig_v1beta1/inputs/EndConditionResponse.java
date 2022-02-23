@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.runtimeconfig_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.runtimeconfig_v1beta1.inputs.CardinalityResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cardinality", required=true)
-    private final CardinalityResponse cardinality;
+      private final CardinalityResponse cardinality;
 
     public CardinalityResponse getCardinality() {
         return this.cardinality;
@@ -59,7 +59,6 @@ public final class EndConditionResponse extends io.pulumi.resources.InvokeArgs {
             this.cardinality = Objects.requireNonNull(cardinality);
             return this;
         }
-
         public EndConditionResponse build() {
             return new EndConditionResponse(cardinality);
         }

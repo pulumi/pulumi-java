@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.documentdb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class IpAddressOrRangeResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipAddressOrRange")
-    private final @Nullable String ipAddressOrRange;
+        private final @Nullable String ipAddressOrRange;
 
     public Optional<String> getIpAddressOrRange() {
         return this.ipAddressOrRange == null ? Optional.empty() : Optional.ofNullable(this.ipAddressOrRange);
@@ -61,7 +61,6 @@ public final class IpAddressOrRangeResponse extends io.pulumi.resources.InvokeAr
             this.ipAddressOrRange = ipAddressOrRange;
             return this;
         }
-
         public IpAddressOrRangeResponse build() {
             return new IpAddressOrRangeResponse(ipAddressOrRange);
         }

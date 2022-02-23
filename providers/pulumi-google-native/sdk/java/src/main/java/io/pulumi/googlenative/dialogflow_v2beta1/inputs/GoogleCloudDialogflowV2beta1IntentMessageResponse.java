@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse;
 import io.pulumi.googlenative.dialogflow_v2beta1.inputs.GoogleCloudDialogflowV2beta1IntentMessageCardResponse;
@@ -41,7 +41,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="basicCard", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
+      private final GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse basicCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBasicCardResponse getBasicCard() {
         return this.basicCard;
@@ -52,7 +52,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="browseCarouselCard", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
+      private final GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse browseCarouselCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageBrowseCarouselCardResponse getBrowseCarouselCard() {
         return this.browseCarouselCard;
@@ -63,7 +63,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="card", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
+      private final GoogleCloudDialogflowV2beta1IntentMessageCardResponse card;
 
     public GoogleCloudDialogflowV2beta1IntentMessageCardResponse getCard() {
         return this.card;
@@ -74,7 +74,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="carouselSelect", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
+      private final GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse carouselSelect;
 
     public GoogleCloudDialogflowV2beta1IntentMessageCarouselSelectResponse getCarouselSelect() {
         return this.carouselSelect;
@@ -85,7 +85,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="image", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
+      private final GoogleCloudDialogflowV2beta1IntentMessageImageResponse image;
 
     public GoogleCloudDialogflowV2beta1IntentMessageImageResponse getImage() {
         return this.image;
@@ -96,7 +96,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="linkOutSuggestion", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
+      private final GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse linkOutSuggestion;
 
     public GoogleCloudDialogflowV2beta1IntentMessageLinkOutSuggestionResponse getLinkOutSuggestion() {
         return this.linkOutSuggestion;
@@ -107,7 +107,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="listSelect", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
+      private final GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse listSelect;
 
     public GoogleCloudDialogflowV2beta1IntentMessageListSelectResponse getListSelect() {
         return this.listSelect;
@@ -118,7 +118,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="mediaContent", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
+      private final GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse mediaContent;
 
     public GoogleCloudDialogflowV2beta1IntentMessageMediaContentResponse getMediaContent() {
         return this.mediaContent;
@@ -129,7 +129,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="payload", required=true)
-    private final Map<String,String> payload;
+      private final Map<String,String> payload;
 
     public Map<String,String> getPayload() {
         return this.payload;
@@ -140,7 +140,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="platform", required=true)
-    private final String platform;
+      private final String platform;
 
     public String getPlatform() {
         return this.platform;
@@ -151,7 +151,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="quickReplies", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
+      private final GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse quickReplies;
 
     public GoogleCloudDialogflowV2beta1IntentMessageQuickRepliesResponse getQuickReplies() {
         return this.quickReplies;
@@ -162,7 +162,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="rbmCarouselRichCard", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse rbmCarouselRichCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmCarouselCardResponse getRbmCarouselRichCard() {
         return this.rbmCarouselRichCard;
@@ -173,7 +173,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="rbmStandaloneRichCard", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse rbmStandaloneRichCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmStandaloneCardResponse getRbmStandaloneRichCard() {
         return this.rbmStandaloneRichCard;
@@ -184,7 +184,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="rbmText", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
+      private final GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse rbmText;
 
     public GoogleCloudDialogflowV2beta1IntentMessageRbmTextResponse getRbmText() {
         return this.rbmText;
@@ -195,7 +195,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="simpleResponses", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
+      private final GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse simpleResponses;
 
     public GoogleCloudDialogflowV2beta1IntentMessageSimpleResponsesResponse getSimpleResponses() {
         return this.simpleResponses;
@@ -206,7 +206,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="suggestions", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
+      private final GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse suggestions;
 
     public GoogleCloudDialogflowV2beta1IntentMessageSuggestionsResponse getSuggestions() {
         return this.suggestions;
@@ -217,7 +217,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="tableCard", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
+      private final GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse tableCard;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTableCardResponse getTableCard() {
         return this.tableCard;
@@ -228,7 +228,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="telephonyPlayAudio", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
+      private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse telephonyPlayAudio;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyPlayAudioResponse getTelephonyPlayAudio() {
         return this.telephonyPlayAudio;
@@ -239,7 +239,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="telephonySynthesizeSpeech", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
+      private final GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse telephonySynthesizeSpeech;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonySynthesizeSpeechResponse getTelephonySynthesizeSpeech() {
         return this.telephonySynthesizeSpeech;
@@ -250,7 +250,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="telephonyTransferCall", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
+      private final GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse telephonyTransferCall;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTelephonyTransferCallResponse getTelephonyTransferCall() {
         return this.telephonyTransferCall;
@@ -261,7 +261,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
      * 
      */
     @InputImport(name="text", required=true)
-    private final GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
+      private final GoogleCloudDialogflowV2beta1IntentMessageTextResponse text;
 
     public GoogleCloudDialogflowV2beta1IntentMessageTextResponse getText() {
         return this.text;
@@ -500,7 +500,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageResponse extends io.
             this.text = Objects.requireNonNull(text);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageResponse build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageResponse(basicCard, browseCarouselCard, card, carouselSelect, image, linkOutSuggestion, listSelect, mediaContent, payload, platform, quickReplies, rbmCarouselRichCard, rbmStandaloneRichCard, rbmText, simpleResponses, suggestions, tableCard, telephonyPlayAudio, telephonySynthesizeSpeech, telephonyTransferCall, text);
         }

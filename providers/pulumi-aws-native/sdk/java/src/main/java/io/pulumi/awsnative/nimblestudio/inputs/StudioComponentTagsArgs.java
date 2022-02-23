@@ -30,7 +30,6 @@ public final class StudioComponentTagsArgs extends io.pulumi.resources.ResourceA
         public Builder(StudioComponentTagsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public StudioComponentTagsArgs build() {
             return new StudioComponentTagsArgs();
         }

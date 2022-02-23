@@ -7,7 +7,7 @@ import io.pulumi.azurenative.servicefabric.outputs.ApplicationMetricDescriptionR
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUpgradePolicyResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ApplicationUserAssignedIdentityResponse;
 import io.pulumi.azurenative.servicefabric.outputs.ManagedIdentityResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -399,7 +399,6 @@ public final class GetApplicationResult {
             this.upgradePolicy = upgradePolicy;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(etag, id, identity, location, managedIdentities, maximumNodes, metrics, minimumNodes, name, parameters, provisioningState, removeApplicationCapacity, tags, type, typeName, typeVersion, upgradePolicy);
         }

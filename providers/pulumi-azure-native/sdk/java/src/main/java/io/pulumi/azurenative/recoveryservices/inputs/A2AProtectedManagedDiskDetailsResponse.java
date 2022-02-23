@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -27,7 +27,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="allowedDiskLevelOperation")
-    private final @Nullable List<String> allowedDiskLevelOperation;
+        private final @Nullable List<String> allowedDiskLevelOperation;
 
     public List<String> getAllowedDiskLevelOperation() {
         return this.allowedDiskLevelOperation == null ? List.of() : this.allowedDiskLevelOperation;
@@ -38,7 +38,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataPendingAtSourceAgentInMB")
-    private final @Nullable Double dataPendingAtSourceAgentInMB;
+        private final @Nullable Double dataPendingAtSourceAgentInMB;
 
     public Optional<Double> getDataPendingAtSourceAgentInMB() {
         return this.dataPendingAtSourceAgentInMB == null ? Optional.empty() : Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
@@ -49,7 +49,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dataPendingInStagingStorageAccountInMB")
-    private final @Nullable Double dataPendingInStagingStorageAccountInMB;
+        private final @Nullable Double dataPendingInStagingStorageAccountInMB;
 
     public Optional<Double> getDataPendingInStagingStorageAccountInMB() {
         return this.dataPendingInStagingStorageAccountInMB == null ? Optional.empty() : Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
@@ -60,7 +60,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="dekKeyVaultArmId")
-    private final @Nullable String dekKeyVaultArmId;
+        private final @Nullable String dekKeyVaultArmId;
 
     public Optional<String> getDekKeyVaultArmId() {
         return this.dekKeyVaultArmId == null ? Optional.empty() : Optional.ofNullable(this.dekKeyVaultArmId);
@@ -71,7 +71,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskCapacityInBytes")
-    private final @Nullable Double diskCapacityInBytes;
+        private final @Nullable Double diskCapacityInBytes;
 
     public Optional<Double> getDiskCapacityInBytes() {
         return this.diskCapacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.diskCapacityInBytes);
@@ -82,7 +82,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskId")
-    private final @Nullable String diskId;
+        private final @Nullable String diskId;
 
     public Optional<String> getDiskId() {
         return this.diskId == null ? Optional.empty() : Optional.ofNullable(this.diskId);
@@ -93,7 +93,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskName")
-    private final @Nullable String diskName;
+        private final @Nullable String diskName;
 
     public Optional<String> getDiskName() {
         return this.diskName == null ? Optional.empty() : Optional.ofNullable(this.diskName);
@@ -104,7 +104,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskState")
-    private final @Nullable String diskState;
+        private final @Nullable String diskState;
 
     public Optional<String> getDiskState() {
         return this.diskState == null ? Optional.empty() : Optional.ofNullable(this.diskState);
@@ -115,7 +115,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable String diskType;
+        private final @Nullable String diskType;
 
     public Optional<String> getDiskType() {
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
@@ -126,7 +126,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="failoverDiskName")
-    private final @Nullable String failoverDiskName;
+        private final @Nullable String failoverDiskName;
 
     public Optional<String> getFailoverDiskName() {
         return this.failoverDiskName == null ? Optional.empty() : Optional.ofNullable(this.failoverDiskName);
@@ -137,7 +137,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="isDiskEncrypted")
-    private final @Nullable Boolean isDiskEncrypted;
+        private final @Nullable Boolean isDiskEncrypted;
 
     public Optional<Boolean> getIsDiskEncrypted() {
         return this.isDiskEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isDiskEncrypted);
@@ -148,7 +148,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="isDiskKeyEncrypted")
-    private final @Nullable Boolean isDiskKeyEncrypted;
+        private final @Nullable Boolean isDiskKeyEncrypted;
 
     public Optional<Boolean> getIsDiskKeyEncrypted() {
         return this.isDiskKeyEncrypted == null ? Optional.empty() : Optional.ofNullable(this.isDiskKeyEncrypted);
@@ -159,7 +159,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="kekKeyVaultArmId")
-    private final @Nullable String kekKeyVaultArmId;
+        private final @Nullable String kekKeyVaultArmId;
 
     public Optional<String> getKekKeyVaultArmId() {
         return this.kekKeyVaultArmId == null ? Optional.empty() : Optional.ofNullable(this.kekKeyVaultArmId);
@@ -170,7 +170,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyIdentifier")
-    private final @Nullable String keyIdentifier;
+        private final @Nullable String keyIdentifier;
 
     public Optional<String> getKeyIdentifier() {
         return this.keyIdentifier == null ? Optional.empty() : Optional.ofNullable(this.keyIdentifier);
@@ -181,7 +181,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="monitoringJobType")
-    private final @Nullable String monitoringJobType;
+        private final @Nullable String monitoringJobType;
 
     public Optional<String> getMonitoringJobType() {
         return this.monitoringJobType == null ? Optional.empty() : Optional.ofNullable(this.monitoringJobType);
@@ -192,7 +192,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="monitoringPercentageCompletion")
-    private final @Nullable Integer monitoringPercentageCompletion;
+        private final @Nullable Integer monitoringPercentageCompletion;
 
     public Optional<Integer> getMonitoringPercentageCompletion() {
         return this.monitoringPercentageCompletion == null ? Optional.empty() : Optional.ofNullable(this.monitoringPercentageCompletion);
@@ -203,7 +203,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="primaryStagingAzureStorageAccountId")
-    private final @Nullable String primaryStagingAzureStorageAccountId;
+        private final @Nullable String primaryStagingAzureStorageAccountId;
 
     public Optional<String> getPrimaryStagingAzureStorageAccountId() {
         return this.primaryStagingAzureStorageAccountId == null ? Optional.empty() : Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
@@ -214,7 +214,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="recoveryDiskEncryptionSetId")
-    private final @Nullable String recoveryDiskEncryptionSetId;
+        private final @Nullable String recoveryDiskEncryptionSetId;
 
     public Optional<String> getRecoveryDiskEncryptionSetId() {
         return this.recoveryDiskEncryptionSetId == null ? Optional.empty() : Optional.ofNullable(this.recoveryDiskEncryptionSetId);
@@ -225,7 +225,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="recoveryReplicaDiskAccountType")
-    private final @Nullable String recoveryReplicaDiskAccountType;
+        private final @Nullable String recoveryReplicaDiskAccountType;
 
     public Optional<String> getRecoveryReplicaDiskAccountType() {
         return this.recoveryReplicaDiskAccountType == null ? Optional.empty() : Optional.ofNullable(this.recoveryReplicaDiskAccountType);
@@ -236,7 +236,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="recoveryReplicaDiskId")
-    private final @Nullable String recoveryReplicaDiskId;
+        private final @Nullable String recoveryReplicaDiskId;
 
     public Optional<String> getRecoveryReplicaDiskId() {
         return this.recoveryReplicaDiskId == null ? Optional.empty() : Optional.ofNullable(this.recoveryReplicaDiskId);
@@ -247,7 +247,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="recoveryResourceGroupId")
-    private final @Nullable String recoveryResourceGroupId;
+        private final @Nullable String recoveryResourceGroupId;
 
     public Optional<String> getRecoveryResourceGroupId() {
         return this.recoveryResourceGroupId == null ? Optional.empty() : Optional.ofNullable(this.recoveryResourceGroupId);
@@ -258,7 +258,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="recoveryTargetDiskAccountType")
-    private final @Nullable String recoveryTargetDiskAccountType;
+        private final @Nullable String recoveryTargetDiskAccountType;
 
     public Optional<String> getRecoveryTargetDiskAccountType() {
         return this.recoveryTargetDiskAccountType == null ? Optional.empty() : Optional.ofNullable(this.recoveryTargetDiskAccountType);
@@ -269,7 +269,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="recoveryTargetDiskId")
-    private final @Nullable String recoveryTargetDiskId;
+        private final @Nullable String recoveryTargetDiskId;
 
     public Optional<String> getRecoveryTargetDiskId() {
         return this.recoveryTargetDiskId == null ? Optional.empty() : Optional.ofNullable(this.recoveryTargetDiskId);
@@ -280,7 +280,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="resyncRequired")
-    private final @Nullable Boolean resyncRequired;
+        private final @Nullable Boolean resyncRequired;
 
     public Optional<Boolean> getResyncRequired() {
         return this.resyncRequired == null ? Optional.empty() : Optional.ofNullable(this.resyncRequired);
@@ -291,7 +291,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="secretIdentifier")
-    private final @Nullable String secretIdentifier;
+        private final @Nullable String secretIdentifier;
 
     public Optional<String> getSecretIdentifier() {
         return this.secretIdentifier == null ? Optional.empty() : Optional.ofNullable(this.secretIdentifier);
@@ -302,7 +302,7 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
      * 
      */
     @InputImport(name="tfoDiskName")
-    private final @Nullable String tfoDiskName;
+        private final @Nullable String tfoDiskName;
 
     public Optional<String> getTfoDiskName() {
         return this.tfoDiskName == null ? Optional.empty() : Optional.ofNullable(this.tfoDiskName);
@@ -591,7 +591,6 @@ public final class A2AProtectedManagedDiskDetailsResponse extends io.pulumi.reso
             this.tfoDiskName = tfoDiskName;
             return this;
         }
-
         public A2AProtectedManagedDiskDetailsResponse build() {
             return new A2AProtectedManagedDiskDetailsResponse(allowedDiskLevelOperation, dataPendingAtSourceAgentInMB, dataPendingInStagingStorageAccountInMB, dekKeyVaultArmId, diskCapacityInBytes, diskId, diskName, diskState, diskType, failoverDiskName, isDiskEncrypted, isDiskKeyEncrypted, kekKeyVaultArmId, keyIdentifier, monitoringJobType, monitoringPercentageCompletion, primaryStagingAzureStorageAccountId, recoveryDiskEncryptionSetId, recoveryReplicaDiskAccountType, recoveryReplicaDiskId, recoveryResourceGroupId, recoveryTargetDiskAccountType, recoveryTargetDiskId, resyncRequired, secretIdentifier, tfoDiskName);
         }

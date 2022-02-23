@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.LineRegistrationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -98,7 +98,6 @@ public final class LineChannelPropertiesResponse {
             this.lineRegistrations = Objects.requireNonNull(lineRegistrations);
             return this;
         }
-
         public LineChannelPropertiesResponse build() {
             return new LineChannelPropertiesResponse(callbackUrl, isValidated, lineRegistrations);
         }

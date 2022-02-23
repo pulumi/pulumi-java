@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesAdditionalExtension;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesCaOptions;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateTemplatePredefinedValuesKeyUsage;
@@ -144,7 +144,6 @@ public final class CertificateTemplatePredefinedValues {
             this.policyIds = policyIds;
             return this;
         }
-
         public CertificateTemplatePredefinedValues build() {
             return new CertificateTemplatePredefinedValues(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

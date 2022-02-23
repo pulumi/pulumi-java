@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerservice.outputs;
 
 import io.pulumi.azurenative.containerservice.outputs.ManagedClusterAddonProfileResponseIdentity;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -99,7 +99,6 @@ public final class ManagedClusterAddonProfileResponse {
             this.identity = Objects.requireNonNull(identity);
             return this;
         }
-
         public ManagedClusterAddonProfileResponse build() {
             return new ManagedClusterAddonProfileResponse(config, enabled, identity);
         }

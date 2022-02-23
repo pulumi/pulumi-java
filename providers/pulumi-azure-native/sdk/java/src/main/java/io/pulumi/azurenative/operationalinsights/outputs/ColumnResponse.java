@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.operationalinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -182,7 +182,6 @@ public final class ColumnResponse {
             this.type = type;
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(dataTypeHint, description, displayName, isDefaultDisplay, isHidden, name, type);
         }

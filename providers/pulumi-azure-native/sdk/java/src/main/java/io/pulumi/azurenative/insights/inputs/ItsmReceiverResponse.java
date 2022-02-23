@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="connectionId", required=true)
-    private final String connectionId;
+        private final String connectionId;
 
     public String getConnectionId() {
         return this.connectionId;
@@ -32,7 +32,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -43,7 +43,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="region", required=true)
-    private final String region;
+        private final String region;
 
     public String getRegion() {
         return this.region;
@@ -54,7 +54,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ticketConfiguration", required=true)
-    private final String ticketConfiguration;
+        private final String ticketConfiguration;
 
     public String getTicketConfiguration() {
         return this.ticketConfiguration;
@@ -65,7 +65,7 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="workspaceId", required=true)
-    private final String workspaceId;
+        private final String workspaceId;
 
     public String getWorkspaceId() {
         return this.workspaceId;
@@ -144,7 +144,6 @@ public final class ItsmReceiverResponse extends io.pulumi.resources.InvokeArgs {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public ItsmReceiverResponse build() {
             return new ItsmReceiverResponse(connectionId, name, region, ticketConfiguration, workspaceId);
         }

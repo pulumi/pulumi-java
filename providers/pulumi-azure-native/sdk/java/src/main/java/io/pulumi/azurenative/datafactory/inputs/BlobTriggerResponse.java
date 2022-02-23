@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.TriggerPipelineReferenceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -28,7 +28,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -39,7 +39,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -50,7 +50,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="folderPath", required=true)
-    private final String folderPath;
+        private final String folderPath;
 
     public String getFolderPath() {
         return this.folderPath;
@@ -61,7 +61,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkedService", required=true)
-    private final LinkedServiceReferenceResponse linkedService;
+        private final LinkedServiceReferenceResponse linkedService;
 
     public LinkedServiceReferenceResponse getLinkedService() {
         return this.linkedService;
@@ -72,7 +72,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxConcurrency", required=true)
-    private final Integer maxConcurrency;
+        private final Integer maxConcurrency;
 
     public Integer getMaxConcurrency() {
         return this.maxConcurrency;
@@ -83,7 +83,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="pipelines")
-    private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
+        private final @Nullable List<TriggerPipelineReferenceResponse> pipelines;
 
     public List<TriggerPipelineReferenceResponse> getPipelines() {
         return this.pipelines == null ? List.of() : this.pipelines;
@@ -94,7 +94,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="runtimeState", required=true)
-    private final String runtimeState;
+        private final String runtimeState;
 
     public String getRuntimeState() {
         return this.runtimeState;
@@ -106,7 +106,7 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -215,7 +215,6 @@ public final class BlobTriggerResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public BlobTriggerResponse build() {
             return new BlobTriggerResponse(annotations, description, folderPath, linkedService, maxConcurrency, pipelines, runtimeState, type);
         }

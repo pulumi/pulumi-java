@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.ToolExecutionResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class ToolExecutionStepResponse {
             this.toolExecution = Objects.requireNonNull(toolExecution);
             return this;
         }
-
         public ToolExecutionStepResponse build() {
             return new ToolExecutionStepResponse(toolExecution);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.LoadBalancerConfigurationResponse;
 import io.pulumi.azurenative.compute.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class CloudServiceNetworkProfileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerConfigurations")
-    private final @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
+        private final @Nullable List<LoadBalancerConfigurationResponse> loadBalancerConfigurations;
 
     public List<LoadBalancerConfigurationResponse> getLoadBalancerConfigurations() {
         return this.loadBalancerConfigurations == null ? List.of() : this.loadBalancerConfigurations;
@@ -36,7 +36,7 @@ public final class CloudServiceNetworkProfileResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="swappableCloudService")
-    private final @Nullable SubResourceResponse swappableCloudService;
+        private final @Nullable SubResourceResponse swappableCloudService;
 
     public Optional<SubResourceResponse> getSwappableCloudService() {
         return this.swappableCloudService == null ? Optional.empty() : Optional.ofNullable(this.swappableCloudService);
@@ -85,7 +85,6 @@ public final class CloudServiceNetworkProfileResponse extends io.pulumi.resource
             this.swappableCloudService = swappableCloudService;
             return this;
         }
-
         public CloudServiceNetworkProfileResponse build() {
             return new CloudServiceNetworkProfileResponse(loadBalancerConfigurations, swappableCloudService);
         }

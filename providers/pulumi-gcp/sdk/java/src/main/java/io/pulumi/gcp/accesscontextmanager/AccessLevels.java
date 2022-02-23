@@ -5,8 +5,8 @@ package io.pulumi.gcp.accesscontextmanager;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.accesscontextmanager.AccessLevelsArgs;
 import io.pulumi.gcp.accesscontextmanager.inputs.AccessLevelsState;
@@ -76,13 +76,6 @@ public class AccessLevels extends io.pulumi.resources.CustomResource {
         return this.parent;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AccessLevels(String name) {
-        super("gcp:accesscontextmanager/accessLevels:AccessLevels", name, AccessLevelsArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

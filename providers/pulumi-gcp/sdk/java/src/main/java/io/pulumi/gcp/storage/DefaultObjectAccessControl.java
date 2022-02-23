@@ -5,8 +5,8 @@ package io.pulumi.gcp.storage;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.storage.DefaultObjectAccessControlArgs;
 import io.pulumi.gcp.storage.inputs.DefaultObjectAccessControlState;
@@ -195,13 +195,6 @@ public class DefaultObjectAccessControl extends io.pulumi.resources.CustomResour
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public DefaultObjectAccessControl(String name) {
-        super("gcp:storage/defaultObjectAccessControl:DefaultObjectAccessControl", name, DefaultObjectAccessControlArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

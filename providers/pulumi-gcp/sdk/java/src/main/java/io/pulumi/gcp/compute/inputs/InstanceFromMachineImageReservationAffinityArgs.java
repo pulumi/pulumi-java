@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.InstanceFromMachineImageReservationAffinitySpecificReservationArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class InstanceFromMachineImageReservationAffinityArgs extends io.pu
     public static final InstanceFromMachineImageReservationAffinityArgs Empty = new InstanceFromMachineImageReservationAffinityArgs();
 
     @InputImport(name="specificReservation")
-    private final @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
+        private final @Nullable Input<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> specificReservation;
 
     public Input<InstanceFromMachineImageReservationAffinitySpecificReservationArgs> getSpecificReservation() {
         return this.specificReservation == null ? Input.empty() : this.specificReservation;
     }
 
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class InstanceFromMachineImageReservationAffinityArgs extends io.pu
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public InstanceFromMachineImageReservationAffinityArgs build() {
             return new InstanceFromMachineImageReservationAffinityArgs(specificReservation, type);
         }

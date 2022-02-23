@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.ExprResponse;
 import io.pulumi.googlenative.compute_beta.inputs.SecurityPolicyRuleMatcherConfigResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="config", required=true)
-    private final SecurityPolicyRuleMatcherConfigResponse config;
+      private final SecurityPolicyRuleMatcherConfigResponse config;
 
     public SecurityPolicyRuleMatcherConfigResponse getConfig() {
         return this.config;
@@ -34,7 +34,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="expr", required=true)
-    private final ExprResponse expr;
+      private final ExprResponse expr;
 
     public ExprResponse getExpr() {
         return this.expr;
@@ -45,7 +45,7 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="versionedExpr", required=true)
-    private final String versionedExpr;
+      private final String versionedExpr;
 
     public String getVersionedExpr() {
         return this.versionedExpr;
@@ -104,7 +104,6 @@ public final class SecurityPolicyRuleMatcherResponse extends io.pulumi.resources
             this.versionedExpr = Objects.requireNonNull(versionedExpr);
             return this;
         }
-
         public SecurityPolicyRuleMatcherResponse build() {
             return new SecurityPolicyRuleMatcherResponse(config, expr, versionedExpr);
         }

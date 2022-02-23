@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class RegionalReplicationStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public RegionalReplicationStatusResponse build() {
             return new RegionalReplicationStatusResponse(details, progress, region, state);
         }

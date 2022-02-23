@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.securityinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="branches")
-    private final @Nullable List<String> branches;
+        private final @Nullable List<String> branches;
 
     public List<String> getBranches() {
         return this.branches == null ? List.of() : this.branches;
@@ -35,7 +35,7 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fullName")
-    private final @Nullable String fullName;
+        private final @Nullable String fullName;
 
     public Optional<String> getFullName() {
         return this.fullName == null ? Optional.empty() : Optional.ofNullable(this.fullName);
@@ -46,7 +46,7 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url")
-    private final @Nullable String url;
+        private final @Nullable String url;
 
     public Optional<String> getUrl() {
         return this.url == null ? Optional.empty() : Optional.ofNullable(this.url);
@@ -105,7 +105,6 @@ public final class RepoResponse extends io.pulumi.resources.InvokeArgs {
             this.url = url;
             return this;
         }
-
         public RepoResponse build() {
             return new RepoResponse(branches, fullName, url);
         }

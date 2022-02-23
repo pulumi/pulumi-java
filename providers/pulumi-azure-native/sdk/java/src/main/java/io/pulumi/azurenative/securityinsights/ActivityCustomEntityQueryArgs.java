@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.EntityType;
 import io.pulumi.azurenative.securityinsights.inputs.ActivityEntityQueriesPropertiesQueryDefinitionsArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="content")
-    private final @Nullable Input<String> content;
+        private final @Nullable Input<String> content;
 
     public Input<String> getContent() {
         return this.content == null ? Input.empty() : this.content;
@@ -36,7 +36,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -47,7 +47,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -58,7 +58,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="entitiesFilter")
-    private final @Nullable Input<Map<String,List<String>>> entitiesFilter;
+        private final @Nullable Input<Map<String,List<String>>> entitiesFilter;
 
     public Input<Map<String,List<String>>> getEntitiesFilter() {
         return this.entitiesFilter == null ? Input.empty() : this.entitiesFilter;
@@ -69,7 +69,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="entityQueryId")
-    private final @Nullable Input<String> entityQueryId;
+        private final @Nullable Input<String> entityQueryId;
 
     public Input<String> getEntityQueryId() {
         return this.entityQueryId == null ? Input.empty() : this.entityQueryId;
@@ -80,7 +80,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="inputEntityType")
-    private final @Nullable Input<Either<String,EntityType>> inputEntityType;
+        private final @Nullable Input<Either<String,EntityType>> inputEntityType;
 
     public Input<Either<String,EntityType>> getInputEntityType() {
         return this.inputEntityType == null ? Input.empty() : this.inputEntityType;
@@ -92,7 +92,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -103,7 +103,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+        private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -114,7 +114,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="queryDefinitions")
-    private final @Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
+        private final @Nullable Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> queryDefinitions;
 
     public Input<ActivityEntityQueriesPropertiesQueryDefinitionsArgs> getQueryDefinitions() {
         return this.queryDefinitions == null ? Input.empty() : this.queryDefinitions;
@@ -125,7 +125,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="requiredInputFieldsSets")
-    private final @Nullable Input<List<List<String>>> requiredInputFieldsSets;
+        private final @Nullable Input<List<List<String>>> requiredInputFieldsSets;
 
     public Input<List<List<String>>> getRequiredInputFieldsSets() {
         return this.requiredInputFieldsSets == null ? Input.empty() : this.requiredInputFieldsSets;
@@ -136,7 +136,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -147,7 +147,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="templateName")
-    private final @Nullable Input<String> templateName;
+        private final @Nullable Input<String> templateName;
 
     public Input<String> getTemplateName() {
         return this.templateName == null ? Input.empty() : this.templateName;
@@ -158,7 +158,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -169,7 +169,7 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -408,7 +408,6 @@ public final class ActivityCustomEntityQueryArgs extends io.pulumi.resources.Res
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public ActivityCustomEntityQueryArgs build() {
             return new ActivityCustomEntityQueryArgs(content, description, enabled, entitiesFilter, entityQueryId, inputEntityType, kind, operationalInsightsResourceProvider, queryDefinitions, requiredInputFieldsSets, resourceGroupName, templateName, title, workspaceName);
         }

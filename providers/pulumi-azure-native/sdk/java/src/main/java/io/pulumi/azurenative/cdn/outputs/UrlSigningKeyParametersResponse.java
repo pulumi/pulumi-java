@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cdn.outputs;
 
 import io.pulumi.azurenative.cdn.outputs.ResourceReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -121,7 +121,6 @@ public final class UrlSigningKeyParametersResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public UrlSigningKeyParametersResponse build() {
             return new UrlSigningKeyParametersResponse(keyId, secretSource, secretVersion, type);
         }

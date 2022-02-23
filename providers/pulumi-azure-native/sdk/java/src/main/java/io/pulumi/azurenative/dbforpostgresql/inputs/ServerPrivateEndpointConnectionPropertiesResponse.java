@@ -5,7 +5,7 @@ package io.pulumi.azurenative.dbforpostgresql.inputs;
 
 import io.pulumi.azurenative.dbforpostgresql.inputs.PrivateEndpointPropertyResponse;
 import io.pulumi.azurenative.dbforpostgresql.inputs.ServerPrivateLinkServiceConnectionStatePropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
      * 
      */
     @InputImport(name="privateEndpoint")
-    private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
+        private final @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
     public Optional<PrivateEndpointPropertyResponse> getPrivateEndpoint() {
         return this.privateEndpoint == null ? Optional.empty() : Optional.ofNullable(this.privateEndpoint);
@@ -36,7 +36,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
      * 
      */
     @InputImport(name="privateLinkServiceConnectionState")
-    private final @Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
+        private final @Nullable ServerPrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
     public Optional<ServerPrivateLinkServiceConnectionStatePropertyResponse> getPrivateLinkServiceConnectionState() {
         return this.privateLinkServiceConnectionState == null ? Optional.empty() : Optional.ofNullable(this.privateLinkServiceConnectionState);
@@ -47,7 +47,7 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -106,7 +106,6 @@ public final class ServerPrivateEndpointConnectionPropertiesResponse extends io.
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ServerPrivateEndpointConnectionPropertiesResponse build() {
             return new ServerPrivateEndpointConnectionPropertiesResponse(privateEndpoint, privateLinkServiceConnectionState, provisioningState);
         }

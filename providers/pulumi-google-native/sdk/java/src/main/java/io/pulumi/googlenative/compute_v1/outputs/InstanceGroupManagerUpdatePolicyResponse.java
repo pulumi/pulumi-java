@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class InstanceGroupManagerUpdatePolicyResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public InstanceGroupManagerUpdatePolicyResponse build() {
             return new InstanceGroupManagerUpdatePolicyResponse(instanceRedistributionType, maxSurge, maxUnavailable, minimalAction, mostDisruptiveAllowedAction, replacementMethod, type);
         }

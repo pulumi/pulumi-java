@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="licenseArn", required=true)
-    private final String licenseArn;
+        private final String licenseArn;
 
     public String getLicenseArn() {
         return this.licenseArn;
@@ -55,7 +55,6 @@ public final class GetLicenseArgs extends io.pulumi.resources.InvokeArgs {
             this.licenseArn = Objects.requireNonNull(licenseArn);
             return this;
         }
-
         public GetLicenseArgs build() {
             return new GetLicenseArgs(licenseArn);
         }

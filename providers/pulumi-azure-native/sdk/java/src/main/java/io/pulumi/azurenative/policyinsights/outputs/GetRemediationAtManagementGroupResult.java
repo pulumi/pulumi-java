@@ -5,7 +5,7 @@ package io.pulumi.azurenative.policyinsights.outputs;
 
 import io.pulumi.azurenative.policyinsights.outputs.RemediationDeploymentSummaryResponse;
 import io.pulumi.azurenative.policyinsights.outputs.RemediationFiltersResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -267,7 +267,6 @@ public final class GetRemediationAtManagementGroupResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRemediationAtManagementGroupResult build() {
             return new GetRemediationAtManagementGroupResult(createdOn, deploymentStatus, filters, id, lastUpdatedOn, name, policyAssignmentId, policyDefinitionReferenceId, provisioningState, resourceDiscoveryMode, type);
         }

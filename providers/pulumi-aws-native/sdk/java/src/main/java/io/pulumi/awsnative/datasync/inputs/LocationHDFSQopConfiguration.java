@@ -5,7 +5,7 @@ package io.pulumi.awsnative.datasync.inputs;
 
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationDataTransferProtection;
 import io.pulumi.awsnative.datasync.enums.LocationHDFSQopConfigurationRpcProtection;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="dataTransferProtection")
-    private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
+        private final @Nullable LocationHDFSQopConfigurationDataTransferProtection dataTransferProtection;
 
     public Optional<LocationHDFSQopConfigurationDataTransferProtection> getDataTransferProtection() {
         return this.dataTransferProtection == null ? Optional.empty() : Optional.ofNullable(this.dataTransferProtection);
@@ -35,7 +35,7 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="rpcProtection")
-    private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
+        private final @Nullable LocationHDFSQopConfigurationRpcProtection rpcProtection;
 
     public Optional<LocationHDFSQopConfigurationRpcProtection> getRpcProtection() {
         return this.rpcProtection == null ? Optional.empty() : Optional.ofNullable(this.rpcProtection);
@@ -84,7 +84,6 @@ public final class LocationHDFSQopConfiguration extends io.pulumi.resources.Invo
             this.rpcProtection = rpcProtection;
             return this;
         }
-
         public LocationHDFSQopConfiguration build() {
             return new LocationHDFSQopConfiguration(dataTransferProtection, rpcProtection);
         }

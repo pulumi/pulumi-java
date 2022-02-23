@@ -34,7 +34,6 @@ public final class NoConnectivitySettingsArgs extends io.pulumi.resources.Resour
         public Builder(NoConnectivitySettingsArgs defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public NoConnectivitySettingsArgs build() {
             return new NoConnectivitySettingsArgs();
         }

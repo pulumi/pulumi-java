@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudsupport_v2beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class ActorResponse {
             this.principalId = Objects.requireNonNull(principalId);
             return this;
         }
-
         public ActorResponse build() {
             return new ActorResponse(displayName, email, googleSupport, principalId);
         }

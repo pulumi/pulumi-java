@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.inputs.BucketServerSideEncryptionRule;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BucketEncryption extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="serverSideEncryptionConfiguration", required=true)
-    private final List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
+        private final List<BucketServerSideEncryptionRule> serverSideEncryptionConfiguration;
 
     public List<BucketServerSideEncryptionRule> getServerSideEncryptionConfiguration() {
         return this.serverSideEncryptionConfiguration;
@@ -60,7 +60,6 @@ public final class BucketEncryption extends io.pulumi.resources.InvokeArgs {
             this.serverSideEncryptionConfiguration = Objects.requireNonNull(serverSideEncryptionConfiguration);
             return this;
         }
-
         public BucketEncryption build() {
             return new BucketEncryption(serverSideEncryptionConfiguration);
         }

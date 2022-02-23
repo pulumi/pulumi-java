@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -19,7 +19,7 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
      * 
      */
     @InputImport(name="cloudSecret", required=true)
-    private final Input<String> cloudSecret;
+        private final Input<String> cloudSecret;
 
     public Input<String> getCloudSecret() {
         return this.cloudSecret;
@@ -62,7 +62,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs e
             this.cloudSecret = Input.of(Objects.requireNonNull(cloudSecret));
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfigKeytabArgs(cloudSecret);
         }

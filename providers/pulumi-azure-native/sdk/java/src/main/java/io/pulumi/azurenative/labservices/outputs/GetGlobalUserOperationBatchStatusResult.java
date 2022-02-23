@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.labservices.outputs;
 
 import io.pulumi.azurenative.labservices.outputs.OperationBatchStatusResponseItemResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class GetGlobalUserOperationBatchStatusResult {
             this.items = Objects.requireNonNull(items);
             return this;
         }
-
         public GetGlobalUserOperationBatchStatusResult build() {
             return new GetGlobalUserOperationBatchStatusResult(items);
         }

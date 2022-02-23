@@ -14,7 +14,7 @@ import io.pulumi.azurenative.logic.outputs.EdifactProcessingSettingsResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactSchemaReferenceResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactValidationOverrideResponse;
 import io.pulumi.azurenative.logic.outputs.EdifactValidationSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -275,7 +275,6 @@ public final class EdifactProtocolSettingsResponse {
             this.validationSettings = Objects.requireNonNull(validationSettings);
             return this;
         }
-
         public EdifactProtocolSettingsResponse build() {
             return new EdifactProtocolSettingsResponse(acknowledgementSettings, edifactDelimiterOverrides, envelopeOverrides, envelopeSettings, framingSettings, messageFilter, messageFilterList, processingSettings, schemaReferences, validationOverrides, validationSettings);
         }

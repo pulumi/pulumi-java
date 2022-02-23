@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.AnyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class TestIssueResponse {
             this.warning = Objects.requireNonNull(warning);
             return this;
         }
-
         public TestIssueResponse build() {
             return new TestIssueResponse(category, errorMessage, severity, type, warning);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.JobInputClipResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class JobInputSequenceResponse {
             this.odataType = Objects.requireNonNull(odataType);
             return this;
         }
-
         public JobInputSequenceResponse build() {
             return new JobInputSequenceResponse(inputs, odataType);
         }

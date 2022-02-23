@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.NoRecursiveArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.outputs.Rec;
@@ -28,13 +28,6 @@ public class NoRecursive extends io.pulumi.resources.CustomResource {
         return this.replace;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NoRecursive(String name) {
-        super("example::NoRecursive", name, NoRecursiveArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

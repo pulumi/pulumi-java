@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storagepool.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class AttributesResponse {
             this.prodModeWriteProtect = Objects.requireNonNull(prodModeWriteProtect);
             return this;
         }
-
         public AttributesResponse build() {
             return new AttributesResponse(authentication, prodModeWriteProtect);
         }

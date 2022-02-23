@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.emr.outputs;
 
 import io.pulumi.awsnative.emr.outputs.StudioTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -246,7 +246,6 @@ public final class GetStudioResult {
             this.url = url;
             return this;
         }
-
         public GetStudioResult build() {
             return new GetStudioResult(arn, defaultS3Location, description, idpAuthUrl, idpRelayStateParameterName, name, studioId, subnetIds, tags, url);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabric.inputs;
 
 import io.pulumi.azurenative.servicefabric.inputs.EndpointRangeDescriptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -27,7 +27,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="applicationPorts")
-    private final @Nullable EndpointRangeDescriptionResponse applicationPorts;
+        private final @Nullable EndpointRangeDescriptionResponse applicationPorts;
 
     public Optional<EndpointRangeDescriptionResponse> getApplicationPorts() {
         return this.applicationPorts == null ? Optional.empty() : Optional.ofNullable(this.applicationPorts);
@@ -38,7 +38,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="capacities")
-    private final @Nullable Map<String,String> capacities;
+        private final @Nullable Map<String,String> capacities;
 
     public Map<String,String> getCapacities() {
         return this.capacities == null ? Map.of() : this.capacities;
@@ -49,7 +49,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="clientConnectionEndpointPort", required=true)
-    private final Integer clientConnectionEndpointPort;
+        private final Integer clientConnectionEndpointPort;
 
     public Integer getClientConnectionEndpointPort() {
         return this.clientConnectionEndpointPort;
@@ -64,7 +64,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="durabilityLevel")
-    private final @Nullable String durabilityLevel;
+        private final @Nullable String durabilityLevel;
 
     public Optional<String> getDurabilityLevel() {
         return this.durabilityLevel == null ? Optional.empty() : Optional.ofNullable(this.durabilityLevel);
@@ -75,7 +75,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="ephemeralPorts")
-    private final @Nullable EndpointRangeDescriptionResponse ephemeralPorts;
+        private final @Nullable EndpointRangeDescriptionResponse ephemeralPorts;
 
     public Optional<EndpointRangeDescriptionResponse> getEphemeralPorts() {
         return this.ephemeralPorts == null ? Optional.empty() : Optional.ofNullable(this.ephemeralPorts);
@@ -86,7 +86,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="httpGatewayEndpointPort", required=true)
-    private final Integer httpGatewayEndpointPort;
+        private final Integer httpGatewayEndpointPort;
 
     public Integer getHttpGatewayEndpointPort() {
         return this.httpGatewayEndpointPort;
@@ -97,7 +97,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="isPrimary", required=true)
-    private final Boolean isPrimary;
+        private final Boolean isPrimary;
 
     public Boolean getIsPrimary() {
         return this.isPrimary;
@@ -108,7 +108,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -119,7 +119,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="placementProperties")
-    private final @Nullable Map<String,String> placementProperties;
+        private final @Nullable Map<String,String> placementProperties;
 
     public Map<String,String> getPlacementProperties() {
         return this.placementProperties == null ? Map.of() : this.placementProperties;
@@ -130,7 +130,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="reverseProxyEndpointPort")
-    private final @Nullable Integer reverseProxyEndpointPort;
+        private final @Nullable Integer reverseProxyEndpointPort;
 
     public Optional<Integer> getReverseProxyEndpointPort() {
         return this.reverseProxyEndpointPort == null ? Optional.empty() : Optional.ofNullable(this.reverseProxyEndpointPort);
@@ -141,7 +141,7 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="vmInstanceCount", required=true)
-    private final Integer vmInstanceCount;
+        private final Integer vmInstanceCount;
 
     public Integer getVmInstanceCount() {
         return this.vmInstanceCount;
@@ -280,7 +280,6 @@ public final class NodeTypeDescriptionResponse extends io.pulumi.resources.Invok
             this.vmInstanceCount = Objects.requireNonNull(vmInstanceCount);
             return this;
         }
-
         public NodeTypeDescriptionResponse build() {
             return new NodeTypeDescriptionResponse(applicationPorts, capacities, clientConnectionEndpointPort, durabilityLevel, ephemeralPorts, httpGatewayEndpointPort, isPrimary, name, placementProperties, reverseProxyEndpointPort, vmInstanceCount);
         }

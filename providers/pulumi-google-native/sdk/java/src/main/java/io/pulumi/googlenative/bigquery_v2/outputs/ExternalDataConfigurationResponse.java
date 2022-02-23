@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.AvroOptionsResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.BigtableOptionsResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.CsvOptionsResponse;
@@ -357,7 +357,6 @@ public final class ExternalDataConfigurationResponse {
             this.sourceUris = Objects.requireNonNull(sourceUris);
             return this;
         }
-
         public ExternalDataConfigurationResponse build() {
             return new ExternalDataConfigurationResponse(autodetect, avroOptions, bigtableOptions, compression, connectionId, csvOptions, decimalTargetTypes, googleSheetsOptions, hivePartitioningOptions, ignoreUnknownValues, maxBadRecords, parquetOptions, schema, sourceFormat, sourceUris);
         }

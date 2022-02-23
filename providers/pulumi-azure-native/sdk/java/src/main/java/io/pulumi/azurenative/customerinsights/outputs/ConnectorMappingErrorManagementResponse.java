@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.customerinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class ConnectorMappingErrorManagementResponse {
             this.errorManagementType = Objects.requireNonNull(errorManagementType);
             return this;
         }
-
         public ConnectorMappingErrorManagementResponse build() {
             return new ConnectorMappingErrorManagementResponse(errorLimit, errorManagementType);
         }

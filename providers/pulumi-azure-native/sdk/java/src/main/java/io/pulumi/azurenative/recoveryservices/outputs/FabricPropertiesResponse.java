@@ -11,7 +11,7 @@ import io.pulumi.azurenative.recoveryservices.outputs.InMageRcmFabricSpecificDet
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VMwareV2FabricSpecificDetailsResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.VmmDetailsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -212,7 +212,6 @@ public final class FabricPropertiesResponse {
             this.rolloverEncryptionDetails = rolloverEncryptionDetails;
             return this;
         }
-
         public FabricPropertiesResponse build() {
             return new FabricPropertiesResponse(bcdrState, customDetails, encryptionDetails, friendlyName, health, healthErrorDetails, internalIdentifier, rolloverEncryptionDetails);
         }

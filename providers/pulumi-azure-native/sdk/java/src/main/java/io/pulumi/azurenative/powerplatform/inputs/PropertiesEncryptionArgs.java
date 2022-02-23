@@ -7,7 +7,7 @@ import io.pulumi.azurenative.powerplatform.enums.State;
 import io.pulumi.azurenative.powerplatform.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVault")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVault;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVault;
 
     public Input<KeyVaultPropertiesArgs> getKeyVault() {
         return this.keyVault == null ? Input.empty() : this.keyVault;
@@ -37,7 +37,7 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<Either<String,State>> state;
+        private final @Nullable Input<Either<String,State>> state;
 
     public Input<Either<String,State>> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -96,7 +96,6 @@ public final class PropertiesEncryptionArgs extends io.pulumi.resources.Resource
             this.state = Input.ofNullable(state);
             return this;
         }
-
         public PropertiesEncryptionArgs build() {
             return new PropertiesEncryptionArgs(keyVault, state);
         }

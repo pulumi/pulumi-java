@@ -5,7 +5,7 @@ package io.pulumi.awsnative.ecs.inputs;
 
 import io.pulumi.awsnative.ecs.inputs.TaskDefinitionSecretArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -18,21 +18,21 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
     public static final TaskDefinitionLogConfigurationArgs Empty = new TaskDefinitionLogConfigurationArgs();
 
     @InputImport(name="logDriver", required=true)
-    private final Input<String> logDriver;
+        private final Input<String> logDriver;
 
     public Input<String> getLogDriver() {
         return this.logDriver;
     }
 
     @InputImport(name="options")
-    private final @Nullable Input<Object> options;
+        private final @Nullable Input<Object> options;
 
     public Input<Object> getOptions() {
         return this.options == null ? Input.empty() : this.options;
     }
 
     @InputImport(name="secretOptions")
-    private final @Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions;
+        private final @Nullable Input<List<TaskDefinitionSecretArgs>> secretOptions;
 
     public Input<List<TaskDefinitionSecretArgs>> getSecretOptions() {
         return this.secretOptions == null ? Input.empty() : this.secretOptions;
@@ -106,7 +106,6 @@ public final class TaskDefinitionLogConfigurationArgs extends io.pulumi.resource
             this.secretOptions = Input.ofNullable(secretOptions);
             return this;
         }
-
         public TaskDefinitionLogConfigurationArgs build() {
             return new TaskDefinitionLogConfigurationArgs(logDriver, options, secretOptions);
         }

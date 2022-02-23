@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.FhirStoreStreamConfigBigqueryDestinationArgs;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-    private final Input<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
+        private final Input<FhirStoreStreamConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Input<FhirStoreStreamConfigBigqueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination;
@@ -39,7 +39,7 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="resourceTypes")
-    private final @Nullable Input<List<String>> resourceTypes;
+        private final @Nullable Input<List<String>> resourceTypes;
 
     public Input<List<String>> getResourceTypes() {
         return this.resourceTypes == null ? Input.empty() : this.resourceTypes;
@@ -98,7 +98,6 @@ public final class FhirStoreStreamConfigArgs extends io.pulumi.resources.Resourc
             this.resourceTypes = Input.ofNullable(resourceTypes);
             return this;
         }
-
         public FhirStoreStreamConfigArgs build() {
             return new FhirStoreStreamConfigArgs(bigqueryDestination, resourceTypes);
         }

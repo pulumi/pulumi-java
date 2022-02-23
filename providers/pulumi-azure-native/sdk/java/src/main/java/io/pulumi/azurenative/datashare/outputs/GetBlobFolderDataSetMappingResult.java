@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -308,7 +308,6 @@ public final class GetBlobFolderDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBlobFolderDataSetMappingResult build() {
             return new GetBlobFolderDataSetMappingResult(containerName, dataSetId, dataSetMappingStatus, id, kind, name, prefix, provisioningState, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

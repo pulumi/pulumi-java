@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="expirationMs")
-    private final @Nullable Input<String> expirationMs;
+        private final @Nullable Input<String> expirationMs;
 
     public Input<String> getExpirationMs() {
         return this.expirationMs == null ? Input.empty() : this.expirationMs;
@@ -32,7 +32,7 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+        private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
@@ -44,7 +44,7 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -118,7 +118,6 @@ public final class JobLoadTimePartitioningArgs extends io.pulumi.resources.Resou
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public JobLoadTimePartitioningArgs build() {
             return new JobLoadTimePartitioningArgs(expirationMs, field, type);
         }

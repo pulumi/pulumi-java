@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.devopsguru.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends io.p
      * 
      */
     @InputImport(name="stackNames")
-    private final @Nullable List<String> stackNames;
+        private final @Nullable List<String> stackNames;
 
     public List<String> getStackNames() {
         return this.stackNames == null ? List.of() : this.stackNames;
@@ -62,7 +62,6 @@ public final class ResourceCollectionCloudFormationCollectionFilter extends io.p
             this.stackNames = stackNames;
             return this;
         }
-
         public ResourceCollectionCloudFormationCollectionFilter build() {
             return new ResourceCollectionCloudFormationCollectionFilter(stackNames);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.solutions.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
      * 
      */
     @InputImport(name="allowedActions")
-    private final @Nullable List<String> allowedActions;
+        private final @Nullable List<String> allowedActions;
 
     public List<String> getAllowedActions() {
         return this.allowedActions == null ? List.of() : this.allowedActions;
@@ -35,7 +35,7 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
      * 
      */
     @InputImport(name="allowedDataActions")
-    private final @Nullable List<String> allowedDataActions;
+        private final @Nullable List<String> allowedDataActions;
 
     public List<String> getAllowedDataActions() {
         return this.allowedDataActions == null ? List.of() : this.allowedDataActions;
@@ -84,7 +84,6 @@ public final class ApplicationPackageLockingPolicyDefinitionResponse extends io.
             this.allowedDataActions = allowedDataActions;
             return this;
         }
-
         public ApplicationPackageLockingPolicyDefinitionResponse build() {
             return new ApplicationPackageLockingPolicyDefinitionResponse(allowedActions, allowedDataActions);
         }

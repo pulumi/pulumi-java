@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.RepoSourceResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceManifestResponse;
 import io.pulumi.googlenative.cloudbuild_v1.outputs.StorageSourceResponse;
@@ -97,7 +97,6 @@ public final class SourceResponse {
             this.storageSourceManifest = Objects.requireNonNull(storageSourceManifest);
             return this;
         }
-
         public SourceResponse build() {
             return new SourceResponse(repoSource, storageSource, storageSourceManifest);
         }

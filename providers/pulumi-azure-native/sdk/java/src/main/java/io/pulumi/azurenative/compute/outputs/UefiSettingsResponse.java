@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class UefiSettingsResponse {
             this.vTpmEnabled = vTpmEnabled;
             return this;
         }
-
         public UefiSettingsResponse build() {
             return new UefiSettingsResponse(secureBootEnabled, vTpmEnabled);
         }

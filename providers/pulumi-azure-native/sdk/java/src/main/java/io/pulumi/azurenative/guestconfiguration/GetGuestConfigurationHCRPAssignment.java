@@ -6,7 +6,7 @@ package io.pulumi.azurenative.guestconfiguration;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.guestconfiguration.inputs.GetGuestConfigurationHCRPAssignmentArgs;
 import io.pulumi.azurenative.guestconfiguration.outputs.GetGuestConfigurationHCRPAssignmentResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

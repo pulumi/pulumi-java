@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -245,7 +245,6 @@ public final class VirtualDiskResponse {
             this.unitNumber = unitNumber;
             return this;
         }
-
         public VirtualDiskResponse build() {
             return new VirtualDiskResponse(controllerKey, deviceKey, deviceName, diskMode, diskObjectId, diskSizeGB, diskType, label, name, unitNumber);
         }

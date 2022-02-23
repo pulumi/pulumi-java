@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.licensemanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -152,7 +152,6 @@ public final class GetGrantResult {
             this.version = version;
             return this;
         }
-
         public GetGrantResult build() {
             return new GetGrantResult(grantArn, grantName, homeRegion, licenseArn, status, version);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable Input<String> userAssignedIdentity;
+        private final @Nullable Input<String> userAssignedIdentity;
 
     public Input<String> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
@@ -66,7 +66,6 @@ public final class CMKIdentityDefinitionArgs extends io.pulumi.resources.Resourc
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }
-
         public CMKIdentityDefinitionArgs build() {
             return new CMKIdentityDefinitionArgs(userAssignedIdentity);
         }

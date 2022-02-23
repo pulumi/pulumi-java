@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="height")
-    private final @Nullable Input<String> height;
+        private final @Nullable Input<String> height;
 
     public Input<String> getHeight() {
         return this.height == null ? Input.empty() : this.height;
@@ -34,7 +34,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="left")
-    private final @Nullable Input<String> left;
+        private final @Nullable Input<String> left;
 
     public Input<String> getLeft() {
         return this.left == null ? Input.empty() : this.left;
@@ -45,7 +45,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="top")
-    private final @Nullable Input<String> top;
+        private final @Nullable Input<String> top;
 
     public Input<String> getTop() {
         return this.top == null ? Input.empty() : this.top;
@@ -56,7 +56,7 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="width")
-    private final @Nullable Input<String> width;
+        private final @Nullable Input<String> width;
 
     public Input<String> getWidth() {
         return this.width == null ? Input.empty() : this.width;
@@ -145,7 +145,6 @@ public final class RectangleArgs extends io.pulumi.resources.ResourceArgs {
             this.width = Input.ofNullable(width);
             return this;
         }
-
         public RectangleArgs build() {
             return new RectangleArgs(height, left, top, width);
         }

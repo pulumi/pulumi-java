@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
      * 
      */
     @InputImport(name="layer7DdosDefenseConfig")
-    private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
+        private final @Nullable Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> layer7DdosDefenseConfig;
 
     public Input<SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigArgs> getLayer7DdosDefenseConfig() {
         return this.layer7DdosDefenseConfig == null ? Input.empty() : this.layer7DdosDefenseConfig;
@@ -62,7 +62,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigArgs extends io.pulumi.
             this.layer7DdosDefenseConfig = Input.ofNullable(layer7DdosDefenseConfig);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigArgs build() {
             return new SecurityPolicyAdaptiveProtectionConfigArgs(layer7DdosDefenseConfig);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.run_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.run_v1alpha1.outputs.InstanceTemplateSpecResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class JobSpecResponse {
             this.ttlSecondsAfterFinished = Objects.requireNonNull(ttlSecondsAfterFinished);
             return this;
         }
-
         public JobSpecResponse build() {
             return new JobSpecResponse(activeDeadlineSeconds, backoffLimit, completions, parallelism, template, ttlSecondsAfterFinished);
         }

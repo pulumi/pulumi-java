@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.PodDisruptionBudgetSpec;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.PodDisruptionBudgetStatus;
@@ -142,7 +142,6 @@ public final class PodDisruptionBudget {
             this.status = status;
             return this;
         }
-
         public PodDisruptionBudget build() {
             return new PodDisruptionBudget(apiVersion, kind, metadata, spec, status);
         }

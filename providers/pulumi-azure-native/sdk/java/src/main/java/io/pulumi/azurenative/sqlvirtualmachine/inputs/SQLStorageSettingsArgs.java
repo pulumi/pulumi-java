@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sqlvirtualmachine.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="defaultFilePath")
-    private final @Nullable Input<String> defaultFilePath;
+        private final @Nullable Input<String> defaultFilePath;
 
     public Input<String> getDefaultFilePath() {
         return this.defaultFilePath == null ? Input.empty() : this.defaultFilePath;
@@ -36,7 +36,7 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="luns")
-    private final @Nullable Input<List<Integer>> luns;
+        private final @Nullable Input<List<Integer>> luns;
 
     public Input<List<Integer>> getLuns() {
         return this.luns == null ? Input.empty() : this.luns;
@@ -95,7 +95,6 @@ public final class SQLStorageSettingsArgs extends io.pulumi.resources.ResourceAr
             this.luns = Input.ofNullable(luns);
             return this;
         }
-
         public SQLStorageSettingsArgs build() {
             return new SQLStorageSettingsArgs(defaultFilePath, luns);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.securityinsights.enums.Source;
 import io.pulumi.azurenative.securityinsights.inputs.WatchlistUserInfoArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="contentType")
-    private final @Nullable Input<String> contentType;
+        private final @Nullable Input<String> contentType;
 
     public Input<String> getContentType() {
         return this.contentType == null ? Input.empty() : this.contentType;
@@ -36,7 +36,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="created")
-    private final @Nullable Input<String> created;
+        private final @Nullable Input<String> created;
 
     public Input<String> getCreated() {
         return this.created == null ? Input.empty() : this.created;
@@ -47,7 +47,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdBy")
-    private final @Nullable Input<WatchlistUserInfoArgs> createdBy;
+        private final @Nullable Input<WatchlistUserInfoArgs> createdBy;
 
     public Input<WatchlistUserInfoArgs> getCreatedBy() {
         return this.createdBy == null ? Input.empty() : this.createdBy;
@@ -58,7 +58,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="defaultDuration")
-    private final @Nullable Input<String> defaultDuration;
+        private final @Nullable Input<String> defaultDuration;
 
     public Input<String> getDefaultDuration() {
         return this.defaultDuration == null ? Input.empty() : this.defaultDuration;
@@ -69,7 +69,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -80,7 +80,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -91,7 +91,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isDeleted")
-    private final @Nullable Input<Boolean> isDeleted;
+        private final @Nullable Input<Boolean> isDeleted;
 
     public Input<Boolean> getIsDeleted() {
         return this.isDeleted == null ? Input.empty() : this.isDeleted;
@@ -102,7 +102,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="itemsSearchKey", required=true)
-    private final Input<String> itemsSearchKey;
+        private final Input<String> itemsSearchKey;
 
     public Input<String> getItemsSearchKey() {
         return this.itemsSearchKey;
@@ -113,7 +113,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<List<String>> labels;
+        private final @Nullable Input<List<String>> labels;
 
     public Input<List<String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -124,7 +124,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="numberOfLinesToSkip")
-    private final @Nullable Input<Integer> numberOfLinesToSkip;
+        private final @Nullable Input<Integer> numberOfLinesToSkip;
 
     public Input<Integer> getNumberOfLinesToSkip() {
         return this.numberOfLinesToSkip == null ? Input.empty() : this.numberOfLinesToSkip;
@@ -135,7 +135,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="operationalInsightsResourceProvider", required=true)
-    private final Input<String> operationalInsightsResourceProvider;
+        private final Input<String> operationalInsightsResourceProvider;
 
     public Input<String> getOperationalInsightsResourceProvider() {
         return this.operationalInsightsResourceProvider;
@@ -146,7 +146,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provider", required=true)
-    private final Input<String> provider;
+        private final Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider;
@@ -157,7 +157,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rawContent")
-    private final @Nullable Input<String> rawContent;
+        private final @Nullable Input<String> rawContent;
 
     public Input<String> getRawContent() {
         return this.rawContent == null ? Input.empty() : this.rawContent;
@@ -168,7 +168,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -179,7 +179,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<Either<String,Source>> source;
+        private final Input<Either<String,Source>> source;
 
     public Input<Either<String,Source>> getSource() {
         return this.source;
@@ -190,7 +190,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -201,7 +201,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updated")
-    private final @Nullable Input<String> updated;
+        private final @Nullable Input<String> updated;
 
     public Input<String> getUpdated() {
         return this.updated == null ? Input.empty() : this.updated;
@@ -212,7 +212,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedBy")
-    private final @Nullable Input<WatchlistUserInfoArgs> updatedBy;
+        private final @Nullable Input<WatchlistUserInfoArgs> updatedBy;
 
     public Input<WatchlistUserInfoArgs> getUpdatedBy() {
         return this.updatedBy == null ? Input.empty() : this.updatedBy;
@@ -223,7 +223,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uploadStatus")
-    private final @Nullable Input<String> uploadStatus;
+        private final @Nullable Input<String> uploadStatus;
 
     public Input<String> getUploadStatus() {
         return this.uploadStatus == null ? Input.empty() : this.uploadStatus;
@@ -234,7 +234,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistAlias")
-    private final @Nullable Input<String> watchlistAlias;
+        private final @Nullable Input<String> watchlistAlias;
 
     public Input<String> getWatchlistAlias() {
         return this.watchlistAlias == null ? Input.empty() : this.watchlistAlias;
@@ -245,7 +245,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistId")
-    private final @Nullable Input<String> watchlistId;
+        private final @Nullable Input<String> watchlistId;
 
     public Input<String> getWatchlistId() {
         return this.watchlistId == null ? Input.empty() : this.watchlistId;
@@ -256,7 +256,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistItemsCount")
-    private final @Nullable Input<Integer> watchlistItemsCount;
+        private final @Nullable Input<Integer> watchlistItemsCount;
 
     public Input<Integer> getWatchlistItemsCount() {
         return this.watchlistItemsCount == null ? Input.empty() : this.watchlistItemsCount;
@@ -267,7 +267,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="watchlistType")
-    private final @Nullable Input<String> watchlistType;
+        private final @Nullable Input<String> watchlistType;
 
     public Input<String> getWatchlistType() {
         return this.watchlistType == null ? Input.empty() : this.watchlistType;
@@ -278,7 +278,7 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workspaceName", required=true)
-    private final Input<String> workspaceName;
+        private final Input<String> workspaceName;
 
     public Input<String> getWorkspaceName() {
         return this.workspaceName;
@@ -667,7 +667,6 @@ public final class WatchlistArgs extends io.pulumi.resources.ResourceArgs {
             this.workspaceName = Input.of(Objects.requireNonNull(workspaceName));
             return this;
         }
-
         public WatchlistArgs build() {
             return new WatchlistArgs(contentType, created, createdBy, defaultDuration, description, displayName, isDeleted, itemsSearchKey, labels, numberOfLinesToSkip, operationalInsightsResourceProvider, provider, rawContent, resourceGroupName, source, tenantId, updated, updatedBy, uploadStatus, watchlistAlias, watchlistId, watchlistItemsCount, watchlistType, workspaceName);
         }

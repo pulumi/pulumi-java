@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="labelSelectorPath")
-    private final @Nullable Input<String> labelSelectorPath;
+        private final @Nullable Input<String> labelSelectorPath;
 
     public Input<String> getLabelSelectorPath() {
         return this.labelSelectorPath == null ? Input.empty() : this.labelSelectorPath;
@@ -34,7 +34,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="specReplicasPath", required=true)
-    private final Input<String> specReplicasPath;
+        private final Input<String> specReplicasPath;
 
     public Input<String> getSpecReplicasPath() {
         return this.specReplicasPath;
@@ -45,7 +45,7 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="statusReplicasPath", required=true)
-    private final Input<String> statusReplicasPath;
+        private final Input<String> statusReplicasPath;
 
     public Input<String> getStatusReplicasPath() {
         return this.statusReplicasPath;
@@ -119,7 +119,6 @@ public final class CustomResourceSubresourceScaleArgs extends io.pulumi.resource
             this.statusReplicasPath = Input.of(Objects.requireNonNull(statusReplicasPath));
             return this;
         }
-
         public CustomResourceSubresourceScaleArgs build() {
             return new CustomResourceSubresourceScaleArgs(labelSelectorPath, specReplicasPath, statusReplicasPath);
         }

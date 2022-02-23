@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.ResourcePolicyArgs;
 import io.pulumi.gcp.compute.inputs.ResourcePolicyState;
@@ -177,13 +177,6 @@ public class ResourcePolicy extends io.pulumi.resources.CustomResource {
         return this.snapshotSchedulePolicy;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ResourcePolicy(String name) {
-        super("gcp:compute/resourcePolicy:ResourcePolicy", name, ResourcePolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

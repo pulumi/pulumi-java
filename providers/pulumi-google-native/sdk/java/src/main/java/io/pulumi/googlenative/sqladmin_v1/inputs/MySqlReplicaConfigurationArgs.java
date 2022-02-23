@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="caCertificate")
-    private final @Nullable Input<String> caCertificate;
+      private final @Nullable Input<String> caCertificate;
 
     public Input<String> getCaCertificate() {
         return this.caCertificate == null ? Input.empty() : this.caCertificate;
@@ -36,7 +36,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientCertificate")
-    private final @Nullable Input<String> clientCertificate;
+      private final @Nullable Input<String> clientCertificate;
 
     public Input<String> getClientCertificate() {
         return this.clientCertificate == null ? Input.empty() : this.clientCertificate;
@@ -47,7 +47,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="clientKey")
-    private final @Nullable Input<String> clientKey;
+      private final @Nullable Input<String> clientKey;
 
     public Input<String> getClientKey() {
         return this.clientKey == null ? Input.empty() : this.clientKey;
@@ -58,7 +58,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="connectRetryInterval")
-    private final @Nullable Input<Integer> connectRetryInterval;
+      private final @Nullable Input<Integer> connectRetryInterval;
 
     public Input<Integer> getConnectRetryInterval() {
         return this.connectRetryInterval == null ? Input.empty() : this.connectRetryInterval;
@@ -69,7 +69,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="dumpFilePath")
-    private final @Nullable Input<String> dumpFilePath;
+      private final @Nullable Input<String> dumpFilePath;
 
     public Input<String> getDumpFilePath() {
         return this.dumpFilePath == null ? Input.empty() : this.dumpFilePath;
@@ -80,7 +80,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -91,7 +91,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="masterHeartbeatPeriod")
-    private final @Nullable Input<String> masterHeartbeatPeriod;
+      private final @Nullable Input<String> masterHeartbeatPeriod;
 
     public Input<String> getMasterHeartbeatPeriod() {
         return this.masterHeartbeatPeriod == null ? Input.empty() : this.masterHeartbeatPeriod;
@@ -102,7 +102,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="password")
-    private final @Nullable Input<String> password;
+      private final @Nullable Input<String> password;
 
     public Input<String> getPassword() {
         return this.password == null ? Input.empty() : this.password;
@@ -113,7 +113,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="sslCipher")
-    private final @Nullable Input<String> sslCipher;
+      private final @Nullable Input<String> sslCipher;
 
     public Input<String> getSslCipher() {
         return this.sslCipher == null ? Input.empty() : this.sslCipher;
@@ -124,7 +124,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="username")
-    private final @Nullable Input<String> username;
+      private final @Nullable Input<String> username;
 
     public Input<String> getUsername() {
         return this.username == null ? Input.empty() : this.username;
@@ -135,7 +135,7 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="verifyServerCertificate")
-    private final @Nullable Input<Boolean> verifyServerCertificate;
+      private final @Nullable Input<Boolean> verifyServerCertificate;
 
     public Input<Boolean> getVerifyServerCertificate() {
         return this.verifyServerCertificate == null ? Input.empty() : this.verifyServerCertificate;
@@ -329,7 +329,6 @@ public final class MySqlReplicaConfigurationArgs extends io.pulumi.resources.Res
             this.verifyServerCertificate = Input.ofNullable(verifyServerCertificate);
             return this;
         }
-
         public MySqlReplicaConfigurationArgs build() {
             return new MySqlReplicaConfigurationArgs(caCertificate, clientCertificate, clientKey, connectRetryInterval, dumpFilePath, kind, masterHeartbeatPeriod, password, sslCipher, username, verifyServerCertificate);
         }

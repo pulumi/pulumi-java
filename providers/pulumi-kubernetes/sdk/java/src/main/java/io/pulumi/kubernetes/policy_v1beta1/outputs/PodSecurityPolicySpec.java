@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.AllowedCSIDriver;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.AllowedFlexVolume;
 import io.pulumi.kubernetes.policy_v1beta1.outputs.AllowedHostPath;
@@ -558,7 +558,6 @@ public final class PodSecurityPolicySpec {
             this.volumes = volumes;
             return this;
         }
-
         public PodSecurityPolicySpec build() {
             return new PodSecurityPolicySpec(allowPrivilegeEscalation, allowedCSIDrivers, allowedCapabilities, allowedFlexVolumes, allowedHostPaths, allowedProcMountTypes, allowedUnsafeSysctls, defaultAddCapabilities, defaultAllowPrivilegeEscalation, forbiddenSysctls, fsGroup, hostIPC, hostNetwork, hostPID, hostPorts, privileged, readOnlyRootFilesystem, requiredDropCapabilities, runAsGroup, runAsUser, runtimeClass, seLinux, supplementalGroups, volumes);
         }

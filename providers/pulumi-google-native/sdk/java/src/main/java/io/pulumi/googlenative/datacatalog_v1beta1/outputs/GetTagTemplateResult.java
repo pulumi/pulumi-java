@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datacatalog_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GetTagTemplateResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetTagTemplateResult build() {
             return new GetTagTemplateResult(displayName, fields, name);
         }

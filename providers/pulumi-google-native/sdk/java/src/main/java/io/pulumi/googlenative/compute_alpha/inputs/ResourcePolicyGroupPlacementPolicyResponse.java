@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="availabilityDomainCount", required=true)
-    private final Integer availabilityDomainCount;
+      private final Integer availabilityDomainCount;
 
     public Integer getAvailabilityDomainCount() {
         return this.availabilityDomainCount;
@@ -33,7 +33,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="collocation", required=true)
-    private final String collocation;
+      private final String collocation;
 
     public String getCollocation() {
         return this.collocation;
@@ -44,7 +44,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="locality", required=true)
-    private final String locality;
+      private final String locality;
 
     public String getLocality() {
         return this.locality;
@@ -55,7 +55,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+      private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -66,7 +66,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="style", required=true)
-    private final String style;
+      private final String style;
 
     public String getStyle() {
         return this.style;
@@ -77,7 +77,7 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
      * 
      */
     @InputImport(name="vmCount", required=true)
-    private final Integer vmCount;
+      private final Integer vmCount;
 
     public Integer getVmCount() {
         return this.vmCount;
@@ -166,7 +166,6 @@ public final class ResourcePolicyGroupPlacementPolicyResponse extends io.pulumi.
             this.vmCount = Objects.requireNonNull(vmCount);
             return this;
         }
-
         public ResourcePolicyGroupPlacementPolicyResponse build() {
             return new ResourcePolicyGroupPlacementPolicyResponse(availabilityDomainCount, collocation, locality, scope, style, vmCount);
         }

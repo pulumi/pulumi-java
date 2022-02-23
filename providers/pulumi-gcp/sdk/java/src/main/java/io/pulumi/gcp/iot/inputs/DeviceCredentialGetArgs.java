@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.iot.inputs.DeviceCredentialPublicKeyGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="expirationTime")
-    private final @Nullable Input<String> expirationTime;
+        private final @Nullable Input<String> expirationTime;
 
     public Input<String> getExpirationTime() {
         return this.expirationTime == null ? Input.empty() : this.expirationTime;
@@ -32,7 +32,7 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="publicKey", required=true)
-    private final Input<DeviceCredentialPublicKeyGetArgs> publicKey;
+        private final Input<DeviceCredentialPublicKeyGetArgs> publicKey;
 
     public Input<DeviceCredentialPublicKeyGetArgs> getPublicKey() {
         return this.publicKey;
@@ -91,7 +91,6 @@ public final class DeviceCredentialGetArgs extends io.pulumi.resources.ResourceA
             this.publicKey = Input.of(Objects.requireNonNull(publicKey));
             return this;
         }
-
         public DeviceCredentialGetArgs build() {
             return new DeviceCredentialGetArgs(expirationTime, publicKey);
         }

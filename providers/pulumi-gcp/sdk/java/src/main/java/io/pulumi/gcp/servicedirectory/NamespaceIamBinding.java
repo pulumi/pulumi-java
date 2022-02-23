@@ -5,8 +5,8 @@ package io.pulumi.gcp.servicedirectory;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.servicedirectory.NamespaceIamBindingArgs;
 import io.pulumi.gcp.servicedirectory.inputs.NamespaceIamBindingState;
@@ -118,13 +118,6 @@ public class NamespaceIamBinding extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public NamespaceIamBinding(String name) {
-        super("gcp:servicedirectory/namespaceIamBinding:NamespaceIamBinding", name, NamespaceIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

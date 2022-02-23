@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expirationDate")
-    private final @Nullable Input<String> expirationDate;
+        private final @Nullable Input<String> expirationDate;
 
     public Input<String> getExpirationDate() {
         return this.expirationDate == null ? Input.empty() : this.expirationDate;
@@ -41,7 +41,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="invitationName")
-    private final @Nullable Input<String> invitationName;
+        private final @Nullable Input<String> invitationName;
 
     public Input<String> getInvitationName() {
         return this.invitationName == null ? Input.empty() : this.invitationName;
@@ -52,7 +52,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -63,7 +63,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="shareName", required=true)
-    private final Input<String> shareName;
+        private final Input<String> shareName;
 
     public Input<String> getShareName() {
         return this.shareName;
@@ -74,7 +74,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetActiveDirectoryId")
-    private final @Nullable Input<String> targetActiveDirectoryId;
+        private final @Nullable Input<String> targetActiveDirectoryId;
 
     public Input<String> getTargetActiveDirectoryId() {
         return this.targetActiveDirectoryId == null ? Input.empty() : this.targetActiveDirectoryId;
@@ -85,7 +85,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetEmail")
-    private final @Nullable Input<String> targetEmail;
+        private final @Nullable Input<String> targetEmail;
 
     public Input<String> getTargetEmail() {
         return this.targetEmail == null ? Input.empty() : this.targetEmail;
@@ -98,7 +98,7 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetObjectId")
-    private final @Nullable Input<String> targetObjectId;
+        private final @Nullable Input<String> targetObjectId;
 
     public Input<String> getTargetObjectId() {
         return this.targetObjectId == null ? Input.empty() : this.targetObjectId;
@@ -247,7 +247,6 @@ public final class InvitationArgs extends io.pulumi.resources.ResourceArgs {
             this.targetObjectId = Input.ofNullable(targetObjectId);
             return this;
         }
-
         public InvitationArgs build() {
             return new InvitationArgs(accountName, expirationDate, invitationName, resourceGroupName, shareName, targetActiveDirectoryId, targetEmail, targetObjectId);
         }

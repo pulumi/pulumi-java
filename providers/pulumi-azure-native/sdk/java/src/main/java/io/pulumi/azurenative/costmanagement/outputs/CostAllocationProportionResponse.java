@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.costmanagement.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class CostAllocationProportionResponse {
             this.percentage = Objects.requireNonNull(percentage);
             return this;
         }
-
         public CostAllocationProportionResponse build() {
             return new CostAllocationProportionResponse(name, percentage);
         }

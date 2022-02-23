@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="code")
-    private final @Nullable Integer code;
+        private final @Nullable Integer code;
 
     public Optional<Integer> getCode() {
         return this.code == null ? Optional.empty() : Optional.ofNullable(this.code);
@@ -36,7 +36,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="message")
-    private final @Nullable String message;
+        private final @Nullable String message;
 
     public Optional<String> getMessage() {
         return this.message == null ? Optional.empty() : Optional.ofNullable(this.message);
@@ -47,7 +47,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="recommendations")
-    private final @Nullable List<String> recommendations;
+        private final @Nullable List<String> recommendations;
 
     public List<String> getRecommendations() {
         return this.recommendations == null ? List.of() : this.recommendations;
@@ -58,7 +58,7 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="title")
-    private final @Nullable String title;
+        private final @Nullable String title;
 
     public Optional<String> getTitle() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
@@ -127,7 +127,6 @@ public final class MABContainerHealthDetailsResponse extends io.pulumi.resources
             this.title = title;
             return this;
         }
-
         public MABContainerHealthDetailsResponse build() {
             return new MABContainerHealthDetailsResponse(code, message, recommendations, title);
         }

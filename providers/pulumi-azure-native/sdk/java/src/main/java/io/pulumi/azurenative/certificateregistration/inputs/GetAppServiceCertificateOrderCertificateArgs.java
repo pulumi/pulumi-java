@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.certificateregistration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="certificateOrderName", required=true)
-    private final String certificateOrderName;
+        private final String certificateOrderName;
 
     public String getCertificateOrderName() {
         return this.certificateOrderName;
@@ -28,7 +28,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -39,7 +39,7 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -98,7 +98,6 @@ public final class GetAppServiceCertificateOrderCertificateArgs extends io.pulum
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetAppServiceCertificateOrderCertificateArgs build() {
             return new GetAppServiceCertificateOrderCertificateArgs(certificateOrderName, name, resourceGroupName);
         }

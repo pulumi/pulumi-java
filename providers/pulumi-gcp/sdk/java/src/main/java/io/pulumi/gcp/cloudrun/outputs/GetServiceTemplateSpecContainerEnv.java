@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudrun.outputs.GetServiceTemplateSpecContainerEnvValueFrom;
 import java.lang.String;
 import java.util.List;
@@ -81,7 +81,6 @@ public final class GetServiceTemplateSpecContainerEnv {
             this.valueFroms = Objects.requireNonNull(valueFroms);
             return this;
         }
-
         public GetServiceTemplateSpecContainerEnv build() {
             return new GetServiceTemplateSpecContainerEnv(name, value, valueFroms);
         }

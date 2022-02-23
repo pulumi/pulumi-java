@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseCustomHeaders;
 import io.pulumi.azurenative.network.outputs.EndpointPropertiesResponseSubnets;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -374,7 +374,6 @@ public final class GetEndpointResult {
             this.weight = weight;
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(customHeaders, endpointLocation, endpointMonitorStatus, endpointStatus, geoMapping, id, minChildEndpoints, minChildEndpointsIPv4, minChildEndpointsIPv6, name, priority, subnets, target, targetResourceId, type, weight);
         }

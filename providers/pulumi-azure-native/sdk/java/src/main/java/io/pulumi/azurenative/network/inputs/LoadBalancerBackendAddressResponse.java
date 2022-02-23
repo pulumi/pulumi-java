@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+        private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -35,7 +35,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="loadBalancerFrontendIPConfiguration")
-    private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
+        private final @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
 
     public Optional<SubResourceResponse> getLoadBalancerFrontendIPConfiguration() {
         return this.loadBalancerFrontendIPConfiguration == null ? Optional.empty() : Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
@@ -46,7 +46,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -57,7 +57,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="networkInterfaceIPConfiguration", required=true)
-    private final SubResourceResponse networkInterfaceIPConfiguration;
+        private final SubResourceResponse networkInterfaceIPConfiguration;
 
     public SubResourceResponse getNetworkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
@@ -68,7 +68,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="subnet")
-    private final @Nullable SubResourceResponse subnet;
+        private final @Nullable SubResourceResponse subnet;
 
     public Optional<SubResourceResponse> getSubnet() {
         return this.subnet == null ? Optional.empty() : Optional.ofNullable(this.subnet);
@@ -79,7 +79,7 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="virtualNetwork")
-    private final @Nullable SubResourceResponse virtualNetwork;
+        private final @Nullable SubResourceResponse virtualNetwork;
 
     public Optional<SubResourceResponse> getVirtualNetwork() {
         return this.virtualNetwork == null ? Optional.empty() : Optional.ofNullable(this.virtualNetwork);
@@ -168,7 +168,6 @@ public final class LoadBalancerBackendAddressResponse extends io.pulumi.resource
             this.virtualNetwork = virtualNetwork;
             return this;
         }
-
         public LoadBalancerBackendAddressResponse build() {
             return new LoadBalancerBackendAddressResponse(ipAddress, loadBalancerFrontendIPConfiguration, name, networkInterfaceIPConfiguration, subnet, virtualNetwork);
         }

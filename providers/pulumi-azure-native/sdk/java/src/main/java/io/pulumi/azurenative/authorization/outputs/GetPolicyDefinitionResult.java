@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.authorization.outputs;
 
 import io.pulumi.azurenative.authorization.outputs.ParameterDefinitionsValueResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -247,7 +247,6 @@ public final class GetPolicyDefinitionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetPolicyDefinitionResult build() {
             return new GetPolicyDefinitionResult(description, displayName, id, metadata, mode, name, parameters, policyRule, policyType, type);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storsimple.outputs;
 
 import io.pulumi.azurenative.storsimple.outputs.FailoverSetResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class ListDeviceFailoverSetsResult {
             this.value = value;
             return this;
         }
-
         public ListDeviceFailoverSetsResult build() {
             return new ListDeviceFailoverSetsResult(value);
         }

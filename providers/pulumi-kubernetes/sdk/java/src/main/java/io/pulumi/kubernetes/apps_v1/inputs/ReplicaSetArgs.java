@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apps_v1.inputs.ReplicaSetSpecArgs;
 import io.pulumi.kubernetes.apps_v1.inputs.ReplicaSetStatusArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
@@ -26,7 +26,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -48,7 +48,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -59,7 +59,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<ReplicaSetSpecArgs> spec;
+        private final @Nullable Input<ReplicaSetSpecArgs> spec;
 
     public Input<ReplicaSetSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -70,7 +70,7 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<ReplicaSetStatusArgs> status;
+        private final @Nullable Input<ReplicaSetStatusArgs> status;
 
     public Input<ReplicaSetStatusArgs> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -174,7 +174,6 @@ public final class ReplicaSetArgs extends io.pulumi.resources.ResourceArgs {
             this.status = Input.ofNullable(status);
             return this;
         }
-
         public ReplicaSetArgs build() {
             return new ReplicaSetArgs(apiVersion, kind, metadata, spec, status);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,42 +15,42 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
     public static final GetSessionEntityTypeArgs Empty = new GetSessionEntityTypeArgs();
 
     @InputImport(name="agentId", required=true)
-    private final String agentId;
+      private final String agentId;
 
     public String getAgentId() {
         return this.agentId;
     }
 
     @InputImport(name="entityTypeId", required=true)
-    private final String entityTypeId;
+      private final String entityTypeId;
 
     public String getEntityTypeId() {
         return this.entityTypeId;
     }
 
     @InputImport(name="environmentId", required=true)
-    private final String environmentId;
+      private final String environmentId;
 
     public String getEnvironmentId() {
         return this.environmentId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="sessionId", required=true)
-    private final String sessionId;
+      private final String sessionId;
 
     public String getSessionId() {
         return this.sessionId;
@@ -139,7 +139,6 @@ public final class GetSessionEntityTypeArgs extends io.pulumi.resources.InvokeAr
             this.sessionId = Objects.requireNonNull(sessionId);
             return this;
         }
-
         public GetSessionEntityTypeArgs build() {
             return new GetSessionEntityTypeArgs(agentId, entityTypeId, environmentId, location, project, sessionId);
         }

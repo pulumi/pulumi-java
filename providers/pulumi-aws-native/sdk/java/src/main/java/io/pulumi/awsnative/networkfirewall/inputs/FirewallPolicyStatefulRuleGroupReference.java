@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkfirewall.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class FirewallPolicyStatefulRuleGroupReference extends io.pulumi.re
     public static final FirewallPolicyStatefulRuleGroupReference Empty = new FirewallPolicyStatefulRuleGroupReference();
 
     @InputImport(name="priority")
-    private final @Nullable Integer priority;
+        private final @Nullable Integer priority;
 
     public Optional<Integer> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
     }
 
     @InputImport(name="resourceArn", required=true)
-    private final String resourceArn;
+        private final String resourceArn;
 
     public String getResourceArn() {
         return this.resourceArn;
@@ -72,7 +72,6 @@ public final class FirewallPolicyStatefulRuleGroupReference extends io.pulumi.re
             this.resourceArn = Objects.requireNonNull(resourceArn);
             return this;
         }
-
         public FirewallPolicyStatefulRuleGroupReference build() {
             return new FirewallPolicyStatefulRuleGroupReference(priority, resourceArn);
         }

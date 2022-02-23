@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.auditregistration.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="level", required=true)
-    private final Input<String> level;
+        private final Input<String> level;
 
     public Input<String> getLevel() {
         return this.level;
@@ -35,7 +35,7 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="stages")
-    private final @Nullable Input<List<String>> stages;
+        private final @Nullable Input<List<String>> stages;
 
     public Input<List<String>> getStages() {
         return this.stages == null ? Input.empty() : this.stages;
@@ -94,7 +94,6 @@ public final class PolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.stages = Input.ofNullable(stages);
             return this;
         }
-
         public PolicyArgs build() {
             return new PolicyArgs(level, stages);
         }

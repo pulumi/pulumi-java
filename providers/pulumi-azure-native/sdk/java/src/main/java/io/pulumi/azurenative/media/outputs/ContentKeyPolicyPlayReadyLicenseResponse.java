@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyContentEncry
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyContentEncryptionKeyFromKeyIdentifierResponse;
 import io.pulumi.azurenative.media.outputs.ContentKeyPolicyPlayReadyPlayRightResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -249,7 +249,6 @@ public final class ContentKeyPolicyPlayReadyLicenseResponse {
             this.relativeExpirationDate = relativeExpirationDate;
             return this;
         }
-
         public ContentKeyPolicyPlayReadyLicenseResponse build() {
             return new ContentKeyPolicyPlayReadyLicenseResponse(allowTestDevices, beginDate, contentKeyLocation, contentType, expirationDate, gracePeriod, licenseType, playRight, relativeBeginDate, relativeExpirationDate);
         }

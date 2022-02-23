@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.managementpartner.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPartnerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="partnerId", required=true)
-    private final String partnerId;
+        private final String partnerId;
 
     public String getPartnerId() {
         return this.partnerId;
@@ -55,7 +55,6 @@ public final class GetPartnerArgs extends io.pulumi.resources.InvokeArgs {
             this.partnerId = Objects.requireNonNull(partnerId);
             return this;
         }
-
         public GetPartnerArgs build() {
             return new GetPartnerArgs(partnerId);
         }

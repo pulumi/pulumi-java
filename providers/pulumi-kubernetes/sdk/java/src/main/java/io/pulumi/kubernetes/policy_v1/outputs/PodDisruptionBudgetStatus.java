@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.policy_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.Condition;
 import java.lang.Integer;
 import java.lang.String;
@@ -201,7 +201,6 @@ public final class PodDisruptionBudgetStatus {
             this.observedGeneration = observedGeneration;
             return this;
         }
-
         public PodDisruptionBudgetStatus build() {
             return new PodDisruptionBudgetStatus(conditions, currentHealthy, desiredHealthy, disruptedPods, disruptionsAllowed, expectedPods, observedGeneration);
         }

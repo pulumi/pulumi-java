@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class RecommendedActionErrorInfoResponse {
             this.isRetryable = Objects.requireNonNull(isRetryable);
             return this;
         }
-
         public RecommendedActionErrorInfoResponse build() {
             return new RecommendedActionErrorInfoResponse(errorCode, isRetryable);
         }

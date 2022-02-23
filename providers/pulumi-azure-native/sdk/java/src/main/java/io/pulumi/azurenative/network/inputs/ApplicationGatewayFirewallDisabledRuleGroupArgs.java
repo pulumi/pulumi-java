@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
      * 
      */
     @InputImport(name="ruleGroupName", required=true)
-    private final Input<String> ruleGroupName;
+        private final Input<String> ruleGroupName;
 
     public Input<String> getRuleGroupName() {
         return this.ruleGroupName;
@@ -36,7 +36,7 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
      * 
      */
     @InputImport(name="rules")
-    private final @Nullable Input<List<Integer>> rules;
+        private final @Nullable Input<List<Integer>> rules;
 
     public Input<List<Integer>> getRules() {
         return this.rules == null ? Input.empty() : this.rules;
@@ -95,7 +95,6 @@ public final class ApplicationGatewayFirewallDisabledRuleGroupArgs extends io.pu
             this.rules = Input.ofNullable(rules);
             return this;
         }
-
         public ApplicationGatewayFirewallDisabledRuleGroupArgs build() {
             return new ApplicationGatewayFirewallDisabledRuleGroupArgs(ruleGroupName, rules);
         }

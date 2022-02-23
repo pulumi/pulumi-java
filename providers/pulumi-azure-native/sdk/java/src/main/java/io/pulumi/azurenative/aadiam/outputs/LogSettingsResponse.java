@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.aadiam.outputs;
 
 import io.pulumi.azurenative.aadiam.outputs.RetentionPolicyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class LogSettingsResponse {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(category, enabled, retentionPolicy);
         }

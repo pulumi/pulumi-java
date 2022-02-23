@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceArgs
 import io.pulumi.azurenative.datafactory.inputs.SecureStringArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -26,7 +26,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
+        private final Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
     public Input<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> getPassword() {
         return this.password;
@@ -37,7 +37,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetName", required=true)
-    private final Input<Object> targetName;
+        private final Input<Object> targetName;
 
     public Input<Object> getTargetName() {
         return this.targetName;
@@ -49,7 +49,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -60,7 +60,7 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Input<Object> userName;
+        private final Input<Object> userName;
 
     public Input<Object> getUserName() {
         return this.userName;
@@ -149,7 +149,6 @@ public final class CmdkeySetupArgs extends io.pulumi.resources.ResourceArgs {
             this.userName = Input.of(Objects.requireNonNull(userName));
             return this;
         }
-
         public CmdkeySetupArgs build() {
             return new CmdkeySetupArgs(password, targetName, type, userName);
         }

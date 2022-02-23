@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.NotificationEndpointGrpcSettingsArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -31,7 +31,7 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="grpcSettings")
-    private final @Nullable Input<NotificationEndpointGrpcSettingsArgs> grpcSettings;
+      private final @Nullable Input<NotificationEndpointGrpcSettingsArgs> grpcSettings;
 
     public Input<NotificationEndpointGrpcSettingsArgs> getGrpcSettings() {
         return this.grpcSettings == null ? Input.empty() : this.grpcSettings;
@@ -42,28 +42,28 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region", required=true)
-    private final Input<String> region;
+      private final Input<String> region;
 
     public Input<String> getRegion() {
         return this.region;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -182,7 +182,6 @@ public final class RegionNotificationEndpointArgs extends io.pulumi.resources.Re
             this.requestId = Input.ofNullable(requestId);
             return this;
         }
-
         public RegionNotificationEndpointArgs build() {
             return new RegionNotificationEndpointArgs(description, grpcSettings, name, project, region, requestId);
         }

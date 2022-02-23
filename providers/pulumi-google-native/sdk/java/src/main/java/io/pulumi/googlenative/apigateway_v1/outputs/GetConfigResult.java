@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigateway_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigFileResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigGrpcServiceDefinitionResponse;
 import io.pulumi.googlenative.apigateway_v1.outputs.ApigatewayApiConfigOpenApiDocumentResponse;
@@ -268,7 +268,6 @@ public final class GetConfigResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetConfigResult build() {
             return new GetConfigResult(createTime, displayName, gatewayServiceAccount, grpcServices, labels, managedServiceConfigs, name, openapiDocuments, serviceConfigId, state, updateTime);
         }

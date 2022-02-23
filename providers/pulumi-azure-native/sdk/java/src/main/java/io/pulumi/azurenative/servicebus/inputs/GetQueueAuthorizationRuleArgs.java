@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="authorizationRuleName", required=true)
-    private final String authorizationRuleName;
+        private final String authorizationRuleName;
 
     public String getAuthorizationRuleName() {
         return this.authorizationRuleName;
@@ -28,7 +28,7 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -39,7 +39,7 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="queueName", required=true)
-    private final String queueName;
+        private final String queueName;
 
     public String getQueueName() {
         return this.queueName;
@@ -50,7 +50,7 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetQueueAuthorizationRuleArgs extends io.pulumi.resources.Inv
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetQueueAuthorizationRuleArgs build() {
             return new GetQueueAuthorizationRuleArgs(authorizationRuleName, namespaceName, queueName, resourceGroupName);
         }

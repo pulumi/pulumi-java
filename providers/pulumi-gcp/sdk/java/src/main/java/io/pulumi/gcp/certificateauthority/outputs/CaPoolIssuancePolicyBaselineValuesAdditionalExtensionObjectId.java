@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId
             this.objectIdPaths = Objects.requireNonNull(objectIdPaths);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId build() {
             return new CaPoolIssuancePolicyBaselineValuesAdditionalExtensionObjectId(objectIdPaths);
         }

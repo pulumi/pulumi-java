@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logGroupName")
-    private final @Nullable Input<String> logGroupName;
+        private final @Nullable Input<String> logGroupName;
 
     public Input<String> getLogGroupName() {
         return this.logGroupName == null ? Input.empty() : this.logGroupName;
@@ -30,7 +30,7 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="logRoleArn")
-    private final @Nullable Input<String> logRoleArn;
+        private final @Nullable Input<String> logRoleArn;
 
     public Input<String> getLogRoleArn() {
         return this.logRoleArn == null ? Input.empty() : this.logRoleArn;
@@ -89,7 +89,6 @@ public final class ResourceVersionLoggingConfigArgs extends io.pulumi.resources.
             this.logRoleArn = Input.ofNullable(logRoleArn);
             return this;
         }
-
         public ResourceVersionLoggingConfigArgs build() {
             return new ResourceVersionLoggingConfigArgs(logGroupName, logRoleArn);
         }

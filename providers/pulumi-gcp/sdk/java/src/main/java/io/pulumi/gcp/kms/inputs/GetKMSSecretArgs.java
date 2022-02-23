@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.kms.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="additionalAuthenticatedData")
-    private final @Nullable String additionalAuthenticatedData;
+        private final @Nullable String additionalAuthenticatedData;
 
     public Optional<String> getAdditionalAuthenticatedData() {
         return this.additionalAuthenticatedData == null ? Optional.empty() : Optional.ofNullable(this.additionalAuthenticatedData);
@@ -30,7 +30,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ciphertext", required=true)
-    private final String ciphertext;
+        private final String ciphertext;
 
     public String getCiphertext() {
         return this.ciphertext;
@@ -43,7 +43,7 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cryptoKey", required=true)
-    private final String cryptoKey;
+        private final String cryptoKey;
 
     public String getCryptoKey() {
         return this.cryptoKey;
@@ -102,7 +102,6 @@ public final class GetKMSSecretArgs extends io.pulumi.resources.InvokeArgs {
             this.cryptoKey = Objects.requireNonNull(cryptoKey);
             return this;
         }
-
         public GetKMSSecretArgs build() {
             return new GetKMSSecretArgs(additionalAuthenticatedData, ciphertext, cryptoKey);
         }

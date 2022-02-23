@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.container_v1beta1.outputs.AddonsConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.AuthenticatorGroupsConfigResponse;
 import io.pulumi.googlenative.container_v1beta1.outputs.AutopilotResponse;
@@ -1267,7 +1267,6 @@ public final class GetClusterResult {
             this.workloadIdentityConfig = Objects.requireNonNull(workloadIdentityConfig);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(addonsConfig, authenticatorGroupsConfig, autopilot, autoscaling, binaryAuthorization, clusterIpv4Cidr, clusterTelemetry, conditions, confidentialNodes, createTime, currentMasterVersion, currentNodeVersion, databaseEncryption, defaultMaxPodsConstraint, description, enableKubernetesAlpha, endpoint, expireTime, identityServiceConfig, initialClusterVersion, ipAllocationPolicy, labelFingerprint, legacyAbac, location, locations, loggingConfig, loggingService, maintenancePolicy, master, masterAuth, masterAuthorizedNetworksConfig, meshCertificates, monitoringConfig, monitoringService, name, network, networkConfig, networkPolicy, nodeIpv4CidrSize, nodePoolDefaults, nodePools, notificationConfig, podSecurityPolicyConfig, privateClusterConfig, releaseChannel, resourceLabels, resourceUsageExportConfig, selfLink, servicesIpv4Cidr, shieldedNodes, status, subnetwork, tpuConfig, tpuIpv4CidrBlock, verticalPodAutoscaling, workloadCertificates, workloadIdentityConfig);
         }

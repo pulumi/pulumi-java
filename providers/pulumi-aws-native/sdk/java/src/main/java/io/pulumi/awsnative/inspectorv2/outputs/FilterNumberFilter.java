@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.inspectorv2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class FilterNumberFilter {
             this.upperInclusive = upperInclusive;
             return this;
         }
-
         public FilterNumberFilter build() {
             return new FilterNumberFilter(lowerInclusive, upperInclusive);
         }

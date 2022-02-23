@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -266,7 +266,6 @@ public final class GetWebAppPremierAddOnResult {
             this.vendor = vendor;
             return this;
         }
-
         public GetWebAppPremierAddOnResult build() {
             return new GetWebAppPremierAddOnResult(id, kind, location, marketplaceOffer, marketplacePublisher, name, product, sku, tags, type, vendor);
         }

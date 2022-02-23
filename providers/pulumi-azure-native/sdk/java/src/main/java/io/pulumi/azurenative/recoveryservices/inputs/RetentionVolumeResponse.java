@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="capacityInBytes")
-    private final @Nullable Double capacityInBytes;
+        private final @Nullable Double capacityInBytes;
 
     public Optional<Double> getCapacityInBytes() {
         return this.capacityInBytes == null ? Optional.empty() : Optional.ofNullable(this.capacityInBytes);
@@ -36,7 +36,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="freeSpaceInBytes")
-    private final @Nullable Double freeSpaceInBytes;
+        private final @Nullable Double freeSpaceInBytes;
 
     public Optional<Double> getFreeSpaceInBytes() {
         return this.freeSpaceInBytes == null ? Optional.empty() : Optional.ofNullable(this.freeSpaceInBytes);
@@ -47,7 +47,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="thresholdPercentage")
-    private final @Nullable Integer thresholdPercentage;
+        private final @Nullable Integer thresholdPercentage;
 
     public Optional<Integer> getThresholdPercentage() {
         return this.thresholdPercentage == null ? Optional.empty() : Optional.ofNullable(this.thresholdPercentage);
@@ -58,7 +58,7 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="volumeName")
-    private final @Nullable String volumeName;
+        private final @Nullable String volumeName;
 
     public Optional<String> getVolumeName() {
         return this.volumeName == null ? Optional.empty() : Optional.ofNullable(this.volumeName);
@@ -127,7 +127,6 @@ public final class RetentionVolumeResponse extends io.pulumi.resources.InvokeArg
             this.volumeName = volumeName;
             return this;
         }
-
         public RetentionVolumeResponse build() {
             return new RetentionVolumeResponse(capacityInBytes, freeSpaceInBytes, thresholdPercentage, volumeName);
         }

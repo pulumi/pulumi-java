@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id")
-    private final @Nullable Input<String> id;
+        private final @Nullable Input<String> id;
 
     public Input<String> getId() {
         return this.id == null ? Input.empty() : this.id;
@@ -34,7 +34,7 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="provider")
-    private final @Nullable Input<String> provider;
+        private final @Nullable Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider == null ? Input.empty() : this.provider;
@@ -93,7 +93,6 @@ public final class UserIdentityContractArgs extends io.pulumi.resources.Resource
             this.provider = Input.ofNullable(provider);
             return this;
         }
-
         public UserIdentityContractArgs build() {
             return new UserIdentityContractArgs(id, provider);
         }

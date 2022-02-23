@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.testbase.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="role")
-    private final @Nullable String role;
+        private final @Nullable String role;
 
     public Optional<String> getRole() {
         return this.role == null ? Optional.empty() : Optional.ofNullable(this.role);
@@ -34,7 +34,7 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable String subscriptionId;
+        private final @Nullable String subscriptionId;
 
     public Optional<String> getSubscriptionId() {
         return this.subscriptionId == null ? Optional.empty() : Optional.ofNullable(this.subscriptionId);
@@ -45,7 +45,7 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="subscriptionName")
-    private final @Nullable String subscriptionName;
+        private final @Nullable String subscriptionName;
 
     public Optional<String> getSubscriptionName() {
         return this.subscriptionName == null ? Optional.empty() : Optional.ofNullable(this.subscriptionName);
@@ -104,7 +104,6 @@ public final class SubscriptionReceiverValueResponse extends io.pulumi.resources
             this.subscriptionName = subscriptionName;
             return this;
         }
-
         public SubscriptionReceiverValueResponse build() {
             return new SubscriptionReceiverValueResponse(role, subscriptionId, subscriptionName);
         }

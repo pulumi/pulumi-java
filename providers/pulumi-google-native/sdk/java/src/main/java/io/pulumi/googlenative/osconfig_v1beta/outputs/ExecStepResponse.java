@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.ExecStepConfigResponse;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ExecStepResponse {
             this.windowsExecStepConfig = Objects.requireNonNull(windowsExecStepConfig);
             return this;
         }
-
         public ExecStepResponse build() {
             return new ExecStepResponse(linuxExecStepConfig, windowsExecStepConfig);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.cloudbuild;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.cloudbuild.WorkerPoolArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolState;
@@ -213,13 +213,6 @@ public class WorkerPool extends io.pulumi.resources.CustomResource {
         return this.workerConfig;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public WorkerPool(String name) {
-        super("gcp:cloudbuild/workerPool:WorkerPool", name, WorkerPoolArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

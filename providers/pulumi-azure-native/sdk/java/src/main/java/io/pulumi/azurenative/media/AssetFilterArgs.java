@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.inputs.FilterTrackSelectionArgs;
 import io.pulumi.azurenative.media.inputs.FirstQualityArgs;
 import io.pulumi.azurenative.media.inputs.PresentationTimeRangeArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName", required=true)
-    private final Input<String> assetName;
+        private final Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName;
@@ -45,7 +45,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filterName")
-    private final @Nullable Input<String> filterName;
+        private final @Nullable Input<String> filterName;
 
     public Input<String> getFilterName() {
         return this.filterName == null ? Input.empty() : this.filterName;
@@ -56,7 +56,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="firstQuality")
-    private final @Nullable Input<FirstQualityArgs> firstQuality;
+        private final @Nullable Input<FirstQualityArgs> firstQuality;
 
     public Input<FirstQualityArgs> getFirstQuality() {
         return this.firstQuality == null ? Input.empty() : this.firstQuality;
@@ -67,7 +67,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="presentationTimeRange")
-    private final @Nullable Input<PresentationTimeRangeArgs> presentationTimeRange;
+        private final @Nullable Input<PresentationTimeRangeArgs> presentationTimeRange;
 
     public Input<PresentationTimeRangeArgs> getPresentationTimeRange() {
         return this.presentationTimeRange == null ? Input.empty() : this.presentationTimeRange;
@@ -78,7 +78,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -89,7 +89,7 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tracks")
-    private final @Nullable Input<List<FilterTrackSelectionArgs>> tracks;
+        private final @Nullable Input<List<FilterTrackSelectionArgs>> tracks;
 
     public Input<List<FilterTrackSelectionArgs>> getTracks() {
         return this.tracks == null ? Input.empty() : this.tracks;
@@ -223,7 +223,6 @@ public final class AssetFilterArgs extends io.pulumi.resources.ResourceArgs {
             this.tracks = Input.ofNullable(tracks);
             return this;
         }
-
         public AssetFilterArgs build() {
             return new AssetFilterArgs(accountName, assetName, filterName, firstQuality, presentationTimeRange, resourceGroupName, tracks);
         }

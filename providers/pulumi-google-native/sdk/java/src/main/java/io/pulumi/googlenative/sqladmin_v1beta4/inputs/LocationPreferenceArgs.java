@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.sqladmin_v1beta4.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="followGaeApplication")
-    private final @Nullable Input<String> followGaeApplication;
+      private final @Nullable Input<String> followGaeApplication;
 
     public Input<String> getFollowGaeApplication() {
         return this.followGaeApplication == null ? Input.empty() : this.followGaeApplication;
@@ -34,7 +34,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -45,7 +45,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="secondaryZone")
-    private final @Nullable Input<String> secondaryZone;
+      private final @Nullable Input<String> secondaryZone;
 
     public Input<String> getSecondaryZone() {
         return this.secondaryZone == null ? Input.empty() : this.secondaryZone;
@@ -56,7 +56,7 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+      private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -145,7 +145,6 @@ public final class LocationPreferenceArgs extends io.pulumi.resources.ResourceAr
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public LocationPreferenceArgs build() {
             return new LocationPreferenceArgs(followGaeApplication, kind, secondaryZone, zone);
         }

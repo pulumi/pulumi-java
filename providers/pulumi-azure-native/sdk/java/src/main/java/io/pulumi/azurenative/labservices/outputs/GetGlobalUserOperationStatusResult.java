@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.labservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GetGlobalUserOperationStatusResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetGlobalUserOperationStatusResult build() {
             return new GetGlobalUserOperationStatusResult(status);
         }

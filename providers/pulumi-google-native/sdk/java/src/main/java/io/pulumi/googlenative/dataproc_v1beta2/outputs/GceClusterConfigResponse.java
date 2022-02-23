@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.NodeGroupAffinityResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ReservationAffinityResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.ShieldedInstanceConfigResponse;
@@ -290,7 +290,6 @@ public final class GceClusterConfigResponse {
             this.zoneUri = Objects.requireNonNull(zoneUri);
             return this;
         }
-
         public GceClusterConfigResponse build() {
             return new GceClusterConfigResponse(internalIpOnly, metadata, networkUri, nodeGroupAffinity, privateIpv6GoogleAccess, reservationAffinity, serviceAccount, serviceAccountScopes, shieldedInstanceConfig, subnetworkUri, tags, zoneUri);
         }

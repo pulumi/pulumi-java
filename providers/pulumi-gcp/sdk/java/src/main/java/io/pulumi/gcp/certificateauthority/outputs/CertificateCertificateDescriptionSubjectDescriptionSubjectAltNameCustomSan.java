@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSanObectId;
 import java.lang.Boolean;
 import java.lang.String;
@@ -94,7 +94,6 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             this.value = value;
             return this;
         }
-
         public CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan build() {
             return new CertificateCertificateDescriptionSubjectDescriptionSubjectAltNameCustomSan(critical, obectIds, value);
         }

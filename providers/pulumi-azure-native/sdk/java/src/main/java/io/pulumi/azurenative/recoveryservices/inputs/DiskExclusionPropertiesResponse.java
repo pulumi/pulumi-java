@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class DiskExclusionPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="diskLunList")
-    private final @Nullable List<Integer> diskLunList;
+        private final @Nullable List<Integer> diskLunList;
 
     public List<Integer> getDiskLunList() {
         return this.diskLunList == null ? List.of() : this.diskLunList;
@@ -32,7 +32,7 @@ public final class DiskExclusionPropertiesResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="isInclusionList")
-    private final @Nullable Boolean isInclusionList;
+        private final @Nullable Boolean isInclusionList;
 
     public Optional<Boolean> getIsInclusionList() {
         return this.isInclusionList == null ? Optional.empty() : Optional.ofNullable(this.isInclusionList);
@@ -81,7 +81,6 @@ public final class DiskExclusionPropertiesResponse extends io.pulumi.resources.I
             this.isInclusionList = isInclusionList;
             return this;
         }
-
         public DiskExclusionPropertiesResponse build() {
             return new DiskExclusionPropertiesResponse(diskLunList, isInclusionList);
         }

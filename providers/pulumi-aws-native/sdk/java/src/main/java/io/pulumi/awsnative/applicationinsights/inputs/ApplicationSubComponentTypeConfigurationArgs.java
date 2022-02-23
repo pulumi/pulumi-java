@@ -6,7 +6,7 @@ package io.pulumi.awsnative.applicationinsights.inputs;
 import io.pulumi.awsnative.applicationinsights.enums.ApplicationSubComponentTypeConfigurationSubComponentType;
 import io.pulumi.awsnative.applicationinsights.inputs.ApplicationSubComponentConfigurationDetailsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 
 
@@ -23,7 +23,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subComponentConfigurationDetails", required=true)
-    private final Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
+        private final Input<ApplicationSubComponentConfigurationDetailsArgs> subComponentConfigurationDetails;
 
     public Input<ApplicationSubComponentConfigurationDetailsArgs> getSubComponentConfigurationDetails() {
         return this.subComponentConfigurationDetails;
@@ -34,7 +34,7 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
      * 
      */
     @InputImport(name="subComponentType", required=true)
-    private final Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
+        private final Input<ApplicationSubComponentTypeConfigurationSubComponentType> subComponentType;
 
     public Input<ApplicationSubComponentTypeConfigurationSubComponentType> getSubComponentType() {
         return this.subComponentType;
@@ -93,7 +93,6 @@ public final class ApplicationSubComponentTypeConfigurationArgs extends io.pulum
             this.subComponentType = Input.of(Objects.requireNonNull(subComponentType));
             return this;
         }
-
         public ApplicationSubComponentTypeConfigurationArgs build() {
             return new ApplicationSubComponentTypeConfigurationArgs(subComponentConfigurationDetails, subComponentType);
         }

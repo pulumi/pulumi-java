@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.logging_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.logging_v2.outputs.BigQueryOptionsResponse;
 import io.pulumi.googlenative.logging_v2.outputs.LogExclusionResponse;
 import java.lang.Boolean;
@@ -267,7 +267,6 @@ public final class GetBillingAccountSinkResult {
             this.writerIdentity = Objects.requireNonNull(writerIdentity);
             return this;
         }
-
         public GetBillingAccountSinkResult build() {
             return new GetBillingAccountSinkResult(bigqueryOptions, createTime, description, destination, disabled, exclusions, filter, includeChildren, name, updateTime, writerIdentity);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.CapacityReservationInstanceViewResponse;
 import io.pulumi.azurenative.compute.outputs.SkuResponse;
 import io.pulumi.azurenative.compute.outputs.SubResourceReadOnlyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -290,7 +290,6 @@ public final class GetCapacityReservationResult {
             this.zones = zones;
             return this;
         }
-
         public GetCapacityReservationResult build() {
             return new GetCapacityReservationResult(id, instanceView, location, name, provisioningState, provisioningTime, reservationId, sku, tags, type, virtualMachinesAssociated, zones);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.security;
 import io.pulumi.azurenative.security.inputs.SecurityContactPropertiesAlertNotificationsArgs;
 import io.pulumi.azurenative.security.inputs.SecurityContactPropertiesNotificationsByRoleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="alertNotifications")
-    private final @Nullable Input<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
+        private final @Nullable Input<SecurityContactPropertiesAlertNotificationsArgs> alertNotifications;
 
     public Input<SecurityContactPropertiesAlertNotificationsArgs> getAlertNotifications() {
         return this.alertNotifications == null ? Input.empty() : this.alertNotifications;
@@ -32,7 +32,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="emails")
-    private final @Nullable Input<String> emails;
+        private final @Nullable Input<String> emails;
 
     public Input<String> getEmails() {
         return this.emails == null ? Input.empty() : this.emails;
@@ -43,7 +43,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="notificationsByRole")
-    private final @Nullable Input<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
+        private final @Nullable Input<SecurityContactPropertiesNotificationsByRoleArgs> notificationsByRole;
 
     public Input<SecurityContactPropertiesNotificationsByRoleArgs> getNotificationsByRole() {
         return this.notificationsByRole == null ? Input.empty() : this.notificationsByRole;
@@ -54,7 +54,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="phone")
-    private final @Nullable Input<String> phone;
+        private final @Nullable Input<String> phone;
 
     public Input<String> getPhone() {
         return this.phone == null ? Input.empty() : this.phone;
@@ -65,7 +65,7 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="securityContactName")
-    private final @Nullable Input<String> securityContactName;
+        private final @Nullable Input<String> securityContactName;
 
     public Input<String> getSecurityContactName() {
         return this.securityContactName == null ? Input.empty() : this.securityContactName;
@@ -169,7 +169,6 @@ public final class SecurityContactArgs extends io.pulumi.resources.ResourceArgs 
             this.securityContactName = Input.ofNullable(securityContactName);
             return this;
         }
-
         public SecurityContactArgs build() {
             return new SecurityContactArgs(alertNotifications, emails, notificationsByRole, phone, securityContactName);
         }

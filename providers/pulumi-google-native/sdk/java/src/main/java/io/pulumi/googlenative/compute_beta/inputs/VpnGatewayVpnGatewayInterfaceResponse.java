@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="interconnectAttachment", required=true)
-    private final String interconnectAttachment;
+      private final String interconnectAttachment;
 
     public String getInterconnectAttachment() {
         return this.interconnectAttachment;
@@ -32,7 +32,7 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="ipAddress", required=true)
-    private final String ipAddress;
+      private final String ipAddress;
 
     public String getIpAddress() {
         return this.ipAddress;
@@ -81,7 +81,6 @@ public final class VpnGatewayVpnGatewayInterfaceResponse extends io.pulumi.resou
             this.ipAddress = Objects.requireNonNull(ipAddress);
             return this;
         }
-
         public VpnGatewayVpnGatewayInterfaceResponse build() {
             return new VpnGatewayVpnGatewayInterfaceResponse(interconnectAttachment, ipAddress);
         }

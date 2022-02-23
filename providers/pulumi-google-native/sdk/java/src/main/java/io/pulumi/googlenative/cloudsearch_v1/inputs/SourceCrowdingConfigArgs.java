@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudsearch_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="numResults")
-    private final @Nullable Input<Integer> numResults;
+      private final @Nullable Input<Integer> numResults;
 
     public Input<Integer> getNumResults() {
         return this.numResults == null ? Input.empty() : this.numResults;
@@ -34,7 +34,7 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="numSuggestions")
-    private final @Nullable Input<Integer> numSuggestions;
+      private final @Nullable Input<Integer> numSuggestions;
 
     public Input<Integer> getNumSuggestions() {
         return this.numSuggestions == null ? Input.empty() : this.numSuggestions;
@@ -93,7 +93,6 @@ public final class SourceCrowdingConfigArgs extends io.pulumi.resources.Resource
             this.numSuggestions = Input.ofNullable(numSuggestions);
             return this;
         }
-
         public SourceCrowdingConfigArgs build() {
             return new SourceCrowdingConfigArgs(numResults, numSuggestions);
         }

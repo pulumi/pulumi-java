@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gkehub_v1.inputs.CommonFeatureSpecArgs;
 import java.lang.String;
 import java.util.Map;
@@ -17,7 +17,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
     public static final FeatureArgs Empty = new FeatureArgs();
 
     @InputImport(name="featureId")
-    private final @Nullable Input<String> featureId;
+      private final @Nullable Input<String> featureId;
 
     public Input<String> getFeatureId() {
         return this.featureId == null ? Input.empty() : this.featureId;
@@ -28,14 +28,14 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -46,21 +46,21 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="membershipSpecs")
-    private final @Nullable Input<Map<String,String>> membershipSpecs;
+      private final @Nullable Input<Map<String,String>> membershipSpecs;
 
     public Input<Map<String,String>> getMembershipSpecs() {
         return this.membershipSpecs == null ? Input.empty() : this.membershipSpecs;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
@@ -71,7 +71,7 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="spec")
-    private final @Nullable Input<CommonFeatureSpecArgs> spec;
+      private final @Nullable Input<CommonFeatureSpecArgs> spec;
 
     public Input<CommonFeatureSpecArgs> getSpec() {
         return this.spec == null ? Input.empty() : this.spec;
@@ -205,7 +205,6 @@ public final class FeatureArgs extends io.pulumi.resources.ResourceArgs {
             this.spec = Input.ofNullable(spec);
             return this;
         }
-
         public FeatureArgs build() {
             return new FeatureArgs(featureId, labels, location, membershipSpecs, project, requestId, spec);
         }

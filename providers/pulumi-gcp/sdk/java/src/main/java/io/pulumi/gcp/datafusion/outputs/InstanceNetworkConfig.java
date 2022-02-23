@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.datafusion.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -80,7 +80,6 @@ public final class InstanceNetworkConfig {
             this.network = Objects.requireNonNull(network);
             return this;
         }
-
         public InstanceNetworkConfig build() {
             return new InstanceNetworkConfig(ipAllocation, network);
         }

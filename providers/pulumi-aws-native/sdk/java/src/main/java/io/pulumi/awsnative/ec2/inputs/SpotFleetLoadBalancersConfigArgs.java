@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ec2.inputs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetClassicLoadBalancersConfigArgs;
 import io.pulumi.awsnative.ec2.inputs.SpotFleetTargetGroupsConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -16,14 +16,14 @@ public final class SpotFleetLoadBalancersConfigArgs extends io.pulumi.resources.
     public static final SpotFleetLoadBalancersConfigArgs Empty = new SpotFleetLoadBalancersConfigArgs();
 
     @InputImport(name="classicLoadBalancersConfig")
-    private final @Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
+        private final @Nullable Input<SpotFleetClassicLoadBalancersConfigArgs> classicLoadBalancersConfig;
 
     public Input<SpotFleetClassicLoadBalancersConfigArgs> getClassicLoadBalancersConfig() {
         return this.classicLoadBalancersConfig == null ? Input.empty() : this.classicLoadBalancersConfig;
     }
 
     @InputImport(name="targetGroupsConfig")
-    private final @Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
+        private final @Nullable Input<SpotFleetTargetGroupsConfigArgs> targetGroupsConfig;
 
     public Input<SpotFleetTargetGroupsConfigArgs> getTargetGroupsConfig() {
         return this.targetGroupsConfig == null ? Input.empty() : this.targetGroupsConfig;
@@ -82,7 +82,6 @@ public final class SpotFleetLoadBalancersConfigArgs extends io.pulumi.resources.
             this.targetGroupsConfig = Input.ofNullable(targetGroupsConfig);
             return this;
         }
-
         public SpotFleetLoadBalancersConfigArgs build() {
             return new SpotFleetLoadBalancersConfigArgs(classicLoadBalancersConfig, targetGroupsConfig);
         }

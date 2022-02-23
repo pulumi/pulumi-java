@@ -14,7 +14,7 @@ import io.pulumi.azurenative.network.outputs.SoaRecordResponse;
 import io.pulumi.azurenative.network.outputs.SrvRecordResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
 import io.pulumi.azurenative.network.outputs.TxtRecordResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -447,7 +447,6 @@ public final class GetRecordSetResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetRecordSetResult build() {
             return new GetRecordSetResult(aRecords, aaaaRecords, caaRecords, cnameRecord, etag, fqdn, id, metadata, mxRecords, name, nsRecords, provisioningState, ptrRecords, soaRecord, srvRecords, targetResource, ttl, txtRecords, type);
         }

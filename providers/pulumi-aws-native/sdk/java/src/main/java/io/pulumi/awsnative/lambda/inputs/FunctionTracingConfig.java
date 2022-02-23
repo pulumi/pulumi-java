@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lambda.inputs;
 
 import io.pulumi.awsnative.lambda.enums.FunctionTracingConfigMode;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FunctionTracingConfig extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable FunctionTracingConfigMode mode;
+        private final @Nullable FunctionTracingConfigMode mode;
 
     public Optional<FunctionTracingConfigMode> getMode() {
         return this.mode == null ? Optional.empty() : Optional.ofNullable(this.mode);
@@ -61,7 +61,6 @@ public final class FunctionTracingConfig extends io.pulumi.resources.InvokeArgs 
             this.mode = mode;
             return this;
         }
-
         public FunctionTracingConfig build() {
             return new FunctionTracingConfig(mode);
         }

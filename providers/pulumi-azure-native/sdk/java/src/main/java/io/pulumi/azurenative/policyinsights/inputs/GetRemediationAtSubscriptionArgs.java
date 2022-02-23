@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRemediationAtSubscriptionArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="remediationName", required=true)
-    private final String remediationName;
+        private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -55,7 +55,6 @@ public final class GetRemediationAtSubscriptionArgs extends io.pulumi.resources.
             this.remediationName = Objects.requireNonNull(remediationName);
             return this;
         }
-
         public GetRemediationAtSubscriptionArgs build() {
             return new GetRemediationAtSubscriptionArgs(remediationName);
         }

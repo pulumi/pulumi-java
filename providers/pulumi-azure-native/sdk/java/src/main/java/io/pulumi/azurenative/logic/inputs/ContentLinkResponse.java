@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.azurenative.logic.inputs.ContentHashResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Object;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentHash", required=true)
-    private final ContentHashResponse contentHash;
+        private final ContentHashResponse contentHash;
 
     public ContentHashResponse getContentHash() {
         return this.contentHash;
@@ -37,7 +37,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentSize", required=true)
-    private final Double contentSize;
+        private final Double contentSize;
 
     public Double getContentSize() {
         return this.contentSize;
@@ -48,7 +48,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="contentVersion", required=true)
-    private final String contentVersion;
+        private final String contentVersion;
 
     public String getContentVersion() {
         return this.contentVersion;
@@ -59,7 +59,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="metadata", required=true)
-    private final Object metadata;
+        private final Object metadata;
 
     public Object getMetadata() {
         return this.metadata;
@@ -70,7 +70,7 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable String uri;
+        private final @Nullable String uri;
 
     public Optional<String> getUri() {
         return this.uri == null ? Optional.empty() : Optional.ofNullable(this.uri);
@@ -149,7 +149,6 @@ public final class ContentLinkResponse extends io.pulumi.resources.InvokeArgs {
             this.uri = uri;
             return this;
         }
-
         public ContentLinkResponse build() {
             return new ContentLinkResponse(contentHash, contentSize, contentVersion, metadata, uri);
         }

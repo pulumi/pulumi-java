@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterMasterAuthorizedNetworksConfigCidrBlockArgs;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cidrBlocks")
-    private final @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
+        private final @Nullable Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> cidrBlocks;
 
     public Input<List<ClusterMasterAuthorizedNetworksConfigCidrBlockArgs>> getCidrBlocks() {
         return this.cidrBlocks == null ? Input.empty() : this.cidrBlocks;
@@ -64,7 +64,6 @@ public final class ClusterMasterAuthorizedNetworksConfigArgs extends io.pulumi.r
             this.cidrBlocks = Input.ofNullable(cidrBlocks);
             return this;
         }
-
         public ClusterMasterAuthorizedNetworksConfigArgs build() {
             return new ClusterMasterAuthorizedNetworksConfigArgs(cidrBlocks);
         }

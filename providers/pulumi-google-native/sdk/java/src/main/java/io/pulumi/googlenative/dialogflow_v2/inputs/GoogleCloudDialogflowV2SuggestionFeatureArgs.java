@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v2.enums.GoogleCloudDialogflowV2SuggestionFeatureType;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<GoogleCloudDialogflowV2SuggestionFeatureType> type;
+      private final @Nullable Input<GoogleCloudDialogflowV2SuggestionFeatureType> type;
 
     public Input<GoogleCloudDialogflowV2SuggestionFeatureType> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -66,7 +66,6 @@ public final class GoogleCloudDialogflowV2SuggestionFeatureArgs extends io.pulum
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public GoogleCloudDialogflowV2SuggestionFeatureArgs build() {
             return new GoogleCloudDialogflowV2SuggestionFeatureArgs(type);
         }

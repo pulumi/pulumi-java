@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.BasicSliResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.RequestBasedSliResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.WindowsBasedSliResponse;
@@ -97,7 +97,6 @@ public final class ServiceLevelIndicatorResponse {
             this.windowsBased = Objects.requireNonNull(windowsBased);
             return this;
         }
-
         public ServiceLevelIndicatorResponse build() {
             return new ServiceLevelIndicatorResponse(basicSli, requestBased, windowsBased);
         }

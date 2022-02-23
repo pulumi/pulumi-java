@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.container.inputs.ClusterResourceUsageExportConfigBigqueryDestinationArgs;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="bigqueryDestination", required=true)
-    private final Input<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
+        private final Input<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
 
     public Input<ClusterResourceUsageExportConfigBigqueryDestinationArgs> getBigqueryDestination() {
         return this.bigqueryDestination;
@@ -32,7 +32,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableNetworkEgressMetering")
-    private final @Nullable Input<Boolean> enableNetworkEgressMetering;
+        private final @Nullable Input<Boolean> enableNetworkEgressMetering;
 
     public Input<Boolean> getEnableNetworkEgressMetering() {
         return this.enableNetworkEgressMetering == null ? Input.empty() : this.enableNetworkEgressMetering;
@@ -47,7 +47,7 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="enableResourceConsumptionMetering")
-    private final @Nullable Input<Boolean> enableResourceConsumptionMetering;
+        private final @Nullable Input<Boolean> enableResourceConsumptionMetering;
 
     public Input<Boolean> getEnableResourceConsumptionMetering() {
         return this.enableResourceConsumptionMetering == null ? Input.empty() : this.enableResourceConsumptionMetering;
@@ -121,7 +121,6 @@ public final class ClusterResourceUsageExportConfigArgs extends io.pulumi.resour
             this.enableResourceConsumptionMetering = Input.ofNullable(enableResourceConsumptionMetering);
             return this;
         }
-
         public ClusterResourceUsageExportConfigArgs build() {
             return new ClusterResourceUsageExportConfigArgs(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);
         }

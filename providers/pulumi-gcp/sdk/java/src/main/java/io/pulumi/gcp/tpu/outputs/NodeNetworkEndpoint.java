@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.tpu.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -61,7 +61,6 @@ public final class NodeNetworkEndpoint {
             this.port = port;
             return this;
         }
-
         public NodeNetworkEndpoint build() {
             return new NodeNetworkEndpoint(ipAddress, port);
         }

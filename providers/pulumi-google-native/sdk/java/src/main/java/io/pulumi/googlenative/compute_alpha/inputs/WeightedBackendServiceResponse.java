@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.HttpHeaderActionResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="backendService", required=true)
-    private final String backendService;
+      private final String backendService;
 
     public String getBackendService() {
         return this.backendService;
@@ -34,7 +34,7 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="headerAction", required=true)
-    private final HttpHeaderActionResponse headerAction;
+      private final HttpHeaderActionResponse headerAction;
 
     public HttpHeaderActionResponse getHeaderAction() {
         return this.headerAction;
@@ -45,7 +45,7 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="weight", required=true)
-    private final Integer weight;
+      private final Integer weight;
 
     public Integer getWeight() {
         return this.weight;
@@ -104,7 +104,6 @@ public final class WeightedBackendServiceResponse extends io.pulumi.resources.In
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public WeightedBackendServiceResponse build() {
             return new WeightedBackendServiceResponse(backendService, headerAction, weight);
         }

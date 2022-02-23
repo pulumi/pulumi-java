@@ -6,7 +6,7 @@ package io.pulumi.azurenative.web.inputs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectLoginArgs;
 import io.pulumi.azurenative.web.inputs.OpenIdConnectRegistrationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -36,7 +36,7 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="login")
-    private final @Nullable Input<OpenIdConnectLoginArgs> login;
+        private final @Nullable Input<OpenIdConnectLoginArgs> login;
 
     public Input<OpenIdConnectLoginArgs> getLogin() {
         return this.login == null ? Input.empty() : this.login;
@@ -47,7 +47,7 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="registration")
-    private final @Nullable Input<OpenIdConnectRegistrationArgs> registration;
+        private final @Nullable Input<OpenIdConnectRegistrationArgs> registration;
 
     public Input<OpenIdConnectRegistrationArgs> getRegistration() {
         return this.registration == null ? Input.empty() : this.registration;
@@ -121,7 +121,6 @@ public final class CustomOpenIdConnectProviderArgs extends io.pulumi.resources.R
             this.registration = Input.ofNullable(registration);
             return this;
         }
-
         public CustomOpenIdConnectProviderArgs build() {
             return new CustomOpenIdConnectProviderArgs(enabled, login, registration);
         }

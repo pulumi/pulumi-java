@@ -5,8 +5,8 @@ package io.pulumi.googlenative.servicedirectory_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.servicedirectory_v1.ServiceArgs;
 import io.pulumi.googlenative.servicedirectory_v1.outputs.EndpointResponse;
@@ -64,13 +64,6 @@ public class Service extends io.pulumi.resources.CustomResource {
         return this.name;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Service(String name) {
-        super("google-native:servicedirectory/v1:Service", name, ServiceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

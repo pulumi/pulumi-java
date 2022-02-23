@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.marketplace.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="collectionId", required=true)
-    private final String collectionId;
+        private final String collectionId;
 
     public String getCollectionId() {
         return this.collectionId;
@@ -28,7 +28,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="offerId", required=true)
-    private final String offerId;
+        private final String offerId;
 
     public String getOfferId() {
         return this.offerId;
@@ -39,7 +39,7 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="privateStoreId", required=true)
-    private final String privateStoreId;
+        private final String privateStoreId;
 
     public String getPrivateStoreId() {
         return this.privateStoreId;
@@ -98,7 +98,6 @@ public final class GetPrivateStoreCollectionOfferArgs extends io.pulumi.resource
             this.privateStoreId = Objects.requireNonNull(privateStoreId);
             return this;
         }
-
         public GetPrivateStoreCollectionOfferArgs build() {
             return new GetPrivateStoreCollectionOfferArgs(collectionId, offerId, privateStoreId);
         }

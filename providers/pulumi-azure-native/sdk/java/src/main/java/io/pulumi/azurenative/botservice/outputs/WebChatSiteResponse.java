@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class WebChatSiteResponse {
             this.siteName = Objects.requireNonNull(siteName);
             return this;
         }
-
         public WebChatSiteResponse build() {
             return new WebChatSiteResponse(isEnabled, isWebchatPreviewEnabled, key, key2, siteId, siteName);
         }

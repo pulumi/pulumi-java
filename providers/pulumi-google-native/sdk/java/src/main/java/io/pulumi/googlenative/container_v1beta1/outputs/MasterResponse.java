@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class MasterResponse {
         public Builder(MasterResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public MasterResponse build() {
             return new MasterResponse();
         }

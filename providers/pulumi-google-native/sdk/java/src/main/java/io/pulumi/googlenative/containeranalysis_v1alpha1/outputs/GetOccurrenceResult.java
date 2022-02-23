@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.AttestationResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.BuildDetailsResponse;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.outputs.ComplianceOccurrenceResponse;
@@ -531,7 +531,6 @@ public final class GetOccurrenceResult {
             this.vulnerabilityDetails = Objects.requireNonNull(vulnerabilityDetails);
             return this;
         }
-
         public GetOccurrenceResult build() {
             return new GetOccurrenceResult(attestation, buildDetails, compliance, createTime, deployment, derivedImage, discovered, dsseAttestation, envelope, installation, kind, name, noteName, remediation, resource, resourceUrl, sbom, spdxFile, spdxPackage, spdxRelationship, updateTime, upgrade, vulnerabilityDetails);
         }

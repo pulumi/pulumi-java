@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AutoscalingConfigResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="policyUri", required=true)
-    private final String policyUri;
+      private final String policyUri;
 
     public String getPolicyUri() {
         return this.policyUri;
@@ -59,7 +59,6 @@ public final class AutoscalingConfigResponse extends io.pulumi.resources.InvokeA
             this.policyUri = Objects.requireNonNull(policyUri);
             return this;
         }
-
         public AutoscalingConfigResponse build() {
             return new AutoscalingConfigResponse(policyUri);
         }

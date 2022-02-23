@@ -12,8 +12,8 @@ import io.pulumi.awsnative.ecs.outputs.TaskSetScale;
 import io.pulumi.awsnative.ecs.outputs.TaskSetServiceRegistry;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import javax.annotation.Nullable;
@@ -149,13 +149,6 @@ public class TaskSet extends io.pulumi.resources.CustomResource {
         return this.taskDefinition;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TaskSet(String name) {
-        super("aws-native:ecs:TaskSet", name, TaskSetArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

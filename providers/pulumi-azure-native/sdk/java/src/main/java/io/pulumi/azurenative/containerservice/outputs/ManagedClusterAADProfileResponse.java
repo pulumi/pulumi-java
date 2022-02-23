@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -183,7 +183,6 @@ public final class ManagedClusterAADProfileResponse {
             this.tenantID = tenantID;
             return this;
         }
-
         public ManagedClusterAADProfileResponse build() {
             return new ManagedClusterAADProfileResponse(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
         }

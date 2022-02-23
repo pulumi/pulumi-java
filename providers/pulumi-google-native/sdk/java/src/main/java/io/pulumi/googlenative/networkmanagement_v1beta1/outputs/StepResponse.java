@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkmanagement_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.AbortInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.CloudSQLInstanceInfoResponse;
 import io.pulumi.googlenative.networkmanagement_v1beta1.outputs.DeliverInfoResponse;
@@ -447,7 +447,6 @@ public final class StepResponse {
             this.vpnTunnel = Objects.requireNonNull(vpnTunnel);
             return this;
         }
-
         public StepResponse build() {
             return new StepResponse(abort, causesDrop, cloudSqlInstance, deliver, description, drop, endpoint, firewall, forward, forwardingRule, gkeMaster, instance, loadBalancer, network, project, route, state, vpnGateway, vpnTunnel);
         }

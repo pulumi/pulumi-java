@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
 import io.pulumi.awsnative.lex.outputs.BotStillWaitingResponseSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -120,7 +120,6 @@ public final class BotWaitAndContinueSpecification {
             this.waitingResponse = Objects.requireNonNull(waitingResponse);
             return this;
         }
-
         public BotWaitAndContinueSpecification build() {
             return new BotWaitAndContinueSpecification(continueResponse, isActive, stillWaitingResponse, waitingResponse);
         }

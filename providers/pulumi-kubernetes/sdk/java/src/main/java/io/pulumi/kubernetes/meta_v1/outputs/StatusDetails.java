@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.meta_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.StatusCause;
 import java.lang.Integer;
 import java.lang.String;
@@ -163,7 +163,6 @@ public final class StatusDetails {
             this.uid = uid;
             return this;
         }
-
         public StatusDetails build() {
             return new StatusDetails(causes, group, kind, name, retryAfterSeconds, uid);
         }

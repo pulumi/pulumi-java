@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetAccessItemResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.DatasetTagsItemResponse;
@@ -409,7 +409,6 @@ public final class GetDatasetResult {
             this.tags = Objects.requireNonNull(tags);
             return this;
         }
-
         public GetDatasetResult build() {
             return new GetDatasetResult(access, creationTime, datasetReference, defaultCollation, defaultEncryptionConfiguration, defaultPartitionExpirationMs, defaultTableExpirationMs, description, etag, friendlyName, isCaseInsensitive, kind, labels, lastModifiedTime, location, satisfiesPZS, selfLink, tags);
         }

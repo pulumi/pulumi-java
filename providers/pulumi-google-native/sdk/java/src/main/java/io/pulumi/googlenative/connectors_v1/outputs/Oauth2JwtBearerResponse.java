@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.connectors_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.connectors_v1.outputs.JwtClaimsResponse;
 import io.pulumi.googlenative.connectors_v1.outputs.SecretResponse;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class Oauth2JwtBearerResponse {
             this.jwtClaims = Objects.requireNonNull(jwtClaims);
             return this;
         }
-
         public Oauth2JwtBearerResponse build() {
             return new Oauth2JwtBearerResponse(clientKey, jwtClaims);
         }

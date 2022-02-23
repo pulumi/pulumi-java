@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.recaptchaenterprise_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1AndroidKeySettingsResponse;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1IOSKeySettingsResponse;
 import io.pulumi.googlenative.recaptchaenterprise_v1.outputs.GoogleCloudRecaptchaenterpriseV1TestingOptionsResponse;
@@ -227,7 +227,6 @@ public final class GetKeyResult {
             this.webSettings = Objects.requireNonNull(webSettings);
             return this;
         }
-
         public GetKeyResult build() {
             return new GetKeyResult(androidSettings, createTime, displayName, iosSettings, labels, name, testingOptions, wafSettings, webSettings);
         }

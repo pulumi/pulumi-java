@@ -8,7 +8,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.MpiResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputDataBindingResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.PyTorchResponse;
 import io.pulumi.azurenative.machinelearningservices.inputs.TensorFlowResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -30,7 +30,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="codeId")
-    private final @Nullable String codeId;
+        private final @Nullable String codeId;
 
     public Optional<String> getCodeId() {
         return this.codeId == null ? Optional.empty() : Optional.ofNullable(this.codeId);
@@ -41,7 +41,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="command", required=true)
-    private final String command;
+        private final String command;
 
     public String getCommand() {
         return this.command;
@@ -52,7 +52,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="distribution")
-    private final @Nullable Object distribution;
+        private final @Nullable Object distribution;
 
     public Object getDistribution() {
         return this.distribution == null ? null : this.distribution;
@@ -63,7 +63,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable String environmentId;
+        private final @Nullable String environmentId;
 
     public Optional<String> getEnvironmentId() {
         return this.environmentId == null ? Optional.empty() : Optional.ofNullable(this.environmentId);
@@ -74,7 +74,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Map<String,String> environmentVariables;
+        private final @Nullable Map<String,String> environmentVariables;
 
     public Map<String,String> getEnvironmentVariables() {
         return this.environmentVariables == null ? Map.of() : this.environmentVariables;
@@ -85,7 +85,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="inputDataBindings")
-    private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
+        private final @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
     public Map<String,InputDataBindingResponse> getInputDataBindings() {
         return this.inputDataBindings == null ? Map.of() : this.inputDataBindings;
@@ -96,7 +96,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="outputDataBindings")
-    private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
+        private final @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
     public Map<String,OutputDataBindingResponse> getOutputDataBindings() {
         return this.outputDataBindings == null ? Map.of() : this.outputDataBindings;
@@ -108,7 +108,7 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="timeout")
-    private final @Nullable String timeout;
+        private final @Nullable String timeout;
 
     public Optional<String> getTimeout() {
         return this.timeout == null ? Optional.empty() : Optional.ofNullable(this.timeout);
@@ -217,7 +217,6 @@ public final class TrialComponentResponse extends io.pulumi.resources.InvokeArgs
             this.timeout = timeout;
             return this;
         }
-
         public TrialComponentResponse build() {
             return new TrialComponentResponse(codeId, command, distribution, environmentId, environmentVariables, inputDataBindings, outputDataBindings, timeout);
         }

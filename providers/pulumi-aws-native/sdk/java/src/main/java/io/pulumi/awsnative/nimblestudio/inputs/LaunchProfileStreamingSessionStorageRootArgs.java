@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
      * 
      */
     @InputImport(name="linux")
-    private final @Nullable Input<String> linux;
+        private final @Nullable Input<String> linux;
 
     public Input<String> getLinux() {
         return this.linux == null ? Input.empty() : this.linux;
@@ -35,7 +35,7 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
      * 
      */
     @InputImport(name="windows")
-    private final @Nullable Input<String> windows;
+        private final @Nullable Input<String> windows;
 
     public Input<String> getWindows() {
         return this.windows == null ? Input.empty() : this.windows;
@@ -94,7 +94,6 @@ public final class LaunchProfileStreamingSessionStorageRootArgs extends io.pulum
             this.windows = Input.ofNullable(windows);
             return this;
         }
-
         public LaunchProfileStreamingSessionStorageRootArgs build() {
             return new LaunchProfileStreamingSessionStorageRootArgs(linux, windows);
         }

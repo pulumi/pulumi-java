@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ErrorProtoResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class JobStatusResponse {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public JobStatusResponse build() {
             return new JobStatusResponse(errorResult, errors, state);
         }

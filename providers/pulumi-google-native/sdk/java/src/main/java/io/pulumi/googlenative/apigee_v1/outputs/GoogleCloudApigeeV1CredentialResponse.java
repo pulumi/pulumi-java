@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1ApiProductRefResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import java.lang.String;
@@ -203,7 +203,6 @@ public final class GoogleCloudApigeeV1CredentialResponse {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GoogleCloudApigeeV1CredentialResponse build() {
             return new GoogleCloudApigeeV1CredentialResponse(apiProducts, attributes, consumerKey, consumerSecret, expiresAt, issuedAt, scopes, status);
         }

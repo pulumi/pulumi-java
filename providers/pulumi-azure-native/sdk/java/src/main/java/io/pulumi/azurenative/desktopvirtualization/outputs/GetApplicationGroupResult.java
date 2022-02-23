@@ -7,7 +7,7 @@ import io.pulumi.azurenative.desktopvirtualization.outputs.MigrationRequestPrope
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseIdentity;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponsePlan;
 import io.pulumi.azurenative.desktopvirtualization.outputs.ResourceModelWithAllowedPropertySetResponseSku;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -415,7 +415,6 @@ public final class GetApplicationGroupResult {
             this.workspaceArmPath = Objects.requireNonNull(workspaceArmPath);
             return this;
         }
-
         public GetApplicationGroupResult build() {
             return new GetApplicationGroupResult(applicationGroupType, cloudPcResource, description, etag, friendlyName, hostPoolArmPath, id, identity, kind, location, managedBy, migrationRequest, name, objectId, plan, sku, tags, type, workspaceArmPath);
         }

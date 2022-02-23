@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotResponseSpecification;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -73,7 +73,6 @@ public final class BotPostFulfillmentStatusSpecification {
             this.timeoutResponse = timeoutResponse;
             return this;
         }
-
         public BotPostFulfillmentStatusSpecification build() {
             return new BotPostFulfillmentStatusSpecification(failureResponse, successResponse, timeoutResponse);
         }

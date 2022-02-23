@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IngressBackend;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IngressRule;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.IngressTLS;
@@ -122,7 +122,6 @@ public final class IngressSpec {
             this.tls = tls;
             return this;
         }
-
         public IngressSpec build() {
             return new IngressSpec(backend, ingressClassName, rules, tls);
         }

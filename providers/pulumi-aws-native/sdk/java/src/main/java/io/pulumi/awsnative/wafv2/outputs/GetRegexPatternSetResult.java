@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.wafv2.outputs;
 
 import io.pulumi.awsnative.wafv2.outputs.RegexPatternSetTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -125,7 +125,6 @@ public final class GetRegexPatternSetResult {
             this.tags = tags;
             return this;
         }
-
         public GetRegexPatternSetResult build() {
             return new GetRegexPatternSetResult(arn, description, id, regularExpressionList, tags);
         }

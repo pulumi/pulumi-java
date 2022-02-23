@@ -6,7 +6,7 @@ package io.pulumi.azurenative.resourceconnector.outputs;
 import io.pulumi.azurenative.resourceconnector.outputs.AppliancePropertiesResponseInfrastructureConfig;
 import io.pulumi.azurenative.resourceconnector.outputs.IdentityResponse;
 import io.pulumi.azurenative.resourceconnector.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -311,7 +311,6 @@ public final class GetApplianceResult {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public GetApplianceResult build() {
             return new GetApplianceResult(distro, id, identity, infrastructureConfig, location, name, provisioningState, publicKey, status, systemData, tags, type, version);
         }

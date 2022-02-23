@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="prefixListId", required=true)
-    private final String prefixListId;
+        private final String prefixListId;
 
     public String getPrefixListId() {
         return this.prefixListId;
@@ -55,7 +55,6 @@ public final class GetPrefixListArgs extends io.pulumi.resources.InvokeArgs {
             this.prefixListId = Objects.requireNonNull(prefixListId);
             return this;
         }
-
         public GetPrefixListArgs build() {
             return new GetPrefixListArgs(prefixListId);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="cidrs")
-    private final @Nullable Input<List<String>> cidrs;
+        private final @Nullable Input<List<String>> cidrs;
 
     public Input<List<String>> getCidrs() {
         return this.cidrs == null ? Input.empty() : this.cidrs;
@@ -37,7 +37,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="count")
-    private final @Nullable Input<String> count;
+        private final @Nullable Input<String> count;
 
     public Input<String> getCount() {
         return this.count == null ? Input.empty() : this.count;
@@ -48,7 +48,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="number")
-    private final @Nullable Input<Double> number;
+        private final @Nullable Input<Double> number;
 
     public Input<Double> getNumber() {
         return this.number == null ? Input.empty() : this.number;
@@ -59,7 +59,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="numbers")
-    private final @Nullable Input<List<Double>> numbers;
+        private final @Nullable Input<List<Double>> numbers;
 
     public Input<List<Double>> getNumbers() {
         return this.numbers == null ? Input.empty() : this.numbers;
@@ -70,7 +70,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<Integer>> ports;
+        private final @Nullable Input<List<Integer>> ports;
 
     public Input<List<Integer>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -81,7 +81,7 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="strings")
-    private final @Nullable Input<List<String>> strings;
+        private final @Nullable Input<List<String>> strings;
 
     public Input<List<String>> getStrings() {
         return this.strings == null ? Input.empty() : this.strings;
@@ -200,7 +200,6 @@ public final class SecurityProfileMetricValueArgs extends io.pulumi.resources.Re
             this.strings = Input.ofNullable(strings);
             return this;
         }
-
         public SecurityProfileMetricValueArgs build() {
             return new SecurityProfileMetricValueArgs(cidrs, count, number, numbers, ports, strings);
         }

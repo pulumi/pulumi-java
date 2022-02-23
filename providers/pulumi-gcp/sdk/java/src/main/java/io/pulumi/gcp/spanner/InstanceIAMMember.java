@@ -5,8 +5,8 @@ package io.pulumi.gcp.spanner;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.spanner.InstanceIAMMemberArgs;
 import io.pulumi.gcp.spanner.inputs.InstanceIAMMemberState;
@@ -136,13 +136,6 @@ public class InstanceIAMMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceIAMMember(String name) {
-        super("gcp:spanner/instanceIAMMember:InstanceIAMMember", name, InstanceIAMMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

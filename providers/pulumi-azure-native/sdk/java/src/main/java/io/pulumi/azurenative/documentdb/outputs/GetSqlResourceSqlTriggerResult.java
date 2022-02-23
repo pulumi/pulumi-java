@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.SqlTriggerGetPropertiesResponseResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -154,7 +154,6 @@ public final class GetSqlResourceSqlTriggerResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSqlResourceSqlTriggerResult build() {
             return new GetSqlResourceSqlTriggerResult(id, location, name, resource, tags, type);
         }

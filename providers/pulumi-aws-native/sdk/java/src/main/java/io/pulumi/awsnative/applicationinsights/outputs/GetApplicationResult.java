@@ -7,7 +7,7 @@ import io.pulumi.awsnative.applicationinsights.outputs.ApplicationComponentMonit
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationCustomComponent;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationLogPatternSet;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -229,7 +229,6 @@ public final class GetApplicationResult {
             this.tags = tags;
             return this;
         }
-
         public GetApplicationResult build() {
             return new GetApplicationResult(applicationARN, autoConfigurationEnabled, cWEMonitorEnabled, componentMonitoringSettings, customComponents, logPatternSets, opsCenterEnabled, opsItemSNSTopicArn, tags);
         }

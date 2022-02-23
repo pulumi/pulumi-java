@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.FileReferenceResponse;
 import io.pulumi.googlenative.testing_v1.outputs.IosDeviceFileResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class IosTestSetupResponse {
             this.pushFiles = Objects.requireNonNull(pushFiles);
             return this;
         }
-
         public IosTestSetupResponse build() {
             return new IosTestSetupResponse(additionalIpas, networkProfile, pullDirectories, pushFiles);
         }

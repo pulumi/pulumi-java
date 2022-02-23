@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.AvroFileFormatResponse;
 import io.pulumi.googlenative.datastream_v1alpha1.outputs.JsonFileFormatResponse;
 import java.lang.Integer;
@@ -140,7 +140,6 @@ public final class GcsDestinationConfigResponse {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public GcsDestinationConfigResponse build() {
             return new GcsDestinationConfigResponse(avroFileFormat, fileRotationInterval, fileRotationMb, jsonFileFormat, path);
         }

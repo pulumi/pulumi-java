@@ -5,8 +5,8 @@ package io.pulumi.kubernetes.extensions_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.kubernetes.Utilities;
 import io.pulumi.kubernetes.extensions_v1beta1.IngressListArgs;
 import io.pulumi.kubernetes.extensions_v1beta1.outputs.Ingress;
@@ -78,13 +78,6 @@ public class IngressList extends io.pulumi.resources.CustomResource {
         return this.metadata;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public IngressList(String name) {
-        super("kubernetes:extensions/v1beta1:IngressList", name, IngressListArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

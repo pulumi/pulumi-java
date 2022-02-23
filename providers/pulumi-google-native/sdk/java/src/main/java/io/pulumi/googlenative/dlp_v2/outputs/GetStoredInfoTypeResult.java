@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dlp_v2.outputs.GooglePrivacyDlpV2StoredInfoTypeVersionResponse;
 import java.lang.String;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GetStoredInfoTypeResult {
             this.pendingVersions = Objects.requireNonNull(pendingVersions);
             return this;
         }
-
         public GetStoredInfoTypeResult build() {
             return new GetStoredInfoTypeResult(currentVersion, name, pendingVersions);
         }

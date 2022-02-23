@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.MonthlyScheduleResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.TimeOfDayResponse;
 import io.pulumi.googlenative.osconfig_v1beta.outputs.TimeZoneResponse;
@@ -225,7 +225,6 @@ public final class RecurringScheduleResponse {
             this.weekly = Objects.requireNonNull(weekly);
             return this;
         }
-
         public RecurringScheduleResponse build() {
             return new RecurringScheduleResponse(endTime, frequency, lastExecuteTime, monthly, nextExecuteTime, startTime, timeOfDay, timeZone, weekly);
         }

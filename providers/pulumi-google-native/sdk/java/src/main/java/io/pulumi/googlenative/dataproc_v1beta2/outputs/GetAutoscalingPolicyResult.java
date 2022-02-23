@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.BasicAutoscalingAlgorithmResponse;
 import io.pulumi.googlenative.dataproc_v1beta2.outputs.InstanceGroupAutoscalingPolicyConfigResponse;
 import java.lang.String;
@@ -110,7 +110,6 @@ public final class GetAutoscalingPolicyResult {
             this.workerConfig = Objects.requireNonNull(workerConfig);
             return this;
         }
-
         public GetAutoscalingPolicyResult build() {
             return new GetAutoscalingPolicyResult(basicAlgorithm, name, secondaryWorkerConfig, workerConfig);
         }

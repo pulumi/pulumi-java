@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="connectionStatus", required=true)
-    private final String connectionStatus;
+        private final String connectionStatus;
 
     public String getConnectionStatus() {
         return this.connectionStatus;
@@ -33,7 +33,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="egressBytesTransferred", required=true)
-    private final Double egressBytesTransferred;
+        private final Double egressBytesTransferred;
 
     public Double getEgressBytesTransferred() {
         return this.egressBytesTransferred;
@@ -44,7 +44,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="ingressBytesTransferred", required=true)
-    private final Double ingressBytesTransferred;
+        private final Double ingressBytesTransferred;
 
     public Double getIngressBytesTransferred() {
         return this.ingressBytesTransferred;
@@ -55,7 +55,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="lastConnectionEstablishedUtcTime", required=true)
-    private final String lastConnectionEstablishedUtcTime;
+        private final String lastConnectionEstablishedUtcTime;
 
     public String getLastConnectionEstablishedUtcTime() {
         return this.lastConnectionEstablishedUtcTime;
@@ -66,7 +66,7 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tunnel", required=true)
-    private final String tunnel;
+        private final String tunnel;
 
     public String getTunnel() {
         return this.tunnel;
@@ -145,7 +145,6 @@ public final class TunnelConnectionHealthResponse extends io.pulumi.resources.In
             this.tunnel = Objects.requireNonNull(tunnel);
             return this;
         }
-
         public TunnelConnectionHealthResponse build() {
             return new TunnelConnectionHealthResponse(connectionStatus, egressBytesTransferred, ingressBytesTransferred, lastConnectionEstablishedUtcTime, tunnel);
         }

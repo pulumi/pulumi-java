@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -115,7 +115,6 @@ public final class CIFSMountConfigurationResponse {
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public CIFSMountConfigurationResponse build() {
             return new CIFSMountConfigurationResponse(mountOptions, password, relativeMountPath, source, username);
         }

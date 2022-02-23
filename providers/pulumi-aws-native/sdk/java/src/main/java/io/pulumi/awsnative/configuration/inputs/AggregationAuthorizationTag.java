@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.configuration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AggregationAuthorizationTag extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="key", required=true)
-    private final String key;
+        private final String key;
 
     public String getKey() {
         return this.key;
@@ -32,7 +32,7 @@ public final class AggregationAuthorizationTag extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class AggregationAuthorizationTag extends io.pulumi.resources.Invok
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public AggregationAuthorizationTag build() {
             return new AggregationAuthorizationTag(key, value);
         }

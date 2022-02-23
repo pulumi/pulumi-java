@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyDailyCycleArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyHourlyCycleArgs;
 import io.pulumi.googlenative.compute_alpha.inputs.ResourcePolicyWeeklyCycleArgs;
@@ -21,21 +21,21 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
     public static final ResourcePolicySnapshotSchedulePolicyScheduleArgs Empty = new ResourcePolicySnapshotSchedulePolicyScheduleArgs();
 
     @InputImport(name="dailySchedule")
-    private final @Nullable Input<ResourcePolicyDailyCycleArgs> dailySchedule;
+      private final @Nullable Input<ResourcePolicyDailyCycleArgs> dailySchedule;
 
     public Input<ResourcePolicyDailyCycleArgs> getDailySchedule() {
         return this.dailySchedule == null ? Input.empty() : this.dailySchedule;
     }
 
     @InputImport(name="hourlySchedule")
-    private final @Nullable Input<ResourcePolicyHourlyCycleArgs> hourlySchedule;
+      private final @Nullable Input<ResourcePolicyHourlyCycleArgs> hourlySchedule;
 
     public Input<ResourcePolicyHourlyCycleArgs> getHourlySchedule() {
         return this.hourlySchedule == null ? Input.empty() : this.hourlySchedule;
     }
 
     @InputImport(name="weeklySchedule")
-    private final @Nullable Input<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
+      private final @Nullable Input<ResourcePolicyWeeklyCycleArgs> weeklySchedule;
 
     public Input<ResourcePolicyWeeklyCycleArgs> getWeeklySchedule() {
         return this.weeklySchedule == null ? Input.empty() : this.weeklySchedule;
@@ -109,7 +109,6 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleArgs extends io.p
             this.weeklySchedule = Input.ofNullable(weeklySchedule);
             return this;
         }
-
         public ResourcePolicySnapshotSchedulePolicyScheduleArgs build() {
             return new ResourcePolicySnapshotSchedulePolicyScheduleArgs(dailySchedule, hourlySchedule, weeklySchedule);
         }

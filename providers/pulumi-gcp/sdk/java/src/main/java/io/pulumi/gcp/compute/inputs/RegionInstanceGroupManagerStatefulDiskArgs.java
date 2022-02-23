@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class RegionInstanceGroupManagerStatefulDiskArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deleteRule")
-    private final @Nullable Input<String> deleteRule;
+        private final @Nullable Input<String> deleteRule;
 
     public Input<String> getDeleteRule() {
         return this.deleteRule == null ? Input.empty() : this.deleteRule;
@@ -30,7 +30,7 @@ public final class RegionInstanceGroupManagerStatefulDiskArgs extends io.pulumi.
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -89,7 +89,6 @@ public final class RegionInstanceGroupManagerStatefulDiskArgs extends io.pulumi.
             this.deviceName = Input.of(Objects.requireNonNull(deviceName));
             return this;
         }
-
         public RegionInstanceGroupManagerStatefulDiskArgs build() {
             return new RegionInstanceGroupManagerStatefulDiskArgs(deleteRule, deviceName);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.inputs;
 
 import io.pulumi.azurenative.costmanagement.inputs.ReportComparisonExpressionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="and")
-    private final @Nullable List<ReportFilterResponse> and;
+        private final @Nullable List<ReportFilterResponse> and;
 
     public List<ReportFilterResponse> getAnd() {
         return this.and == null ? List.of() : this.and;
@@ -35,7 +35,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dimension")
-    private final @Nullable ReportComparisonExpressionResponse dimension;
+        private final @Nullable ReportComparisonExpressionResponse dimension;
 
     public Optional<ReportComparisonExpressionResponse> getDimension() {
         return this.dimension == null ? Optional.empty() : Optional.ofNullable(this.dimension);
@@ -46,7 +46,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="not")
-    private final @Nullable ReportFilterResponse not;
+        private final @Nullable ReportFilterResponse not;
 
     public Optional<ReportFilterResponse> getNot() {
         return this.not == null ? Optional.empty() : Optional.ofNullable(this.not);
@@ -57,7 +57,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="or")
-    private final @Nullable List<ReportFilterResponse> or;
+        private final @Nullable List<ReportFilterResponse> or;
 
     public List<ReportFilterResponse> getOr() {
         return this.or == null ? List.of() : this.or;
@@ -68,7 +68,7 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tag")
-    private final @Nullable ReportComparisonExpressionResponse tag;
+        private final @Nullable ReportComparisonExpressionResponse tag;
 
     public Optional<ReportComparisonExpressionResponse> getTag() {
         return this.tag == null ? Optional.empty() : Optional.ofNullable(this.tag);
@@ -147,7 +147,6 @@ public final class ReportFilterResponse extends io.pulumi.resources.InvokeArgs {
             this.tag = tag;
             return this;
         }
-
         public ReportFilterResponse build() {
             return new ReportFilterResponse(and, dimension, not, or, tag);
         }

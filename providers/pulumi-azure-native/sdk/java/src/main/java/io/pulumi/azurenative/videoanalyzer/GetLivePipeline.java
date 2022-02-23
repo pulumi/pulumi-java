@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoanalyzer;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.videoanalyzer.inputs.GetLivePipelineArgs;
 import io.pulumi.azurenative.videoanalyzer.outputs.GetLivePipelineResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

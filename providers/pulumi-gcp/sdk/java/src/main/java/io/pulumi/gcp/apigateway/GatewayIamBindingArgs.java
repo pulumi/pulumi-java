@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.apigateway.inputs.GatewayIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,21 +17,21 @@ public final class GatewayIamBindingArgs extends io.pulumi.resources.ResourceArg
     public static final GatewayIamBindingArgs Empty = new GatewayIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<GatewayIamBindingConditionArgs> condition;
+        private final @Nullable Input<GatewayIamBindingConditionArgs> condition;
 
     public Input<GatewayIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="gateway", required=true)
-    private final Input<String> gateway;
+        private final Input<String> gateway;
 
     public Input<String> getGateway() {
         return this.gateway;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -43,7 +43,7 @@ public final class GatewayIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -57,7 +57,7 @@ public final class GatewayIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -70,7 +70,7 @@ public final class GatewayIamBindingArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -189,7 +189,6 @@ public final class GatewayIamBindingArgs extends io.pulumi.resources.ResourceArg
             this.role = Input.of(Objects.requireNonNull(role));
             return this;
         }
-
         public GatewayIamBindingArgs build() {
             return new GatewayIamBindingArgs(condition, gateway, members, project, region, role);
         }

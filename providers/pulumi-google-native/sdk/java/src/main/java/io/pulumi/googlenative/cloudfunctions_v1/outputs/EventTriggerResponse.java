@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudfunctions_v1.outputs.FailurePolicyResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -117,7 +117,6 @@ public final class EventTriggerResponse {
             this.service = Objects.requireNonNull(service);
             return this;
         }
-
         public EventTriggerResponse build() {
             return new EventTriggerResponse(eventType, failurePolicy, resource, service);
         }

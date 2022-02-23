@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigee;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="hostnames")
-    private final @Nullable Input<List<String>> hostnames;
+        private final @Nullable Input<List<String>> hostnames;
 
     public Input<List<String>> getHostnames() {
         return this.hostnames == null ? Input.empty() : this.hostnames;
@@ -31,7 +31,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -43,7 +43,7 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="orgId", required=true)
-    private final Input<String> orgId;
+        private final Input<String> orgId;
 
     public Input<String> getOrgId() {
         return this.orgId;
@@ -117,7 +117,6 @@ public final class EnvGroupArgs extends io.pulumi.resources.ResourceArgs {
             this.orgId = Input.of(Objects.requireNonNull(orgId));
             return this;
         }
-
         public EnvGroupArgs build() {
             return new EnvGroupArgs(hostnames, name, orgId);
         }

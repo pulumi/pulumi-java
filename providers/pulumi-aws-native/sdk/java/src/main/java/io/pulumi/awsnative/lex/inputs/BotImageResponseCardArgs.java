@@ -5,7 +5,7 @@ package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.awsnative.lex.inputs.BotButtonArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="buttons")
-    private final @Nullable Input<List<BotButtonArgs>> buttons;
+        private final @Nullable Input<List<BotButtonArgs>> buttons;
 
     public Input<List<BotButtonArgs>> getButtons() {
         return this.buttons == null ? Input.empty() : this.buttons;
@@ -36,7 +36,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="imageUrl")
-    private final @Nullable Input<String> imageUrl;
+        private final @Nullable Input<String> imageUrl;
 
     public Input<String> getImageUrl() {
         return this.imageUrl == null ? Input.empty() : this.imageUrl;
@@ -47,7 +47,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="subtitle")
-    private final @Nullable Input<String> subtitle;
+        private final @Nullable Input<String> subtitle;
 
     public Input<String> getSubtitle() {
         return this.subtitle == null ? Input.empty() : this.subtitle;
@@ -58,7 +58,7 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="title", required=true)
-    private final Input<String> title;
+        private final Input<String> title;
 
     public Input<String> getTitle() {
         return this.title;
@@ -147,7 +147,6 @@ public final class BotImageResponseCardArgs extends io.pulumi.resources.Resource
             this.title = Input.of(Objects.requireNonNull(title));
             return this;
         }
-
         public BotImageResponseCardArgs build() {
             return new BotImageResponseCardArgs(buttons, imageUrl, subtitle, title);
         }

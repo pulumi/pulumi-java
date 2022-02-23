@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -23,7 +23,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clusterId", required=true)
-    private final Integer clusterId;
+        private final Integer clusterId;
 
     public Integer getClusterId() {
         return this.clusterId;
@@ -34,7 +34,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="clusterSize", required=true)
-    private final Integer clusterSize;
+        private final Integer clusterSize;
 
     public Integer getClusterSize() {
         return this.clusterSize;
@@ -45,7 +45,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="hosts", required=true)
-    private final List<String> hosts;
+        private final List<String> hosts;
 
     public List<String> getHosts() {
         return this.hosts;
@@ -56,7 +56,7 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -125,7 +125,6 @@ public final class ManagementClusterResponse extends io.pulumi.resources.InvokeA
             this.provisioningState = Objects.requireNonNull(provisioningState);
             return this;
         }
-
         public ManagementClusterResponse build() {
             return new ManagementClusterResponse(clusterId, clusterSize, hosts, provisioningState);
         }

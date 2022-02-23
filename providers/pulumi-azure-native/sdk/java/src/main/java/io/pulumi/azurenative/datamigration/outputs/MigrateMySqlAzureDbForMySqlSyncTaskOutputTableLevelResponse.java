@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -350,7 +350,6 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse {
             this.totalChangesApplied = Objects.requireNonNull(totalChangesApplied);
             return this;
         }
-
         public MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse build() {
             return new MigrateMySqlAzureDbForMySqlSyncTaskOutputTableLevelResponse(cdcDeleteCounter, cdcInsertCounter, cdcUpdateCounter, dataErrorsCounter, databaseName, fullLoadEndedOn, fullLoadEstFinishTime, fullLoadStartedOn, fullLoadTotalRows, id, lastModifiedTime, resultType, state, tableName, totalChangesApplied);
         }

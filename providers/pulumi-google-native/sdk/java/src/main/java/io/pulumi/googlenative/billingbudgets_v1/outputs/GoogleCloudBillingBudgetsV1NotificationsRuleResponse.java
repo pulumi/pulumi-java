@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.billingbudgets_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -118,7 +118,6 @@ public final class GoogleCloudBillingBudgetsV1NotificationsRuleResponse {
             this.schemaVersion = Objects.requireNonNull(schemaVersion);
             return this;
         }
-
         public GoogleCloudBillingBudgetsV1NotificationsRuleResponse build() {
             return new GoogleCloudBillingBudgetsV1NotificationsRuleResponse(disableDefaultIamRecipients, monitoringNotificationChannels, pubsubTopic, schemaVersion);
         }

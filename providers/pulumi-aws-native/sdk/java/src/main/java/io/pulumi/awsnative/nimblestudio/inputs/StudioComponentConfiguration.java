@@ -7,7 +7,7 @@ import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentActiveDirectoryCon
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentComputeFarmConfiguration;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentLicenseServiceConfiguration;
 import io.pulumi.awsnative.nimblestudio.inputs.StudioComponentSharedFileSystemConfiguration;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -22,28 +22,28 @@ public final class StudioComponentConfiguration extends io.pulumi.resources.Invo
     public static final StudioComponentConfiguration Empty = new StudioComponentConfiguration();
 
     @InputImport(name="activeDirectoryConfiguration")
-    private final @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
+        private final @Nullable StudioComponentActiveDirectoryConfiguration activeDirectoryConfiguration;
 
     public Optional<StudioComponentActiveDirectoryConfiguration> getActiveDirectoryConfiguration() {
         return this.activeDirectoryConfiguration == null ? Optional.empty() : Optional.ofNullable(this.activeDirectoryConfiguration);
     }
 
     @InputImport(name="computeFarmConfiguration")
-    private final @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
+        private final @Nullable StudioComponentComputeFarmConfiguration computeFarmConfiguration;
 
     public Optional<StudioComponentComputeFarmConfiguration> getComputeFarmConfiguration() {
         return this.computeFarmConfiguration == null ? Optional.empty() : Optional.ofNullable(this.computeFarmConfiguration);
     }
 
     @InputImport(name="licenseServiceConfiguration")
-    private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
+        private final @Nullable StudioComponentLicenseServiceConfiguration licenseServiceConfiguration;
 
     public Optional<StudioComponentLicenseServiceConfiguration> getLicenseServiceConfiguration() {
         return this.licenseServiceConfiguration == null ? Optional.empty() : Optional.ofNullable(this.licenseServiceConfiguration);
     }
 
     @InputImport(name="sharedFileSystemConfiguration")
-    private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
+        private final @Nullable StudioComponentSharedFileSystemConfiguration sharedFileSystemConfiguration;
 
     public Optional<StudioComponentSharedFileSystemConfiguration> getSharedFileSystemConfiguration() {
         return this.sharedFileSystemConfiguration == null ? Optional.empty() : Optional.ofNullable(this.sharedFileSystemConfiguration);
@@ -112,7 +112,6 @@ public final class StudioComponentConfiguration extends io.pulumi.resources.Invo
             this.sharedFileSystemConfiguration = sharedFileSystemConfiguration;
             return this;
         }
-
         public StudioComponentConfiguration build() {
             return new StudioComponentConfiguration(activeDirectoryConfiguration, computeFarmConfiguration, licenseServiceConfiguration, sharedFileSystemConfiguration);
         }

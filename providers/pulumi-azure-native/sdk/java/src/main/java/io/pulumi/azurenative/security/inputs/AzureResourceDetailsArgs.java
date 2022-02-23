@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -23,7 +23,7 @@ public final class AzureResourceDetailsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<String> source;
+        private final Input<String> source;
 
     public Input<String> getSource() {
         return this.source;
@@ -66,7 +66,6 @@ public final class AzureResourceDetailsArgs extends io.pulumi.resources.Resource
             this.source = Input.of(Objects.requireNonNull(source));
             return this;
         }
-
         public AzureResourceDetailsArgs build() {
             return new AzureResourceDetailsArgs(source);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.IPAccessControlArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -23,7 +23,7 @@ public final class LiveEventPreviewAccessControlArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="ip")
-    private final @Nullable Input<IPAccessControlArgs> ip;
+        private final @Nullable Input<IPAccessControlArgs> ip;
 
     public Input<IPAccessControlArgs> getIp() {
         return this.ip == null ? Input.empty() : this.ip;
@@ -66,7 +66,6 @@ public final class LiveEventPreviewAccessControlArgs extends io.pulumi.resources
             this.ip = Input.ofNullable(ip);
             return this;
         }
-
         public LiveEventPreviewAccessControlArgs build() {
             return new LiveEventPreviewAccessControlArgs(ip);
         }

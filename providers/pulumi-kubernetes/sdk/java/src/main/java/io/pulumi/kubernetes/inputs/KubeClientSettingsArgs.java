@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.Utilities;
 import java.lang.Double;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="burst")
-    private final @Nullable Input<Integer> burst;
+        private final @Nullable Input<Integer> burst;
 
     public Input<Integer> getBurst() {
         return this.burst == null ? Input.empty() : this.burst;
@@ -36,7 +36,7 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="qps")
-    private final @Nullable Input<Double> qps;
+        private final @Nullable Input<Double> qps;
 
     public Input<Double> getQps() {
         return this.qps == null ? Input.empty() : this.qps;
@@ -95,7 +95,6 @@ public final class KubeClientSettingsArgs extends io.pulumi.resources.ResourceAr
             this.qps = Input.ofNullable(qps);
             return this;
         }
-
         public KubeClientSettingsArgs build() {
             return new KubeClientSettingsArgs(burst, qps);
         }

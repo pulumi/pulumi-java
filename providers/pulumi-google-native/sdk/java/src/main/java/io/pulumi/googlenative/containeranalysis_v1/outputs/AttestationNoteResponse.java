@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1.outputs.HintResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AttestationNoteResponse {
             this.hint = Objects.requireNonNull(hint);
             return this;
         }
-
         public AttestationNoteResponse build() {
             return new AttestationNoteResponse(hint);
         }

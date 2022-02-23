@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="operationId", required=true)
-    private final String operationId;
+        private final String operationId;
 
     public String getOperationId() {
         return this.operationId;
@@ -34,7 +34,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -45,7 +45,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceName")
-    private final @Nullable String resourceName;
+        private final @Nullable String resourceName;
 
     public Optional<String> getPropResourceName() {
         return this.resourceName == null ? Optional.empty() : Optional.ofNullable(this.resourceName);
@@ -56,7 +56,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="resourceType")
-    private final @Nullable String resourceType;
+        private final @Nullable String resourceType;
 
     public Optional<String> getPropResourceType() {
         return this.resourceType == null ? Optional.empty() : Optional.ofNullable(this.resourceType);
@@ -67,7 +67,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="statusCode", required=true)
-    private final String statusCode;
+        private final String statusCode;
 
     public String getStatusCode() {
         return this.statusCode;
@@ -78,7 +78,7 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="statusMessage", required=true)
-    private final String statusMessage;
+        private final String statusMessage;
 
     public String getStatusMessage() {
         return this.statusMessage;
@@ -167,7 +167,6 @@ public final class ResourceOperationResponse extends io.pulumi.resources.InvokeA
             this.statusMessage = Objects.requireNonNull(statusMessage);
             return this;
         }
-
         public ResourceOperationResponse build() {
             return new ResourceOperationResponse(operationId, provisioningState, resourceName, resourceType, statusCode, statusMessage);
         }

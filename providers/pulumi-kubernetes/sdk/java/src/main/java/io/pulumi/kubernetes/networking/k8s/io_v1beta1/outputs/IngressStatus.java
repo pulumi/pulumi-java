@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.LoadBalancerStatus;
 import java.util.Objects;
 import java.util.Optional;
@@ -54,7 +54,6 @@ public final class IngressStatus {
             this.loadBalancer = loadBalancer;
             return this;
         }
-
         public IngressStatus build() {
             return new IngressStatus(loadBalancer);
         }

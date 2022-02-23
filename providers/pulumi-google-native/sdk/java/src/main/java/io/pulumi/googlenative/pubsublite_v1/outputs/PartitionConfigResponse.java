@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.pubsublite_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.pubsublite_v1.outputs.CapacityResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class PartitionConfigResponse {
             this.count = Objects.requireNonNull(count);
             return this;
         }
-
         public PartitionConfigResponse build() {
             return new PartitionConfigResponse(capacity, count);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.inputs.RecipeParametersInputPropertiesArgs;
 import io.pulumi.awsnative.databrew.inputs.RecipeSecondaryInputArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -20,203 +20,203 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
     public static final RecipeParametersArgs Empty = new RecipeParametersArgs();
 
     @InputImport(name="aggregateFunction")
-    private final @Nullable Input<String> aggregateFunction;
+        private final @Nullable Input<String> aggregateFunction;
 
     public Input<String> getAggregateFunction() {
         return this.aggregateFunction == null ? Input.empty() : this.aggregateFunction;
     }
 
     @InputImport(name="base")
-    private final @Nullable Input<String> base;
+        private final @Nullable Input<String> base;
 
     public Input<String> getBase() {
         return this.base == null ? Input.empty() : this.base;
     }
 
     @InputImport(name="caseStatement")
-    private final @Nullable Input<String> caseStatement;
+        private final @Nullable Input<String> caseStatement;
 
     public Input<String> getCaseStatement() {
         return this.caseStatement == null ? Input.empty() : this.caseStatement;
     }
 
     @InputImport(name="categoryMap")
-    private final @Nullable Input<String> categoryMap;
+        private final @Nullable Input<String> categoryMap;
 
     public Input<String> getCategoryMap() {
         return this.categoryMap == null ? Input.empty() : this.categoryMap;
     }
 
     @InputImport(name="charsToRemove")
-    private final @Nullable Input<String> charsToRemove;
+        private final @Nullable Input<String> charsToRemove;
 
     public Input<String> getCharsToRemove() {
         return this.charsToRemove == null ? Input.empty() : this.charsToRemove;
     }
 
     @InputImport(name="collapseConsecutiveWhitespace")
-    private final @Nullable Input<String> collapseConsecutiveWhitespace;
+        private final @Nullable Input<String> collapseConsecutiveWhitespace;
 
     public Input<String> getCollapseConsecutiveWhitespace() {
         return this.collapseConsecutiveWhitespace == null ? Input.empty() : this.collapseConsecutiveWhitespace;
     }
 
     @InputImport(name="columnDataType")
-    private final @Nullable Input<String> columnDataType;
+        private final @Nullable Input<String> columnDataType;
 
     public Input<String> getColumnDataType() {
         return this.columnDataType == null ? Input.empty() : this.columnDataType;
     }
 
     @InputImport(name="columnRange")
-    private final @Nullable Input<String> columnRange;
+        private final @Nullable Input<String> columnRange;
 
     public Input<String> getColumnRange() {
         return this.columnRange == null ? Input.empty() : this.columnRange;
     }
 
     @InputImport(name="count")
-    private final @Nullable Input<String> count;
+        private final @Nullable Input<String> count;
 
     public Input<String> getCount() {
         return this.count == null ? Input.empty() : this.count;
     }
 
     @InputImport(name="customCharacters")
-    private final @Nullable Input<String> customCharacters;
+        private final @Nullable Input<String> customCharacters;
 
     public Input<String> getCustomCharacters() {
         return this.customCharacters == null ? Input.empty() : this.customCharacters;
     }
 
     @InputImport(name="customStopWords")
-    private final @Nullable Input<String> customStopWords;
+        private final @Nullable Input<String> customStopWords;
 
     public Input<String> getCustomStopWords() {
         return this.customStopWords == null ? Input.empty() : this.customStopWords;
     }
 
     @InputImport(name="customValue")
-    private final @Nullable Input<String> customValue;
+        private final @Nullable Input<String> customValue;
 
     public Input<String> getCustomValue() {
         return this.customValue == null ? Input.empty() : this.customValue;
     }
 
     @InputImport(name="datasetsColumns")
-    private final @Nullable Input<String> datasetsColumns;
+        private final @Nullable Input<String> datasetsColumns;
 
     public Input<String> getDatasetsColumns() {
         return this.datasetsColumns == null ? Input.empty() : this.datasetsColumns;
     }
 
     @InputImport(name="dateAddValue")
-    private final @Nullable Input<String> dateAddValue;
+        private final @Nullable Input<String> dateAddValue;
 
     public Input<String> getDateAddValue() {
         return this.dateAddValue == null ? Input.empty() : this.dateAddValue;
     }
 
     @InputImport(name="dateTimeFormat")
-    private final @Nullable Input<String> dateTimeFormat;
+        private final @Nullable Input<String> dateTimeFormat;
 
     public Input<String> getDateTimeFormat() {
         return this.dateTimeFormat == null ? Input.empty() : this.dateTimeFormat;
     }
 
     @InputImport(name="dateTimeParameters")
-    private final @Nullable Input<String> dateTimeParameters;
+        private final @Nullable Input<String> dateTimeParameters;
 
     public Input<String> getDateTimeParameters() {
         return this.dateTimeParameters == null ? Input.empty() : this.dateTimeParameters;
     }
 
     @InputImport(name="deleteOtherRows")
-    private final @Nullable Input<String> deleteOtherRows;
+        private final @Nullable Input<String> deleteOtherRows;
 
     public Input<String> getDeleteOtherRows() {
         return this.deleteOtherRows == null ? Input.empty() : this.deleteOtherRows;
     }
 
     @InputImport(name="delimiter")
-    private final @Nullable Input<String> delimiter;
+        private final @Nullable Input<String> delimiter;
 
     public Input<String> getDelimiter() {
         return this.delimiter == null ? Input.empty() : this.delimiter;
     }
 
     @InputImport(name="endPattern")
-    private final @Nullable Input<String> endPattern;
+        private final @Nullable Input<String> endPattern;
 
     public Input<String> getEndPattern() {
         return this.endPattern == null ? Input.empty() : this.endPattern;
     }
 
     @InputImport(name="endPosition")
-    private final @Nullable Input<String> endPosition;
+        private final @Nullable Input<String> endPosition;
 
     public Input<String> getEndPosition() {
         return this.endPosition == null ? Input.empty() : this.endPosition;
     }
 
     @InputImport(name="endValue")
-    private final @Nullable Input<String> endValue;
+        private final @Nullable Input<String> endValue;
 
     public Input<String> getEndValue() {
         return this.endValue == null ? Input.empty() : this.endValue;
     }
 
     @InputImport(name="expandContractions")
-    private final @Nullable Input<String> expandContractions;
+        private final @Nullable Input<String> expandContractions;
 
     public Input<String> getExpandContractions() {
         return this.expandContractions == null ? Input.empty() : this.expandContractions;
     }
 
     @InputImport(name="exponent")
-    private final @Nullable Input<String> exponent;
+        private final @Nullable Input<String> exponent;
 
     public Input<String> getExponent() {
         return this.exponent == null ? Input.empty() : this.exponent;
     }
 
     @InputImport(name="falseString")
-    private final @Nullable Input<String> falseString;
+        private final @Nullable Input<String> falseString;
 
     public Input<String> getFalseString() {
         return this.falseString == null ? Input.empty() : this.falseString;
     }
 
     @InputImport(name="groupByAggFunctionOptions")
-    private final @Nullable Input<String> groupByAggFunctionOptions;
+        private final @Nullable Input<String> groupByAggFunctionOptions;
 
     public Input<String> getGroupByAggFunctionOptions() {
         return this.groupByAggFunctionOptions == null ? Input.empty() : this.groupByAggFunctionOptions;
     }
 
     @InputImport(name="groupByColumns")
-    private final @Nullable Input<String> groupByColumns;
+        private final @Nullable Input<String> groupByColumns;
 
     public Input<String> getGroupByColumns() {
         return this.groupByColumns == null ? Input.empty() : this.groupByColumns;
     }
 
     @InputImport(name="hiddenColumns")
-    private final @Nullable Input<String> hiddenColumns;
+        private final @Nullable Input<String> hiddenColumns;
 
     public Input<String> getHiddenColumns() {
         return this.hiddenColumns == null ? Input.empty() : this.hiddenColumns;
     }
 
     @InputImport(name="ignoreCase")
-    private final @Nullable Input<String> ignoreCase;
+        private final @Nullable Input<String> ignoreCase;
 
     public Input<String> getIgnoreCase() {
         return this.ignoreCase == null ? Input.empty() : this.ignoreCase;
     }
 
     @InputImport(name="includeInSplit")
-    private final @Nullable Input<String> includeInSplit;
+        private final @Nullable Input<String> includeInSplit;
 
     public Input<String> getIncludeInSplit() {
         return this.includeInSplit == null ? Input.empty() : this.includeInSplit;
@@ -227,504 +227,504 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="input")
-    private final @Nullable Input<RecipeParametersInputPropertiesArgs> input;
+        private final @Nullable Input<RecipeParametersInputPropertiesArgs> input;
 
     public Input<RecipeParametersInputPropertiesArgs> getInput() {
         return this.input == null ? Input.empty() : this.input;
     }
 
     @InputImport(name="interval")
-    private final @Nullable Input<String> interval;
+        private final @Nullable Input<String> interval;
 
     public Input<String> getInterval() {
         return this.interval == null ? Input.empty() : this.interval;
     }
 
     @InputImport(name="isText")
-    private final @Nullable Input<String> isText;
+        private final @Nullable Input<String> isText;
 
     public Input<String> getIsText() {
         return this.isText == null ? Input.empty() : this.isText;
     }
 
     @InputImport(name="joinKeys")
-    private final @Nullable Input<String> joinKeys;
+        private final @Nullable Input<String> joinKeys;
 
     public Input<String> getJoinKeys() {
         return this.joinKeys == null ? Input.empty() : this.joinKeys;
     }
 
     @InputImport(name="joinType")
-    private final @Nullable Input<String> joinType;
+        private final @Nullable Input<String> joinType;
 
     public Input<String> getJoinType() {
         return this.joinType == null ? Input.empty() : this.joinType;
     }
 
     @InputImport(name="leftColumns")
-    private final @Nullable Input<String> leftColumns;
+        private final @Nullable Input<String> leftColumns;
 
     public Input<String> getLeftColumns() {
         return this.leftColumns == null ? Input.empty() : this.leftColumns;
     }
 
     @InputImport(name="limit")
-    private final @Nullable Input<String> limit;
+        private final @Nullable Input<String> limit;
 
     public Input<String> getLimit() {
         return this.limit == null ? Input.empty() : this.limit;
     }
 
     @InputImport(name="lowerBound")
-    private final @Nullable Input<String> lowerBound;
+        private final @Nullable Input<String> lowerBound;
 
     public Input<String> getLowerBound() {
         return this.lowerBound == null ? Input.empty() : this.lowerBound;
     }
 
     @InputImport(name="mapType")
-    private final @Nullable Input<String> mapType;
+        private final @Nullable Input<String> mapType;
 
     public Input<String> getMapType() {
         return this.mapType == null ? Input.empty() : this.mapType;
     }
 
     @InputImport(name="modeType")
-    private final @Nullable Input<String> modeType;
+        private final @Nullable Input<String> modeType;
 
     public Input<String> getModeType() {
         return this.modeType == null ? Input.empty() : this.modeType;
     }
 
     @InputImport(name="multiLine")
-    private final @Nullable Input<Boolean> multiLine;
+        private final @Nullable Input<Boolean> multiLine;
 
     public Input<Boolean> getMultiLine() {
         return this.multiLine == null ? Input.empty() : this.multiLine;
     }
 
     @InputImport(name="numRows")
-    private final @Nullable Input<String> numRows;
+        private final @Nullable Input<String> numRows;
 
     public Input<String> getNumRows() {
         return this.numRows == null ? Input.empty() : this.numRows;
     }
 
     @InputImport(name="numRowsAfter")
-    private final @Nullable Input<String> numRowsAfter;
+        private final @Nullable Input<String> numRowsAfter;
 
     public Input<String> getNumRowsAfter() {
         return this.numRowsAfter == null ? Input.empty() : this.numRowsAfter;
     }
 
     @InputImport(name="numRowsBefore")
-    private final @Nullable Input<String> numRowsBefore;
+        private final @Nullable Input<String> numRowsBefore;
 
     public Input<String> getNumRowsBefore() {
         return this.numRowsBefore == null ? Input.empty() : this.numRowsBefore;
     }
 
     @InputImport(name="orderByColumn")
-    private final @Nullable Input<String> orderByColumn;
+        private final @Nullable Input<String> orderByColumn;
 
     public Input<String> getOrderByColumn() {
         return this.orderByColumn == null ? Input.empty() : this.orderByColumn;
     }
 
     @InputImport(name="orderByColumns")
-    private final @Nullable Input<String> orderByColumns;
+        private final @Nullable Input<String> orderByColumns;
 
     public Input<String> getOrderByColumns() {
         return this.orderByColumns == null ? Input.empty() : this.orderByColumns;
     }
 
     @InputImport(name="other")
-    private final @Nullable Input<String> other;
+        private final @Nullable Input<String> other;
 
     public Input<String> getOther() {
         return this.other == null ? Input.empty() : this.other;
     }
 
     @InputImport(name="pattern")
-    private final @Nullable Input<String> pattern;
+        private final @Nullable Input<String> pattern;
 
     public Input<String> getPattern() {
         return this.pattern == null ? Input.empty() : this.pattern;
     }
 
     @InputImport(name="patternOption1")
-    private final @Nullable Input<String> patternOption1;
+        private final @Nullable Input<String> patternOption1;
 
     public Input<String> getPatternOption1() {
         return this.patternOption1 == null ? Input.empty() : this.patternOption1;
     }
 
     @InputImport(name="patternOption2")
-    private final @Nullable Input<String> patternOption2;
+        private final @Nullable Input<String> patternOption2;
 
     public Input<String> getPatternOption2() {
         return this.patternOption2 == null ? Input.empty() : this.patternOption2;
     }
 
     @InputImport(name="patternOptions")
-    private final @Nullable Input<String> patternOptions;
+        private final @Nullable Input<String> patternOptions;
 
     public Input<String> getPatternOptions() {
         return this.patternOptions == null ? Input.empty() : this.patternOptions;
     }
 
     @InputImport(name="period")
-    private final @Nullable Input<String> period;
+        private final @Nullable Input<String> period;
 
     public Input<String> getPeriod() {
         return this.period == null ? Input.empty() : this.period;
     }
 
     @InputImport(name="position")
-    private final @Nullable Input<String> position;
+        private final @Nullable Input<String> position;
 
     public Input<String> getPosition() {
         return this.position == null ? Input.empty() : this.position;
     }
 
     @InputImport(name="removeAllPunctuation")
-    private final @Nullable Input<String> removeAllPunctuation;
+        private final @Nullable Input<String> removeAllPunctuation;
 
     public Input<String> getRemoveAllPunctuation() {
         return this.removeAllPunctuation == null ? Input.empty() : this.removeAllPunctuation;
     }
 
     @InputImport(name="removeAllQuotes")
-    private final @Nullable Input<String> removeAllQuotes;
+        private final @Nullable Input<String> removeAllQuotes;
 
     public Input<String> getRemoveAllQuotes() {
         return this.removeAllQuotes == null ? Input.empty() : this.removeAllQuotes;
     }
 
     @InputImport(name="removeAllWhitespace")
-    private final @Nullable Input<String> removeAllWhitespace;
+        private final @Nullable Input<String> removeAllWhitespace;
 
     public Input<String> getRemoveAllWhitespace() {
         return this.removeAllWhitespace == null ? Input.empty() : this.removeAllWhitespace;
     }
 
     @InputImport(name="removeCustomCharacters")
-    private final @Nullable Input<String> removeCustomCharacters;
+        private final @Nullable Input<String> removeCustomCharacters;
 
     public Input<String> getRemoveCustomCharacters() {
         return this.removeCustomCharacters == null ? Input.empty() : this.removeCustomCharacters;
     }
 
     @InputImport(name="removeCustomValue")
-    private final @Nullable Input<String> removeCustomValue;
+        private final @Nullable Input<String> removeCustomValue;
 
     public Input<String> getRemoveCustomValue() {
         return this.removeCustomValue == null ? Input.empty() : this.removeCustomValue;
     }
 
     @InputImport(name="removeLeadingAndTrailingPunctuation")
-    private final @Nullable Input<String> removeLeadingAndTrailingPunctuation;
+        private final @Nullable Input<String> removeLeadingAndTrailingPunctuation;
 
     public Input<String> getRemoveLeadingAndTrailingPunctuation() {
         return this.removeLeadingAndTrailingPunctuation == null ? Input.empty() : this.removeLeadingAndTrailingPunctuation;
     }
 
     @InputImport(name="removeLeadingAndTrailingQuotes")
-    private final @Nullable Input<String> removeLeadingAndTrailingQuotes;
+        private final @Nullable Input<String> removeLeadingAndTrailingQuotes;
 
     public Input<String> getRemoveLeadingAndTrailingQuotes() {
         return this.removeLeadingAndTrailingQuotes == null ? Input.empty() : this.removeLeadingAndTrailingQuotes;
     }
 
     @InputImport(name="removeLeadingAndTrailingWhitespace")
-    private final @Nullable Input<String> removeLeadingAndTrailingWhitespace;
+        private final @Nullable Input<String> removeLeadingAndTrailingWhitespace;
 
     public Input<String> getRemoveLeadingAndTrailingWhitespace() {
         return this.removeLeadingAndTrailingWhitespace == null ? Input.empty() : this.removeLeadingAndTrailingWhitespace;
     }
 
     @InputImport(name="removeLetters")
-    private final @Nullable Input<String> removeLetters;
+        private final @Nullable Input<String> removeLetters;
 
     public Input<String> getRemoveLetters() {
         return this.removeLetters == null ? Input.empty() : this.removeLetters;
     }
 
     @InputImport(name="removeNumbers")
-    private final @Nullable Input<String> removeNumbers;
+        private final @Nullable Input<String> removeNumbers;
 
     public Input<String> getRemoveNumbers() {
         return this.removeNumbers == null ? Input.empty() : this.removeNumbers;
     }
 
     @InputImport(name="removeSourceColumn")
-    private final @Nullable Input<String> removeSourceColumn;
+        private final @Nullable Input<String> removeSourceColumn;
 
     public Input<String> getRemoveSourceColumn() {
         return this.removeSourceColumn == null ? Input.empty() : this.removeSourceColumn;
     }
 
     @InputImport(name="removeSpecialCharacters")
-    private final @Nullable Input<String> removeSpecialCharacters;
+        private final @Nullable Input<String> removeSpecialCharacters;
 
     public Input<String> getRemoveSpecialCharacters() {
         return this.removeSpecialCharacters == null ? Input.empty() : this.removeSpecialCharacters;
     }
 
     @InputImport(name="rightColumns")
-    private final @Nullable Input<String> rightColumns;
+        private final @Nullable Input<String> rightColumns;
 
     public Input<String> getRightColumns() {
         return this.rightColumns == null ? Input.empty() : this.rightColumns;
     }
 
     @InputImport(name="sampleSize")
-    private final @Nullable Input<String> sampleSize;
+        private final @Nullable Input<String> sampleSize;
 
     public Input<String> getSampleSize() {
         return this.sampleSize == null ? Input.empty() : this.sampleSize;
     }
 
     @InputImport(name="sampleType")
-    private final @Nullable Input<String> sampleType;
+        private final @Nullable Input<String> sampleType;
 
     public Input<String> getSampleType() {
         return this.sampleType == null ? Input.empty() : this.sampleType;
     }
 
     @InputImport(name="secondInput")
-    private final @Nullable Input<String> secondInput;
+        private final @Nullable Input<String> secondInput;
 
     public Input<String> getSecondInput() {
         return this.secondInput == null ? Input.empty() : this.secondInput;
     }
 
     @InputImport(name="secondaryInputs")
-    private final @Nullable Input<List<RecipeSecondaryInputArgs>> secondaryInputs;
+        private final @Nullable Input<List<RecipeSecondaryInputArgs>> secondaryInputs;
 
     public Input<List<RecipeSecondaryInputArgs>> getSecondaryInputs() {
         return this.secondaryInputs == null ? Input.empty() : this.secondaryInputs;
     }
 
     @InputImport(name="sheetIndexes")
-    private final @Nullable Input<List<Integer>> sheetIndexes;
+        private final @Nullable Input<List<Integer>> sheetIndexes;
 
     public Input<List<Integer>> getSheetIndexes() {
         return this.sheetIndexes == null ? Input.empty() : this.sheetIndexes;
     }
 
     @InputImport(name="sheetNames")
-    private final @Nullable Input<List<String>> sheetNames;
+        private final @Nullable Input<List<String>> sheetNames;
 
     public Input<List<String>> getSheetNames() {
         return this.sheetNames == null ? Input.empty() : this.sheetNames;
     }
 
     @InputImport(name="sourceColumn")
-    private final @Nullable Input<String> sourceColumn;
+        private final @Nullable Input<String> sourceColumn;
 
     public Input<String> getSourceColumn() {
         return this.sourceColumn == null ? Input.empty() : this.sourceColumn;
     }
 
     @InputImport(name="sourceColumn1")
-    private final @Nullable Input<String> sourceColumn1;
+        private final @Nullable Input<String> sourceColumn1;
 
     public Input<String> getSourceColumn1() {
         return this.sourceColumn1 == null ? Input.empty() : this.sourceColumn1;
     }
 
     @InputImport(name="sourceColumn2")
-    private final @Nullable Input<String> sourceColumn2;
+        private final @Nullable Input<String> sourceColumn2;
 
     public Input<String> getSourceColumn2() {
         return this.sourceColumn2 == null ? Input.empty() : this.sourceColumn2;
     }
 
     @InputImport(name="sourceColumns")
-    private final @Nullable Input<String> sourceColumns;
+        private final @Nullable Input<String> sourceColumns;
 
     public Input<String> getSourceColumns() {
         return this.sourceColumns == null ? Input.empty() : this.sourceColumns;
     }
 
     @InputImport(name="startColumnIndex")
-    private final @Nullable Input<String> startColumnIndex;
+        private final @Nullable Input<String> startColumnIndex;
 
     public Input<String> getStartColumnIndex() {
         return this.startColumnIndex == null ? Input.empty() : this.startColumnIndex;
     }
 
     @InputImport(name="startPattern")
-    private final @Nullable Input<String> startPattern;
+        private final @Nullable Input<String> startPattern;
 
     public Input<String> getStartPattern() {
         return this.startPattern == null ? Input.empty() : this.startPattern;
     }
 
     @InputImport(name="startPosition")
-    private final @Nullable Input<String> startPosition;
+        private final @Nullable Input<String> startPosition;
 
     public Input<String> getStartPosition() {
         return this.startPosition == null ? Input.empty() : this.startPosition;
     }
 
     @InputImport(name="startValue")
-    private final @Nullable Input<String> startValue;
+        private final @Nullable Input<String> startValue;
 
     public Input<String> getStartValue() {
         return this.startValue == null ? Input.empty() : this.startValue;
     }
 
     @InputImport(name="stemmingMode")
-    private final @Nullable Input<String> stemmingMode;
+        private final @Nullable Input<String> stemmingMode;
 
     public Input<String> getStemmingMode() {
         return this.stemmingMode == null ? Input.empty() : this.stemmingMode;
     }
 
     @InputImport(name="stepCount")
-    private final @Nullable Input<String> stepCount;
+        private final @Nullable Input<String> stepCount;
 
     public Input<String> getStepCount() {
         return this.stepCount == null ? Input.empty() : this.stepCount;
     }
 
     @InputImport(name="stepIndex")
-    private final @Nullable Input<String> stepIndex;
+        private final @Nullable Input<String> stepIndex;
 
     public Input<String> getStepIndex() {
         return this.stepIndex == null ? Input.empty() : this.stepIndex;
     }
 
     @InputImport(name="stopWordsMode")
-    private final @Nullable Input<String> stopWordsMode;
+        private final @Nullable Input<String> stopWordsMode;
 
     public Input<String> getStopWordsMode() {
         return this.stopWordsMode == null ? Input.empty() : this.stopWordsMode;
     }
 
     @InputImport(name="strategy")
-    private final @Nullable Input<String> strategy;
+        private final @Nullable Input<String> strategy;
 
     public Input<String> getStrategy() {
         return this.strategy == null ? Input.empty() : this.strategy;
     }
 
     @InputImport(name="targetColumn")
-    private final @Nullable Input<String> targetColumn;
+        private final @Nullable Input<String> targetColumn;
 
     public Input<String> getTargetColumn() {
         return this.targetColumn == null ? Input.empty() : this.targetColumn;
     }
 
     @InputImport(name="targetColumnNames")
-    private final @Nullable Input<String> targetColumnNames;
+        private final @Nullable Input<String> targetColumnNames;
 
     public Input<String> getTargetColumnNames() {
         return this.targetColumnNames == null ? Input.empty() : this.targetColumnNames;
     }
 
     @InputImport(name="targetDateFormat")
-    private final @Nullable Input<String> targetDateFormat;
+        private final @Nullable Input<String> targetDateFormat;
 
     public Input<String> getTargetDateFormat() {
         return this.targetDateFormat == null ? Input.empty() : this.targetDateFormat;
     }
 
     @InputImport(name="targetIndex")
-    private final @Nullable Input<String> targetIndex;
+        private final @Nullable Input<String> targetIndex;
 
     public Input<String> getTargetIndex() {
         return this.targetIndex == null ? Input.empty() : this.targetIndex;
     }
 
     @InputImport(name="timeZone")
-    private final @Nullable Input<String> timeZone;
+        private final @Nullable Input<String> timeZone;
 
     public Input<String> getTimeZone() {
         return this.timeZone == null ? Input.empty() : this.timeZone;
     }
 
     @InputImport(name="tokenizerPattern")
-    private final @Nullable Input<String> tokenizerPattern;
+        private final @Nullable Input<String> tokenizerPattern;
 
     public Input<String> getTokenizerPattern() {
         return this.tokenizerPattern == null ? Input.empty() : this.tokenizerPattern;
     }
 
     @InputImport(name="trueString")
-    private final @Nullable Input<String> trueString;
+        private final @Nullable Input<String> trueString;
 
     public Input<String> getTrueString() {
         return this.trueString == null ? Input.empty() : this.trueString;
     }
 
     @InputImport(name="udfLang")
-    private final @Nullable Input<String> udfLang;
+        private final @Nullable Input<String> udfLang;
 
     public Input<String> getUdfLang() {
         return this.udfLang == null ? Input.empty() : this.udfLang;
     }
 
     @InputImport(name="units")
-    private final @Nullable Input<String> units;
+        private final @Nullable Input<String> units;
 
     public Input<String> getUnits() {
         return this.units == null ? Input.empty() : this.units;
     }
 
     @InputImport(name="unpivotColumn")
-    private final @Nullable Input<String> unpivotColumn;
+        private final @Nullable Input<String> unpivotColumn;
 
     public Input<String> getUnpivotColumn() {
         return this.unpivotColumn == null ? Input.empty() : this.unpivotColumn;
     }
 
     @InputImport(name="upperBound")
-    private final @Nullable Input<String> upperBound;
+        private final @Nullable Input<String> upperBound;
 
     public Input<String> getUpperBound() {
         return this.upperBound == null ? Input.empty() : this.upperBound;
     }
 
     @InputImport(name="useNewDataFrame")
-    private final @Nullable Input<String> useNewDataFrame;
+        private final @Nullable Input<String> useNewDataFrame;
 
     public Input<String> getUseNewDataFrame() {
         return this.useNewDataFrame == null ? Input.empty() : this.useNewDataFrame;
     }
 
     @InputImport(name="value")
-    private final @Nullable Input<String> value;
+        private final @Nullable Input<String> value;
 
     public Input<String> getValue() {
         return this.value == null ? Input.empty() : this.value;
     }
 
     @InputImport(name="value1")
-    private final @Nullable Input<String> value1;
+        private final @Nullable Input<String> value1;
 
     public Input<String> getValue1() {
         return this.value1 == null ? Input.empty() : this.value1;
     }
 
     @InputImport(name="value2")
-    private final @Nullable Input<String> value2;
+        private final @Nullable Input<String> value2;
 
     public Input<String> getValue2() {
         return this.value2 == null ? Input.empty() : this.value2;
     }
 
     @InputImport(name="valueColumn")
-    private final @Nullable Input<String> valueColumn;
+        private final @Nullable Input<String> valueColumn;
 
     public Input<String> getValueColumn() {
         return this.valueColumn == null ? Input.empty() : this.valueColumn;
     }
 
     @InputImport(name="viewFrame")
-    private final @Nullable Input<String> viewFrame;
+        private final @Nullable Input<String> viewFrame;
 
     public Input<String> getViewFrame() {
         return this.viewFrame == null ? Input.empty() : this.viewFrame;
@@ -2268,7 +2268,6 @@ public final class RecipeParametersArgs extends io.pulumi.resources.ResourceArgs
             this.viewFrame = Input.ofNullable(viewFrame);
             return this;
         }
-
         public RecipeParametersArgs build() {
             return new RecipeParametersArgs(aggregateFunction, base, caseStatement, categoryMap, charsToRemove, collapseConsecutiveWhitespace, columnDataType, columnRange, count, customCharacters, customStopWords, customValue, datasetsColumns, dateAddValue, dateTimeFormat, dateTimeParameters, deleteOtherRows, delimiter, endPattern, endPosition, endValue, expandContractions, exponent, falseString, groupByAggFunctionOptions, groupByColumns, hiddenColumns, ignoreCase, includeInSplit, input, interval, isText, joinKeys, joinType, leftColumns, limit, lowerBound, mapType, modeType, multiLine, numRows, numRowsAfter, numRowsBefore, orderByColumn, orderByColumns, other, pattern, patternOption1, patternOption2, patternOptions, period, position, removeAllPunctuation, removeAllQuotes, removeAllWhitespace, removeCustomCharacters, removeCustomValue, removeLeadingAndTrailingPunctuation, removeLeadingAndTrailingQuotes, removeLeadingAndTrailingWhitespace, removeLetters, removeNumbers, removeSourceColumn, removeSpecialCharacters, rightColumns, sampleSize, sampleType, secondInput, secondaryInputs, sheetIndexes, sheetNames, sourceColumn, sourceColumn1, sourceColumn2, sourceColumns, startColumnIndex, startPattern, startPosition, startValue, stemmingMode, stepCount, stepIndex, stopWordsMode, strategy, targetColumn, targetColumnNames, targetDateFormat, targetIndex, timeZone, tokenizerPattern, trueString, udfLang, units, unpivotColumn, upperBound, useNewDataFrame, value, value1, value2, valueColumn, viewFrame);
         }

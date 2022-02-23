@@ -10,7 +10,7 @@ import io.pulumi.awsnative.synthetics.outputs.CanarySchedule;
 import io.pulumi.awsnative.synthetics.outputs.CanaryTag;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVPCConfig;
 import io.pulumi.awsnative.synthetics.outputs.CanaryVisualReference;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -351,7 +351,6 @@ public final class GetCanaryResult {
             this.visualReference = visualReference;
             return this;
         }
-
         public GetCanaryResult build() {
             return new GetCanaryResult(artifactConfig, artifactS3Location, code, executionRoleArn, failureRetentionPeriod, id, runConfig, runtimeVersion, schedule, startCanaryAfterCreation, state, successRetentionPeriod, tags, vPCConfig, visualReference);
         }

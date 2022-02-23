@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * 
      */
     @InputImport(name="maxFindingsPerInfoTypes")
-    private final @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
+        private final @Nullable Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> maxFindingsPerInfoTypes;
 
     public Input<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeArgs>> getMaxFindingsPerInfoTypes() {
         return this.maxFindingsPerInfoTypes == null ? Input.empty() : this.maxFindingsPerInfoTypes;
@@ -33,7 +33,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * 
      */
     @InputImport(name="maxFindingsPerItem", required=true)
-    private final Input<Integer> maxFindingsPerItem;
+        private final Input<Integer> maxFindingsPerItem;
 
     public Input<Integer> getMaxFindingsPerItem() {
         return this.maxFindingsPerItem;
@@ -44,7 +44,7 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
      * 
      */
     @InputImport(name="maxFindingsPerRequest", required=true)
-    private final Input<Integer> maxFindingsPerRequest;
+        private final Input<Integer> maxFindingsPerRequest;
 
     public Input<Integer> getMaxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
@@ -118,7 +118,6 @@ public final class PreventionInspectTemplateInspectConfigLimitsArgs extends io.p
             this.maxFindingsPerRequest = Input.of(Objects.requireNonNull(maxFindingsPerRequest));
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigLimitsArgs build() {
             return new PreventionInspectTemplateInspectConfigLimitsArgs(maxFindingsPerInfoTypes, maxFindingsPerItem, maxFindingsPerRequest);
         }

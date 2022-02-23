@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.policyinsights.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="remediationName", required=true)
-    private final String remediationName;
+        private final String remediationName;
 
     public String getRemediationName() {
         return this.remediationName;
@@ -28,7 +28,7 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceId", required=true)
-    private final String resourceId;
+        private final String resourceId;
 
     public String getResourceId() {
         return this.resourceId;
@@ -77,7 +77,6 @@ public final class GetRemediationAtResourceArgs extends io.pulumi.resources.Invo
             this.resourceId = Objects.requireNonNull(resourceId);
             return this;
         }
-
         public GetRemediationAtResourceArgs build() {
             return new GetRemediationAtResourceArgs(remediationName, resourceId);
         }

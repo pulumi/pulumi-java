@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.codeguruprofiler.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class ProfilingGroupChannel {
             this.channelUri = Objects.requireNonNull(channelUri);
             return this;
         }
-
         public ProfilingGroupChannel build() {
             return new ProfilingGroupChannel(channelId, channelUri);
         }

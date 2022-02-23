@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetCaPoolArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetCaPoolArgs Empty = new GetCaPoolArgs();
 
     @InputImport(name="caPoolId", required=true)
-    private final String caPoolId;
+      private final String caPoolId;
 
     public String getCaPoolId() {
         return this.caPoolId;
     }
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
@@ -88,7 +88,6 @@ public final class GetCaPoolArgs extends io.pulumi.resources.InvokeArgs {
             this.project = project;
             return this;
         }
-
         public GetCaPoolArgs build() {
             return new GetCaPoolArgs(caPoolId, location, project);
         }

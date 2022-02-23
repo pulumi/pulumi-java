@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.ErrorDetailResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -98,7 +98,6 @@ public final class InquiryValidationResponse {
             this.status = status;
             return this;
         }
-
         public InquiryValidationResponse build() {
             return new InquiryValidationResponse(additionalDetail, errorDetail, status);
         }

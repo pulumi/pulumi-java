@@ -9,8 +9,8 @@ import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationInsta
 import io.pulumi.awsnative.imagebuilder.outputs.InfrastructureConfigurationLogging;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.Object;
 import java.lang.String;
@@ -220,13 +220,6 @@ public class InfrastructureConfiguration extends io.pulumi.resources.CustomResou
         return this.terminateInstanceOnFailure;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InfrastructureConfiguration(String name) {
-        super("aws-native:imagebuilder:InfrastructureConfiguration", name, InfrastructureConfigurationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

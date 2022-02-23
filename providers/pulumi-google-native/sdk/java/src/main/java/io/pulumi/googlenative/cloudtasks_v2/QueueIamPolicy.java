@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudtasks_v2;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudtasks_v2.QueueIamPolicyArgs;
 import io.pulumi.googlenative.cloudtasks_v2.outputs.BindingResponse;
@@ -66,13 +66,6 @@ public class QueueIamPolicy extends io.pulumi.resources.CustomResource {
         return this.version;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public QueueIamPolicy(String name) {
-        super("google-native:cloudtasks/v2:QueueIamPolicy", name, QueueIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

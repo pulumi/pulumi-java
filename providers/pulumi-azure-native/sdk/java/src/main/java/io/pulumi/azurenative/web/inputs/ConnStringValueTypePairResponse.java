@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConnStringValueTypePairResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -32,7 +32,7 @@ public final class ConnStringValueTypePairResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="value", required=true)
-    private final String value;
+        private final String value;
 
     public String getValue() {
         return this.value;
@@ -81,7 +81,6 @@ public final class ConnStringValueTypePairResponse extends io.pulumi.resources.I
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public ConnStringValueTypePairResponse build() {
             return new ConnStringValueTypePairResponse(type, value);
         }

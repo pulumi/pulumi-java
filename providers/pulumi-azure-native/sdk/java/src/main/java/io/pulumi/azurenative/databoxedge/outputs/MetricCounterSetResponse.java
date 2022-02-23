@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databoxedge.outputs;
 
 import io.pulumi.azurenative.databoxedge.outputs.MetricCounterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class MetricCounterSetResponse {
             this.counters = Objects.requireNonNull(counters);
             return this;
         }
-
         public MetricCounterSetResponse build() {
             return new MetricCounterSetResponse(counters);
         }

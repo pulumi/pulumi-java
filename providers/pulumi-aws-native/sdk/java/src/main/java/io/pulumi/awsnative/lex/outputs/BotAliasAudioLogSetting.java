@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.outputs;
 
 import io.pulumi.awsnative.lex.outputs.BotAliasAudioLogDestination;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -59,7 +59,6 @@ public final class BotAliasAudioLogSetting {
             this.enabled = Objects.requireNonNull(enabled);
             return this;
         }
-
         public BotAliasAudioLogSetting build() {
             return new BotAliasAudioLogSetting(destination, enabled);
         }

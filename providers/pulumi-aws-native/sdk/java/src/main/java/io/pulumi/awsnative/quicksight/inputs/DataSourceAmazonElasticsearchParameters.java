@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class DataSourceAmazonElasticsearchParameters extends io.pulumi.res
      * 
      */
     @InputImport(name="domain", required=true)
-    private final String domain;
+        private final String domain;
 
     public String getDomain() {
         return this.domain;
@@ -59,7 +59,6 @@ public final class DataSourceAmazonElasticsearchParameters extends io.pulumi.res
             this.domain = Objects.requireNonNull(domain);
             return this;
         }
-
         public DataSourceAmazonElasticsearchParameters build() {
             return new DataSourceAmazonElasticsearchParameters(domain);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiregistration.k8s.io_v1.inputs.ServiceReferenceArgs;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -26,7 +26,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="caBundle")
-    private final @Nullable Input<String> caBundle;
+        private final @Nullable Input<String> caBundle;
 
     public Input<String> getCaBundle() {
         return this.caBundle == null ? Input.empty() : this.caBundle;
@@ -37,7 +37,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="group")
-    private final @Nullable Input<String> group;
+        private final @Nullable Input<String> group;
 
     public Input<String> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -48,7 +48,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="groupPriorityMinimum", required=true)
-    private final Input<Integer> groupPriorityMinimum;
+        private final Input<Integer> groupPriorityMinimum;
 
     public Input<Integer> getGroupPriorityMinimum() {
         return this.groupPriorityMinimum;
@@ -59,7 +59,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="insecureSkipTLSVerify")
-    private final @Nullable Input<Boolean> insecureSkipTLSVerify;
+        private final @Nullable Input<Boolean> insecureSkipTLSVerify;
 
     public Input<Boolean> getInsecureSkipTLSVerify() {
         return this.insecureSkipTLSVerify == null ? Input.empty() : this.insecureSkipTLSVerify;
@@ -70,7 +70,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="service")
-    private final @Nullable Input<ServiceReferenceArgs> service;
+        private final @Nullable Input<ServiceReferenceArgs> service;
 
     public Input<ServiceReferenceArgs> getService() {
         return this.service == null ? Input.empty() : this.service;
@@ -81,7 +81,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="version")
-    private final @Nullable Input<String> version;
+        private final @Nullable Input<String> version;
 
     public Input<String> getVersion() {
         return this.version == null ? Input.empty() : this.version;
@@ -92,7 +92,7 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionPriority", required=true)
-    private final Input<Integer> versionPriority;
+        private final Input<Integer> versionPriority;
 
     public Input<Integer> getVersionPriority() {
         return this.versionPriority;
@@ -226,7 +226,6 @@ public final class APIServiceSpecArgs extends io.pulumi.resources.ResourceArgs {
             this.versionPriority = Input.of(Objects.requireNonNull(versionPriority));
             return this;
         }
-
         public APIServiceSpecArgs build() {
             return new APIServiceSpecArgs(caBundle, group, groupPriorityMinimum, insecureSkipTLSVerify, service, version, versionPriority);
         }

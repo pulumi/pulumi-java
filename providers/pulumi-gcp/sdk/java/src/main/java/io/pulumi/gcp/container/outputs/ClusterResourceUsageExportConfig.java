@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.ClusterResourceUsageExportConfigBigqueryDestination;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -108,7 +108,6 @@ public final class ClusterResourceUsageExportConfig {
             this.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }
-
         public ClusterResourceUsageExportConfig build() {
             return new ClusterResourceUsageExportConfig(bigqueryDestination, enableNetworkEgressMetering, enableResourceConsumptionMetering);
         }

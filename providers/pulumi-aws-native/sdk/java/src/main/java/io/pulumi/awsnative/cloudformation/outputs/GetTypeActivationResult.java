@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.cloudformation.outputs;
 
 import io.pulumi.awsnative.cloudformation.enums.TypeActivationVersionBump;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -120,7 +120,6 @@ public final class GetTypeActivationResult {
             this.versionBump = versionBump;
             return this;
         }
-
         public GetTypeActivationResult build() {
             return new GetTypeActivationResult(arn, autoUpdate, majorVersion, versionBump);
         }

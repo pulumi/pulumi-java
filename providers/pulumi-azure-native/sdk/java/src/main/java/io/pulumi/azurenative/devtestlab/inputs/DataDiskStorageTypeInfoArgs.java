@@ -6,7 +6,7 @@ package io.pulumi.azurenative.devtestlab.inputs;
 import io.pulumi.azurenative.devtestlab.enums.StorageType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="lun")
-    private final @Nullable Input<String> lun;
+        private final @Nullable Input<String> lun;
 
     public Input<String> getLun() {
         return this.lun == null ? Input.empty() : this.lun;
@@ -36,7 +36,7 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="storageType")
-    private final @Nullable Input<Either<String,StorageType>> storageType;
+        private final @Nullable Input<Either<String,StorageType>> storageType;
 
     public Input<Either<String,StorageType>> getStorageType() {
         return this.storageType == null ? Input.empty() : this.storageType;
@@ -95,7 +95,6 @@ public final class DataDiskStorageTypeInfoArgs extends io.pulumi.resources.Resou
             this.storageType = Input.ofNullable(storageType);
             return this;
         }
-
         public DataDiskStorageTypeInfoArgs build() {
             return new DataDiskStorageTypeInfoArgs(lun, storageType);
         }

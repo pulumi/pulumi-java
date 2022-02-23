@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.privateca_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="clientAuth")
-    private final @Nullable Input<Boolean> clientAuth;
+      private final @Nullable Input<Boolean> clientAuth;
 
     public Input<Boolean> getClientAuth() {
         return this.clientAuth == null ? Input.empty() : this.clientAuth;
@@ -34,7 +34,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="codeSigning")
-    private final @Nullable Input<Boolean> codeSigning;
+      private final @Nullable Input<Boolean> codeSigning;
 
     public Input<Boolean> getCodeSigning() {
         return this.codeSigning == null ? Input.empty() : this.codeSigning;
@@ -45,7 +45,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="emailProtection")
-    private final @Nullable Input<Boolean> emailProtection;
+      private final @Nullable Input<Boolean> emailProtection;
 
     public Input<Boolean> getEmailProtection() {
         return this.emailProtection == null ? Input.empty() : this.emailProtection;
@@ -56,7 +56,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="ocspSigning")
-    private final @Nullable Input<Boolean> ocspSigning;
+      private final @Nullable Input<Boolean> ocspSigning;
 
     public Input<Boolean> getOcspSigning() {
         return this.ocspSigning == null ? Input.empty() : this.ocspSigning;
@@ -67,7 +67,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="serverAuth")
-    private final @Nullable Input<Boolean> serverAuth;
+      private final @Nullable Input<Boolean> serverAuth;
 
     public Input<Boolean> getServerAuth() {
         return this.serverAuth == null ? Input.empty() : this.serverAuth;
@@ -78,7 +78,7 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="timeStamping")
-    private final @Nullable Input<Boolean> timeStamping;
+      private final @Nullable Input<Boolean> timeStamping;
 
     public Input<Boolean> getTimeStamping() {
         return this.timeStamping == null ? Input.empty() : this.timeStamping;
@@ -197,7 +197,6 @@ public final class ExtendedKeyUsageOptionsArgs extends io.pulumi.resources.Resou
             this.timeStamping = Input.ofNullable(timeStamping);
             return this;
         }
-
         public ExtendedKeyUsageOptionsArgs build() {
             return new ExtendedKeyUsageOptionsArgs(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

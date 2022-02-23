@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vision_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vision_v1.outputs.KeyValueResponse;
 import java.lang.String;
 import java.util.List;
@@ -139,7 +139,6 @@ public final class GetProductResult {
             this.productLabels = Objects.requireNonNull(productLabels);
             return this;
         }
-
         public GetProductResult build() {
             return new GetProductResult(description, displayName, name, productCategory, productLabels);
         }

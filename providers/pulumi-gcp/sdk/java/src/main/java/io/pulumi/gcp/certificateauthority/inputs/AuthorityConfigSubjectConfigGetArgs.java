@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectAltNameGetArgs;
 import io.pulumi.gcp.certificateauthority.inputs.AuthorityConfigSubjectConfigSubjectGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subject", required=true)
-    private final Input<AuthorityConfigSubjectConfigSubjectGetArgs> subject;
+        private final Input<AuthorityConfigSubjectConfigSubjectGetArgs> subject;
 
     public Input<AuthorityConfigSubjectConfigSubjectGetArgs> getSubject() {
         return this.subject;
@@ -33,7 +33,7 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subjectAltName")
-    private final @Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
+        private final @Nullable Input<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
     public Input<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> getSubjectAltName() {
         return this.subjectAltName == null ? Input.empty() : this.subjectAltName;
@@ -92,7 +92,6 @@ public final class AuthorityConfigSubjectConfigGetArgs extends io.pulumi.resourc
             this.subjectAltName = Input.ofNullable(subjectAltName);
             return this;
         }
-
         public AuthorityConfigSubjectConfigGetArgs build() {
             return new AuthorityConfigSubjectConfigGetArgs(subject, subjectAltName);
         }

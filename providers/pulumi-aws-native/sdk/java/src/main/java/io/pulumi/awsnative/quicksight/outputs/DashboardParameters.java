@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.outputs.DashboardDateTimeParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardDecimalParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardIntegerParameter;
 import io.pulumi.awsnative.quicksight.outputs.DashboardStringParameter;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -121,7 +121,6 @@ public final class DashboardParameters {
             this.stringParameters = stringParameters;
             return this;
         }
-
         public DashboardParameters build() {
             return new DashboardParameters(dateTimeParameters, decimalParameters, integerParameters, stringParameters);
         }

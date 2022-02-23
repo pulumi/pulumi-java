@@ -6,7 +6,7 @@ package io.pulumi.awsnative.frauddetector.outputs;
 import io.pulumi.awsnative.frauddetector.enums.DetectorRuleLanguage;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorOutcome;
 import io.pulumi.awsnative.frauddetector.outputs.DetectorTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -213,7 +213,6 @@ public final class DetectorRule {
             this.tags = tags;
             return this;
         }
-
         public DetectorRule build() {
             return new DetectorRule(arn, createdTime, description, detectorId, expression, language, lastUpdatedTime, outcomes, ruleId, ruleVersion, tags);
         }

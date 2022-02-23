@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.outputs.CommandJobResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SweepJobResponse;
 import io.pulumi.azurenative.machinelearningservices.outputs.SystemDataResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -141,7 +141,6 @@ public final class GetJobResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetJobResult build() {
             return new GetJobResult(id, name, properties, systemData, type);
         }

@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -42,7 +42,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -53,7 +53,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -64,7 +64,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -75,7 +75,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -86,7 +86,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="servicePrincipalId", required=true)
-    private final Object servicePrincipalId;
+        private final Object servicePrincipalId;
 
     public Object getServicePrincipalId() {
         return this.servicePrincipalId;
@@ -97,7 +97,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="servicePrincipalKey", required=true)
-    private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
+        private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getServicePrincipalKey() {
         return this.servicePrincipalKey;
@@ -108,7 +108,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="siteUrl", required=true)
-    private final Object siteUrl;
+        private final Object siteUrl;
 
     public Object getSiteUrl() {
         return this.siteUrl;
@@ -119,7 +119,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="tenantId", required=true)
-    private final Object tenantId;
+        private final Object tenantId;
 
     public Object getTenantId() {
         return this.tenantId;
@@ -131,7 +131,7 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -260,7 +260,6 @@ public final class SharePointOnlineListLinkedServiceResponse extends io.pulumi.r
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SharePointOnlineListLinkedServiceResponse build() {
             return new SharePointOnlineListLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, servicePrincipalId, servicePrincipalKey, siteUrl, tenantId, type);
         }

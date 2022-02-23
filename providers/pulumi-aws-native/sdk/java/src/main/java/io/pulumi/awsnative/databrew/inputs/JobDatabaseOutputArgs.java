@@ -6,7 +6,7 @@ package io.pulumi.awsnative.databrew.inputs;
 import io.pulumi.awsnative.databrew.enums.JobDatabaseOutputDatabaseOutputMode;
 import io.pulumi.awsnative.databrew.inputs.JobDatabaseTableOutputOptionsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
     public static final JobDatabaseOutputArgs Empty = new JobDatabaseOutputArgs();
 
     @InputImport(name="databaseOptions", required=true)
-    private final Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
+        private final Input<JobDatabaseTableOutputOptionsArgs> databaseOptions;
 
     public Input<JobDatabaseTableOutputOptionsArgs> getDatabaseOptions() {
         return this.databaseOptions;
@@ -28,7 +28,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="databaseOutputMode")
-    private final @Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
+        private final @Nullable Input<JobDatabaseOutputDatabaseOutputMode> databaseOutputMode;
 
     public Input<JobDatabaseOutputDatabaseOutputMode> getDatabaseOutputMode() {
         return this.databaseOutputMode == null ? Input.empty() : this.databaseOutputMode;
@@ -39,7 +39,7 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="glueConnectionName", required=true)
-    private final Input<String> glueConnectionName;
+        private final Input<String> glueConnectionName;
 
     public Input<String> getGlueConnectionName() {
         return this.glueConnectionName;
@@ -113,7 +113,6 @@ public final class JobDatabaseOutputArgs extends io.pulumi.resources.ResourceArg
             this.glueConnectionName = Input.of(Objects.requireNonNull(glueConnectionName));
             return this;
         }
-
         public JobDatabaseOutputArgs build() {
             return new JobDatabaseOutputArgs(databaseOptions, databaseOutputMode, glueConnectionName);
         }

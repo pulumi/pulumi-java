@@ -7,7 +7,7 @@ import io.pulumi.azurenative.synapse.outputs.SsisEnvironmentResponse;
 import io.pulumi.azurenative.synapse.outputs.SsisFolderResponse;
 import io.pulumi.azurenative.synapse.outputs.SsisPackageResponse;
 import io.pulumi.azurenative.synapse.outputs.SsisProjectResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -82,7 +82,6 @@ public final class GetIntegrationRuntimeObjectMetadatumResult {
             this.value = value;
             return this;
         }
-
         public GetIntegrationRuntimeObjectMetadatumResult build() {
             return new GetIntegrationRuntimeObjectMetadatumResult(nextLink, value);
         }

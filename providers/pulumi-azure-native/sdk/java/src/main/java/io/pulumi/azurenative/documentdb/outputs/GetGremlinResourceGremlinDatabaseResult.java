@@ -5,7 +5,7 @@ package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.GremlinDatabaseGetPropertiesResponseOptions;
 import io.pulumi.azurenative.documentdb.outputs.GremlinDatabaseGetPropertiesResponseResource;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -168,7 +168,6 @@ public final class GetGremlinResourceGremlinDatabaseResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGremlinResourceGremlinDatabaseResult build() {
             return new GetGremlinResourceGremlinDatabaseResult(id, location, name, options, resource, tags, type);
         }

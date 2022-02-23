@@ -6,7 +6,7 @@ package io.pulumi.azurenative.compute.outputs;
 import io.pulumi.azurenative.compute.outputs.TargetRegionResponse;
 import io.pulumi.azurenative.compute.outputs.UserArtifactManageResponse;
 import io.pulumi.azurenative.compute.outputs.UserArtifactSourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -221,7 +221,6 @@ public final class GalleryApplicationVersionPublishingProfileResponse {
             this.targetRegions = targetRegions;
             return this;
         }
-
         public GalleryApplicationVersionPublishingProfileResponse build() {
             return new GalleryApplicationVersionPublishingProfileResponse(enableHealthCheck, endOfLifeDate, excludeFromLatest, manageActions, publishedDate, replicaCount, source, storageAccountType, targetRegions);
         }

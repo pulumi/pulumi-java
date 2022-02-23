@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.route53resolver.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -76,7 +76,6 @@ public final class ResolverRuleTargetAddress {
             this.port = port;
             return this;
         }
-
         public ResolverRuleTargetAddress build() {
             return new ResolverRuleTargetAddress(ip, port);
         }

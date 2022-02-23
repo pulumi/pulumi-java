@@ -6,7 +6,7 @@ package io.pulumi.azurenative.media.outputs;
 import io.pulumi.azurenative.media.outputs.CrossSiteAccessPoliciesResponse;
 import io.pulumi.azurenative.media.outputs.StreamingEndpointAccessControlResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.Integer;
@@ -504,7 +504,6 @@ public final class GetStreamingEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetStreamingEndpointResult build() {
             return new GetStreamingEndpointResult(accessControl, availabilitySetName, cdnEnabled, cdnProfile, cdnProvider, created, crossSiteAccessPolicies, customHostNames, description, freeTrialEndTime, hostName, id, lastModified, location, maxCacheAge, name, provisioningState, resourceState, scaleUnits, systemData, tags, type);
         }

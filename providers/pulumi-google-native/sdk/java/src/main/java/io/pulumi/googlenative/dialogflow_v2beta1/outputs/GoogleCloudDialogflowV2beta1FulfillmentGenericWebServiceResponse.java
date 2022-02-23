@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -139,7 +139,6 @@ public final class GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceRespo
             this.username = Objects.requireNonNull(username);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse build() {
             return new GoogleCloudDialogflowV2beta1FulfillmentGenericWebServiceResponse(isCloudFunction, password, requestHeaders, uri, username);
         }

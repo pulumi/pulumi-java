@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1DatastoreConfigResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -180,7 +180,6 @@ public final class GetDatastoreResult {
             this.targetType = Objects.requireNonNull(targetType);
             return this;
         }
-
         public GetDatastoreResult build() {
             return new GetDatastoreResult(createTime, datastoreConfig, displayName, lastUpdateTime, org, self, targetType);
         }

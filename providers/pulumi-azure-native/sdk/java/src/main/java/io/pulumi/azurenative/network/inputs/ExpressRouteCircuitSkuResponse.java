@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="family")
-    private final @Nullable String family;
+        private final @Nullable String family;
 
     public Optional<String> getFamily() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
@@ -34,7 +34,7 @@ public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -45,7 +45,7 @@ public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+        private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -104,7 +104,6 @@ public final class ExpressRouteCircuitSkuResponse extends io.pulumi.resources.In
             this.tier = tier;
             return this;
         }
-
         public ExpressRouteCircuitSkuResponse build() {
             return new ExpressRouteCircuitSkuResponse(family, name, tier);
         }

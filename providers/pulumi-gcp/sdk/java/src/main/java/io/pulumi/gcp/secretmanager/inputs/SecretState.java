@@ -4,7 +4,7 @@
 package io.pulumi.gcp.secretmanager.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.secretmanager.inputs.SecretReplicationGetArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretRotationGetArgs;
 import io.pulumi.gcp.secretmanager.inputs.SecretTopicGetArgs;
@@ -24,7 +24,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -36,7 +36,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="expireTime")
-    private final @Nullable Input<String> expireTime;
+        private final @Nullable Input<String> expireTime;
 
     public Input<String> getExpireTime() {
         return this.expireTime == null ? Input.empty() : this.expireTime;
@@ -54,7 +54,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -66,7 +66,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -78,7 +78,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -91,7 +91,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="replication")
-    private final @Nullable Input<SecretReplicationGetArgs> replication;
+        private final @Nullable Input<SecretReplicationGetArgs> replication;
 
     public Input<SecretReplicationGetArgs> getReplication() {
         return this.replication == null ? Input.empty() : this.replication;
@@ -103,7 +103,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotation")
-    private final @Nullable Input<SecretRotationGetArgs> rotation;
+        private final @Nullable Input<SecretRotationGetArgs> rotation;
 
     public Input<SecretRotationGetArgs> getRotation() {
         return this.rotation == null ? Input.empty() : this.rotation;
@@ -114,7 +114,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretId")
-    private final @Nullable Input<String> secretId;
+        private final @Nullable Input<String> secretId;
 
     public Input<String> getSecretId() {
         return this.secretId == null ? Input.empty() : this.secretId;
@@ -126,7 +126,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="topics")
-    private final @Nullable Input<List<SecretTopicGetArgs>> topics;
+        private final @Nullable Input<List<SecretTopicGetArgs>> topics;
 
     public Input<List<SecretTopicGetArgs>> getTopics() {
         return this.topics == null ? Input.empty() : this.topics;
@@ -138,7 +138,7 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<String> ttl;
+        private final @Nullable Input<String> ttl;
 
     public Input<String> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -317,7 +317,6 @@ public final class SecretState extends io.pulumi.resources.ResourceArgs {
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public SecretState build() {
             return new SecretState(createTime, expireTime, labels, name, project, replication, rotation, secretId, topics, ttl);
         }

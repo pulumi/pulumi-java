@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.logging_v2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
     public static final BillingAccountExclusionArgs Empty = new BillingAccountExclusionArgs();
 
     @InputImport(name="billingAccountId", required=true)
-    private final Input<String> billingAccountId;
+      private final Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId;
@@ -27,7 +27,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -38,7 +38,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+      private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -49,7 +49,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filter", required=true)
-    private final Input<String> filter;
+      private final Input<String> filter;
 
     public Input<String> getFilter() {
         return this.filter;
@@ -60,7 +60,7 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -164,7 +164,6 @@ public final class BillingAccountExclusionArgs extends io.pulumi.resources.Resou
             this.name = Input.ofNullable(name);
             return this;
         }
-
         public BillingAccountExclusionArgs build() {
             return new BillingAccountExclusionArgs(billingAccountId, description, disabled, filter, name);
         }

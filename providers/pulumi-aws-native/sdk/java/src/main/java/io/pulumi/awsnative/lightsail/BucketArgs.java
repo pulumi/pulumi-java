@@ -6,7 +6,7 @@ package io.pulumi.awsnative.lightsail;
 import io.pulumi.awsnative.lightsail.inputs.BucketAccessRulesArgs;
 import io.pulumi.awsnative.lightsail.inputs.BucketTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
     public static final BucketArgs Empty = new BucketArgs();
 
     @InputImport(name="accessRules")
-    private final @Nullable Input<BucketAccessRulesArgs> accessRules;
+        private final @Nullable Input<BucketAccessRulesArgs> accessRules;
 
     public Input<BucketAccessRulesArgs> getAccessRules() {
         return this.accessRules == null ? Input.empty() : this.accessRules;
@@ -30,7 +30,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bucketName")
-    private final @Nullable Input<String> bucketName;
+        private final @Nullable Input<String> bucketName;
 
     public Input<String> getBucketName() {
         return this.bucketName == null ? Input.empty() : this.bucketName;
@@ -41,7 +41,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="bundleId", required=true)
-    private final Input<String> bundleId;
+        private final Input<String> bundleId;
 
     public Input<String> getBundleId() {
         return this.bundleId;
@@ -52,7 +52,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="objectVersioning")
-    private final @Nullable Input<Boolean> objectVersioning;
+        private final @Nullable Input<Boolean> objectVersioning;
 
     public Input<Boolean> getObjectVersioning() {
         return this.objectVersioning == null ? Input.empty() : this.objectVersioning;
@@ -63,7 +63,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="readOnlyAccessAccounts")
-    private final @Nullable Input<List<String>> readOnlyAccessAccounts;
+        private final @Nullable Input<List<String>> readOnlyAccessAccounts;
 
     public Input<List<String>> getReadOnlyAccessAccounts() {
         return this.readOnlyAccessAccounts == null ? Input.empty() : this.readOnlyAccessAccounts;
@@ -74,7 +74,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourcesReceivingAccess")
-    private final @Nullable Input<List<String>> resourcesReceivingAccess;
+        private final @Nullable Input<List<String>> resourcesReceivingAccess;
 
     public Input<List<String>> getResourcesReceivingAccess() {
         return this.resourcesReceivingAccess == null ? Input.empty() : this.resourcesReceivingAccess;
@@ -85,7 +85,7 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<BucketTagArgs>> tags;
+        private final @Nullable Input<List<BucketTagArgs>> tags;
 
     public Input<List<BucketTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -219,7 +219,6 @@ public final class BucketArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public BucketArgs build() {
             return new BucketArgs(accessRules, bucketName, bundleId, objectVersioning, readOnlyAccessAccounts, resourcesReceivingAccess, tags);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.RuleWithOperations;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.outputs.WebhookClientConfig;
 import io.pulumi.kubernetes.meta_v1.outputs.LabelSelector;
@@ -354,7 +354,6 @@ public final class MutatingWebhook {
             this.timeoutSeconds = timeoutSeconds;
             return this;
         }
-
         public MutatingWebhook build() {
             return new MutatingWebhook(admissionReviewVersions, clientConfig, failurePolicy, matchPolicy, name, namespaceSelector, objectSelector, reinvocationPolicy, rules, sideEffects, timeoutSeconds);
         }

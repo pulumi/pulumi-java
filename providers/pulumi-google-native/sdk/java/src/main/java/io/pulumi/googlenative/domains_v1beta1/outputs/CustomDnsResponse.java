@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.domains_v1beta1.outputs.DsRecordResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class CustomDnsResponse {
             this.nameServers = Objects.requireNonNull(nameServers);
             return this;
         }
-
         public CustomDnsResponse build() {
             return new CustomDnsResponse(dsRecords, nameServers);
         }

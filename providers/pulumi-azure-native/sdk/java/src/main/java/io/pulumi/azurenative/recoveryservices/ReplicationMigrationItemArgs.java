@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.azurenative.recoveryservices.inputs.EnableMigrationInputPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="fabricName", required=true)
-    private final Input<String> fabricName;
+        private final Input<String> fabricName;
 
     public Input<String> getFabricName() {
         return this.fabricName;
@@ -31,7 +31,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="migrationItemName")
-    private final @Nullable Input<String> migrationItemName;
+        private final @Nullable Input<String> migrationItemName;
 
     public Input<String> getMigrationItemName() {
         return this.migrationItemName == null ? Input.empty() : this.migrationItemName;
@@ -42,7 +42,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<EnableMigrationInputPropertiesArgs> properties;
+        private final Input<EnableMigrationInputPropertiesArgs> properties;
 
     public Input<EnableMigrationInputPropertiesArgs> getProperties() {
         return this.properties;
@@ -53,7 +53,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="protectionContainerName", required=true)
-    private final Input<String> protectionContainerName;
+        private final Input<String> protectionContainerName;
 
     public Input<String> getProtectionContainerName() {
         return this.protectionContainerName;
@@ -64,7 +64,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -75,7 +75,7 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="resourceName", required=true)
-    private final Input<String> resourceName;
+        private final Input<String> resourceName;
 
     public Input<String> getPropResourceName() {
         return this.resourceName;
@@ -194,7 +194,6 @@ public final class ReplicationMigrationItemArgs extends io.pulumi.resources.Reso
             this.resourceName = Input.of(Objects.requireNonNull(resourceName));
             return this;
         }
-
         public ReplicationMigrationItemArgs build() {
             return new ReplicationMigrationItemArgs(fabricName, migrationItemName, properties, protectionContainerName, resourceGroupName, resourceName);
         }

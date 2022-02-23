@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="radiusServerAddress", required=true)
-    private final Input<String> radiusServerAddress;
+        private final Input<String> radiusServerAddress;
 
     public Input<String> getRadiusServerAddress() {
         return this.radiusServerAddress;
@@ -35,7 +35,7 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="radiusServerScore")
-    private final @Nullable Input<Double> radiusServerScore;
+        private final @Nullable Input<Double> radiusServerScore;
 
     public Input<Double> getRadiusServerScore() {
         return this.radiusServerScore == null ? Input.empty() : this.radiusServerScore;
@@ -46,7 +46,7 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="radiusServerSecret")
-    private final @Nullable Input<String> radiusServerSecret;
+        private final @Nullable Input<String> radiusServerSecret;
 
     public Input<String> getRadiusServerSecret() {
         return this.radiusServerSecret == null ? Input.empty() : this.radiusServerSecret;
@@ -120,7 +120,6 @@ public final class RadiusServerArgs extends io.pulumi.resources.ResourceArgs {
             this.radiusServerSecret = Input.ofNullable(radiusServerSecret);
             return this;
         }
-
         public RadiusServerArgs build() {
             return new RadiusServerArgs(radiusServerAddress, radiusServerScore, radiusServerSecret);
         }

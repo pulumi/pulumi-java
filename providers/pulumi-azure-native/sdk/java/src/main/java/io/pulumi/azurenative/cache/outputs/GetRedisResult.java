@@ -9,7 +9,7 @@ import io.pulumi.azurenative.cache.outputs.RedisCommonPropertiesResponseRedisCon
 import io.pulumi.azurenative.cache.outputs.RedisInstanceDetailsResponse;
 import io.pulumi.azurenative.cache.outputs.RedisLinkedServerResponse;
 import io.pulumi.azurenative.cache.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -569,7 +569,6 @@ public final class GetRedisResult {
             this.zones = zones;
             return this;
         }
-
         public GetRedisResult build() {
             return new GetRedisResult(accessKeys, enableNonSslPort, hostName, id, instances, linkedServers, location, minimumTlsVersion, name, port, privateEndpointConnections, provisioningState, publicNetworkAccess, redisConfiguration, redisVersion, replicasPerMaster, shardCount, sku, sslPort, staticIP, subnetId, tags, tenantSettings, type, zones);
         }

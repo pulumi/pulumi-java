@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.outputs;
 import io.pulumi.azurenative.datafactory.outputs.DatasetResponseFolder;
 import io.pulumi.azurenative.datafactory.outputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -252,7 +252,6 @@ public final class Office365DatasetResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public Office365DatasetResponse build() {
             return new Office365DatasetResponse(annotations, description, folder, linkedServiceName, parameters, predicate, schema, structure, tableName, type);
         }

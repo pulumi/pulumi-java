@@ -5,7 +5,7 @@ package io.pulumi.awsnative.cloudfront;
 
 import io.pulumi.awsnative.cloudfront.inputs.RealtimeLogConfigEndPointArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -18,28 +18,28 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
     public static final RealtimeLogConfigArgs Empty = new RealtimeLogConfigArgs();
 
     @InputImport(name="endPoints", required=true)
-    private final Input<List<RealtimeLogConfigEndPointArgs>> endPoints;
+        private final Input<List<RealtimeLogConfigEndPointArgs>> endPoints;
 
     public Input<List<RealtimeLogConfigEndPointArgs>> getEndPoints() {
         return this.endPoints;
     }
 
     @InputImport(name="fields", required=true)
-    private final Input<List<String>> fields;
+        private final Input<List<String>> fields;
 
     public Input<List<String>> getFields() {
         return this.fields;
     }
 
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="samplingRate", required=true)
-    private final Input<Double> samplingRate;
+        private final Input<Double> samplingRate;
 
     public Input<Double> getSamplingRate() {
         return this.samplingRate;
@@ -128,7 +128,6 @@ public final class RealtimeLogConfigArgs extends io.pulumi.resources.ResourceArg
             this.samplingRate = Input.of(Objects.requireNonNull(samplingRate));
             return this;
         }
-
         public RealtimeLogConfigArgs build() {
             return new RealtimeLogConfigArgs(endPoints, fields, name, samplingRate);
         }

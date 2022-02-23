@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventDescription", required=true)
-    private final String eventDescription;
+        private final String eventDescription;
 
     public String getEventDescription() {
         return this.eventDescription;
@@ -32,7 +32,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventLevel", required=true)
-    private final String eventLevel;
+        private final String eventLevel;
 
     public String getEventLevel() {
         return this.eventLevel;
@@ -43,7 +43,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventSummary", required=true)
-    private final String eventSummary;
+        private final String eventSummary;
 
     public String getEventSummary() {
         return this.eventSummary;
@@ -54,7 +54,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventTimestamp", required=true)
-    private final String eventTimestamp;
+        private final String eventTimestamp;
 
     public String getEventTimestamp() {
         return this.eventTimestamp;
@@ -65,7 +65,7 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
      * 
      */
     @InputImport(name="eventType", required=true)
-    private final String eventType;
+        private final String eventType;
 
     public String getEventType() {
         return this.eventType;
@@ -144,7 +144,6 @@ public final class PeeringServicePrefixEventResponse extends io.pulumi.resources
             this.eventType = Objects.requireNonNull(eventType);
             return this;
         }
-
         public PeeringServicePrefixEventResponse build() {
             return new PeeringServicePrefixEventResponse(eventDescription, eventLevel, eventSummary, eventTimestamp, eventType);
         }

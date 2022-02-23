@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.cognitiveservices.outputs;
 
 import io.pulumi.azurenative.cognitiveservices.outputs.CommitmentPeriodResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class CommitmentPlanPropertiesResponse {
             this.planType = planType;
             return this;
         }
-
         public CommitmentPlanPropertiesResponse build() {
             return new CommitmentPlanPropertiesResponse(autoRenew, current, hostingModel, last, next, planType);
         }

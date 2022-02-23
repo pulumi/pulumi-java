@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -285,7 +285,6 @@ public final class VmwareVmDetailsResponse {
             this.vmId = Objects.requireNonNull(vmId);
             return this;
         }
-
         public VmwareVmDetailsResponse build() {
             return new VmwareVmDetailsResponse(bootOption, committedStorageMb, cpuCount, datacenterDescription, datacenterId, diskCount, displayName, guestDescription, memoryMb, powerState, uuid, vmId);
         }

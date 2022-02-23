@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudfunctions;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,28 +15,28 @@ public final class FunctionIamPolicyArgs extends io.pulumi.resources.ResourceArg
     public static final FunctionIamPolicyArgs Empty = new FunctionIamPolicyArgs();
 
     @InputImport(name="cloudFunction", required=true)
-    private final Input<String> cloudFunction;
+        private final Input<String> cloudFunction;
 
     public Input<String> getCloudFunction() {
         return this.cloudFunction;
     }
 
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -125,7 +125,6 @@ public final class FunctionIamPolicyArgs extends io.pulumi.resources.ResourceArg
             this.region = Input.ofNullable(region);
             return this;
         }
-
         public FunctionIamPolicyArgs build() {
             return new FunctionIamPolicyArgs(cloudFunction, policyData, project, region);
         }

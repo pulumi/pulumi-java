@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.outputs;
 
 import io.pulumi.azurenative.compute.outputs.GalleryIdentifierResponse;
 import io.pulumi.azurenative.compute.outputs.SharingProfileResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -226,7 +226,6 @@ public final class GetGalleryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetGalleryResult build() {
             return new GetGalleryResult(description, id, identifier, location, name, provisioningState, sharingProfile, tags, type);
         }

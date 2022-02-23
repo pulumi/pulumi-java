@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="accessModes")
-    private final @Nullable List<String> accessModes;
+        private final @Nullable List<String> accessModes;
 
     public List<String> getAccessModes() {
         return this.accessModes == null ? List.of() : this.accessModes;
@@ -37,7 +37,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="destinationPort")
-    private final @Nullable Integer destinationPort;
+        private final @Nullable Integer destinationPort;
 
     public Optional<Integer> getDestinationPort() {
         return this.destinationPort == null ? Optional.empty() : Optional.ofNullable(this.destinationPort);
@@ -48,7 +48,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="disableGatewayAuth")
-    private final @Nullable Boolean disableGatewayAuth;
+        private final @Nullable Boolean disableGatewayAuth;
 
     public Optional<Boolean> getDisableGatewayAuth() {
         return this.disableGatewayAuth == null ? Optional.empty() : Optional.ofNullable(this.disableGatewayAuth);
@@ -59,7 +59,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="location", required=true)
-    private final String location;
+        private final String location;
 
     public String getLocation() {
         return this.location;
@@ -70,7 +70,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="privateIPAddress")
-    private final @Nullable String privateIPAddress;
+        private final @Nullable String privateIPAddress;
 
     public Optional<String> getPrivateIPAddress() {
         return this.privateIPAddress == null ? Optional.empty() : Optional.ofNullable(this.privateIPAddress);
@@ -81,7 +81,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="publicPort", required=true)
-    private final Integer publicPort;
+        private final Integer publicPort;
 
     public Integer getPublicPort() {
         return this.publicPort;
@@ -92,7 +92,7 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="subDomainSuffix")
-    private final @Nullable String subDomainSuffix;
+        private final @Nullable String subDomainSuffix;
 
     public Optional<String> getSubDomainSuffix() {
         return this.subDomainSuffix == null ? Optional.empty() : Optional.ofNullable(this.subDomainSuffix);
@@ -191,7 +191,6 @@ public final class ApplicationGetHttpsEndpointResponse extends io.pulumi.resourc
             this.subDomainSuffix = subDomainSuffix;
             return this;
         }
-
         public ApplicationGetHttpsEndpointResponse build() {
             return new ApplicationGetHttpsEndpointResponse(accessModes, destinationPort, disableGatewayAuth, location, privateIPAddress, publicPort, subDomainSuffix);
         }

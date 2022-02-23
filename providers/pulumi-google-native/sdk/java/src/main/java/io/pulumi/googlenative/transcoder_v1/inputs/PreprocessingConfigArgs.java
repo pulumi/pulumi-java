@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.transcoder_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.transcoder_v1.inputs.AudioArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.ColorArgs;
 import io.pulumi.googlenative.transcoder_v1.inputs.CropArgs;
@@ -28,7 +28,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="audio")
-    private final @Nullable Input<AudioArgs> audio;
+      private final @Nullable Input<AudioArgs> audio;
 
     public Input<AudioArgs> getAudio() {
         return this.audio == null ? Input.empty() : this.audio;
@@ -39,7 +39,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="color")
-    private final @Nullable Input<ColorArgs> color;
+      private final @Nullable Input<ColorArgs> color;
 
     public Input<ColorArgs> getColor() {
         return this.color == null ? Input.empty() : this.color;
@@ -50,7 +50,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="crop")
-    private final @Nullable Input<CropArgs> crop;
+      private final @Nullable Input<CropArgs> crop;
 
     public Input<CropArgs> getCrop() {
         return this.crop == null ? Input.empty() : this.crop;
@@ -61,7 +61,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="deblock")
-    private final @Nullable Input<DeblockArgs> deblock;
+      private final @Nullable Input<DeblockArgs> deblock;
 
     public Input<DeblockArgs> getDeblock() {
         return this.deblock == null ? Input.empty() : this.deblock;
@@ -72,7 +72,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="denoise")
-    private final @Nullable Input<DenoiseArgs> denoise;
+      private final @Nullable Input<DenoiseArgs> denoise;
 
     public Input<DenoiseArgs> getDenoise() {
         return this.denoise == null ? Input.empty() : this.denoise;
@@ -83,7 +83,7 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="pad")
-    private final @Nullable Input<PadArgs> pad;
+      private final @Nullable Input<PadArgs> pad;
 
     public Input<PadArgs> getPad() {
         return this.pad == null ? Input.empty() : this.pad;
@@ -202,7 +202,6 @@ public final class PreprocessingConfigArgs extends io.pulumi.resources.ResourceA
             this.pad = Input.ofNullable(pad);
             return this;
         }
-
         public PreprocessingConfigArgs build() {
             return new PreprocessingConfigArgs(audio, color, crop, deblock, denoise, pad);
         }

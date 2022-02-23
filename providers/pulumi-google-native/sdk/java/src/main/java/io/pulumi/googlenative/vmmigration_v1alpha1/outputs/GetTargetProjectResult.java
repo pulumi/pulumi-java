@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class GetTargetProjectResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetTargetProjectResult build() {
             return new GetTargetProjectResult(createTime, description, name, project, updateTime);
         }

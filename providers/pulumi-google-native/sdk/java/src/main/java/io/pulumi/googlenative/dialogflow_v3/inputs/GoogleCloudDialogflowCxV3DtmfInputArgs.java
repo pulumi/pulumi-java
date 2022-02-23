@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="digits")
-    private final @Nullable Input<String> digits;
+      private final @Nullable Input<String> digits;
 
     public Input<String> getDigits() {
         return this.digits == null ? Input.empty() : this.digits;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="finishDigit")
-    private final @Nullable Input<String> finishDigit;
+      private final @Nullable Input<String> finishDigit;
 
     public Input<String> getFinishDigit() {
         return this.finishDigit == null ? Input.empty() : this.finishDigit;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowCxV3DtmfInputArgs extends io.pulumi.reso
             this.finishDigit = Input.ofNullable(finishDigit);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3DtmfInputArgs build() {
             return new GoogleCloudDialogflowCxV3DtmfInputArgs(digits, finishDigit);
         }

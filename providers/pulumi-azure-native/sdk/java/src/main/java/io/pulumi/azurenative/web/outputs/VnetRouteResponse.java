@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.web.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -191,7 +191,6 @@ public final class VnetRouteResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VnetRouteResponse build() {
             return new VnetRouteResponse(endAddress, id, kind, name, routeType, startAddress, type);
         }

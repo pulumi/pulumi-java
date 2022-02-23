@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DataSourceManifestFileLocation;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -44,7 +44,6 @@ public final class DataSourceS3Parameters {
             this.manifestFileLocation = Objects.requireNonNull(manifestFileLocation);
             return this;
         }
-
         public DataSourceS3Parameters build() {
             return new DataSourceS3Parameters(manifestFileLocation);
         }

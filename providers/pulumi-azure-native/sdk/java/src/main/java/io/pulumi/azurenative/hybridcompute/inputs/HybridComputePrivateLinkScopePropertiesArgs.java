@@ -6,7 +6,7 @@ package io.pulumi.azurenative.hybridcompute.inputs;
 import io.pulumi.azurenative.hybridcompute.enums.PublicNetworkAccessType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
      * 
      */
     @InputImport(name="publicNetworkAccess")
-    private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
+        private final @Nullable Input<Either<String,PublicNetworkAccessType>> publicNetworkAccess;
 
     public Input<Either<String,PublicNetworkAccessType>> getPublicNetworkAccess() {
         return this.publicNetworkAccess == null ? Input.empty() : this.publicNetworkAccess;
@@ -68,7 +68,6 @@ public final class HybridComputePrivateLinkScopePropertiesArgs extends io.pulumi
             this.publicNetworkAccess = Input.ofNullable(publicNetworkAccess);
             return this;
         }
-
         public HybridComputePrivateLinkScopePropertiesArgs build() {
             return new HybridComputePrivateLinkScopePropertiesArgs(publicNetworkAccess);
         }

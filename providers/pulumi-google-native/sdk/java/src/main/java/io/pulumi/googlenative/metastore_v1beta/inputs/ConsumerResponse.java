@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endpointUri", required=true)
-    private final String endpointUri;
+      private final String endpointUri;
 
     public String getEndpointUri() {
         return this.endpointUri;
@@ -32,7 +32,7 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -81,7 +81,6 @@ public final class ConsumerResponse extends io.pulumi.resources.InvokeArgs {
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public ConsumerResponse build() {
             return new ConsumerResponse(endpointUri, subnetwork);
         }

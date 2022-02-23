@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.baremetalsolution_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.baremetalsolution_v2.outputs.ScheduleResponse;
 import java.lang.String;
 import java.util.List;
@@ -119,7 +119,6 @@ public final class GetSnapshotSchedulePolicyResult {
             this.schedules = Objects.requireNonNull(schedules);
             return this;
         }
-
         public GetSnapshotSchedulePolicyResult build() {
             return new GetSnapshotSchedulePolicyResult(description, labels, name, schedules);
         }

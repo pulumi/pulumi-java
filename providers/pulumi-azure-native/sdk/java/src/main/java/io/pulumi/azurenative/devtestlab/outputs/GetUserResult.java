@@ -5,7 +5,7 @@ package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.UserIdentityResponse;
 import io.pulumi.azurenative.devtestlab.outputs.UserSecretStoreResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -247,7 +247,6 @@ public final class GetUserResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetUserResult build() {
             return new GetUserResult(createdDate, id, identity, location, name, provisioningState, secretStore, tags, type, uniqueIdentifier);
         }

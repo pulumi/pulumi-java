@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dialogflow_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
      * 
      */
     @InputImport(name="accessibilityText")
-    private final @Nullable Input<String> accessibilityText;
+      private final @Nullable Input<String> accessibilityText;
 
     public Input<String> getAccessibilityText() {
         return this.accessibilityText == null ? Input.empty() : this.accessibilityText;
@@ -34,7 +34,7 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
      * 
      */
     @InputImport(name="imageUri")
-    private final @Nullable Input<String> imageUri;
+      private final @Nullable Input<String> imageUri;
 
     public Input<String> getImageUri() {
         return this.imageUri == null ? Input.empty() : this.imageUri;
@@ -93,7 +93,6 @@ public final class GoogleCloudDialogflowV2beta1IntentMessageImageArgs extends io
             this.imageUri = Input.ofNullable(imageUri);
             return this;
         }
-
         public GoogleCloudDialogflowV2beta1IntentMessageImageArgs build() {
             return new GoogleCloudDialogflowV2beta1IntentMessageImageArgs(accessibilityText, imageUri);
         }

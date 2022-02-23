@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class MessageCountDetailsResponse {
             this.transferMessageCount = Objects.requireNonNull(transferMessageCount);
             return this;
         }
-
         public MessageCountDetailsResponse build() {
             return new MessageCountDetailsResponse(activeMessageCount, deadLetterMessageCount, scheduledMessageCount, transferDeadLetterMessageCount, transferMessageCount);
         }

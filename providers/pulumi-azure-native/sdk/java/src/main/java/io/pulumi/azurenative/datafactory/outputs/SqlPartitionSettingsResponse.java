@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class SqlPartitionSettingsResponse {
             this.partitionUpperBound = partitionUpperBound;
             return this;
         }
-
         public SqlPartitionSettingsResponse build() {
             return new SqlPartitionSettingsResponse(partitionColumnName, partitionLowerBound, partitionUpperBound);
         }

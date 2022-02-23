@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.autoscaling_v2beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -34,7 +34,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
@@ -45,7 +45,7 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -119,7 +119,6 @@ public final class CrossVersionObjectReferenceArgs extends io.pulumi.resources.R
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public CrossVersionObjectReferenceArgs build() {
             return new CrossVersionObjectReferenceArgs(apiVersion, kind, name);
         }

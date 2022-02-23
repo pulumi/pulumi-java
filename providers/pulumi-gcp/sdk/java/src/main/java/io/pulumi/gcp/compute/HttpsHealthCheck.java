@@ -5,8 +5,8 @@ package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.compute.HttpsHealthCheckArgs;
 import io.pulumi.gcp.compute.inputs.HttpsHealthCheckState;
@@ -254,13 +254,6 @@ public class HttpsHealthCheck extends io.pulumi.resources.CustomResource {
         return this.unhealthyThreshold;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public HttpsHealthCheck(String name) {
-        super("gcp:compute/httpsHealthCheck:HttpsHealthCheck", name, HttpsHealthCheckArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

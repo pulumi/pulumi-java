@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceConversionArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionNamesArgs;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.inputs.CustomResourceDefinitionVersionArgs;
@@ -28,7 +28,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="conversion")
-    private final @Nullable Input<CustomResourceConversionArgs> conversion;
+        private final @Nullable Input<CustomResourceConversionArgs> conversion;
 
     public Input<CustomResourceConversionArgs> getConversion() {
         return this.conversion == null ? Input.empty() : this.conversion;
@@ -39,7 +39,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="group", required=true)
-    private final Input<String> group;
+        private final Input<String> group;
 
     public Input<String> getGroup() {
         return this.group;
@@ -50,7 +50,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="names", required=true)
-    private final Input<CustomResourceDefinitionNamesArgs> names;
+        private final Input<CustomResourceDefinitionNamesArgs> names;
 
     public Input<CustomResourceDefinitionNamesArgs> getNames() {
         return this.names;
@@ -61,7 +61,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="preserveUnknownFields")
-    private final @Nullable Input<Boolean> preserveUnknownFields;
+        private final @Nullable Input<Boolean> preserveUnknownFields;
 
     public Input<Boolean> getPreserveUnknownFields() {
         return this.preserveUnknownFields == null ? Input.empty() : this.preserveUnknownFields;
@@ -72,7 +72,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -83,7 +83,7 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="versions", required=true)
-    private final Input<List<CustomResourceDefinitionVersionArgs>> versions;
+        private final Input<List<CustomResourceDefinitionVersionArgs>> versions;
 
     public Input<List<CustomResourceDefinitionVersionArgs>> getVersions() {
         return this.versions;
@@ -202,7 +202,6 @@ public final class CustomResourceDefinitionSpecArgs extends io.pulumi.resources.
             this.versions = Input.of(Objects.requireNonNull(versions));
             return this;
         }
-
         public CustomResourceDefinitionSpecArgs build() {
             return new CustomResourceDefinitionSpecArgs(conversion, group, names, preserveUnknownFields, scope, versions);
         }

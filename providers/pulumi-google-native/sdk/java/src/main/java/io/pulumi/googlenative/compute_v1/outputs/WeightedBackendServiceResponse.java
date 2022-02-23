@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.HttpHeaderActionResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class WeightedBackendServiceResponse {
             this.weight = Objects.requireNonNull(weight);
             return this;
         }
-
         public WeightedBackendServiceResponse build() {
             return new WeightedBackendServiceResponse(backendService, headerAction, weight);
         }

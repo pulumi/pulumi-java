@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.DaprComponentResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -122,7 +122,6 @@ public final class DaprResponse {
             this.enabled = enabled;
             return this;
         }
-
         public DaprResponse build() {
             return new DaprResponse(appId, appPort, components, enabled);
         }

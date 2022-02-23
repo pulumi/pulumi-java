@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class SparkBatchResponse {
             this.mainJarFileUri = Objects.requireNonNull(mainJarFileUri);
             return this;
         }
-
         public SparkBatchResponse build() {
             return new SparkBatchResponse(archiveUris, args, fileUris, jarFileUris, mainClass, mainJarFileUri);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -35,7 +35,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="ikeVersion")
-    private final @Nullable Input<Integer> ikeVersion;
+        private final @Nullable Input<Integer> ikeVersion;
 
     public Input<Integer> getIkeVersion() {
         return this.ikeVersion == null ? Input.empty() : this.ikeVersion;
@@ -46,7 +46,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -60,7 +60,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localTrafficSelectors")
-    private final @Nullable Input<List<String>> localTrafficSelectors;
+        private final @Nullable Input<List<String>> localTrafficSelectors;
 
     public Input<List<String>> getLocalTrafficSelectors() {
         return this.localTrafficSelectors == null ? Input.empty() : this.localTrafficSelectors;
@@ -77,7 +77,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -88,7 +88,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerExternalGateway")
-    private final @Nullable Input<String> peerExternalGateway;
+        private final @Nullable Input<String> peerExternalGateway;
 
     public Input<String> getPeerExternalGateway() {
         return this.peerExternalGateway == null ? Input.empty() : this.peerExternalGateway;
@@ -99,7 +99,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerExternalGatewayInterface")
-    private final @Nullable Input<Integer> peerExternalGatewayInterface;
+        private final @Nullable Input<Integer> peerExternalGatewayInterface;
 
     public Input<Integer> getPeerExternalGatewayInterface() {
         return this.peerExternalGatewayInterface == null ? Input.empty() : this.peerExternalGatewayInterface;
@@ -113,7 +113,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerGcpGateway")
-    private final @Nullable Input<String> peerGcpGateway;
+        private final @Nullable Input<String> peerGcpGateway;
 
     public Input<String> getPeerGcpGateway() {
         return this.peerGcpGateway == null ? Input.empty() : this.peerGcpGateway;
@@ -124,7 +124,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="peerIp")
-    private final @Nullable Input<String> peerIp;
+        private final @Nullable Input<String> peerIp;
 
     public Input<String> getPeerIp() {
         return this.peerIp == null ? Input.empty() : this.peerIp;
@@ -136,7 +136,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -147,7 +147,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -161,7 +161,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="remoteTrafficSelectors")
-    private final @Nullable Input<List<String>> remoteTrafficSelectors;
+        private final @Nullable Input<List<String>> remoteTrafficSelectors;
 
     public Input<List<String>> getRemoteTrafficSelectors() {
         return this.remoteTrafficSelectors == null ? Input.empty() : this.remoteTrafficSelectors;
@@ -172,7 +172,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="router")
-    private final @Nullable Input<String> router;
+        private final @Nullable Input<String> router;
 
     public Input<String> getRouter() {
         return this.router == null ? Input.empty() : this.router;
@@ -185,7 +185,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sharedSecret", required=true)
-    private final Input<String> sharedSecret;
+        private final Input<String> sharedSecret;
 
     public Input<String> getSharedSecret() {
         return this.sharedSecret;
@@ -197,7 +197,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="targetVpnGateway")
-    private final @Nullable Input<String> targetVpnGateway;
+        private final @Nullable Input<String> targetVpnGateway;
 
     public Input<String> getTargetVpnGateway() {
         return this.targetVpnGateway == null ? Input.empty() : this.targetVpnGateway;
@@ -210,7 +210,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGateway")
-    private final @Nullable Input<String> vpnGateway;
+        private final @Nullable Input<String> vpnGateway;
 
     public Input<String> getVpnGateway() {
         return this.vpnGateway == null ? Input.empty() : this.vpnGateway;
@@ -221,7 +221,7 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpnGatewayInterface")
-    private final @Nullable Input<Integer> vpnGatewayInterface;
+        private final @Nullable Input<Integer> vpnGatewayInterface;
 
     public Input<Integer> getVpnGatewayInterface() {
         return this.vpnGatewayInterface == null ? Input.empty() : this.vpnGatewayInterface;
@@ -505,7 +505,6 @@ public final class VPNTunnelArgs extends io.pulumi.resources.ResourceArgs {
             this.vpnGatewayInterface = Input.ofNullable(vpnGatewayInterface);
             return this;
         }
-
         public VPNTunnelArgs build() {
             return new VPNTunnelArgs(description, ikeVersion, labels, localTrafficSelectors, name, peerExternalGateway, peerExternalGatewayInterface, peerGcpGateway, peerIp, project, region, remoteTrafficSelectors, router, sharedSecret, targetVpnGateway, vpnGateway, vpnGatewayInterface);
         }

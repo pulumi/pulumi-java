@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.nimblestudio.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+        private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -66,7 +66,6 @@ public final class StudioComponentLicenseServiceConfigurationArgs extends io.pul
             this.endpoint = Input.ofNullable(endpoint);
             return this;
         }
-
         public StudioComponentLicenseServiceConfigurationArgs build() {
             return new StudioComponentLicenseServiceConfigurationArgs(endpoint);
         }

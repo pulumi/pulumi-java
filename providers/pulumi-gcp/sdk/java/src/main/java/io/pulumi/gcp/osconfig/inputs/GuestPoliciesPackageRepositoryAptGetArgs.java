@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="archiveType")
-    private final @Nullable Input<String> archiveType;
+        private final @Nullable Input<String> archiveType;
 
     public Input<String> getArchiveType() {
         return this.archiveType == null ? Input.empty() : this.archiveType;
@@ -33,7 +33,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="components", required=true)
-    private final Input<List<String>> components;
+        private final Input<List<String>> components;
 
     public Input<List<String>> getComponents() {
         return this.components;
@@ -44,7 +44,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="distribution", required=true)
-    private final Input<String> distribution;
+        private final Input<String> distribution;
 
     public Input<String> getDistribution() {
         return this.distribution;
@@ -56,7 +56,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="gpgKey")
-    private final @Nullable Input<String> gpgKey;
+        private final @Nullable Input<String> gpgKey;
 
     public Input<String> getGpgKey() {
         return this.gpgKey == null ? Input.empty() : this.gpgKey;
@@ -67,7 +67,7 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
      * 
      */
     @InputImport(name="uri", required=true)
-    private final Input<String> uri;
+        private final Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri;
@@ -171,7 +171,6 @@ public final class GuestPoliciesPackageRepositoryAptGetArgs extends io.pulumi.re
             this.uri = Input.of(Objects.requireNonNull(uri));
             return this;
         }
-
         public GuestPoliciesPackageRepositoryAptGetArgs build() {
             return new GuestPoliciesPackageRepositoryAptGetArgs(archiveType, components, distribution, gpgKey, uri);
         }

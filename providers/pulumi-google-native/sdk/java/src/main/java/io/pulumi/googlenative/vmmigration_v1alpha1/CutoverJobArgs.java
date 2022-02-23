@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.vmmigration_v1alpha1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,42 +15,42 @@ public final class CutoverJobArgs extends io.pulumi.resources.ResourceArgs {
     public static final CutoverJobArgs Empty = new CutoverJobArgs();
 
     @InputImport(name="cutoverJobId", required=true)
-    private final Input<String> cutoverJobId;
+      private final Input<String> cutoverJobId;
 
     public Input<String> getCutoverJobId() {
         return this.cutoverJobId;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
     }
 
     @InputImport(name="migratingVmId", required=true)
-    private final Input<String> migratingVmId;
+      private final Input<String> migratingVmId;
 
     public Input<String> getMigratingVmId() {
         return this.migratingVmId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="requestId")
-    private final @Nullable Input<String> requestId;
+      private final @Nullable Input<String> requestId;
 
     public Input<String> getRequestId() {
         return this.requestId == null ? Input.empty() : this.requestId;
     }
 
     @InputImport(name="sourceId", required=true)
-    private final Input<String> sourceId;
+      private final Input<String> sourceId;
 
     public Input<String> getSourceId() {
         return this.sourceId;
@@ -169,7 +169,6 @@ public final class CutoverJobArgs extends io.pulumi.resources.ResourceArgs {
             this.sourceId = Input.of(Objects.requireNonNull(sourceId));
             return this;
         }
-
         public CutoverJobArgs build() {
             return new CutoverJobArgs(cutoverJobId, location, migratingVmId, project, requestId, sourceId);
         }

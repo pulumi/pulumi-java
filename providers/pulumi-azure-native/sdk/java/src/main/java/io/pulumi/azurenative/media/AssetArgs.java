@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -30,7 +30,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="alternateId")
-    private final @Nullable Input<String> alternateId;
+        private final @Nullable Input<String> alternateId;
 
     public Input<String> getAlternateId() {
         return this.alternateId == null ? Input.empty() : this.alternateId;
@@ -41,7 +41,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="assetName")
-    private final @Nullable Input<String> assetName;
+        private final @Nullable Input<String> assetName;
 
     public Input<String> getAssetName() {
         return this.assetName == null ? Input.empty() : this.assetName;
@@ -52,7 +52,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="container")
-    private final @Nullable Input<String> container;
+        private final @Nullable Input<String> container;
 
     public Input<String> getContainer() {
         return this.container == null ? Input.empty() : this.container;
@@ -63,7 +63,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -74,7 +74,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -85,7 +85,7 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageAccountName")
-    private final @Nullable Input<String> storageAccountName;
+        private final @Nullable Input<String> storageAccountName;
 
     public Input<String> getStorageAccountName() {
         return this.storageAccountName == null ? Input.empty() : this.storageAccountName;
@@ -219,7 +219,6 @@ public final class AssetArgs extends io.pulumi.resources.ResourceArgs {
             this.storageAccountName = Input.ofNullable(storageAccountName);
             return this;
         }
-
         public AssetArgs build() {
             return new AssetArgs(accountName, alternateId, assetName, container, description, resourceGroupName, storageAccountName);
         }

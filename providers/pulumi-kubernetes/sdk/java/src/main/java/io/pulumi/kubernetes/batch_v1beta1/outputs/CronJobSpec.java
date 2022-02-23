@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.batch_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.batch_v1beta1.outputs.JobTemplateSpec;
 import java.lang.Boolean;
 import java.lang.Integer;
@@ -184,7 +184,6 @@ public final class CronJobSpec {
             this.suspend = suspend;
             return this;
         }
-
         public CronJobSpec build() {
             return new CronJobSpec(concurrencyPolicy, failedJobsHistoryLimit, jobTemplate, schedule, startingDeadlineSeconds, successfulJobsHistoryLimit, suspend);
         }

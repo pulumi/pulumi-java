@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.GroupSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.ServiceAccountSubjectArgs;
 import io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.inputs.UserSubjectArgs;
@@ -22,7 +22,7 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
     public static final SubjectArgs Empty = new SubjectArgs();
 
     @InputImport(name="group")
-    private final @Nullable Input<GroupSubjectArgs> group;
+        private final @Nullable Input<GroupSubjectArgs> group;
 
     public Input<GroupSubjectArgs> getGroup() {
         return this.group == null ? Input.empty() : this.group;
@@ -33,21 +33,21 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="kind", required=true)
-    private final Input<String> kind;
+        private final Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind;
     }
 
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<ServiceAccountSubjectArgs> serviceAccount;
+        private final @Nullable Input<ServiceAccountSubjectArgs> serviceAccount;
 
     public Input<ServiceAccountSubjectArgs> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
     }
 
     @InputImport(name="user")
-    private final @Nullable Input<UserSubjectArgs> user;
+        private final @Nullable Input<UserSubjectArgs> user;
 
     public Input<UserSubjectArgs> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -136,7 +136,6 @@ public final class SubjectArgs extends io.pulumi.resources.ResourceArgs {
             this.user = Input.ofNullable(user);
             return this;
         }
-
         public SubjectArgs build() {
             return new SubjectArgs(group, kind, serviceAccount, user);
         }

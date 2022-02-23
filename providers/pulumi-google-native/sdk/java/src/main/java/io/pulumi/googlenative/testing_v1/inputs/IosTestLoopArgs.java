@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.testing_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.testing_v1.inputs.FileReferenceArgs;
 import java.lang.Integer;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="appIpa", required=true)
-    private final Input<FileReferenceArgs> appIpa;
+      private final Input<FileReferenceArgs> appIpa;
 
     public Input<FileReferenceArgs> getAppIpa() {
         return this.appIpa;
@@ -36,7 +36,7 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scenarios")
-    private final @Nullable Input<List<Integer>> scenarios;
+      private final @Nullable Input<List<Integer>> scenarios;
 
     public Input<List<Integer>> getScenarios() {
         return this.scenarios == null ? Input.empty() : this.scenarios;
@@ -95,7 +95,6 @@ public final class IosTestLoopArgs extends io.pulumi.resources.ResourceArgs {
             this.scenarios = Input.ofNullable(scenarios);
             return this;
         }
-
         public IosTestLoopArgs build() {
             return new IosTestLoopArgs(appIpa, scenarios);
         }

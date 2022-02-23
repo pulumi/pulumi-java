@@ -5,8 +5,8 @@ package io.pulumi.foobar.submodule1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.Utilities;
 import io.pulumi.foobar.outputs.TopLevel;
 import io.pulumi.foobar.submodule1.ModuleResourceArgs;
@@ -21,13 +21,6 @@ public class ModuleResource extends io.pulumi.resources.CustomResource {
         return this.thing;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ModuleResource(String name) {
-        super("foo-bar:submodule1:ModuleResource", name, ModuleResourceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

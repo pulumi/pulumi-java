@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.relay.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -267,7 +267,6 @@ public final class GetWCFRelayResult {
             this.userMetadata = userMetadata;
             return this;
         }
-
         public GetWCFRelayResult build() {
             return new GetWCFRelayResult(createdAt, id, isDynamic, listenerCount, name, relayType, requiresClientAuthorization, requiresTransportSecurity, type, updatedAt, userMetadata);
         }

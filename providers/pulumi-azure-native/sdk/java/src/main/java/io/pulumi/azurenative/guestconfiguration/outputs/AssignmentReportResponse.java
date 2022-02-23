@@ -6,7 +6,7 @@ package io.pulumi.azurenative.guestconfiguration.outputs;
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentInfoResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.AssignmentReportResourceResponse;
 import io.pulumi.azurenative.guestconfiguration.outputs.VMInfoResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class AssignmentReportResponse {
             this.vm = vm;
             return this;
         }
-
         public AssignmentReportResponse build() {
             return new AssignmentReportResponse(assignment, complianceStatus, endTime, id, operationType, reportId, resources, startTime, vm);
         }

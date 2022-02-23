@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudfunctions_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudfunctions_v1.inputs.RetryResponse;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="retry", required=true)
-    private final RetryResponse retry;
+      private final RetryResponse retry;
 
     public RetryResponse getRetry() {
         return this.retry;
@@ -59,7 +59,6 @@ public final class FailurePolicyResponse extends io.pulumi.resources.InvokeArgs 
             this.retry = Objects.requireNonNull(retry);
             return this;
         }
-
         public FailurePolicyResponse build() {
             return new FailurePolicyResponse(retry);
         }

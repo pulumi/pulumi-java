@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.ecs.outputs;
 
 import io.pulumi.awsnative.ecs.enums.TaskSetScaleUnit;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class TaskSetScale {
             this.value = value;
             return this;
         }
-
         public TaskSetScale build() {
             return new TaskSetScale(unit, value);
         }

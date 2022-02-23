@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudfunctions.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.cloudfunctions.outputs.GetFunctionEventTrigger;
 import io.pulumi.gcp.cloudfunctions.outputs.GetFunctionSourceRepository;
 import java.lang.Boolean;
@@ -505,7 +505,6 @@ public final class GetFunctionResult {
             this.vpcConnectorEgressSettings = Objects.requireNonNull(vpcConnectorEgressSettings);
             return this;
         }
-
         public GetFunctionResult build() {
             return new GetFunctionResult(availableMemoryMb, buildEnvironmentVariables, description, entryPoint, environmentVariables, eventTriggers, httpsTriggerUrl, id, ingressSettings, labels, maxInstances, minInstances, name, project, region, runtime, serviceAccountEmail, sourceArchiveBucket, sourceArchiveObject, sourceRepositories, timeout, triggerHttp, vpcConnector, vpcConnectorEgressSettings);
         }

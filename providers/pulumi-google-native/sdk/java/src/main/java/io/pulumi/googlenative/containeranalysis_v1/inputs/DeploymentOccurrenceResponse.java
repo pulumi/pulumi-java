@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="address", required=true)
-    private final String address;
+      private final String address;
 
     public String getAddress() {
         return this.address;
@@ -33,7 +33,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="config", required=true)
-    private final String config;
+      private final String config;
 
     public String getConfig() {
         return this.config;
@@ -44,7 +44,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="deployTime", required=true)
-    private final String deployTime;
+      private final String deployTime;
 
     public String getDeployTime() {
         return this.deployTime;
@@ -55,7 +55,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="platform", required=true)
-    private final String platform;
+      private final String platform;
 
     public String getPlatform() {
         return this.platform;
@@ -66,7 +66,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceUri", required=true)
-    private final List<String> resourceUri;
+      private final List<String> resourceUri;
 
     public List<String> getResourceUri() {
         return this.resourceUri;
@@ -77,7 +77,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="undeployTime", required=true)
-    private final String undeployTime;
+      private final String undeployTime;
 
     public String getUndeployTime() {
         return this.undeployTime;
@@ -88,7 +88,7 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userEmail", required=true)
-    private final String userEmail;
+      private final String userEmail;
 
     public String getUserEmail() {
         return this.userEmail;
@@ -187,7 +187,6 @@ public final class DeploymentOccurrenceResponse extends io.pulumi.resources.Invo
             this.userEmail = Objects.requireNonNull(userEmail);
             return this;
         }
-
         public DeploymentOccurrenceResponse build() {
             return new DeploymentOccurrenceResponse(address, config, deployTime, platform, resourceUri, undeployTime, userEmail);
         }

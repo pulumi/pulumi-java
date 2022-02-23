@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkfirewall.inputs;
 
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupMatchAttributesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -16,14 +16,14 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
     public static final RuleGroupRuleDefinitionArgs Empty = new RuleGroupRuleDefinitionArgs();
 
     @InputImport(name="actions", required=true)
-    private final Input<List<String>> actions;
+        private final Input<List<String>> actions;
 
     public Input<List<String>> getActions() {
         return this.actions;
     }
 
     @InputImport(name="matchAttributes", required=true)
-    private final Input<RuleGroupMatchAttributesArgs> matchAttributes;
+        private final Input<RuleGroupMatchAttributesArgs> matchAttributes;
 
     public Input<RuleGroupMatchAttributesArgs> getMatchAttributes() {
         return this.matchAttributes;
@@ -82,7 +82,6 @@ public final class RuleGroupRuleDefinitionArgs extends io.pulumi.resources.Resou
             this.matchAttributes = Input.of(Objects.requireNonNull(matchAttributes));
             return this;
         }
-
         public RuleGroupRuleDefinitionArgs build() {
             return new RuleGroupRuleDefinitionArgs(actions, matchAttributes);
         }

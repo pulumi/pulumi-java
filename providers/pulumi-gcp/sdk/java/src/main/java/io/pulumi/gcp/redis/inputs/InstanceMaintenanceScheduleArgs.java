@@ -4,7 +4,7 @@
 package io.pulumi.gcp.redis.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endTime")
-    private final @Nullable Input<String> endTime;
+        private final @Nullable Input<String> endTime;
 
     public Input<String> getEndTime() {
         return this.endTime == null ? Input.empty() : this.endTime;
@@ -37,7 +37,7 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="scheduleDeadlineTime")
-    private final @Nullable Input<String> scheduleDeadlineTime;
+        private final @Nullable Input<String> scheduleDeadlineTime;
 
     public Input<String> getScheduleDeadlineTime() {
         return this.scheduleDeadlineTime == null ? Input.empty() : this.scheduleDeadlineTime;
@@ -51,7 +51,7 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="startTime")
-    private final @Nullable Input<String> startTime;
+        private final @Nullable Input<String> startTime;
 
     public Input<String> getStartTime() {
         return this.startTime == null ? Input.empty() : this.startTime;
@@ -125,7 +125,6 @@ public final class InstanceMaintenanceScheduleArgs extends io.pulumi.resources.R
             this.startTime = Input.ofNullable(startTime);
             return this;
         }
-
         public InstanceMaintenanceScheduleArgs build() {
             return new InstanceMaintenanceScheduleArgs(endTime, scheduleDeadlineTime, startTime);
         }

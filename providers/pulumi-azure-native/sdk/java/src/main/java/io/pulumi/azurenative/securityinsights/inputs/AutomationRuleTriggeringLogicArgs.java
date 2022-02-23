@@ -8,7 +8,7 @@ import io.pulumi.azurenative.securityinsights.enums.TriggersWhen;
 import io.pulumi.azurenative.securityinsights.inputs.AutomationRulePropertyValuesConditionArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -29,7 +29,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="conditions")
-    private final @Nullable Input<List<AutomationRulePropertyValuesConditionArgs>> conditions;
+        private final @Nullable Input<List<AutomationRulePropertyValuesConditionArgs>> conditions;
 
     public Input<List<AutomationRulePropertyValuesConditionArgs>> getConditions() {
         return this.conditions == null ? Input.empty() : this.conditions;
@@ -40,7 +40,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="expirationTimeUtc")
-    private final @Nullable Input<String> expirationTimeUtc;
+        private final @Nullable Input<String> expirationTimeUtc;
 
     public Input<String> getExpirationTimeUtc() {
         return this.expirationTimeUtc == null ? Input.empty() : this.expirationTimeUtc;
@@ -51,7 +51,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="isEnabled", required=true)
-    private final Input<Boolean> isEnabled;
+        private final Input<Boolean> isEnabled;
 
     public Input<Boolean> getIsEnabled() {
         return this.isEnabled;
@@ -62,7 +62,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="triggersOn", required=true)
-    private final Input<Either<String,TriggersOn>> triggersOn;
+        private final Input<Either<String,TriggersOn>> triggersOn;
 
     public Input<Either<String,TriggersOn>> getTriggersOn() {
         return this.triggersOn;
@@ -73,7 +73,7 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="triggersWhen", required=true)
-    private final Input<Either<String,TriggersWhen>> triggersWhen;
+        private final Input<Either<String,TriggersWhen>> triggersWhen;
 
     public Input<Either<String,TriggersWhen>> getTriggersWhen() {
         return this.triggersWhen;
@@ -177,7 +177,6 @@ public final class AutomationRuleTriggeringLogicArgs extends io.pulumi.resources
             this.triggersWhen = Input.of(Objects.requireNonNull(triggersWhen));
             return this;
         }
-
         public AutomationRuleTriggeringLogicArgs build() {
             return new AutomationRuleTriggeringLogicArgs(conditions, expirationTimeUtc, isEnabled, triggersOn, triggersWhen);
         }

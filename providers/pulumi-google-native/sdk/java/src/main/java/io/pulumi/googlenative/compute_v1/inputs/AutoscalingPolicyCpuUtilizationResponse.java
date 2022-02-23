@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="predictiveMethod", required=true)
-    private final String predictiveMethod;
+      private final String predictiveMethod;
 
     public String getPredictiveMethod() {
         return this.predictiveMethod;
@@ -33,7 +33,7 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="utilizationTarget", required=true)
-    private final Double utilizationTarget;
+      private final Double utilizationTarget;
 
     public Double getUtilizationTarget() {
         return this.utilizationTarget;
@@ -82,7 +82,6 @@ public final class AutoscalingPolicyCpuUtilizationResponse extends io.pulumi.res
             this.utilizationTarget = Objects.requireNonNull(utilizationTarget);
             return this;
         }
-
         public AutoscalingPolicyCpuUtilizationResponse build() {
             return new AutoscalingPolicyCpuUtilizationResponse(predictiveMethod, utilizationTarget);
         }

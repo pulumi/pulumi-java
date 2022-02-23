@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class ApplicationInsightsComponentProactiveDetectionConfigurationRe
             this.supportsEmailNotifications = supportsEmailNotifications;
             return this;
         }
-
         public ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions build() {
             return new ApplicationInsightsComponentProactiveDetectionConfigurationResponseRuleDefinitions(description, displayName, helpUrl, isEnabledByDefault, isHidden, isInPreview, name, supportsEmailNotifications);
         }

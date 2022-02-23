@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudrun.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -15,21 +15,21 @@ public final class GetServiceTraffic extends io.pulumi.resources.InvokeArgs {
     public static final GetServiceTraffic Empty = new GetServiceTraffic();
 
     @InputImport(name="latestRevision", required=true)
-    private final Boolean latestRevision;
+        private final Boolean latestRevision;
 
     public Boolean getLatestRevision() {
         return this.latestRevision;
     }
 
     @InputImport(name="percent", required=true)
-    private final Integer percent;
+        private final Integer percent;
 
     public Integer getPercent() {
         return this.percent;
     }
 
     @InputImport(name="revisionName", required=true)
-    private final String revisionName;
+        private final String revisionName;
 
     public String getRevisionName() {
         return this.revisionName;
@@ -88,7 +88,6 @@ public final class GetServiceTraffic extends io.pulumi.resources.InvokeArgs {
             this.revisionName = Objects.requireNonNull(revisionName);
             return this;
         }
-
         public GetServiceTraffic build() {
             return new GetServiceTraffic(latestRevision, percent, revisionName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.websecurityscanner_v1beta.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.websecurityscanner_v1beta.outputs.ScanConfigErrorResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -97,7 +97,6 @@ public final class ScanRunErrorTraceResponse {
             this.scanConfigError = Objects.requireNonNull(scanConfigError);
             return this;
         }
-
         public ScanRunErrorTraceResponse build() {
             return new ScanRunErrorTraceResponse(code, mostCommonHttpErrorCode, scanConfigError);
         }

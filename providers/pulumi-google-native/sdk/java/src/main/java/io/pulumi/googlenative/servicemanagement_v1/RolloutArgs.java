@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.enums.RolloutStatus;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.DeleteServiceStrategyArgs;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.TrafficPercentStrategyArgs;
@@ -22,7 +22,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+      private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -33,7 +33,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteServiceStrategy")
-    private final @Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy;
+      private final @Nullable Input<DeleteServiceStrategyArgs> deleteServiceStrategy;
 
     public Input<DeleteServiceStrategyArgs> getDeleteServiceStrategy() {
         return this.deleteServiceStrategy == null ? Input.empty() : this.deleteServiceStrategy;
@@ -44,7 +44,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rolloutId")
-    private final @Nullable Input<String> rolloutId;
+      private final @Nullable Input<String> rolloutId;
 
     public Input<String> getRolloutId() {
         return this.rolloutId == null ? Input.empty() : this.rolloutId;
@@ -55,7 +55,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final Input<String> serviceName;
+      private final Input<String> serviceName;
 
     public Input<String> getServiceName() {
         return this.serviceName;
@@ -66,7 +66,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<RolloutStatus> status;
+      private final @Nullable Input<RolloutStatus> status;
 
     public Input<RolloutStatus> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -77,7 +77,7 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="trafficPercentStrategy")
-    private final @Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy;
+      private final @Nullable Input<TrafficPercentStrategyArgs> trafficPercentStrategy;
 
     public Input<TrafficPercentStrategyArgs> getTrafficPercentStrategy() {
         return this.trafficPercentStrategy == null ? Input.empty() : this.trafficPercentStrategy;
@@ -196,7 +196,6 @@ public final class RolloutArgs extends io.pulumi.resources.ResourceArgs {
             this.trafficPercentStrategy = Input.ofNullable(trafficPercentStrategy);
             return this;
         }
-
         public RolloutArgs build() {
             return new RolloutArgs(createTime, deleteServiceStrategy, rolloutId, serviceName, status, trafficPercentStrategy);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceToIndexFieldMappingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -18,42 +18,42 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
     public static final DataSourceWorkDocsConfigurationArgs Empty = new DataSourceWorkDocsConfigurationArgs();
 
     @InputImport(name="crawlComments")
-    private final @Nullable Input<Boolean> crawlComments;
+        private final @Nullable Input<Boolean> crawlComments;
 
     public Input<Boolean> getCrawlComments() {
         return this.crawlComments == null ? Input.empty() : this.crawlComments;
     }
 
     @InputImport(name="exclusionPatterns")
-    private final @Nullable Input<List<String>> exclusionPatterns;
+        private final @Nullable Input<List<String>> exclusionPatterns;
 
     public Input<List<String>> getExclusionPatterns() {
         return this.exclusionPatterns == null ? Input.empty() : this.exclusionPatterns;
     }
 
     @InputImport(name="fieldMappings")
-    private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
+        private final @Nullable Input<List<DataSourceToIndexFieldMappingArgs>> fieldMappings;
 
     public Input<List<DataSourceToIndexFieldMappingArgs>> getFieldMappings() {
         return this.fieldMappings == null ? Input.empty() : this.fieldMappings;
     }
 
     @InputImport(name="inclusionPatterns")
-    private final @Nullable Input<List<String>> inclusionPatterns;
+        private final @Nullable Input<List<String>> inclusionPatterns;
 
     public Input<List<String>> getInclusionPatterns() {
         return this.inclusionPatterns == null ? Input.empty() : this.inclusionPatterns;
     }
 
     @InputImport(name="organizationId", required=true)
-    private final Input<String> organizationId;
+        private final Input<String> organizationId;
 
     public Input<String> getOrganizationId() {
         return this.organizationId;
     }
 
     @InputImport(name="useChangeLog")
-    private final @Nullable Input<Boolean> useChangeLog;
+        private final @Nullable Input<Boolean> useChangeLog;
 
     public Input<Boolean> getUseChangeLog() {
         return this.useChangeLog == null ? Input.empty() : this.useChangeLog;
@@ -172,7 +172,6 @@ public final class DataSourceWorkDocsConfigurationArgs extends io.pulumi.resourc
             this.useChangeLog = Input.ofNullable(useChangeLog);
             return this;
         }
-
         public DataSourceWorkDocsConfigurationArgs build() {
             return new DataSourceWorkDocsConfigurationArgs(crawlComments, exclusionPatterns, fieldMappings, inclusionPatterns, organizationId, useChangeLog);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.cloudbuild.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolNetworkConfigGetArgs;
 import io.pulumi.gcp.cloudbuild.inputs.WorkerPoolWorkerConfigGetArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable Input<Map<String,String>> annotations;
+        private final @Nullable Input<Map<String,String>> annotations;
 
     public Input<Map<String,String>> getAnnotations() {
         return this.annotations == null ? Input.empty() : this.annotations;
@@ -34,7 +34,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createTime")
-    private final @Nullable Input<String> createTime;
+        private final @Nullable Input<String> createTime;
 
     public Input<String> getCreateTime() {
         return this.createTime == null ? Input.empty() : this.createTime;
@@ -45,7 +45,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deleteTime")
-    private final @Nullable Input<String> deleteTime;
+        private final @Nullable Input<String> deleteTime;
 
     public Input<String> getDeleteTime() {
         return this.deleteTime == null ? Input.empty() : this.deleteTime;
@@ -56,7 +56,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable Input<String> displayName;
+        private final @Nullable Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName == null ? Input.empty() : this.displayName;
@@ -67,7 +67,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkConfig")
-    private final @Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig;
+        private final @Nullable Input<WorkerPoolNetworkConfigGetArgs> networkConfig;
 
     public Input<WorkerPoolNetworkConfigGetArgs> getNetworkConfig() {
         return this.networkConfig == null ? Input.empty() : this.networkConfig;
@@ -100,7 +100,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -111,7 +111,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="state")
-    private final @Nullable Input<String> state;
+        private final @Nullable Input<String> state;
 
     public Input<String> getState() {
         return this.state == null ? Input.empty() : this.state;
@@ -122,7 +122,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="uid")
-    private final @Nullable Input<String> uid;
+        private final @Nullable Input<String> uid;
 
     public Input<String> getUid() {
         return this.uid == null ? Input.empty() : this.uid;
@@ -133,7 +133,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updateTime")
-    private final @Nullable Input<String> updateTime;
+        private final @Nullable Input<String> updateTime;
 
     public Input<String> getUpdateTime() {
         return this.updateTime == null ? Input.empty() : this.updateTime;
@@ -144,7 +144,7 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="workerConfig")
-    private final @Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig;
+        private final @Nullable Input<WorkerPoolWorkerConfigGetArgs> workerConfig;
 
     public Input<WorkerPoolWorkerConfigGetArgs> getWorkerConfig() {
         return this.workerConfig == null ? Input.empty() : this.workerConfig;
@@ -353,7 +353,6 @@ public final class WorkerPoolState extends io.pulumi.resources.ResourceArgs {
             this.workerConfig = Input.ofNullable(workerConfig);
             return this;
         }
-
         public WorkerPoolState build() {
             return new WorkerPoolState(annotations, createTime, deleteTime, displayName, location, name, networkConfig, project, state, uid, updateTime, workerConfig);
         }

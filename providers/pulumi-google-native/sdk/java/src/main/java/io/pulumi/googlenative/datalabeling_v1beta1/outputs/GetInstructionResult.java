@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datalabeling_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.datalabeling_v1beta1.outputs.GoogleCloudDatalabelingV1beta1PdfInstructionResponse;
 import java.lang.String;
 import java.util.List;
@@ -202,7 +202,6 @@ public final class GetInstructionResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetInstructionResult build() {
             return new GetInstructionResult(blockingResources, createTime, dataType, description, displayName, name, pdfInstruction, updateTime);
         }

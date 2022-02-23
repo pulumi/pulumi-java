@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.signer.outputs;
 
 import io.pulumi.awsnative.signer.outputs.SigningProfileTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -141,7 +141,6 @@ public final class GetSigningProfileResult {
             this.tags = tags;
             return this;
         }
-
         public GetSigningProfileResult build() {
             return new GetSigningProfileResult(arn, profileName, profileVersion, profileVersionArn, tags);
         }

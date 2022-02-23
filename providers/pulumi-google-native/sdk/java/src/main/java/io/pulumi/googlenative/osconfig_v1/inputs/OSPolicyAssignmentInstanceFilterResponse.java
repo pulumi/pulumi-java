@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentInstanceFilterInventoryResponse;
 import io.pulumi.googlenative.osconfig_v1.inputs.OSPolicyAssignmentLabelSetResponse;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="all", required=true)
-    private final Boolean all;
+      private final Boolean all;
 
     public Boolean getAll() {
         return this.all;
@@ -35,7 +35,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="exclusionLabels", required=true)
-    private final List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
+      private final List<OSPolicyAssignmentLabelSetResponse> exclusionLabels;
 
     public List<OSPolicyAssignmentLabelSetResponse> getExclusionLabels() {
         return this.exclusionLabels;
@@ -46,7 +46,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="inclusionLabels", required=true)
-    private final List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
+      private final List<OSPolicyAssignmentLabelSetResponse> inclusionLabels;
 
     public List<OSPolicyAssignmentLabelSetResponse> getInclusionLabels() {
         return this.inclusionLabels;
@@ -57,7 +57,7 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="inventories", required=true)
-    private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
+      private final List<OSPolicyAssignmentInstanceFilterInventoryResponse> inventories;
 
     public List<OSPolicyAssignmentInstanceFilterInventoryResponse> getInventories() {
         return this.inventories;
@@ -126,7 +126,6 @@ public final class OSPolicyAssignmentInstanceFilterResponse extends io.pulumi.re
             this.inventories = Objects.requireNonNull(inventories);
             return this;
         }
-
         public OSPolicyAssignmentInstanceFilterResponse build() {
             return new OSPolicyAssignmentInstanceFilterResponse(all, exclusionLabels, inclusionLabels, inventories);
         }

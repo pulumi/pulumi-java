@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -224,7 +224,6 @@ public final class AzureFirewallNetworkRuleResponse {
             this.sourceIpGroups = sourceIpGroups;
             return this;
         }
-
         public AzureFirewallNetworkRuleResponse build() {
             return new AzureFirewallNetworkRuleResponse(description, destinationAddresses, destinationFqdns, destinationIpGroups, destinationPorts, name, protocols, sourceAddresses, sourceIpGroups);
         }

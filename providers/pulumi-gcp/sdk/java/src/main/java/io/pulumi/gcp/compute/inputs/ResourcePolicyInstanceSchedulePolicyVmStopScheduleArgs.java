@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final Input<String> schedule;
+        private final Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule;
@@ -61,7 +61,6 @@ public final class ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs extend
             this.schedule = Input.of(Objects.requireNonNull(schedule));
             return this;
         }
-
         public ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs build() {
             return new ResourcePolicyInstanceSchedulePolicyVmStopScheduleArgs(schedule);
         }

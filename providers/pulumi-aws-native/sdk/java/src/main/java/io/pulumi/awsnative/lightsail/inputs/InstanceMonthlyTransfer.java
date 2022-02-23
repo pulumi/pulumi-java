@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class InstanceMonthlyTransfer extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="gbPerMonthAllocated")
-    private final @Nullable String gbPerMonthAllocated;
+        private final @Nullable String gbPerMonthAllocated;
 
     public Optional<String> getGbPerMonthAllocated() {
         return this.gbPerMonthAllocated == null ? Optional.empty() : Optional.ofNullable(this.gbPerMonthAllocated);
@@ -61,7 +61,6 @@ public final class InstanceMonthlyTransfer extends io.pulumi.resources.InvokeArg
             this.gbPerMonthAllocated = gbPerMonthAllocated;
             return this;
         }
-
         public InstanceMonthlyTransfer build() {
             return new InstanceMonthlyTransfer(gbPerMonthAllocated);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class ManagementEventAggregationConditionResponse {
             this.windowSize = windowSize;
             return this;
         }
-
         public ManagementEventAggregationConditionResponse build() {
             return new ManagementEventAggregationConditionResponse(operator, threshold, windowSize);
         }

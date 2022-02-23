@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.ColumnResponse;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class ColumnLayoutResponse {
             this.columns = Objects.requireNonNull(columns);
             return this;
         }
-
         public ColumnLayoutResponse build() {
             return new ColumnLayoutResponse(columns);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.resources.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="detailLevel")
-    private final @Nullable Input<String> detailLevel;
+        private final @Nullable Input<String> detailLevel;
 
     public Input<String> getDetailLevel() {
         return this.detailLevel == null ? Input.empty() : this.detailLevel;
@@ -66,7 +66,6 @@ public final class DebugSettingArgs extends io.pulumi.resources.ResourceArgs {
             this.detailLevel = Input.ofNullable(detailLevel);
             return this;
         }
-
         public DebugSettingArgs build() {
             return new DebugSettingArgs(detailLevel);
         }

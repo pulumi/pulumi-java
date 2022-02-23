@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.lightsail.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -161,7 +161,6 @@ public final class ContainerHealthCheckConfig {
             this.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
-
         public ContainerHealthCheckConfig build() {
             return new ContainerHealthCheckConfig(healthyThreshold, intervalSeconds, path, successCodes, timeoutSeconds, unhealthyThreshold);
         }

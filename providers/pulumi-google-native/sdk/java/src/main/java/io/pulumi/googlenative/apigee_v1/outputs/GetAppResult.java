@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.apigee_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1AttributeResponse;
 import io.pulumi.googlenative.apigee_v1.outputs.GoogleCloudApigeeV1CredentialResponse;
 import java.lang.String;
@@ -308,7 +308,6 @@ public final class GetAppResult {
             this.status = Objects.requireNonNull(status);
             return this;
         }
-
         public GetAppResult build() {
             return new GetAppResult(apiProducts, appFamily, appId, attributes, callbackUrl, createdAt, credentials, developerId, keyExpiresIn, lastModifiedAt, name, scopes, status);
         }

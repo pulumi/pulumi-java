@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
      * 
      */
     @InputImport(name="bucket", required=true)
-    private final Input<String> bucket;
+        private final Input<String> bucket;
 
     public Input<String> getBucket() {
         return this.bucket;
@@ -29,7 +29,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
      * 
      */
     @InputImport(name="generationNumber", required=true)
-    private final Input<String> generationNumber;
+        private final Input<String> generationNumber;
 
     public Input<String> getGenerationNumber() {
         return this.generationNumber;
@@ -40,7 +40,7 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
      * 
      */
     @InputImport(name="object", required=true)
-    private final Input<String> object;
+        private final Input<String> object;
 
     public Input<String> getObject() {
         return this.object;
@@ -114,7 +114,6 @@ public final class PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObj
             this.object = Input.of(Objects.requireNonNull(object));
             return this;
         }
-
         public PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs build() {
             return new PatchDeploymentPatchConfigPostStepWindowsExecStepConfigGcsObjectArgs(bucket, generationNumber, object);
         }

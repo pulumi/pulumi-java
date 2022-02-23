@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigquery_v2.outputs.ArgumentResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.RoutineReferenceResponse;
 import io.pulumi.googlenative.bigquery_v2.outputs.StandardSqlDataTypeResponse;
@@ -332,7 +332,6 @@ public final class GetRoutineResult {
             this.strictMode = Objects.requireNonNull(strictMode);
             return this;
         }
-
         public GetRoutineResult build() {
             return new GetRoutineResult(arguments, creationTime, definitionBody, description, determinismLevel, etag, importedLibraries, language, lastModifiedTime, returnTableType, returnType, routineReference, routineType, strictMode);
         }

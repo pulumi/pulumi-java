@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.synthetics.inputs;
 
 import io.pulumi.awsnative.synthetics.inputs.CanaryS3Encryption;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class CanaryArtifactConfig extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="s3Encryption")
-    private final @Nullable CanaryS3Encryption s3Encryption;
+        private final @Nullable CanaryS3Encryption s3Encryption;
 
     public Optional<CanaryS3Encryption> getS3Encryption() {
         return this.s3Encryption == null ? Optional.empty() : Optional.ofNullable(this.s3Encryption);
@@ -57,7 +57,6 @@ public final class CanaryArtifactConfig extends io.pulumi.resources.InvokeArgs {
             this.s3Encryption = s3Encryption;
             return this;
         }
-
         public CanaryArtifactConfig build() {
             return new CanaryArtifactConfig(s3Encryption);
         }

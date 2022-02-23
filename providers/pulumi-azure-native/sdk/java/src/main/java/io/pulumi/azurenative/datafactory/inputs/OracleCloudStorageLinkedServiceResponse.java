@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.inputs.IntegrationRuntimeReferenceRespo
 import io.pulumi.azurenative.datafactory.inputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="accessKeyId")
-    private final @Nullable Object accessKeyId;
+        private final @Nullable Object accessKeyId;
 
     public Optional<Object> getAccessKeyId() {
         return this.accessKeyId == null ? Optional.empty() : Optional.ofNullable(this.accessKeyId);
@@ -42,7 +42,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="annotations")
-    private final @Nullable List<Object> annotations;
+        private final @Nullable List<Object> annotations;
 
     public List<Object> getAnnotations() {
         return this.annotations == null ? List.of() : this.annotations;
@@ -53,7 +53,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="connectVia")
-    private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
+        private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
     public Optional<IntegrationRuntimeReferenceResponse> getConnectVia() {
         return this.connectVia == null ? Optional.empty() : Optional.ofNullable(this.connectVia);
@@ -64,7 +64,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -75,7 +75,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="encryptedCredential")
-    private final @Nullable Object encryptedCredential;
+        private final @Nullable Object encryptedCredential;
 
     public Optional<Object> getEncryptedCredential() {
         return this.encryptedCredential == null ? Optional.empty() : Optional.ofNullable(this.encryptedCredential);
@@ -86,7 +86,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
+        private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
     public Map<String,ParameterSpecificationResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -97,7 +97,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="secretAccessKey")
-    private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
+        private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> secretAccessKey;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getSecretAccessKey() {
         return this.secretAccessKey == null ? null : this.secretAccessKey;
@@ -108,7 +108,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="serviceUrl")
-    private final @Nullable Object serviceUrl;
+        private final @Nullable Object serviceUrl;
 
     public Optional<Object> getServiceUrl() {
         return this.serviceUrl == null ? Optional.empty() : Optional.ofNullable(this.serviceUrl);
@@ -120,7 +120,7 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -239,7 +239,6 @@ public final class OracleCloudStorageLinkedServiceResponse extends io.pulumi.res
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public OracleCloudStorageLinkedServiceResponse build() {
             return new OracleCloudStorageLinkedServiceResponse(accessKeyId, annotations, connectVia, description, encryptedCredential, parameters, secretAccessKey, serviceUrl, type);
         }

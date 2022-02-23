@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.apimanagement.inputs;
 
 import io.pulumi.azurenative.apimanagement.enums.KeyType;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="expiry", required=true)
-    private final String expiry;
+        private final String expiry;
 
     public String getExpiry() {
         return this.expiry;
@@ -29,7 +29,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="keyType", required=true)
-    private final KeyType keyType;
+        private final KeyType keyType;
 
     public KeyType getKeyType() {
         return this.keyType;
@@ -40,7 +40,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -51,7 +51,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="serviceName", required=true)
-    private final String serviceName;
+        private final String serviceName;
 
     public String getServiceName() {
         return this.serviceName;
@@ -62,7 +62,7 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="userId", required=true)
-    private final String userId;
+        private final String userId;
 
     public String getUserId() {
         return this.userId;
@@ -141,7 +141,6 @@ public final class GetUserSharedAccessTokenArgs extends io.pulumi.resources.Invo
             this.userId = Objects.requireNonNull(userId);
             return this;
         }
-
         public GetUserSharedAccessTokenArgs build() {
             return new GetUserSharedAccessTokenArgs(expiry, keyType, resourceGroupName, serviceName, userId);
         }

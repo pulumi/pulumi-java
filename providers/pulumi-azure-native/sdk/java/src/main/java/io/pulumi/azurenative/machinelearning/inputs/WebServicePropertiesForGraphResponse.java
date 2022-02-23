@@ -15,7 +15,7 @@ import io.pulumi.azurenative.machinelearning.inputs.ServiceInputOutputSpecificat
 import io.pulumi.azurenative.machinelearning.inputs.StorageAccountResponse;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceKeysResponse;
 import io.pulumi.azurenative.machinelearning.inputs.WebServiceParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -37,7 +37,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="assets")
-    private final @Nullable Map<String,AssetItemResponse> assets;
+        private final @Nullable Map<String,AssetItemResponse> assets;
 
     public Map<String,AssetItemResponse> getAssets() {
         return this.assets == null ? Map.of() : this.assets;
@@ -48,7 +48,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="commitmentPlan")
-    private final @Nullable CommitmentPlanResponse commitmentPlan;
+        private final @Nullable CommitmentPlanResponse commitmentPlan;
 
     public Optional<CommitmentPlanResponse> getCommitmentPlan() {
         return this.commitmentPlan == null ? Optional.empty() : Optional.ofNullable(this.commitmentPlan);
@@ -59,7 +59,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="createdOn", required=true)
-    private final String createdOn;
+        private final String createdOn;
 
     public String getCreatedOn() {
         return this.createdOn;
@@ -70,7 +70,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -81,7 +81,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="diagnostics")
-    private final @Nullable DiagnosticsConfigurationResponse diagnostics;
+        private final @Nullable DiagnosticsConfigurationResponse diagnostics;
 
     public Optional<DiagnosticsConfigurationResponse> getDiagnostics() {
         return this.diagnostics == null ? Optional.empty() : Optional.ofNullable(this.diagnostics);
@@ -92,7 +92,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="exampleRequest")
-    private final @Nullable ExampleRequestResponse exampleRequest;
+        private final @Nullable ExampleRequestResponse exampleRequest;
 
     public Optional<ExampleRequestResponse> getExampleRequest() {
         return this.exampleRequest == null ? Optional.empty() : Optional.ofNullable(this.exampleRequest);
@@ -103,7 +103,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="exposeSampleData")
-    private final @Nullable Boolean exposeSampleData;
+        private final @Nullable Boolean exposeSampleData;
 
     public Optional<Boolean> getExposeSampleData() {
         return this.exposeSampleData == null ? Optional.empty() : Optional.ofNullable(this.exposeSampleData);
@@ -114,7 +114,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="input")
-    private final @Nullable ServiceInputOutputSpecificationResponse input;
+        private final @Nullable ServiceInputOutputSpecificationResponse input;
 
     public Optional<ServiceInputOutputSpecificationResponse> getInput() {
         return this.input == null ? Optional.empty() : Optional.ofNullable(this.input);
@@ -125,7 +125,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable WebServiceKeysResponse keys;
+        private final @Nullable WebServiceKeysResponse keys;
 
     public Optional<WebServiceKeysResponse> getKeys() {
         return this.keys == null ? Optional.empty() : Optional.ofNullable(this.keys);
@@ -136,7 +136,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="machineLearningWorkspace")
-    private final @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
+        private final @Nullable MachineLearningWorkspaceResponse machineLearningWorkspace;
 
     public Optional<MachineLearningWorkspaceResponse> getMachineLearningWorkspace() {
         return this.machineLearningWorkspace == null ? Optional.empty() : Optional.ofNullable(this.machineLearningWorkspace);
@@ -147,7 +147,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="modifiedOn", required=true)
-    private final String modifiedOn;
+        private final String modifiedOn;
 
     public String getModifiedOn() {
         return this.modifiedOn;
@@ -158,7 +158,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="output")
-    private final @Nullable ServiceInputOutputSpecificationResponse output;
+        private final @Nullable ServiceInputOutputSpecificationResponse output;
 
     public Optional<ServiceInputOutputSpecificationResponse> getOutput() {
         return this.output == null ? Optional.empty() : Optional.ofNullable(this.output);
@@ -169,7 +169,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="package")
-    private final @Nullable GraphPackageResponse $package;
+        private final @Nullable GraphPackageResponse $package;
 
     public Optional<GraphPackageResponse> get$package() {
         return this.$package == null ? Optional.empty() : Optional.ofNullable(this.$package);
@@ -181,7 +181,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="packageType", required=true)
-    private final String packageType;
+        private final String packageType;
 
     public String getPackageType() {
         return this.packageType;
@@ -192,7 +192,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,WebServiceParameterResponse> parameters;
+        private final @Nullable Map<String,WebServiceParameterResponse> parameters;
 
     public Map<String,WebServiceParameterResponse> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -203,7 +203,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="payloadsInBlobStorage")
-    private final @Nullable Boolean payloadsInBlobStorage;
+        private final @Nullable Boolean payloadsInBlobStorage;
 
     public Optional<Boolean> getPayloadsInBlobStorage() {
         return this.payloadsInBlobStorage == null ? Optional.empty() : Optional.ofNullable(this.payloadsInBlobStorage);
@@ -214,7 +214,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="payloadsLocation")
-    private final @Nullable BlobLocationResponse payloadsLocation;
+        private final @Nullable BlobLocationResponse payloadsLocation;
 
     public Optional<BlobLocationResponse> getPayloadsLocation() {
         return this.payloadsLocation == null ? Optional.empty() : Optional.ofNullable(this.payloadsLocation);
@@ -225,7 +225,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -236,7 +236,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Boolean readOnly;
+        private final @Nullable Boolean readOnly;
 
     public Optional<Boolean> getReadOnly() {
         return this.readOnly == null ? Optional.empty() : Optional.ofNullable(this.readOnly);
@@ -247,7 +247,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="realtimeConfiguration")
-    private final @Nullable RealtimeConfigurationResponse realtimeConfiguration;
+        private final @Nullable RealtimeConfigurationResponse realtimeConfiguration;
 
     public Optional<RealtimeConfigurationResponse> getRealtimeConfiguration() {
         return this.realtimeConfiguration == null ? Optional.empty() : Optional.ofNullable(this.realtimeConfiguration);
@@ -258,7 +258,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="storageAccount")
-    private final @Nullable StorageAccountResponse storageAccount;
+        private final @Nullable StorageAccountResponse storageAccount;
 
     public Optional<StorageAccountResponse> getStorageAccount() {
         return this.storageAccount == null ? Optional.empty() : Optional.ofNullable(this.storageAccount);
@@ -269,7 +269,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="swaggerLocation", required=true)
-    private final String swaggerLocation;
+        private final String swaggerLocation;
 
     public String getSwaggerLocation() {
         return this.swaggerLocation;
@@ -280,7 +280,7 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="title")
-    private final @Nullable String title;
+        private final @Nullable String title;
 
     public Optional<String> getTitle() {
         return this.title == null ? Optional.empty() : Optional.ofNullable(this.title);
@@ -539,7 +539,6 @@ public final class WebServicePropertiesForGraphResponse extends io.pulumi.resour
             this.title = title;
             return this;
         }
-
         public WebServicePropertiesForGraphResponse build() {
             return new WebServicePropertiesForGraphResponse(assets, commitmentPlan, createdOn, description, diagnostics, exampleRequest, exposeSampleData, input, keys, machineLearningWorkspace, modifiedOn, output, $package, packageType, parameters, payloadsInBlobStorage, payloadsLocation, provisioningState, readOnly, realtimeConfiguration, storageAccount, swaggerLocation, title);
         }

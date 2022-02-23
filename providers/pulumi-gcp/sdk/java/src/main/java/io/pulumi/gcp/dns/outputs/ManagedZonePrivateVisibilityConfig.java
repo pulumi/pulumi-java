@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dns.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dns.outputs.ManagedZonePrivateVisibilityConfigNetwork;
 import java.util.List;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class ManagedZonePrivateVisibilityConfig {
             this.networks = Objects.requireNonNull(networks);
             return this;
         }
-
         public ManagedZonePrivateVisibilityConfig build() {
             return new ManagedZonePrivateVisibilityConfig(networks);
         }

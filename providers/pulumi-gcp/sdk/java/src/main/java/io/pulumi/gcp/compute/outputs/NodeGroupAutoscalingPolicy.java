@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -114,7 +114,6 @@ public final class NodeGroupAutoscalingPolicy {
             this.mode = mode;
             return this;
         }
-
         public NodeGroupAutoscalingPolicy build() {
             return new NodeGroupAutoscalingPolicy(maxNodes, minNodes, mode);
         }

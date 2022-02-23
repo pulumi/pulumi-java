@@ -4,7 +4,7 @@
 package io.pulumi.gcp.container.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class AwsClusterControlPlaneSshConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="ec2KeyPair", required=true)
-    private final Input<String> ec2KeyPair;
+        private final Input<String> ec2KeyPair;
 
     public Input<String> getEc2KeyPair() {
         return this.ec2KeyPair;
@@ -61,7 +61,6 @@ public final class AwsClusterControlPlaneSshConfigArgs extends io.pulumi.resourc
             this.ec2KeyPair = Input.of(Objects.requireNonNull(ec2KeyPair));
             return this;
         }
-
         public AwsClusterControlPlaneSshConfigArgs build() {
             return new AwsClusterControlPlaneSshConfigArgs(ec2KeyPair);
         }

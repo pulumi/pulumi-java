@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.devtestlab.outputs;
 
 import io.pulumi.azurenative.devtestlab.outputs.PortResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -54,7 +54,6 @@ public final class SubnetSharedPublicIpAddressConfigurationResponse {
             this.allowedPorts = allowedPorts;
             return this;
         }
-
         public SubnetSharedPublicIpAddressConfigurationResponse build() {
             return new SubnetSharedPublicIpAddressConfigurationResponse(allowedPorts);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.RectangleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="audioGainLevel")
-    private final @Nullable Double audioGainLevel;
+        private final @Nullable Double audioGainLevel;
 
     public Optional<Double> getAudioGainLevel() {
         return this.audioGainLevel == null ? Optional.empty() : Optional.ofNullable(this.audioGainLevel);
@@ -36,7 +36,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="cropRectangle")
-    private final @Nullable RectangleResponse cropRectangle;
+        private final @Nullable RectangleResponse cropRectangle;
 
     public Optional<RectangleResponse> getCropRectangle() {
         return this.cropRectangle == null ? Optional.empty() : Optional.ofNullable(this.cropRectangle);
@@ -47,7 +47,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable String end;
+        private final @Nullable String end;
 
     public Optional<String> getEnd() {
         return this.end == null ? Optional.empty() : Optional.ofNullable(this.end);
@@ -58,7 +58,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fadeInDuration")
-    private final @Nullable String fadeInDuration;
+        private final @Nullable String fadeInDuration;
 
     public Optional<String> getFadeInDuration() {
         return this.fadeInDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeInDuration);
@@ -69,7 +69,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fadeOutDuration")
-    private final @Nullable String fadeOutDuration;
+        private final @Nullable String fadeOutDuration;
 
     public Optional<String> getFadeOutDuration() {
         return this.fadeOutDuration == null ? Optional.empty() : Optional.ofNullable(this.fadeOutDuration);
@@ -80,7 +80,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inputLabel", required=true)
-    private final String inputLabel;
+        private final String inputLabel;
 
     public String getInputLabel() {
         return this.inputLabel;
@@ -92,7 +92,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final String odataType;
+        private final String odataType;
 
     public String getOdataType() {
         return this.odataType;
@@ -103,7 +103,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="opacity")
-    private final @Nullable Double opacity;
+        private final @Nullable Double opacity;
 
     public Optional<Double> getOpacity() {
         return this.opacity == null ? Optional.empty() : Optional.ofNullable(this.opacity);
@@ -114,7 +114,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="position")
-    private final @Nullable RectangleResponse position;
+        private final @Nullable RectangleResponse position;
 
     public Optional<RectangleResponse> getPosition() {
         return this.position == null ? Optional.empty() : Optional.ofNullable(this.position);
@@ -125,7 +125,7 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable String start;
+        private final @Nullable String start;
 
     public Optional<String> getStart() {
         return this.start == null ? Optional.empty() : Optional.ofNullable(this.start);
@@ -254,7 +254,6 @@ public final class VideoOverlayResponse extends io.pulumi.resources.InvokeArgs {
             this.start = start;
             return this;
         }
-
         public VideoOverlayResponse build() {
             return new VideoOverlayResponse(audioGainLevel, cropRectangle, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, opacity, position, start);
         }

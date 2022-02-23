@@ -9,7 +9,7 @@ import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceArgs;
 import io.pulumi.azurenative.datafactory.inputs.StoredProcedureParameterArgs;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -31,7 +31,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
+        private final @Nullable Input<List<ActivityDependencyArgs>> dependsOn;
 
     public Input<List<ActivityDependencyArgs>> getDependsOn() {
         return this.dependsOn == null ? Input.empty() : this.dependsOn;
@@ -42,7 +42,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -53,7 +53,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="linkedServiceName", required=true)
-    private final Input<LinkedServiceReferenceArgs> linkedServiceName;
+        private final Input<LinkedServiceReferenceArgs> linkedServiceName;
 
     public Input<LinkedServiceReferenceArgs> getLinkedServiceName() {
         return this.linkedServiceName;
@@ -64,7 +64,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -75,7 +75,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable Input<ActivityPolicyArgs> policy;
+        private final @Nullable Input<ActivityPolicyArgs> policy;
 
     public Input<ActivityPolicyArgs> getPolicy() {
         return this.policy == null ? Input.empty() : this.policy;
@@ -86,7 +86,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedProcedureName", required=true)
-    private final Input<Object> storedProcedureName;
+        private final Input<Object> storedProcedureName;
 
     public Input<Object> getStoredProcedureName() {
         return this.storedProcedureName;
@@ -97,7 +97,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="storedProcedureParameters")
-    private final @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
+        private final @Nullable Input<Map<String,StoredProcedureParameterArgs>> storedProcedureParameters;
 
     public Input<Map<String,StoredProcedureParameterArgs>> getStoredProcedureParameters() {
         return this.storedProcedureParameters == null ? Input.empty() : this.storedProcedureParameters;
@@ -109,7 +109,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -120,7 +120,7 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable Input<List<UserPropertyArgs>> userProperties;
+        private final @Nullable Input<List<UserPropertyArgs>> userProperties;
 
     public Input<List<UserPropertyArgs>> getUserProperties() {
         return this.userProperties == null ? Input.empty() : this.userProperties;
@@ -284,7 +284,6 @@ public final class SqlServerStoredProcedureActivityArgs extends io.pulumi.resour
             this.userProperties = Input.ofNullable(userProperties);
             return this;
         }
-
         public SqlServerStoredProcedureActivityArgs build() {
             return new SqlServerStoredProcedureActivityArgs(dependsOn, description, linkedServiceName, name, policy, storedProcedureName, storedProcedureParameters, type, userProperties);
         }

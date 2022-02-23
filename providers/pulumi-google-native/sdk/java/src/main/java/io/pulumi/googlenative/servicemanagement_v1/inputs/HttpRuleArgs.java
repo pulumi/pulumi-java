@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.CustomHttpPatternArgs;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="additionalBindings")
-    private final @Nullable Input<List<HttpRuleArgs>> additionalBindings;
+      private final @Nullable Input<List<HttpRuleArgs>> additionalBindings;
 
     public Input<List<HttpRuleArgs>> getAdditionalBindings() {
         return this.additionalBindings == null ? Input.empty() : this.additionalBindings;
@@ -36,7 +36,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="body")
-    private final @Nullable Input<String> body;
+      private final @Nullable Input<String> body;
 
     public Input<String> getBody() {
         return this.body == null ? Input.empty() : this.body;
@@ -47,7 +47,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="custom")
-    private final @Nullable Input<CustomHttpPatternArgs> custom;
+      private final @Nullable Input<CustomHttpPatternArgs> custom;
 
     public Input<CustomHttpPatternArgs> getCustom() {
         return this.custom == null ? Input.empty() : this.custom;
@@ -58,7 +58,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="delete")
-    private final @Nullable Input<String> delete;
+      private final @Nullable Input<String> delete;
 
     public Input<String> getDelete() {
         return this.delete == null ? Input.empty() : this.delete;
@@ -69,7 +69,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="get")
-    private final @Nullable Input<String> get;
+      private final @Nullable Input<String> get;
 
     public Input<String> getGet() {
         return this.get == null ? Input.empty() : this.get;
@@ -80,7 +80,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="patch")
-    private final @Nullable Input<String> patch;
+      private final @Nullable Input<String> patch;
 
     public Input<String> getPatch() {
         return this.patch == null ? Input.empty() : this.patch;
@@ -91,7 +91,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="post")
-    private final @Nullable Input<String> post;
+      private final @Nullable Input<String> post;
 
     public Input<String> getPost() {
         return this.post == null ? Input.empty() : this.post;
@@ -102,7 +102,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="put")
-    private final @Nullable Input<String> put;
+      private final @Nullable Input<String> put;
 
     public Input<String> getPut() {
         return this.put == null ? Input.empty() : this.put;
@@ -113,7 +113,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="responseBody")
-    private final @Nullable Input<String> responseBody;
+      private final @Nullable Input<String> responseBody;
 
     public Input<String> getResponseBody() {
         return this.responseBody == null ? Input.empty() : this.responseBody;
@@ -124,7 +124,7 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<String> selector;
+      private final @Nullable Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -303,7 +303,6 @@ public final class HttpRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.selector = Input.ofNullable(selector);
             return this;
         }
-
         public HttpRuleArgs build() {
             return new HttpRuleArgs(additionalBindings, body, custom, delete, get, patch, post, put, responseBody, selector);
         }

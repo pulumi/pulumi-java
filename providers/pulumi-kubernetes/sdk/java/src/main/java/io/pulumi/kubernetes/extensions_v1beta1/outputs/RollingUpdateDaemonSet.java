@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.extensions_v1beta1.outputs;
 
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -56,7 +56,6 @@ public final class RollingUpdateDaemonSet {
             this.maxUnavailable = maxUnavailable;
             return this;
         }
-
         public RollingUpdateDaemonSet build() {
             return new RollingUpdateDaemonSet(maxUnavailable);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.vmmigration_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.ComputeEngineTargetDetailsResponse;
 import io.pulumi.googlenative.vmmigration_v1alpha1.outputs.StatusResponse;
 import java.lang.String;
@@ -160,7 +160,6 @@ public final class CloneJobResponse {
             this.stateTime = Objects.requireNonNull(stateTime);
             return this;
         }
-
         public CloneJobResponse build() {
             return new CloneJobResponse(computeEngineTargetDetails, createTime, error, name, state, stateTime);
         }

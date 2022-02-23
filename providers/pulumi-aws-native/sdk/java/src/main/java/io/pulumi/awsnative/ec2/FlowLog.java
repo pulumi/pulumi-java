@@ -12,8 +12,8 @@ import io.pulumi.awsnative.ec2.outputs.DestinationOptionsProperties;
 import io.pulumi.awsnative.ec2.outputs.FlowLogTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -172,13 +172,6 @@ public class FlowLog extends io.pulumi.resources.CustomResource {
         return this.trafficType;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FlowLog(String name) {
-        super("aws-native:ec2:FlowLog", name, FlowLogArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -138,7 +138,6 @@ public final class ErrorResponse {
             this.reason = Objects.requireNonNull(reason);
             return this;
         }
-
         public ErrorResponse build() {
             return new ErrorResponse(details, errorTime, errorUuid, message, reason);
         }

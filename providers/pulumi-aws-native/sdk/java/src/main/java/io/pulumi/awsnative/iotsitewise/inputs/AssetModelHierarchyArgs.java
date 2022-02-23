@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="childAssetModelId", required=true)
-    private final Input<String> childAssetModelId;
+        private final Input<String> childAssetModelId;
 
     public Input<String> getChildAssetModelId() {
         return this.childAssetModelId;
@@ -33,7 +33,7 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="logicalId", required=true)
-    private final Input<String> logicalId;
+        private final Input<String> logicalId;
 
     public Input<String> getLogicalId() {
         return this.logicalId;
@@ -44,7 +44,7 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -118,7 +118,6 @@ public final class AssetModelHierarchyArgs extends io.pulumi.resources.ResourceA
             this.name = Input.of(Objects.requireNonNull(name));
             return this;
         }
-
         public AssetModelHierarchyArgs build() {
             return new AssetModelHierarchyArgs(childAssetModelId, logicalId, name);
         }

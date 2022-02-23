@@ -5,8 +5,8 @@ package io.pulumi.example;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.example.TypeUsesArgs;
 import io.pulumi.example.Utilities;
 import io.pulumi.example.enums.OutputOnlyEnumType;
@@ -71,13 +71,6 @@ public class TypeUses extends io.pulumi.resources.CustomResource {
         return this.zed;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TypeUses(String name) {
-        super("example::TypeUses", name, TypeUsesArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

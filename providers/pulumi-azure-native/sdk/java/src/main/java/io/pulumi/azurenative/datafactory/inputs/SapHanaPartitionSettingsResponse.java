@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SapHanaPartitionSettingsResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="partitionColumnName")
-    private final @Nullable Object partitionColumnName;
+        private final @Nullable Object partitionColumnName;
 
     public Optional<Object> getPartitionColumnName() {
         return this.partitionColumnName == null ? Optional.empty() : Optional.ofNullable(this.partitionColumnName);
@@ -61,7 +61,6 @@ public final class SapHanaPartitionSettingsResponse extends io.pulumi.resources.
             this.partitionColumnName = partitionColumnName;
             return this;
         }
-
         public SapHanaPartitionSettingsResponse build() {
             return new SapHanaPartitionSettingsResponse(partitionColumnName);
         }

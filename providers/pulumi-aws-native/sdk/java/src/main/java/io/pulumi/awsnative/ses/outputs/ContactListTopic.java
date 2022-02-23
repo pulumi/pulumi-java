@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ses.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -110,7 +110,6 @@ public final class ContactListTopic {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public ContactListTopic build() {
             return new ContactListTopic(defaultSubscriptionStatus, description, displayName, topicName);
         }

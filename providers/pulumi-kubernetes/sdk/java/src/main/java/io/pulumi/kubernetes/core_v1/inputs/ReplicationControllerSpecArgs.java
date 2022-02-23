@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.PodTemplateSpecArgs;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="minReadySeconds")
-    private final @Nullable Input<Integer> minReadySeconds;
+        private final @Nullable Input<Integer> minReadySeconds;
 
     public Input<Integer> getMinReadySeconds() {
         return this.minReadySeconds == null ? Input.empty() : this.minReadySeconds;
@@ -37,7 +37,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="replicas")
-    private final @Nullable Input<Integer> replicas;
+        private final @Nullable Input<Integer> replicas;
 
     public Input<Integer> getReplicas() {
         return this.replicas == null ? Input.empty() : this.replicas;
@@ -48,7 +48,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="selector")
-    private final @Nullable Input<Map<String,String>> selector;
+        private final @Nullable Input<Map<String,String>> selector;
 
     public Input<Map<String,String>> getSelector() {
         return this.selector == null ? Input.empty() : this.selector;
@@ -59,7 +59,7 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="template")
-    private final @Nullable Input<PodTemplateSpecArgs> template;
+        private final @Nullable Input<PodTemplateSpecArgs> template;
 
     public Input<PodTemplateSpecArgs> getTemplate() {
         return this.template == null ? Input.empty() : this.template;
@@ -148,7 +148,6 @@ public final class ReplicationControllerSpecArgs extends io.pulumi.resources.Res
             this.template = Input.ofNullable(template);
             return this;
         }
-
         public ReplicationControllerSpecArgs build() {
             return new ReplicationControllerSpecArgs(minReadySeconds, replicas, selector, template);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.kinesisfirehose.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DeliveryStreamElasticsearchRetryOptionsArgs extends io.pulumi
     public static final DeliveryStreamElasticsearchRetryOptionsArgs Empty = new DeliveryStreamElasticsearchRetryOptionsArgs();
 
     @InputImport(name="durationInSeconds")
-    private final @Nullable Input<Integer> durationInSeconds;
+        private final @Nullable Input<Integer> durationInSeconds;
 
     public Input<Integer> getDurationInSeconds() {
         return this.durationInSeconds == null ? Input.empty() : this.durationInSeconds;
@@ -58,7 +58,6 @@ public final class DeliveryStreamElasticsearchRetryOptionsArgs extends io.pulumi
             this.durationInSeconds = Input.ofNullable(durationInSeconds);
             return this;
         }
-
         public DeliveryStreamElasticsearchRetryOptionsArgs build() {
             return new DeliveryStreamElasticsearchRetryOptionsArgs(durationInSeconds);
         }

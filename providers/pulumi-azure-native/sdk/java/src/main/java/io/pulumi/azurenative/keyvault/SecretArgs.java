@@ -5,7 +5,7 @@ package io.pulumi.azurenative.keyvault;
 
 import io.pulumi.azurenative.keyvault.inputs.SecretPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties", required=true)
-    private final Input<SecretPropertiesArgs> properties;
+        private final Input<SecretPropertiesArgs> properties;
 
     public Input<SecretPropertiesArgs> getProperties() {
         return this.properties;
@@ -32,7 +32,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -43,7 +43,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="secretName")
-    private final @Nullable Input<String> secretName;
+        private final @Nullable Input<String> secretName;
 
     public Input<String> getSecretName() {
         return this.secretName == null ? Input.empty() : this.secretName;
@@ -54,7 +54,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -65,7 +65,7 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+        private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;
@@ -169,7 +169,6 @@ public final class SecretArgs extends io.pulumi.resources.ResourceArgs {
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }
-
         public SecretArgs build() {
             return new SecretArgs(properties, resourceGroupName, secretName, tags, vaultName);
         }

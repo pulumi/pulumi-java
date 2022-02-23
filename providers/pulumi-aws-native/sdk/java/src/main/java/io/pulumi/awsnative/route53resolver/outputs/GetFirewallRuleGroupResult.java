@@ -7,7 +7,7 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupShareStatus;
 import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupStatus;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupFirewallRule;
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -292,7 +292,6 @@ public final class GetFirewallRuleGroupResult {
             this.tags = tags;
             return this;
         }
-
         public GetFirewallRuleGroupResult build() {
             return new GetFirewallRuleGroupResult(arn, creationTime, creatorRequestId, firewallRules, id, modificationTime, ownerId, ruleCount, shareStatus, status, statusMessage, tags);
         }

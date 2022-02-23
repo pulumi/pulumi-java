@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagecache.inputs;
 import io.pulumi.azurenative.storagecache.inputs.CacheActiveDirectorySettingsArgs;
 import io.pulumi.azurenative.storagecache.inputs.CacheUsernameDownloadSettingsArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -24,7 +24,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="activeDirectory")
-    private final @Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory;
+        private final @Nullable Input<CacheActiveDirectorySettingsArgs> activeDirectory;
 
     public Input<CacheActiveDirectorySettingsArgs> getActiveDirectory() {
         return this.activeDirectory == null ? Input.empty() : this.activeDirectory;
@@ -35,7 +35,7 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="usernameDownload")
-    private final @Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload;
+        private final @Nullable Input<CacheUsernameDownloadSettingsArgs> usernameDownload;
 
     public Input<CacheUsernameDownloadSettingsArgs> getUsernameDownload() {
         return this.usernameDownload == null ? Input.empty() : this.usernameDownload;
@@ -94,7 +94,6 @@ public final class CacheDirectorySettingsArgs extends io.pulumi.resources.Resour
             this.usernameDownload = Input.ofNullable(usernameDownload);
             return this;
         }
-
         public CacheDirectorySettingsArgs build() {
             return new CacheDirectorySettingsArgs(activeDirectory, usernameDownload);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.resources.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
     public static final TagsResponse Empty = new TagsResponse();
 
     @InputImport(name="tags")
-    private final @Nullable Map<String,String> tags;
+        private final @Nullable Map<String,String> tags;
 
     public Map<String,String> getTags() {
         return this.tags == null ? Map.of() : this.tags;
@@ -58,7 +58,6 @@ public final class TagsResponse extends io.pulumi.resources.InvokeArgs {
             this.tags = tags;
             return this;
         }
-
         public TagsResponse build() {
             return new TagsResponse(tags);
         }

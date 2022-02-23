@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.testbase.outputs;
 
 import io.pulumi.azurenative.testbase.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -138,7 +138,6 @@ public final class GetFavoriteProcessResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetFavoriteProcessResult build() {
             return new GetFavoriteProcessResult(actualProcessName, id, name, systemData, type);
         }

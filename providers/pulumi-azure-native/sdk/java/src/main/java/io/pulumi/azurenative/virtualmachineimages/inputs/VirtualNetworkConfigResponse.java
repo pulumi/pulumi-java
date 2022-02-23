@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.virtualmachineimages.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VirtualNetworkConfigResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="subnetId")
-    private final @Nullable String subnetId;
+        private final @Nullable String subnetId;
 
     public Optional<String> getSubnetId() {
         return this.subnetId == null ? Optional.empty() : Optional.ofNullable(this.subnetId);
@@ -61,7 +61,6 @@ public final class VirtualNetworkConfigResponse extends io.pulumi.resources.Invo
             this.subnetId = subnetId;
             return this;
         }
-
         public VirtualNetworkConfigResponse build() {
             return new VirtualNetworkConfigResponse(subnetId);
         }

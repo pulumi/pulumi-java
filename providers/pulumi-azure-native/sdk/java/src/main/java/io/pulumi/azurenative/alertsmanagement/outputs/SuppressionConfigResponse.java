@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.SuppressionScheduleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -77,7 +77,6 @@ public final class SuppressionConfigResponse {
             this.schedule = schedule;
             return this;
         }
-
         public SuppressionConfigResponse build() {
             return new SuppressionConfigResponse(recurrenceType, schedule);
         }

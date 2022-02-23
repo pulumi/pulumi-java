@@ -20,7 +20,7 @@ import io.pulumi.azurenative.providerhub.outputs.ServiceTreeInfoResponse;
 import io.pulumi.azurenative.providerhub.outputs.SubscriptionStateRuleResponse;
 import io.pulumi.azurenative.providerhub.outputs.SwaggerSpecificationResponse;
 import io.pulumi.azurenative.providerhub.outputs.ThrottlingRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -430,7 +430,6 @@ public final class ResourceTypeRegistrationResponseProperties {
             this.throttlingRules = throttlingRules;
             return this;
         }
-
         public ResourceTypeRegistrationResponseProperties build() {
             return new ResourceTypeRegistrationResponseProperties(allowedUnauthorizedActions, authorizationActionMappings, checkNameAvailabilitySpecifications, defaultApiVersion, disallowedActionVerbs, enableAsyncOperation, enableThirdPartyS2S, endpoints, extendedLocations, extensionOptions, featuresRule, identityManagement, isPureProxy, linkedAccessChecks, loggingRules, marketplaceType, provisioningState, regionality, requestHeaderOptions, requiredFeatures, resourceDeletionPolicy, resourceMovePolicy, routingType, serviceTreeInfos, subscriptionLifecycleNotificationSpecifications, subscriptionStateRules, swaggerSpecifications, templateDeploymentOptions, throttlingRules);
         }

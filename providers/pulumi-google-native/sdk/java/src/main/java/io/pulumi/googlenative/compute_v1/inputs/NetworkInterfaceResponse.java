@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_v1.inputs.AccessConfigResponse;
 import io.pulumi.googlenative.compute_v1.inputs.AliasIpRangeResponse;
 import java.lang.Integer;
@@ -25,7 +25,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="accessConfigs", required=true)
-    private final List<AccessConfigResponse> accessConfigs;
+      private final List<AccessConfigResponse> accessConfigs;
 
     public List<AccessConfigResponse> getAccessConfigs() {
         return this.accessConfigs;
@@ -36,7 +36,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="aliasIpRanges", required=true)
-    private final List<AliasIpRangeResponse> aliasIpRanges;
+      private final List<AliasIpRangeResponse> aliasIpRanges;
 
     public List<AliasIpRangeResponse> getAliasIpRanges() {
         return this.aliasIpRanges;
@@ -47,7 +47,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="fingerprint", required=true)
-    private final String fingerprint;
+      private final String fingerprint;
 
     public String getFingerprint() {
         return this.fingerprint;
@@ -58,7 +58,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipv6AccessConfigs", required=true)
-    private final List<AccessConfigResponse> ipv6AccessConfigs;
+      private final List<AccessConfigResponse> ipv6AccessConfigs;
 
     public List<AccessConfigResponse> getIpv6AccessConfigs() {
         return this.ipv6AccessConfigs;
@@ -69,7 +69,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipv6AccessType", required=true)
-    private final String ipv6AccessType;
+      private final String ipv6AccessType;
 
     public String getIpv6AccessType() {
         return this.ipv6AccessType;
@@ -80,7 +80,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="ipv6Address", required=true)
-    private final String ipv6Address;
+      private final String ipv6Address;
 
     public String getIpv6Address() {
         return this.ipv6Address;
@@ -91,7 +91,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="kind", required=true)
-    private final String kind;
+      private final String kind;
 
     public String getKind() {
         return this.kind;
@@ -102,7 +102,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -113,7 +113,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="network", required=true)
-    private final String network;
+      private final String network;
 
     public String getNetwork() {
         return this.network;
@@ -124,7 +124,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="networkIP", required=true)
-    private final String networkIP;
+      private final String networkIP;
 
     public String getNetworkIP() {
         return this.networkIP;
@@ -135,7 +135,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="nicType", required=true)
-    private final String nicType;
+      private final String nicType;
 
     public String getNicType() {
         return this.nicType;
@@ -146,7 +146,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="queueCount", required=true)
-    private final Integer queueCount;
+      private final Integer queueCount;
 
     public Integer getQueueCount() {
         return this.queueCount;
@@ -157,7 +157,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="stackType", required=true)
-    private final String stackType;
+      private final String stackType;
 
     public String getStackType() {
         return this.stackType;
@@ -168,7 +168,7 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="subnetwork", required=true)
-    private final String subnetwork;
+      private final String subnetwork;
 
     public String getSubnetwork() {
         return this.subnetwork;
@@ -337,7 +337,6 @@ public final class NetworkInterfaceResponse extends io.pulumi.resources.InvokeAr
             this.subnetwork = Objects.requireNonNull(subnetwork);
             return this;
         }
-
         public NetworkInterfaceResponse build() {
             return new NetworkInterfaceResponse(accessConfigs, aliasIpRanges, fingerprint, ipv6AccessConfigs, ipv6AccessType, ipv6Address, kind, name, network, networkIP, nicType, queueCount, stackType, subnetwork);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkconnectivity_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -87,7 +87,6 @@ public final class RouterApplianceInstanceResponse {
             this.virtualMachine = Objects.requireNonNull(virtualMachine);
             return this;
         }
-
         public RouterApplianceInstanceResponse build() {
             return new RouterApplianceInstanceResponse(ipAddress, networkInterface, virtualMachine);
         }

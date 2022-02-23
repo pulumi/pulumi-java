@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -45,7 +45,6 @@ public final class EnvironmentResponse {
             this.customValues = Objects.requireNonNull(customValues);
             return this;
         }
-
         public EnvironmentResponse build() {
             return new EnvironmentResponse(customValues);
         }

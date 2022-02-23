@@ -5,7 +5,7 @@ package io.pulumi.azurenative.containerservice.inputs;
 
 import io.pulumi.azurenative.containerservice.inputs.SysctlConfigArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="swapFileSizeMB")
-    private final @Nullable Input<Integer> swapFileSizeMB;
+        private final @Nullable Input<Integer> swapFileSizeMB;
 
     public Input<Integer> getSwapFileSizeMB() {
         return this.swapFileSizeMB == null ? Input.empty() : this.swapFileSizeMB;
@@ -36,7 +36,7 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sysctls")
-    private final @Nullable Input<SysctlConfigArgs> sysctls;
+        private final @Nullable Input<SysctlConfigArgs> sysctls;
 
     public Input<SysctlConfigArgs> getSysctls() {
         return this.sysctls == null ? Input.empty() : this.sysctls;
@@ -47,7 +47,7 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transparentHugePageDefrag")
-    private final @Nullable Input<String> transparentHugePageDefrag;
+        private final @Nullable Input<String> transparentHugePageDefrag;
 
     public Input<String> getTransparentHugePageDefrag() {
         return this.transparentHugePageDefrag == null ? Input.empty() : this.transparentHugePageDefrag;
@@ -58,7 +58,7 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="transparentHugePageEnabled")
-    private final @Nullable Input<String> transparentHugePageEnabled;
+        private final @Nullable Input<String> transparentHugePageEnabled;
 
     public Input<String> getTransparentHugePageEnabled() {
         return this.transparentHugePageEnabled == null ? Input.empty() : this.transparentHugePageEnabled;
@@ -147,7 +147,6 @@ public final class LinuxOSConfigArgs extends io.pulumi.resources.ResourceArgs {
             this.transparentHugePageEnabled = Input.ofNullable(transparentHugePageEnabled);
             return this;
         }
-
         public LinuxOSConfigArgs build() {
             return new LinuxOSConfigArgs(swapFileSizeMB, sysctls, transparentHugePageDefrag, transparentHugePageEnabled);
         }

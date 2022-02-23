@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.coordination.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -140,7 +140,6 @@ public final class LeaseSpec {
             this.renewTime = renewTime;
             return this;
         }
-
         public LeaseSpec build() {
             return new LeaseSpec(acquireTime, holderIdentity, leaseDurationSeconds, leaseTransitions, renewTime);
         }

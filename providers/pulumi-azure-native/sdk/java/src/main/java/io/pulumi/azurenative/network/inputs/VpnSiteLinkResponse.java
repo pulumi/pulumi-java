@@ -5,7 +5,7 @@ package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.azurenative.network.inputs.VpnLinkBgpSettingsResponse;
 import io.pulumi.azurenative.network.inputs.VpnLinkProviderPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bgpProperties")
-    private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
+        private final @Nullable VpnLinkBgpSettingsResponse bgpProperties;
 
     public Optional<VpnLinkBgpSettingsResponse> getBgpProperties() {
         return this.bgpProperties == null ? Optional.empty() : Optional.ofNullable(this.bgpProperties);
@@ -36,7 +36,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="etag", required=true)
-    private final String etag;
+        private final String etag;
 
     public String getEtag() {
         return this.etag;
@@ -47,7 +47,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="fqdn")
-    private final @Nullable String fqdn;
+        private final @Nullable String fqdn;
 
     public Optional<String> getFqdn() {
         return this.fqdn == null ? Optional.empty() : Optional.ofNullable(this.fqdn);
@@ -58,7 +58,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -69,7 +69,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ipAddress")
-    private final @Nullable String ipAddress;
+        private final @Nullable String ipAddress;
 
     public Optional<String> getIpAddress() {
         return this.ipAddress == null ? Optional.empty() : Optional.ofNullable(this.ipAddress);
@@ -80,7 +80,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="linkProperties")
-    private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
+        private final @Nullable VpnLinkProviderPropertiesResponse linkProperties;
 
     public Optional<VpnLinkProviderPropertiesResponse> getLinkProperties() {
         return this.linkProperties == null ? Optional.empty() : Optional.ofNullable(this.linkProperties);
@@ -91,7 +91,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -102,7 +102,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="provisioningState", required=true)
-    private final String provisioningState;
+        private final String provisioningState;
 
     public String getProvisioningState() {
         return this.provisioningState;
@@ -113,7 +113,7 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -232,7 +232,6 @@ public final class VpnSiteLinkResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public VpnSiteLinkResponse build() {
             return new VpnSiteLinkResponse(bgpProperties, etag, fqdn, id, ipAddress, linkProperties, name, provisioningState, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.blueprint.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class BlueprintStatusResponse {
             this.timeCreated = Objects.requireNonNull(timeCreated);
             return this;
         }
-
         public BlueprintStatusResponse build() {
             return new BlueprintStatusResponse(lastModified, timeCreated);
         }

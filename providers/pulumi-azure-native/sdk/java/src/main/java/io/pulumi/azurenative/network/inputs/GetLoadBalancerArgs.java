@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="expand")
-    private final @Nullable String expand;
+        private final @Nullable String expand;
 
     public Optional<String> getExpand() {
         return this.expand == null ? Optional.empty() : Optional.ofNullable(this.expand);
@@ -30,7 +30,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="loadBalancerName", required=true)
-    private final String loadBalancerName;
+        private final String loadBalancerName;
 
     public String getLoadBalancerName() {
         return this.loadBalancerName;
@@ -41,7 +41,7 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -100,7 +100,6 @@ public final class GetLoadBalancerArgs extends io.pulumi.resources.InvokeArgs {
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetLoadBalancerArgs build() {
             return new GetLoadBalancerArgs(expand, loadBalancerName, resourceGroupName);
         }

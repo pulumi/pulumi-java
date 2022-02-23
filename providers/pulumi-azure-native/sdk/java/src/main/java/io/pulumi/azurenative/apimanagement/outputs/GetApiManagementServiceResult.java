@@ -10,7 +10,7 @@ import io.pulumi.azurenative.apimanagement.outputs.ApiVersionConstraintResponse;
 import io.pulumi.azurenative.apimanagement.outputs.CertificateConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.HostnameConfigurationResponse;
 import io.pulumi.azurenative.apimanagement.outputs.VirtualNetworkConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -737,7 +737,6 @@ public final class GetApiManagementServiceResult {
             this.zones = zones;
             return this;
         }
-
         public GetApiManagementServiceResult build() {
             return new GetApiManagementServiceResult(additionalLocations, apiVersionConstraint, certificates, createdAtUtc, customProperties, developerPortalUrl, disableGateway, enableClientCertificate, etag, gatewayRegionalUrl, gatewayUrl, hostnameConfigurations, id, identity, location, managementApiUrl, name, notificationSenderEmail, portalUrl, privateIPAddresses, provisioningState, publicIPAddresses, publisherEmail, publisherName, restore, scmUrl, sku, tags, targetProvisioningState, type, virtualNetworkConfiguration, virtualNetworkType, zones);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.cloudasset.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -124,7 +124,6 @@ public final class ProjectFeedCondition {
             this.title = title;
             return this;
         }
-
         public ProjectFeedCondition build() {
             return new ProjectFeedCondition(description, expression, location, title);
         }

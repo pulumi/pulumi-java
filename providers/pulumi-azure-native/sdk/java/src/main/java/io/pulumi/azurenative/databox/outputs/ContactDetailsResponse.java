@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.databox.outputs;
 
 import io.pulumi.azurenative.databox.outputs.NotificationPreferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -162,7 +162,6 @@ public final class ContactDetailsResponse {
             this.phoneExtension = phoneExtension;
             return this;
         }
-
         public ContactDetailsResponse build() {
             return new ContactDetailsResponse(contactName, emailList, mobile, notificationPreference, phone, phoneExtension);
         }

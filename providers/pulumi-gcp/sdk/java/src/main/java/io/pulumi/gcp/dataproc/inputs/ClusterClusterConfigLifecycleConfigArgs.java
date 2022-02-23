@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataproc.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -21,7 +21,7 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="autoDeleteTime")
-    private final @Nullable Input<String> autoDeleteTime;
+        private final @Nullable Input<String> autoDeleteTime;
 
     public Input<String> getAutoDeleteTime() {
         return this.autoDeleteTime == null ? Input.empty() : this.autoDeleteTime;
@@ -33,14 +33,14 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
      * 
      */
     @InputImport(name="idleDeleteTtl")
-    private final @Nullable Input<String> idleDeleteTtl;
+        private final @Nullable Input<String> idleDeleteTtl;
 
     public Input<String> getIdleDeleteTtl() {
         return this.idleDeleteTtl == null ? Input.empty() : this.idleDeleteTtl;
     }
 
     @InputImport(name="idleStartTime")
-    private final @Nullable Input<String> idleStartTime;
+        private final @Nullable Input<String> idleStartTime;
 
     public Input<String> getIdleStartTime() {
         return this.idleStartTime == null ? Input.empty() : this.idleStartTime;
@@ -114,7 +114,6 @@ public final class ClusterClusterConfigLifecycleConfigArgs extends io.pulumi.res
             this.idleStartTime = Input.ofNullable(idleStartTime);
             return this;
         }
-
         public ClusterClusterConfigLifecycleConfigArgs build() {
             return new ClusterClusterConfigLifecycleConfigArgs(autoDeleteTime, idleDeleteTtl, idleStartTime);
         }

@@ -10,8 +10,8 @@ import io.pulumi.azurenative.devtestlab.outputs.LabSupportPropertiesResponse;
 import io.pulumi.core.Alias;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -375,13 +375,6 @@ public class Lab extends io.pulumi.resources.CustomResource {
         return this.vmCreationResourceGroup;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Lab(String name) {
-        super("azure-native:devtestlab:Lab", name, LabArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

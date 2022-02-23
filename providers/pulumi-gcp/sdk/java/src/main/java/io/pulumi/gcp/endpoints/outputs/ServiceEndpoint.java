@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.endpoints.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class ServiceEndpoint {
             this.name = name;
             return this;
         }
-
         public ServiceEndpoint build() {
             return new ServiceEndpoint(address, name);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.policy_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="allowedRuntimeClassNames", required=true)
-    private final Input<List<String>> allowedRuntimeClassNames;
+        private final Input<List<String>> allowedRuntimeClassNames;
 
     public Input<List<String>> getAllowedRuntimeClassNames() {
         return this.allowedRuntimeClassNames;
@@ -35,7 +35,7 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="defaultRuntimeClassName")
-    private final @Nullable Input<String> defaultRuntimeClassName;
+        private final @Nullable Input<String> defaultRuntimeClassName;
 
     public Input<String> getDefaultRuntimeClassName() {
         return this.defaultRuntimeClassName == null ? Input.empty() : this.defaultRuntimeClassName;
@@ -94,7 +94,6 @@ public final class RuntimeClassStrategyOptionsArgs extends io.pulumi.resources.R
             this.defaultRuntimeClassName = Input.ofNullable(defaultRuntimeClassName);
             return this;
         }
-
         public RuntimeClassStrategyOptionsArgs build() {
             return new RuntimeClassStrategyOptionsArgs(allowedRuntimeClassNames, defaultRuntimeClassName);
         }

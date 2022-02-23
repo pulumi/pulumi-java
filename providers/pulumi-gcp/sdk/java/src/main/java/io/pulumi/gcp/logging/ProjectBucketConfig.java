@@ -5,8 +5,8 @@ package io.pulumi.gcp.logging;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.logging.ProjectBucketConfigArgs;
 import io.pulumi.gcp.logging.inputs.ProjectBucketConfigState;
@@ -133,13 +133,6 @@ public class ProjectBucketConfig extends io.pulumi.resources.CustomResource {
         return this.retentionDays;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public ProjectBucketConfig(String name) {
-        super("gcp:logging/projectBucketConfig:ProjectBucketConfig", name, ProjectBucketConfigArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

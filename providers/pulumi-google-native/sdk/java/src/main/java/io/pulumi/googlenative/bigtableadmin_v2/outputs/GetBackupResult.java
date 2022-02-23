@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigtableadmin_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigtableadmin_v2.outputs.EncryptionInfoResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -201,7 +201,6 @@ public final class GetBackupResult {
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public GetBackupResult build() {
             return new GetBackupResult(encryptionInfo, endTime, expireTime, name, sizeBytes, sourceTable, startTime, state);
         }

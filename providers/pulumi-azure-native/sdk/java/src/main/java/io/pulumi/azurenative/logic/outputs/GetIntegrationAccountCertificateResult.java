@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.outputs;
 
 import io.pulumi.azurenative.logic.outputs.KeyVaultKeyReferenceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -247,7 +247,6 @@ public final class GetIntegrationAccountCertificateResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetIntegrationAccountCertificateResult build() {
             return new GetIntegrationAccountCertificateResult(changedTime, createdTime, id, key, location, metadata, name, publicCertificate, tags, type);
         }

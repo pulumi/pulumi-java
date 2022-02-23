@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -329,7 +329,6 @@ public final class GetPolicyResult {
             this.uniqueIdentifier = Objects.requireNonNull(uniqueIdentifier);
             return this;
         }
-
         public GetPolicyResult build() {
             return new GetPolicyResult(createdDate, description, evaluatorType, factData, factName, id, location, name, provisioningState, status, tags, threshold, type, uniqueIdentifier);
         }

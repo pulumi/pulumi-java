@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gameservices_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.gameservices_v1.inputs.ExprResponse;
 import java.lang.String;
 import java.util.List;
@@ -19,7 +19,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
     public static final BindingResponse Empty = new BindingResponse();
 
     @InputImport(name="bindingId", required=true)
-    private final String bindingId;
+      private final String bindingId;
 
     public String getBindingId() {
         return this.bindingId;
@@ -30,7 +30,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="condition", required=true)
-    private final ExprResponse condition;
+      private final ExprResponse condition;
 
     public ExprResponse getCondition() {
         return this.condition;
@@ -41,7 +41,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="members", required=true)
-    private final List<String> members;
+      private final List<String> members;
 
     public List<String> getMembers() {
         return this.members;
@@ -52,7 +52,7 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="role", required=true)
-    private final String role;
+      private final String role;
 
     public String getRole() {
         return this.role;
@@ -121,7 +121,6 @@ public final class BindingResponse extends io.pulumi.resources.InvokeArgs {
             this.role = Objects.requireNonNull(role);
             return this;
         }
-
         public BindingResponse build() {
             return new BindingResponse(bindingId, condition, members, role);
         }

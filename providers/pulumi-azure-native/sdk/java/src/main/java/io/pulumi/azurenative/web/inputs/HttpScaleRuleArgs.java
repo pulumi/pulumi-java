@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.inputs.ScaleRuleAuthArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -26,7 +26,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="auth")
-    private final @Nullable Input<List<ScaleRuleAuthArgs>> auth;
+        private final @Nullable Input<List<ScaleRuleAuthArgs>> auth;
 
     public Input<List<ScaleRuleAuthArgs>> getAuth() {
         return this.auth == null ? Input.empty() : this.auth;
@@ -37,7 +37,7 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<Map<String,String>> metadata;
+        private final @Nullable Input<Map<String,String>> metadata;
 
     public Input<Map<String,String>> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -96,7 +96,6 @@ public final class HttpScaleRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public HttpScaleRuleArgs build() {
             return new HttpScaleRuleArgs(auth, metadata);
         }

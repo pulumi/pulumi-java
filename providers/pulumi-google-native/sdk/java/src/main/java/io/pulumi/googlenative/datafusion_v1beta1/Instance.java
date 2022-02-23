@@ -5,8 +5,8 @@ package io.pulumi.googlenative.datafusion_v1beta1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.datafusion_v1beta1.InstanceArgs;
 import io.pulumi.googlenative.datafusion_v1beta1.outputs.AcceleratorResponse;
@@ -405,13 +405,6 @@ public class Instance extends io.pulumi.resources.CustomResource {
         return this.zone;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Instance(String name) {
-        super("google-native:datafusion/v1beta1:Instance", name, InstanceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

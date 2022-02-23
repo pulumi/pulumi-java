@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.networkmanagement_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.networkmanagement_v1.inputs.EndpointArgs;
 import java.lang.String;
 import java.util.List;
@@ -22,7 +22,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+      private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -33,7 +33,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="destination", required=true)
-    private final Input<EndpointArgs> destination;
+      private final Input<EndpointArgs> destination;
 
     public Input<EndpointArgs> getDestination() {
         return this.destination;
@@ -44,7 +44,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -55,14 +55,14 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+      private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -73,7 +73,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="protocol")
-    private final @Nullable Input<String> protocol;
+      private final @Nullable Input<String> protocol;
 
     public Input<String> getProtocol() {
         return this.protocol == null ? Input.empty() : this.protocol;
@@ -84,7 +84,7 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="relatedProjects")
-    private final @Nullable Input<List<String>> relatedProjects;
+      private final @Nullable Input<List<String>> relatedProjects;
 
     public Input<List<String>> getRelatedProjects() {
         return this.relatedProjects == null ? Input.empty() : this.relatedProjects;
@@ -95,14 +95,14 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="source", required=true)
-    private final Input<EndpointArgs> source;
+      private final Input<EndpointArgs> source;
 
     public Input<EndpointArgs> getSource() {
         return this.source;
     }
 
     @InputImport(name="testId", required=true)
-    private final Input<String> testId;
+      private final Input<String> testId;
 
     public Input<String> getTestId() {
         return this.testId;
@@ -266,7 +266,6 @@ public final class ConnectivityTestArgs extends io.pulumi.resources.ResourceArgs
             this.testId = Input.of(Objects.requireNonNull(testId));
             return this;
         }
-
         public ConnectivityTestArgs build() {
             return new ConnectivityTestArgs(description, destination, labels, name, project, protocol, relatedProjects, source, testId);
         }

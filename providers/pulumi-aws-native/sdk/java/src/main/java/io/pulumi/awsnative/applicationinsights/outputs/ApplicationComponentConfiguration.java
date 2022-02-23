@@ -5,7 +5,7 @@ package io.pulumi.awsnative.applicationinsights.outputs;
 
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationConfigurationDetails;
 import io.pulumi.awsnative.applicationinsights.outputs.ApplicationSubComponentTypeConfiguration;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -78,7 +78,6 @@ public final class ApplicationComponentConfiguration {
             this.subComponentTypeConfigurations = subComponentTypeConfigurations;
             return this;
         }
-
         public ApplicationComponentConfiguration build() {
             return new ApplicationComponentConfiguration(configurationDetails, subComponentTypeConfigurations);
         }

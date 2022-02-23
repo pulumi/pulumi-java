@@ -5,8 +5,8 @@ package io.pulumi.googlenative.compute_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.compute_v1.RegionHealthCheckArgs;
 import io.pulumi.googlenative.compute_v1.outputs.GRPCHealthCheckResponse;
@@ -231,13 +231,6 @@ public class RegionHealthCheck extends io.pulumi.resources.CustomResource {
         return this.unhealthyThreshold;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public RegionHealthCheck(String name) {
-        super("google-native:compute/v1:RegionHealthCheck", name, RegionHealthCheckArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

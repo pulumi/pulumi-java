@@ -10,7 +10,7 @@ import io.pulumi.azurenative.network.outputs.ExpressRouteConnectionIdResponse;
 import io.pulumi.azurenative.network.outputs.Ipv6ExpressRouteCircuitPeeringConfigResponse;
 import io.pulumi.azurenative.network.outputs.PeerExpressRouteCircuitConnectionResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -548,7 +548,6 @@ public final class GetExpressRouteCircuitPeeringResult {
             this.vlanId = vlanId;
             return this;
         }
-
         public GetExpressRouteCircuitPeeringResult build() {
             return new GetExpressRouteCircuitPeeringResult(azureASN, connections, etag, expressRouteConnection, gatewayManagerEtag, id, ipv6PeeringConfig, lastModifiedBy, microsoftPeeringConfig, name, peerASN, peeredConnections, peeringType, primaryAzurePort, primaryPeerAddressPrefix, provisioningState, routeFilter, secondaryAzurePort, secondaryPeerAddressPrefix, sharedKey, state, stats, type, vlanId);
         }

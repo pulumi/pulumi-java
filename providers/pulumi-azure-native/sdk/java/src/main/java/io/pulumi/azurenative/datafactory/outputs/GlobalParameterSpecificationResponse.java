@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GlobalParameterSpecificationResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public GlobalParameterSpecificationResponse build() {
             return new GlobalParameterSpecificationResponse(type, value);
         }

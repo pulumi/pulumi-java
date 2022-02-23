@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.logging.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.logging.outputs.MetricMetricDescriptorLabel;
 import java.lang.String;
 import java.util.List;
@@ -167,7 +167,6 @@ public final class MetricMetricDescriptor {
             this.valueType = Objects.requireNonNull(valueType);
             return this;
         }
-
         public MetricMetricDescriptor build() {
             return new MetricMetricDescriptor(displayName, labels, metricKind, unit, valueType);
         }

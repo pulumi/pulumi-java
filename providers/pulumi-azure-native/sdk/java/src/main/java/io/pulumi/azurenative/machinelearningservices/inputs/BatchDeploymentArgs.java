@@ -13,7 +13,7 @@ import io.pulumi.azurenative.machinelearningservices.inputs.IdAssetReferenceArgs
 import io.pulumi.azurenative.machinelearningservices.inputs.OutputPathAssetReferenceArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.Object;
@@ -37,7 +37,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="codeConfiguration")
-    private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
+        private final @Nullable Input<CodeConfigurationArgs> codeConfiguration;
 
     public Input<CodeConfigurationArgs> getCodeConfiguration() {
         return this.codeConfiguration == null ? Input.empty() : this.codeConfiguration;
@@ -48,7 +48,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="compute")
-    private final @Nullable Input<ComputeConfigurationArgs> compute;
+        private final @Nullable Input<ComputeConfigurationArgs> compute;
 
     public Input<ComputeConfigurationArgs> getCompute() {
         return this.compute == null ? Input.empty() : this.compute;
@@ -59,7 +59,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -70,7 +70,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentId")
-    private final @Nullable Input<String> environmentId;
+        private final @Nullable Input<String> environmentId;
 
     public Input<String> getEnvironmentId() {
         return this.environmentId == null ? Input.empty() : this.environmentId;
@@ -81,7 +81,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="environmentVariables")
-    private final @Nullable Input<Map<String,String>> environmentVariables;
+        private final @Nullable Input<Map<String,String>> environmentVariables;
 
     public Input<Map<String,String>> getEnvironmentVariables() {
         return this.environmentVariables == null ? Input.empty() : this.environmentVariables;
@@ -96,7 +96,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="errorThreshold")
-    private final @Nullable Input<Integer> errorThreshold;
+        private final @Nullable Input<Integer> errorThreshold;
 
     public Input<Integer> getErrorThreshold() {
         return this.errorThreshold == null ? Input.empty() : this.errorThreshold;
@@ -107,7 +107,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="loggingLevel")
-    private final @Nullable Input<Either<String,BatchLoggingLevel>> loggingLevel;
+        private final @Nullable Input<Either<String,BatchLoggingLevel>> loggingLevel;
 
     public Input<Either<String,BatchLoggingLevel>> getLoggingLevel() {
         return this.loggingLevel == null ? Input.empty() : this.loggingLevel;
@@ -120,7 +120,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="miniBatchSize")
-    private final @Nullable Input<Double> miniBatchSize;
+        private final @Nullable Input<Double> miniBatchSize;
 
     public Input<Double> getMiniBatchSize() {
         return this.miniBatchSize == null ? Input.empty() : this.miniBatchSize;
@@ -131,7 +131,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="model")
-    private final @Nullable Input<Object> model;
+        private final @Nullable Input<Object> model;
 
     public Input<Object> getModel() {
         return this.model == null ? Input.empty() : this.model;
@@ -142,7 +142,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="outputConfiguration")
-    private final @Nullable Input<BatchOutputConfigurationArgs> outputConfiguration;
+        private final @Nullable Input<BatchOutputConfigurationArgs> outputConfiguration;
 
     public Input<BatchOutputConfigurationArgs> getOutputConfiguration() {
         return this.outputConfiguration == null ? Input.empty() : this.outputConfiguration;
@@ -153,7 +153,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="partitionKeys")
-    private final @Nullable Input<List<String>> partitionKeys;
+        private final @Nullable Input<List<String>> partitionKeys;
 
     public Input<List<String>> getPartitionKeys() {
         return this.partitionKeys == null ? Input.empty() : this.partitionKeys;
@@ -164,7 +164,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -175,7 +175,7 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="retrySettings")
-    private final @Nullable Input<BatchRetrySettingsArgs> retrySettings;
+        private final @Nullable Input<BatchRetrySettingsArgs> retrySettings;
 
     public Input<BatchRetrySettingsArgs> getRetrySettings() {
         return this.retrySettings == null ? Input.empty() : this.retrySettings;
@@ -399,7 +399,6 @@ public final class BatchDeploymentArgs extends io.pulumi.resources.ResourceArgs 
             this.retrySettings = Input.ofNullable(retrySettings);
             return this;
         }
-
         public BatchDeploymentArgs build() {
             return new BatchDeploymentArgs(codeConfiguration, compute, description, environmentId, environmentVariables, errorThreshold, loggingLevel, miniBatchSize, model, outputConfiguration, partitionKeys, properties, retrySettings);
         }

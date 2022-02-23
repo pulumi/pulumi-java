@@ -10,7 +10,7 @@ import io.pulumi.azurenative.datafactory.outputs.AzureFileStorageWriteSettingsRe
 import io.pulumi.azurenative.datafactory.outputs.FileServerWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.JsonWriteSettingsResponse;
 import io.pulumi.azurenative.datafactory.outputs.SftpWriteSettingsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -233,7 +233,6 @@ public final class JsonSinkResponse {
             this.writeBatchTimeout = writeBatchTimeout;
             return this;
         }
-
         public JsonSinkResponse build() {
             return new JsonSinkResponse(disableMetricsCollection, formatSettings, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, storeSettings, type, writeBatchSize, writeBatchTimeout);
         }

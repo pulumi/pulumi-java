@@ -4,7 +4,7 @@
 package io.pulumi.gcp.healthcare.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.healthcare.inputs.Hl7StoreIamBindingConditionGetArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
     public static final Hl7StoreIamBindingState Empty = new Hl7StoreIamBindingState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<Hl7StoreIamBindingConditionGetArgs> condition;
+        private final @Nullable Input<Hl7StoreIamBindingConditionGetArgs> condition;
 
     public Input<Hl7StoreIamBindingConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,7 +28,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
@@ -42,14 +42,14 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="hl7V2StoreId")
-    private final @Nullable Input<String> hl7V2StoreId;
+        private final @Nullable Input<String> hl7V2StoreId;
 
     public Input<String> getHl7V2StoreId() {
         return this.hl7V2StoreId == null ? Input.empty() : this.hl7V2StoreId;
     }
 
     @InputImport(name="members")
-    private final @Nullable Input<List<String>> members;
+        private final @Nullable Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members == null ? Input.empty() : this.members;
@@ -62,7 +62,7 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -166,7 +166,6 @@ public final class Hl7StoreIamBindingState extends io.pulumi.resources.ResourceA
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public Hl7StoreIamBindingState build() {
             return new Hl7StoreIamBindingState(condition, etag, hl7V2StoreId, members, role);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.storage.k8s.io_v1alpha1.outputs.VolumeAttachmentSource;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class VolumeAttachmentSpec {
             this.source = Objects.requireNonNull(source);
             return this;
         }
-
         public VolumeAttachmentSpec build() {
             return new VolumeAttachmentSpec(attacher, nodeName, source);
         }

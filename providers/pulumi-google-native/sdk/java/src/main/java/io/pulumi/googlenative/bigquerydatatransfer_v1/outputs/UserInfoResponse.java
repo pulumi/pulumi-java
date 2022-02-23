@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquerydatatransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class UserInfoResponse {
             this.email = Objects.requireNonNull(email);
             return this;
         }
-
         public UserInfoResponse build() {
             return new UserInfoResponse(email);
         }

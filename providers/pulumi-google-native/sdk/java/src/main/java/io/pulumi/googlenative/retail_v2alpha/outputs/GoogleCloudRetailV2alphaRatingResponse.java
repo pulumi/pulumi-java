@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.util.List;
@@ -97,7 +97,6 @@ public final class GoogleCloudRetailV2alphaRatingResponse {
             this.ratingHistogram = Objects.requireNonNull(ratingHistogram);
             return this;
         }
-
         public GoogleCloudRetailV2alphaRatingResponse build() {
             return new GoogleCloudRetailV2alphaRatingResponse(averageRating, ratingCount, ratingHistogram);
         }

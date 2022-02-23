@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="configurationStatus")
-    private final @Nullable String configurationStatus;
+        private final @Nullable String configurationStatus;
 
     public Optional<String> getConfigurationStatus() {
         return this.configurationStatus == null ? Optional.empty() : Optional.ofNullable(this.configurationStatus);
@@ -34,7 +34,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="enforcementSupport")
-    private final @Nullable String enforcementSupport;
+        private final @Nullable String enforcementSupport;
 
     public Optional<String> getEnforcementSupport() {
         return this.enforcementSupport == null ? Optional.empty() : Optional.ofNullable(this.enforcementSupport);
@@ -45,7 +45,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="recommendationAction")
-    private final @Nullable String recommendationAction;
+        private final @Nullable String recommendationAction;
 
     public Optional<String> getRecommendationAction() {
         return this.recommendationAction == null ? Optional.empty() : Optional.ofNullable(this.recommendationAction);
@@ -56,7 +56,7 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="resourceId")
-    private final @Nullable String resourceId;
+        private final @Nullable String resourceId;
 
     public Optional<String> getResourceId() {
         return this.resourceId == null ? Optional.empty() : Optional.ofNullable(this.resourceId);
@@ -125,7 +125,6 @@ public final class VmRecommendationResponse extends io.pulumi.resources.InvokeAr
             this.resourceId = resourceId;
             return this;
         }
-
         public VmRecommendationResponse build() {
             return new VmRecommendationResponse(configurationStatus, enforcementSupport, recommendationAction, resourceId);
         }

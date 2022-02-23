@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -141,7 +141,6 @@ public final class VideoResponse {
             this.syncMode = syncMode;
             return this;
         }
-
         public VideoResponse build() {
             return new VideoResponse(keyFrameInterval, label, odataType, stretchMode, syncMode);
         }

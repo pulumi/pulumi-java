@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.documentdb.outputs;
 
 import io.pulumi.azurenative.documentdb.outputs.SeedNodeResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class DataCenterResourceResponseProperties {
             this.seedNodes = Objects.requireNonNull(seedNodes);
             return this;
         }
-
         public DataCenterResourceResponseProperties build() {
             return new DataCenterResourceResponseProperties(base64EncodedCassandraYamlFragment, dataCenterLocation, delegatedSubnetId, nodeCount, provisioningState, seedNodes);
         }

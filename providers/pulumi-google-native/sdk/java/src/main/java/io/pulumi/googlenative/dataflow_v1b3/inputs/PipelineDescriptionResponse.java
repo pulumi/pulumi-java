@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataflow_v1b3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.DisplayDataResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.ExecutionStageSummaryResponse;
 import io.pulumi.googlenative.dataflow_v1b3.inputs.TransformSummaryResponse;
@@ -24,7 +24,7 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="displayData", required=true)
-    private final List<DisplayDataResponse> displayData;
+      private final List<DisplayDataResponse> displayData;
 
     public List<DisplayDataResponse> getDisplayData() {
         return this.displayData;
@@ -35,7 +35,7 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="executionPipelineStage", required=true)
-    private final List<ExecutionStageSummaryResponse> executionPipelineStage;
+      private final List<ExecutionStageSummaryResponse> executionPipelineStage;
 
     public List<ExecutionStageSummaryResponse> getExecutionPipelineStage() {
         return this.executionPipelineStage;
@@ -46,7 +46,7 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="originalPipelineTransform", required=true)
-    private final List<TransformSummaryResponse> originalPipelineTransform;
+      private final List<TransformSummaryResponse> originalPipelineTransform;
 
     public List<TransformSummaryResponse> getOriginalPipelineTransform() {
         return this.originalPipelineTransform;
@@ -105,7 +105,6 @@ public final class PipelineDescriptionResponse extends io.pulumi.resources.Invok
             this.originalPipelineTransform = Objects.requireNonNull(originalPipelineTransform);
             return this;
         }
-
         public PipelineDescriptionResponse build() {
             return new PipelineDescriptionResponse(displayData, executionPipelineStage, originalPipelineTransform);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.datafactory.inputs.ActivityDependencyResponse;
 import io.pulumi.azurenative.datafactory.inputs.ActivityPolicyResponse;
 import io.pulumi.azurenative.datafactory.inputs.LinkedServiceReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -30,7 +30,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="compilationMode")
-    private final @Nullable Object compilationMode;
+        private final @Nullable Object compilationMode;
 
     public Optional<Object> getCompilationMode() {
         return this.compilationMode == null ? Optional.empty() : Optional.ofNullable(this.compilationMode);
@@ -41,7 +41,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="degreeOfParallelism")
-    private final @Nullable Object degreeOfParallelism;
+        private final @Nullable Object degreeOfParallelism;
 
     public Optional<Object> getDegreeOfParallelism() {
         return this.degreeOfParallelism == null ? Optional.empty() : Optional.ofNullable(this.degreeOfParallelism);
@@ -52,7 +52,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="dependsOn")
-    private final @Nullable List<ActivityDependencyResponse> dependsOn;
+        private final @Nullable List<ActivityDependencyResponse> dependsOn;
 
     public List<ActivityDependencyResponse> getDependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
@@ -63,7 +63,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -74,7 +74,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="linkedServiceName")
-    private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
+        private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
     public Optional<LinkedServiceReferenceResponse> getLinkedServiceName() {
         return this.linkedServiceName == null ? Optional.empty() : Optional.ofNullable(this.linkedServiceName);
@@ -85,7 +85,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -96,7 +96,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable Map<String,Object> parameters;
+        private final @Nullable Map<String,Object> parameters;
 
     public Map<String,Object> getParameters() {
         return this.parameters == null ? Map.of() : this.parameters;
@@ -107,7 +107,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="policy")
-    private final @Nullable ActivityPolicyResponse policy;
+        private final @Nullable ActivityPolicyResponse policy;
 
     public Optional<ActivityPolicyResponse> getPolicy() {
         return this.policy == null ? Optional.empty() : Optional.ofNullable(this.policy);
@@ -118,7 +118,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="priority")
-    private final @Nullable Object priority;
+        private final @Nullable Object priority;
 
     public Optional<Object> getPriority() {
         return this.priority == null ? Optional.empty() : Optional.ofNullable(this.priority);
@@ -129,7 +129,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="runtimeVersion")
-    private final @Nullable Object runtimeVersion;
+        private final @Nullable Object runtimeVersion;
 
     public Optional<Object> getRuntimeVersion() {
         return this.runtimeVersion == null ? Optional.empty() : Optional.ofNullable(this.runtimeVersion);
@@ -140,7 +140,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="scriptLinkedService", required=true)
-    private final LinkedServiceReferenceResponse scriptLinkedService;
+        private final LinkedServiceReferenceResponse scriptLinkedService;
 
     public LinkedServiceReferenceResponse getScriptLinkedService() {
         return this.scriptLinkedService;
@@ -151,7 +151,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="scriptPath", required=true)
-    private final Object scriptPath;
+        private final Object scriptPath;
 
     public Object getScriptPath() {
         return this.scriptPath;
@@ -163,7 +163,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -174,7 +174,7 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="userProperties")
-    private final @Nullable List<UserPropertyResponse> userProperties;
+        private final @Nullable List<UserPropertyResponse> userProperties;
 
     public List<UserPropertyResponse> getUserProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
@@ -343,7 +343,6 @@ public final class DataLakeAnalyticsUSQLActivityResponse extends io.pulumi.resou
             this.userProperties = userProperties;
             return this;
         }
-
         public DataLakeAnalyticsUSQLActivityResponse build() {
             return new DataLakeAnalyticsUSQLActivityResponse(compilationMode, degreeOfParallelism, dependsOn, description, linkedServiceName, name, parameters, policy, priority, runtimeVersion, scriptLinkedService, scriptPath, type, userProperties);
         }

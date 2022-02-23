@@ -4,7 +4,7 @@
 package io.pulumi.gcp.diagflow.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="entityType", required=true)
-    private final Input<String> entityType;
+        private final Input<String> entityType;
 
     public Input<String> getEntityType() {
         return this.entityType;
@@ -32,7 +32,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="id", required=true)
-    private final Input<String> id;
+        private final Input<String> id;
 
     public Input<String> getId() {
         return this.id;
@@ -43,7 +43,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="isList")
-    private final @Nullable Input<Boolean> isList;
+        private final @Nullable Input<Boolean> isList;
 
     public Input<Boolean> getIsList() {
         return this.isList == null ? Input.empty() : this.isList;
@@ -55,7 +55,7 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="redact")
-    private final @Nullable Input<Boolean> redact;
+        private final @Nullable Input<Boolean> redact;
 
     public Input<Boolean> getRedact() {
         return this.redact == null ? Input.empty() : this.redact;
@@ -144,7 +144,6 @@ public final class CxIntentParameterGetArgs extends io.pulumi.resources.Resource
             this.redact = Input.ofNullable(redact);
             return this;
         }
-
         public CxIntentParameterGetArgs build() {
             return new CxIntentParameterGetArgs(entityType, id, isList, redact);
         }

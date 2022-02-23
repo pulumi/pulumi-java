@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.botservice.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -119,7 +119,6 @@ public final class KikChannelPropertiesResponse {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public KikChannelPropertiesResponse build() {
             return new KikChannelPropertiesResponse(apiKey, isEnabled, isValidated, userName);
         }

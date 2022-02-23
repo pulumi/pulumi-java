@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.netapp.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.Integer;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class WeeklyScheduleResponse {
             this.usedBytes = usedBytes;
             return this;
         }
-
         public WeeklyScheduleResponse build() {
             return new WeeklyScheduleResponse(day, hour, minute, snapshotsToKeep, usedBytes);
         }

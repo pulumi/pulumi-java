@@ -8,7 +8,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.ParameterSpecificationResponse;
 import io.pulumi.azurenative.datafactory.outputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -233,7 +233,6 @@ public final class SapEccLinkedServiceResponse {
             this.username = username;
             return this;
         }
-
         public SapEccLinkedServiceResponse build() {
             return new SapEccLinkedServiceResponse(annotations, connectVia, description, encryptedCredential, parameters, password, type, url, username);
         }

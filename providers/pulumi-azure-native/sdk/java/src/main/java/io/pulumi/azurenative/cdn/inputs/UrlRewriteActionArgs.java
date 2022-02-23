@@ -5,7 +5,7 @@ package io.pulumi.azurenative.cdn.inputs;
 
 import io.pulumi.azurenative.cdn.inputs.UrlRewriteActionParametersArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -35,7 +35,7 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="parameters", required=true)
-    private final Input<UrlRewriteActionParametersArgs> parameters;
+        private final Input<UrlRewriteActionParametersArgs> parameters;
 
     public Input<UrlRewriteActionParametersArgs> getParameters() {
         return this.parameters;
@@ -94,7 +94,6 @@ public final class UrlRewriteActionArgs extends io.pulumi.resources.ResourceArgs
             this.parameters = Input.of(Objects.requireNonNull(parameters));
             return this;
         }
-
         public UrlRewriteActionArgs build() {
             return new UrlRewriteActionArgs(name, parameters);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.autoscaling.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GetLaunchConfigurationResult {
         public Builder(GetLaunchConfigurationResult defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GetLaunchConfigurationResult build() {
             return new GetLaunchConfigurationResult();
         }

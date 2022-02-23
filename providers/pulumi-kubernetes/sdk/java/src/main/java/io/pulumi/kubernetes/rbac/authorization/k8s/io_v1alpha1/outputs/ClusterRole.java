@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.outputs.AggregationRule;
 import io.pulumi.kubernetes.rbac.authorization.k8s.io_v1alpha1.outputs.PolicyRule;
@@ -143,7 +143,6 @@ public final class ClusterRole {
             this.rules = rules;
             return this;
         }
-
         public ClusterRole build() {
             return new ClusterRole(aggregationRule, apiVersion, kind, metadata, rules);
         }

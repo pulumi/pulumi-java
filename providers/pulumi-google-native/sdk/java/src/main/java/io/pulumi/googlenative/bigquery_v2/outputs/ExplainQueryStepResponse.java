@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class ExplainQueryStepResponse {
             this.substeps = Objects.requireNonNull(substeps);
             return this;
         }
-
         public ExplainQueryStepResponse build() {
             return new ExplainQueryStepResponse(kind, substeps);
         }

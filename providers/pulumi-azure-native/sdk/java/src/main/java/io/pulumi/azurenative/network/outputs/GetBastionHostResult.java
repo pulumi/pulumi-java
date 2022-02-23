@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.BastionHostIPConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -226,7 +226,6 @@ public final class GetBastionHostResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBastionHostResult build() {
             return new GetBastionHostResult(dnsName, etag, id, ipConfigurations, location, name, provisioningState, tags, type);
         }

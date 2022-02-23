@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.networkmanager.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -97,7 +97,6 @@ public final class DeviceLocation {
             this.longitude = longitude;
             return this;
         }
-
         public DeviceLocation build() {
             return new DeviceLocation(address, latitude, longitude);
         }

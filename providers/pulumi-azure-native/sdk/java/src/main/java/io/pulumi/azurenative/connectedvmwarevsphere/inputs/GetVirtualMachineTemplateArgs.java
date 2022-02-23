@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -28,7 +28,7 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="virtualMachineTemplateName", required=true)
-    private final String virtualMachineTemplateName;
+        private final String virtualMachineTemplateName;
 
     public String getVirtualMachineTemplateName() {
         return this.virtualMachineTemplateName;
@@ -77,7 +77,6 @@ public final class GetVirtualMachineTemplateArgs extends io.pulumi.resources.Inv
             this.virtualMachineTemplateName = Objects.requireNonNull(virtualMachineTemplateName);
             return this;
         }
-
         public GetVirtualMachineTemplateArgs build() {
             return new GetVirtualMachineTemplateArgs(resourceGroupName, virtualMachineTemplateName);
         }

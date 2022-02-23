@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="arguments", required=true)
-    private final Boolean arguments;
+      private final Boolean arguments;
 
     public Boolean getArguments() {
         return this.arguments;
@@ -32,7 +32,7 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="environment", required=true)
-    private final Boolean environment;
+      private final Boolean environment;
 
     public Boolean getEnvironment() {
         return this.environment;
@@ -43,7 +43,7 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="materials", required=true)
-    private final Boolean materials;
+      private final Boolean materials;
 
     public Boolean getMaterials() {
         return this.materials;
@@ -102,7 +102,6 @@ public final class CompletenessResponse extends io.pulumi.resources.InvokeArgs {
             this.materials = Objects.requireNonNull(materials);
             return this;
         }
-
         public CompletenessResponse build() {
             return new CompletenessResponse(arguments, environment, materials);
         }

@@ -5,8 +5,8 @@ package io.pulumi.gcp.iap;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.iap.AppEngineServiceIamPolicyArgs;
 import io.pulumi.gcp.iap.inputs.AppEngineServiceIamPolicyState;
@@ -136,13 +136,6 @@ public class AppEngineServiceIamPolicy extends io.pulumi.resources.CustomResourc
         return this.service;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public AppEngineServiceIamPolicy(String name) {
-        super("gcp:iap/appEngineServiceIamPolicy:AppEngineServiceIamPolicy", name, AppEngineServiceIamPolicyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

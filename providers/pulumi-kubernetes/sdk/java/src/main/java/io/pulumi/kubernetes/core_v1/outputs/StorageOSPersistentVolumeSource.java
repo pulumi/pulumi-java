@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import java.lang.Boolean;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class StorageOSPersistentVolumeSource {
             this.volumeNamespace = volumeNamespace;
             return this;
         }
-
         public StorageOSPersistentVolumeSource build() {
             return new StorageOSPersistentVolumeSource(fsType, readOnly, secretRef, volumeName, volumeNamespace);
         }

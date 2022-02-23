@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.outputs.ApplicationRuleResponse;
 import io.pulumi.azurenative.network.outputs.FirewallPolicyFilterRuleCollectionActionResponse;
 import io.pulumi.azurenative.network.outputs.NatRuleResponse;
 import io.pulumi.azurenative.network.outputs.NetworkRuleResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.Object;
 import java.lang.String;
@@ -148,7 +148,6 @@ public final class FirewallPolicyFilterRuleCollectionResponse {
             this.rules = rules;
             return this;
         }
-
         public FirewallPolicyFilterRuleCollectionResponse build() {
             return new FirewallPolicyFilterRuleCollectionResponse(action, name, priority, ruleCollectionType, rules);
         }

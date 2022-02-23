@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.privateca_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="clientAuth", required=true)
-    private final Boolean clientAuth;
+      private final Boolean clientAuth;
 
     public Boolean getClientAuth() {
         return this.clientAuth;
@@ -32,7 +32,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="codeSigning", required=true)
-    private final Boolean codeSigning;
+      private final Boolean codeSigning;
 
     public Boolean getCodeSigning() {
         return this.codeSigning;
@@ -43,7 +43,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="emailProtection", required=true)
-    private final Boolean emailProtection;
+      private final Boolean emailProtection;
 
     public Boolean getEmailProtection() {
         return this.emailProtection;
@@ -54,7 +54,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="ocspSigning", required=true)
-    private final Boolean ocspSigning;
+      private final Boolean ocspSigning;
 
     public Boolean getOcspSigning() {
         return this.ocspSigning;
@@ -65,7 +65,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="serverAuth", required=true)
-    private final Boolean serverAuth;
+      private final Boolean serverAuth;
 
     public Boolean getServerAuth() {
         return this.serverAuth;
@@ -76,7 +76,7 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
      * 
      */
     @InputImport(name="timeStamping", required=true)
-    private final Boolean timeStamping;
+      private final Boolean timeStamping;
 
     public Boolean getTimeStamping() {
         return this.timeStamping;
@@ -165,7 +165,6 @@ public final class ExtendedKeyUsageOptionsResponse extends io.pulumi.resources.I
             this.timeStamping = Objects.requireNonNull(timeStamping);
             return this;
         }
-
         public ExtendedKeyUsageOptionsResponse build() {
             return new ExtendedKeyUsageOptionsResponse(clientAuth, codeSigning, emailProtection, ocspSigning, serverAuth, timeStamping);
         }

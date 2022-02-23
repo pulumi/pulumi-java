@@ -5,7 +5,7 @@ package io.pulumi.azurenative.recoveryservices.outputs;
 
 import io.pulumi.azurenative.recoveryservices.outputs.CmkKekIdentityResponse;
 import io.pulumi.azurenative.recoveryservices.outputs.CmkKeyVaultPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -99,7 +99,6 @@ public final class VaultPropertiesResponseEncryption {
             this.keyVaultProperties = keyVaultProperties;
             return this;
         }
-
         public VaultPropertiesResponseEncryption build() {
             return new VaultPropertiesResponseEncryption(infrastructureEncryption, kekIdentity, keyVaultProperties);
         }

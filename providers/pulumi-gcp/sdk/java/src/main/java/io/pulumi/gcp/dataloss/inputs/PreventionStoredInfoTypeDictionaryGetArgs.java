@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionStoredInfoTypeDictionaryWordListGetArgs;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="cloudStoragePath")
-    private final @Nullable Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
+        private final @Nullable Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> cloudStoragePath;
 
     public Input<PreventionStoredInfoTypeDictionaryCloudStoragePathGetArgs> getCloudStoragePath() {
         return this.cloudStoragePath == null ? Input.empty() : this.cloudStoragePath;
@@ -33,7 +33,7 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
      * 
      */
     @InputImport(name="wordList")
-    private final @Nullable Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
+        private final @Nullable Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> wordList;
 
     public Input<PreventionStoredInfoTypeDictionaryWordListGetArgs> getWordList() {
         return this.wordList == null ? Input.empty() : this.wordList;
@@ -92,7 +92,6 @@ public final class PreventionStoredInfoTypeDictionaryGetArgs extends io.pulumi.r
             this.wordList = Input.ofNullable(wordList);
             return this;
         }
-
         public PreventionStoredInfoTypeDictionaryGetArgs build() {
             return new PreventionStoredInfoTypeDictionaryGetArgs(cloudStoragePath, wordList);
         }

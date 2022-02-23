@@ -6,7 +6,7 @@ package io.pulumi.azurenative.kubernetesconfiguration.outputs;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.ComplianceStatusResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.HelmOperatorPropertiesResponse;
 import io.pulumi.azurenative.kubernetesconfiguration.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -396,7 +396,6 @@ public final class GetSourceControlConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSourceControlConfigurationResult build() {
             return new GetSourceControlConfigurationResult(complianceStatus, configurationProtectedSettings, enableHelmOperator, helmOperatorProperties, id, name, operatorInstanceName, operatorNamespace, operatorParams, operatorScope, operatorType, provisioningState, repositoryPublicKey, repositoryUrl, sshKnownHostsContents, systemData, type);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaConditionQueryTermResponse;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaConditionTimeRangeResponse;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class GoogleCloudRetailV2alphaConditionResponse {
             this.queryTerms = Objects.requireNonNull(queryTerms);
             return this;
         }
-
         public GoogleCloudRetailV2alphaConditionResponse build() {
             return new GoogleCloudRetailV2alphaConditionResponse(activeTimeRange, queryTerms);
         }

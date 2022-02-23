@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="capacityInBytes", required=true)
-    private final Double capacityInBytes;
+        private final Double capacityInBytes;
 
     public Double getCapacityInBytes() {
         return this.capacityInBytes;
@@ -35,7 +35,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskId", required=true)
-    private final String diskId;
+        private final String diskId;
 
     public String getDiskId() {
         return this.diskId;
@@ -46,7 +46,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskName", required=true)
-    private final String diskName;
+        private final String diskName;
 
     public String getDiskName() {
         return this.diskName;
@@ -57,7 +57,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskPath", required=true)
-    private final String diskPath;
+        private final String diskPath;
 
     public String getDiskPath() {
         return this.diskPath;
@@ -68,7 +68,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="diskType")
-    private final @Nullable String diskType;
+        private final @Nullable String diskType;
 
     public Optional<String> getDiskType() {
         return this.diskType == null ? Optional.empty() : Optional.ofNullable(this.diskType);
@@ -79,7 +79,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="isOSDisk", required=true)
-    private final String isOSDisk;
+        private final String isOSDisk;
 
     public String getIsOSDisk() {
         return this.isOSDisk;
@@ -90,7 +90,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="logStorageAccountId", required=true)
-    private final String logStorageAccountId;
+        private final String logStorageAccountId;
 
     public String getLogStorageAccountId() {
         return this.logStorageAccountId;
@@ -101,7 +101,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="logStorageAccountSasSecretName", required=true)
-    private final String logStorageAccountSasSecretName;
+        private final String logStorageAccountSasSecretName;
 
     public String getLogStorageAccountSasSecretName() {
         return this.logStorageAccountSasSecretName;
@@ -112,7 +112,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="seedManagedDiskId", required=true)
-    private final String seedManagedDiskId;
+        private final String seedManagedDiskId;
 
     public String getSeedManagedDiskId() {
         return this.seedManagedDiskId;
@@ -123,7 +123,7 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
      * 
      */
     @InputImport(name="targetManagedDiskId", required=true)
-    private final String targetManagedDiskId;
+        private final String targetManagedDiskId;
 
     public String getTargetManagedDiskId() {
         return this.targetManagedDiskId;
@@ -252,7 +252,6 @@ public final class VMwareCbtProtectedDiskDetailsResponse extends io.pulumi.resou
             this.targetManagedDiskId = Objects.requireNonNull(targetManagedDiskId);
             return this;
         }
-
         public VMwareCbtProtectedDiskDetailsResponse build() {
             return new VMwareCbtProtectedDiskDetailsResponse(capacityInBytes, diskId, diskName, diskPath, diskType, isOSDisk, logStorageAccountId, logStorageAccountSasSecretName, seedManagedDiskId, targetManagedDiskId);
         }

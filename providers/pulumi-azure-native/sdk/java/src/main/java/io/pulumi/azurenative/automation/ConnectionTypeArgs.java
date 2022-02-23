@@ -5,7 +5,7 @@ package io.pulumi.azurenative.automation;
 
 import io.pulumi.azurenative.automation.inputs.FieldDefinitionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -22,7 +22,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="automationAccountName", required=true)
-    private final Input<String> automationAccountName;
+        private final Input<String> automationAccountName;
 
     public Input<String> getAutomationAccountName() {
         return this.automationAccountName;
@@ -33,7 +33,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="connectionTypeName")
-    private final @Nullable Input<String> connectionTypeName;
+        private final @Nullable Input<String> connectionTypeName;
 
     public Input<String> getConnectionTypeName() {
         return this.connectionTypeName == null ? Input.empty() : this.connectionTypeName;
@@ -44,7 +44,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fieldDefinitions", required=true)
-    private final Input<Map<String,FieldDefinitionArgs>> fieldDefinitions;
+        private final Input<Map<String,FieldDefinitionArgs>> fieldDefinitions;
 
     public Input<Map<String,FieldDefinitionArgs>> getFieldDefinitions() {
         return this.fieldDefinitions;
@@ -55,7 +55,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="isGlobal")
-    private final @Nullable Input<Boolean> isGlobal;
+        private final @Nullable Input<Boolean> isGlobal;
 
     public Input<Boolean> getIsGlobal() {
         return this.isGlobal == null ? Input.empty() : this.isGlobal;
@@ -66,7 +66,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -77,7 +77,7 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -196,7 +196,6 @@ public final class ConnectionTypeArgs extends io.pulumi.resources.ResourceArgs {
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public ConnectionTypeArgs build() {
             return new ConnectionTypeArgs(automationAccountName, connectionTypeName, fieldDefinitions, isGlobal, name, resourceGroupName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.events.k8s.io_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.EventSource;
 import io.pulumi.kubernetes.core_v1.outputs.ObjectReference;
 import io.pulumi.kubernetes.events.k8s.io_v1beta1.outputs.EventSeries;
@@ -396,7 +396,6 @@ public final class Event {
             this.type = type;
             return this;
         }
-
         public Event build() {
             return new Event(action, apiVersion, deprecatedCount, deprecatedFirstTimestamp, deprecatedLastTimestamp, deprecatedSource, eventTime, kind, metadata, note, reason, regarding, related, reportingController, reportingInstance, series, type);
         }

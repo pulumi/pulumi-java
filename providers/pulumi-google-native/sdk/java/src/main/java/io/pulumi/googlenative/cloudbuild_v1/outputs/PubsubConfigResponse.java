@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudbuild_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class PubsubConfigResponse {
             this.topic = Objects.requireNonNull(topic);
             return this;
         }
-
         public PubsubConfigResponse build() {
             return new PubsubConfigResponse(serviceAccountEmail, state, subscription, topic);
         }

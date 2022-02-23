@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.dns_v1beta2;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dns_v1beta2.enums.ResponsePolicyRuleBehavior;
 import io.pulumi.googlenative.dns_v1beta2.inputs.ResponsePolicyRuleLocalDataArgs;
 import java.lang.String;
@@ -21,14 +21,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="behavior")
-    private final @Nullable Input<ResponsePolicyRuleBehavior> behavior;
+      private final @Nullable Input<ResponsePolicyRuleBehavior> behavior;
 
     public Input<ResponsePolicyRuleBehavior> getBehavior() {
         return this.behavior == null ? Input.empty() : this.behavior;
     }
 
     @InputImport(name="clientOperationId")
-    private final @Nullable Input<String> clientOperationId;
+      private final @Nullable Input<String> clientOperationId;
 
     public Input<String> getClientOperationId() {
         return this.clientOperationId == null ? Input.empty() : this.clientOperationId;
@@ -39,14 +39,14 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dnsName")
-    private final @Nullable Input<String> dnsName;
+      private final @Nullable Input<String> dnsName;
 
     public Input<String> getDnsName() {
         return this.dnsName == null ? Input.empty() : this.dnsName;
     }
 
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+      private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -57,21 +57,21 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="localData")
-    private final @Nullable Input<ResponsePolicyRuleLocalDataArgs> localData;
+      private final @Nullable Input<ResponsePolicyRuleLocalDataArgs> localData;
 
     public Input<ResponsePolicyRuleLocalDataArgs> getLocalData() {
         return this.localData == null ? Input.empty() : this.localData;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
     }
 
     @InputImport(name="responsePolicy", required=true)
-    private final Input<String> responsePolicy;
+      private final Input<String> responsePolicy;
 
     public Input<String> getResponsePolicy() {
         return this.responsePolicy;
@@ -82,7 +82,7 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="ruleName")
-    private final @Nullable Input<String> ruleName;
+      private final @Nullable Input<String> ruleName;
 
     public Input<String> getRuleName() {
         return this.ruleName == null ? Input.empty() : this.ruleName;
@@ -231,7 +231,6 @@ public final class ResponsePolicyRuleArgs extends io.pulumi.resources.ResourceAr
             this.ruleName = Input.ofNullable(ruleName);
             return this;
         }
-
         public ResponsePolicyRuleArgs build() {
             return new ResponsePolicyRuleArgs(behavior, clientOperationId, dnsName, kind, localData, project, responsePolicy, ruleName);
         }

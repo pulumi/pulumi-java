@@ -11,7 +11,7 @@ import io.pulumi.azurenative.devtestlab.outputs.DataDiskPropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.GalleryImageReferenceResponse;
 import io.pulumi.azurenative.devtestlab.outputs.NetworkInterfacePropertiesResponse;
 import io.pulumi.azurenative.devtestlab.outputs.ScheduleCreationParameterResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -885,7 +885,6 @@ public final class GetVirtualMachineResult {
             this.virtualMachineCreationSource = Objects.requireNonNull(virtualMachineCreationSource);
             return this;
         }
-
         public GetVirtualMachineResult build() {
             return new GetVirtualMachineResult(allowClaim, applicableSchedule, artifactDeploymentStatus, artifacts, computeId, computeVm, createdByUser, createdByUserId, createdDate, customImageId, dataDiskParameters, disallowPublicIpAddress, environmentId, expirationDate, fqdn, galleryImageReference, id, isAuthenticationWithSshKey, labSubnetName, labVirtualNetworkId, lastKnownPowerState, location, name, networkInterface, notes, osType, ownerObjectId, ownerUserPrincipalName, password, planId, provisioningState, scheduleParameters, size, sshKey, storageType, tags, type, uniqueIdentifier, userName, virtualMachineCreationSource);
         }

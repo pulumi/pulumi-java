@@ -5,8 +5,8 @@ package io.pulumi.googlenative.vpcaccess_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.vpcaccess_v1.ConnectorArgs;
 import io.pulumi.googlenative.vpcaccess_v1.outputs.SubnetResponse;
@@ -176,13 +176,6 @@ public class Connector extends io.pulumi.resources.CustomResource {
         return this.subnet;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Connector(String name) {
-        super("google-native:vpcaccess/v1:Connector", name, ConnectorArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

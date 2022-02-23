@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.iot.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,14 +13,14 @@ public final class TopicRuleCloudwatchLogsAction extends io.pulumi.resources.Inv
     public static final TopicRuleCloudwatchLogsAction Empty = new TopicRuleCloudwatchLogsAction();
 
     @InputImport(name="logGroupName", required=true)
-    private final String logGroupName;
+        private final String logGroupName;
 
     public String getLogGroupName() {
         return this.logGroupName;
     }
 
     @InputImport(name="roleArn", required=true)
-    private final String roleArn;
+        private final String roleArn;
 
     public String getRoleArn() {
         return this.roleArn;
@@ -69,7 +69,6 @@ public final class TopicRuleCloudwatchLogsAction extends io.pulumi.resources.Inv
             this.roleArn = Objects.requireNonNull(roleArn);
             return this;
         }
-
         public TopicRuleCloudwatchLogsAction build() {
             return new TopicRuleCloudwatchLogsAction(logGroupName, roleArn);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.pubsub_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="maximumBackoff")
-    private final @Nullable Input<String> maximumBackoff;
+      private final @Nullable Input<String> maximumBackoff;
 
     public Input<String> getMaximumBackoff() {
         return this.maximumBackoff == null ? Input.empty() : this.maximumBackoff;
@@ -34,7 +34,7 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="minimumBackoff")
-    private final @Nullable Input<String> minimumBackoff;
+      private final @Nullable Input<String> minimumBackoff;
 
     public Input<String> getMinimumBackoff() {
         return this.minimumBackoff == null ? Input.empty() : this.minimumBackoff;
@@ -93,7 +93,6 @@ public final class RetryPolicyArgs extends io.pulumi.resources.ResourceArgs {
             this.minimumBackoff = Input.ofNullable(minimumBackoff);
             return this;
         }
-
         public RetryPolicyArgs build() {
             return new RetryPolicyArgs(maximumBackoff, minimumBackoff);
         }

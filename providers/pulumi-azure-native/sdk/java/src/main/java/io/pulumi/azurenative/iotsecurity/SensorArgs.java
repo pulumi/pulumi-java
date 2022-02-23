@@ -6,7 +6,7 @@ package io.pulumi.azurenative.iotsecurity;
 import io.pulumi.azurenative.iotsecurity.enums.SensorType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -33,7 +33,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sensorName")
-    private final @Nullable Input<String> sensorName;
+        private final @Nullable Input<String> sensorName;
 
     public Input<String> getSensorName() {
         return this.sensorName == null ? Input.empty() : this.sensorName;
@@ -44,7 +44,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sensorType")
-    private final @Nullable Input<Either<String,SensorType>> sensorType;
+        private final @Nullable Input<Either<String,SensorType>> sensorType;
 
     public Input<Either<String,SensorType>> getSensorType() {
         return this.sensorType == null ? Input.empty() : this.sensorType;
@@ -55,7 +55,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tiAutomaticUpdates")
-    private final @Nullable Input<Boolean> tiAutomaticUpdates;
+        private final @Nullable Input<Boolean> tiAutomaticUpdates;
 
     public Input<Boolean> getTiAutomaticUpdates() {
         return this.tiAutomaticUpdates == null ? Input.empty() : this.tiAutomaticUpdates;
@@ -66,7 +66,7 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -170,7 +170,6 @@ public final class SensorArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public SensorArgs build() {
             return new SensorArgs(scope, sensorName, sensorType, tiAutomaticUpdates, zone);
         }

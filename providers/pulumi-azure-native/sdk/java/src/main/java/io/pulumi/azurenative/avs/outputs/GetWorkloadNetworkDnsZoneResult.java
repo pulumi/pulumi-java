@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.avs.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.List;
@@ -246,7 +246,6 @@ public final class GetWorkloadNetworkDnsZoneResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetWorkloadNetworkDnsZoneResult build() {
             return new GetWorkloadNetworkDnsZoneResult(displayName, dnsServerIps, dnsServices, domain, id, name, provisioningState, revision, sourceIp, type);
         }

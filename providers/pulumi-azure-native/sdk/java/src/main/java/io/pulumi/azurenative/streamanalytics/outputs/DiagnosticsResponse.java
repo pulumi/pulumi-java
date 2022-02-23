@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.outputs;
 
 import io.pulumi.azurenative.streamanalytics.outputs.DiagnosticConditionResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.List;
 import java.util.Objects;
 
@@ -53,7 +53,6 @@ public final class DiagnosticsResponse {
             this.conditions = Objects.requireNonNull(conditions);
             return this;
         }
-
         public DiagnosticsResponse build() {
             return new DiagnosticsResponse(conditions);
         }

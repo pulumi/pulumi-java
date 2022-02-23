@@ -6,7 +6,7 @@ package io.pulumi.azurenative.notificationhubs;
 import io.pulumi.azurenative.notificationhubs.enums.NamespaceType;
 import io.pulumi.azurenative.notificationhubs.inputs.SkuArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createdAt")
-    private final @Nullable Input<String> createdAt;
+        private final @Nullable Input<String> createdAt;
 
     public Input<String> getCreatedAt() {
         return this.createdAt == null ? Input.empty() : this.createdAt;
@@ -34,7 +34,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="critical")
-    private final @Nullable Input<Boolean> critical;
+        private final @Nullable Input<Boolean> critical;
 
     public Input<Boolean> getCritical() {
         return this.critical == null ? Input.empty() : this.critical;
@@ -45,7 +45,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="dataCenter")
-    private final @Nullable Input<String> dataCenter;
+        private final @Nullable Input<String> dataCenter;
 
     public Input<String> getDataCenter() {
         return this.dataCenter == null ? Input.empty() : this.dataCenter;
@@ -56,7 +56,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -67,7 +67,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -78,7 +78,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceName")
-    private final @Nullable Input<String> namespaceName;
+        private final @Nullable Input<String> namespaceName;
 
     public Input<String> getNamespaceName() {
         return this.namespaceName == null ? Input.empty() : this.namespaceName;
@@ -100,7 +100,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="namespaceType")
-    private final @Nullable Input<NamespaceType> namespaceType;
+        private final @Nullable Input<NamespaceType> namespaceType;
 
     public Input<NamespaceType> getNamespaceType() {
         return this.namespaceType == null ? Input.empty() : this.namespaceType;
@@ -111,7 +111,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable Input<String> provisioningState;
+        private final @Nullable Input<String> provisioningState;
 
     public Input<String> getProvisioningState() {
         return this.provisioningState == null ? Input.empty() : this.provisioningState;
@@ -122,7 +122,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="region")
-    private final @Nullable Input<String> region;
+        private final @Nullable Input<String> region;
 
     public Input<String> getRegion() {
         return this.region == null ? Input.empty() : this.region;
@@ -133,7 +133,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -144,7 +144,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scaleUnit")
-    private final @Nullable Input<String> scaleUnit;
+        private final @Nullable Input<String> scaleUnit;
 
     public Input<String> getScaleUnit() {
         return this.scaleUnit == null ? Input.empty() : this.scaleUnit;
@@ -155,7 +155,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceBusEndpoint")
-    private final @Nullable Input<String> serviceBusEndpoint;
+        private final @Nullable Input<String> serviceBusEndpoint;
 
     public Input<String> getServiceBusEndpoint() {
         return this.serviceBusEndpoint == null ? Input.empty() : this.serviceBusEndpoint;
@@ -166,7 +166,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sku")
-    private final @Nullable Input<SkuArgs> sku;
+        private final @Nullable Input<SkuArgs> sku;
 
     public Input<SkuArgs> getSku() {
         return this.sku == null ? Input.empty() : this.sku;
@@ -177,7 +177,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="status")
-    private final @Nullable Input<String> status;
+        private final @Nullable Input<String> status;
 
     public Input<String> getStatus() {
         return this.status == null ? Input.empty() : this.status;
@@ -188,7 +188,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subscriptionId")
-    private final @Nullable Input<String> subscriptionId;
+        private final @Nullable Input<String> subscriptionId;
 
     public Input<String> getSubscriptionId() {
         return this.subscriptionId == null ? Input.empty() : this.subscriptionId;
@@ -199,7 +199,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -210,7 +210,7 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="updatedAt")
-    private final @Nullable Input<String> updatedAt;
+        private final @Nullable Input<String> updatedAt;
 
     public Input<String> getUpdatedAt() {
         return this.updatedAt == null ? Input.empty() : this.updatedAt;
@@ -509,7 +509,6 @@ public final class NamespaceArgs extends io.pulumi.resources.ResourceArgs {
             this.updatedAt = Input.ofNullable(updatedAt);
             return this;
         }
-
         public NamespaceArgs build() {
             return new NamespaceArgs(createdAt, critical, dataCenter, enabled, location, name, namespaceName, namespaceType, provisioningState, region, resourceGroupName, scaleUnit, serviceBusEndpoint, sku, status, subscriptionId, tags, updatedAt);
         }

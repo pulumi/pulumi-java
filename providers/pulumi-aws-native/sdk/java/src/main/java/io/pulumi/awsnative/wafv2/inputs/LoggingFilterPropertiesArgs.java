@@ -6,7 +6,7 @@ package io.pulumi.awsnative.wafv2.inputs;
 import io.pulumi.awsnative.wafv2.enums.LoggingConfigurationLoggingFilterPropertiesDefaultBehavior;
 import io.pulumi.awsnative.wafv2.inputs.LoggingConfigurationFilterArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -24,7 +24,7 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="defaultBehavior", required=true)
-    private final Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
+        private final Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> defaultBehavior;
 
     public Input<LoggingConfigurationLoggingFilterPropertiesDefaultBehavior> getDefaultBehavior() {
         return this.defaultBehavior;
@@ -35,7 +35,7 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="filters", required=true)
-    private final Input<List<LoggingConfigurationFilterArgs>> filters;
+        private final Input<List<LoggingConfigurationFilterArgs>> filters;
 
     public Input<List<LoggingConfigurationFilterArgs>> getFilters() {
         return this.filters;
@@ -94,7 +94,6 @@ public final class LoggingFilterPropertiesArgs extends io.pulumi.resources.Resou
             this.filters = Input.of(Objects.requireNonNull(filters));
             return this;
         }
-
         public LoggingFilterPropertiesArgs build() {
             return new LoggingFilterPropertiesArgs(defaultBehavior, filters);
         }

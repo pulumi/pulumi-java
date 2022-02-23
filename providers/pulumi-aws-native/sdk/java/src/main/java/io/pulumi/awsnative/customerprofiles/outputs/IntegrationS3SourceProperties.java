@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.customerprofiles.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -60,7 +60,6 @@ public final class IntegrationS3SourceProperties {
             this.bucketPrefix = bucketPrefix;
             return this;
         }
-
         public IntegrationS3SourceProperties build() {
             return new IntegrationS3SourceProperties(bucketName, bucketPrefix);
         }

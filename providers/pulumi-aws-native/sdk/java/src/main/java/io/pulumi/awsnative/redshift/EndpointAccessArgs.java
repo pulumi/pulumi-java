@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.redshift;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="clusterIdentifier")
-    private final @Nullable Input<String> clusterIdentifier;
+        private final @Nullable Input<String> clusterIdentifier;
 
     public Input<String> getClusterIdentifier() {
         return this.clusterIdentifier == null ? Input.empty() : this.clusterIdentifier;
@@ -31,7 +31,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="endpointName", required=true)
-    private final Input<String> endpointName;
+        private final Input<String> endpointName;
 
     public Input<String> getEndpointName() {
         return this.endpointName;
@@ -42,7 +42,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceOwner")
-    private final @Nullable Input<String> resourceOwner;
+        private final @Nullable Input<String> resourceOwner;
 
     public Input<String> getResourceOwner() {
         return this.resourceOwner == null ? Input.empty() : this.resourceOwner;
@@ -53,7 +53,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="subnetGroupName")
-    private final @Nullable Input<String> subnetGroupName;
+        private final @Nullable Input<String> subnetGroupName;
 
     public Input<String> getSubnetGroupName() {
         return this.subnetGroupName == null ? Input.empty() : this.subnetGroupName;
@@ -64,7 +64,7 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="vpcSecurityGroupIds", required=true)
-    private final Input<List<String>> vpcSecurityGroupIds;
+        private final Input<List<String>> vpcSecurityGroupIds;
 
     public Input<List<String>> getVpcSecurityGroupIds() {
         return this.vpcSecurityGroupIds;
@@ -168,7 +168,6 @@ public final class EndpointAccessArgs extends io.pulumi.resources.ResourceArgs {
             this.vpcSecurityGroupIds = Input.of(Objects.requireNonNull(vpcSecurityGroupIds));
             return this;
         }
-
         public EndpointAccessArgs build() {
             return new EndpointAccessArgs(clusterIdentifier, endpointName, resourceOwner, subnetGroupName, vpcSecurityGroupIds);
         }

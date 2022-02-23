@@ -5,8 +5,8 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.InstanceIamMemberArgs;
 import io.pulumi.gcp.notebooks.inputs.InstanceIamMemberState;
@@ -147,13 +147,6 @@ public class InstanceIamMember extends io.pulumi.resources.CustomResource {
         return this.role;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public InstanceIamMember(String name) {
-        super("gcp:notebooks/instanceIamMember:InstanceIamMember", name, InstanceIamMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

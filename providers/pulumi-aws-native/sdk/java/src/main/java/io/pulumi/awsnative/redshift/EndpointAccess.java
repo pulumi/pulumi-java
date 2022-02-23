@@ -9,8 +9,8 @@ import io.pulumi.awsnative.redshift.outputs.EndpointAccessVpcSecurityGroup;
 import io.pulumi.awsnative.redshift.outputs.VpcEndpointProperties;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -177,13 +177,6 @@ public class EndpointAccess extends io.pulumi.resources.CustomResource {
         return this.vpcSecurityGroups;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public EndpointAccess(String name) {
-        super("aws-native:redshift:EndpointAccess", name, EndpointAccessArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

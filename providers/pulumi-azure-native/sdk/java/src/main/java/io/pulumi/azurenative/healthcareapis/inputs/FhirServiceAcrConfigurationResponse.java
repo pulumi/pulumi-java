@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.healthcareapis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FhirServiceAcrConfigurationResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="loginServers")
-    private final @Nullable List<String> loginServers;
+        private final @Nullable List<String> loginServers;
 
     public List<String> getLoginServers() {
         return this.loginServers == null ? List.of() : this.loginServers;
@@ -62,7 +62,6 @@ public final class FhirServiceAcrConfigurationResponse extends io.pulumi.resourc
             this.loginServers = loginServers;
             return this;
         }
-
         public FhirServiceAcrConfigurationResponse build() {
             return new FhirServiceAcrConfigurationResponse(loginServers);
         }

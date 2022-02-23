@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.devtestlab.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="emailRecipient")
-    private final @Nullable String emailRecipient;
+        private final @Nullable String emailRecipient;
 
     public Optional<String> getEmailRecipient() {
         return this.emailRecipient == null ? Optional.empty() : Optional.ofNullable(this.emailRecipient);
@@ -35,7 +35,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="notificationLocale")
-    private final @Nullable String notificationLocale;
+        private final @Nullable String notificationLocale;
 
     public Optional<String> getNotificationLocale() {
         return this.notificationLocale == null ? Optional.empty() : Optional.ofNullable(this.notificationLocale);
@@ -46,7 +46,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="status")
-    private final @Nullable String status;
+        private final @Nullable String status;
 
     public Optional<String> getStatus() {
         return this.status == null ? Optional.empty() : Optional.ofNullable(this.status);
@@ -57,7 +57,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="timeInMinutes")
-    private final @Nullable Integer timeInMinutes;
+        private final @Nullable Integer timeInMinutes;
 
     public Optional<Integer> getTimeInMinutes() {
         return this.timeInMinutes == null ? Optional.empty() : Optional.ofNullable(this.timeInMinutes);
@@ -68,7 +68,7 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="webhookUrl")
-    private final @Nullable String webhookUrl;
+        private final @Nullable String webhookUrl;
 
     public Optional<String> getWebhookUrl() {
         return this.webhookUrl == null ? Optional.empty() : Optional.ofNullable(this.webhookUrl);
@@ -147,7 +147,6 @@ public final class NotificationSettingsResponse extends io.pulumi.resources.Invo
             this.webhookUrl = webhookUrl;
             return this;
         }
-
         public NotificationSettingsResponse build() {
             return new NotificationSettingsResponse(emailRecipient, notificationLocale, status, timeInMinutes, webhookUrl);
         }

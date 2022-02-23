@@ -4,7 +4,7 @@
 package io.pulumi.gcp.networkservices.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @InputImport(name="exactMatch")
-    private final @Nullable Input<String> exactMatch;
+        private final @Nullable Input<String> exactMatch;
 
     public Input<String> getExactMatch() {
         return this.exactMatch == null ? Input.empty() : this.exactMatch;
@@ -31,7 +31,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -42,7 +42,7 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
      * 
      */
     @InputImport(name="presentMatch")
-    private final @Nullable Input<Boolean> presentMatch;
+        private final @Nullable Input<Boolean> presentMatch;
 
     public Input<Boolean> getPresentMatch() {
         return this.presentMatch == null ? Input.empty() : this.presentMatch;
@@ -116,7 +116,6 @@ public final class EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryPara
             this.presentMatch = Input.ofNullable(presentMatch);
             return this;
         }
-
         public EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs build() {
             return new EdgeCacheServiceRoutingPathMatcherRouteRuleMatchRuleQueryParameterMatchArgs(exactMatch, name, presentMatch);
         }

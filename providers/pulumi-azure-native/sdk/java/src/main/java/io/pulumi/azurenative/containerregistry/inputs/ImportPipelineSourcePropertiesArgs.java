@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.enums.PipelineSourceType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="keyVaultUri", required=true)
-    private final Input<String> keyVaultUri;
+        private final Input<String> keyVaultUri;
 
     public Input<String> getKeyVaultUri() {
         return this.keyVaultUri;
@@ -36,7 +36,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<Either<String,PipelineSourceType>> type;
+        private final @Nullable Input<Either<String,PipelineSourceType>> type;
 
     public Input<Either<String,PipelineSourceType>> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -49,7 +49,7 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -123,7 +123,6 @@ public final class ImportPipelineSourcePropertiesArgs extends io.pulumi.resource
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public ImportPipelineSourcePropertiesArgs build() {
             return new ImportPipelineSourcePropertiesArgs(keyVaultUri, type, uri);
         }

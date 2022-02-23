@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.orgpolicy.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRuleCondition;
 import io.pulumi.gcp.orgpolicy.outputs.PolicySpecRuleValues;
 import java.lang.String;
@@ -141,7 +141,6 @@ public final class PolicySpecRule {
             this.values = values;
             return this;
         }
-
         public PolicySpecRule build() {
             return new PolicySpecRule(allowAll, condition, denyAll, enforce, values);
         }

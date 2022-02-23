@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.DurationResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -159,7 +159,6 @@ public final class CircuitBreakersResponse {
             this.maxRetries = Objects.requireNonNull(maxRetries);
             return this;
         }
-
         public CircuitBreakersResponse build() {
             return new CircuitBreakersResponse(connectTimeout, maxConnections, maxPendingRequests, maxRequests, maxRequestsPerConnection, maxRetries);
         }

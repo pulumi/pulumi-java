@@ -12,7 +12,7 @@ import io.pulumi.azurenative.datafactory.outputs.IntegrationRuntimeReferenceResp
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkMappingResponse;
 import io.pulumi.azurenative.datafactory.outputs.PowerQuerySinkResponse;
 import io.pulumi.azurenative.datafactory.outputs.UserPropertyResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -363,7 +363,6 @@ public final class ExecuteWranglingDataflowActivityResponse {
             this.userProperties = userProperties;
             return this;
         }
-
         public ExecuteWranglingDataflowActivityResponse build() {
             return new ExecuteWranglingDataflowActivityResponse(compute, continueOnError, dataFlow, dependsOn, description, integrationRuntime, name, policy, queries, runConcurrently, sinks, staging, traceLevel, type, userProperties);
         }

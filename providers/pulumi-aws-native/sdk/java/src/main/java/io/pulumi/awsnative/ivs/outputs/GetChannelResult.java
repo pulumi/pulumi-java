@@ -6,7 +6,7 @@ package io.pulumi.awsnative.ivs.outputs;
 import io.pulumi.awsnative.ivs.enums.ChannelLatencyMode;
 import io.pulumi.awsnative.ivs.enums.ChannelType;
 import io.pulumi.awsnative.ivs.outputs.ChannelTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -228,7 +228,6 @@ public final class GetChannelResult {
             this.type = type;
             return this;
         }
-
         public GetChannelResult build() {
             return new GetChannelResult(arn, authorized, ingestEndpoint, latencyMode, name, playbackUrl, recordingConfigurationArn, tags, type);
         }

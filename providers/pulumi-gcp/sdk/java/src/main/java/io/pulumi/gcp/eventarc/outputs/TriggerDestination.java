@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.eventarc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.eventarc.outputs.TriggerDestinationCloudRunService;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class TriggerDestination {
             this.cloudRunService = cloudRunService;
             return this;
         }
-
         public TriggerDestination build() {
             return new TriggerDestination(cloudFunction, cloudRunService);
         }

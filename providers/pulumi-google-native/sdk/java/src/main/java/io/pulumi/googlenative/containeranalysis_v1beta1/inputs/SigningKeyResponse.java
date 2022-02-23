@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyId", required=true)
-    private final String keyId;
+      private final String keyId;
 
     public String getKeyId() {
         return this.keyId;
@@ -32,7 +32,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyScheme", required=true)
-    private final String keyScheme;
+      private final String keyScheme;
 
     public String getKeyScheme() {
         return this.keyScheme;
@@ -43,7 +43,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="keyType", required=true)
-    private final String keyType;
+      private final String keyType;
 
     public String getKeyType() {
         return this.keyType;
@@ -54,7 +54,7 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="publicKeyValue", required=true)
-    private final String publicKeyValue;
+      private final String publicKeyValue;
 
     public String getPublicKeyValue() {
         return this.publicKeyValue;
@@ -123,7 +123,6 @@ public final class SigningKeyResponse extends io.pulumi.resources.InvokeArgs {
             this.publicKeyValue = Objects.requireNonNull(publicKeyValue);
             return this;
         }
-
         public SigningKeyResponse build() {
             return new SigningKeyResponse(keyId, keyScheme, keyType, publicKeyValue);
         }

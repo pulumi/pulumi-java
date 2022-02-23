@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.azurearcdata.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -25,7 +25,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Integer capacity;
+        private final @Nullable Integer capacity;
 
     public Optional<Integer> getCapacity() {
         return this.capacity == null ? Optional.empty() : Optional.ofNullable(this.capacity);
@@ -36,7 +36,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="dev")
-    private final @Nullable Boolean dev;
+        private final @Nullable Boolean dev;
 
     public Optional<Boolean> getDev() {
         return this.dev == null ? Optional.empty() : Optional.ofNullable(this.dev);
@@ -47,7 +47,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="family")
-    private final @Nullable String family;
+        private final @Nullable String family;
 
     public Optional<String> getFamily() {
         return this.family == null ? Optional.empty() : Optional.ofNullable(this.family);
@@ -58,7 +58,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -69,7 +69,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="size")
-    private final @Nullable String size;
+        private final @Nullable String size;
 
     public Optional<String> getSize() {
         return this.size == null ? Optional.empty() : Optional.ofNullable(this.size);
@@ -80,7 +80,7 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable String tier;
+        private final @Nullable String tier;
 
     public Optional<String> getTier() {
         return this.tier == null ? Optional.empty() : Optional.ofNullable(this.tier);
@@ -169,7 +169,6 @@ public final class SqlManagedInstanceSkuResponse extends io.pulumi.resources.Inv
             this.tier = tier;
             return this;
         }
-
         public SqlManagedInstanceSkuResponse build() {
             return new SqlManagedInstanceSkuResponse(capacity, dev, family, name, size, tier);
         }

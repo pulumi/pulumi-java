@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.inputs.DataSourceWebCrawlerBasicAuthenticationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,7 +16,7 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
     public static final DataSourceWebCrawlerAuthenticationConfigurationArgs Empty = new DataSourceWebCrawlerAuthenticationConfigurationArgs();
 
     @InputImport(name="basicAuthentication")
-    private final @Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
+        private final @Nullable Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> basicAuthentication;
 
     public Input<List<DataSourceWebCrawlerBasicAuthenticationArgs>> getBasicAuthentication() {
         return this.basicAuthentication == null ? Input.empty() : this.basicAuthentication;
@@ -59,7 +59,6 @@ public final class DataSourceWebCrawlerAuthenticationConfigurationArgs extends i
             this.basicAuthentication = Input.ofNullable(basicAuthentication);
             return this;
         }
-
         public DataSourceWebCrawlerAuthenticationConfigurationArgs build() {
             return new DataSourceWebCrawlerAuthenticationConfigurationArgs(basicAuthentication);
         }

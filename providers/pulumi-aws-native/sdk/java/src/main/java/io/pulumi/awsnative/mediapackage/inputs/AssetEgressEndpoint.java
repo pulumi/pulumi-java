@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.mediapackage.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="packagingConfigurationId", required=true)
-    private final String packagingConfigurationId;
+        private final String packagingConfigurationId;
 
     public String getPackagingConfigurationId() {
         return this.packagingConfigurationId;
@@ -32,7 +32,7 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="url", required=true)
-    private final String url;
+        private final String url;
 
     public String getUrl() {
         return this.url;
@@ -81,7 +81,6 @@ public final class AssetEgressEndpoint extends io.pulumi.resources.InvokeArgs {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public AssetEgressEndpoint build() {
             return new AssetEgressEndpoint(packagingConfigurationId, url);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.admissionregistration.k8s.io_v1beta1.inputs.MutatingWebhookArgs;
 import io.pulumi.kubernetes.meta_v1.inputs.ObjectMetaArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="apiVersion")
-    private final @Nullable Input<String> apiVersion;
+        private final @Nullable Input<String> apiVersion;
 
     public Input<String> getApiVersion() {
         return this.apiVersion == null ? Input.empty() : this.apiVersion;
@@ -37,7 +37,7 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -48,7 +48,7 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<ObjectMetaArgs> metadata;
+        private final @Nullable Input<ObjectMetaArgs> metadata;
 
     public Input<ObjectMetaArgs> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -59,7 +59,7 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="webhooks")
-    private final @Nullable Input<List<MutatingWebhookArgs>> webhooks;
+        private final @Nullable Input<List<MutatingWebhookArgs>> webhooks;
 
     public Input<List<MutatingWebhookArgs>> getWebhooks() {
         return this.webhooks == null ? Input.empty() : this.webhooks;
@@ -148,7 +148,6 @@ public final class MutatingWebhookConfigurationArgs extends io.pulumi.resources.
             this.webhooks = Input.ofNullable(webhooks);
             return this;
         }
-
         public MutatingWebhookConfigurationArgs build() {
             return new MutatingWebhookConfigurationArgs(apiVersion, kind, metadata, webhooks);
         }

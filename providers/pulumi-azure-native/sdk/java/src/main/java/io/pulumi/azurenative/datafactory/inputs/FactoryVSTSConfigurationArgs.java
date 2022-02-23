@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datafactory.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="accountName", required=true)
-    private final Input<String> accountName;
+        private final Input<String> accountName;
 
     public Input<String> getAccountName() {
         return this.accountName;
@@ -34,7 +34,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="collaborationBranch", required=true)
-    private final Input<String> collaborationBranch;
+        private final Input<String> collaborationBranch;
 
     public Input<String> getCollaborationBranch() {
         return this.collaborationBranch;
@@ -45,7 +45,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="lastCommitId")
-    private final @Nullable Input<String> lastCommitId;
+        private final @Nullable Input<String> lastCommitId;
 
     public Input<String> getLastCommitId() {
         return this.lastCommitId == null ? Input.empty() : this.lastCommitId;
@@ -56,7 +56,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final Input<String> projectName;
+        private final Input<String> projectName;
 
     public Input<String> getProjectName() {
         return this.projectName;
@@ -67,7 +67,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="repositoryName", required=true)
-    private final Input<String> repositoryName;
+        private final Input<String> repositoryName;
 
     public Input<String> getRepositoryName() {
         return this.repositoryName;
@@ -78,7 +78,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="rootFolder", required=true)
-    private final Input<String> rootFolder;
+        private final Input<String> rootFolder;
 
     public Input<String> getRootFolder() {
         return this.rootFolder;
@@ -89,7 +89,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable Input<String> tenantId;
+        private final @Nullable Input<String> tenantId;
 
     public Input<String> getTenantId() {
         return this.tenantId == null ? Input.empty() : this.tenantId;
@@ -101,7 +101,7 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -250,7 +250,6 @@ public final class FactoryVSTSConfigurationArgs extends io.pulumi.resources.Reso
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public FactoryVSTSConfigurationArgs build() {
             return new FactoryVSTSConfigurationArgs(accountName, collaborationBranch, lastCommitId, projectName, repositoryName, rootFolder, tenantId, type);
         }

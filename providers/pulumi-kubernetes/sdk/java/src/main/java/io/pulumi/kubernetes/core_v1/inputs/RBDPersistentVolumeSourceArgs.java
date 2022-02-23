@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.core_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.kubernetes.core_v1.inputs.SecretReferenceArgs;
 import java.lang.Boolean;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="fsType")
-    private final @Nullable Input<String> fsType;
+        private final @Nullable Input<String> fsType;
 
     public Input<String> getFsType() {
         return this.fsType == null ? Input.empty() : this.fsType;
@@ -37,7 +37,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="image", required=true)
-    private final Input<String> image;
+        private final Input<String> image;
 
     public Input<String> getImage() {
         return this.image;
@@ -48,7 +48,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="keyring")
-    private final @Nullable Input<String> keyring;
+        private final @Nullable Input<String> keyring;
 
     public Input<String> getKeyring() {
         return this.keyring == null ? Input.empty() : this.keyring;
@@ -59,7 +59,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="monitors", required=true)
-    private final Input<List<String>> monitors;
+        private final Input<List<String>> monitors;
 
     public Input<List<String>> getMonitors() {
         return this.monitors;
@@ -70,7 +70,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="pool")
-    private final @Nullable Input<String> pool;
+        private final @Nullable Input<String> pool;
 
     public Input<String> getPool() {
         return this.pool == null ? Input.empty() : this.pool;
@@ -81,7 +81,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="readOnly")
-    private final @Nullable Input<Boolean> readOnly;
+        private final @Nullable Input<Boolean> readOnly;
 
     public Input<Boolean> getReadOnly() {
         return this.readOnly == null ? Input.empty() : this.readOnly;
@@ -92,7 +92,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="secretRef")
-    private final @Nullable Input<SecretReferenceArgs> secretRef;
+        private final @Nullable Input<SecretReferenceArgs> secretRef;
 
     public Input<SecretReferenceArgs> getSecretRef() {
         return this.secretRef == null ? Input.empty() : this.secretRef;
@@ -103,7 +103,7 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="user")
-    private final @Nullable Input<String> user;
+        private final @Nullable Input<String> user;
 
     public Input<String> getUser() {
         return this.user == null ? Input.empty() : this.user;
@@ -252,7 +252,6 @@ public final class RBDPersistentVolumeSourceArgs extends io.pulumi.resources.Res
             this.user = Input.ofNullable(user);
             return this;
         }
-
         public RBDPersistentVolumeSourceArgs build() {
             return new RBDPersistentVolumeSourceArgs(fsType, image, keyring, monitors, pool, readOnly, secretRef, user);
         }

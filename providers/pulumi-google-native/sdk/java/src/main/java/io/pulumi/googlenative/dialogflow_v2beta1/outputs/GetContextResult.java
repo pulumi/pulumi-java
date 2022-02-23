@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -97,7 +97,6 @@ public final class GetContextResult {
             this.parameters = Objects.requireNonNull(parameters);
             return this;
         }
-
         public GetContextResult build() {
             return new GetContextResult(lifespanCount, name, parameters);
         }

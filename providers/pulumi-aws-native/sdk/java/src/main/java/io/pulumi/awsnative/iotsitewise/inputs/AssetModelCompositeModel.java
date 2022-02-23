@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotsitewise.inputs;
 
 import io.pulumi.awsnative.iotsitewise.inputs.AssetModelProperty;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="compositeModelProperties")
-    private final @Nullable List<AssetModelProperty> compositeModelProperties;
+        private final @Nullable List<AssetModelProperty> compositeModelProperties;
 
     public List<AssetModelProperty> getCompositeModelProperties() {
         return this.compositeModelProperties == null ? List.of() : this.compositeModelProperties;
@@ -36,7 +36,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable String description;
+        private final @Nullable String description;
 
     public Optional<String> getDescription() {
         return this.description == null ? Optional.empty() : Optional.ofNullable(this.description);
@@ -47,7 +47,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -58,7 +58,7 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -127,7 +127,6 @@ public final class AssetModelCompositeModel extends io.pulumi.resources.InvokeAr
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public AssetModelCompositeModel build() {
             return new AssetModelCompositeModel(compositeModelProperties, description, name, type);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.web.inputs;
 
 import io.pulumi.azurenative.web.enums.ClientCredentialMethod;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="clientSecretSettingName")
-    private final @Nullable Input<String> clientSecretSettingName;
+        private final @Nullable Input<String> clientSecretSettingName;
 
     public Input<String> getClientSecretSettingName() {
         return this.clientSecretSettingName == null ? Input.empty() : this.clientSecretSettingName;
@@ -35,7 +35,7 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="method")
-    private final @Nullable Input<ClientCredentialMethod> method;
+        private final @Nullable Input<ClientCredentialMethod> method;
 
     public Input<ClientCredentialMethod> getMethod() {
         return this.method == null ? Input.empty() : this.method;
@@ -94,7 +94,6 @@ public final class OpenIdConnectClientCredentialArgs extends io.pulumi.resources
             this.method = Input.ofNullable(method);
             return this;
         }
-
         public OpenIdConnectClientCredentialArgs build() {
             return new OpenIdConnectClientCredentialArgs(clientSecretSettingName, method);
         }

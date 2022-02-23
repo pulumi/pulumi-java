@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="content", required=true)
-    private final String content;
+      private final String content;
 
     public String getContent() {
         return this.content;
@@ -33,7 +33,7 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+      private final String name;
 
     public String getName() {
         return this.name;
@@ -44,7 +44,7 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subpages", required=true)
-    private final List<PageResponse> subpages;
+      private final List<PageResponse> subpages;
 
     public List<PageResponse> getSubpages() {
         return this.subpages;
@@ -103,7 +103,6 @@ public final class PageResponse extends io.pulumi.resources.InvokeArgs {
             this.subpages = Objects.requireNonNull(subpages);
             return this;
         }
-
         public PageResponse build() {
             return new PageResponse(content, name, subpages);
         }

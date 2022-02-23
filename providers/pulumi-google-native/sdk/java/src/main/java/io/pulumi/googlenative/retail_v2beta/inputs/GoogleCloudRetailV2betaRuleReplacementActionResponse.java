@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
      * 
      */
     @InputImport(name="queryTerms", required=true)
-    private final List<String> queryTerms;
+      private final List<String> queryTerms;
 
     public List<String> getQueryTerms() {
         return this.queryTerms;
@@ -33,7 +33,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
      * 
      */
     @InputImport(name="replacementTerm", required=true)
-    private final String replacementTerm;
+      private final String replacementTerm;
 
     public String getReplacementTerm() {
         return this.replacementTerm;
@@ -44,7 +44,7 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
      * 
      */
     @InputImport(name="term", required=true)
-    private final String term;
+      private final String term;
 
     public String getTerm() {
         return this.term;
@@ -103,7 +103,6 @@ public final class GoogleCloudRetailV2betaRuleReplacementActionResponse extends 
             this.term = Objects.requireNonNull(term);
             return this;
         }
-
         public GoogleCloudRetailV2betaRuleReplacementActionResponse build() {
             return new GoogleCloudRetailV2betaRuleReplacementActionResponse(queryTerms, replacementTerm, term);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class GetVariableResult {
             this.value = value;
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(creationTime, description, id, isEncrypted, lastModifiedTime, name, type, value);
         }

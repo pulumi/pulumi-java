@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.compute.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 import java.util.Optional;
@@ -46,7 +46,6 @@ public final class InterconnectAttachmentPrivateInterconnectInfo {
             this.tag8021q = tag8021q;
             return this;
         }
-
         public InterconnectAttachmentPrivateInterconnectInfo build() {
             return new InterconnectAttachmentPrivateInterconnectInfo(tag8021q);
         }

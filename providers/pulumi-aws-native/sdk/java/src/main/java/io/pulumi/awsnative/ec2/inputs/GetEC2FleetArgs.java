@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class GetEC2FleetArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetEC2FleetArgs Empty = new GetEC2FleetArgs();
 
     @InputImport(name="fleetId", required=true)
-    private final String fleetId;
+        private final String fleetId;
 
     public String getFleetId() {
         return this.fleetId;
@@ -51,7 +51,6 @@ public final class GetEC2FleetArgs extends io.pulumi.resources.InvokeArgs {
             this.fleetId = Objects.requireNonNull(fleetId);
             return this;
         }
-
         public GetEC2FleetArgs build() {
             return new GetEC2FleetArgs(fleetId);
         }

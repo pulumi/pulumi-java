@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableIntegrityMonitoring", required=true)
-    private final Boolean enableIntegrityMonitoring;
+      private final Boolean enableIntegrityMonitoring;
 
     public Boolean getEnableIntegrityMonitoring() {
         return this.enableIntegrityMonitoring;
@@ -32,7 +32,7 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableSecureBoot", required=true)
-    private final Boolean enableSecureBoot;
+      private final Boolean enableSecureBoot;
 
     public Boolean getEnableSecureBoot() {
         return this.enableSecureBoot;
@@ -43,7 +43,7 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
      * 
      */
     @InputImport(name="enableVtpm", required=true)
-    private final Boolean enableVtpm;
+      private final Boolean enableVtpm;
 
     public Boolean getEnableVtpm() {
         return this.enableVtpm;
@@ -102,7 +102,6 @@ public final class ShieldedInstanceConfigResponse extends io.pulumi.resources.In
             this.enableVtpm = Objects.requireNonNull(enableVtpm);
             return this;
         }
-
         public ShieldedInstanceConfigResponse build() {
             return new ShieldedInstanceConfigResponse(enableIntegrityMonitoring, enableSecureBoot, enableVtpm);
         }

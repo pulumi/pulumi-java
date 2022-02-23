@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v3.outputs.MetricRangeResponse;
 import io.pulumi.googlenative.monitoring_v3.outputs.PerformanceThresholdResponse;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class WindowsBasedSliResponse {
             this.windowPeriod = Objects.requireNonNull(windowPeriod);
             return this;
         }
-
         public WindowsBasedSliResponse build() {
             return new WindowsBasedSliResponse(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }

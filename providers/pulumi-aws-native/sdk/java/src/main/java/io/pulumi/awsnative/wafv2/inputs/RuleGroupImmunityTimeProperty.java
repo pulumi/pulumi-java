@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.wafv2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -13,7 +13,7 @@ public final class RuleGroupImmunityTimeProperty extends io.pulumi.resources.Inv
     public static final RuleGroupImmunityTimeProperty Empty = new RuleGroupImmunityTimeProperty();
 
     @InputImport(name="immunityTime", required=true)
-    private final Integer immunityTime;
+        private final Integer immunityTime;
 
     public Integer getImmunityTime() {
         return this.immunityTime;
@@ -51,7 +51,6 @@ public final class RuleGroupImmunityTimeProperty extends io.pulumi.resources.Inv
             this.immunityTime = Objects.requireNonNull(immunityTime);
             return this;
         }
-
         public RuleGroupImmunityTimeProperty build() {
             return new RuleGroupImmunityTimeProperty(immunityTime);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerservice.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -25,7 +25,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="adminGroupObjectIDs")
-    private final @Nullable List<String> adminGroupObjectIDs;
+        private final @Nullable List<String> adminGroupObjectIDs;
 
     public List<String> getAdminGroupObjectIDs() {
         return this.adminGroupObjectIDs == null ? List.of() : this.adminGroupObjectIDs;
@@ -36,7 +36,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="clientAppID")
-    private final @Nullable String clientAppID;
+        private final @Nullable String clientAppID;
 
     public Optional<String> getClientAppID() {
         return this.clientAppID == null ? Optional.empty() : Optional.ofNullable(this.clientAppID);
@@ -47,7 +47,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="enableAzureRBAC")
-    private final @Nullable Boolean enableAzureRBAC;
+        private final @Nullable Boolean enableAzureRBAC;
 
     public Optional<Boolean> getEnableAzureRBAC() {
         return this.enableAzureRBAC == null ? Optional.empty() : Optional.ofNullable(this.enableAzureRBAC);
@@ -58,7 +58,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="managed")
-    private final @Nullable Boolean managed;
+        private final @Nullable Boolean managed;
 
     public Optional<Boolean> getManaged() {
         return this.managed == null ? Optional.empty() : Optional.ofNullable(this.managed);
@@ -69,7 +69,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverAppID")
-    private final @Nullable String serverAppID;
+        private final @Nullable String serverAppID;
 
     public Optional<String> getServerAppID() {
         return this.serverAppID == null ? Optional.empty() : Optional.ofNullable(this.serverAppID);
@@ -80,7 +80,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="serverAppSecret")
-    private final @Nullable String serverAppSecret;
+        private final @Nullable String serverAppSecret;
 
     public Optional<String> getServerAppSecret() {
         return this.serverAppSecret == null ? Optional.empty() : Optional.ofNullable(this.serverAppSecret);
@@ -91,7 +91,7 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="tenantID")
-    private final @Nullable String tenantID;
+        private final @Nullable String tenantID;
 
     public Optional<String> getTenantID() {
         return this.tenantID == null ? Optional.empty() : Optional.ofNullable(this.tenantID);
@@ -190,7 +190,6 @@ public final class ManagedClusterAADProfileResponse extends io.pulumi.resources.
             this.tenantID = tenantID;
             return this;
         }
-
         public ManagedClusterAADProfileResponse build() {
             return new ManagedClusterAADProfileResponse(adminGroupObjectIDs, clientAppID, enableAzureRBAC, managed, serverAppID, serverAppSecret, tenantID);
         }

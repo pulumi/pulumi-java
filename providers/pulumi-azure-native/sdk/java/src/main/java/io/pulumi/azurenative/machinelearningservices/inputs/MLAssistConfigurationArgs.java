@@ -5,7 +5,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.ComputeBindingArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="inferencingComputeBinding", required=true)
-    private final Input<ComputeBindingArgs> inferencingComputeBinding;
+        private final Input<ComputeBindingArgs> inferencingComputeBinding;
 
     public Input<ComputeBindingArgs> getInferencingComputeBinding() {
         return this.inferencingComputeBinding;
@@ -37,7 +37,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="mlAssistEnabled")
-    private final @Nullable Input<Boolean> mlAssistEnabled;
+        private final @Nullable Input<Boolean> mlAssistEnabled;
 
     public Input<Boolean> getMlAssistEnabled() {
         return this.mlAssistEnabled == null ? Input.empty() : this.mlAssistEnabled;
@@ -48,7 +48,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="modelNamePrefix", required=true)
-    private final Input<String> modelNamePrefix;
+        private final Input<String> modelNamePrefix;
 
     public Input<String> getModelNamePrefix() {
         return this.modelNamePrefix;
@@ -59,7 +59,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="prelabelAccuracyThreshold")
-    private final @Nullable Input<Double> prelabelAccuracyThreshold;
+        private final @Nullable Input<Double> prelabelAccuracyThreshold;
 
     public Input<Double> getPrelabelAccuracyThreshold() {
         return this.prelabelAccuracyThreshold == null ? Input.empty() : this.prelabelAccuracyThreshold;
@@ -70,7 +70,7 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="trainingComputeBinding", required=true)
-    private final Input<ComputeBindingArgs> trainingComputeBinding;
+        private final Input<ComputeBindingArgs> trainingComputeBinding;
 
     public Input<ComputeBindingArgs> getTrainingComputeBinding() {
         return this.trainingComputeBinding;
@@ -174,7 +174,6 @@ public final class MLAssistConfigurationArgs extends io.pulumi.resources.Resourc
             this.trainingComputeBinding = Input.of(Objects.requireNonNull(trainingComputeBinding));
             return this;
         }
-
         public MLAssistConfigurationArgs build() {
             return new MLAssistConfigurationArgs(inferencingComputeBinding, mlAssistEnabled, modelNamePrefix, prelabelAccuracyThreshold, trainingComputeBinding);
         }

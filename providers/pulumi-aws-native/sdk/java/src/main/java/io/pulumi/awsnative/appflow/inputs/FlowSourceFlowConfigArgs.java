@@ -7,7 +7,7 @@ import io.pulumi.awsnative.appflow.enums.FlowConnectorType;
 import io.pulumi.awsnative.appflow.inputs.FlowIncrementalPullConfigArgs;
 import io.pulumi.awsnative.appflow.inputs.FlowSourceConnectorPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -26,7 +26,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectorProfileName")
-    private final @Nullable Input<String> connectorProfileName;
+        private final @Nullable Input<String> connectorProfileName;
 
     public Input<String> getConnectorProfileName() {
         return this.connectorProfileName == null ? Input.empty() : this.connectorProfileName;
@@ -37,7 +37,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="connectorType", required=true)
-    private final Input<FlowConnectorType> connectorType;
+        private final Input<FlowConnectorType> connectorType;
 
     public Input<FlowConnectorType> getConnectorType() {
         return this.connectorType;
@@ -48,7 +48,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="incrementalPullConfig")
-    private final @Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig;
+        private final @Nullable Input<FlowIncrementalPullConfigArgs> incrementalPullConfig;
 
     public Input<FlowIncrementalPullConfigArgs> getIncrementalPullConfig() {
         return this.incrementalPullConfig == null ? Input.empty() : this.incrementalPullConfig;
@@ -59,7 +59,7 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="sourceConnectorProperties", required=true)
-    private final Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
+        private final Input<FlowSourceConnectorPropertiesArgs> sourceConnectorProperties;
 
     public Input<FlowSourceConnectorPropertiesArgs> getSourceConnectorProperties() {
         return this.sourceConnectorProperties;
@@ -148,7 +148,6 @@ public final class FlowSourceFlowConfigArgs extends io.pulumi.resources.Resource
             this.sourceConnectorProperties = Input.of(Objects.requireNonNull(sourceConnectorProperties));
             return this;
         }
-
         public FlowSourceFlowConfigArgs build() {
             return new FlowSourceFlowConfigArgs(connectorProfileName, connectorType, incrementalPullConfig, sourceConnectorProperties);
         }

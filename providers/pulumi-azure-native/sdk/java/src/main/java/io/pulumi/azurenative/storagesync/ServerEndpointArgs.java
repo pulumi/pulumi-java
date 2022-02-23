@@ -8,7 +8,7 @@ import io.pulumi.azurenative.storagesync.enums.InitialDownloadPolicy;
 import io.pulumi.azurenative.storagesync.enums.LocalCacheMode;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cloudTiering")
-    private final @Nullable Input<Either<String,FeatureStatus>> cloudTiering;
+        private final @Nullable Input<Either<String,FeatureStatus>> cloudTiering;
 
     public Input<Either<String,FeatureStatus>> getCloudTiering() {
         return this.cloudTiering == null ? Input.empty() : this.cloudTiering;
@@ -35,7 +35,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="friendlyName")
-    private final @Nullable Input<String> friendlyName;
+        private final @Nullable Input<String> friendlyName;
 
     public Input<String> getFriendlyName() {
         return this.friendlyName == null ? Input.empty() : this.friendlyName;
@@ -46,7 +46,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="initialDownloadPolicy")
-    private final @Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
+        private final @Nullable Input<Either<String,InitialDownloadPolicy>> initialDownloadPolicy;
 
     public Input<Either<String,InitialDownloadPolicy>> getInitialDownloadPolicy() {
         return this.initialDownloadPolicy == null ? Input.empty() : this.initialDownloadPolicy;
@@ -57,7 +57,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="localCacheMode")
-    private final @Nullable Input<Either<String,LocalCacheMode>> localCacheMode;
+        private final @Nullable Input<Either<String,LocalCacheMode>> localCacheMode;
 
     public Input<Either<String,LocalCacheMode>> getLocalCacheMode() {
         return this.localCacheMode == null ? Input.empty() : this.localCacheMode;
@@ -68,7 +68,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offlineDataTransfer")
-    private final @Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer;
+        private final @Nullable Input<Either<String,FeatureStatus>> offlineDataTransfer;
 
     public Input<Either<String,FeatureStatus>> getOfflineDataTransfer() {
         return this.offlineDataTransfer == null ? Input.empty() : this.offlineDataTransfer;
@@ -79,7 +79,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="offlineDataTransferShareName")
-    private final @Nullable Input<String> offlineDataTransferShareName;
+        private final @Nullable Input<String> offlineDataTransferShareName;
 
     public Input<String> getOfflineDataTransferShareName() {
         return this.offlineDataTransferShareName == null ? Input.empty() : this.offlineDataTransferShareName;
@@ -90,7 +90,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -101,7 +101,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverEndpointName")
-    private final @Nullable Input<String> serverEndpointName;
+        private final @Nullable Input<String> serverEndpointName;
 
     public Input<String> getServerEndpointName() {
         return this.serverEndpointName == null ? Input.empty() : this.serverEndpointName;
@@ -112,7 +112,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverLocalPath")
-    private final @Nullable Input<String> serverLocalPath;
+        private final @Nullable Input<String> serverLocalPath;
 
     public Input<String> getServerLocalPath() {
         return this.serverLocalPath == null ? Input.empty() : this.serverLocalPath;
@@ -123,7 +123,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serverResourceId")
-    private final @Nullable Input<String> serverResourceId;
+        private final @Nullable Input<String> serverResourceId;
 
     public Input<String> getServerResourceId() {
         return this.serverResourceId == null ? Input.empty() : this.serverResourceId;
@@ -134,7 +134,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageSyncServiceName", required=true)
-    private final Input<String> storageSyncServiceName;
+        private final Input<String> storageSyncServiceName;
 
     public Input<String> getStorageSyncServiceName() {
         return this.storageSyncServiceName;
@@ -145,7 +145,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="syncGroupName", required=true)
-    private final Input<String> syncGroupName;
+        private final Input<String> syncGroupName;
 
     public Input<String> getSyncGroupName() {
         return this.syncGroupName;
@@ -156,7 +156,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tierFilesOlderThanDays")
-    private final @Nullable Input<Integer> tierFilesOlderThanDays;
+        private final @Nullable Input<Integer> tierFilesOlderThanDays;
 
     public Input<Integer> getTierFilesOlderThanDays() {
         return this.tierFilesOlderThanDays == null ? Input.empty() : this.tierFilesOlderThanDays;
@@ -167,7 +167,7 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="volumeFreeSpacePercent")
-    private final @Nullable Input<Integer> volumeFreeSpacePercent;
+        private final @Nullable Input<Integer> volumeFreeSpacePercent;
 
     public Input<Integer> getVolumeFreeSpacePercent() {
         return this.volumeFreeSpacePercent == null ? Input.empty() : this.volumeFreeSpacePercent;
@@ -406,7 +406,6 @@ public final class ServerEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.volumeFreeSpacePercent = Input.ofNullable(volumeFreeSpacePercent);
             return this;
         }
-
         public ServerEndpointArgs build() {
             return new ServerEndpointArgs(cloudTiering, friendlyName, initialDownloadPolicy, localCacheMode, offlineDataTransfer, offlineDataTransferShareName, resourceGroupName, serverEndpointName, serverLocalPath, serverResourceId, storageSyncServiceName, syncGroupName, tierFilesOlderThanDays, volumeFreeSpacePercent);
         }

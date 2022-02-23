@@ -4,7 +4,7 @@
 package io.pulumi.gcp.certificateauthority.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesCaOptionsArgs;
 import io.pulumi.gcp.certificateauthority.inputs.CaPoolIssuancePolicyBaselineValuesKeyUsageArgs;
@@ -25,7 +25,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="additionalExtensions")
-    private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
+        private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> additionalExtensions;
 
     public Input<List<CaPoolIssuancePolicyBaselineValuesAdditionalExtensionArgs>> getAdditionalExtensions() {
         return this.additionalExtensions == null ? Input.empty() : this.additionalExtensions;
@@ -37,7 +37,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="aiaOcspServers")
-    private final @Nullable Input<List<String>> aiaOcspServers;
+        private final @Nullable Input<List<String>> aiaOcspServers;
 
     public Input<List<String>> getAiaOcspServers() {
         return this.aiaOcspServers == null ? Input.empty() : this.aiaOcspServers;
@@ -49,7 +49,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="caOptions", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
+        private final Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> caOptions;
 
     public Input<CaPoolIssuancePolicyBaselineValuesCaOptionsArgs> getCaOptions() {
         return this.caOptions;
@@ -61,7 +61,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="keyUsage", required=true)
-    private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
+        private final Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> keyUsage;
 
     public Input<CaPoolIssuancePolicyBaselineValuesKeyUsageArgs> getKeyUsage() {
         return this.keyUsage;
@@ -73,7 +73,7 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="policyIds")
-    private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
+        private final @Nullable Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> policyIds;
 
     public Input<List<CaPoolIssuancePolicyBaselineValuesPolicyIdArgs>> getPolicyIds() {
         return this.policyIds == null ? Input.empty() : this.policyIds;
@@ -177,7 +177,6 @@ public final class CaPoolIssuancePolicyBaselineValuesArgs extends io.pulumi.reso
             this.policyIds = Input.ofNullable(policyIds);
             return this;
         }
-
         public CaPoolIssuancePolicyBaselineValuesArgs build() {
             return new CaPoolIssuancePolicyBaselineValuesArgs(additionalExtensions, aiaOcspServers, caOptions, keyUsage, policyIds);
         }

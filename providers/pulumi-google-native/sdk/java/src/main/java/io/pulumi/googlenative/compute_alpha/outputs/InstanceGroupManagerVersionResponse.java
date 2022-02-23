@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.FixedOrPercentResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class InstanceGroupManagerVersionResponse {
             this.targetSize = Objects.requireNonNull(targetSize);
             return this;
         }
-
         public InstanceGroupManagerVersionResponse build() {
             return new InstanceGroupManagerVersionResponse(instanceTemplate, name, targetSize);
         }

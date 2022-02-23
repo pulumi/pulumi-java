@@ -5,8 +5,8 @@ package io.pulumi.gcp.securitycenter;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.securitycenter.SourceArgs;
 import io.pulumi.gcp.securitycenter.inputs.SourceState;
@@ -109,13 +109,6 @@ public class Source extends io.pulumi.resources.CustomResource {
         return this.organization;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Source(String name) {
-        super("gcp:securitycenter/source:Source", name, SourceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

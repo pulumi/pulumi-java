@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.monitoring_v3.inputs.MetricRangeResponse;
 import io.pulumi.googlenative.monitoring_v3.inputs.PerformanceThresholdResponse;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="goodBadMetricFilter", required=true)
-    private final String goodBadMetricFilter;
+      private final String goodBadMetricFilter;
 
     public String getGoodBadMetricFilter() {
         return this.goodBadMetricFilter;
@@ -34,7 +34,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="goodTotalRatioThreshold", required=true)
-    private final PerformanceThresholdResponse goodTotalRatioThreshold;
+      private final PerformanceThresholdResponse goodTotalRatioThreshold;
 
     public PerformanceThresholdResponse getGoodTotalRatioThreshold() {
         return this.goodTotalRatioThreshold;
@@ -45,7 +45,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metricMeanInRange", required=true)
-    private final MetricRangeResponse metricMeanInRange;
+      private final MetricRangeResponse metricMeanInRange;
 
     public MetricRangeResponse getMetricMeanInRange() {
         return this.metricMeanInRange;
@@ -56,7 +56,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="metricSumInRange", required=true)
-    private final MetricRangeResponse metricSumInRange;
+      private final MetricRangeResponse metricSumInRange;
 
     public MetricRangeResponse getMetricSumInRange() {
         return this.metricSumInRange;
@@ -67,7 +67,7 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="windowPeriod", required=true)
-    private final String windowPeriod;
+      private final String windowPeriod;
 
     public String getWindowPeriod() {
         return this.windowPeriod;
@@ -146,7 +146,6 @@ public final class WindowsBasedSliResponse extends io.pulumi.resources.InvokeArg
             this.windowPeriod = Objects.requireNonNull(windowPeriod);
             return this;
         }
-
         public WindowsBasedSliResponse build() {
             return new WindowsBasedSliResponse(goodBadMetricFilter, goodTotalRatioThreshold, metricMeanInRange, metricSumInRange, windowPeriod);
         }

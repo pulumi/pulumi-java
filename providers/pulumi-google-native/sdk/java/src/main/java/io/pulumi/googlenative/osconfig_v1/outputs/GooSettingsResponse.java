@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class GooSettingsResponse {
         public Builder(GooSettingsResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public GooSettingsResponse build() {
             return new GooSettingsResponse();
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.gameservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfigSchedule;
 import io.pulumi.gcp.gameservices.outputs.GameServerConfigScalingConfigSelector;
 import java.lang.String;
@@ -132,7 +132,6 @@ public final class GameServerConfigScalingConfig {
             this.selectors = selectors;
             return this;
         }
-
         public GameServerConfigScalingConfig build() {
             return new GameServerConfigScalingConfig(fleetAutoscalerSpec, name, schedules, selectors);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.gcp.dataloss.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobActionGetArgs;
 import io.pulumi.gcp.dataloss.inputs.PreventionJobTriggerInspectJobStorageConfigGetArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class PreventionJobTriggerInspectJobGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="actions", required=true)
-    private final Input<List<PreventionJobTriggerInspectJobActionGetArgs>> actions;
+        private final Input<List<PreventionJobTriggerInspectJobActionGetArgs>> actions;
 
     public Input<List<PreventionJobTriggerInspectJobActionGetArgs>> getActions() {
         return this.actions;
@@ -33,7 +33,7 @@ public final class PreventionJobTriggerInspectJobGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="inspectTemplateName", required=true)
-    private final Input<String> inspectTemplateName;
+        private final Input<String> inspectTemplateName;
 
     public Input<String> getInspectTemplateName() {
         return this.inspectTemplateName;
@@ -45,7 +45,7 @@ public final class PreventionJobTriggerInspectJobGetArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="storageConfig", required=true)
-    private final Input<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig;
+        private final Input<PreventionJobTriggerInspectJobStorageConfigGetArgs> storageConfig;
 
     public Input<PreventionJobTriggerInspectJobStorageConfigGetArgs> getStorageConfig() {
         return this.storageConfig;
@@ -119,7 +119,6 @@ public final class PreventionJobTriggerInspectJobGetArgs extends io.pulumi.resou
             this.storageConfig = Input.of(Objects.requireNonNull(storageConfig));
             return this;
         }
-
         public PreventionJobTriggerInspectJobGetArgs build() {
             return new PreventionJobTriggerInspectJobGetArgs(actions, inspectTemplateName, storageConfig);
         }

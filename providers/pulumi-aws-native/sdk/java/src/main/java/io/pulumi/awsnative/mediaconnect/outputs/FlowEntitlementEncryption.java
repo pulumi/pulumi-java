@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionAlgorithm;
 import io.pulumi.awsnative.mediaconnect.enums.FlowEntitlementEncryptionKeyType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -225,7 +225,6 @@ public final class FlowEntitlementEncryption {
             this.url = url;
             return this;
         }
-
         public FlowEntitlementEncryption build() {
             return new FlowEntitlementEncryption(algorithm, constantInitializationVector, deviceId, keyType, region, resourceId, roleArn, secretArn, url);
         }

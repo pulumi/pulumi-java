@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -351,7 +351,6 @@ public final class WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKe
             this.truststorePassword = truststorePassword;
             return this;
         }
-
         public WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig build() {
             return new WorkflowTemplatePlacementManagedClusterConfigSecurityConfigKerberosConfig(crossRealmTrustAdminServer, crossRealmTrustKdc, crossRealmTrustRealm, crossRealmTrustSharedPassword, enableKerberos, kdcDbKey, keyPassword, keystore, keystorePassword, kmsKey, realm, rootPrincipalPassword, tgtLifetimeHours, truststore, truststorePassword);
         }

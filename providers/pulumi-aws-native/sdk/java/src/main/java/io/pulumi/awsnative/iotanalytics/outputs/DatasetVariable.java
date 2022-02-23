@@ -5,7 +5,7 @@ package io.pulumi.awsnative.iotanalytics.outputs;
 
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetContentVersionValue;
 import io.pulumi.awsnative.iotanalytics.outputs.DatasetOutputFileUriValue;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -102,7 +102,6 @@ public final class DatasetVariable {
             this.variableName = Objects.requireNonNull(variableName);
             return this;
         }
-
         public DatasetVariable build() {
             return new DatasetVariable(datasetContentVersionValue, doubleValue, outputFileUriValue, stringValue, variableName);
         }

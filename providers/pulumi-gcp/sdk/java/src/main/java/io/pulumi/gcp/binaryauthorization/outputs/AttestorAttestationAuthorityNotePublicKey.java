@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.binaryauthorization.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.binaryauthorization.outputs.AttestorAttestationAuthorityNotePublicKeyPkixPublicKey;
 import java.lang.String;
 import java.util.Objects;
@@ -155,7 +155,6 @@ public final class AttestorAttestationAuthorityNotePublicKey {
             this.pkixPublicKey = pkixPublicKey;
             return this;
         }
-
         public AttestorAttestationAuthorityNotePublicKey build() {
             return new AttestorAttestationAuthorityNotePublicKey(asciiArmoredPgpPublicKey, comment, id, pkixPublicKey);
         }

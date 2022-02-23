@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.sagemaker.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -23,7 +23,7 @@ public final class ModelQualityJobDefinitionVpcConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="securityGroupIds", required=true)
-    private final Input<List<String>> securityGroupIds;
+        private final Input<List<String>> securityGroupIds;
 
     public Input<List<String>> getSecurityGroupIds() {
         return this.securityGroupIds;
@@ -34,7 +34,7 @@ public final class ModelQualityJobDefinitionVpcConfigArgs extends io.pulumi.reso
      * 
      */
     @InputImport(name="subnets", required=true)
-    private final Input<List<String>> subnets;
+        private final Input<List<String>> subnets;
 
     public Input<List<String>> getSubnets() {
         return this.subnets;
@@ -93,7 +93,6 @@ public final class ModelQualityJobDefinitionVpcConfigArgs extends io.pulumi.reso
             this.subnets = Input.of(Objects.requireNonNull(subnets));
             return this;
         }
-
         public ModelQualityJobDefinitionVpcConfigArgs build() {
             return new ModelQualityJobDefinitionVpcConfigArgs(securityGroupIds, subnets);
         }

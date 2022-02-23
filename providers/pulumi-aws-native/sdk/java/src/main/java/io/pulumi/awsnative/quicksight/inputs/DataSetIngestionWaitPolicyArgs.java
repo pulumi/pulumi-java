@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="ingestionWaitTimeInHours")
-    private final @Nullable Input<Double> ingestionWaitTimeInHours;
+        private final @Nullable Input<Double> ingestionWaitTimeInHours;
 
     public Input<Double> getIngestionWaitTimeInHours() {
         return this.ingestionWaitTimeInHours == null ? Input.empty() : this.ingestionWaitTimeInHours;
@@ -37,7 +37,7 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
      * 
      */
     @InputImport(name="waitForSpiceIngestion")
-    private final @Nullable Input<Boolean> waitForSpiceIngestion;
+        private final @Nullable Input<Boolean> waitForSpiceIngestion;
 
     public Input<Boolean> getWaitForSpiceIngestion() {
         return this.waitForSpiceIngestion == null ? Input.empty() : this.waitForSpiceIngestion;
@@ -96,7 +96,6 @@ public final class DataSetIngestionWaitPolicyArgs extends io.pulumi.resources.Re
             this.waitForSpiceIngestion = Input.ofNullable(waitForSpiceIngestion);
             return this;
         }
-
         public DataSetIngestionWaitPolicyArgs build() {
             return new DataSetIngestionWaitPolicyArgs(ingestionWaitTimeInHours, waitForSpiceIngestion);
         }

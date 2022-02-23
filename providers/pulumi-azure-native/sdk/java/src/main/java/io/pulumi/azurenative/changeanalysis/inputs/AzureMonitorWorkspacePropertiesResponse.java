@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.changeanalysis.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="includeChangeDetails")
-    private final @Nullable String includeChangeDetails;
+        private final @Nullable String includeChangeDetails;
 
     public Optional<String> getIncludeChangeDetails() {
         return this.includeChangeDetails == null ? Optional.empty() : Optional.ofNullable(this.includeChangeDetails);
@@ -34,7 +34,7 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="workspaceId")
-    private final @Nullable String workspaceId;
+        private final @Nullable String workspaceId;
 
     public Optional<String> getWorkspaceId() {
         return this.workspaceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceId);
@@ -45,7 +45,7 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="workspaceResourceId")
-    private final @Nullable String workspaceResourceId;
+        private final @Nullable String workspaceResourceId;
 
     public Optional<String> getWorkspaceResourceId() {
         return this.workspaceResourceId == null ? Optional.empty() : Optional.ofNullable(this.workspaceResourceId);
@@ -104,7 +104,6 @@ public final class AzureMonitorWorkspacePropertiesResponse extends io.pulumi.res
             this.workspaceResourceId = workspaceResourceId;
             return this;
         }
-
         public AzureMonitorWorkspacePropertiesResponse build() {
             return new AzureMonitorWorkspacePropertiesResponse(includeChangeDetails, workspaceId, workspaceResourceId);
         }

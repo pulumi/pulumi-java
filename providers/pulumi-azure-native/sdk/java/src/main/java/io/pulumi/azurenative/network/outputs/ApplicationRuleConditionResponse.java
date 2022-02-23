@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.FirewallPolicyRuleConditionApplicationProtocolResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -227,7 +227,6 @@ public final class ApplicationRuleConditionResponse {
             this.targetFqdns = targetFqdns;
             return this;
         }
-
         public ApplicationRuleConditionResponse build() {
             return new ApplicationRuleConditionResponse(description, destinationAddresses, fqdnTags, name, protocols, ruleConditionType, sourceAddresses, sourceIpGroups, targetFqdns);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sql.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -203,7 +203,6 @@ public final class GetServerAzureADAdministratorResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetServerAzureADAdministratorResult build() {
             return new GetServerAzureADAdministratorResult(administratorType, azureADOnlyAuthentication, id, login, name, sid, tenantId, type);
         }

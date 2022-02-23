@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.networking.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import io.pulumi.kubernetes.networking.k8s.io_v1.outputs.NetworkPolicySpec;
 import java.lang.String;
@@ -120,7 +120,6 @@ public final class NetworkPolicy {
             this.spec = spec;
             return this;
         }
-
         public NetworkPolicy build() {
             return new NetworkPolicy(apiVersion, kind, metadata, spec);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.lex.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class BotPlainTextMessageArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="value", required=true)
-    private final Input<String> value;
+        private final Input<String> value;
 
     public Input<String> getValue() {
         return this.value;
@@ -65,7 +65,6 @@ public final class BotPlainTextMessageArgs extends io.pulumi.resources.ResourceA
             this.value = Input.of(Objects.requireNonNull(value));
             return this;
         }
-
         public BotPlainTextMessageArgs build() {
             return new BotPlainTextMessageArgs(value);
         }

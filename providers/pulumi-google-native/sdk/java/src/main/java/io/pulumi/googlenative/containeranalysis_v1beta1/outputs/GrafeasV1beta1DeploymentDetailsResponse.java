@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.containeranalysis_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.containeranalysis_v1beta1.outputs.DeploymentResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class GrafeasV1beta1DeploymentDetailsResponse {
             this.deployment = Objects.requireNonNull(deployment);
             return this;
         }
-
         public GrafeasV1beta1DeploymentDetailsResponse build() {
             return new GrafeasV1beta1DeploymentDetailsResponse(deployment);
         }

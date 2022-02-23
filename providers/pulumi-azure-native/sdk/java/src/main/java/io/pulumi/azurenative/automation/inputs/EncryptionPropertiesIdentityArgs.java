@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.automation.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
      * 
      */
     @InputImport(name="userAssignedIdentity")
-    private final @Nullable Input<Object> userAssignedIdentity;
+        private final @Nullable Input<Object> userAssignedIdentity;
 
     public Input<Object> getUserAssignedIdentity() {
         return this.userAssignedIdentity == null ? Input.empty() : this.userAssignedIdentity;
@@ -66,7 +66,6 @@ public final class EncryptionPropertiesIdentityArgs extends io.pulumi.resources.
             this.userAssignedIdentity = Input.ofNullable(userAssignedIdentity);
             return this;
         }
-
         public EncryptionPropertiesIdentityArgs build() {
             return new EncryptionPropertiesIdentityArgs(userAssignedIdentity);
         }

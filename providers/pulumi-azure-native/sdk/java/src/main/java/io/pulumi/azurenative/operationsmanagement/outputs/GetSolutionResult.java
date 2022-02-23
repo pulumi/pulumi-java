@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationsmanagement.outputs;
 
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPlanResponse;
 import io.pulumi.azurenative.operationsmanagement.outputs.SolutionPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -184,7 +184,6 @@ public final class GetSolutionResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSolutionResult build() {
             return new GetSolutionResult(id, location, name, plan, properties, tags, type);
         }

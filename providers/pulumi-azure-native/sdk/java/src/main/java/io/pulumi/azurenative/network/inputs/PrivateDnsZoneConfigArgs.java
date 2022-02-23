@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="privateDnsZoneId")
-    private final @Nullable Input<String> privateDnsZoneId;
+        private final @Nullable Input<String> privateDnsZoneId;
 
     public Input<String> getPrivateDnsZoneId() {
         return this.privateDnsZoneId == null ? Input.empty() : this.privateDnsZoneId;
@@ -93,7 +93,6 @@ public final class PrivateDnsZoneConfigArgs extends io.pulumi.resources.Resource
             this.privateDnsZoneId = Input.ofNullable(privateDnsZoneId);
             return this;
         }
-
         public PrivateDnsZoneConfigArgs build() {
             return new PrivateDnsZoneConfigArgs(name, privateDnsZoneId);
         }

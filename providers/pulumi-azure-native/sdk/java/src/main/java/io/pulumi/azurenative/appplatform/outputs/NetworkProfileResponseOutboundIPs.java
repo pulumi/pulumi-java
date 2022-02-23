@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.appplatform.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -53,7 +53,6 @@ public final class NetworkProfileResponseOutboundIPs {
             this.publicIPs = Objects.requireNonNull(publicIPs);
             return this;
         }
-
         public NetworkProfileResponseOutboundIPs build() {
             return new NetworkProfileResponseOutboundIPs(publicIPs);
         }

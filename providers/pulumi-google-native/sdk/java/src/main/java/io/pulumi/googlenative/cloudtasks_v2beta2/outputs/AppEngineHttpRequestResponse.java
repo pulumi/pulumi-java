@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineRoutingResponse;
 import java.lang.String;
 import java.util.Map;
@@ -139,7 +139,6 @@ public final class AppEngineHttpRequestResponse {
             this.relativeUrl = Objects.requireNonNull(relativeUrl);
             return this;
         }
-
         public AppEngineHttpRequestResponse build() {
             return new AppEngineHttpRequestResponse(appEngineRouting, headers, httpMethod, payload, relativeUrl);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.imagebuilder.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="imageTestsEnabled")
-    private final @Nullable Boolean imageTestsEnabled;
+        private final @Nullable Boolean imageTestsEnabled;
 
     public Optional<Boolean> getImageTestsEnabled() {
         return this.imageTestsEnabled == null ? Optional.empty() : Optional.ofNullable(this.imageTestsEnabled);
@@ -35,7 +35,7 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
      * 
      */
     @InputImport(name="timeoutMinutes")
-    private final @Nullable Integer timeoutMinutes;
+        private final @Nullable Integer timeoutMinutes;
 
     public Optional<Integer> getTimeoutMinutes() {
         return this.timeoutMinutes == null ? Optional.empty() : Optional.ofNullable(this.timeoutMinutes);
@@ -84,7 +84,6 @@ public final class ImagePipelineImageTestsConfiguration extends io.pulumi.resour
             this.timeoutMinutes = timeoutMinutes;
             return this;
         }
-
         public ImagePipelineImageTestsConfiguration build() {
             return new ImagePipelineImageTestsConfiguration(imageTestsEnabled, timeoutMinutes);
         }

@@ -5,7 +5,7 @@ package io.pulumi.awsnative.mediaconnect.outputs;
 
 import io.pulumi.awsnative.mediaconnect.enums.FlowSourceProtocol;
 import io.pulumi.awsnative.mediaconnect.outputs.FlowSourceEncryption;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -331,7 +331,6 @@ public final class GetFlowSourceResult {
             this.whitelistCidr = whitelistCidr;
             return this;
         }
-
         public GetFlowSourceResult build() {
             return new GetFlowSourceResult(decryption, description, entitlementArn, flowArn, ingestIp, ingestPort, maxBitrate, maxLatency, protocol, sourceArn, sourceIngestPort, streamId, vpcInterfaceName, whitelistCidr);
         }

@@ -7,7 +7,7 @@ import io.pulumi.azurenative.network.enums.ManagedRuleExclusionMatchVariable;
 import io.pulumi.azurenative.network.enums.ManagedRuleExclusionSelectorMatchOperator;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -25,7 +25,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="matchVariable", required=true)
-    private final Input<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
+        private final Input<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
     public Input<Either<String,ManagedRuleExclusionMatchVariable>> getMatchVariable() {
         return this.matchVariable;
@@ -36,7 +36,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="selector", required=true)
-    private final Input<String> selector;
+        private final Input<String> selector;
 
     public Input<String> getSelector() {
         return this.selector;
@@ -47,7 +47,7 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="selectorMatchOperator", required=true)
-    private final Input<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
+        private final Input<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 
     public Input<Either<String,ManagedRuleExclusionSelectorMatchOperator>> getSelectorMatchOperator() {
         return this.selectorMatchOperator;
@@ -121,7 +121,6 @@ public final class ManagedRuleExclusionArgs extends io.pulumi.resources.Resource
             this.selectorMatchOperator = Input.of(Objects.requireNonNull(selectorMatchOperator));
             return this;
         }
-
         public ManagedRuleExclusionArgs build() {
             return new ManagedRuleExclusionArgs(matchVariable, selector, selectorMatchOperator);
         }

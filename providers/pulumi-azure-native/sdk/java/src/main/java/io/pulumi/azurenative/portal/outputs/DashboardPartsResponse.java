@@ -5,7 +5,7 @@ package io.pulumi.azurenative.portal.outputs;
 
 import io.pulumi.azurenative.portal.outputs.DashboardPartsResponsePosition;
 import io.pulumi.azurenative.portal.outputs.MarkdownPartMetadataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -77,7 +77,6 @@ public final class DashboardPartsResponse {
             this.position = Objects.requireNonNull(position);
             return this;
         }
-
         public DashboardPartsResponse build() {
             return new DashboardPartsResponse(metadata, position);
         }

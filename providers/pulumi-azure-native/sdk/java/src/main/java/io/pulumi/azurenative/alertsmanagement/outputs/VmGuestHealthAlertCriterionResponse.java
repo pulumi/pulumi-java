@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.alertsmanagement.outputs;
 
 import io.pulumi.azurenative.alertsmanagement.outputs.HealthStateResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -121,7 +121,6 @@ public final class VmGuestHealthAlertCriterionResponse {
             this.namespace = Objects.requireNonNull(namespace);
             return this;
         }
-
         public VmGuestHealthAlertCriterionResponse build() {
             return new VmGuestHealthAlertCriterionResponse(healthStates, monitorNames, monitorTypes, namespace);
         }

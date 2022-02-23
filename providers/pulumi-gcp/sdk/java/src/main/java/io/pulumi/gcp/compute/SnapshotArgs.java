@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.SnapshotSnapshotEncryptionKeyArgs;
 import io.pulumi.gcp.compute.inputs.SnapshotSourceDiskEncryptionKeyArgs;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -51,7 +51,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -63,7 +63,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -76,7 +76,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="snapshotEncryptionKey")
-    private final @Nullable Input<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
+        private final @Nullable Input<SnapshotSnapshotEncryptionKeyArgs> snapshotEncryptionKey;
 
     public Input<SnapshotSnapshotEncryptionKeyArgs> getSnapshotEncryptionKey() {
         return this.snapshotEncryptionKey == null ? Input.empty() : this.snapshotEncryptionKey;
@@ -87,7 +87,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDisk", required=true)
-    private final Input<String> sourceDisk;
+        private final Input<String> sourceDisk;
 
     public Input<String> getSourceDisk() {
         return this.sourceDisk;
@@ -101,7 +101,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sourceDiskEncryptionKey")
-    private final @Nullable Input<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
+        private final @Nullable Input<SnapshotSourceDiskEncryptionKeyArgs> sourceDiskEncryptionKey;
 
     public Input<SnapshotSourceDiskEncryptionKeyArgs> getSourceDiskEncryptionKey() {
         return this.sourceDiskEncryptionKey == null ? Input.empty() : this.sourceDiskEncryptionKey;
@@ -112,7 +112,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="storageLocations")
-    private final @Nullable Input<List<String>> storageLocations;
+        private final @Nullable Input<List<String>> storageLocations;
 
     public Input<List<String>> getStorageLocations() {
         return this.storageLocations == null ? Input.empty() : this.storageLocations;
@@ -123,7 +123,7 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -287,7 +287,6 @@ public final class SnapshotArgs extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public SnapshotArgs build() {
             return new SnapshotArgs(description, labels, name, project, snapshotEncryptionKey, sourceDisk, sourceDiskEncryptionKey, storageLocations, zone);
         }

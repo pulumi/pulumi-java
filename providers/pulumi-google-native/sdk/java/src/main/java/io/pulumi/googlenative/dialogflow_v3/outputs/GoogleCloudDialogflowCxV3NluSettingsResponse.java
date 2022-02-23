@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class GoogleCloudDialogflowCxV3NluSettingsResponse {
             this.modelType = Objects.requireNonNull(modelType);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3NluSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3NluSettingsResponse(classificationThreshold, modelTrainingMode, modelType);
         }

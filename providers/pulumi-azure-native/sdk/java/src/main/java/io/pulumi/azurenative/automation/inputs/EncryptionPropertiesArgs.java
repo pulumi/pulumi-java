@@ -7,7 +7,7 @@ import io.pulumi.azurenative.automation.enums.EncryptionKeySourceType;
 import io.pulumi.azurenative.automation.inputs.EncryptionPropertiesIdentityArgs;
 import io.pulumi.azurenative.automation.inputs.KeyVaultPropertiesArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -25,7 +25,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="identity")
-    private final @Nullable Input<EncryptionPropertiesIdentityArgs> identity;
+        private final @Nullable Input<EncryptionPropertiesIdentityArgs> identity;
 
     public Input<EncryptionPropertiesIdentityArgs> getIdentity() {
         return this.identity == null ? Input.empty() : this.identity;
@@ -36,7 +36,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keySource")
-    private final @Nullable Input<EncryptionKeySourceType> keySource;
+        private final @Nullable Input<EncryptionKeySourceType> keySource;
 
     public Input<EncryptionKeySourceType> getKeySource() {
         return this.keySource == null ? Input.empty() : this.keySource;
@@ -47,7 +47,7 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="keyVaultProperties")
-    private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
+        private final @Nullable Input<KeyVaultPropertiesArgs> keyVaultProperties;
 
     public Input<KeyVaultPropertiesArgs> getKeyVaultProperties() {
         return this.keyVaultProperties == null ? Input.empty() : this.keyVaultProperties;
@@ -121,7 +121,6 @@ public final class EncryptionPropertiesArgs extends io.pulumi.resources.Resource
             this.keyVaultProperties = Input.ofNullable(keyVaultProperties);
             return this;
         }
-
         public EncryptionPropertiesArgs build() {
             return new EncryptionPropertiesArgs(identity, keySource, keyVaultProperties);
         }

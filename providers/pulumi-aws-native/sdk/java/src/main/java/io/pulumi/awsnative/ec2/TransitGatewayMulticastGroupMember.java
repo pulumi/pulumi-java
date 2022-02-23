@@ -7,8 +7,8 @@ import io.pulumi.awsnative.Utilities;
 import io.pulumi.awsnative.ec2.TransitGatewayMulticastGroupMemberArgs;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Boolean;
 import java.lang.String;
 import javax.annotation.Nullable;
@@ -174,13 +174,6 @@ public class TransitGatewayMulticastGroupMember extends io.pulumi.resources.Cust
         return this.transitGatewayMulticastDomainId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TransitGatewayMulticastGroupMember(String name) {
-        super("aws-native:ec2:TransitGatewayMulticastGroupMember", name, TransitGatewayMulticastGroupMemberArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

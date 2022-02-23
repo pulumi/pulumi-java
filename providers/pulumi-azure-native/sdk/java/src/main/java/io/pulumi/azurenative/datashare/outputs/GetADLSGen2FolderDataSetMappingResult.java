@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datashare.outputs;
 
 import io.pulumi.azurenative.datashare.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -308,7 +308,6 @@ public final class GetADLSGen2FolderDataSetMappingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetADLSGen2FolderDataSetMappingResult build() {
             return new GetADLSGen2FolderDataSetMappingResult(dataSetId, dataSetMappingStatus, fileSystem, folderPath, id, kind, name, provisioningState, resourceGroup, storageAccountName, subscriptionId, systemData, type);
         }

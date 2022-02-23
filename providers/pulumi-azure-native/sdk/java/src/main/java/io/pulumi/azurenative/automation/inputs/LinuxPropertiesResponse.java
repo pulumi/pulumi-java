@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.automation.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="excludedPackageNameMasks")
-    private final @Nullable List<String> excludedPackageNameMasks;
+        private final @Nullable List<String> excludedPackageNameMasks;
 
     public List<String> getExcludedPackageNameMasks() {
         return this.excludedPackageNameMasks == null ? List.of() : this.excludedPackageNameMasks;
@@ -35,7 +35,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="includedPackageClassifications")
-    private final @Nullable String includedPackageClassifications;
+        private final @Nullable String includedPackageClassifications;
 
     public Optional<String> getIncludedPackageClassifications() {
         return this.includedPackageClassifications == null ? Optional.empty() : Optional.ofNullable(this.includedPackageClassifications);
@@ -46,7 +46,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="includedPackageNameMasks")
-    private final @Nullable List<String> includedPackageNameMasks;
+        private final @Nullable List<String> includedPackageNameMasks;
 
     public List<String> getIncludedPackageNameMasks() {
         return this.includedPackageNameMasks == null ? List.of() : this.includedPackageNameMasks;
@@ -57,7 +57,7 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="rebootSetting")
-    private final @Nullable String rebootSetting;
+        private final @Nullable String rebootSetting;
 
     public Optional<String> getRebootSetting() {
         return this.rebootSetting == null ? Optional.empty() : Optional.ofNullable(this.rebootSetting);
@@ -126,7 +126,6 @@ public final class LinuxPropertiesResponse extends io.pulumi.resources.InvokeArg
             this.rebootSetting = rebootSetting;
             return this;
         }
-
         public LinuxPropertiesResponse build() {
             return new LinuxPropertiesResponse(excludedPackageNameMasks, includedPackageClassifications, includedPackageNameMasks, rebootSetting);
         }

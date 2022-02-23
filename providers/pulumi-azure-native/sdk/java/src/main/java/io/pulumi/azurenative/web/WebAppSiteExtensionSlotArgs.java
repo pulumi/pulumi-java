@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -30,7 +30,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -41,7 +41,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="siteExtensionId")
-    private final @Nullable Input<String> siteExtensionId;
+        private final @Nullable Input<String> siteExtensionId;
 
     public Input<String> getSiteExtensionId() {
         return this.siteExtensionId == null ? Input.empty() : this.siteExtensionId;
@@ -52,7 +52,7 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="slot", required=true)
-    private final Input<String> slot;
+        private final Input<String> slot;
 
     public Input<String> getSlot() {
         return this.slot;
@@ -141,7 +141,6 @@ public final class WebAppSiteExtensionSlotArgs extends io.pulumi.resources.Resou
             this.slot = Input.of(Objects.requireNonNull(slot));
             return this;
         }
-
         public WebAppSiteExtensionSlotArgs build() {
             return new WebAppSiteExtensionSlotArgs(name, resourceGroupName, siteExtensionId, slot);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.iam.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -130,7 +130,6 @@ public final class GetRuleResult {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GetRuleResult build() {
             return new GetRuleResult(id, includedPermissions, name, stage, title);
         }

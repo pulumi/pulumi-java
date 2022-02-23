@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.containerregistry.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="gatewayEndpoint", required=true)
-    private final String gatewayEndpoint;
+        private final String gatewayEndpoint;
 
     public String getGatewayEndpoint() {
         return this.gatewayEndpoint;
@@ -34,7 +34,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="lastSyncTime", required=true)
-    private final String lastSyncTime;
+        private final String lastSyncTime;
 
     public String getLastSyncTime() {
         return this.lastSyncTime;
@@ -45,7 +45,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="messageTtl", required=true)
-    private final String messageTtl;
+        private final String messageTtl;
 
     public String getMessageTtl() {
         return this.messageTtl;
@@ -56,7 +56,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable String schedule;
+        private final @Nullable String schedule;
 
     public Optional<String> getSchedule() {
         return this.schedule == null ? Optional.empty() : Optional.ofNullable(this.schedule);
@@ -67,7 +67,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="syncWindow")
-    private final @Nullable String syncWindow;
+        private final @Nullable String syncWindow;
 
     public Optional<String> getSyncWindow() {
         return this.syncWindow == null ? Optional.empty() : Optional.ofNullable(this.syncWindow);
@@ -78,7 +78,7 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="tokenId", required=true)
-    private final String tokenId;
+        private final String tokenId;
 
     public String getTokenId() {
         return this.tokenId;
@@ -167,7 +167,6 @@ public final class SyncPropertiesResponse extends io.pulumi.resources.InvokeArgs
             this.tokenId = Objects.requireNonNull(tokenId);
             return this;
         }
-
         public SyncPropertiesResponse build() {
             return new SyncPropertiesResponse(gatewayEndpoint, lastSyncTime, messageTtl, schedule, syncWindow, tokenId);
         }

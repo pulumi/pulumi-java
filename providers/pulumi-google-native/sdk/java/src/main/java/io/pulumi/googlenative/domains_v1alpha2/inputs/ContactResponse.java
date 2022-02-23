@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1alpha2.inputs.PostalAddressResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="email", required=true)
-    private final String email;
+      private final String email;
 
     public String getEmail() {
         return this.email;
@@ -33,7 +33,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="faxNumber", required=true)
-    private final String faxNumber;
+      private final String faxNumber;
 
     public String getFaxNumber() {
         return this.faxNumber;
@@ -44,7 +44,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="phoneNumber", required=true)
-    private final String phoneNumber;
+      private final String phoneNumber;
 
     public String getPhoneNumber() {
         return this.phoneNumber;
@@ -55,7 +55,7 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="postalAddress", required=true)
-    private final PostalAddressResponse postalAddress;
+      private final PostalAddressResponse postalAddress;
 
     public PostalAddressResponse getPostalAddress() {
         return this.postalAddress;
@@ -124,7 +124,6 @@ public final class ContactResponse extends io.pulumi.resources.InvokeArgs {
             this.postalAddress = Objects.requireNonNull(postalAddress);
             return this;
         }
-
         public ContactResponse build() {
             return new ContactResponse(email, faxNumber, phoneNumber, postalAddress);
         }

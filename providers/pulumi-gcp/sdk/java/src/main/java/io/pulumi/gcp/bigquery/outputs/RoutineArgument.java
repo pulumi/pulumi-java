@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.bigquery.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -136,7 +136,6 @@ public final class RoutineArgument {
             this.name = name;
             return this;
         }
-
         public RoutineArgument build() {
             return new RoutineArgument(argumentKind, dataType, mode, name);
         }

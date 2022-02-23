@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.media.outputs;
 
 import io.pulumi.azurenative.media.outputs.EdgeUsageDataEventHubResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class EdgeUsageDataCollectionPolicyResponse {
             this.maxAllowedUnreportedUsageDuration = maxAllowedUnreportedUsageDuration;
             return this;
         }
-
         public EdgeUsageDataCollectionPolicyResponse build() {
             return new EdgeUsageDataCollectionPolicyResponse(dataCollectionFrequency, dataReportingFrequency, eventHubDetails, maxAllowedUnreportedUsageDuration);
         }

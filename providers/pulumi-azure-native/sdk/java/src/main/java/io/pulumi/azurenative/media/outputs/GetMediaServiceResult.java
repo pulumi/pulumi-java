@@ -7,7 +7,7 @@ import io.pulumi.azurenative.media.outputs.AccountEncryptionResponse;
 import io.pulumi.azurenative.media.outputs.MediaServiceIdentityResponse;
 import io.pulumi.azurenative.media.outputs.StorageAccountResponse;
 import io.pulumi.azurenative.media.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -263,7 +263,6 @@ public final class GetMediaServiceResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetMediaServiceResult build() {
             return new GetMediaServiceResult(encryption, id, identity, location, mediaServiceId, name, storageAccounts, storageAuthentication, systemData, tags, type);
         }

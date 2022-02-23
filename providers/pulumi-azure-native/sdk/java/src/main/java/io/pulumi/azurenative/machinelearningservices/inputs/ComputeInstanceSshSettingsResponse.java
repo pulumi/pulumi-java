@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class ComputeInstanceSshSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="adminPublicKey")
-    private final @Nullable String adminPublicKey;
+        private final @Nullable String adminPublicKey;
 
     public Optional<String> getAdminPublicKey() {
         return this.adminPublicKey == null ? Optional.empty() : Optional.ofNullable(this.adminPublicKey);
@@ -35,7 +35,7 @@ public final class ComputeInstanceSshSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="adminUserName", required=true)
-    private final String adminUserName;
+        private final String adminUserName;
 
     public String getAdminUserName() {
         return this.adminUserName;
@@ -46,7 +46,7 @@ public final class ComputeInstanceSshSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sshPort", required=true)
-    private final Integer sshPort;
+        private final Integer sshPort;
 
     public Integer getSshPort() {
         return this.sshPort;
@@ -57,7 +57,7 @@ public final class ComputeInstanceSshSettingsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="sshPublicAccess")
-    private final @Nullable String sshPublicAccess;
+        private final @Nullable String sshPublicAccess;
 
     public Optional<String> getSshPublicAccess() {
         return this.sshPublicAccess == null ? Optional.empty() : Optional.ofNullable(this.sshPublicAccess);
@@ -126,7 +126,6 @@ public final class ComputeInstanceSshSettingsResponse extends io.pulumi.resource
             this.sshPublicAccess = sshPublicAccess;
             return this;
         }
-
         public ComputeInstanceSshSettingsResponse build() {
             return new ComputeInstanceSshSettingsResponse(adminPublicKey, adminUserName, sshPort, sshPublicAccess);
         }

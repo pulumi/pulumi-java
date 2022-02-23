@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cache.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -23,7 +23,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="isMaster", required=true)
-    private final Boolean isMaster;
+        private final Boolean isMaster;
 
     public Boolean getIsMaster() {
         return this.isMaster;
@@ -34,7 +34,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="nonSslPort", required=true)
-    private final Integer nonSslPort;
+        private final Integer nonSslPort;
 
     public Integer getNonSslPort() {
         return this.nonSslPort;
@@ -45,7 +45,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="shardId", required=true)
-    private final Integer shardId;
+        private final Integer shardId;
 
     public Integer getShardId() {
         return this.shardId;
@@ -56,7 +56,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="sslPort", required=true)
-    private final Integer sslPort;
+        private final Integer sslPort;
 
     public Integer getSslPort() {
         return this.sslPort;
@@ -67,7 +67,7 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
      * 
      */
     @InputImport(name="zone", required=true)
-    private final String zone;
+        private final String zone;
 
     public String getZone() {
         return this.zone;
@@ -146,7 +146,6 @@ public final class RedisInstanceDetailsResponse extends io.pulumi.resources.Invo
             this.zone = Objects.requireNonNull(zone);
             return this;
         }
-
         public RedisInstanceDetailsResponse build() {
             return new RedisInstanceDetailsResponse(isMaster, nonSslPort, shardId, sslPort, zone);
         }

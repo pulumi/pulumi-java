@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.quicksight.outputs;
 
 import io.pulumi.awsnative.quicksight.outputs.DataSetGeoSpatialColumnGroup;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -46,7 +46,6 @@ public final class DataSetColumnGroup {
             this.geoSpatialColumnGroup = geoSpatialColumnGroup;
             return this;
         }
-
         public DataSetColumnGroup build() {
             return new DataSetColumnGroup(geoSpatialColumnGroup);
         }

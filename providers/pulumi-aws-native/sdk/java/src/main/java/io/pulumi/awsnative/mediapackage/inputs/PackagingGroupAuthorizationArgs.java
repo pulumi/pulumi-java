@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.mediapackage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,7 +18,7 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cdnIdentifierSecret", required=true)
-    private final Input<String> cdnIdentifierSecret;
+        private final Input<String> cdnIdentifierSecret;
 
     public Input<String> getCdnIdentifierSecret() {
         return this.cdnIdentifierSecret;
@@ -29,7 +29,7 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="secretsRoleArn", required=true)
-    private final Input<String> secretsRoleArn;
+        private final Input<String> secretsRoleArn;
 
     public Input<String> getSecretsRoleArn() {
         return this.secretsRoleArn;
@@ -88,7 +88,6 @@ public final class PackagingGroupAuthorizationArgs extends io.pulumi.resources.R
             this.secretsRoleArn = Input.of(Objects.requireNonNull(secretsRoleArn));
             return this;
         }
-
         public PackagingGroupAuthorizationArgs build() {
             return new PackagingGroupAuthorizationArgs(cdnIdentifierSecret, secretsRoleArn);
         }

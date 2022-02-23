@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.testing_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.testing_v1.outputs.GoogleAutoResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class AccountResponse {
             this.googleAuto = Objects.requireNonNull(googleAuto);
             return this;
         }
-
         public AccountResponse build() {
             return new AccountResponse(googleAuto);
         }

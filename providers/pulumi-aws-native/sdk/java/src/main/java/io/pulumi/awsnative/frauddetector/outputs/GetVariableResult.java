@@ -7,7 +7,7 @@ import io.pulumi.awsnative.frauddetector.enums.VariableDataSource;
 import io.pulumi.awsnative.frauddetector.enums.VariableDataType;
 import io.pulumi.awsnative.frauddetector.enums.VariableType;
 import io.pulumi.awsnative.frauddetector.outputs.VariableTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -228,7 +228,6 @@ public final class GetVariableResult {
             this.variableType = variableType;
             return this;
         }
-
         public GetVariableResult build() {
             return new GetVariableResult(arn, createdTime, dataSource, dataType, defaultValue, description, lastUpdatedTime, tags, variableType);
         }

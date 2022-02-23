@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.healthcare_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class SchemaConfigResponse {
             this.schemaType = Objects.requireNonNull(schemaType);
             return this;
         }
-
         public SchemaConfigResponse build() {
             return new SchemaConfigResponse(recursiveStructureDepth, schemaType);
         }

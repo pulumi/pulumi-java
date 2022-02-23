@@ -5,7 +5,7 @@ package io.pulumi.azurenative.datamigration.inputs;
 
 import io.pulumi.azurenative.datamigration.inputs.BackupSetInfoResponse;
 import io.pulumi.azurenative.datamigration.inputs.ReportableExceptionResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -21,7 +21,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="activeBackupSets", required=true)
-    private final List<BackupSetInfoResponse> activeBackupSets;
+        private final List<BackupSetInfoResponse> activeBackupSets;
 
     public List<BackupSetInfoResponse> getActiveBackupSets() {
         return this.activeBackupSets;
@@ -32,7 +32,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="containerName", required=true)
-    private final String containerName;
+        private final String containerName;
 
     public String getContainerName() {
         return this.containerName;
@@ -43,7 +43,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="endedOn", required=true)
-    private final String endedOn;
+        private final String endedOn;
 
     public String getEndedOn() {
         return this.endedOn;
@@ -54,7 +54,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="errorPrefix", required=true)
-    private final String errorPrefix;
+        private final String errorPrefix;
 
     public String getErrorPrefix() {
         return this.errorPrefix;
@@ -65,7 +65,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="exceptionsAndWarnings", required=true)
-    private final List<ReportableExceptionResponse> exceptionsAndWarnings;
+        private final List<ReportableExceptionResponse> exceptionsAndWarnings;
 
     public List<ReportableExceptionResponse> getExceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
@@ -76,7 +76,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="fullBackupSetInfo", required=true)
-    private final BackupSetInfoResponse fullBackupSetInfo;
+        private final BackupSetInfoResponse fullBackupSetInfo;
 
     public BackupSetInfoResponse getFullBackupSetInfo() {
         return this.fullBackupSetInfo;
@@ -87,7 +87,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -98,7 +98,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="isFullBackupRestored", required=true)
-    private final Boolean isFullBackupRestored;
+        private final Boolean isFullBackupRestored;
 
     public Boolean getIsFullBackupRestored() {
         return this.isFullBackupRestored;
@@ -109,7 +109,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="lastRestoredBackupSetInfo", required=true)
-    private final BackupSetInfoResponse lastRestoredBackupSetInfo;
+        private final BackupSetInfoResponse lastRestoredBackupSetInfo;
 
     public BackupSetInfoResponse getLastRestoredBackupSetInfo() {
         return this.lastRestoredBackupSetInfo;
@@ -120,7 +120,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="migrationState", required=true)
-    private final String migrationState;
+        private final String migrationState;
 
     public String getMigrationState() {
         return this.migrationState;
@@ -132,7 +132,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="resultType", required=true)
-    private final String resultType;
+        private final String resultType;
 
     public String getResultType() {
         return this.resultType;
@@ -143,7 +143,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="sourceDatabaseName", required=true)
-    private final String sourceDatabaseName;
+        private final String sourceDatabaseName;
 
     public String getSourceDatabaseName() {
         return this.sourceDatabaseName;
@@ -154,7 +154,7 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
      * 
      */
     @InputImport(name="startedOn", required=true)
-    private final String startedOn;
+        private final String startedOn;
 
     public String getStartedOn() {
         return this.startedOn;
@@ -313,7 +313,6 @@ public final class MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse exte
             this.startedOn = Objects.requireNonNull(startedOn);
             return this;
         }
-
         public MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse build() {
             return new MigrateSqlServerSqlMISyncTaskOutputDatabaseLevelResponse(activeBackupSets, containerName, endedOn, errorPrefix, exceptionsAndWarnings, fullBackupSetInfo, id, isFullBackupRestored, lastRestoredBackupSetInfo, migrationState, resultType, sourceDatabaseName, startedOn);
         }

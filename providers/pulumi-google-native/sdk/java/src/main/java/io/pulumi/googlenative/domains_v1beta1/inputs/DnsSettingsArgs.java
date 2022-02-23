@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.domains_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.domains_v1beta1.inputs.CustomDnsArgs;
 import io.pulumi.googlenative.domains_v1beta1.inputs.GlueRecordArgs;
 import io.pulumi.googlenative.domains_v1beta1.inputs.GoogleDomainsDnsArgs;
@@ -26,7 +26,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="customDns")
-    private final @Nullable Input<CustomDnsArgs> customDns;
+      private final @Nullable Input<CustomDnsArgs> customDns;
 
     public Input<CustomDnsArgs> getCustomDns() {
         return this.customDns == null ? Input.empty() : this.customDns;
@@ -37,7 +37,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="glueRecords")
-    private final @Nullable Input<List<GlueRecordArgs>> glueRecords;
+      private final @Nullable Input<List<GlueRecordArgs>> glueRecords;
 
     public Input<List<GlueRecordArgs>> getGlueRecords() {
         return this.glueRecords == null ? Input.empty() : this.glueRecords;
@@ -48,7 +48,7 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="googleDomainsDns")
-    private final @Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns;
+      private final @Nullable Input<GoogleDomainsDnsArgs> googleDomainsDns;
 
     public Input<GoogleDomainsDnsArgs> getGoogleDomainsDns() {
         return this.googleDomainsDns == null ? Input.empty() : this.googleDomainsDns;
@@ -122,7 +122,6 @@ public final class DnsSettingsArgs extends io.pulumi.resources.ResourceArgs {
             this.googleDomainsDns = Input.ofNullable(googleDomainsDns);
             return this;
         }
-
         public DnsSettingsArgs build() {
             return new DnsSettingsArgs(customDns, glueRecords, googleDomainsDns);
         }

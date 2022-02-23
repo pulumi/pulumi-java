@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RetentionPolicyResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="category")
-    private final @Nullable String category;
+        private final @Nullable String category;
 
     public Optional<String> getCategory() {
         return this.category == null ? Optional.empty() : Optional.ofNullable(this.category);
@@ -36,7 +36,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="enabled", required=true)
-    private final Boolean enabled;
+        private final Boolean enabled;
 
     public Boolean getEnabled() {
         return this.enabled;
@@ -47,7 +47,7 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="retentionPolicy")
-    private final @Nullable RetentionPolicyResponse retentionPolicy;
+        private final @Nullable RetentionPolicyResponse retentionPolicy;
 
     public Optional<RetentionPolicyResponse> getRetentionPolicy() {
         return this.retentionPolicy == null ? Optional.empty() : Optional.ofNullable(this.retentionPolicy);
@@ -106,7 +106,6 @@ public final class LogSettingsResponse extends io.pulumi.resources.InvokeArgs {
             this.retentionPolicy = retentionPolicy;
             return this;
         }
-
         public LogSettingsResponse build() {
             return new LogSettingsResponse(category, enabled, retentionPolicy);
         }

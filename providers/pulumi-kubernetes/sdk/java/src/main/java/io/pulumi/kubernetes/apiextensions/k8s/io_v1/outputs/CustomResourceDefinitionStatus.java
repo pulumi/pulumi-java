@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionCondition;
 import io.pulumi.kubernetes.apiextensions.k8s.io_v1.outputs.CustomResourceDefinitionNames;
 import java.lang.String;
@@ -99,7 +99,6 @@ public final class CustomResourceDefinitionStatus {
             this.storedVersions = Objects.requireNonNull(storedVersions);
             return this;
         }
-
         public CustomResourceDefinitionStatus build() {
             return new CustomResourceDefinitionStatus(acceptedNames, conditions, storedVersions);
         }

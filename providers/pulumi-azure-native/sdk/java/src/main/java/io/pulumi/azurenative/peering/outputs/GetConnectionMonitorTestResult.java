@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.peering.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -247,7 +247,6 @@ public final class GetConnectionMonitorTestResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetConnectionMonitorTestResult build() {
             return new GetConnectionMonitorTestResult(destination, destinationPort, id, isTestSuccessful, name, path, provisioningState, sourceAgent, testFrequencyInSec, type);
         }

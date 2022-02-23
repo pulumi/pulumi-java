@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.security.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -139,7 +139,6 @@ public final class OnPremiseResourceDetailsResponse {
             this.workspaceId = Objects.requireNonNull(workspaceId);
             return this;
         }
-
         public OnPremiseResourceDetailsResponse build() {
             return new OnPremiseResourceDetailsResponse(machineName, source, sourceComputerId, vmuuid, workspaceId);
         }

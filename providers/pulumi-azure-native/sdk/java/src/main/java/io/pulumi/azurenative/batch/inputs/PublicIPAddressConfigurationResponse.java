@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.batch.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="ipAddressIds")
-    private final @Nullable List<String> ipAddressIds;
+        private final @Nullable List<String> ipAddressIds;
 
     public List<String> getIpAddressIds() {
         return this.ipAddressIds == null ? List.of() : this.ipAddressIds;
@@ -35,7 +35,7 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
      * 
      */
     @InputImport(name="provision")
-    private final @Nullable String provision;
+        private final @Nullable String provision;
 
     public Optional<String> getProvision() {
         return this.provision == null ? Optional.empty() : Optional.ofNullable(this.provision);
@@ -84,7 +84,6 @@ public final class PublicIPAddressConfigurationResponse extends io.pulumi.resour
             this.provision = provision;
             return this;
         }
-
         public PublicIPAddressConfigurationResponse build() {
             return new PublicIPAddressConfigurationResponse(ipAddressIds, provision);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.cloudfront.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -59,7 +59,6 @@ public final class ResponseHeadersPolicyFrameOptions {
             this.override = Objects.requireNonNull(override);
             return this;
         }
-
         public ResponseHeadersPolicyFrameOptions build() {
             return new ResponseHeadersPolicyFrameOptions(frameOption, override);
         }

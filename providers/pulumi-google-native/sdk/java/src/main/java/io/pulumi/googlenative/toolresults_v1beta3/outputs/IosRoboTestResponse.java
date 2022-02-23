@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.toolresults_v1beta3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 
 @OutputCustomType
@@ -30,7 +30,6 @@ public final class IosRoboTestResponse {
         public Builder(IosRoboTestResponse defaults) {
     	      Objects.requireNonNull(defaults);
         }
-
         public IosRoboTestResponse build() {
             return new IosRoboTestResponse();
         }

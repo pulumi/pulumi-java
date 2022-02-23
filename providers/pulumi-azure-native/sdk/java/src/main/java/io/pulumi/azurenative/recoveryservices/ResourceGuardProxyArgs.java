@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.recoveryservices;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
     }
 
     @InputImport(name="resourceGuardProxyName")
-    private final @Nullable Input<String> resourceGuardProxyName;
+        private final @Nullable Input<String> resourceGuardProxyName;
 
     public Input<String> getResourceGuardProxyName() {
         return this.resourceGuardProxyName == null ? Input.empty() : this.resourceGuardProxyName;
@@ -37,7 +37,7 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="vaultName", required=true)
-    private final Input<String> vaultName;
+        private final Input<String> vaultName;
 
     public Input<String> getVaultName() {
         return this.vaultName;
@@ -111,7 +111,6 @@ public final class ResourceGuardProxyArgs extends io.pulumi.resources.ResourceAr
             this.vaultName = Input.of(Objects.requireNonNull(vaultName));
             return this;
         }
-
         public ResourceGuardProxyArgs build() {
             return new ResourceGuardProxyArgs(resourceGroupName, resourceGuardProxyName, vaultName);
         }

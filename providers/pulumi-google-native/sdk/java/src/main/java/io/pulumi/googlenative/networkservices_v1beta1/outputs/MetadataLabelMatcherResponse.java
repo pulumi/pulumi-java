@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.networkservices_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.networkservices_v1beta1.outputs.MetadataLabelsResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class MetadataLabelMatcherResponse {
             this.metadataLabels = Objects.requireNonNull(metadataLabels);
             return this;
         }
-
         public MetadataLabelMatcherResponse build() {
             return new MetadataLabelMatcherResponse(metadataLabelMatchCriteria, metadataLabels);
         }

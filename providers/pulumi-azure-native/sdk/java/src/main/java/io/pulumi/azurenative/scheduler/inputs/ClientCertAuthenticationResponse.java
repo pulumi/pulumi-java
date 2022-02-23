@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.scheduler.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -19,7 +19,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateExpirationDate")
-    private final @Nullable String certificateExpirationDate;
+        private final @Nullable String certificateExpirationDate;
 
     public Optional<String> getCertificateExpirationDate() {
         return this.certificateExpirationDate == null ? Optional.empty() : Optional.ofNullable(this.certificateExpirationDate);
@@ -30,7 +30,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateSubjectName")
-    private final @Nullable String certificateSubjectName;
+        private final @Nullable String certificateSubjectName;
 
     public Optional<String> getCertificateSubjectName() {
         return this.certificateSubjectName == null ? Optional.empty() : Optional.ofNullable(this.certificateSubjectName);
@@ -41,7 +41,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="certificateThumbprint")
-    private final @Nullable String certificateThumbprint;
+        private final @Nullable String certificateThumbprint;
 
     public Optional<String> getCertificateThumbprint() {
         return this.certificateThumbprint == null ? Optional.empty() : Optional.ofNullable(this.certificateThumbprint);
@@ -52,7 +52,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -63,7 +63,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="pfx")
-    private final @Nullable String pfx;
+        private final @Nullable String pfx;
 
     public Optional<String> getPfx() {
         return this.pfx == null ? Optional.empty() : Optional.ofNullable(this.pfx);
@@ -75,7 +75,7 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -164,7 +164,6 @@ public final class ClientCertAuthenticationResponse extends io.pulumi.resources.
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ClientCertAuthenticationResponse build() {
             return new ClientCertAuthenticationResponse(certificateExpirationDate, certificateSubjectName, certificateThumbprint, password, pfx, type);
         }

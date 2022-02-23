@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.botservice.inputs;
 
 import io.pulumi.azurenative.botservice.inputs.ConnectionSettingParameterResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="clientId")
-    private final @Nullable String clientId;
+        private final @Nullable String clientId;
 
     public Optional<String> getClientId() {
         return this.clientId == null ? Optional.empty() : Optional.ofNullable(this.clientId);
@@ -36,7 +36,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="clientSecret")
-    private final @Nullable String clientSecret;
+        private final @Nullable String clientSecret;
 
     public Optional<String> getClientSecret() {
         return this.clientSecret == null ? Optional.empty() : Optional.ofNullable(this.clientSecret);
@@ -47,7 +47,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="id")
-    private final @Nullable String id;
+        private final @Nullable String id;
 
     public Optional<String> getId() {
         return this.id == null ? Optional.empty() : Optional.ofNullable(this.id);
@@ -58,7 +58,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="name")
-    private final @Nullable String name;
+        private final @Nullable String name;
 
     public Optional<String> getName() {
         return this.name == null ? Optional.empty() : Optional.ofNullable(this.name);
@@ -69,7 +69,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="parameters")
-    private final @Nullable List<ConnectionSettingParameterResponse> parameters;
+        private final @Nullable List<ConnectionSettingParameterResponse> parameters;
 
     public List<ConnectionSettingParameterResponse> getParameters() {
         return this.parameters == null ? List.of() : this.parameters;
@@ -80,7 +80,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="provisioningState")
-    private final @Nullable String provisioningState;
+        private final @Nullable String provisioningState;
 
     public Optional<String> getProvisioningState() {
         return this.provisioningState == null ? Optional.empty() : Optional.ofNullable(this.provisioningState);
@@ -91,7 +91,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="scopes")
-    private final @Nullable String scopes;
+        private final @Nullable String scopes;
 
     public Optional<String> getScopes() {
         return this.scopes == null ? Optional.empty() : Optional.ofNullable(this.scopes);
@@ -102,7 +102,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceProviderDisplayName")
-    private final @Nullable String serviceProviderDisplayName;
+        private final @Nullable String serviceProviderDisplayName;
 
     public Optional<String> getServiceProviderDisplayName() {
         return this.serviceProviderDisplayName == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderDisplayName);
@@ -113,7 +113,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="serviceProviderId")
-    private final @Nullable String serviceProviderId;
+        private final @Nullable String serviceProviderId;
 
     public Optional<String> getServiceProviderId() {
         return this.serviceProviderId == null ? Optional.empty() : Optional.ofNullable(this.serviceProviderId);
@@ -124,7 +124,7 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
      * 
      */
     @InputImport(name="settingId", required=true)
-    private final String settingId;
+        private final String settingId;
 
     public String getSettingId() {
         return this.settingId;
@@ -253,7 +253,6 @@ public final class ConnectionSettingPropertiesResponse extends io.pulumi.resourc
             this.settingId = Objects.requireNonNull(settingId);
             return this;
         }
-
         public ConnectionSettingPropertiesResponse build() {
             return new ConnectionSettingPropertiesResponse(clientId, clientSecret, id, name, parameters, provisioningState, scopes, serviceProviderDisplayName, serviceProviderId, settingId);
         }

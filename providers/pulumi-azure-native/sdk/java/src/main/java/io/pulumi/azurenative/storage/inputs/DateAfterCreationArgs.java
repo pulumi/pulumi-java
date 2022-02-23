@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.storage.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="daysAfterCreationGreaterThan", required=true)
-    private final Input<Double> daysAfterCreationGreaterThan;
+        private final Input<Double> daysAfterCreationGreaterThan;
 
     public Input<Double> getDaysAfterCreationGreaterThan() {
         return this.daysAfterCreationGreaterThan;
@@ -65,7 +65,6 @@ public final class DateAfterCreationArgs extends io.pulumi.resources.ResourceArg
             this.daysAfterCreationGreaterThan = Input.of(Objects.requireNonNull(daysAfterCreationGreaterThan));
             return this;
         }
-
         public DateAfterCreationArgs build() {
             return new DateAfterCreationArgs(daysAfterCreationGreaterThan);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.datafactory.inputs;
 import io.pulumi.azurenative.datafactory.inputs.AzureKeyVaultSecretReferenceResponse;
 import io.pulumi.azurenative.datafactory.inputs.SecureStringResponse;
 import io.pulumi.core.Either;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="password", required=true)
-    private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
+        private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> getPassword() {
         return this.password;
@@ -36,7 +36,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="targetName", required=true)
-    private final Object targetName;
+        private final Object targetName;
 
     public Object getTargetName() {
         return this.targetName;
@@ -48,7 +48,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -59,7 +59,7 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="userName", required=true)
-    private final Object userName;
+        private final Object userName;
 
     public Object getUserName() {
         return this.userName;
@@ -128,7 +128,6 @@ public final class CmdkeySetupResponse extends io.pulumi.resources.InvokeArgs {
             this.userName = Objects.requireNonNull(userName);
             return this;
         }
-
         public CmdkeySetupResponse build() {
             return new CmdkeySetupResponse(password, targetName, type, userName);
         }

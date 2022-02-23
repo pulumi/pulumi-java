@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class CredentialReferenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="referenceName", required=true)
-    private final String referenceName;
+        private final String referenceName;
 
     public String getReferenceName() {
         return this.referenceName;
@@ -32,7 +32,7 @@ public final class CredentialReferenceResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -81,7 +81,6 @@ public final class CredentialReferenceResponse extends io.pulumi.resources.Invok
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public CredentialReferenceResponse build() {
             return new CredentialReferenceResponse(referenceName, type);
         }

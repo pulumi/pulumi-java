@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.enums.FirewallLogConfigMetadata;
 import java.lang.Boolean;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="enable")
-    private final @Nullable Input<Boolean> enable;
+      private final @Nullable Input<Boolean> enable;
 
     public Input<Boolean> getEnable() {
         return this.enable == null ? Input.empty() : this.enable;
@@ -35,7 +35,7 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
      * 
      */
     @InputImport(name="metadata")
-    private final @Nullable Input<FirewallLogConfigMetadata> metadata;
+      private final @Nullable Input<FirewallLogConfigMetadata> metadata;
 
     public Input<FirewallLogConfigMetadata> getMetadata() {
         return this.metadata == null ? Input.empty() : this.metadata;
@@ -94,7 +94,6 @@ public final class FirewallLogConfigArgs extends io.pulumi.resources.ResourceArg
             this.metadata = Input.ofNullable(metadata);
             return this;
         }
-
         public FirewallLogConfigArgs build() {
             return new FirewallLogConfigArgs(enable, metadata);
         }

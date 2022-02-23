@@ -5,8 +5,8 @@ package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.cloudkms_v1.CryptoKeyArgs;
 import io.pulumi.googlenative.cloudkms_v1.outputs.CryptoKeyVersionResponse;
@@ -180,13 +180,6 @@ public class CryptoKey extends io.pulumi.resources.CustomResource {
         return this.versionTemplate;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public CryptoKey(String name) {
-        super("google-native:cloudkms/v1:CryptoKey", name, CryptoKeyArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

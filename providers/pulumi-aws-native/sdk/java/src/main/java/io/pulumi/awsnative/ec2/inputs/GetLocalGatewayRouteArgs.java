@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.ec2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="destinationCidrBlock", required=true)
-    private final String destinationCidrBlock;
+        private final String destinationCidrBlock;
 
     public String getDestinationCidrBlock() {
         return this.destinationCidrBlock;
@@ -28,7 +28,7 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="localGatewayRouteTableId", required=true)
-    private final String localGatewayRouteTableId;
+        private final String localGatewayRouteTableId;
 
     public String getLocalGatewayRouteTableId() {
         return this.localGatewayRouteTableId;
@@ -77,7 +77,6 @@ public final class GetLocalGatewayRouteArgs extends io.pulumi.resources.InvokeAr
             this.localGatewayRouteTableId = Objects.requireNonNull(localGatewayRouteTableId);
             return this;
         }
-
         public GetLocalGatewayRouteArgs build() {
             return new GetLocalGatewayRouteArgs(destinationCidrBlock, localGatewayRouteTableId);
         }

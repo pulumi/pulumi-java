@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class DhcpOptionsResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dnsServers")
-    private final @Nullable List<String> dnsServers;
+        private final @Nullable List<String> dnsServers;
 
     public List<String> getDnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
@@ -62,7 +62,6 @@ public final class DhcpOptionsResponse extends io.pulumi.resources.InvokeArgs {
             this.dnsServers = dnsServers;
             return this;
         }
-
         public DhcpOptionsResponse build() {
             return new DhcpOptionsResponse(dnsServers);
         }

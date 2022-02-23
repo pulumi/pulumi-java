@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.management.inputs;
 
 import io.pulumi.azurenative.management.inputs.EntityParentGroupInfoResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="displayName")
-    private final @Nullable String displayName;
+        private final @Nullable String displayName;
 
     public Optional<String> getDisplayName() {
         return this.displayName == null ? Optional.empty() : Optional.ofNullable(this.displayName);
@@ -37,7 +37,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="id", required=true)
-    private final String id;
+        private final String id;
 
     public String getId() {
         return this.id;
@@ -48,7 +48,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="inheritedPermissions")
-    private final @Nullable String inheritedPermissions;
+        private final @Nullable String inheritedPermissions;
 
     public Optional<String> getInheritedPermissions() {
         return this.inheritedPermissions == null ? Optional.empty() : Optional.ofNullable(this.inheritedPermissions);
@@ -59,7 +59,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="name", required=true)
-    private final String name;
+        private final String name;
 
     public String getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numberOfChildGroups")
-    private final @Nullable Integer numberOfChildGroups;
+        private final @Nullable Integer numberOfChildGroups;
 
     public Optional<Integer> getNumberOfChildGroups() {
         return this.numberOfChildGroups == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildGroups);
@@ -81,14 +81,14 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="numberOfChildren")
-    private final @Nullable Integer numberOfChildren;
+        private final @Nullable Integer numberOfChildren;
 
     public Optional<Integer> getNumberOfChildren() {
         return this.numberOfChildren == null ? Optional.empty() : Optional.ofNullable(this.numberOfChildren);
     }
 
     @InputImport(name="numberOfDescendants")
-    private final @Nullable Integer numberOfDescendants;
+        private final @Nullable Integer numberOfDescendants;
 
     public Optional<Integer> getNumberOfDescendants() {
         return this.numberOfDescendants == null ? Optional.empty() : Optional.ofNullable(this.numberOfDescendants);
@@ -99,7 +99,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parent")
-    private final @Nullable EntityParentGroupInfoResponse parent;
+        private final @Nullable EntityParentGroupInfoResponse parent;
 
     public Optional<EntityParentGroupInfoResponse> getParent() {
         return this.parent == null ? Optional.empty() : Optional.ofNullable(this.parent);
@@ -110,7 +110,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentDisplayNameChain")
-    private final @Nullable List<String> parentDisplayNameChain;
+        private final @Nullable List<String> parentDisplayNameChain;
 
     public List<String> getParentDisplayNameChain() {
         return this.parentDisplayNameChain == null ? List.of() : this.parentDisplayNameChain;
@@ -121,7 +121,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="parentNameChain")
-    private final @Nullable List<String> parentNameChain;
+        private final @Nullable List<String> parentNameChain;
 
     public List<String> getParentNameChain() {
         return this.parentNameChain == null ? List.of() : this.parentNameChain;
@@ -132,7 +132,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="permissions")
-    private final @Nullable String permissions;
+        private final @Nullable String permissions;
 
     public Optional<String> getPermissions() {
         return this.permissions == null ? Optional.empty() : Optional.ofNullable(this.permissions);
@@ -143,7 +143,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="tenantId")
-    private final @Nullable String tenantId;
+        private final @Nullable String tenantId;
 
     public Optional<String> getTenantId() {
         return this.tenantId == null ? Optional.empty() : Optional.ofNullable(this.tenantId);
@@ -154,7 +154,7 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -313,7 +313,6 @@ public final class EntityInfoResponse extends io.pulumi.resources.InvokeArgs {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public EntityInfoResponse build() {
             return new EntityInfoResponse(displayName, id, inheritedPermissions, name, numberOfChildGroups, numberOfChildren, numberOfDescendants, parent, parentDisplayNameChain, parentNameChain, permissions, tenantId, type);
         }

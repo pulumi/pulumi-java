@@ -5,8 +5,8 @@ package io.pulumi.gcp.datacatalog;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.datacatalog.TagTemplateIamBindingArgs;
 import io.pulumi.gcp.datacatalog.inputs.TagTemplateIamBindingState;
@@ -60,13 +60,6 @@ public class TagTemplateIamBinding extends io.pulumi.resources.CustomResource {
         return this.tagTemplate;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TagTemplateIamBinding(String name) {
-        super("gcp:datacatalog/tagTemplateIamBinding:TagTemplateIamBinding", name, TagTemplateIamBindingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

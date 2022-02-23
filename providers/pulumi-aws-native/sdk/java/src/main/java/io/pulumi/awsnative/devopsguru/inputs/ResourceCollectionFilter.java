@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.devopsguru.inputs;
 
 import io.pulumi.awsnative.devopsguru.inputs.ResourceCollectionCloudFormationCollectionFilter;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ResourceCollectionFilter extends io.pulumi.resources.InvokeAr
     public static final ResourceCollectionFilter Empty = new ResourceCollectionFilter();
 
     @InputImport(name="cloudFormation")
-    private final @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
+        private final @Nullable ResourceCollectionCloudFormationCollectionFilter cloudFormation;
 
     public Optional<ResourceCollectionCloudFormationCollectionFilter> getCloudFormation() {
         return this.cloudFormation == null ? Optional.empty() : Optional.ofNullable(this.cloudFormation);
@@ -57,7 +57,6 @@ public final class ResourceCollectionFilter extends io.pulumi.resources.InvokeAr
             this.cloudFormation = cloudFormation;
             return this;
         }
-
         public ResourceCollectionFilter build() {
             return new ResourceCollectionFilter(cloudFormation);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.retail_v2alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.retail_v2alpha.outputs.GoogleCloudRetailV2alphaIntervalResponse;
 import java.lang.String;
 import java.util.List;
@@ -181,7 +181,6 @@ public final class GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyRespons
             this.restrictedValues = Objects.requireNonNull(restrictedValues);
             return this;
         }
-
         public GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse build() {
             return new GoogleCloudRetailV2alphaSearchRequestFacetSpecFacetKeyResponse(contains, intervals, key, orderBy, prefixes, query, restrictedValues);
         }

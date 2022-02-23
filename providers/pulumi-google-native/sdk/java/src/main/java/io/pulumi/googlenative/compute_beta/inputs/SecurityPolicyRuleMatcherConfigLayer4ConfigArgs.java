@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_beta.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
      * 
      */
     @InputImport(name="ipProtocol")
-    private final @Nullable Input<String> ipProtocol;
+      private final @Nullable Input<String> ipProtocol;
 
     public Input<String> getIpProtocol() {
         return this.ipProtocol == null ? Input.empty() : this.ipProtocol;
@@ -31,7 +31,7 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
      * 
      */
     @InputImport(name="ports")
-    private final @Nullable Input<List<String>> ports;
+      private final @Nullable Input<List<String>> ports;
 
     public Input<List<String>> getPorts() {
         return this.ports == null ? Input.empty() : this.ports;
@@ -90,7 +90,6 @@ public final class SecurityPolicyRuleMatcherConfigLayer4ConfigArgs extends io.pu
             this.ports = Input.ofNullable(ports);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigLayer4ConfigArgs build() {
             return new SecurityPolicyRuleMatcherConfigLayer4ConfigArgs(ipProtocol, ports);
         }

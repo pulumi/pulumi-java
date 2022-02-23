@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.datamigration.outputs;
 
 import io.pulumi.azurenative.datamigration.outputs.ExecutionStatisticsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -118,7 +118,6 @@ public final class QueryExecutionResultResponse {
             this.targetResult = Objects.requireNonNull(targetResult);
             return this;
         }
-
         public QueryExecutionResultResponse build() {
             return new QueryExecutionResultResponse(queryText, sourceResult, statementsInBatch, targetResult);
         }

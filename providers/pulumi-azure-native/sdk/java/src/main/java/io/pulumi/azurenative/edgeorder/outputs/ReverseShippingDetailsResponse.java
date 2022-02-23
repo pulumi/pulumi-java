@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -137,7 +137,6 @@ public final class ReverseShippingDetailsResponse {
             this.trackingUrl = Objects.requireNonNull(trackingUrl);
             return this;
         }
-
         public ReverseShippingDetailsResponse build() {
             return new ReverseShippingDetailsResponse(carrierDisplayName, carrierName, sasKeyForLabel, trackingId, trackingUrl);
         }

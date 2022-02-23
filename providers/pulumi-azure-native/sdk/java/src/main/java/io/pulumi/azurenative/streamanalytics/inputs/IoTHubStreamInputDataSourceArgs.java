@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.streamanalytics.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="consumerGroupName")
-    private final @Nullable Input<String> consumerGroupName;
+        private final @Nullable Input<String> consumerGroupName;
 
     public Input<String> getConsumerGroupName() {
         return this.consumerGroupName == null ? Input.empty() : this.consumerGroupName;
@@ -34,7 +34,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="endpoint")
-    private final @Nullable Input<String> endpoint;
+        private final @Nullable Input<String> endpoint;
 
     public Input<String> getEndpoint() {
         return this.endpoint == null ? Input.empty() : this.endpoint;
@@ -45,7 +45,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="iotHubNamespace")
-    private final @Nullable Input<String> iotHubNamespace;
+        private final @Nullable Input<String> iotHubNamespace;
 
     public Input<String> getIotHubNamespace() {
         return this.iotHubNamespace == null ? Input.empty() : this.iotHubNamespace;
@@ -56,7 +56,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sharedAccessPolicyKey")
-    private final @Nullable Input<String> sharedAccessPolicyKey;
+        private final @Nullable Input<String> sharedAccessPolicyKey;
 
     public Input<String> getSharedAccessPolicyKey() {
         return this.sharedAccessPolicyKey == null ? Input.empty() : this.sharedAccessPolicyKey;
@@ -67,7 +67,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="sharedAccessPolicyName")
-    private final @Nullable Input<String> sharedAccessPolicyName;
+        private final @Nullable Input<String> sharedAccessPolicyName;
 
     public Input<String> getSharedAccessPolicyName() {
         return this.sharedAccessPolicyName == null ? Input.empty() : this.sharedAccessPolicyName;
@@ -79,7 +79,7 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<String> type;
+        private final Input<String> type;
 
     public Input<String> getType() {
         return this.type;
@@ -198,7 +198,6 @@ public final class IoTHubStreamInputDataSourceArgs extends io.pulumi.resources.R
             this.type = Input.of(Objects.requireNonNull(type));
             return this;
         }
-
         public IoTHubStreamInputDataSourceArgs build() {
             return new IoTHubStreamInputDataSourceArgs(consumerGroupName, endpoint, iotHubNamespace, sharedAccessPolicyKey, sharedAccessPolicyName, type);
         }

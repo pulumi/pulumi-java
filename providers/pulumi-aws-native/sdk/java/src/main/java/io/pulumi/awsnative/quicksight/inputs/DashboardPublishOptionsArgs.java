@@ -7,7 +7,7 @@ import io.pulumi.awsnative.quicksight.inputs.DashboardAdHocFilteringOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardExportToCSVOptionArgs;
 import io.pulumi.awsnative.quicksight.inputs.DashboardSheetControlsOptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import javax.annotation.Nullable;
 
@@ -21,21 +21,21 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
     public static final DashboardPublishOptionsArgs Empty = new DashboardPublishOptionsArgs();
 
     @InputImport(name="adHocFilteringOption")
-    private final @Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
+        private final @Nullable Input<DashboardAdHocFilteringOptionArgs> adHocFilteringOption;
 
     public Input<DashboardAdHocFilteringOptionArgs> getAdHocFilteringOption() {
         return this.adHocFilteringOption == null ? Input.empty() : this.adHocFilteringOption;
     }
 
     @InputImport(name="exportToCSVOption")
-    private final @Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption;
+        private final @Nullable Input<DashboardExportToCSVOptionArgs> exportToCSVOption;
 
     public Input<DashboardExportToCSVOptionArgs> getExportToCSVOption() {
         return this.exportToCSVOption == null ? Input.empty() : this.exportToCSVOption;
     }
 
     @InputImport(name="sheetControlsOption")
-    private final @Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption;
+        private final @Nullable Input<DashboardSheetControlsOptionArgs> sheetControlsOption;
 
     public Input<DashboardSheetControlsOptionArgs> getSheetControlsOption() {
         return this.sheetControlsOption == null ? Input.empty() : this.sheetControlsOption;
@@ -109,7 +109,6 @@ public final class DashboardPublishOptionsArgs extends io.pulumi.resources.Resou
             this.sheetControlsOption = Input.ofNullable(sheetControlsOption);
             return this;
         }
-
         public DashboardPublishOptionsArgs build() {
             return new DashboardPublishOptionsArgs(adHocFilteringOption, exportToCSVOption, sheetControlsOption);
         }

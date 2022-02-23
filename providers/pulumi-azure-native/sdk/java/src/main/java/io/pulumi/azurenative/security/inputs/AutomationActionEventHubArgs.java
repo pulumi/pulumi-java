@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.security.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="actionType", required=true)
-    private final Input<String> actionType;
+        private final Input<String> actionType;
 
     public Input<String> getActionType() {
         return this.actionType;
@@ -35,7 +35,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="connectionString")
-    private final @Nullable Input<String> connectionString;
+        private final @Nullable Input<String> connectionString;
 
     public Input<String> getConnectionString() {
         return this.connectionString == null ? Input.empty() : this.connectionString;
@@ -46,7 +46,7 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="eventHubResourceId")
-    private final @Nullable Input<String> eventHubResourceId;
+        private final @Nullable Input<String> eventHubResourceId;
 
     public Input<String> getEventHubResourceId() {
         return this.eventHubResourceId == null ? Input.empty() : this.eventHubResourceId;
@@ -120,7 +120,6 @@ public final class AutomationActionEventHubArgs extends io.pulumi.resources.Reso
             this.eventHubResourceId = Input.ofNullable(eventHubResourceId);
             return this;
         }
-
         public AutomationActionEventHubArgs build() {
             return new AutomationActionEventHubArgs(actionType, connectionString, eventHubResourceId);
         }

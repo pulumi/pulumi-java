@@ -5,7 +5,7 @@ package io.pulumi.azurenative.botservice.outputs;
 
 import io.pulumi.azurenative.botservice.outputs.BotPropertiesResponse;
 import io.pulumi.azurenative.botservice.outputs.SkuResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Map;
@@ -248,7 +248,6 @@ public final class GetBotResult {
             this.zones = Objects.requireNonNull(zones);
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(etag, id, kind, location, name, properties, sku, tags, type, zones);
         }

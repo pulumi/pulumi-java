@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudkms_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudkms_v1.enums.CryptoKeyPurpose;
 import io.pulumi.googlenative.cloudkms_v1.inputs.CryptoKeyVersionTemplateArgs;
 import java.lang.Boolean;
@@ -23,14 +23,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cryptoKeyBackend")
-    private final @Nullable Input<String> cryptoKeyBackend;
+      private final @Nullable Input<String> cryptoKeyBackend;
 
     public Input<String> getCryptoKeyBackend() {
         return this.cryptoKeyBackend == null ? Input.empty() : this.cryptoKeyBackend;
     }
 
     @InputImport(name="cryptoKeyId", required=true)
-    private final Input<String> cryptoKeyId;
+      private final Input<String> cryptoKeyId;
 
     public Input<String> getCryptoKeyId() {
         return this.cryptoKeyId;
@@ -41,7 +41,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="destroyScheduledDuration")
-    private final @Nullable Input<String> destroyScheduledDuration;
+      private final @Nullable Input<String> destroyScheduledDuration;
 
     public Input<String> getDestroyScheduledDuration() {
         return this.destroyScheduledDuration == null ? Input.empty() : this.destroyScheduledDuration;
@@ -52,14 +52,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="importOnly")
-    private final @Nullable Input<Boolean> importOnly;
+      private final @Nullable Input<Boolean> importOnly;
 
     public Input<Boolean> getImportOnly() {
         return this.importOnly == null ? Input.empty() : this.importOnly;
     }
 
     @InputImport(name="keyRingId", required=true)
-    private final Input<String> keyRingId;
+      private final Input<String> keyRingId;
 
     public Input<String> getKeyRingId() {
         return this.keyRingId;
@@ -70,14 +70,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+      private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
     }
 
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+      private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -88,14 +88,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="nextRotationTime")
-    private final @Nullable Input<String> nextRotationTime;
+      private final @Nullable Input<String> nextRotationTime;
 
     public Input<String> getNextRotationTime() {
         return this.nextRotationTime == null ? Input.empty() : this.nextRotationTime;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -106,7 +106,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="purpose")
-    private final @Nullable Input<CryptoKeyPurpose> purpose;
+      private final @Nullable Input<CryptoKeyPurpose> purpose;
 
     public Input<CryptoKeyPurpose> getPurpose() {
         return this.purpose == null ? Input.empty() : this.purpose;
@@ -117,14 +117,14 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rotationPeriod")
-    private final @Nullable Input<String> rotationPeriod;
+      private final @Nullable Input<String> rotationPeriod;
 
     public Input<String> getRotationPeriod() {
         return this.rotationPeriod == null ? Input.empty() : this.rotationPeriod;
     }
 
     @InputImport(name="skipInitialVersionCreation")
-    private final @Nullable Input<String> skipInitialVersionCreation;
+      private final @Nullable Input<String> skipInitialVersionCreation;
 
     public Input<String> getSkipInitialVersionCreation() {
         return this.skipInitialVersionCreation == null ? Input.empty() : this.skipInitialVersionCreation;
@@ -135,7 +135,7 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="versionTemplate")
-    private final @Nullable Input<CryptoKeyVersionTemplateArgs> versionTemplate;
+      private final @Nullable Input<CryptoKeyVersionTemplateArgs> versionTemplate;
 
     public Input<CryptoKeyVersionTemplateArgs> getVersionTemplate() {
         return this.versionTemplate == null ? Input.empty() : this.versionTemplate;
@@ -359,7 +359,6 @@ public final class CryptoKeyArgs extends io.pulumi.resources.ResourceArgs {
             this.versionTemplate = Input.ofNullable(versionTemplate);
             return this;
         }
-
         public CryptoKeyArgs build() {
             return new CryptoKeyArgs(cryptoKeyBackend, cryptoKeyId, destroyScheduledDuration, importOnly, keyRingId, labels, location, nextRotationTime, project, purpose, rotationPeriod, skipInitialVersionCreation, versionTemplate);
         }

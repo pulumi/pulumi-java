@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.outputs;
 
 import io.pulumi.awsnative.s3.outputs.BucketReplicationRule;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -76,7 +76,6 @@ public final class BucketReplicationConfiguration {
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public BucketReplicationConfiguration build() {
             return new BucketReplicationConfiguration(role, rules);
         }

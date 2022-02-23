@@ -6,7 +6,7 @@ package io.pulumi.awsnative.backup;
 import io.pulumi.awsnative.backup.inputs.FrameworkControlArgs;
 import io.pulumi.awsnative.backup.inputs.FrameworkTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkControls", required=true)
-    private final Input<List<FrameworkControlArgs>> frameworkControls;
+        private final Input<List<FrameworkControlArgs>> frameworkControls;
 
     public Input<List<FrameworkControlArgs>> getFrameworkControls() {
         return this.frameworkControls;
@@ -33,7 +33,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkDescription")
-    private final @Nullable Input<String> frameworkDescription;
+        private final @Nullable Input<String> frameworkDescription;
 
     public Input<String> getFrameworkDescription() {
         return this.frameworkDescription == null ? Input.empty() : this.frameworkDescription;
@@ -44,7 +44,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkName")
-    private final @Nullable Input<String> frameworkName;
+        private final @Nullable Input<String> frameworkName;
 
     public Input<String> getFrameworkName() {
         return this.frameworkName == null ? Input.empty() : this.frameworkName;
@@ -55,7 +55,7 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="frameworkTags")
-    private final @Nullable Input<List<FrameworkTagArgs>> frameworkTags;
+        private final @Nullable Input<List<FrameworkTagArgs>> frameworkTags;
 
     public Input<List<FrameworkTagArgs>> getFrameworkTags() {
         return this.frameworkTags == null ? Input.empty() : this.frameworkTags;
@@ -144,7 +144,6 @@ public final class FrameworkArgs extends io.pulumi.resources.ResourceArgs {
             this.frameworkTags = Input.ofNullable(frameworkTags);
             return this;
         }
-
         public FrameworkArgs build() {
             return new FrameworkArgs(frameworkControls, frameworkDescription, frameworkName, frameworkTags);
         }

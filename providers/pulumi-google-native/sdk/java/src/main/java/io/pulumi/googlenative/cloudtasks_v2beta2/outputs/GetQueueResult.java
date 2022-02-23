@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudtasks_v2beta2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.AppEngineHttpTargetResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.PullTargetResponse;
 import io.pulumi.googlenative.cloudtasks_v2beta2.outputs.QueueStatsResponse;
@@ -247,7 +247,6 @@ public final class GetQueueResult {
             this.tombstoneTtl = Objects.requireNonNull(tombstoneTtl);
             return this;
         }
-
         public GetQueueResult build() {
             return new GetQueueResult(appEngineHttpTarget, name, pullTarget, purgeTime, rateLimits, retryConfig, state, stats, taskTtl, tombstoneTtl);
         }

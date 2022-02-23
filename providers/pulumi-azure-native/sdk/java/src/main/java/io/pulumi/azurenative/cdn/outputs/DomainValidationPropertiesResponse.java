@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.cdn.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class DomainValidationPropertiesResponse {
             this.validationToken = Objects.requireNonNull(validationToken);
             return this;
         }
-
         public DomainValidationPropertiesResponse build() {
             return new DomainValidationPropertiesResponse(expirationDate, validationToken);
         }

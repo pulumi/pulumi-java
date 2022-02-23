@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataloss.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule;
 import io.pulumi.gcp.dataloss.outputs.PreventionInspectTemplateInspectConfigRuleSetRuleHotwordRule;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRule {
             this.hotwordRule = hotwordRule;
             return this;
         }
-
         public PreventionInspectTemplateInspectConfigRuleSetRule build() {
             return new PreventionInspectTemplateInspectConfigRuleSetRule(exclusionRule, hotwordRule);
         }

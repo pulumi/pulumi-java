@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.web.outputs;
 
 import io.pulumi.azurenative.web.outputs.FrontEndConfigurationResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -113,7 +113,6 @@ public final class ArcConfigurationResponse {
             this.frontEndServiceConfiguration = frontEndServiceConfiguration;
             return this;
         }
-
         public ArcConfigurationResponse build() {
             return new ArcConfigurationResponse(artifactStorageAccessMode, artifactStorageClassName, artifactStorageMountPath, artifactStorageNodeName, artifactsStorageType, frontEndServiceConfiguration);
         }

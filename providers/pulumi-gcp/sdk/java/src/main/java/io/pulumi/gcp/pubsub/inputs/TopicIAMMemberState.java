@@ -4,7 +4,7 @@
 package io.pulumi.gcp.pubsub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.pubsub.inputs.TopicIAMMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,7 +16,7 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
     public static final TopicIAMMemberState Empty = new TopicIAMMemberState();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TopicIAMMemberConditionGetArgs> condition;
+        private final @Nullable Input<TopicIAMMemberConditionGetArgs> condition;
 
     public Input<TopicIAMMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -27,14 +27,14 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
@@ -46,7 +46,7 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -59,7 +59,7 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -70,7 +70,7 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="topic")
-    private final @Nullable Input<String> topic;
+        private final @Nullable Input<String> topic;
 
     public Input<String> getTopic() {
         return this.topic == null ? Input.empty() : this.topic;
@@ -189,7 +189,6 @@ public final class TopicIAMMemberState extends io.pulumi.resources.ResourceArgs 
             this.topic = Input.ofNullable(topic);
             return this;
         }
-
         public TopicIAMMemberState build() {
             return new TopicIAMMemberState(condition, etag, member, project, role, topic);
         }

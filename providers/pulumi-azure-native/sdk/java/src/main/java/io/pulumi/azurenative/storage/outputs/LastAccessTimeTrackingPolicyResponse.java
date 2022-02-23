@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.storage.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -121,7 +121,6 @@ public final class LastAccessTimeTrackingPolicyResponse {
             this.trackingGranularityInDays = trackingGranularityInDays;
             return this;
         }
-
         public LastAccessTimeTrackingPolicyResponse build() {
             return new LastAccessTimeTrackingPolicyResponse(blobType, enable, name, trackingGranularityInDays);
         }

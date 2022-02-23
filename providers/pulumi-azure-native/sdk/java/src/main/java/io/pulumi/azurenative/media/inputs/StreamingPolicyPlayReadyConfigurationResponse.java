@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class StreamingPolicyPlayReadyConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="customLicenseAcquisitionUrlTemplate")
-    private final @Nullable String customLicenseAcquisitionUrlTemplate;
+        private final @Nullable String customLicenseAcquisitionUrlTemplate;
 
     public Optional<String> getCustomLicenseAcquisitionUrlTemplate() {
         return this.customLicenseAcquisitionUrlTemplate == null ? Optional.empty() : Optional.ofNullable(this.customLicenseAcquisitionUrlTemplate);
@@ -34,7 +34,7 @@ public final class StreamingPolicyPlayReadyConfigurationResponse extends io.pulu
      * 
      */
     @InputImport(name="playReadyCustomAttributes")
-    private final @Nullable String playReadyCustomAttributes;
+        private final @Nullable String playReadyCustomAttributes;
 
     public Optional<String> getPlayReadyCustomAttributes() {
         return this.playReadyCustomAttributes == null ? Optional.empty() : Optional.ofNullable(this.playReadyCustomAttributes);
@@ -83,7 +83,6 @@ public final class StreamingPolicyPlayReadyConfigurationResponse extends io.pulu
             this.playReadyCustomAttributes = playReadyCustomAttributes;
             return this;
         }
-
         public StreamingPolicyPlayReadyConfigurationResponse build() {
             return new StreamingPolicyPlayReadyConfigurationResponse(customLicenseAcquisitionUrlTemplate, playReadyCustomAttributes);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.azurenative.migrate.inputs.NicIpConfigurationResourceSettingsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -26,7 +26,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="enableAcceleratedNetworking")
-    private final @Nullable Boolean enableAcceleratedNetworking;
+        private final @Nullable Boolean enableAcceleratedNetworking;
 
     public Optional<Boolean> getEnableAcceleratedNetworking() {
         return this.enableAcceleratedNetworking == null ? Optional.empty() : Optional.ofNullable(this.enableAcceleratedNetworking);
@@ -37,7 +37,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="ipConfigurations")
-    private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
+        private final @Nullable List<NicIpConfigurationResourceSettingsResponse> ipConfigurations;
 
     public List<NicIpConfigurationResourceSettingsResponse> getIpConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
@@ -49,7 +49,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="resourceType", required=true)
-    private final String resourceType;
+        private final String resourceType;
 
     public String getPropResourceType() {
         return this.resourceType;
@@ -60,7 +60,7 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
      * 
      */
     @InputImport(name="targetResourceName", required=true)
-    private final String targetResourceName;
+        private final String targetResourceName;
 
     public String getTargetResourceName() {
         return this.targetResourceName;
@@ -129,7 +129,6 @@ public final class NetworkInterfaceResourceSettingsResponse extends io.pulumi.re
             this.targetResourceName = Objects.requireNonNull(targetResourceName);
             return this;
         }
-
         public NetworkInterfaceResourceSettingsResponse build() {
             return new NetworkInterfaceResourceSettingsResponse(enableAcceleratedNetworking, ipConfigurations, resourceType, targetResourceName);
         }

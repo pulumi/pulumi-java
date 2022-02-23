@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -24,7 +24,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowCredentials", required=true)
-    private final Boolean allowCredentials;
+      private final Boolean allowCredentials;
 
     public Boolean getAllowCredentials() {
         return this.allowCredentials;
@@ -35,7 +35,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowHeaders", required=true)
-    private final List<String> allowHeaders;
+      private final List<String> allowHeaders;
 
     public List<String> getAllowHeaders() {
         return this.allowHeaders;
@@ -46,7 +46,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowMethods", required=true)
-    private final List<String> allowMethods;
+      private final List<String> allowMethods;
 
     public List<String> getAllowMethods() {
         return this.allowMethods;
@@ -57,7 +57,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowOriginRegexes", required=true)
-    private final List<String> allowOriginRegexes;
+      private final List<String> allowOriginRegexes;
 
     public List<String> getAllowOriginRegexes() {
         return this.allowOriginRegexes;
@@ -68,7 +68,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="allowOrigins", required=true)
-    private final List<String> allowOrigins;
+      private final List<String> allowOrigins;
 
     public List<String> getAllowOrigins() {
         return this.allowOrigins;
@@ -79,7 +79,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disabled", required=true)
-    private final Boolean disabled;
+      private final Boolean disabled;
 
     public Boolean getDisabled() {
         return this.disabled;
@@ -90,7 +90,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="exposeHeaders", required=true)
-    private final List<String> exposeHeaders;
+      private final List<String> exposeHeaders;
 
     public List<String> getExposeHeaders() {
         return this.exposeHeaders;
@@ -101,7 +101,7 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maxAge", required=true)
-    private final Integer maxAge;
+      private final Integer maxAge;
 
     public Integer getMaxAge() {
         return this.maxAge;
@@ -210,7 +210,6 @@ public final class CorsPolicyResponse extends io.pulumi.resources.InvokeArgs {
             this.maxAge = Objects.requireNonNull(maxAge);
             return this;
         }
-
         public CorsPolicyResponse build() {
             return new CorsPolicyResponse(allowCredentials, allowHeaders, allowMethods, allowOriginRegexes, allowOrigins, disabled, exposeHeaders, maxAge);
         }

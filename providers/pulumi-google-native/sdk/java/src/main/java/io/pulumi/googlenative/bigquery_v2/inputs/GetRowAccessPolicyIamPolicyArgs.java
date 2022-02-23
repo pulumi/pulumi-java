@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,28 +15,28 @@ public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.I
     public static final GetRowAccessPolicyIamPolicyArgs Empty = new GetRowAccessPolicyIamPolicyArgs();
 
     @InputImport(name="datasetId", required=true)
-    private final String datasetId;
+      private final String datasetId;
 
     public String getDatasetId() {
         return this.datasetId;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="rowAccessPolicyId", required=true)
-    private final String rowAccessPolicyId;
+      private final String rowAccessPolicyId;
 
     public String getRowAccessPolicyId() {
         return this.rowAccessPolicyId;
     }
 
     @InputImport(name="tableId", required=true)
-    private final String tableId;
+      private final String tableId;
 
     public String getTableId() {
         return this.tableId;
@@ -105,7 +105,6 @@ public final class GetRowAccessPolicyIamPolicyArgs extends io.pulumi.resources.I
             this.tableId = Objects.requireNonNull(tableId);
             return this;
         }
-
         public GetRowAccessPolicyIamPolicyArgs build() {
             return new GetRowAccessPolicyIamPolicyArgs(datasetId, project, rowAccessPolicyId, tableId);
         }

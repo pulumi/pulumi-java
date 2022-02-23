@@ -4,7 +4,7 @@
 package io.pulumi.gcp.billing.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.billing.inputs.AccountIamMemberConditionGetArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -16,35 +16,35 @@ public final class AccountIamMemberState extends io.pulumi.resources.ResourceArg
     public static final AccountIamMemberState Empty = new AccountIamMemberState();
 
     @InputImport(name="billingAccountId")
-    private final @Nullable Input<String> billingAccountId;
+        private final @Nullable Input<String> billingAccountId;
 
     public Input<String> getBillingAccountId() {
         return this.billingAccountId == null ? Input.empty() : this.billingAccountId;
     }
 
     @InputImport(name="condition")
-    private final @Nullable Input<AccountIamMemberConditionGetArgs> condition;
+        private final @Nullable Input<AccountIamMemberConditionGetArgs> condition;
 
     public Input<AccountIamMemberConditionGetArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
     }
 
     @InputImport(name="etag")
-    private final @Nullable Input<String> etag;
+        private final @Nullable Input<String> etag;
 
     public Input<String> getEtag() {
         return this.etag == null ? Input.empty() : this.etag;
     }
 
     @InputImport(name="member")
-    private final @Nullable Input<String> member;
+        private final @Nullable Input<String> member;
 
     public Input<String> getMember() {
         return this.member == null ? Input.empty() : this.member;
     }
 
     @InputImport(name="role")
-    private final @Nullable Input<String> role;
+        private final @Nullable Input<String> role;
 
     public Input<String> getRole() {
         return this.role == null ? Input.empty() : this.role;
@@ -148,7 +148,6 @@ public final class AccountIamMemberState extends io.pulumi.resources.ResourceArg
             this.role = Input.ofNullable(role);
             return this;
         }
-
         public AccountIamMemberState build() {
             return new AccountIamMemberState(billingAccountId, condition, etag, member, role);
         }

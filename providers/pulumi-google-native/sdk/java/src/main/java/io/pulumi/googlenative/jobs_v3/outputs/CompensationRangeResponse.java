@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.jobs_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.jobs_v3.outputs.MoneyResponse;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class CompensationRangeResponse {
             this.minCompensation = Objects.requireNonNull(minCompensation);
             return this;
         }
-
         public CompensationRangeResponse build() {
             return new CompensationRangeResponse(maxCompensation, minCompensation);
         }

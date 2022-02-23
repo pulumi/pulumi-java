@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.logic.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -34,7 +34,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -45,7 +45,7 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
      * 
      */
     @InputImport(name="version", required=true)
-    private final Input<String> version;
+        private final Input<String> version;
 
     public Input<String> getVersion() {
         return this.version;
@@ -119,7 +119,6 @@ public final class RosettaNetPipBusinessDocumentArgs extends io.pulumi.resources
             this.version = Input.of(Objects.requireNonNull(version));
             return this;
         }
-
         public RosettaNetPipBusinessDocumentArgs build() {
             return new RosettaNetPipBusinessDocumentArgs(description, name, version);
         }

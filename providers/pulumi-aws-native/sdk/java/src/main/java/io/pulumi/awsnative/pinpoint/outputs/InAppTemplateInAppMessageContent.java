@@ -6,7 +6,7 @@ package io.pulumi.awsnative.pinpoint.outputs;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateBodyConfig;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateButtonConfig;
 import io.pulumi.awsnative.pinpoint.outputs.InAppTemplateHeaderConfig;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -115,7 +115,6 @@ public final class InAppTemplateInAppMessageContent {
             this.secondaryBtn = secondaryBtn;
             return this;
         }
-
         public InAppTemplateInAppMessageContent build() {
             return new InAppTemplateInAppMessageContent(backgroundColor, bodyConfig, headerConfig, imageUrl, primaryBtn, secondaryBtn);
         }

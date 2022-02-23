@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.eventgrid.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="eventSubscriptionName", required=true)
-    private final String eventSubscriptionName;
+        private final String eventSubscriptionName;
 
     public String getEventSubscriptionName() {
         return this.eventSubscriptionName;
@@ -28,7 +28,7 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends io.pulumi.
      * 
      */
     @InputImport(name="scope", required=true)
-    private final String scope;
+        private final String scope;
 
     public String getScope() {
         return this.scope;
@@ -77,7 +77,6 @@ public final class GetEventSubscriptionDeliveryAttributesArgs extends io.pulumi.
             this.scope = Objects.requireNonNull(scope);
             return this;
         }
-
         public GetEventSubscriptionDeliveryAttributesArgs build() {
             return new GetEventSubscriptionDeliveryAttributesArgs(eventSubscriptionName, scope);
         }

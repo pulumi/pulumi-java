@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1alpha2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="issuer")
-    private final @Nullable Input<String> issuer;
+      private final @Nullable Input<String> issuer;
 
     public Input<String> getIssuer() {
         return this.issuer == null ? Input.empty() : this.issuer;
@@ -34,7 +34,7 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="oidcJwks")
-    private final @Nullable Input<String> oidcJwks;
+      private final @Nullable Input<String> oidcJwks;
 
     public Input<String> getOidcJwks() {
         return this.oidcJwks == null ? Input.empty() : this.oidcJwks;
@@ -93,7 +93,6 @@ public final class AuthorityArgs extends io.pulumi.resources.ResourceArgs {
             this.oidcJwks = Input.ofNullable(oidcJwks);
             return this;
         }
-
         public AuthorityArgs build() {
             return new AuthorityArgs(issuer, oidcJwks);
         }

@@ -5,7 +5,7 @@ package io.pulumi.azurenative.synapse.outputs;
 
 import io.pulumi.azurenative.synapse.outputs.SystemDataResponse;
 import io.pulumi.azurenative.synapse.outputs.TableLevelSharingPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -268,7 +268,6 @@ public final class GetKustoPoolAttachedDatabaseConfigurationResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetKustoPoolAttachedDatabaseConfigurationResult build() {
             return new GetKustoPoolAttachedDatabaseConfigurationResult(attachedDatabaseNames, databaseName, defaultPrincipalsModificationKind, id, kustoPoolResourceId, location, name, provisioningState, systemData, tableLevelSharingProperties, type);
         }

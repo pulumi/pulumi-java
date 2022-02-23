@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.certificateauthority.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigSubjectConfigSubject;
 import io.pulumi.gcp.certificateauthority.outputs.CertificateConfigSubjectConfigSubjectAltName;
 import java.util.Objects;
@@ -81,7 +81,6 @@ public final class CertificateConfigSubjectConfig {
             this.subjectAltName = subjectAltName;
             return this;
         }
-
         public CertificateConfigSubjectConfig build() {
             return new CertificateConfigSubjectConfig(subject, subjectAltName);
         }

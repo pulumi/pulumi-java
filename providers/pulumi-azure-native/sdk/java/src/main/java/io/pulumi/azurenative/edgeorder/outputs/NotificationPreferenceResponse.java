@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.edgeorder.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class NotificationPreferenceResponse {
             this.stageName = Objects.requireNonNull(stageName);
             return this;
         }
-
         public NotificationPreferenceResponse build() {
             return new NotificationPreferenceResponse(sendNotification, stageName);
         }

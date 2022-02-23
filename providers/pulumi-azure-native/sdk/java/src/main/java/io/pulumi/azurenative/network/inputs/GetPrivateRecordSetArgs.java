@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.network.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="privateZoneName", required=true)
-    private final String privateZoneName;
+        private final String privateZoneName;
 
     public String getPrivateZoneName() {
         return this.privateZoneName;
@@ -28,7 +28,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="recordType", required=true)
-    private final String recordType;
+        private final String recordType;
 
     public String getRecordType() {
         return this.recordType;
@@ -39,7 +39,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="relativeRecordSetName", required=true)
-    private final String relativeRecordSetName;
+        private final String relativeRecordSetName;
 
     public String getRelativeRecordSetName() {
         return this.relativeRecordSetName;
@@ -50,7 +50,7 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -119,7 +119,6 @@ public final class GetPrivateRecordSetArgs extends io.pulumi.resources.InvokeArg
             this.resourceGroupName = Objects.requireNonNull(resourceGroupName);
             return this;
         }
-
         public GetPrivateRecordSetArgs build() {
             return new GetPrivateRecordSetArgs(privateZoneName, recordType, relativeRecordSetName, resourceGroupName);
         }

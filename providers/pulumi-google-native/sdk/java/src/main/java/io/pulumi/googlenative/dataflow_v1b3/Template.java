@@ -5,8 +5,8 @@ package io.pulumi.googlenative.dataflow_v1b3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.dataflow_v1b3.TemplateArgs;
 import io.pulumi.googlenative.dataflow_v1b3.outputs.RuntimeMetadataResponse;
@@ -81,13 +81,6 @@ public class Template extends io.pulumi.resources.CustomResource {
         return this.templateType;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Template(String name) {
-        super("google-native:dataflow/v1b3:Template", name, TemplateArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

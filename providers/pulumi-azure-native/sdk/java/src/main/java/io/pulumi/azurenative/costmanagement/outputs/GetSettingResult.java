@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.costmanagement.outputs;
 
 import io.pulumi.azurenative.costmanagement.outputs.SettingsPropertiesResponseCache;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -183,7 +183,6 @@ public final class GetSettingResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetSettingResult build() {
             return new GetSettingResult(cache, id, kind, name, scope, startOn, type);
         }

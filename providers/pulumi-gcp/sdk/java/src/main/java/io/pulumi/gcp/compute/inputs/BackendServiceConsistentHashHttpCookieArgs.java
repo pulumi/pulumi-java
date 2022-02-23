@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.compute.inputs.BackendServiceConsistentHashHttpCookieTtlArgs;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -31,7 +31,7 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
      * 
      */
     @InputImport(name="path")
-    private final @Nullable Input<String> path;
+        private final @Nullable Input<String> path;
 
     public Input<String> getPath() {
         return this.path == null ? Input.empty() : this.path;
@@ -43,7 +43,7 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
      * 
      */
     @InputImport(name="ttl")
-    private final @Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl;
+        private final @Nullable Input<BackendServiceConsistentHashHttpCookieTtlArgs> ttl;
 
     public Input<BackendServiceConsistentHashHttpCookieTtlArgs> getTtl() {
         return this.ttl == null ? Input.empty() : this.ttl;
@@ -117,7 +117,6 @@ public final class BackendServiceConsistentHashHttpCookieArgs extends io.pulumi.
             this.ttl = Input.ofNullable(ttl);
             return this;
         }
-
         public BackendServiceConsistentHashHttpCookieArgs build() {
             return new BackendServiceConsistentHashHttpCookieArgs(name, path, ttl);
         }

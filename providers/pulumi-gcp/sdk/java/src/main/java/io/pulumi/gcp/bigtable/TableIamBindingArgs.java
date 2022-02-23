@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigtable;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigtable.inputs.TableIamBindingConditionArgs;
 import java.lang.String;
 import java.util.List;
@@ -17,7 +17,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
     public static final TableIamBindingArgs Empty = new TableIamBindingArgs();
 
     @InputImport(name="condition")
-    private final @Nullable Input<TableIamBindingConditionArgs> condition;
+        private final @Nullable Input<TableIamBindingConditionArgs> condition;
 
     public Input<TableIamBindingConditionArgs> getCondition() {
         return this.condition == null ? Input.empty() : this.condition;
@@ -28,14 +28,14 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="instance", required=true)
-    private final Input<String> instance;
+        private final Input<String> instance;
 
     public Input<String> getInstance() {
         return this.instance;
     }
 
     @InputImport(name="members", required=true)
-    private final Input<List<String>> members;
+        private final Input<List<String>> members;
 
     public Input<List<String>> getMembers() {
         return this.members;
@@ -47,7 +47,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -60,7 +60,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="role", required=true)
-    private final Input<String> role;
+        private final Input<String> role;
 
     public Input<String> getRole() {
         return this.role;
@@ -71,7 +71,7 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="table", required=true)
-    private final Input<String> table;
+        private final Input<String> table;
 
     public Input<String> getTable() {
         return this.table;
@@ -190,7 +190,6 @@ public final class TableIamBindingArgs extends io.pulumi.resources.ResourceArgs 
             this.table = Input.of(Objects.requireNonNull(table));
             return this;
         }
-
         public TableIamBindingArgs build() {
             return new TableIamBindingArgs(condition, instance, members, project, role, table);
         }

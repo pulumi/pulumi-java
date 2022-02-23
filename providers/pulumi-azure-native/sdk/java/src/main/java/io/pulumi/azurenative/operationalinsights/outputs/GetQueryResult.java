@@ -5,7 +5,7 @@ package io.pulumi.azurenative.operationalinsights.outputs;
 
 import io.pulumi.azurenative.operationalinsights.outputs.LogAnalyticsQueryPackQueryPropertiesResponseRelated;
 import io.pulumi.azurenative.operationalinsights.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -312,7 +312,6 @@ public final class GetQueryResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetQueryResult build() {
             return new GetQueryResult(author, body, description, displayName, id, name, properties, related, systemData, tags, timeCreated, timeModified, type);
         }

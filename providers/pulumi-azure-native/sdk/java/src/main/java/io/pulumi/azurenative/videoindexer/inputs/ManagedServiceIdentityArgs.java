@@ -6,7 +6,7 @@ package io.pulumi.azurenative.videoindexer.inputs;
 import io.pulumi.azurenative.videoindexer.enums.ManagedServiceIdentityType;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="type", required=true)
-    private final Input<Either<String,ManagedServiceIdentityType>> type;
+        private final Input<Either<String,ManagedServiceIdentityType>> type;
 
     public Input<Either<String,ManagedServiceIdentityType>> getType() {
         return this.type;
@@ -38,7 +38,7 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
      * 
      */
     @InputImport(name="userAssignedIdentities")
-    private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
+        private final @Nullable Input<Map<String,Object>> userAssignedIdentities;
 
     public Input<Map<String,Object>> getUserAssignedIdentities() {
         return this.userAssignedIdentities == null ? Input.empty() : this.userAssignedIdentities;
@@ -97,7 +97,6 @@ public final class ManagedServiceIdentityArgs extends io.pulumi.resources.Resour
             this.userAssignedIdentities = Input.ofNullable(userAssignedIdentities);
             return this;
         }
-
         public ManagedServiceIdentityArgs build() {
             return new ManagedServiceIdentityArgs(type, userAssignedIdentities);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dialogflow_v3.outputs.GoogleCloudDialogflowCxV3SecuritySettingsInsightsExportSettingsResponse;
 import java.lang.Integer;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class GetSecuritySettingResult {
             this.retentionWindowDays = Objects.requireNonNull(retentionWindowDays);
             return this;
         }
-
         public GetSecuritySettingResult build() {
             return new GetSecuritySettingResult(deidentifyTemplate, displayName, insightsExportSettings, inspectTemplate, name, purgeDataTypes, redactionScope, redactionStrategy, retentionWindowDays);
         }

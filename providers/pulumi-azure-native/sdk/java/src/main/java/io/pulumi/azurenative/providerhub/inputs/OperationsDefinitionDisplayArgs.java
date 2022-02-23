@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.providerhub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -18,28 +18,28 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
     public static final OperationsDefinitionDisplayArgs Empty = new OperationsDefinitionDisplayArgs();
 
     @InputImport(name="description", required=true)
-    private final Input<String> description;
+        private final Input<String> description;
 
     public Input<String> getDescription() {
         return this.description;
     }
 
     @InputImport(name="operation", required=true)
-    private final Input<String> operation;
+        private final Input<String> operation;
 
     public Input<String> getOperation() {
         return this.operation;
     }
 
     @InputImport(name="provider", required=true)
-    private final Input<String> provider;
+        private final Input<String> provider;
 
     public Input<String> getProvider() {
         return this.provider;
     }
 
     @InputImport(name="resource", required=true)
-    private final Input<String> resource;
+        private final Input<String> resource;
 
     public Input<String> getResource() {
         return this.resource;
@@ -128,7 +128,6 @@ public final class OperationsDefinitionDisplayArgs extends io.pulumi.resources.R
             this.resource = Input.of(Objects.requireNonNull(resource));
             return this;
         }
-
         public OperationsDefinitionDisplayArgs build() {
             return new OperationsDefinitionDisplayArgs(description, operation, provider, resource);
         }

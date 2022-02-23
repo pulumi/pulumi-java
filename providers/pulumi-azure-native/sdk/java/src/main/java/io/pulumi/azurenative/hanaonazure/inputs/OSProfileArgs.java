@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hanaonazure.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="computerName")
-    private final @Nullable Input<String> computerName;
+        private final @Nullable Input<String> computerName;
 
     public Input<String> getComputerName() {
         return this.computerName == null ? Input.empty() : this.computerName;
@@ -34,7 +34,7 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="sshPublicKey")
-    private final @Nullable Input<String> sshPublicKey;
+        private final @Nullable Input<String> sshPublicKey;
 
     public Input<String> getSshPublicKey() {
         return this.sshPublicKey == null ? Input.empty() : this.sshPublicKey;
@@ -93,7 +93,6 @@ public final class OSProfileArgs extends io.pulumi.resources.ResourceArgs {
             this.sshPublicKey = Input.ofNullable(sshPublicKey);
             return this;
         }
-
         public OSProfileArgs build() {
             return new OSProfileArgs(computerName, sshPublicKey);
         }

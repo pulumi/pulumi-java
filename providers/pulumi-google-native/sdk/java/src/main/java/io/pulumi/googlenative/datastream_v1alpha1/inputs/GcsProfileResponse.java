@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="bucketName", required=true)
-    private final String bucketName;
+      private final String bucketName;
 
     public String getBucketName() {
         return this.bucketName;
@@ -32,7 +32,7 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="rootPath", required=true)
-    private final String rootPath;
+      private final String rootPath;
 
     public String getRootPath() {
         return this.rootPath;
@@ -81,7 +81,6 @@ public final class GcsProfileResponse extends io.pulumi.resources.InvokeArgs {
             this.rootPath = Objects.requireNonNull(rootPath);
             return this;
         }
-
         public GcsProfileResponse build() {
             return new GcsProfileResponse(bucketName, rootPath);
         }

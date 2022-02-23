@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_alpha.inputs.DiskInstantiationConfigArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
      * 
      */
     @InputImport(name="diskConfigs")
-    private final @Nullable Input<List<DiskInstantiationConfigArgs>> diskConfigs;
+      private final @Nullable Input<List<DiskInstantiationConfigArgs>> diskConfigs;
 
     public Input<List<DiskInstantiationConfigArgs>> getDiskConfigs() {
         return this.diskConfigs == null ? Input.empty() : this.diskConfigs;
@@ -67,7 +67,6 @@ public final class SourceInstanceParamsArgs extends io.pulumi.resources.Resource
             this.diskConfigs = Input.ofNullable(diskConfigs);
             return this;
         }
-
         public SourceInstanceParamsArgs build() {
             return new SourceInstanceParamsArgs(diskConfigs);
         }

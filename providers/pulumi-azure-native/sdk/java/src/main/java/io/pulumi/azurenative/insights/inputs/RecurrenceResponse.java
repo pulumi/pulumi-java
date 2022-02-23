@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.insights.inputs;
 
 import io.pulumi.azurenative.insights.inputs.RecurrentScheduleResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="frequency", required=true)
-    private final String frequency;
+        private final String frequency;
 
     public String getFrequency() {
         return this.frequency;
@@ -33,7 +33,7 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="schedule", required=true)
-    private final RecurrentScheduleResponse schedule;
+        private final RecurrentScheduleResponse schedule;
 
     public RecurrentScheduleResponse getSchedule() {
         return this.schedule;
@@ -82,7 +82,6 @@ public final class RecurrenceResponse extends io.pulumi.resources.InvokeArgs {
             this.schedule = Objects.requireNonNull(schedule);
             return this;
         }
-
         public RecurrenceResponse build() {
             return new RecurrenceResponse(frequency, schedule);
         }

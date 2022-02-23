@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.pubsub.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -60,7 +60,6 @@ public final class SubscriptionExpirationPolicy {
             this.ttl = Objects.requireNonNull(ttl);
             return this;
         }
-
         public SubscriptionExpirationPolicy build() {
             return new SubscriptionExpirationPolicy(ttl);
         }

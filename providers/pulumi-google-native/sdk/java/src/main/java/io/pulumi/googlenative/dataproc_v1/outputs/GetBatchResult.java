@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dataproc_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.dataproc_v1.outputs.EnvironmentConfigResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.PySparkBatchResponse;
 import io.pulumi.googlenative.dataproc_v1.outputs.RuntimeConfigResponse;
@@ -399,7 +399,6 @@ public final class GetBatchResult {
             this.uuid = Objects.requireNonNull(uuid);
             return this;
         }
-
         public GetBatchResult build() {
             return new GetBatchResult(createTime, creator, environmentConfig, labels, name, operation, pysparkBatch, runtimeConfig, runtimeInfo, sparkBatch, sparkRBatch, sparkSqlBatch, state, stateHistory, stateMessage, stateTime, uuid);
         }

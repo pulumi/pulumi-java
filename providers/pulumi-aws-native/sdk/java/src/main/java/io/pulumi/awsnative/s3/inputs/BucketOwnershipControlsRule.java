@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.s3.inputs;
 
 import io.pulumi.awsnative.s3.enums.BucketOwnershipControlsRuleObjectOwnership;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class BucketOwnershipControlsRule extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="objectOwnership")
-    private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
+        private final @Nullable BucketOwnershipControlsRuleObjectOwnership objectOwnership;
 
     public Optional<BucketOwnershipControlsRuleObjectOwnership> getObjectOwnership() {
         return this.objectOwnership == null ? Optional.empty() : Optional.ofNullable(this.objectOwnership);
@@ -57,7 +57,6 @@ public final class BucketOwnershipControlsRule extends io.pulumi.resources.Invok
             this.objectOwnership = objectOwnership;
             return this;
         }
-
         public BucketOwnershipControlsRule build() {
             return new BucketOwnershipControlsRule(objectOwnership);
         }

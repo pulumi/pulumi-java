@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.spanner_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.spanner_v1.enums.DatabaseDatabaseDialect;
 import io.pulumi.googlenative.spanner_v1.inputs.EncryptionConfigArgs;
 import java.lang.String;
@@ -22,7 +22,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="createStatement", required=true)
-    private final Input<String> createStatement;
+      private final Input<String> createStatement;
 
     public Input<String> getCreateStatement() {
         return this.createStatement;
@@ -33,7 +33,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="databaseDialect")
-    private final @Nullable Input<DatabaseDatabaseDialect> databaseDialect;
+      private final @Nullable Input<DatabaseDatabaseDialect> databaseDialect;
 
     public Input<DatabaseDatabaseDialect> getDatabaseDialect() {
         return this.databaseDialect == null ? Input.empty() : this.databaseDialect;
@@ -44,7 +44,7 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptionConfig")
-    private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
+      private final @Nullable Input<EncryptionConfigArgs> encryptionConfig;
 
     public Input<EncryptionConfigArgs> getEncryptionConfig() {
         return this.encryptionConfig == null ? Input.empty() : this.encryptionConfig;
@@ -55,21 +55,21 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="extraStatements")
-    private final @Nullable Input<List<String>> extraStatements;
+      private final @Nullable Input<List<String>> extraStatements;
 
     public Input<List<String>> getExtraStatements() {
         return this.extraStatements == null ? Input.empty() : this.extraStatements;
     }
 
     @InputImport(name="instanceId", required=true)
-    private final Input<String> instanceId;
+      private final Input<String> instanceId;
 
     public Input<String> getInstanceId() {
         return this.instanceId;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -188,7 +188,6 @@ public final class DatabaseArgs extends io.pulumi.resources.ResourceArgs {
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public DatabaseArgs build() {
             return new DatabaseArgs(createStatement, databaseDialect, encryptionConfig, extraStatements, instanceId, project);
         }

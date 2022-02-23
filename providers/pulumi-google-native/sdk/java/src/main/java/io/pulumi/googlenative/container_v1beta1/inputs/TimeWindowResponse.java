@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.container_v1beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.container_v1beta1.inputs.MaintenanceExclusionOptionsResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -33,7 +33,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="maintenanceExclusionOptions", required=true)
-    private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
+      private final MaintenanceExclusionOptionsResponse maintenanceExclusionOptions;
 
     public MaintenanceExclusionOptionsResponse getMaintenanceExclusionOptions() {
         return this.maintenanceExclusionOptions;
@@ -44,7 +44,7 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -103,7 +103,6 @@ public final class TimeWindowResponse extends io.pulumi.resources.InvokeArgs {
             this.startTime = Objects.requireNonNull(startTime);
             return this;
         }
-
         public TimeWindowResponse build() {
             return new TimeWindowResponse(endTime, maintenanceExclusionOptions, startTime);
         }

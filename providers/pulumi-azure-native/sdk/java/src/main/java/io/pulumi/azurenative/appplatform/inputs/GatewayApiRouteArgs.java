@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.appplatform.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -37,7 +37,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="filters")
-    private final @Nullable Input<List<String>> filters;
+        private final @Nullable Input<List<String>> filters;
 
     public Input<List<String>> getFilters() {
         return this.filters == null ? Input.empty() : this.filters;
@@ -48,7 +48,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="order")
-    private final @Nullable Input<Integer> order;
+        private final @Nullable Input<Integer> order;
 
     public Input<Integer> getOrder() {
         return this.order == null ? Input.empty() : this.order;
@@ -59,7 +59,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="predicates")
-    private final @Nullable Input<List<String>> predicates;
+        private final @Nullable Input<List<String>> predicates;
 
     public Input<List<String>> getPredicates() {
         return this.predicates == null ? Input.empty() : this.predicates;
@@ -70,7 +70,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="ssoEnabled")
-    private final @Nullable Input<Boolean> ssoEnabled;
+        private final @Nullable Input<Boolean> ssoEnabled;
 
     public Input<Boolean> getSsoEnabled() {
         return this.ssoEnabled == null ? Input.empty() : this.ssoEnabled;
@@ -81,7 +81,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<String>> tags;
+        private final @Nullable Input<List<String>> tags;
 
     public Input<List<String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -92,7 +92,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="title")
-    private final @Nullable Input<String> title;
+        private final @Nullable Input<String> title;
 
     public Input<String> getTitle() {
         return this.title == null ? Input.empty() : this.title;
@@ -103,7 +103,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tokenRelay")
-    private final @Nullable Input<Boolean> tokenRelay;
+        private final @Nullable Input<Boolean> tokenRelay;
 
     public Input<Boolean> getTokenRelay() {
         return this.tokenRelay == null ? Input.empty() : this.tokenRelay;
@@ -114,7 +114,7 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="uri")
-    private final @Nullable Input<String> uri;
+        private final @Nullable Input<String> uri;
 
     public Input<String> getUri() {
         return this.uri == null ? Input.empty() : this.uri;
@@ -278,7 +278,6 @@ public final class GatewayApiRouteArgs extends io.pulumi.resources.ResourceArgs 
             this.uri = Input.ofNullable(uri);
             return this;
         }
-
         public GatewayApiRouteArgs build() {
             return new GatewayApiRouteArgs(description, filters, order, predicates, ssoEnabled, tags, title, tokenRelay, uri);
         }

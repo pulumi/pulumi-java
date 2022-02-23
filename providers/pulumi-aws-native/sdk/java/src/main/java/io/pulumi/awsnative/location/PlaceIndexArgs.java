@@ -6,7 +6,7 @@ package io.pulumi.awsnative.location;
 import io.pulumi.awsnative.location.enums.PlaceIndexPricingPlan;
 import io.pulumi.awsnative.location.inputs.PlaceIndexDataSourceConfigurationArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,35 +17,35 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
     public static final PlaceIndexArgs Empty = new PlaceIndexArgs();
 
     @InputImport(name="dataSource", required=true)
-    private final Input<String> dataSource;
+        private final Input<String> dataSource;
 
     public Input<String> getDataSource() {
         return this.dataSource;
     }
 
     @InputImport(name="dataSourceConfiguration")
-    private final @Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
+        private final @Nullable Input<PlaceIndexDataSourceConfigurationArgs> dataSourceConfiguration;
 
     public Input<PlaceIndexDataSourceConfigurationArgs> getDataSourceConfiguration() {
         return this.dataSourceConfiguration == null ? Input.empty() : this.dataSourceConfiguration;
     }
 
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
     }
 
     @InputImport(name="indexName", required=true)
-    private final Input<String> indexName;
+        private final Input<String> indexName;
 
     public Input<String> getIndexName() {
         return this.indexName;
     }
 
     @InputImport(name="pricingPlan")
-    private final @Nullable Input<PlaceIndexPricingPlan> pricingPlan;
+        private final @Nullable Input<PlaceIndexPricingPlan> pricingPlan;
 
     public Input<PlaceIndexPricingPlan> getPricingPlan() {
         return this.pricingPlan == null ? Input.empty() : this.pricingPlan;
@@ -149,7 +149,6 @@ public final class PlaceIndexArgs extends io.pulumi.resources.ResourceArgs {
             this.pricingPlan = Input.ofNullable(pricingPlan);
             return this;
         }
-
         public PlaceIndexArgs build() {
             return new PlaceIndexArgs(dataSource, dataSourceConfiguration, description, indexName, pricingPlan);
         }

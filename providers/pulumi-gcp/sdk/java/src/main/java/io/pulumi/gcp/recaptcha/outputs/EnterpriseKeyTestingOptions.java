@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.recaptcha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -77,7 +77,6 @@ public final class EnterpriseKeyTestingOptions {
             this.testingScore = testingScore;
             return this;
         }
-
         public EnterpriseKeyTestingOptions build() {
             return new EnterpriseKeyTestingOptions(testingChallenge, testingScore);
         }

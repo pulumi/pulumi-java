@@ -5,7 +5,7 @@ package io.pulumi.awsnative.kendra.inputs;
 
 import io.pulumi.awsnative.kendra.enums.DataSourceConfluenceBlogFieldName;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -16,21 +16,21 @@ public final class DataSourceConfluenceBlogToIndexFieldMappingArgs extends io.pu
     public static final DataSourceConfluenceBlogToIndexFieldMappingArgs Empty = new DataSourceConfluenceBlogToIndexFieldMappingArgs();
 
     @InputImport(name="dataSourceFieldName", required=true)
-    private final Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
+        private final Input<DataSourceConfluenceBlogFieldName> dataSourceFieldName;
 
     public Input<DataSourceConfluenceBlogFieldName> getDataSourceFieldName() {
         return this.dataSourceFieldName;
     }
 
     @InputImport(name="dateFieldFormat")
-    private final @Nullable Input<String> dateFieldFormat;
+        private final @Nullable Input<String> dateFieldFormat;
 
     public Input<String> getDateFieldFormat() {
         return this.dateFieldFormat == null ? Input.empty() : this.dateFieldFormat;
     }
 
     @InputImport(name="indexFieldName", required=true)
-    private final Input<String> indexFieldName;
+        private final Input<String> indexFieldName;
 
     public Input<String> getIndexFieldName() {
         return this.indexFieldName;
@@ -104,7 +104,6 @@ public final class DataSourceConfluenceBlogToIndexFieldMappingArgs extends io.pu
             this.indexFieldName = Input.of(Objects.requireNonNull(indexFieldName));
             return this;
         }
-
         public DataSourceConfluenceBlogToIndexFieldMappingArgs build() {
             return new DataSourceConfluenceBlogToIndexFieldMappingArgs(dataSourceFieldName, dateFieldFormat, indexFieldName);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.transcoder_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class ManifestResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ManifestResponse build() {
             return new ManifestResponse(fileName, muxStreams, type);
         }

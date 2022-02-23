@@ -7,7 +7,7 @@ import io.pulumi.azurenative.databoxedge.enums.UserType;
 import io.pulumi.azurenative.databoxedge.inputs.AsymmetricEncryptedSecretArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -22,7 +22,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="deviceName", required=true)
-    private final Input<String> deviceName;
+        private final Input<String> deviceName;
 
     public Input<String> getDeviceName() {
         return this.deviceName;
@@ -33,7 +33,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="encryptedPassword")
-    private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword;
+        private final @Nullable Input<AsymmetricEncryptedSecretArgs> encryptedPassword;
 
     public Input<AsymmetricEncryptedSecretArgs> getEncryptedPassword() {
         return this.encryptedPassword == null ? Input.empty() : this.encryptedPassword;
@@ -44,7 +44,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -55,7 +55,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -66,7 +66,7 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="userType", required=true)
-    private final Input<Either<String,UserType>> userType;
+        private final Input<Either<String,UserType>> userType;
 
     public Input<Either<String,UserType>> getUserType() {
         return this.userType;
@@ -170,7 +170,6 @@ public final class UserArgs extends io.pulumi.resources.ResourceArgs {
             this.userType = Input.of(Objects.requireNonNull(userType));
             return this;
         }
-
         public UserArgs build() {
             return new UserArgs(deviceName, encryptedPassword, name, resourceGroupName, userType);
         }

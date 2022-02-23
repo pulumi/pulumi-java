@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.core_v1.outputs.ContainerStatus;
 import io.pulumi.kubernetes.core_v1.outputs.PodCondition;
 import io.pulumi.kubernetes.core_v1.outputs.PodIP;
@@ -343,7 +343,6 @@ public final class PodStatus {
             this.startTime = startTime;
             return this;
         }
-
         public PodStatus build() {
             return new PodStatus(conditions, containerStatuses, ephemeralContainerStatuses, hostIP, initContainerStatuses, message, nominatedNodeName, phase, podIP, podIPs, qosClass, reason, startTime);
         }

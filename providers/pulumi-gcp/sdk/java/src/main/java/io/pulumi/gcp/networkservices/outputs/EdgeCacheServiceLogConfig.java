@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.networkservices.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Double;
 import java.util.Objects;
@@ -79,7 +79,6 @@ public final class EdgeCacheServiceLogConfig {
             this.sampleRate = sampleRate;
             return this;
         }
-
         public EdgeCacheServiceLogConfig build() {
             return new EdgeCacheServiceLogConfig(enable, sampleRate);
         }

@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotanalytics;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineActivityArgs;
 import io.pulumi.awsnative.iotanalytics.inputs.PipelineTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -18,21 +18,21 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
     public static final PipelineArgs Empty = new PipelineArgs();
 
     @InputImport(name="pipelineActivities", required=true)
-    private final Input<List<PipelineActivityArgs>> pipelineActivities;
+        private final Input<List<PipelineActivityArgs>> pipelineActivities;
 
     public Input<List<PipelineActivityArgs>> getPipelineActivities() {
         return this.pipelineActivities;
     }
 
     @InputImport(name="pipelineName")
-    private final @Nullable Input<String> pipelineName;
+        private final @Nullable Input<String> pipelineName;
 
     public Input<String> getPipelineName() {
         return this.pipelineName == null ? Input.empty() : this.pipelineName;
     }
 
     @InputImport(name="tags")
-    private final @Nullable Input<List<PipelineTagArgs>> tags;
+        private final @Nullable Input<List<PipelineTagArgs>> tags;
 
     public Input<List<PipelineTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -106,7 +106,6 @@ public final class PipelineArgs extends io.pulumi.resources.ResourceArgs {
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public PipelineArgs build() {
             return new PipelineArgs(pipelineActivities, pipelineName, tags);
         }

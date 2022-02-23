@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.monitoring.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -131,7 +131,6 @@ public final class SloRequestBasedSliGoodTotalRatio {
             this.totalServiceFilter = totalServiceFilter;
             return this;
         }
-
         public SloRequestBasedSliGoodTotalRatio build() {
             return new SloRequestBasedSliGoodTotalRatio(badServiceFilter, goodServiceFilter, totalServiceFilter);
         }

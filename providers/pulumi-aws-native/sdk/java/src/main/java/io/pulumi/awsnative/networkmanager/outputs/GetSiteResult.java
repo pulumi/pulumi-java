@@ -5,7 +5,7 @@ package io.pulumi.awsnative.networkmanager.outputs;
 
 import io.pulumi.awsnative.networkmanager.outputs.SiteLocation;
 import io.pulumi.awsnative.networkmanager.outputs.SiteTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -142,7 +142,6 @@ public final class GetSiteResult {
             this.tags = tags;
             return this;
         }
-
         public GetSiteResult build() {
             return new GetSiteResult(description, location, siteArn, siteId, tags);
         }

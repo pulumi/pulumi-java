@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.JwtArgs;
 import io.pulumi.googlenative.containeranalysis_v1.inputs.SignatureArgs;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="jwts")
-    private final @Nullable Input<List<JwtArgs>> jwts;
+      private final @Nullable Input<List<JwtArgs>> jwts;
 
     public Input<List<JwtArgs>> getJwts() {
         return this.jwts == null ? Input.empty() : this.jwts;
@@ -37,7 +37,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="serializedPayload", required=true)
-    private final Input<String> serializedPayload;
+      private final Input<String> serializedPayload;
 
     public Input<String> getSerializedPayload() {
         return this.serializedPayload;
@@ -48,7 +48,7 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="signatures")
-    private final @Nullable Input<List<SignatureArgs>> signatures;
+      private final @Nullable Input<List<SignatureArgs>> signatures;
 
     public Input<List<SignatureArgs>> getSignatures() {
         return this.signatures == null ? Input.empty() : this.signatures;
@@ -122,7 +122,6 @@ public final class AttestationOccurrenceArgs extends io.pulumi.resources.Resourc
             this.signatures = Input.ofNullable(signatures);
             return this;
         }
-
         public AttestationOccurrenceArgs build() {
             return new AttestationOccurrenceArgs(jwts, serializedPayload, signatures);
         }

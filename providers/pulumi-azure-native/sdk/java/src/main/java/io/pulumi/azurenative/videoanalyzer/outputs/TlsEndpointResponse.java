@@ -7,7 +7,7 @@ import io.pulumi.azurenative.videoanalyzer.outputs.PemCertificateListResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.SecureIotDeviceRemoteTunnelResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.TlsValidationOptionsResponse;
 import io.pulumi.azurenative.videoanalyzer.outputs.UsernamePasswordCredentialsResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -166,7 +166,6 @@ public final class TlsEndpointResponse {
             this.validationOptions = validationOptions;
             return this;
         }
-
         public TlsEndpointResponse build() {
             return new TlsEndpointResponse(credentials, trustedCertificates, tunnel, type, url, validationOptions);
         }

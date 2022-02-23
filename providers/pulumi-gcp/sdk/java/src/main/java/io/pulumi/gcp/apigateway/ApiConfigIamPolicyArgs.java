@@ -4,7 +4,7 @@
 package io.pulumi.gcp.apigateway;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,14 +20,14 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="api", required=true)
-    private final Input<String> api;
+        private final Input<String> api;
 
     public Input<String> getApi() {
         return this.api;
     }
 
     @InputImport(name="apiConfig", required=true)
-    private final Input<String> apiConfig;
+        private final Input<String> apiConfig;
 
     public Input<String> getApiConfig() {
         return this.apiConfig;
@@ -39,7 +39,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="policyData", required=true)
-    private final Input<String> policyData;
+        private final Input<String> policyData;
 
     public Input<String> getPolicyData() {
         return this.policyData;
@@ -51,7 +51,7 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -140,7 +140,6 @@ public final class ApiConfigIamPolicyArgs extends io.pulumi.resources.ResourceAr
             this.project = Input.ofNullable(project);
             return this;
         }
-
         public ApiConfigIamPolicyArgs build() {
             return new ApiConfigIamPolicyArgs(api, apiConfig, policyData, project);
         }

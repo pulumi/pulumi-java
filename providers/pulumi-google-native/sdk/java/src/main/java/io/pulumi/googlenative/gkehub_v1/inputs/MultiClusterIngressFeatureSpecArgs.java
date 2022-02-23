@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.gkehub_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="configMembership")
-    private final @Nullable Input<String> configMembership;
+      private final @Nullable Input<String> configMembership;
 
     public Input<String> getConfigMembership() {
         return this.configMembership == null ? Input.empty() : this.configMembership;
@@ -66,7 +66,6 @@ public final class MultiClusterIngressFeatureSpecArgs extends io.pulumi.resource
             this.configMembership = Input.ofNullable(configMembership);
             return this;
         }
-
         public MultiClusterIngressFeatureSpecArgs build() {
             return new MultiClusterIngressFeatureSpecArgs(configMembership);
         }

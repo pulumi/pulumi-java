@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.diagflow.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.diagflow.outputs.CxIntentTrainingPhrasePart;
 import java.lang.Integer;
 import java.lang.String;
@@ -114,7 +114,6 @@ public final class CxIntentTrainingPhrase {
             this.repeatCount = repeatCount;
             return this;
         }
-
         public CxIntentTrainingPhrase build() {
             return new CxIntentTrainingPhrase(id, parts, repeatCount);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="systemMetrics", required=true)
-    private final Map<String,String> systemMetrics;
+      private final Map<String,String> systemMetrics;
 
     public Map<String,String> getSystemMetrics() {
         return this.systemMetrics;
@@ -60,7 +60,6 @@ public final class RuntimeMetricsResponse extends io.pulumi.resources.InvokeArgs
             this.systemMetrics = Objects.requireNonNull(systemMetrics);
             return this;
         }
-
         public RuntimeMetricsResponse build() {
             return new RuntimeMetricsResponse(systemMetrics);
         }

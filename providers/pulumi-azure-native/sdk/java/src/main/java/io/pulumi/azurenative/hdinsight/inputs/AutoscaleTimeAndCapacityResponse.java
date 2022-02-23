@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hdinsight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="maxInstanceCount")
-    private final @Nullable Integer maxInstanceCount;
+        private final @Nullable Integer maxInstanceCount;
 
     public Optional<Integer> getMaxInstanceCount() {
         return this.maxInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.maxInstanceCount);
@@ -35,7 +35,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="minInstanceCount")
-    private final @Nullable Integer minInstanceCount;
+        private final @Nullable Integer minInstanceCount;
 
     public Optional<Integer> getMinInstanceCount() {
         return this.minInstanceCount == null ? Optional.empty() : Optional.ofNullable(this.minInstanceCount);
@@ -46,7 +46,7 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
      * 
      */
     @InputImport(name="time")
-    private final @Nullable String time;
+        private final @Nullable String time;
 
     public Optional<String> getTime() {
         return this.time == null ? Optional.empty() : Optional.ofNullable(this.time);
@@ -105,7 +105,6 @@ public final class AutoscaleTimeAndCapacityResponse extends io.pulumi.resources.
             this.time = time;
             return this;
         }
-
         public AutoscaleTimeAndCapacityResponse build() {
             return new AutoscaleTimeAndCapacityResponse(maxInstanceCount, minInstanceCount, time);
         }

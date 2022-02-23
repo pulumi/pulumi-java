@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.WinRMListenerArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -24,7 +24,7 @@ public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="listeners")
-    private final @Nullable Input<List<WinRMListenerArgs>> listeners;
+        private final @Nullable Input<List<WinRMListenerArgs>> listeners;
 
     public Input<List<WinRMListenerArgs>> getListeners() {
         return this.listeners == null ? Input.empty() : this.listeners;
@@ -67,7 +67,6 @@ public final class WinRMConfigurationArgs extends io.pulumi.resources.ResourceAr
             this.listeners = Input.ofNullable(listeners);
             return this;
         }
-
         public WinRMConfigurationArgs build() {
             return new WinRMConfigurationArgs(listeners);
         }

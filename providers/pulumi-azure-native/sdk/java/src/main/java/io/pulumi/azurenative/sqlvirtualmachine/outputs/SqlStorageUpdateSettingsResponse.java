@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.sqlvirtualmachine.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class SqlStorageUpdateSettingsResponse {
             this.startingDeviceId = startingDeviceId;
             return this;
         }
-
         public SqlStorageUpdateSettingsResponse build() {
             return new SqlStorageUpdateSettingsResponse(diskConfigurationType, diskCount, startingDeviceId);
         }

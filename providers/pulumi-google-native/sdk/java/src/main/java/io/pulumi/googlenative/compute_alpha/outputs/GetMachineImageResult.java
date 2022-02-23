@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.CustomerEncryptionKeyResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.InstancePropertiesResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SavedDiskResponse;
@@ -396,7 +396,6 @@ public final class GetMachineImageResult {
             this.totalStorageBytes = Objects.requireNonNull(totalStorageBytes);
             return this;
         }
-
         public GetMachineImageResult build() {
             return new GetMachineImageResult(creationTimestamp, description, guestFlush, instanceProperties, kind, machineImageEncryptionKey, name, satisfiesPzs, savedDisks, selfLink, selfLinkWithId, sourceDiskEncryptionKeys, sourceInstance, sourceInstanceProperties, status, storageLocations, totalStorageBytes);
         }

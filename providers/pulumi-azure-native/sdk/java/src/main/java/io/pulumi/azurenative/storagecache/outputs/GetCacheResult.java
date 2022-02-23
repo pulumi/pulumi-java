@@ -12,7 +12,7 @@ import io.pulumi.azurenative.storagecache.outputs.CacheResponseSku;
 import io.pulumi.azurenative.storagecache.outputs.CacheSecuritySettingsResponse;
 import io.pulumi.azurenative.storagecache.outputs.CacheUpgradeStatusResponse;
 import io.pulumi.azurenative.storagecache.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -424,7 +424,6 @@ public final class GetCacheResult {
             this.upgradeStatus = upgradeStatus;
             return this;
         }
-
         public GetCacheResult build() {
             return new GetCacheResult(cacheSizeGB, directoryServicesSettings, encryptionSettings, health, id, identity, location, mountAddresses, name, networkSettings, provisioningState, securitySettings, sku, subnet, systemData, tags, type, upgradeStatus);
         }

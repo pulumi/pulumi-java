@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.domainregistration;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="domainName", required=true)
-    private final Input<String> domainName;
+        private final Input<String> domainName;
 
     public Input<String> getDomainName() {
         return this.domainName;
@@ -30,7 +30,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="kind")
-    private final @Nullable Input<String> kind;
+        private final @Nullable Input<String> kind;
 
     public Input<String> getKind() {
         return this.kind == null ? Input.empty() : this.kind;
@@ -41,7 +41,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -52,7 +52,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="ownershipId")
-    private final @Nullable Input<String> ownershipId;
+        private final @Nullable Input<String> ownershipId;
 
     public Input<String> getOwnershipId() {
         return this.ownershipId == null ? Input.empty() : this.ownershipId;
@@ -63,7 +63,7 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -167,7 +167,6 @@ public final class DomainOwnershipIdentifierArgs extends io.pulumi.resources.Res
             this.resourceGroupName = Input.of(Objects.requireNonNull(resourceGroupName));
             return this;
         }
-
         public DomainOwnershipIdentifierArgs build() {
             return new DomainOwnershipIdentifierArgs(domainName, kind, name, ownershipId, resourceGroupName);
         }

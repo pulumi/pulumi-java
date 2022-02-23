@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.MetastoreServiceHiveMetastoreConfigKerberosConfigKeytab;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class MetastoreServiceHiveMetastoreConfigKerberosConfig {
             this.principal = Objects.requireNonNull(principal);
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfigKerberosConfig build() {
             return new MetastoreServiceHiveMetastoreConfigKerberosConfig(keytab, krb5ConfigGcsUri, principal);
         }

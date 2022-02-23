@@ -4,7 +4,7 @@
 package io.pulumi.kubernetes.apps_v1beta2.outputs;
 
 import com.google.gson.JsonElement;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.meta_v1.outputs.ObjectMeta;
 import java.lang.Integer;
 import java.lang.String;
@@ -142,7 +142,6 @@ public final class ControllerRevision {
             this.revision = Objects.requireNonNull(revision);
             return this;
         }
-
         public ControllerRevision build() {
             return new ControllerRevision(apiVersion, data, kind, metadata, revision);
         }

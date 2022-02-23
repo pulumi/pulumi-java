@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.bigquery_v2.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="expirationMs")
-    private final @Nullable Input<String> expirationMs;
+      private final @Nullable Input<String> expirationMs;
 
     public Input<String> getExpirationMs() {
         return this.expirationMs == null ? Input.empty() : this.expirationMs;
@@ -31,14 +31,14 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="field")
-    private final @Nullable Input<String> field;
+      private final @Nullable Input<String> field;
 
     public Input<String> getField() {
         return this.field == null ? Input.empty() : this.field;
     }
 
     @InputImport(name="requirePartitionFilter")
-    private final @Nullable Input<Boolean> requirePartitionFilter;
+      private final @Nullable Input<Boolean> requirePartitionFilter;
 
     public Input<Boolean> getRequirePartitionFilter() {
         return this.requirePartitionFilter == null ? Input.empty() : this.requirePartitionFilter;
@@ -49,7 +49,7 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
      * 
      */
     @InputImport(name="type")
-    private final @Nullable Input<String> type;
+      private final @Nullable Input<String> type;
 
     public Input<String> getType() {
         return this.type == null ? Input.empty() : this.type;
@@ -138,7 +138,6 @@ public final class TimePartitioningArgs extends io.pulumi.resources.ResourceArgs
             this.type = Input.ofNullable(type);
             return this;
         }
-
         public TimePartitioningArgs build() {
             return new TimePartitioningArgs(expirationMs, field, requirePartitionFilter, type);
         }

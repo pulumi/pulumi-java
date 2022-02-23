@@ -6,7 +6,7 @@ package io.pulumi.awsnative.iotcoredeviceadvisor;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionConfigurationPropertiesArgs;
 import io.pulumi.awsnative.iotcoredeviceadvisor.inputs.SuiteDefinitionTagArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -17,7 +17,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
     public static final SuiteDefinitionArgs Empty = new SuiteDefinitionArgs();
 
     @InputImport(name="suiteDefinitionConfiguration", required=true)
-    private final Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
+        private final Input<SuiteDefinitionConfigurationPropertiesArgs> suiteDefinitionConfiguration;
 
     public Input<SuiteDefinitionConfigurationPropertiesArgs> getSuiteDefinitionConfiguration() {
         return this.suiteDefinitionConfiguration;
@@ -28,7 +28,7 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<List<SuiteDefinitionTagArgs>> tags;
+        private final @Nullable Input<List<SuiteDefinitionTagArgs>> tags;
 
     public Input<List<SuiteDefinitionTagArgs>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -87,7 +87,6 @@ public final class SuiteDefinitionArgs extends io.pulumi.resources.ResourceArgs 
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public SuiteDefinitionArgs build() {
             return new SuiteDefinitionArgs(suiteDefinitionConfiguration, tags);
         }

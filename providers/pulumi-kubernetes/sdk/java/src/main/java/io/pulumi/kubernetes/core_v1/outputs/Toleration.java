@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.core_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -158,7 +158,6 @@ public final class Toleration {
             this.value = value;
             return this;
         }
-
         public Toleration build() {
             return new Toleration(effect, key, operator, tolerationSeconds, value);
         }

@@ -6,7 +6,7 @@ package io.pulumi.azurenative.containerregistry.inputs;
 import io.pulumi.azurenative.containerregistry.inputs.BaseImageTriggerResponse;
 import io.pulumi.azurenative.containerregistry.inputs.SourceTriggerResponse;
 import io.pulumi.azurenative.containerregistry.inputs.TimerTriggerResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -26,7 +26,7 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="baseImageTrigger")
-    private final @Nullable BaseImageTriggerResponse baseImageTrigger;
+        private final @Nullable BaseImageTriggerResponse baseImageTrigger;
 
     public Optional<BaseImageTriggerResponse> getBaseImageTrigger() {
         return this.baseImageTrigger == null ? Optional.empty() : Optional.ofNullable(this.baseImageTrigger);
@@ -37,7 +37,7 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sourceTriggers")
-    private final @Nullable List<SourceTriggerResponse> sourceTriggers;
+        private final @Nullable List<SourceTriggerResponse> sourceTriggers;
 
     public List<SourceTriggerResponse> getSourceTriggers() {
         return this.sourceTriggers == null ? List.of() : this.sourceTriggers;
@@ -48,7 +48,7 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="timerTriggers")
-    private final @Nullable List<TimerTriggerResponse> timerTriggers;
+        private final @Nullable List<TimerTriggerResponse> timerTriggers;
 
     public List<TimerTriggerResponse> getTimerTriggers() {
         return this.timerTriggers == null ? List.of() : this.timerTriggers;
@@ -107,7 +107,6 @@ public final class TriggerPropertiesResponse extends io.pulumi.resources.InvokeA
             this.timerTriggers = timerTriggers;
             return this;
         }
-
         public TriggerPropertiesResponse build() {
             return new TriggerPropertiesResponse(baseImageTrigger, sourceTriggers, timerTriggers);
         }

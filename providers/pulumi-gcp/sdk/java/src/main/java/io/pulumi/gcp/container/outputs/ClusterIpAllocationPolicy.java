@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -144,7 +144,6 @@ public final class ClusterIpAllocationPolicy {
             this.servicesSecondaryRangeName = servicesSecondaryRangeName;
             return this;
         }
-
         public ClusterIpAllocationPolicy build() {
             return new ClusterIpAllocationPolicy(clusterIpv4CidrBlock, clusterSecondaryRangeName, servicesIpv4CidrBlock, servicesSecondaryRangeName);
         }

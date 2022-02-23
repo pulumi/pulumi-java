@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="databaseDumpType", required=true)
-    private final String databaseDumpType;
+      private final String databaseDumpType;
 
     public String getDatabaseDumpType() {
         return this.databaseDumpType;
@@ -32,7 +32,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="destinationGcsUri", required=true)
-    private final String destinationGcsUri;
+      private final String destinationGcsUri;
 
     public String getDestinationGcsUri() {
         return this.destinationGcsUri;
@@ -43,7 +43,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="endTime", required=true)
-    private final String endTime;
+      private final String endTime;
 
     public String getEndTime() {
         return this.endTime;
@@ -54,7 +54,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="startTime", required=true)
-    private final String startTime;
+      private final String startTime;
 
     public String getStartTime() {
         return this.startTime;
@@ -65,7 +65,7 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="state", required=true)
-    private final String state;
+      private final String state;
 
     public String getState() {
         return this.state;
@@ -144,7 +144,6 @@ public final class MetadataExportResponse extends io.pulumi.resources.InvokeArgs
             this.state = Objects.requireNonNull(state);
             return this;
         }
-
         public MetadataExportResponse build() {
             return new MetadataExportResponse(databaseDumpType, destinationGcsUri, endTime, startTime, state);
         }

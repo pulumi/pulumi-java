@@ -8,8 +8,8 @@ import io.pulumi.awsnative.ec2.TransitGatewayArgs;
 import io.pulumi.awsnative.ec2.outputs.TransitGatewayTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -94,13 +94,6 @@ public class TransitGateway extends io.pulumi.resources.CustomResource {
         return this.vpnEcmpSupport;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public TransitGateway(String name) {
-        super("aws-native:ec2:TransitGateway", name, TransitGatewayArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

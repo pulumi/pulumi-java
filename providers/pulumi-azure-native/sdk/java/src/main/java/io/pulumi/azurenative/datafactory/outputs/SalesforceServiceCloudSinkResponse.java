@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datafactory.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Objects;
@@ -247,7 +247,6 @@ public final class SalesforceServiceCloudSinkResponse {
             this.writeBehavior = writeBehavior;
             return this;
         }
-
         public SalesforceServiceCloudSinkResponse build() {
             return new SalesforceServiceCloudSinkResponse(disableMetricsCollection, externalIdFieldName, ignoreNullValues, maxConcurrentConnections, sinkRetryCount, sinkRetryWait, type, writeBatchSize, writeBatchTimeout, writeBehavior);
         }

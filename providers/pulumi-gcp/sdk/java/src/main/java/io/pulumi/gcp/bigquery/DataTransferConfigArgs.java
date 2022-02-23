@@ -4,7 +4,7 @@
 package io.pulumi.gcp.bigquery;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigEmailPreferencesArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigScheduleOptionsArgs;
 import io.pulumi.gcp.bigquery.inputs.DataTransferConfigSensitiveParamsArgs;
@@ -29,7 +29,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataRefreshWindowDays")
-    private final @Nullable Input<Integer> dataRefreshWindowDays;
+        private final @Nullable Input<Integer> dataRefreshWindowDays;
 
     public Input<Integer> getDataRefreshWindowDays() {
         return this.dataRefreshWindowDays == null ? Input.empty() : this.dataRefreshWindowDays;
@@ -40,7 +40,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="dataSourceId", required=true)
-    private final Input<String> dataSourceId;
+        private final Input<String> dataSourceId;
 
     public Input<String> getDataSourceId() {
         return this.dataSourceId;
@@ -51,7 +51,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="destinationDatasetId")
-    private final @Nullable Input<String> destinationDatasetId;
+        private final @Nullable Input<String> destinationDatasetId;
 
     public Input<String> getDestinationDatasetId() {
         return this.destinationDatasetId == null ? Input.empty() : this.destinationDatasetId;
@@ -62,7 +62,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="disabled")
-    private final @Nullable Input<Boolean> disabled;
+        private final @Nullable Input<Boolean> disabled;
 
     public Input<Boolean> getDisabled() {
         return this.disabled == null ? Input.empty() : this.disabled;
@@ -73,7 +73,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="displayName", required=true)
-    private final Input<String> displayName;
+        private final Input<String> displayName;
 
     public Input<String> getDisplayName() {
         return this.displayName;
@@ -86,7 +86,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="emailPreferences")
-    private final @Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences;
+        private final @Nullable Input<DataTransferConfigEmailPreferencesArgs> emailPreferences;
 
     public Input<DataTransferConfigEmailPreferencesArgs> getEmailPreferences() {
         return this.emailPreferences == null ? Input.empty() : this.emailPreferences;
@@ -98,7 +98,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -110,7 +110,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="notificationPubsubTopic")
-    private final @Nullable Input<String> notificationPubsubTopic;
+        private final @Nullable Input<String> notificationPubsubTopic;
 
     public Input<String> getNotificationPubsubTopic() {
         return this.notificationPubsubTopic == null ? Input.empty() : this.notificationPubsubTopic;
@@ -123,7 +123,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="params", required=true)
-    private final Input<Map<String,String>> params;
+        private final Input<Map<String,String>> params;
 
     public Input<Map<String,String>> getParams() {
         return this.params;
@@ -135,7 +135,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -153,7 +153,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="schedule")
-    private final @Nullable Input<String> schedule;
+        private final @Nullable Input<String> schedule;
 
     public Input<String> getSchedule() {
         return this.schedule == null ? Input.empty() : this.schedule;
@@ -165,7 +165,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="scheduleOptions")
-    private final @Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
+        private final @Nullable Input<DataTransferConfigScheduleOptionsArgs> scheduleOptions;
 
     public Input<DataTransferConfigScheduleOptionsArgs> getScheduleOptions() {
         return this.scheduleOptions == null ? Input.empty() : this.scheduleOptions;
@@ -182,7 +182,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="sensitiveParams")
-    private final @Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
+        private final @Nullable Input<DataTransferConfigSensitiveParamsArgs> sensitiveParams;
 
     public Input<DataTransferConfigSensitiveParamsArgs> getSensitiveParams() {
         return this.sensitiveParams == null ? Input.empty() : this.sensitiveParams;
@@ -195,7 +195,7 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="serviceAccountName")
-    private final @Nullable Input<String> serviceAccountName;
+        private final @Nullable Input<String> serviceAccountName;
 
     public Input<String> getServiceAccountName() {
         return this.serviceAccountName == null ? Input.empty() : this.serviceAccountName;
@@ -434,7 +434,6 @@ public final class DataTransferConfigArgs extends io.pulumi.resources.ResourceAr
             this.serviceAccountName = Input.ofNullable(serviceAccountName);
             return this;
         }
-
         public DataTransferConfigArgs build() {
             return new DataTransferConfigArgs(dataRefreshWindowDays, dataSourceId, destinationDatasetId, disabled, displayName, emailPreferences, location, notificationPubsubTopic, params, project, schedule, scheduleOptions, sensitiveParams, serviceAccountName);
         }

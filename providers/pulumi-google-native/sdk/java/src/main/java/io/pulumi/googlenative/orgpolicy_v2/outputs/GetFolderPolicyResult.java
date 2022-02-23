@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.orgpolicy_v2.outputs.GoogleCloudOrgpolicyV2PolicySpecResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class GetFolderPolicyResult {
             this.spec = Objects.requireNonNull(spec);
             return this;
         }
-
         public GetFolderPolicyResult build() {
             return new GetFolderPolicyResult(name, spec);
         }

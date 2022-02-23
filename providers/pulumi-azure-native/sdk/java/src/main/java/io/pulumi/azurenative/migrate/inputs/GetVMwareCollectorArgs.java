@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.migrate.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="projectName", required=true)
-    private final String projectName;
+        private final String projectName;
 
     public String getProjectName() {
         return this.projectName;
@@ -28,7 +28,7 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="vmWareCollectorName", required=true)
-    private final String vmWareCollectorName;
+        private final String vmWareCollectorName;
 
     public String getVmWareCollectorName() {
         return this.vmWareCollectorName;
@@ -98,7 +98,6 @@ public final class GetVMwareCollectorArgs extends io.pulumi.resources.InvokeArgs
             this.vmWareCollectorName = Objects.requireNonNull(vmWareCollectorName);
             return this;
         }
-
         public GetVMwareCollectorArgs build() {
             return new GetVMwareCollectorArgs(projectName, resourceGroupName, vmWareCollectorName);
         }

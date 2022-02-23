@@ -4,7 +4,7 @@
 package io.pulumi.gcp.osconfig.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs;
 import io.pulumi.gcp.osconfig.inputs.OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs;
 import java.lang.Boolean;
@@ -22,7 +22,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
      * 
      */
     @InputImport(name="allowInsecure")
-    private final @Nullable Input<Boolean> allowInsecure;
+        private final @Nullable Input<Boolean> allowInsecure;
 
     public Input<Boolean> getAllowInsecure() {
         return this.allowInsecure == null ? Input.empty() : this.allowInsecure;
@@ -33,7 +33,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
      * 
      */
     @InputImport(name="gcs")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> gcs;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> gcs;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGcsGetArgs> getGcs() {
         return this.gcs == null ? Input.empty() : this.gcs;
@@ -44,7 +44,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
      * 
      */
     @InputImport(name="localPath")
-    private final @Nullable Input<String> localPath;
+        private final @Nullable Input<String> localPath;
 
     public Input<String> getLocalPath() {
         return this.localPath == null ? Input.empty() : this.localPath;
@@ -55,7 +55,7 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
      * 
      */
     @InputImport(name="remote")
-    private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> remote;
+        private final @Nullable Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> remote;
 
     public Input<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceRemoteGetArgs> getRemote() {
         return this.remote == null ? Input.empty() : this.remote;
@@ -144,7 +144,6 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGe
             this.remote = Input.ofNullable(remote);
             return this;
         }
-
         public OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs build() {
             return new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsiSourceGetArgs(allowInsecure, gcs, localPath, remote);
         }

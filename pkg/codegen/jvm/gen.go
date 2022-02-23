@@ -1261,16 +1261,13 @@ func (mod *modContext) genResource(ctx *classFileContext, r *schema.Resource, ar
 	}
 
 	// Name only constructor
-	_, _ = fmt.Fprintf(w, "    /**\n")
-	_, _ = fmt.Fprintf(w, "     *\n")
-	_, _ = fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
-	_, _ = fmt.Fprintf(w, "     */\n")
-	fmt.Fprintf(w,
-		"    public %s(String name) {\n", className)
-	fmt.Fprintf(w,
-		"        this(name, %s.Empty);\n", ctx.ref(argsFQN))
-	fmt.Fprintf(w,
-		"    }\n")
+	fmt.Fprintf(w, "    /**\n")
+	fmt.Fprintf(w, "     *\n")
+	fmt.Fprintf(w, "     * @param name The _unique_ name of the resulting resource.\n")
+	fmt.Fprintf(w, "     */\n")
+	fmt.Fprintf(w, "    public %s(String name) {\n", className)
+	fmt.Fprintf(w, "        this(name, %s.Empty);\n", ctx.ref(argsFQN))
+	fmt.Fprintf(w, "    }\n")
 
 	// Name+Args constructor
 

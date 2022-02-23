@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.osconfig.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -120,7 +120,6 @@ public final class GuestPoliciesRecipeUpdateStepFileExec {
             this.localPath = localPath;
             return this;
         }
-
         public GuestPoliciesRecipeUpdateStepFileExec build() {
             return new GuestPoliciesRecipeUpdateStepFileExec(allowedExitCodes, args, artifactId, localPath);
         }

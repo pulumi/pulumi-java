@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.autoscaling_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricIdentifier;
 import io.pulumi.kubernetes.autoscaling_v2.outputs.MetricTarget;
 import java.util.Objects;
@@ -75,7 +75,6 @@ public final class PodsMetricSource {
             this.target = Objects.requireNonNull(target);
             return this;
         }
-
         public PodsMetricSource build() {
             return new PodsMetricSource(metric, target);
         }

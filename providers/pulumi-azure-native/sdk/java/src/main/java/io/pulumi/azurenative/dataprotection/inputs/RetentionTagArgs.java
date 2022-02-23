@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.dataprotection.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tagName", required=true)
-    private final Input<String> tagName;
+        private final Input<String> tagName;
 
     public Input<String> getTagName() {
         return this.tagName;
@@ -65,7 +65,6 @@ public final class RetentionTagArgs extends io.pulumi.resources.ResourceArgs {
             this.tagName = Input.of(Objects.requireNonNull(tagName));
             return this;
         }
-
         public RetentionTagArgs build() {
             return new RetentionTagArgs(tagName);
         }

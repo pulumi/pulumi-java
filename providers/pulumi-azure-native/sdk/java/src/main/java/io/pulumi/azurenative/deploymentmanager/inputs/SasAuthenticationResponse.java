@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.deploymentmanager.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="sasUri", required=true)
-    private final String sasUri;
+        private final String sasUri;
 
     public String getSasUri() {
         return this.sasUri;
@@ -33,7 +33,7 @@ public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -82,7 +82,6 @@ public final class SasAuthenticationResponse extends io.pulumi.resources.InvokeA
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public SasAuthenticationResponse build() {
             return new SasAuthenticationResponse(sasUri, type);
         }

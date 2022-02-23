@@ -5,8 +5,8 @@ package io.pulumi.gcp.eventarc;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.eventarc.TriggerArgs;
 import io.pulumi.gcp.eventarc.inputs.TriggerState;
@@ -215,13 +215,6 @@ public class Trigger extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Trigger(String name) {
-        super("gcp:eventarc/trigger:Trigger", name, TriggerArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

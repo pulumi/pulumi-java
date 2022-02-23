@@ -6,7 +6,7 @@ package io.pulumi.azurenative.healthbot.outputs;
 import io.pulumi.azurenative.healthbot.outputs.HealthBotPropertiesResponse;
 import io.pulumi.azurenative.healthbot.outputs.SkuResponse;
 import io.pulumi.azurenative.healthbot.outputs.SystemDataResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -205,7 +205,6 @@ public final class GetBotResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetBotResult build() {
             return new GetBotResult(id, location, name, properties, sku, systemData, tags, type);
         }

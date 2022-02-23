@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.eks.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -53,7 +53,6 @@ public final class ClusterLogging {
             this.clusterLogging = clusterLogging;
             return this;
         }
-
         public ClusterLogging build() {
             return new ClusterLogging(clusterLogging);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.aad.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="certificateNotAfter", required=true)
-    private final String certificateNotAfter;
+        private final String certificateNotAfter;
 
     public String getCertificateNotAfter() {
         return this.certificateNotAfter;
@@ -34,7 +34,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="certificateThumbprint", required=true)
-    private final String certificateThumbprint;
+        private final String certificateThumbprint;
 
     public String getCertificateThumbprint() {
         return this.certificateThumbprint;
@@ -45,7 +45,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="externalAccess")
-    private final @Nullable String externalAccess;
+        private final @Nullable String externalAccess;
 
     public Optional<String> getExternalAccess() {
         return this.externalAccess == null ? Optional.empty() : Optional.ofNullable(this.externalAccess);
@@ -56,7 +56,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="ldaps")
-    private final @Nullable String ldaps;
+        private final @Nullable String ldaps;
 
     public Optional<String> getLdaps() {
         return this.ldaps == null ? Optional.empty() : Optional.ofNullable(this.ldaps);
@@ -67,7 +67,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="pfxCertificate")
-    private final @Nullable String pfxCertificate;
+        private final @Nullable String pfxCertificate;
 
     public Optional<String> getPfxCertificate() {
         return this.pfxCertificate == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificate);
@@ -78,7 +78,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="pfxCertificatePassword")
-    private final @Nullable String pfxCertificatePassword;
+        private final @Nullable String pfxCertificatePassword;
 
     public Optional<String> getPfxCertificatePassword() {
         return this.pfxCertificatePassword == null ? Optional.empty() : Optional.ofNullable(this.pfxCertificatePassword);
@@ -89,7 +89,7 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="publicCertificate", required=true)
-    private final String publicCertificate;
+        private final String publicCertificate;
 
     public String getPublicCertificate() {
         return this.publicCertificate;
@@ -188,7 +188,6 @@ public final class LdapsSettingsResponse extends io.pulumi.resources.InvokeArgs 
             this.publicCertificate = Objects.requireNonNull(publicCertificate);
             return this;
         }
-
         public LdapsSettingsResponse build() {
             return new LdapsSettingsResponse(certificateNotAfter, certificateThumbprint, externalAccess, ldaps, pfxCertificate, pfxCertificatePassword, publicCertificate);
         }

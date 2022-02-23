@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -181,7 +181,6 @@ public final class GetRouteResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetRouteResult build() {
             return new GetRouteResult(createTime, destinationAddress, destinationPort, displayName, labels, name, updateTime);
         }

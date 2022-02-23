@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.hybridcompute.outputs;
 
 import io.pulumi.azurenative.hybridcompute.outputs.MachineExtensionInstanceViewResponseStatus;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -119,7 +119,6 @@ public final class MachineExtensionPropertiesResponseInstanceView {
             this.typeHandlerVersion = Objects.requireNonNull(typeHandlerVersion);
             return this;
         }
-
         public MachineExtensionPropertiesResponseInstanceView build() {
             return new MachineExtensionPropertiesResponseInstanceView(name, status, type, typeHandlerVersion);
         }

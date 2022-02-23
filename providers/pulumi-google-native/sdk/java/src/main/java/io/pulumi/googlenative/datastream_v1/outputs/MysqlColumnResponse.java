@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class MysqlColumnResponse {
             this.primaryKey = Objects.requireNonNull(primaryKey);
             return this;
         }
-
         public MysqlColumnResponse build() {
             return new MysqlColumnResponse(collation, column, dataType, length, nullable, ordinalPosition, primaryKey);
         }

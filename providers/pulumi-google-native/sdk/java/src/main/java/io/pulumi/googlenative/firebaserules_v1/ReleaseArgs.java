@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.firebaserules_v1;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,14 +19,14 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+      private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
     }
 
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+      private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -37,7 +37,7 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="rulesetName")
-    private final @Nullable Input<String> rulesetName;
+      private final @Nullable Input<String> rulesetName;
 
     public Input<String> getRulesetName() {
         return this.rulesetName == null ? Input.empty() : this.rulesetName;
@@ -111,7 +111,6 @@ public final class ReleaseArgs extends io.pulumi.resources.ResourceArgs {
             this.rulesetName = Input.ofNullable(rulesetName);
             return this;
         }
-
         public ReleaseArgs build() {
             return new ReleaseArgs(name, project, rulesetName);
         }

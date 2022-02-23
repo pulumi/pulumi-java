@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.container.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.container.outputs.GetClusterAddonsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterAuthenticatorGroupsConfig;
 import io.pulumi.gcp.container.outputs.GetClusterClusterAutoscaling;
@@ -851,7 +851,6 @@ public final class GetClusterResult {
             this.workloadIdentityConfigs = Objects.requireNonNull(workloadIdentityConfigs);
             return this;
         }
-
         public GetClusterResult build() {
             return new GetClusterResult(addonsConfigs, authenticatorGroupsConfigs, clusterAutoscalings, clusterIpv4Cidr, clusterTelemetries, confidentialNodes, databaseEncryptions, datapathProvider, defaultMaxPodsPerNode, defaultSnatStatuses, description, dnsConfigs, enableAutopilot, enableBinaryAuthorization, enableIntranodeVisibility, enableKubernetesAlpha, enableL4IlbSubsetting, enableLegacyAbac, enableShieldedNodes, enableTpu, endpoint, id, identityServiceConfigs, initialNodeCount, ipAllocationPolicies, labelFingerprint, location, loggingConfigs, loggingService, maintenancePolicies, masterAuthorizedNetworksConfigs, masterAuths, masterVersion, minMasterVersion, monitoringConfigs, monitoringService, name, network, networkPolicies, networkingMode, nodeConfigs, nodeLocations, nodePools, nodeVersion, notificationConfigs, operation, podSecurityPolicyConfigs, privateClusterConfigs, privateIpv6GoogleAccess, project, releaseChannels, removeDefaultNodePool, resourceLabels, resourceUsageExportConfigs, selfLink, servicesIpv4Cidr, subnetwork, tpuIpv4CidrBlock, verticalPodAutoscalings, workloadIdentityConfigs);
         }

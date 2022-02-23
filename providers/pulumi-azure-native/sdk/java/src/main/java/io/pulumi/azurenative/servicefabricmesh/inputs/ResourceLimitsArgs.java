@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.servicefabricmesh.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cpu")
-    private final @Nullable Input<Double> cpu;
+        private final @Nullable Input<Double> cpu;
 
     public Input<Double> getCpu() {
         return this.cpu == null ? Input.empty() : this.cpu;
@@ -34,7 +34,7 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="memoryInGB")
-    private final @Nullable Input<Double> memoryInGB;
+        private final @Nullable Input<Double> memoryInGB;
 
     public Input<Double> getMemoryInGB() {
         return this.memoryInGB == null ? Input.empty() : this.memoryInGB;
@@ -93,7 +93,6 @@ public final class ResourceLimitsArgs extends io.pulumi.resources.ResourceArgs {
             this.memoryInGB = Input.ofNullable(memoryInGB);
             return this;
         }
-
         public ResourceLimitsArgs build() {
             return new ResourceLimitsArgs(cpu, memoryInGB);
         }

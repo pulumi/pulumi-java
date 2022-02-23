@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.flowcontrol.apiserver.k8s.io_v1alpha1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -139,7 +139,6 @@ public final class PriorityLevelConfigurationCondition {
             this.type = type;
             return this;
         }
-
         public PriorityLevelConfigurationCondition build() {
             return new PriorityLevelConfigurationCondition(lastTransitionTime, message, reason, status, type);
         }

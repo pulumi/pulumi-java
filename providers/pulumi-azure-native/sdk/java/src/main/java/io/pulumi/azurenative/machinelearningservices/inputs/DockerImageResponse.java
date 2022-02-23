@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.machinelearningservices.inputs;
 
 import io.pulumi.azurenative.machinelearningservices.inputs.DockerImagePlatformResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -25,7 +25,7 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dockerImageUri", required=true)
-    private final String dockerImageUri;
+        private final String dockerImageUri;
 
     public String getDockerImageUri() {
         return this.dockerImageUri;
@@ -37,7 +37,7 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="dockerSpecificationType", required=true)
-    private final String dockerSpecificationType;
+        private final String dockerSpecificationType;
 
     public String getDockerSpecificationType() {
         return this.dockerSpecificationType;
@@ -48,7 +48,7 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="platform")
-    private final @Nullable DockerImagePlatformResponse platform;
+        private final @Nullable DockerImagePlatformResponse platform;
 
     public Optional<DockerImagePlatformResponse> getPlatform() {
         return this.platform == null ? Optional.empty() : Optional.ofNullable(this.platform);
@@ -107,7 +107,6 @@ public final class DockerImageResponse extends io.pulumi.resources.InvokeArgs {
             this.platform = platform;
             return this;
         }
-
         public DockerImageResponse build() {
             return new DockerImageResponse(dockerImageUri, dockerSpecificationType, platform);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.datastream_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="caCertificate", required=true)
-    private final String caCertificate;
+      private final String caCertificate;
 
     public String getCaCertificate() {
         return this.caCertificate;
@@ -33,7 +33,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="caCertificateSet", required=true)
-    private final Boolean caCertificateSet;
+      private final Boolean caCertificateSet;
 
     public Boolean getCaCertificateSet() {
         return this.caCertificateSet;
@@ -44,7 +44,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="clientCertificate", required=true)
-    private final String clientCertificate;
+      private final String clientCertificate;
 
     public String getClientCertificate() {
         return this.clientCertificate;
@@ -55,7 +55,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="clientCertificateSet", required=true)
-    private final Boolean clientCertificateSet;
+      private final Boolean clientCertificateSet;
 
     public Boolean getClientCertificateSet() {
         return this.clientCertificateSet;
@@ -66,7 +66,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="clientKey", required=true)
-    private final String clientKey;
+      private final String clientKey;
 
     public String getClientKey() {
         return this.clientKey;
@@ -77,7 +77,7 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
      * 
      */
     @InputImport(name="clientKeySet", required=true)
-    private final Boolean clientKeySet;
+      private final Boolean clientKeySet;
 
     public Boolean getClientKeySet() {
         return this.clientKeySet;
@@ -166,7 +166,6 @@ public final class MysqlSslConfigResponse extends io.pulumi.resources.InvokeArgs
             this.clientKeySet = Objects.requireNonNull(clientKeySet);
             return this;
         }
-
         public MysqlSslConfigResponse build() {
             return new MysqlSslConfigResponse(caCertificate, caCertificateSet, clientCertificate, clientCertificateSet, clientKey, clientKeySet);
         }

@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.imagebuilder.inputs;
 
 import io.pulumi.awsnative.imagebuilder.inputs.InfrastructureConfigurationS3Logs;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class InfrastructureConfigurationLogging extends io.pulumi.resource
     public static final InfrastructureConfigurationLogging Empty = new InfrastructureConfigurationLogging();
 
     @InputImport(name="s3Logs")
-    private final @Nullable InfrastructureConfigurationS3Logs s3Logs;
+        private final @Nullable InfrastructureConfigurationS3Logs s3Logs;
 
     public Optional<InfrastructureConfigurationS3Logs> getS3Logs() {
         return this.s3Logs == null ? Optional.empty() : Optional.ofNullable(this.s3Logs);
@@ -57,7 +57,6 @@ public final class InfrastructureConfigurationLogging extends io.pulumi.resource
             this.s3Logs = s3Logs;
             return this;
         }
-
         public InfrastructureConfigurationLogging build() {
             return new InfrastructureConfigurationLogging(s3Logs);
         }

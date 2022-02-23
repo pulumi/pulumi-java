@@ -5,7 +5,7 @@ package io.pulumi.azurenative.compute;
 
 import io.pulumi.azurenative.compute.enums.OperatingSystemTypes;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Map;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -32,7 +32,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="endOfLifeDate")
-    private final @Nullable Input<String> endOfLifeDate;
+        private final @Nullable Input<String> endOfLifeDate;
 
     public Input<String> getEndOfLifeDate() {
         return this.endOfLifeDate == null ? Input.empty() : this.endOfLifeDate;
@@ -43,7 +43,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="eula")
-    private final @Nullable Input<String> eula;
+        private final @Nullable Input<String> eula;
 
     public Input<String> getEula() {
         return this.eula == null ? Input.empty() : this.eula;
@@ -54,7 +54,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="galleryApplicationName")
-    private final @Nullable Input<String> galleryApplicationName;
+        private final @Nullable Input<String> galleryApplicationName;
 
     public Input<String> getGalleryApplicationName() {
         return this.galleryApplicationName == null ? Input.empty() : this.galleryApplicationName;
@@ -65,7 +65,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="galleryName", required=true)
-    private final Input<String> galleryName;
+        private final Input<String> galleryName;
 
     public Input<String> getGalleryName() {
         return this.galleryName;
@@ -76,7 +76,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<String> location;
+        private final @Nullable Input<String> location;
 
     public Input<String> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -87,7 +87,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="privacyStatementUri")
-    private final @Nullable Input<String> privacyStatementUri;
+        private final @Nullable Input<String> privacyStatementUri;
 
     public Input<String> getPrivacyStatementUri() {
         return this.privacyStatementUri == null ? Input.empty() : this.privacyStatementUri;
@@ -98,7 +98,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="releaseNoteUri")
-    private final @Nullable Input<String> releaseNoteUri;
+        private final @Nullable Input<String> releaseNoteUri;
 
     public Input<String> getReleaseNoteUri() {
         return this.releaseNoteUri == null ? Input.empty() : this.releaseNoteUri;
@@ -109,7 +109,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final Input<String> resourceGroupName;
+        private final Input<String> resourceGroupName;
 
     public Input<String> getResourceGroupName() {
         return this.resourceGroupName;
@@ -120,7 +120,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="supportedOSType", required=true)
-    private final Input<OperatingSystemTypes> supportedOSType;
+        private final Input<OperatingSystemTypes> supportedOSType;
 
     public Input<OperatingSystemTypes> getSupportedOSType() {
         return this.supportedOSType;
@@ -131,7 +131,7 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="tags")
-    private final @Nullable Input<Map<String,String>> tags;
+        private final @Nullable Input<Map<String,String>> tags;
 
     public Input<Map<String,String>> getTags() {
         return this.tags == null ? Input.empty() : this.tags;
@@ -325,7 +325,6 @@ public final class GalleryApplicationArgs extends io.pulumi.resources.ResourceAr
             this.tags = Input.ofNullable(tags);
             return this;
         }
-
         public GalleryApplicationArgs build() {
             return new GalleryApplicationArgs(description, endOfLifeDate, eula, galleryApplicationName, galleryName, location, privacyStatementUri, releaseNoteUri, resourceGroupName, supportedOSType, tags);
         }

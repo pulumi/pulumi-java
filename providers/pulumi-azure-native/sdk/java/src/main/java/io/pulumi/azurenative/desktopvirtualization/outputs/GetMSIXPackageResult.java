@@ -5,7 +5,7 @@ package io.pulumi.azurenative.desktopvirtualization.outputs;
 
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageApplicationsResponse;
 import io.pulumi.azurenative.desktopvirtualization.outputs.MsixPackageDependenciesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -332,7 +332,6 @@ public final class GetMSIXPackageResult {
             this.version = version;
             return this;
         }
-
         public GetMSIXPackageResult build() {
             return new GetMSIXPackageResult(displayName, id, imagePath, isActive, isRegularRegistration, lastUpdated, name, packageApplications, packageDependencies, packageFamilyName, packageName, packageRelativePath, type, version);
         }

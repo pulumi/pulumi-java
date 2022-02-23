@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.portal;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="consoleName")
-    private final @Nullable Input<String> consoleName;
+        private final @Nullable Input<String> consoleName;
 
     public Input<String> getConsoleName() {
         return this.consoleName == null ? Input.empty() : this.consoleName;
@@ -30,7 +30,7 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
      * 
      */
     @InputImport(name="location", required=true)
-    private final Input<String> location;
+        private final Input<String> location;
 
     public Input<String> getLocation() {
         return this.location;
@@ -89,7 +89,6 @@ public final class ConsoleWithLocationArgs extends io.pulumi.resources.ResourceA
             this.location = Input.of(Objects.requireNonNull(location));
             return this;
         }
-
         public ConsoleWithLocationArgs build() {
             return new ConsoleWithLocationArgs(consoleName, location);
         }

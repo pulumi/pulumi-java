@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.SecurityPolicyAdaptiveProtectionConfigLayer7DdosDefenseConfigResponse;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class SecurityPolicyAdaptiveProtectionConfigResponse {
             this.layer7DdosDefenseConfig = Objects.requireNonNull(layer7DdosDefenseConfig);
             return this;
         }
-
         public SecurityPolicyAdaptiveProtectionConfigResponse build() {
             return new SecurityPolicyAdaptiveProtectionConfigResponse(layer7DdosDefenseConfig);
         }

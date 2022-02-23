@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.media.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -76,7 +76,6 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse {
             this.rawBody = Objects.requireNonNull(rawBody);
             return this;
         }
-
         public ContentKeyPolicyX509CertificateTokenKeyResponse build() {
             return new ContentKeyPolicyX509CertificateTokenKeyResponse(odataType, rawBody);
         }

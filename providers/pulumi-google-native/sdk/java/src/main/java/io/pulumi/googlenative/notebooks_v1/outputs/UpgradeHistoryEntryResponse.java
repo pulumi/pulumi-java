@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.notebooks_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -242,7 +242,6 @@ public final class UpgradeHistoryEntryResponse {
             this.vmImage = Objects.requireNonNull(vmImage);
             return this;
         }
-
         public UpgradeHistoryEntryResponse build() {
             return new UpgradeHistoryEntryResponse(action, containerImage, createTime, framework, snapshot, state, targetImage, targetVersion, version, vmImage);
         }

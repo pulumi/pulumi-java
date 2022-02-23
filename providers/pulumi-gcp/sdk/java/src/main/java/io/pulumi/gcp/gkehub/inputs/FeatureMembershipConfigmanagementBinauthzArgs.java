@@ -4,7 +4,7 @@
 package io.pulumi.gcp.gkehub.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -19,7 +19,7 @@ public final class FeatureMembershipConfigmanagementBinauthzArgs extends io.pulu
      * 
      */
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -62,7 +62,6 @@ public final class FeatureMembershipConfigmanagementBinauthzArgs extends io.pulu
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public FeatureMembershipConfigmanagementBinauthzArgs build() {
             return new FeatureMembershipConfigmanagementBinauthzArgs(enabled);
         }

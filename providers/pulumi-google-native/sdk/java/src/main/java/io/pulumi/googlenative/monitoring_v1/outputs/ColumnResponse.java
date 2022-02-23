@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.monitoring_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.monitoring_v1.outputs.WidgetResponse;
 import java.lang.String;
 import java.util.List;
@@ -76,7 +76,6 @@ public final class ColumnResponse {
             this.widgets = Objects.requireNonNull(widgets);
             return this;
         }
-
         public ColumnResponse build() {
             return new ColumnResponse(weight, widgets);
         }

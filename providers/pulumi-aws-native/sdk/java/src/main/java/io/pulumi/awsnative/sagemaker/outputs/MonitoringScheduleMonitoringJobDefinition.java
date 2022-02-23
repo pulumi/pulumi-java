@@ -10,7 +10,7 @@ import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringOutputC
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleMonitoringResources;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleNetworkConfig;
 import io.pulumi.awsnative.sagemaker.outputs.MonitoringScheduleStoppingCondition;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Object;
 import java.lang.String;
 import java.util.List;
@@ -176,7 +176,6 @@ public final class MonitoringScheduleMonitoringJobDefinition {
             this.stoppingCondition = stoppingCondition;
             return this;
         }
-
         public MonitoringScheduleMonitoringJobDefinition build() {
             return new MonitoringScheduleMonitoringJobDefinition(baselineConfig, environment, monitoringAppSpecification, monitoringInputs, monitoringOutputConfig, monitoringResources, networkConfig, roleArn, stoppingCondition);
         }

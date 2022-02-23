@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1beta1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
     public static final ArtifactRuleArgs Empty = new ArtifactRuleArgs();
 
     @InputImport(name="artifactRule")
-    private final @Nullable Input<List<String>> artifactRule;
+      private final @Nullable Input<List<String>> artifactRule;
 
     public Input<List<String>> getArtifactRule() {
         return this.artifactRule == null ? Input.empty() : this.artifactRule;
@@ -63,7 +63,6 @@ public final class ArtifactRuleArgs extends io.pulumi.resources.ResourceArgs {
             this.artifactRule = Input.ofNullable(artifactRule);
             return this;
         }
-
         public ArtifactRuleArgs build() {
             return new ArtifactRuleArgs(artifactRule);
         }

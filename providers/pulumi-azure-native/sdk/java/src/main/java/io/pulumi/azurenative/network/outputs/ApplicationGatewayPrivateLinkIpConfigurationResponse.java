@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.network.outputs;
 
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -225,7 +225,6 @@ public final class ApplicationGatewayPrivateLinkIpConfigurationResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public ApplicationGatewayPrivateLinkIpConfigurationResponse build() {
             return new ApplicationGatewayPrivateLinkIpConfigurationResponse(etag, id, name, primary, privateIPAddress, privateIPAllocationMethod, provisioningState, subnet, type);
         }

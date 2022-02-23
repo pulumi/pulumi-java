@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.gkehub_v1alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.gkehub_v1alpha.outputs.ServiceMeshAnalysisMessageBaseResponse;
 import java.lang.String;
 import java.util.List;
@@ -119,7 +119,6 @@ public final class ServiceMeshAnalysisMessageResponse {
             this.resourcePaths = Objects.requireNonNull(resourcePaths);
             return this;
         }
-
         public ServiceMeshAnalysisMessageResponse build() {
             return new ServiceMeshAnalysisMessageResponse(args, description, messageBase, resourcePaths);
         }

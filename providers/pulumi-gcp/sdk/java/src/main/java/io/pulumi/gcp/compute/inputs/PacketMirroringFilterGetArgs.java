@@ -4,7 +4,7 @@
 package io.pulumi.gcp.compute.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -21,7 +21,7 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="cidrRanges")
-    private final @Nullable Input<List<String>> cidrRanges;
+        private final @Nullable Input<List<String>> cidrRanges;
 
     public Input<List<String>> getCidrRanges() {
         return this.cidrRanges == null ? Input.empty() : this.cidrRanges;
@@ -34,7 +34,7 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="direction")
-    private final @Nullable Input<String> direction;
+        private final @Nullable Input<String> direction;
 
     public Input<String> getDirection() {
         return this.direction == null ? Input.empty() : this.direction;
@@ -46,7 +46,7 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
      * 
      */
     @InputImport(name="ipProtocols")
-    private final @Nullable Input<List<String>> ipProtocols;
+        private final @Nullable Input<List<String>> ipProtocols;
 
     public Input<List<String>> getIpProtocols() {
         return this.ipProtocols == null ? Input.empty() : this.ipProtocols;
@@ -120,7 +120,6 @@ public final class PacketMirroringFilterGetArgs extends io.pulumi.resources.Reso
             this.ipProtocols = Input.ofNullable(ipProtocols);
             return this;
         }
-
         public PacketMirroringFilterGetArgs build() {
             return new PacketMirroringFilterGetArgs(cidrRanges, direction, ipProtocols);
         }

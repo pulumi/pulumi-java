@@ -5,8 +5,8 @@ package io.pulumi.googlenative.toolresults_v1beta3;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.toolresults_v1beta3.PerfSampleSeriesArgs;
 import io.pulumi.googlenative.toolresults_v1beta3.outputs.BasicPerfSampleSeriesResponse;
@@ -107,13 +107,6 @@ public class PerfSampleSeries extends io.pulumi.resources.CustomResource {
         return this.stepId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public PerfSampleSeries(String name) {
-        super("google-native:toolresults/v1beta3:PerfSampleSeries", name, PerfSampleSeriesArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

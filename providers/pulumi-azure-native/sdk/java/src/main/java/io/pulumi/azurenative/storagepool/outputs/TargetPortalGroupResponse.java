@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagepool.outputs;
 import io.pulumi.azurenative.storagepool.outputs.AclResponse;
 import io.pulumi.azurenative.storagepool.outputs.AttributesResponse;
 import io.pulumi.azurenative.storagepool.outputs.IscsiLunResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -163,7 +163,6 @@ public final class TargetPortalGroupResponse {
             this.tag = Objects.requireNonNull(tag);
             return this;
         }
-
         public TargetPortalGroupResponse build() {
             return new TargetPortalGroupResponse(acls, attributes, endpoints, luns, port, tag);
         }

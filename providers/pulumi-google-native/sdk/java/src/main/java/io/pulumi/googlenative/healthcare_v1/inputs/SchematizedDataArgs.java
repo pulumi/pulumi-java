@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.healthcare_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="data")
-    private final @Nullable Input<String> data;
+      private final @Nullable Input<String> data;
 
     public Input<String> getData() {
         return this.data == null ? Input.empty() : this.data;
@@ -34,7 +34,7 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
      * 
      */
     @InputImport(name="error")
-    private final @Nullable Input<String> error;
+      private final @Nullable Input<String> error;
 
     public Input<String> getError() {
         return this.error == null ? Input.empty() : this.error;
@@ -93,7 +93,6 @@ public final class SchematizedDataArgs extends io.pulumi.resources.ResourceArgs 
             this.error = Input.ofNullable(error);
             return this;
         }
-
         public SchematizedDataArgs build() {
             return new SchematizedDataArgs(data, error);
         }

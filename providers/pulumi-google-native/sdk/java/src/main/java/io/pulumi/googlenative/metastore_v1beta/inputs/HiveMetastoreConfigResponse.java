@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.metastore_v1beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.metastore_v1beta.inputs.KerberosConfigResponse;
 import java.lang.String;
 import java.util.Map;
@@ -23,7 +23,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="auxiliaryVersions", required=true)
-    private final Map<String,String> auxiliaryVersions;
+      private final Map<String,String> auxiliaryVersions;
 
     public Map<String,String> getAuxiliaryVersions() {
         return this.auxiliaryVersions;
@@ -34,7 +34,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="configOverrides", required=true)
-    private final Map<String,String> configOverrides;
+      private final Map<String,String> configOverrides;
 
     public Map<String,String> getConfigOverrides() {
         return this.configOverrides;
@@ -45,7 +45,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="endpointProtocol", required=true)
-    private final String endpointProtocol;
+      private final String endpointProtocol;
 
     public String getEndpointProtocol() {
         return this.endpointProtocol;
@@ -56,7 +56,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="kerberosConfig", required=true)
-    private final KerberosConfigResponse kerberosConfig;
+      private final KerberosConfigResponse kerberosConfig;
 
     public KerberosConfigResponse getKerberosConfig() {
         return this.kerberosConfig;
@@ -67,7 +67,7 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="version", required=true)
-    private final String version;
+      private final String version;
 
     public String getVersion() {
         return this.version;
@@ -146,7 +146,6 @@ public final class HiveMetastoreConfigResponse extends io.pulumi.resources.Invok
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public HiveMetastoreConfigResponse build() {
             return new HiveMetastoreConfigResponse(auxiliaryVersions, configOverrides, endpointProtocol, kerberosConfig, version);
         }

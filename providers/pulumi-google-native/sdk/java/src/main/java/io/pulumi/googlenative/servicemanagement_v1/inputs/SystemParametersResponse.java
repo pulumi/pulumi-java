@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.servicemanagement_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.servicemanagement_v1.inputs.SystemParameterRuleResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class SystemParametersResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="rules", required=true)
-    private final List<SystemParameterRuleResponse> rules;
+      private final List<SystemParameterRuleResponse> rules;
 
     public List<SystemParameterRuleResponse> getRules() {
         return this.rules;
@@ -60,7 +60,6 @@ public final class SystemParametersResponse extends io.pulumi.resources.InvokeAr
             this.rules = Objects.requireNonNull(rules);
             return this;
         }
-
         public SystemParametersResponse build() {
             return new SystemParametersResponse(rules);
         }

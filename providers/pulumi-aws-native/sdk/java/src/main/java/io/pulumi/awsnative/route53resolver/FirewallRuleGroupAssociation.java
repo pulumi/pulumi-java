@@ -10,8 +10,8 @@ import io.pulumi.awsnative.route53resolver.enums.FirewallRuleGroupAssociationSta
 import io.pulumi.awsnative.route53resolver.outputs.FirewallRuleGroupAssociationTag;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -206,13 +206,6 @@ public class FirewallRuleGroupAssociation extends io.pulumi.resources.CustomReso
         return this.vpcId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public FirewallRuleGroupAssociation(String name) {
-        super("aws-native:route53resolver:FirewallRuleGroupAssociation", name, FirewallRuleGroupAssociationArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

@@ -10,7 +10,7 @@ import io.pulumi.azurenative.consumption.inputs.BudgetTimePeriodArgs;
 import io.pulumi.azurenative.consumption.inputs.NotificationArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Map;
@@ -27,7 +27,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="amount", required=true)
-    private final Input<Double> amount;
+        private final Input<Double> amount;
 
     public Input<Double> getAmount() {
         return this.amount;
@@ -38,7 +38,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="budgetName")
-    private final @Nullable Input<String> budgetName;
+        private final @Nullable Input<String> budgetName;
 
     public Input<String> getBudgetName() {
         return this.budgetName == null ? Input.empty() : this.budgetName;
@@ -49,7 +49,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="category", required=true)
-    private final Input<Either<String,CategoryType>> category;
+        private final Input<Either<String,CategoryType>> category;
 
     public Input<Either<String,CategoryType>> getCategory() {
         return this.category;
@@ -60,7 +60,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="eTag")
-    private final @Nullable Input<String> eTag;
+        private final @Nullable Input<String> eTag;
 
     public Input<String> getETag() {
         return this.eTag == null ? Input.empty() : this.eTag;
@@ -71,7 +71,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="filter")
-    private final @Nullable Input<BudgetFilterArgs> filter;
+        private final @Nullable Input<BudgetFilterArgs> filter;
 
     public Input<BudgetFilterArgs> getFilter() {
         return this.filter == null ? Input.empty() : this.filter;
@@ -82,7 +82,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="notifications")
-    private final @Nullable Input<Map<String,NotificationArgs>> notifications;
+        private final @Nullable Input<Map<String,NotificationArgs>> notifications;
 
     public Input<Map<String,NotificationArgs>> getNotifications() {
         return this.notifications == null ? Input.empty() : this.notifications;
@@ -93,7 +93,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="scope", required=true)
-    private final Input<String> scope;
+        private final Input<String> scope;
 
     public Input<String> getScope() {
         return this.scope;
@@ -104,7 +104,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timeGrain", required=true)
-    private final Input<Either<String,TimeGrainType>> timeGrain;
+        private final Input<Either<String,TimeGrainType>> timeGrain;
 
     public Input<Either<String,TimeGrainType>> getTimeGrain() {
         return this.timeGrain;
@@ -115,7 +115,7 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="timePeriod", required=true)
-    private final Input<BudgetTimePeriodArgs> timePeriod;
+        private final Input<BudgetTimePeriodArgs> timePeriod;
 
     public Input<BudgetTimePeriodArgs> getTimePeriod() {
         return this.timePeriod;
@@ -279,7 +279,6 @@ public final class BudgetArgs extends io.pulumi.resources.ResourceArgs {
             this.timePeriod = Input.of(Objects.requireNonNull(timePeriod));
             return this;
         }
-
         public BudgetArgs build() {
             return new BudgetArgs(amount, budgetName, category, eTag, filter, notifications, scope, timeGrain, timePeriod);
         }

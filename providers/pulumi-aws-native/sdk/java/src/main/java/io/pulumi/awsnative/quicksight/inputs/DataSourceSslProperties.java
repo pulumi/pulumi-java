@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.quicksight.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class DataSourceSslProperties extends io.pulumi.resources.InvokeArg
      * 
      */
     @InputImport(name="disableSsl")
-    private final @Nullable Boolean disableSsl;
+        private final @Nullable Boolean disableSsl;
 
     public Optional<Boolean> getDisableSsl() {
         return this.disableSsl == null ? Optional.empty() : Optional.ofNullable(this.disableSsl);
@@ -62,7 +62,6 @@ public final class DataSourceSslProperties extends io.pulumi.resources.InvokeArg
             this.disableSsl = disableSsl;
             return this;
         }
-
         public DataSourceSslProperties build() {
             return new DataSourceSslProperties(disableSsl);
         }

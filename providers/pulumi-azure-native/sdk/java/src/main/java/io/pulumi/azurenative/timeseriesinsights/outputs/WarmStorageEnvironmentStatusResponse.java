@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.timeseriesinsights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -98,7 +98,6 @@ public final class WarmStorageEnvironmentStatusResponse {
             this.state = state;
             return this;
         }
-
         public WarmStorageEnvironmentStatusResponse build() {
             return new WarmStorageEnvironmentStatusResponse(currentCount, maxCount, state);
         }

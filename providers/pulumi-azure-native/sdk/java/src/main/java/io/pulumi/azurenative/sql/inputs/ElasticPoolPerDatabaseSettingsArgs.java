@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.sql.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="maxCapacity")
-    private final @Nullable Input<Double> maxCapacity;
+        private final @Nullable Input<Double> maxCapacity;
 
     public Input<Double> getMaxCapacity() {
         return this.maxCapacity == null ? Input.empty() : this.maxCapacity;
@@ -34,7 +34,7 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
      * 
      */
     @InputImport(name="minCapacity")
-    private final @Nullable Input<Double> minCapacity;
+        private final @Nullable Input<Double> minCapacity;
 
     public Input<Double> getMinCapacity() {
         return this.minCapacity == null ? Input.empty() : this.minCapacity;
@@ -93,7 +93,6 @@ public final class ElasticPoolPerDatabaseSettingsArgs extends io.pulumi.resource
             this.minCapacity = Input.ofNullable(minCapacity);
             return this;
         }
-
         public ElasticPoolPerDatabaseSettingsArgs build() {
             return new ElasticPoolPerDatabaseSettingsArgs(maxCapacity, minCapacity);
         }

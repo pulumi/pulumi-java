@@ -7,7 +7,7 @@ import io.pulumi.azurenative.devices.inputs.EnrichmentPropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.FallbackRoutePropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.RoutePropertiesResponse;
 import io.pulumi.azurenative.devices.inputs.RoutingEndpointsResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -27,7 +27,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="endpoints")
-    private final @Nullable RoutingEndpointsResponse endpoints;
+        private final @Nullable RoutingEndpointsResponse endpoints;
 
     public Optional<RoutingEndpointsResponse> getEndpoints() {
         return this.endpoints == null ? Optional.empty() : Optional.ofNullable(this.endpoints);
@@ -38,7 +38,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="enrichments")
-    private final @Nullable List<EnrichmentPropertiesResponse> enrichments;
+        private final @Nullable List<EnrichmentPropertiesResponse> enrichments;
 
     public List<EnrichmentPropertiesResponse> getEnrichments() {
         return this.enrichments == null ? List.of() : this.enrichments;
@@ -49,7 +49,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="fallbackRoute")
-    private final @Nullable FallbackRoutePropertiesResponse fallbackRoute;
+        private final @Nullable FallbackRoutePropertiesResponse fallbackRoute;
 
     public Optional<FallbackRoutePropertiesResponse> getFallbackRoute() {
         return this.fallbackRoute == null ? Optional.empty() : Optional.ofNullable(this.fallbackRoute);
@@ -60,7 +60,7 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
      * 
      */
     @InputImport(name="routes")
-    private final @Nullable List<RoutePropertiesResponse> routes;
+        private final @Nullable List<RoutePropertiesResponse> routes;
 
     public List<RoutePropertiesResponse> getRoutes() {
         return this.routes == null ? List.of() : this.routes;
@@ -129,7 +129,6 @@ public final class RoutingPropertiesResponse extends io.pulumi.resources.InvokeA
             this.routes = routes;
             return this;
         }
-
         public RoutingPropertiesResponse build() {
             return new RoutingPropertiesResponse(endpoints, enrichments, fallbackRoute, routes);
         }

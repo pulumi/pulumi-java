@@ -8,7 +8,7 @@ import io.pulumi.azurenative.network.enums.PolicyMode;
 import io.pulumi.azurenative.network.enums.PolicyRequestBodyCheck;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -28,7 +28,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customBlockResponseBody")
-    private final @Nullable Input<String> customBlockResponseBody;
+        private final @Nullable Input<String> customBlockResponseBody;
 
     public Input<String> getCustomBlockResponseBody() {
         return this.customBlockResponseBody == null ? Input.empty() : this.customBlockResponseBody;
@@ -39,7 +39,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="customBlockResponseStatusCode")
-    private final @Nullable Input<Integer> customBlockResponseStatusCode;
+        private final @Nullable Input<Integer> customBlockResponseStatusCode;
 
     public Input<Integer> getCustomBlockResponseStatusCode() {
         return this.customBlockResponseStatusCode == null ? Input.empty() : this.customBlockResponseStatusCode;
@@ -50,7 +50,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="enabledState")
-    private final @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
+        private final @Nullable Input<Either<String,PolicyEnabledState>> enabledState;
 
     public Input<Either<String,PolicyEnabledState>> getEnabledState() {
         return this.enabledState == null ? Input.empty() : this.enabledState;
@@ -61,7 +61,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="mode")
-    private final @Nullable Input<Either<String,PolicyMode>> mode;
+        private final @Nullable Input<Either<String,PolicyMode>> mode;
 
     public Input<Either<String,PolicyMode>> getMode() {
         return this.mode == null ? Input.empty() : this.mode;
@@ -72,7 +72,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="redirectUrl")
-    private final @Nullable Input<String> redirectUrl;
+        private final @Nullable Input<String> redirectUrl;
 
     public Input<String> getRedirectUrl() {
         return this.redirectUrl == null ? Input.empty() : this.redirectUrl;
@@ -83,7 +83,7 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
      * 
      */
     @InputImport(name="requestBodyCheck")
-    private final @Nullable Input<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
+        private final @Nullable Input<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
 
     public Input<Either<String,PolicyRequestBodyCheck>> getRequestBodyCheck() {
         return this.requestBodyCheck == null ? Input.empty() : this.requestBodyCheck;
@@ -202,7 +202,6 @@ public final class FrontDoorPolicySettingsArgs extends io.pulumi.resources.Resou
             this.requestBodyCheck = Input.ofNullable(requestBodyCheck);
             return this;
         }
-
         public FrontDoorPolicySettingsArgs build() {
             return new FrontDoorPolicySettingsArgs(customBlockResponseBody, customBlockResponseStatusCode, enabledState, mode, redirectUrl, requestBodyCheck);
         }

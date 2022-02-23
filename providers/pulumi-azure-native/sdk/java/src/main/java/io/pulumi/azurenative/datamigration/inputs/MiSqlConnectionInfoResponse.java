@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.datamigration.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="managedInstanceResourceId", required=true)
-    private final String managedInstanceResourceId;
+        private final String managedInstanceResourceId;
 
     public String getManagedInstanceResourceId() {
         return this.managedInstanceResourceId;
@@ -34,7 +34,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="password")
-    private final @Nullable String password;
+        private final @Nullable String password;
 
     public Optional<String> getPassword() {
         return this.password == null ? Optional.empty() : Optional.ofNullable(this.password);
@@ -46,7 +46,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="type", required=true)
-    private final String type;
+        private final String type;
 
     public String getType() {
         return this.type;
@@ -57,7 +57,7 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
      * 
      */
     @InputImport(name="userName")
-    private final @Nullable String userName;
+        private final @Nullable String userName;
 
     public Optional<String> getUserName() {
         return this.userName == null ? Optional.empty() : Optional.ofNullable(this.userName);
@@ -126,7 +126,6 @@ public final class MiSqlConnectionInfoResponse extends io.pulumi.resources.Invok
             this.userName = userName;
             return this;
         }
-
         public MiSqlConnectionInfoResponse build() {
             return new MiSqlConnectionInfoResponse(managedInstanceResourceId, password, type, userName);
         }

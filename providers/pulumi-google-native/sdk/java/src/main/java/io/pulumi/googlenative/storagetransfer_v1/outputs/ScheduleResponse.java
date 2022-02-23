@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.storagetransfer_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.DateResponse;
 import io.pulumi.googlenative.storagetransfer_v1.outputs.TimeOfDayResponse;
 import java.lang.String;
@@ -139,7 +139,6 @@ public final class ScheduleResponse {
             this.startTimeOfDay = Objects.requireNonNull(startTimeOfDay);
             return this;
         }
-
         public ScheduleResponse build() {
             return new ScheduleResponse(endTimeOfDay, repeatInterval, scheduleEndDate, scheduleStartDate, startTimeOfDay);
         }

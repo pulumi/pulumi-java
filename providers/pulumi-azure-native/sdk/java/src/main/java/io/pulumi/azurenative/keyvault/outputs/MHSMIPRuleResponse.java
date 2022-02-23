@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.keyvault.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -52,7 +52,6 @@ public final class MHSMIPRuleResponse {
             this.value = Objects.requireNonNull(value);
             return this;
         }
-
         public MHSMIPRuleResponse build() {
             return new MHSMIPRuleResponse(value);
         }

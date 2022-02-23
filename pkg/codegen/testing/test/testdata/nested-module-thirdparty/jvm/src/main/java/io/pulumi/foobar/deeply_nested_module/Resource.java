@@ -5,8 +5,8 @@ package io.pulumi.foobar.deeply_nested_module;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.foobar.Utilities;
 import io.pulumi.foobar.deeply_nested_module.ResourceArgs;
 import java.lang.String;
@@ -22,13 +22,6 @@ public class Resource extends io.pulumi.resources.CustomResource {
         return this.baz;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Resource(String name) {
-        super("foo-bar:deeply/nested/module:Resource", name, ResourceArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

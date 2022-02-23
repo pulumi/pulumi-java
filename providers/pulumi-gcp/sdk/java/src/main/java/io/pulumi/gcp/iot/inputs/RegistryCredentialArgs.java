@@ -4,7 +4,7 @@
 package io.pulumi.gcp.iot.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Object;
 import java.lang.String;
 import java.util.Map;
@@ -20,7 +20,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicKeyCertificate", required=true)
-    private final Input<Map<String,Object>> publicKeyCertificate;
+        private final Input<Map<String,Object>> publicKeyCertificate;
 
     public Input<Map<String,Object>> getPublicKeyCertificate() {
         return this.publicKeyCertificate;
@@ -63,7 +63,6 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
             this.publicKeyCertificate = Input.of(Objects.requireNonNull(publicKeyCertificate));
             return this;
         }
-
         public RegistryCredentialArgs build() {
             return new RegistryCredentialArgs(publicKeyCertificate);
         }

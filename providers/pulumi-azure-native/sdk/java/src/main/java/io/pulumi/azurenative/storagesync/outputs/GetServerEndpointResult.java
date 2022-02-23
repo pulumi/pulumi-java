@@ -6,7 +6,7 @@ package io.pulumi.azurenative.storagesync.outputs;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointCloudTieringStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointRecallStatusResponse;
 import io.pulumi.azurenative.storagesync.outputs.ServerEndpointSyncStatusResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -479,7 +479,6 @@ public final class GetServerEndpointResult {
             this.volumeFreeSpacePercent = volumeFreeSpacePercent;
             return this;
         }
-
         public GetServerEndpointResult build() {
             return new GetServerEndpointResult(cloudTiering, cloudTieringStatus, friendlyName, id, initialDownloadPolicy, lastOperationName, lastWorkflowId, localCacheMode, name, offlineDataTransfer, offlineDataTransferShareName, offlineDataTransferStorageAccountResourceId, offlineDataTransferStorageAccountTenantId, provisioningState, recallStatus, serverLocalPath, serverResourceId, syncStatus, tierFilesOlderThanDays, type, volumeFreeSpacePercent);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.domains_v1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -15,21 +15,21 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
     public static final GetRegistrationArgs Empty = new GetRegistrationArgs();
 
     @InputImport(name="location", required=true)
-    private final String location;
+      private final String location;
 
     public String getLocation() {
         return this.location;
     }
 
     @InputImport(name="project")
-    private final @Nullable String project;
+      private final @Nullable String project;
 
     public Optional<String> getProject() {
         return this.project == null ? Optional.empty() : Optional.ofNullable(this.project);
     }
 
     @InputImport(name="registrationId", required=true)
-    private final String registrationId;
+      private final String registrationId;
 
     public String getRegistrationId() {
         return this.registrationId;
@@ -88,7 +88,6 @@ public final class GetRegistrationArgs extends io.pulumi.resources.InvokeArgs {
             this.registrationId = Objects.requireNonNull(registrationId);
             return this;
         }
-
         public GetRegistrationArgs build() {
             return new GetRegistrationArgs(location, project, registrationId);
         }

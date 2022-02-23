@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databox.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -23,7 +23,7 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="doubleEncryption")
-    private final @Nullable String doubleEncryption;
+        private final @Nullable String doubleEncryption;
 
     public Optional<String> getDoubleEncryption() {
         return this.doubleEncryption == null ? Optional.empty() : Optional.ofNullable(this.doubleEncryption);
@@ -61,7 +61,6 @@ public final class EncryptionPreferencesResponse extends io.pulumi.resources.Inv
             this.doubleEncryption = doubleEncryption;
             return this;
         }
-
         public EncryptionPreferencesResponse build() {
             return new EncryptionPreferencesResponse(doubleEncryption);
         }

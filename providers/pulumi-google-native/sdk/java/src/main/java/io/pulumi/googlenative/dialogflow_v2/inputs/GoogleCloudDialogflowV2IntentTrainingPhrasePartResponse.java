@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @InputImport(name="alias", required=true)
-    private final String alias;
+      private final String alias;
 
     public String getAlias() {
         return this.alias;
@@ -33,7 +33,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @InputImport(name="entityType", required=true)
-    private final String entityType;
+      private final String entityType;
 
     public String getEntityType() {
         return this.entityType;
@@ -44,7 +44,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @InputImport(name="text", required=true)
-    private final String text;
+      private final String text;
 
     public String getText() {
         return this.text;
@@ -55,7 +55,7 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
      * 
      */
     @InputImport(name="userDefined", required=true)
-    private final Boolean userDefined;
+      private final Boolean userDefined;
 
     public Boolean getUserDefined() {
         return this.userDefined;
@@ -124,7 +124,6 @@ public final class GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse exten
             this.userDefined = Objects.requireNonNull(userDefined);
             return this;
         }
-
         public GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse build() {
             return new GoogleCloudDialogflowV2IntentTrainingPhrasePartResponse(alias, entityType, text, userDefined);
         }

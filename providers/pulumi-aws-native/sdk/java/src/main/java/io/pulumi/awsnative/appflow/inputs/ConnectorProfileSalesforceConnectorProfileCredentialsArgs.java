@@ -5,7 +5,7 @@ package io.pulumi.awsnative.appflow.inputs;
 
 import io.pulumi.awsnative.appflow.inputs.ConnectorProfileConnectorOAuthRequestArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -20,7 +20,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="accessToken")
-    private final @Nullable Input<String> accessToken;
+        private final @Nullable Input<String> accessToken;
 
     public Input<String> getAccessToken() {
         return this.accessToken == null ? Input.empty() : this.accessToken;
@@ -31,7 +31,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="clientCredentialsArn")
-    private final @Nullable Input<String> clientCredentialsArn;
+        private final @Nullable Input<String> clientCredentialsArn;
 
     public Input<String> getClientCredentialsArn() {
         return this.clientCredentialsArn == null ? Input.empty() : this.clientCredentialsArn;
@@ -42,7 +42,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="connectorOAuthRequest")
-    private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
+        private final @Nullable Input<ConnectorProfileConnectorOAuthRequestArgs> connectorOAuthRequest;
 
     public Input<ConnectorProfileConnectorOAuthRequestArgs> getConnectorOAuthRequest() {
         return this.connectorOAuthRequest == null ? Input.empty() : this.connectorOAuthRequest;
@@ -53,7 +53,7 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
      * 
      */
     @InputImport(name="refreshToken")
-    private final @Nullable Input<String> refreshToken;
+        private final @Nullable Input<String> refreshToken;
 
     public Input<String> getRefreshToken() {
         return this.refreshToken == null ? Input.empty() : this.refreshToken;
@@ -142,7 +142,6 @@ public final class ConnectorProfileSalesforceConnectorProfileCredentialsArgs ext
             this.refreshToken = Input.ofNullable(refreshToken);
             return this;
         }
-
         public ConnectorProfileSalesforceConnectorProfileCredentialsArgs build() {
             return new ConnectorProfileSalesforceConnectorProfileCredentialsArgs(accessToken, clientCredentialsArn, connectorOAuthRequest, refreshToken);
         }

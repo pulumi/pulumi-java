@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.cloudiot_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.cloudiot_v1.inputs.PublicKeyCertificateArgs;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
      * 
      */
     @InputImport(name="publicKeyCertificate")
-    private final @Nullable Input<PublicKeyCertificateArgs> publicKeyCertificate;
+      private final @Nullable Input<PublicKeyCertificateArgs> publicKeyCertificate;
 
     public Input<PublicKeyCertificateArgs> getPublicKeyCertificate() {
         return this.publicKeyCertificate == null ? Input.empty() : this.publicKeyCertificate;
@@ -66,7 +66,6 @@ public final class RegistryCredentialArgs extends io.pulumi.resources.ResourceAr
             this.publicKeyCertificate = Input.ofNullable(publicKeyCertificate);
             return this;
         }
-
         public RegistryCredentialArgs build() {
             return new RegistryCredentialArgs(publicKeyCertificate);
         }

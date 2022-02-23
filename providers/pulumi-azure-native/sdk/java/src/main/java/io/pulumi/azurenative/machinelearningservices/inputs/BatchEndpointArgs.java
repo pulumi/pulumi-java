@@ -7,7 +7,7 @@ import io.pulumi.azurenative.machinelearningservices.enums.EndpointAuthMode;
 import io.pulumi.azurenative.machinelearningservices.inputs.EndpointAuthKeysArgs;
 import io.pulumi.core.Either;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Map;
@@ -28,7 +28,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="authMode")
-    private final @Nullable Input<Either<String,EndpointAuthMode>> authMode;
+        private final @Nullable Input<Either<String,EndpointAuthMode>> authMode;
 
     public Input<Either<String,EndpointAuthMode>> getAuthMode() {
         return this.authMode == null ? Input.empty() : this.authMode;
@@ -39,7 +39,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -51,7 +51,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="keys")
-    private final @Nullable Input<EndpointAuthKeysArgs> keys;
+        private final @Nullable Input<EndpointAuthKeysArgs> keys;
 
     public Input<EndpointAuthKeysArgs> getKeys() {
         return this.keys == null ? Input.empty() : this.keys;
@@ -62,7 +62,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="properties")
-    private final @Nullable Input<Map<String,String>> properties;
+        private final @Nullable Input<Map<String,String>> properties;
 
     public Input<Map<String,String>> getProperties() {
         return this.properties == null ? Input.empty() : this.properties;
@@ -73,7 +73,7 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="traffic")
-    private final @Nullable Input<Map<String,Integer>> traffic;
+        private final @Nullable Input<Map<String,Integer>> traffic;
 
     public Input<Map<String,Integer>> getTraffic() {
         return this.traffic == null ? Input.empty() : this.traffic;
@@ -177,7 +177,6 @@ public final class BatchEndpointArgs extends io.pulumi.resources.ResourceArgs {
             this.traffic = Input.ofNullable(traffic);
             return this;
         }
-
         public BatchEndpointArgs build() {
             return new BatchEndpointArgs(authMode, description, keys, properties, traffic);
         }

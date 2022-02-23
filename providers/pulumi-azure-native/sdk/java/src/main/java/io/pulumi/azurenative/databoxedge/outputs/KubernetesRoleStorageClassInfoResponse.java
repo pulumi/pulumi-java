@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.databoxedge.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -95,7 +95,6 @@ public final class KubernetesRoleStorageClassInfoResponse {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public KubernetesRoleStorageClassInfoResponse build() {
             return new KubernetesRoleStorageClassInfoResponse(name, posixCompliant, type);
         }

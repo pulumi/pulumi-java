@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.apigateway.outputs;
 
 import io.pulumi.awsnative.apigateway.outputs.ClientCertificateTag;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -99,7 +99,6 @@ public final class GetClientCertificateResult {
             this.tags = tags;
             return this;
         }
-
         public GetClientCertificateResult build() {
             return new GetClientCertificateResult(clientCertificateId, description, tags);
         }

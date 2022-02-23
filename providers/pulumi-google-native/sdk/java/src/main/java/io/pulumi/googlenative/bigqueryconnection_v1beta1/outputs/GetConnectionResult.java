@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.bigqueryconnection_v1beta1.outputs.CloudSqlPropertiesResponse;
 import java.lang.Boolean;
 import java.lang.String;
@@ -181,7 +181,6 @@ public final class GetConnectionResult {
             this.name = Objects.requireNonNull(name);
             return this;
         }
-
         public GetConnectionResult build() {
             return new GetConnectionResult(cloudSql, creationTime, description, friendlyName, hasCredential, lastModifiedTime, name);
         }

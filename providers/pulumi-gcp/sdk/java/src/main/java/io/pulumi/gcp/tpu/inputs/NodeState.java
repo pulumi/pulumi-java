@@ -4,7 +4,7 @@
 package io.pulumi.gcp.tpu.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.gcp.tpu.inputs.NodeNetworkEndpointGetArgs;
 import io.pulumi.gcp.tpu.inputs.NodeSchedulingConfigGetArgs;
 import java.lang.Boolean;
@@ -24,7 +24,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="acceleratorType")
-    private final @Nullable Input<String> acceleratorType;
+        private final @Nullable Input<String> acceleratorType;
 
     public Input<String> getAcceleratorType() {
         return this.acceleratorType == null ? Input.empty() : this.acceleratorType;
@@ -42,7 +42,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cidrBlock")
-    private final @Nullable Input<String> cidrBlock;
+        private final @Nullable Input<String> cidrBlock;
 
     public Input<String> getCidrBlock() {
         return this.cidrBlock == null ? Input.empty() : this.cidrBlock;
@@ -53,7 +53,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="description")
-    private final @Nullable Input<String> description;
+        private final @Nullable Input<String> description;
 
     public Input<String> getDescription() {
         return this.description == null ? Input.empty() : this.description;
@@ -64,7 +64,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="labels")
-    private final @Nullable Input<Map<String,String>> labels;
+        private final @Nullable Input<Map<String,String>> labels;
 
     public Input<Map<String,String>> getLabels() {
         return this.labels == null ? Input.empty() : this.labels;
@@ -75,7 +75,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -89,7 +89,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="network")
-    private final @Nullable Input<String> network;
+        private final @Nullable Input<String> network;
 
     public Input<String> getNetwork() {
         return this.network == null ? Input.empty() : this.network;
@@ -101,7 +101,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="networkEndpoints")
-    private final @Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
+        private final @Nullable Input<List<NodeNetworkEndpointGetArgs>> networkEndpoints;
 
     public Input<List<NodeNetworkEndpointGetArgs>> getNetworkEndpoints() {
         return this.networkEndpoints == null ? Input.empty() : this.networkEndpoints;
@@ -113,7 +113,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="project")
-    private final @Nullable Input<String> project;
+        private final @Nullable Input<String> project;
 
     public Input<String> getProject() {
         return this.project == null ? Input.empty() : this.project;
@@ -125,7 +125,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="schedulingConfig")
-    private final @Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig;
+        private final @Nullable Input<NodeSchedulingConfigGetArgs> schedulingConfig;
 
     public Input<NodeSchedulingConfigGetArgs> getSchedulingConfig() {
         return this.schedulingConfig == null ? Input.empty() : this.schedulingConfig;
@@ -137,7 +137,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="serviceAccount")
-    private final @Nullable Input<String> serviceAccount;
+        private final @Nullable Input<String> serviceAccount;
 
     public Input<String> getServiceAccount() {
         return this.serviceAccount == null ? Input.empty() : this.serviceAccount;
@@ -148,7 +148,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="tensorflowVersion")
-    private final @Nullable Input<String> tensorflowVersion;
+        private final @Nullable Input<String> tensorflowVersion;
 
     public Input<String> getTensorflowVersion() {
         return this.tensorflowVersion == null ? Input.empty() : this.tensorflowVersion;
@@ -162,7 +162,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="useServiceNetworking")
-    private final @Nullable Input<Boolean> useServiceNetworking;
+        private final @Nullable Input<Boolean> useServiceNetworking;
 
     public Input<Boolean> getUseServiceNetworking() {
         return this.useServiceNetworking == null ? Input.empty() : this.useServiceNetworking;
@@ -173,7 +173,7 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="zone")
-    private final @Nullable Input<String> zone;
+        private final @Nullable Input<String> zone;
 
     public Input<String> getZone() {
         return this.zone == null ? Input.empty() : this.zone;
@@ -397,7 +397,6 @@ public final class NodeState extends io.pulumi.resources.ResourceArgs {
             this.zone = Input.ofNullable(zone);
             return this;
         }
-
         public NodeState build() {
             return new NodeState(acceleratorType, cidrBlock, description, labels, name, network, networkEndpoints, project, schedulingConfig, serviceAccount, tensorflowVersion, useServiceNetworking, zone);
         }

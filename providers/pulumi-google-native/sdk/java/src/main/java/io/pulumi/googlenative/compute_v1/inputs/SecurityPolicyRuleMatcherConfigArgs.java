@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_v1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -20,7 +20,7 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
      * 
      */
     @InputImport(name="srcIpRanges")
-    private final @Nullable Input<List<String>> srcIpRanges;
+      private final @Nullable Input<List<String>> srcIpRanges;
 
     public Input<List<String>> getSrcIpRanges() {
         return this.srcIpRanges == null ? Input.empty() : this.srcIpRanges;
@@ -63,7 +63,6 @@ public final class SecurityPolicyRuleMatcherConfigArgs extends io.pulumi.resourc
             this.srcIpRanges = Input.ofNullable(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigArgs build() {
             return new SecurityPolicyRuleMatcherConfigArgs(srcIpRanges);
         }

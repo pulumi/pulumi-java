@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.iotevents.outputs;
 
 import io.pulumi.awsnative.iotevents.outputs.DetectorModelPayload;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -69,7 +69,6 @@ public final class DetectorModelIotTopicPublish {
             this.payload = payload;
             return this;
         }
-
         public DetectorModelIotTopicPublish build() {
             return new DetectorModelIotTopicPublish(mqttTopic, payload);
         }

@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.cloudidentity_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.DynamicGroupMetadataResponse;
 import io.pulumi.googlenative.cloudidentity_v1.outputs.EntityKeyResponse;
 import java.lang.String;
@@ -224,7 +224,6 @@ public final class GetGroupResult {
             this.updateTime = Objects.requireNonNull(updateTime);
             return this;
         }
-
         public GetGroupResult build() {
             return new GetGroupResult(createTime, description, displayName, dynamicGroupMetadata, groupKey, labels, name, parent, updateTime);
         }

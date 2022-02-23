@@ -8,8 +8,8 @@ import io.pulumi.awsnative.emr.StudioSessionMappingArgs;
 import io.pulumi.awsnative.emr.enums.StudioSessionMappingIdentityType;
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import java.lang.String;
 import javax.annotation.Nullable;
 
@@ -76,13 +76,6 @@ public class StudioSessionMapping extends io.pulumi.resources.CustomResource {
         return this.studioId;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public StudioSessionMapping(String name) {
-        super("aws-native:emr:StudioSessionMapping", name, StudioSessionMappingArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

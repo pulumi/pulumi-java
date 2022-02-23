@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.orgpolicy_v2.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -116,7 +116,6 @@ public final class GoogleTypeExprResponse {
             this.title = Objects.requireNonNull(title);
             return this;
         }
-
         public GoogleTypeExprResponse build() {
             return new GoogleTypeExprResponse(description, expression, location, title);
         }

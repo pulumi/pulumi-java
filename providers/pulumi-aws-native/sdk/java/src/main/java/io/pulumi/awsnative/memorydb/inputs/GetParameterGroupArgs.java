@@ -3,7 +3,7 @@
 
 package io.pulumi.awsnative.memorydb.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetParameterGroupArgs extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="parameterGroupName", required=true)
-    private final String parameterGroupName;
+        private final String parameterGroupName;
 
     public String getParameterGroupName() {
         return this.parameterGroupName;
@@ -55,7 +55,6 @@ public final class GetParameterGroupArgs extends io.pulumi.resources.InvokeArgs 
             this.parameterGroupName = Objects.requireNonNull(parameterGroupName);
             return this;
         }
-
         public GetParameterGroupArgs build() {
             return new GetParameterGroupArgs(parameterGroupName);
         }

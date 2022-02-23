@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.recoveryservices.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="containerIds")
-    private final @Nullable List<String> containerIds;
+        private final @Nullable List<String> containerIds;
 
     public List<String> getContainerIds() {
         return this.containerIds == null ? List.of() : this.containerIds;
@@ -36,7 +36,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="instanceType", required=true)
-    private final String instanceType;
+        private final String instanceType;
 
     public String getInstanceType() {
         return this.instanceType;
@@ -47,7 +47,7 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
      * 
      */
     @InputImport(name="location")
-    private final @Nullable String location;
+        private final @Nullable String location;
 
     public Optional<String> getLocation() {
         return this.location == null ? Optional.empty() : Optional.ofNullable(this.location);
@@ -106,7 +106,6 @@ public final class AzureFabricSpecificDetailsResponse extends io.pulumi.resource
             this.location = location;
             return this;
         }
-
         public AzureFabricSpecificDetailsResponse build() {
             return new AzureFabricSpecificDetailsResponse(containerIds, instanceType, location);
         }

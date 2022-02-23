@@ -6,7 +6,7 @@ package io.pulumi.azurenative.logic.inputs;
 import io.pulumi.azurenative.logic.inputs.AS2AgreementContentResponse;
 import io.pulumi.azurenative.logic.inputs.EdifactAgreementContentResponse;
 import io.pulumi.azurenative.logic.inputs.X12AgreementContentResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.Objects;
 import java.util.Optional;
 import javax.annotation.Nullable;
@@ -25,7 +25,7 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="aS2")
-    private final @Nullable AS2AgreementContentResponse aS2;
+        private final @Nullable AS2AgreementContentResponse aS2;
 
     public Optional<AS2AgreementContentResponse> getAS2() {
         return this.aS2 == null ? Optional.empty() : Optional.ofNullable(this.aS2);
@@ -36,7 +36,7 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="edifact")
-    private final @Nullable EdifactAgreementContentResponse edifact;
+        private final @Nullable EdifactAgreementContentResponse edifact;
 
     public Optional<EdifactAgreementContentResponse> getEdifact() {
         return this.edifact == null ? Optional.empty() : Optional.ofNullable(this.edifact);
@@ -47,7 +47,7 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
      * 
      */
     @InputImport(name="x12")
-    private final @Nullable X12AgreementContentResponse x12;
+        private final @Nullable X12AgreementContentResponse x12;
 
     public Optional<X12AgreementContentResponse> getX12() {
         return this.x12 == null ? Optional.empty() : Optional.ofNullable(this.x12);
@@ -106,7 +106,6 @@ public final class AgreementContentResponse extends io.pulumi.resources.InvokeAr
             this.x12 = x12;
             return this;
         }
-
         public AgreementContentResponse build() {
             return new AgreementContentResponse(aS2, edifact, x12);
         }

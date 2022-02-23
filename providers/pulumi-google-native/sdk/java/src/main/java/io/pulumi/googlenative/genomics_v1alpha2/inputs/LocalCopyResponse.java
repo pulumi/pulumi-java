@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.genomics_v1alpha2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="disk", required=true)
-    private final String disk;
+      private final String disk;
 
     public String getDisk() {
         return this.disk;
@@ -32,7 +32,7 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="path", required=true)
-    private final String path;
+      private final String path;
 
     public String getPath() {
         return this.path;
@@ -81,7 +81,6 @@ public final class LocalCopyResponse extends io.pulumi.resources.InvokeArgs {
             this.path = Objects.requireNonNull(path);
             return this;
         }
-
         public LocalCopyResponse build() {
             return new LocalCopyResponse(disk, path);
         }

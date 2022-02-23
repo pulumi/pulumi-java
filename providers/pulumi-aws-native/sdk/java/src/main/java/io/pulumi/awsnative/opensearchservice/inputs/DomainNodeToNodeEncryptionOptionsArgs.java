@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.opensearchservice.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -15,7 +15,7 @@ public final class DomainNodeToNodeEncryptionOptionsArgs extends io.pulumi.resou
     public static final DomainNodeToNodeEncryptionOptionsArgs Empty = new DomainNodeToNodeEncryptionOptionsArgs();
 
     @InputImport(name="enabled")
-    private final @Nullable Input<Boolean> enabled;
+        private final @Nullable Input<Boolean> enabled;
 
     public Input<Boolean> getEnabled() {
         return this.enabled == null ? Input.empty() : this.enabled;
@@ -58,7 +58,6 @@ public final class DomainNodeToNodeEncryptionOptionsArgs extends io.pulumi.resou
             this.enabled = Input.ofNullable(enabled);
             return this;
         }
-
         public DomainNodeToNodeEncryptionOptionsArgs build() {
             return new DomainNodeToNodeEncryptionOptionsArgs(enabled);
         }

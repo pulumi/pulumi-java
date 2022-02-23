@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.dialogflow_v3.inputs.GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse;
 import java.util.List;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse ex
      * 
      */
     @InputImport(name="segments", required=true)
-    private final List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments;
+      private final List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> segments;
 
     public List<GoogleCloudDialogflowCxV3ResponseMessageMixedAudioSegmentResponse> getSegments() {
         return this.segments;
@@ -60,7 +60,6 @@ public final class GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse ex
             this.segments = Objects.requireNonNull(segments);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse build() {
             return new GoogleCloudDialogflowCxV3ResponseMessageMixedAudioResponse(segments);
         }

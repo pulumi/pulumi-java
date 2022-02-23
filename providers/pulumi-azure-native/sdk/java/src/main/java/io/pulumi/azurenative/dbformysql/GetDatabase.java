@@ -6,7 +6,7 @@ package io.pulumi.azurenative.dbformysql;
 import io.pulumi.azurenative.Utilities;
 import io.pulumi.azurenative.dbformysql.inputs.GetDatabaseArgs;
 import io.pulumi.azurenative.dbformysql.outputs.GetDatabaseResult;
-import io.pulumi.core.internal.Reflection.TypeShape;
+import io.pulumi.core.TypeShape;
 import io.pulumi.deployment.Deployment;
 import io.pulumi.deployment.InvokeOptions;
 import java.util.concurrent.CompletableFuture;

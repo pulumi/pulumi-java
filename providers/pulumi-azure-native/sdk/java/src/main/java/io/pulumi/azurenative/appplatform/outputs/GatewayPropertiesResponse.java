@@ -9,7 +9,7 @@ import io.pulumi.azurenative.appplatform.outputs.GatewayInstanceResponse;
 import io.pulumi.azurenative.appplatform.outputs.GatewayOperatorPropertiesResponse;
 import io.pulumi.azurenative.appplatform.outputs.GatewayResourceRequestsResponse;
 import io.pulumi.azurenative.appplatform.outputs.SsoPropertiesResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -252,7 +252,6 @@ public final class GatewayPropertiesResponse {
             this.url = Objects.requireNonNull(url);
             return this;
         }
-
         public GatewayPropertiesResponse build() {
             return new GatewayPropertiesResponse(apiMetadataProperties, corsProperties, httpsOnly, instances, operatorProperties, provisioningState, $public, resourceRequests, ssoProperties, url);
         }

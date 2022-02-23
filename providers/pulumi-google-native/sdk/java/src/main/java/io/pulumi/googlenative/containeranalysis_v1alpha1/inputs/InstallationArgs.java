@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.containeranalysis_v1alpha1.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.containeranalysis_v1alpha1.inputs.LocationArgs;
 import java.util.List;
 import java.util.Objects;
@@ -24,7 +24,7 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="location")
-    private final @Nullable Input<List<LocationArgs>> location;
+      private final @Nullable Input<List<LocationArgs>> location;
 
     public Input<List<LocationArgs>> getLocation() {
         return this.location == null ? Input.empty() : this.location;
@@ -67,7 +67,6 @@ public final class InstallationArgs extends io.pulumi.resources.ResourceArgs {
             this.location = Input.ofNullable(location);
             return this;
         }
-
         public InstallationArgs build() {
             return new InstallationArgs(location);
         }

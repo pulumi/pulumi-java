@@ -6,7 +6,7 @@ package io.pulumi.azurenative.machinelearningservices.inputs;
 import io.pulumi.azurenative.machinelearningservices.inputs.RCranPackageArgs;
 import io.pulumi.azurenative.machinelearningservices.inputs.RGitHubPackageArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -27,7 +27,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="bioConductorPackages")
-    private final @Nullable Input<List<String>> bioConductorPackages;
+        private final @Nullable Input<List<String>> bioConductorPackages;
 
     public Input<List<String>> getBioConductorPackages() {
         return this.bioConductorPackages == null ? Input.empty() : this.bioConductorPackages;
@@ -38,7 +38,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="cranPackages")
-    private final @Nullable Input<List<RCranPackageArgs>> cranPackages;
+        private final @Nullable Input<List<RCranPackageArgs>> cranPackages;
 
     public Input<List<RCranPackageArgs>> getCranPackages() {
         return this.cranPackages == null ? Input.empty() : this.cranPackages;
@@ -49,7 +49,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="customUrlPackages")
-    private final @Nullable Input<List<String>> customUrlPackages;
+        private final @Nullable Input<List<String>> customUrlPackages;
 
     public Input<List<String>> getCustomUrlPackages() {
         return this.customUrlPackages == null ? Input.empty() : this.customUrlPackages;
@@ -60,7 +60,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="gitHubPackages")
-    private final @Nullable Input<List<RGitHubPackageArgs>> gitHubPackages;
+        private final @Nullable Input<List<RGitHubPackageArgs>> gitHubPackages;
 
     public Input<List<RGitHubPackageArgs>> getGitHubPackages() {
         return this.gitHubPackages == null ? Input.empty() : this.gitHubPackages;
@@ -71,7 +71,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rVersion")
-    private final @Nullable Input<String> rVersion;
+        private final @Nullable Input<String> rVersion;
 
     public Input<String> getRVersion() {
         return this.rVersion == null ? Input.empty() : this.rVersion;
@@ -83,7 +83,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="rscriptPath")
-    private final @Nullable Input<String> rscriptPath;
+        private final @Nullable Input<String> rscriptPath;
 
     public Input<String> getRscriptPath() {
         return this.rscriptPath == null ? Input.empty() : this.rscriptPath;
@@ -94,7 +94,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="snapshotDate")
-    private final @Nullable Input<String> snapshotDate;
+        private final @Nullable Input<String> snapshotDate;
 
     public Input<String> getSnapshotDate() {
         return this.snapshotDate == null ? Input.empty() : this.snapshotDate;
@@ -105,7 +105,7 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
      * 
      */
     @InputImport(name="userManaged")
-    private final @Nullable Input<Boolean> userManaged;
+        private final @Nullable Input<Boolean> userManaged;
 
     public Input<Boolean> getUserManaged() {
         return this.userManaged == null ? Input.empty() : this.userManaged;
@@ -254,7 +254,6 @@ public final class ModelEnvironmentDefinitionRArgs extends io.pulumi.resources.R
             this.userManaged = Input.ofNullable(userManaged);
             return this;
         }
-
         public ModelEnvironmentDefinitionRArgs build() {
             return new ModelEnvironmentDefinitionRArgs(bioConductorPackages, cranPackages, customUrlPackages, gitHubPackages, rVersion, rscriptPath, snapshotDate, userManaged);
         }

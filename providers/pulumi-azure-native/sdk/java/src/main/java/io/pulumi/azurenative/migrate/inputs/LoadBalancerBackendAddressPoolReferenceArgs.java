@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.migrate.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
      * 
      */
     @InputImport(name="name")
-    private final @Nullable Input<String> name;
+        private final @Nullable Input<String> name;
 
     public Input<String> getName() {
         return this.name == null ? Input.empty() : this.name;
@@ -34,7 +34,7 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
      * 
      */
     @InputImport(name="sourceArmResourceId", required=true)
-    private final Input<String> sourceArmResourceId;
+        private final Input<String> sourceArmResourceId;
 
     public Input<String> getSourceArmResourceId() {
         return this.sourceArmResourceId;
@@ -93,7 +93,6 @@ public final class LoadBalancerBackendAddressPoolReferenceArgs extends io.pulumi
             this.sourceArmResourceId = Input.of(Objects.requireNonNull(sourceArmResourceId));
             return this;
         }
-
         public LoadBalancerBackendAddressPoolReferenceArgs build() {
             return new LoadBalancerBackendAddressPoolReferenceArgs(name, sourceArmResourceId);
         }

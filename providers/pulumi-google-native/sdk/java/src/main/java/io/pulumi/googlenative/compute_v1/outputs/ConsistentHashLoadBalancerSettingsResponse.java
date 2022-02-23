@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_v1.outputs.ConsistentHashLoadBalancerSettingsHttpCookieResponse;
 import java.lang.String;
 import java.util.Objects;
@@ -96,7 +96,6 @@ public final class ConsistentHashLoadBalancerSettingsResponse {
             this.minimumRingSize = Objects.requireNonNull(minimumRingSize);
             return this;
         }
-
         public ConsistentHashLoadBalancerSettingsResponse build() {
             return new ConsistentHashLoadBalancerSettingsResponse(httpCookie, httpHeaderName, minimumRingSize);
         }

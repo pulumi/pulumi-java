@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dlp_v2.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
      * 
      */
     @InputImport(name="fixedLikelihood", required=true)
-    private final String fixedLikelihood;
+      private final String fixedLikelihood;
 
     public String getFixedLikelihood() {
         return this.fixedLikelihood;
@@ -33,7 +33,7 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
      * 
      */
     @InputImport(name="relativeLikelihood", required=true)
-    private final Integer relativeLikelihood;
+      private final Integer relativeLikelihood;
 
     public Integer getRelativeLikelihood() {
         return this.relativeLikelihood;
@@ -82,7 +82,6 @@ public final class GooglePrivacyDlpV2LikelihoodAdjustmentResponse extends io.pul
             this.relativeLikelihood = Objects.requireNonNull(relativeLikelihood);
             return this;
         }
-
         public GooglePrivacyDlpV2LikelihoodAdjustmentResponse build() {
             return new GooglePrivacyDlpV2LikelihoodAdjustmentResponse(fixedLikelihood, relativeLikelihood);
         }

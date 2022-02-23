@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.containerregistry.inputs;
 
 import io.pulumi.azurenative.containerregistry.inputs.TlsPropertiesResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -22,7 +22,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="host", required=true)
-    private final String host;
+        private final String host;
 
     public String getHost() {
         return this.host;
@@ -33,7 +33,7 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="tls", required=true)
-    private final TlsPropertiesResponse tls;
+        private final TlsPropertiesResponse tls;
 
     public TlsPropertiesResponse getTls() {
         return this.tls;
@@ -82,7 +82,6 @@ public final class LoginServerPropertiesResponse extends io.pulumi.resources.Inv
             this.tls = Objects.requireNonNull(tls);
             return this;
         }
-
         public LoginServerPropertiesResponse build() {
             return new LoginServerPropertiesResponse(host, tls);
         }

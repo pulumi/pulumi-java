@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicefabric.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class ServiceCorrelationDescriptionResponse {
             this.serviceName = Objects.requireNonNull(serviceName);
             return this;
         }
-
         public ServiceCorrelationDescriptionResponse build() {
             return new ServiceCorrelationDescriptionResponse(scheme, serviceName);
         }

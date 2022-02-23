@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_beta.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import io.pulumi.googlenative.compute_beta.inputs.FixedOrPercentResponse;
 import java.lang.Integer;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="maxScaledInReplicas", required=true)
-    private final FixedOrPercentResponse maxScaledInReplicas;
+      private final FixedOrPercentResponse maxScaledInReplicas;
 
     public FixedOrPercentResponse getMaxScaledInReplicas() {
         return this.maxScaledInReplicas;
@@ -33,7 +33,7 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
      * 
      */
     @InputImport(name="timeWindowSec", required=true)
-    private final Integer timeWindowSec;
+      private final Integer timeWindowSec;
 
     public Integer getTimeWindowSec() {
         return this.timeWindowSec;
@@ -82,7 +82,6 @@ public final class AutoscalingPolicyScaleInControlResponse extends io.pulumi.res
             this.timeWindowSec = Objects.requireNonNull(timeWindowSec);
             return this;
         }
-
         public AutoscalingPolicyScaleInControlResponse build() {
             return new AutoscalingPolicyScaleInControlResponse(maxScaledInReplicas, timeWindowSec);
         }

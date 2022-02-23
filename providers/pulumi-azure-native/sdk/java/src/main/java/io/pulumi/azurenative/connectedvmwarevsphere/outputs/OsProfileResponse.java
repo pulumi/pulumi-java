@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.connectedvmwarevsphere.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -181,7 +181,6 @@ public final class OsProfileResponse {
             this.toolsVersionStatus = Objects.requireNonNull(toolsVersionStatus);
             return this;
         }
-
         public OsProfileResponse build() {
             return new OsProfileResponse(adminUsername, computerName, osName, osType, toolsRunningStatus, toolsVersion, toolsVersionStatus);
         }

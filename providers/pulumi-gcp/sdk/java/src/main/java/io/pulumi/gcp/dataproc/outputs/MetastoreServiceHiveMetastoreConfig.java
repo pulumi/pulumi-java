@@ -3,7 +3,7 @@
 
 package io.pulumi.gcp.dataproc.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.gcp.dataproc.outputs.MetastoreServiceHiveMetastoreConfigKerberosConfig;
 import java.lang.String;
 import java.util.Map;
@@ -103,7 +103,6 @@ public final class MetastoreServiceHiveMetastoreConfig {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public MetastoreServiceHiveMetastoreConfig build() {
             return new MetastoreServiceHiveMetastoreConfig(configOverrides, kerberosConfig, version);
         }

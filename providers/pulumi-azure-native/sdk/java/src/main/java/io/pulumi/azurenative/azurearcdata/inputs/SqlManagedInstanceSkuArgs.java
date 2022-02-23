@@ -5,7 +5,7 @@ package io.pulumi.azurenative.azurearcdata.inputs;
 
 import io.pulumi.azurenative.azurearcdata.enums.SqlManagedInstanceSkuTier;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.lang.Integer;
 import java.lang.String;
@@ -26,7 +26,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="capacity")
-    private final @Nullable Input<Integer> capacity;
+        private final @Nullable Input<Integer> capacity;
 
     public Input<Integer> getCapacity() {
         return this.capacity == null ? Input.empty() : this.capacity;
@@ -37,7 +37,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="dev")
-    private final @Nullable Input<Boolean> dev;
+        private final @Nullable Input<Boolean> dev;
 
     public Input<Boolean> getDev() {
         return this.dev == null ? Input.empty() : this.dev;
@@ -48,7 +48,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="family")
-    private final @Nullable Input<String> family;
+        private final @Nullable Input<String> family;
 
     public Input<String> getFamily() {
         return this.family == null ? Input.empty() : this.family;
@@ -59,7 +59,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="name", required=true)
-    private final Input<String> name;
+        private final Input<String> name;
 
     public Input<String> getName() {
         return this.name;
@@ -70,7 +70,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="size")
-    private final @Nullable Input<String> size;
+        private final @Nullable Input<String> size;
 
     public Input<String> getSize() {
         return this.size == null ? Input.empty() : this.size;
@@ -81,7 +81,7 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
      * 
      */
     @InputImport(name="tier")
-    private final @Nullable Input<SqlManagedInstanceSkuTier> tier;
+        private final @Nullable Input<SqlManagedInstanceSkuTier> tier;
 
     public Input<SqlManagedInstanceSkuTier> getTier() {
         return this.tier == null ? Input.empty() : this.tier;
@@ -200,7 +200,6 @@ public final class SqlManagedInstanceSkuArgs extends io.pulumi.resources.Resourc
             this.tier = Input.ofNullable(tier);
             return this;
         }
-
         public SqlManagedInstanceSkuArgs build() {
             return new SqlManagedInstanceSkuArgs(capacity, dev, family, name, size, tier);
         }

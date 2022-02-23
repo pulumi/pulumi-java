@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.servicebus.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 
@@ -17,7 +17,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="namespaceName", required=true)
-    private final String namespaceName;
+        private final String namespaceName;
 
     public String getNamespaceName() {
         return this.namespaceName;
@@ -28,7 +28,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="resourceGroupName", required=true)
-    private final String resourceGroupName;
+        private final String resourceGroupName;
 
     public String getResourceGroupName() {
         return this.resourceGroupName;
@@ -39,7 +39,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="ruleName", required=true)
-    private final String ruleName;
+        private final String ruleName;
 
     public String getRuleName() {
         return this.ruleName;
@@ -50,7 +50,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="subscriptionName", required=true)
-    private final String subscriptionName;
+        private final String subscriptionName;
 
     public String getSubscriptionName() {
         return this.subscriptionName;
@@ -61,7 +61,7 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
      * 
      */
     @InputImport(name="topicName", required=true)
-    private final String topicName;
+        private final String topicName;
 
     public String getTopicName() {
         return this.topicName;
@@ -140,7 +140,6 @@ public final class GetRuleArgs extends io.pulumi.resources.InvokeArgs {
             this.topicName = Objects.requireNonNull(topicName);
             return this;
         }
-
         public GetRuleArgs build() {
             return new GetRuleArgs(namespaceName, resourceGroupName, ruleName, subscriptionName, topicName);
         }

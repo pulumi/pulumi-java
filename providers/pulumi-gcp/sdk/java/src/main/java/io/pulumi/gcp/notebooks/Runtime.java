@@ -5,8 +5,8 @@ package io.pulumi.gcp.notebooks;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.gcp.Utilities;
 import io.pulumi.gcp.notebooks.RuntimeArgs;
 import io.pulumi.gcp.notebooks.inputs.RuntimeState;
@@ -189,13 +189,6 @@ public class Runtime extends io.pulumi.resources.CustomResource {
         return this.virtualMachine;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Runtime(String name) {
-        super("gcp:notebooks/runtime:Runtime", name, RuntimeArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

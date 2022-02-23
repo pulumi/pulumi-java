@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.compute_alpha.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleMatcherConfigDestinationPortResponse;
 import io.pulumi.googlenative.compute_alpha.outputs.SecurityPolicyRuleMatcherConfigLayer4ConfigResponse;
 import java.lang.String;
@@ -119,7 +119,6 @@ public final class SecurityPolicyRuleMatcherConfigResponse {
             this.srcIpRanges = Objects.requireNonNull(srcIpRanges);
             return this;
         }
-
         public SecurityPolicyRuleMatcherConfigResponse build() {
             return new SecurityPolicyRuleMatcherConfigResponse(destIpRanges, destPorts, layer4Configs, srcIpRanges);
         }

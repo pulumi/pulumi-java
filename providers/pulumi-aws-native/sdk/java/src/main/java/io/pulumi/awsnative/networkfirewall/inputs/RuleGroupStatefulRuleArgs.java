@@ -7,7 +7,7 @@ import io.pulumi.awsnative.networkfirewall.enums.RuleGroupStatefulRuleAction;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupHeaderArgs;
 import io.pulumi.awsnative.networkfirewall.inputs.RuleGroupRuleOptionArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 
@@ -17,21 +17,21 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
     public static final RuleGroupStatefulRuleArgs Empty = new RuleGroupStatefulRuleArgs();
 
     @InputImport(name="action", required=true)
-    private final Input<RuleGroupStatefulRuleAction> action;
+        private final Input<RuleGroupStatefulRuleAction> action;
 
     public Input<RuleGroupStatefulRuleAction> getAction() {
         return this.action;
     }
 
     @InputImport(name="header", required=true)
-    private final Input<RuleGroupHeaderArgs> header;
+        private final Input<RuleGroupHeaderArgs> header;
 
     public Input<RuleGroupHeaderArgs> getHeader() {
         return this.header;
     }
 
     @InputImport(name="ruleOptions", required=true)
-    private final Input<List<RuleGroupRuleOptionArgs>> ruleOptions;
+        private final Input<List<RuleGroupRuleOptionArgs>> ruleOptions;
 
     public Input<List<RuleGroupRuleOptionArgs>> getRuleOptions() {
         return this.ruleOptions;
@@ -105,7 +105,6 @@ public final class RuleGroupStatefulRuleArgs extends io.pulumi.resources.Resourc
             this.ruleOptions = Input.of(Objects.requireNonNull(ruleOptions));
             return this;
         }
-
         public RuleGroupStatefulRuleArgs build() {
             return new RuleGroupStatefulRuleArgs(action, header, ruleOptions);
         }

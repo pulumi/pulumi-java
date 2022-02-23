@@ -4,7 +4,7 @@
 package io.pulumi.googlenative.compute_alpha.inputs;
 
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.String;
 import java.util.Objects;
 import javax.annotation.Nullable;
@@ -23,7 +23,7 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="function")
-    private final @Nullable Input<String> function;
+      private final @Nullable Input<String> function;
 
     public Input<String> getFunction() {
         return this.function == null ? Input.empty() : this.function;
@@ -34,7 +34,7 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
      * 
      */
     @InputImport(name="urlMask")
-    private final @Nullable Input<String> urlMask;
+      private final @Nullable Input<String> urlMask;
 
     public Input<String> getUrlMask() {
         return this.urlMask == null ? Input.empty() : this.urlMask;
@@ -93,7 +93,6 @@ public final class NetworkEndpointGroupCloudFunctionArgs extends io.pulumi.resou
             this.urlMask = Input.ofNullable(urlMask);
             return this;
         }
-
         public NetworkEndpointGroupCloudFunctionArgs build() {
             return new NetworkEndpointGroupCloudFunctionArgs(function, urlMask);
         }

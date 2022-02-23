@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hanaonazure.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -118,7 +118,6 @@ public final class OSProfileResponse {
             this.version = Objects.requireNonNull(version);
             return this;
         }
-
         public OSProfileResponse build() {
             return new OSProfileResponse(computerName, osType, sshPublicKey, version);
         }

@@ -11,7 +11,7 @@ import io.pulumi.azurenative.network.outputs.NatGatewayResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPAddressDnsSettingsResponse;
 import io.pulumi.azurenative.network.outputs.PublicIPAddressSkuResponse;
 import io.pulumi.azurenative.network.outputs.SubResourceResponse;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.lang.String;
 import java.util.List;
@@ -549,7 +549,6 @@ public final class PublicIPAddressResponse {
             this.zones = zones;
             return this;
         }
-
         public PublicIPAddressResponse build() {
             return new PublicIPAddressResponse(ddosSettings, dnsSettings, etag, extendedLocation, id, idleTimeoutInMinutes, ipAddress, ipConfiguration, ipTags, linkedPublicIPAddress, location, migrationPhase, name, natGateway, provisioningState, publicIPAddressVersion, publicIPAllocationMethod, publicIPPrefix, resourceGuid, servicePublicIPAddress, sku, tags, type, zones);
         }

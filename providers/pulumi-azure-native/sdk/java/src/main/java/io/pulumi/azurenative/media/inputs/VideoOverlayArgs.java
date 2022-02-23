@@ -5,7 +5,7 @@ package io.pulumi.azurenative.media.inputs;
 
 import io.pulumi.azurenative.media.inputs.RectangleArgs;
 import io.pulumi.core.Input;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -25,7 +25,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="audioGainLevel")
-    private final @Nullable Input<Double> audioGainLevel;
+        private final @Nullable Input<Double> audioGainLevel;
 
     public Input<Double> getAudioGainLevel() {
         return this.audioGainLevel == null ? Input.empty() : this.audioGainLevel;
@@ -36,7 +36,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="cropRectangle")
-    private final @Nullable Input<RectangleArgs> cropRectangle;
+        private final @Nullable Input<RectangleArgs> cropRectangle;
 
     public Input<RectangleArgs> getCropRectangle() {
         return this.cropRectangle == null ? Input.empty() : this.cropRectangle;
@@ -47,7 +47,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="end")
-    private final @Nullable Input<String> end;
+        private final @Nullable Input<String> end;
 
     public Input<String> getEnd() {
         return this.end == null ? Input.empty() : this.end;
@@ -58,7 +58,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fadeInDuration")
-    private final @Nullable Input<String> fadeInDuration;
+        private final @Nullable Input<String> fadeInDuration;
 
     public Input<String> getFadeInDuration() {
         return this.fadeInDuration == null ? Input.empty() : this.fadeInDuration;
@@ -69,7 +69,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="fadeOutDuration")
-    private final @Nullable Input<String> fadeOutDuration;
+        private final @Nullable Input<String> fadeOutDuration;
 
     public Input<String> getFadeOutDuration() {
         return this.fadeOutDuration == null ? Input.empty() : this.fadeOutDuration;
@@ -80,7 +80,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="inputLabel", required=true)
-    private final Input<String> inputLabel;
+        private final Input<String> inputLabel;
 
     public Input<String> getInputLabel() {
         return this.inputLabel;
@@ -92,7 +92,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="odataType", required=true)
-    private final Input<String> odataType;
+        private final Input<String> odataType;
 
     public Input<String> getOdataType() {
         return this.odataType;
@@ -103,7 +103,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="opacity")
-    private final @Nullable Input<Double> opacity;
+        private final @Nullable Input<Double> opacity;
 
     public Input<Double> getOpacity() {
         return this.opacity == null ? Input.empty() : this.opacity;
@@ -114,7 +114,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="position")
-    private final @Nullable Input<RectangleArgs> position;
+        private final @Nullable Input<RectangleArgs> position;
 
     public Input<RectangleArgs> getPosition() {
         return this.position == null ? Input.empty() : this.position;
@@ -125,7 +125,7 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
      * 
      */
     @InputImport(name="start")
-    private final @Nullable Input<String> start;
+        private final @Nullable Input<String> start;
 
     public Input<String> getStart() {
         return this.start == null ? Input.empty() : this.start;
@@ -304,7 +304,6 @@ public final class VideoOverlayArgs extends io.pulumi.resources.ResourceArgs {
             this.start = Input.ofNullable(start);
             return this;
         }
-
         public VideoOverlayArgs build() {
             return new VideoOverlayArgs(audioGainLevel, cropRectangle, end, fadeInDuration, fadeOutDuration, inputLabel, odataType, opacity, position, start);
         }

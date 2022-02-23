@@ -4,7 +4,7 @@
 package io.pulumi.azurenative.compute.inputs;
 
 import io.pulumi.azurenative.compute.inputs.CloudServiceVaultSecretGroupResponse;
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
@@ -24,7 +24,7 @@ public final class CloudServiceOsProfileResponse extends io.pulumi.resources.Inv
      * 
      */
     @InputImport(name="secrets")
-    private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
+        private final @Nullable List<CloudServiceVaultSecretGroupResponse> secrets;
 
     public List<CloudServiceVaultSecretGroupResponse> getSecrets() {
         return this.secrets == null ? List.of() : this.secrets;
@@ -62,7 +62,6 @@ public final class CloudServiceOsProfileResponse extends io.pulumi.resources.Inv
             this.secrets = secrets;
             return this;
         }
-
         public CloudServiceOsProfileResponse build() {
             return new CloudServiceOsProfileResponse(secrets);
         }

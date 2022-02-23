@@ -4,7 +4,7 @@
 package io.pulumi.awsnative.servicecatalogappregistry.outputs;
 
 import io.pulumi.awsnative.servicecatalogappregistry.enums.ResourceAssociationResourceType;
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -137,7 +137,6 @@ public final class GetResourceAssociationResult {
             this.resourceType = resourceType;
             return this;
         }
-
         public GetResourceAssociationResult build() {
             return new GetResourceAssociationResult(application, applicationArn, id, resource, resourceArn, resourceType);
         }

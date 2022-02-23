@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.insights.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Boolean;
 import java.lang.String;
 import java.util.List;
@@ -267,7 +267,6 @@ public final class GetFavoriteResult {
             this.version = version;
             return this;
         }
-
         public GetFavoriteResult build() {
             return new GetFavoriteResult(category, config, favoriteId, favoriteType, isGeneratedFromTemplate, name, sourceType, tags, timeModified, userId, version);
         }

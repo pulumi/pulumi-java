@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.osconfig_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.Integer;
 import java.util.Objects;
 
@@ -74,7 +74,6 @@ public final class FixedOrPercentResponse {
             this.percent = Objects.requireNonNull(percent);
             return this;
         }
-
         public FixedOrPercentResponse build() {
             return new FixedOrPercentResponse(fixed, percent);
         }

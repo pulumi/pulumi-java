@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.consumption.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Double;
 import java.lang.String;
 import java.util.Objects;
@@ -22,7 +22,7 @@ public final class ForecastSpendResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="amount", required=true)
-    private final Double amount;
+        private final Double amount;
 
     public Double getAmount() {
         return this.amount;
@@ -33,7 +33,7 @@ public final class ForecastSpendResponse extends io.pulumi.resources.InvokeArgs 
      * 
      */
     @InputImport(name="unit", required=true)
-    private final String unit;
+        private final String unit;
 
     public String getUnit() {
         return this.unit;
@@ -82,7 +82,6 @@ public final class ForecastSpendResponse extends io.pulumi.resources.InvokeArgs 
             this.unit = Objects.requireNonNull(unit);
             return this;
         }
-
         public ForecastSpendResponse build() {
             return new ForecastSpendResponse(amount, unit);
         }

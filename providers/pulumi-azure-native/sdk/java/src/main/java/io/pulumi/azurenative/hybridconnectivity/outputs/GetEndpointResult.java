@@ -3,7 +3,7 @@
 
 package io.pulumi.azurenative.hybridconnectivity.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import java.lang.String;
 import java.util.Objects;
 import java.util.Optional;
@@ -257,7 +257,6 @@ public final class GetEndpointResult {
             this.type = Objects.requireNonNull(type);
             return this;
         }
-
         public GetEndpointResult build() {
             return new GetEndpointResult(createdAt, createdBy, createdByType, id, lastModifiedAt, lastModifiedBy, lastModifiedByType, name, provisioningState, resourceId, type);
         }

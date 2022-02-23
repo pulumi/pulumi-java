@@ -3,7 +3,7 @@
 
 package io.pulumi.googlenative.dialogflow_v3beta1.inputs;
 
-import io.pulumi.core.internal.annotations.InputImport;
+import io.pulumi.core.annotations.InputImport;
 import java.lang.Boolean;
 import java.util.Objects;
 
@@ -21,7 +21,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
      * 
      */
     @InputImport(name="enableInteractionLogging", required=true)
-    private final Boolean enableInteractionLogging;
+      private final Boolean enableInteractionLogging;
 
     public Boolean getEnableInteractionLogging() {
         return this.enableInteractionLogging;
@@ -32,7 +32,7 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
      * 
      */
     @InputImport(name="enableStackdriverLogging", required=true)
-    private final Boolean enableStackdriverLogging;
+      private final Boolean enableStackdriverLogging;
 
     public Boolean getEnableStackdriverLogging() {
         return this.enableStackdriverLogging;
@@ -81,7 +81,6 @@ public final class GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettings
             this.enableStackdriverLogging = Objects.requireNonNull(enableStackdriverLogging);
             return this;
         }
-
         public GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse build() {
             return new GoogleCloudDialogflowCxV3beta1AdvancedSettingsLoggingSettingsResponse(enableInteractionLogging, enableStackdriverLogging);
         }

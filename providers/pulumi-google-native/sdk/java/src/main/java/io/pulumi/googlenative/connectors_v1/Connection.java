@@ -5,8 +5,8 @@ package io.pulumi.googlenative.connectors_v1;
 
 import io.pulumi.core.Input;
 import io.pulumi.core.Output;
-import io.pulumi.core.internal.annotations.OutputExport;
-import io.pulumi.core.internal.annotations.ResourceType;
+import io.pulumi.core.annotations.OutputExport;
+import io.pulumi.core.annotations.ResourceType;
 import io.pulumi.googlenative.Utilities;
 import io.pulumi.googlenative.connectors_v1.ConnectionArgs;
 import io.pulumi.googlenative.connectors_v1.outputs.AuthConfigResponse;
@@ -251,13 +251,6 @@ public class Connection extends io.pulumi.resources.CustomResource {
         return this.updateTime;
     }
 
-    /**
-     *
-     * @param name The _unique_ name of the resulting resource.
-     */
-    public Connection(String name) {
-        super("google-native:connectors/v1:Connection", name, ConnectionArgs.Empty, makeResourceOptions(null, Input.empty()));
-    }
     /**
      *
      * @param name The _unique_ name of the resulting resource.

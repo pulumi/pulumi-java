@@ -3,7 +3,7 @@
 
 package io.pulumi.kubernetes.authorization.k8s.io_v1.outputs;
 
-import io.pulumi.core.internal.annotations.OutputCustomType;
+import io.pulumi.core.annotations.OutputCustomType;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.NonResourceRule;
 import io.pulumi.kubernetes.authorization.k8s.io_v1.outputs.ResourceRule;
 import java.lang.Boolean;
@@ -122,7 +122,6 @@ public final class SubjectRulesReviewStatus {
             this.resourceRules = Objects.requireNonNull(resourceRules);
             return this;
         }
-
         public SubjectRulesReviewStatus build() {
             return new SubjectRulesReviewStatus(evaluationError, incomplete, nonResourceRules, resourceRules);
         }
